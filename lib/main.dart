@@ -7,6 +7,7 @@ import 'core/fonts.dart';
 import 'core/providers.dart';
 import 'core/storage.dart';
 import 'features/alerts/alerts.dart';
+import 'features/alerts/notification_backend.dart';
 import 'features/home/card_registry.dart';
 import 'features/home/cards/builtin_cards.dart';
 
@@ -46,10 +47,14 @@ class _LifecycleState extends ConsumerState<_Lifecycle> with WidgetsBindingObser
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
+    notificationTaps.addListener(_openZmanim);
   }
+
+  void _openZmanim() => ref.read(routerProvider).go('/zmanim');
 
   @override
   void dispose() {
+    notificationTaps.removeListener(_openZmanim);
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }

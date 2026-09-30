@@ -166,6 +166,18 @@ const _ashkenazi = {
   'yom haatzmaut': "Yom Ha'atzmaus",
   "yom ha'atzmaut": "Yom Ha'atzmaus",
   'birkat hamazon': 'Birchas Hamazon',
+  'alot': 'Alos',
+  'tzeit': 'Tzeis',
+  'hashmashot': 'HaShmashos',
+  'hashemashot': 'HaShemashos',
+  'shkiat': 'Shkias',
+  'levana': 'Levanah',
+  'kiddush levana': 'Kiddush Levanah',
+  'chazarat hashatz': 'Chazaras HaShatz',
+  'modim derabbanan': 'Modim DeRabbanan',
+  'kohanim': 'Kohanim',
+  'shaot': 'Shaos',
+  'zmaniyot': 'Zmaniyos',
 };
 
 final _ashkenaziRe = RegExp(

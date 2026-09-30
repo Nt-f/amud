@@ -164,6 +164,17 @@ class SettingsScreen extends ConsumerWidget {
             },
           ),
           AdaptiveSwitchTile(title: context.tr('Show halachic notes'), value: s.showNotes, onChanged: (v) => set((x) => x.copyWith(showNotes: v))),
+          if (s.showNotes)
+            AdaptiveSwitchTile(
+                title: context.tr('Collapse halachic notes'),
+                subtitle: context.tr('Show a one-line note; tap to read it'),
+                value: s.collapseNotes,
+                onChanged: (v) => set((x) => x.copyWith(collapseNotes: v))),
+          AdaptiveSwitchTile(
+              title: context.tr('Collapse Chazarat HaShatz'),
+              subtitle: context.tr("Kedusha, Birkat Kohanim and Modim DeRabbanan fold into a row"),
+              value: s.collapseChazarah,
+              onChanged: (v) => set((x) => x.copyWith(collapseChazarah: v))),
         ]),
         AdaptiveSection(header: context.tr('Customs (minhagim)'), children: [
           AdaptiveSwitchTile(title: context.tr('Praying with a minyan'), value: s.minhagim.withMinyan, onChanged: (v) => minhag((m) => m.copyWith(withMinyan: v))),
@@ -210,6 +221,22 @@ class SettingsScreen extends ConsumerWidget {
                   title: context.tr('Theme'), selected: s.themeMode, options: [for (final m in AppThemeMode.values) (m, context.tr(m.name))]);
               if (v != null) set((x) => x.copyWith(themeMode: v));
             },
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+            child: Row(children: [
+              const Icon(Icons.thermostat_outlined, size: 20),
+              const SizedBox(width: 12),
+              Text(context.tr('Warmth')),
+              Expanded(
+                child: Slider.adaptive(
+                  value: s.warmth,
+                  divisions: 20,
+                  label: s.warmth == 0 ? context.tr('Neutral') : '${(s.warmth * 100).round()}%',
+                  onChanged: (v) => set((x) => x.copyWith(warmth: v)),
+                ),
+              ),
+            ]),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),

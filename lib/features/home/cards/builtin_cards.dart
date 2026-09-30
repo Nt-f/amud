@@ -152,7 +152,11 @@ class _HebrewDateCard extends ConsumerWidget {
     final t = ref.watch(todaySnapshotProvider);
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
-    final hebFont = ref.watch(settingsProvider.select((s) => s.hebrewFont));
+    final s = ref.watch(settingsProvider);
+    // After sunset the Hebrew date is already tomorrow's.
+    final hd = t.halachic;
+    final parsha = parshaName(hd, s.location.il, context.hebcalLocale);
+    final holidays = getHolidaysOnDate(hd, s.location.il).where((e) => !e.hasFlag(Flags.yomKippurKatan) && !e.hasFlag(Flags.behab));
     return CardFrame(
       onTap: () => context.go('/calendar'),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -161,24 +165,23 @@ class _HebrewDateCard extends ConsumerWidget {
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(formatPlainDate(t.civil), style: theme.textTheme.labelLarge),
               const SizedBox(height: 4),
-              Text(t.hdate.render(context.hebcalLocale), style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w600)),
+              Text(hd.render(context.hebcalLocale), style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w600)),
             ]),
           ),
-          Text(t.hdate.renderGematriya(),
+          Text(hd.renderGematriya(),
               textDirection: TextDirection.rtl,
-              style: theme.textTheme.headlineSmall?.copyWith(fontFamily: hebFont, color: theme.colorScheme.primary)),
+              style: theme.textTheme.headlineSmall?.copyWith(fontFamily: s.hebrewFont, color: theme.colorScheme.primary)),
         ]),
-        if (!t.halachic.isSameDate(t.hdate))
+        if (t.afterSunset)
           Padding(
             padding: const EdgeInsets.only(top: 4),
-            child: Text('After sunset: ${t.halachic.render(context.hebcalLocale)}',
+            child: Text(context.tr('After sunset · the day of {date} has ended', {'date': t.hdate.render(context.hebcalLocale)}),
                 style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.tertiary)),
           ),
         const SizedBox(height: 10),
         Wrap(spacing: 6, runSpacing: 6, children: [
-          if (t.parsha != null)
-            Chip(avatar: const Icon(Icons.auto_stories, size: 16), label: Text(t.parsha!), visualDensity: VisualDensity.compact),
-          for (final h in t.holidays)
+          Chip(avatar: const Icon(Icons.auto_stories, size: 16), label: Text(parsha), visualDensity: VisualDensity.compact),
+          for (final h in holidays)
             Chip(
               label: Text('${h.getEmoji()} ${h.render(context.hebcalLocale)}'),
               backgroundColor: colors.chipToday,
@@ -415,7 +418,7 @@ class _LearningCard extends ConsumerWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 4),
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(learningScheduleTitles[name] ?? name, style: theme.textTheme.labelSmall),
+                  Text(context.term(learningScheduleTitles[name] ?? name), style: theme.textTheme.labelSmall),
                   Text(ev.render(context.hebcalLocale), style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600)),
                 ]),
               ),
@@ -509,7 +512,7 @@ class _QuickPrayersCard extends ConsumerWidget {
       icon: Icons.bolt,
       child: Wrap(spacing: 8, runSpacing: 8, children: [
         for (final (label, icon, key) in shortcuts)
-          ActionChip(avatar: Icon(icon, size: 18), label: Text(label), onPressed: () => context.go('/siddur?section=$key')),
+          ActionChip(avatar: Icon(icon, size: 18), label: Text(context.tr(label)), onPressed: () => context.go('/siddur?section=$key')),
         ActionChip(
           avatar: const Icon(Icons.bakery_dining, size: 18),
           label: Text(context.tr("Me'ein Shalosh")),

@@ -71,7 +71,7 @@ enum TextLayout { sideBySide, interleaved, hebrewOnly, translationOnly }
 /// text layout.
 enum NotesLanguage { bilingual, english, hebrew }
 
-enum AppThemeMode { system, light, dark, sepia }
+enum AppThemeMode { system, light, dark }
 
 /// Which zmanim methodology to show by default.
 enum ZmanimOpinion { gra, mga, baalHatanya }
@@ -106,10 +106,20 @@ class AppSettings {
   final String? latinFont;
   final ExcludedDisplay excludedDisplay;
   final bool showNotes;
+
+  /// Show halachic notes as a one-line row that expands on tap.
+  final bool collapseNotes;
+
+  /// Fold the chazzan's repetition (Kedushah, Birkas Kohanim, Modim
+  /// DeRabbanan) into a tappable row.
+  final bool collapseChazarah;
   final bool showInstructions;
   final bool highlightToday;
   final Minhagim minhagim;
   final AppThemeMode themeMode;
+
+  /// Color temperature of the page, 0 (neutral) to 1 (warm paper/sepia).
+  final double warmth;
   final int seedColor;
 
   /// Only redistributable (PD / Creative Commons) text versions are offered.
@@ -120,6 +130,9 @@ class AppSettings {
 
   /// Daily learning schedules shown on the learning screen.
   final List<String> learningSchedules;
+
+  /// The first-run setup has been completed.
+  final bool setupDone;
 
   const AppSettings({
     this.location = SavedLocation.newYork,
@@ -134,23 +147,27 @@ class AppSettings {
     this.layout = TextLayout.hebrewOnly,
     this.notesLanguage = NotesLanguage.bilingual,
     this.uiLanguage = UiLanguage.en,
-    this.ashkenaziSpelling = false,
+    this.ashkenaziSpelling = true,
     this.showTeamim = true,
     this.showNikud = true,
     this.preferTrop = true,
     this.textScale = 1.0,
-    this.hebrewFont = 'FrankRuhlLibre',
+    this.hebrewFont = 'TaameyFrankCLM',
     this.latinFont,
     this.excludedDisplay = ExcludedDisplay.collapse,
-    this.showNotes = false,
+    this.showNotes = true,
+    this.collapseNotes = true,
+    this.collapseChazarah = true,
     this.showInstructions = true,
     this.highlightToday = true,
     this.minhagim = const Minhagim(),
     this.themeMode = AppThemeMode.system,
+    this.warmth = 0,
     this.seedColor = 0xFF3B5BA5,
     this.openLicensesOnly = false,
-    this.exactAlarms = false,
+    this.exactAlarms = true,
     this.learningSchedules = const ['dafYomi', 'mishnaYomi', 'nachYomi', 'rambam1', 'psalms', 'chofetzChaim'],
+    this.setupDone = false,
   });
 
   AppSettings copyWith({
@@ -175,14 +192,18 @@ class AppSettings {
     String? Function()? latinFont,
     ExcludedDisplay? excludedDisplay,
     bool? showNotes,
+    bool? collapseNotes,
+    bool? collapseChazarah,
     bool? showInstructions,
     bool? highlightToday,
     Minhagim? minhagim,
     AppThemeMode? themeMode,
+    double? warmth,
     int? seedColor,
     bool? openLicensesOnly,
     bool? exactAlarms,
     List<String>? learningSchedules,
+    bool? setupDone,
   }) =>
       AppSettings(
         location: location ?? this.location,
@@ -206,17 +227,25 @@ class AppSettings {
         latinFont: latinFont != null ? latinFont() : this.latinFont,
         excludedDisplay: excludedDisplay ?? this.excludedDisplay,
         showNotes: showNotes ?? this.showNotes,
+        collapseNotes: collapseNotes ?? this.collapseNotes,
+        collapseChazarah: collapseChazarah ?? this.collapseChazarah,
         showInstructions: showInstructions ?? this.showInstructions,
         highlightToday: highlightToday ?? this.highlightToday,
         minhagim: minhagim ?? this.minhagim,
         themeMode: themeMode ?? this.themeMode,
+        warmth: warmth ?? this.warmth,
         seedColor: seedColor ?? this.seedColor,
         openLicensesOnly: openLicensesOnly ?? this.openLicensesOnly,
         exactAlarms: exactAlarms ?? this.exactAlarms,
         learningSchedules: learningSchedules ?? this.learningSchedules,
+        setupDone: setupDone ?? this.setupDone,
       );
 
+  /// Bumped when defaults change in a way existing installs should adopt.
+  static const schemaVersion = 2;
+
   Map<String, Object?> toJson() => {
+        'v': schemaVersion,
         'location': location.toJson(),
         'useElevation': useElevation,
         'hour12': hour12,
@@ -238,18 +267,27 @@ class AppSettings {
         'latinFont': latinFont,
         'excludedDisplay': excludedDisplay.name,
         'showNotes': showNotes,
+        'collapseNotes': collapseNotes,
+        'collapseChazarah': collapseChazarah,
         'showInstructions': showInstructions,
         'highlightToday': highlightToday,
         'minhagim': minhagim.toJson(),
         'themeMode': themeMode.name,
+        'warmth': warmth,
         'seedColor': seedColor,
         'openLicensesOnly': openLicensesOnly,
         'exactAlarms': exactAlarms,
         'learningSchedules': learningSchedules,
+        'setupDone': setupDone,
       };
 
   factory AppSettings.fromJson(Map<String, Object?> j) {
     const d = AppSettings();
+    // Settings saved before v2 adopt the newer defaults for spelling, font
+    // and notes (they were never shown a choice).
+    if (((j['v'] as num?) ?? 1) < 2) {
+      j = {...j}..removeWhere((k, _) => const {'ashkenaziSpelling', 'hebrewFont', 'showNotes', 'exactAlarms'}.contains(k));
+    }
     T pick<T>(String k, T fallback) => j[k] is T ? j[k] as T : fallback;
     E byName<E extends Enum>(List<E> values, String k, E fallback) {
       final v = j[k];
@@ -284,16 +322,21 @@ class AppSettings {
       latinFont: j['latinFont'] as String?,
       excludedDisplay: byName(ExcludedDisplay.values, 'excludedDisplay', d.excludedDisplay),
       showNotes: pick('showNotes', d.showNotes),
+      collapseNotes: pick('collapseNotes', d.collapseNotes),
+      collapseChazarah: pick('collapseChazarah', d.collapseChazarah),
       showInstructions: pick('showInstructions', d.showInstructions),
       highlightToday: pick('highlightToday', d.highlightToday),
       minhagim: j['minhagim'] is Map
           ? Minhagim.fromJson((j['minhagim'] as Map).cast<String, Object?>())
           : d.minhagim,
-      themeMode: byName(AppThemeMode.values, 'themeMode', d.themeMode),
+      // The former sepia theme is light with a warm temperature.
+      themeMode: j['themeMode'] == 'sepia' ? AppThemeMode.light : byName(AppThemeMode.values, 'themeMode', d.themeMode),
+      warmth: (j['warmth'] as num?)?.toDouble().clamp(0.0, 1.0) ?? (j['themeMode'] == 'sepia' ? 0.8 : d.warmth),
       seedColor: (j['seedColor'] as num?)?.toInt() ?? d.seedColor,
       openLicensesOnly: pick('openLicensesOnly', d.openLicensesOnly),
       exactAlarms: pick('exactAlarms', d.exactAlarms),
       learningSchedules: (j['learningSchedules'] as List?)?.cast<String>() ?? d.learningSchedules,
+      setupDone: pick('setupDone', d.setupDone),
     );
   }
 
@@ -303,7 +346,7 @@ class AppSettings {
   bool get showEnglishNotes => notesLanguage != NotesLanguage.hebrew;
 
   ThemeMode get flutterThemeMode => switch (themeMode) {
-        AppThemeMode.light || AppThemeMode.sepia => ThemeMode.light,
+        AppThemeMode.light => ThemeMode.light,
         AppThemeMode.dark => ThemeMode.dark,
         AppThemeMode.system => ThemeMode.system,
       };

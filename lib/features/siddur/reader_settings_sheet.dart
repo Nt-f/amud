@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 
+import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/fonts.dart';
 import '../../core/settings.dart';
@@ -11,7 +12,6 @@ import '../settings/font_gallery_screen.dart';
 Future<void> showReaderSettings(BuildContext context, String book) => showModalBottomSheet<void>(
       context: context,
       isScrollControlled: true,
-      showDragHandle: true,
       builder: (ctx) => _ReaderSettings(book: book),
     );
 
@@ -49,10 +49,10 @@ class _ReaderSettings extends ConsumerWidget {
               textDirection: TextDirection.rtl,
               textAlign: TextAlign.center,
               style: TextStyle(fontFamily: s.hebrewFont, fontSize: 22 * s.textScale, height: 1.6)),
-          const SizedBox(height: 12),
-          Text(context.tr('Prayer text'), style: theme.textTheme.titleSmall),
-          const SizedBox(height: 6),
+          SheetLabel(context.tr('Prayer text')),
           SegmentedButton<TextLayout>(
+            showSelectedIcon: false,
+            expandedInsets: EdgeInsets.zero,
             segments: [
               ButtonSegment(value: TextLayout.hebrewOnly, label: Text(context.tr('Hebrew')), icon: Icon(Icons.format_textdirection_r_to_l)),
               ButtonSegment(value: TextLayout.interleaved, label: Text(context.tr('Bilingual')), icon: Icon(Icons.view_stream)),
@@ -61,10 +61,10 @@ class _ReaderSettings extends ConsumerWidget {
             selected: {s.layout == TextLayout.translationOnly ? TextLayout.interleaved : s.layout},
             onSelectionChanged: (v) => n.update((x) => x.copyWith(layout: v.first)),
           ),
-          const SizedBox(height: 12),
-          Text(context.tr('Instructions & notes'), style: theme.textTheme.titleSmall),
-          const SizedBox(height: 6),
+          SheetLabel(context.tr('Instructions & notes')),
           SegmentedButton<NotesLanguage>(
+            showSelectedIcon: false,
+            expandedInsets: EdgeInsets.zero,
             segments: [
               ButtonSegment(value: NotesLanguage.bilingual, label: Text(context.tr('Bilingual'))),
               ButtonSegment(value: NotesLanguage.english, label: Text(context.tr('English'))),
@@ -111,17 +111,17 @@ class _ReaderSettings extends ConsumerWidget {
             value: s.preferTrop,
             onChanged: (v) => n.update((x) => x.copyWith(preferTrop: v)),
           ),
-          const SizedBox(height: 8),
-          Text(context.tr('Today-aware display'), style: theme.textTheme.titleSmall),
+          SheetLabel(context.tr('Today-aware display')),
           SwitchListTile.adaptive(
             contentPadding: EdgeInsets.zero,
             title: Text(context.tr('Highlight what applies today')),
             value: s.highlightToday,
             onChanged: (v) => n.update((x) => x.copyWith(highlightToday: v)),
           ),
-          Text(context.tr('Text not said today:')),
-          const SizedBox(height: 6),
+          SheetLabel(context.tr('Text not said today')),
           SegmentedButton<ExcludedDisplay>(
+            showSelectedIcon: false,
+            expandedInsets: EdgeInsets.zero,
             segments: [
               ButtonSegment(value: ExcludedDisplay.collapse, label: Text(context.tr('Collapse'))),
               ButtonSegment(value: ExcludedDisplay.dim, label: Text(context.tr('Dim'))),
@@ -146,6 +146,21 @@ class _ReaderSettings extends ConsumerWidget {
             title: Text(context.tr('Show halachic notes')),
             value: s.showNotes,
             onChanged: (v) => n.update((x) => x.copyWith(showNotes: v)),
+          ),
+          if (s.showNotes)
+            SwitchListTile.adaptive(
+              contentPadding: EdgeInsets.zero,
+              title: Text(context.tr('Collapse halachic notes')),
+              subtitle: Text(context.tr('Show a one-line note; tap to read it')),
+              value: s.collapseNotes,
+              onChanged: (v) => n.update((x) => x.copyWith(collapseNotes: v)),
+            ),
+          SwitchListTile.adaptive(
+            contentPadding: EdgeInsets.zero,
+            title: Text(context.tr('Collapse Chazarat HaShatz')),
+            subtitle: Text(context.tr("Kedusha, Birkat Kohanim and Modim DeRabbanan fold into a row")),
+            value: s.collapseChazarah,
+            onChanged: (v) => n.update((x) => x.copyWith(collapseChazarah: v)),
           ),
           SwitchListTile.adaptive(
             contentPadding: EdgeInsets.zero,

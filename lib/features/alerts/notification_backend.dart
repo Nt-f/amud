@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 import 'alerts.dart';
 import 'notification_backend_stub.dart'
     if (dart.library.io) 'notification_backend_io.dart'
@@ -23,3 +25,6 @@ abstract class NotificationBackend {
 }
 
 NotificationBackend createNotificationBackend() => createBackend();
+
+/// Set when the user taps a zman notification; the app opens Zmanim.
+final notificationTaps = ValueNotifier<DateTime?>(null);

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/l10n.dart';
+
 /// Shared chrome for dashboard cards.
 class CardFrame extends StatelessWidget {
   final String? title;
@@ -27,7 +29,7 @@ class CardFrame extends StatelessWidget {
                 child: Row(children: [
                   if (icon != null) ...[Icon(icon, size: 18, color: theme.colorScheme.primary), const SizedBox(width: 8)],
                   Expanded(
-                    child: Text(title!,
+                    child: Text(context.tr(title!),
                         style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary, letterSpacing: 0.3),
                         overflow: TextOverflow.ellipsis),
                   ),

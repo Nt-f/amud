@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hebcal/hebcal.dart';
+import 'package:timezone/timezone.dart' as tz;
 
 import '../../core/format.dart';
 import '../../core/providers.dart';
@@ -72,9 +74,24 @@ class AlertsScreen extends ConsumerWidget {
               leading: const Icon(Icons.schedule),
               title: Text(p.title),
               subtitle: Text(p.body),
-              trailing: Text(formatTime(p.fireAt, ref.watch(locationProvider), hour12: s.hour12)),
+              trailing: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.end, children: [
+                Text(formatTime(p.fireAt, ref.watch(locationProvider), hour12: s.hour12),
+                    style: const TextStyle(fontWeight: FontWeight.w600, fontFeatures: [FontFeature.tabularFigures()])),
+                Text(_day(p.fireAt, ref.watch(locationProvider)), style: theme.textTheme.bodySmall),
+              ]),
             ),
         ],
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+          child: OutlinedButton.icon(
+            onPressed: () async {
+              await backend.requestPermission(exact: s.exactAlarms);
+              await backend.showNow('Zman alerts', 'Notifications are working.');
+            },
+            icon: const Icon(Icons.notifications_outlined),
+            label: const Text('Send a test notification'),
+          ),
+        ),
         Padding(
           padding: const EdgeInsets.all(16),
           child: OutlinedButton.icon(
@@ -89,4 +106,14 @@ class AlertsScreen extends ConsumerWidget {
       ]),
     );
   }
+}
+
+/// "Today", "Tomorrow" or a short weekday + date at the user's location.
+String _day(DateTime t, Location loc) {
+  final l = tz.TZDateTime.from(t, loc.tzLocation);
+  final now = tz.TZDateTime.now(loc.tzLocation);
+  final d = PlainDate(l.year, l.month, l.day).abs - PlainDate(now.year, now.month, now.day).abs;
+  if (d == 0) return 'Today';
+  if (d == 1) return 'Tomorrow';
+  return formatPlainDate(PlainDate(l.year, l.month, l.day), weekday: true).replaceFirst(RegExp(r', \d+$'), '');
 }

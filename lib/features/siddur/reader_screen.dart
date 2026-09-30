@@ -13,6 +13,7 @@ import '../../core/html_text.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
 import '../../core/theme.dart';
+import 'reader_grouping.dart';
 import 'reader_settings_sheet.dart';
 import 'siddur_providers.dart';
 
@@ -55,6 +56,10 @@ class ReaderScreen extends ConsumerStatefulWidget {
 class _ReaderScreenState extends ConsumerState<ReaderScreen> {
   final _expanded = <String>{};
   final _expandedGroups = <String>{};
+
+  /// Chazarah groups / notes the user toggled away from their default.
+  final _toggledChazarah = <String>{};
+  final _toggledNotes = <String>{};
 
   @override
   Widget build(BuildContext context) {
@@ -129,15 +134,61 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
             onTap: () => setState(() => _expanded.add(node.id)),
           ));
     }
-    for (final it in list) {
-      switch (it) {
-        case ExcludedGroupItem g when _expandedGroups.contains(g.key):
-          for (final si in g.items) {
-            rows.add((c) => _SegmentView(item: si, layout: layout));
-          }
-        default:
-          rows.add((c) => _item(c, it, layout));
+    // Opened directly on the repetition (e.g. Kedushah): show it as is.
+    final groupChazarah = node == null || !isChazarahNode(node);
+    var i = 0;
+    while (i < list.length) {
+      final it = list[i];
+      final next = i + 1 < list.length ? list[i + 1] : null;
+      if (it is SegmentItem && isRedundantRubric(it, next is SegmentItem ? next : null, s)) {
+        i++;
+        continue;
       }
+      // Kiddush / Kadesh: one card rather than a run of separate rows.
+      final unit = _unitLeafOf(it);
+      if (unit != null) {
+        final segs = <SegmentItem>[];
+        while (i < list.length && _unitLeafOf(list[i]) == unit) {
+          final x = list[i];
+          if (x is SegmentItem) segs.add(x);
+          if (x is ExcludedGroupItem) segs.addAll(x.items);
+          i++;
+        }
+        rows.add((c) => _UnitCard(node: unit, items: segs, layout: layout));
+        continue;
+      }
+      if (groupChazarah && _isChazarah(it)) {
+        final group = <RenderItem>[];
+        while (i < list.length && _isChazarah(list[i])) {
+          group.add(list[i]);
+          i++;
+        }
+        final key = group.first.key;
+        final open = s.collapseChazarah == _toggledChazarah.contains(key);
+        final titles = <String>[
+          for (final g in group)
+            if (g is HeadingItem && g.level > 0 || g is CollapsedSectionItem)
+              context.uiLanguage == UiLanguage.en
+                  ? context.term((g is HeadingItem ? g.node : (g as CollapsedSectionItem).node).en)
+                  : (g is HeadingItem ? g.node : (g as CollapsedSectionItem).node).he,
+        ];
+        if (titles.isEmpty && group.any((g) => g is SegmentItem && isChazarahSegment(g))) titles.add(context.tr('Modim DeRabbanan'));
+        rows.add((c) => _ChazarahHeader(
+              title: titles.toSet().join(' · '),
+              open: open,
+              onTap: () => setState(() => _toggledChazarah.contains(key) ? _toggledChazarah.remove(key) : _toggledChazarah.add(key)),
+            ));
+        if (open) {
+          for (final g in group) {
+            for (final w in _rowsFor(context, g, layout)) {
+              rows.add((c) => _ChazarahBody(child: w(c)));
+            }
+          }
+        }
+        continue;
+      }
+      rows.addAll(_rowsFor(context, it, layout));
+      i++;
     }
     return SelectionArea(
       child: ListView.builder(
@@ -147,6 +198,39 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
       ),
     );
   }
+
+  /// The row(s) for one render item, with expanded groups and collapsible
+  /// notes.
+  List<Widget Function(BuildContext)> _rowsFor(BuildContext context, RenderItem it, TextLayout layout) {
+    final s = ref.read(settingsProvider);
+    switch (it) {
+      case ExcludedGroupItem g when _expandedGroups.contains(g.key):
+        return [for (final si in g.items) (c) => _SegmentView(item: si, layout: layout)];
+      case SegmentItem si when si.kind == SegmentKind.note && s.collapseNotes:
+        final open = _toggledNotes.contains(si.key);
+        void toggle() => setState(() => open ? _toggledNotes.remove(si.key) : _toggledNotes.add(si.key));
+        return [(c) => _NoteRow(item: si, open: open, onTap: toggle, child: open ? _SegmentView(item: si, layout: layout) : null)];
+      default:
+        return [(c) => _item(c, it, layout)];
+    }
+  }
+
+  static SchemaNode? _unitLeafOf(RenderItem it) {
+    final n = switch (it) {
+      SegmentItem s => s.node,
+      ExcludedGroupItem g => g.items.first.node,
+      _ => null,
+    };
+    return n != null && isUnitNode(n) ? n : null;
+  }
+
+  static bool _isChazarah(RenderItem it) => switch (it) {
+        HeadingItem h => h.level > 0 && isChazarahNode(h.node),
+        CollapsedSectionItem c => isChazarahNode(c.node),
+        SegmentItem s => isChazarahNode(s.node) || isChazarahSegment(s),
+        ExcludedGroupItem g => g.items.every((i) => isChazarahNode(i.node)),
+        _ => false,
+      };
 
   Widget _nextSection(BuildContext context, SchemaNode? node) {
     if (node == null || node.parent == null) return const SizedBox.shrink();
@@ -288,12 +372,15 @@ class _TodayChip extends StatelessWidget {
   Widget build(BuildContext context) {
     final colors = SiddurColors.of(context);
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
       decoration: BoxDecoration(color: colors.chipToday, borderRadius: BorderRadius.circular(20)),
       child: Row(mainAxisSize: MainAxisSize.min, children: [
-        const Icon(Icons.today, size: 12),
-        const SizedBox(width: 4),
-        Flexible(child: Text(label, style: Theme.of(context).textTheme.labelSmall)),
+        const Icon(Icons.today, size: 11),
+        const SizedBox(width: 3),
+        Flexible(
+          child: Text(label,
+              style: Theme.of(context).textTheme.labelSmall?.copyWith(height: 1.2), maxLines: 1, overflow: TextOverflow.ellipsis),
+        ),
       ]),
     );
   }
@@ -379,7 +466,10 @@ class _OmerBlock extends ConsumerWidget {
 class _SegmentView extends ConsumerWidget {
   final SegmentItem item;
   final TextLayout layout;
-  const _SegmentView({required this.item, required this.layout});
+
+  /// Tighter spacing, inside a card such as Kiddush.
+  final bool compact;
+  const _SegmentView({required this.item, required this.layout, this.compact = false});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -412,14 +502,14 @@ class _SegmentView extends ConsumerWidget {
           builder: (c) => SafeArea(child: Padding(padding: const EdgeInsets.fromLTRB(20, 0, 20, 20), child: SelectableText(note))),
         );
 
-    Widget text(ResolvedSegment seg, TextStyle base, bool rtl) {
+    Widget text(ResolvedSegment seg, TextStyle base, bool rtl, {InlineSpan? lead}) {
       String marks(String h) => seg.segment.hebrew ? hebrewMarks(h, teamim: s.showTeamim, nikud: s.showNikud) : h;
       if (seg.segment.hebrew) {
         final all = seg.runs.map((r) => marks(r.html)).join();
         base = base.copyWith(fontFamily: hebrewFamilyFor(s.hebrewFont, teamim: hasTeamim(all), nikud: hasNikud(all)));
       }
       final html = SefariaHtml(base, instructionStyle: TextStyle(color: colors.instruction, fontStyle: FontStyle.italic), onFootnote: footnote);
-      final spans = <InlineSpan>[];
+      final spans = <InlineSpan>[?lead];
       for (final r in seg.runs) {
         var st = base;
         if (r.marker) {
@@ -438,8 +528,23 @@ class _SegmentView extends ConsumerWidget {
     final tr = item.tr;
     Widget body;
     // The resolver already applied the prayer-text and notes language choices.
-    final heW = he == null ? null : text(he, heBase, he.segment.hebrew);
-    final trW = tr == null ? null : text(tr, enBase, tr.segment.hebrew);
+    // "Said only on…" labels sit inline at the start of the text instead
+    // of on a line of their own.
+    InlineSpan? lead;
+    if (today || (excluded && item.labelEn != null)) {
+      final l = conditionLabel(context, s, item.labelEn, item.labelHe);
+      lead = WidgetSpan(
+        alignment: PlaceholderAlignment.middle,
+        child: Padding(
+          padding: const EdgeInsetsDirectional.only(end: 6),
+          child: today
+              ? _TodayChip(item.labelEn == null && item.labelHe == null ? context.tr('Today') : l)
+              : Text(context.tr('Not today · {label}', {'label': l}), style: theme.textTheme.labelSmall?.copyWith(color: colors.excluded)),
+        ),
+      );
+    }
+    final heW = he == null ? null : text(he, heBase, he.segment.hebrew, lead: lead);
+    final trW = tr == null ? null : text(tr, enBase, tr.segment.hebrew, lead: he == null ? lead : null);
     if (layout == TextLayout.sideBySide && heW != null && trW != null) {
       body = Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Expanded(child: trW),
@@ -455,30 +560,15 @@ class _SegmentView extends ConsumerWidget {
     }
     if (heW == null && trW == null) return const SizedBox.shrink();
 
-    final label = today || (excluded && item.labelEn != null)
-        ? Padding(
-            padding: const EdgeInsets.only(bottom: 4),
-            child: Row(children: [
-              if (today)
-                _TodayChip(item.labelEn == null && item.labelHe == null ? context.tr('Today') : conditionLabel(context, s, item.labelEn, item.labelHe))
-              else
-                Flexible(
-                  child: Text(context.tr('Not today · {label}', {'label': conditionLabel(context, s, item.labelEn, item.labelHe)}),
-                      style: theme.textTheme.labelSmall?.copyWith(color: colors.excluded)),
-                ),
-            ]),
-          )
-        : null;
-
-    final content = Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [?label, body]);
-    if (!today) return Padding(padding: const EdgeInsets.symmetric(vertical: 5), child: content);
+    final content = body;
+    if (!today) return Padding(padding: EdgeInsets.symmetric(vertical: compact ? 3 : 5), child: content);
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 5),
+      margin: EdgeInsets.symmetric(vertical: compact ? 2 : 4),
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(color: colors.todayFill, borderRadius: BorderRadius.circular(10)),
       child: IntrinsicHeight(
         child: Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-          Expanded(child: Padding(padding: const EdgeInsets.fromLTRB(12, 8, 12, 8), child: content)),
+          Expanded(child: Padding(padding: const EdgeInsets.fromLTRB(10, 4, 10, 4), child: content)),
           Container(width: 4, color: colors.todayBar),
         ]),
       ),
@@ -495,4 +585,171 @@ String conditionLabel(BuildContext context, AppSettings s, String? en, String? h
     if (s.showHebrewNotes && he != null && he != en) he,
   ];
   return parts.isEmpty ? (e ?? he ?? '') : parts.join(' · ');
+}
+
+/// The row standing for a run of the chazzan's repetition: a distinct
+/// color, faded, and tappable to show or hide it.
+class _ChazarahHeader extends StatelessWidget {
+  final String title;
+  final bool open;
+  final VoidCallback onTap;
+  const _ChazarahHeader({required this.title, required this.open, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colors = SiddurColors.of(context);
+    final label = context.term('Chazarat HaShatz');
+    return Padding(
+      padding: EdgeInsets.only(top: 6, bottom: open ? 0 : 6),
+      child: Opacity(
+        opacity: open ? 1 : 0.75,
+        child: Material(
+          color: colors.chazarahFill,
+          borderRadius: open ? const BorderRadius.vertical(top: Radius.circular(12)) : BorderRadius.circular(12),
+          child: InkWell(
+            borderRadius: open ? const BorderRadius.vertical(top: Radius.circular(12)) : BorderRadius.circular(12),
+            onTap: onTap,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              child: Row(children: [
+                Icon(Icons.record_voice_over_outlined, size: 18, color: colors.chazarah),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text.rich(
+                    TextSpan(children: [
+                      TextSpan(text: label, style: const TextStyle(fontWeight: FontWeight.w700)),
+                      if (title.isNotEmpty) TextSpan(text: ' · $title'),
+                    ]),
+                    style: theme.textTheme.bodyMedium?.copyWith(color: colors.chazarah),
+                  ),
+                ),
+                Text(context.tr(open ? 'Hide' : 'Show'), style: theme.textTheme.labelMedium?.copyWith(color: colors.chazarah)),
+                Icon(open ? Icons.expand_less : Icons.expand_more, size: 18, color: colors.chazarah),
+              ]),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// One expanded row of the repetition, tinted and faded.
+class _ChazarahBody extends StatelessWidget {
+  final Widget child;
+  const _ChazarahBody({required this.child});
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = SiddurColors.of(context);
+    return Container(
+      padding: const EdgeInsetsDirectional.only(start: 10, end: 6),
+      decoration: BoxDecoration(
+        color: colors.chazarahFill,
+        border: BorderDirectional(start: BorderSide(color: colors.chazarah, width: 3)),
+      ),
+      child: Opacity(opacity: 0.72, child: child),
+    );
+  }
+}
+
+/// A halachic note shown as one line until tapped.
+class _NoteRow extends ConsumerWidget {
+  final SegmentItem item;
+  final bool open;
+  final VoidCallback onTap;
+  final Widget? child;
+  const _NoteRow({required this.item, required this.open, required this.onTap, this.child});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
+    final colors = SiddurColors.of(context);
+    final hebFont = ref.watch(settingsProvider.select((s) => s.hebrewFont));
+    final seg = item.tr ?? item.he;
+    final excerpt = seg == null ? '' : stripHtml(seg.segment.html).replaceAll(RegExp(r'\s+'), ' ').trim();
+    final rtl = seg?.segment.hebrew ?? false;
+    final header = InkWell(
+      borderRadius: BorderRadius.circular(10),
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+        child: Row(children: [
+          Icon(Icons.menu_book_outlined, size: 16, color: colors.note),
+          const SizedBox(width: 8),
+          Text(context.tr('Halachic note'), style: theme.textTheme.labelMedium?.copyWith(color: colors.note, fontWeight: FontWeight.w700)),
+          const SizedBox(width: 8),
+          Expanded(
+            child: open
+                ? const SizedBox.shrink()
+                : Text(excerpt,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    textDirection: rtl ? TextDirection.rtl : TextDirection.ltr,
+                    style: theme.textTheme.bodySmall?.copyWith(color: colors.note.withValues(alpha: 0.8), fontFamily: rtl ? hebFont : null)),
+          ),
+          Icon(open ? Icons.expand_less : Icons.expand_more, size: 18, color: colors.note),
+        ]),
+      ),
+    );
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 3),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: colors.note.withValues(alpha: 0.3)),
+      ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        header,
+        if (child != null) Padding(padding: const EdgeInsets.fromLTRB(10, 0, 10, 6), child: child),
+      ]),
+    );
+  }
+}
+
+/// Kiddush / Kadesh as a single card: the blessings in order, with the
+/// parts said only on some nights labelled inline rather than folded away.
+class _UnitCard extends ConsumerWidget {
+  final SchemaNode node;
+  final List<SegmentItem> items;
+  final TextLayout layout;
+  const _UnitCard({required this.node, required this.items, required this.layout});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
+    final s = ref.watch(settingsProvider);
+    // Leading title lines ("הגדה של פסח", "קדש") repeat the heading.
+    var start = 0;
+    while (start < items.length && items[start].kind == SegmentKind.speaker) {
+      start++;
+    }
+    final body = items.sublist(start);
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 8),
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+      decoration: BoxDecoration(
+        color: theme.colorScheme.surfaceContainerLow,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: theme.colorScheme.outlineVariant),
+      ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        Row(children: [
+          Icon(Icons.wine_bar_outlined, size: 18, color: theme.colorScheme.primary),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Text(context.term(node.en),
+                style: theme.textTheme.titleSmall?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.w700)),
+          ),
+          Text(node.he,
+              textDirection: TextDirection.rtl,
+              style: TextStyle(fontFamily: s.hebrewFont, fontSize: 18, color: theme.colorScheme.primary, fontWeight: FontWeight.w700)),
+        ]),
+        const Divider(height: 16),
+        for (var i = 0; i < body.length; i++)
+          if (!isRedundantRubric(body[i], i + 1 < body.length ? body[i + 1] : null, s))
+            _SegmentView(item: body[i], layout: layout, compact: true),
+      ]),
+    );
+  }
 }

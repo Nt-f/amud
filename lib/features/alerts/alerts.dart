@@ -10,6 +10,7 @@ import '../../core/providers.dart';
 import '../../core/settings.dart';
 import '../zmanim/zman_catalog.dart';
 import 'notification_backend.dart';
+import 'timer_backend.dart';
 
 /// A user-configured notification tied to a zman.
 class ZmanAlert {
@@ -119,15 +120,29 @@ List<PlannedNotification> planNotifications({
           : a.offsetMinutes < 0
               ? '$name in ${-a.offsetMinutes} min ($timeStr)'
               : '$name was ${a.offsetMinutes} min ago ($timeStr)';
-      out.add(PlannedNotification(0, fire, a.title, body, a.id));
+      out.add(PlannedNotification(notificationId(a.id, date), fire, a.title, body, a.id));
     }
   }
   out.sort((a, b) => a.fireAt.compareTo(b.fireAt));
-  final capped = out.take(max).toList();
-  return [
-    for (var i = 0; i < capped.length; i++)
-      PlannedNotification(1000 + i, capped[i].fireAt, capped[i].title, capped[i].body, capped[i].alertId),
+  // Two alerts that would say the same thing at the same minute are one
+  // notification.
+  final seen = <String>{};
+  final unique = [
+    for (final p in out)
+      if (seen.add('${p.fireAt.millisecondsSinceEpoch ~/ 60000}|${p.title}|${p.body}')) p,
   ];
+  return unique.take(max).toList();
+}
+
+/// A stable id per alert and day, so re-planning replaces a scheduled
+/// notification instead of adding a second copy (ids below 1000 are
+/// reserved for test notifications).
+int notificationId(String alertId, PlainDate date) {
+  var h = 0x811c9dc5;
+  for (final c in '$alertId@${date.abs}'.codeUnits) {
+    h = ((h ^ c) * 0x01000193) & 0x7fffffff;
+  }
+  return 1000 + h % 0x7ffff000;
 }
 
 String _fmt(DateTime t, bool h12) {
@@ -167,9 +182,33 @@ class AlertScheduler {
   final Ref ref;
   AlertScheduler(this.ref);
 
+  Future<int>? _running;
+  bool _again = false;
+
+  /// Re-plans notifications. Calls made while a pass is running are
+  /// coalesced into one follow-up pass, so passes never interleave.
   Future<int> reschedule() async {
+    if (_running != null) {
+      _again = true;
+      return _running!;
+    }
+    try {
+      int n;
+      do {
+        _again = false;
+        _running = _pass();
+        n = await _running!;
+      } while (_again);
+      return n;
+    } finally {
+      _running = null;
+    }
+  }
+
+  Future<int> _pass() async {
     final backend = ref.read(notificationBackendProvider);
     await backend.init();
+    if (backend is TimerNotificationBackend) backend.onPlanExhausted = reschedule;
     final settings = ref.read(settingsProvider);
     final plan = planNotifications(
       alerts: ref.read(alertsProvider),
@@ -190,6 +229,10 @@ class AlertScheduler {
 
 final alertSchedulerProvider = Provider<AlertScheduler>((ref) {
   final s = AlertScheduler(ref);
+  // Long-running sessions (desktop, an open browser tab) plan ahead again
+  // as days pass.
+  final timer = Timer.periodic(const Duration(hours: 6), (_) => s.reschedule());
+  ref.onDispose(timer.cancel);
   // Re-plan whenever inputs change.
   ref.listen(alertsProvider, (_, _) => s.reschedule());
   ref.listen(customZmanimProvider, (_, _) => s.reschedule());

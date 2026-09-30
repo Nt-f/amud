@@ -111,7 +111,37 @@
         "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
         "Sefaria Community Translation"
       ]
-    }
+    },
+    "segments": [
+      {
+        "path": "Pesach Haggadah/Kadesh",
+        "index": 3,
+        "when": "shabbat",
+        "labelEn": "On Shabbat",
+        "labelHe": "בשבת"
+      },
+      {
+        "path": "Pesach Haggadah/Kadesh",
+        "index": 4,
+        "when": "shabbat",
+        "labelEn": "On Shabbat",
+        "labelHe": "בשבת"
+      },
+      {
+        "path": "Pesach Haggadah/Kadesh",
+        "index": 10,
+        "when": "motzaeiShabbat",
+        "labelEn": "Motzaei Shabbat",
+        "labelHe": "במוצאי שבת"
+      },
+      {
+        "path": "Pesach Haggadah/Kadesh",
+        "index": 11,
+        "when": "motzaeiShabbat",
+        "labelEn": "Motzaei Shabbat",
+        "labelHe": "במוצאי שבת"
+      }
+    ]
   },
   "Siddur Edot HaMizrach": {
     "inserts": [

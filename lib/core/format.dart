@@ -25,5 +25,9 @@ String formatCountdown(Duration d) {
 const weekdayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Shabbat'];
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+/// Spelling of the seventh day in formatted dates; set from the Ashkenazi
+/// spelling preference.
+String shabbatName = 'Shabbat';
+
 String formatPlainDate(PlainDate d, {bool weekday = true}) =>
-    '${weekday ? '${weekdayNames[d.dayOfWeek]}, ' : ''}${monthNames[d.month - 1]} ${d.day}, ${d.year}';
+    '${weekday ? '${d.dayOfWeek == 6 ? shabbatName : weekdayNames[d.dayOfWeek]}, ' : ''}${monthNames[d.month - 1]} ${d.day}, ${d.year}';

@@ -53,7 +53,9 @@ class _NativeBackend implements NotificationBackend {
         requestBadgePermission: false,
         requestSoundPermission: false,
       ),
-    ));
+    ), onDidReceiveNotificationResponse: (_) => notificationTaps.value = DateTime.now());
+    final launch = await _plugin.getNotificationAppLaunchDetails();
+    if (launch?.didNotificationLaunchApp ?? false) notificationTaps.value = DateTime.now();
     _ready = true;
   }
 
@@ -81,9 +83,12 @@ class _NativeBackend implements NotificationBackend {
   @override
   Future<void> replaceAll(List<PlannedNotification> plan, {bool exact = false}) async {
     await init();
+    // Ids are stable per alert and day: scheduling an id again replaces
+    // it, so only notifications no longer in the plan are cancelled.
+    final keep = {for (final p in plan) p.id};
     final pending = await _plugin.pendingNotificationRequests();
     for (final p in pending) {
-      if (p.id >= 1000) await _plugin.cancel(p.id);
+      if (p.id >= 1000 && !keep.contains(p.id)) await _plugin.cancel(p.id);
     }
     var mode = exact ? AndroidScheduleMode.exactAllowWhileIdle : AndroidScheduleMode.inexactAllowWhileIdle;
     if (Platform.isAndroid && exact) {
@@ -128,13 +133,23 @@ class _DesktopTimerBackend extends TimerNotificationBackend {
     try {
       await _plugin.initialize(const InitializationSettings(
         linux: LinuxInitializationSettings(defaultActionName: 'Open'),
-      ));
+      ), onDidReceiveNotificationResponse: (_) => notificationTaps.value = DateTime.now());
     } catch (_) {}
     _ready = true;
   }
 
   @override
   Future<bool> requestPermission({bool exact = false}) async => true;
+
+  @override
+  Future<void> showScheduled(PlannedNotification p) async {
+    await init();
+    try {
+      await _plugin.show(p.id, p.title, p.body, const NotificationDetails(linux: LinuxNotificationDetails()));
+    } catch (e) {
+      debugPrint('notify failed: $e');
+    }
+  }
 
   @override
   Future<void> showNow(String title, String body) async {

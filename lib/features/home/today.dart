@@ -39,6 +39,9 @@ class TodaySnapshot {
     required this.learningHe,
   });
 
+  /// Past sunset: the Hebrew date has advanced but the civil day hasn't.
+  bool get afterSunset => !halachic.isSameDate(hdate);
+
   tz.TZDateTime local(DateTime t) => tz.TZDateTime.from(t, location.tzLocation);
 
   /// The next upcoming zman among [keys].
@@ -72,7 +75,15 @@ class TodaySnapshot {
         'he': hdate.renderGematriya(true),
         'heNikud': hdate.renderGematriya(),
       },
-      'afterSunset': !halachic.isSameDate(hdate),
+      'afterSunset': afterSunset,
+      'halachicDate': {
+        'day': halachic.getDate(),
+        'month': halachic.getMonth(),
+        'monthName': halachic.getMonthName(),
+        'year': halachic.getFullYear(),
+        'en': halachic.render('en'),
+        'he': halachic.renderGematriya(true),
+      },
       'location': {
         'name': location.getName(),
         'latitude': location.latitude,
@@ -93,6 +104,13 @@ class TodaySnapshot {
       'learningHe': learningHe,
     };
   }
+}
+
+/// This week's parsha (or the holiday reading) for [hd], in [locale].
+String parshaName(HDate hd, bool il, String locale) {
+  final shabbat = hd.onOrAfter(6);
+  final p = getSedra(shabbat.getFullYear(), il).lookup(shabbat);
+  return p.chag ? Locale.gettext(p.parsha.first, locale) : renderParshaName(p.parsha, locale);
 }
 
 final todaySnapshotProvider = Provider<TodaySnapshot>((ref) {

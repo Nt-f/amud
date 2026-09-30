@@ -26,7 +26,11 @@ class HomeScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(today.hdate.render(context.hebcalLocale), style: theme.textTheme.titleMedium),
+          Text(
+              today.afterSunset
+                  ? '${today.halachic.render(context.hebcalLocale)} · ${context.tr('night')}'
+                  : today.halachic.render(context.hebcalLocale),
+              style: theme.textTheme.titleMedium),
           Text(loc, style: theme.textTheme.bodySmall),
         ]),
         actions: [
@@ -75,7 +79,7 @@ class HomeScreen extends ConsumerWidget {
             for (final t in registry.all)
               ListTile(
                 leading: CircleAvatar(child: Icon(t.icon)),
-                title: Text(t.title),
+                title: Text(context.tr(t.title)),
                 subtitle: Text(t.description),
                 onTap: () => Navigator.pop(ctx, t),
               ),

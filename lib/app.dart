@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import 'core/format.dart';
 import 'core/l10n.dart';
 import 'core/settings.dart';
 import 'core/theme.dart';
@@ -13,6 +14,7 @@ import 'features/learning/learning_screen.dart';
 import 'features/settings/font_gallery_screen.dart';
 import 'features/settings/location_screen.dart';
 import 'features/settings/settings_screen.dart';
+import 'features/setup/setup_screen.dart';
 import 'features/siddur/library_screen.dart';
 import 'features/siddur/meein_shalosh_screen.dart';
 import 'features/siddur/reader_screen.dart';
@@ -27,6 +29,12 @@ final _rootKey = GlobalKey<NavigatorState>();
 final routerProvider = Provider<GoRouter>((ref) => GoRouter(
       navigatorKey: _rootKey,
       initialLocation: '/',
+      // First run: walk through the main options before anything else.
+      redirect: (context, state) {
+        final done = ref.read(settingsProvider).setupDone;
+        final inSetup = state.matchedLocation == '/setup' || state.matchedLocation.startsWith('/settings/');
+        return !done && !inSetup ? '/setup' : null;
+      },
       routes: [
         StatefulShellRoute.indexedStack(
           builder: (context, state, shell) => AdaptiveShell(shell: shell),
@@ -82,6 +90,7 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
             ]),
           ],
         ),
+        GoRoute(path: '/setup', parentNavigatorKey: _rootKey, builder: (c, s) => const SetupScreen()),
         GoRoute(path: '/alerts', parentNavigatorKey: _rootKey, builder: (c, s) => const AlertsScreen()),
         GoRoute(path: '/learning', parentNavigatorKey: _rootKey, builder: (c, s) => const LearningScreen()),
         GoRoute(path: '/meein-shalosh', parentNavigatorKey: _rootKey, builder: (c, s) => const MeeinShaloshScreen()),
@@ -94,6 +103,7 @@ class SiddurApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final s = ref.watch(settingsProvider);
+    shabbatName = s.ashkenaziSpelling ? 'Shabbos' : 'Shabbat';
     return MaterialApp.router(
       title: 'Siddur',
       debugShowCheckedModeBanner: false,

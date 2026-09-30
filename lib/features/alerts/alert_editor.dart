@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 
+import '../../core/adaptive.dart';
+import '../../core/settings.dart';
 import '../zmanim/zman_catalog.dart';
 import 'alerts.dart';
 
@@ -76,7 +78,7 @@ class _AlertEditorState extends ConsumerState<_AlertEditor> {
             const SizedBox(height: 12),
             TextField(controller: _title, decoration: InputDecoration(labelText: 'Title', hintText: names.name(zmanKey))),
             const SizedBox(height: 12),
-            Text('Only on', style: theme.textTheme.titleSmall),
+            const SheetLabel('Only on'),
             Wrap(spacing: 6, runSpacing: 6, children: [
               for (final (label, expr) in _presets)
                 ChoiceChip(label: Text(label), selected: _when.text == expr, onSelected: (_) => setState(() => _when.text = expr)),
@@ -102,7 +104,7 @@ class _AlertEditorState extends ConsumerState<_AlertEditor> {
                   return;
                 }
                 final backend = ref.read(notificationBackendProvider);
-                await backend.requestPermission();
+                await backend.requestPermission(exact: ref.read(settingsProvider).exactAlarms);
                 final a = ZmanAlert(
                   id: widget.existing?.id ?? DateTime.now().microsecondsSinceEpoch.toString(),
                   title: _title.text.trim().isEmpty ? names.name(zmanKey) : _title.text.trim(),

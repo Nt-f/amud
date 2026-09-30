@@ -30,6 +30,7 @@ class ZmanimScreen extends ConsumerWidget {
     final loc = ref.watch(locationProvider);
     final z = ref.watch(zmanimProvider(date));
     final custom = ref.watch(customZmanimProvider);
+    final names = ref.watch(zmanResolverProvider);
     final now = ref.watch(nowProvider).value ?? DateTime.now();
     final showAll = ref.watch(_showAllProvider);
     final hd = HDate.fromAbs(date.abs);
@@ -54,13 +55,13 @@ class ZmanimScreen extends ConsumerWidget {
         if (defs.any((d) => d.group == g)) ...[
           Padding(
             padding: const EdgeInsets.fromLTRB(4, 16, 4, 4),
-            child: Text(_groupName(g), style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary)),
+            child: Text(context.term(_groupName(g)), style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary)),
           ),
           Card(
             child: Column(children: [
               for (final d in defs.where((d) => d.group == g))
                 _ZmanRow(
-                  name: d.en,
+                  name: names.name(d.key),
                   he: d.he,
                   opinion: d.opinion,
                   time: times[d.key],
@@ -68,7 +69,7 @@ class ZmanimScreen extends ConsumerWidget {
                   hour12: s.hour12,
                   isNext: d.key == nextKey,
                   passed: isToday && times[d.key] != null && times[d.key]!.isBefore(now),
-                  onTap: () => _zmanActions(context, ref, d.key, d.en),
+                  onTap: () => _zmanActions(context, ref, d.key, names.name(d.key)),
                 ),
             ]),
           ),
@@ -125,11 +126,11 @@ class ZmanimScreen extends ConsumerWidget {
           _DateNav(date: date, hd: hd, isToday: isToday),
           const SizedBox(height: 8),
           SegmentedButton<Object>(
-            segments: const [
-              ButtonSegment(value: ZmanimOpinion.gra, label: Text('GRA')),
-              ButtonSegment(value: ZmanimOpinion.mga, label: Text('MGA')),
-              ButtonSegment(value: ZmanimOpinion.baalHatanya, label: Text('Baal HaTanya')),
-              ButtonSegment(value: 'all', label: Text('All')),
+            segments: [
+              const ButtonSegment(value: ZmanimOpinion.gra, label: Text('GRA')),
+              const ButtonSegment(value: ZmanimOpinion.mga, label: Text('MGA')),
+              ButtonSegment(value: ZmanimOpinion.baalHatanya, label: Text(context.term('Baal HaTanya'))),
+              const ButtonSegment(value: 'all', label: Text('All')),
             ],
             selected: {showAll ? 'all' : s.opinion},
             onSelectionChanged: (v) {
@@ -225,6 +226,8 @@ class _DateNav extends ConsumerWidget {
     final il = ref.watch(settingsProvider.select((s) => s.location.il));
     final hol = getHolidaysOnDate(hd, il).where((e) => !e.hasFlag(Flags.yomKippurKatan) && !e.hasFlag(Flags.behab));
     void go(int d) => ref.read(_zmanimDateProvider.notifier).state = date.addDays(d);
+    final halachic = ref.watch(halachicTodayProvider);
+    final tonight = isToday && !halachic.isSameDate(hd) ? halachic : null;
     return Row(children: [
       IconButton(onPressed: () => go(-1), icon: const Icon(Icons.chevron_left)),
       Expanded(
@@ -239,6 +242,9 @@ class _DateNav extends ConsumerWidget {
             child: Column(children: [
               Text(formatPlainDate(date), style: theme.textTheme.titleMedium),
               Text('${hd.render(context.hebcalLocale)} · ${hd.renderGematriya(true)}', style: theme.textTheme.bodySmall),
+              if (tonight != null)
+                Text(context.tr('Tonight: {date}', {'date': '${tonight.render(context.hebcalLocale)} · ${tonight.renderGematriya(true)}'}),
+                    style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.w600)),
               if (hol.isNotEmpty)
                 Text(hol.map((e) => e.render(context.hebcalLocale)).join(' · '),
                     style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.tertiary), textAlign: TextAlign.center),
@@ -344,10 +350,10 @@ class _SunArcCard extends StatelessWidget {
           DefaultTextStyle(
             style: theme.textTheme.bodySmall!.copyWith(color: night ? Colors.white : Colors.black87),
             child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-              _cap('Alot', formatTime(alot, loc, hour12: hour12)),
+              _cap(context.term('Alot'), formatTime(alot, loc, hour12: hour12)),
               _cap('Netz', formatTime(rise, loc, hour12: hour12)),
               _cap('Shkiah', formatTime(set, loc, hour12: hour12)),
-              _cap('Tzeit', formatTime(tzeit, loc, hour12: hour12)),
+              _cap(context.term('Tzeit'), formatTime(tzeit, loc, hour12: hour12)),
             ]),
           ),
           if (dayLen != null)
@@ -435,7 +441,7 @@ class _SpecialTimes extends ConsumerWidget {
     for (final e in events) {
       if (e is TimedEvent) rows.add((e.renderBrief(context.hebcalLocale), formatTime(e.eventTime, loc, hour12: s.hour12)));
       if (e is TimedChanukahEvent && e.eventTime != null) {
-        rows.add(('Chanukah candles', formatTime(e.eventTime, loc, hour12: s.hour12)));
+        rows.add((context.term('Chanukah candles'), formatTime(e.eventTime, loc, hour12: s.hour12)));
       }
       if (e is MoladEvent) rows.add(('Molad', e.molad.render('en', s.hour12)));
     }
@@ -443,9 +449,9 @@ class _SpecialTimes extends ConsumerWidget {
     final kl3 = z.getTchilasZmanKidushLevana3Days();
     final kl7 = z.getTchilasZmanKidushLevana7Days();
     final klEnd = z.getSofZmanKidushLevana15Days();
-    if (kl3 != null) rows.add(('Kiddush Levana from (3 days)', formatTime(kl3, loc, hour12: s.hour12)));
-    if (kl7 != null) rows.add(('Kiddush Levana from (7 days)', formatTime(kl7, loc, hour12: s.hour12)));
-    if (klEnd != null) rows.add(('Kiddush Levana until', formatTime(klEnd, loc, hour12: s.hour12)));
+    if (kl3 != null) rows.add((context.term('Kiddush Levana from (3 days)'), formatTime(kl3, loc, hour12: s.hour12)));
+    if (kl7 != null) rows.add((context.term('Kiddush Levana from (7 days)'), formatTime(kl7, loc, hour12: s.hour12)));
+    if (klEnd != null) rows.add((context.term('Kiddush Levana until'), formatTime(klEnd, loc, hour12: s.hour12)));
     final molad = z.getZmanMolad();
     if (molad != null) rows.add(('Molad (local time)', formatTime(molad, loc, hour12: s.hour12)));
     if (rows.isEmpty) return const SizedBox.shrink();
@@ -453,7 +459,7 @@ class _SpecialTimes extends ConsumerWidget {
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text('Today\'s special times', style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary)),
+          Text(context.term('Today\'s special times'), style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary)),
           const SizedBox(height: 8),
           for (final (a, b) in rows)
             Padding(

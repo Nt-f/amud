@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hebcal/hebcal.dart';
 
+import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
 
@@ -194,9 +195,14 @@ final customZmanimProvider = NotifierProvider<CustomZmanimNotifier, List<CustomZ
 /// calculator.
 class ZmanResolver {
   final Map<String, CustomZman> custom;
-  ZmanResolver(List<CustomZman> list) : custom = {for (final c in list) c.key: c};
 
-  String name(String key) => builtInByKey[key]?.en ?? custom[key]?.name ?? key;
+  /// Ashkenazi transliteration of built-in names ("Chatzos", "Tzeis").
+  final bool ashkenazi;
+  ZmanResolver(List<CustomZman> list, {this.ashkenazi = false}) : custom = {for (final c in list) c.key: c};
+
+  String _spell(String en) => ashkenazi ? ashkenaziSpelling(en) : en;
+
+  String name(String key) => builtInByKey[key] != null ? _spell(builtInByKey[key]!.en) : custom[key]?.name ?? key;
   String nameHe(String key) => builtInByKey[key]?.he ?? custom[key]?.name ?? key;
 
   DateTime? compute(String key, Zmanim z) {
@@ -207,7 +213,7 @@ class ZmanResolver {
 
   Iterable<(String, String)> get allKeys sync* {
     for (final z in builtInZmanim) {
-      yield (z.key, z.en);
+      yield (z.key, _spell(z.en));
     }
     for (final c in custom.values) {
       yield (c.key, c.name);
@@ -215,4 +221,5 @@ class ZmanResolver {
   }
 }
 
-final zmanResolverProvider = Provider<ZmanResolver>((ref) => ZmanResolver(ref.watch(customZmanimProvider)));
+final zmanResolverProvider = Provider<ZmanResolver>((ref) =>
+    ZmanResolver(ref.watch(customZmanimProvider), ashkenazi: ref.watch(settingsProvider.select((s) => s.ashkenaziSpelling))));
