@@ -12,7 +12,7 @@ import 'apk_installer.dart';
 
 /// Where releases are published (GitHub Releases, built by
 /// .github/workflows/build.yml on a `v*` tag).
-const updateRepo = 'Nt-f/flutter_siddur';
+const updateRepo = 'Nt-f/amud';
 
 /// A published release newer than the running app.
 class UpdateInfo {

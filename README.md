@@ -6,7 +6,7 @@ It runs on Android, Windows, macOS, Linux and the web (as an installable
 PWA). iOS builds are released unsigned, for sideloading.
 
 - **Website:** https://amud.page (the web app is at https://amud.page/app/)
-- **Apps:** [latest release](https://github.com/Nt-f/flutter_siddur/releases/latest):
+- **Apps:** [latest release](https://github.com/Nt-f/amud/releases/latest):
   `amud-android.apk`, `amud-windows.zip`, `amud-macos.zip`,
   `amud-linux-x64.tar.gz`, `amud-ios-unsigned.ipa`, and `amud-web.zip` (the
   built site). The apps check for new releases. Android downloads and
