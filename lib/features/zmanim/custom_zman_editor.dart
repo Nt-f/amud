@@ -6,6 +6,7 @@ import '../../core/format.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
 import 'zman_catalog.dart';
+import '../../core/l10n.dart';
 
 Future<void> showCustomZmanEditor(BuildContext context, WidgetRef ref, {CustomZman? existing}) =>
     showModalBottomSheet<void>(
@@ -58,13 +59,13 @@ class _CustomZmanEditorState extends ConsumerState<_CustomZmanEditor> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
             Text(widget.existing == null ? 'New custom zman' : 'Edit custom zman', style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: 12),
-            TextField(controller: _name, decoration: const InputDecoration(labelText: 'Name'), onChanged: (_) => setState(() {})),
+            TextField(controller: _name, decoration: InputDecoration(labelText: context.tr('Name')), onChanged: (_) => setState(() {})),
             const SizedBox(height: 12),
             ChoiceBar<CustomZmanKind>(
-              options: const [
-                (CustomZmanKind.offset, 'Offset', null),
-                (CustomZmanKind.degrees, 'Sun angle', null),
-                (CustomZmanKind.shaahZmanit, 'Shaos', null),
+              options: [
+                (CustomZmanKind.offset, context.tr('Offset'), null),
+                (CustomZmanKind.degrees, context.tr('Sun angle'), null),
+                (CustomZmanKind.shaahZmanit, context.term('Shaot'), null),
               ],
               selected: kind,
               onChanged: (v) => setState(() => kind = v),
@@ -74,15 +75,15 @@ class _CustomZmanEditorState extends ConsumerState<_CustomZmanEditor> {
               CustomZmanKind.offset => [
                   DropdownButtonFormField<String>(
                     initialValue: baseKey,
-                    decoration: const InputDecoration(labelText: 'Relative to'),
+                    decoration: InputDecoration(labelText: context.tr('Relative to')),
                     items: [for (final d in builtInZmanim) DropdownMenuItem(value: d.key, child: Text(d.en))],
                     onChanged: (v) => setState(() => baseKey = v!),
                   ),
-                  Text('Minutes: ${minutes.toStringAsFixed(1)} (${minutes < 0 ? 'before' : 'after'})'),
+                  Text(context.tr(minutes < 0 ? 'Minutes: {n} (before)' : 'Minutes: {n} (after)', {'n': minutes.toStringAsFixed(1)})),
                   Slider.adaptive(value: minutes, min: -180, max: 180, divisions: 720, onChanged: (v) => setState(() => minutes = v)),
                 ],
               CustomZmanKind.degrees => [
-                  Text('Sun ${value.toStringAsFixed(2)}° below the horizon'),
+                  Text(context.tr('Sun {deg}° below the horizon', {'deg': value.toStringAsFixed(2)})),
                   Slider.adaptive(value: value.clamp(-2, 26), min: -2, max: 26, divisions: 1120, onChanged: (v) => setState(() => value = v)),
                   SwitchListTile.adaptive(
                     contentPadding: EdgeInsets.zero,
@@ -96,7 +97,7 @@ class _CustomZmanEditorState extends ConsumerState<_CustomZmanEditor> {
                   Slider.adaptive(value: value.clamp(0, 12), min: 0, max: 12, divisions: 48, onChanged: (v) => setState(() => value = v)),
                   DropdownButtonFormField<String>(
                     initialValue: system,
-                    decoration: const InputDecoration(labelText: 'Day defined by'),
+                    decoration: InputDecoration(labelText: context.tr('Day defined by')),
                     items: const [
                       DropdownMenuItem(value: 'gra', child: Text('GRA (sunrise–sunset)')),
                       DropdownMenuItem(value: 'mga', child: Text('MGA (72 min)')),
@@ -108,14 +109,14 @@ class _CustomZmanEditorState extends ConsumerState<_CustomZmanEditor> {
                 ],
             },
             const SizedBox(height: 8),
-            Text('Today: ${formatTime(preview, loc, hour12: hour12, seconds: true)}', style: Theme.of(context).textTheme.titleMedium),
+            Text(context.tr('Today: {time}', {'time': formatTime(preview, loc, hour12: hour12, seconds: true)}), style: Theme.of(context).textTheme.titleMedium),
             const SizedBox(height: 16),
             FilledButton(
               onPressed: () {
                 ref.read(customZmanimProvider.notifier).upsert(draft);
                 Navigator.pop(context);
               },
-              child: const Text('Save'),
+              child: Text(context.tr('Save')),
             ),
           ]),
         ),

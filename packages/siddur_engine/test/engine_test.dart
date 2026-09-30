@@ -167,6 +167,26 @@ void main() {
       expect(items.where((s) => s.kind == SegmentKind.note), isEmpty);
     });
 
+    test("each day's Hoshanos apply on that day only", () async {
+      final resolver = SiddurResolver();
+      List<String> today(SchemaNode parent, HDate hd) => [
+            for (final n in parent.children)
+              if (Condition.parse(resolver.sectionRuleFor(n)?.when ?? 'false').eval(DayContext(hd, il: false).env)) n.en,
+          ];
+      final hoshanot = root.find("Festivals/Sukkot/Hosha'anot")!;
+      // 5787: the first day of Sukkot is Shabbat.
+      expect(today(hoshanot, HDate(15, Months.tishrei, 5787)), ['For Shabbat Chol Hamoed']);
+      expect(today(hoshanot, HDate(19, Months.tishrei, 5787)), ['Fifth Day of Sukkot']);
+      expect(today(hoshanot, HDate(21, Months.tishrei, 5787)), ["Hosha'ana Rabba"]);
+      expect(today(hoshanot, HDate(23, Months.tishrei, 5787)), isEmpty);
+      final koren = await lib.index((await lib.manifest()).book('The Koren Shalem Siddur; Ashkenaz')!);
+      final festivals = koren.find('Festivals')!;
+      List<String> korenToday(HDate hd) => today(festivals, hd).where((t) => t.startsWith('Hoshanot')).toList();
+      expect(korenToday(HDate(21, Months.tishrei, 5787)), ['Hoshanot', 'Hoshanot for Hoshana Raba']);
+      expect(korenToday(HDate(15, Months.tishrei, 5787)), ['Hoshanot', "Hoshanot for Shabbat Hol HaMo'ed"]);
+      expect(korenToday(HDate(18, Months.tishrei, 5787)), ['Hoshanot']);
+    });
+
     test('prayer text and notes languages are independent', () async {
       final en = book.versions.firstWhere((v) => v.language == 'en' && v.versionTitle.contains('Metsudah'));
       final both = VersionSelection(sel.hebrew, [await lib.version(en)]);

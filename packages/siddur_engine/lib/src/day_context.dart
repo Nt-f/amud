@@ -355,8 +355,11 @@ class _Builder {
     set('tachanunMincha', t.mincha);
     set('tachanun', service == Service.mincha ? t.mincha : (service == Service.shacharit ? t.shacharit : false));
     set('monThu', dow == 1 || dow == 4);
-    set('torahReading', shabbat || yomTov || rc || cholHamoed || (dow == 1 || dow == 4) && service == Service.shacharit ||
-        chanukahDay > 0 || isPurim14 || minorFast || tishaBav);
+    // At Mincha the Torah is read only on Shabbat, fast days and Yom Kippur.
+    set('torahReading', service == Service.mincha
+        ? shabbat || minorFast || tishaBav || yk
+        : shabbat || yomTov || rc || cholHamoed || (dow == 1 || dow == 4) && service == Service.shacharit ||
+            chanukahDay > 0 || isPurim14 || minorFast || tishaBav);
 
     final ayt = month == Months.tishrei && day <= 10;
     set('avinuMalkeinu', !shabbat && (ayt || minorFast) && service != Service.maariv &&

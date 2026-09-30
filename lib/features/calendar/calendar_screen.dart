@@ -11,10 +11,32 @@ import '../../core/theme.dart';
 final _monthProvider = StateProvider<(int, int)?>((ref) => null);
 final _selectedProvider = StateProvider<PlainDate?>((ref) => null);
 
-/// Gregorian month grid annotated with Hebrew dates, holidays, parsha,
-/// candle lighting and Omer (all from the Hebcal port).
+/// Full-screen calendar, opened from the Home calendar card.
 class CalendarScreen extends ConsumerWidget {
   const CalendarScreen({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) => Scaffold(
+        appBar: AppBar(title: Text(context.tr('Calendar')), actions: [
+          TextButton(onPressed: () => resetCalendar(ref), child: Text(context.tr('Today'))),
+        ]),
+        body: ListView(padding: const EdgeInsets.fromLTRB(12, 0, 12, 32), children: const [CalendarView()]),
+      );
+}
+
+/// Returns the calendar to the current month and today.
+void resetCalendar(WidgetRef ref) {
+  ref.read(_monthProvider.notifier).state = null;
+  ref.read(_selectedProvider.notifier).state = null;
+}
+
+/// Gregorian month grid annotated with Hebrew dates, holidays, parsha,
+/// candle lighting and Omer (all from the Hebcal port), with the chosen
+/// day's events below. Shared by the Home card and [CalendarScreen].
+class CalendarView extends ConsumerWidget {
+  /// Tighter cells for the Home card.
+  final bool compact;
+  const CalendarView({super.key, this.compact = false});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -55,22 +77,12 @@ class CalendarScreen extends ConsumerWidget {
     final selEvents = byAbs[selected.abs] ?? const <Event>[];
     final selHd = HDate.fromAbs(selected.abs);
 
-    return Scaffold(
-      appBar: AppBar(title: const Text('Calendar'), actions: [
-        TextButton(
-          onPressed: () {
-            ref.read(_monthProvider.notifier).state = null;
-            ref.read(_selectedProvider.notifier).state = null;
-          },
-          child: const Text('Today'),
-        ),
-      ]),
-      body: ListView(padding: const EdgeInsets.fromLTRB(12, 0, 12, 32), children: [
+    return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
         Row(children: [
           IconButton(onPressed: () => shift(-1), icon: const Icon(Icons.chevron_left)),
           Expanded(
             child: Column(children: [
-              Text('${monthNames[ym.$2 - 1]} ${ym.$1}', style: theme.textTheme.titleLarge),
+              Text(formatMonth(ym.$1, ym.$2), style: theme.textTheme.titleLarge),
               Text(hebRange, style: theme.textTheme.bodySmall),
             ]),
           ),
@@ -85,7 +97,7 @@ class CalendarScreen extends ConsumerWidget {
           crossAxisCount: 7,
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
-          childAspectRatio: 0.8,
+          childAspectRatio: compact ? 0.9 : 0.8,
           children: [
             for (var i = 0; i < lead; i++) const SizedBox.shrink(),
             for (var d = 1; d <= days; d++)
@@ -120,13 +132,16 @@ class CalendarScreen extends ConsumerWidget {
         ),
         const SizedBox(height: 12),
         Card(
+          elevation: compact ? 0 : null,
+          color: compact ? theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.5) : null,
+          margin: compact ? EdgeInsets.zero : null,
           child: Padding(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(compact ? 12 : 16),
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(formatPlainDate(selected), style: theme.textTheme.titleMedium),
               Text('${selHd.render(context.hebcalLocale)} · ${selHd.renderGematriya()}', style: theme.textTheme.bodyMedium),
               const Divider(),
-              if (selEvents.isEmpty) const Text('No events'),
+              if (selEvents.isEmpty) Text(context.tr('No events')),
               for (final e in selEvents)
                 ListTile(
                   dense: true,
@@ -138,7 +153,6 @@ class CalendarScreen extends ConsumerWidget {
             ]),
           ),
         ),
-      ]),
-    );
+    ]);
   }
 }

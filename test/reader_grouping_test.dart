@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:archive/archive.dart';
-import 'package:flutter_siddur/core/settings.dart';
-import 'package:flutter_siddur/features/alerts/alerts.dart';
-import 'package:flutter_siddur/features/siddur/reader_grouping.dart';
-import 'package:flutter_siddur/features/zmanim/zman_catalog.dart';
+import 'package:amud/core/settings.dart';
+import 'package:amud/features/alerts/alerts.dart';
+import 'package:amud/features/siddur/reader_grouping.dart';
+import 'package:amud/features/zmanim/zman_catalog.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hebcal/hebcal.dart';
 import 'package:siddur_engine/siddur_engine.dart';

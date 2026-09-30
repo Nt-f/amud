@@ -106,11 +106,20 @@ class TodaySnapshot {
   }
 }
 
-/// This week's parsha (or the holiday reading) for [hd], in [locale].
-String parshaName(HDate hd, bool il, String locale) {
-  final shabbat = hd.onOrAfter(6);
-  final p = getSedra(shabbat.getFullYear(), il).lookup(shabbat);
-  return p.chag ? Locale.gettext(p.parsha.first, locale) : renderParshaName(p.parsha, locale);
+/// The next weekly parsha from [hd], in [locale]: this coming Shabbat's,
+/// or, when that Shabbat reads for a holiday instead (Shabbat Chol
+/// HaMoed, Shemini Atzeret), the first regular parsha after it, with the
+/// Shabbat it's read on. The holiday itself shows among the day's holidays.
+({String name, HDate shabbat, bool thisWeek}) upcomingParsha(HDate hd, bool il, String locale) {
+  final first = hd.onOrAfter(6);
+  var shabbat = first;
+  for (var i = 0; i < 8; i++) {
+    final p = getSedra(shabbat.getFullYear(), il).lookup(shabbat);
+    if (!p.chag && p.parsha.isNotEmpty) return (name: renderParshaName(p.parsha, locale), shabbat: shabbat, thisWeek: i == 0);
+    shabbat = shabbat.addDays(7);
+  }
+  final p = getSedra(first.getFullYear(), il).lookup(first);
+  return (name: Locale.gettext(p.parsha.first, locale), shabbat: first, thisWeek: true);
 }
 
 final todaySnapshotProvider = Provider<TodaySnapshot>((ref) {
@@ -126,8 +135,6 @@ final todaySnapshotProvider = Provider<TodaySnapshot>((ref) {
     for (final (k, _) in resolver.allKeys) k: resolver.compute(k, z),
   };
   final il = settings.location.il;
-  final shabbat = hd.onOrAfter(6);
-  final p = getSedra(shabbat.getFullYear(), il).lookup(shabbat);
   final learning = <String, String>{};
   final learningHe = <String, String>{};
   for (final name in settings.learningSchedules) {
@@ -147,8 +154,8 @@ final todaySnapshotProvider = Provider<TodaySnapshot>((ref) {
     location: loc,
     day: DayContext(hd, il: il, service: Service.other, minhagim: settings.minhagim),
     holidays: getHolidaysOnDate(hd, il).where((e) => !e.hasFlag(Flags.yomKippurKatan) && !e.hasFlag(Flags.behab)).toList(),
-    parsha: p.chag ? p.parsha.first : renderParshaName(p.parsha, 'en'),
-    parshaHe: p.chag ? Locale.gettext(p.parsha.first, 'he') : renderParshaName(p.parsha, 'he'),
+    parsha: upcomingParsha(hd, il, 'en').name,
+    parshaHe: upcomingParsha(hd, il, 'he').name,
     omerTonight: omerDay(hd.next()),
     zmanim: zmanim,
     learning: learning,

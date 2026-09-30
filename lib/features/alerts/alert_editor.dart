@@ -6,6 +6,7 @@ import '../../core/adaptive.dart';
 import '../../core/settings.dart';
 import '../zmanim/zman_catalog.dart';
 import 'alerts.dart';
+import '../../core/l10n.dart';
 
 const _presets = <(String, String)>[
   ('Every day', 'true'),
@@ -57,7 +58,7 @@ class _AlertEditorState extends ConsumerState<_AlertEditor> {
             DropdownButtonFormField<String>(
               initialValue: zmanKey,
               isExpanded: true,
-              decoration: const InputDecoration(labelText: 'Zman'),
+              decoration: InputDecoration(labelText: context.tr('Zman')),
               items: [for (final (k, n) in names.allKeys) DropdownMenuItem(value: k, child: Text(n, overflow: TextOverflow.ellipsis))],
               onChanged: (v) => setState(() => zmanKey = v!),
             ),
@@ -76,7 +77,7 @@ class _AlertEditorState extends ConsumerState<_AlertEditor> {
                 ChoiceChip(label: Text(m == 0 ? 'At' : (m < 0 ? '${-m}m before' : '${m}m after')), selected: offset == m, onSelected: (_) => setState(() => offset = m)),
             ]),
             const SizedBox(height: 12),
-            TextField(controller: _title, decoration: InputDecoration(labelText: 'Title', hintText: names.name(zmanKey))),
+            TextField(controller: _title, decoration: InputDecoration(labelText: context.tr('Title'), hintText: names.name(zmanKey))),
             const SizedBox(height: 12),
             const SheetLabel('Only on'),
             Wrap(spacing: 6, runSpacing: 6, children: [
@@ -116,7 +117,7 @@ class _AlertEditorState extends ConsumerState<_AlertEditor> {
                 ref.read(alertsProvider.notifier).upsert(a);
                 if (context.mounted) Navigator.pop(context);
               },
-              child: const Text('Save alert'),
+              child: Text(context.tr('Save alert')),
             ),
           ]),
         ),

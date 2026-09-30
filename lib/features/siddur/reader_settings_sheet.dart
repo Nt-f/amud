@@ -73,6 +73,17 @@ class _ReaderSettings extends ConsumerWidget {
             padding: const EdgeInsets.only(top: 4),
             child: Text(context.tr('Also used for "said only on…" labels'), style: theme.textTheme.bodySmall),
           ),
+          SheetLabel(context.tr('Prayer titles')),
+          ChoiceBar<TitleLanguage>(
+            options: [
+              (TitleLanguage.auto, context.tr('Auto'), null),
+              (TitleLanguage.english, context.tr('English'), null),
+              (TitleLanguage.hebrew, context.tr('Hebrew'), null),
+              (TitleLanguage.both, context.tr('Both'), null),
+            ],
+            selected: s.titleLanguage,
+            onChanged: (v) => n.update((x) => x.copyWith(titleLanguage: v)),
+          ),
           const SizedBox(height: 16),
           ListTile(
             contentPadding: EdgeInsets.zero,

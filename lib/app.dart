@@ -15,15 +15,19 @@ import 'features/learning/learning_screen.dart';
 import 'features/settings/font_gallery_screen.dart';
 import 'features/settings/location_screen.dart';
 import 'features/settings/settings_screen.dart';
+import 'features/setup/launch_animation.dart';
 import 'features/setup/setup_screen.dart';
 import 'features/update/update_screen.dart';
 import 'features/siddur/library_screen.dart';
 import 'features/siddur/meein_shalosh_screen.dart';
 import 'features/siddur/reader_screen.dart';
+import 'features/siddur/seasons_screen.dart';
+import 'features/siddur/today_screen.dart';
 import 'features/siddur/versions_screen.dart';
 import 'features/tehillim/tehillim_data.dart';
 import 'features/tehillim/tehillim_reader.dart';
 import 'features/tehillim/tehillim_screen.dart';
+import 'features/torah/torah_screen.dart';
 import 'features/zmanim/zmanim_screen.dart';
 
 final _rootKey = GlobalKey<NavigatorState>();
@@ -47,6 +51,7 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                 path: '/siddur',
                 builder: (c, s) => LibraryScreen(section: s.uri.queryParameters['section']),
                 routes: [
+                  GoRoute(path: 'seasons', builder: (c, s) => const SeasonsScreen()),
                   GoRoute(
                     path: 'tehillim',
                     builder: (c, s) => const TehillimScreen(),
@@ -78,7 +83,40 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
               ),
             ]),
             StatefulShellBranch(routes: [GoRoute(path: '/zmanim', builder: (c, s) => const ZmanimScreen())]),
-            StatefulShellBranch(routes: [GoRoute(path: '/calendar', builder: (c, s) => const CalendarScreen())]),
+            StatefulShellBranch(routes: [
+              GoRoute(
+                path: '/torah',
+                builder: (c, s) => const TorahScreen(),
+                routes: [
+                  GoRoute(
+                    path: ':category',
+                    builder: (c, s) => TorahCategoryScreen(category: s.pathParameters['category']!),
+                    routes: [
+                      GoRoute(
+                        path: ':work',
+                        builder: (c, s) => TorahWorkScreen(category: s.pathParameters['category']!, work: s.pathParameters['work']!),
+                        routes: [
+                          GoRoute(
+                            path: 'read',
+                            builder: (c, s) {
+                              final q = s.uri.queryParameters;
+                              return TorahReaderScreen(
+                                key: ValueKey(s.uri.toString()),
+                                category: s.pathParameters['category']!,
+                                work: s.pathParameters['work']!,
+                                siman: int.tryParse(q['siman'] ?? '') ?? 1,
+                                from: int.tryParse(q['from'] ?? ''),
+                                to: int.tryParse(q['to'] ?? ''),
+                              );
+                            },
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ]),
             StatefulShellBranch(routes: [
               GoRoute(
                 path: '/settings',
@@ -99,9 +137,11 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
           parentNavigatorKey: _rootKey,
           builder: (c, s) => ReaderScreen(book: s.pathParameters['book']!, nodeId: s.uri.queryParameters['node'] ?? '', standalone: true),
         ),
+        GoRoute(path: '/today', parentNavigatorKey: _rootKey, builder: (c, s) => const TodayDaveningScreen()),
         GoRoute(path: '/update', parentNavigatorKey: _rootKey, builder: (c, s) => const UpdateScreen()),
         GoRoute(path: '/setup', parentNavigatorKey: _rootKey, builder: (c, s) => const SetupScreen()),
         GoRoute(path: '/alerts', parentNavigatorKey: _rootKey, builder: (c, s) => const AlertsScreen()),
+        GoRoute(path: '/calendar', parentNavigatorKey: _rootKey, builder: (c, s) => const CalendarScreen()),
         GoRoute(path: '/learning', parentNavigatorKey: _rootKey, builder: (c, s) => const LearningScreen()),
         GoRoute(path: '/meein-shalosh', parentNavigatorKey: _rootKey, builder: (c, s) => const MeeinShaloshScreen()),
       ],
@@ -114,8 +154,9 @@ class SiddurApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final s = ref.watch(settingsProvider);
     shabbatName = s.ashkenaziSpelling ? 'Shabbos' : 'Shabbat';
+    dateLocale = s.uiLanguage == UiLanguage.en ? 'en' : 'he';
     return MaterialApp.router(
-      title: 'Siddur',
+      title: 'Amud',
       debugShowCheckedModeBanner: false,
       theme: buildTheme(s, Brightness.light),
       darkTheme: buildTheme(s, Brightness.dark),
@@ -124,7 +165,7 @@ class SiddurApp extends ConsumerWidget {
       locale: s.uiLanguage.locale,
       localizationsDelegates: appLocalizationsDelegates,
       supportedLocales: [for (final l in UiLanguage.values) l.locale],
-      builder: (context, child) => AppText(lang: s.uiLanguage, ashkenazi: s.ashkenaziSpelling, child: child!),
+      builder: (context, child) => AppText(lang: s.uiLanguage, ashkenazi: s.ashkenaziSpelling, child: LaunchAnimation(child: child!)),
     );
   }
 }
@@ -133,7 +174,7 @@ const _destinations = [
   (Icons.dashboard_outlined, Icons.dashboard, CupertinoIcons.square_grid_2x2, 'Home'),
   (Icons.menu_book_outlined, Icons.menu_book, CupertinoIcons.book, 'Siddur'),
   (Icons.wb_twilight_outlined, Icons.wb_twilight, CupertinoIcons.sunrise, 'Zmanim'),
-  (Icons.calendar_month_outlined, Icons.calendar_month, CupertinoIcons.calendar, 'Calendar'),
+  (Icons.local_library_outlined, Icons.local_library, CupertinoIcons.book_circle, 'Torah'),
   (Icons.settings_outlined, Icons.settings, CupertinoIcons.settings, 'Settings'),
 ];
 

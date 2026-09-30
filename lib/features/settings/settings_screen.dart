@@ -10,6 +10,7 @@ import '../../core/adaptive.dart';
 import '../../core/fonts.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
+import '../../core/titles.dart';
 import '../update/update_service.dart';
 import '../alerts/alerts.dart';
 
@@ -117,12 +118,17 @@ class SettingsScreen extends ConsumerWidget {
           AdaptiveNavTile(
             icon: Icons.menu_book,
             title: context.tr('Default siddur'),
-            subtitle: context.term(s.defaultBook ?? 'Siddur Ashkenaz'),
+            subtitle: () {
+              final b = manifest?.book(s.defaultBook ?? 'Siddur Ashkenaz');
+              return b == null ? context.term(s.defaultBook ?? 'Siddur Ashkenaz') : context.prayerTitle(s, b.title, b.heTitle);
+            }(),
             onTap: manifest == null
                 ? null
                 : () async {
                     final v = await showAdaptivePicker(context,
-                        title: context.tr('Default siddur'), selected: s.defaultBook, options: [for (final b in manifest.books) (b.title, b.title)]);
+                        title: context.tr('Default siddur'),
+                        selected: s.defaultBook,
+                        options: [for (final b in manifest.books) (b.title, context.prayerTitle(s, b.title, b.heTitle))]);
                     if (v != null) set((x) => x.copyWith(defaultBook: () => v));
                   },
           ),
@@ -151,6 +157,18 @@ class SettingsScreen extends ConsumerWidget {
               final v = await showAdaptivePicker(context,
                   title: context.tr('Instructions & notes'), selected: s.notesLanguage, options: [for (final l in NotesLanguage.values) (l, context.tr(_notesLabel(l)))]);
               if (v != null) set((x) => x.copyWith(notesLanguage: v));
+            },
+          ),
+          AdaptiveNavTile(
+            icon: Icons.title,
+            title: context.tr('Prayer title language'),
+            subtitle: context.tr(titleLanguageLabel(s.titleLanguage)),
+            onTap: () async {
+              final v = await showAdaptivePicker(context,
+                  title: context.tr('Prayer title language'),
+                  selected: s.titleLanguage,
+                  options: [for (final l in TitleLanguage.values) (l, context.tr(titleLanguageLabel(l)))]);
+              if (v != null) set((x) => x.copyWith(titleLanguage: v));
             },
           ),
           AdaptiveNavTile(
@@ -306,7 +324,7 @@ class SettingsScreen extends ConsumerWidget {
             subtitle: context.tr('Sefaria texts, Hebcal (GPL-2.0), fonts (OFL)'),
             onTap: () => showLicensePage(
               context: context,
-              applicationName: 'Siddur',
+              applicationName: 'Amud',
               applicationLegalese: 'Calendar and zmanim: a Dart port of Hebcal (GPL-2.0-or-later) and @hebcal/noaa (LGPL-2.1). '
                   'Liturgical texts: Sefaria and the respective translators/publishers, under each version\'s license. '
                   'Tehillim: Miqra according to the Masorah (CC-BY-SA) and JPS 1917 (public domain), via Sefaria. '
@@ -372,7 +390,7 @@ class _CustomRulesScreenState extends ConsumerState<CustomRulesScreen> {
           decoration: InputDecoration(border: const OutlineInputBorder(), errorText: _error, errorMaxLines: 4),
         ),
         const SizedBox(height: 16),
-        Text('Condition variables', style: theme.textTheme.titleSmall),
+        Text(context.tr('Condition variables'), style: theme.textTheme.titleSmall),
         for (final e in DayContext.variableDocs.entries)
           ListTile(dense: true, title: Text(e.key, style: const TextStyle(fontFamily: 'monospace')), subtitle: Text(e.value)),
       ]),
@@ -391,6 +409,13 @@ String _notesLabel(NotesLanguage l) => switch (l) {
       NotesLanguage.bilingual => 'Hebrew & English',
       NotesLanguage.english => 'English only',
       NotesLanguage.hebrew => 'Hebrew only',
+    };
+
+String titleLanguageLabel(TitleLanguage l) => switch (l) {
+      TitleLanguage.auto => 'Same as the app',
+      TitleLanguage.english => 'English',
+      TitleLanguage.hebrew => 'Hebrew',
+      TitleLanguage.both => 'English & Hebrew',
     };
 
 String _excludedLabel(ExcludedDisplay e) => switch (e) {

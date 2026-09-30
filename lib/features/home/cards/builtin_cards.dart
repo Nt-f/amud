@@ -12,6 +12,8 @@ import '../../../core/providers.dart';
 import '../../../core/settings.dart';
 import '../../../core/split_row.dart';
 import '../../../core/theme.dart';
+import '../../../core/titles.dart';
+import '../../calendar/calendar_screen.dart';
 import '../../js_cards/js_card.dart';
 import '../../minyan/minyan.dart';
 import '../../siddur/today_summary.dart';
@@ -55,6 +57,14 @@ void registerBuiltInCards(CardRegistry r) {
       description: 'Next candle lighting and havdalah',
       icon: Icons.local_fire_department_outlined,
       build: (c, ref, cfg) => const _CandlesCard(),
+    ))
+    ..register(CardType(
+      type: 'calendar',
+      title: 'Calendar',
+      description: 'Month view with Hebrew dates, holidays and times',
+      icon: Icons.calendar_month_outlined,
+      defaultSpan: 2,
+      build: (c, ref, cfg) => const _CalendarCard(),
     ))
     ..register(CardType(
       type: 'omer',
@@ -113,12 +123,12 @@ void registerBuiltInCards(CardRegistry r) {
       editor: (c, ref, cfg, onChanged) => Column(children: [
         TextFormField(
           initialValue: cfg.setting<String>('title', 'Note'),
-          decoration: const InputDecoration(labelText: 'Title'),
+          decoration: InputDecoration(labelText: c.tr('Title')),
           onChanged: (v) => onChanged(cfg.copyWith(settings: {...cfg.settings, 'title': v})),
         ),
         TextFormField(
           initialValue: cfg.setting<String>('text', ''),
-          decoration: const InputDecoration(labelText: 'Text'),
+          decoration: InputDecoration(labelText: c.tr('Text')),
           maxLines: 6,
           onChanged: (v) => onChanged(cfg.copyWith(settings: {...cfg.settings, 'text': v})),
         ),
@@ -157,10 +167,14 @@ class _HebrewDateCard extends ConsumerWidget {
     final s = ref.watch(settingsProvider);
     // After sunset the Hebrew date is already tomorrow's.
     final hd = t.halachic;
-    final parsha = parshaName(hd, s.location.il, context.hebcalLocale);
+    final p = upcomingParsha(hd, s.location.il, context.hebcalLocale);
+    final parsha = p.thisWeek
+        ? p.name
+        : context.tr('{parsha} · Shabbat {date}',
+            {'parsha': p.name, 'date': formatPlainDate(p.shabbat.plainDate(), weekday: false, year: false)});
     final holidays = getHolidaysOnDate(hd, s.location.il).where((e) => !e.hasFlag(Flags.yomKippurKatan) && !e.hasFlag(Flags.behab));
     return CardFrame(
-      onTap: () => context.go('/calendar'),
+      onTap: () => context.push('/calendar'),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         SplitRow(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -235,13 +249,13 @@ class _NextZmanCard extends ConsumerWidget {
       icon: Icons.timer_outlined,
       onTap: () => context.go('/zmanim'),
       child: next == null
-          ? const Text('No upcoming zmanim')
+          ? Text(context.tr('No upcoming zmanim'))
           : Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(names.name(next.$1), style: theme.textTheme.titleMedium, maxLines: 2),
+              Text(names.label(next.$1), style: theme.textTheme.titleMedium, maxLines: 2),
               const SizedBox(height: 6),
               Text(formatTime(next.$2, t.location, hour12: s.hour12),
                   style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w700)),
-              Text('in ${formatCountdown(next.$2.difference(t.now))}', style: theme.textTheme.bodyMedium),
+              Text(context.tr('in {time}', {'time': formatCountdown(next.$2.difference(t.now))}), style: theme.textTheme.bodyMedium),
             ]),
     );
   }
@@ -260,7 +274,7 @@ class _ZmanimListCard extends ConsumerWidget {
     final theme = Theme.of(context);
     final next = t.nextZman(keys)?.$1;
     return CardFrame(
-      title: 'Zmanim · ${t.location.getShortName() ?? ''}',
+      title: '${context.tr('Zmanim')} · ${t.location.getShortName() ?? ''}',
       icon: Icons.wb_twilight,
       onTap: () => context.go('/zmanim'),
       child: Column(children: [
@@ -269,7 +283,7 @@ class _ZmanimListCard extends ConsumerWidget {
             padding: const EdgeInsets.symmetric(vertical: 3),
             child: Row(children: [
               Expanded(
-                child: Text(names.name(k),
+                child: Text(names.label(k),
                     style: k == next
                         ? theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w700, color: theme.colorScheme.primary)
                         : (t.zmanim[k] != null && t.zmanim[k]!.isBefore(t.now)
@@ -301,7 +315,7 @@ class _ZmanKeysEditorState extends ConsumerState<_ZmanKeysEditor> {
   Widget build(BuildContext context) {
     final names = ref.watch(zmanResolverProvider);
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      const Text('Choose zmanim (none selected = defaults for your opinion setting)'),
+      Text(context.tr('Choose zmanim (none selected = defaults for your opinion setting)')),
       for (final (k, name) in names.allKeys)
         CheckboxListTile.adaptive(
           dense: true,
@@ -355,6 +369,30 @@ class _CandlesCard extends ConsumerWidget {
             ]),
     );
   }
+}
+
+class _CalendarCard extends ConsumerWidget {
+  const _CalendarCard();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) => CardFrame(
+        title: 'Calendar',
+        icon: Icons.calendar_month_outlined,
+        trailing: Row(mainAxisSize: MainAxisSize.min, children: [
+          TextButton(
+            style: TextButton.styleFrom(visualDensity: VisualDensity.compact),
+            onPressed: () => resetCalendar(ref),
+            child: Text(context.tr('Today')),
+          ),
+          IconButton(
+            visualDensity: VisualDensity.compact,
+            tooltip: context.tr('Open'),
+            icon: const Icon(Icons.open_in_full, size: 18),
+            onPressed: () => context.push('/calendar'),
+          ),
+        ]),
+        child: const CalendarView(compact: true),
+      );
 }
 
 /// Tonight's Omer count (after sunset the halachic date has already
@@ -458,7 +496,7 @@ class _LearningEditorState extends State<_LearningEditor> {
           CheckboxListTile.adaptive(
             dense: true,
             value: sel.contains(e.key),
-            title: Text(e.value),
+            title: Text(context.term(e.value)),
             onChanged: (v) {
               setState(() => v == true ? sel.add(e.key) : sel.remove(e.key));
               widget.onChanged(widget.cfg.copyWith(settings: {...widget.cfg.settings, 'schedules': List.of(sel)}));
@@ -488,7 +526,7 @@ class _UpcomingCard extends ConsumerWidget {
     return CardFrame(
       title: 'Upcoming',
       icon: Icons.event_note,
-      onTap: () => context.go('/calendar'),
+      onTap: () => context.push('/calendar'),
       child: Column(children: [
         for (final e in events)
           Padding(
@@ -498,7 +536,7 @@ class _UpcomingCard extends ConsumerWidget {
               Expanded(
                 child: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
                   Text(e.render(context.hebcalLocale), style: theme.textTheme.bodyMedium),
-                  Text('${e.date.deltaDays(t.hdate)}d · ${formatPlainDate(e.date.plainDate(), weekday: false).replaceFirst(RegExp(r', \d+$'), '')}',
+                  Text('${context.tr('in {n}d', {'n': e.date.deltaDays(t.hdate)})} · ${formatPlainDate(e.date.plainDate(), weekday: false, year: false)}',
                       style: theme.textTheme.bodySmall),
                 ]),
               ),
@@ -516,23 +554,24 @@ class _QuickPrayersCard extends ConsumerWidget {
 
   static const _groups = [
     ('Davening', [
-      ('Shacharit', Icons.wb_sunny_outlined, '/pray/shacharit'),
-      ('Mincha', Icons.light_mode_outlined, '/pray/mincha'),
-      ('Maariv', Icons.nights_stay_outlined, '/pray/maariv'),
+      ('Shacharit', 'שחרית', Icons.wb_sunny_outlined, '/pray/shacharit'),
+      ('Mincha', 'מנחה', Icons.light_mode_outlined, '/pray/mincha'),
+      ('Maariv', 'ערבית', Icons.nights_stay_outlined, '/pray/maariv'),
     ]),
     ('After meals', [
-      ('Birkat HaMazon', Icons.restaurant, '/pray/birkat'),
-      ("Me'ein Shalosh", Icons.bakery_dining, '/meein-shalosh'),
+      ('Birkat HaMazon', 'ברכת המזון', Icons.restaurant, '/pray/birkat'),
+      ("Me'ein Shalosh", 'מעין שלוש', Icons.bakery_dining, '/meein-shalosh'),
     ]),
     ('More', [
-      ('Tefillat HaDerech', Icons.directions_car_outlined, '/pray/derech'),
-      ('Bedtime Shema', Icons.bedtime_outlined, '/pray/bedtime'),
+      ('Tefillat HaDerech', 'תפילת הדרך', Icons.directions_car_outlined, '/pray/derech'),
+      ('Bedtime Shema', 'קריאת שמע על המיטה', Icons.bedtime_outlined, '/pray/bedtime'),
     ]),
   ];
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
+    final s = ref.watch(settingsProvider);
     return CardFrame(
       title: 'Quick prayers',
       icon: Icons.bolt,
@@ -550,7 +589,7 @@ class _QuickPrayersCard extends ConsumerWidget {
               final cols = fit < items.length ? (fit >= 2 ? 2 : 1) : items.length;
               final w = (c.maxWidth - 8 * (cols - 1)) / cols;
               return Wrap(spacing: 8, children: [
-                for (final (label, icon, path) in items)
+                for (final (en, he, icon, path) in items)
                   SizedBox(
                     width: w,
                     child: InkWell(
@@ -561,7 +600,11 @@ class _QuickPrayersCard extends ConsumerWidget {
                         child: Row(children: [
                           Icon(icon, size: 18, color: theme.colorScheme.primary),
                           const SizedBox(width: 8),
-                          Expanded(child: Text(context.tr(label), style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
+                          Expanded(
+                            child: Text(context.prayerTitle(s, en, he),
+                                style: theme.textTheme.bodyMedium?.copyWith(fontFamily: context.prayerTitleIsHebrew(s) ? s.hebrewFont : null),
+                                overflow: TextOverflow.ellipsis),
+                          ),
                         ]),
                       ),
                     ),

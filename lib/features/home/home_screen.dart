@@ -64,13 +64,13 @@ class HomeScreen extends ConsumerWidget {
           child: ListView(shrinkWrap: true, children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(24, 0, 24, 8),
-              child: Text('Add a card', style: Theme.of(ctx).textTheme.titleLarge),
+              child: Text(context.tr('Add a card'), style: Theme.of(ctx).textTheme.titleLarge),
             ),
             for (final t in registry.all)
               ListTile(
                 leading: CircleAvatar(child: Icon(t.icon)),
                 title: Text(context.tr(t.title)),
-                subtitle: Text(t.description),
+                subtitle: Text(context.tr(t.description)),
                 onTap: () => Navigator.pop(ctx, t),
               ),
           ]),
@@ -251,7 +251,7 @@ class _EditList extends ConsumerWidget {
             child: SingleChildScrollView(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
               child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-                Text('Configure ${t.title}', style: Theme.of(ctx).textTheme.titleLarge),
+                Text(context.tr('Configure {card}', {'card': context.tr(t.title)}), style: Theme.of(ctx).textTheme.titleLarge),
                 const SizedBox(height: 12),
                 t.editor!(ctx, ref, draft, (v) => setState(() => draft = v)),
                 const SizedBox(height: 12),
@@ -260,7 +260,7 @@ class _EditList extends ConsumerWidget {
                     ref.read(dashboardProvider.notifier).replace(draft);
                     Navigator.pop(ctx);
                   },
-                  child: const Text('Save'),
+                  child: Text(context.tr('Save')),
                 ),
               ]),
             ),

@@ -84,9 +84,9 @@ class _LocationScreenState extends ConsumerState<LocationScreen> {
         ),
         if (_error != null) Padding(padding: const EdgeInsets.symmetric(horizontal: 16), child: Text(_error!, style: TextStyle(color: Theme.of(context).colorScheme.error))),
         if (kIsWeb)
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            child: Text('Your browser will ask for permission to share your location.', style: TextStyle(fontSize: 12)),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Text(context.tr('Your browser will ask for permission to share your location.'), style: const TextStyle(fontSize: 12)),
           ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),

@@ -9,10 +9,11 @@ import '../../core/adaptive.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
 import '../../core/theme.dart';
-import '../../core/split_row.dart';
+import '../../core/titles.dart';
 import '../tehillim/tehillim_data.dart';
 import '../tehillim/tehillim_progress.dart';
 import '../tehillim/tehillim_reader.dart';
+import 'prayer_catalog.dart';
 import 'reader_screen.dart';
 import 'siddur_providers.dart';
 import 'today_summary.dart';
@@ -32,8 +33,8 @@ class LibraryScreen extends ConsumerWidget {
     if (section != null && defaultBook.hasValue) {
       final root = ref.watch(bookIndexProvider(defaultBook.value!));
       if (root.hasValue) {
-        final shabbat = ref.watch(dayContextProvider((ref.read(readerDaytimeDateProvider).abs(), Service.shacharit)))['shabbat'];
-        final id = findSection(root.value!, section!, shabbat: shabbat);
+        final date = ref.read(readerDaytimeDateProvider).abs();
+        final id = findSectionOn(root.value!, section!, (svc) => ref.read(dayContextProvider((date, svc))));
         WidgetsBinding.instance.addPostFrameCallback((_) {
           if (!context.mounted) return;
           // Replace the `?section=` history entry, or going back from the
@@ -51,6 +52,7 @@ class LibraryScreen extends ConsumerWidget {
         error: (e, _) => Center(child: Text('$e')),
         data: (m) => ListView(padding: const EdgeInsets.only(bottom: 32), children: [
           if (defaultBook.hasValue) _TodayServices(book: defaultBook.value!),
+          const _SeasonsCard(),
           const _TehillimCard(),
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 16, 20, 8),
@@ -81,9 +83,8 @@ class _TodayServices extends ConsumerWidget {
     final ctx = ref.watch(dayContextProvider((date.abs(), Service.shacharit)));
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
+    final s = ref.watch(settingsProvider);
     if (!root.hasValue) return const SizedBox(height: 120, child: Center(child: CircularProgressIndicator.adaptive()));
-    final r = root.value!;
-    final shabbat = ctx['shabbat'];
     const keys = [
       ('shacharit', 'Shacharit', 'שחרית', Icons.wb_sunny_outlined),
       ('mincha', 'Mincha', 'מנחה', Icons.light_mode_outlined),
@@ -108,20 +109,28 @@ class _TodayServices extends ConsumerWidget {
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(context.tr('Today · {book}', {'book': context.term(book)}), style: theme.textTheme.titleMedium),
+            Row(children: [
+              Expanded(child: Text(context.tr('Today · {book}', {'book': context.prayerTitle(s, book, ref.watch(bookProvider(book)).value?.heTitle ?? book)}), style: theme.textTheme.titleMedium)),
+              TextButton.icon(
+                onPressed: () => context.push('/today'),
+                icon: const Icon(Icons.format_list_numbered, size: 18),
+                label: Text(context.tr('Full order')),
+              ),
+            ]),
             if (ctx.labels.isNotEmpty)
               Text((context.uiLanguage == UiLanguage.en ? ctx.labels.map(context.term) : ctx.labelsHe).join(' · '), style: theme.textTheme.bodySmall),
             const SizedBox(height: 12),
             Wrap(spacing: 8, runSpacing: 8, children: [
-              for (final (key, en, _, icon) in keys)
+              for (final (key, en, he, icon) in keys)
                 if (show[key] ?? true)
-                  Builder(builder: (context) {
-                    final id = findSection(r, key, shabbat: shabbat);
-                    if (id == null) return const SizedBox.shrink();
+                  Consumer(builder: (context, ref, _) {
+                    // From another siddur when this one lacks it (Shabbat in a weekday siddur).
+                    final found = ref.watch(sectionRefProvider((key, date.abs()))).value;
+                    if (found == null) return const SizedBox.shrink();
                     return FilledButton.tonalIcon(
-                      onPressed: () => context.push(readerPath(book, id)),
+                      onPressed: () => context.push(readerPath(found.book, found.id)),
                       icon: Icon(icon, size: 18),
-                      label: Text(context.tr(en)),
+                      label: Text(context.prayerTitle(s, en, he)),
                       style: show.containsKey(key) ? FilledButton.styleFrom(backgroundColor: colors.chipToday) : null,
                     );
                   }),
@@ -132,7 +141,7 @@ class _TodayServices extends ConsumerWidget {
                 for (final c in changes)
                   Chip(
                     avatar: Icon(c.kind == ChangeKind.add ? Icons.add : Icons.remove, size: 16),
-                    label: Text(context.term(c.en)),
+                    label: Text(context.prayerTitle(s, c.en, c.he)),
                     visualDensity: VisualDensity.compact,
                   ),
               ]),
@@ -151,14 +160,17 @@ class _BookTile extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final hebFont = ref.watch(settingsProvider.select((s) => s.hebrewFont));
+    final s = ref.watch(settingsProvider);
     final he = book.byLanguage('he').length;
     final en = book.byLanguage('en').length;
+    final other = context.prayerSubtitle(s, book.title, book.heTitle);
+    final versions = context.tr('{he} Hebrew · {en} translation versions', {'he': he, 'en': en});
     return ListTile(
-      leading: CircleAvatar(child: Text(book.heTitle.characters.first, style: TextStyle(fontFamily: hebFont))),
-      title: Text(context.uiLanguage == UiLanguage.en ? context.term(book.title) : book.heTitle),
-      // Bidi isolates keep the Hebrew title from reordering the English text.
-      subtitle: Text('\u2067${book.heTitle}\u2069 · ${context.tr('{he} Hebrew · {en} translation versions', {'he': he, 'en': en})}'),
+      leading: CircleAvatar(child: Text(book.heTitle.characters.first, style: TextStyle(fontFamily: s.hebrewFont))),
+      title: Text(context.prayerTitle(s, book.title, book.heTitle),
+          style: context.prayerTitleIsHebrew(s) ? TextStyle(fontFamily: s.hebrewFont) : null),
+      // Bidi isolates keep a Hebrew title from reordering the English text.
+      subtitle: Text(other == null ? versions : '\u2068$other\u2069 · $versions'),
       trailing: isDefault
           ? Chip(label: Text(context.tr('Default')), visualDensity: VisualDensity.compact)
           : IconButton(
@@ -183,7 +195,7 @@ class BookScreen extends ConsumerWidget {
     final date = ref.watch(readerDaytimeDateProvider);
     return Scaffold(
       appBar: AppBar(
-        title: Text(context.uiLanguage == UiLanguage.en ? context.term(book) : (ref.watch(bookProvider(book)).value?.heTitle ?? book)),
+        title: Text(context.prayerTitle(ref.watch(settingsProvider), book, ref.watch(bookProvider(book)).value?.heTitle ?? book)),
         actions: [
           IconButton(
             tooltip: context.tr('Text versions'),
@@ -212,31 +224,33 @@ class _TocNode extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final hebFont = ref.watch(settingsProvider.select((s) => s.hebrewFont));
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
-    Applicability ap = Applicability.always;
+    var ap = Applicability.always;
     String? label;
-    final rule = resolver?.sectionRuleFor(node);
-    if (rule != null && rule.when != 'true') {
-      final svc = SiddurResolver.serviceFor(node, Service.shacharit);
-      final ok = Condition.parse(rule.when).eval(ref.watch(dayContextProvider((date.abs(), svc))).env);
-      ap = ok ? Applicability.today : Applicability.notToday;
-      label = conditionLabel(context, ref.watch(settingsProvider), rule.labelEn, rule.labelHe);
+    final r = resolver;
+    if (r != null) {
+      // A section without a rule of its own goes by its parts (Selichot).
+      final st = sectionStatus(r, node, (svc) => ref.watch(dayContextProvider((date.abs(), svc))));
+      ap = st.ap == Applicability.unknown ? Applicability.always : st.ap;
+      if (ap != Applicability.always && (st.labelEn != null || st.labelHe != null)) {
+        label = conditionLabel(context, ref.watch(settingsProvider), st.labelEn, st.labelHe);
+      }
     }
     final titleStyle = ap == Applicability.notToday ? TextStyle(color: colors.excluded) : null;
-    final hebrewUi = context.uiLanguage != UiLanguage.en;
-    final trailingHe = Text(node.he, textDirection: TextDirection.rtl, style: TextStyle(fontFamily: hebFont, fontSize: 17, color: titleStyle?.color));
-    final subtitle = label == null
-        ? null
-        : Text(ap == Applicability.today ? '${context.tr('Today')} · $label' : context.tr('Not today · {label}', {'label': label}),
-            style: theme.textTheme.bodySmall?.copyWith(color: ap == Applicability.today ? colors.todayBar : colors.excluded));
+    final subtitle = switch (ap) {
+      Applicability.today => Text(label == null ? context.tr('Today') : '${context.tr('Today')} · $label',
+          style: theme.textTheme.bodySmall?.copyWith(color: colors.todayBar)),
+      Applicability.notToday => Text(label == null ? context.tr('Not said today') : context.tr('Not today · {label}', {'label': label}),
+          style: theme.textTheme.bodySmall?.copyWith(color: colors.excluded)),
+      _ => null,
+    };
     final read = IconButton(
       tooltip: context.tr('Read'),
       icon: const Icon(Icons.chrome_reader_mode_outlined),
       onPressed: () => context.push(readerPath(book, node.id)),
     );
-    final title = hebrewUi ? trailingHe : SplitRow(children: [Text(context.term(node.en), style: titleStyle), trailingHe]);
+    final title = PrayerTitleText(node.en, node.he, enStyle: titleStyle, heStyle: TextStyle(fontSize: 17, color: titleStyle?.color));
     if (readsAsOne(node)) {
       return ListTile(
         title: title,
@@ -259,6 +273,52 @@ class _TocNode extends ConsumerWidget {
 /// deep (e.g. the Amidah with its blessings, including nested ones such as
 /// Modim / Al Hanisim).
 bool readsAsOne(SchemaNode node) => node.children.every((c) => c.children.every((g) => g.isLeaf));
+
+/// The Holidays & Seasons siddur, with what from it is said today.
+class _SeasonsCard extends ConsumerWidget {
+  const _SeasonsCard();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(settingsProvider);
+    final hd = ref.watch(readerDaytimeDateProvider);
+    final day = ref.watch(dayContextProvider((hd.abs(), Service.shacharit)));
+    final night = ref.watch(dayContextProvider((hd.abs(), Service.maariv)));
+    final theme = Theme.of(context);
+    final colors = SiddurColors.of(context);
+    final now = [
+      for (final g in catalogGroups)
+        for (final i in g.items)
+          if (itemTime(i, day, night) != ItemTime.none) i,
+    ];
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        child: InkWell(
+          onTap: () => context.push('/siddur/seasons'),
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(children: [
+              Icon(Icons.event_note, size: 30, color: theme.colorScheme.primary),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Text(context.tr('Holidays & Seasons'), style: theme.textTheme.titleMedium),
+                  now.isEmpty
+                      ? Text(context.tr('Hoshanot, Lulav, Selichot, Chanukah candles and more'), style: theme.textTheme.bodySmall)
+                      : Text('${context.tr('Today')}: ${now.map((i) => context.prayerTitle(s, i.en, i.he)).join(' · ')}',
+                          style: theme.textTheme.bodySmall?.copyWith(color: colors.todayBar)),
+                ]),
+              ),
+              Icon(Icons.chevron_right, color: theme.colorScheme.outline),
+            ]),
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 class _TehillimCard extends ConsumerWidget {
   const _TehillimCard();

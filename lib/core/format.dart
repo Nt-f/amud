@@ -1,4 +1,5 @@
 import 'package:hebcal/hebcal.dart';
+import 'package:intl/intl.dart';
 import 'package:timezone/timezone.dart' as tz;
 
 /// Formats an instant as wall-clock time at [loc].
@@ -13,13 +14,18 @@ String formatTime(DateTime? t, Location loc, {bool? hour12, bool seconds = false
   return '$h:$mm$ss ${l.hour < 12 ? 'AM' : 'PM'}';
 }
 
+/// Language of formatted dates and countdowns: 'en', or 'he' for the
+/// Hebrew and Yiddish interfaces. Set from the interface language.
+String dateLocale = 'en';
+
 String formatCountdown(Duration d) {
-  if (d.isNegative) return 'now';
+  final he = dateLocale != 'en';
+  if (d.isNegative) return he ? 'עכשיו' : 'now';
   final h = d.inHours;
   final m = d.inMinutes % 60;
-  if (h > 0) return '${h}h ${m}m';
-  if (d.inMinutes > 0) return '${d.inMinutes} min';
-  return '<1 min';
+  if (h > 0) return he ? '$h שע׳ $m דק׳' : '${h}h ${m}m';
+  if (d.inMinutes > 0) return he ? '${d.inMinutes} דק׳' : '${d.inMinutes} min';
+  return he ? 'פחות מדקה' : '<1 min';
 }
 
 const weekdayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Shabbat'];
@@ -29,5 +35,29 @@ const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'Jul
 /// spelling preference.
 String shabbatName = 'Shabbat';
 
-String formatPlainDate(PlainDate d, {bool weekday = true}) =>
-    '${weekday ? '${d.dayOfWeek == 6 ? shabbatName : weekdayNames[d.dayOfWeek]}, ' : ''}${monthNames[d.month - 1]} ${d.day}, ${d.year}';
+String formatPlainDate(PlainDate d, {bool weekday = true, bool year = true}) {
+  if (dateLocale != 'en') {
+    try {
+      final f = switch ((weekday, year)) {
+        (true, true) => DateFormat.yMMMMEEEEd(dateLocale),
+        (true, false) => DateFormat.MMMMEEEEd(dateLocale),
+        (false, true) => DateFormat.yMMMMd(dateLocale),
+        (false, false) => DateFormat.MMMMd(dateLocale),
+      };
+      return f.format(DateTime(d.year, d.month, d.day));
+    } catch (_) {
+      // Date symbols not loaded (outside the app): English below.
+    }
+  }
+  return '${weekday ? '${d.dayOfWeek == 6 ? shabbatName : weekdayNames[d.dayOfWeek]}, ' : ''}${monthNames[d.month - 1]} ${d.day}${year ? ', ${d.year}' : ''}';
+}
+
+/// A month and year, e.g. "October 2026".
+String formatMonth(int year, int month) {
+  if (dateLocale != 'en') {
+    try {
+      return DateFormat.yMMMM(dateLocale).format(DateTime(year, month));
+    } catch (_) {}
+  }
+  return '${monthNames[month - 1]} $year';
+}

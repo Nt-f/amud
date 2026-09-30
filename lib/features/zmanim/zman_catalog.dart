@@ -198,12 +198,18 @@ class ZmanResolver {
 
   /// Ashkenazi transliteration of built-in names ("Chatzos", "Tzeis").
   final bool ashkenazi;
-  ZmanResolver(List<CustomZman> list, {this.ashkenazi = false}) : custom = {for (final c in list) c.key: c};
+
+  /// Hebrew or Yiddish interface: [label] gives the Hebrew name.
+  final bool hebrew;
+  ZmanResolver(List<CustomZman> list, {this.ashkenazi = false, this.hebrew = false}) : custom = {for (final c in list) c.key: c};
 
   String _spell(String en) => ashkenazi ? ashkenaziSpelling(en) : en;
 
   String name(String key) => builtInByKey[key] != null ? _spell(builtInByKey[key]!.en) : custom[key]?.name ?? key;
   String nameHe(String key) => builtInByKey[key]?.he ?? custom[key]?.name ?? key;
+
+  /// The name in the interface language.
+  String label(String key) => hebrew ? nameHe(key) : name(key);
 
   DateTime? compute(String key, Zmanim z) {
     final b = builtInByKey[key];
@@ -222,4 +228,6 @@ class ZmanResolver {
 }
 
 final zmanResolverProvider = Provider<ZmanResolver>((ref) =>
-    ZmanResolver(ref.watch(customZmanimProvider), ashkenazi: ref.watch(settingsProvider.select((s) => s.ashkenaziSpelling))));
+    ZmanResolver(ref.watch(customZmanimProvider),
+        ashkenazi: ref.watch(settingsProvider.select((s) => s.ashkenaziSpelling)),
+        hebrew: ref.watch(settingsProvider.select((s) => s.uiLanguage != UiLanguage.en))));

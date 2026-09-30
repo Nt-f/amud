@@ -14,8 +14,13 @@ const _samples = [
 
 /// Browse, preview and choose among every open-licensed Hebrew font the
 /// app knows about. Downloadable fonts load as they scroll into view.
+///
+/// Chooses the siddur's font unless [selectedFont] and [chooseFont] point
+/// it at another setting (the Torah tab's).
 class FontGalleryScreen extends ConsumerStatefulWidget {
-  const FontGalleryScreen({super.key});
+  final ProviderListenable<String>? selectedFont;
+  final void Function(WidgetRef ref, String family)? chooseFont;
+  const FontGalleryScreen({super.key, this.selectedFont, this.chooseFont});
 
   @override
   ConsumerState<FontGalleryScreen> createState() => _FontGalleryScreenState();
@@ -38,7 +43,7 @@ class _FontGalleryScreenState extends ConsumerState<FontGalleryScreen> {
   @override
   Widget build(BuildContext context) {
     final user = ref.watch(fontsProvider);
-    final selected = ref.watch(settingsProvider.select((s) => s.hebrewFont));
+    final selected = _current(watch: true);
     final theme = Theme.of(context);
     final all = [...fontCatalog, for (final f in user) FontEntry(f.family, f.label)];
     final q = _query.toLowerCase();
@@ -148,6 +153,15 @@ class _FontGalleryScreenState extends ConsumerState<FontGalleryScreen> {
     );
   }
 
+  String _current({bool watch = false}) {
+    final p = widget.selectedFont ?? settingsProvider.select((s) => s.hebrewFont);
+    return watch ? ref.watch(p) : ref.read(p);
+  }
+
+  void _choose(String family) => widget.chooseFont != null
+      ? widget.chooseFont!(ref, family)
+      : ref.read(settingsProvider.notifier).update((x) => x.copyWith(hebrewFont: family));
+
   Future<void> _select(FontEntry f) async {
     if (f.remote) {
       await ref.read(remoteFontsProvider.notifier).save(f);
@@ -156,19 +170,20 @@ class _FontGalleryScreenState extends ConsumerState<FontGalleryScreen> {
         return;
       }
     }
-    ref.read(settingsProvider.notifier).update((x) => x.copyWith(hebrewFont: f.family));
+    _choose(f.family);
   }
 
   Future<void> _delete(FontEntry f) async {
     final n = ref.read(settingsProvider.notifier);
     if (ref.read(settingsProvider).hebrewFont == f.family) n.update((x) => x.copyWith(hebrewFont: builtInFonts.first.family));
+    if (_current() == f.family) _choose(builtInFonts.first.family);
     await ref.read(fontsProvider.notifier).remove(f.family);
   }
 
   Future<void> _upload() async {
     try {
       final added = await ref.read(fontsProvider.notifier).pickAndImport();
-      if (added.isNotEmpty) ref.read(settingsProvider.notifier).update((x) => x.copyWith(hebrewFont: added.last.family));
+      if (added.isNotEmpty) _choose(added.last.family);
     } catch (e) {
       if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('$e')));
     }

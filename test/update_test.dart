@@ -1,4 +1,4 @@
-import 'package:flutter_siddur/features/update/update_service.dart';
+import 'package:amud/features/update/update_service.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

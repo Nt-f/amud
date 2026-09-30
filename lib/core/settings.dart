@@ -71,6 +71,11 @@ enum TextLayout { sideBySide, interleaved, hebrewOnly, translationOnly }
 /// text layout.
 enum NotesLanguage { bilingual, english, hebrew }
 
+/// Language of prayer and section titles, chosen apart from the interface
+/// language. [auto] shows both with an English interface and Hebrew only
+/// otherwise.
+enum TitleLanguage { auto, english, hebrew, both }
+
 enum AppThemeMode {
   system('System'),
   light('Light'),
@@ -99,6 +104,7 @@ class AppSettings {
   final Map<String, List<String>> translationVersions;
   final TextLayout layout;
   final NotesLanguage notesLanguage;
+  final TitleLanguage titleLanguage;
   final UiLanguage uiLanguage;
   final bool ashkenaziSpelling;
 
@@ -160,6 +166,7 @@ class AppSettings {
     this.translationVersions = const {},
     this.layout = TextLayout.hebrewOnly,
     this.notesLanguage = NotesLanguage.bilingual,
+    this.titleLanguage = TitleLanguage.auto,
     this.uiLanguage = UiLanguage.en,
     this.ashkenaziSpelling = true,
     this.showTeamim = true,
@@ -198,6 +205,7 @@ class AppSettings {
     Map<String, List<String>>? translationVersions,
     TextLayout? layout,
     NotesLanguage? notesLanguage,
+    TitleLanguage? titleLanguage,
     UiLanguage? uiLanguage,
     bool? ashkenaziSpelling,
     bool? showTeamim,
@@ -235,6 +243,7 @@ class AppSettings {
         translationVersions: translationVersions ?? this.translationVersions,
         layout: layout ?? this.layout,
         notesLanguage: notesLanguage ?? this.notesLanguage,
+        titleLanguage: titleLanguage ?? this.titleLanguage,
         uiLanguage: uiLanguage ?? this.uiLanguage,
         ashkenaziSpelling: ashkenaziSpelling ?? this.ashkenaziSpelling,
         showTeamim: showTeamim ?? this.showTeamim,
@@ -277,6 +286,7 @@ class AppSettings {
         'translationVersions': translationVersions,
         'layout': layout.name,
         'notesLanguage': notesLanguage.name,
+        'titleLanguage': titleLanguage.name,
         'uiLanguage': uiLanguage.name,
         'ashkenaziSpelling': ashkenaziSpelling,
         'showTeamim': showTeamim,
@@ -334,6 +344,7 @@ class AppSettings {
       translationVersions: lists('translationVersions'),
       layout: byName(TextLayout.values, 'layout', d.layout),
       notesLanguage: byName(NotesLanguage.values, 'notesLanguage', d.notesLanguage),
+      titleLanguage: byName(TitleLanguage.values, 'titleLanguage', d.titleLanguage),
       uiLanguage: byName(UiLanguage.values, 'uiLanguage', d.uiLanguage),
       ashkenaziSpelling: pick('ashkenaziSpelling', d.ashkenaziSpelling),
       showTeamim: pick('showTeamim', d.showTeamim),

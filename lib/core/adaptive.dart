@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'l10n.dart';
 import 'theme.dart';
 
 /// Small set of platform-adaptive building blocks so screens use native
@@ -115,8 +116,8 @@ Future<bool> showAdaptiveConfirm(BuildContext context, {required String title, S
       title: Text(title),
       content: message == null ? null : Text(message),
       actions: [
-        _action(ctx, 'Cancel', () => Navigator.pop(ctx, false)),
-        _action(ctx, confirm, () => Navigator.pop(ctx, true), isDefault: true),
+        _action(ctx, ctx.tr('Cancel'), () => Navigator.pop(ctx, false)),
+        _action(ctx, ctx.tr(confirm), () => Navigator.pop(ctx, true), isDefault: true),
       ],
     ),
   );
@@ -146,7 +147,7 @@ Future<T?> showAdaptivePicker<T>(BuildContext context,
               child: Text(label),
             ),
         ],
-        cancelButton: CupertinoActionSheetAction(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+        cancelButton: CupertinoActionSheetAction(onPressed: () => Navigator.pop(ctx), child: Text(ctx.tr('Cancel'))),
       ),
     );
   }

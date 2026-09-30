@@ -1,17 +1,23 @@
 name: Build
 
-# Windows builds need a Windows host (Flutter can't cross-compile from
-# Linux), so both apps are built here.
+# Builds every platform: Android, Windows, Linux, macOS, iOS (unsigned) and
+# the web app. Windows and Apple builds need their own hosts (Flutter can't
+# cross-compile), so each platform is its own job.
 #
-# Pushing a tag like `v0.2.0` builds that version and publishes a GitHub
+# Pushing a tag like `v0.4.0` builds that version and publishes a GitHub
 # Release; the apps' update checker (lib/features/update) looks for the
-# newest release and its `siddur-android.apk` / `siddur-windows.zip`.
+# newest release and picks its file by name: the `.apk` on Android, the
+# file with `windows` / `linux` in its name on desktop.
 # Running the workflow by hand just builds the files as artifacts.
 #
 # Android signing uses these repository secrets (the same key as local
 # release builds, or Android won't install one over the other):
 #   SIDDUR_KEYSTORE_BASE64  base64 of the .jks file
 #   SIDDUR_KEYSTORE_PASSWORD, SIDDUR_KEY_ALIAS, SIDDUR_KEY_PASSWORD
+#
+# The macOS and iOS builds are unsigned: macOS asks to confirm the first
+# launch (right-click → Open), and the .ipa must be signed by a sideloading
+# tool (AltStore, Sideloadly) before it installs.
 on:
   workflow_dispatch:
   push:
@@ -36,8 +42,23 @@ jobs:
             echo "name=$(grep '^version:' pubspec.yaml | sed 's/version: *//; s/+.*//')" >> "$GITHUB_OUTPUT"
           fi
 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          cache: true
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: flutter test
+      - run: cd packages/siddur_engine && dart pub get && dart test
+      - run: cd packages/hebcal && dart pub get && dart test
+
   windows:
-    needs: version
+    needs: [version, test]
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
@@ -50,14 +71,14 @@ jobs:
       - run: flutter build windows --release --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }}
       # The exe needs the DLLs and data/ folder beside it, so ship the
       # whole Release directory.
-      - run: Compress-Archive -Path build/windows/x64/runner/Release/* -DestinationPath siddur-windows.zip
+      - run: Compress-Archive -Path build/windows/x64/runner/Release/* -DestinationPath amud-windows.zip
       - uses: actions/upload-artifact@v4
         with:
-          name: siddur-windows
-          path: siddur-windows.zip
+          name: amud-windows
+          path: amud-windows.zip
 
   android:
-    needs: version
+    needs: [version, test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -91,15 +112,98 @@ jobs:
           SIDDUR_KEYSTORE_PASSWORD: ${{ secrets.SIDDUR_KEYSTORE_PASSWORD }}
           SIDDUR_KEY_ALIAS: ${{ secrets.SIDDUR_KEY_ALIAS }}
           SIDDUR_KEY_PASSWORD: ${{ secrets.SIDDUR_KEY_PASSWORD }}
-      - run: mv build/app/outputs/flutter-apk/app-release.apk siddur-android.apk
+      - run: mv build/app/outputs/flutter-apk/app-release.apk amud-android.apk
       - uses: actions/upload-artifact@v4
         with:
-          name: siddur-android
-          path: siddur-android.apk
+          name: amud-android
+          path: amud-android.apk
+
+  linux:
+    needs: [version, test]
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Linux build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev libnotify-dev
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          cache: true
+      - run: flutter pub get
+      - run: flutter build linux --release --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }}
+      # The binary needs lib/ and data/ beside it; ship the bundle folder.
+      - run: tar -czf amud-linux-x64.tar.gz -C build/linux/x64/release/bundle .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: amud-linux
+          path: amud-linux-x64.tar.gz
+
+  macos:
+    needs: [version, test]
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          cache: true
+      - run: flutter pub get
+      - run: flutter build macos --release --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }}
+      # ditto keeps the .app bundle's symlinks and permissions intact.
+      - run: ditto -c -k --keepParent "$(ls -d build/macos/Build/Products/Release/*.app | head -1)" amud-macos.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: amud-macos
+          path: amud-macos.zip
+
+  ios:
+    needs: [version, test]
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          cache: true
+      - run: flutter pub get
+      - run: flutter build ios --release --no-codesign --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }}
+      # An .ipa is the .app inside a Payload/ folder, zipped.
+      - run: |
+          mkdir Payload
+          cp -R build/ios/iphoneos/Runner.app Payload/
+          zip -qr amud-ios-unsigned.ipa Payload
+      - uses: actions/upload-artifact@v4
+        with:
+          name: amud-ios
+          path: amud-ios-unsigned.ipa
+
+  web:
+    needs: [version, test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          cache: true
+      # The landing page at the site root and the app under /app/, as
+      # deployed to amud.page (see DEPLOY.md).
+      - run: bash tool/build_web.sh
+      - run: cd web-dist && zip -qr ../amud-web.zip .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: amud-web
+          path: amud-web.zip
 
   release:
     if: startsWith(github.ref, 'refs/tags/v')
-    needs: [version, windows, android]
+    needs: [version, windows, android, linux, macos, ios, web]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -126,8 +230,12 @@ jobs:
           merge-multiple: true
       - uses: softprops/action-gh-release@v2
         with:
-          name: Siddur ${{ needs.version.outputs.name }}
+          name: Amud ${{ needs.version.outputs.name }}
           body_path: notes.md
           files: |
-            siddur-android.apk
-            siddur-windows.zip
+            amud-android.apk
+            amud-windows.zip
+            amud-linux-x64.tar.gz
+            amud-macos.zip
+            amud-ios-unsigned.ipa
+            amud-web.zip

@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import 'package:hebcal/hebcal.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 
@@ -17,8 +16,11 @@ import '../../core/providers.dart';
 import '../../core/settings.dart';
 import '../../core/split_row.dart';
 import '../../core/theme.dart';
+import '../../core/titles.dart';
 import 'reader_grouping.dart';
+import 'prayer_catalog.dart';
 import 'reader_settings_sheet.dart';
+import 'related_prayers.dart';
 import 'siddur_providers.dart';
 
 typedef _ReaderKey = ({String book, String node, String expanded, int dateAbs});
@@ -72,6 +74,9 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
 
   final _selection = GlobalKey<SelectionAreaState>();
   late final StateController<bool> _focus;
+
+  /// Keys of the lines that open a section (see [normalizeOpeningBold]).
+  Set<String> _openers = {};
 
   /// Readers alive, so focus mode survives "Next" (which swaps readers)
   /// but ends once the last one closes.
@@ -139,22 +144,28 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
     final node = rootAsync.value?.find(widget.nodeId);
     final s = ref.watch(settingsProvider);
     final theme = Theme.of(context);
-    final hebrewUi = context.uiLanguage != UiLanguage.en;
     final focus = ref.watch(focusModeProvider);
     const slide = Duration(milliseconds: 250);
 
     final bar = AppBar(
-        title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(node == null ? context.term(widget.book) : (hebrewUi ? node.he : context.term(node.en)),
-              overflow: TextOverflow.ellipsis, style: hebrewUi ? TextStyle(fontFamily: s.hebrewFont) : null),
-          if (node != null && !hebrewUi)
-            Text(node.he, style: theme.textTheme.bodySmall?.copyWith(fontFamily: s.hebrewFont), textDirection: TextDirection.rtl),
-        ]),
+        title: Builder(builder: (context) {
+          final heTitle = context.prayerTitleIsHebrew(s);
+          final sub = node == null ? null : context.prayerSubtitle(s, node.en, node.he);
+          return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(node == null ? context.term(widget.book) : context.prayerTitle(s, node.en, node.he),
+                overflow: TextOverflow.ellipsis, style: node != null && heTitle ? TextStyle(fontFamily: s.hebrewFont) : null),
+            if (sub != null)
+              Text(sub,
+                  overflow: TextOverflow.ellipsis,
+                  style: theme.textTheme.bodySmall?.copyWith(fontFamily: heTitle ? null : s.hebrewFont),
+                  textDirection: heTitle ? null : TextDirection.rtl),
+          ]);
+        }),
         actions: [
           IconButton(
             tooltip: context.tr('Date'),
             icon: Badge(isLabelVisible: picked != null, child: const Icon(Icons.event)),
-            onPressed: () => _pickDate(context, date),
+            onPressed: () => pickReaderDate(context, ref, date),
           ),
           IconButton(
             tooltip: context.tr('Text settings'),
@@ -174,7 +185,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
             curve: Curves.easeInOutCubic,
             alignment: Alignment.bottomCenter,
             heightFactor: focus ? 0 : 1,
-            child: Column(mainAxisSize: MainAxisSize.min, children: [bar, _DayBanner(date: date, picked: picked != null)]),
+            child: Column(mainAxisSize: MainAxisSize.min, children: [bar, DayBanner(date: date, picked: picked != null)]),
           ),
         ),
         Expanded(
@@ -198,19 +209,6 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
     );
   }
 
-  Future<void> _pickDate(BuildContext context, HDate current) async {
-    final g = current.greg();
-    final picked = await showDatePicker(
-      context: context,
-      initialDate: g,
-      firstDate: DateTime(1900),
-      lastDate: DateTime(2239),
-      helpText: context.tr('Pray as of…'),
-    );
-    if (picked == null) return;
-    ref.read(readerDateProvider.notifier).state = HDate.fromDate(picked);
-  }
-
   Widget _list(BuildContext context, List<RenderItem> list, SchemaNode? node) {
     final s = ref.watch(settingsProvider);
     final wide = MediaQuery.sizeOf(context).width > 700;
@@ -221,9 +219,23 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
             icon: Icons.visibility_off_outlined,
             title: context.tr('Not said today'),
             subtitle: context.tr('Tap to show it anyway'),
-            he: node.he,
+            he: context.titleFormsFor(ref.read(settingsProvider)).he ? node.he : null,
             onTap: () => setState(() => _expanded.add(node.id)),
           ));
+    }
+    // The first prayer line of each section starts in bold, whichever
+    // version it comes from.
+    _openers = {};
+    final started = <String>{};
+    for (final it in list) {
+      final segs = switch (it) {
+        SegmentItem s => [s],
+        ExcludedGroupItem g => g.items,
+        _ => const <SegmentItem>[],
+      };
+      for (final si in segs) {
+        if (si.kind == SegmentKind.prayer && !si.excluded && started.add(si.node.id)) _openers.add(si.key);
+      }
     }
     // Opened directly on the repetition (e.g. Kedushah): show it as is.
     final groupChazarah = node == null || !isChazarahNode(node);
@@ -250,7 +262,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
           if (x is ExcludedGroupItem) segs.addAll(x.items);
           i++;
         }
-        rows.add((c) => _UnitCard(node: unit, items: segs, layout: layout));
+        rows.add((c) => _UnitCard(node: unit, items: segs, layout: layout, openers: _openers));
         continue;
       }
       if (groupChazarah && _isChazarah(it)) {
@@ -264,9 +276,8 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
         final titles = <String>[
           for (final g in group)
             if (g is HeadingItem && g.level > 0 || g is CollapsedSectionItem)
-              context.uiLanguage == UiLanguage.en
-                  ? context.term((g is HeadingItem ? g.node : (g as CollapsedSectionItem).node).en)
-                  : (g is HeadingItem ? g.node : (g as CollapsedSectionItem).node).he,
+              context.prayerTitle(s, (g is HeadingItem ? g.node : (g as CollapsedSectionItem).node).en,
+                  (g is HeadingItem ? g.node : (g as CollapsedSectionItem).node).he),
         ];
         if (titles.isEmpty && group.any((g) => g is SegmentItem && isChazarahSegment(g))) titles.add(context.tr('Modim DeRabbanan'));
         rows.add((c) => _ChazarahHeader(
@@ -291,7 +302,9 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
       child: ListView.builder(
         padding: EdgeInsets.fromLTRB(wide ? 48 : 16, 8, wide ? 48 : 16, 96),
         itemCount: rows.length + 1,
-        itemBuilder: (c, i) => i == rows.length ? _nextSection(c, node) : rows[i](c),
+        itemBuilder: (c, i) => i == rows.length
+            ? (node == null ? const SizedBox.shrink() : RelatedPrayers(book: widget.book, node: node, standalone: widget.standalone))
+            : rows[i](c),
       ),
     );
   }
@@ -302,11 +315,11 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
     final s = ref.read(settingsProvider);
     switch (it) {
       case ExcludedGroupItem g when _expandedGroups.contains(g.key):
-        return [for (final si in g.items) (c) => _SegmentView(item: si, layout: layout)];
+        return [for (final si in g.items) (c) => _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key))];
       case SegmentItem si when si.kind == SegmentKind.note && s.collapseNotes:
         final open = _toggledNotes.contains(si.key);
         void toggle() => setState(() => open ? _toggledNotes.remove(si.key) : _toggledNotes.add(si.key));
-        return [(c) => _NoteRow(item: si, open: open, onTap: toggle, child: open ? _SegmentView(item: si, layout: layout) : null)];
+        return [(c) => _NoteRow(item: si, open: open, onTap: toggle, child: open ? _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key)) : null)];
       default:
         return [(c) => _item(c, it, layout)];
     }
@@ -329,24 +342,6 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
         _ => false,
       };
 
-  Widget _nextSection(BuildContext context, SchemaNode? node) {
-    if (node == null || node.parent == null) return const SizedBox.shrink();
-    final siblings = node.parent!.children;
-    final i = siblings.indexOf(node);
-    if (i < 0 || i + 1 >= siblings.length) return const SizedBox.shrink();
-    final next = siblings[i + 1];
-    return Padding(
-      padding: const EdgeInsets.only(top: 24),
-      child: FilledButton.tonalIcon(
-        // Replaces this page in the browser history too, so back returns
-        // to the library rather than the previous section.
-        onPressed: () => Router.neglect(context, () => context.pushReplacement(readerPath(widget.book, next.id, standalone: widget.standalone))),
-        icon: const Icon(Icons.arrow_forward),
-        label: Text(context.tr('Next: {title}', {'title': context.term(next.en)})),
-      ),
-    );
-  }
-
   Widget _item(BuildContext context, RenderItem it, TextLayout layout) {
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
@@ -357,17 +352,24 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
         final size = (24 - h.level * 3).clamp(15, 24).toDouble() * s.textScale;
         return Padding(
           padding: EdgeInsets.only(top: h.level == 0 ? 4 : 20, bottom: 6),
-          child: SplitRow(gap: 12, children: [
-            context.uiLanguage == UiLanguage.en
-                ? Text(context.term(h.node.en),
-                    style: theme.textTheme.titleMedium?.copyWith(fontSize: size * 0.72, color: theme.colorScheme.primary, fontWeight: FontWeight.w600))
-                : const SizedBox.shrink(),
-            if (h.applicability == Applicability.today && s.highlightToday && h.labelEn != null)
-              _TodayChip(conditionLabel(context, s, h.labelEn, h.labelHe)),
-            Text(h.node.he,
-                textDirection: TextDirection.rtl,
-                style: TextStyle(fontFamily: s.hebrewFont, fontSize: size, fontWeight: FontWeight.w700, color: theme.colorScheme.primary)),
-          ]),
+          child: Builder(builder: (context) {
+            final f = context.titleFormsFor(s);
+            // An untitled Hebrew node repeats the English title.
+            final showHe = f.he && (h.node.he != h.node.en || !f.en);
+            return SplitRow(gap: 12, children: [
+              f.en
+                  ? Text(context.term(h.node.en),
+                      style: theme.textTheme.titleMedium
+                          ?.copyWith(fontSize: size * (showHe ? 0.72 : 0.85), color: theme.colorScheme.primary, fontWeight: FontWeight.w600))
+                  : const SizedBox.shrink(),
+              if (h.applicability == Applicability.today && s.highlightToday && h.labelEn != null)
+                _TodayChip(conditionLabel(context, s, h.labelEn, h.labelHe)),
+              if (showHe)
+                Text(h.node.he,
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(fontFamily: s.hebrewFont, fontSize: size, fontWeight: FontWeight.w700, color: theme.colorScheme.primary)),
+            ]);
+          }),
         );
       case InsertedSectionItem ins:
         return Container(
@@ -379,8 +381,9 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
             const SizedBox(width: 8),
             Expanded(
               child: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
-                Text(context.tr('Added today: {label}', {'label': context.term(ins.labelEn)}), style: theme.textTheme.labelLarge),
-                Text(ins.labelHe, textDirection: TextDirection.rtl, style: TextStyle(fontFamily: s.hebrewFont, fontSize: 16)),
+                Text(context.tr('Added today: {label}', {'label': context.prayerTitle(s, ins.labelEn, ins.labelHe)}), style: theme.textTheme.labelLarge),
+                if (!context.prayerTitleIsHebrew(s) && context.prayerSubtitle(s, ins.labelEn, ins.labelHe) != null)
+                  Text(ins.labelHe, textDirection: TextDirection.rtl, style: TextStyle(fontFamily: s.hebrewFont, fontSize: 16)),
               ]),
             ),
           ]),
@@ -388,9 +391,9 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
       case CollapsedSectionItem c:
         return _CollapsedTile(
           icon: Icons.unfold_more,
-          title: context.tr('{title} — not said today', {'title': context.term(c.node.en)}),
+          title: context.tr('{title} — not said today', {'title': context.prayerTitle(s, c.node.en, c.node.he)}),
           subtitle: conditionLabel(context, s, c.labelEn, c.labelHe),
-          he: c.node.he,
+          he: context.prayerTitleIsHebrew(s) ? null : context.prayerSubtitle(s, c.node.en, c.node.he),
           onTap: () => setState(() => _expanded.add(c.node.id)),
         );
       case ExcludedGroupItem g:
@@ -423,9 +426,22 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
           ]),
         );
       case SegmentItem si:
-        return _SegmentView(item: si, layout: layout);
+        return _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key));
     }
   }
+}
+
+/// Lets the user read the siddur as of another day.
+Future<void> pickReaderDate(BuildContext context, WidgetRef ref, HDate current) async {
+  final picked = await showDatePicker(
+    context: context,
+    initialDate: current.greg(),
+    firstDate: DateTime(1900),
+    lastDate: DateTime(2239),
+    helpText: context.tr('Pray as of…'),
+  );
+  if (picked == null) return;
+  ref.read(readerDateProvider.notifier).state = HDate.fromDate(picked);
 }
 
 String readerPath(String book, String nodeId, {bool standalone = false}) => standalone
@@ -440,20 +456,21 @@ class SectionReaderScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final book = ref.watch(defaultBookProvider).value;
-    final root = book == null ? null : ref.watch(bookIndexProvider(book)).value;
-    if (book == null || root == null) return Scaffold(appBar: AppBar(), body: adaptiveProgress());
-    final shabbat = ref.watch(dayContextProvider((ref.watch(readerDaytimeDateProvider).abs(), Service.shacharit)))['shabbat'];
-    final id = findSection(root, section, shabbat: shabbat);
-    if (id == null) return Scaffold(appBar: AppBar(), body: Center(child: Text(context.tr('Not found in this siddur'))));
-    return ReaderScreen(key: ValueKey(id), book: book, nodeId: id, standalone: true);
+    final date = ref.watch(readerDaytimeDateProvider).abs();
+    final found = ref.watch(sectionRefProvider((section, date)));
+    if (!found.hasValue) return Scaffold(appBar: AppBar(), body: adaptiveProgress());
+    final r = found.value;
+    if (r == null) return Scaffold(appBar: AppBar(), body: Center(child: Text(context.tr('Not found in this siddur'))));
+    return ReaderScreen(key: ValueKey('${r.book}|${r.id}'), book: r.book, nodeId: r.id, standalone: true);
   }
 }
 
-class _DayBanner extends ConsumerWidget {
+/// The reader's date with its special days, and a way back to today
+/// when another date is picked.
+class DayBanner extends ConsumerWidget {
   final HDate date;
   final bool picked;
-  const _DayBanner({required this.date, required this.picked});
+  const DayBanner({super.key, required this.date, required this.picked});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -591,7 +608,10 @@ class _SegmentView extends ConsumerWidget {
 
   /// Tighter spacing, inside a card such as Kiddush.
   final bool compact;
-  const _SegmentView({required this.item, required this.layout, this.compact = false});
+
+  /// The first prayer line of its section: starts in bold.
+  final bool opening;
+  const _SegmentView({required this.item, required this.layout, this.compact = false, this.opening = false});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -642,7 +662,11 @@ class _SegmentView extends ConsumerWidget {
       final html = SefariaHtml(base, instructionStyle: TextStyle(color: colors.instruction, fontStyle: FontStyle.italic), onFootnote: footnote);
       final spans = <InlineSpan>[?lead];
       var inOptions = false;
-      for (final r in seg.runs) {
+      for (final (i, r) in seg.runs.indexed) {
+        var h = r.html;
+        if (i == 0 && !r.marker && item.kind == SegmentKind.prayer) {
+          h = normalizeOpeningBold(h, opening: opening, addIfMissing: seg.segment.hebrew);
+        }
         // Each labelled option ("לר"ח: …", "לפסח: …") starts its own line so
         // the choices are easy to tell apart.
         final optionStart = r.option && r.marker;
@@ -662,7 +686,7 @@ class _SegmentView extends ConsumerWidget {
         } else if (r.applicability == Applicability.notToday) {
           st = base.copyWith(color: colors.excluded, decoration: TextDecoration.lineThrough, decorationColor: colors.excluded);
         }
-        spans.addAll(html.parse(marks(r.html), style: st));
+        spans.addAll(html.parse(marks(h), style: st));
       }
       return Text.rich(TextSpan(children: spans), textDirection: rtl ? TextDirection.rtl : TextDirection.ltr, textAlign: TextAlign.start);
     }
@@ -856,7 +880,8 @@ class _UnitCard extends ConsumerWidget {
   final SchemaNode node;
   final List<SegmentItem> items;
   final TextLayout layout;
-  const _UnitCard({required this.node, required this.items, required this.layout});
+  final Set<String> openers;
+  const _UnitCard({required this.node, required this.items, required this.layout, required this.openers});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -881,19 +906,17 @@ class _UnitCard extends ConsumerWidget {
           Icon(Icons.wine_bar_outlined, size: 18, color: theme.colorScheme.primary),
           const SizedBox(width: 8),
           Expanded(
-            child: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
-              Text(context.term(node.en),
-                  style: theme.textTheme.titleSmall?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.w700)),
-              Text(node.he,
-                  textDirection: TextDirection.rtl,
-                  style: TextStyle(fontFamily: s.hebrewFont, fontSize: 18, color: theme.colorScheme.primary, fontWeight: FontWeight.w700)),
-            ]),
+            child: PrayerTitleText(node.en, node.he,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                hebrewAtEnd: true,
+                enStyle: theme.textTheme.titleSmall?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.w700),
+                heStyle: TextStyle(fontSize: 18, color: theme.colorScheme.primary, fontWeight: FontWeight.w700)),
           ),
         ]),
         const Divider(height: 16),
         for (var i = 0; i < body.length; i++)
           if (!isRedundantRubric(body[i], i + 1 < body.length ? body[i + 1] : null, s))
-            _SegmentView(item: body[i], layout: layout, compact: true),
+            _SegmentView(item: body[i], layout: layout, compact: true, opening: openers.contains(body[i].key)),
       ]),
     );
   }

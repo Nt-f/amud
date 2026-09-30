@@ -35,7 +35,7 @@ class LearningScreen extends ConsumerWidget {
       return (ia < 0 ? 999 : ia).compareTo(ib < 0 ? 999 : ib);
     });
     return Scaffold(
-      appBar: AppBar(title: const Text('Daily learning')),
+      appBar: AppBar(title: Text(context.tr('Daily learning'))),
       body: ListView(children: [
         Row(children: [
           IconButton(onPressed: () => ref.read(_learnDateProvider.notifier).state = date.addDays(-1), icon: const Icon(Icons.chevron_left)),
@@ -68,7 +68,7 @@ class LearningScreen extends ConsumerWidget {
           ),
         Padding(
           padding: const EdgeInsets.all(16),
-          child: Text('Long-press to star a schedule. Links open the text on Sefaria.', style: theme.textTheme.bodySmall),
+          child: Text(context.tr('Long-press to star a schedule. Links open the text on Sefaria.'), style: theme.textTheme.bodySmall),
         ),
       ]),
     );

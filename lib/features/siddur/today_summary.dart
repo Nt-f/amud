@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 
 import '../../core/l10n.dart';
@@ -7,6 +8,7 @@ import '../../core/providers.dart';
 import '../../core/settings.dart';
 import '../../core/theme.dart';
 import '../../core/split_row.dart';
+import '../../core/titles.dart';
 import '../home/cards/card_frame.dart';
 
 enum ChangeKind { add, omit, info }
@@ -72,17 +74,22 @@ class TodayInSiddurCard extends ConsumerWidget {
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
     // Just the list: what changes first, then the season's standing wording.
+    final s = ref.watch(settingsProvider);
     return CardFrame(
       title: 'Today in the siddur',
       icon: Icons.auto_awesome,
-      child: Column(children: [
-        for (final c in changes) _row(context, theme, colors, c),
+      onTap: () => context.push('/today'),
+      trailing: Icon(Icons.chevron_right, size: 18, color: theme.colorScheme.outline),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        for (final c in changes) _row(context, s, theme, colors, c),
         if (changes.isEmpty) Text(context.tr('A regular weekday.')),
+        const SizedBox(height: 6),
+        Text(context.tr("Tap for today's davening, in order"), style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.primary)),
       ]),
     );
   }
 
-  Widget _row(BuildContext context, ThemeData theme, SiddurColors colors, LiturgyChange c) => Padding(
+  Widget _row(BuildContext context, AppSettings s, ThemeData theme, SiddurColors colors, LiturgyChange c) => Padding(
         padding: const EdgeInsets.symmetric(vertical: 3),
         child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Icon(
@@ -96,13 +103,20 @@ class TodayInSiddurCard extends ConsumerWidget {
           ),
           const SizedBox(width: 8),
           Expanded(
-            child: SplitRow(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            child: Builder(builder: (context) {
+              final f = context.titleFormsFor(s);
+              final en = Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Text(context.term(c.en), style: theme.textTheme.bodyMedium?.copyWith(fontWeight: c.kind == ChangeKind.info ? null : FontWeight.w600)),
                 if (c.detail != null) Text(context.term(c.detail!), style: theme.textTheme.bodySmall),
-              ]),
-              Text(c.he, textDirection: TextDirection.rtl, style: theme.textTheme.bodySmall),
-            ]),
+              ]);
+              if (!f.he) return en;
+              final he = Text(c.he,
+                  textDirection: TextDirection.rtl,
+                  style: f.en
+                      ? theme.textTheme.bodySmall
+                      : theme.textTheme.bodyMedium?.copyWith(fontWeight: c.kind == ChangeKind.info ? null : FontWeight.w600));
+              return f.en ? SplitRow(crossAxisAlignment: CrossAxisAlignment.start, children: [en, he]) : Align(alignment: AlignmentDirectional.centerStart, child: he);
+            }),
           ),
         ]),
       );

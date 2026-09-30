@@ -13,10 +13,18 @@ class Storage {
   final Box<List<int>> _blobs;
 
   static Future<Storage> open() async {
+    // The folder keeps the app's original name so saved data survives the
+    // rename to Amud.
     await Hive.initFlutter('flutter_siddur');
     final kv = await Hive.openBox<String>('kv');
     final blobs = await Hive.openBox<List<int>>('blobs');
     return Storage._(kv, blobs);
+  }
+
+  /// Opens the boxes in [dir] (tests, where there's no app directory).
+  static Future<Storage> openAt(String dir) async {
+    Hive.init(dir);
+    return Storage._(await Hive.openBox<String>('kv'), await Hive.openBox<List<int>>('blobs'));
   }
 
   T? readJson<T>(String key, T Function(Object? json) decode) {

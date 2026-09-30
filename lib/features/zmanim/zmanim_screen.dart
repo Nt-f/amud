@@ -78,11 +78,11 @@ class ZmanimScreen extends ConsumerWidget {
       Padding(
         padding: const EdgeInsets.fromLTRB(4, 16, 4, 4),
         child: Row(children: [
-          Expanded(child: Text('My zmanim', style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary))),
+          Expanded(child: Text(context.tr('My zmanim'), style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary))),
           TextButton.icon(
             onPressed: () => showCustomZmanEditor(context, ref),
             icon: const Icon(Icons.add, size: 18),
-            label: const Text('Custom zman'),
+            label: Text(context.tr('Custom zman')),
           ),
         ]),
       ),
@@ -113,12 +113,12 @@ class ZmanimScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const Text('Zmanim'),
+          Text(context.tr('Zmanim')),
           Text(loc.getName() ?? '', style: theme.textTheme.bodySmall),
         ]),
         actions: [
-          IconButton(tooltip: 'Alerts', icon: const Icon(Icons.notifications_active_outlined), onPressed: () => context.push('/alerts')),
-          IconButton(tooltip: 'Location', icon: const Icon(Icons.place_outlined), onPressed: () => context.push('/settings/location')),
+          IconButton(tooltip: context.tr('Alerts'), icon: const Icon(Icons.notifications_active_outlined), onPressed: () => context.push('/alerts')),
+          IconButton(tooltip: context.tr('Location'), icon: const Icon(Icons.place_outlined), onPressed: () => context.push('/settings/location')),
         ],
       ),
       body: ListView(
@@ -183,8 +183,8 @@ class ZmanimScreen extends ConsumerWidget {
           ListTile(title: Text(name, style: Theme.of(ctx).textTheme.titleMedium)),
           ListTile(
             leading: const Icon(Icons.add_alert_outlined),
-            title: const Text('Notify me'),
-            subtitle: const Text('Set a reminder before or after this zman'),
+            title: Text(context.tr('Notify me')),
+            subtitle: Text(context.tr('Set a reminder before or after this zman')),
             onTap: () {
               Navigator.pop(ctx);
               showAlertEditor(context, ref, zmanKey: key);
@@ -193,7 +193,7 @@ class ZmanimScreen extends ConsumerWidget {
           if (custom != null) ...[
             ListTile(
               leading: const Icon(Icons.edit_outlined),
-              title: const Text('Edit custom zman'),
+              title: Text(context.tr('Edit custom zman')),
               onTap: () {
                 Navigator.pop(ctx);
                 showCustomZmanEditor(context, ref, existing: custom);
@@ -201,7 +201,7 @@ class ZmanimScreen extends ConsumerWidget {
             ),
             ListTile(
               leading: const Icon(Icons.delete_outline),
-              title: const Text('Delete custom zman'),
+              title: Text(context.tr('Delete custom zman')),
               onTap: () {
                 ref.read(customZmanimProvider.notifier).remove(custom.id);
                 Navigator.pop(ctx);
@@ -253,7 +253,7 @@ class _DateNav extends ConsumerWidget {
         ),
       ),
       if (!isToday)
-        TextButton(onPressed: () => ref.read(_zmanimDateProvider.notifier).state = null, child: const Text('Today')),
+        TextButton(onPressed: () => ref.read(_zmanimDateProvider.notifier).state = null, child: Text(context.tr('Today'))),
       IconButton(onPressed: () => go(1), icon: const Icon(Icons.chevron_right)),
     ]);
   }

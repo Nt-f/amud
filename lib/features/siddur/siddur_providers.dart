@@ -72,11 +72,19 @@ final defaultBookProvider = FutureProvider<String>((ref) async {
   return (m.book('Siddur Ashkenaz') ?? m.books.first).title;
 });
 
+/// Finds a well-known section (shortcut key) for the day [contextFor]
+/// describes: Shabbat's services on Shabbat and Yom Tov, where Friday
+/// night's Maariv is Shabbat's and Saturday night's isn't.
+String? findSectionOn(SchemaNode root, String key, DayContext Function(Service) contextFor) {
+  final c = contextFor(key == 'maariv' ? Service.maariv : Service.shacharit);
+  return findSection(root, key, shabbat: c['shabbat'] || c['yomTov']);
+}
+
 /// Finds a well-known section (shortcut key) within a book.
 String? findSection(SchemaNode root, String key, {required bool shabbat}) {
   final patterns = <String, List<String>>{
     'shacharit': shabbat
-        ? [r'^shabbat/shacharit$', r'shabbat.*(?:shacharit|morning)', r'shaharit for shabbat', r'the morning prayers']
+        ? [r'^shabbat/shacharit$', r'shaharit for shabbat', r'^shabbat (?:shacharit|morning services?)$', r'^the morning prayers$', r'^shabbat[^/]*/(?:shacharit|shaharit)$']
         : [r'^weekday/shacharit$', r'weekday shacharit', r'^shacharit$', r'the morning prayers', r'weekdays$'],
     'mincha': shabbat
         ? [r'^shabbat/minchah?$', r'shabbat mincha', r'mincha service for shabbos', r'minha for shabbat']
@@ -84,6 +92,7 @@ String? findSection(SchemaNode root, String key, {required bool shabbat}) {
     'maariv': shabbat
         ? [r'^shabbat/maariv$', r'shabbat (?:eve )?(?:maariv|arvit)', r'maariv service for shabbos', r"ma'ariv for shabbat"]
         : [r'^weekday/maariv$', r'weekday (?:maariv|arvit)', r'^maariv$', r"ma'ariv for weekdays"],
+    'musaf': [r'^shabbat/musaf', r'musaf leshabbat', r'shabbat mussaf', r'musaf for shabbat', r'^musaf service$', r'^musaf$'],
     'birkat': [r'birkat ha.?mazon', r'birchas? ha.?mazon', r'post meal blessing', r'grace after meals'],
     'bedtime': [r"keri.at shema al hamita", r'bedtime shema', r'prayer before retiring', r'shema before sleep'],
     'derech': [r'tefillat ha.?derech', r"traveler.?s prayer"],
@@ -101,4 +110,31 @@ String? findSection(SchemaNode root, String key, {required bool shabbat}) {
     }
   }
   return null;
+}
+
+/// Whether [node] is said on the day [contexts] describes: by its own
+/// section rule, or, for a section without one, by its parts: a section
+/// all of whose parts are for other days (Selichot on an ordinary day)
+/// isn't said, and one whose parts are all conditional and some said today
+/// (Hoshanot) is. The labels say why.
+({Applicability ap, String? labelEn, String? labelHe}) sectionStatus(
+    SiddurResolver resolver, SchemaNode node, DayContext Function(Service) contexts,
+    [Service fallback = Service.shacharit]) {
+  final rule = resolver.sectionRuleFor(node);
+  if (rule != null && rule.when != 'true') {
+    final unknown = <String>{};
+    final ok = rule.condition.eval(contexts(SiddurResolver.serviceFor(node, fallback)).env, unknown);
+    if (unknown.isNotEmpty) return (ap: Applicability.unknown, labelEn: rule.labelEn, labelHe: rule.labelHe);
+    return (ap: ok ? Applicability.today : Applicability.notToday, labelEn: rule.labelEn, labelHe: rule.labelHe);
+  }
+  if (rule != null || node.isLeaf) return (ap: Applicability.always, labelEn: null, labelHe: null);
+  final svc = SiddurResolver.serviceFor(node, fallback);
+  final parts = [for (final c in node.children) sectionStatus(resolver, c, contexts, svc)];
+  if (parts.every((p) => p.ap == Applicability.notToday)) return (ap: Applicability.notToday, labelEn: null, labelHe: null);
+  if (parts.every((p) => p.ap != Applicability.always)) {
+    for (final p in parts) {
+      if (p.ap == Applicability.today) return p;
+    }
+  }
+  return (ap: Applicability.always, labelEn: null, labelHe: null);
 }

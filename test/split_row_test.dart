@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_siddur/core/split_row.dart';
+import 'package:amud/core/split_row.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 Widget _host(double width, TextDirection dir) => Directionality(

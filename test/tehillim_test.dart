@@ -1,5 +1,5 @@
-import 'package:flutter_siddur/core/hebrew_text.dart';
-import 'package:flutter_siddur/features/tehillim/tehillim_data.dart';
+import 'package:amud/core/hebrew_text.dart';
+import 'package:amud/features/tehillim/tehillim_data.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hebcal/hebcal.dart';
 

@@ -228,8 +228,11 @@ class FontRepository extends Notifier<List<FontEntry>> {
       final bytes = _storage.readBlob('font:${f.family}');
       if (bytes != null) await _register(f.family, bytes);
     }
-    final chosen = ref.read(settingsProvider).hebrewFont;
-    if (chosen.startsWith('gf_')) await ref.read(remoteFontsProvider.notifier).loadCached(chosen);
+    // The siddur's font and the Torah tab's (stored separately).
+    final torah = _storage.readJson('torahSettings', (j) => (j as Map)['hebrewFont'] as String?);
+    for (final chosen in {ref.read(settingsProvider).hebrewFont, ?torah}) {
+      if (chosen.startsWith('gf_')) await ref.read(remoteFontsProvider.notifier).loadCached(chosen);
+    }
   }
 
   static Future<void> _register(String family, List<int> bytes) async {

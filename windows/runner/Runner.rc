@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.fluttersiddur" "\0"
-            VALUE "FileDescription", "flutter_siddur" "\0"
+            VALUE "CompanyName", "Amud" "\0"
+            VALUE "FileDescription", "Amud" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "flutter_siddur" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2026 com.fluttersiddur. All rights reserved." "\0"
-            VALUE "OriginalFilename", "flutter_siddur.exe" "\0"
-            VALUE "ProductName", "flutter_siddur" "\0"
+            VALUE "InternalName", "amud" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2026 Amud. All rights reserved." "\0"
+            VALUE "OriginalFilename", "amud.exe" "\0"
+            VALUE "ProductName", "Amud" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

@@ -18,6 +18,14 @@ class Feature {
 
 const features = [
   Feature(1, Icons.fullscreen, 'Focus mode', 'Double-tap the text while praying to hide the top and bottom bars. Double-tap again to bring them back.'),
+  Feature(2, Icons.format_list_numbered, "Today's davening",
+      "The whole day's davening in order, with what's added today, such as Hallel, Musaf or the day's Hoshanot. Open it from Today in the siddur on Home, or from the Siddur tab. Under each section, links lead to what comes next today and to related prayers."),
+  Feature(3, Icons.event_note, 'Holidays & Seasons',
+      'Hoshanot, Lulav, Selichot, Chanukah candles and other holiday prayers in one place, with the ones for today marked. Find it in the Siddur tab.'),
+  Feature(4, Icons.title, 'Prayer title language',
+      'Show prayer titles in English, Hebrew or both, whatever the app language. Under Settings → Siddur, or Text settings in the reader.'),
+  Feature(5, Icons.local_library, 'Torah tab',
+      "Download the Kitzur Shulchan Aruch from Sefaria to learn offline, with today's Kitzur Yomi marked. More books are on the way. The calendar is now a card on Home."),
 ];
 
 int get latestFeature => features.last.id;

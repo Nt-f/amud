@@ -79,18 +79,39 @@ const defaultDashboard = [
   CardConfig(id: 'd10', type: 'minyan', span: 1),
   CardConfig(id: 'd3', type: 'candles', span: 1),
   CardConfig(id: 'd2', type: 'nextZman', span: 1),
+  CardConfig(id: 'd11', type: 'calendar', span: 2),
   CardConfig(id: 'd7', type: 'zmanimList', span: 2),
   CardConfig(id: 'd8', type: 'upcoming', span: 2),
 ];
 
 /// Bumped when saved dashboards should adopt a new arrangement.
-const _dashboardVersion = 2;
+const _dashboardVersion = 3;
 
+/// v3: the Calendar tab became a card, placed under Shabbat & Yom Tov and
+/// the next zman (above the zmanim list).
+///
 /// v2: the Omer card is a full-width strip under the date; after "Today
 /// in the siddur" come quick prayers, then daily learning beside the
 /// minyan card, then Shabbat & Yom Tov beside the next zman.
 List<CardConfig> _migrate(List<CardConfig> l, int from) {
-  if (from >= 2) return l;
+  if (from < 2) l = _migrateV2(l);
+  if (from < 3 && !l.any((c) => c.type == 'calendar')) {
+    final out = [...l];
+    final after = [for (final (i, c) in out.indexed) if (c.type == 'candles' || c.type == 'nextZman') i];
+    final zmanim = out.indexWhere((c) => c.type == 'zmanimList');
+    final at = after.isNotEmpty ? after.last + 1 : (zmanim >= 0 ? zmanim : out.length);
+    final ids = {for (final c in out) c.id};
+    var n = out.length + 1;
+    while (ids.contains('c$n')) {
+      n++;
+    }
+    out.insert(at, CardConfig(id: 'c$n', type: 'calendar', span: 2));
+    l = out;
+  }
+  return l;
+}
+
+List<CardConfig> _migrateV2(List<CardConfig> l) {
   final out = [...l];
   CardConfig? take(String type) {
     final i = out.indexWhere((c) => c.type == type);

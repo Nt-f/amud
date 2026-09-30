@@ -9,6 +9,7 @@ import '../../core/settings.dart';
 import '../zmanim/zman_catalog.dart';
 import 'alert_editor.dart';
 import 'alerts.dart';
+import '../../core/l10n.dart';
 
 class AlertsScreen extends ConsumerWidget {
   const AlertsScreen({super.key});
@@ -30,11 +31,11 @@ class AlertsScreen extends ConsumerWidget {
     );
     final theme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text('Zman alerts')),
+      appBar: AppBar(title: Text(context.tr('Zman alerts'))),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => showAlertEditor(context, ref),
         icon: const Icon(Icons.add_alert),
-        label: const Text('New alert'),
+        label: Text(context.tr('New alert')),
       ),
       body: ListView(padding: const EdgeInsets.only(bottom: 96), children: [
         if (!backend.firesWhenClosed)
@@ -42,13 +43,13 @@ class AlertsScreen extends ConsumerWidget {
             margin: const EdgeInsets.all(16),
             child: Padding(
               padding: const EdgeInsets.all(12),
-              child: Text('On this platform alerts fire while the app is open.', style: theme.textTheme.bodySmall),
+              child: Text(context.tr('On this platform alerts fire while the app is open.'), style: theme.textTheme.bodySmall),
             ),
           ),
         if (alerts.isEmpty)
-          const Padding(
-            padding: EdgeInsets.all(32),
-            child: Text('No alerts yet. Tap a zman on the Zmanim page or “New alert”.', textAlign: TextAlign.center),
+          Padding(
+            padding: const EdgeInsets.all(32),
+            child: Text(context.tr('No alerts yet. Tap a zman on the Zmanim page or “New alert”.'), textAlign: TextAlign.center),
           ),
         for (final a in alerts)
           Dismissible(
@@ -59,14 +60,18 @@ class AlertsScreen extends ConsumerWidget {
               value: a.enabled,
               onChanged: (v) => ref.read(alertsProvider.notifier).upsert(a.copyWith(enabled: v)),
               title: Text(a.title),
-              subtitle: Text('${a.describeOffset()} ${names.name(a.zmanKey)}${a.when == 'true' ? '' : ' · when ${a.when}'}'),
+              subtitle: Text([
+                context.tr(a.offsetMinutes == 0 ? 'At {zman}' : (a.offsetMinutes < 0 ? '{n} min before {zman}' : '{n} min after {zman}'),
+                    {'n': a.offsetMinutes.abs(), 'zman': names.label(a.zmanKey)}),
+                if (a.when != 'true') context.tr('when {condition}', {'condition': a.when}),
+              ].join(' · ')),
               secondary: IconButton(icon: const Icon(Icons.edit_outlined), onPressed: () => showAlertEditor(context, ref, existing: a)),
             ),
           ),
         if (plan.isNotEmpty) ...[
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 24, 16, 8),
-            child: Text('Coming up', style: theme.textTheme.titleSmall),
+            child: Text(context.tr('Coming up'), style: theme.textTheme.titleSmall),
           ),
           for (final p in plan)
             ListTile(
@@ -89,7 +94,7 @@ class AlertsScreen extends ConsumerWidget {
               await backend.showNow('Zman alerts', 'Notifications are working.');
             },
             icon: const Icon(Icons.notifications_outlined),
-            label: const Text('Send a test notification'),
+            label: Text(context.tr('Send a test notification')),
           ),
         ),
         Padding(
@@ -97,10 +102,10 @@ class AlertsScreen extends ConsumerWidget {
           child: OutlinedButton.icon(
             onPressed: () async {
               final n = await ref.read(alertSchedulerProvider).reschedule();
-              if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Scheduled $n notifications')));
+              if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.tr('Scheduled {n} notifications', {'n': n}))));
             },
             icon: const Icon(Icons.sync),
-            label: const Text('Reschedule now'),
+            label: Text(context.tr('Reschedule now')),
           ),
         ),
       ]),
@@ -115,5 +120,5 @@ String _day(DateTime t, Location loc) {
   final d = PlainDate(l.year, l.month, l.day).abs - PlainDate(now.year, now.month, now.day).abs;
   if (d == 0) return 'Today';
   if (d == 1) return 'Tomorrow';
-  return formatPlainDate(PlainDate(l.year, l.month, l.day), weekday: true).replaceFirst(RegExp(r', \d+$'), '');
+  return formatPlainDate(PlainDate(l.year, l.month, l.day), weekday: true, year: false);
 }

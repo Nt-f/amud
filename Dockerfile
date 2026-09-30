@@ -4,7 +4,7 @@
 #   docker run -d -p 8088:8088 flutter-siddur   → http://localhost:8088
 # Options:
 #   --build-arg SYNC_SEFARIA=1       re-download texts from Sefaria first
-#   --build-arg BASE_HREF=/siddur/   when served from a sub-path
+#   --build-arg BASE_HREF=/          the app alone at the root (no landing page)
 # To deploy the precompiled web-dist/ without the Flutter SDK, use Dockerfile.prebuilt.
 ARG FLUTTER_VERSION=3.41.2
 
@@ -17,7 +17,7 @@ RUN flutter pub get
 COPY . .
 ARG SYNC_SEFARIA=0
 RUN if [ "$SYNC_SEFARIA" = "1" ]; then dart run tool/sefaria_sync.dart; fi
-ARG BASE_HREF=/
+ARG BASE_HREF=/app/
 RUN BASE_HREF="$BASE_HREF" bash tool/build_web.sh
 
 # Export target: refresh web-dist/ on the host from the same build.

@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Siddur</string>
+	<string>Amud</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Your location is used on-device to calculate zmanim (halachic times) and candle-lighting times. It is never sent anywhere.</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
@@ -19,7 +19,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>flutter_siddur</string>
+	<string>Amud</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>

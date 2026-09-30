@@ -10,6 +10,7 @@ import '../home/cards/card_frame.dart';
 import '../home/today.dart';
 import '../zmanim/zman_catalog.dart';
 import 'js_runtime.dart';
+import '../../core/l10n.dart';
 
 const sampleJsCard = r'''// A custom card. Define render(ctx) and return a card description.
 // ctx.hebrewDate, ctx.zmanim.sunset.time, ctx.day.roshChodesh, ctx.omerTonight,
@@ -186,21 +187,21 @@ class _JsCardEditorState extends ConsumerState<JsCardEditor> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-      TextField(controller: _title, decoration: const InputDecoration(labelText: 'Title'), onChanged: (_) => _emit()),
+      TextField(controller: _title, decoration: InputDecoration(labelText: context.tr('Title')), onChanged: (_) => _emit()),
       const SizedBox(height: 12),
       TextField(
         controller: _script,
         maxLines: 16,
         minLines: 8,
         style: const TextStyle(fontFamily: 'monospace', fontSize: 13),
-        decoration: const InputDecoration(labelText: 'Script', border: OutlineInputBorder(), alignLabelWithHint: true),
+        decoration: InputDecoration(labelText: context.tr('Script'), border: OutlineInputBorder(), alignLabelWithHint: true),
         onChanged: (_) => _emit(),
       ),
       const SizedBox(height: 8),
       Row(children: [
-        FilledButton.tonalIcon(onPressed: _running ? null : _run, icon: const Icon(Icons.play_arrow), label: const Text('Run preview')),
+        FilledButton.tonalIcon(onPressed: _running ? null : _run, icon: const Icon(Icons.play_arrow), label: Text(context.tr('Run preview'))),
         const SizedBox(width: 8),
-        TextButton(onPressed: () => _showApi(context), child: const Text('API')),
+        TextButton(onPressed: () => _showApi(context), child: Text(context.tr('API'))),
       ]),
       if (_preview != null) ...[
         const SizedBox(height: 8),
