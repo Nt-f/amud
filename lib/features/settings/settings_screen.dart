@@ -168,6 +168,12 @@ class SettingsScreen extends ConsumerWidget {
           AdaptiveSwitchTile(title: context.tr('Show halachic notes'), value: s.showNotes, onChanged: (v) => set((x) => x.copyWith(showNotes: v))),
           if (s.showNotes)
             AdaptiveSwitchTile(
+                title: context.tr('Short notes'),
+                subtitle: context.tr("Brief notes only when they apply today, instead of the siddur's full notes"),
+                value: s.conciseNotes,
+                onChanged: (v) => set((x) => x.copyWith(conciseNotes: v))),
+          if (s.showNotes && !s.conciseNotes)
+            AdaptiveSwitchTile(
                 title: context.tr('Collapse halachic notes'),
                 subtitle: context.tr('Show a one-line note; tap to read it'),
                 value: s.collapseNotes,

@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 
 import '../../core/fonts.dart';
+import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
@@ -145,12 +146,10 @@ class _Choice<T> extends StatelessWidget {
   const _Choice({required this.value, required this.options, required this.onChanged});
 
   @override
-  Widget build(BuildContext context) => SegmentedButton<T>(
-        showSelectedIcon: false,
-        expandedInsets: EdgeInsets.zero,
-        segments: [for (final (v, l) in options) ButtonSegment(value: v, label: Text(context.tr(l), textAlign: TextAlign.center))],
-        selected: {value},
-        onSelectionChanged: (v) => onChanged(v.first),
+  Widget build(BuildContext context) => ChoiceBar<T>(
+        options: [for (final (v, l) in options) (v, context.tr(l), null)],
+        selected: value,
+        onChanged: onChanged,
       );
 }
 
@@ -349,6 +348,13 @@ class _ReadingPage extends ConsumerWidget {
         _Switch(title: 'Show instructions', value: s.showInstructions, onChanged: (v) => set((x) => x.copyWith(showInstructions: v))),
         _Switch(title: 'Show halachic notes', value: s.showNotes, onChanged: (v) => set((x) => x.copyWith(showNotes: v))),
         if (s.showNotes)
+          _Switch(
+            title: 'Short notes',
+            subtitle: "Brief notes only when they apply today, instead of the siddur's full notes",
+            value: s.conciseNotes,
+            onChanged: (v) => set((x) => x.copyWith(conciseNotes: v)),
+          ),
+        if (s.showNotes && !s.conciseNotes)
           _Switch(
             title: 'Collapse halachic notes',
             subtitle: 'Show a one-line note; tap to read it',

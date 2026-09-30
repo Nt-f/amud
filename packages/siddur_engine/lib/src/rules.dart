@@ -192,9 +192,106 @@ final List<CalloutRule> defaultCallouts = [
       en: 'Half Hallel is said today.', he: 'היום אומרים חצי הלל.'),
   CalloutRule(title: r'^hallel$', when: 'wholeHallel',
       en: 'Whole Hallel is said today.', he: 'היום אומרים הלל שלם.'),
-  CalloutRule(title: r'amid|shemoneh esrei', when: 'mashivHaruach && hMonth == 7 && hDay >= 22 && hDay <= 30',
-      en: 'Mashiv HaRuach was added at Musaf of Shmini Atzeret — take care in the first 30 days.',
-      he: 'התחילו לומר "משיב הרוח" — יש להיזהר בשלושים הימים הראשונים.'),
-  CalloutRule(title: r'amid|shemoneh esrei', when: 'talUmatar && ((il && hMonth == 8 && hDay >= 7 && hDay <= 30) || (diaspora && (hMonth == 9 || hMonth == 10)))',
-      en: 'V\'ten tal u\'matar is said now.', he: 'אומרים "ותן טל ומטר לברכה".'),
+];
+
+/// Gives a condition to a well-known passage by its opening words, for
+/// versions that print it without any rubric (e.g. Atah Chonantanu set in
+/// small type). Only used when the analyzer found no condition itself.
+class ContentRule {
+  /// Matched against the start of the passage's normalized Hebrew.
+  final RegExp opening;
+
+  /// Optional regex the section id must match.
+  final RegExp? within;
+  final String when;
+  final String labelEn;
+  final String labelHe;
+  ContentRule(String opening, this.when, this.labelEn, this.labelHe, {String? within})
+      : opening = RegExp('^(?:$opening)'),
+        within = within == null ? null : RegExp(within, caseSensitive: false);
+}
+
+const _amidah = r'amid|shemoneh|esrei';
+const _mazon = r'mazon|grace after|bentch|birkat hamazon|birkas hamazon';
+
+final List<ContentRule> defaultContentRules = [
+  ContentRule('אתה חוננתנו', 'motzaeiShabbat || motzaeiYomTov', "Motza'ei Shabbat", 'מוצאי שבת', within: _amidah),
+  ContentRule('ו?על הנסים', 'chanukah || purim', 'Chanukah / Purim', 'חנוכה / פורים', within: '$_amidah|$_mazon'),
+  ContentRule('עננו', 'fastDay', 'Fast day', 'תענית', within: _amidah),
+  ContentRule('נחם', 'tishaBav', "Tisha B'Av", 'תשעה באב', within: _amidah),
+  ContentRule('זכרנו לחיים|מי כמוך אב הרחמ|וכתוב לחיים|בספר חיים', 'aseretYemeiTeshuva', 'Aseret Yemei Teshuva', 'עשי"ת', within: _amidah),
+  ContentRule('ותן טל ומטר', 'talUmatar', 'Winter', 'חורף', within: _amidah),
+  ContentRule('ותן ברכה', '!talUmatar', 'Summer', 'קיץ', within: _amidah),
+  ContentRule('משיב הרוח', 'mashivHaruach', 'Winter', 'חורף', within: _amidah),
+  ContentRule('מוריד הטל', 'moridHatal', 'Summer', 'קיץ', within: _amidah),
+  ContentRule('רצה והחליצנו', 'shabbat', 'Shabbat', 'שבת', within: _mazon),
+  ContentRule('הרחמן הוא ינחילנו יום שכלו שבת', 'shabbat', 'Shabbat', 'שבת', within: _mazon),
+  ContentRule('הרחמן הוא ינחילנו יום שכלו טוב', 'yomTov', 'Yom Tov', 'יום טוב', within: _mazon),
+  ContentRule('הרחמן הוא יחדש עלינו', 'roshChodesh', 'Rosh Chodesh', 'ראש חודש', within: _mazon),
+  ContentRule('הרחמן הוא יקים לנו את סוכת', 'sukkot', 'Sukkot', 'סוכות', within: _mazon),
+];
+
+/// A short, to-the-point note the app shows above a passage on the days it
+/// matters — what to add and what to do if you forget — in place of the
+/// siddur's long halachic notes.
+class CuratedNote {
+  /// Matched anywhere in the passage's normalized Hebrew.
+  final RegExp anchor;
+  final RegExp? within;
+  final String when;
+  final String en;
+  final String he;
+  CuratedNote(String anchor, this.when, {String? within, required this.en, required this.he})
+      : anchor = RegExp(anchor),
+        within = within == null ? null : RegExp(within, caseSensitive: false);
+}
+
+const _first30Winter = '((hMonth == 7 && hDay >= 22) || (hMonth == 8 && hDay <= 21))';
+const _first30Summer = '((hMonth == 1 && hDay >= 15) || (hMonth == 2 && hDay <= 15))';
+// Israel starts 7 Cheshvan; the diaspora on December 4/5, which falls in
+// Kislev — so roughly the first month either way.
+const _first30TalUmatar = '((il && ((hMonth == 8 && hDay >= 7) || (hMonth == 9 && hDay <= 7))) || (diaspora && ((hMonth == 9 && hDay >= 5) || (hMonth == 10 && hDay <= 29))))';
+
+final List<CuratedNote> defaultCuratedNotes = [
+  // Amidah
+  CuratedNote('משיב הרוח', 'mashivHaruach && $_first30Winter', within: _amidah,
+      en: 'Mashiv HaRuach from Musaf of Shmini Atzeres. Said Morid HaTal instead? Continue. Said neither and already ended the blessing? Start the Amidah again.',
+      he: 'אומרים "משיב הרוח" ממוסף שמיני עצרת. אמר "מוריד הטל" — אינו חוזר. לא אמר כלום וסיים הברכה — חוזר לראש התפילה.'),
+  CuratedNote('משיב הרוח', '!mashivHaruach && $_first30Summer', within: _amidah,
+      en: 'No more Mashiv HaRuach (since Musaf of the first day of Pesach). Said it by mistake? Go back to Atah Gibor — or, if you already ended the blessing, start the Amidah again.',
+      he: 'אין אומרים "משיב הרוח" ממוסף יום א׳ של פסח. אמר בטעות — חוזר ל"אתה גבור", ואם סיים הברכה — לראש התפילה.'),
+  CuratedNote('האל הקדוש', 'aseretYemeiTeshuva', within: _amidah,
+      en: 'End with HaMelech HaKadosh. Said HaEl HaKadosh and didn’t correct it right away? Start the Amidah again.',
+      he: 'חותמים "המלך הקדוש". טעה ולא תיקן תוך כדי דיבור — חוזר לראש התפילה.'),
+  CuratedNote('זכרנו לחיים', 'aseretYemeiTeshuva', within: _amidah,
+      en: 'Add Zochreinu, Mi Chamocha, U’chsov and B’sefer Chaim. Forgot one? Add it if you haven’t said Hashem’s name at the end of that blessing; otherwise just continue.',
+      he: 'מוסיפים זכרנו, מי כמוך, וכתוב ובספר חיים. שכח — אם לא אמר את השם בחתימת הברכה חוזר ואומר, ואם אמר — ממשיך.'),
+  CuratedNote('ותן טל ומטר', 'talUmatar && $_first30TalUmatar', within: _amidah,
+      en: 'V’sein tal u’matar now. Forgot it? Add it in Shema Koleinu; past that, go back to Bareich Aleinu; finished the Amidah — repeat it.',
+      he: 'אומרים "ותן טל ומטר". שכח — אומרו ב"שמע קולנו"; עבר — חוזר ל"ברך עלינו"; סיים התפילה — חוזר לראשה.'),
+  CuratedNote('או?הב צדקה ומשפט', 'aseretYemeiTeshuva && weekday', within: _amidah,
+      en: 'End with HaMelech HaMishpat. Said the usual ending and didn’t correct it right away? Continue — you don’t repeat.',
+      he: 'חותמים "המלך המשפט". טעה ולא תיקן תוך כדי דיבור — אינו חוזר (רמ"א).'),
+  CuratedNote('יעלה ויבו?א', '(roshChodesh || cholHamoed) && !(maariv && roshChodesh && !cholHamoed)', within: _amidah,
+      en: 'Add Ya’aleh VeYavo. Forgot it? Before Modim — say it there. After that — go back to Retzei, or repeat the Amidah if you already finished.',
+      he: 'מוסיפים יעלה ויבוא. שכח — אם נזכר קודם "מודים" אומרו שם; אחר כך — חוזר ל"רצה"; סיים התפילה — חוזר לראשה.'),
+  CuratedNote('יעלה ויבו?א', 'maariv && roshChodesh && !cholHamoed', within: _amidah,
+      en: 'Add Ya’aleh VeYavo. Forgot it at Maariv of Rosh Chodesh? Don’t go back.',
+      he: 'מוסיפים יעלה ויבוא. שכח בערבית של ראש חודש — אינו חוזר.'),
+  CuratedNote('^ו?על הנסים', 'chanukah || purim', within: _amidah,
+      en: 'Add Al HaNissim. Forgot it? If you haven’t said Hashem’s name at the end of the blessing, go back to it; otherwise continue — don’t repeat the Amidah.',
+      he: 'מוסיפים על הנסים. שכח — אם לא אמר את השם בחתימה חוזר, ואם אמר — אינו חוזר.'),
+  CuratedNote('^עננו', 'fastDay && mincha', within: _amidah,
+      en: 'Say Aneinu only if you are fasting. Forgot it? Don’t go back.',
+      he: 'אומרים עננו רק מי שמתענה. שכח — אינו חוזר.'),
+  CuratedNote('^נחם', 'tishaBav && mincha', within: _amidah,
+      en: 'Add Nachem at Mincha of Tisha B’Av. Forgot it? Say it in Shema Koleinu, or skip it — don’t repeat the Amidah.',
+      he: 'מוסיפים נחם במנחה. שכח — אומרו ב"שמע קולנו", ואם לא — אינו חוזר.'),
+  // Birkat HaMazon
+  CuratedNote('יעלה ויבו?א', 'roshChodesh || cholHamoed', within: _mazon,
+      en: 'Add Ya’aleh VeYavo. Forgot it? Don’t repeat Birkat HaMazon.',
+      he: 'מוסיפים יעלה ויבוא. שכח — אינו חוזר.'),
+  CuratedNote('^ו?על הנסים', 'chanukah || purim', within: _mazon,
+      en: 'Add Al HaNissim. Forgot it? Don’t go back — add the “HaRachaman… nissim” line among the HaRachamans.',
+      he: 'מוסיפים על הנסים. שכח — אינו חוזר, ואומר "הרחמן הוא יעשה לנו נסים" בין ההרחמנים.'),
 ];

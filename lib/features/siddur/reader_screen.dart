@@ -38,6 +38,7 @@ final _resolvedProvider = FutureProvider.family<List<RenderItem>, _ReaderKey>((r
     options: ResolveOptions(
       excluded: s.excludedDisplay,
       showNotes: s.showNotes,
+      conciseNotes: s.showNotes && s.conciseNotes,
       showInstructions: s.showInstructions,
       showHebrew: s.showHebrewText,
       showTranslation: s.showTranslationText,
@@ -229,7 +230,12 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
     var i = 0;
     while (i < list.length) {
       final it = list[i];
-      final next = i + 1 < list.length ? list[i + 1] : null;
+      // The line an instruction introduces, past any note placed above it.
+      var n = i + 1;
+      while (n < list.length && list[n] is DynamicItem) {
+        n++;
+      }
+      final next = n < list.length ? list[n] : null;
       if (it is SegmentItem && isRedundantRubric(it, next is SegmentItem ? next : null, s)) {
         i++;
         continue;
@@ -594,8 +600,13 @@ class _SegmentView extends ConsumerWidget {
     final colors = SiddurColors.of(context);
     final heSize = 22.0 * s.textScale;
     final enSize = 16.0 * s.textScale;
-    final today = item.applicability == Applicability.today && s.highlightToday;
+    // Only the words said get the "today" treatment; a note about today
+    // reads as a note.
+    final today = item.applicability == Applicability.today && s.highlightToday && item.kind == SegmentKind.prayer;
     final excluded = item.excluded;
+    // One of several alternative lines not said today: crossed out beside
+    // the one that is, rather than labelled.
+    final strike = excluded && item.option;
 
     TextStyle heBase = TextStyle(fontFamily: s.hebrewFont, fontSize: heSize, height: 1.65, color: theme.colorScheme.onSurface);
     TextStyle enBase = TextStyle(fontFamily: s.latinFont, fontSize: enSize, height: 1.5, color: theme.colorScheme.onSurface);
@@ -610,6 +621,10 @@ class _SegmentView extends ConsumerWidget {
     if (excluded) {
       heBase = heBase.copyWith(color: colors.excluded);
       enBase = enBase.copyWith(color: colors.excluded);
+    }
+    if (strike) {
+      heBase = heBase.copyWith(decoration: TextDecoration.lineThrough, decorationColor: colors.excluded);
+      enBase = enBase.copyWith(decoration: TextDecoration.lineThrough, decorationColor: colors.excluded);
     }
 
     void footnote(String note) => showModalBottomSheet<void>(
@@ -626,12 +641,24 @@ class _SegmentView extends ConsumerWidget {
       }
       final html = SefariaHtml(base, instructionStyle: TextStyle(color: colors.instruction, fontStyle: FontStyle.italic), onFootnote: footnote);
       final spans = <InlineSpan>[?lead];
+      var inOptions = false;
       for (final r in seg.runs) {
+        // Each labelled option ("לר"ח: …", "לפסח: …") starts its own line so
+        // the choices are easy to tell apart.
+        final optionStart = r.option && r.marker;
+        if (optionStart || (inOptions && !r.option)) spans.add(const TextSpan(text: '\n'));
+        if (r.marker) inOptions = r.option;
+        if (!r.option && !r.marker) inOptions = false;
         var st = base;
         if (r.marker) {
           st = base.copyWith(fontSize: (base.fontSize ?? 16) * 0.72, color: colors.marker, fontWeight: FontWeight.w600);
+          if (r.applicability == Applicability.notToday) st = st.copyWith(color: colors.excluded);
         } else if (r.applicability == Applicability.today && s.highlightToday) {
-          st = base.copyWith(backgroundColor: colors.todayFill);
+          // Inside a highlighted line the chosen option needs to stand out
+          // from the highlight itself.
+          st = r.option
+              ? base.copyWith(backgroundColor: colors.todayBar.withValues(alpha: 0.3), fontWeight: FontWeight.w600)
+              : base.copyWith(backgroundColor: colors.todayFill);
         } else if (r.applicability == Applicability.notToday) {
           st = base.copyWith(color: colors.excluded, decoration: TextDecoration.lineThrough, decorationColor: colors.excluded);
         }
@@ -647,7 +674,7 @@ class _SegmentView extends ConsumerWidget {
     // "Said only on…" labels sit inline at the start of the text instead
     // of on a line of their own.
     InlineSpan? lead;
-    if (today || (excluded && item.labelEn != null)) {
+    if (today || (excluded && !strike && item.labelEn != null)) {
       final l = conditionLabel(context, s, item.labelEn, item.labelHe);
       lead = WidgetSpan(
         alignment: PlaceholderAlignment.middle,

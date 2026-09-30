@@ -50,28 +50,24 @@ class _ReaderSettings extends ConsumerWidget {
               textAlign: TextAlign.center,
               style: TextStyle(fontFamily: s.hebrewFont, fontSize: 22 * s.textScale, height: 1.6)),
           SheetLabel(context.tr('Prayer text')),
-          SegmentedButton<TextLayout>(
-            showSelectedIcon: false,
-            expandedInsets: EdgeInsets.zero,
-            segments: [
-              ButtonSegment(value: TextLayout.hebrewOnly, label: Text(context.tr('Hebrew')), icon: Icon(Icons.format_textdirection_r_to_l)),
-              ButtonSegment(value: TextLayout.interleaved, label: Text(context.tr('Bilingual')), icon: Icon(Icons.view_stream)),
-              ButtonSegment(value: TextLayout.sideBySide, label: Text(context.tr('Side by side')), icon: Icon(Icons.view_column)),
+          ChoiceBar<TextLayout>(
+            options: [
+              (TextLayout.hebrewOnly, context.tr('Hebrew'), Icons.format_textdirection_r_to_l),
+              (TextLayout.interleaved, context.tr('Bilingual'), Icons.view_stream),
+              (TextLayout.sideBySide, context.tr('Side by side'), Icons.view_column),
             ],
-            selected: {s.layout == TextLayout.translationOnly ? TextLayout.interleaved : s.layout},
-            onSelectionChanged: (v) => n.update((x) => x.copyWith(layout: v.first)),
+            selected: s.layout == TextLayout.translationOnly ? TextLayout.interleaved : s.layout,
+            onChanged: (v) => n.update((x) => x.copyWith(layout: v)),
           ),
           SheetLabel(context.tr('Instructions & notes')),
-          SegmentedButton<NotesLanguage>(
-            showSelectedIcon: false,
-            expandedInsets: EdgeInsets.zero,
-            segments: [
-              ButtonSegment(value: NotesLanguage.bilingual, label: Text(context.tr('Bilingual'))),
-              ButtonSegment(value: NotesLanguage.english, label: Text(context.tr('English'))),
-              ButtonSegment(value: NotesLanguage.hebrew, label: Text(context.tr('Hebrew'))),
+          ChoiceBar<NotesLanguage>(
+            options: [
+              (NotesLanguage.bilingual, context.tr('Bilingual'), null),
+              (NotesLanguage.english, context.tr('English'), null),
+              (NotesLanguage.hebrew, context.tr('Hebrew'), null),
             ],
-            selected: {s.notesLanguage},
-            onSelectionChanged: (v) => n.update((x) => x.copyWith(notesLanguage: v.first)),
+            selected: s.notesLanguage,
+            onChanged: (v) => n.update((x) => x.copyWith(notesLanguage: v)),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 4),
@@ -119,21 +115,19 @@ class _ReaderSettings extends ConsumerWidget {
             onChanged: (v) => n.update((x) => x.copyWith(highlightToday: v)),
           ),
           SheetLabel(context.tr('Text not said today')),
-          SegmentedButton<ExcludedDisplay>(
-            showSelectedIcon: false,
-            expandedInsets: EdgeInsets.zero,
-            segments: [
-              ButtonSegment(value: ExcludedDisplay.collapse, label: Text(context.tr('Collapse'))),
-              ButtonSegment(value: ExcludedDisplay.dim, label: Text(context.tr('Dim'))),
-              ButtonSegment(value: ExcludedDisplay.hide, label: Text(context.tr('Hide'))),
+          ChoiceBar<ExcludedDisplay>(
+            options: [
+              (ExcludedDisplay.collapse, context.tr('Collapse'), null),
+              (ExcludedDisplay.dim, context.tr('Dim'), null),
+              (ExcludedDisplay.hide, context.tr('Hide'), null),
             ],
-            selected: {s.excludedDisplay},
-            onSelectionChanged: (v) => n.update((x) => x.copyWith(excludedDisplay: v.first)),
+            selected: s.excludedDisplay,
+            onChanged: (v) => n.update((x) => x.copyWith(excludedDisplay: v)),
           ),
           if (s.excludedDisplay == ExcludedDisplay.hide)
             Padding(
               padding: const EdgeInsets.only(top: 6),
-              child: Text(context.tr('Sections, lines and inline phrases not said today are removed entirely.'), style: theme.textTheme.bodySmall),
+              child: Text(context.tr('Sections, lines and additions not said today are removed. Where one of several options is said, the others stay, crossed out.'), style: theme.textTheme.bodySmall),
             ),
           SwitchListTile.adaptive(
             contentPadding: EdgeInsets.zero,
@@ -148,6 +142,14 @@ class _ReaderSettings extends ConsumerWidget {
             onChanged: (v) => n.update((x) => x.copyWith(showNotes: v)),
           ),
           if (s.showNotes)
+            SwitchListTile.adaptive(
+              contentPadding: EdgeInsets.zero,
+              title: Text(context.tr('Short notes')),
+              subtitle: Text(context.tr("Brief notes only when they apply today, instead of the siddur's full notes")),
+              value: s.conciseNotes,
+              onChanged: (v) => n.update((x) => x.copyWith(conciseNotes: v)),
+            ),
+          if (s.showNotes && !s.conciseNotes)
             SwitchListTile.adaptive(
               contentPadding: EdgeInsets.zero,
               title: Text(context.tr('Collapse halachic notes')),

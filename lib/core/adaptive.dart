@@ -184,3 +184,51 @@ Future<T?> showAdaptivePicker<T>(BuildContext context,
 }
 
 Widget adaptiveProgress() => const Center(child: CircularProgressIndicator.adaptive());
+
+/// A single choice among a few options: a segmented bar when the labels
+/// fit on one line, otherwise chips that wrap, so long labels, large text
+/// or narrow phones never squeeze them into broken words.
+class ChoiceBar<T> extends StatelessWidget {
+  final List<(T, String, IconData?)> options;
+  final T selected;
+  final ValueChanged<T> onChanged;
+  const ChoiceBar({super.key, required this.options, required this.selected, required this.onChanged});
+
+  @override
+  Widget build(BuildContext context) {
+    final style = Theme.of(context).textTheme.labelLarge;
+    final scaler = MediaQuery.textScalerOf(context);
+    return LayoutBuilder(builder: (context, c) {
+      // Each segment needs its label, optional icon and padding; the bar
+      // divides the width evenly, so the widest segment decides.
+      var widest = 0.0;
+      for (final (_, label, icon) in options) {
+        final p = TextPainter(text: TextSpan(text: label, style: style), textDirection: Directionality.of(context), textScaler: scaler)
+          ..layout();
+        widest = widest > p.width + (icon != null ? 26 : 0) ? widest : p.width + (icon != null ? 26 : 0);
+        p.dispose();
+      }
+      if ((widest + 32) * options.length <= c.maxWidth) {
+        return SegmentedButton<T>(
+          showSelectedIcon: false,
+          expandedInsets: EdgeInsets.zero,
+          segments: [
+            for (final (v, label, icon) in options) ButtonSegment(value: v, label: Text(label, maxLines: 1), icon: icon == null ? null : Icon(icon)),
+          ],
+          selected: {selected},
+          onSelectionChanged: (v) => onChanged(v.first),
+        );
+      }
+      return Wrap(spacing: 8, runSpacing: 8, children: [
+        for (final (v, label, icon) in options)
+          ChoiceChip(
+            avatar: icon == null ? null : Icon(icon, size: 18),
+            label: Text(label),
+            selected: v == selected,
+            showCheckmark: false,
+            onSelected: (_) => onChanged(v),
+          ),
+      ]);
+    });
+  }
+}

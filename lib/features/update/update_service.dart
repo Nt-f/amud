@@ -8,6 +8,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 
 import '../../core/providers.dart';
 import '../alerts/alerts.dart';
+import 'apk_installer.dart';
 
 /// Where releases are published (GitHub Releases, built by
 /// .github/workflows/build.yml on a `v*` tag).
@@ -22,8 +23,16 @@ class UpdateInfo {
   /// This platform's download (APK / Windows zip), if the release has one.
   final String? downloadUrl;
   final int? downloadSize;
-  const UpdateInfo({required this.version, required this.notes, required this.pageUrl, this.downloadUrl, this.downloadSize});
+
+  /// The download's SHA-256 (hex), when GitHub lists one.
+  final String? sha256;
+  const UpdateInfo(
+      {required this.version, required this.notes, required this.pageUrl, this.downloadUrl, this.downloadSize, this.sha256});
 }
+
+/// Whether updates download and install inside the app (Android). Elsewhere
+/// the download opens in the browser.
+bool get installsInApp => !kIsWeb && defaultTargetPlatform == TargetPlatform.android;
 
 /// Whether this platform installs from a downloaded release file. The web
 /// app updates itself through its service worker instead.
@@ -73,6 +82,22 @@ class UpdateState {
   /// The last version a notification was shown for.
   final String? notified;
 
+  /// Download progress (0–1) while an update downloads; null otherwise.
+  final double? downloading;
+
+  /// Waiting for the user to allow installs from this app.
+  final bool needsPermission;
+
+  /// The last version whose release notes were offered after updating.
+  final String? seenVersion;
+
+  /// Release notes for the installed version, once known.
+  final String? installedNotes;
+
+  /// Notes saved when an update was found, shown after it's installed.
+  final String? savedNotesVersion;
+  final String? savedNotes;
+
   const UpdateState({
     this.currentVersion = '',
     this.available,
@@ -82,10 +107,20 @@ class UpdateState {
     this.autoCheck = true,
     this.skipped,
     this.notified,
+    this.downloading,
+    this.needsPermission = false,
+    this.seenVersion,
+    this.installedNotes,
+    this.savedNotesVersion,
+    this.savedNotes,
   });
 
   /// An update the user hasn't dismissed.
   UpdateInfo? get pending => available != null && available!.version != skipped ? available : null;
+
+  /// The app was updated and the user hasn't looked at what changed yet.
+  bool get justUpdated =>
+      currentVersion.isNotEmpty && seenVersion != null && compareVersions(currentVersion, seenVersion!) > 0;
 
   UpdateState copyWith({
     String? currentVersion,
@@ -96,6 +131,12 @@ class UpdateState {
     bool? autoCheck,
     String? Function()? skipped,
     String? notified,
+    double? Function()? downloading,
+    bool? needsPermission,
+    String? seenVersion,
+    String? Function()? installedNotes,
+    String? savedNotesVersion,
+    String? savedNotes,
   }) =>
       UpdateState(
         currentVersion: currentVersion ?? this.currentVersion,
@@ -106,6 +147,12 @@ class UpdateState {
         autoCheck: autoCheck ?? this.autoCheck,
         skipped: skipped != null ? skipped() : this.skipped,
         notified: notified ?? this.notified,
+        downloading: downloading != null ? downloading() : this.downloading,
+        needsPermission: needsPermission ?? this.needsPermission,
+        seenVersion: seenVersion ?? this.seenVersion,
+        installedNotes: installedNotes != null ? installedNotes() : this.installedNotes,
+        savedNotesVersion: savedNotesVersion ?? this.savedNotesVersion,
+        savedNotes: savedNotes ?? this.savedNotes,
       );
 }
 
@@ -121,6 +168,9 @@ class UpdateNotifier extends Notifier<UpdateState> {
       autoCheck: j['autoCheck'] != false,
       skipped: j['skipped'] as String?,
       notified: j['notified'] as String?,
+      seenVersion: j['seenVersion'] as String?,
+      savedNotesVersion: j['notesVersion'] as String?,
+      savedNotes: j['notes'] as String?,
     );
   }
 
@@ -129,6 +179,9 @@ class UpdateNotifier extends Notifier<UpdateState> {
         'autoCheck': state.autoCheck,
         'skipped': state.skipped,
         'notified': state.notified,
+        'seenVersion': state.seenVersion,
+        'notesVersion': state.savedNotesVersion,
+        'notes': state.savedNotes,
       });
 
   void setAutoCheck(bool v) {
@@ -144,7 +197,18 @@ class UpdateNotifier extends Notifier<UpdateState> {
   /// Background check at startup: at most once a day, and a notification
   /// the first time a new version is seen.
   Future<void> autoCheck() async {
-    if (!updatesSupported || !state.autoCheck) return;
+    if (!updatesSupported) return;
+    await _loadVersion();
+    if (state.seenVersion == null && state.currentVersion.isNotEmpty) {
+      // First run: nothing to announce.
+      state = state.copyWith(seenVersion: state.currentVersion);
+      _save();
+    }
+    if (state.justUpdated && installsInApp) {
+      // The APK that was just installed is no longer needed.
+      unawaited(ApkInstaller.clear().catchError((_) {}));
+    }
+    if (!state.autoCheck) return;
     final last = state.lastCheck;
     if (last != null && DateTime.now().difference(last) < const Duration(hours: 20)) {
       // Still learn our own version for the About screen.
@@ -167,6 +231,75 @@ class UpdateNotifier extends Notifier<UpdateState> {
         debugPrint('update notification failed: $e');
       }
     }
+  }
+
+  /// The user has seen (or dismissed) what's new in this version.
+  void markSeen() {
+    if (state.currentVersion.isEmpty) return;
+    state = state.copyWith(seenVersion: state.currentVersion);
+    _save();
+  }
+
+  /// Release notes for the running version: saved when the update was
+  /// found, otherwise fetched from its GitHub release.
+  Future<void> loadInstalledNotes() async {
+    await _loadVersion();
+    final v = state.currentVersion;
+    if (v.isEmpty || state.installedNotes != null) return;
+    if (state.savedNotesVersion == v && (state.savedNotes ?? '').isNotEmpty) {
+      state = state.copyWith(installedNotes: () => state.savedNotes);
+      return;
+    }
+    try {
+      final res = await http.get(
+        Uri.parse('https://api.github.com/repos/$updateRepo/releases/tags/v$v'),
+        headers: {'Accept': 'application/vnd.github+json'},
+      ).timeout(const Duration(seconds: 20));
+      if (res.statusCode != 200) return;
+      final notes = ((jsonDecode(res.body) as Map<String, dynamic>)['body'] as String?)?.trim() ?? '';
+      state = state.copyWith(installedNotes: () => notes, savedNotesVersion: v, savedNotes: notes);
+      _save();
+    } catch (_) {}
+  }
+
+  String? _apk;
+
+  /// Downloads the update and opens Android's install prompt. If installs
+  /// from this app aren't allowed yet, opens that setting; [resumed] then
+  /// carries on when the user comes back.
+  Future<void> downloadAndInstall() async {
+    final info = state.available;
+    if (info?.downloadUrl == null || state.downloading != null) return;
+    state = state.copyWith(downloading: () => 0, error: () => null);
+    try {
+      _apk = await ApkInstaller.download(info!.downloadUrl!, info.version,
+          size: info.downloadSize,
+          sha256: info.sha256,
+          onProgress: (p) => state = state.copyWith(downloading: () => p));
+      state = state.copyWith(downloading: () => null);
+      await _install();
+    } catch (e) {
+      state = state.copyWith(downloading: () => null, error: () => "The update couldn't be downloaded: $e");
+    }
+  }
+
+  Future<void> _install() async {
+    if (!await ApkInstaller.canInstall()) {
+      state = state.copyWith(needsPermission: true);
+      await ApkInstaller.openInstallSettings();
+      return;
+    }
+    state = state.copyWith(needsPermission: false);
+    try {
+      await ApkInstaller.install(_apk!);
+    } catch (e) {
+      state = state.copyWith(error: () => "The installer couldn't be opened: $e");
+    }
+  }
+
+  /// The app is back in the foreground, maybe from the install setting.
+  Future<void> resumed() async {
+    if (state.needsPermission && _apk != null && await ApkInstaller.canInstall()) await _install();
   }
 
   Future<void> _loadVersion() async {
@@ -210,9 +343,19 @@ class UpdateNotifier extends Notifier<UpdateState> {
               pageUrl: (j['html_url'] as String?) ?? 'https://github.com/$updateRepo/releases/latest',
               downloadUrl: asset?['browser_download_url'] as String?,
               downloadSize: (asset?['size'] as num?)?.toInt(),
+              sha256: (asset?['digest'] as String?)?.startsWith('sha256:') == true
+                  ? (asset!['digest'] as String).substring(7)
+                  : null,
             )
           : null;
-      state = state.copyWith(checking: false, available: () => info, lastCheck: DateTime.now());
+      state = state.copyWith(
+        checking: false,
+        available: () => info,
+        lastCheck: DateTime.now(),
+        // Kept to show as "What's new" once this version is installed.
+        savedNotesVersion: info?.version,
+        savedNotes: info?.notes,
+      );
       _save();
       return info;
     } on http.ClientException {

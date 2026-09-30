@@ -35,13 +35,14 @@ final _notUnit = RegExp(r'levan|zemirot', caseSensitive: false);
 /// Kiddush / Kadesh leaves, shown as one card.
 bool isUnitNode(SchemaNode n) => n.isLeaf && _unitTitle.hasMatch(n.en.trim()) && !_notUnit.hasMatch(n.en);
 
-/// A short rubric line ("בקיץ:", "In winter:") whose meaning is already
-/// shown as a label on the line that follows it.
+/// A rubric line ("בקיץ:", "On Rosh Chodesh and Chol HaMoed say:") whose
+/// meaning is already shown as a label on the line that follows it.
 bool isRedundantRubric(SegmentItem it, SegmentItem? next, AppSettings s) {
   if (it.kind != SegmentKind.instruction || next == null || next.kind != SegmentKind.prayer) return false;
   if (next.labelEn == null && next.labelHe == null) return false;
   final labelled = (next.applicability == Applicability.today && s.highlightToday) || (next.excluded && next.labelEn != null);
   if (!labelled) return false;
+  if (it.announces) return true;
   bool short(ResolvedSegment? r) {
     if (r == null) return true;
     final t = stripHtml(r.segment.html).trim();

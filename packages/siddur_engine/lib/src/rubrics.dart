@@ -125,7 +125,7 @@ final List<_Entry> _english = [
   _Entry(r'she?mini atzere[st]', 'shminiAtzeret', _Cat.occasion, 'Shmini Atzeret', 'שמיני עצרת'),
   _Entry(r'sim(?:c)?hat torah|simchas torah', 'simchatTorah', _Cat.occasion, 'Simchat Torah', 'שמחת תורה'),
   _Entry(r'suk(?:k)?o[ts]|tabernacles', 'sukkot', _Cat.occasion, 'Sukkot', 'סוכות'),
-  _Entry(r'pesa(?:c)?h|passover', 'pesach', _Cat.occasion, 'Pesach', 'פסח'),
+  _Entry(r'pesa(?:c)?h|passover|matzo[st]|matzah', 'pesach', _Cat.occasion, 'Pesach', 'פסח'),
   _Entry(r'shavuo[ts]|pentecost', 'shavuot', _Cat.occasion, 'Shavuot', 'שבועות'),
   _Entry(r"yom ha-?atzma[’']?ut", 'yomHaatzmaut', _Cat.occasion, "Yom HaAtzma'ut", 'יום העצמאות'),
   _Entry(r'yom yerushalayim|jerusalem day', 'yomYerushalayim', _Cat.occasion, 'Yom Yerushalayim', 'יום ירושלים'),

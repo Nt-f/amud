@@ -384,14 +384,14 @@ class _TehillimSettings extends ConsumerWidget {
             ),
             const Icon(Icons.text_increase, size: 18),
           ]),
-          SegmentedButton<TextLayout>(
-            segments: [
-              ButtonSegment(value: TextLayout.hebrewOnly, label: Text(context.tr('Hebrew'))),
-              ButtonSegment(value: TextLayout.interleaved, label: Text(context.tr('Bilingual'))),
-              ButtonSegment(value: TextLayout.translationOnly, label: Text(context.tr('English'))),
+          ChoiceBar<TextLayout>(
+            options: [
+              (TextLayout.hebrewOnly, context.tr('Hebrew'), null),
+              (TextLayout.interleaved, context.tr('Bilingual'), null),
+              (TextLayout.translationOnly, context.tr('English'), null),
             ],
-            selected: {s.layout == TextLayout.sideBySide ? TextLayout.interleaved : s.layout},
-            onSelectionChanged: (v) => n.update((x) => x.copyWith(layout: v.first)),
+            selected: s.layout == TextLayout.sideBySide ? TextLayout.interleaved : s.layout,
+            onChanged: (v) => n.update((x) => x.copyWith(layout: v)),
           ),
           ListTile(
             contentPadding: EdgeInsets.zero,

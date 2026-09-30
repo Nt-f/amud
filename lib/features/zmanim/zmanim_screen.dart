@@ -7,6 +7,7 @@ import 'package:hebcal/hebcal.dart';
 import 'package:timezone/timezone.dart' as tz;
 
 import '../../core/l10n.dart';
+import '../../core/adaptive.dart';
 import '../../core/format.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
@@ -125,16 +126,15 @@ class ZmanimScreen extends ConsumerWidget {
         children: [
           _DateNav(date: date, hd: hd, isToday: isToday),
           const SizedBox(height: 8),
-          SegmentedButton<Object>(
-            segments: [
-              const ButtonSegment(value: ZmanimOpinion.gra, label: Text('GRA')),
-              const ButtonSegment(value: ZmanimOpinion.mga, label: Text('MGA')),
-              ButtonSegment(value: ZmanimOpinion.baalHatanya, label: Text(context.term('Baal HaTanya'))),
-              const ButtonSegment(value: 'all', label: Text('All')),
+          ChoiceBar<Object>(
+            options: [
+              (ZmanimOpinion.gra, 'GRA', null),
+              (ZmanimOpinion.mga, 'MGA', null),
+              (ZmanimOpinion.baalHatanya, context.term('Baal HaTanya'), null),
+              ('all', context.tr('All'), null),
             ],
-            selected: {showAll ? 'all' : s.opinion},
-            onSelectionChanged: (v) {
-              final sel = v.first;
+            selected: showAll ? 'all' : s.opinion,
+            onChanged: (sel) {
               if (sel == 'all') {
                 ref.read(_showAllProvider.notifier).state = true;
               } else {

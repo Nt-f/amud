@@ -13,8 +13,7 @@ Future<void> _open(String url) => launchUrl(Uri.parse(url), mode: LaunchMode.ext
 String _size(int? bytes) => bytes == null ? '' : ' (${(bytes / 1048576).toStringAsFixed(1)} MB)';
 
 String _installHint() => switch (defaultTargetPlatform) {
-      TargetPlatform.android => 'Open the downloaded APK to install it over this version. '
-          'Android may ask you to allow installs from your browser the first time.',
+      TargetPlatform.android => 'Android asks you to confirm the update. Your settings and data are kept.',
       TargetPlatform.windows => 'Unzip the download and replace your current Siddur folder with it, then run siddur.exe.',
       _ => 'Download the new version from the release page.',
     };
@@ -32,7 +31,12 @@ class _UpdateScreenState extends ConsumerState<UpdateScreen> {
   void initState() {
     super.initState();
     // Opening the page (e.g. from the notification) refreshes the check.
-    Future.microtask(() => ref.read(updateProvider.notifier).check());
+    Future.microtask(() {
+      final n = ref.read(updateProvider.notifier);
+      n.check();
+      n.loadInstalledNotes();
+      n.markSeen();
+    });
   }
 
   @override
@@ -73,11 +77,24 @@ class _UpdateScreenState extends ConsumerState<UpdateScreen> {
                 ),
               if (info != null) ...[
                 const SizedBox(height: 16),
-                if (info.downloadUrl != null)
+                if (u.downloading != null) ...[
+                  LinearProgressIndicator(value: u.downloading! > 0 ? u.downloading : null),
+                  const SizedBox(height: 6),
+                  Text(context.tr('Downloading… {p}%', {'p': '${(u.downloading! * 100).round()}'}), style: theme.textTheme.bodySmall),
+                ] else if (u.needsPermission) ...[
+                  Text(context.tr('Allow Siddur to install apps, then come back here to finish the update.'),
+                      style: theme.textTheme.bodyMedium),
+                  const SizedBox(height: 8),
                   FilledButton.icon(
-                    onPressed: () => _open(info.downloadUrl!),
-                    icon: const Icon(Icons.download),
-                    label: Text('${context.tr('Download')}${_size(info.downloadSize)}'),
+                    onPressed: n.downloadAndInstall,
+                    icon: const Icon(Icons.settings),
+                    label: Text(context.tr('Allow and install')),
+                  ),
+                ] else if (info.downloadUrl != null)
+                  FilledButton.icon(
+                    onPressed: installsInApp ? n.downloadAndInstall : () => _open(info.downloadUrl!),
+                    icon: Icon(installsInApp ? Icons.system_update : Icons.download),
+                    label: Text('${context.tr(installsInApp ? 'Update now' : 'Download')}${_size(info.downloadSize)}'),
                   ),
                 const SizedBox(height: 8),
                 Row(children: [
@@ -92,8 +109,12 @@ class _UpdateScreenState extends ConsumerState<UpdateScreen> {
           ),
         ),
         if (info != null && info.notes.isNotEmpty) ...[
-          const SheetLabel("What's new"),
-          Card(child: Padding(padding: const EdgeInsets.all(16), child: SelectableText(info.notes))),
+          SheetLabel(context.tr("What's new in {v}", {'v': info.version})),
+          Card(child: Padding(padding: const EdgeInsets.all(16), child: ReleaseNotes(info.notes))),
+        ],
+        if ((u.installedNotes ?? '').isNotEmpty) ...[
+          SheetLabel(context.tr("What's new in {v}", {'v': u.currentVersion})),
+          Card(child: Padding(padding: const EdgeInsets.all(16), child: ReleaseNotes(u.installedNotes!))),
         ],
         const SizedBox(height: 8),
         SwitchListTile.adaptive(
@@ -119,7 +140,8 @@ class UpdateBanner extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final info = ref.watch(updateProvider.select((u) => u.pending));
-    if (info == null) return const SizedBox.shrink();
+    final updated = ref.watch(updateProvider.select((u) => u.justUpdated ? u.currentVersion : null));
+    if (info == null && updated == null) return const SizedBox.shrink();
     final theme = Theme.of(context);
     return Material(
       color: theme.colorScheme.primaryContainer,
@@ -131,18 +153,66 @@ class UpdateBanner extends ConsumerWidget {
             Icon(Icons.system_update, size: 20, color: theme.colorScheme.onPrimaryContainer),
             const SizedBox(width: 12),
             Expanded(
-              child: Text(context.tr('Version {v} is available', {'v': info.version}),
+              child: Text(
+                  info != null
+                      ? context.tr('Version {v} is available', {'v': info.version})
+                      : context.tr('Updated to {v}', {'v': updated!}),
                   style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onPrimaryContainer, fontWeight: FontWeight.w600)),
             ),
-            TextButton(onPressed: () => context.push('/update'), child: Text(context.tr('Update'))),
+            TextButton(onPressed: () => context.push('/update'), child: Text(context.tr(info != null ? 'Update' : "What's new"))),
             IconButton(
-              tooltip: context.tr('Skip this version'),
+              tooltip: context.tr(info != null ? 'Skip this version' : 'Dismiss'),
               icon: const Icon(Icons.close, size: 18),
-              onPressed: () => ref.read(updateProvider.notifier).skip(info.version),
+              onPressed: () => info != null
+                  ? ref.read(updateProvider.notifier).skip(info.version)
+                  : ref.read(updateProvider.notifier).markSeen(),
             ),
           ]),
         ),
       ),
     );
+  }
+}
+
+/// GitHub release notes (Markdown) shown as headings, bullets and
+/// paragraphs, without links or emphasis markup.
+class ReleaseNotes extends StatelessWidget {
+  final String markdown;
+  const ReleaseNotes(this.markdown, {super.key});
+
+  static String _inline(String t) => t
+      .replaceAllMapped(RegExp(r'\[([^\]]+)\]\([^)]+\)'), (m) => m[1]!)
+      .replaceAll(RegExp(r'\*\*|__|`'), '')
+      .replaceAllMapped(RegExp(r'(^|\s)[*_]([^*_]+)[*_]'), (m) => '${m[1]}${m[2]}')
+      .trim();
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final children = <Widget>[];
+    for (final raw in markdown.split(RegExp(r'\r?\n'))) {
+      final line = raw.trimRight();
+      if (line.trim().isEmpty || RegExp(r'^\s*(-{3,}|\*{3,})\s*$').hasMatch(line)) continue;
+      final heading = RegExp(r'^#{1,6}\s+(.*)').firstMatch(line);
+      final bullet = RegExp(r'^(\s*)[-*+]\s+(.*)').firstMatch(line);
+      if (heading != null) {
+        children.add(Padding(
+          padding: EdgeInsets.only(top: children.isEmpty ? 0 : 12, bottom: 4),
+          child: Text(_inline(heading[1]!), style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w700)),
+        ));
+      } else if (bullet != null) {
+        final indent = bullet[1]!.length >= 2 ? 16.0 : 0.0;
+        children.add(Padding(
+          padding: EdgeInsetsDirectional.only(start: indent, top: 2, bottom: 2),
+          child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            const Text('•  '),
+            Expanded(child: Text(_inline(bullet[2]!))),
+          ]),
+        ));
+      } else {
+        children.add(Padding(padding: const EdgeInsets.symmetric(vertical: 2), child: Text(_inline(line))));
+      }
+    }
+    return SelectionArea(child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: children));
   }
 }

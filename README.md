@@ -8,7 +8,8 @@ macOS and iOS projects build too, but nothing is released for them.
 - **Web:** https://siddur.nt-wrks.xyz
 - **Android / Windows:** [latest release](https://github.com/Nt-f/flutter_siddur/releases/latest)
   (`siddur-android.apk`, `siddur-windows.zip`). The apps check for new
-  releases and offer to install them (Settings → App updates).
+  releases. Android downloads and installs them in the app; Windows opens the
+  download (Settings → App updates).
 
 ## Features
 
@@ -21,8 +22,8 @@ macOS and iOS projects build too, but nothing is released for them.
   There are about 40 bundled Hebrew fonts, and an optional Ashkenazi
   spelling for English text (Shabbos, Shacharis). Double-tap the text for **focus
   mode**, which hides the top and bottom bars.
-- **Home:** a dashboard of cards you can rearrange and resize (tap the
-  dashboard icon to edit). Cards include:
+- **Home:** a dashboard of cards you can rearrange and resize (*Edit
+  dashboard* is below the cards). Cards include:
   - the Hebrew date and parsha
   - Sefirat HaOmer, shown only while it's being counted
   - what changes in davening today
@@ -72,7 +73,8 @@ a one-time "What's new" card on Home.
 
 ## Releasing
 
-**Apps:** push a version tag, for example:
+**Apps:** write the release notes in `release-notes/<version>.md` (the app
+shows them before and after updating), then push a version tag, for example:
 
     git tag v0.2.0 && git push origin v0.2.0
 

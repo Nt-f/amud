@@ -22,9 +22,12 @@ class TextRun {
   final String html;
   final RunKind kind;
   final RubricMatch? rubric;
-  const TextRun(this.html, this.kind, [this.rubric]);
+  TextRun(this.html, this.kind, [this.rubric]);
 
   bool get conditional => rubric != null;
+
+  /// Part of a run of alternatives within the line (see [Segment.option]).
+  bool option = false;
 }
 
 class Segment {
@@ -49,6 +52,15 @@ class Segment {
 
   /// For "if you forgot…" notes: bound to the previous conditional segment.
   bool followsPrevious;
+
+  /// An instruction whose only job is to introduce the conditional line
+  /// after it ("On Rosh Chodesh say:"); [rubric] is that line's condition.
+  bool announces = false;
+
+  /// One of a set of alternative lines ("לר"ח: …", "לפסח: …", "לסכות: …")
+  /// inside a longer prayer; the reader keeps the unsaid ones, crossed out,
+  /// beside the one that is said.
+  bool option = false;
 
   /// If this is a day of the Omer count line, its day number.
   int? omerDay;
@@ -76,6 +88,10 @@ class Segment {
 final _errorNote = RegExp(
     r'^(?:\*?\s*)?(?:אם שכח|שכח|טעה|הטועה|אם לא אמר|אם טעה|if you (?:forgot|forget|neglected|omitted|did not)|if (?:forgotten|omitted)|\* ?if)',
     caseSensitive: false);
+/// "If you forgot / made a mistake" anywhere in a note, not just at its start
+/// ("בכל השנה … ובעשי"ת אם טעה …").
+final _mentionsError = RegExp(r'(?:אם|ואם) (?:שכח|טעה|לא אמר)|הטועה|if you (?:forgot|forget|mistakenly|omitted|neglected)',
+    caseSensitive: false);
 final _saysNext = RegExp(
     r'(?:אומרים|אומר|מוסיפים|מוסיף|יאמר|יאמרו|מתחילין|מתחילים|ממשיך|מסיים|יסיים|חותם)|:\s*\)?\s*$|\b(?:say|says|said|add|adds|added|recite|recited|insert|inserted|continue|following)\b',
     caseSensitive: false);
@@ -97,6 +113,7 @@ class SegmentAnalyzer {
       out.add(_classify(ref, html, hebrew, vocalized));
     }
     _propagate(out);
+    _markOptions(out);
     if (omerSection) _markOmer(out, hebrew);
     return out;
   }
@@ -113,14 +130,14 @@ class SegmentAnalyzer {
       instruction = true;
     } else if (hebrew) {
       instruction = vocalized
-          ? nikkudRatio(html) < 0.12
+          ? nikkudRatio(_dropBold(html)) < 0.12
           : plain.length < 90 && plain.endsWith(':') && matchRubric(plain) != null;
     } else {
       instruction = _allItalic(html);
     }
     if (instruction) {
       final norm = normalizeRubric(plain);
-      final errorNote = _errorNote.hasMatch(norm);
+      final errorNote = _errorNote.hasMatch(norm) || (_mentionsError.hasMatch(norm) && !norm.endsWith(':'));
       RubricMatch? governing;
       var strict = false;
       if (!errorNote) {
@@ -130,7 +147,9 @@ class SegmentAnalyzer {
         for (final sentence in sentences.reversed) {
           if (_errorNote.hasMatch(sentence)) continue;
           final r = matchRubric(sentence);
-          if (r != null && (_saysNext.hasMatch(sentence) || norm.endsWith(':'))) {
+          // "Chazzan:"/"In the repetition, Kedushah here:" are roles, not
+          // conditions on the next line.
+          if (r != null && r.expression != 'minyan' && (_saysNext.hasMatch(sentence) || norm.endsWith(':'))) {
             governing = r;
             strict = RegExp(r':\s*\)?\s*$|\bfollowing\b').hasMatch(sentence);
             break;
@@ -150,7 +169,28 @@ class SegmentAnalyzer {
       );
     }
     final runs = hebrew ? _hebrewRuns(html) : _englishRuns(html);
-    return Segment(ref: ref, html: html, hebrew: hebrew, kind: SegmentKind.prayer, runs: runs);
+    return Segment(ref: ref, html: html, hebrew: hebrew, kind: SegmentKind.prayer, runs: runs, rubric: _wholeLine(runs));
+  }
+
+  /// Bold opening words are vocalized even in instructions ("…אומרים
+  /// <b>וִיהִי נֹעַם</b>"), so they don't count when telling them apart.
+  static String _dropBold(String html) {
+    final rest = html.replaceAll(RegExp(r'<b>.*?</b>', dotAll: true), '');
+    return RegExp('[א-ת]').allMatches(stripHtml(rest)).length >= 12 ? rest : html;
+  }
+
+  /// When every word of a line sits under one inline rubric ("בעשי"ת:
+  /// זָכְרֵנוּ…"), the whole line is conditional, not just a phrase in it.
+  static RubricMatch? _wholeLine(List<TextRun> runs) {
+    RubricMatch? only;
+    for (final r in runs) {
+      if (r.kind == RunKind.marker) continue;
+      if (stripHtml(r.html).replaceAll(RegExp(r'[\s()\[\].,;:׃־—–-]+'), '').isEmpty) continue;
+      if (r.rubric == null) return null;
+      if (only != null && only.expression != r.rubric!.expression) return null;
+      only = r.rubric;
+    }
+    return only;
   }
 
   void _propagate(List<Segment> segs) {
@@ -158,8 +198,11 @@ class SegmentAnalyzer {
     String? named;
     var remaining = 0;
     RubricMatch? lastApplied;
+    var since = 0;
+    Segment? setter;
     for (final s in segs) {
       if (s.setsRubric != null) {
+        setter = s;
         pending = s.setsRubric;
         named = s.requiresNamedNext;
         remaining = named != null ? 1 : maxRubricSpan;
@@ -169,20 +212,99 @@ class SegmentAnalyzer {
         if (pending != null && named != null && !_namesSegment(named, s)) {
           pending = null;
         }
-        if (pending != null && remaining > 0 && !s.hasInlineConditions) {
+        // A line may carry its own inline options (Ya'aleh VeYavo's "Rosh
+        // Chodesh / Pesach / Sukkos") and still be said only on some days.
+        if (pending != null && remaining > 0 && s.rubric == null) {
           s.rubric = pending.resolveSeason(s.html);
           lastApplied = s.rubric;
+          since = 0;
           remaining--;
+          // The instruction goes (or stays) with the line it introduces.
+          if (setter != null && setter.rubric == null) {
+            setter
+              ..rubric = s.rubric
+              ..announces = true;
+          }
+          setter = null;
           continue;
         }
+        if (pending != null && s.rubric != null && setter != null && setter.rubric == null) {
+          // "בחורף:" before a line whose own inline marker says the same.
+          setter
+            ..rubric = s.rubric
+            ..announces = true;
+        }
         pending = null;
-        lastApplied = null;
+        setter = null;
+        // "If you forgot…" notes often come after the rest of the blessing;
+        // they still refer to the conditional line a little before.
+        if (s.rubric != null) {
+          lastApplied = s.rubric;
+          since = 0;
+        } else if (++since > 2) {
+          lastApplied = null;
+        }
       } else if (s.followsPrevious && lastApplied != null) {
         s.rubric = lastApplied;
         pending = null;
       } else if (s.kind == SegmentKind.note || s.kind == SegmentKind.instruction) {
         pending = null;
       }
+    }
+    // A one-sentence instruction about one occasion that doesn't introduce
+    // a line of its own ("(On a public fast the chazzan says Aneinu here)")
+    // is itself only relevant then.
+    for (final s in segs) {
+      if (s.kind != SegmentKind.instruction || s.rubric != null || s.followsPrevious || s.setsRubric != null) continue;
+      final t = normalizeRubric(s.html);
+      if (RegExp(r'[.!?]\s+\S').hasMatch(t.replaceAll(RegExp(r'[.!?)\s]+$'), ''))) continue;
+      s.rubric = matchRubric(t);
+    }
+  }
+
+  /// Alternatives: two or more adjacent conditional runs in a line, or two or
+  /// more adjacent lines that are each one conditional phrase. A prayer
+  /// split around its options (Ya'aleh VeYavo in some versions) keeps its
+  /// condition in the part after them.
+  void _markOptions(List<Segment> segs) {
+    for (final s in segs) {
+      var run = <TextRun>[];
+      void close() {
+        if (run.where((r) => r.kind == RunKind.text).length >= 2) {
+          for (final r in run) {
+            r.option = true;
+          }
+        }
+        run = [];
+      }
+
+      for (final r in s.runs) {
+        final blank = stripHtml(r.html).replaceAll(RegExp(r'[\s:׃,./]+'), '').isEmpty;
+        if (r.conditional || (blank && run.isNotEmpty)) {
+          run.add(r);
+        } else if (!blank) {
+          close();
+        }
+      }
+      close();
+    }
+    for (var i = 0; i < segs.length; i++) {
+      bool optionLine(Segment s) =>
+          s.kind == SegmentKind.prayer && s.rubric != null && s.runs.any((r) => r.kind == RunKind.marker);
+      var j = i;
+      while (j < segs.length && optionLine(segs[j])) {
+        j++;
+      }
+      if (j - i < 2) continue;
+      for (var k = i; k < j; k++) {
+        segs[k].option = true;
+      }
+      final before = i > 0 ? segs[i - 1] : null;
+      final after = j < segs.length ? segs[j] : null;
+      if (before?.rubric != null && !before!.option && after != null && after.kind == SegmentKind.prayer && after.rubric == null) {
+        after.rubric = before.rubric;
+      }
+      i = j - 1;
     }
   }
 
@@ -259,7 +381,9 @@ class SegmentAnalyzer {
       if (m != null) {
         final rubric = matchRubric(m.group(2)!);
         final rest = line.substring(m.end);
-        if (rubric != null && nikkudRatio(rest) > 0.15) {
+        // "בקיץ: מוֹרִיד הַטָּל. בחורף: מַשִּׁיב הָרוּחַ" — more options follow.
+        final more = _inlineMarker.allMatches(rest).any((x) => matchRubric(x.group(1) ?? x.group(2)!) != null);
+        if (rubric != null && nikkudRatio(rest) > 0.15 && !more) {
           if (m.group(1)!.isNotEmpty) runs.add(TextRun(m.group(1)!, RunKind.text));
           final resolved = rubric.resolveSeason(rest);
           runs.add(TextRun('${m.group(2)}:', RunKind.marker, resolved));
@@ -267,9 +391,46 @@ class SegmentAnalyzer {
           continue;
         }
       }
-      runs.addAll(_hebrewParens(line));
+      for (final piece in _hebrewInline(line)) {
+        runs.addAll(piece.kind == RunKind.text && piece.rubric == null ? _hebrewParens(piece.html) : [piece]);
+      }
     }
     return _merge(runs);
+  }
+
+  /// `<small>לפסח:</small>`, or an unvocalized "בחורף:" starting a line or
+  /// sentence.
+  static final _inlineMarker =
+      RegExp(r'<small>([^<]{2,30}?):\s*</small>\s*|(?:^|(?<=[.:׃,]\s))(?:<[^>]+>)*([^\u0591-\u05C7<>:.,()]{2,24}):(?:\s*</[^>]+>)?\s*');
+
+  /// Options marked mid-line, as in Ya'aleh VeYavo:
+  /// `בְּיוֹם <small>לר"ח:</small> רֹאשׁ הַחֹדֶשׁ הַזֶּה: <small>לפסח:</small> …`.
+  /// Each option runs to the next marker or its closing colon.
+  List<TextRun> _hebrewInline(String line) {
+    final runs = <TextRun>[];
+    var last = 0;
+    final markers = _inlineMarker.allMatches(line).toList();
+    for (var k = 0; k < markers.length; k++) {
+      final m = markers[k];
+      if (m.start < last) continue;
+      final label = m.group(1) ?? m.group(2)!;
+      if (m.group(2) != null && RegExp(r'[\u0591-\u05C7]').hasMatch(label)) continue;
+      final rubric = isSpeakerLabel(label) ? null : matchRubric(label);
+      if (rubric == null) continue;
+      final limit = k + 1 < markers.length ? markers[k + 1].start : line.length;
+      var end = limit;
+      final colon = RegExp(r'[:׃]').firstMatch(line.substring(m.end, limit));
+      if (colon != null) end = m.end + colon.end;
+      final body = line.substring(m.end, end);
+      if (nikkudRatio(body) < 0.15) continue;
+      if (m.start > last) runs.add(TextRun(line.substring(last, m.start), RunKind.text));
+      final resolved = rubric.resolveSeason(body);
+      runs.add(TextRun(line.substring(m.start, m.end), RunKind.marker, resolved));
+      runs.add(TextRun(body, RunKind.text, resolved));
+      last = end;
+    }
+    if (last < line.length) runs.add(TextRun(line.substring(last), RunKind.text));
+    return runs;
   }
 
   List<TextRun> _hebrewParens(String line) {
@@ -298,6 +459,10 @@ class SegmentAnalyzer {
   }
 
   List<TextRun> _englishRuns(String html) {
+    final options = _englishOptions(html);
+    if (options != null) return options;
+    final parens = _englishParens(html);
+    if (parens != null) return parens;
     // Find top-level <i ...>…</i> spans that end with ':' and are rubrics.
     final markers = <(int, int, RubricMatch)>[];
     var i = 0;
@@ -352,6 +517,44 @@ class SegmentAnalyzer {
       runs.add(TextRun(body, RunKind.text, resolved));
       if (tail.isNotEmpty) runs.add(TextRun(tail, RunKind.text));
     }
+    return _merge(runs);
+  }
+
+  static final _slashList = RegExp(r'<i>([^<]{3,120}/[^<]{3,120})</i>');
+
+  /// "on this day of the: <i>Rosh Chodesh/Festival of Matzos/Festival of
+  /// Sukkos</i>" — one run per occasion, the slash kept with the option
+  /// after it.
+  List<TextRun>? _englishOptions(String html) {
+    final m = _slashList.firstMatch(html);
+    if (m == null) return null;
+    final parts = m.group(1)!.split('/');
+    // "Festival of Matzos" names Pesach, not any festival.
+    final rubrics = [for (final p in parts) matchRubric(p.replaceAll(RegExp(r'festival of', caseSensitive: false), ''))];
+    if (rubrics.any((r) => r == null)) return null;
+    return [
+      if (m.start > 0) TextRun(html.substring(0, m.start), RunKind.text),
+      for (var i = 0; i < parts.length; i++) TextRun('${i == 0 ? '' : '/'}<i>${parts[i]}</i>', RunKind.text, rubrics[i]),
+      if (m.end < html.length) ..._englishRuns(html.substring(m.end)),
+    ];
+  }
+
+  static final _enParen = RegExp(r'\(([^():]{3,60}):\s*([^()]{1,120})\)');
+
+  /// "above (Ten Days of Penitence: far above) all the blessings".
+  List<TextRun>? _englishParens(String html) {
+    final runs = <TextRun>[];
+    var last = 0;
+    for (final m in _enParen.allMatches(html)) {
+      final rubric = matchRubric('${m.group(1)}:');
+      if (rubric == null || isSpeakerLabel(m.group(1)!)) continue;
+      if (m.start > last) runs.add(TextRun(html.substring(last, m.start), RunKind.text));
+      runs.add(TextRun('(${m.group(1)}: ', RunKind.marker, rubric));
+      runs.add(TextRun('${m.group(2)})', RunKind.text, rubric));
+      last = m.end;
+    }
+    if (runs.isEmpty) return null;
+    if (last < html.length) runs.add(TextRun(html.substring(last), RunKind.text));
     return _merge(runs);
   }
 

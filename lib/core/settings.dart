@@ -114,6 +114,10 @@ class AppSettings {
   final ExcludedDisplay excludedDisplay;
   final bool showNotes;
 
+  /// Short notes from the app, shown only on the days they matter, in place
+  /// of the siddur's own long halachic notes.
+  final bool conciseNotes;
+
   /// Show halachic notes as a one-line row that expands on tap.
   final bool collapseNotes;
 
@@ -166,6 +170,7 @@ class AppSettings {
     this.latinFont,
     this.excludedDisplay = ExcludedDisplay.collapse,
     this.showNotes = true,
+    this.conciseNotes = true,
     this.collapseNotes = true,
     this.collapseChazarah = true,
     this.showInstructions = true,
@@ -203,6 +208,7 @@ class AppSettings {
     String? Function()? latinFont,
     ExcludedDisplay? excludedDisplay,
     bool? showNotes,
+    bool? conciseNotes,
     bool? collapseNotes,
     bool? collapseChazarah,
     bool? showInstructions,
@@ -239,6 +245,7 @@ class AppSettings {
         latinFont: latinFont != null ? latinFont() : this.latinFont,
         excludedDisplay: excludedDisplay ?? this.excludedDisplay,
         showNotes: showNotes ?? this.showNotes,
+        conciseNotes: conciseNotes ?? this.conciseNotes,
         collapseNotes: collapseNotes ?? this.collapseNotes,
         collapseChazarah: collapseChazarah ?? this.collapseChazarah,
         showInstructions: showInstructions ?? this.showInstructions,
@@ -280,6 +287,7 @@ class AppSettings {
         'latinFont': latinFont,
         'excludedDisplay': excludedDisplay.name,
         'showNotes': showNotes,
+        'conciseNotes': conciseNotes,
         'collapseNotes': collapseNotes,
         'collapseChazarah': collapseChazarah,
         'showInstructions': showInstructions,
@@ -336,6 +344,7 @@ class AppSettings {
       latinFont: j['latinFont'] as String?,
       excludedDisplay: byName(ExcludedDisplay.values, 'excludedDisplay', d.excludedDisplay),
       showNotes: pick('showNotes', d.showNotes),
+      conciseNotes: pick('conciseNotes', d.conciseNotes),
       collapseNotes: pick('collapseNotes', d.collapseNotes),
       collapseChazarah: pick('collapseChazarah', d.collapseChazarah),
       showInstructions: pick('showInstructions', d.showInstructions),

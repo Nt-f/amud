@@ -69,6 +69,8 @@ class _LifecycleState extends ConsumerState<_Lifecycle> with WidgetsBindingObser
     if (state == AppLifecycleState.resumed) {
       ref.invalidate(nowProvider);
       ref.read(alertSchedulerProvider).reschedule();
+      // Back from the "Install unknown apps" setting during an update.
+      ref.read(updateProvider.notifier).resumed();
     }
   }
 

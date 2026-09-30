@@ -97,14 +97,18 @@ class VersionSelection {
   }
 }
 
-/// How excluded (not-said-today) content is presented. [hide] removes it
-/// entirely: whole sections, single lines and inline phrases, along with
-/// headings left empty.
+/// How excluded (not-said-today) content is presented. [hide] removes whole
+/// sections, lines and inline additions (and headings left empty); only the
+/// other options beside one that is said stay, crossed out.
 enum ExcludedDisplay { hide, collapse, dim }
 
 class ResolveOptions {
   final ExcludedDisplay excluded;
   final bool showNotes;
+
+  /// Replace the siddur's own halachic notes (and "if you forgot…" notes)
+  /// with the app's short [CuratedNote]s, shown only on the days they apply.
+  final bool conciseNotes;
   final bool showInstructions;
   final bool showTranslation;
 
@@ -121,6 +125,7 @@ class ResolveOptions {
   const ResolveOptions({
     this.excluded = ExcludedDisplay.collapse,
     this.showNotes = false,
+    this.conciseNotes = false,
     this.showInstructions = true,
     this.showTranslation = true,
     this.showHebrew = true,
@@ -182,7 +187,10 @@ class ResolvedRun {
   final Applicability applicability;
   final String? labelEn;
   final String? labelHe;
-  const ResolvedRun(this.html, this.marker, this.applicability, this.labelEn, this.labelHe);
+
+  /// One of several alternatives side by side in the line.
+  final bool option;
+  const ResolvedRun(this.html, this.marker, this.applicability, this.labelEn, this.labelHe, {this.option = false});
 }
 
 class ResolvedSegment {
@@ -203,8 +211,16 @@ class SegmentItem extends RenderItem {
 
   /// Rendered dimmed/collapsed because it's not said today.
   final bool excluded;
+
+  /// An instruction that only introduces the next line's condition ("On
+  /// Rosh Chodesh say:"), which the reader can show as a label instead.
+  final bool announces;
+
+  /// One of several alternative lines (see [Segment.option]); shown crossed
+  /// out rather than folded away when not said.
+  final bool option;
   const SegmentItem(super.key, this.node, this.he, this.tr, this.kind, this.applicability, this.labelEn,
-      this.labelHe, this.excluded);
+      this.labelHe, this.excluded, {this.announces = false, this.option = false});
 }
 
 /// Consecutive segments that aren't said today, folded into one row.
@@ -234,6 +250,8 @@ class SiddurResolver {
   final List<SegmentRule> segmentRules;
   final List<InsertRule> insertRules;
   final List<CalloutRule> callouts;
+  final List<ContentRule> contentRules;
+  final List<CuratedNote> curatedNotes;
   final SegmentAnalyzer analyzer;
 
   SiddurResolver({
@@ -241,11 +259,19 @@ class SiddurResolver {
     this.segmentRules = const [],
     this.insertRules = const [],
     List<CalloutRule>? callouts,
+    List<ContentRule>? contentRules,
+    List<CuratedNote>? curatedNotes,
     this.analyzer = const SegmentAnalyzer(),
   })  : sectionRules = sectionRules ?? defaultSectionRules,
-        callouts = callouts ?? defaultCallouts;
+        callouts = callouts ?? defaultCallouts,
+        contentRules = contentRules ?? defaultContentRules,
+        curatedNotes = curatedNotes ?? defaultCuratedNotes;
 
   final _analysisCache = <String, List<Segment>>{};
+
+  /// Curated notes already shown in the current [resolve] call.
+  final _noted = <int>{};
+  var _hideMode = false;
 
   /// Parses a per-book rules JSON (`{"sections": [...], "segments": [...]}`)
   /// and returns a resolver with those rules taking precedence.
@@ -263,6 +289,8 @@ class SiddurResolver {
           ...insertRules,
         ],
         callouts: callouts,
+        contentRules: contentRules,
+        curatedNotes: curatedNotes,
         analyzer: analyzer,
       );
 
@@ -299,6 +327,27 @@ class SiddurResolver {
     return _analysisCache.putIfAbsent(key, () {
       final omer = RegExp(r'omer', caseSensitive: false).hasMatch(leaf.id);
       final segs = analyzer.analyze(raw, hebrew: v.language == 'he', omerSection: omer);
+      if (v.language == 'he') {
+        for (var i = 0; i < segs.length; i++) {
+          final s = segs[i];
+          if (s.kind != SegmentKind.prayer || s.rubric != null || s.hasInlineConditions) continue;
+          final text = _normalized(s.html);
+          for (final c in contentRules) {
+            if ((c.within == null || c.within!.hasMatch(leaf.id)) && c.opening.hasMatch(text)) {
+              s.rubric = RubricMatch(c.when, [c.labelEn], [c.labelHe]);
+              // The note introducing it ("בחנוכה ופורים אומרים על הנסים…")
+              // goes with it.
+              final prev = i > 0 ? segs[i - 1] : null;
+              if (prev != null && prev.kind != SegmentKind.prayer && prev.setsRubric != null && prev.rubric == null) {
+                prev
+                  ..rubric = s.rubric
+                  ..announces = true;
+              }
+              break;
+            }
+          }
+        }
+      }
       for (final r in segmentRules) {
         if (r.path == leaf.id && r.index >= 0 && r.index < segs.length) {
           segs[r.index].rubric = RubricMatch(r.when, [r.labelEn], [r.labelHe]);
@@ -308,10 +357,18 @@ class SiddurResolver {
     });
   }
 
+  /// Hebrew without markup, vowels or punctuation, for matching passages.
+  static String _normalized(String html) => normalizeRubric(html)
+      .replaceAll(RegExp(r'[^\u05d0-\u05ea ]'), ' ')
+      .replaceAll(RegExp(r'\s+'), ' ')
+      .trim();
+
   /// Resolves [node] (a section or a leaf) into render items.
   List<RenderItem> resolve(SchemaNode node, VersionSelection versions, ContextProvider contexts,
       {ResolveOptions options = const ResolveOptions()}) {
     final out = <RenderItem>[];
+    _noted.clear();
+    _hideMode = options.excluded == ExcludedDisplay.hide;
     final baseLevel = node.path.length;
     final baseService = serviceFor(node, Service.shacharit);
     // Ancestor section rules apply to everything below.
@@ -324,11 +381,36 @@ class SiddurResolver {
       }
     }
     _resolveNode(node, versions, contexts, options, out, baseLevel, baseService, inherited, true);
+    _dropUnsaidOptionSets(out);
     return switch (options.excluded) {
       ExcludedDisplay.collapse => _group(out),
       ExcludedDisplay.hide => _pruneEmptyHeadings(out),
       ExcludedDisplay.dim => out,
     };
+  }
+
+  /// Option lines are kept even when excluded so the unsaid ones can sit,
+  /// crossed out, beside the one that is said; a set with none said (a
+  /// plain weekday) is dropped in hide mode like any other line.
+  void _dropUnsaidOptionSets(List<RenderItem> items) {
+    var i = 0;
+    while (i < items.length) {
+      final it = items[i];
+      if (it is! SegmentItem || !it.option) {
+        i++;
+        continue;
+      }
+      var j = i;
+      while (j < items.length && items[j] is SegmentItem && (items[j] as SegmentItem).option) {
+        j++;
+      }
+      final set = items.sublist(i, j).cast<SegmentItem>();
+      if (set.every((s) => s.excluded) && _hideMode) {
+        items.removeRange(i, j);
+      } else {
+        i = j;
+      }
+    }
   }
 
   /// Drops headings with nothing under them (their content was all hidden),
@@ -367,7 +449,7 @@ class SiddurResolver {
     }
 
     for (final it in items) {
-      if (it is SegmentItem && it.excluded) {
+      if (it is SegmentItem && it.excluded && !it.option) {
         buf.add(it);
       } else {
         flush();
@@ -461,8 +543,26 @@ class SiddurResolver {
     final tr = trInfo == null ? const <Segment>[] : analyzed(trInfo, leaf, trRaw!);
     final aligned = he.isNotEmpty && tr.isNotEmpty && he.length == tr.length;
 
+    final noted = _noted;
+    void curated(Segment h) {
+      final text = _normalized(h.html);
+      for (var n = 0; n < curatedNotes.length; n++) {
+        final c = curatedNotes[n];
+        if (noted.contains(n) || (c.within != null && !c.within!.hasMatch(leaf.id)) || !c.anchor.hasMatch(text)) continue;
+        if (_eval(Condition.parse(c.when), ctx) != Applicability.today) continue;
+        noted.add(n);
+        out.add(DynamicItem('cn:${leaf.id}:$n', 'note', {'en': c.en, 'he': c.he}));
+      }
+    }
+
     void emit(int i, Segment? h, Segment? t) {
       final primary = h ?? t!;
+      if (options.conciseNotes) {
+        if (h != null && h.kind == SegmentKind.prayer && !sectionExcluded) curated(h);
+        // The app's notes stand in for the siddur's commentary and its
+        // "if you forgot…" paragraphs.
+        if (primary.kind == SegmentKind.note || (h ?? t)!.followsPrevious || (t?.followsPrevious ?? false)) return;
+      }
       if (primary.kind == SegmentKind.note && !options.showNotes) return;
       if ((primary.kind == SegmentKind.instruction || primary.kind == SegmentKind.speaker) &&
           !options.showInstructions) {
@@ -480,8 +580,8 @@ class SiddurResolver {
       var ap = rubric == null ? Applicability.always : _eval(rubric.condition, ctx);
       if (sectionExcluded) ap = Applicability.notToday;
       final isExcluded = ap == Applicability.notToday;
-      if (isExcluded && options.excluded == ExcludedDisplay.hide) return;
-      final hide = options.excluded == ExcludedDisplay.hide;
+      if (isExcluded && options.excluded == ExcludedDisplay.hide && !primary.option) return;
+      final hide = options.excluded == ExcludedDisplay.hide && !primary.option;
       final heRuns = h == null ? null : _runs(h, ctx, hide);
       final trRuns = t == null ? null : _runs(t, ctx, hide);
       if (heRuns == null && trRuns == null) return;
@@ -495,6 +595,8 @@ class SiddurResolver {
         rubric?.labelEn,
         rubric?.labelHe,
         isExcluded,
+        announces: (h ?? t)!.announces,
+        option: (h ?? t)!.option,
       ));
     }
 
@@ -523,11 +625,33 @@ class SiddurResolver {
           r.rubric == null ? Applicability.always : _eval(r.rubric!.condition, ctx),
           r.rubric?.labelEn,
           r.rubric?.labelHe,
+          option: r.option,
         ),
     ];
     if (!hide) return ResolvedSegment(s, runs);
-    final kept = [for (final r in runs) if (r.applicability != Applicability.notToday) r];
-    final hasText = kept.any((r) => !r.marker && r.html.replaceAll(RegExp(r'<[^>]*>'), '').trim().isNotEmpty);
+    bool blank(ResolvedRun r) => r.html.replaceAll(RegExp(r'<[^>]*>'), '').trim().isEmpty;
+    // Runs of adjacent options ("Rosh Chodesh / Pesach / Sukkos"): when one
+    // of them is said the others stay, crossed out, so the sentence still
+    // reads as printed. Lone additions not said today ("בעשי"ת מסיים: …")
+    // go.
+    final kept = <ResolvedRun>[];
+    var group = <ResolvedRun>[];
+    void flush() {
+      final said = group.any((r) => !r.marker && r.applicability != Applicability.notToday && !blank(r));
+      kept.addAll(said ? group : group.where((r) => r.applicability != Applicability.notToday));
+      group = [];
+    }
+
+    for (final r in runs) {
+      if (r.applicability == Applicability.always && !r.marker && !blank(r)) {
+        flush();
+        kept.add(r);
+      } else {
+        group.add(r);
+      }
+    }
+    flush();
+    final hasText = kept.any((r) => !r.marker && r.applicability != Applicability.notToday && !blank(r));
     return hasText ? ResolvedSegment(s, kept) : null;
   }
 }

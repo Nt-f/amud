@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/adaptive.dart';
 import '../../core/format.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
@@ -59,14 +60,14 @@ class _CustomZmanEditorState extends ConsumerState<_CustomZmanEditor> {
             const SizedBox(height: 12),
             TextField(controller: _name, decoration: const InputDecoration(labelText: 'Name'), onChanged: (_) => setState(() {})),
             const SizedBox(height: 12),
-            SegmentedButton<CustomZmanKind>(
-              segments: const [
-                ButtonSegment(value: CustomZmanKind.offset, label: Text('Offset')),
-                ButtonSegment(value: CustomZmanKind.degrees, label: Text('Sun angle')),
-                ButtonSegment(value: CustomZmanKind.shaahZmanit, label: Text('Shaos')),
+            ChoiceBar<CustomZmanKind>(
+              options: const [
+                (CustomZmanKind.offset, 'Offset', null),
+                (CustomZmanKind.degrees, 'Sun angle', null),
+                (CustomZmanKind.shaahZmanit, 'Shaos', null),
               ],
-              selected: {kind},
-              onSelectionChanged: (v) => setState(() => kind = v.first),
+              selected: kind,
+              onChanged: (v) => setState(() => kind = v),
             ),
             const SizedBox(height: 12),
             ...switch (kind) {

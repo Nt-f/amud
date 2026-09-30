@@ -123,9 +123,48 @@ void main() {
       expect(segs, isNotEmpty);
       expect(segs.where((s) => s.excluded), isEmpty);
       expect(segs.expand((s) => s.he!.runs).where((r) => r.applicability == Applicability.notToday), isEmpty);
+      // Chol HaMoed Sukkot: Ya'aleh VeYavo is said with the Sukkot option;
+      // Rosh Chodesh and Pesach stay beside it, crossed out.
+      final sukkot = SiddurResolver()
+          .resolve(node, sel, (s) => DayContext(HDate(18, Months.tishrei, 5787), il: false, service: s),
+              options: const ResolveOptions(excluded: ExcludedDisplay.hide))
+          .whereType<SegmentItem>()
+          .firstWhere((s) => stripHtml(s.he!.segment.html).contains('יַעֲלֶה'));
+      expect(sukkot.applicability, Applicability.today);
+      final options = sukkot.he!.runs.where((r) => r.applicability != Applicability.always && !r.marker).toList();
+      expect(options.map((r) => r.applicability), [Applicability.notToday, Applicability.notToday, Applicability.today]);
       expect(segs.where((s) => stripHtml(s.he!.segment.html).contains('יַעֲלֶה')), isEmpty);
       expect(items.whereType<CollapsedSectionItem>(), isEmpty);
       expect(items.whereType<ExcludedGroupItem>(), isEmpty);
+    });
+
+    List<RenderItem> maariv(HDate hd, {bool concise = false}) => SiddurResolver().resolve(
+        root.find('Weekday/Maariv/Amidah')!, sel, (s) => DayContext(hd, il: false, service: s),
+        options: ResolveOptions(excluded: ExcludedDisplay.hide, showNotes: true, conciseNotes: concise));
+    String plain(SegmentItem s) => stripHtml(s.he!.segment.html);
+
+    test('notes and instructions go with the lines they are about', () {
+      final weekday = maariv(HDate(5, Months.cheshvan, 5787)).whereType<SegmentItem>().map(plain).join('\n');
+      expect(weekday, isNot(contains('בראש חדש ובחול המועד אומרים')));
+      expect(weekday, isNot(contains('אם לא אמר זכרנו')));
+      expect(weekday, isNot(contains('בקיץ:')), reason: 'winter: no Morid HaTal');
+      expect(weekday, isNot(contains('אַתָּה חוֹנַנְתָּנוּ')), reason: 'Atah Chonantanu is for Motzaei Shabbat');
+      final rc = maariv(HDate(30, Months.cheshvan, 5787)).whereType<SegmentItem>().toList();
+      final announce = rc.firstWhere((s) => plain(s).contains('בראש חדש ובחול המועד אומרים'));
+      expect(announce.announces, isTrue);
+      expect(announce.applicability, Applicability.today);
+    });
+
+    test('concise notes: short, and only when relevant', () {
+      List<String> notes(HDate hd) =>
+          [for (final d in maariv(hd, concise: true).whereType<DynamicItem>()) if (d.kind == 'note') '${d.data['en']}'];
+      expect(notes(HDate(15, Months.kislev, 5787)), isEmpty);
+      expect(notes(HDate(5, Months.cheshvan, 5787)).single, contains('Mashiv HaRuach'), reason: 'first 30 days');
+      expect(notes(HDate(30, Months.cheshvan, 5787)), [contains('Forgot it at Maariv of Rosh Chodesh')]);
+      expect(notes(HDate(18, Months.tishrei, 5787)).single, contains('go back to Retzei'));
+      expect(notes(HDate(5, Months.tishrei, 5787)), hasLength(3), reason: 'Zochreinu, HaMelech HaKadosh, HaMelech HaMishpat');
+      final items = maariv(HDate(18, Months.tishrei, 5787), concise: true).whereType<SegmentItem>();
+      expect(items.where((s) => s.kind == SegmentKind.note), isEmpty);
     });
 
     test('prayer text and notes languages are independent', () async {

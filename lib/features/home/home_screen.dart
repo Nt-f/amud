@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/l10n.dart';
 import '../../core/adaptive.dart';
-import '../../core/settings.dart';
 import '../setup/whats_new.dart';
 import '../update/update_screen.dart';
 import 'card_registry.dart';
@@ -22,50 +22,33 @@ class HomeScreen extends ConsumerWidget {
     final editing = ref.watch(_editingProvider);
     final cards = ref.watch(dashboardProvider);
     final registry = ref.watch(cardRegistryProvider);
-    final today = ref.watch(todaySnapshotProvider);
-    final loc = ref.watch(settingsProvider.select((s) => s.location.name));
     final theme = Theme.of(context);
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(
-              today.afterSunset
-                  ? '${today.halachic.render(context.hebcalLocale)} · ${context.tr('night')}'
-                  : today.halachic.render(context.hebcalLocale),
-              style: theme.textTheme.titleMedium),
-          Text(loc, style: theme.textTheme.bodySmall),
-        ]),
-        actions: [
-          if (editing)
-            IconButton(
-              tooltip: 'Reset layout',
-              icon: const Icon(Icons.restart_alt),
-              onPressed: () async {
-                if (await showAdaptiveConfirm(context, title: 'Reset dashboard?', message: 'Restore the default cards.')) {
-                  ref.read(dashboardProvider.notifier).reset();
-                }
-              },
+    // No app bar: the date card already shows the date, and the space goes
+    // to the cards. Editing is at the bottom of the dashboard.
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: theme.brightness == Brightness.dark ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark,
+      child: Scaffold(
+        floatingActionButton: editing
+            ? FloatingActionButton.extended(
+                onPressed: () => ref.read(_editingProvider.notifier).state = false,
+                icon: const Icon(Icons.check),
+                label: Text(context.tr('Done')),
+              )
+            : null,
+        body: SafeArea(
+          bottom: false,
+          child: Column(children: [
+            const UpdateBanner(),
+            const WhatsNewBanner(),
+            Expanded(
+              child: editing
+                  ? _EditList(cards: cards, registry: registry, onAdd: () => _addCard(context, ref))
+                  : _Grid(cards: cards, registry: registry),
             ),
-          IconButton(
-            tooltip: editing ? 'Done' : 'Edit dashboard',
-            icon: Icon(editing ? Icons.check : Icons.dashboard_customize_outlined),
-            onPressed: () => ref.read(_editingProvider.notifier).state = !editing,
-          ),
-        ],
+          ]),
+        ),
       ),
-      floatingActionButton: editing
-          ? FloatingActionButton.extended(
-              onPressed: () => _addCard(context, ref),
-              icon: const Icon(Icons.add),
-              label: const Text('Add card'),
-            )
-          : null,
-      body: Column(children: [
-        const UpdateBanner(),
-        const WhatsNewBanner(),
-        Expanded(child: editing ? _EditList(cards: cards, registry: registry) : _Grid(cards: cards, registry: registry)),
-      ]),
     );
   }
 
@@ -122,7 +105,7 @@ class _Grid extends ConsumerWidget {
         onRefresh: () async => ref.invalidate(todaySnapshotProvider),
         child: SingleChildScrollView(
           physics: const AlwaysScrollableScrollPhysics(),
-          padding: EdgeInsets.fromLTRB(pad, 8, pad, 96),
+          padding: EdgeInsets.fromLTRB(pad, 12, pad, 24),
           child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
             for (final (i, row) in _rows(ref, cols).indexed)
               Padding(
@@ -135,6 +118,16 @@ class _Grid extends ConsumerWidget {
                     ),
                 ]),
               ),
+            Padding(
+              padding: const EdgeInsets.only(top: 16),
+              child: Center(
+                child: TextButton.icon(
+                  onPressed: () => ref.read(_editingProvider.notifier).state = true,
+                  icon: const Icon(Icons.dashboard_customize_outlined),
+                  label: Text(context.tr('Edit dashboard')),
+                ),
+              ),
+            ),
           ]),
         ),
       );
@@ -170,7 +163,8 @@ class _Grid extends ConsumerWidget {
 class _EditList extends ConsumerWidget {
   final List<CardConfig> cards;
   final CardRegistry registry;
-  const _EditList({required this.cards, required this.registry});
+  final VoidCallback onAdd;
+  const _EditList({required this.cards, required this.registry, required this.onAdd});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -179,34 +173,64 @@ class _EditList extends ConsumerWidget {
       padding: const EdgeInsets.fromLTRB(12, 8, 12, 96),
       itemCount: cards.length,
       onReorder: notifier.reorder,
+      header: Padding(
+        padding: const EdgeInsets.fromLTRB(4, 8, 4, 8),
+        child: Text(context.tr('Edit dashboard'), style: Theme.of(context).textTheme.titleLarge),
+      ),
+      footer: Padding(
+        padding: const EdgeInsets.only(top: 12),
+        child: Wrap(alignment: WrapAlignment.center, spacing: 8, runSpacing: 8, children: [
+          FilledButton.tonalIcon(onPressed: onAdd, icon: const Icon(Icons.add), label: Text(context.tr('Add card'))),
+          TextButton.icon(
+            onPressed: () async {
+              if (await showAdaptiveConfirm(context,
+                  title: context.tr('Reset dashboard?'), message: context.tr('Restore the default cards.'))) {
+                notifier.reset();
+              }
+            },
+            icon: const Icon(Icons.restart_alt),
+            label: Text(context.tr('Reset layout')),
+          ),
+        ]),
+      ),
       itemBuilder: (context, i) {
         final c = cards[i];
         final t = registry[c.type];
         return Card(
           key: ValueKey(c.id),
           margin: const EdgeInsets.symmetric(vertical: 4),
+          // Actions live in a menu so the card's name keeps the width on
+          // narrow phones and with large text.
           child: ListTile(
+            contentPadding: const EdgeInsetsDirectional.only(start: 16, end: 4),
             leading: Icon(t?.icon ?? Icons.help_outline),
-            title: Text(c.setting<String>('title', '').isNotEmpty ? c.setting<String>('title', '') : (t?.title ?? c.type)),
-            subtitle: Text(c.span >= 2 ? 'Wide' : 'Compact'),
+            title: Text(c.setting<String>('title', '').isNotEmpty ? c.setting<String>('title', '') : context.tr(t?.title ?? c.type)),
+            subtitle: Text(context.tr(c.span >= 2 ? 'Wide' : 'Compact')),
+            onTap: t?.editor == null ? null : () => _configure(context, ref, t!, c),
             trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-              IconButton(
-                tooltip: 'Toggle width',
-                icon: Icon(c.span >= 2 ? Icons.view_agenda_outlined : Icons.grid_view),
-                onPressed: () => notifier.replace(c.copyWith(span: c.span >= 2 ? 1 : 2)),
+              PopupMenuButton<VoidCallback>(
+                tooltip: context.tr('More'),
+                onSelected: (f) => f(),
+                itemBuilder: (_) => [
+                  PopupMenuItem(
+                    value: () => notifier.replace(c.copyWith(span: c.span >= 2 ? 1 : 2)),
+                    child: ListTile(
+                      leading: Icon(c.span >= 2 ? Icons.grid_view : Icons.view_agenda_outlined),
+                      title: Text(context.tr(c.span >= 2 ? 'Make compact' : 'Make wide')),
+                    ),
+                  ),
+                  if (t?.editor != null)
+                    PopupMenuItem(
+                      value: () => _configure(context, ref, t!, c),
+                      child: ListTile(leading: const Icon(Icons.tune), title: Text(context.tr('Configure'))),
+                    ),
+                  PopupMenuItem(
+                    value: () => notifier.remove(c.id),
+                    child: ListTile(leading: const Icon(Icons.delete_outline), title: Text(context.tr('Remove'))),
+                  ),
+                ],
               ),
-              if (t?.editor != null)
-                IconButton(
-                  tooltip: 'Configure',
-                  icon: const Icon(Icons.tune),
-                  onPressed: () => _configure(context, ref, t!, c),
-                ),
-              IconButton(
-                tooltip: 'Remove',
-                icon: const Icon(Icons.delete_outline),
-                onPressed: () => notifier.remove(c.id),
-              ),
-              ReorderableDragStartListener(index: i, child: const Padding(padding: EdgeInsets.all(8), child: Icon(Icons.drag_handle))),
+              ReorderableDragStartListener(index: i, child: const Padding(padding: EdgeInsets.all(12), child: Icon(Icons.drag_handle))),
             ]),
           ),
         );
