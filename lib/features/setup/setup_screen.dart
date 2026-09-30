@@ -7,6 +7,7 @@ import '../../core/fonts.dart';
 import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
+import '../../core/split_row.dart';
 import '../alerts/alerts.dart';
 import 'whats_new.dart';
 
@@ -268,8 +269,10 @@ class _SiddurPage extends ConsumerWidget {
                 for (final b in manifest.books)
                   RadioListTile<String>.adaptive(
                     value: b.title,
-                    title: Text(context.term(b.title)),
-                    secondary: Text(b.heTitle, textDirection: TextDirection.rtl, style: TextStyle(fontFamily: s.hebrewFont, fontSize: 16)),
+                    title: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
+                      Text(context.term(b.title)),
+                      Text(b.heTitle, textDirection: TextDirection.rtl, style: TextStyle(fontFamily: s.hebrewFont, fontSize: 16)),
+                    ]),
                   ),
               ]),
             ),
@@ -295,9 +298,13 @@ class _SiddurPage extends ConsumerWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                   child: Row(children: [
-                    Expanded(child: Text(catalogFont(f)!.label, style: theme.textTheme.bodyMedium)),
-                    Text('בָּרוּךְ אַתָּה יְהֹוָה',
-                        textDirection: TextDirection.rtl, style: TextStyle(fontFamily: f, fontSize: 22, height: 1.5)),
+                    Expanded(
+                      child: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
+                        Text(catalogFont(f)!.label, style: theme.textTheme.bodyMedium),
+                        Text('בָּרוּךְ אַתָּה יְהֹוָה',
+                            textDirection: TextDirection.rtl, style: TextStyle(fontFamily: f, fontSize: 22, height: 1.5)),
+                      ]),
+                    ),
                     if (s.hebrewFont == f) Padding(padding: const EdgeInsets.only(left: 8), child: Icon(Icons.check_circle, color: theme.colorScheme.primary)),
                   ]),
                 ),

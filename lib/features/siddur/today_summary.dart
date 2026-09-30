@@ -6,6 +6,7 @@ import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
 import '../../core/theme.dart';
+import '../../core/split_row.dart';
 import '../home/cards/card_frame.dart';
 
 enum ChangeKind { add, omit, info }
@@ -95,12 +96,14 @@ class TodayInSiddurCard extends ConsumerWidget {
           ),
           const SizedBox(width: 8),
           Expanded(
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(context.term(c.en), style: theme.textTheme.bodyMedium?.copyWith(fontWeight: c.kind == ChangeKind.info ? null : FontWeight.w600)),
-              if (c.detail != null) Text(context.term(c.detail!), style: theme.textTheme.bodySmall),
+            child: SplitRow(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text(context.term(c.en), style: theme.textTheme.bodyMedium?.copyWith(fontWeight: c.kind == ChangeKind.info ? null : FontWeight.w600)),
+                if (c.detail != null) Text(context.term(c.detail!), style: theme.textTheme.bodySmall),
+              ]),
+              Text(c.he, textDirection: TextDirection.rtl, style: theme.textTheme.bodySmall),
             ]),
           ),
-          Text(c.he, textDirection: TextDirection.rtl, style: theme.textTheme.bodySmall),
         ]),
       );
 }

@@ -9,6 +9,7 @@ import '../../core/adaptive.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
 import '../../core/theme.dart';
+import '../../core/split_row.dart';
 import '../tehillim/tehillim_data.dart';
 import '../tehillim/tehillim_progress.dart';
 import '../tehillim/tehillim_reader.dart';
@@ -235,16 +236,16 @@ class _TocNode extends ConsumerWidget {
       icon: const Icon(Icons.chrome_reader_mode_outlined),
       onPressed: () => context.push(readerPath(book, node.id)),
     );
+    final title = hebrewUi ? trailingHe : SplitRow(children: [Text(context.term(node.en), style: titleStyle), trailingHe]);
     if (readsAsOne(node)) {
       return ListTile(
-        title: hebrewUi ? trailingHe : Text(context.term(node.en), style: titleStyle),
+        title: title,
         subtitle: subtitle,
-        trailing: hebrewUi ? null : trailingHe,
         onTap: () => context.push(readerPath(book, node.id)),
       );
     }
     return ExpansionTile(
-      title: hebrewUi ? trailingHe : Row(children: [Expanded(child: Text(context.term(node.en), style: titleStyle)), trailingHe]),
+      title: title,
       subtitle: subtitle,
       leading: read,
       childrenPadding: const EdgeInsets.only(left: 16),

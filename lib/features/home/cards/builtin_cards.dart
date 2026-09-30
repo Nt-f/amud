@@ -10,6 +10,7 @@ import '../../../core/format.dart';
 import '../../../core/l10n.dart';
 import '../../../core/providers.dart';
 import '../../../core/settings.dart';
+import '../../../core/split_row.dart';
 import '../../../core/theme.dart';
 import '../../js_cards/js_card.dart';
 import '../../minyan/minyan.dart';
@@ -161,14 +162,12 @@ class _HebrewDateCard extends ConsumerWidget {
     return CardFrame(
       onTap: () => context.go('/calendar'),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Expanded(
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(formatPlainDate(t.civil), style: theme.textTheme.labelLarge),
-              const SizedBox(height: 4),
-              Text(hd.render(context.hebcalLocale), style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w600)),
-            ]),
-          ),
+        SplitRow(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(formatPlainDate(t.civil), style: theme.textTheme.labelLarge),
+            const SizedBox(height: 4),
+            Text(hd.render(context.hebcalLocale), style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w600)),
+          ]),
           Text(hd.renderGematriya(),
               textDirection: TextDirection.rtl,
               style: theme.textTheme.headlineSmall?.copyWith(fontFamily: s.hebrewFont, color: theme.colorScheme.primary)),
@@ -386,13 +385,15 @@ class _OmerCard extends ConsumerWidget {
             Text('$day', style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w800, color: on)),
             const SizedBox(width: 12),
             Expanded(
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(context.tr('Sefirat HaOmer · tonight'),
-                    style: theme.textTheme.labelLarge?.copyWith(color: on, fontWeight: FontWeight.w700)),
-                Text(ev.sefira(OmerLang.translit), style: theme.textTheme.bodySmall?.copyWith(color: on), overflow: TextOverflow.ellipsis),
+              child: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Text(context.tr('Sefirat HaOmer · tonight'),
+                      style: theme.textTheme.labelLarge?.copyWith(color: on, fontWeight: FontWeight.w700)),
+                  Text(ev.sefira(OmerLang.translit), style: theme.textTheme.bodySmall?.copyWith(color: on)),
+                ]),
+                Text(ev.sefira(OmerLang.he), textDirection: TextDirection.rtl, style: TextStyle(fontFamily: hebFont, fontSize: 17, color: on)),
               ]),
             ),
-            Text(ev.sefira(OmerLang.he), textDirection: TextDirection.rtl, style: TextStyle(fontFamily: hebFont, fontSize: 17, color: on)),
           ]),
         ),
       ),
@@ -494,9 +495,13 @@ class _UpcomingCard extends ConsumerWidget {
             padding: const EdgeInsets.symmetric(vertical: 4),
             child: Row(children: [
               SizedBox(width: 32, child: Text(e.getEmoji(), style: const TextStyle(fontSize: 18))),
-              Expanded(child: Text(e.render(context.hebcalLocale), style: theme.textTheme.bodyMedium)),
-              Text('${e.date.deltaDays(t.hdate)}d · ${formatPlainDate(e.date.plainDate(), weekday: false).replaceFirst(RegExp(r', \d+$'), '')}',
-                  style: theme.textTheme.bodySmall),
+              Expanded(
+                child: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
+                  Text(e.render(context.hebcalLocale), style: theme.textTheme.bodyMedium),
+                  Text('${e.date.deltaDays(t.hdate)}d · ${formatPlainDate(e.date.plainDate(), weekday: false).replaceFirst(RegExp(r', \d+$'), '')}',
+                      style: theme.textTheme.bodySmall),
+                ]),
+              ),
             ]),
           ),
       ]),

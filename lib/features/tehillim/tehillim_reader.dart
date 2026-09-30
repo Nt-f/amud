@@ -8,6 +8,7 @@ import '../../core/hebrew_text.dart';
 import '../../core/html_text.dart';
 import '../../core/l10n.dart';
 import '../../core/settings.dart';
+import '../../core/split_row.dart';
 import '../../core/theme.dart';
 import '../settings/font_gallery_screen.dart';
 import 'tehillim_data.dart';
@@ -158,12 +159,14 @@ class _ChapterHeader extends ConsumerWidget {
           },
         ),
         Expanded(
-          child: Text(context.tr('Psalm {n}', {'n': chapter}),
-              style: theme.textTheme.titleMedium?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.w600)),
+          child: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
+            Text(context.tr('Psalm {n}', {'n': chapter}),
+                style: theme.textTheme.titleMedium?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.w600)),
+            Text('מזמור ${hebrewNumeral(chapter)}',
+                textDirection: TextDirection.rtl,
+                style: TextStyle(fontFamily: s.hebrewFont, fontSize: 24 * s.textScale, fontWeight: FontWeight.w700, color: theme.colorScheme.primary)),
+          ]),
         ),
-        Text('מזמור ${hebrewNumeral(chapter)}',
-            textDirection: TextDirection.rtl,
-            style: TextStyle(fontFamily: s.hebrewFont, fontSize: 24 * s.textScale, fontWeight: FontWeight.w700, color: theme.colorScheme.primary)),
       ]),
     );
   }

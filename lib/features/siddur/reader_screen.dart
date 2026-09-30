@@ -15,6 +15,7 @@ import '../../core/hebrew_text.dart';
 import '../../core/html_text.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
+import '../../core/split_row.dart';
 import '../../core/theme.dart';
 import 'reader_grouping.dart';
 import 'reader_settings_sheet.dart';
@@ -350,15 +351,13 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
         final size = (24 - h.level * 3).clamp(15, 24).toDouble() * s.textScale;
         return Padding(
           padding: EdgeInsets.only(top: h.level == 0 ? 4 : 20, bottom: 6),
-          child: Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
-            Expanded(
-              child: context.uiLanguage == UiLanguage.en
-                  ? Text(context.term(h.node.en),
-                      style: theme.textTheme.titleMedium?.copyWith(fontSize: size * 0.72, color: theme.colorScheme.primary, fontWeight: FontWeight.w600))
-                  : const SizedBox.shrink(),
-            ),
+          child: SplitRow(gap: 12, children: [
+            context.uiLanguage == UiLanguage.en
+                ? Text(context.term(h.node.en),
+                    style: theme.textTheme.titleMedium?.copyWith(fontSize: size * 0.72, color: theme.colorScheme.primary, fontWeight: FontWeight.w600))
+                : const SizedBox.shrink(),
             if (h.applicability == Applicability.today && s.highlightToday && h.labelEn != null)
-              Flexible(child: Padding(padding: const EdgeInsets.symmetric(horizontal: 8), child: _TodayChip(conditionLabel(context, s, h.labelEn, h.labelHe)))),
+              _TodayChip(conditionLabel(context, s, h.labelEn, h.labelHe)),
             Text(h.node.he,
                 textDirection: TextDirection.rtl,
                 style: TextStyle(fontFamily: s.hebrewFont, fontSize: size, fontWeight: FontWeight.w700, color: theme.colorScheme.primary)),
@@ -372,8 +371,12 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
           child: Row(children: [
             Icon(Icons.add_circle, color: colors.todayBar, size: 18),
             const SizedBox(width: 8),
-            Expanded(child: Text(context.tr('Added today: {label}', {'label': context.term(ins.labelEn)}), style: theme.textTheme.labelLarge)),
-            Text(ins.labelHe, textDirection: TextDirection.rtl, style: TextStyle(fontFamily: s.hebrewFont, fontSize: 16)),
+            Expanded(
+              child: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
+                Text(context.tr('Added today: {label}', {'label': context.term(ins.labelEn)}), style: theme.textTheme.labelLarge),
+                Text(ins.labelHe, textDirection: TextDirection.rtl, style: TextStyle(fontFamily: s.hebrewFont, fontSize: 16)),
+              ]),
+            ),
           ]),
         );
       case CollapsedSectionItem c:
@@ -524,12 +527,14 @@ class _CollapsedTile extends ConsumerWidget {
             Icon(icon, size: 18, color: theme.colorScheme.outline),
             const SizedBox(width: 10),
             Expanded(
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(title, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.outline)),
-                if (subtitle != null && subtitle!.isNotEmpty) Text(subtitle!, style: theme.textTheme.bodySmall),
+              child: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Text(title, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.outline)),
+                  if (subtitle != null && subtitle!.isNotEmpty) Text(subtitle!, style: theme.textTheme.bodySmall),
+                ]),
+                if (he != null) Text(he!, textDirection: TextDirection.rtl, style: TextStyle(fontFamily: hebFont, color: theme.colorScheme.outline)),
               ]),
             ),
-            if (he != null) Text(he!, textDirection: TextDirection.rtl, style: TextStyle(fontFamily: hebFont, color: theme.colorScheme.outline)),
           ]),
         ),
       ),
@@ -558,7 +563,7 @@ class _OmerBlock extends ConsumerWidget {
         Row(children: [
           Icon(Icons.today, color: colors.todayBar),
           const SizedBox(width: 8),
-          Text(context.tr("Tonight's count · day {n}", {'n': data['day']}), style: theme.textTheme.titleSmall),
+          Expanded(child: Text(context.tr("Tonight's count · day {n}", {'n': data['day']}), style: theme.textTheme.titleSmall)),
         ]),
         const SizedBox(height: 10),
         Text('${data['he']}',
@@ -849,12 +854,14 @@ class _UnitCard extends ConsumerWidget {
           Icon(Icons.wine_bar_outlined, size: 18, color: theme.colorScheme.primary),
           const SizedBox(width: 8),
           Expanded(
-            child: Text(context.term(node.en),
-                style: theme.textTheme.titleSmall?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.w700)),
+            child: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
+              Text(context.term(node.en),
+                  style: theme.textTheme.titleSmall?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.w700)),
+              Text(node.he,
+                  textDirection: TextDirection.rtl,
+                  style: TextStyle(fontFamily: s.hebrewFont, fontSize: 18, color: theme.colorScheme.primary, fontWeight: FontWeight.w700)),
+            ]),
           ),
-          Text(node.he,
-              textDirection: TextDirection.rtl,
-              style: TextStyle(fontFamily: s.hebrewFont, fontSize: 18, color: theme.colorScheme.primary, fontWeight: FontWeight.w700)),
         ]),
         const Divider(height: 16),
         for (var i = 0; i < body.length; i++)
