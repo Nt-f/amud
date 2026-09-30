@@ -58,8 +58,10 @@ void registerBuiltInCards(CardRegistry r) {
     ..register(CardType(
       type: 'omer',
       title: 'Sefirat HaOmer',
-      description: 'Tonight\'s count with sefira',
+      description: 'Tonight\'s count with sefira (only during the Omer)',
       icon: Icons.filter_7,
+      defaultSpan: 2,
+      visible: (ref) => omerCountTonight(ref.watch(todaySnapshotProvider)) > 0,
       build: (c, ref, cfg) => const _OmerCard(),
     ))
     ..register(CardType(
@@ -124,9 +126,8 @@ void registerBuiltInCards(CardRegistry r) {
     ..register(CardType(
       type: 'minyan',
       title: 'Find a minyan',
-      description: 'Nearby minyanim (GoDaven support coming)',
+      description: 'Search minyanim nearby on GoDaven',
       icon: Icons.groups_outlined,
-      defaultSpan: 2,
       build: (c, ref, cfg) => const MinyanCard(),
     ))
     ..register(CardType(
@@ -178,16 +179,23 @@ class _HebrewDateCard extends ConsumerWidget {
             child: Text(context.tr('After sunset · the day of {date} has ended', {'date': t.hdate.render(context.hebcalLocale)}),
                 style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.tertiary)),
           ),
-        const SizedBox(height: 10),
-        Wrap(spacing: 6, runSpacing: 6, children: [
-          Chip(avatar: const Icon(Icons.auto_stories, size: 16), label: Text(parsha), visualDensity: VisualDensity.compact),
-          for (final h in holidays)
-            Chip(
-              label: Text('${h.getEmoji()} ${h.render(context.hebcalLocale)}'),
-              backgroundColor: colors.chipToday,
-              visualDensity: VisualDensity.compact,
-            ),
+        const SizedBox(height: 8),
+        Row(children: [
+          Icon(Icons.auto_stories, size: 16, color: theme.colorScheme.primary),
+          const SizedBox(width: 6),
+          Expanded(child: Text(parsha, style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600))),
         ]),
+        if (holidays.isNotEmpty) ...[
+          const SizedBox(height: 8),
+          Wrap(spacing: 6, runSpacing: 6, children: [
+            for (final h in holidays)
+              Chip(
+                label: Text('${h.getEmoji()} ${h.render(context.hebcalLocale)}'),
+                backgroundColor: colors.chipToday,
+                visualDensity: VisualDensity.compact,
+              ),
+          ]),
+        ],
       ]),
     );
   }
@@ -350,6 +358,11 @@ class _CandlesCard extends ConsumerWidget {
   }
 }
 
+/// Tonight's Omer count (after sunset the halachic date has already
+/// advanced); 0 outside the Omer.
+int omerCountTonight(TodaySnapshot t) => !t.halachic.isSameDate(t.hdate) ? omerDay(t.halachic) : t.omerTonight;
+
+/// A slim strip in a standout color, shown only during the Omer.
 class _OmerCard extends ConsumerWidget {
   const _OmerCard();
 
@@ -358,34 +371,31 @@ class _OmerCard extends ConsumerWidget {
     final t = ref.watch(todaySnapshotProvider);
     final hebFont = ref.watch(settingsProvider.select((s) => s.hebrewFont));
     final theme = Theme.of(context);
-    // Tonight's count (after sunset the halachic date already advanced).
-    final afterSunset = !t.halachic.isSameDate(t.hdate);
-    final day = afterSunset ? omerDay(t.halachic) : t.omerTonight;
-    if (day == 0) {
-      final pesach = HDate(15, Months.nisan, t.hdate.getFullYear() + (t.hdate.getMonth() >= Months.sivan && t.hdate.getMonth() < Months.tishrei ? 1 : 0));
-      final days = pesach.abs() - t.hdate.abs();
-      return CardFrame(
-        title: 'Sefirat HaOmer',
-        icon: Icons.filter_7,
-        child: Text(days > 0 ? 'Counting begins in $days days (second night of Pesach).' : 'Not during the Omer.'),
-      );
-    }
+    final day = omerCountTonight(t);
+    if (day == 0) return const SizedBox.shrink();
     final ev = OmerEvent(t.hdate.next(), day);
-    return CardFrame(
-      title: afterSunset ? 'Omer · tonight' : 'Omer · tonight after nightfall',
-      icon: Icons.filter_7,
-      onTap: () => context.go('/siddur?section=omer'),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
-          Text('$day', style: theme.textTheme.displaySmall?.copyWith(fontWeight: FontWeight.w700, color: theme.colorScheme.primary)),
-          const SizedBox(width: 8),
-          Expanded(child: Text(ev.sefira(OmerLang.translit), style: theme.textTheme.bodySmall)),
-        ]),
-        const SizedBox(height: 6),
-        Text(ev.getTodayIs('he'), textDirection: TextDirection.rtl, style: TextStyle(fontFamily: hebFont, fontSize: 17, height: 1.5)),
-        const SizedBox(height: 4),
-        Text(ev.sefira(OmerLang.he), textDirection: TextDirection.rtl, style: TextStyle(fontFamily: hebFont, color: theme.colorScheme.tertiary)),
-      ]),
+    final on = theme.colorScheme.onTertiaryContainer;
+    return Card(
+      clipBehavior: Clip.antiAlias,
+      color: theme.colorScheme.tertiaryContainer,
+      child: InkWell(
+        onTap: () => context.go('/siddur?section=omer'),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          child: Row(children: [
+            Text('$day', style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w800, color: on)),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text(context.tr('Sefirat HaOmer · tonight'),
+                    style: theme.textTheme.labelLarge?.copyWith(color: on, fontWeight: FontWeight.w700)),
+                Text(ev.sefira(OmerLang.translit), style: theme.textTheme.bodySmall?.copyWith(color: on), overflow: TextOverflow.ellipsis),
+              ]),
+            ),
+            Text(ev.sefira(OmerLang.he), textDirection: TextDirection.rtl, style: TextStyle(fontFamily: hebFont, fontSize: 17, color: on)),
+          ]),
+        ),
+      ),
     );
   }
 }
@@ -494,6 +504,7 @@ class _UpcomingCard extends ConsumerWidget {
   }
 }
 
+/// Compact list of shortcuts into the siddur; two columns when wide.
 class _QuickPrayersCard extends ConsumerWidget {
   const _QuickPrayersCard();
 
@@ -504,21 +515,36 @@ class _QuickPrayersCard extends ConsumerWidget {
       ('Mincha', Icons.light_mode_outlined, 'mincha'),
       ('Maariv', Icons.nights_stay_outlined, 'maariv'),
       ('Birkat HaMazon', Icons.restaurant, 'birkat'),
+      ("Me'ein Shalosh", Icons.bakery_dining, null),
       ('Bedtime Shema', Icons.bedtime_outlined, 'bedtime'),
       ('Tefillat HaDerech', Icons.directions_car_outlined, 'derech'),
     ];
+    final theme = Theme.of(context);
     return CardFrame(
       title: 'Quick prayers',
       icon: Icons.bolt,
-      child: Wrap(spacing: 8, runSpacing: 8, children: [
-        for (final (label, icon, key) in shortcuts)
-          ActionChip(avatar: Icon(icon, size: 18), label: Text(context.tr(label)), onPressed: () => context.go('/siddur?section=$key')),
-        ActionChip(
-          avatar: const Icon(Icons.bakery_dining, size: 18),
-          label: Text(context.tr("Me'ein Shalosh")),
-          onPressed: () => context.push('/meein-shalosh'),
-        ),
-      ]),
+      child: LayoutBuilder(builder: (context, c) {
+        final cols = c.maxWidth >= 280 ? 2 : 1;
+        final w = (c.maxWidth - 8 * (cols - 1)) / cols;
+        return Wrap(spacing: 8, children: [
+          for (final (label, icon, key) in shortcuts)
+            SizedBox(
+              width: w,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(8),
+                onTap: () => key == null ? context.push('/meein-shalosh') : context.go('/siddur?section=$key'),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 7),
+                  child: Row(children: [
+                    Icon(icon, size: 18, color: theme.colorScheme.primary),
+                    const SizedBox(width: 10),
+                    Expanded(child: Text(context.tr(label), style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
+                  ]),
+                ),
+              ),
+            ),
+        ]);
+      }),
     );
   }
 }

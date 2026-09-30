@@ -150,24 +150,36 @@ Future<T?> showAdaptivePicker<T>(BuildContext context,
       ),
     );
   }
+  // Above the tab bar, with a heading that stands apart from the options.
   return showModalBottomSheet<T>(
     context: context,
+    useRootNavigator: true,
     showDragHandle: true,
     isScrollControlled: true,
-    builder: (ctx) => SafeArea(
-      child: ConstrainedBox(
-        constraints: BoxConstraints(maxHeight: MediaQuery.sizeOf(ctx).height * 0.7),
-        child: ListView(shrinkWrap: true, children: [
-          Padding(padding: const EdgeInsets.fromLTRB(24, 0, 24, 8), child: Text(title, style: Theme.of(ctx).textTheme.titleMedium)),
-          for (final (v, label) in options)
-            ListTile(
-              title: Text(label),
-              trailing: v == selected ? const Icon(Icons.check) : null,
-              onTap: () => Navigator.pop(ctx, v),
+    builder: (ctx) {
+      final theme = Theme.of(ctx);
+      return SafeArea(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(maxHeight: MediaQuery.sizeOf(ctx).height * 0.7),
+          child: ListView(shrinkWrap: true, children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(24, 0, 24, 12),
+              child: Text(title, style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
             ),
-        ]),
-      ),
-    ),
+            const Divider(height: 1, indent: 16, endIndent: 16),
+            const SizedBox(height: 4),
+            for (final (v, label) in options)
+              ListTile(
+                contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                title: Text(label,
+                    style: v == selected ? TextStyle(color: theme.colorScheme.primary, fontWeight: FontWeight.w600) : null),
+                trailing: v == selected ? Icon(Icons.check, color: theme.colorScheme.primary) : null,
+                onTap: () => Navigator.pop(ctx, v),
+              ),
+          ]),
+        ),
+      );
+    },
   );
 }
 

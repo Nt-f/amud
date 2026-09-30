@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/l10n.dart';
 import '../../core/adaptive.dart';
 import '../../core/settings.dart';
+import '../setup/whats_new.dart';
 import '../update/update_screen.dart';
 import 'card_registry.dart';
 import 'cards/card_frame.dart';
@@ -61,6 +63,7 @@ class HomeScreen extends ConsumerWidget {
           : null,
       body: Column(children: [
         const UpdateBanner(),
+        const WhatsNewBanner(),
         Expanded(child: editing ? _EditList(cards: cards, registry: registry) : _Grid(cards: cards, registry: registry)),
       ]),
     );
@@ -120,20 +123,39 @@ class _Grid extends ConsumerWidget {
         child: SingleChildScrollView(
           physics: const AlwaysScrollableScrollPhysics(),
           padding: EdgeInsets.fromLTRB(pad, 8, pad, 96),
-          child: Wrap(
-            spacing: gap,
-            runSpacing: gap,
-            children: [
-              for (final card in cards)
-                SizedBox(
-                  width: (colW * _span(card, cols) + gap * (_span(card, cols) - 1)),
-                  child: _buildCard(context, ref, card),
-                ),
-            ],
-          ),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            for (final (i, row) in _rows(ref, cols).indexed)
+              Padding(
+                padding: EdgeInsets.only(top: i == 0 ? 0 : gap),
+                child: _EqualHeightRow(gap: gap, children: [
+                  for (final card in row)
+                    SizedBox(
+                      width: (colW * _span(card, cols) + gap * (_span(card, cols) - 1)),
+                      child: _buildCard(context, ref, card),
+                    ),
+                ]),
+              ),
+          ]),
         ),
       );
     });
+  }
+
+  /// Visible cards packed into rows of at most [cols] columns, in order.
+  List<List<CardConfig>> _rows(WidgetRef ref, int cols) {
+    final rows = <List<CardConfig>>[];
+    var used = cols;
+    for (final card in cards) {
+      if (!(registry[card.type]?.visible?.call(ref) ?? true)) continue;
+      final span = _span(card, cols);
+      if (used + span > cols) {
+        rows.add([]);
+        used = 0;
+      }
+      rows.last.add(card);
+      used += span;
+    }
+    return rows;
   }
 
   int _span(CardConfig c, int cols) => (c.span >= 2 ? (cols == 2 ? 2 : c.span.clamp(1, cols)) : 1);
@@ -223,4 +245,72 @@ class _EditList extends ConsumerWidget {
       ),
     );
   }
+}
+
+/// Lays its children out side by side, all as tall as the tallest, so
+/// compact cards sharing a row line up. Children size their own width.
+///
+/// (IntrinsicHeight would do this too, but cards may use LayoutBuilder,
+/// which can't report intrinsic sizes.)
+class _EqualHeightRow extends MultiChildRenderObjectWidget {
+  final double gap;
+  const _EqualHeightRow({required this.gap, required super.children});
+
+  @override
+  RenderObject createRenderObject(BuildContext context) => _RenderEqualHeightRow(gap, Directionality.of(context));
+
+  @override
+  void updateRenderObject(BuildContext context, _RenderEqualHeightRow renderObject) => renderObject
+    ..gap = gap
+    ..textDirection = Directionality.of(context);
+}
+
+class _RowParentData extends ContainerBoxParentData<RenderBox> {}
+
+class _RenderEqualHeightRow extends RenderBox
+    with ContainerRenderObjectMixin<RenderBox, _RowParentData>, RenderBoxContainerDefaultsMixin<RenderBox, _RowParentData> {
+  _RenderEqualHeightRow(this._gap, this._textDirection);
+
+  double _gap;
+  set gap(double v) {
+    if (v == _gap) return;
+    _gap = v;
+    markNeedsLayout();
+  }
+
+  TextDirection _textDirection;
+  set textDirection(TextDirection v) {
+    if (v == _textDirection) return;
+    _textDirection = v;
+    markNeedsLayout();
+  }
+
+  @override
+  void setupParentData(RenderBox child) {
+    if (child.parentData is! _RowParentData) child.parentData = _RowParentData();
+  }
+
+  @override
+  void performLayout() {
+    final loose = BoxConstraints(maxWidth: constraints.maxWidth);
+    var height = 0.0;
+    for (var c = firstChild; c != null; c = childAfter(c)) {
+      c.layout(loose, parentUsesSize: true);
+      if (c.size.height > height) height = c.size.height;
+    }
+    final rtl = _textDirection == TextDirection.rtl;
+    var x = 0.0;
+    for (var c = firstChild; c != null; c = childAfter(c)) {
+      c.layout(BoxConstraints.tightFor(width: c.size.width, height: height), parentUsesSize: true);
+      (c.parentData! as _RowParentData).offset = Offset(rtl ? constraints.maxWidth - x - c.size.width : x, 0);
+      x += c.size.width + _gap;
+    }
+    size = constraints.constrain(Size(constraints.maxWidth, height));
+  }
+
+  @override
+  bool hitTestChildren(BoxHitTestResult result, {required Offset position}) => defaultHitTestChildren(result, position: position);
+
+  @override
+  void paint(PaintingContext context, Offset offset) => defaultPaint(context, offset);
 }

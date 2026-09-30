@@ -71,7 +71,14 @@ enum TextLayout { sideBySide, interleaved, hebrewOnly, translationOnly }
 /// text layout.
 enum NotesLanguage { bilingual, english, hebrew }
 
-enum AppThemeMode { system, light, dark }
+enum AppThemeMode {
+  system('System'),
+  light('Light'),
+  dark('Dark');
+
+  final String label;
+  const AppThemeMode(this.label);
+}
 
 /// Which zmanim methodology to show by default.
 enum ZmanimOpinion { gra, mga, baalHatanya }
@@ -134,6 +141,9 @@ class AppSettings {
   /// The first-run setup has been completed.
   final bool setupDone;
 
+  /// The newest feature announced to this user (see whats_new.dart).
+  final int seenFeatures;
+
   const AppSettings({
     this.location = SavedLocation.newYork,
     this.useElevation = false,
@@ -168,6 +178,7 @@ class AppSettings {
     this.exactAlarms = true,
     this.learningSchedules = const ['dafYomi', 'mishnaYomi', 'nachYomi', 'rambam1', 'psalms', 'chofetzChaim'],
     this.setupDone = false,
+    this.seenFeatures = 0,
   });
 
   AppSettings copyWith({
@@ -204,6 +215,7 @@ class AppSettings {
     bool? exactAlarms,
     List<String>? learningSchedules,
     bool? setupDone,
+    int? seenFeatures,
   }) =>
       AppSettings(
         location: location ?? this.location,
@@ -239,6 +251,7 @@ class AppSettings {
         exactAlarms: exactAlarms ?? this.exactAlarms,
         learningSchedules: learningSchedules ?? this.learningSchedules,
         setupDone: setupDone ?? this.setupDone,
+        seenFeatures: seenFeatures ?? this.seenFeatures,
       );
 
   /// Bumped when defaults change in a way existing installs should adopt.
@@ -279,6 +292,7 @@ class AppSettings {
         'exactAlarms': exactAlarms,
         'learningSchedules': learningSchedules,
         'setupDone': setupDone,
+        'seenFeatures': seenFeatures,
       };
 
   factory AppSettings.fromJson(Map<String, Object?> j) {
@@ -337,6 +351,7 @@ class AppSettings {
       exactAlarms: pick('exactAlarms', d.exactAlarms),
       learningSchedules: (j['learningSchedules'] as List?)?.cast<String>() ?? d.learningSchedules,
       setupDone: pick('setupDone', d.setupDone),
+      seenFeatures: (j['seenFeatures'] as num?)?.toInt() ?? d.seenFeatures,
     );
   }
 

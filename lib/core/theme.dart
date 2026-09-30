@@ -160,13 +160,15 @@ class _WebFadeTransitionsBuilder extends PageTransitionsBuilder {
   @override
   Duration get transitionDuration => const Duration(milliseconds: 150);
 
+  // No reverse fade: a browser swipe-back has already slid the previous
+  // page into view, and fading the old page out on top of it flashes it
+  // back for a moment. (Flutter never sees that gesture, so
+  // popGestureInProgress can't tell it apart from the back button.)
   @override
-  Duration get reverseTransitionDuration => const Duration(milliseconds: 120);
+  Duration get reverseTransitionDuration => Duration.zero;
 
   @override
   Widget buildTransitions<T>(PageRoute<T> route, BuildContext context, Animation<double> animation,
           Animation<double> secondaryAnimation, Widget child) =>
-      // A swipe-back gesture already showed the previous page; skip the
-      // reverse fade.
-      route.popGestureInProgress ? child : FadeTransition(opacity: CurvedAnimation(parent: animation, curve: Curves.easeOut), child: child);
+      FadeTransition(opacity: CurvedAnimation(parent: animation, curve: Curves.easeOut), child: child);
 }

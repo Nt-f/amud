@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../home/cards/card_frame.dart';
 
@@ -53,31 +54,24 @@ class GoDavenProvider implements MinyanProvider {
 
 final minyanProvidersProvider = Provider<List<MinyanProvider>>((ref) => const [GoDavenProvider()]);
 
+/// Compact card; tapping it opens the provider to search nearby.
 class MinyanCard extends ConsumerWidget {
   const MinyanCard({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final providers = ref.watch(minyanProvidersProvider);
+    final p = ref.watch(minyanProvidersProvider).first;
     final loc = ref.watch(locationProvider);
-    final p = providers.first;
     final theme = Theme.of(context);
     return CardFrame(
       title: 'Find a minyan',
       icon: Icons.groups_outlined,
+      trailing: Icon(Icons.open_in_new, size: 16, color: theme.colorScheme.outline),
+      onTap: () => launchUrl(p.webSearchUri(loc.latitude, loc.longitude), mode: LaunchMode.externalApplication),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(
-          p.available
-              ? 'Minyanim near ${loc.getShortName()}'
-              : '${p.name} integration is coming soon. Meanwhile, open ${p.name} to search minyanim near ${loc.getShortName()}.',
-          style: theme.textTheme.bodyMedium,
-        ),
-        const SizedBox(height: 8),
-        FilledButton.tonalIcon(
-          onPressed: () => launchUrl(p.webSearchUri(loc.latitude, loc.longitude), mode: LaunchMode.externalApplication),
-          icon: const Icon(Icons.open_in_new),
-          label: Text('Open ${p.name}'),
-        ),
+        Text(p.name, style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
+        Text(context.tr('Minyanim near {place}', {'place': loc.getShortName() ?? ''}),
+            style: theme.textTheme.bodySmall, maxLines: 2, overflow: TextOverflow.ellipsis),
       ]),
     );
   }

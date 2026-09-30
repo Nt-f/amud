@@ -8,6 +8,7 @@ import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
 import '../alerts/alerts.dart';
+import 'whats_new.dart';
 
 /// First-run walkthrough of the main options. Every choice is saved as it
 /// is made and can be changed later in Settings.
@@ -27,7 +28,8 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
   void _set(AppSettings Function(AppSettings) f) => ref.read(settingsProvider.notifier).update(f);
 
   void _finish() {
-    _set((x) => x.copyWith(setupDone: true));
+    // Features are taught here, so none need announcing on Home.
+    _set((x) => x.copyWith(setupDone: true, seenFeatures: latestFeature));
     context.go('/');
   }
 
@@ -358,6 +360,7 @@ class _ReadingPage extends ConsumerWidget {
           value: s.collapseChazarah,
           onChanged: (v) => set((x) => x.copyWith(collapseChazarah: v)),
         ),
+        for (final f in features) Padding(padding: const EdgeInsets.only(top: 16), child: FeatureTile(f)),
       ],
     );
   }

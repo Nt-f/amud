@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 
 import 'core/format.dart';
 import 'core/l10n.dart';
+import 'core/providers.dart';
 import 'core/settings.dart';
 import 'core/theme.dart';
 import 'features/alerts/alerts_screen.dart';
@@ -131,27 +132,44 @@ const _destinations = [
 
 /// Native navigation chrome: Cupertino tab bar on iOS/macOS, Material 3
 /// navigation bar on phones, navigation rail on wide screens (tablet/web).
-class AdaptiveShell extends StatelessWidget {
+class AdaptiveShell extends ConsumerWidget {
   final StatefulNavigationShell shell;
   const AdaptiveShell({super.key, required this.shell});
 
   void _go(int i) => shell.goBranch(i, initialLocation: i == shell.currentIndex);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final wide = MediaQuery.sizeOf(context).width >= 900;
+    // Reader focus mode slides the navigation out of view.
+    final focus = ref.watch(focusModeProvider);
+    Widget away(Widget bar, {required bool vertical}) => ClipRect(
+          child: AnimatedAlign(
+            duration: const Duration(milliseconds: 250),
+            curve: Curves.easeInOutCubic,
+            alignment: vertical ? Alignment.topCenter : AlignmentDirectional.centerEnd,
+            heightFactor: vertical && focus ? 0 : 1,
+            widthFactor: !vertical && focus ? 0 : 1,
+            child: bar,
+          ),
+        );
     if (wide) {
       return Scaffold(
         body: Row(children: [
-          NavigationRail(
-            selectedIndex: shell.currentIndex,
-            onDestinationSelected: _go,
-            labelType: NavigationRailLabelType.all,
-            destinations: [
-              for (final (o, s, _, l) in _destinations) NavigationRailDestination(icon: Icon(o), selectedIcon: Icon(s), label: Text(context.tr(l))),
-            ],
+          away(
+            vertical: false,
+            Row(children: [
+              NavigationRail(
+                selectedIndex: shell.currentIndex,
+                onDestinationSelected: _go,
+                labelType: NavigationRailLabelType.all,
+                destinations: [
+                  for (final (o, s, _, l) in _destinations) NavigationRailDestination(icon: Icon(o), selectedIcon: Icon(s), label: Text(context.tr(l))),
+                ],
+              ),
+              const VerticalDivider(width: 1),
+            ]),
           ),
-          const VerticalDivider(width: 1),
           Expanded(child: shell),
         ]),
       );
@@ -159,20 +177,23 @@ class AdaptiveShell extends StatelessWidget {
     if (isCupertinoPlatform) {
       return Scaffold(
         body: shell,
-        bottomNavigationBar: CupertinoTabBar(
+        bottomNavigationBar: away(vertical: true, CupertinoTabBar(
           currentIndex: shell.currentIndex,
           onTap: _go,
           activeColor: Theme.of(context).colorScheme.primary,
           items: [for (final (_, _, c, l) in _destinations) BottomNavigationBarItem(icon: Icon(c), label: context.tr(l))],
-        ),
+        )),
       );
     }
     return Scaffold(
       body: shell,
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: shell.currentIndex,
-        onDestinationSelected: _go,
-        destinations: [for (final (o, s, _, l) in _destinations) NavigationDestination(icon: Icon(o), selectedIcon: Icon(s), label: context.tr(l))],
+      bottomNavigationBar: away(
+        vertical: true,
+        NavigationBar(
+          selectedIndex: shell.currentIndex,
+          onDestinationSelected: _go,
+          destinations: [for (final (o, s, _, l) in _destinations) NavigationDestination(icon: Icon(o), selectedIcon: Icon(s), label: context.tr(l))],
+        ),
       ),
     );
   }

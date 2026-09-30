@@ -35,7 +35,9 @@ class LibraryScreen extends ConsumerWidget {
         final id = findSection(root.value!, section!, shabbat: shabbat);
         WidgetsBinding.instance.addPostFrameCallback((_) {
           if (!context.mounted) return;
-          context.go('/siddur');
+          // Replace the `?section=` history entry, or going back from the
+          // reader would land on it and jump straight back in.
+          Router.neglect(context, () => context.go('/siddur'));
           if (id != null) context.push(readerPath(defaultBook.value!, id));
         });
       }

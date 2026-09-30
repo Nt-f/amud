@@ -44,6 +44,10 @@ class CardType {
   final Map<String, Object?> defaults;
   final CardBuilder build;
   final CardEditorBuilder? editor;
+
+  /// Whether the card shows right now (e.g. Sefirat HaOmer only during
+  /// the Omer); hidden cards take no space on the dashboard.
+  final bool Function(WidgetRef ref)? visible;
   const CardType({
     required this.type,
     required this.title,
@@ -53,6 +57,7 @@ class CardType {
     this.defaultSpan = 1,
     this.defaults = const {},
     this.editor,
+    this.visible,
   });
 }
 
@@ -67,27 +72,72 @@ final cardRegistryProvider = Provider<CardRegistry>((ref) => throw Unimplemented
 
 const defaultDashboard = [
   CardConfig(id: 'd1', type: 'hebrewDate', span: 2),
-  CardConfig(id: 'd2', type: 'nextZman', span: 1),
-  CardConfig(id: 'd3', type: 'candles', span: 1),
+  CardConfig(id: 'd5', type: 'omer', span: 2),
   CardConfig(id: 'd4', type: 'todayInSiddur', span: 2),
-  CardConfig(id: 'd5', type: 'omer', span: 1),
+  CardConfig(id: 'd9', type: 'quickPrayers', span: 2),
   CardConfig(id: 'd6', type: 'learning', span: 1, settings: {'schedules': ['dafYomi', 'mishnaYomi', 'rambam1']}),
+  CardConfig(id: 'd10', type: 'minyan', span: 1),
+  CardConfig(id: 'd3', type: 'candles', span: 1),
+  CardConfig(id: 'd2', type: 'nextZman', span: 1),
   CardConfig(id: 'd7', type: 'zmanimList', span: 2),
   CardConfig(id: 'd8', type: 'upcoming', span: 2),
-  CardConfig(id: 'd9', type: 'quickPrayers', span: 2),
-  CardConfig(id: 'd10', type: 'minyan', span: 2),
 ];
+
+/// Bumped when saved dashboards should adopt a new arrangement.
+const _dashboardVersion = 2;
+
+/// v2: the Omer card is a full-width strip under the date; after "Today
+/// in the siddur" come quick prayers, then daily learning beside the
+/// minyan card, then Shabbat & Yom Tov beside the next zman.
+List<CardConfig> _migrate(List<CardConfig> l, int from) {
+  if (from >= 2) return l;
+  final out = [...l];
+  CardConfig? take(String type) {
+    final i = out.indexWhere((c) => c.type == type);
+    return i < 0 ? null : out.removeAt(i);
+  }
+
+  void insertAfter(String type, List<CardConfig> cards) {
+    final i = out.indexWhere((c) => c.type == type);
+    out.insertAll(i < 0 ? out.length : i + 1, cards);
+  }
+
+  final omer = take('omer');
+  final quick = take('quickPrayers');
+  final learning = take('learning');
+  final minyan = take('minyan');
+  final candles = take('candles');
+  final next = take('nextZman');
+  if (omer != null) insertAfter('hebrewDate', [omer.copyWith(span: 2)]);
+  insertAfter('todayInSiddur', [
+    ?quick?.copyWith(span: 2),
+    ?learning?.copyWith(span: 1),
+    ?minyan?.copyWith(span: 1),
+    ?candles?.copyWith(span: 1),
+    ?next?.copyWith(span: 1),
+  ]);
+  return out;
+}
 
 class DashboardNotifier extends Notifier<List<CardConfig>> {
   @override
-  List<CardConfig> build() =>
-      ref.watch(storageProvider).readJson(
-          'dashboard', (j) => [for (final e in (j as List).cast<Map>()) CardConfig.fromJson(e.cast<String, Object?>())]) ??
-      defaultDashboard;
+  List<CardConfig> build() {
+    final storage = ref.watch(storageProvider);
+    final saved = storage.readJson(
+        'dashboard', (j) => [for (final e in (j as List).cast<Map>()) CardConfig.fromJson(e.cast<String, Object?>())]);
+    if (saved == null) return defaultDashboard;
+    final version = storage.readJson('dashboardVersion', (j) => (j as num).toInt()) ?? 1;
+    if (version >= _dashboardVersion) return saved;
+    final migrated = _migrate(saved, version);
+    storage.writeJson('dashboard', [for (final c in migrated) c.toJson()]);
+    storage.writeJson('dashboardVersion', _dashboardVersion);
+    return migrated;
+  }
 
   void _save(List<CardConfig> l) {
     state = l;
     ref.read(storageProvider).writeJson('dashboard', [for (final c in l) c.toJson()]);
+    ref.read(storageProvider).writeJson('dashboardVersion', _dashboardVersion);
   }
 
   void add(CardConfig c) => _save([...state, c]);

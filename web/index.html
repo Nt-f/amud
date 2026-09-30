@@ -39,10 +39,16 @@
       });
       // A new deployment's worker takes over as soon as it has cached
       // everything; reload once so the page runs the new version instead of
-      // the cached one it started with. (Skipped on the very first install.)
+      // the cached one it started with. (Skipped on the very first install,
+      // and at most once a minute so a misbehaving worker can't loop.)
       var hadController = !!navigator.serviceWorker.controller, reloading = false;
       navigator.serviceWorker.addEventListener('controllerchange', function () {
         if (!hadController || reloading) return;
+        try {
+          var last = +sessionStorage.getItem('sw-reload') || 0;
+          if (Date.now() - last < 60000) return;
+          sessionStorage.setItem('sw-reload', String(Date.now()));
+        } catch (e) {}
         reloading = true;
         window.location.reload();
       });

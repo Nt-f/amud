@@ -305,7 +305,7 @@ class _Footer extends ConsumerWidget {
             if (single > 1)
               Expanded(
                 child: OutlinedButton.icon(
-                  onPressed: () => context.pushReplacement(tehillimReadPath(chapterPortion(single - 1))),
+                  onPressed: () => Router.neglect(context, () => context.pushReplacement(tehillimReadPath(chapterPortion(single - 1)))),
                   icon: const Icon(Icons.arrow_back),
                   label: Text(context.tr('Psalm {n}', {'n': single - 1})),
                 ),
@@ -314,7 +314,7 @@ class _Footer extends ConsumerWidget {
             if (single < 150)
               Expanded(
                 child: FilledButton.tonalIcon(
-                  onPressed: () => context.pushReplacement(tehillimReadPath(chapterPortion(single + 1))),
+                  onPressed: () => Router.neglect(context, () => context.pushReplacement(tehillimReadPath(chapterPortion(single + 1)))),
                   icon: const Icon(Icons.arrow_forward),
                   label: Text(context.tr('Psalm {n}', {'n': single + 1})),
                 ),

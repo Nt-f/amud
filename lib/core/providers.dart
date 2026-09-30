@@ -99,6 +99,9 @@ final dayContextProvider = Provider.family<DayContext, (int, Service)>((ref, k) 
 /// after sunset still resolves correctly) unless the user picked a date.
 final readerDateProvider = StateProvider<HDate?>((ref) => null);
 
+/// Reader focus mode (double-tap the text): the app bars slide away.
+final focusModeProvider = StateProvider<bool>((ref) => false);
+
 final readerDaytimeDateProvider = Provider<HDate>((ref) {
   final picked = ref.watch(readerDateProvider);
   if (picked != null) return picked;

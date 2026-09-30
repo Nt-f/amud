@@ -217,10 +217,10 @@ class SettingsScreen extends ConsumerWidget {
           AdaptiveNavTile(
             icon: Icons.palette_outlined,
             title: context.tr('Theme'),
-            subtitle: context.tr(s.themeMode.name),
+            subtitle: context.tr(s.themeMode.label),
             onTap: () async {
               final v = await showAdaptivePicker(context,
-                  title: context.tr('Theme'), selected: s.themeMode, options: [for (final m in AppThemeMode.values) (m, context.tr(m.name))]);
+                  title: context.tr('Theme'), selected: s.themeMode, options: [for (final m in AppThemeMode.values) (m, context.tr(m.label))]);
               if (v != null) set((x) => x.copyWith(themeMode: v));
             },
           ),
