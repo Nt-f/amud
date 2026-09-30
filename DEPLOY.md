@@ -48,6 +48,12 @@ HTTPS is required for installation and offline use (localhost is exempt).
   precaches the app shell, all 67 Sefaria text files and one CanvasKit build
   (about 17 MB) on the first visit. After that the app works with no network.
 - Each deployment gets a new content-hashed cache, and old caches are removed.
+- `sw.js` is the **only** service worker. `web/flutter_bootstrap.js` loads
+  Flutter without `serviceWorkerSettings`, and the `flutter_service_worker.js`
+  that Flutter generates just unregisters itself. Two workers fighting over
+  the page caused endless reloads, so don't turn Flutter's worker back on.
+- `index.html` reloads once when a new `sw.js` takes over, at most once a
+  minute (a `sessionStorage` guard), so an update can't loop.
 
 ## Sefaria sources on the server
 
@@ -63,3 +69,21 @@ to keep only public-domain and Creative Commons versions), then rebuild.
 ## Rebuilding web-dist
 
     tool/build_web.sh
+
+`web-dist/` is committed, so commit it along with the source changes.
+
+## Redeploying siddur.nt-wrks.xyz
+
+The live site is the `flutter-siddur:latest` image running on port 8088,
+behind Cloudflare. To ship the current `web-dist/`:
+
+    tool/build_web.sh
+    docker build -f Dockerfile.prebuilt -t flutter-siddur:latest .
+    docker compose up -d --no-build
+
+Installed PWAs pick up the new version the next time they're opened.
+
+## Android and Windows apps
+
+These are released from GitHub Actions, not deployed here. Push a `v*` tag;
+see the README's "Releasing" section.
