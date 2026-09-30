@@ -171,17 +171,24 @@ h3 { font: 700 19px/1.3 var(--body); margin: 0 0 8px; color: var(--ink); }
 /* Day-aware demo */
 .today { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 @media (max-width: 900px) { .today { grid-template-columns: 1fr; } }
-.page { background: #fffdf8; border: 1px solid var(--line); border-radius: 20px; padding: 28px; box-shadow: 0 30px 60px -30px rgba(23, 42, 92, .35); }
-.page-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 16px; font-size: 14px; color: var(--muted); }
-.page-head strong { color: var(--ink); font-size: 16px; }
-.row { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
-.row:last-child { border-bottom: 0; }
-.row .he { font: 500 22px/1.3 var(--hebrew); color: var(--text); }
-.row .en { font-size: 14px; color: var(--muted); }
-.tag { flex-shrink: 0; font-size: 12px; font-weight: 700; letter-spacing: .5px; padding: 4px 10px; border-radius: 999px; }
-.tag.say { background: #dfe8fa; color: #22397a; }
-.tag.off { background: var(--paper-2); color: #5b5446; }
-.row.skipped .he, .row.skipped .en { text-decoration: line-through; text-decoration-color: #9a8f7a; color: #8a8374; }
+.page { background: #fffdf8; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(23, 42, 92, .35); }
+.page-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 24px; background: var(--ink); color: var(--paper); }
+.page-head .title { display: flex; flex-direction: column; gap: 2px; }
+.page-head strong { font: 600 22px/1.1 var(--display); letter-spacing: -.3px; }
+.page-head small { font-size: 13px; color: #aebbd8; }
+.page-head .day { flex-shrink: 0; font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; background: var(--fan); color: var(--ink); }
+.rows { list-style: none; margin: 0; padding: 6px 0; }
+.row { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 20px; padding: 14px 24px; }
+.row + .row { border-top: 1px solid #eee6d6; }
+.row .name { font-weight: 600; font-size: 16px; color: var(--ink); line-height: 1.3; }
+.row .status { display: inline-flex; align-items: center; gap: 7px; margin-top: 4px; font-size: 13px; font-weight: 500; color: #2f4d8f; }
+.row .status::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.row .he { font: 500 24px/1.2 var(--hebrew); color: var(--text); text-align: right; white-space: nowrap; }
+.row.skipped { background: #f6f1e6; }
+.row.skipped .name { color: #7d7566; }
+.row.skipped .status { color: #7d7566; }
+.row.skipped .he { color: #9a917f; text-decoration: line-through; text-decoration-thickness: 1.5px; }
+.page-foot { margin: 0; padding: 14px 24px 18px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
 .checks { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 14px; }
 .checks li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; }
 .checks svg { width: 22px; height: 22px; color: var(--accent); margin-top: 3px; }
@@ -303,12 +310,19 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Short halachic notes</b> only when they apply, like "Say Ya'aleh VeYavo" on Rosh Chodesh.</span></li>
         </ul>
       </div>
-      <div class="page" aria-label="Example: Shacharis on Rosh Chodesh">
-        <div class="page-head"><strong>Shacharis · Rosh Chodesh</strong><span>Today in the siddur</span></div>
-        <div class="row"><div><div class="he" lang="he" dir="rtl">יעלה ויבוא</div><div class="en">Ya'aleh VeYavo in Shemoneh Esrei</div></div><span class="tag say">Said today</span></div>
-        <div class="row"><div><div class="he" lang="he" dir="rtl">הלל</div><div class="en">Half Hallel</div></div><span class="tag say">Said today</span></div>
-        <div class="row skipped"><div><div class="he" lang="he" dir="rtl">תחנון</div><div class="en">Tachanun</div></div><span class="tag off">Not said</span></div>
-        <div class="row"><div><div class="he" lang="he" dir="rtl">מוסף לראש חודש</div><div class="en">Musaf for Rosh Chodesh</div></div><span class="tag say">Said today</span></div>
+      <figure class="page" aria-label="Example: what the siddur shows at Shacharis on Rosh Chodesh" style="margin:0">
+        <div class="page-head">
+          <div class="title"><strong>Shacharis</strong><small>Today in the siddur</small></div>
+          <span class="day">Rosh Chodesh</span>
+        </div>
+        <ul class="rows">
+          <li class="row"><div><div class="name">Ya'aleh VeYavo</div><div class="status">Added in Shemoneh Esrei</div></div><div class="he" lang="he" dir="rtl">יעלה ויבוא</div></li>
+          <li class="row"><div><div class="name">Half Hallel</div><div class="status">After Shemoneh Esrei</div></div><div class="he" lang="he" dir="rtl">הלל</div></li>
+          <li class="row skipped"><div><div class="name">Tachanun</div><div class="status">Not said today</div></div><div class="he" lang="he" dir="rtl">תחנון</div></li>
+          <li class="row"><div><div class="name">Musaf</div><div class="status">For Rosh Chodesh</div></div><div class="he" lang="he" dir="rtl">מוסף</div></li>
+        </ul>
+        <figcaption class="page-foot">Each addition appears in its place; Tachanun is folded away.</figcaption>
+      </figure>
       </div>
     </div>
   </section>
@@ -322,7 +336,7 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
         <div class="card">
           <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5C6.5 4 9.5 4 12 6c2.5-2 5.5-2 8-.5V19c-2.5-1.5-5.5-1.5-8 .5-2.5-2-5.5-2-8-.5z M12 6v13.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
           <h3>Siddur in every nusach</h3>
-          <p>Ashkenaz, Sefard, Edot HaMizrach and Chabad, in Hebrew with English side by side or interleaved. Choose from about 40 Hebrew fonts, with or without nikud and trop.</p>
+          <p>Ashkenaz, Sefard, Edot HaMizrach and Chabad, in Hebrew with English side by side or interleaved. Choose from over 80 Hebrew fonts, with or without nikud and trop.</p>
         </div>
         <div class="card">
           <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M4.2 7.2l2.1 2.1M3 15h3m12 0h3m-3.3-5.7 2.1-2.1M7 15a5 5 0 0 1 10 0M2 19h20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>

@@ -51,11 +51,17 @@ jobs:
           channel: stable
           flutter-version: ${{ env.FLUTTER_VERSION }}
           cache: true
-      - run: flutter pub get
+      # The local packages' own dev dependencies (package:test) aren't
+      # fetched by the app's pub get, and `flutter analyze` checks their
+      # tests too, so get them first.
+      - run: |
+          flutter pub get
+          (cd packages/hebcal && dart pub get)
+          (cd packages/siddur_engine && dart pub get)
       - run: flutter analyze
       - run: flutter test
-      - run: cd packages/siddur_engine && dart pub get && dart test
-      - run: cd packages/hebcal && dart pub get && dart test
+      - run: cd packages/siddur_engine && dart test
+      - run: cd packages/hebcal && dart test
 
   windows:
     needs: [version, test]
