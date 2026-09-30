@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hebcal/hebcal.dart';
@@ -9,6 +11,7 @@ import 'core/storage.dart';
 import 'features/alerts/alerts.dart';
 import 'features/alerts/notification_backend.dart';
 import 'features/home/card_registry.dart';
+import 'features/update/update_service.dart';
 import 'features/home/cards/builtin_cards.dart';
 
 Future<void> main() async {
@@ -30,6 +33,8 @@ Future<void> main() async {
 
   // Plan notifications after first frame (never blocks startup).
   Future<void>.delayed(const Duration(seconds: 1), () => container.read(alertSchedulerProvider).reschedule());
+  // Look for a new release in the background (daily; Android/desktop).
+  Future<void>.delayed(const Duration(seconds: 5), () => container.read(updateProvider.notifier).autoCheck());
 }
 
 /// Re-plans notifications when the app returns to the foreground (dates,
@@ -47,14 +52,14 @@ class _LifecycleState extends ConsumerState<_Lifecycle> with WidgetsBindingObser
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    notificationTaps.addListener(_openZmanim);
+    _taps = notificationTaps.stream.listen((route) => ref.read(routerProvider).go(route));
   }
 
-  void _openZmanim() => ref.read(routerProvider).go('/zmanim');
+  StreamSubscription<String>? _taps;
 
   @override
   void dispose() {
-    notificationTaps.removeListener(_openZmanim);
+    _taps?.cancel();
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }

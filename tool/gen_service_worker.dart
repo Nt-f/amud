@@ -92,18 +92,19 @@ self.addEventListener('message', (event) => {
   if (event.data === 'skipWaiting') self.skipWaiting();
 });
 
-// Zman alerts: tapping one focuses the open app (or opens it) on Zmanim.
+// Tapping a notification focuses the open app (or opens it) on the page it
+// is about (Zmanim for zman alerts).
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   event.waitUntil((async () => {
     const all = await self.clients.matchAll({type: 'window', includeUncontrolled: true});
     for (const c of all) {
       if ('focus' in c) {
-        c.postMessage({type: 'notification-tap', tag: event.notification.tag});
+        c.postMessage({type: 'notification-tap', route: event.notification.data || '/zmanim'});
         return c.focus();
       }
     }
-    return self.clients.openWindow('./#/zmanim');
+    return self.clients.openWindow('./#' + (event.notification.data || '/zmanim'));
   })());
 });
 

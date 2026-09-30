@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/l10n.dart';
 import '../../core/adaptive.dart';
 import '../../core/settings.dart';
+import '../update/update_screen.dart';
 import 'card_registry.dart';
 import 'cards/card_frame.dart';
 import 'today.dart';
@@ -58,7 +59,10 @@ class HomeScreen extends ConsumerWidget {
               label: const Text('Add card'),
             )
           : null,
-      body: editing ? _EditList(cards: cards, registry: registry) : _Grid(cards: cards, registry: registry),
+      body: Column(children: [
+        const UpdateBanner(),
+        Expanded(child: editing ? _EditList(cards: cards, registry: registry) : _Grid(cards: cards, registry: registry)),
+      ]),
     );
   }
 

@@ -10,6 +10,7 @@ import '../../core/adaptive.dart';
 import '../../core/fonts.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
+import '../update/update_service.dart';
 import '../alerts/alerts.dart';
 
 class SettingsScreen extends ConsumerWidget {
@@ -21,6 +22,7 @@ class SettingsScreen extends ConsumerWidget {
     final n = ref.read(settingsProvider.notifier);
     final manifest = ref.watch(manifestProvider).value;
     final fonts = ref.watch(fontsProvider);
+    final update = ref.watch(updateProvider);
     void set(AppSettings Function(AppSettings) f) => n.update(f);
     void minhag(Minhagim Function(Minhagim) f) => n.update((x) => x.copyWith(minhagim: f(x.minhagim)));
 
@@ -281,6 +283,17 @@ class SettingsScreen extends ConsumerWidget {
           ),
         ]),
         AdaptiveSection(header: context.tr('About'), children: [
+          if (updatesSupported)
+            AdaptiveNavTile(
+              icon: Icons.system_update_outlined,
+              title: context.tr('App updates'),
+              subtitle: update.pending != null
+                  ? context.tr('Version {v} is available', {'v': update.pending!.version})
+                  : update.currentVersion.isEmpty
+                      ? null
+                      : context.tr('Version {v}', {'v': update.currentVersion}),
+              onTap: () => context.push('/update'),
+            ),
           AdaptiveNavTile(
             icon: Icons.info_outline,
             title: context.tr('Licenses & sources'),

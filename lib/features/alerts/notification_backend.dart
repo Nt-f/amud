@@ -1,4 +1,5 @@
-import 'package:flutter/foundation.dart';
+import 'dart:async';
+
 
 import 'alerts.dart';
 import 'notification_backend_stub.dart'
@@ -21,10 +22,15 @@ abstract class NotificationBackend {
   /// Cancels previously scheduled notifications and schedules [plan].
   Future<void> replaceAll(List<PlannedNotification> plan, {bool exact = false});
 
-  Future<void> showNow(String title, String body);
+  /// Shows a notification now; tapping it opens [route].
+  Future<void> showNow(String title, String body, {String route = '/zmanim', int id = 999});
 }
 
 NotificationBackend createNotificationBackend() => createBackend();
 
-/// Set when the user taps a zman notification; the app opens Zmanim.
-final notificationTaps = ValueNotifier<DateTime?>(null);
+/// Routes of tapped notifications (zman alerts open Zmanim, update
+/// notices open the update page); the app navigates to each.
+final notificationTaps = StreamController<String>.broadcast();
+
+/// The route a notification payload stands for.
+String routeForPayload(String? payload) => payload != null && payload.startsWith('/') ? payload : '/zmanim';

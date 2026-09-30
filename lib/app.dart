@@ -15,6 +15,7 @@ import 'features/settings/font_gallery_screen.dart';
 import 'features/settings/location_screen.dart';
 import 'features/settings/settings_screen.dart';
 import 'features/setup/setup_screen.dart';
+import 'features/update/update_screen.dart';
 import 'features/siddur/library_screen.dart';
 import 'features/siddur/meein_shalosh_screen.dart';
 import 'features/siddur/reader_screen.dart';
@@ -90,6 +91,7 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
             ]),
           ],
         ),
+        GoRoute(path: '/update', parentNavigatorKey: _rootKey, builder: (c, s) => const UpdateScreen()),
         GoRoute(path: '/setup', parentNavigatorKey: _rootKey, builder: (c, s) => const SetupScreen()),
         GoRoute(path: '/alerts', parentNavigatorKey: _rootKey, builder: (c, s) => const AlertsScreen()),
         GoRoute(path: '/learning', parentNavigatorKey: _rootKey, builder: (c, s) => const LearningScreen()),

@@ -28,7 +28,7 @@ class _WebBackend extends TimerNotificationBackend {
         ((web.MessageEvent e) {
           final data = e.data;
           if (data.isA<JSObject>() && (data as JSObject).getProperty<JSAny?>('type'.toJS).dartify() == 'notification-tap') {
-            notificationTaps.value = DateTime.now();
+            notificationTaps.add(routeForPayload(data.getProperty<JSAny?>('route'.toJS).dartify() as String?));
           }
         }).toJS,
       );
@@ -41,9 +41,9 @@ class _WebBackend extends TimerNotificationBackend {
     return result.toDart == 'granted';
   }
 
-  Future<void> _show(String title, String body, String tag) async {
+  Future<void> _show(String title, String body, String tag, [String route = '/zmanim']) async {
     if (web.Notification.permission != 'granted') return;
-    final options = web.NotificationOptions(body: body, tag: tag, icon: 'icons/Icon-192.png');
+    final options = web.NotificationOptions(body: body, tag: tag, icon: 'icons/Icon-192.png', data: route.toJS);
     try {
       final reg = await web.window.navigator.serviceWorker.getRegistration().toDart;
       if (reg != null) {
@@ -54,7 +54,7 @@ class _WebBackend extends TimerNotificationBackend {
     try {
       final n = web.Notification(title, options);
       n.onclick = ((web.Event _) {
-        notificationTaps.value = DateTime.now();
+        notificationTaps.add(route);
         n.close();
       }).toJS;
     } catch (_) {}
@@ -64,5 +64,5 @@ class _WebBackend extends TimerNotificationBackend {
   Future<void> showScheduled(PlannedNotification p) => _show(p.title, p.body, 'zman-${p.id}');
 
   @override
-  Future<void> showNow(String title, String body) => _show(title, body, 'zman-test');
+  Future<void> showNow(String title, String body, {String route = '/zmanim', int id = 999}) => _show(title, body, 'n-$id', route);
 }

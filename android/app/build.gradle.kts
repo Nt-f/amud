@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -32,11 +34,31 @@ android {
         versionName = flutter.versionName
     }
 
+    // Release signing: android/key.properties locally, or SIDDUR_KEYSTORE_*
+    // environment variables in CI. Every release must use the same key or
+    // Android refuses to install it as an update. Without one, builds fall
+    // back to the debug key (fine for local testing only).
+    val keyProps = Properties().apply {
+        val f = rootProject.file("key.properties")
+        if (f.exists()) f.inputStream().use { load(it) }
+    }
+    fun keyValue(prop: String, env: String): String? = keyProps.getProperty(prop) ?: System.getenv(env)
+    val storeFilePath = keyValue("storeFile", "SIDDUR_KEYSTORE_FILE")
+
+    signingConfigs {
+        if (storeFilePath != null) {
+            create("release") {
+                storeFile = file(storeFilePath)
+                storePassword = keyValue("storePassword", "SIDDUR_KEYSTORE_PASSWORD")
+                keyAlias = keyValue("keyAlias", "SIDDUR_KEY_ALIAS")
+                keyPassword = keyValue("keyPassword", "SIDDUR_KEY_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug")
         }
     }
 }

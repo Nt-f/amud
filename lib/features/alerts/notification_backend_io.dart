@@ -27,6 +27,17 @@ const _details = NotificationDetails(
   macOS: DarwinNotificationDetails(),
 );
 
+const _updateDetails = NotificationDetails(
+  android: AndroidNotificationDetails(
+    'updates',
+    'App updates',
+    channelDescription: 'When a new version of the app is available',
+    importance: Importance.defaultImportance,
+  ),
+  iOS: DarwinNotificationDetails(),
+  macOS: DarwinNotificationDetails(),
+);
+
 /// OS-scheduled notifications (fire even when the app is closed).
 class _NativeBackend implements NotificationBackend {
   final _plugin = FlutterLocalNotificationsPlugin();
@@ -53,9 +64,9 @@ class _NativeBackend implements NotificationBackend {
         requestBadgePermission: false,
         requestSoundPermission: false,
       ),
-    ), onDidReceiveNotificationResponse: (_) => notificationTaps.value = DateTime.now());
+    ), onDidReceiveNotificationResponse: (r) => notificationTaps.add(routeForPayload(r.payload)));
     final launch = await _plugin.getNotificationAppLaunchDetails();
-    if (launch?.didNotificationLaunchApp ?? false) notificationTaps.value = DateTime.now();
+    if (launch?.didNotificationLaunchApp ?? false) notificationTaps.add(routeForPayload(launch!.notificationResponse?.payload));
     _ready = true;
   }
 
@@ -107,7 +118,7 @@ class _NativeBackend implements NotificationBackend {
           _details,
           androidScheduleMode: mode,
           uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
-          payload: p.alertId,
+          payload: '/zmanim',
         );
       } catch (e) {
         debugPrint('schedule ${p.id} failed: $e');
@@ -116,9 +127,9 @@ class _NativeBackend implements NotificationBackend {
   }
 
   @override
-  Future<void> showNow(String title, String body) async {
+  Future<void> showNow(String title, String body, {String route = '/zmanim', int id = 999}) async {
     await init();
-    await _plugin.show(999, title, body, _details);
+    await _plugin.show(id, title, body, route == '/update' ? _updateDetails : _details, payload: route);
   }
 }
 
@@ -133,7 +144,7 @@ class _DesktopTimerBackend extends TimerNotificationBackend {
     try {
       await _plugin.initialize(const InitializationSettings(
         linux: LinuxInitializationSettings(defaultActionName: 'Open'),
-      ), onDidReceiveNotificationResponse: (_) => notificationTaps.value = DateTime.now());
+      ), onDidReceiveNotificationResponse: (r) => notificationTaps.add(routeForPayload(r.payload)));
     } catch (_) {}
     _ready = true;
   }
@@ -145,17 +156,17 @@ class _DesktopTimerBackend extends TimerNotificationBackend {
   Future<void> showScheduled(PlannedNotification p) async {
     await init();
     try {
-      await _plugin.show(p.id, p.title, p.body, const NotificationDetails(linux: LinuxNotificationDetails()));
+      await _plugin.show(p.id, p.title, p.body, const NotificationDetails(linux: LinuxNotificationDetails()), payload: '/zmanim');
     } catch (e) {
       debugPrint('notify failed: $e');
     }
   }
 
   @override
-  Future<void> showNow(String title, String body) async {
+  Future<void> showNow(String title, String body, {String route = '/zmanim', int id = 999}) async {
     await init();
     try {
-      await _plugin.show(999, title, body, const NotificationDetails(linux: LinuxNotificationDetails()));
+      await _plugin.show(id, title, body, const NotificationDetails(linux: LinuxNotificationDetails()), payload: route);
     } catch (e) {
       debugPrint('notify failed: $e');
     }
