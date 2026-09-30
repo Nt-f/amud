@@ -92,6 +92,13 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
             ]),
           ],
         ),
+        // Home shortcuts open prayers above the tabs, so back returns Home.
+        GoRoute(path: '/pray/:section', parentNavigatorKey: _rootKey, builder: (c, s) => SectionReaderScreen(section: s.pathParameters['section']!)),
+        GoRoute(
+          path: '/read/:book',
+          parentNavigatorKey: _rootKey,
+          builder: (c, s) => ReaderScreen(book: s.pathParameters['book']!, nodeId: s.uri.queryParameters['node'] ?? '', standalone: true),
+        ),
         GoRoute(path: '/update', parentNavigatorKey: _rootKey, builder: (c, s) => const UpdateScreen()),
         GoRoute(path: '/setup', parentNavigatorKey: _rootKey, builder: (c, s) => const SetupScreen()),
         GoRoute(path: '/alerts', parentNavigatorKey: _rootKey, builder: (c, s) => const AlertsScreen()),

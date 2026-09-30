@@ -75,13 +75,13 @@ class TodayInSiddurCard extends ConsumerWidget {
       title: 'Today in the siddur',
       icon: Icons.auto_awesome,
       child: Column(children: [
-        for (final c in changes) _row(theme, colors, c),
+        for (final c in changes) _row(context, theme, colors, c),
         if (changes.isEmpty) Text(context.tr('A regular weekday.')),
       ]),
     );
   }
 
-  Widget _row(ThemeData theme, SiddurColors colors, LiturgyChange c) => Padding(
+  Widget _row(BuildContext context, ThemeData theme, SiddurColors colors, LiturgyChange c) => Padding(
         padding: const EdgeInsets.symmetric(vertical: 3),
         child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Icon(
@@ -96,8 +96,8 @@ class TodayInSiddurCard extends ConsumerWidget {
           const SizedBox(width: 8),
           Expanded(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(c.en, style: theme.textTheme.bodyMedium?.copyWith(fontWeight: c.kind == ChangeKind.info ? null : FontWeight.w600)),
-              if (c.detail != null) Text(c.detail!, style: theme.textTheme.bodySmall),
+              Text(context.term(c.en), style: theme.textTheme.bodyMedium?.copyWith(fontWeight: c.kind == ChangeKind.info ? null : FontWeight.w600)),
+              if (c.detail != null) Text(context.term(c.detail!), style: theme.textTheme.bodySmall),
             ]),
           ),
           Text(c.he, textDirection: TextDirection.rtl, style: theme.textTheme.bodySmall),

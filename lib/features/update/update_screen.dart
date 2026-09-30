@@ -68,7 +68,7 @@ class _UpdateScreenState extends ConsumerState<UpdateScreen> {
               if (u.error != null)
                 Padding(
                   padding: const EdgeInsets.only(top: 8),
-                  child: Text(context.tr("Couldn't check for updates: {e}", {'e': u.error}),
+                  child: Text(context.tr("Couldn't check for updates: {e}", {'e': context.tr(u.error!)}),
                       style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.error)),
                 ),
               if (info != null) ...[

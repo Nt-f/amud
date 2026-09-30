@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
@@ -110,6 +111,7 @@ class UpdateState {
 
 class UpdateNotifier extends Notifier<UpdateState> {
   static const _key = 'update';
+  static const _offline = "GitHub couldn't be reached. Check your internet connection.";
 
   @override
   UpdateState build() {
@@ -213,6 +215,13 @@ class UpdateNotifier extends Notifier<UpdateState> {
       state = state.copyWith(checking: false, available: () => info, lastCheck: DateTime.now());
       _save();
       return info;
+    } on http.ClientException {
+      // DNS/socket failures: no connection (or GitHub unreachable).
+      state = state.copyWith(checking: false, error: () => _offline);
+      return null;
+    } on TimeoutException {
+      state = state.copyWith(checking: false, error: () => _offline);
+      return null;
     } catch (e) {
       state = state.copyWith(checking: false, error: () => '$e');
       return null;

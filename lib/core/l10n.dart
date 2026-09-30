@@ -178,6 +178,9 @@ const _ashkenazi = {
   'kohanim': 'Kohanim',
   'shaot': 'Shaos',
   'zmaniyot': 'Zmaniyos',
+  "v'ten": "V'sein",
+  'kinot': 'Kinos',
+  'mincha': 'Minchah',
 };
 
 final _ashkenaziRe = RegExp(
@@ -329,6 +332,7 @@ const Map<String, (String, String)> _strings = {
   'Hallel': ('הלל', 'הלל'),
   'Kiddush Levana': ('קידוש לבנה', 'קידוש לבנה'),
   'Birkat HaMazon': ('ברכת המזון', 'בענטשן'),
+  'Tefillat HaDerech': ('תפילת הדרך', 'תפילת הדרך'),
   'Bedtime Shema': ('קריאת שמע על המיטה', 'קריאת שמע שעל המטה'),
   "Me'ein Shalosh": ('ברכה מעין שלוש', 'ברכה מעין שלש'),
   'Al HaMichya': ('על המחיה', 'על המחיה'),
@@ -440,6 +444,13 @@ const Map<String, (String, String)> _strings = {
   'Sefirat HaOmer · tonight': ('ספירת העומר · הלילה', 'ספירת העומר · היינט ביינאכט'),
   'Minyanim near {place}': ('מניינים ליד {place}', 'מנינים נעבן {place}'),
   'A regular weekday.': ('יום חול רגיל.', 'א געווענליכער וואכנטאג.'),
+
+  'Davening': ('תפילות', 'דאווענען'),
+  'After meals': ('אחרי האוכל', 'נאכן עסן'),
+  'More': ('עוד', 'נאך'),
+  'Not found in this siddur': ('לא נמצא בסידור זה', 'נישט געפונען אין דעם סידור'),
+
+  "GitHub couldn't be reached. Check your internet connection.": ('לא ניתן להתחבר ל-GitHub. בדקו את החיבור לאינטרנט.', 'מען קען נישט דערגרייכן GitHub. קוקט איבער אייער אינטערנעט פארבינדונג.'),
 
   // What's new
   "What's new": ('מה חדש', 'וואס איז נייעס'),

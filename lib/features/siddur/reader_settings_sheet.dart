@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 
 import '../../core/adaptive.dart';
@@ -8,6 +7,7 @@ import '../../core/l10n.dart';
 import '../../core/fonts.dart';
 import '../../core/settings.dart';
 import '../settings/font_gallery_screen.dart';
+import 'versions_screen.dart';
 
 Future<void> showReaderSettings(BuildContext context, String book) => showModalBottomSheet<void>(
       context: context,
@@ -176,8 +176,9 @@ class _ReaderSettings extends ConsumerWidget {
             subtitle: Text(context.tr('Choose and order Hebrew text and translations')),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
+              final nav = Navigator.of(context, rootNavigator: true);
               Navigator.pop(context);
-              context.push('/siddur/book/${Uri.encodeComponent(book)}/versions');
+              nav.push(MaterialPageRoute<void>(builder: (_) => VersionsScreen(book: book)));
             },
           ),
         ]),

@@ -379,7 +379,7 @@ class _OmerCard extends ConsumerWidget {
       clipBehavior: Clip.antiAlias,
       color: theme.colorScheme.tertiaryContainer,
       child: InkWell(
-        onTap: () => context.go('/siddur?section=omer'),
+        onTap: () => context.push('/pray/omer'),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
           child: Row(children: [
@@ -504,45 +504,66 @@ class _UpcomingCard extends ConsumerWidget {
   }
 }
 
-/// Compact list of shortcuts into the siddur; two columns when wide.
+/// Shortcuts into the siddur, grouped by when they're said. They open
+/// above the tabs, so back returns Home.
 class _QuickPrayersCard extends ConsumerWidget {
   const _QuickPrayersCard();
 
+  static const _groups = [
+    ('Davening', [
+      ('Shacharit', Icons.wb_sunny_outlined, '/pray/shacharit'),
+      ('Mincha', Icons.light_mode_outlined, '/pray/mincha'),
+      ('Maariv', Icons.nights_stay_outlined, '/pray/maariv'),
+    ]),
+    ('After meals', [
+      ('Birkat HaMazon', Icons.restaurant, '/pray/birkat'),
+      ("Me'ein Shalosh", Icons.bakery_dining, '/meein-shalosh'),
+    ]),
+    ('More', [
+      ('Tefillat HaDerech', Icons.directions_car_outlined, '/pray/derech'),
+      ('Bedtime Shema', Icons.bedtime_outlined, '/pray/bedtime'),
+    ]),
+  ];
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    const shortcuts = [
-      ('Shacharit', Icons.wb_sunny_outlined, 'shacharit'),
-      ('Mincha', Icons.light_mode_outlined, 'mincha'),
-      ('Maariv', Icons.nights_stay_outlined, 'maariv'),
-      ('Birkat HaMazon', Icons.restaurant, 'birkat'),
-      ("Me'ein Shalosh", Icons.bakery_dining, null),
-      ('Bedtime Shema', Icons.bedtime_outlined, 'bedtime'),
-      ('Tefillat HaDerech', Icons.directions_car_outlined, 'derech'),
-    ];
     final theme = Theme.of(context);
     return CardFrame(
       title: 'Quick prayers',
       icon: Icons.bolt,
       child: LayoutBuilder(builder: (context, c) {
-        final cols = c.maxWidth >= 280 ? 2 : 1;
-        final w = (c.maxWidth - 8 * (cols - 1)) / cols;
-        return Wrap(spacing: 8, children: [
-          for (final (label, icon, key) in shortcuts)
-            SizedBox(
-              width: w,
-              child: InkWell(
-                borderRadius: BorderRadius.circular(8),
-                onTap: () => key == null ? context.push('/meein-shalosh') : context.go('/siddur?section=$key'),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 7),
-                  child: Row(children: [
-                    Icon(icon, size: 18, color: theme.colorScheme.primary),
-                    const SizedBox(width: 10),
-                    Expanded(child: Text(context.tr(label), style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
-                  ]),
-                ),
-              ),
+        // As many columns as fit (Shacharit, Mincha and Maariv share a row
+        // when there's room).
+        final fit = (c.maxWidth / 110).floor().clamp(1, 3);
+        return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          for (final (i, (heading, items)) in _groups.indexed) ...[
+            Padding(
+              padding: EdgeInsets.only(top: i == 0 ? 0 : 10, bottom: 2),
+              child: Text(context.tr(heading), style: theme.textTheme.labelMedium?.copyWith(color: theme.colorScheme.outline)),
             ),
+            Builder(builder: (context) {
+              final cols = fit < items.length ? (fit >= 2 ? 2 : 1) : items.length;
+              final w = (c.maxWidth - 8 * (cols - 1)) / cols;
+              return Wrap(spacing: 8, children: [
+                for (final (label, icon, path) in items)
+                  SizedBox(
+                    width: w,
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(8),
+                      onTap: () => context.push(path),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 7),
+                        child: Row(children: [
+                          Icon(icon, size: 18, color: theme.colorScheme.primary),
+                          const SizedBox(width: 8),
+                          Expanded(child: Text(context.tr(label), style: theme.textTheme.bodyMedium, overflow: TextOverflow.ellipsis)),
+                        ]),
+                      ),
+                    ),
+                  ),
+              ]);
+            }),
+          ],
         ]);
       }),
     );

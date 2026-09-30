@@ -50,7 +50,11 @@ final _resolvedProvider = FutureProvider.family<List<RenderItem>, _ReaderKey>((r
 class ReaderScreen extends ConsumerStatefulWidget {
   final String book;
   final String nodeId;
-  const ReaderScreen({super.key, required this.book, required this.nodeId});
+
+  /// Opened from a Home shortcut, above the tabs: back returns to Home
+  /// rather than the Siddur tab.
+  final bool standalone;
+  const ReaderScreen({super.key, required this.book, required this.nodeId, this.standalone = false});
 
   @override
   ConsumerState<ReaderScreen> createState() => _ReaderScreenState();
@@ -329,7 +333,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
       child: FilledButton.tonalIcon(
         // Replaces this page in the browser history too, so back returns
         // to the library rather than the previous section.
-        onPressed: () => Router.neglect(context, () => context.pushReplacement(readerPath(widget.book, next.id))),
+        onPressed: () => Router.neglect(context, () => context.pushReplacement(readerPath(widget.book, next.id, standalone: widget.standalone))),
         icon: const Icon(Icons.arrow_forward),
         label: Text(context.tr('Next: {title}', {'title': context.term(next.en)})),
       ),
@@ -415,8 +419,27 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
   }
 }
 
-String readerPath(String book, String nodeId) =>
-    '/siddur/book/${Uri.encodeComponent(book)}/read?node=${Uri.encodeQueryComponent(nodeId)}';
+String readerPath(String book, String nodeId, {bool standalone = false}) => standalone
+    ? '/read/${Uri.encodeComponent(book)}?node=${Uri.encodeQueryComponent(nodeId)}'
+    : '/siddur/book/${Uri.encodeComponent(book)}/read?node=${Uri.encodeQueryComponent(nodeId)}';
+
+/// A section of the default siddur by shortcut key (`shacharit`, `omer`,
+/// …), opened standalone from Home.
+class SectionReaderScreen extends ConsumerWidget {
+  final String section;
+  const SectionReaderScreen({super.key, required this.section});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final book = ref.watch(defaultBookProvider).value;
+    final root = book == null ? null : ref.watch(bookIndexProvider(book)).value;
+    if (book == null || root == null) return Scaffold(appBar: AppBar(), body: adaptiveProgress());
+    final shabbat = ref.watch(dayContextProvider((ref.watch(readerDaytimeDateProvider).abs(), Service.shacharit)))['shabbat'];
+    final id = findSection(root, section, shabbat: shabbat);
+    if (id == null) return Scaffold(appBar: AppBar(), body: Center(child: Text(context.tr('Not found in this siddur'))));
+    return ReaderScreen(key: ValueKey(id), book: book, nodeId: id, standalone: true);
+  }
+}
 
 class _DayBanner extends ConsumerWidget {
   final HDate date;

@@ -131,7 +131,7 @@ class _TodayServices extends ConsumerWidget {
                 for (final c in changes)
                   Chip(
                     avatar: Icon(c.kind == ChangeKind.add ? Icons.add : Icons.remove, size: 16),
-                    label: Text(c.en),
+                    label: Text(context.term(c.en)),
                     visualDensity: VisualDensity.compact,
                   ),
               ]),
