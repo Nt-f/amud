@@ -42,7 +42,9 @@ PWA). iOS builds are released unsigned, for sideloading.
   - candle lighting
   - the next zman, a month calendar, and a list of zmanim
   - upcoming days
-  - notes, and your own cards written in JavaScript
+  - notes, and your own cards written in JavaScript, which can fetch data
+    from the web (guide: [`skills/js-card/SKILL.md`](skills/js-card/SKILL.md),
+    also usable as an AI agent skill)
 - **Zmanim and calendar:** GRA, Magen Avraham or Baal HaTanya opinions,
   custom zmanim, and a Jewish calendar (a Home card) with holidays and parshiyos.
 - **Torah:** texts downloaded from Sefaria on request (not bundled) and kept

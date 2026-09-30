@@ -93,7 +93,16 @@ String? findSection(SchemaNode root, String key, {required bool shabbat}) {
         ? [r'^shabbat/maariv$', r'shabbat (?:eve )?(?:maariv|arvit)', r'maariv service for shabbos', r"ma'ariv for shabbat"]
         : [r'^weekday/maariv$', r'weekday (?:maariv|arvit)', r'^maariv$', r"ma'ariv for weekdays"],
     'musaf': [r'^shabbat/musaf', r'musaf leshabbat', r'shabbat mussaf', r'musaf for shabbat', r'^musaf service$', r'^musaf$'],
-    'birkat': [r'birkat ha.?mazon', r'birchas? ha.?mazon', r'post meal blessing', r'grace after meals'],
+    // Whole titles first, so "Birchas Hamazon for Sheva Berachos" isn't
+    // taken for the everyday one.
+    'birkat': [
+      r'(?:^|/)bir(?:k|ch)(?:at|as|os) ha.?mazon(?:;[^/]*)?$',
+      r'(?:^|/)post meal blessing$',
+      r'(?:^|/)grace after meals$',
+      r'bir(?:k|ch)(?:at|as|os) ha.?mazon',
+      r'post meal blessing',
+      r'grace after meals',
+    ],
     'bedtime': [r"keri.at shema al hamita", r'bedtime shema', r'prayer before retiring', r'shema before sleep'],
     'derech': [r'tefillat ha.?derech', r"traveler.?s prayer"],
     'omer': [r'sefirat ha.?omer', r'counting (?:of )?the omer'],

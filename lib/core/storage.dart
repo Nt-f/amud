@@ -33,6 +33,9 @@ class Storage {
     try {
       return decode(jsonDecode(raw));
     } catch (_) {
+      // Callers fall back to defaults and may save over this key; keep a
+      // copy of what couldn't be read so it isn't lost for good.
+      if (_kv.get('$key.unreadable') != raw) _kv.put('$key.unreadable', raw);
       return null;
     }
   }

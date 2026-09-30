@@ -326,20 +326,30 @@ class AppSettings {
       return values.firstWhere((e) => e.name == v, orElse: () => fallback);
     }
 
-    Map<String, List<String>> lists(String k) => {
-          for (final e in ((j[k] as Map?) ?? const {}).entries)
-            e.key as String: (e.value as List).cast<String>(),
-        };
+    // One unreadable value (say, from a newer or older version) falls back
+    // on its own instead of resetting every setting.
+    T orElse<T>(T Function() read, T fallback) {
+      try {
+        return read();
+      } catch (_) {
+        return fallback;
+      }
+    }
+
+    Map<String, List<String>> lists(String k) => orElse(
+        () => {
+              for (final e in ((j[k] as Map?) ?? const {}).entries)
+                if (e.value is List) e.key as String: [for (final v in e.value as List) if (v is String) v],
+            },
+        const {});
     return AppSettings(
-      location: j['location'] is Map
-          ? SavedLocation.fromJson((j['location'] as Map).cast<String, Object?>())
-          : d.location,
+      location: orElse(() => SavedLocation.fromJson((j['location'] as Map).cast<String, Object?>()), d.location),
       useElevation: pick('useElevation', d.useElevation),
-      hour12: j['hour12'] as bool?,
-      candleLightingMins: (j['candleLightingMins'] as num?)?.toInt() ?? d.candleLightingMins,
-      havdalahMins: (j['havdalahMins'] as num?)?.toInt(),
+      hour12: j['hour12'] is bool ? j['hour12'] as bool : null,
+      candleLightingMins: orElse(() => (j['candleLightingMins'] as num).toInt(), d.candleLightingMins),
+      havdalahMins: j['havdalahMins'] is num ? (j['havdalahMins'] as num).toInt() : null,
       opinion: byName(ZmanimOpinion.values, 'opinion', d.opinion),
-      defaultBook: j['defaultBook'] as String?,
+      defaultBook: j['defaultBook'] is String ? j['defaultBook'] as String : null,
       hebrewVersions: lists('hebrewVersions'),
       translationVersions: lists('translationVersions'),
       layout: byName(TextLayout.values, 'layout', d.layout),
@@ -350,9 +360,9 @@ class AppSettings {
       showTeamim: pick('showTeamim', d.showTeamim),
       showNikud: pick('showNikud', d.showNikud),
       preferTrop: pick('preferTrop', d.preferTrop),
-      textScale: (j['textScale'] as num?)?.toDouble() ?? d.textScale,
+      textScale: orElse(() => (j['textScale'] as num).toDouble(), d.textScale),
       hebrewFont: pick('hebrewFont', d.hebrewFont),
-      latinFont: j['latinFont'] as String?,
+      latinFont: j['latinFont'] is String ? j['latinFont'] as String : null,
       excludedDisplay: byName(ExcludedDisplay.values, 'excludedDisplay', d.excludedDisplay),
       showNotes: pick('showNotes', d.showNotes),
       conciseNotes: pick('conciseNotes', d.conciseNotes),
@@ -360,18 +370,16 @@ class AppSettings {
       collapseChazarah: pick('collapseChazarah', d.collapseChazarah),
       showInstructions: pick('showInstructions', d.showInstructions),
       highlightToday: pick('highlightToday', d.highlightToday),
-      minhagim: j['minhagim'] is Map
-          ? Minhagim.fromJson((j['minhagim'] as Map).cast<String, Object?>())
-          : d.minhagim,
+      minhagim: orElse(() => Minhagim.fromJson((j['minhagim'] as Map).cast<String, Object?>()), d.minhagim),
       // The former sepia theme is light with a warm temperature.
       themeMode: j['themeMode'] == 'sepia' ? AppThemeMode.light : byName(AppThemeMode.values, 'themeMode', d.themeMode),
-      warmth: (j['warmth'] as num?)?.toDouble().clamp(0.0, 1.0) ?? (j['themeMode'] == 'sepia' ? 0.8 : d.warmth),
-      seedColor: (j['seedColor'] as num?)?.toInt() ?? d.seedColor,
+      warmth: orElse(() => (j['warmth'] as num).toDouble().clamp(0.0, 1.0), j['themeMode'] == 'sepia' ? 0.8 : d.warmth),
+      seedColor: orElse(() => (j['seedColor'] as num).toInt(), d.seedColor),
       openLicensesOnly: pick('openLicensesOnly', d.openLicensesOnly),
       exactAlarms: pick('exactAlarms', d.exactAlarms),
-      learningSchedules: (j['learningSchedules'] as List?)?.cast<String>() ?? d.learningSchedules,
+      learningSchedules: orElse(() => [for (final v in j['learningSchedules'] as List) if (v is String) v], d.learningSchedules),
       setupDone: pick('setupDone', d.setupDone),
-      seenFeatures: (j['seenFeatures'] as num?)?.toInt() ?? d.seenFeatures,
+      seenFeatures: orElse(() => (j['seenFeatures'] as num).toInt(), d.seenFeatures),
     );
   }
 

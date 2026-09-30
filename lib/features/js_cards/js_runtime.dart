@@ -10,36 +10,87 @@ class JsCardResult {
   bool get ok => error == null;
 }
 
+/// How long a script may take in all, network requests included.
+const jsCardTimeout = Duration(seconds: 15);
+
 /// Sandboxed evaluation of user-authored card scripts.
 ///
 /// App Store compliance: scripts are authored by the user on-device (not
 /// downloaded from us), run in the platform's own engine (JavaScriptCore on
-/// iOS/macOS, QuickJS on Android/desktop, the browser engine on web — no
-/// bundled V8 or JIT), without network access or native bridges, and can
-/// only return declarative JSON that the app renders with native widgets.
+/// iOS/macOS, QuickJS on Android/desktop, a Web Worker on web; no bundled
+/// V8 or JIT) with no native bridges, and can only return declarative JSON
+/// that the app renders with native widgets. Their only way out is `fetch()`,
+/// which the app carries out itself (see JsFetcher): https only, limited in
+/// count, size and time. XMLHttpRequest, WebSocket and importScripts are gone.
 abstract class JsCardRuntime {
-  /// Runs [script] and calls its global `render(ctx)` with [contextJson].
-  /// The return value is JSON-serialized. Times out after [timeout].
-  Future<JsCardResult> render(String script, String contextJson, {Duration timeout = const Duration(seconds: 2)});
+  /// Runs [script] and calls its global `render(ctx)` (which may be async)
+  /// with [contextJson]. The return value is JSON-serialized. Gives up after
+  /// [timeout].
+  Future<JsCardResult> render(String script, String contextJson, {Duration timeout = jsCardTimeout});
 }
 
 JsCardRuntime createJsCardRuntime() => createRuntime();
 
-/// Wrapper executed around the user's script: removes network globals,
-/// invokes render(ctx) and serializes the result.
+/// Wrapper executed around the user's script. The host provides
+/// `__amudSend(message)` and calls `__amudReceive(message)` with fetch
+/// results; the script's result goes back as a `done` message.
 String wrapScript(String script, String contextJson) => '''
 (function(){
-  var fetch = undefined, XMLHttpRequest = undefined, WebSocket = undefined, importScripts = undefined;
-  var __out;
+  var __g = (typeof globalThis !== 'undefined') ? globalThis : this;
+  var __send = __amudSend;
+  var __waiting = {}, __count = 0;
+  var XMLHttpRequest = undefined, WebSocket = undefined, importScripts = undefined;
+
+  function __response(m) {
+    var h = m.headers || {};
+    return {
+      ok: m.status >= 200 && m.status < 300,
+      status: m.status,
+      statusText: m.statusText || '',
+      url: m.url,
+      headers: { get: function(n) { var v = h[String(n).toLowerCase()]; return v === undefined ? null : v; } },
+      text: function() { return Promise.resolve(m.body); },
+      json: function() { return Promise.resolve().then(function() { return JSON.parse(m.body); }); }
+    };
+  }
+
+  __g.__amudReceive = function(m) {
+    var w = __waiting[m.id];
+    if (!w) return;
+    delete __waiting[m.id];
+    if (m.error) w.reject(new Error(m.error)); else w.resolve(__response(m));
+  };
+
+  var fetch = __g.fetch = function(url, opts) {
+    opts = opts || {};
+    return new Promise(function(resolve, reject) {
+      var id = String(++__count);
+      __waiting[id] = {resolve: resolve, reject: reject};
+      __send({
+        type: 'fetch', id: id, url: String(url),
+        method: String(opts.method || 'GET').toUpperCase(),
+        headers: opts.headers || {},
+        body: opts.body == null ? null : String(opts.body)
+      });
+    });
+  };
+
+  function __fail(e) {
+    // "Error: message", then where it happened (some engines' stacks
+    // leave the message out).
+    var stack = e && e.stack ? String(e.stack) : '';
+    __send({type: 'done', ok: false, error: String(e) + (stack && stack.indexOf(String(e)) < 0 ? '\\n' + stack : '')});
+  }
   try {
     $script
     ;
     if (typeof render !== 'function') { throw new Error('Define a function render(ctx) that returns a card object'); }
     var __ctx = $contextJson;
-    __out = JSON.stringify({ok: true, value: render(__ctx)});
+    Promise.resolve(render(__ctx)).then(function(v) {
+      try { __send({type: 'done', ok: true, value: v}); } catch (e) { __fail(e); }
+    }, __fail);
   } catch (e) {
-    __out = JSON.stringify({ok: false, error: String(e && e.stack ? e.stack : e)});
+    __fail(e);
   }
-  return __out;
-})()
+})();
 ''';

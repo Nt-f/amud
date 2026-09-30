@@ -4,9 +4,11 @@ import 'package:go_router/go_router.dart';
 import 'package:hebcal/hebcal.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../core/focus_mode.dart';
 import '../../core/hebrew_text.dart';
 import '../../core/l10n.dart';
 import '../../core/settings.dart';
+import '../../core/theme.dart';
 import '../home/today.dart';
 import 'torah_library.dart';
 import 'torah_settings.dart';
@@ -22,7 +24,7 @@ class TorahScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final all = [for (final c in torahCategories) ...c.availableWorks];
     return Scaffold(
-      appBar: AppBar(title: Text(context.tr('Torah'))),
+      appBar: AppBar(title: Text(context.tr('Torah')), actions: [OfflineStatus(works: all)]),
       body: ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
         DownloadPanel(works: all, label: context.tr('Download everything')),
         const SizedBox(height: 8),
@@ -49,7 +51,7 @@ class TorahCategoryScreen extends ConsumerWidget {
     if (c == null) return Scaffold(appBar: AppBar());
     final states = ref.watch(torahLibraryProvider);
     return Scaffold(
-      appBar: AppBar(title: Text(_name(context, c.en, c.he))),
+      appBar: AppBar(title: Text(_name(context, c.en, c.he)), actions: [OfflineStatus(works: c.availableWorks)]),
       body: ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
         if (c.available) DownloadPanel(works: c.availableWorks, label: context.tr('Download all of {name}', {'name': _name(context, c.en, c.he)})),
         if (c.id == 'halacha') const KitzurYomiTile(),
@@ -108,15 +110,13 @@ class _WorkTile extends StatelessWidget {
   }
 }
 
-/// A prominent download button for [works] showing the estimated size;
-/// shows progress while downloading and the stored size afterwards.
+/// A prominent download button for [works] showing the estimated size,
+/// and progress while downloading. Once everything is downloaded it's
+/// gone; [OfflineStatus] in the top bar says so instead.
 class DownloadPanel extends ConsumerWidget {
   final List<TorahWork> works;
   final String label;
-
-  /// Offer to delete the download (on a single book's page).
-  final bool allowDelete;
-  const DownloadPanel({super.key, required this.works, required this.label, this.allowDelete = false});
+  const DownloadPanel({super.key, required this.works, required this.label});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -126,8 +126,8 @@ class DownloadPanel extends ConsumerWidget {
     final missing = [for (final w in works) if (states[w.id] is! Downloaded) w];
     final downloading = works.any((w) => states[w.id] is Downloading);
     final failed = [for (final w in works) if (states[w.id] case DownloadFailed(:final error)) error];
-    final stored = works.fold<int>(0, (n, w) => n + switch (states[w.id]) { Downloaded(:final bytes) => bytes, _ => 0 });
     final estimate = missing.fold<int>(0, (n, w) => n + w.estimatedBytes);
+    if (missing.isEmpty && !downloading) return const SizedBox.shrink();
 
     final Widget body;
     if (downloading) {
@@ -135,27 +135,6 @@ class DownloadPanel extends ConsumerWidget {
         Text(context.tr('Downloading from Sefaria…'), style: theme.textTheme.titleSmall),
         const SizedBox(height: 10),
         const LinearProgressIndicator(),
-      ]);
-    } else if (missing.isEmpty) {
-      body = Row(children: [
-        Icon(Icons.offline_pin, color: theme.colorScheme.primary),
-        const SizedBox(width: 12),
-        Expanded(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(context.tr('Available offline'), style: theme.textTheme.titleSmall),
-            Text(formatBytes(stored), style: theme.textTheme.bodySmall),
-          ]),
-        ),
-        if (allowDelete)
-          TextButton.icon(
-            icon: const Icon(Icons.delete_outline),
-            label: Text(context.tr('Remove')),
-            onPressed: () async {
-              for (final w in works) {
-                await lib.delete(w);
-              }
-            },
-          ),
       ]);
     } else {
       body = Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
@@ -178,6 +157,47 @@ class DownloadPanel extends ConsumerWidget {
     return Card(
       color: theme.colorScheme.secondaryContainer.withValues(alpha: 0.5),
       child: Padding(padding: const EdgeInsets.all(14), child: body),
+    );
+  }
+}
+
+/// A small "available offline" mark for the top bar once all of [works]
+/// is downloaded. Tapping it shows the space used and, when [allowDelete],
+/// offers to remove the download.
+class OfflineStatus extends ConsumerWidget {
+  final List<TorahWork> works;
+  final bool allowDelete;
+  const OfflineStatus({super.key, required this.works, this.allowDelete = false});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final states = ref.watch(torahLibraryProvider);
+    if (works.isEmpty || works.any((w) => states[w.id] is! Downloaded)) return const SizedBox.shrink();
+    final stored = works.fold<int>(0, (n, w) => n + switch (states[w.id]) { Downloaded(:final bytes) => bytes, _ => 0 });
+    final theme = Theme.of(context);
+    final label = context.tr('Available offline · {size}', {'size': formatBytes(stored)});
+    return PopupMenuButton<void>(
+      tooltip: label,
+      icon: Icon(Icons.offline_pin_outlined, color: theme.colorScheme.primary),
+      itemBuilder: (context) => [
+        PopupMenuItem(
+          enabled: false,
+          child: ListTile(
+            contentPadding: EdgeInsets.zero,
+            leading: Icon(Icons.offline_pin, color: theme.colorScheme.primary),
+            title: Text(label, style: theme.textTheme.bodyMedium),
+          ),
+        ),
+        if (allowDelete)
+          PopupMenuItem(
+            onTap: () async {
+              for (final w in works) {
+                await ref.read(torahLibraryProvider.notifier).delete(w);
+              }
+            },
+            child: ListTile(contentPadding: EdgeInsets.zero, leading: const Icon(Icons.delete_outline), title: Text(context.tr('Remove download'))),
+          ),
+      ],
     );
   }
 }
@@ -214,14 +234,16 @@ class KitzurYomiTile extends ConsumerWidget {
     final url = ev?.url();
     final inApp = downloaded && target != null;
     return Card(
-      color: theme.colorScheme.tertiaryContainer,
+      // The primary container (the theme's blue), not the tertiary one,
+      // which Material derives as pink from the default seed color.
+      color: theme.colorScheme.primaryContainer,
       child: ListTile(
-        leading: Icon(Icons.today, color: theme.colorScheme.onTertiaryContainer),
+        leading: Icon(Icons.today, color: theme.colorScheme.onPrimaryContainer),
         title: Text(context.tr('Kitzur Yomi'),
-            style: theme.textTheme.titleMedium?.copyWith(color: theme.colorScheme.onTertiaryContainer, fontWeight: FontWeight.w600)),
+            style: theme.textTheme.titleMedium?.copyWith(color: theme.colorScheme.onPrimaryContainer, fontWeight: FontWeight.w600)),
         subtitle: Text(ev == null ? context.tr('No reading today') : ev.renderBrief(context.hebcalLocale),
-            style: TextStyle(color: theme.colorScheme.onTertiaryContainer)),
-        trailing: ev == null ? null : Icon(inApp ? Icons.chevron_right : Icons.open_in_new, color: theme.colorScheme.onTertiaryContainer),
+            style: TextStyle(color: theme.colorScheme.onPrimaryContainer)),
+        trailing: ev == null ? null : Icon(inApp ? Icons.chevron_right : Icons.open_in_new, color: theme.colorScheme.onPrimaryContainer),
         onTap: ev == null
             ? null
             : inApp
@@ -251,10 +273,11 @@ class TorahWorkScreen extends ConsumerWidget {
     final he = context.uiLanguage != UiLanguage.en;
     return Scaffold(
       appBar: AppBar(title: Text(_name(context, w.en, w.he)), actions: [
+        OfflineStatus(works: [w], allowDelete: true),
         IconButton(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => showTorahTextSettings(context)),
       ]),
       body: ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
-        DownloadPanel(works: [w], label: context.tr('Download'), allowDelete: true),
+        DownloadPanel(works: [w], label: context.tr('Download')),
         if (w.id == kitzur.id) const KitzurYomiTile(),
         const SizedBox(height: 8),
         ...switch (book) {
@@ -303,7 +326,7 @@ class TorahReaderScreen extends ConsumerStatefulWidget {
   ConsumerState<TorahReaderScreen> createState() => _TorahReaderScreenState();
 }
 
-class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> {
+class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with FocusModeReader {
   final _firstKey = GlobalKey();
   bool _scrolled = false;
 
@@ -324,6 +347,7 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> {
     final s = ref.watch(torahSettingsProvider);
     final lang = s.resolvedLanguage(context.uiLanguage);
     final theme = Theme.of(context);
+    final colors = SiddurColors.of(context);
     final heUi = context.uiLanguage != UiLanguage.en;
     if (w == null || book == null || widget.siman < 1 || widget.siman > book.length) {
       return Scaffold(appBar: AppBar(), body: const Center(child: CircularProgressIndicator()));
@@ -339,8 +363,7 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> {
 
     void go(int siman) => context.pushReplacement('/torah/${widget.category}/${widget.work}/read?siman=$siman');
 
-    return Scaffold(
-      appBar: AppBar(
+    final bar = AppBar(
         title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(heUi ? 'סימן ${gematriya(widget.siman)}' : '${context.tr('Siman')} ${widget.siman}'),
           Text(heUi || book.titlesEn[i].isEmpty ? book.titlesHe[i] : book.titlesEn[i],
@@ -349,8 +372,17 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> {
         actions: [
           IconButton(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => showTorahTextSettings(context)),
         ],
-      ),
-      body: SingleChildScrollView(
+    );
+
+    // Double-tap for focus mode, as in the siddur: the bars slide away.
+    return Scaffold(
+      body: Column(children: [
+        FocusModeBars(child: bar),
+        Expanded(
+          child: FocusModeBody(
+            child: DoubleTapListener(
+              onDoubleTap: toggleFocusMode,
+              child: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
         child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           for (var n = 1; n <= count; n++)
@@ -359,7 +391,12 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> {
               margin: const EdgeInsets.only(bottom: 10),
               padding: const EdgeInsets.all(10),
               decoration: from != null && n >= from && n <= to
-                  ? BoxDecoration(color: theme.colorScheme.tertiaryContainer.withValues(alpha: 0.45), borderRadius: BorderRadius.circular(10))
+                  // The siddur's "said today" colors, for today's portion.
+                  ? BoxDecoration(
+                      color: colors.todayFill,
+                      borderRadius: BorderRadius.circular(10),
+                      border: BorderDirectional(start: BorderSide(color: colors.todayBar, width: 3)),
+                    )
                   : null,
               child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
                 // English-only still shows the Hebrew where there's no translation.
@@ -419,7 +456,11 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> {
                 style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.outline)),
           ],
         ]),
-      ),
+              ),
+            ),
+          ),
+        ),
+      ]),
     );
   }
 }

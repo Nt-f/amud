@@ -49,6 +49,10 @@ String _contextJson(WidgetRef ref) {
   return jsonEncode(m);
 }
 
+/// Each card's last result, shown while the next minute's run (which may
+/// be waiting on the network) is still going.
+final _lastJsResult = <String, JsCardResult>{};
+
 class JsCard extends ConsumerWidget {
   final CardConfig cfg;
   const JsCard(this.cfg, {super.key});
@@ -57,10 +61,18 @@ class JsCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final script = cfg.setting<String>('script', sampleJsCard);
     final result = ref.watch(_jsResultProvider((script, _contextJson(ref))));
+    final last = _lastJsResult['${cfg.id}|$script'];
+    Widget show(JsCardResult r) =>
+        r.ok ? DeclarativeCard(spec: r.value, fallbackTitle: cfg.setting<String>('title', 'Custom card')) : _error(context, r.error!);
     return result.when(
-      loading: () => CardFrame(title: cfg.setting<String>('title', 'Custom card'), icon: Icons.code, child: const LinearProgressIndicator()),
+      loading: () => last != null
+          ? show(last)
+          : CardFrame(title: cfg.setting<String>('title', 'Custom card'), icon: Icons.code, child: const LinearProgressIndicator()),
       error: (e, _) => _error(context, '$e'),
-      data: (r) => r.ok ? DeclarativeCard(spec: r.value, fallbackTitle: cfg.setting<String>('title', 'Custom card')) : _error(context, r.error!),
+      data: (r) {
+        _lastJsResult['${cfg.id}|$script'] = r;
+        return show(r);
+      },
     );
   }
 
@@ -211,8 +223,8 @@ class _JsCardEditorState extends ConsumerState<JsCardEditor> {
       ],
       const SizedBox(height: 8),
       Text(
-        'Scripts run on-device in a sandbox (JavaScriptCore on Apple platforms, QuickJS elsewhere, a Web Worker on web) '
-        'with no network access and a 2-second limit.',
+        'Scripts run on-device in a sandbox (JavaScriptCore on Apple platforms, QuickJS elsewhere, a Web Worker on web). '
+        'They can fetch() https URLs (up to 10 requests, 2 MB each; GETs are cached for 5 minutes) and have 15 seconds in all.',
         style: theme.textTheme.bodySmall,
       ),
     ]);
@@ -230,7 +242,7 @@ class _JsCardEditorState extends ConsumerState<JsCardEditor> {
           child: SingleChildScrollView(
             padding: const EdgeInsets.all(20),
             child: SelectableText('''
-render(ctx) must return:
+render(ctx) — or async render(ctx) — must return:
   { title?, icon?: star|sun|moon|book|clock|candle|calendar|heart|info, children: [node…] }
 node:
   {type:'text', text, style?: title|headline|caption|hebrew, color?}
@@ -248,6 +260,14 @@ ctx:
   ctx.learning.<schedule> (English), ctx.learningHe.<schedule>
   ctx.day.* — halachic day flags:
 $vars
+
+fetch(url, {method?, headers?, body?}) → Promise of
+  {ok, status, statusText, url, headers.get(name), text(), json()}
+  https only · at most 10 per update · 2 MB · 10 s each ·
+  GET responses cached 5 minutes · on web the server must allow CORS
+  Whole script: 15 seconds. The card re-runs every minute.
+
+Full guide: skills/js-card/SKILL.md in the app's repository.
 '''),
           ),
         ),

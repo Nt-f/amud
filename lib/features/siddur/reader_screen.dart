@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hebcal/hebcal.dart';
@@ -8,6 +7,7 @@ import 'package:siddur_engine/siddur_engine.dart';
 
 import '../../core/l10n.dart';
 import '../../core/adaptive.dart';
+import '../../core/focus_mode.dart';
 import '../../core/fonts.dart';
 import '../../core/format.dart';
 import '../../core/hebrew_text.dart';
@@ -64,7 +64,7 @@ class ReaderScreen extends ConsumerStatefulWidget {
   ConsumerState<ReaderScreen> createState() => _ReaderScreenState();
 }
 
-class _ReaderScreenState extends ConsumerState<ReaderScreen> {
+class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReader {
   final _expanded = <String>{};
   final _expandedGroups = <String>{};
 
@@ -73,65 +73,18 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
   final _toggledNotes = <String>{};
 
   final _selection = GlobalKey<SelectionAreaState>();
-  late final StateController<bool> _focus;
 
   /// Keys of the lines that open a section (see [normalizeOpeningBold]).
   Set<String> _openers = {};
 
-  /// Readers alive, so focus mode survives "Next" (which swaps readers)
-  /// but ends once the last one closes.
-  static int _open = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    _open++;
-    _focus = ref.read(focusModeProvider.notifier);
-  }
-
-  @override
-  void dispose() {
-    _open--;
-    // Providers can't change while the tree is being torn down.
-    scheduleMicrotask(() {
-      if (_open == 0) _focus.state = false;
+  void _doubleTap() {
+    toggleFocusMode();
+    // Double-tap also selects a word; drop it once the gesture is done.
+    Timer.run(() {
+      final region = _selection.currentState?.selectableRegion;
+      region?.clearSelection();
+      region?.hideToolbar();
     });
-    super.dispose();
-  }
-
-  // Double-tap detection from raw pointer events, so single taps on rows
-  // aren't delayed and scrolling isn't disturbed.
-  Offset? _downAt;
-  Duration? _downTime;
-  (Offset, Duration)? _lastTap;
-
-  void _pointerDown(PointerDownEvent e) {
-    _downAt = e.position;
-    _downTime = e.timeStamp;
-  }
-
-  void _pointerUp(PointerUpEvent e) {
-    final down = _downAt, downTime = _downTime;
-    _downAt = null;
-    if (down == null || downTime == null) return;
-    final isTap = (e.position - down).distance < kTouchSlop && e.timeStamp - downTime < kLongPressTimeout;
-    if (!isTap) {
-      _lastTap = null;
-      return;
-    }
-    final last = _lastTap;
-    if (last != null && e.timeStamp - last.$2 < kDoubleTapTimeout && (e.position - last.$1).distance < kDoubleTapSlop) {
-      _lastTap = null;
-      _focus.state = !_focus.state;
-      // Double-tap also selects a word; drop it once the gesture is done.
-      Timer.run(() {
-        final region = _selection.currentState?.selectableRegion;
-        region?.clearSelection();
-        region?.hideToolbar();
-      });
-    } else {
-      _lastTap = (e.position, e.timeStamp);
-    }
   }
 
   @override
@@ -144,8 +97,6 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
     final node = rootAsync.value?.find(widget.nodeId);
     final s = ref.watch(settingsProvider);
     final theme = Theme.of(context);
-    final focus = ref.watch(focusModeProvider);
-    const slide = Duration(milliseconds: 250);
 
     final bar = AppBar(
         title: Builder(builder: (context) {
@@ -179,24 +130,11 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
       body: Column(children: [
         // Focus mode: the bars slide up out of view; the text keeps clear
         // of the status bar.
-        ClipRect(
-          child: AnimatedAlign(
-            duration: slide,
-            curve: Curves.easeInOutCubic,
-            alignment: Alignment.bottomCenter,
-            heightFactor: focus ? 0 : 1,
-            child: Column(mainAxisSize: MainAxisSize.min, children: [bar, DayBanner(date: date, picked: picked != null)]),
-          ),
-        ),
+        FocusModeBars(child: Column(mainAxisSize: MainAxisSize.min, children: [bar, DayBanner(date: date, picked: picked != null)])),
         Expanded(
-          child: AnimatedPadding(
-            duration: slide,
-            curve: Curves.easeInOutCubic,
-            padding: EdgeInsets.only(top: focus ? MediaQuery.paddingOf(context).top : 0),
-            child: Listener(
-              onPointerDown: _pointerDown,
-              onPointerUp: _pointerUp,
-              onPointerCancel: (_) => _downAt = null,
+          child: FocusModeBody(
+            child: DoubleTapListener(
+              onDoubleTap: _doubleTap,
               child: items.when(
                 loading: adaptiveProgress,
                 error: (e, st) => Center(child: Padding(padding: const EdgeInsets.all(24), child: Text('$e'))),
@@ -294,6 +232,12 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
         }
         continue;
       }
+      // A sub-section titled like the section it's in (Birchas Hamazon
+      // inside Birchas Hamazon) would repeat the heading right above it.
+      if (it is HeadingItem && i > 0 && _repeatsParent(it, list[i - 1])) {
+        i++;
+        continue;
+      }
       rows.addAll(_rowsFor(context, it, layout));
       i++;
     }
@@ -324,6 +268,15 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
         return [(c) => _item(c, it, layout)];
     }
   }
+
+  static String _plain(String s) => s.toLowerCase().replaceAll(RegExp(r'[^a-z0-9]'), '');
+
+  static bool _repeatsParent(HeadingItem h, RenderItem prev) =>
+      prev is HeadingItem &&
+      prev.level < h.level &&
+      h.labelEn == null &&
+      _plain(h.node.en).isNotEmpty &&
+      _plain(h.node.en) == _plain(prev.node.en);
 
   static SchemaNode? _unitLeafOf(RenderItem it) {
     final n = switch (it) {

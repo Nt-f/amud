@@ -48,10 +48,10 @@ class TorahSettings {
     const d = TorahSettings();
     return TorahSettings(
       language: TorahTextLanguage.values.asNameMap()[j['language']] ?? d.language,
-      hebrewFont: j['hebrewFont'] as String? ?? d.hebrewFont,
-      latinFont: j['latinFont'] as String?,
-      textScale: (j['textScale'] as num?)?.toDouble() ?? d.textScale,
-      showNikud: j['showNikud'] as bool? ?? d.showNikud,
+      hebrewFont: j['hebrewFont'] is String ? j['hebrewFont'] as String : d.hebrewFont,
+      latinFont: j['latinFont'] is String ? j['latinFont'] as String : null,
+      textScale: j['textScale'] is num ? (j['textScale'] as num).toDouble() : d.textScale,
+      showNikud: j['showNikud'] is bool ? j['showNikud'] as bool : d.showNikud,
     );
   }
 }

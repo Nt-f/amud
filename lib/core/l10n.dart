@@ -655,6 +655,8 @@ const Map<String, (String, String)> _strings = {
   'Work in progress': ('בעבודה', 'אין ארבעט'),
   'Downloading from Sefaria…': ('מוריד מספריא…', 'לאדט אראפ פון ספריא…'),
   'Available offline': ('זמין ללא חיבור', 'צוטריטלעך אן אינטערנעט'),
+  'Available offline · {size}': ('זמין ללא חיבור · {size}', 'צוטריטלעך אן אינטערנעט · {size}'),
+  'Remove download': ('הסרת ההורדה', 'אויסמעקן די אראפלאדונג'),
   'Download failed. Check your connection and try again.':
       ('ההורדה נכשלה. בדקו את החיבור ונסו שוב.', 'דאס אראפלאדן איז דורכגעפאלן. קוקט די פארבינדונג און פרובירט נאכאמאל.'),
   'Downloads from Sefaria once, then works offline.': ('יורד מספריא פעם אחת, ואחר כך זמין ללא חיבור.', 'ווערט אראפגעלאדן פון ספריא איין מאל, דערנאך ארבעט עס אן אינטערנעט.'),

@@ -9,9 +9,10 @@ const _fanDeep = Color(0xFF6F8CC0);
 
 /// Plays the Amud launch animation over [child] once per app start: the
 /// podium lines fly in, the pages fan open and the wordmark rises, then it
-/// fades into the app. Tap to skip. On the web the page's own copy of the
-/// animation already played while the app loaded, so it's skipped there, and
-/// also when the system asks for reduced motion.
+/// fades into the app. It always plays in full and can't be tapped away.
+/// With reduced motion the finished logo shows, still, for the same time.
+/// On the web the page's own copy of the animation already played while the
+/// app loaded, so it's skipped there.
 class LaunchAnimation extends StatefulWidget {
   final Widget child;
   const LaunchAnimation({super.key, required this.child});
@@ -35,12 +36,6 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
     if (_show) _c.forward().whenComplete(_finish);
   }
 
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    if (_show && MediaQuery.maybeDisableAnimationsOf(context) == true) _show = false;
-  }
-
   Future<void> _finish() async {
     if (!mounted || !_show) return;
     await _fade.forward();
@@ -62,11 +57,8 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
       Positioned.fill(
         child: FadeTransition(
           opacity: ReverseAnimation(_fade),
-          child: GestureDetector(
-            onTap: () {
-              _c.stop();
-              _finish();
-            },
+          // Nothing reaches the app until the animation is done.
+          child: AbsorbPointer(
             child: ColoredBox(
               color: amudInk,
               child: Semantics(
@@ -74,7 +66,8 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
                 child: AnimatedBuilder(
                   animation: _c,
                   builder: (context, _) {
-                    final t = _c.value * _length.inMilliseconds / 1000;
+                    final still = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+                    final t = still ? _length.inMilliseconds / 1000 : _c.value * _length.inMilliseconds / 1000;
                     final word = _segment(t, 1.9, .6, Curves.easeOut);
                     return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                       CustomPaint(size: const Size.square(240), painter: _MarkPainter(t)),

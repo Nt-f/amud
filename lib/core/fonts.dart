@@ -1,8 +1,10 @@
 import 'package:file_picker/file_picker.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 
+import 'font_formats.dart';
 import 'providers.dart';
 import 'settings.dart';
 import 'storage.dart';
@@ -241,24 +243,27 @@ class FontRepository extends Notifier<List<FontEntry>> {
   }
 
   /// Prompts for font files and imports them. Returns imported entries.
+  ///
+  /// Android and iOS pickers filter by file type, and fonts often arrive as
+  /// generic data (application/octet-stream), which a font filter greys
+  /// out. There any file can be picked, and [importBytes] checks it.
   Future<List<FontEntry>> pickAndImport() async {
-    final files = await FilePicker.pickFiles(type: FileType.custom, allowedExtensions: const ['ttf', 'otf']);
+    final mobile = !kIsWeb && (defaultTargetPlatform == TargetPlatform.android || defaultTargetPlatform == TargetPlatform.iOS);
+    final files = mobile
+        ? await FilePicker.pickFiles(type: FileType.any)
+        : await FilePicker.pickFiles(type: FileType.custom, allowedExtensions: importableFontExtensions);
     final added = <FontEntry>[];
     for (final f in files) {
       final bytes = await f.xFile.readAsBytes();
-      final label = f.name.replaceAll(RegExp(r'\.(ttf|otf)$', caseSensitive: false), '');
-      added.add(await importBytes(label, bytes));
+      added.add(await importBytes(fontNameFromFile(f.name), bytes));
     }
     return added;
   }
 
-  Future<FontEntry> importBytes(String label, List<int> bytes) async {
-    if (bytes.length < 12) throw const FormatException('Not a font file');
-    final sig = bytes.sublist(0, 4);
-    final ok = (sig[0] == 0 && sig[1] == 1 && sig[2] == 0 && sig[3] == 0) || // TrueType
-        String.fromCharCodes(sig) == 'OTTO' || // OpenType CFF
-        String.fromCharCodes(sig) == 'true';
-    if (!ok) throw const FormatException('Only TrueType (.ttf) or OpenType (.otf) fonts are supported');
+  /// Saves and registers a font file (TrueType, OpenType, a collection or
+  /// WOFF, which is stored unpacked).
+  Future<FontEntry> importBytes(String label, List<int> file) async {
+    final bytes = toLoadableFont(file);
     final family = 'user_${DateTime.now().microsecondsSinceEpoch}';
     await _storage.writeBlob('font:$family', bytes);
     await _register(family, bytes);

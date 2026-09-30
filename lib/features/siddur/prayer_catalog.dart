@@ -116,7 +116,7 @@ const extraItems = <CatalogItem>[
       [r'^shabbat/shabbat evening/kiddush$', r'shabbat evening/kiddush$', r'kiddush for shabbos eve$', r'shabbat eve kiddush$',
         r'kiddush and zemirot for shabbat evening$']),
   CatalogItem('birkat', 'Birkat HaMazon', 'ברכת המזון',
-      [r'(^|/)birkat ha.?mazon$', r'birchat ha.?mazon$', r'birchas? ha.?mazon$', r'post meal blessing$', r'grace after meals$']),
+      [r'(^|/)birkat ha.?mazon$', r'birchat ha.?mazon$', r'birchas? ha.?mazon$', r'birkas ha.?mazon$', r'post meal blessing$', r'grace after meals$']),
   CatalogItem('brachot', 'Blessings on food', 'ברכות הנהנין',
       [r'birkat hanehenin$', r'blessings on pleasures', r'berachos said before eating', r'blessings on enjoyments$', r'blessing on foods$',
         r'various blessings$']),
