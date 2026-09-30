@@ -9,6 +9,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 import '../../core/providers.dart';
 import '../alerts/alerts.dart';
 import 'apk_installer.dart';
+import '../../core/analytics.dart';
 
 /// Where releases are published (GitHub Releases, built by
 /// .github/workflows/build.yml on a `v*` tag).
@@ -190,6 +191,7 @@ class UpdateNotifier extends Notifier<UpdateState> {
   }
 
   void skip(String version) {
+    analytics.event('update_skip', {'version': version});
     state = state.copyWith(skipped: () => version);
     _save();
   }
@@ -203,6 +205,11 @@ class UpdateNotifier extends Notifier<UpdateState> {
       // First run: nothing to announce.
       state = state.copyWith(seenVersion: state.currentVersion);
       _save();
+    }
+    final storage = ref.read(storageProvider);
+    if (state.justUpdated && storage.readJson('updateLogged', (j) => j as String) != state.currentVersion) {
+      analytics.event('app_updated', {'version': state.currentVersion, 'from': state.seenVersion});
+      storage.writeJson('updateLogged', state.currentVersion);
     }
     if (state.justUpdated && installsInApp) {
       // The APK that was just installed is no longer needed.
@@ -218,11 +225,12 @@ class UpdateNotifier extends Notifier<UpdateState> {
     await check();
     final u = state.pending;
     if (u != null && state.notified != u.version) {
+      analytics.event('update_found', {'version': u.version, 'current': state.currentVersion});
       state = state.copyWith(notified: u.version);
       _save();
       try {
         await ref.read(notificationBackendProvider).showNow(
-              'Siddur ${u.version} is available',
+              'Amud ${u.version} is available',
               'Tap to see what\'s new and download the update.',
               route: '/update',
               id: 998,
@@ -271,14 +279,17 @@ class UpdateNotifier extends Notifier<UpdateState> {
     final info = state.available;
     if (info?.downloadUrl == null || state.downloading != null) return;
     state = state.copyWith(downloading: () => 0, error: () => null);
+    analytics.event('update_download', {'version': info!.version, 'status': 'start'});
     try {
-      _apk = await ApkInstaller.download(info!.downloadUrl!, info.version,
+      _apk = await ApkInstaller.download(info.downloadUrl!, info.version,
           size: info.downloadSize,
           sha256: info.sha256,
           onProgress: (p) => state = state.copyWith(downloading: () => p));
       state = state.copyWith(downloading: () => null);
+      analytics.event('update_download', {'version': info.version, 'status': 'done'});
       await _install();
     } catch (e) {
+      analytics.event('update_download', {'version': info.version, 'status': 'failed', 'error': e.runtimeType.toString()});
       state = state.copyWith(downloading: () => null, error: () => "The update couldn't be downloaded: $e");
     }
   }

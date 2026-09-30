@@ -4,12 +4,16 @@ import 'package:go_router/go_router.dart';
 import 'package:hebcal/hebcal.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../core/analytics.dart';
 import '../../core/focus_mode.dart';
 import '../../core/hebrew_text.dart';
 import '../../core/l10n.dart';
+import '../../core/page_swipe.dart';
+import '../../core/search.dart';
 import '../../core/settings.dart';
 import '../../core/theme.dart';
 import '../home/today.dart';
+import '../search/search_sources.dart';
 import 'torah_library.dart';
 import 'torah_settings.dart';
 
@@ -23,9 +27,21 @@ class TorahScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final all = [for (final c in torahCategories) ...c.availableWorks];
+    final query = SearchQuery(ref.watch(pageSearchProvider('torah')));
     return Scaffold(
-      appBar: AppBar(title: Text(context.tr('Torah')), actions: [OfflineStatus(works: all)]),
-      body: ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
+      appBar: AppBar(
+        title: Text(context.tr('Torah')),
+        actions: [OfflineStatus(works: all)],
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(PageSearchBar.height),
+          child: PageSearchBar(page: 'torah', hint: context.tr('Search books and texts')),
+        ),
+      ),
+      body: !query.isEmpty
+          ? ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+              SearchResults(query: query.raw, hebrewFont: ref.watch(torahSettingsProvider).hebrewFont, groups: torahResults(context, ref, query)),
+            ])
+          : ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
         DownloadPanel(works: all, label: context.tr('Download everything')),
         const SizedBox(height: 8),
         for (final c in torahCategories)
@@ -269,14 +285,28 @@ class TorahWorkScreen extends ConsumerWidget {
     if (w == null) return Scaffold(appBar: AppBar());
     final s = ref.watch(torahSettingsProvider);
     final book = ref.watch(torahBookProvider(w.id));
+    final query = SearchQuery(ref.watch(pageSearchProvider('torah:${w.id}')));
     final theme = Theme.of(context);
     final he = context.uiLanguage != UiLanguage.en;
     return Scaffold(
-      appBar: AppBar(title: Text(_name(context, w.en, w.he)), actions: [
-        OfflineStatus(works: [w], allowDelete: true),
-        IconButton(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => showTorahTextSettings(context)),
-      ]),
-      body: ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
+      appBar: AppBar(
+        title: Text(_name(context, w.en, w.he)),
+        actions: [
+          OfflineStatus(works: [w], allowDelete: true),
+          IconButton(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => showTorahTextSettings(context)),
+        ],
+        bottom: book.value == null
+            ? null
+            : PreferredSize(
+                preferredSize: const Size.fromHeight(PageSearchBar.height),
+                child: PageSearchBar(page: 'torah:${w.id}', hint: context.tr('Search {book}', {'book': _name(context, w.en, w.he)})),
+              ),
+      ),
+      body: !query.isEmpty && book.value != null
+          ? ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+              SearchResults(query: query.raw, hebrewFont: s.hebrewFont, groups: torahResults(context, ref, query, only: w.id)),
+            ])
+          : ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
         DownloadPanel(works: [w], label: context.tr('Download')),
         if (w.id == kitzur.id) const KitzurYomiTile(),
         const SizedBox(height: 8),
@@ -360,8 +390,21 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
     final from = widget.from;
     final to = widget.to ?? count;
     _scrollToHighlight();
+    readingText({
+      'work': w.id,
+      'siman': widget.siman,
+      'title': book.titlesEn[i].isEmpty ? book.titlesHe[i] : book.titlesEn[i],
+      'language': lang.name,
+      'daily_portion': from != null,
+    });
 
     void go(int siman) => context.pushReplacement('/torah/${widget.category}/${widget.work}/read?siman=$siman');
+    VoidCallback? swipeTo(int siman, String way) => siman < 1 || siman > book.length
+        ? null
+        : () {
+            analytics.event('page_swipe', {'reader': 'torah', 'way': way});
+            go(siman);
+          };
 
     final bar = AppBar(
         title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -382,6 +425,9 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
           child: FocusModeBody(
             child: DoubleTapListener(
               onDoubleTap: toggleFocusMode,
+              child: PageSwipe(
+              onNext: swipeTo(widget.siman + 1, 'next'),
+              onPrevious: swipeTo(widget.siman - 1, 'previous'),
               child: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
         child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
@@ -456,6 +502,7 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
                 style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.outline)),
           ],
         ]),
+              ),
               ),
             ),
           ),

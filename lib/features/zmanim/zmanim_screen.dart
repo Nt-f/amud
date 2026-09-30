@@ -10,6 +10,7 @@ import '../../core/l10n.dart';
 import '../../core/adaptive.dart';
 import '../../core/format.dart';
 import '../../core/providers.dart';
+import '../../core/search.dart';
 import '../../core/settings.dart';
 import '../../core/theme.dart';
 import '../alerts/alert_editor.dart';
@@ -38,7 +39,13 @@ class ZmanimScreen extends ConsumerWidget {
     final theme = Theme.of(context);
     final wide = MediaQuery.sizeOf(context).width > 900;
 
-    final defs = [for (final d in builtInZmanim) if (showAll || d.defaultFor.contains(s.opinion)) d];
+    // A search looks through every zman, whatever the opinion setting.
+    final query = SearchQuery(ref.watch(pageSearchProvider('zmanim')));
+    final searching = !query.isEmpty;
+    final defs = searching
+        ? [for (final d in builtInZmanim) if (query.matches([names.name(d.key), d.en, d.he, d.opinion])) d]
+        : [for (final d in builtInZmanim) if (showAll || d.defaultFor.contains(s.opinion)) d];
+    final customShown = searching ? [for (final c in custom) if (query.matches([c.name, c.describe()])) c] : custom;
     final times = {for (final d in defs) d.key: d.compute(z)};
     String? nextKey;
     if (isToday) {
@@ -75,6 +82,13 @@ class ZmanimScreen extends ConsumerWidget {
             ]),
           ),
         ],
+      if (searching && defs.isEmpty && customShown.isEmpty)
+        Padding(
+          padding: const EdgeInsets.all(32),
+          child: Text(context.tr('Nothing found for “{q}”', {'q': query.raw}),
+              textAlign: TextAlign.center, style: theme.textTheme.bodyLarge?.copyWith(color: theme.colorScheme.outline)),
+        ),
+      if (!searching || customShown.isNotEmpty)
       Padding(
         padding: const EdgeInsets.fromLTRB(4, 16, 4, 4),
         child: Row(children: [
@@ -86,10 +100,10 @@ class ZmanimScreen extends ConsumerWidget {
           ),
         ]),
       ),
-      if (custom.isNotEmpty)
+      if (customShown.isNotEmpty)
         Card(
           child: Column(children: [
-            for (final c in custom)
+            for (final c in customShown)
               _ZmanRow(
                 name: c.name,
                 he: c.describe(),
@@ -120,12 +134,18 @@ class ZmanimScreen extends ConsumerWidget {
           IconButton(tooltip: context.tr('Alerts'), icon: const Icon(Icons.notifications_active_outlined), onPressed: () => context.push('/alerts')),
           IconButton(tooltip: context.tr('Location'), icon: const Icon(Icons.place_outlined), onPressed: () => context.push('/settings/location')),
         ],
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(PageSearchBar.height),
+          child: PageSearchBar(page: 'zmanim', hint: context.tr('Search zmanim')),
+        ),
       ),
       body: ListView(
         padding: EdgeInsets.fromLTRB(wide ? 32 : 16, 8, wide ? 32 : 16, 32),
         children: [
           _DateNav(date: date, hd: hd, isToday: isToday),
           const SizedBox(height: 8),
+          // While searching, the results come first.
+          if (!searching)
           ChoiceBar<Object>(
             options: [
               (ZmanimOpinion.gra, 'GRA', null),
@@ -144,7 +164,9 @@ class ZmanimScreen extends ConsumerWidget {
             },
           ),
           const SizedBox(height: 8),
-          if (wide)
+          if (searching)
+            list
+          else if (wide)
             Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Expanded(flex: 5, child: list),
               const SizedBox(width: 24),
@@ -369,7 +391,13 @@ class _SunArcCard extends StatelessWidget {
     );
   }
 
-  Widget _cap(String a, String b) => Column(children: [Text(a), Text(b, style: const TextStyle(fontWeight: FontWeight.w700))]);
+  // Shrinks rather than overflowing on narrow phones and with large text.
+  Widget _cap(String a, String b) => Flexible(
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Column(children: [Text(a), Text(b, style: const TextStyle(fontWeight: FontWeight.w700))]),
+        ),
+      );
 }
 
 class _ArcPainter extends CustomPainter {

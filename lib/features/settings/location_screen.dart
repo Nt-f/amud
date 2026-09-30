@@ -8,6 +8,7 @@ import 'package:timezone/timezone.dart' as tz;
 
 import '../../core/l10n.dart';
 import '../../core/settings.dart';
+import '../../core/analytics.dart';
 
 bool _inIsrael(double lat, double lon) => lat > 29.45 && lat < 33.35 && lon > 34.2 && lon < 35.9;
 
@@ -23,7 +24,8 @@ class _LocationScreenState extends ConsumerState<LocationScreen> {
   bool _locating = false;
   String? _error;
 
-  void _choose(SavedLocation l) {
+  void _choose(SavedLocation l, {String method = 'list'}) {
+    analytics.event('location_set', {'method': method, 'country': l.countryCode, 'in_israel': l.il});
     ref.read(settingsProvider.notifier).update((s) => s.copyWith(location: l));
     Navigator.of(context).maybePop();
   }
@@ -53,8 +55,9 @@ class _LocationScreenState extends ConsumerState<LocationScreen> {
         tzid: il ? 'Asia/Jerusalem' : tzid,
         countryCode: il ? 'IL' : null,
         il: il,
-      ));
+      ), method: 'gps');
     } catch (e) {
+      analytics.event('location_gps_failed', {'error': e.runtimeType.toString()});
       setState(() => _error = '$e');
     } finally {
       if (mounted) setState(() => _locating = false);

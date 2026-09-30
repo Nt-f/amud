@@ -1,12 +1,15 @@
 import 'dart:async';
+import 'dart:ui' show PlatformDispatcher;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hebcal/hebcal.dart';
 
 import 'app.dart';
+import 'core/analytics.dart';
 import 'core/fonts.dart';
 import 'core/providers.dart';
+import 'core/settings.dart';
 import 'core/storage.dart';
 import 'features/alerts/alerts.dart';
 import 'features/alerts/notification_backend.dart';
@@ -29,7 +32,23 @@ Future<void> main() async {
   ]);
   await container.read(fontsProvider.notifier).loadAll();
 
+  final onFlutterError = FlutterError.onError;
+  FlutterError.onError = (details) {
+    analytics.error(details.exception, fatal: false);
+    onFlutterError?.call(details);
+  };
+  PlatformDispatcher.instance.onError = (error, stack) {
+    analytics.error(error, fatal: true);
+    return false;
+  };
+
   runApp(UncontrolledProviderScope(container: container, child: const _Lifecycle(child: SiddurApp())));
+
+  // Analytics starts after the first frame too; events before then wait.
+  final settings = container.read(settingsProvider);
+  analytics.trackScreens(container.read(routerProvider));
+  analytics.event('app_launch', {'fonts': container.read(fontsProvider).length});
+  unawaited(analytics.init(settings, storage));
 
   // Plan notifications after first frame (never blocks startup).
   Future<void>.delayed(const Duration(seconds: 1), () => container.read(alertSchedulerProvider).reschedule());
@@ -52,7 +71,10 @@ class _LifecycleState extends ConsumerState<_Lifecycle> with WidgetsBindingObser
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    _taps = notificationTaps.stream.listen((route) => ref.read(routerProvider).go(route));
+    _taps = notificationTaps.stream.listen((route) {
+      analytics.event('alert_tap', {'route': route});
+      ref.read(routerProvider).go(route);
+    });
   }
 
   StreamSubscription<String>? _taps;
@@ -67,6 +89,8 @@ class _LifecycleState extends ConsumerState<_Lifecycle> with WidgetsBindingObser
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
+      analytics.event('app_resume');
+      analytics.checkIn();
       ref.invalidate(nowProvider);
       ref.read(alertSchedulerProvider).reschedule();
       // Back from the "Install unknown apps" setting during an update.

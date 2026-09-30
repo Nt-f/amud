@@ -1,6 +1,9 @@
-# file_picker needs iOS 14 (keep in step with IPHONEOS_DEPLOYMENT_TARGET in
+# Firebase needs iOS 15 (keep in step with IPHONEOS_DEPLOYMENT_TARGET in
 # Runner.xcodeproj).
-platform :ios, '14.0'
+platform :ios, '15.0'
+
+# Analytics without the advertising identifier: Amud has no ads.
+$FirebaseAnalyticsWithoutAdIdSupport = true
 
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'

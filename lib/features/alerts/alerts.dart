@@ -11,6 +11,7 @@ import '../../core/settings.dart';
 import '../zmanim/zman_catalog.dart';
 import 'notification_backend.dart';
 import 'timer_backend.dart';
+import '../../core/analytics.dart';
 
 /// A user-configured notification tied to a zman.
 class ZmanAlert {
@@ -166,10 +167,14 @@ class AlertsNotifier extends Notifier<List<ZmanAlert>> {
 
   void upsert(ZmanAlert a) {
     final i = state.indexWhere((e) => e.id == a.id);
+    analytics.event(i < 0 ? 'alert_add' : 'alert_edit', {'zman': a.zmanKey, 'offset': a.offsetMinutes, 'when': a.when});
     _save(i < 0 ? [...state, a] : [...state]..[i] = a);
   }
 
-  void remove(String id) => _save(state.where((e) => e.id != id).toList());
+  void remove(String id) {
+    analytics.event('alert_remove');
+    _save(state.where((e) => e.id != id).toList());
+  }
 }
 
 final alertsProvider = NotifierProvider<AlertsNotifier, List<ZmanAlert>>(AlertsNotifier.new);

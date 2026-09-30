@@ -11,6 +11,7 @@ import '../../core/settings.dart';
 import '../../core/split_row.dart';
 import '../alerts/alerts.dart';
 import 'whats_new.dart';
+import '../../core/analytics.dart';
 
 /// First-run walkthrough of the main options. Every choice is saved as it
 /// is made and can be changed later in Settings.
@@ -32,6 +33,14 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
   void _finish() {
     // Features are taught here, so none need announcing on Home.
     _set((x) => x.copyWith(setupDone: true, seenFeatures: latestFeature));
+    final s = ref.read(settingsProvider);
+    analytics.event('setup_complete', {
+      'siddur': s.defaultBook,
+      'ui_language': s.uiLanguage.name,
+      'text_layout': s.layout.name,
+      'in_israel': s.location.il,
+      'share_usage': s.shareUsage,
+    });
     context.go('/');
   }
 

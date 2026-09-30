@@ -25,12 +25,12 @@
     #splash { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center;
       justify-content: center; gap: 20px; background: #172a5c; }
     #splash .word { font: 600 56px Fraunces, Georgia, serif; letter-spacing: -1.5px; color: #f8f3ea;
-      animation: amud-rise .6s 1.9s ease-out both; }
+      animation: amud-rise .6s 2.2s ease-out both; }
     #splash .throw { transform-box: fill-box; transform-origin: center; animation: amud-throw .95s cubic-bezier(.18,1.35,.4,1) both; }
     #splash .pg { transform-box: fill-box; animation: amud-open .6s cubic-bezier(.2,.8,.3,1) both; }
     #splash .pg-l { transform-origin: right bottom; }
     #splash .pg-r { transform-origin: left bottom; }
-    #splash .ledge { animation: amud-dim .5s 2.5s ease forwards; }
+    #splash .ledge { animation: amud-dim .5s 3.1s ease forwards; }
     #splash .load { stroke-dasharray: 100 100; stroke-dashoffset: 100; animation: amud-sweep 1.7s ease-in-out infinite backwards; }
     @keyframes amud-throw { 0% { opacity: 0; transform: translate(var(--tx), var(--ty)) rotate(var(--r)) scale(1.5); } 18% { opacity: 1; } 100% { opacity: 1; transform: none; } }
     @keyframes amud-open { from { opacity: 0; transform: scaleX(0); } to { opacity: 1; transform: none; } }
@@ -43,12 +43,12 @@
 <body>
   <div id="splash" role="status" aria-label="Amud is loading">
     <svg width="240" height="240" viewBox="16 20 168 168" aria-hidden="true">
-      <g transform="rotate(-14 97 92)"><path class="pg pg-l" style="animation-delay:1.5s" fill="#6f8cc0" d="M97 92 C84 80 62 75 44 76 L40 30 C62 29 84 36 97 50 Z"/></g>
-      <g transform="rotate(14 103 92)"><path class="pg pg-r" style="animation-delay:1.5s" fill="#6f8cc0" d="M103 92 C116 80 138 75 156 76 L160 30 C138 29 116 36 103 50 Z"/></g>
-      <g transform="rotate(-7 97 92)"><path class="pg pg-l" style="animation-delay:1.38s" fill="#a9c0ee" d="M97 92 C84 80 62 75 44 76 L40 30 C62 29 84 36 97 50 Z"/></g>
-      <g transform="rotate(7 103 92)"><path class="pg pg-r" style="animation-delay:1.38s" fill="#a9c0ee" d="M103 92 C116 80 138 75 156 76 L160 30 C138 29 116 36 103 50 Z"/></g>
-      <path class="pg pg-l" style="animation-delay:1.25s" fill="#f8f3ea" d="M97 92 C84 80 62 75 44 76 L40 30 C62 29 84 36 97 50 Z"/>
-      <path class="pg pg-r" style="animation-delay:1.25s" fill="#f8f3ea" d="M103 92 C116 80 138 75 156 76 L160 30 C138 29 116 36 103 50 Z"/>
+      <g transform="rotate(-14 97 92)"><path class="pg pg-l" style="animation-delay:1.75s" fill="#6f8cc0" d="M97 92 C84 80 62 75 44 76 L40 30 C62 29 84 36 97 50 Z"/></g>
+      <g transform="rotate(14 103 92)"><path class="pg pg-r" style="animation-delay:1.75s" fill="#6f8cc0" d="M103 92 C116 80 138 75 156 76 L160 30 C138 29 116 36 103 50 Z"/></g>
+      <g transform="rotate(-7 97 92)"><path class="pg pg-l" style="animation-delay:1.62s" fill="#a9c0ee" d="M97 92 C84 80 62 75 44 76 L40 30 C62 29 84 36 97 50 Z"/></g>
+      <g transform="rotate(7 103 92)"><path class="pg pg-r" style="animation-delay:1.62s" fill="#a9c0ee" d="M103 92 C116 80 138 75 156 76 L160 30 C138 29 116 36 103 50 Z"/></g>
+      <path class="pg pg-l" style="animation-delay:1.5s" fill="#f8f3ea" d="M97 92 C84 80 62 75 44 76 L40 30 C62 29 84 36 97 50 Z"/>
+      <path class="pg pg-r" style="animation-delay:1.5s" fill="#f8f3ea" d="M103 92 C116 80 138 75 156 76 L160 30 C138 29 116 36 103 50 Z"/>
       <g stroke="#f8f3ea" stroke-width="7" stroke-linecap="round" fill="none">
         <g class="throw" style="--tx:-160px;--ty:-130px;--r:-80deg;animation-delay:0s"><line class="ledge" x1="50" y1="106" x2="150" y2="106"/></g>
         <g class="throw" style="--tx:150px;--ty:-150px;--r:65deg;animation-delay:.08s"><line class="ledge" x1="64" y1="119" x2="136" y2="119"/></g>
@@ -57,12 +57,20 @@
         <g class="throw" style="--tx:170px;--ty:110px;--r:95deg;animation-delay:.32s"><line x1="118" y1="133" x2="118" y2="172"/></g>
       </g>
       <g stroke="#f8f3ea" stroke-width="7" stroke-linecap="round" fill="none">
-        <line class="load" pathLength="100" style="animation-delay:2.5s" x1="50" y1="106" x2="150" y2="106"/>
-        <line class="load" pathLength="100" style="animation-delay:2.75s" x1="64" y1="119" x2="136" y2="119"/>
+        <line class="load" pathLength="100" style="animation-delay:3.1s" x1="50" y1="106" x2="150" y2="106"/>
+        <line class="load" pathLength="100" style="animation-delay:3.35s" x1="64" y1="119" x2="136" y2="119"/>
       </g>
     </svg>
     <div class="word">amud</div>
   </div>
+  <script>
+    // Analytics (Firebase, started by the app): a cookie that ends with the
+    // browser session, so visits aren't linked to each other, and no Google
+    // signals or ad personalization. Firebase picks up this gtag queue.
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('set', { cookie_expires: 0, allow_google_signals: false, allow_ad_personalization_signals: false });
+  </script>
   <script>
     // Offline-first PWA: tool/gen_service_worker.dart generates sw.js,
     // which precaches the whole app including every Sefaria text.

@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart' show SelectedContent;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/adaptive.dart';
+import '../../core/analytics.dart';
 import '../../core/fonts.dart';
 import '../../core/hebrew_text.dart';
 import '../../core/html_text.dart';
 import '../../core/l10n.dart';
+import '../../core/page_swipe.dart';
 import '../../core/settings.dart';
 import '../../core/split_row.dart';
 import '../../core/theme.dart';
@@ -31,11 +34,37 @@ class TehillimReaderScreen extends ConsumerStatefulWidget {
 }
 
 class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
+  /// Text is selected: sideways drags move its handles, so swiping
+  /// doesn't turn the page.
+  bool _selected = false;
+
+  void _selectionChanged(SelectedContent? c) {
+    final selected = c != null && c.plainText.isNotEmpty;
+    if (selected != _selected) setState(() => _selected = selected);
+  }
+
   @override
   void initState() {
     super.initState();
     final first = widget.portion.passages.firstOrNull;
     if (first != null) Future.microtask(() => ref.read(tehillimProgressProvider.notifier).opened(first.chapter));
+    analytics.event('text_open', _text);
+  }
+
+  final _opened = Stopwatch()..start();
+
+  /// What's being read, for analytics.
+  Map<String, Object?> get _text => {
+        'reader': 'tehillim',
+        'portion': widget.portion.titleEn,
+        'chapters': widget.portion.rangeLabel,
+        'count': widget.portion.passages.length,
+      };
+
+  @override
+  void dispose() {
+    analytics.event('text_read', {..._text, 'seconds': _opened.elapsed.inSeconds});
+    super.dispose();
   }
 
   @override
@@ -43,6 +72,7 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
     final data = ref.watch(tehillimProvider);
     final p = widget.portion;
     final hebrewUi = context.uiLanguage != UiLanguage.en;
+    final single = p.passages.length == 1 && p.passages.first.whole ? p.passages.first.chapter : null;
     return Scaffold(
       appBar: AppBar(
         title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -57,12 +87,25 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
           ),
         ],
       ),
-      body: data.when(
-        loading: adaptiveProgress,
-        error: (e, _) => Center(child: Text('$e')),
-        data: (t) => _body(context, t),
+      body: PageSwipe(
+        onNext: _turn(single, 1),
+        onPrevious: _turn(single, -1),
+        child: data.when(
+          loading: adaptiveProgress,
+          error: (e, _) => Center(child: Text('$e')),
+          data: (t) => _body(context, t),
+        ),
       ),
     );
+  }
+
+  /// Swiping from a single psalm to the one [by] away, if there is one.
+  VoidCallback? _turn(int? chapter, int by) {
+    if (_selected || chapter == null || chapter + by < 1 || chapter + by > 150) return null;
+    return () {
+      analytics.event('page_swipe', {'reader': 'tehillim', 'way': by > 0 ? 'next' : 'previous'});
+      Router.neglect(context, () => context.pushReplacement(tehillimReadPath(chapterPortion(chapter + by))));
+    };
   }
 
   Widget _body(BuildContext context, Tehillim t) {
@@ -102,6 +145,7 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
     }
     rows.add((c) => _Footer(portion: p));
     return SelectionArea(
+      onSelectionChanged: _selectionChanged,
       child: ListView.builder(
         padding: EdgeInsets.fromLTRB(wide ? 48 : 16, 8, wide ? 48 : 16, 96),
         itemCount: rows.length,

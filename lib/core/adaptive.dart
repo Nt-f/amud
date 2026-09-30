@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'l10n.dart';
+import 'search.dart';
 import 'theme.dart';
 
 /// Small set of platform-adaptive building blocks so screens use native
@@ -72,6 +73,17 @@ class SheetLabel extends StatelessWidget {
   }
 }
 
+/// A row that isn't a tile (a slider, a color picker) with the words a
+/// [ListFilter] should find it by.
+class FilterKeywords extends StatelessWidget {
+  final List<String> keywords;
+  final Widget child;
+  const FilterKeywords({super.key, required this.keywords, required this.child});
+
+  @override
+  Widget build(BuildContext context) => child;
+}
+
 /// A settings group: inset-grouped on iOS, a titled card elsewhere.
 class AdaptiveSection extends StatelessWidget {
   final String? header;
@@ -79,8 +91,27 @@ class AdaptiveSection extends StatelessWidget {
   final List<Widget> children;
   const AdaptiveSection({super.key, this.header, this.footer, required this.children});
 
+  /// The rows a [ListFilter] above leaves: all of them when the header
+  /// matches, otherwise the tiles whose title or subtitle does.
+  List<Widget> _visible(BuildContext context) {
+    final q = ListFilter.of(context);
+    // Each text in the interface language and in the English it was
+    // translated from.
+    List<String?> both(List<String?> texts) => [for (final t in texts) ...[t, if (t != null) englishOf(t)]];
+    if (q == null || q.matches(both([header]))) return children;
+    return [
+      for (final c in children)
+        if (c is AdaptiveSwitchTile && q.matches(both([c.title, c.subtitle])) ||
+            c is AdaptiveNavTile && q.matches(both([c.title, c.subtitle])) ||
+            c is FilterKeywords && q.matches(both(c.keywords)))
+          c,
+    ];
+  }
+
   @override
   Widget build(BuildContext context) {
+    final children = _visible(context);
+    if (children.isEmpty) return const SizedBox.shrink();
     if (isCupertinoPlatform) {
       return CupertinoListSection.insetGrouped(
         header: header == null ? null : Text(header!.toUpperCase()),

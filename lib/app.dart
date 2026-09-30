@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import 'core/analytics.dart';
 import 'core/format.dart';
 import 'core/l10n.dart';
+import 'core/page_swipe.dart';
 import 'core/providers.dart';
 import 'core/settings.dart';
 import 'core/theme.dart';
@@ -22,7 +24,6 @@ import 'features/siddur/library_screen.dart';
 import 'features/siddur/meein_shalosh_screen.dart';
 import 'features/siddur/reader_screen.dart';
 import 'features/siddur/seasons_screen.dart';
-import 'features/siddur/today_screen.dart';
 import 'features/siddur/versions_screen.dart';
 import 'features/tehillim/tehillim_data.dart';
 import 'features/tehillim/tehillim_reader.dart';
@@ -43,7 +44,9 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
       },
       routes: [
         StatefulShellRoute.indexedStack(
-          builder: (context, state, shell) => AdaptiveShell(shell: shell),
+          // Tabs swipe only on their own first screen: deeper pages (the
+          // readers) have swipes of their own.
+          builder: (context, state, shell) => AdaptiveShell(shell: shell, atTabRoot: _tabRoots.contains(state.fullPath)),
           branches: [
             StatefulShellBranch(routes: [GoRoute(path: '/', builder: (c, s) => const HomeScreen())]),
             StatefulShellBranch(routes: [
@@ -137,7 +140,6 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
           parentNavigatorKey: _rootKey,
           builder: (c, s) => ReaderScreen(book: s.pathParameters['book']!, nodeId: s.uri.queryParameters['node'] ?? '', standalone: true),
         ),
-        GoRoute(path: '/today', parentNavigatorKey: _rootKey, builder: (c, s) => const TodayDaveningScreen()),
         GoRoute(path: '/update', parentNavigatorKey: _rootKey, builder: (c, s) => const UpdateScreen()),
         GoRoute(path: '/setup', parentNavigatorKey: _rootKey, builder: (c, s) => const SetupScreen()),
         GoRoute(path: '/alerts', parentNavigatorKey: _rootKey, builder: (c, s) => const AlertsScreen()),
@@ -170,6 +172,9 @@ class SiddurApp extends ConsumerWidget {
   }
 }
 
+/// The first screen of each tab, in [_destinations] order.
+const _tabRoots = {'/', '/siddur', '/zmanim', '/torah', '/settings'};
+
 const _destinations = [
   (Icons.dashboard_outlined, Icons.dashboard, CupertinoIcons.square_grid_2x2, 'Home'),
   (Icons.menu_book_outlined, Icons.menu_book, CupertinoIcons.book, 'Siddur'),
@@ -182,9 +187,25 @@ const _destinations = [
 /// navigation bar on phones, navigation rail on wide screens (tablet/web).
 class AdaptiveShell extends ConsumerWidget {
   final StatefulNavigationShell shell;
-  const AdaptiveShell({super.key, required this.shell});
+
+  /// The current tab is on its first screen, so swiping moves between tabs.
+  final bool atTabRoot;
+  const AdaptiveShell({super.key, required this.shell, this.atTabRoot = false});
 
   void _go(int i) => shell.goBranch(i, initialLocation: i == shell.currentIndex);
+
+  /// The tabs on either side, for [TabSwipe]; none while focus mode hides
+  /// the navigation.
+  Widget _swipeable(bool focus) {
+    final i = shell.currentIndex;
+    VoidCallback? to(int j) => !atTabRoot || focus || j < 0 || j >= _destinations.length
+        ? null
+        : () {
+            analytics.event('tab_swipe', {'to': _destinations[j].$4.toLowerCase()});
+            _go(j);
+          };
+    return TabSwipe(onNext: to(i + 1), onPrevious: to(i - 1), child: shell);
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -218,13 +239,13 @@ class AdaptiveShell extends ConsumerWidget {
               const VerticalDivider(width: 1),
             ]),
           ),
-          Expanded(child: shell),
+          Expanded(child: _swipeable(focus)),
         ]),
       );
     }
     if (isCupertinoPlatform) {
       return Scaffold(
-        body: shell,
+        body: _swipeable(focus),
         bottomNavigationBar: away(vertical: true, CupertinoTabBar(
           currentIndex: shell.currentIndex,
           onTap: _go,
@@ -234,7 +255,7 @@ class AdaptiveShell extends ConsumerWidget {
       );
     }
     return Scaffold(
-      body: shell,
+      body: _swipeable(focus),
       bottomNavigationBar: away(
         vertical: true,
         NavigationBar(

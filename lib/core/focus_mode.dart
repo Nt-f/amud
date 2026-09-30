@@ -4,6 +4,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'analytics.dart';
 import 'providers.dart';
 
 /// For reading screens with focus mode ([focusModeProvider]): it lasts
@@ -12,6 +13,19 @@ import 'providers.dart';
 mixin FocusModeReader<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   static int _open = 0;
   late final StateController<bool> focusMode;
+  final _opened = Stopwatch()..start();
+  Map<String, Object?>? _text;
+  String? _textKey;
+
+  /// What's being read, once it's known: logged as `text_open` now, and as
+  /// `text_read` with the time spent when the reader closes.
+  void readingText(Map<String, Object?> info) {
+    final key = info.toString();
+    if (key == _textKey) return;
+    _textKey = key;
+    _text = {'reader': T.toString(), ...info};
+    analytics.event('text_open', _text!);
+  }
 
   @override
   void initState() {
@@ -23,14 +37,19 @@ mixin FocusModeReader<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   @override
   void dispose() {
     _open--;
+    // How long each text stays open (a few seconds is a look, not a read).
+    analytics.event('text_read', {...(_text ?? {'reader': T.toString()}), 'seconds': _opened.elapsed.inSeconds});
     // Providers can't change while the tree is being torn down.
     scheduleMicrotask(() {
-      if (_open == 0) focusMode.state = false;
+      if (_open == 0 && focusMode.mounted) focusMode.state = false;
     });
     super.dispose();
   }
 
-  void toggleFocusMode() => focusMode.state = !focusMode.state;
+  void toggleFocusMode() {
+    focusMode.state = !focusMode.state;
+    analytics.event('focus_mode', {'on': focusMode.state, 'reader': T.toString()});
+  }
 }
 
 /// Calls [onDoubleTap] on a double tap anywhere in [child], found from raw

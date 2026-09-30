@@ -10,6 +10,7 @@ import '../../core/theme.dart';
 import '../../core/split_row.dart';
 import '../../core/titles.dart';
 import '../home/cards/card_frame.dart';
+import '../home/today.dart';
 
 enum ChangeKind { add, omit, info }
 
@@ -58,6 +59,15 @@ List<LiturgyChange> summarizeDay(DayContext shacharit, DayContext mincha, DayCon
   return out;
 }
 
+/// The service for the time of day: Shacharit until midday (chatzot),
+/// Mincha until sunset, Maariv after.
+String currentServiceKey(TodaySnapshot t) {
+  final chatzot = t.zmanim['chatzot'], sunset = t.zmanim['sunset'];
+  if (chatzot != null && t.now.isBefore(chatzot)) return 'shacharit';
+  if (sunset != null && t.now.isBefore(sunset)) return 'mincha';
+  return 'maariv';
+}
+
 class TodayInSiddurCard extends ConsumerWidget {
   const TodayInSiddurCard({super.key});
 
@@ -78,13 +88,22 @@ class TodayInSiddurCard extends ConsumerWidget {
     return CardFrame(
       title: 'Today in the siddur',
       icon: Icons.auto_awesome,
-      onTap: () => context.push('/today'),
+      // The service for this time of day, with its jump bar.
+      onTap: () => context.push('/pray/${currentServiceKey(ref.read(todaySnapshotProvider))}'),
       trailing: Icon(Icons.chevron_right, size: 18, color: theme.colorScheme.outline),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         for (final c in changes) _row(context, s, theme, colors, c),
         if (changes.isEmpty) Text(context.tr('A regular weekday.')),
         const SizedBox(height: 6),
-        Text(context.tr("Tap for today's davening, in order"), style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.primary)),
+        Text(
+            context.tr('Tap to open {service}', {
+              'service': context.term(switch (currentServiceKey(ref.watch(todaySnapshotProvider))) {
+                'shacharit' => 'Shacharit',
+                'mincha' => 'Mincha',
+                _ => 'Maariv',
+              }),
+            }),
+            style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.primary)),
       ]),
     );
   }

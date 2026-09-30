@@ -1,7 +1,7 @@
 name: amud
 description: "Offline, interactive siddur with Sefaria texts, a full Hebcal port, zmanim, notifications and a customizable home screen."
 publish_to: 'none'
-version: 0.5.0+1
+version: 0.6.0+1
 
 environment:
   sdk: ^3.11.0
@@ -33,6 +33,9 @@ dependencies:
   http: ^1.6.0
   crypto: ^3.0.6
   package_info_plus: ^10.2.1
+  scrollable_positioned_list: ^0.3.8
+  firebase_core: ^4.15.0
+  firebase_analytics: ^12.6.0
 
 dev_dependencies:
   flutter_test:

@@ -24,16 +24,27 @@ class LaunchAnimation extends StatefulWidget {
 }
 
 class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderStateMixin {
-  static const _length = Duration(milliseconds: 2650);
+  // The podium is built (lines land by 1.27 s), then after a beat the
+  // siddur opens on it (1.5–2.35 s), the wordmark rises (2.2–2.8 s), and it
+  // all holds a moment before fading into the app.
+  static const _length = Duration(milliseconds: 3600);
   late final AnimationController _c = AnimationController(vsync: this, duration: _length);
-  late final AnimationController _fade = AnimationController(vsync: this, duration: const Duration(milliseconds: 350));
+  late final AnimationController _fade = AnimationController(vsync: this, duration: const Duration(milliseconds: 400));
   bool _show = !kIsWeb && !LaunchAnimation._played;
 
   @override
   void initState() {
     super.initState();
     LaunchAnimation._played = true;
-    if (_show) _c.forward().whenComplete(_finish);
+    // Start once the first frame is on screen, plus a beat: the app's first
+    // frames are slow, and a clock started earlier would spend the podium
+    // stage behind the native launch screen.
+    if (_show) {
+      WidgetsBinding.instance.addPostFrameCallback((_) async {
+        await Future<void>.delayed(const Duration(milliseconds: 250));
+        if (mounted) _c.forward().whenComplete(_finish);
+      });
+    }
   }
 
   Future<void> _finish() async {
@@ -68,7 +79,7 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
                   builder: (context, _) {
                     final still = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
                     final t = still ? _length.inMilliseconds / 1000 : _c.value * _length.inMilliseconds / 1000;
-                    final word = _segment(t, 1.9, .6, Curves.easeOut);
+                    final word = _segment(t, 2.2, .6, Curves.easeOut);
                     return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                       CustomPaint(size: const Size.square(240), painter: _MarkPainter(t)),
                       const SizedBox(height: 20),
@@ -140,7 +151,7 @@ class _MarkPainter extends CustomPainter {
     canvas.translate(-16, -20);
 
     // Pages: back layers first, each unfolding from the spine.
-    for (final (color, angle, delay) in [(_fanDeep, 14.0, 1.5), (_fan, 7.0, 1.38), (_paper, 0.0, 1.25)]) {
+    for (final (color, angle, delay) in [(_fanDeep, 14.0, 1.75), (_fan, 7.0, 1.62), (_paper, 0.0, 1.5)]) {
       final p = _segment(t, delay, .6, _openCurve);
       if (p <= 0) continue;
       final paint = Paint()..color = color.withValues(alpha: p);

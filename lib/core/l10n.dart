@@ -197,6 +197,14 @@ String ashkenaziSpelling(String s) => s.replaceAllMapped(_ashkenaziRe, (m) {
       return out;
     });
 
+/// The English an interface string was translated from, if it's one of
+/// ours ("ערכת צבעים" → "Theme"), so searches in English still find it.
+String? englishOf(String translated) => _english[translated];
+
+final Map<String, String> _english = {
+  for (final e in _strings.entries) ...{e.value.$1: e.key, e.value.$2: e.key},
+};
+
 // --- Translations -------------------------------------------------------------
 
 /// English → (Hebrew, Yiddish). Missing entries fall back to English.
@@ -263,6 +271,10 @@ const Map<String, (String, String)> _strings = {
   'Daily learning': ('לימוד יומי', 'טעגליכער לימוד'),
   'Advanced': ('מתקדם', 'פאראויסגעשריטן'),
   'Custom siddur rules': ('כללי סידור מותאמים', 'אייגענע סידור כללים'),
+  'Share anonymous usage': ('שיתוף נתוני שימוש אנונימיים', 'טיילן אַנאָנימע באַניץ־דאַטן'),
+  'Which screens, features and prayers or texts are opened, to improve Amud. Nothing you type, no names, no exact location.':
+      ('באילו מסכים, תכונות, תפילות וטקסטים משתמשים, כדי לשפר את עמוד. בלי מה שאתם מקלידים, בלי שמות ובלי מיקום מדויק.',
+          'וועלכע עקראַנען, מעגלעכקייטן, תפילות און טעקסטן מען עפֿנט, כדי צו פֿאַרבעסערן עמוד. אָן וואָס איר שרייבט, אָן נעמען און אָן אַ גענויען אָרט.'),
   'Show or hide sections by condition': ('הצג או הסתר קטעים לפי תנאי', 'ווייז אדער באהאלט טיילן לויט א תנאי'),
   'About': ('אודות', 'וועגן'),
   'Licenses & sources': ('רישיונות ומקורות', 'ליצענצן און מקורות'),
@@ -641,6 +653,33 @@ const Map<String, (String, String)> _strings = {
   'At {zman}': ('ב{zman}', 'ביי {zman}'),
   '{n} min before {zman}': ('{n} דק׳ לפני {zman}', '{n} מינוט פאר {zman}'),
   '{n} min after {zman}': ('{n} דק׳ אחרי {zman}', '{n} מינוט נאך {zman}'),
+
+  // Siddur page and reader jump bar
+  'Jump through the davening': ('קפיצה בתוך התפילה', 'שפרינגען אין דער תפילה'),
+  "Open Shacharit, Mincha or Maariv and a bar under the title jumps to its key points, such as Shema, Shemoneh Esrei, Hallel or the Torah reading. Parts said today that are printed elsewhere open from there too.":
+      ('פתחו שחרית, מנחה או ערבית, ושורה מתחת לכותרת קופצת לנקודות המרכזיות, כמו שמע, שמונה עשרה, הלל או קריאת התורה. חלקים שנאמרים היום ומודפסים במקום אחר נפתחים משם גם כן.',
+          'עפנט שחרית, מנחה אדער מעריב, און א ריי אונטער דעם טיטל שפרינגט צו די הויפט טיילן, ווי שמע, שמונה עשרה, הלל אדער קריאת התורה. טיילן וואס מען זאגט היינט און זענען געדרוקט אנדערשוואו עפענען זיך פון דארט אויך.'),
+  'Now': ('עכשיו', 'איצט'),
+  'Added today': ('נוסף היום', 'צוגעלייגט היינט'),
+  'Tap to open {service}': ('הקישו לפתיחת {service}', 'טאפט צו עפענען {service}'),
+
+  // Search
+  'Clear': ('ניקוי', 'אויסמעקן'),
+  'Nothing found for “{q}”': ('לא נמצא דבר עבור „{q}”', 'גאר נישט געפונען פאר „{q}”'),
+  'Search settings': ('חיפוש בהגדרות', 'זוכן אין איינשטעלונגען'),
+  'Search zmanim': ('חיפוש זמנים', 'זוכן זמנים'),
+  'Search prayers, zmanim, Torah…': ('חיפוש תפילות, זמנים, תורה…', 'זוכן תפילות, זמנים, תורה…'),
+  'Search prayers': ('חיפוש תפילות', 'זוכן תפילות'),
+  'Search books and texts': ('חיפוש ספרים וטקסטים', 'זוכן ספרים און טעקסטן'),
+  'Search {book}': ('חיפוש ב{book}', 'זוכן אין {book}'),
+  'In {book}': ('ב{book}', 'אין {book}'),
+  'Other siddurim': ('סידורים אחרים', 'אנדערע סידורים'),
+  'Pages': ('עמודים', 'זייטן'),
+  'Books': ('ספרים', 'ספרים'),
+  'Simanim': ('סימנים', 'סימנים'),
+  'In the text': ('בטקסט', 'אינעם טעקסט'),
+  'Search settings for “{q}”': ('חיפוש „{q}” בהגדרות', 'זוכן „{q}” אין איינשטעלונגען'),
+  'Color': ('צבע', 'פארב'),
 
   // Torah tab
   'Torah tab': ('לשונית תורה', 'תורה טאב'),

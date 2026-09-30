@@ -14,6 +14,9 @@ final _nikud = RegExp('[ְ-ׇֽֿׁׂׅׄ]');
 bool hasTeamim(String s) => _teamim.hasMatch(s);
 bool hasNikud(String s) => _nikud.hasMatch(s);
 
+/// Whether the single character [c] is a te'am or a nikud mark.
+bool isHebrewMark(String c) => _teamim.hasMatch(c) || _nikud.hasMatch(c);
+
 String stripTeamim(String html) => html.replaceAll(_paseq, ' ').replaceAll(_teamim, '');
 String stripNikud(String html) => html.replaceAll(_nikud, '');
 

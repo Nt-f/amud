@@ -119,12 +119,16 @@ class CalendarView extends ConsumerWidget {
                       borderRadius: BorderRadius.circular(10),
                       border: isToday ? Border.all(color: theme.colorScheme.primary, width: 1.5) : null,
                     ),
-                    child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    // Scales down in small cells rather than overflowing.
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Column(mainAxisSize: MainAxisSize.min, children: [
                       Text('$d', style: theme.textTheme.bodyMedium?.copyWith(fontWeight: pd.dayOfWeek == 6 ? FontWeight.w700 : null)),
                       Text(gematriya(hd.getDate()).replaceAll(RegExp('[׳״]'), ''),
                           style: TextStyle(fontSize: 11, fontFamily: s.hebrewFont, color: theme.colorScheme.outline)),
                       if (holiday) Container(width: 5, height: 5, decoration: BoxDecoration(color: colors.todayBar, shape: BoxShape.circle)),
                     ]),
+                    ),
                   ),
                 );
               }),

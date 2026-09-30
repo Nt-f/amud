@@ -7,15 +7,18 @@ import 'package:siddur_engine/siddur_engine.dart';
 import '../../core/l10n.dart';
 import '../../core/adaptive.dart';
 import '../../core/providers.dart';
+import '../../core/search.dart';
 import '../../core/settings.dart';
 import '../../core/theme.dart';
 import '../../core/titles.dart';
 import '../tehillim/tehillim_data.dart';
 import '../tehillim/tehillim_progress.dart';
 import '../tehillim/tehillim_reader.dart';
+import '../search/search_sources.dart';
 import 'prayer_catalog.dart';
 import 'reader_screen.dart';
 import 'siddur_providers.dart';
+import '../home/today.dart';
 import 'today_summary.dart';
 
 /// Siddur tab: today's services for the default nusach plus all books.
@@ -45,12 +48,27 @@ class LibraryScreen extends ConsumerWidget {
       }
     }
 
+    final query = SearchQuery(ref.watch(pageSearchProvider('siddur')));
     return Scaffold(
-      appBar: AppBar(title: Text(context.tr('Siddur'))),
+      appBar: AppBar(
+        title: Text(context.tr('Siddur')),
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(PageSearchBar.height),
+          child: PageSearchBar(page: 'siddur', hint: context.tr('Search prayers')),
+        ),
+      ),
       body: manifest.when(
         loading: adaptiveProgress,
         error: (e, _) => Center(child: Text('$e')),
-        data: (m) => ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+        data: (m) => !query.isEmpty
+            ? ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+                SearchResults(
+                  query: query.raw,
+                  hebrewFont: ref.watch(settingsProvider).hebrewFont,
+                  groups: [...siddurResults(context, ref, query), (context.tr('Pages'), pageResults(context, query))],
+                ),
+              ])
+            : ListView(padding: const EdgeInsets.only(bottom: 32), children: [
           if (defaultBook.hasValue) _TodayServices(book: defaultBook.value!),
           const _SeasonsCard(),
           const _TehillimCard(),
@@ -72,82 +90,178 @@ class LibraryScreen extends ConsumerWidget {
   }
 }
 
+/// Today at a glance: the three services (the one for this time of day
+/// marked), the day's other prayers, and what changes in davening today.
 class _TodayServices extends ConsumerWidget {
   final String book;
   const _TodayServices({required this.book});
+
+  static const _services = [
+    ('shacharit', 'Shacharit', 'שחרית', Icons.wb_sunny_outlined),
+    ('mincha', 'Mincha', 'מנחה', Icons.light_mode_outlined),
+    ('maariv', 'Maariv', 'ערבית', Icons.nights_stay_outlined),
+  ];
+
+  static const _more = [
+    ('omer', 'Sefirat HaOmer', 'ספירת העומר', Icons.filter_7),
+    ('hallel', 'Hallel', 'הלל', Icons.celebration_outlined),
+    ('kiddushLevana', 'Kiddush Levana', 'קידוש לבנה', Icons.brightness_3_outlined),
+    ('birkat', 'Birkat HaMazon', 'ברכת המזון', Icons.restaurant),
+    ('bedtime', 'Bedtime Shema', 'קריאת שמע על המיטה', Icons.bedtime_outlined),
+  ];
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final root = ref.watch(bookIndexProvider(book));
     final date = ref.watch(readerDaytimeDateProvider);
+    final picked = ref.watch(readerDateProvider) != null;
     final ctx = ref.watch(dayContextProvider((date.abs(), Service.shacharit)));
+    final night = ref.watch(dayContextProvider((date.abs(), Service.maariv)));
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
     final s = ref.watch(settingsProvider);
     if (!root.hasValue) return const SizedBox(height: 120, child: Center(child: CircularProgressIndicator.adaptive()));
-    const keys = [
-      ('shacharit', 'Shacharit', 'שחרית', Icons.wb_sunny_outlined),
-      ('mincha', 'Mincha', 'מנחה', Icons.light_mode_outlined),
-      ('maariv', 'Maariv', 'ערבית', Icons.nights_stay_outlined),
-      ('omer', 'Sefirat HaOmer', 'ספירת העומר', Icons.filter_7),
-      ('hallel', 'Hallel', 'הלל', Icons.celebration_outlined),
-      ('kiddushLevana', 'Kiddush Levana', 'קידוש לבנה', Icons.brightness_3_outlined),
-      ('birkat', 'Birkat HaMazon', 'ברכת המזון', Icons.restaurant),
-      ('bedtime', 'Bedtime Shema', 'קריאת שמע על המיטה', Icons.bedtime_outlined),
-    ];
-    final show = {
-      'omer': ctx['omer'] || ref.watch(dayContextProvider((date.abs(), Service.maariv)))['omer'],
+
+    // Said only on some days: shown then, and marked.
+    final today = {
+      'omer': ctx['omer'] || night['omer'],
       'hallel': ctx['hallel'],
       'kiddushLevana': ctx['kiddushLevana'],
     };
-    final changes = summarizeDay(ctx, ref.watch(dayContextProvider((date.abs(), Service.mincha))), ref.watch(dayContextProvider((date.abs(), Service.maariv))))
-        .where((c) => c.kind != ChangeKind.info)
-        .toList();
+    final current = picked ? null : currentServiceKey(ref.watch(todaySnapshotProvider));
+    final changes = summarizeDay(ctx, ref.watch(dayContextProvider((date.abs(), Service.mincha))), night);
+    final added = [for (final c in changes) if (c.kind == ChangeKind.add) context.prayerTitle(s, c.en, c.he)];
+    final omitted = [for (final c in changes) if (c.kind == ChangeKind.omit) context.prayerTitle(s, c.en, c.he)];
+    final labels = context.uiLanguage == UiLanguage.en ? ctx.labels.map(context.term).toList() : ctx.labelsHe;
+    final bookTitle = context.prayerTitle(s, book, ref.watch(bookProvider(book)).value?.heTitle ?? book);
+
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
       child: Card(
         child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            Text(context.tr('Today'), style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
+            Text([...labels, bookTitle].join(' · '), style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+            const SizedBox(height: 14),
             Row(children: [
-              Expanded(child: Text(context.tr('Today · {book}', {'book': context.prayerTitle(s, book, ref.watch(bookProvider(book)).value?.heTitle ?? book)}), style: theme.textTheme.titleMedium)),
-              TextButton.icon(
-                onPressed: () => context.push('/today'),
-                icon: const Icon(Icons.format_list_numbered, size: 18),
-                label: Text(context.tr('Full order')),
-              ),
+              for (final (i, (key, en, he, icon)) in _services.indexed) ...[
+                if (i > 0) const SizedBox(width: 8),
+                Expanded(child: _ServiceTile(sectionKey: key, en: en, he: he, icon: icon, date: date.abs(), now: key == current)),
+              ],
             ]),
-            if (ctx.labels.isNotEmpty)
-              Text((context.uiLanguage == UiLanguage.en ? ctx.labels.map(context.term) : ctx.labelsHe).join(' · '), style: theme.textTheme.bodySmall),
-            const SizedBox(height: 12),
-            Wrap(spacing: 8, runSpacing: 8, children: [
-              for (final (key, en, he, icon) in keys)
-                if (show[key] ?? true)
-                  Consumer(builder: (context, ref, _) {
-                    // From another siddur when this one lacks it (Shabbat in a weekday siddur).
-                    final found = ref.watch(sectionRefProvider((key, date.abs()))).value;
-                    if (found == null) return const SizedBox.shrink();
-                    return FilledButton.tonalIcon(
-                      onPressed: () => context.push(readerPath(found.book, found.id)),
-                      icon: Icon(icon, size: 18),
-                      label: Text(context.prayerTitle(s, en, he)),
-                      style: show.containsKey(key) ? FilledButton.styleFrom(backgroundColor: colors.chipToday) : null,
-                    );
-                  }),
-            ]),
-            if (changes.isNotEmpty) ...[
-              const Divider(height: 24),
-              Wrap(spacing: 6, runSpacing: 6, children: [
-                for (final c in changes)
-                  Chip(
-                    avatar: Icon(c.kind == ChangeKind.add ? Icons.add : Icons.remove, size: 16),
-                    label: Text(context.prayerTitle(s, c.en, c.he)),
-                    visualDensity: VisualDensity.compact,
-                  ),
-              ]),
+            const SizedBox(height: 8),
+            LayoutBuilder(builder: (context, c) {
+              final w = c.maxWidth >= 360 ? (c.maxWidth - 8) / 2 : c.maxWidth;
+              return Wrap(spacing: 8, children: [
+                for (final (key, en, he, icon) in _more)
+                  if (today[key] ?? true)
+                    SizedBox(width: w, child: _ShortcutRow(sectionKey: key, en: en, he: he, icon: icon, date: date.abs(), today: today.containsKey(key))),
+              ]);
+            }),
+            if (added.isNotEmpty || omitted.isNotEmpty) ...[
+              const Divider(height: 20),
+              if (added.isNotEmpty) _changeLine(context, context.tr('Added today'), added, colors.todayBar),
+              if (omitted.isNotEmpty) _changeLine(context, context.tr('Not said today'), omitted, theme.colorScheme.outline),
             ],
           ]),
         ),
+      ),
+    );
+  }
+
+  Widget _changeLine(BuildContext context, String label, List<String> items, Color color) {
+    final theme = Theme.of(context);
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 3),
+      child: Text.rich(
+        TextSpan(children: [
+          TextSpan(text: '$label  ', style: theme.textTheme.labelMedium?.copyWith(color: color, fontWeight: FontWeight.w700)),
+          TextSpan(text: items.join(' · '), style: theme.textTheme.bodyMedium),
+        ]),
+      ),
+    );
+  }
+}
+
+/// A service in the top card: opens it in the reader (with its jump bar).
+class _ServiceTile extends ConsumerWidget {
+  final String sectionKey;
+  final String en;
+  final String he;
+  final IconData icon;
+  final int date;
+
+  /// The service for this time of day.
+  final bool now;
+  const _ServiceTile({required this.sectionKey, required this.en, required this.he, required this.icon, required this.date, required this.now});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(settingsProvider);
+    final theme = Theme.of(context);
+    final found = ref.watch(sectionRefProvider((sectionKey, date))).value;
+    final fg = now ? theme.colorScheme.onPrimaryContainer : theme.colorScheme.onSurface;
+    return Material(
+      color: now ? theme.colorScheme.primaryContainer : theme.colorScheme.surfaceContainerHighest,
+      borderRadius: BorderRadius.circular(14),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: found == null ? null : () => context.push(readerPath(found.book, found.id)),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 6),
+          child: Column(children: [
+            Icon(icon, color: now ? fg : theme.colorScheme.primary),
+            const SizedBox(height: 6),
+            Text(context.prayerTitle(s, en, he),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: theme.textTheme.labelLarge?.copyWith(
+                    color: fg, fontWeight: FontWeight.w700, fontFamily: context.prayerTitleIsHebrew(s) ? s.hebrewFont : null)),
+            Text(now ? context.tr('Now') : ' ', style: theme.textTheme.labelSmall?.copyWith(color: fg)),
+          ]),
+        ),
+      ),
+    );
+  }
+}
+
+/// One of the day's other prayers: a plain row, marked when it's for today.
+class _ShortcutRow extends ConsumerWidget {
+  final String sectionKey;
+  final String en;
+  final String he;
+  final IconData icon;
+  final int date;
+  final bool today;
+  const _ShortcutRow({required this.sectionKey, required this.en, required this.he, required this.icon, required this.date, required this.today});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(settingsProvider);
+    final theme = Theme.of(context);
+    final colors = SiddurColors.of(context);
+    // From another siddur when this one lacks it (Shabbat in a weekday siddur).
+    final found = ref.watch(sectionRefProvider((sectionKey, date))).value;
+    if (found == null) return const SizedBox.shrink();
+    return InkWell(
+      borderRadius: BorderRadius.circular(8),
+      onTap: () => context.push(readerPath(found.book, found.id)),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 9, horizontal: 4),
+        child: Row(children: [
+          Icon(icon, size: 18, color: theme.colorScheme.primary),
+          const SizedBox(width: 10),
+          Flexible(
+            child: Text(context.prayerTitle(s, en, he),
+                overflow: TextOverflow.ellipsis,
+                style: theme.textTheme.bodyMedium?.copyWith(fontFamily: context.prayerTitleIsHebrew(s) ? s.hebrewFont : null)),
+          ),
+          if (today) ...[
+            const SizedBox(width: 6),
+            Container(width: 7, height: 7, decoration: BoxDecoration(color: colors.todayBar, shape: BoxShape.circle)),
+          ],
+        ]),
       ),
     );
   }

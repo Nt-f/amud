@@ -8,6 +8,7 @@ import 'font_formats.dart';
 import 'providers.dart';
 import 'settings.dart';
 import 'storage.dart';
+import 'analytics.dart';
 
 enum FontCategory {
   cantillation('Siddur & te\'amim'),
@@ -263,17 +264,33 @@ class FontRepository extends Notifier<List<FontEntry>> {
   /// Saves and registers a font file (TrueType, OpenType, a collection or
   /// WOFF, which is stored unpacked).
   Future<FontEntry> importBytes(String label, List<int> file) async {
-    final bytes = toLoadableFont(file);
+    // The file's signature: "OTTO", "ttcf", "wOFF", "true", else TrueType.
+    final format = switch (String.fromCharCodes(file.take(4))) {
+      'OTTO' => 'otf',
+      'ttcf' => 'ttc',
+      'wOFF' => 'woff',
+      'wOF2' => 'woff2',
+      _ => 'ttf',
+    };
+    final Uint8List bytes;
+    try {
+      bytes = toLoadableFont(file);
+    } on FormatException {
+      analytics.event('font_import_failed', {'format': format});
+      rethrow;
+    }
     final family = 'user_${DateTime.now().microsecondsSinceEpoch}';
     await _storage.writeBlob('font:$family', bytes);
     await _register(family, bytes);
     final entry = FontEntry(family, label);
+    analytics.event('font_import', {'format': format, 'kb': file.length ~/ 1024});
     state = [...state, entry];
     await _storage.writeJson(_metaKey, [for (final e in state) e.toJson()]);
     return entry;
   }
 
   Future<void> remove(String family) async {
+    analytics.event('font_remove');
     await _storage.deleteBlob('font:$family');
     state = state.where((f) => f.family != family).toList();
     await _storage.writeJson(_metaKey, [for (final e in state) e.toJson()]);

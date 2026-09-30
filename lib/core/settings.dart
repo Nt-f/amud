@@ -1,8 +1,11 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hebcal/hebcal.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 
+import 'analytics.dart';
 import 'l10n.dart';
 import 'providers.dart';
 
@@ -154,6 +157,9 @@ class AppSettings {
   /// The newest feature announced to this user (see whats_new.dart).
   final int seenFeatures;
 
+  /// Send anonymous usage statistics (see analytics.dart).
+  final bool shareUsage;
+
   const AppSettings({
     this.location = SavedLocation.newYork,
     this.useElevation = false,
@@ -191,6 +197,7 @@ class AppSettings {
     this.learningSchedules = const ['dafYomi', 'mishnaYomi', 'nachYomi', 'rambam1', 'psalms', 'chofetzChaim'],
     this.setupDone = false,
     this.seenFeatures = 0,
+    this.shareUsage = true,
   });
 
   AppSettings copyWith({
@@ -230,6 +237,7 @@ class AppSettings {
     List<String>? learningSchedules,
     bool? setupDone,
     int? seenFeatures,
+    bool? shareUsage,
   }) =>
       AppSettings(
         location: location ?? this.location,
@@ -268,6 +276,7 @@ class AppSettings {
         learningSchedules: learningSchedules ?? this.learningSchedules,
         setupDone: setupDone ?? this.setupDone,
         seenFeatures: seenFeatures ?? this.seenFeatures,
+        shareUsage: shareUsage ?? this.shareUsage,
       );
 
   /// Bumped when defaults change in a way existing installs should adopt.
@@ -311,6 +320,7 @@ class AppSettings {
         'learningSchedules': learningSchedules,
         'setupDone': setupDone,
         'seenFeatures': seenFeatures,
+        'shareUsage': shareUsage,
       };
 
   factory AppSettings.fromJson(Map<String, Object?> j) {
@@ -380,6 +390,7 @@ class AppSettings {
       learningSchedules: orElse(() => [for (final v in j['learningSchedules'] as List) if (v is String) v], d.learningSchedules),
       setupDone: pick('setupDone', d.setupDone),
       seenFeatures: orElse(() => (j['seenFeatures'] as num).toInt(), d.seenFeatures),
+      shareUsage: pick('shareUsage', d.shareUsage),
     );
   }
 
@@ -406,8 +417,34 @@ class SettingsNotifier extends Notifier<AppSettings> {
   }
 
   void update(AppSettings Function(AppSettings s) change) {
+    final old = state;
     state = change(state);
     ref.read(storageProvider).writeJson(_key, state.toJson());
+    _logChanges(old, state);
+  }
+
+  /// Which settings people change, and to what (for analytics).
+  static void _logChanges(AppSettings old, AppSettings now) {
+    if (old.shareUsage != now.shareUsage) analytics.setEnabled(now.shareUsage);
+    final a = old.toJson(), b = now.toJson();
+    for (final k in b.keys) {
+      if (const {'v', 'seenFeatures', 'setupDone', 'shareUsage'}.contains(k)) continue;
+      if (jsonEncode(a[k]) == jsonEncode(b[k])) continue;
+      if (k == 'minhagim') {
+        final ma = a[k] as Map, mb = b[k] as Map;
+        for (final m in mb.keys) {
+          if (jsonEncode(ma[m]) != jsonEncode(mb[m])) analytics.settingChanged('minhag_$m', mb[m]);
+        }
+        continue;
+      }
+      // Only the country of a location, and only the book names of versions.
+      final value = switch (k) {
+        'location' => now.location.countryCode ?? (now.location.il ? 'IL' : null),
+        'hebrewVersions' || 'translationVersions' || 'learningSchedules' => null,
+        _ => b[k],
+      };
+      analytics.settingChanged(k, value);
+    }
   }
 }
 

@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/l10n.dart';
+import '../../core/search.dart';
+import '../search/search_sources.dart';
 import '../../core/adaptive.dart';
 import '../setup/whats_new.dart';
 import '../update/update_screen.dart';
@@ -23,6 +25,7 @@ class HomeScreen extends ConsumerWidget {
     final cards = ref.watch(dashboardProvider);
     final registry = ref.watch(cardRegistryProvider);
     final theme = Theme.of(context);
+    final query = SearchQuery(ref.watch(pageSearchProvider('home')));
 
     // No app bar: the date card already shows the date, and the space goes
     // to the cards. Editing is at the bottom of the dashboard.
@@ -39,12 +42,34 @@ class HomeScreen extends ConsumerWidget {
         body: SafeArea(
           bottom: false,
           child: Column(children: [
-            const UpdateBanner(),
-            const WhatsNewBanner(),
+            // Several new features at once make a tall banner: it scrolls
+            // within at most half the screen rather than pushing Home off it.
+            ConstrainedBox(
+              constraints: BoxConstraints(maxHeight: MediaQuery.sizeOf(context).height * 0.5),
+              child: const SingleChildScrollView(child: Column(children: [UpdateBanner(), WhatsNewBanner()])),
+            ),
+            // Searches everything: prayers, zmanim, Torah, pages, settings.
+            if (!editing)
+              Center(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 720),
+                  child: PageSearchBar(page: 'home', hint: context.tr('Search prayers, zmanim, Torah…')),
+                ),
+              ),
             Expanded(
               child: editing
                   ? _EditList(cards: cards, registry: registry, onAdd: () => _addCard(context, ref))
-                  : _Grid(cards: cards, registry: registry),
+                  : query.isEmpty
+                      ? _Grid(cards: cards, registry: registry)
+                      : SingleChildScrollView(
+                          padding: const EdgeInsets.only(bottom: 24),
+                          child: Center(
+                            child: ConstrainedBox(
+                              constraints: const BoxConstraints(maxWidth: 720),
+                              child: GlobalSearchResults(query: query),
+                            ),
+                          ),
+                        ),
             ),
           ]),
         ),

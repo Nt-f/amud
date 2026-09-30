@@ -4,6 +4,7 @@ import 'package:hebcal/hebcal.dart';
 import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
+import '../../core/analytics.dart';
 
 enum ZmanGroup { dawn, morning, afternoon, evening, night, shabbat }
 
@@ -185,7 +186,10 @@ class CustomZmanimNotifier extends Notifier<List<CustomZman>> {
     ref.read(storageProvider).writeJson('customZmanim', [for (final z in list) z.toJson()]);
   }
 
-  void upsert(CustomZman z) => save([...state.where((e) => e.id != z.id), z]);
+  void upsert(CustomZman z) {
+    analytics.event('custom_zman_save', {'kind': z.kind.name, 'value': z.value});
+    save([...state.where((e) => e.id != z.id), z]);
+  }
   void remove(String id) => save(state.where((e) => e.id != id).toList());
 }
 

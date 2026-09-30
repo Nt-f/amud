@@ -143,8 +143,10 @@ self.addEventListener('fetch', (event) => {
   }
 
   // Fallback glyph fonts Flutter may request from Google Fonts (emoji,
-  // rare scripts): cache them the first time so they work offline later.
-  if (url.hostname === 'fonts.gstatic.com' || url.hostname === 'fonts.googleapis.com') {
+  // rare scripts), and the Firebase Analytics scripts (versioned URLs):
+  // cache them the first time so they load offline later.
+  if (url.hostname === 'fonts.gstatic.com' || url.hostname === 'fonts.googleapis.com' ||
+      (url.hostname === 'www.gstatic.com' && url.pathname.startsWith('/firebasejs/'))) {
     event.respondWith((async () => {
       const cache = await caches.open(RUNTIME);
       const hit = await cache.match(req);

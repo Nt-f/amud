@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/providers.dart';
+import '../../core/analytics.dart';
 
 /// A card placed on the home dashboard.
 class CardConfig {
@@ -161,8 +162,15 @@ class DashboardNotifier extends Notifier<List<CardConfig>> {
     ref.read(storageProvider).writeJson('dashboardVersion', _dashboardVersion);
   }
 
-  void add(CardConfig c) => _save([...state, c]);
-  void remove(String id) => _save(state.where((c) => c.id != id).toList());
+  void add(CardConfig c) {
+    analytics.event('card_add', {'type': c.type});
+    _save([...state, c]);
+  }
+
+  void remove(String id) {
+    analytics.event('card_remove', {'type': state.where((c) => c.id == id).firstOrNull?.type});
+    _save(state.where((c) => c.id != id).toList());
+  }
   void replace(CardConfig c) => _save([for (final e in state) e.id == c.id ? c : e]);
   void reorder(int oldIndex, int newIndex) {
     final l = [...state];
@@ -171,7 +179,10 @@ class DashboardNotifier extends Notifier<List<CardConfig>> {
     _save(l);
   }
 
-  void reset() => _save(defaultDashboard);
+  void reset() {
+    analytics.event('cards_reset');
+    _save(defaultDashboard);
+  }
 }
 
 final dashboardProvider = NotifierProvider<DashboardNotifier, List<CardConfig>>(DashboardNotifier.new);

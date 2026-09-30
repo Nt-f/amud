@@ -6,6 +6,7 @@ import '../../core/fonts.dart';
 import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../settings/font_gallery_screen.dart';
+import '../../core/analytics.dart';
 
 enum TorahTextLanguage { auto, hebrew, both, english }
 
@@ -64,8 +65,13 @@ class TorahSettingsNotifier extends Notifier<TorahSettings> {
       ref.watch(storageProvider).readJson(_key, (j) => TorahSettings.fromJson((j as Map).cast<String, Object?>())) ?? const TorahSettings();
 
   void update(TorahSettings Function(TorahSettings) f) {
+    final old = state.toJson();
     state = f(state);
-    ref.read(storageProvider).writeJson(_key, state.toJson());
+    final now = state.toJson();
+    ref.read(storageProvider).writeJson(_key, now);
+    for (final k in now.keys) {
+      if (old[k] != now[k]) analytics.settingChanged('torah_$k', now[k]);
+    }
   }
 }
 

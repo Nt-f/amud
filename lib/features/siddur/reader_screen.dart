@@ -1,10 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart' show SelectedContent;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hebcal/hebcal.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 
+import '../../core/analytics.dart';
 import '../../core/l10n.dart';
 import '../../core/adaptive.dart';
 import '../../core/focus_mode.dart';
@@ -12,6 +16,7 @@ import '../../core/fonts.dart';
 import '../../core/format.dart';
 import '../../core/hebrew_text.dart';
 import '../../core/html_text.dart';
+import '../../core/page_swipe.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
 import '../../core/split_row.dart';
@@ -19,9 +24,11 @@ import '../../core/theme.dart';
 import '../../core/titles.dart';
 import 'reader_grouping.dart';
 import 'prayer_catalog.dart';
+import 'reader_jump.dart';
 import 'reader_settings_sheet.dart';
 import 'related_prayers.dart';
 import 'siddur_providers.dart';
+import 'today_plan.dart';
 
 typedef _ReaderKey = ({String book, String node, String expanded, int dateAbs});
 
@@ -74,8 +81,82 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
 
   final _selection = GlobalKey<SelectionAreaState>();
 
+  /// Text is selected: sideways drags move its handles, so swiping
+  /// doesn't turn the page.
+  bool _selected = false;
+
+  void _selectionChanged(SelectedContent? c) {
+    final selected = c != null && c.plainText.isNotEmpty;
+    if (selected != _selected) setState(() => _selected = selected);
+  }
+
   /// Keys of the lines that open a section (see [normalizeOpeningBold]).
   Set<String> _openers = {};
+
+  // The jump bar: the list scrolls by row index, and the row at the top
+  // marks the current key point.
+  final _scroll = ItemScrollController();
+  final _positions = ItemPositionsListener.create();
+  List<JumpPoint> _jumps = const [];
+  int _active = 0;
+
+  /// Scrolling to a chosen key point: the rows passed on the way don't
+  /// change the mark.
+  bool _jumping = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _positions.itemPositions.addListener(_track);
+  }
+
+  @override
+  void dispose() {
+    _positions.itemPositions.removeListener(_track);
+    super.dispose();
+  }
+
+  void _track() {
+    if (_jumping) return;
+    final visible = _positions.itemPositions.value.where((p) => p.itemTrailingEdge > 0.02);
+    if (visible.isEmpty) return;
+    final top = visible.map((p) => p.index).reduce((a, b) => a < b ? a : b);
+    var active = 0;
+    for (final (i, j) in _jumps.indexed) {
+      if (j.row != null && j.row! <= top) active = i;
+    }
+    if (active != _active) setState(() => _active = active);
+  }
+
+  void _jump(JumpPoint p) {
+    analytics.event('jump_bar', {'point': p.en, 'elsewhere': p.elsewhere != null, 'book': widget.book});
+    final ref0 = p.elsewhere;
+    if (ref0 != null) {
+      context.push(readerPath(ref0.book, ref0.id, standalone: widget.standalone));
+      return;
+    }
+    setState(() => _active = _jumps.indexOf(p));
+    _jumping = true;
+    _scroll
+        .scrollTo(index: p.row!, duration: const Duration(milliseconds: 350), curve: Curves.easeOutCubic)
+        .whenComplete(() => _jumping = false);
+  }
+
+  /// Parts of today's service printed elsewhere (read straight through,
+  /// the service leaves them out), for the jump bar.
+  List<JumpPoint> _elsewhere(SchemaNode? node, int dateAbs) {
+    final plan = ref.watch(todayPlanProvider(dateAbs)).valueOrNull;
+    if (plan == null || node == null) return const [];
+    final at = locateInPlan(plan, widget.book, node);
+    if (at.covered.length < 2) return const [];
+    final svc = plan.serviceOf(at.covered.first);
+    if (svc == null) return const [];
+    return [
+      for (final e in svc.entries)
+        if (e.extra && !at.covered.contains(e))
+          JumpPoint(e.addedEn ?? e.node.en, e.addedHe ?? e.node.he, elsewhere: e.ref),
+    ];
+  }
 
   void _doubleTap() {
     toggleFocusMode();
@@ -94,7 +175,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     final key = (book: widget.book, node: widget.nodeId, expanded: (_expanded.toList()..sort()).join('|'), dateAbs: date.abs());
     final items = ref.watch(_resolvedProvider(key));
     final rootAsync = ref.watch(bookIndexProvider(widget.book));
-    final node = rootAsync.value?.find(widget.nodeId);
+    final node = rootAsync.valueOrNull?.find(widget.nodeId);
     final s = ref.watch(settingsProvider);
     final theme = Theme.of(context);
 
@@ -126,19 +207,60 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         ],
     );
 
+    final loaded = items.valueOrNull;
+    final built = loaded == null ? null : _rows(context, loaded, node);
+    // Key points of this prayer, in order, then its parts printed
+    // elsewhere; shown when there's somewhere to go.
+    _jumps = built == null ? const [] : [...built.jumps, ..._elsewhere(node, date.abs())];
+    if (_active >= _jumps.length) _active = 0;
+    final showJumps = _jumps.length >= 2;
+    if (node != null) {
+      final he = ref.watch(versionOrderProvider((widget.book, 'he'))).valueOrNull;
+      final en = s.showTranslationText ? ref.watch(versionOrderProvider((widget.book, 'en'))).valueOrNull : const <String>[];
+      if (he != null && en != null) {
+        readingText({
+          'book': widget.book,
+          'section': node.en,
+          'section_id': node.id,
+          'hebrew_version': s.showHebrewText ? he.firstOrNull : null,
+          'translation_version': en.firstOrNull,
+          'layout': s.layout.name,
+          'day': ref.watch(dayContextProvider((date.abs(), Service.shacharit))).labels.join(', '),
+          'other_date': picked != null,
+        });
+      }
+    }
+    final around = node == null ? null : prayerNeighbors(ref, widget.book, node);
+    VoidCallback? turnTo(PrayerRef? r, String way) => r == null || _selected
+        ? null
+        : () {
+            analytics.event('page_swipe', {'reader': 'siddur', 'way': way});
+            Router.neglect(context, () => context.pushReplacement(readerPath(r.book, r.id, standalone: widget.standalone)));
+          };
+
     return Scaffold(
       body: Column(children: [
         // Focus mode: the bars slide up out of view; the text keeps clear
         // of the status bar.
-        FocusModeBars(child: Column(mainAxisSize: MainAxisSize.min, children: [bar, DayBanner(date: date, picked: picked != null)])),
+        FocusModeBars(
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            bar,
+            if (showJumps) ReaderJumpBar(points: _jumps, active: _active, onTap: _jump),
+            DayBanner(date: date, picked: picked != null),
+          ]),
+        ),
         Expanded(
           child: FocusModeBody(
             child: DoubleTapListener(
               onDoubleTap: _doubleTap,
-              child: items.when(
-                loading: adaptiveProgress,
-                error: (e, st) => Center(child: Padding(padding: const EdgeInsets.all(24), child: Text('$e'))),
-                data: (list) => _list(context, list, node),
+              child: PageSwipe(
+                onNext: turnTo(around?.next, 'next'),
+                onPrevious: turnTo(around?.prev, 'previous'),
+                child: items.when(
+                  loading: adaptiveProgress,
+                  error: (e, st) => Center(child: Padding(padding: const EdgeInsets.all(24), child: Text('$e'))),
+                  data: (_) => _listView(context, built!.rows, node),
+                ),
               ),
             ),
           ),
@@ -147,11 +269,32 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     );
   }
 
-  Widget _list(BuildContext context, List<RenderItem> list, SchemaNode? node) {
+  Widget _listView(BuildContext context, List<Widget Function(BuildContext)> rows, SchemaNode? node) {
+    final wide = MediaQuery.sizeOf(context).width > 700;
+    return SelectionArea(
+      key: _selection,
+      onSelectionChanged: _selectionChanged,
+      child: ScrollablePositionedList.builder(
+        itemScrollController: _scroll,
+        itemPositionsListener: _positions,
+        padding: EdgeInsets.fromLTRB(wide ? 48 : 16, 8, wide ? 48 : 16, 96),
+        itemCount: rows.length + 1,
+        itemBuilder: (c, i) => i == rows.length
+            ? (node == null ? const SizedBox.shrink() : RelatedPrayers(book: widget.book, node: node, standalone: widget.standalone))
+            : rows[i](c),
+      ),
+    );
+  }
+
+  /// The list's rows, and the key points among its headings (see
+  /// [keyPoints]) with the row each starts at.
+  ({List<Widget Function(BuildContext)> rows, List<JumpPoint> jumps}) _rows(BuildContext context, List<RenderItem> list, SchemaNode? node) {
     final s = ref.watch(settingsProvider);
     final wide = MediaQuery.sizeOf(context).width > 700;
     final layout = s.layout == TextLayout.sideBySide && !wide ? TextLayout.interleaved : s.layout;
     final rows = <Widget Function(BuildContext)>[];
+    final jumps = <JumpPoint>[];
+    final seen = <String>{};
     if (node != null && list.every((it) => it is HeadingItem)) {
       rows.add((c) => _CollapsedTile(
             icon: Icons.visibility_off_outlined,
@@ -238,19 +381,19 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         i++;
         continue;
       }
+      // A heading (or an addition for today) that's one of the service's
+      // key points, the first of its kind.
+      final title = switch (it) {
+        HeadingItem h when h.level > 0 || !h.node.isLeaf => h.node.en,
+        InsertedSectionItem ins => ins.labelEn,
+        _ => null,
+      };
+      final point = title == null ? null : keyPointFor(title);
+      if (point != null && seen.add(point.$1)) jumps.add(JumpPoint(point.$1, point.$2, row: rows.length));
       rows.addAll(_rowsFor(context, it, layout));
       i++;
     }
-    return SelectionArea(
-      key: _selection,
-      child: ListView.builder(
-        padding: EdgeInsets.fromLTRB(wide ? 48 : 16, 8, wide ? 48 : 16, 96),
-        itemCount: rows.length + 1,
-        itemBuilder: (c, i) => i == rows.length
-            ? (node == null ? const SizedBox.shrink() : RelatedPrayers(book: widget.book, node: node, standalone: widget.standalone))
-            : rows[i](c),
-      ),
-    );
+    return (rows: rows, jumps: jumps);
   }
 
   /// The row(s) for one render item, with expanded groups and collapsible

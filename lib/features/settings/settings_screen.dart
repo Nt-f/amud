@@ -7,6 +7,7 @@ import 'package:siddur_engine/siddur_engine.dart';
 
 import '../../core/l10n.dart';
 import '../../core/adaptive.dart';
+import '../../core/search.dart';
 import '../../core/fonts.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
@@ -27,9 +28,18 @@ class SettingsScreen extends ConsumerWidget {
     void set(AppSettings Function(AppSettings) f) => n.update(f);
     void minhag(Minhagim Function(Minhagim) f) => n.update((x) => x.copyWith(minhagim: f(x.minhagim)));
 
+    final query = SearchQuery(ref.watch(pageSearchProvider('settings')));
     return Scaffold(
-      appBar: AppBar(title: Text(context.tr('Settings'))),
-      body: ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+      appBar: AppBar(
+        title: Text(context.tr('Settings')),
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(PageSearchBar.height),
+          child: PageSearchBar(page: 'settings', hint: context.tr('Search settings')),
+        ),
+      ),
+      body: ListFilter(
+        query: query,
+        child: ListView(padding: const EdgeInsets.only(bottom: 32), children: [
         AdaptiveSection(header: context.tr('Location'), children: [
           AdaptiveNavTile(
             icon: Icons.place_outlined,
@@ -248,7 +258,9 @@ class SettingsScreen extends ConsumerWidget {
               if (v != null) set((x) => x.copyWith(themeMode: v));
             },
           ),
-          Padding(
+          FilterKeywords(
+            keywords: [context.tr('Warmth'), context.tr('Theme'), 'sepia'],
+            child: Padding(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
             child: Row(children: [
               const Icon(Icons.thermostat_outlined, size: 20),
@@ -264,7 +276,10 @@ class SettingsScreen extends ConsumerWidget {
               ),
             ]),
           ),
-          Padding(
+          ),
+          FilterKeywords(
+            keywords: [context.tr('Color'), context.tr('Theme')],
+            child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             child: Wrap(spacing: 10, runSpacing: 10, children: [
               for (final c in const [0xFF3B5BA5, 0xFF7B5EA7, 0xFF00796B, 0xFFB5651D, 0xFF8E2C48, 0xFF455A64, 0xFF2E7D32])
@@ -277,6 +292,7 @@ class SettingsScreen extends ConsumerWidget {
                   ),
                 ),
             ]),
+          ),
           ),
           AdaptiveNavTile(
             icon: Icons.font_download_outlined,
@@ -299,6 +315,12 @@ class SettingsScreen extends ConsumerWidget {
           AdaptiveNavTile(icon: Icons.menu_book_outlined, title: context.tr('Daily learning'), onTap: () => context.push('/learning')),
         ]),
         AdaptiveSection(header: context.tr('Advanced'), children: [
+          AdaptiveSwitchTile(
+            title: context.tr('Share anonymous usage'),
+            subtitle: context.tr('Which screens, features and prayers or texts are opened, to improve Amud. Nothing you type, no names, no exact location.'),
+            value: s.shareUsage,
+            onChanged: (v) => set((x) => x.copyWith(shareUsage: v)),
+          ),
           AdaptiveNavTile(
             icon: Icons.tune,
             title: context.tr('Custom siddur rules'),
@@ -332,7 +354,8 @@ class SettingsScreen extends ConsumerWidget {
             ),
           ),
         ]),
-      ]),
+        ]),
+      ),
     );
   }
 }

@@ -8,6 +8,7 @@ import 'package:http/http.dart' as http;
 
 import '../../core/providers.dart';
 import '../../core/settings.dart';
+import '../../core/analytics.dart';
 
 /// A downloadable text in the Torah tab. Texts are fetched from Sefaria on
 /// request (nothing here is bundled) and kept for offline reading.
@@ -145,6 +146,8 @@ class TorahLibrary extends Notifier<Map<String, DownloadState>> {
   Future<void> download(TorahWork w) async {
     if (!w.available || state[w.id] is Downloading) return;
     state = {...state, w.id: const Downloading(0)};
+    analytics.event('torah_download', {'work': w.id, 'status': 'start'});
+    final took = Stopwatch()..start();
     final client = http.Client();
     try {
       final uri = Uri.parse('https://www.sefaria.org/api/v3/texts/${w.sefariaTitle}'
@@ -168,8 +171,10 @@ class TorahLibrary extends Notifier<Map<String, DownloadState>> {
       await ref.read(storageProvider).writeBlob(_blobKey(w), packed);
       ref.invalidate(torahBookProvider(w.id));
       state = {...state, w.id: Downloaded(packed.length)};
+      analytics.event('torah_download', {'work': w.id, 'status': 'done', 'kb': packed.length ~/ 1024, 'seconds': took.elapsed.inSeconds});
     } catch (e) {
       state = {...state, w.id: DownloadFailed('$e')};
+      analytics.event('torah_download', {'work': w.id, 'status': 'failed', 'error': e.runtimeType.toString()});
     } finally {
       client.close();
     }
@@ -196,6 +201,7 @@ class TorahLibrary extends Notifier<Map<String, DownloadState>> {
     await ref.read(storageProvider).deleteBlob(_blobKey(w));
     ref.invalidate(torahBookProvider(w.id));
     state = {...state, w.id: const NotDownloaded()};
+    analytics.event('torah_delete', {'work': w.id});
   }
 }
 

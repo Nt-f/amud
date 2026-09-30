@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/l10n.dart';
 import '../../core/settings.dart';
+import '../../core/analytics.dart';
 
 /// A feature worth pointing out: taught in the setup walkthrough, and
 /// announced once on Home to people who finished setup before it existed.
@@ -18,8 +19,8 @@ class Feature {
 
 const features = [
   Feature(1, Icons.fullscreen, 'Focus mode', 'Double-tap the text while praying to hide the top and bottom bars. Double-tap again to bring them back.'),
-  Feature(2, Icons.format_list_numbered, "Today's davening",
-      "The whole day's davening in order, with what's added today, such as Hallel, Musaf or the day's Hoshanot. Open it from Today in the siddur on Home, or from the Siddur tab. Under each section, links lead to what comes next today and to related prayers."),
+  Feature(2, Icons.format_list_numbered, 'Jump through the davening',
+      "Open Shacharit, Mincha or Maariv and a bar under the title jumps to its key points, such as Shema, Shemoneh Esrei, Hallel or the Torah reading. Parts said today that are printed elsewhere open from there too."),
   Feature(3, Icons.event_note, 'Holidays & Seasons',
       'Hoshanot, Lulav, Selichot, Chanukah candles and other holiday prayers in one place, with the ones for today marked. Find it in the Siddur tab.'),
   Feature(4, Icons.title, 'Prayer title language',
@@ -74,7 +75,10 @@ class WhatsNewBanner extends ConsumerWidget {
             Align(
               alignment: AlignmentDirectional.centerEnd,
               child: TextButton(
-                onPressed: () => ref.read(settingsProvider.notifier).update((x) => x.copyWith(seenFeatures: latestFeature)),
+                onPressed: () {
+                  analytics.event('whats_new_dismiss', {'features': unseen.length});
+                  ref.read(settingsProvider.notifier).update((x) => x.copyWith(seenFeatures: latestFeature));
+                },
                 child: Text(context.tr('Got it')),
               ),
             ),

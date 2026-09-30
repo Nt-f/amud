@@ -32,11 +32,73 @@ const _routes = {
   'meeinShalosh': ("Me'ein Shalosh", 'מעין שלוש', '/meein-shalosh'),
 };
 
+/// The sections before and after [node] as read in order: in today's
+/// davening, the previous and next parts of the day's services (Hallel
+/// after the Amidah on Rosh Chodesh); otherwise the siddur's own order.
+/// [also] is what's said with it today but printed elsewhere.
+({PrayerRef? prev, PrayerRef? next, PlanService? nextService, List<PlanEntry> also}) prayerNeighbors(
+    WidgetRef ref, String book, SchemaNode node) {
+  final date = ref.watch(readerDaytimeDateProvider).abs();
+  final plan = ref.watch(todayPlanProvider(date)).value;
+  PrayerRef? prev, next;
+  PlanService? nextService;
+  final also = <PlanEntry>[];
+  var inPlan = false;
+  final siblings = node.parent?.children ?? const <SchemaNode>[];
+  final i = siblings.indexOf(node);
+  if (plan != null) {
+    final entries = plan.entries;
+    final at = locateInPlan(plan, book, node);
+    PlanEntry? first, last;
+    inPlan = at.covered.isNotEmpty || at.within != null;
+    if (at.covered.isNotEmpty) {
+      first = at.covered.first;
+      last = at.covered.last;
+      // Read straight through, the service leaves out what comes from
+      // elsewhere (the Lulav blessing, the day's Hoshana): link to it.
+      final svc = plan.serviceOf(at.covered.first);
+      if (at.covered.length > 1 && svc != null) also.addAll(svc.entries.where((e) => e.extra && !at.covered.contains(e)));
+    } else if (at.within != null) {
+      // A part of a section: its neighboring parts, then the neighboring
+      // sections.
+      final within = '${at.within!.node.id}/';
+      if (i >= 0 && i + 1 < siblings.length && siblings[i + 1].id.startsWith(within)) {
+        next = PrayerRef(book, siblings[i + 1]);
+      } else {
+        last = at.within;
+      }
+      if (i > 0 && siblings[i - 1].id.startsWith(within)) {
+        prev = PrayerRef(book, siblings[i - 1]);
+      } else {
+        first = at.within;
+      }
+    }
+    bool skip(PlanEntry e) => at.covered.contains(e) || also.contains(e);
+    if (last != null) {
+      final after = entries.skip(entries.indexOf(last) + 1).where((e) => !skip(e));
+      if (after.isNotEmpty) {
+        next = after.first.ref;
+        final from = plan.serviceOf(last), to = plan.serviceOf(after.first);
+        if (to != null && to != from) nextService = to;
+      }
+    }
+    if (first != null) {
+      final before = entries.take(entries.indexOf(first)).where((e) => !skip(e));
+      if (before.isNotEmpty) prev = before.last.ref;
+    }
+  }
+  // Outside today's davening: the siddur's own order.
+  if (!inPlan && i >= 0) {
+    if (i + 1 < siblings.length) next = PrayerRef(book, siblings[i + 1]);
+    if (i > 0) prev = PrayerRef(book, siblings[i - 1]);
+  }
+  return (prev: prev, next: next, nextService: nextService, also: also);
+}
+
 /// Links under a section of the reader: what comes next in today's
 /// davening (Hallel after the Amidah on Rosh Chodesh, the day's Hoshana
-/// after Musaf), what else is said today with it, prayers that go with it,
-/// and the full order of the day. Outside today's davening, the next
-/// section of the siddur.
+/// after Musaf), what else is said today with it, and prayers that go
+/// with it. Outside today's davening, the next section of the siddur.
 class RelatedPrayers extends ConsumerWidget {
   final String book;
   final SchemaNode node;
@@ -47,52 +109,14 @@ class RelatedPrayers extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final s = ref.watch(settingsProvider);
     final date = ref.watch(readerDaytimeDateProvider).abs();
-    final plan = ref.watch(todayPlanProvider(date)).value;
     final day = ref.watch(dayContextProvider((date, Service.shacharit)));
     final night = ref.watch(dayContextProvider((date, Service.maariv)));
     final theme = Theme.of(context);
 
-    PrayerRef? next;
-    String? nextService;
-    final also = <PlanEntry>[];
-    var inPlan = false;
-    if (plan != null) {
-      final entries = plan.entries;
-      final at = locateInPlan(plan, book, node);
-      PlanEntry? last;
-      inPlan = at.covered.isNotEmpty || at.within != null;
-      if (at.covered.isNotEmpty) {
-        last = at.covered.last;
-        // Read straight through, the service leaves out what comes from
-        // elsewhere (the Lulav blessing, the day's Hoshana): link to it.
-        final svc = plan.serviceOf(at.covered.first);
-        if (at.covered.length > 1 && svc != null) also.addAll(svc.entries.where((e) => e.extra && !at.covered.contains(e)));
-      } else if (at.within != null) {
-        // A part of a section: its next part, then the next section.
-        final siblings = node.parent?.children ?? const <SchemaNode>[];
-        final i = siblings.indexOf(node);
-        if (i >= 0 && i + 1 < siblings.length && siblings[i + 1].id.startsWith('${at.within!.node.id}/')) {
-          next = PrayerRef(book, siblings[i + 1]);
-        } else {
-          last = at.within;
-        }
-      }
-      if (last != null) {
-        final i = entries.indexOf(last);
-        final after = entries.skip(i + 1).where((e) => !at.covered.contains(e) && !also.contains(e));
-        if (after.isNotEmpty) {
-          next = after.first.ref;
-          final from = plan.serviceOf(last), to = plan.serviceOf(after.first);
-          if (to != null && to != from) nextService = context.prayerTitle(s, to.en, to.he);
-        }
-      }
-    }
-    // Outside today's davening: the next section of this siddur.
-    if (!inPlan) {
-      final siblings = node.parent?.children ?? const <SchemaNode>[];
-      final i = siblings.indexOf(node);
-      if (i >= 0 && i + 1 < siblings.length) next = PrayerRef(book, siblings[i + 1]);
-    }
+    final around = prayerNeighbors(ref, book, node);
+    final next = around.next;
+    final nextService = around.nextService == null ? null : context.prayerTitle(s, around.nextService!.en, around.nextService!.he);
+    final also = around.also;
 
     // Prayers that go with this one, when they're said today (or aren't
     // tied to a day).
@@ -156,12 +180,6 @@ class RelatedPrayers extends ConsumerWidget {
           const SizedBox(height: 6),
           Wrap(spacing: 8, runSpacing: 8, children: links),
         ],
-        const SizedBox(height: 12),
-        TextButton.icon(
-          onPressed: () => context.push('/today'),
-          icon: const Icon(Icons.format_list_numbered),
-          label: Text(context.tr("Today's davening")),
-        ),
       ]),
     );
   }
