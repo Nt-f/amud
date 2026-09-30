@@ -1,0 +1,76 @@
+{
+  "name": "Siddur",
+  "short_name": "Siddur",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F7F8FC",
+  "theme_color": "#3B5BA5",
+  "description": "Offline interactive siddur with all Sefaria versions, zmanim, Hebrew calendar and daily learning.",
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/Icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/Icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/Icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/Icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "id": "/",
+  "scope": "./",
+  "lang": "en",
+  "dir": "auto",
+  "categories": [
+    "lifestyle",
+    "books",
+    "education"
+  ],
+  "shortcuts": [
+    {
+      "name": "Siddur",
+      "url": "./#/siddur",
+      "icons": [
+        {
+          "src": "icons/Icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Zmanim",
+      "url": "./#/zmanim",
+      "icons": [
+        {
+          "src": "icons/Icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Calendar",
+      "url": "./#/calendar",
+      "icons": [
+        {
+          "src": "icons/Icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

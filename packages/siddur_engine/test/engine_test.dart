@@ -1,0 +1,147 @@
+import 'dart:io';
+
+import 'package:hebcal/hebcal.dart';
+import 'package:siddur_engine/siddur_engine.dart';
+import 'package:test/test.dart';
+
+class _FileSource implements TextSource {
+  @override
+  Future<List<int>> readBytes(String file) => File('../../$file').readAsBytes();
+}
+
+HDate _greg(int y, int m, int d) => HDate.fromDate(DateTime(y, m, d));
+
+void main() {
+  setUpAll(initHebcal);
+
+  group('Condition', () {
+    test('parses and evaluates', () {
+      final env = <String, Object>{'a': true, 'b': false, 'n': 3};
+      expect(Condition.parse('a && !b').eval(env), isTrue);
+      expect(Condition.parse('a && (b || n >= 3)').eval(env), isTrue);
+      expect(Condition.parse('n in [1, 2]').eval(env), isFalse);
+      expect(Condition.parse('n in [3]').eval(env), isTrue);
+      final unknown = <String>{};
+      Condition.parse('zzz || b').eval(env, unknown);
+      expect(unknown, {'zzz'});
+      expect(() => Condition.parse('a &&'), throwsA(isA<ConditionParseException>()));
+    });
+  });
+
+  group('rubrics', () {
+    test('Hebrew', () {
+      expect(matchRubric('בראש חדש ובחול המועד אומרים זה:')!.expression, '(roshChodesh || cholHamoed)');
+      expect(matchRubric('בעשי"ת:')!.expression, 'aseretYemeiTeshuva');
+      expect(matchRubric('בחנוכה:')!.expression, 'chanukah');
+      expect(matchRubric('קהל וחזן:'), isNull);
+      expect(matchRubric('בקיץ:')!.resolveSeason('מוֹרִיד הַטָּל').expression, 'moridHatal');
+      expect(matchRubric('בימות הגשמים:')!.resolveSeason('טַל וּמָטָר לִבְרָכָה').expression, 'talUmatar');
+    });
+    test('English', () {
+      expect(matchRubric('On Rosh Ḥodesh and Ḥol HaMo’ed, say:')!.expression, '(roshChodesh || cholHamoed)');
+      expect(matchRubric('From the Musaf of Shemini Atzeres until the Musaf of the first day of Pesach you should say:')!
+          .expression, 'mashivHaruach');
+      expect(matchRubric('In Israel, in spring and summer:')!.resolveSeason('He causes the dew to fall').expression,
+          'il && moridHatal');
+    });
+  });
+
+  group('DayContext', () {
+    test('Rosh Chodesh / seasons', () {
+      final c = DayContext(HDate(30, Months.tishrei, 5786), il: false);
+      expect(c['roshChodesh'], isTrue);
+      expect(c['mashivHaruach'], isTrue);
+      expect(c['talUmatar'], isFalse);
+      expect(c['tachanunShacharit'], isFalse);
+      expect(c['hallel'], isTrue);
+      expect(c['halfHallel'], isTrue);
+    });
+    test('Mashiv HaRuach starts at Musaf of Shmini Atzeret', () {
+      final sa = HDate(22, Months.tishrei, 5786);
+      expect(DayContext(sa, il: false, service: Service.shacharit)['mashivHaruach'], isFalse);
+      expect(DayContext(sa, il: false, service: Service.musaf)['mashivHaruach'], isTrue);
+    });
+    test("Tal u'matar: diaspora from the evening of Dec 4 (5 before leap year)", () {
+      // 2025: begins Maariv Dec 4, so daytime Dec 5 is the first full day.
+      expect(DayContext.forService(_greg(2025, 12, 4), Service.maariv, il: false)['talUmatar'], isTrue);
+      expect(DayContext(_greg(2025, 12, 4), il: false, service: Service.mincha)['talUmatar'], isFalse);
+      // 2027 precedes leap year 2028: begins Dec 5 evening.
+      expect(DayContext(_greg(2027, 12, 5), il: false, service: Service.mincha)['talUmatar'], isFalse);
+      expect(DayContext.forService(_greg(2027, 12, 5), Service.maariv, il: false)['talUmatar'], isTrue);
+      // Israel: 7 Cheshvan.
+      expect(DayContext(HDate(7, Months.cheshvan, 5786), il: true)['talUmatar'], isTrue);
+      expect(DayContext(HDate(6, Months.cheshvan, 5786), il: true)['talUmatar'], isFalse);
+    });
+    test('Omer at Maariv counts the coming day', () {
+      final c = DayContext.forService(HDate(15, Months.nisan, 5786), Service.maariv, il: false);
+      expect(c.number('omerDay'), 1);
+    });
+    test('Chanukah and Purim', () {
+      expect(DayContext(HDate(25, Months.kislev, 5786), il: false).number('chanukahDay'), 1);
+      expect(DayContext(HDate(24, Months.kislev, 5786), il: false)['chanukah'], isFalse);
+      final adar = isLeapYear(5786) ? Months.adarII : Months.adarI;
+      expect(DayContext(HDate(14, adar, 5786), il: false)['purim'], isTrue);
+      expect(DayContext(HDate(14, adar, 5786), il: false, minhagim: const Minhagim(walledCity: true))['purim'],
+          isFalse);
+    });
+  });
+
+  group('resolver (bundled Sefaria assets)', () {
+    late SiddurLibrary lib;
+    late BookInfo book;
+    late SchemaNode root;
+    late VersionSelection sel;
+    setUpAll(() async {
+      lib = SiddurLibrary(_FileSource(), gzip.decode);
+      final m = await lib.manifest();
+      book = m.book('Siddur Ashkenaz')!;
+      root = await lib.index(book);
+      final he = book.versions.firstWhere((v) => v.versionTitle == 'The Metsudah siddur, 1981');
+      sel = VersionSelection([await lib.version(he)], const []);
+    });
+
+    List<SegmentItem> segs(HDate hd) {
+      final node = root.find('Weekday/Shacharit/Amidah/Temple Service')!;
+      return SiddurResolver()
+          .resolve(node, sel, (s) => DayContext(hd, il: false, service: s),
+              options: const ResolveOptions(excluded: ExcludedDisplay.dim))
+          .whereType<SegmentItem>()
+          .toList();
+    }
+
+    test("Ya'aleh VeYavo highlighted on Rosh Chodesh, excluded otherwise", () {
+      bool yaaleh(SegmentItem s) => stripHtml(s.he!.segment.html).contains('יַעֲלֶה');
+      expect(segs(HDate(1, Months.cheshvan, 5786)).firstWhere(yaaleh).applicability, Applicability.today);
+      expect(segs(HDate(5, Months.cheshvan, 5786)).firstWhere(yaaleh).applicability, Applicability.notToday);
+    });
+
+    test('hide removes everything not said today', () {
+      final node = root.find('Weekday/Shacharit/Amidah')!;
+      final items = SiddurResolver().resolve(node, sel, (s) => DayContext(HDate(5, Months.cheshvan, 5786), il: false, service: s),
+          options: const ResolveOptions(excluded: ExcludedDisplay.hide));
+      final segs = items.whereType<SegmentItem>().toList();
+      expect(segs, isNotEmpty);
+      expect(segs.where((s) => s.excluded), isEmpty);
+      expect(segs.expand((s) => s.he!.runs).where((r) => r.applicability == Applicability.notToday), isEmpty);
+      expect(segs.where((s) => stripHtml(s.he!.segment.html).contains('יַעֲלֶה')), isEmpty);
+      expect(items.whereType<CollapsedSectionItem>(), isEmpty);
+      expect(items.whereType<ExcludedGroupItem>(), isEmpty);
+    });
+
+    test('prayer text and notes languages are independent', () async {
+      final en = book.versions.firstWhere((v) => v.language == 'en' && v.versionTitle.contains('Metsudah'));
+      final both = VersionSelection(sel.hebrew, [await lib.version(en)]);
+      List<SegmentItem> run(ResolveOptions o) => SiddurResolver()
+          .resolve(root.find('Weekday/Shacharit/Amidah')!, both, (s) => DayContext(HDate(5, Months.cheshvan, 5786), il: false, service: s),
+              options: o)
+          .whereType<SegmentItem>()
+          .toList();
+      final heOnly = run(const ResolveOptions(showTranslation: false));
+      expect(heOnly.where((s) => s.kind == SegmentKind.prayer && s.tr != null), isEmpty);
+      expect(heOnly.where((s) => s.kind != SegmentKind.prayer && s.tr != null), isNotEmpty);
+      final enNotes = run(const ResolveOptions(showTranslation: false, notesHebrew: false));
+      expect(enNotes.where((s) => s.kind != SegmentKind.prayer && s.he != null), isEmpty);
+      expect(enNotes.where((s) => s.kind == SegmentKind.prayer && s.he == null), isEmpty);
+    });
+  });
+}

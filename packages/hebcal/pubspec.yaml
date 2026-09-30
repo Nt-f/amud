@@ -1,0 +1,14 @@
+name: hebcal
+description: >-
+  A Dart port of Hebcal (@hebcal/hdate, @hebcal/core, @hebcal/noaa and
+  @hebcal/learning): Hebrew calendar, holidays, parsha, zmanim, omer,
+  molad, candle lighting and daily learning schedules.
+version: 0.1.0
+publish_to: none
+environment:
+  sdk: ^3.5.0
+dependencies:
+  timezone: ^0.10.0
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.25.0

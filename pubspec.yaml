@@ -1,0 +1,151 @@
+name: flutter_siddur
+description: "Offline, interactive siddur with Sefaria texts, a full Hebcal port, zmanim, notifications and a customizable home screen."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  hebcal:
+    path: packages/hebcal
+  siddur_engine:
+    path: packages/siddur_engine
+  flutter_riverpod: ^2.6.1
+  go_router: ^17.5.0
+  hive_ce: ^2.20.1
+  hive_ce_flutter: ^2.3.4
+  archive: ^4.3.0
+  timezone: ^0.10.1
+  flutter_timezone: ^5.1.0
+  flutter_local_notifications: ^18.0.1
+  geolocator: ^14.1.1
+  file_picker: ^13.1.0
+  url_launcher: ^6.3.2
+  flutter_js: ^0.8.7
+  web: ^1.1.1
+  intl: ^0.20.2
+  http: ^1.6.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/sefaria/
+    - assets/rules/
+    - assets/fonts/
+    - assets/tehillim/
+  fonts:
+    - family: FrankRuhlLibre
+      fonts:
+        - asset: assets/fonts/FrankRuhlLibre.ttf
+    - family: NotoSerifHebrew
+      fonts:
+        - asset: assets/fonts/NotoSerifHebrew.ttf
+    - family: DavidLibre
+      fonts:
+        - asset: assets/fonts/DavidLibre-Regular.ttf
+        - asset: assets/fonts/DavidLibre-Bold.ttf
+          weight: 700
+    - family: TaameyFrankCLM
+      fonts:
+        - asset: assets/fonts/TaameyFrankCLM-Medium.ttf
+        - asset: assets/fonts/TaameyFrankCLM-Bold.ttf
+          weight: 700
+    - family: TaameyDavidCLM
+      fonts:
+        - asset: assets/fonts/TaameyDavidCLM-Medium.ttf
+        - asset: assets/fonts/TaameyDavidCLM-Bold.ttf
+          weight: 700
+    - family: TaameyAshkenaz
+      fonts:
+        - asset: assets/fonts/TaameyAshkenaz-Medium.ttf
+        - asset: assets/fonts/TaameyAshkenaz-Bold.ttf
+          weight: 700
+    - family: KeterYG
+      fonts:
+        - asset: assets/fonts/KeterYG-Medium.ttf
+        - asset: assets/fonts/KeterYG-Bold.ttf
+          weight: 700
+    - family: KeterAramTsova
+      fonts:
+        - asset: assets/fonts/KeterAramTsova.ttf
+    - family: EzraSIL
+      fonts:
+        - asset: assets/fonts/EzraSIL.ttf
+    - family: EzraSILSR
+      fonts:
+        - asset: assets/fonts/EzraSILSR.ttf
+    - family: FrankRuehlCLM
+      fonts:
+        - asset: assets/fonts/FrankRuehlCLM-Medium.otf
+        - asset: assets/fonts/FrankRuehlCLM-Bold.otf
+          weight: 700
+    - family: DavidCLM
+      fonts:
+        - asset: assets/fonts/DavidCLM-Medium.otf
+        - asset: assets/fonts/DavidCLM-Bold.otf
+          weight: 700
+    - family: DrugulinCLM
+      fonts:
+        - asset: assets/fonts/DrugulinCLM-Bold.otf
+    - family: MiriamCLM
+      fonts:
+        - asset: assets/fonts/MiriamCLM-Book.otf
+        - asset: assets/fonts/MiriamCLM-Bold.otf
+          weight: 700
+    - family: MiriamMonoCLM
+      fonts:
+        - asset: assets/fonts/MiriamMonoCLM-Book.ttf
+        - asset: assets/fonts/MiriamMonoCLM-Bold.ttf
+          weight: 700
+    - family: HadasimCLM
+      fonts:
+        - asset: assets/fonts/HadasimCLM-Regular.otf
+        - asset: assets/fonts/HadasimCLM-Bold.otf
+          weight: 700
+    - family: NachlieliCLM
+      fonts:
+        - asset: assets/fonts/NachlieliCLM-Light.otf
+        - asset: assets/fonts/NachlieliCLM-Bold.otf
+          weight: 700
+    - family: ElliniaCLM
+      fonts:
+        - asset: assets/fonts/ElliniaCLM-Light.otf
+        - asset: assets/fonts/ElliniaCLM-Bold.otf
+          weight: 700
+    - family: YehudaCLM
+      fonts:
+        - asset: assets/fonts/YehudaCLM-Light.otf
+        - asset: assets/fonts/YehudaCLM-Bold.otf
+          weight: 700
+    - family: AharoniCLM
+      fonts:
+        - asset: assets/fonts/AharoniCLM-Book.otf
+        - asset: assets/fonts/AharoniCLM-Bold.otf
+          weight: 700
+    - family: SimpleCLM
+      fonts:
+        - asset: assets/fonts/SimpleCLM-Medium.ttf
+        - asset: assets/fonts/SimpleCLM-Bold.ttf
+          weight: 700
+    - family: Shofar
+      fonts:
+        - asset: assets/fonts/ShofarRegular.ttf
+        - asset: assets/fonts/ShofarDemi-Bold.ttf
+          weight: 700
+    - family: StamAshkenazCLM
+      fonts:
+        - asset: assets/fonts/StamAshkenazCLM.ttf
+    - family: StamSefaradCLM
+      fonts:
+        - asset: assets/fonts/StamSefaradCLM.ttf

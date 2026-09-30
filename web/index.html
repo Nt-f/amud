@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Offline interactive siddur with all Sefaria versions, zmanim, Hebrew calendar and daily learning.">
+  <meta name="theme-color" content="#3B5BA5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1B2233" media="(prefers-color-scheme: dark)">
+  <!-- iOS / installable PWA -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Siddur">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="manifest" href="manifest.json">
+  <title>Siddur</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #F7F8FC; }
+    @media (prefers-color-scheme: dark) { html, body { background: #12151C; } #splash { color: #CFD6E6; } }
+    #splash { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center;
+      justify-content: center; font: 500 18px system-ui, sans-serif; color: #3B5BA5; gap: 14px; }
+    #splash .he { font-size: 34px; font-family: serif; }
+    #splash .bar { width: 140px; height: 3px; background: #3B5BA533; border-radius: 2px; overflow: hidden; }
+    #splash .bar::after { content: ''; display: block; width: 40%; height: 100%; background: #3B5BA5;
+      animation: slide 1.1s ease-in-out infinite; }
+    @keyframes slide { from { transform: translateX(-100%); } to { transform: translateX(260%); } }
+  </style>
+</head>
+<body>
+  <div id="splash"><div class="he">סידור</div><div class="bar"></div></div>
+  <script>
+    // Offline-first PWA: tool/gen_service_worker.dart generates sw.js,
+    // which precaches the whole app including every Sefaria text.
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function (e) { console.warn('SW registration failed', e); });
+      });
+      // A new deployment's worker takes over as soon as it has cached
+      // everything; reload once so the page runs the new version instead of
+      // the cached one it started with. (Skipped on the very first install.)
+      var hadController = !!navigator.serviceWorker.controller, reloading = false;
+      navigator.serviceWorker.addEventListener('controllerchange', function () {
+        if (!hadController || reloading) return;
+        reloading = true;
+        window.location.reload();
+      });
+    }
+    window.addEventListener('flutter-first-frame', function () {
+      var s = document.getElementById('splash'); if (s) s.remove();
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

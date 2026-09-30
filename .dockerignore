@@ -1,0 +1,14 @@
+build/
+.dart_tool/
+**/.dart_tool/
+.idea/
+.vscode/
+android/.gradle/
+android/app/build/
+ios/Pods/
+ios/.symlinks/
+macos/Pods/
+**/*.iml
+.git/
+*.zip
+web-dist/
