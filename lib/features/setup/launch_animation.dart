@@ -10,7 +10,7 @@ const _fanDeep = Color(0xFF6F8CC0);
 /// Plays the Amud launch animation over [child] once per app start: the
 /// podium lines fly in, the pages fan open and the wordmark rises, then it
 /// fades into the app. It always plays in full and can't be tapped away.
-/// With reduced motion the finished logo shows, still, for the same time.
+/// With reduced motion the finished logo shows, still, for 1.2 seconds.
 /// On the web the page's own copy of the animation already played while the
 /// app loaded, so it's skipped there.
 class LaunchAnimation extends StatefulWidget {
@@ -24,12 +24,20 @@ class LaunchAnimation extends StatefulWidget {
 }
 
 class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderStateMixin {
-  // The podium is built (lines land by 1.27 s), then after a beat the
-  // siddur opens on it (1.5–2.35 s), the wordmark rises (2.2–2.8 s), and it
-  // all holds a moment before fading into the app.
+  // The podium is built (lines land by 1.27 s) and the siddur opens on it
+  // as it lands (1.25–2.1 s), the wordmark rises (2.2–2.8 s), and it all
+  // holds a moment before fading into the app.
   static const _length = Duration(milliseconds: 3600);
-  late final AnimationController _c = AnimationController(vsync: this, duration: _length);
-  late final AnimationController _fade = AnimationController(vsync: this, duration: const Duration(milliseconds: 400));
+  // Both keep their length when the system asks for reduced motion
+  // (AnimationController would otherwise run them 20 times faster, so the
+  // logo only blinked); reduced motion is handled here instead.
+  late final AnimationController _c = AnimationController(vsync: this, duration: _length, animationBehavior: AnimationBehavior.preserve);
+  late final AnimationController _fade =
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 400), animationBehavior: AnimationBehavior.preserve);
+
+  /// How long the finished logo shows, still, with reduced motion (the same
+  /// as the web page's splash).
+  static const _stillLength = Duration(milliseconds: 1200);
   bool _show = !kIsWeb && !LaunchAnimation._played;
 
   @override
@@ -42,7 +50,14 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
     if (_show) {
       WidgetsBinding.instance.addPostFrameCallback((_) async {
         await Future<void>.delayed(const Duration(milliseconds: 250));
-        if (mounted) _c.forward().whenComplete(_finish);
+        if (!mounted) return;
+        if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
+          _c.value = 1;
+          await Future<void>.delayed(_stillLength);
+          await _finish();
+        } else {
+          _c.forward().whenComplete(_finish);
+        }
       });
     }
   }
@@ -151,7 +166,7 @@ class _MarkPainter extends CustomPainter {
     canvas.translate(-16, -20);
 
     // Pages: back layers first, each unfolding from the spine.
-    for (final (color, angle, delay) in [(_fanDeep, 14.0, 1.75), (_fan, 7.0, 1.62), (_paper, 0.0, 1.5)]) {
+    for (final (color, angle, delay) in [(_fanDeep, 14.0, 1.5), (_fan, 7.0, 1.38), (_paper, 0.0, 1.25)]) {
       final p = _segment(t, delay, .6, _openCurve);
       if (p <= 0) continue;
       final paint = Paint()..color = color.withValues(alpha: p);
