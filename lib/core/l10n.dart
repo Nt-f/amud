@@ -674,6 +674,8 @@ const Map<String, (String, String)> _strings = {
   'Search {book}': ('חיפוש ב{book}', 'זוכן אין {book}'),
   'In {book}': ('ב{book}', 'אין {book}'),
   'Other siddurim': ('סידורים אחרים', 'אנדערע סידורים'),
+  'Show in every siddur ({n} more)': ('הצג בכל הסידורים ({n} נוספים)', 'ווייזן אין אלע סידורים ({n} מער)'),
+  'Show each prayer once': ('הצג כל תפילה פעם אחת', 'ווייזן יעדע תפילה איין מאל'),
   'Pages': ('עמודים', 'זייטן'),
   'Books': ('ספרים', 'ספרים'),
   'Simanim': ('סימנים', 'סימנים'),

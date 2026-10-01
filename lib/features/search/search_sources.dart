@@ -17,6 +17,8 @@ import '../tehillim/tehillim_data.dart' show Passage, Portion;
 import '../tehillim/tehillim_reader.dart';
 import '../torah/torah_library.dart';
 import '../zmanim/zman_catalog.dart';
+import 'prayer_names.dart';
+import '../siddur/prayer_catalog.dart' show bookSearchOrder;
 
 // --- Siddur -----------------------------------------------------------------
 
@@ -25,8 +27,26 @@ class PrayerEntry {
   final String book;
   final SchemaNode node;
   final List<SchemaNode> path;
-  const PrayerEntry(this.book, this.node, this.path);
+
+  /// Its titles and other names (see [prayerNamesFor]), ready to match.
+  final SearchTarget target;
+
+  /// The same prayer in another siddur has the same key: the name it's
+  /// known by, else its Hebrew title, else its English one.
+  final String key;
+  PrayerEntry(this.book, this.node, this.path, this.target, this.key);
+
+  factory PrayerEntry.of(String book, SchemaNode node, List<SchemaNode> path) {
+    final names = prayerNamesFor(node.en, node.he);
+    final he = searchFold(node.he);
+    return PrayerEntry(book, node, path, SearchTarget([node.en, node.he, ...names.names]),
+        names.key ?? (he.isNotEmpty ? 'he:$he' : 'en:${searchFold(node.en)}'));
+  }
 }
+
+/// Search shows each prayer once, from your siddur or else the one the app
+/// would fall back to; this shows every siddur's copy instead.
+final searchAllSiddurimProvider = StateProvider<bool>((ref) => false);
 
 /// Every titled section of every bundled siddur.
 final prayerIndexProvider = FutureProvider<List<PrayerEntry>>((ref) async {
@@ -36,7 +56,7 @@ final prayerIndexProvider = FutureProvider<List<PrayerEntry>>((ref) async {
     final root = await ref.watch(bookIndexProvider(b.title).future);
     void walk(SchemaNode n, List<SchemaNode> path) {
       for (final c in n.children) {
-        if (c.en.trim().isNotEmpty || c.he.trim().isNotEmpty) out.add(PrayerEntry(b.title, c, path));
+        if (c.en.trim().isNotEmpty || c.he.trim().isNotEmpty) out.add(PrayerEntry.of(b.title, c, path));
         walk(c, [...path, c]);
       }
     }
@@ -74,19 +94,44 @@ int? _hebrewNumber(String s) {
 /// [standalone] opens prayers above the tabs (from Home).
 List<(String, List<SearchHit>)> siddurResults(BuildContext context, WidgetRef ref, SearchQuery q, {bool standalone = false}) {
   final s = ref.watch(settingsProvider);
-  final index = ref.watch(prayerIndexProvider).value ?? const [];
-  final defaultBook = ref.watch(defaultBookProvider).value;
+  final index = ref.watch(prayerIndexProvider).valueOrNull ?? const [];
+  final defaultBook = ref.watch(defaultBookProvider).valueOrNull;
+  final manifest = ref.watch(manifestProvider).valueOrNull;
+  final all = ref.watch(searchAllSiddurimProvider);
   final hebrew = context.prayerTitleIsHebrew(s);
+  // Where the app looks for a prayer your siddur lacks, in order;
+  // commentaries ("… on Siddur") last.
+  final order = manifest == null || defaultBook == null ? const <String>[] : bookSearchOrder(manifest, defaultBook);
+  int rank(String book) => switch (order.indexOf(book)) { -1 => order.length, final i => i };
+
+  final found = <(PrayerEntry, int)>[];
+  for (final e in index) {
+    final score = q.scoreTarget(e.target);
+    if (score != null) found.add((e, score));
+  }
+  // The same prayer in several siddurim: yours, or else the first siddur
+  // the app would fall back to.
+  final ownKeys = {for (final (e, _) in found) if (e.book == defaultBook) e.key};
+  final fallback = <String, String>{};
+  for (final (e, _) in found) {
+    if (e.book == defaultBook || ownKeys.contains(e.key)) continue;
+    final best = fallback[e.key];
+    if (best == null || rank(e.book) < rank(best)) fallback[e.key] = e.book;
+  }
+
   final mine = <SearchHit>[];
   final others = <SearchHit>[];
   final seen = <String>{};
-  for (final e in index) {
-    final score = q.score([e.node.en, e.node.he]);
-    if (score == null) continue;
+  var hidden = 0;
+  for (final (e, score) in found) {
     final own = e.book == defaultBook;
-    // The same prayer in several siddurim: once per siddur is plenty, and
-    // once overall outside yours.
-    if (!own && !seen.add('${e.node.en}|${e.node.he}')) continue;
+    if (!own) {
+      final shown = all ? seen.add('${e.book}|${e.node.en}|${e.node.he}') : fallback[e.key] == e.book && seen.add('${e.key}|${e.node.en}');
+      if (!shown) {
+        hidden++;
+        continue;
+      }
+    }
     final where = [for (final p in e.path) context.prayerTitle(s, p.en, p.he)];
     if (!own) where.insert(0, context.prayerTitle(s, e.book, e.book));
     (own ? mine : others).add(SearchHit(
@@ -97,6 +142,15 @@ List<(String, List<SearchHit>)> siddurResults(BuildContext context, WidgetRef re
       // Top-level sections before the lines inside them.
       score: score * 10 + e.path.length.clamp(0, 9),
       open: (c) => c.push(readerPath(e.book, e.node.id, standalone: standalone)),
+    ));
+  }
+  if (hidden > 0 || all) {
+    others.add(SearchHit(
+      icon: all ? Icons.unfold_less : Icons.library_books_outlined,
+      title: all ? context.tr('Show each prayer once') : context.tr('Show in every siddur ({n} more)', {'n': '$hidden'}),
+      score: 1 << 30,
+      logAs: all ? 'search_all_siddurim_off' : 'search_all_siddurim_on',
+      open: (_) => ref.read(searchAllSiddurimProvider.notifier).state = !all,
     ));
   }
   final chapter = tehillimChapter(q.raw);
@@ -114,7 +168,7 @@ List<(String, List<SearchHit>)> siddurResults(BuildContext context, WidgetRef re
         ]
       ),
     (context.tr('In {book}', {'book': context.prayerTitle(s, defaultBook ?? '', defaultBook ?? '')}), mine.take(40).toList()),
-    (context.tr('Other siddurim'), others.take(20).toList()),
+    (context.tr('Other siddurim'), [...others.where((h) => h.score < 1 << 30).take(all ? 60 : 20), ...others.where((h) => h.score >= 1 << 30)]),
   ];
 }
 
