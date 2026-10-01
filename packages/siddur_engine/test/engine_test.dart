@@ -203,4 +203,51 @@ void main() {
       expect(enNotes.where((s) => s.kind == SegmentKind.prayer && s.he == null), isEmpty);
     });
   });
+
+  group('Birkas Kohanim inside the Amidah', () {
+    late SiddurLibrary lib;
+    setUpAll(() => lib = SiddurLibrary(_FileSource(), gzip.decode));
+
+    Future<List<SegmentItem>> amidah(String title, String path, HDate hd) async {
+      final book = (await lib.manifest()).book(title)!;
+      final root = await lib.index(book);
+      final sel = VersionSelection([for (final v in book.byLanguage('he')) await lib.version(v)], const []);
+      return SiddurResolver()
+          .resolve(root.find(path)!, sel, (s) => DayContext(hd, il: false, service: s),
+              options: const ResolveOptions(excluded: ExcludedDisplay.dim))
+          .whereType<SegmentItem>()
+          .toList();
+    }
+
+    String plain(SegmentItem s) => normalizeRubric(s.he!.segment.html);
+    final weekday = HDate(3, Months.cheshvan, 5787);
+    final fast = HDate(3, Months.tishrei, 5787); // Tzom Gedaliah
+
+    test("is the chazzan's, through Adir BaMarom and not Sim Shalom", () async {
+      final segs = await amidah('Siddur Sefard', 'Weekday Shacharit/Amidah', weekday);
+      final verse = segs.firstWhere((s) => plain(s).startsWith('יברכך'));
+      expect(verse.chazarah, isTrue);
+      expect(verse.applicability, Applicability.always);
+      expect(segs.firstWhere((s) => plain(s).startsWith('אדיר במרום')).chazarah, isTrue);
+      expect(segs.firstWhere((s) => plain(s).startsWith('שים שלום')).chazarah, isFalse);
+      expect(segs.firstWhere((s) => plain(s).startsWith('מודים')).chazarah, isFalse);
+    });
+
+    test('at Mincha, all of it follows its fast-day instruction', () async {
+      for (final (hd, ap) in [(weekday, Applicability.notToday), (fast, Applicability.today)]) {
+        final passage = (await amidah('Siddur Sefard', 'Weekday Mincha/Amidah', hd)).where((s) => s.chazarah).toList();
+        expect(passage.where((s) => s.kind == SegmentKind.prayer), hasLength(5));
+        expect(passage.map((s) => s.applicability).toSet(), {ap}, reason: '$hd');
+      }
+    });
+
+    test('at Mincha without an instruction, only on a fast day', () async {
+      for (final (hd, ap) in [(weekday, Applicability.notToday), (fast, Applicability.today)]) {
+        final passage =
+            (await amidah('Weekday Siddur Sefard Linear', 'Mincha/Shemoneh Esrei', hd)).where((s) => s.chazarah && s.kind == SegmentKind.prayer);
+        expect(passage, isNotEmpty);
+        expect(passage.map((s) => s.applicability).toSet(), {ap}, reason: '$hd');
+      }
+    });
+  });
 }

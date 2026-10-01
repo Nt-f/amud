@@ -53,7 +53,7 @@ Future<void> main(List<String> args) async {
         final tag = s.applicability == Applicability.always ? '' : '{${s.applicability.name}: ${s.labelEn}} ';
         final runs = (s.he ?? s.tr)!.runs.where((r) => r.applicability != Applicability.always);
         final inline = runs.isEmpty ? '' : ' <<${runs.map((r) => '${r.applicability.name}:${r.labelEn}').join(', ')}>>';
-        print('    ${s.kind.name.substring(0, 3)} $tag${short((s.he ?? s.tr)!.segment.html)}$inline');
+        print('    ${s.chazarah ? '[chazarah] ' : ''}${s.kind.name.substring(0, 3)} $tag${short((s.he ?? s.tr)!.segment.html)}$inline');
     }
   }
 }

@@ -65,6 +65,10 @@ class Segment {
   /// If this is a day of the Omer count line, its day number.
   int? omerDay;
 
+  /// Part of a passage said only in the chazzan's repetition, printed
+  /// inside the Amidah (Birkas Kohanim; see [SegmentAnalyzer]).
+  bool chazarah = false;
+
   Segment({
     required this.ref,
     required this.html,
@@ -114,6 +118,7 @@ class SegmentAnalyzer {
     }
     _propagate(out);
     _markOptions(out);
+    _markBirkatKohanim(out, hebrew);
     if (omerSection) _markOmer(out, hebrew);
     return out;
   }
@@ -191,6 +196,67 @@ class SegmentAnalyzer {
       only = r.rubric;
     }
     return only;
+  }
+
+  /// Birkas Kohanim printed inside the Amidah, from its instruction or
+  /// "ברכנו בברכה המשלשת" up to Sim Shalom / Shalom Rav: the chazzan's
+  /// (and the kohanim's) passage, several lines long. A standalone rubric
+  /// governs only one line, so a condition on its opening ("בתענית ציבור
+  /// אומר כאן הש"ץ ברכת כהנים:") is carried through the rest of it here.
+  /// Without an end within a few dozen lines it's left alone: a separate
+  /// Birkas Kohanim section is recognized by its title instead.
+  static void _markBirkatKohanim(List<Segment> segs, bool hebrew) {
+    final start = segs.indexWhere((s) => hebrew ? _bkStartHe(s) : _bkStartEn(s));
+    if (start < 0) return;
+    var end = -1;
+    for (var k = start + 1; k < segs.length && k <= start + 40; k++) {
+      if (hebrew ? _bkEndHe(segs[k]) : _bkEndEn(segs[k])) {
+        end = k;
+        break;
+      }
+    }
+    if (end < 0) return;
+    final passage = segs.sublist(start, end);
+    // The condition the passage opens with, if any (Mincha: fast days).
+    final opening = passage.take(3).map((s) => s.rubric).whereType<RubricMatch>().firstOrNull;
+    for (final s in passage) {
+      s.chazarah = true;
+      if (opening != null && s.rubric == null && s.kind != SegmentKind.note && !s.hasInlineConditions) s.rubric = opening;
+    }
+  }
+
+  static String _bkText(Segment s) => normalizeRubric(s.html).replaceAll(RegExp(r'[^\u05d0-\u05ea ]'), ' ').replaceAll(RegExp(r'\s+'), ' ').trim();
+
+  static bool _bkStartHe(Segment s) {
+    final t = _bkText(s);
+    if (t.contains('בברכה המשלשת')) return true;
+    if (!t.contains('ברכת כהנים')) return false;
+    return s.kind != SegmentKind.prayer || t.startsWith('ברכת כהנים');
+  }
+
+  static bool _bkEndHe(Segment s) {
+    final t = _bkText(s);
+    if (s.kind == SegmentKind.speaker) return t == 'שלום';
+    return s.kind == SegmentKind.prayer && (t.startsWith('שים שלום') || t.startsWith('שלום רב'));
+  }
+
+  static final _bkNameEn = RegExp(r'\b(?:birkas|birkat|birchas|birchat|birkath) (?:ha)?[kc]oh?anim(?![a-z])|priestly blessing', caseSensitive: false);
+  static final _bkEndPrayerEn = RegExp(
+      r'^\W*(?:grant (?:abundant )?peace|sim shalom|shalom rav|abundant peace|establish (?:abundant )?peace|bestow peace|place peace|set peace|put peace)',
+      caseSensitive: false);
+
+  static bool _bkStartEn(Segment s) {
+    final t = s.plain.trim();
+    if (RegExp(r'threefold blessing', caseSensitive: false).hasMatch(t)) return true;
+    if (!_bkNameEn.hasMatch(t)) return false;
+    // An instruction, a bracketed one printed as text, or a heading line.
+    return s.kind != SegmentKind.prayer || t.startsWith('[') || t.startsWith('(') || _bkNameEn.matchAsPrefix(t) != null;
+  }
+
+  static bool _bkEndEn(Segment s) {
+    final t = s.plain.trim();
+    if (s.kind == SegmentKind.speaker) return RegExp(r'peace|shalom', caseSensitive: false).hasMatch(t);
+    return s.kind == SegmentKind.prayer && _bkEndPrayerEn.hasMatch(t);
   }
 
   void _propagate(List<Segment> segs) {

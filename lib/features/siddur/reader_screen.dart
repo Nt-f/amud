@@ -361,6 +361,11 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
                   (g is HeadingItem ? g.node : (g as CollapsedSectionItem).node).he),
         ];
         if (titles.isEmpty && group.any((g) => g is SegmentItem && isChazarahSegment(g))) titles.add(context.tr('Modim DeRabbanan'));
+        // Birkas Kohanim printed inside the Amidah, or not said today.
+        if (titles.isEmpty &&
+            group.any((g) => g is SegmentItem && g.chazarah || g is ExcludedGroupItem && g.items.any((i) => i.chazarah))) {
+          titles.add(context.prayerTitle(s, 'Birkat Kohanim', 'ברכת כהנים'));
+        }
         rows.add((c) => _ChazarahHeader(
               title: titles.toSet().join(' · '),
               open: open,
@@ -433,8 +438,8 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
   static bool _isChazarah(RenderItem it) => switch (it) {
         HeadingItem h => h.level > 0 && isChazarahNode(h.node),
         CollapsedSectionItem c => isChazarahNode(c.node),
-        SegmentItem s => isChazarahNode(s.node) || isChazarahSegment(s),
-        ExcludedGroupItem g => g.items.every((i) => isChazarahNode(i.node)),
+        SegmentItem s => isChazarahNode(s.node) || s.chazarah || isChazarahSegment(s),
+        ExcludedGroupItem g => g.items.every((i) => isChazarahNode(i.node) || i.chazarah),
         _ => false,
       };
 

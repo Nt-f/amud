@@ -219,8 +219,11 @@ class SegmentItem extends RenderItem {
   /// One of several alternative lines (see [Segment.option]); shown crossed
   /// out rather than folded away when not said.
   final bool option;
+
+  /// Said only in the chazzan's repetition (see [Segment.chazarah]).
+  final bool chazarah;
   const SegmentItem(super.key, this.node, this.he, this.tr, this.kind, this.applicability, this.labelEn,
-      this.labelHe, this.excluded, {this.announces = false, this.option = false});
+      this.labelHe, this.excluded, {this.announces = false, this.option = false, this.chazarah = false});
 }
 
 /// Consecutive segments that aren't said today, folded into one row.
@@ -314,6 +317,9 @@ class SiddurResolver {
     }
     return null;
   }
+
+  static const _fastDayOnly = RubricMatch('fastDay', ['Fast day'], ['תענית']);
+  static final _birkatKohanimLeaf = RegExp(r'[kc]oh?anim|priestly', caseSensitive: false);
 
   Applicability _eval(Condition c, DayContext ctx) {
     final unknown = <String>{};
@@ -571,7 +577,14 @@ class SiddurResolver {
       final key = 's:${leaf.id}:${primary.ref}:${h == null ? 't' : (t == null ? 'h' : 'b')}';
       // Segment-level condition: prefer Hebrew analysis, fall back to the
       // translation's own rubric when unaligned or Hebrew has none.
-      final rubric = h?.rubric ?? (aligned || h == null ? t?.rubric : null);
+      var rubric = h?.rubric ?? (aligned || h == null ? t?.rubric : null);
+      // Either language may be the one that recognized the passage.
+      // A section that is itself Birkas Kohanim (the kohanim's, on Yom Tov)
+      // is what the reader opened, not an aside in it.
+      final chazarah = !_birkatKohanimLeaf.hasMatch(leaf.en) && ((h?.chazarah ?? false) || (aligned && (t?.chazarah ?? false)));
+      // At Mincha the chazzan says Birkas Kohanim only on a fast day; some
+      // siddurim print it there without saying so.
+      if (chazarah && rubric == null && ctx.service == Service.mincha) rubric = _fastDayOnly;
       // Prayer text and notes each have their own language choice.
       final prayer = primary.kind == SegmentKind.prayer;
       if (!(prayer ? options.showHebrew : options.notesHebrew)) h = null;
@@ -597,6 +610,7 @@ class SiddurResolver {
         isExcluded,
         announces: (h ?? t)!.announces,
         option: (h ?? t)!.option,
+        chazarah: chazarah || (h == null && !_birkatKohanimLeaf.hasMatch(leaf.en) && (t?.chazarah ?? false)),
       ));
     }
 
