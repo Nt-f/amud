@@ -1,8 +1,9 @@
 name: Build
 
-# Builds every platform: Android, Windows, Linux, macOS, iOS (unsigned) and
-# the web app. Windows and Apple builds need their own hosts (Flutter can't
-# cross-compile), so each platform is its own job.
+# Builds Android (with the Wear OS companion), Windows, Linux and the web
+# app. Windows needs its own host (Flutter can't cross-compile), so each
+# platform is its own job. macOS and iOS build in apple.yml, which adds
+# them to the release when they succeed, so they never hold it up.
 #
 # Pushing a tag like `v0.4.0` builds that version and publishes a GitHub
 # Release; the apps' update checker (lib/features/update) looks for the
@@ -14,10 +15,6 @@ name: Build
 # release builds, or Android won't install one over the other):
 #   SIDDUR_KEYSTORE_BASE64  base64 of the .jks file
 #   SIDDUR_KEYSTORE_PASSWORD, SIDDUR_KEY_ALIAS, SIDDUR_KEY_PASSWORD
-#
-# The macOS and iOS builds are unsigned: macOS asks to confirm the first
-# launch (right-click → Open), and the .ipa must be signed by a sideloading
-# tool (AltStore, Sideloadly) before it installs.
 on:
   workflow_dispatch:
   push:
@@ -154,47 +151,6 @@ jobs:
           name: amud-linux
           path: amud-linux-x64.tar.gz
 
-  macos:
-    needs: [version, test]
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: stable
-          flutter-version: ${{ env.FLUTTER_VERSION }}
-          cache: true
-      - run: flutter pub get
-      - run: flutter build macos --release --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }}
-      # ditto keeps the .app bundle's symlinks and permissions intact.
-      - run: ditto -c -k --keepParent "$(ls -d build/macos/Build/Products/Release/*.app | head -1)" amud-macos.zip
-      - uses: actions/upload-artifact@v4
-        with:
-          name: amud-macos
-          path: amud-macos.zip
-
-  ios:
-    needs: [version, test]
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: stable
-          flutter-version: ${{ env.FLUTTER_VERSION }}
-          cache: true
-      - run: flutter pub get
-      - run: flutter build ios --release --no-codesign --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }}
-      # An .ipa is the .app inside a Payload/ folder, zipped.
-      - run: |
-          mkdir Payload
-          cp -R build/ios/iphoneos/Runner.app Payload/
-          zip -qr amud-ios-unsigned.ipa Payload
-      - uses: actions/upload-artifact@v4
-        with:
-          name: amud-ios
-          path: amud-ios-unsigned.ipa
-
   web:
     needs: [version, test]
     runs-on: ubuntu-latest
@@ -216,7 +172,7 @@ jobs:
 
   release:
     if: startsWith(github.ref, 'refs/tags/v')
-    needs: [version, windows, android, linux, macos, ios, web]
+    needs: [version, windows, android, linux, web]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -250,6 +206,4 @@ jobs:
             amud-wear-os.apk
             amud-windows.zip
             amud-linux-x64.tar.gz
-            amud-macos.zip
-            amud-ios-unsigned.ipa
             amud-web.zip

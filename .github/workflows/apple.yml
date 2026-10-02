@@ -1,0 +1,94 @@
+name: Apple
+
+# Builds macOS and iOS (unsigned) apart from the main Build workflow, so the
+# release never waits on them: the widget and watch targets added in 0.7.0
+# haven't been built on a Mac yet. When a tag's build succeeds, its file is
+# added to that tag's GitHub Release (created by build.yml).
+#
+# Both builds are unsigned: macOS asks to confirm the first launch
+# (right-click → Open), and the .ipa must be signed by a sideloading tool
+# (AltStore, Sideloadly) before it installs.
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+
+env:
+  FLUTTER_VERSION: 3.41.2
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    outputs:
+      name: ${{ steps.v.outputs.name }}
+      number: ${{ steps.v.outputs.number }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      # The build number counts commits: it only goes up, whichever
+      # workflow built the version.
+      - id: v
+        shell: bash
+        run: |
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then
+            echo "name=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+          else
+            echo "name=$(grep '^version:' pubspec.yaml | sed 's/version: *//; s/+.*//')" >> "$GITHUB_OUTPUT"
+          fi
+          echo "number=$(git rev-list --count HEAD)" >> "$GITHUB_OUTPUT"
+
+  macos:
+    needs: version
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          cache: true
+      - run: flutter pub get
+      - run: flutter build macos --release --build-name=${{ needs.version.outputs.name }} --build-number=${{ needs.version.outputs.number }}
+      # ditto keeps the .app bundle's symlinks and permissions intact.
+      - run: ditto -c -k --keepParent "$(ls -d build/macos/Build/Products/Release/*.app | head -1)" amud-macos.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: amud-macos
+          path: amud-macos.zip
+      - name: Add to the release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash .github/upload_to_release.sh amud-macos.zip
+    permissions:
+      contents: write
+
+  ios:
+    needs: version
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          cache: true
+      - run: flutter pub get
+      - run: flutter build ios --release --no-codesign --build-name=${{ needs.version.outputs.name }} --build-number=${{ needs.version.outputs.number }}
+      # An .ipa is the .app inside a Payload/ folder, zipped.
+      - run: |
+          mkdir Payload
+          cp -R build/ios/iphoneos/Runner.app Payload/
+          zip -qr amud-ios-unsigned.ipa Payload
+      - uses: actions/upload-artifact@v4
+        with:
+          name: amud-ios
+          path: amud-ios-unsigned.ipa
+      - name: Add to the release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash .github/upload_to_release.sh amud-ios-unsigned.ipa
+    permissions:
+      contents: write
