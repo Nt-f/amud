@@ -50,6 +50,14 @@ jobs:
           cache: true
       - run: flutter pub get
       - run: flutter build macos --release --build-name=${{ needs.version.outputs.name }} --build-number=${{ needs.version.outputs.number }}
+      # Diagnostics for the widget extension's link (temporary).
+      - name: Why the widget links Flutter plugins
+        if: failure()
+        run: |
+          echo '--- project after Flutter migration'; git diff macos/Runner.xcodeproj | head -150
+          echo '--- widget settings'; xcodebuild -project macos/Runner.xcodeproj -target AmudWidgets -configuration Release -showBuildSettings 2>/dev/null | grep -E 'OTHER_LDFLAGS|OTHER_SWIFT_FLAGS|LIBRARY_SEARCH|FRAMEWORK_SEARCH|SWIFT_INCLUDE|PACKAGE' || true
+          echo '--- widget link command'
+          xcodebuild -workspace macos/Runner.xcworkspace -scheme Runner -configuration Release -derivedDataPath build/macos 2>&1 | grep -E 'Ld .*AmudWidgets|AmudWidgets.*(clang|ld) ' -A3 | head -40 || true
       # ditto keeps the .app bundle's symlinks and permissions intact.
       - run: ditto -c -k --keepParent "$(ls -d build/macos/Build/Products/Release/*.app | head -1)" amud-macos.zip
       - uses: actions/upload-artifact@v4

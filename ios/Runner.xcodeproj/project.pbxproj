@@ -214,7 +214,7 @@
 		74BCB35F82CCA554DAE29385 = {isa = PBXNativeTarget; buildConfigurationList = 9D9B5AAC72BBA997C886AFB4; buildPhases = (2DE8915290B607B1BB96293E,843A5EBCFC2EE88A243B0D02,62DDB136BE8AAE50410AC288,); buildRules = (); dependencies = (); name = AmudWidgets; productName = AmudWidgets; productReference = AD749E21F95E8D348AACF41C; productType = "com.apple.product-type.app-extension"; };
 		BB3739EA5FC06F433BE2490B = {isa = PBXNativeTarget; buildConfigurationList = 653126201BC92D503D4CF46F; buildPhases = (BED468E9CC5CE6AF73DD1BE1,FDE1A4088A1AC24A94D96BC8,1FD34A02C472A003CF0E6704,
 				6C50EB07042E95E70A5CEC26,); buildRules = (); dependencies = (
-				C5F71E4D5E56EB38D61E824E,); name = AmudWatch; productName = AmudWatch; productReference = 8793C8D7DE12C5A973DE2724; productType = "com.apple.product-type.application.watchapp2"; };
+				C5F71E4D5E56EB38D61E824E,); name = AmudWatch; productName = AmudWatch; productReference = 8793C8D7DE12C5A973DE2724; productType = "com.apple.product-type.application"; };
 		3CE05DD42B367F9C0959987C = {isa = PBXNativeTarget; buildConfigurationList = 2869845E52A70A8B11E8D1F8; buildPhases = (109C1FB971F0657B71A999DD,229EF6A8DDF6654971D02C8E,27227D721486BDEE51FC7D3C,); buildRules = (); dependencies = (); name = AmudWatchWidgets; productName = AmudWatchWidgets; productReference = 6724254FE020EBD68C8A1DCB; productType = "com.apple.product-type.app-extension"; };
 /* End PBXNativeTarget section */
 
