@@ -1,0 +1,3965 @@
+{
+ "nusach": "koren",
+ "chunk": "Shabbat [Kiddush and Zemirot for Shabbat Morning .. Barekhi Nafshi]",
+ "leaves": {
+  "Shabbat/Kiddush and Zemirot for Shabbat Morning": {
+   "node": "shabbat.zemirot",
+   "service": "shacharit",
+   "when": "shabbat"
+  },
+  "Shabbat/Minha for Shabbat and Yom Tov": {
+   "node": "amidah.avot",
+   "service": "mincha",
+   "when": "shabbat || yomTov"
+  },
+  "Shabbat/Barekhi Nafshi": {
+   "node": "shabbat.barchi_nafshi",
+   "service": "shacharit",
+   "when": "!shabbat && !yomTov && !roshChodesh && !chanukah && !purim && !pesach && !shavuot && !sukkot && !roshHashana && !yomKippur && !simchatTorah && !shminiAtzeret && !isruChag && !yomHaatzmaut && !yomYerushalayim && !yomHazikaron && !tuBishvat && !tuBav && !lagBaomer && !pesachSheni && !purimKatan && !behab && !yomKippurKatan && !tzomGedaliah && !asaraBTevet && !taanitEsther && !tzomTammuz && !publicFast && !fastDay && !tishaBav && !nineDays && !threeWeeks && !elul && !ledavid && !mashivHaruach && !moridHatal && !talUmatar && !omer && !hallel && !wholeHallel && !halfHallel && !tachanun && !tachanunShacharit && !tachanunMincha && !monThu && !torahReading && !avinuMalkeinu && !tzidkatcha && !avHarachamim && !barchiNafshiShabbat && !pirkeiAvot && !shabbatMevarchim && !yomHaatzmaut && !yomYerushalayim && !yomHazikaron && !isruChag && !kiddushLevana && !eruvTavshilin && !yizkor && !minyan && !mourner && !aveilut && !leapYear && !shabbatShekalim && !shabbatZachor && !shabbatParah && !shabbatHachodesh && !shabbatHagadol && !shabbatChazon && !shabbatNachamu && !erevPesach && !erevTishaBav && !tuBishvat && !tuBav && !lagBaomer && !pesachSheni && !hoshanaDay && !yomTovDay && !firstDayRoshHashana && !secondDayRoshHashana && !chazarah && !kohanim && !birkatKohanimChazzan && !houseOfMourning && !bris && !chatan && !noTefillinCholHamoed"
+  }
+ },
+ "he": {
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:2": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:3": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:4": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:5": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:6": {
+   "kind": "heading",
+   "en": "Kiddusha Rabba"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:8": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:10": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:11": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:13": {
+   "kind": "instruction",
+   "en": "Please pay attention, my masters.",
+   "gloss": "Said when reciting Kiddush for others"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:14": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:16": {
+   "kind": "prayer",
+   "role": "individual",
+   "en": "Blessed are You, Lord our God, King of the Universe, who has made us holy through His commandments, and has commanded us to dwell in the sukka.",
+   "gloss": "Added on Shabbat Chol HaMoed Sukkot if Kiddush is made in the sukkah"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:17": {
+   "kind": "heading",
+   "en": "Zemirot for Shabbat Day"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:18": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:19": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:20": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:21": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:22": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:23": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:24": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:25": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:26": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:27": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:28": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:29": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:30": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:31": {
+   "kind": "prayer",
+   "role": "individual",
+   "repeat": 7,
+   "alt": "shabbat_zemirot_refrain"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:32": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:33": {
+   "kind": "prayer",
+   "role": "individual",
+   "repeat": 7,
+   "alt": "shabbat_zemirot_refrain"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:34": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:35": {
+   "kind": "prayer",
+   "role": "individual",
+   "repeat": 7,
+   "alt": "shabbat_zemirot_refrain"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:36": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:37": {
+   "kind": "prayer",
+   "role": "individual",
+   "repeat": 7,
+   "alt": "shabbat_zemirot_refrain"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:38": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:39": {
+   "kind": "prayer",
+   "role": "individual",
+   "repeat": 7,
+   "alt": "shabbat_zemirot_refrain"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:40": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:41": {
+   "kind": "prayer",
+   "role": "individual",
+   "repeat": 7,
+   "alt": "shabbat_zemirot_refrain"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:42": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:43": {
+   "kind": "prayer",
+   "role": "individual",
+   "repeat": 7,
+   "alt": "shabbat_zemirot_refrain"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:44": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:45": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:46": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:47": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:48": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:49": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:50": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:51": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:52": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:53": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:54": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:55": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:56": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:57": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:58": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:59": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:60": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:61": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:62": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:63": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:64": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:65": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:66": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:67": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:68": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:69": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:70": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:71": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:72": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:73": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:74": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:75": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:76": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:77": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:78": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:79": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:80": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:81": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:82": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:83": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:84": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:85": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:86": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:87": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:88": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:89": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:90": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:91": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:92": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:93": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:94": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:95": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:67": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:68": {
+   "kind": "heading",
+   "en": "Divine Might"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:69": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:71": {
+   "kind": "instruction",
+   "en": "In winter:",
+   "gloss": "Diaspora custom"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:72": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:73": {
+   "kind": "instruction",
+   "en": "On Shabbat Shuva:",
+   "gloss": "Shabbat between Rosh Hashana and Yom Kippur"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:74": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:76": {
+   "kind": "heading",
+   "en": "Kedushah"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:78": {
+   "kind": "instruction",
+   "en": "Congregation and Leader:",
+   "gloss": "Said together in repetition"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:79": {
+   "kind": "instruction",
+   "en": "Congregation and Leader:",
+   "gloss": "Said together in repetition"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:80": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:81": {
+   "kind": "instruction",
+   "en": "Congregation and Leader:",
+   "gloss": "Said together in repetition"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:82": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:83": {
+   "kind": "instruction",
+   "en": "Congregation and Leader:",
+   "gloss": "Said together in repetition"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:84": {
+   "kind": "instruction",
+   "en": "Leader:",
+   "gloss": "Chazzan concludes"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:86": {
+   "kind": "heading",
+   "en": "Holiness of God"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:87": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:88": {
+   "kind": "heading",
+   "en": "Holiness of the Day"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:89": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:90": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:91": {
+   "kind": "heading",
+   "en": "Temple Service"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:92": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:93": {
+   "kind": "instruction",
+   "en": "On Rosh Chodesh and Chol HaMoed:",
+   "gloss": "Ya'aleh VeYavo insertion"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:94": {
+   "kind": "prayer",
+   "when": "roshChodesh || cholHamoed"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:95": {
+   "kind": "prayer",
+   "when": "roshChodesh || cholHamoed"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:96": {
+   "kind": "heading",
+   "en": "Thanksgiving"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:98": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:99": {
+   "kind": "prayer",
+   "role": "congregation",
+   "amidah": "repetition",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:100": {
+   "kind": "prayer",
+   "when": "chanukah",
+   "role": "congregation",
+   "amidah": "repetition",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:101": {
+   "kind": "prayer",
+   "when": "shushanPurim",
+   "role": "congregation",
+   "amidah": "repetition",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:102": {
+   "kind": "prayer",
+   "role": "congregation",
+   "amidah": "repetition",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:103": {
+   "kind": "instruction",
+   "en": "On Shabbat Shuva:",
+   "gloss": "Shabbat between Rosh Hashana and Yom Kippur"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:104": {
+   "kind": "prayer",
+   "role": "congregation",
+   "amidah": "repetition",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:105": {
+   "kind": "heading",
+   "en": "Blessing of Peace"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:106": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:107": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:108": {
+   "kind": "instruction",
+   "en": "On Shabbat Shuva:",
+   "gloss": "Shabbat between Rosh Hashana and Yom Kippur"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:109": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:110": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:112": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:113": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:115": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:116": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:118": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:119": {
+   "kind": "heading",
+   "en": "Kaddish Shalem"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:120": {
+   "kind": "instruction",
+   "en": "Leader:",
+   "gloss": "Chazzan leads"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:121": {
+   "kind": "instruction",
+   "en": "Congregation and Leader:",
+   "gloss": "Said together"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:122": {
+   "kind": "instruction",
+   "en": "Leader:",
+   "gloss": "Chazzan leads"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:1": {
+   "kind": "prayer",
+   "node": "concl.ashrei"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:2": {
+   "kind": "prayer",
+   "node": "concl.uva_letzion"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:3": {
+   "kind": "prayer",
+   "node": "concl.uva_letzion"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:4": {
+   "kind": "prayer",
+   "node": "amidah.kedusha",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:5": {
+   "kind": "prayer",
+   "node": "amidah.kedusha",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:6": {
+   "kind": "prayer",
+   "node": "amidah.kedusha",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:7": {
+   "kind": "prayer",
+   "node": "amidah.kedusha",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:8": {
+   "kind": "prayer",
+   "node": "amidah.kedusha",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:9": {
+   "kind": "prayer",
+   "node": "amidah.kedusha",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:10": {
+   "kind": "prayer",
+   "node": "concl.uva_letzion"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:11": {
+   "kind": "prayer",
+   "node": "concl.uva_letzion"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:12": {
+   "kind": "prayer",
+   "node": "concl.uva_letzion"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:13": {
+   "kind": "heading",
+   "en": "Half Kaddish"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:14": {
+   "kind": "speaker",
+   "node": "kaddish.half",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Leader:"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:15": {
+   "kind": "speaker",
+   "node": "kaddish.half",
+   "role": "congregation",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "All:"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:16": {
+   "kind": "speaker",
+   "node": "kaddish.half",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Leader:"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:18": {
+   "kind": "prayer",
+   "node": "torah.vayehi_binsoa",
+   "role": "congregation"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:20": {
+   "kind": "prayer",
+   "node": "torah.vayehi_binsoa",
+   "role": "congregation"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:21": {
+   "kind": "prayer",
+   "node": "torah.berich_shmei",
+   "role": "congregation"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:23": {
+   "kind": "prayer",
+   "node": "torah.gadlu",
+   "role": "chazzan"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:25": {
+   "kind": "prayer",
+   "node": "torah.lecha_hashem",
+   "role": "congregation"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:26": {
+   "kind": "prayer",
+   "node": "torah.lecha_hashem",
+   "role": "congregation"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:27": {
+   "kind": "prayer",
+   "node": "torah.al_hakol",
+   "role": "congregation"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:29": {
+   "kind": "prayer",
+   "node": "torah.al_hakol",
+   "role": "congregation"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:31": {
+   "kind": "instruction",
+   "en": "If no Kohen is present, a Levi or Yisrael is called up as follows:",
+   "gloss": "Alternative call when no Kohen is present",
+   "forgot": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:32": {
+   "kind": "prayer",
+   "node": "torah.aliyah_blessings",
+   "role": "oleh"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:34": {
+   "kind": "prayer",
+   "node": "torah.aliyah_blessings",
+   "role": "oleh"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:36": {
+   "kind": "speaker",
+   "en": "Oleh:",
+   "gloss": "The person called to the Torah"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:37": {
+   "kind": "prayer",
+   "node": "torah.aliyah_blessings",
+   "role": "congregation"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:38": {
+   "kind": "prayer",
+   "node": "torah.aliyah_blessings",
+   "role": "oleh"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:39": {
+   "kind": "prayer",
+   "node": "torah.aliyah_blessings",
+   "role": "oleh"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:41": {
+   "kind": "prayer",
+   "node": "torah.aliyah_blessings",
+   "role": "oleh"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:43": {
+   "kind": "prayer",
+   "node": "torah.hagbah",
+   "role": "congregation_then_chazzan",
+   "gestures": [
+    "hold_torah"
+   ]
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:45": {
+   "kind": "prayer",
+   "node": "torah.hagbah",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:47": {
+   "kind": "prayer",
+   "node": "torah.hagbah",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:49": {
+   "kind": "prayer",
+   "node": "torah.hagbah",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:51": {
+   "kind": "prayer",
+   "node": "torah.ledavid_mizmor",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:53": {
+   "kind": "prayer",
+   "node": "torah.ledavid_mizmor",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:55": {
+   "kind": "heading",
+   "node": "kaddish.half",
+   "en": "Half Kaddish"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:56": {
+   "kind": "instruction",
+   "node": "kaddish.half",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Chazzan:"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:57": {
+   "kind": "instruction",
+   "node": "kaddish.half",
+   "role": "together",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Congregation and Chazzan:"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:58": {
+   "kind": "instruction",
+   "node": "kaddish.half",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Chazzan:"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:60": {
+   "kind": "heading",
+   "node": "amidah.avot",
+   "en": "Amidah"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:62": {
+   "kind": "prayer",
+   "node": "amidah.avot",
+   "role": "individual"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:63": {
+   "kind": "prayer",
+   "node": "amidah.opening",
+   "role": "individual"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:64": {
+   "kind": "heading",
+   "node": "amidah.avot",
+   "en": "Patriarchs"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:65": {
+   "kind": "prayer",
+   "node": "amidah.avot",
+   "role": "individual"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:66": {
+   "kind": "instruction",
+   "node": "amidah.avot",
+   "role": "individual",
+   "en": "On Shabbat Shuva:",
+   "gloss": "Said only on Shabbat Shuva",
+   "forgot": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:123": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "amidah": "repetition"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:124": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "amidah": "repetition"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:126": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "amidah": "repetition"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:129": {
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud",
+   "minyan": true,
+   "gestures": [
+    "bow_left_right_center"
+   ]
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:130": {
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:132": {
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:133": {
+   "kind": "heading",
+   "en": "Mourner's Kaddish"
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:135": {
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:136": {
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:137": {
+   "parts": [
+    {
+     "kind": "prayer",
+     "when": "!shabbatShuva",
+     "text": "<i class=\"instruction\">אבל:</i> יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר<br>וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל<br>שְׁמֵהּ דְּקֻדְשָׁא בְּרִיךְ הוּא (בְּרִיךְ הוּא)"
+    },
+    {
+     "kind": "instruction",
+     "en": "On Shabbat Shuva:",
+     "gloss": "Said on Shabbat Shuva",
+     "text": "<br>"
+    },
+    {
+     "kind": "prayer",
+     "when": "shabbatShuva",
+     "text": "לְעֵֽלָּא מִן כָּל בִּרְכָתָא<br> /<i class=\"instruction\">בשבת שובה:</i> לְעֵֽלָּא לְעֵֽלָּא מִכָּל בִּרְכָתָא/<br>וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא<br>דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן. (<i class=\"instruction\">קהל:</i> אָמֵן)"
+    }
+   ]
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:138": {
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/Minha for Shabbat and Yom Tov:140": {
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/Barekhi Nafshi:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Barekhi Nafshi:17": {
+   "kind": "prayer"
+  }
+ },
+ "en": {
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:1": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Some say:",
+   "gloss": "Optional introductory phrase for the Zemirot"
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:2": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:2"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:3": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:3"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:4": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:4"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:5": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:5"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:6": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:6"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:7": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Some say:",
+   "gloss": "Optional introductory phrase for the verses before Kiddush"
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:8": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:8"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:9": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Most begin Kiddush here. On Yom Tov that falls on Shabbat, say the Kiddush on page 768.",
+   "gloss": "Instruction on when to start the blessing"
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:10": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:10"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:11": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:11"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:12": {
+   "he": [],
+   "kind": "instruction",
+   "en": "When saying Kiddush for others, add:",
+   "gloss": "Instruction for leading Kiddush"
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:13": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:13"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:14": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:14"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:15": {
+   "he": [],
+   "kind": "instruction",
+   "en": "On Shabbat Chol HaMoed Sukkot, if Kiddush is made in the sukkah, add:",
+   "gloss": "Condition for adding the Sukkah blessing"
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:16": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:16"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:17": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:17"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:18": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:18"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:19": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:19"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:20": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:20"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:21": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:21"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:22": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:22"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:23": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:23"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:24": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:24"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:25": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:25"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:26": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:26"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:27": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:27"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:28": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:28"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:29": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:29"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:30": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:30"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:31": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:31"
+   ],
+   "alt": "shabbat_zemirot_refrain",
+   "role": "individual"
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:32": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:32"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:33": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:33"
+   ],
+   "alt": "shabbat_zemirot_refrain",
+   "role": "individual"
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:34": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:34"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:35": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:35"
+   ],
+   "alt": "shabbat_zemirot_refrain",
+   "role": "individual"
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:36": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:36"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:37": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:37"
+   ],
+   "alt": "shabbat_zemirot_refrain",
+   "role": "individual"
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:38": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:38"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:39": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:39"
+   ],
+   "alt": "shabbat_zemirot_refrain",
+   "role": "individual"
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:40": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:40"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:41": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:41"
+   ],
+   "alt": "shabbat_zemirot_refrain",
+   "role": "individual"
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:42": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:42"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:43": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:43"
+   ],
+   "alt": "shabbat_zemirot_refrain",
+   "role": "individual"
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:44": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:44"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:45": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:45"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:46": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:46"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:47": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:47"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:48": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:48"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:49": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:54"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:50": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:55"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:51": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:56"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:52": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:57"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:53": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:58"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:54": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:59"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:55": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:60"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:56": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:61"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:57": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:62"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:58": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:63"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:59": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:64"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:60": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:65"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:61": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:66"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:62": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:67"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:63": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:68"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:64": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:69"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:65": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:70"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:66": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:71"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:67": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:72"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:68": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:73"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:69": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:74"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:70": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:75"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:71": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:76"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:72": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:77"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:73": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:78"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:74": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:79"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:75": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:80"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:76": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:81"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:77": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:82"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:78": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:83"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:79": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:84"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:80": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:85"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:81": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:86"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:82": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:87"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:83": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:88"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:84": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:89"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:85": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:90"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:86": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:91"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:87": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:92"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:88": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:93"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:89": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:94"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:90": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:95"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:91": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:91"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:92": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:92"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:93": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:93"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:94": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:94"
+   ]
+  },
+  "en:Shabbat/Kiddush and Zemirot for Shabbat Morning:95": {
+   "he": [
+    "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:95"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:49": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:67"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:50": {
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:51": {
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:52": {
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:53": {
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:54": {
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:55": {
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:56": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br>in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:120"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:57": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "  May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:121"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:58": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world –<br>and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:122"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:59": {
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:60": {
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:61": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following prayer, until “in former years” on page 620, is said silently, standing</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">with feet together. If there is a minyan, the Amida is repeated aloud by the Leader.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Take three steps forward and at the points indicated by ▾, bend the knees at the first word,</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">bow at the second, and stand straight before saying God’s name.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:62": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:63"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:63": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:63"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:64": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:64"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:65": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:65"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:66": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Shabbat Shuva:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Remember us for life,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>O King who desires life,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and write us in the book of life –<br>for Your sake,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O God of life.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:66"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:67": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:67"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:68": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:68"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:69": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:69"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:70": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The phrase “He makes the wind blow and the rain fall” is added from</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Simḥat Torah until Pesaḥ. In Israel, the phrase “He causes the dew to fall”</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">is added from Pesaḥ until Shemini Atzeret. See laws 129–131.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:71"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:71": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">In fall & winter:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " He makes the wind blow and the rain fall.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">In Israel, in spring & summer:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " He causes the dew to fall.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:71"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:72": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:72"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:73": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Shabbat Shuva:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Who is like You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " compassionate Father,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>who remembers His creatures in compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for life?",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:73"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:74": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:74"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:75": {
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:76": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:76"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:77": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">During the Leader’s Repetition, the following is said standing</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">with feet together, rising on the toes at the words indicated by▴.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:78"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:78": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong. then Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " נְקַדֵּשׁ We will sanctify Your name on earth,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>as they sanctify it in the highest heavens,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>as is written by Your prophet,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>“And they [the angels] call to one another saying:",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:78"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:79": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong. then Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " ▴Holy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " ▴holy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " ▴holy is the <small>LORD</small> of hosts<br>the whole world is filled with His glory.”",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:79"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:80": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:80"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:81": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong. then Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " ▴“Blessed is the <small>LORD</small>’s glory from His place.”",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:81"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:82": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:82"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:83": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong. then Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " ▴“The <small>LORD</small> shall reign for ever. He is your God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Zion,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>from generation to generation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Halleluya!”",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:83"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:84": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " From generation to generation we will declare Your greatness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and we will proclaim Your holiness for evermore.<br>Your praise,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " shall not leave our mouth forever,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>for You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " are a great and holy King. Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>the holy God. /",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Shabbat Shuva:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the holy King./",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:84"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:85": {
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:86": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:86"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:87": {
+   "parts": [
+    {
+     "text": " אַתָּה קָדוֹשׁ You are holy and Your name is holy,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and holy ones praise You daily,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Selah!<br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>the holy God. /",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Shabbat Shuva:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the holy King./<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">(If forgotten, repeat the Amida.)</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:87"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:88": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:88"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:89": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:89"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:90": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:90"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:91": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:91"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:92": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:92"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:93": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:93"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:94": {
+   "parts": [
+    {
+     "text": "אֱלֹהֵֽינוּ Our God and God of our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may there rise,",
+     "kind": "prayer"
+    },
+    {
+     "text": " come,",
+     "kind": "prayer"
+    },
+    {
+     "text": " reach,",
+     "kind": "prayer"
+    },
+    {
+     "text": " appear,",
+     "kind": "prayer"
+    },
+    {
+     "text": " be favored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " heard,",
+     "kind": "prayer"
+    },
+    {
+     "text": " regarded and remembered before You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our recollection and remembrance,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as well as the remembrance of our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and of the Messiah son of David Your servant,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and of Jerusalem Your holy city,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and of all Your people the house of Israel – for deliveranceand well-being,",
+     "kind": "prayer"
+    },
+    {
+     "text": " grace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " loving-kindness and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " life and peace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " on this day of:<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Rosh Ḥodesh:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Rosh Ḥodesh.<br> ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Pesaḥ:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Matzot.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Sukkot:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Sukkot.<br>On it remember us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for good;",
+     "kind": "prayer"
+    },
+    {
+     "text": " recollect us for blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and deliver us for life. In accord with Your promise of salvation and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " spare us and be gracious to us;",
+     "kind": "prayer"
+    },
+    {
+     "text": " have compassion on us and deliver us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for our eyes are turned to You because You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " are a gracious and compassionate King.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:94"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:95": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:95"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:96": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:96"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:1": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:1"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:2": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:2"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:3": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:3"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:4": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:4"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:5": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:5"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:6": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:6"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:7": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:7"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:8": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:8"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:9": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:9"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:10": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:10"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:11": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:11"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:12": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:12"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:13": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:13"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:14": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br>in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:14"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:15": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "  May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:15"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:16": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world –<br>and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:16"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:17": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:18"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:18": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:18"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:19": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:20"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:20": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:20"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:21": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:21"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:22": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:23"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:23": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:23"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:24": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:25"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:25": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:25"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:26": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:26"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:27": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:27"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:28": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:29"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:29": {
+   "parts": [
+    {
+     "text": "<b>וְתִגָּלֶה</b> May His kingship over us be soon revealed and made manifest. May He be gracious to our surviving remnant,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the remnant of His people the house of Israel in grace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " loving-kindness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " compassion and favor,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let us say: Amen. Let us all render greatness to our God and give honor to the Torah. *Let the Kohen come forward. Arise (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Kohen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:29"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:30": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:31"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:31": {
+   "parts": [
+    {
+     "text": "/As there is no Kohen,",
+     "kind": "prayer"
+    },
+    {
+     "text": " arise (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") in place of a Kohen./",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:31"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:32": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:32"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:33": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:43"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:34": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:45"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:35": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The appropriate Torah portions are to be found from page 1072.<br>The Reader shows the oleh the section to be read. The oleh touches the scroll</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">at that place with the tzitzit of his tallit or the fabric belt of the Torah scroll,</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">which he then kisses. Holding the handles of the scroll, he says:</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:43"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:36": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Oleh:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Bless the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:43"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:37": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Bless the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:43"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:38": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Oleh:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Bless the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:43"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:39": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:39"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:40": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:41"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:41": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Oleh:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small> our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " King of the Universe,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who has given us the Torah of truth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " planting everlasting life in our midst. Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Giver of the Torah.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:41"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:42": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:43"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:43": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:43"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:44": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:45"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:45": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:45"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:46": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The Torah scroll is bound and covered. In some congregations,</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">during the week before a yahrzeit, “God, full of mercy” on page 804 is said.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">The Ark is opened. The Leader takes the Torah scroll and says:</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:51"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:47": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:51"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:48": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:51"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:97": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:123"
+   ],
+   "kind": "instruction",
+   "en": "Bow at the first nine words."
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:98": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:124"
+   ],
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:99": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">During the Leader’s Repetition, the congregation says quietly:</i>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "undertone",
+     "minyan": true
+    },
+    {
+     "text": " ▾מוֹדִים We give thanks to You,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "undertone",
+     "minyan": true
+    },
+    {
+     "text": " for You are the Lord our God and God of our ancestors,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "undertone",
+     "minyan": true
+    },
+    {
+     "text": " God of all flesh,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "undertone",
+     "minyan": true
+    },
+    {
+     "text": " who formed us and formed the universe. Blessings and thanks are due to Your great and holy name for giving us life and sustaining us. May You continue to give us life and sustain us;",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "undertone",
+     "minyan": true
+    },
+    {
+     "text": " and may You gather our exiles to Your holy courts,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "undertone",
+     "minyan": true
+    },
+    {
+     "text": " to keep Your decrees,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "undertone",
+     "minyan": true
+    },
+    {
+     "text": " do Your will and serve You with a perfect heart,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "undertone",
+     "minyan": true
+    },
+    {
+     "text": " for it is for us to give You thanks. Blessed be God to whom thanks­giving is due.</small>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "undertone",
+     "minyan": true
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:126"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:100": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Ḥanukka:</i>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": "<br>עַל הַנִּסִּים [We thank You also] for the miracles,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " the redemption,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " the mighty deeds,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " the salvations,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " and the victories in battle which You performed for our ancestors in those days,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " at this time.<br>בִּימֵי מַתִּתְיָֽהוּ In the days of Mattityahu,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " son of Yoḥanan,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " the High Priest,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " the Hasmonean,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " and his sons,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " the wicked Greek kingdom rose up against Your people Israel to make them forget Your Torah and to force them to transgress the statutes of Your will. It was then that You in Your great compassion stood by them in the time of their distress. You championed their cause,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " judged their claim,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " and avenged their wrong. You delivered the strong into the hands of the weak,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " the many into the hands of the few,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " the impure into the hands of the pure,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " the wicked into the hands of the righteous,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " and the arrogant into the hands of those who were engaged in the study of Your Torah. You made for Yourself great and holy renown in Your world,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " and for Your people Israel You performed a great salvation and redemption as of this very day. Your children then entered the holiest part of Your House,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " cleansed Your Temple,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " purified Your Sanctuary,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " kindled lights in Your holy courts,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": " and designated these eight days of Ḥanukka for giving thanks and praise to Your great name.<br>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    },
+    {
+     "text": "<i class=\"instruction\">Continue with “For all these things.”</i></small>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Chanukah:"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:129"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:101": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Shushan Purim in Jerusalem:</i>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": "<br>עַל הַנִּסִּים [We thank You also] for the miracles,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " the redemption,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " the mighty deeds,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " the salvations,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " and the victories in battle which You performed for our ancestors in those days,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " at this time.<br>בִּימֵי מָרְדְּכַי In the days of Mordekhai and Esther,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " in Shushan the capital,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " the wicked Haman rose up against them and sought to destroy,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " slay and exterminate all the Jews,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " young and old,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " children and women,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " on one day,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " the thirteenth day of the twelfth month,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " which is the month of Adar,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " and to plunder their possessions. Then You in Your great compassion thwarted his counsel,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " frustrated his plans,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " and caused his scheme to recoil on his own head,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": " so that they hanged him and his sons on the gallows.<br>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    },
+    {
+     "text": "<i class=\"instruction\">Continue with “For all these things.”</i></small>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shushan Purim in Jerusalem:"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:130"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:102": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:132"
+   ],
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:103": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Shabbat Shuva:</i>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shabbat Shuva:"
+    },
+    {
+     "text": " And write,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shabbat Shuva:"
+    },
+    {
+     "text": " for a good life,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shabbat Shuva:"
+    },
+    {
+     "text": " all the children of Your covenant.</small>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shabbat Shuva:"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:133"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:104": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:135"
+   ],
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:105": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:136"
+   ],
+   "kind": "heading",
+   "en": "PEACE"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:106": {
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:137"
+   ],
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:107": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">In Israel:</i>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": " שִׂים שָׁלוֹם Grant peace,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": "<br>goodness and blessing,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": "<br>grace,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": " loving-kindness and compassion<br>to us and all Israel Your people.<br>Bless us,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": " our Father,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": " all as one,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": "<br>with the light of Your face,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": "<br>for by the light of Your face<br>You have given us,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": " Lord our God,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": "<br>the Torah of life and love of kindness,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": "<br>righteousness,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": " blessing,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": " compassion,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": "<br>life and peace.<br>May it be good in Your eyes<br>to bless Your people Israel<br>at every time,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": " in every hour,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    },
+    {
+     "text": "<br>with Your peace.</small>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "In Israel:"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:138"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:108": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Shabbat Shuva:</i>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shabbat Shuva:"
+    },
+    {
+     "text": " In the book of life,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shabbat Shuva:"
+    },
+    {
+     "text": " blessing,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shabbat Shuva:"
+    },
+    {
+     "text": " peace and prosperity,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shabbat Shuva:"
+    },
+    {
+     "text": " may we and all Your people the house of Israel be remembered and written before You for a good life,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shabbat Shuva:"
+    },
+    {
+     "text": " and for peace.*</small>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "On Shabbat Shuva:"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Minha for Shabbat and Yom Tov:140"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:109": {
+   "he": [],
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:110": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">*On Shabbat Shuva outside Israel, many end the blessing:</i>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "*On Shabbat Shuva outside Israel, many end the blessing:"
+    },
+    {
+     "text": "<br>Blessed are You,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "*On Shabbat Shuva outside Israel, many end the blessing:"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "*On Shabbat Shuva outside Israel, many end the blessing:"
+    },
+    {
+     "text": " who makes peace.</small>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "*On Shabbat Shuva outside Israel, many end the blessing:"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:111": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following verse concludes the Leader’s Repetition of the Amida.</i>",
+     "kind": "instruction",
+     "en": "The following verse concludes the Leader's Repetition of the Amida."
+    },
+    {
+     "text": "<br><i class=\"instruction\">Some also say it here as part of the silent Amida. See law 368.</i>",
+     "kind": "instruction",
+     "en": "The following verse concludes the Leader's Repetition of the Amida."
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:112": {
+   "he": [],
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:113": {
+   "he": [],
+   "kind": "prayer",
+   "node": "amidah.elokai_netzor"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:114": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Bow, take three steps back, then bow, first left, then right, then center, while saying:",
+   "gloss": "Gestures for Oseh Shalom"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:115": {
+   "he": [],
+   "kind": "prayer",
+   "node": "amidah.oseh_shalom",
+   "gestures": [
+    "bow_left_right_center"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:116": {
+   "he": [],
+   "kind": "prayer",
+   "node": "amidah.yehi_ratzon_mikdash"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:117": {
+   "he": [],
+   "kind": "instruction",
+   "en": "The following is omitted on days when Tachanun is not said (see page 232).",
+   "gloss": "Tachanun omitted on Shabbat/Yom Tov"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:118": {
+   "he": [],
+   "kind": "prayer",
+   "node": "tzidkatcha",
+   "en": "Your righteousness is an everlasting righteousness..."
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:119": {
+   "he": [],
+   "kind": "heading",
+   "en": "FULL KADDISH"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:120": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "speaker",
+     "en": "Leader:"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom >in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:121": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "speaker",
+     "en": "All:"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:122": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "speaker",
+     "en": "Leader:"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation uttered in the world – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:123": {
+   "he": [],
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:124": {
+   "he": [],
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:125": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Bow, take three steps back, as if taking leave of the Divine Presence, then bow, first left, then right, then center, while saying:",
+   "gloss": "Gestures for Oseh Shalom"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:126": {
+   "he": [],
+   "kind": "prayer",
+   "node": "concl.aleinu",
+   "gestures": [
+    "bow_left_right_center"
+   ]
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:127": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Between Sukkot and Pesaḥ, some recite Barekhi Nafshi, page 628, at this point.</i>",
+     "kind": "instruction",
+     "en": "Between Sukkot and Pesach, some recite Barekhi Nafshi, page 628, at this point.",
+     "gloss": "Customary in winter"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Between Pesaḥ and Rosh HaShana some recite Ethics of the Fathers, page 640, at this point.</i>",
+     "kind": "instruction",
+     "en": "Between Pesach and Rosh HaShana some recite Ethics of the Fathers, page 640, at this point.",
+     "gloss": "Customary in summer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:128": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Stand while saying Aleinu. Bow at▾.",
+   "gloss": "Gestures for Aleinu"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:129": {
+   "he": [],
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:130": {
+   "he": [],
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:131": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Some add:",
+   "gloss": "Optional addition in some customs"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:132": {
+   "he": [],
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "gloss": "Optional addition in some customs"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:133": {
+   "he": [],
+   "kind": "heading",
+   "en": "MOURNER'S KADDISH"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:134": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following prayer, said by mourners, requires the presence of a minyan.</i>",
+     "kind": "instruction",
+     "en": "The following prayer, said by mourners, requires the presence of a minyan.",
+     "gloss": "Requires a minyan"
+    },
+    {
+     "text": "<br><i class=\"instruction\">A transliteration can be found on page 1334.</i>",
+     "kind": "instruction",
+     "en": "The following prayer, said by mourners, requires the presence of a minyan.",
+     "gloss": "Requires a minyan"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:135": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br>in your lifetime and in your days,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:136": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "  May His great name be blessed for ever and all time.",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:137": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>blessed be He,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world –<br>and say: Amen.",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:138": {
+   "he": [],
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:139": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Bow, take three steps back, as if taking leave of the Divine Presence, then bow, first left, then right, then center, while saying:",
+   "gloss": "Concluding gestures for Aleinu"
+  },
+  "en:Shabbat/Minha for Shabbat and Yom Tov:140": {
+   "he": [],
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "gestures": [
+    "bow_left_right_center"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:1": {
+   "he": [],
+   "kind": "instruction",
+   "en": "The following psalms are said from the Shabbat after Simḥat Torah until (but not including) the Shabbat before Pesaḥ."
+  },
+  "en:Shabbat/Barekhi Nafshi:2": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:2"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:3": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:3"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:4": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:4"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:5": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:5"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:6": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:6"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:7": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:7"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:8": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:8"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:9": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:9"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:10": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:10"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:11": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:11"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:12": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:12"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:13": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:13"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:14": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:14"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:15": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:15"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:16": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:16"
+   ]
+  },
+  "en:Shabbat/Barekhi Nafshi:17": {
+   "he": [
+    "he:Shabbat/Barekhi Nafshi:17"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:16",
+   "type": "ambiguous",
+   "detail": "Blessing for dwelling in the sukkah is present in the text but lacks a clear conditional instruction in Hebrew; English draft adds condition 'On Shabbat Chol HaMoed Sukkot'. Verify if this is standard for this nusach or a specific custom."
+  },
+  {
+   "id": "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:54",
+   "type": "missing_text",
+   "detail": "Hebrew segment h49 is not selected in the source, but English segment e50 (which corresponds to h49) is selected and has a draft. The Hebrew text for the refrain 'יום זה מכבד...' is missing from the selected Hebrew segments list (h49 is unselected)."
+  },
+  {
+   "id": "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:55",
+   "type": "missing_text",
+   "detail": "Hebrew segment h50 is not selected in the source, but English segment e51 (which corresponds to h50) is selected and has a draft. The Hebrew text for the verse 'יום שבתון אין לשכח...' is missing from the selected Hebrew segments list."
+  },
+  {
+   "id": "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:56",
+   "type": "missing_text",
+   "detail": "Hebrew segment h51 is not selected in the source, but English segment e52 (which corresponds to h51) is selected and has a draft. The Hebrew text for the verse 'היום נכבד לבני אמונים...' is missing from the selected Hebrew segments list."
+  },
+  {
+   "id": "he:Shabbat/Kiddush and Zemirot for Shabbat Morning:57",
+   "type": "missing_text",
+   "detail": "Hebrew segment h52 is not selected in the source, but English segment e53 (which corresponds to h52) is selected and has a draft. The Hebrew text for the refrain 'יונה מצאה בו מנוח...' is missing from the selected Hebrew segments list."
+  },
+  {
+   "id": "he:Shabbat/Minha for Shabbat and Yom Tov:71",
+   "type": "ambiguous",
+   "detail": "Instruction text mixes winter and summer alternatives; split required for correct conditional display."
+  },
+  {
+   "id": "en:Shabbat/Minha for Shabbat and Yom Tov:1",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h14.1; h14.2; h14.3; h15.1; h16.1"
+  },
+  {
+   "id": "he:Shabbat/Minha for Shabbat and Yom Tov:31",
+   "type": "ambiguous",
+   "detail": "Instruction text is enclosed in slashes; unclear if this is a conditional alternative or a fixed instruction for when no Kohen is present. Needs clarification on whether this is said or just a note."
+  },
+  {
+   "id": "he:Shabbat/Minha for Shabbat and Yom Tov:66",
+   "type": "ambiguous",
+   "detail": "Instruction 'On Shabbat Shuva' appears inline with the prayer text; unclear if the instruction is part of the prayer or a separate rubric."
+  },
+  {
+   "id": "en:Shabbat/Minha for Shabbat and Yom Tov:44",
+   "type": "ambiguous",
+   "detail": "English instruction 'Some add:' refers to h34 but the Hebrew text does not indicate this is optional."
+  },
+  {
+   "id": "en:Shabbat/Minha for Shabbat and Yom Tov:33",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h40.1; h40.2; h40.3; h41.1; h42.1"
+  },
+  {
+   "id": "en:Shabbat/Minha for Shabbat and Yom Tov:109",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Shabbat/Minha for Shabbat and Yom Tov:110",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Shabbat/Minha for Shabbat and Yom Tov:111",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Shabbat/Minha for Shabbat and Yom Tov:112",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Shabbat/Minha for Shabbat and Yom Tov:100",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: Marker needs a unique increasing boundary or occurrence: עשה שלום; found positions [0, 88], previous boundary 0; Marker needs a unique increasing boundary or occurrence: עשה שלום; found positions [0, 88], previous boundary 0; Alignment needs known Hebrew segment aliases; Alignment needs known Hebrew segment aliases; Alignment needs known Hebrew segment aliases"
+  },
+  {
+   "id": "en:Shabbat/Minha for Shabbat and Yom Tov:113",
+   "type": "alignment",
+   "detail": "Hebrew counterpart for Elokai Netzor not visible in context; likely in preceding Hebrew segment."
+  },
+  {
+   "id": "en:Shabbat/Minha for Shabbat and Yom Tov:129",
+   "type": "alignment",
+   "detail": "Hebrew counterpart for Aleinu not visible in context; aligning to empty list."
+  }
+ ]
+}

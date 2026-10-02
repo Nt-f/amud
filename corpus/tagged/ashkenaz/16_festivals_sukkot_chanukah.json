@@ -1,0 +1,2468 @@
+{
+ "nusach": "ashkenaz",
+ "chunk": "Festivals [Sukkot .. Chanukah]",
+ "leaves": {
+  "Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot": {
+   "node": "hoshanot",
+   "when": "hoshanaDay == 4",
+   "service": "shacharit"
+  },
+  "Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot": {
+   "node": "hoshanot",
+   "when": "hoshanaDay == 5",
+   "service": "shacharit"
+  },
+  "Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot": {
+   "node": "hoshanot",
+   "when": "hoshanaDay == 6",
+   "service": "shacharit"
+  },
+  "Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba": {
+   "node": "hoshanot",
+   "when": "hoshanaRaba",
+   "service": "shacharit"
+  },
+  "Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles": {
+   "node": "chanukah.candles",
+   "when": "chanukah",
+   "service": "none"
+  },
+  "Festivals/Chanukah/Service for Lighting Chanukah Candles/Hanerot Hallalu": {
+   "node": "chanukah.haneirot_halalu",
+   "when": "chanukah",
+   "service": "none"
+  },
+  "Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur": {
+   "node": "chanukah.maoz_tzur",
+   "when": "chanukah",
+   "service": "none"
+  }
+ },
+ "he": {
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:1": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:2": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:4": {
+   "kind": "instruction",
+   "en": "When it falls on Sunday:",
+   "when": "dow == 0",
+   "alt": "hoshana4"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:6": {
+   "kind": "prayer",
+   "when": "dow == 0",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:8": {
+   "kind": "instruction",
+   "en": "When it falls on Tuesday:",
+   "when": "dow == 2",
+   "alt": "hoshana4"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:10": {
+   "kind": "prayer",
+   "when": "dow == 2",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:12": {
+   "kind": "instruction",
+   "en": "When it falls on Thursday:",
+   "when": "dow == 4",
+   "alt": "hoshana4"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:14": {
+   "kind": "prayer",
+   "when": "dow == 4",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:16": {
+   "kind": "instruction",
+   "en": "When it falls on Friday:",
+   "when": "dow == 5",
+   "alt": "hoshana4"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:18": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:19": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:20": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:21": {
+   "parts": [
+    {
+     "text": "דּֽוֹפְקֵי עֶֽרֶך שׁוּעֽוֹת ",
+     "kind": "prayer",
+     "when": "dow == 5",
+     "alt": "hoshana4",
+     "role": "congregation_then_chazzan"
+    },
+    {
+     "text": "<em><small>נ\"א שְעות</small></em>.",
+     "kind": "commentary",
+     "en": "Variant reading: שְעות"
+    }
+   ]
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:22": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:23": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:24": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:25": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:26": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:27": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:28": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:29": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:30": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:31": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:32": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:33": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:34": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:35": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:36": {
+   "parts": [
+    {
+     "text": "קִרְיַֽת ",
+     "kind": "prayer",
+     "when": "dow == 5",
+     "alt": "hoshana4",
+     "role": "congregation_then_chazzan"
+    },
+    {
+     "text": "<em><small>נ\"א קרב</small></em>",
+     "kind": "commentary",
+     "en": "Variant reading: קרב"
+    },
+    {
+     "text": " תְּשׁוּעֽוֹת.",
+     "kind": "prayer",
+     "when": "dow == 5",
+     "alt": "hoshana4",
+     "role": "congregation_then_chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:37": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:38": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:39": {
+   "kind": "prayer",
+   "when": "dow == 5",
+   "alt": "hoshana4",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:41": {
+   "kind": "instruction",
+   "en": "After saying the Hoshana for that day, conclude with:"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:43": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:44": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:45": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:46": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:47": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:48": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:49": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:50": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:51": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:52": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:53": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:54": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:55": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:57": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:59": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:61": {
+   "kind": "instruction",
+   "en": "Full Kaddish",
+   "node": "kaddish.shalem",
+   "minyan": true
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:1": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:2": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:4": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:5": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:6": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:7": {
+   "parts": [
+    {
+     "text": "דּֽוֹפְקֵי עֶֽרֶך שׁוּעֽוֹת ",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan"
+    },
+    {
+     "text": "<em><small>נ\"א שְעות</small></em>.",
+     "kind": "commentary",
+     "en": "Variant reading: שְעות"
+    }
+   ]
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:8": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:9": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:10": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:11": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:12": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:13": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:14": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:15": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:16": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:17": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:18": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:19": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:20": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:21": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:22": {
+   "parts": [
+    {
+     "text": "קִרְיַֽת ",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan"
+    },
+    {
+     "text": "<em><small>נ\"א קרב</small></em>",
+     "kind": "commentary",
+     "en": "Variant reading: קרב"
+    },
+    {
+     "text": " תְּשׁוּעֽוֹת.",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:23": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:24": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:25": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:27": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:28": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:29": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:30": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:31": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:32": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:33": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:34": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:35": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:36": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:37": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:38": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:39": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:41": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:43": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:45": {
+   "kind": "instruction",
+   "en": "Full Kaddish",
+   "node": "kaddish.shalem",
+   "minyan": true
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:1": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:2": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:4": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:5": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:6": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:7": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:8": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:9": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:10": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:11": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:12": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:13": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:14": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:15": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:16": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:17": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:18": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:19": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:20": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:21": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:22": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:23": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:24": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:25": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:28": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:29": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:30": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:31": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:32": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:33": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:34": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:35": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:36": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:37": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:38": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:39": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:40": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:42": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:44": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:46": {
+   "kind": "instruction",
+   "en": "Full Kaddish",
+   "node": "kaddish.shalem",
+   "minyan": true
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:1": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:2": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:4": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:8": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:12": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:16": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:17": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:18": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:19": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:20": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:21": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:22": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:23": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:24": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:25": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:26": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:27": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:28": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:29": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:30": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:31": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:32": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:33": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:34": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:35": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:36": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:37": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:41": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:45": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:49": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:50": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:51": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:52": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:53": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:54": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:55": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:56": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:57": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:58": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:59": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:60": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:61": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:62": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:63": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:64": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:65": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:66": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:67": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:68": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:69": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:71": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:73": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:75": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:77": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:78": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:79": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:80": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:81": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:82": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:83": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:84": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:85": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:86": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:87": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:88": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:90": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:6": {
+   "parts": [
+    {
+     "text": "בהושענא רבה מוסיפים:",
+     "kind": "instruction",
+     "en": "On Hoshana Rabba we add:"
+    },
+    {
+     "text": " כִּֽי־אָמַֽרְתִּי עוֹלָֽם חֶֽסֶד יִבָּנֶֽה׃",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:10": {
+   "parts": [
+    {
+     "text": "להושענא רבה:",
+     "kind": "instruction",
+     "en": "On Hoshana Rabba:"
+    },
+    {
+     "text": " לְךָֽ זְרֽוֹעַ עִם־גְּבוּרָֽה. תָּעֹֽז יָֽדְךָֽ תָּרֽוּם יְמִינֶֽךָ׃",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:14": {
+   "parts": [
+    {
+     "text": "להושענא רבה:",
+     "kind": "instruction",
+     "en": "On Hoshana Rabba:"
+    },
+    {
+     "text": " תִּתֵּֽן אֱמֶֽת לְיַֽעֲקֹֽב חֶֽסֶד לְאַבְרָהָֽם:",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:39": {
+   "parts": [
+    {
+     "text": "<em><small>להושענא רבה:",
+     "kind": "instruction",
+     "en": "On Hoshana Rabba:"
+    },
+    {
+     "text": " נְעִמֽוֹת בִּימִֽינְךָֽ נֶֽצַח׃</small></em>",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:43": {
+   "parts": [
+    {
+     "text": "ומוסיפים:",
+     "kind": "instruction",
+     "en": "And we add:"
+    },
+    {
+     "text": " ה' אֲדֹנֵֽינוּ מָֽה־אַדִּֽיר שִׁמְךָֽ בְּכׇל־הָאָֽרֶץ. אֲשֶֽׁר תְּנָֽה הֽוֹדְךָֽ עַל־הַשָּׁמָֽיִם׃",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:47": {
+   "parts": [
+    {
+     "text": "ומוסיפים:",
+     "kind": "instruction",
+     "en": "And we add:"
+    },
+    {
+     "text": " צַדִּֽיק ה׳ בְּכׇל־דְּרָכָֽיו. וְחָסִֽיד בְּכׇל־מַֽעֲשָֽׂיו׃",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:1": {
+   "kind": "instruction",
+   "en": "Before lighting, say:"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:2": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:3": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:4": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:5": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:7": {
+   "kind": "instruction",
+   "en": "On the first night we add:",
+   "when": "chanukahDay == 1"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:8": {
+   "kind": "prayer",
+   "when": "chanukahDay == 1"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:9": {
+   "kind": "prayer",
+   "when": "chanukahDay == 1"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Hanerot Hallalu:1": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:1": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:2": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:3": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:4": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:6": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:7": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:8": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:9": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:11": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:12": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:13": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:14": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:16": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:17": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:18": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:19": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:21": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:22": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:23": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:24": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:26": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:27": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:28": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:29": {
+   "kind": "prayer",
+   "role": "together"
+  }
+ },
+ "en": {
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:1": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:1"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:2": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:2"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:4": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:4"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:6": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:6"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:8": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:8"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:10": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:10"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:12": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:12"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:14": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:14"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:16": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:16"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:18": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:18"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:19": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:19"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:20": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:20"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:21": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:21"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:22": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:22"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:23": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:23"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:24": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:24"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:25": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:25"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:26": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:26"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:27": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:27"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:28": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:28"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:29": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:29"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:30": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:30"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:31": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:31"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:32": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:32"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:33": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:33"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:34": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:34"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:35": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:35"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:36": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:36"
+   ],
+   "parts": [
+    {
+     "text": "the town ",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan"
+    },
+    {
+     "text": "(<i> a different version:</i> in the midst:)",
+     "kind": "commentary"
+    },
+    {
+     "text": " of salvation, ",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan"
+    }
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:37": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:37"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:38": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:38"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:39": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:39"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:41": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:41"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:43": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:43"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:44": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:44"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:45": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:45"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:46": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:46"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:47": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:47"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:48": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:48"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:49": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:49"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:50": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:50"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:51": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:51"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:52": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:52"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:53": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:53"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:54": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:54"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:55": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:55"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:57": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:57"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:59": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:59"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:61": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:61"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:1": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:1"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:2": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:2"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:4": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:4"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:5": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:5"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:6": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:6"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:7": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:7"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:8": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:8"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:9": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:9"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:10": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:10"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:11": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:11"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:12": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:12"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:13": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:13"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:14": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:14"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:15": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:15"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:16": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:16"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:17": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:17"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:18": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:18"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:19": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:19"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:20": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:20"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:21": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:21"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:22": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:22"
+   ],
+   "parts": [
+    {
+     "text": "the town ",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan"
+    },
+    {
+     "text": "(<i> a different version:</i> in the midst:)",
+     "kind": "commentary"
+    },
+    {
+     "text": " of salvation, ",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan"
+    }
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:23": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:23"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:24": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:24"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:25": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:25"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:27": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:27"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:28": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:28"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:29": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:29"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:30": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:30"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:31": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:31"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:32": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:32"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:33": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:33"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:34": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:34"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:35": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:35"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:36": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:36"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:37": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:37"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:38": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:38"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:39": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:39"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:41": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:41"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:43": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:43"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:45": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot:45"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:1": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:1"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:2": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:2"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:4": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:4"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:5": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:5"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:6": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:6"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:7": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:7"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:8": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:8"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:9": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:9"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:10": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:10"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:11": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:11"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:12": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:12"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:13": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:13"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:14": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:14"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:15": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:15"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:16": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:16"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:17": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:17"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:18": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:18"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:19": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:19"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:20": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:20"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:21": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:21"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:22": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:22"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:23": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:23"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:24": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:24"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:25": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:25"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:28": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:28"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:29": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:29"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:30": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:30"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:31": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:31"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:32": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:32"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:33": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:33"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:34": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:34"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:35": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:35"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:36": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:36"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:37": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:37"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:38": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:38"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:39": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:39"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:40": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:40"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:42": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:42"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:44": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:44"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:46": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:46"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:1": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:1"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:2": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:2"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:4": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:4"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:6": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:6"
+   ],
+   "parts": [
+    {
+     "text": "<i>On Hoshana Rabba, we add:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " For I have said, \"The world is built by love\" (Psalms 89:3).",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:8": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:8"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:10": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:10"
+   ],
+   "parts": [
+    {
+     "text": "<i>On Hoshana Rabba:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Yours is an arm endowed with might; Your hand is strong; Your right arm, exalted (Psalms 89:14).",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:12": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:12"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:14": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:14"
+   ],
+   "parts": [
+    {
+     "text": "<i>On Hoshana Rabba:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " You will give truth to Jacob, kindness to Abraham (Micah 7:20).",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:16": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:16"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:17": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:17"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:18": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:18"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:19": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:19"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:20": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:20"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:21": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:21"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:22": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:22"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:23": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:23"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:24": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:24"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:25": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:25"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:26": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:26"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:27": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:27"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:28": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:28"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:29": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:29"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:30": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:30"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:31": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:31"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:32": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:32"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:33": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:33"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:34": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:34"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:35": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:35"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:36": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:36"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:37": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:37"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:39": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:39"
+   ],
+   "parts": [
+    {
+     "text": "<i>On Hoshana Rabba:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " In your right are are pleasures for evermore. (Psalms 16:11)",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:40": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:41": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:41"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:42": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:43": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:43"
+   ],
+   "parts": [
+    {
+     "text": "<i>And we add:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " O Lord, our Lord, How majestic is Your name throughout the earth, You who have covered the heavens with Your splendor (Psalms 8:2).",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:45": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:45"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:47": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:47"
+   ],
+   "parts": [
+    {
+     "text": "<i>And we add:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " The Lord is beneficent in all His ways and faithful in all His works (Psalms 145:17).",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:49": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:49"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:50": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:50"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:51": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:51"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:52": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:52"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:53": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:53"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:54": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:54"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:55": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:55"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:56": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:56"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:57": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:57"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:58": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:58"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:59": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:59"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:60": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:60"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:61": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:61"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:62": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:62"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:63": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:63"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:64": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:64"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:65": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:65"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:66": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:66"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:67": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:67"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:68": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:68"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:69": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:69"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:71": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:71"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:73": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:73"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:75": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:75"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:77": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:77"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:78": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:78"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:79": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:79"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:80": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:80"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:81": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:81"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:82": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:82"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:83": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:83"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:84": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:84"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:85": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:85"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:86": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:86"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:87": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:87"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:88": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:88"
+   ]
+  },
+  "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:90": {
+   "he": [
+    "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:90"
+   ]
+  },
+  "en:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:1": {
+   "he": [
+    "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:1"
+   ]
+  },
+  "en:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:2": {
+   "he": [
+    "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:2"
+   ]
+  },
+  "en:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:3": {
+   "he": [
+    "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:3"
+   ]
+  },
+  "en:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:4": {
+   "he": [
+    "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:4"
+   ]
+  },
+  "en:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:5": {
+   "he": [
+    "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:5"
+   ]
+  },
+  "en:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:7": {
+   "he": [
+    "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:7"
+   ]
+  },
+  "en:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:8": {
+   "he": [
+    "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:8"
+   ]
+  },
+  "en:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:9": {
+   "he": [
+    "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:9"
+   ]
+  },
+  "en:Festivals/Chanukah/Service for Lighting Chanukah Candles/Hanerot Hallalu:1": {
+   "he": [
+    "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Hanerot Hallalu:1"
+   ]
+  },
+  "en:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:26": {
+   "he": [
+    "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:26"
+   ]
+  },
+  "en:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:27": {
+   "he": [
+    "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:27"
+   ]
+  },
+  "en:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:28": {
+   "he": [
+    "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:28"
+   ]
+  },
+  "en:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:29": {
+   "he": [
+    "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:29"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot:22",
+   "type": "wrong_vowel",
+   "detail": "תּושִֽׁיעַ is missing the holam on the vav (compare תּוֹשִֽׁיעַ in the same piyyut). Not fixed."
+  },
+  {
+   "id": "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:40",
+   "type": "alignment",
+   "detail": "English placeholder \"......\" with no Hebrew counterpart."
+  },
+  {
+   "id": "en:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:42",
+   "type": "alignment",
+   "detail": "English placeholder \"......\" with no Hebrew counterpart."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:49",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE HE, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:50",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE HE, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:51",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE HE, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:52",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE FINAL MEM, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:53",
+   "type": "engine_bug_risk",
+   "detail": "Contains 2 presentation-form wide letter(s) (WIDE FINAL MEM, WIDE HE, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:54",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE LAMED, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:55",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE HE, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:56",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE TAV, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:57",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE RESH, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:58",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE TAV, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:60",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE ALEF, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:62",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE DALET, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:64",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE RESH, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:65",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE HE, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:66",
+   "type": "engine_bug_risk",
+   "detail": "Contains 3 presentation-form wide letter(s) (WIDE HE, WIDE RESH, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:67",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE FINAL MEM, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:69",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE HE, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:71",
+   "type": "engine_bug_risk",
+   "detail": "Contains 1 presentation-form wide letter(s) (WIDE HE, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:73",
+   "type": "engine_bug_risk",
+   "detail": "Contains 14 presentation-form wide letter(s) (WIDE ALEF, WIDE DALET, WIDE HE, WIDE LAMED, WIDE TAV, U+FB21-FB28) used for justification. A reader or search that matches the plain letters, or a font without these glyphs, will mis-handle them. Text left unchanged."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:56",
+   "type": "wrong_vowel",
+   "detail": "Stray dagesh in יְּרִיעוֹ (and similar). Not fixed."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:62",
+   "type": "wrong_vowel",
+   "detail": "Stray dagesh in נָּף (and similar). Not fixed."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:67",
+   "type": "wrong_vowel",
+   "detail": "Stray dagesh in מֻּשְׁלָכִֽים (and similar). Not fixed."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:71",
+   "type": "wrong_vowel",
+   "detail": "Stray dagesh in יְּהוּדָֽ (and similar). Not fixed."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:73",
+   "type": "wrong_vowel",
+   "detail": "Stray dagesh in לְּרֹֽאשׁ (and similar). Not fixed."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Hosha'ana Rabba:73",
+   "type": "ambiguous",
+   "detail": "Segment 73 (Lecha Hashem hagedulah ... Shema Yisrael ... Baruch shem) is a closing prayer of the Hoshanot, not the Shema; tagged plain prayer with the Hoshanot role."
+  },
+  {
+   "id": "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Blessings on Chanukah Candles:7",
+   "type": "engine_bug_risk",
+   "detail": "\"First night\" is tagged chanukahDay == 1. Night 1 is the evening of 24 Kislev, which is the start of Hebrew day 25 (chanukahDay 1) only if the engine rolls the day over at nightfall. Shehecheyanu is also said on a later night by someone lighting for the first time (not modelled)."
+  },
+  {
+   "id": "he:Festivals/Chanukah/Service for Lighting Chanukah Candles/Maoz Tzur:1",
+   "type": "alignment",
+   "detail": "English is supplied only for the last stanza (Chasof zeroa, segments 26-29); stanzas 1-5 have no English."
+  },
+  {
+   "id": "he:Festivals/Sukkot/Hosha'anot/Fourth Day of Sukkot:1",
+   "type": "ambiguous",
+   "detail": "Hoshanot lines are tagged congregation_then_chazzan per the role table (kahal says each line, chazzan repeats); practice varies (chazzan leads, kahal repeats). Not tagged minyan:true because Hoshanot are said without a minyan too."
+  }
+ ]
+}

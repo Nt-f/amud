@@ -24,6 +24,21 @@ PWA). iOS builds are released unsigned, for sideloading.
   Home, the Siddur tab or a siddur's contents) shows a bar of its key points,
   such as Shema, Shemoneh Esrei, Hallel and the Torah reading, and of what's
   added today from elsewhere in the siddur, like Musaf or the day's Hoshana.
+- **Why today?** Open the date guide from Home or the reader to see why
+  additions and omissions apply. Inspect a prayer's conditions, including
+  custom rules, and preview another date without changing the reader's date.
+- **Explain this line:** Select words in the reader and choose *Explain this
+  line* for the bundled translation, a small offline vocabulary glossary,
+  curated context where available, biblical references, and text sources.
+- **Prepare for tomorrow:** Open tomorrow's guide from Home, or add its
+  dashboard card. It shows special additions, omissions, and changes in
+  seasonal wording, with links to the bundled prayers.
+- **Print a siddur:** Use the print button in the Siddur tab or date guide.
+  Choose any date, services, and Hebrew and/or translation, then preview,
+  print, or save a PDF. Text follows the same calendar and customs as the
+  reader; evening services belong to the next Hebrew date. PDFs include
+  source credits. Festival services use the available bundled texts; days
+  requiring a machzor are marked as incomplete.
 - **Holidays & Seasons:** Hoshanos, Lulav, Selichos, Chanukah candles,
   Hakafos and other holiday prayers in one place, gathered from the bundled
   siddurim (your nusach first), with today's marked.

@@ -30,6 +30,16 @@ class Minhagim {
   /// Sefardi/Edot HaMizrach practice: say "Barechenu" in summer.
   final bool sefardi;
 
+  /// Davening in a shiva house (no Tachanun, no Birkat Kohanim, …).
+  final bool houseOfMourning;
+
+  /// Wears tefillin on Chol HaMoed (most don't).
+  final bool tefillinCholHamoed;
+
+  /// A bris or a chatan in the congregation today (no Tachanun).
+  final bool bris;
+  final bool chatan;
+
   const Minhagim({
     this.ledavidThroughShminiAtzeret = false,
     this.walledCity = false,
@@ -37,6 +47,10 @@ class Minhagim {
     this.mourner = false,
     this.kiddushLevana3Days = false,
     this.sefardi = false,
+    this.houseOfMourning = false,
+    this.tefillinCholHamoed = false,
+    this.bris = false,
+    this.chatan = false,
   });
 
   Map<String, Object?> toJson() => {
@@ -46,6 +60,10 @@ class Minhagim {
         'mourner': mourner,
         'kiddushLevana3Days': kiddushLevana3Days,
         'sefardi': sefardi,
+        'houseOfMourning': houseOfMourning,
+        'tefillinCholHamoed': tefillinCholHamoed,
+        'bris': bris,
+        'chatan': chatan,
       };
 
   factory Minhagim.fromJson(Map<String, Object?> j) => Minhagim(
@@ -55,6 +73,10 @@ class Minhagim {
         mourner: j['mourner'] == true,
         kiddushLevana3Days: j['kiddushLevana3Days'] == true,
         sefardi: j['sefardi'] == true,
+        houseOfMourning: j['houseOfMourning'] == true,
+        tefillinCholHamoed: j['tefillinCholHamoed'] == true,
+        bris: j['bris'] == true,
+        chatan: j['chatan'] == true,
       );
 
   Minhagim copyWith({
@@ -64,6 +86,10 @@ class Minhagim {
     bool? mourner,
     bool? kiddushLevana3Days,
     bool? sefardi,
+    bool? houseOfMourning,
+    bool? tefillinCholHamoed,
+    bool? bris,
+    bool? chatan,
   }) =>
       Minhagim(
         ledavidThroughShminiAtzeret: ledavidThroughShminiAtzeret ?? this.ledavidThroughShminiAtzeret,
@@ -72,6 +98,10 @@ class Minhagim {
         mourner: mourner ?? this.mourner,
         kiddushLevana3Days: kiddushLevana3Days ?? this.kiddushLevana3Days,
         sefardi: sefardi ?? this.sefardi,
+        houseOfMourning: houseOfMourning ?? this.houseOfMourning,
+        tefillinCholHamoed: tefillinCholHamoed ?? this.tefillinCholHamoed,
+        bris: bris ?? this.bris,
+        chatan: chatan ?? this.chatan,
       );
 }
 
@@ -205,6 +235,29 @@ class DayContext {
     'minyan': 'Praying with a minyan',
     'mourner': 'User is a mourner',
     'aveilut': 'Sefira or Three Weeks mourning period',
+    'kohanim': 'Kohanim say Birkat Kohanim at this service (Israel daily; diaspora on Yom Tov)',
+    'birkatKohanimChazzan': "Chazzan says Elokeinu ve'Elokei avoteinu (no kohanim, not a house of mourning, not Tisha B'Av morning)",
+    'hoshanaDay': 'Day of Sukkot for Hoshanot 1-7 (0 if none)',
+    'erevPesach': 'Erev Pesach',
+    'houseOfMourning': 'Davening in a shiva house',
+    'noTefillinCholHamoed': 'Custom of not wearing tefillin on Chol HaMoed',
+    'yomTovDay': 'Which day of a Yom Tov (1 or 2; 0 if not Yom Tov)',
+    'firstDayRoshHashana': '1 Tishrei',
+    'secondDayRoshHashana': '2 Tishrei',
+    'shabbatShekalim': 'Shabbat Shekalim',
+    'shabbatZachor': 'Shabbat Zachor',
+    'shabbatParah': 'Shabbat Parah',
+    'shabbatHachodesh': 'Shabbat HaChodesh',
+    'shabbatHagadol': 'Shabbat HaGadol',
+    'shabbatChazon': 'Shabbat Chazon',
+    'shabbatNachamu': 'Shabbat Nachamu',
+    'erevTishaBav': "Day before Tisha B'Av (as observed)",
+    'tuBishvat': 'Tu BiShvat',
+    'tuBav': "Tu B'Av",
+    'lagBaomer': 'Lag BaOmer',
+    'pesachSheni': 'Pesach Sheni',
+    'bris': 'A bris in the congregation today (no Tachanun)',
+    'chatan': 'A chatan in the congregation (no Tachanun)',
     'leapYear': 'Hebrew leap year',
   };
 }
@@ -337,7 +390,8 @@ class _Builder {
 
     final winter = winterGevurot();
     set('mashivHaruach', winter);
-    set('moridHatal', !winter);
+    // Ashkenaz in the diaspora says nothing in its place.
+    set('moridHatal', !winter && (il || m.sefardi));
     set('talUmatar', _talUmatar(month, day, year));
 
     final omerDay = _omerDay();
@@ -386,6 +440,37 @@ class _Builder {
     set('kiddushLevana', day >= (m.kiddushLevana3Days ? 3 : 7) && day <= 15 && !(month == Months.av && day < 10) &&
         !(month == Months.tishrei && day < 10));
     set('eruvTavshilin', eruvTavshilin(hd, il));
+    set('erevPesach', month == Months.nisan && day == 14);
+    set('firstDayRoshHashana', month == Months.tishrei && day == 1);
+    set('secondDayRoshHashana', month == Months.tishrei && day == 2);
+    set('shabbatShekalim', desc(HolidayDesc.shabbatShekalim));
+    set('shabbatZachor', desc(HolidayDesc.shabbatZachor));
+    set('shabbatParah', desc(HolidayDesc.shabbatParah));
+    set('shabbatHachodesh', desc(HolidayDesc.shabbatHachodesh));
+    set('shabbatHagadol', desc(HolidayDesc.shabbatHagadol));
+    set('shabbatChazon', desc(HolidayDesc.shabbatChazon));
+    set('shabbatNachamu', desc(HolidayDesc.shabbatNachamu));
+    set('erevTishaBav', abs == av9.abs() - 1);
+    set('tuBishvat', month == Months.shvat && day == 15);
+    set('tuBav', month == Months.av && day == 15);
+    set('lagBaomer', omerDay == 33);
+    set('pesachSheni', month == Months.iyyar && day == 14);
+    set('bris', m.bris);
+    set('chatan', m.chatan);
+    set('hoshanaDay', sukkot ? day - 14 : 0);
+    set('yomTovDay', yomTov ? (prevYomTov ? 2 : 1) : 0);
+    set('houseOfMourning', m.houseOfMourning);
+    set('noTefillinCholHamoed', !m.tefillinCholHamoed);
+    // Birkat Kohanim: the kohanim's own in Israel at every Shacharit and
+    // Musaf (and Mincha of a fast), in the diaspora only at Musaf of a
+    // weekday Yom Tov; otherwise the chazzan says it in the repetition. Not
+    // on Tisha B'Av morning or in a house of mourning.
+    final bkService = (service == Service.shacharit && !tishaBav) || service == Service.musaf ||
+        (service == Service.mincha && (minorFast || tishaBav));
+    final kohanim = m.withMinyan && !m.houseOfMourning && bkService &&
+        (il || (service == Service.musaf && yomTov && !shabbat));
+    set('kohanim', kohanim);
+    set('birkatKohanimChazzan', m.withMinyan && !m.houseOfMourning && bkService && !kohanim);
     set('yizkor', (month == Months.tishrei && (day == 10 || day == 22)) ||
         (month == Months.nisan && day == (il ? 21 : 22)) ||
         (month == Months.sivan && day == (il ? 6 : 7)));

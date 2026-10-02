@@ -1,0 +1,185 @@
+{
+  "$comment": "The order of each service, nusach-independent (see corpus/SCHEMA.md, Service graph). Steps are units (corpus/units.json says where each lives in each siddur). An anchor is part of the service as the siddur prints it; an insert comes from elsewhere in the book and is said only 'when'. An insert goes after the nearest anchor before it that the siddur has (or before the nearest after it). 'only' limits a step to some nusachim, where the order differs. 'unit' names the service itself in units.json: a section path, {path, except} or a {from, to} run of sibling sections; the app's Today plan lists that service's sections with the inserts in place. 'whenBy' gives a step a different condition in some nusachim.",
+  "services": {
+    "shacharit.weekday": {
+      "en": "Shacharit",
+      "he": "שחרית",
+      "steps": [
+        {
+          "anchor": "shacharit.weekday.amidah"
+        },
+        {
+          "insert": "lulav",
+          "when": "sukkot && !shabbat",
+          "en": "Lulav",
+          "he": "נטילת לולב"
+        },
+        {
+          "insert": "hallel",
+          "when": "hallel",
+          "en": "Hallel",
+          "he": "הלל"
+        },
+        {
+          "insert": "hoshanot",
+          "when": "cholHamoedSukkot",
+          "only": [
+            "sefard",
+            "edot_hamizrach",
+            "chabad"
+          ],
+          "en": "Hoshanot",
+          "he": "הושענות"
+        },
+        {
+          "insert": "selichot.tzom_gedaliah",
+          "when": "tzomGedaliah",
+          "en": "Selichot",
+          "he": "סליחות"
+        },
+        {
+          "insert": "selichot.asara_btevet",
+          "when": "asaraBTevet",
+          "en": "Selichot",
+          "he": "סליחות"
+        },
+        {
+          "insert": "selichot.taanit_esther",
+          "when": "taanitEsther",
+          "en": "Selichot",
+          "he": "סליחות"
+        },
+        {
+          "insert": "selichot.tzom_tammuz",
+          "when": "tzomTammuz",
+          "en": "Selichot",
+          "he": "סליחות"
+        },
+        {
+          "insert": "selichot.behab",
+          "when": "behab",
+          "en": "Selichot for BaHaB",
+          "he": "סליחות לבה״ב"
+        },
+        {
+          "anchor": "shacharit.weekday.tachanun"
+        },
+        {
+          "anchor": "shacharit.weekday.torah"
+        },
+        {
+          "insert": "torah.chanukah",
+          "when": "chanukah",
+          "en": "Chanukah Torah reading",
+          "he": "קריאת התורה לחנוכה"
+        },
+        {
+          "anchor": "shacharit.weekday.uva_letzion"
+        },
+        {
+          "insert": "musaf.rosh_chodesh",
+          "when": "roshChodesh && !cholHamoed",
+          "en": "Musaf for Rosh Chodesh",
+          "he": "מוסף לראש חודש"
+        },
+        {
+          "insert": "musaf.chol_hamoed",
+          "when": "cholHamoed",
+          "en": "Musaf for Chol HaMoed",
+          "he": "מוסף לחול המועד"
+        },
+        {
+          "insert": "hoshanot",
+          "when": "cholHamoedSukkot",
+          "only": [
+            "ashkenaz",
+            "koren"
+          ],
+          "en": "Hoshanot",
+          "he": "הושענות",
+          "whenBy": {
+            "koren": "cholHamoedSukkot && !hoshanaRaba"
+          }
+        },
+        {
+          "insert": "hoshanot.hoshana_raba",
+          "when": "hoshanaRaba",
+          "en": "Hoshanot",
+          "he": "הושענות"
+        }
+      ],
+      "unit": "service.shacharit.weekday"
+    },
+    "shacharit.shabbat": {
+      "en": "Shacharit for Shabbat",
+      "he": "שחרית לשבת",
+      "steps": [
+        {
+          "anchor": "shacharit.shabbat.amidah"
+        },
+        {
+          "insert": "hallel",
+          "when": "hallel",
+          "en": "Hallel",
+          "he": "הלל"
+        }
+      ]
+    },
+    "maariv.weekday": {
+      "en": "Maariv",
+      "he": "ערבית",
+      "unit": "service.maariv.weekday",
+      "steps": [
+        {
+          "anchor": "maariv.weekday.amidah"
+        },
+        {
+          "insert": "chanukah.candles",
+          "when": "chanukah",
+          "en": "Chanukah candles",
+          "he": "הדלקת נרות חנוכה"
+        },
+        {
+          "anchor": "maariv.weekday.end"
+        },
+        {
+          "insert": "omer",
+          "when": "omer",
+          "en": "Sefirat HaOmer",
+          "he": "ספירת העומר"
+        },
+        {
+          "insert": "kiddush_levana",
+          "when": "kiddushLevana",
+          "en": "Kiddush Levana",
+          "he": "קידוש לבנה"
+        },
+        {
+          "insert": "havdalah",
+          "when": "motzaeiShabbat || motzaeiYomTov",
+          "en": "Havdalah",
+          "he": "הבדלה"
+        }
+      ]
+    },
+    "mincha.weekday": {
+      "en": "Mincha",
+      "he": "מנחה",
+      "unit": "service.mincha.weekday",
+      "steps": [
+        {
+          "anchor": "mincha.weekday.ashrei"
+        },
+        {
+          "insert": "torah.fast_mincha",
+          "when": "fastDay",
+          "en": "Torah reading for a fast",
+          "he": "קריאת התורה לתענית"
+        },
+        {
+          "anchor": "mincha.weekday.amidah"
+        }
+      ]
+    }
+  }
+}

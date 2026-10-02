@@ -1,0 +1,182 @@
+{
+  "$comment": "Where each graph unit (corpus/graph.json) is in each siddur: a leaf or section path. A siddur without the unit leaves it out; an insert then attaches to the nearest anchor it does have. Checked by tool/corpus/build_assets.py.",
+  "shacharit.weekday.amidah": {
+    "ashkenaz": "Weekday/Shacharit/Amidah",
+    "sefard": "Weekday Shacharit/Amidah",
+    "edot_hamizrach": "Weekday Shacharit/Amida",
+    "chabad": "Shacharit/The Amidah",
+    "koren": "Weekdays/The Amida"
+  },
+  "shacharit.weekday.tachanun": {
+    "ashkenaz": "Weekday/Shacharit/Post Amidah",
+    "sefard": "Weekday Shacharit/Tachanun",
+    "edot_hamizrach": "Weekday Shacharit/Vidui",
+    "chabad": "Shacharit/Tachnun",
+    "koren": "Weekdays/Tahanun"
+  },
+  "shacharit.weekday.torah": {
+    "ashkenaz": "Weekday/Shacharit/Torah Reading",
+    "sefard": "Weekday Shacharit/Torah Reading",
+    "edot_hamizrach": "Weekday Shacharit/Torah Reading",
+    "chabad": "Shacharit/Torah Reading",
+    "koren": "Weekdays/Reading of the Torah"
+  },
+  "shacharit.weekday.uva_letzion": {
+    "ashkenaz": "Weekday/Shacharit/Concluding Prayers/Uva Letzion",
+    "sefard": "Weekday Shacharit/Ashrei",
+    "edot_hamizrach": "Weekday Shacharit/Uva LeSion",
+    "chabad": "Shacharit/Ashrei Uva LeZion"
+  },
+  "shacharit.shabbat.amidah": {
+    "ashkenaz": "Shabbat/Shacharit/Amidah",
+    "sefard": "Shabbat Morning Services/Amidah",
+    "edot_hamizrach": "Shabbat Shacharit/Amidah",
+    "koren": "Shabbat/The Amida for Shabbat"
+  },
+  "maariv.weekday.amidah": {
+    "ashkenaz": "Weekday/Maariv/Amidah",
+    "sefard": "Weekday Maariv/Amidah",
+    "edot_hamizrach": "Weekday Arvit/Amidah",
+    "chabad": "Maariv",
+    "koren": "Weekdays/Ma'ariv for Weekdays"
+  },
+  "hallel": {
+    "ashkenaz": "Festivals/Rosh Chodesh/Hallel",
+    "sefard": "Rosh Chodesh/Hallel",
+    "edot_hamizrach": "Rosh Hodesh/Hallel",
+    "chabad": "Hallel",
+    "koren": "Festivals/Hallel"
+  },
+  "hoshanot": {
+    "ashkenaz": "Festivals/Sukkot/Hosha'anot",
+    "sefard": "Sukkot",
+    "koren": "Festivals/Hoshanot"
+  },
+  "musaf.rosh_chodesh": {
+    "ashkenaz": "Festivals/Rosh Chodesh/Musaf Amidah for Rosh Chodesh",
+    "sefard": "Rosh Chodesh/Mussaf",
+    "edot_hamizrach": "Rosh Hodesh/Mussaf",
+    "chabad": "Rosh Chodesh",
+    "koren": "Festivals/Musaf for Rosh Hodesh"
+  },
+  "musaf.chol_hamoed": {
+    "ashkenaz": "Festivals/Shalosh Regalim/Mussaf",
+    "sefard": "Holidays/Yom Tov Musaf Amidah",
+    "edot_hamizrach": "Prayers for Three Festivals/Mussaf",
+    "chabad": "Musaf for Festivals",
+    "koren": "Festivals/Musaf for Festivals"
+  },
+  "torah.chanukah": {
+    "sefard": "Chanukah/Torah Reading"
+  },
+  "chanukah.candles": {
+    "ashkenaz": "Festivals/Chanukah/Service for Lighting Chanukah Candles",
+    "sefard": "Chanukah/Menorah Lighting",
+    "edot_hamizrach": "Hanukkah/Menorah Lighting"
+  },
+  "selichot.tzom_gedaliah": {
+    "ashkenaz": "Festivals/Selichot/Fast of Gedalia",
+    "edot_hamizrach": "Fast Days and Mourning/Fast of Gedalya",
+    "koren": "Festivals/Selihot for the Tenth of Tevet"
+  },
+  "selichot.asara_btevet": {
+    "ashkenaz": "Festivals/Selichot/Ten of Tevet",
+    "sefard": "Fast Days/Selichot for Asara B'Tevet",
+    "edot_hamizrach": "Fast Days and Mourning/Tenth of Tevet",
+    "koren": "Festivals/Selihot for the Tenth of Tevet"
+  },
+  "selichot.taanit_esther": {
+    "ashkenaz": "Festivals/Selichot/Fast of Esther",
+    "sefard": "Fast Days/Selichot for Taanit Esther",
+    "edot_hamizrach": "Fast Days and Mourning/Fast of Esther",
+    "koren": "Festivals/Selihot for the Fast of Esther"
+  },
+  "selichot.tzom_tammuz": {
+    "ashkenaz": "Festivals/Selichot/Seventeen of Tamuz",
+    "sefard": "Fast Days/Selichot for 17 Tamuz",
+    "edot_hamizrach": "Fast Days and Mourning/Seventeenth of Tammuz",
+    "koren": "Festivals/Selihot for the Seventeenth of Tammuz"
+  },
+  "selichot.behab": {
+    "ashkenaz": "Festivals/Selichot/BaHaB",
+    "sefard": "Fast Days/Selichot for BaHaB"
+  },
+  "service.shacharit.weekday": {
+    "ashkenaz": "Weekday/Shacharit",
+    "sefard": "Weekday Shacharit",
+    "edot_hamizrach": "Weekday Shacharit",
+    "chabad": "Shacharit",
+    "koren": {
+      "from": "Weekdays/On Waking",
+      "to": "Weekdays/The Daily Psalm"
+    }
+  },
+  "service.mincha.weekday": {
+    "ashkenaz": "Weekday/Minchah",
+    "sefard": "Weekday Mincha",
+    "edot_hamizrach": "Weekday Mincha",
+    "chabad": "Mincha",
+    "koren": "Weekdays/Minha for Weekdays"
+  },
+  "service.maariv.weekday": {
+    "ashkenaz": {
+      "path": "Weekday/Maariv",
+      "except": [
+        "Weekday/Maariv/Keri'at Shema al Hamita"
+      ]
+    },
+    "sefard": "Weekday Maariv",
+    "edot_hamizrach": "Weekday Arvit",
+    "chabad": "Maariv",
+    "koren": "Weekdays/Ma'ariv for Weekdays"
+  },
+  "mincha.weekday.ashrei": {
+    "ashkenaz": "Weekday/Minchah/Ashrei",
+    "sefard": "Weekday Mincha/Korbanot",
+    "edot_hamizrach": "Weekday Mincha/Offerings",
+    "chabad": "Mincha/Ashrei"
+  },
+  "mincha.weekday.amidah": {
+    "ashkenaz": "Weekday/Minchah/Amida",
+    "sefard": "Weekday Mincha/Amidah",
+    "edot_hamizrach": "Weekday Mincha/Amida",
+    "chabad": "Mincha/Amidah",
+    "koren": "Weekdays/Minha for Weekdays"
+  },
+  "torah.fast_mincha": {
+    "edot_hamizrach": "Fast Days and Mourning/Torah Reading for Fast Days",
+    "koren": "Torah Readings/Fast Days"
+  },
+  "maariv.weekday.end": {
+    "ashkenaz": "Weekday/Maariv/Birkat HaLevana",
+    "sefard": "Weekday Maariv/Sefirat HaOmer",
+    "edot_hamizrach": "Weekday Arvit/Alenu",
+    "chabad": "Maariv",
+    "koren": "Weekdays/Ma'ariv for Weekdays"
+  },
+  "omer": {
+    "edot_hamizrach": "Counting of the Omer",
+    "chabad": "Sefirat HaOmer",
+    "koren": "Weekdays/Counting of the Omer"
+  },
+  "kiddush_levana": {
+    "sefard": "Kiddush Levanah",
+    "chabad": "Kiddush Levanah",
+    "koren": "Shabbat/Blessing of the New Moon",
+    "edot_hamizrach": "Blessing of the Moon"
+  },
+  "havdalah": {
+    "ashkenaz": "Shabbat/Havdalah",
+    "sefard": "Motzaei Shabbat /Havdala",
+    "edot_hamizrach": "Havdalah/Havdala",
+    "koren": "Shabbat/Havdala at Home"
+  },
+  "lulav": {
+    "ashkenaz": "Festivals/Sukkot/Blessing on Lulav",
+    "chabad": "Lulav",
+    "koren": "Festivals/Blessing on Taking the Lulav"
+  },
+  "hoshanot.hoshana_raba": {
+    "koren": "Festivals/Hoshanot for Hoshana Raba"
+  }
+}

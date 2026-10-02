@@ -118,7 +118,7 @@ class _NativeBackend implements NotificationBackend {
           _details,
           androidScheduleMode: mode,
           uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
-          payload: '/zmanim',
+          payload: p.route,
         );
       } catch (e) {
         debugPrint('schedule ${p.id} failed: $e');
@@ -156,7 +156,7 @@ class _DesktopTimerBackend extends TimerNotificationBackend {
   Future<void> showScheduled(PlannedNotification p) async {
     await init();
     try {
-      await _plugin.show(p.id, p.title, p.body, const NotificationDetails(linux: LinuxNotificationDetails()), payload: '/zmanim');
+      await _plugin.show(p.id, p.title, p.body, const NotificationDetails(linux: LinuxNotificationDetails()), payload: p.route);
     } catch (e) {
       debugPrint('notify failed: $e');
     }

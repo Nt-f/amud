@@ -15,6 +15,19 @@
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
+		02FC0F08FEC26A432A5D3D90 = {isa = PBXBuildFile; fileRef = F1127BA10F86AFD800D91368; };
+		D3DE99010E107A3DA6570F61 = {isa = PBXBuildFile; fileRef = 38A6289DFE9E7733A570F50F; };
+		6A7500F2A4B6A5C903F3059A = {isa = PBXBuildFile; fileRef = CF3802B5374CF3B858CD7F50; };
+		D0E623DA85547C8EC1C97194 = {isa = PBXBuildFile; fileRef = F1127BA10F86AFD800D91368; };
+		9033E7CA304042580D3BC8C9 = {isa = PBXBuildFile; fileRef = CDA47D3F0F8F9F60AC1C961E; };
+		471FB669983E7F69090E936A = {isa = PBXBuildFile; fileRef = AD749E21F95E8D348AACF41C; settings = {ATTRIBUTES = (RemoveHeadersOnCopy,);}; };
+		5BFE753FBF49DF0FE705C210 = {isa = PBXBuildFile; fileRef = F1127BA10F86AFD800D91368; };
+		D67F23844FE5838621EC86BC = {isa = PBXBuildFile; fileRef = 40DAB94504D10F99903BF724; };
+		5E6AD6C60C95FA68190161AF = {isa = PBXBuildFile; fileRef = 8793C8D7DE12C5A973DE2724; settings = {ATTRIBUTES = (RemoveHeadersOnCopy,);}; };
+		B19FDE25F9B8530A9C9A92E8 = {isa = PBXBuildFile; fileRef = F1127BA10F86AFD800D91368; };
+		89BCFEE1A66E21AAB3F311D1 = {isa = PBXBuildFile; fileRef = CDA47D3F0F8F9F60AC1C961E; };
+		DF56043C8D74B001E3D5BC93 = {isa = PBXBuildFile; fileRef = 6724254FE020EBD68C8A1DCB; settings = {ATTRIBUTES = (RemoveHeadersOnCopy,);}; };
+		BA029CF15AA1244C251F30AE = {isa = PBXBuildFile; fileRef = BA029CF15AA1244C251F30AD; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +38,9 @@
 			remoteGlobalIDString = 97C146ED1CF9000F007C117D;
 			remoteInfo = Runner;
 		};
+		EB18671F6D7E421113B75169 = {isa = PBXContainerItemProxy; containerPortal = 97C146E61CF9000F007C117D; proxyType = 1; remoteGlobalIDString = 74BCB35F82CCA554DAE29385; remoteInfo = Amud; };
+		C6376E466DF13C94F053C62B = {isa = PBXContainerItemProxy; containerPortal = 97C146E61CF9000F007C117D; proxyType = 1; remoteGlobalIDString = BB3739EA5FC06F433BE2490B; remoteInfo = Amud; };
+		609320905CB2ABF51F3C312C = {isa = PBXContainerItemProxy; containerPortal = 97C146E61CF9000F007C117D; proxyType = 1; remoteGlobalIDString = 3CE05DD42B367F9C0959987C; remoteInfo = Amud; };
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +54,9 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C52EBEBAA37710BFB3AFF204 = {isa = PBXCopyFilesBuildPhase; buildActionMask = 2147483647; dstPath = ""; dstSubfolderSpec = 13; files = (471FB669983E7F69090E936A,); name = "Embed App Extensions"; runOnlyForDeploymentPostprocessing = 0; };
+		AD0B11E47DC2CE8F8792F9AB = {isa = PBXCopyFilesBuildPhase; buildActionMask = 2147483647; dstPath = "$(CONTENTS_FOLDER_PATH)/Watch"; dstSubfolderSpec = 16; files = (5E6AD6C60C95FA68190161AF,); name = "Embed Watch Content"; runOnlyForDeploymentPostprocessing = 0; };
+		6C50EB07042E95E70A5CEC26 = {isa = PBXCopyFilesBuildPhase; buildActionMask = 2147483647; dstPath = ""; dstSubfolderSpec = 13; files = (DF56043C8D74B001E3D5BC93,); name = "Embed App Extensions"; runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +76,22 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1127BA10F86AFD800D91368 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../apple/AmudTimeline.swift"; sourceTree = SOURCE_ROOT; };
+		38A6289DFE9E7733A570F50F = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../apple/AmudIntents.swift"; sourceTree = SOURCE_ROOT; };
+		CF3802B5374CF3B858CD7F50 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Runner/IntegrationBridge.swift"; sourceTree = SOURCE_ROOT; };
+		AD749E21F95E8D348AACF41C = {isa = PBXFileReference; explicitFileType = wrapper.app-extension; includeInIndex = 0; path = "AmudWidgets.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA47D3F0F8F9F60AC1C961E = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../apple/AmudWidget.swift"; sourceTree = SOURCE_ROOT; };
+		AACA4A8C3A2539137B59C319 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AmudWidgets/Info.plist"; sourceTree = SOURCE_ROOT; };
+		BD5A250B515E1882FF5735EA = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AmudWidgets/Extension.entitlements"; sourceTree = SOURCE_ROOT; };
+		8793C8D7DE12C5A973DE2724 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AmudWatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40DAB94504D10F99903BF724 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AmudWatch/AmudWatchApp.swift"; sourceTree = SOURCE_ROOT; };
+		DB70D04F22CF0C8D0E73C3DE = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AmudWatch/Info.plist"; sourceTree = SOURCE_ROOT; };
+		8CA38DA351DD068BDAFF8E56 = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AmudWatch/Watch.entitlements"; sourceTree = SOURCE_ROOT; };
+		6724254FE020EBD68C8A1DCB = {isa = PBXFileReference; explicitFileType = wrapper.app-extension; includeInIndex = 0; path = "AmudWatchWidgets.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1191728CBB94D52934E320AF = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AmudWatchWidgets/Info.plist"; sourceTree = SOURCE_ROOT; };
+		DD42A19DA016EF36F06A3644 = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AmudWatchWidgets/Extension.entitlements"; sourceTree = SOURCE_ROOT; };
+		2309A4ABD685B0322BD7D848 = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Integrations.xcconfig; sourceTree = SOURCE_ROOT; };
+		BA029CF15AA1244C251F30AD = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AmudWatch/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +102,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		843A5EBCFC2EE88A243B0D02 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		FDE1A4088A1AC24A94D96BC8 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		229EF6A8DDF6654971D02C8E = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,6 +134,7 @@
 				97C146F01CF9000F007C117D /* Runner */,
 				97C146EF1CF9000F007C117D /* Products */,
 				331C8082294A63A400263BE5 /* RunnerTests */,
+				24E73BC27280BD69835BC6C9,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +143,9 @@
 			children = (
 				97C146EE1CF9000F007C117D /* Runner.app */,
 				331C8081294A63A400263BE5 /* RunnerTests.xctest */,
+				AD749E21F95E8D348AACF41C,
+				8793C8D7DE12C5A973DE2724,
+				6724254FE020EBD68C8A1DCB,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +166,7 @@
 			path = Runner;
 			sourceTree = "<group>";
 		};
+		24E73BC27280BD69835BC6C9 = {isa = PBXGroup; children = (F1127BA10F86AFD800D91368,38A6289DFE9E7733A570F50F,CF3802B5374CF3B858CD7F50,CDA47D3F0F8F9F60AC1C961E,AACA4A8C3A2539137B59C319,BD5A250B515E1882FF5735EA,40DAB94504D10F99903BF724,DB70D04F22CF0C8D0E73C3DE,8CA38DA351DD068BDAFF8E56,1191728CBB94D52934E320AF,DD42A19DA016EF36F06A3644,); name = Integrations; sourceTree = "<group>"; };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,16 +197,25 @@
 				97C146EC1CF9000F007C117D /* Resources */,
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
+				C52EBEBAA37710BFB3AFF204,
+				AD0B11E47DC2CE8F8792F9AB,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
+
+				FBF92F353CB1BFE21269CCA1,
+				6F5744CA1648F8D9EC32CAE6,);
 			name = Runner;
 			productName = Runner;
 			productReference = 97C146EE1CF9000F007C117D /* Runner.app */;
 			productType = "com.apple.product-type.application";
 		};
+		74BCB35F82CCA554DAE29385 = {isa = PBXNativeTarget; buildConfigurationList = 9D9B5AAC72BBA997C886AFB4; buildPhases = (2DE8915290B607B1BB96293E,843A5EBCFC2EE88A243B0D02,62DDB136BE8AAE50410AC288,); buildRules = (); dependencies = (); name = AmudWidgets; productName = AmudWidgets; productReference = AD749E21F95E8D348AACF41C; productType = "com.apple.product-type.app-extension"; };
+		BB3739EA5FC06F433BE2490B = {isa = PBXNativeTarget; buildConfigurationList = 653126201BC92D503D4CF46F; buildPhases = (BED468E9CC5CE6AF73DD1BE1,FDE1A4088A1AC24A94D96BC8,1FD34A02C472A003CF0E6704,
+				6C50EB07042E95E70A5CEC26,); buildRules = (); dependencies = (
+				C5F71E4D5E56EB38D61E824E,); name = AmudWatch; productName = AmudWatch; productReference = 8793C8D7DE12C5A973DE2724; productType = "com.apple.product-type.application.watchapp2"; };
+		3CE05DD42B367F9C0959987C = {isa = PBXNativeTarget; buildConfigurationList = 2869845E52A70A8B11E8D1F8; buildPhases = (109C1FB971F0657B71A999DD,229EF6A8DDF6654971D02C8E,27227D721486BDEE51FC7D3C,); buildRules = (); dependencies = (); name = AmudWatchWidgets; productName = AmudWatchWidgets; productReference = 6724254FE020EBD68C8A1DCB; productType = "com.apple.product-type.app-extension"; };
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -199,6 +251,9 @@
 			targets = (
 				97C146ED1CF9000F007C117D /* Runner */,
 				331C8080294A63A400263BE5 /* RunnerTests */,
+				74BCB35F82CCA554DAE29385,
+				BB3739EA5FC06F433BE2490B,
+				3CE05DD42B367F9C0959987C,
 			);
 		};
 /* End PBXProject section */
@@ -222,6 +277,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		62DDB136BE8AAE50410AC288 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		1FD34A02C472A003CF0E6704 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (BA029CF15AA1244C251F30AE,); runOnlyForDeploymentPostprocessing = 0; };
+		27227D721486BDEE51FC7D3C = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -274,9 +332,21 @@
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 				7884E8682EC3CC0700C636F2 /* SceneDelegate.swift in Sources */,
+				02FC0F08FEC26A432A5D3D90,
+				D3DE99010E107A3DA6570F61,
+				6A7500F2A4B6A5C903F3059A,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2DE8915290B607B1BB96293E = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
+				D0E623DA85547C8EC1C97194,
+				9033E7CA304042580D3BC8C9,); runOnlyForDeploymentPostprocessing = 0; };
+		BED468E9CC5CE6AF73DD1BE1 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
+				5BFE753FBF49DF0FE705C210,
+				D67F23844FE5838621EC86BC,); runOnlyForDeploymentPostprocessing = 0; };
+		109C1FB971F0657B71A999DD = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
+				B19FDE25F9B8530A9C9A92E8,
+				89BCFEE1A66E21AAB3F311D1,); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -285,6 +355,9 @@
 			target = 97C146ED1CF9000F007C117D /* Runner */;
 			targetProxy = 331C8085294A63A400263BE5 /* PBXContainerItemProxy */;
 		};
+		FBF92F353CB1BFE21269CCA1 = {isa = PBXTargetDependency; target = 74BCB35F82CCA554DAE29385; targetProxy = EB18671F6D7E421113B75169; };
+		6F5744CA1648F8D9EC32CAE6 = {isa = PBXTargetDependency; target = BB3739EA5FC06F433BE2490B; targetProxy = C6376E466DF13C94F053C62B; };
+		C5F71E4D5E56EB38D61E824E = {isa = PBXTargetDependency; target = 3CE05DD42B367F9C0959987C; targetProxy = 609320905CB2ABF51F3C312C; };
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -363,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
@@ -542,6 +616,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
@@ -564,6 +639,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
@@ -581,6 +657,15 @@
 			};
 			name = Release;
 		};
+		102AF9F72B1C0578CC448CBA = {isa = XCBuildConfiguration; baseConfigurationReference = 2309A4ABD685B0322BD7D848; buildSettings = {SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; PRODUCT_BUNDLE_IDENTIFIER = page.amud.widgets; PRODUCT_NAME = "$(TARGET_NAME)"; INFOPLIST_FILE = "AmudWidgets/Info.plist"; CODE_SIGN_ENTITLEMENTS = "AmudWidgets/Extension.entitlements"; CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)"; MARKETING_VERSION = "$(FLUTTER_BUILD_NAME)"; SDKROOT = iphoneos; SKIP_INSTALL = YES; GENERATE_INFOPLIST_FILE = NO; CLANG_ENABLE_MODULES = YES; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks"; IPHONEOS_DEPLOYMENT_TARGET = 16.0; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; APPLICATION_EXTENSION_API_ONLY = YES;}; name = Debug; };
+		1B915F46306AB352FFC111D8 = {isa = XCBuildConfiguration; baseConfigurationReference = 2309A4ABD685B0322BD7D848; buildSettings = {SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; PRODUCT_BUNDLE_IDENTIFIER = page.amud.widgets; PRODUCT_NAME = "$(TARGET_NAME)"; INFOPLIST_FILE = "AmudWidgets/Info.plist"; CODE_SIGN_ENTITLEMENTS = "AmudWidgets/Extension.entitlements"; CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)"; MARKETING_VERSION = "$(FLUTTER_BUILD_NAME)"; SDKROOT = iphoneos; SKIP_INSTALL = YES; GENERATE_INFOPLIST_FILE = NO; CLANG_ENABLE_MODULES = YES; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks"; IPHONEOS_DEPLOYMENT_TARGET = 16.0; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; APPLICATION_EXTENSION_API_ONLY = YES;}; name = Release; };
+		91CD3079AA377318D7057B7A = {isa = XCBuildConfiguration; baseConfigurationReference = 2309A4ABD685B0322BD7D848; buildSettings = {SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; PRODUCT_BUNDLE_IDENTIFIER = page.amud.widgets; PRODUCT_NAME = "$(TARGET_NAME)"; INFOPLIST_FILE = "AmudWidgets/Info.plist"; CODE_SIGN_ENTITLEMENTS = "AmudWidgets/Extension.entitlements"; CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)"; MARKETING_VERSION = "$(FLUTTER_BUILD_NAME)"; SDKROOT = iphoneos; SKIP_INSTALL = YES; GENERATE_INFOPLIST_FILE = NO; CLANG_ENABLE_MODULES = YES; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks"; IPHONEOS_DEPLOYMENT_TARGET = 16.0; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; APPLICATION_EXTENSION_API_ONLY = YES;}; name = Profile; };
+		5B911FD5677E9D4110063B51 = {isa = XCBuildConfiguration; baseConfigurationReference = 2309A4ABD685B0322BD7D848; buildSettings = {SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; PRODUCT_BUNDLE_IDENTIFIER = page.amud.watch; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; PRODUCT_NAME = "$(TARGET_NAME)"; INFOPLIST_FILE = "AmudWatch/Info.plist"; CODE_SIGN_ENTITLEMENTS = "AmudWatch/Watch.entitlements"; CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)"; MARKETING_VERSION = "$(FLUTTER_BUILD_NAME)"; SDKROOT = watchos; SKIP_INSTALL = YES; GENERATE_INFOPLIST_FILE = NO; CLANG_ENABLE_MODULES = YES; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks"; WATCHOS_DEPLOYMENT_TARGET = 10.0; TARGETED_DEVICE_FAMILY = 4; SUPPORTED_PLATFORMS = "watchos watchsimulator";}; name = Debug; };
+		47B933FB557169C65E579742 = {isa = XCBuildConfiguration; baseConfigurationReference = 2309A4ABD685B0322BD7D848; buildSettings = {SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; PRODUCT_BUNDLE_IDENTIFIER = page.amud.watch; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; PRODUCT_NAME = "$(TARGET_NAME)"; INFOPLIST_FILE = "AmudWatch/Info.plist"; CODE_SIGN_ENTITLEMENTS = "AmudWatch/Watch.entitlements"; CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)"; MARKETING_VERSION = "$(FLUTTER_BUILD_NAME)"; SDKROOT = watchos; SKIP_INSTALL = YES; GENERATE_INFOPLIST_FILE = NO; CLANG_ENABLE_MODULES = YES; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks"; WATCHOS_DEPLOYMENT_TARGET = 10.0; TARGETED_DEVICE_FAMILY = 4; SUPPORTED_PLATFORMS = "watchos watchsimulator";}; name = Release; };
+		21CF7E2058E7F84EC956EA92 = {isa = XCBuildConfiguration; baseConfigurationReference = 2309A4ABD685B0322BD7D848; buildSettings = {SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; PRODUCT_BUNDLE_IDENTIFIER = page.amud.watch; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; PRODUCT_NAME = "$(TARGET_NAME)"; INFOPLIST_FILE = "AmudWatch/Info.plist"; CODE_SIGN_ENTITLEMENTS = "AmudWatch/Watch.entitlements"; CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)"; MARKETING_VERSION = "$(FLUTTER_BUILD_NAME)"; SDKROOT = watchos; SKIP_INSTALL = YES; GENERATE_INFOPLIST_FILE = NO; CLANG_ENABLE_MODULES = YES; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks"; WATCHOS_DEPLOYMENT_TARGET = 10.0; TARGETED_DEVICE_FAMILY = 4; SUPPORTED_PLATFORMS = "watchos watchsimulator";}; name = Profile; };
+		303D61DF04DBD6AE0B3388A1 = {isa = XCBuildConfiguration; baseConfigurationReference = 2309A4ABD685B0322BD7D848; buildSettings = {SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; PRODUCT_BUNDLE_IDENTIFIER = page.amud.watch.widgets; PRODUCT_NAME = "$(TARGET_NAME)"; INFOPLIST_FILE = "AmudWatchWidgets/Info.plist"; CODE_SIGN_ENTITLEMENTS = "AmudWatchWidgets/Extension.entitlements"; CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)"; MARKETING_VERSION = "$(FLUTTER_BUILD_NAME)"; SDKROOT = watchos; SKIP_INSTALL = YES; GENERATE_INFOPLIST_FILE = NO; CLANG_ENABLE_MODULES = YES; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks"; WATCHOS_DEPLOYMENT_TARGET = 10.0; TARGETED_DEVICE_FAMILY = 4; SUPPORTED_PLATFORMS = "watchos watchsimulator"; APPLICATION_EXTENSION_API_ONLY = YES;}; name = Debug; };
+		3E7572922235F7080C5C7EFF = {isa = XCBuildConfiguration; baseConfigurationReference = 2309A4ABD685B0322BD7D848; buildSettings = {SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; PRODUCT_BUNDLE_IDENTIFIER = page.amud.watch.widgets; PRODUCT_NAME = "$(TARGET_NAME)"; INFOPLIST_FILE = "AmudWatchWidgets/Info.plist"; CODE_SIGN_ENTITLEMENTS = "AmudWatchWidgets/Extension.entitlements"; CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)"; MARKETING_VERSION = "$(FLUTTER_BUILD_NAME)"; SDKROOT = watchos; SKIP_INSTALL = YES; GENERATE_INFOPLIST_FILE = NO; CLANG_ENABLE_MODULES = YES; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks"; WATCHOS_DEPLOYMENT_TARGET = 10.0; TARGETED_DEVICE_FAMILY = 4; SUPPORTED_PLATFORMS = "watchos watchsimulator"; APPLICATION_EXTENSION_API_ONLY = YES;}; name = Release; };
+		43D9BE242034A8E4CEE63023 = {isa = XCBuildConfiguration; baseConfigurationReference = 2309A4ABD685B0322BD7D848; buildSettings = {SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; PRODUCT_BUNDLE_IDENTIFIER = page.amud.watch.widgets; PRODUCT_NAME = "$(TARGET_NAME)"; INFOPLIST_FILE = "AmudWatchWidgets/Info.plist"; CODE_SIGN_ENTITLEMENTS = "AmudWatchWidgets/Extension.entitlements"; CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)"; MARKETING_VERSION = "$(FLUTTER_BUILD_NAME)"; SDKROOT = watchos; SKIP_INSTALL = YES; GENERATE_INFOPLIST_FILE = NO; CLANG_ENABLE_MODULES = YES; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks"; WATCHOS_DEPLOYMENT_TARGET = 10.0; TARGETED_DEVICE_FAMILY = 4; SUPPORTED_PLATFORMS = "watchos watchsimulator"; APPLICATION_EXTENSION_API_ONLY = YES;}; name = Profile; };
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -614,6 +699,9 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		9D9B5AAC72BBA997C886AFB4 = {isa = XCConfigurationList; buildConfigurations = (102AF9F72B1C0578CC448CBA,1B915F46306AB352FFC111D8,91CD3079AA377318D7057B7A,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		653126201BC92D503D4CF46F = {isa = XCConfigurationList; buildConfigurations = (5B911FD5677E9D4110063B51,47B933FB557169C65E579742,21CF7E2058E7F84EC956EA92,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		2869845E52A70A8B11E8D1F8 = {isa = XCConfigurationList; buildConfigurations = (303D61DF04DBD6AE0B3388A1,3E7572922235F7080C5C7EFF,43D9BE242034A8E4CEE63023,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
 /* End XCConfigurationList section */
 	};
 	rootObject = 97C146E61CF9000F007C117D /* Project object */;

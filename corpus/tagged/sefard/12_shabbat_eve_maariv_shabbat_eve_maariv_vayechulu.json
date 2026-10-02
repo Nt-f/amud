@@ -1,0 +1,3132 @@
+{
+ "nusach": "sefard",
+ "chunk": "Shabbat Eve Maariv [Shabbat Eve Maariv .. Vayechulu]",
+ "leaves": {
+  "Shabbat Eve Maariv/Shabbat Eve Maariv": {
+   "node": "kabbalat_shabbat.psalms",
+   "service": "maariv",
+   "when": "shabbat"
+  },
+  "Shabbat Eve Maariv/Shema & Blessings": {
+   "node": "shema.hamaariv_aravim",
+   "service": "maariv",
+   "when": "true"
+  },
+  "Shabbat Eve Maariv/Amidah": {
+   "node": "amidah.opening",
+   "service": "maariv",
+   "when": "shabbat"
+  },
+  "Shabbat Eve Maariv/Vayechulu": {
+   "node": "motzash.vihi_noam",
+   "service": "maariv",
+   "when": "shabbat"
+  }
+ },
+ "he": {
+  "he:Shabbat Eve Maariv/Shabbat Eve Maariv:1": {
+   "kind": "instruction",
+   "en": "When Shabbat falls on Yom Tov, Motzaei Yom Tov, or Chol HaMoed, do not say K'Gonah; proceed directly to Barchu.",
+   "gloss": "Omitted on Yom Tov and Chol HaMoed"
+  },
+  "he:Shabbat Eve Maariv/Shabbat Eve Maariv:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Eve Maariv/Shabbat Eve Maariv:3": {
+   "parts": [
+    {
+     "text": "<b>רָזָא</b> דְשַׁבָּת אִיהִי שַׁבָּת דְּאִתְאַחֲדַת בְּרָזָא דְאֶחָד. לְמִשְׁרֵי עֲלָהּ רָזָא דְאֶחָד. צְלוֹתָא דְמַעֲלֵי שַׁבְּתָא דְּהָא אִתְאַחֲדַת כּוּרְסַיָּא יַקִּירָא קַדִּישָׁא בְּרָזָא דְאֶחָד. וְאִתְתַּקָּנַת לְמִשְׁרֵי עֲלָהּ מַלְכָּא קַדִּישָׁא עִלָּאָה. כַּד עַיִּל שַׁבְּתָא אִיהִי אִתְיַחֲדַת וְאִתְפַּרְשַׁת מִסִּטְרָא אַחֲרָא. וְכָל דִּינִין מִתְעַבְּרִין מִנָּהּ וְאִיהִי אִשְׁתְּאָרַת בְּיִחוּדָא דִנְהִירוּ קַדִּישָׁא. וְאִתְעַטְרַת בְּכַמָה עִטְרִין לְגַבֵּי מַלְכָּא קַדִישָׁא. וְכָל שׁוּלְטָנֵי רוּגְזִין וּמָארֵי דְדִינָא כֻּלְּהוּ עַרְקִין וְאִתְעַבְּרוּ מִנָּהּ. וְלֵית שׁוּלְטָנָא אַחֲרָא בְּכֻלְּהוּ עָלְמִין ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(בַּר מִנָּהּ)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ". וְאַנְפָּהָא נְהִירִין בִּנְהִירוּ עִלָּאָה וְאִתְעַטְּרַת לְתַתָּא בְּעַמָּא קַדִּישָׁא. וְכֻלְּהוֹן מִתְעַטְּרִין בְּנִשְׁמָתִין חַדְתִּין כְּדֵין שֵׁירוּתָא דִצְלוֹתָא. לְבָרְכָא לָהּ בְּחֶדְוָה בִּנְהִירוּ דְּאַנְפִּין. וְלוֹמַר:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Shabbat Eve Maariv:4": {
+   "kind": "instruction",
+   "en": "When praying alone, say this at the end of K'Gonah, after 'b'nahiro d'anpin'."
+  },
+  "he:Shabbat Eve Maariv/Shabbat Eve Maariv:5": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Eve Maariv/Shabbat Eve Maariv:6": {
+   "parts": [
+    {
+     "text": "<small><b>חזן:</b></small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " <b>בָּרְכוּ</b> אֶת יְהֹוָה הַמְּבֹרָךְ:",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Shabbat Eve Maariv:7": {
+   "parts": [
+    {
+     "text": "<small><b>קהל וחזן:</b></small>",
+     "kind": "speaker",
+     "en": "Congregation and Chazzan:"
+    },
+    {
+     "text": " <b>בָּרוּךְ</b> יְהֹוָה הַמְּבֹרָךְ לְעוֹלָם וָעֵד:",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:2": {
+   "parts": [
+    {
+     "text": "<b>אַהֲבַה רַבָּה</b> ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small> <small>(אַהֲבַת עוֹלָם)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " </small> בֵּית יִשְׂרָאֵל עַמְּךָ אָהַבְתָּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " תּוֹרָה וּמִצְוֹת חֻקִּים וּמִשְׁפָּטִים אוֹתָנוּ לִמַּדְתָּ. עַל כֵּן יְהֹוָה אֱלֹהֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּשָׁכְבֵנוּ וּבְקוּמֵנוּ נָשִׂיחַ בְּחֻקֶּיךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְנִשְׂמַח בְּדִבְרֵי תַלְמוּד תּוֹרָתֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּבְמִצְוֹתֶיךָ לְעוֹלָם וָעֶד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כִּי הֵם חַיֵּינוּ וְאֹרֶךְ יָמֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּבָהֶם נֶהְגֶּה יוֹמָם וָלָיְלָה. וְאַהֲבָתְךָ אַל תָסוּר מִמֶּנּוּ לְעוֹלָמִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בָּרוּךְ אַתָּה יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אוֹהֵב עַמּוֹ יִשְׂרָאֵל:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:3": {
+   "parts": [
+    {
+     "text": "(",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>יחיד אומר:</small>",
+     "kind": "instruction",
+     "en": "The individual says:",
+     "gloss": "Said only when praying without a minyan"
+    },
+    {
+     "text": " אֵל מֶלֶךְ נֶאֱמָן:)",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:5": {
+   "parts": [
+    {
+     "text": "<small>בלחש:</small>",
+     "kind": "instruction",
+     "en": "Quietly:"
+    },
+    {
+     "text": " בָּרוּךְ,",
+     "kind": "prayer",
+     "voice": "silent"
+    },
+    {
+     "text": " שֵּׁם כְּבוֹד מַלְכוּתוֹ,",
+     "kind": "prayer",
+     "voice": "silent"
+    },
+    {
+     "text": " לְעוֹלָם וָעֶד:",
+     "kind": "prayer",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:9": {
+   "parts": [
+    {
+     "text": "<small>וחוזר החזן:</small>",
+     "kind": "instruction",
+     "en": "The chazzan repeats:"
+    },
+    {
+     "text": " יְהֹוָה אֱלֹהֵיכֶם אֱמֶת:",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:10": {
+   "parts": [
+    {
+     "text": "<b>וֶאֱמוּנָה</b> כָּל זֹאת וְקַיָּם עָלֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כִּי הוּא יְהֹוָה אֱלֹהֵינוּ וְאֵין זוּלָתוֹ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וַאֲנַחְנוּ יִשְׂרָאֵל עַמּוֹ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הַפּוֹדֵנוּ מִיַּד מְלָכִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " מַלְכֵּנוּ הַגֹּאֲלֵנוּ מִכַּף כָּל הֶעָרִיצִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הָאֵל הַנִּפְרָע לָנוּ מִצָּרֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הַמְשַׁלֵּם גְּמוּל לְכָל אוֹיְבֵי נַפְשֵׁנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הָעוֹשֵׂה גְדוֹלוֹת עַד אֵין חֵקֶר. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(נִסִּים)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְנִפְלָאוֹת עַד אֵין מִסְפָּר: הַשָּׂם נַפְשֵׁנוּ בַּחַיִּים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְלֹא נָתַן לַמּוֹט רַגְלֵנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הַמַּדְרִיכֵנוּ עַל בָּמוֹת אוֹיְבֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וַיָּרֶם קַרְנֵנוּ עַל כָּל שׂוֹנְאֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הָעֹשֶׂה לָנוּ נִסִּים וּנְקָמָה בְּפַרְעֹה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אוֹתוֹת וּמוֹפְתִים בְּאַדְמַת בְּנֵי חָם. הַמַּכֶּה בְעֶבְרָתו כָּל בְּכוֹרֵי מִצְרָיִם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וַיּוֹצֵא אֶת עַמּוֹ יִשְׂרָאֵל מִתּוֹכָם לְחֵרוּת עוֹלָם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הַמַּעֲבִיר בָּנָיו בֵּין גִּזְרֵי יַם סוּף,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאֶת רוֹדְפֵיהֶם וְאֶת שׂונְאֵיהֶם בִּתְהוֹמוֹת טִבַּע. וְרָאוּ בָנָיו גְּבוּרָתוֹ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שִׁבְּחוּ וְהוֹדוּ לִשְׁמוֹ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּמַלְכוּתוֹ בְרָצוֹן קִבְּלוּ עֲלֵיהֶם. מֹשֶׁה וּבְנֵי יִשְׂרָאֵל,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְךָ עָנוּ שִׁירָה בְשִׂמְחָה רַבָּה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאָמְרוּ כֻלָּם.  ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:15": {
+   "kind": "instruction",
+   "en": "On Shabbat:",
+   "gloss": "Said only on Shabbat"
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:16": {
+   "kind": "prayer",
+   "when": "shabbat"
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:17": {
+   "kind": "instruction",
+   "en": "On the three pilgrimage festivals:",
+   "gloss": "Said only on Pesach, Shavuot, and Sukkot"
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:18": {
+   "kind": "prayer",
+   "when": "pesach || shavuot || sukkot"
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:19": {
+   "kind": "instruction",
+   "en": "Half Kaddish:"
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:20": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:21": {
+   "parts": [
+    {
+     "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא. יִתְבָּרַךְ.</b> וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": " בְּרִיךְ הוּא. לְעֵלָּא (",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small> בעשי\"ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Said only during Aseret Yemei Teshuva"
+    },
+    {
+     "text": " וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " דַּאֲמִירָן בְּעָלְמָא,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " וְאִמְרוּ אָמֵן: ",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Shema & Blessings:22": {
+   "kind": "instruction",
+   "en": "On the three pilgrimage festivals, recite the prayer for the three festivals here:",
+   "gloss": "Said only on Pesach, Shavuot, and Sukkot"
+  },
+  "he:Shabbat Eve Maariv/Amidah:1": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:2": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:3": {
+   "parts": [
+    {
+     "text": "<small>בשבת שובה:</small>",
+     "kind": "instruction",
+     "en": "On Shabbat Shuva:"
+    },
+    {
+     "text": " <b><small>זָכְרֵנוּ לְחַיִּים,",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "Remember us for life,"
+    },
+    {
+     "text": " מֶלֶךְ חָפֵץ בַּחַיִּים,",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "King Who desires life,"
+    },
+    {
+     "text": " כָּתְבֵנוּ בְּסֵפֶר חַיִּים,",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "Inscribe us in the Book of Life,"
+    },
+    {
+     "text": " לְמַעַנְךָ אֱלֹהִים חַיִּים.</small></b>  ",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "For Your sake, Living God."
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Amidah:4": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:5": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:6": {
+   "parts": [
+    {
+     "text": "<small>בקיץ:</small>",
+     "kind": "instruction",
+     "en": "In summer:"
+    },
+    {
+     "text": " מוֹרִיד הַטָּל. ",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "He causes the dew to descend.",
+     "alt": "geshem"
+    },
+    {
+     "text": "<small>בחורף:</small>",
+     "kind": "instruction",
+     "en": "In winter:"
+    },
+    {
+     "text": " מַשִּׁיב הָרוּחַ וּמוֹרִיד הַגֶּשֶׁם.",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "Causer of the wind to blow and of the rain to fall.",
+     "alt": "geshem"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Amidah:7": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:8": {
+   "parts": [
+    {
+     "text": "<small>בשבת שובה:</small>",
+     "kind": "instruction",
+     "en": "On Shabbat Shuva:"
+    },
+    {
+     "text": " <b><small>מִי כָמוֹךָ אָב הָרַחֲמָן,",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "Who is like You, merciful Father,"
+    },
+    {
+     "text": " זוֹכֵר יְצוּרָיו בְּרַחֲמִים לְחַיִּים </small></b>  ",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "Who remembers His creatures for life."
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Amidah:9": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:10": {
+   "parts": [
+    {
+     "text": "<b>אַתָּה קָדוֹשׁ</b>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְשִׁמְךָ קָדוֹשׁ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּקְדוֹשִׁים בְּכָל יוֹם יְהַלְלוּךָ סֶּלָה. כִּי אֵל מֶלֶךְ גָדוֹל וְקָדוֹשׁ אָתָּה. בָּרוּךְ אַתָּה יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הָאֵל ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small> <small>(בשבת שובה:</small>",
+     "kind": "instruction",
+     "en": "On Shabbat Shuva:"
+    },
+    {
+     "text": " <b><small>הַמֶּלֶךְ)</small>",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "the King,"
+    },
+    {
+     "text": " </b></small> הַקָּדוֹשׁ:  ",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Amidah:11": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent",
+   "en": "You have sanctified the seventh day"
+  },
+  "he:Shabbat Eve Maariv/Amidah:12": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:13": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:14": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:15": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:16": {
+   "kind": "instruction",
+   "en": "On Rosh Chodesh and on Chol HaMoed, the following prayer is added:",
+   "when": "roshChodesh || cholHamoed"
+  },
+  "he:Shabbat Eve Maariv/Amidah:17": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent",
+   "when": "roshChodesh || cholHamoed"
+  },
+  "he:Shabbat Eve Maariv/Amidah:18": {
+   "parts": [
+    {
+     "text": "<small><small>בשבת ראש חדש:</small>",
+     "kind": "instruction",
+     "en": "On Shabbat Rosh Chodesh:",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " רֹאשׁ הַחֹדֶשׁ</small>",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "the New Month",
+     "when": "roshChodesh || cholHamoed"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Amidah:19": {
+   "parts": [
+    {
+     "text": "<small><small>בשבת חוה\"מ פסח:</small>",
+     "kind": "instruction",
+     "en": "On Shabbat Chol HaMoed Pesach:",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " חַג הַמַּצּוֹת</small>",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "the Festival of Matzos",
+     "when": "roshChodesh || cholHamoed"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Amidah:20": {
+   "parts": [
+    {
+     "text": "<small><small>בשבת חוה\"מ סוכות:</small>",
+     "kind": "instruction",
+     "en": "On Shabbat Chol HaMoed Sukkot:",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " חַג הַסֻּכּוֹת</small>",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "the Festival of Sukkot",
+     "when": "roshChodesh || cholHamoed"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Amidah:21": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:22": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:23": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:24": {
+   "kind": "instruction",
+   "en": "On Chanukah and Purim (in a walled city) the following prayer is added:",
+   "when": "chanukah || shushanPurim"
+  },
+  "he:Shabbat Eve Maariv/Amidah:25": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent",
+   "when": "chanukah || shushanPurim"
+  },
+  "he:Shabbat Eve Maariv/Amidah:26": {
+   "parts": [
+    {
+     "text": "<small><b><small>בחנוכה</small>",
+     "kind": "instruction",
+     "en": "On Chanukah:",
+     "when": "chanukah || shushanPurim"
+    },
+    {
+     "text": "</b> <small>אומרים:</small>",
+     "kind": "instruction",
+     "en": "say:",
+     "when": "chanukah || shushanPurim"
+    },
+    {
+     "text": " <small><b>בִּימֵי מַתִּתְיָהוּ</b> בֶן יוֹחָנָן כֹּהֵן גָּדוֹל חַשְׁמוֹנָאִי וּבָנָיו כְּשֶׁעָמְדָה מַלְכוּת יָוָן הָרְשָׁעָה עַל עַמְּךָ יִשְׂרָאֵל לְהַשְׁכִּיחָם תּוֹרָתֶךָ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנָךָ וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים עָמַדְתָּ לָהֶם בְּעֵת צָרָתָם רַבְתָּ אֶת רִיבָם דַּנְתָּ אֶת דִּינָם נָקַמְתָּ אֶת נִקְמָתָם מָסַרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים וְרַבִּים בְּיַד מְעַטִּים וּטְמֵאִים בְּיַד טְהוֹרִים וּרְשָׁעִים בְּיַד צַדִּיקִים וְזֵדִים בְּיַד עוֹסְקֵי תוֹרָתֶךָ וּלְךָ עָשִׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמָךְ וּלְעַמְּךָ יִשְׂרָאֵל עָשִׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה וְאַחַר כָּךְ בָּאוּ בָנֶיךָ לִדְבִיר בֵּיתֶךָ וּפִנּוּ אֶת הֵיכָלֶךָ וְטִהֲרוּ אֶת מִקְדָּשֶׁךָ וְהִדְלִיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶׁךָ וְקָבְעוּ שְׁמוֹנַת <small>(יָמִים אֵלּוּ בְּהַלֵּל וּבְהוֹדָאָה וְעָשִׂיתָ עִמָּהֶם נֵס וָפֶלֶא וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל סֶלָה:)</small>",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "when": "chanukah || shushanPurim"
+    },
+    {
+     "text": " יְמֵי חֲנֻכָּה אֵלּוּ לְהוֹדוֹת וּלְהַלֵּל לְשִׁמְךָ הַגָּדוֹל:</small> </small>",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "when": "chanukah || shushanPurim"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Amidah:27": {
+   "parts": [
+    {
+     "text": "<small><b><small>בפורים המשולש</small>",
+     "kind": "instruction",
+     "en": "On Purim (in a walled city):",
+     "when": "chanukah || shushanPurim"
+    },
+    {
+     "text": "</b> <small>אומרים:</small>",
+     "kind": "instruction",
+     "en": "say:",
+     "when": "chanukah || shushanPurim"
+    },
+    {
+     "text": " <small><b>בִּימֵי מָרְדְּכַי</b> וְאֶסְתֵּר בְּשׁוּשַׁן הַבִּירָה כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע בִּקֵּשׁ לְהַשְׁמִיד לַהֲרוֹג וּלְאַבֵּד אֶת כָּל הַיְּהוּדִים מִנַּעַר וְעַד זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד בִּשְׁלֹשָׁה עָשָׂר לְחֹדֶשׁ שְׁנֵים עָשָׂר הוּא חֹדֶשׁ אֲדָר וּשְׁלָלָם לָבוֹז וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים הֵפַרְתָּ אֶת עֲצָתוֹ וְקִלְקַלְתָּ אֶת מַחֲשַׁבְתּוֹ וַהֲשֵׁבוֹתָ לוֹ גְמוּלוֹ בְרֹאשׁוֹ וְתָלוּ אוֹתוֹ וְאֶת בָּנָיו עַל הָעֵץ <small>(וְעָשִׂיתָ עִמָּהֶם נִסִּים וְנִפְלָאוֹת וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל)</small>",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "when": "chanukah || shushanPurim"
+    },
+    {
+     "text": ":</small> </small>",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "when": "chanukah || shushanPurim"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Amidah:28": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:29": {
+   "parts": [
+    {
+     "text": "<small>בעשרת ימי תשובה:</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:"
+    },
+    {
+     "text": " <b><small>וּכְתֹב לְחַיִּים טוֹבִים כָּל בְּנֵי בְרִיתֶךָ.</small></b>",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "Inscribe for a good life all the children of Your covenant."
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Amidah:30": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:31": {
+   "parts": [
+    {
+     "text": "<b>שִׂים שָׁלוֹם</b> טוֹבָה וּבְרָכָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " חַיִּים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " חֵן וָחֶסֶד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְרַחֲמִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל עַמֶּךָ. בָּרְכֵנוּ אָבִינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כֻּלָּנוּ כְּאֶחָד ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(יַחַד)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּאוֹר פָּנֶיךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ יְהֹוָה אֱלֹהֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " תּוֹרַת חַיִּים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאַהֲבַת חֶסֶד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּצְדָקָה וּבְרָכָה וְרַחֲמִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְחַיִּים וְשָׁלוֹם. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(וְכָל טוּב)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְטוֹב יִהְיֶה בְּעֵינֶיךָ לְבָרְכֵנוּ וּלְבָרֵךְ אֶת כָּל עַמְּךָ יִשְׂרָאֵל בְּכָל עֵת וּבְכָל שָׁעָה בִּשְׁלוֹמֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּרֹב עֹז וְשָׁלוֹם. ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Amidah:32": {
+   "parts": [
+    {
+     "text": "<small>בעשרת ימי תשובה:</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:"
+    },
+    {
+     "text": " <b><small>בְּסֵפֶר חַיִּים,",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "In the Book of Life,"
+    },
+    {
+     "text": " בְּרָכָה וְשָׁלוֹם,",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "Blessing and peace,"
+    },
+    {
+     "text": " וּפַרְנָסָה טוֹבָה וּגְזֵרוֹת טוֹבוֹת,",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "And abundant maintenance, good decrees,"
+    },
+    {
+     "text": " יְשׁוּעוֹת וְנֶחָמוֹת,",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "Salvations and consolations,"
+    },
+    {
+     "text": " נִזָּכֵר וְנִכָּתֵב לְפָנֶיךָ,",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "May we be remembered and inscribed before You,"
+    },
+    {
+     "text": " אֲנַחְנוּ וְכָל עַמְּךָ בֵּית יִשְׂרָאֵל,",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "We and all Your people, the House of Israel,"
+    },
+    {
+     "text": " לְחַיִּים טוֹבִים וּלְשָׁלוֹם.</small></b>  ",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "amidah": "silent",
+     "en": "For a good life and peace."
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Amidah:33": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "amidah": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:34": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:35": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:36": {
+   "kind": "instruction",
+   "en": "Some say this prayer here:"
+  },
+  "he:Shabbat Eve Maariv/Amidah:37": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:38": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:39": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:40": {
+   "parts": [
+    {
+     "text": "<b>עֹשֶׂה שָׁלוֹם</b> ",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent"
+    },
+    {
+     "text": "<small> <small>(בעשי\"ת <b>הַשָּׁלוֹם</b>)</small>",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "en": "the peace",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " </small> בִּמְרוֹמָיו. הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל. וְאִמְרוּ אָמֵן:  ",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Amidah:41": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat Eve Maariv/Amidah:42": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:1": {
+   "kind": "note",
+   "en": "Although Vayechulu was said in the Amidah, it was instituted to be said again aloud and standing, as testimony that God created heaven and earth in six days and rested on the seventh. Witnesses must stand and testify together (Avudraham)."
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:2": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud"
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:3": {
+   "parts": [
+    {
+     "text": "<small>קהל וחזן:</small>",
+     "kind": "instruction",
+     "en": "Congregation and chazzan:"
+    },
+    {
+     "text": " <b>בָּרוּךְ</b> אַתָּה יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֱלֹהֵי אַבְרָהָם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הָאֵל הַגָּדוֹל,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הַגִּבּוֹר וְהַנּוֹרָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֵל עֶלְיוֹן,",
+     "kind": "prayer"
+    },
+    {
+     "text": " קוֹנֵה שָׁמַיִם וָאָרֶץ. ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:4": {
+   "parts": [
+    {
+     "text": "<b>מָגֵן</b> אָבוֹת בִּדְבָרוֹ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " מְחַיֵּה מֵתִים בְּמַאֲמָרוֹ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הָאֵל ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small> <small>(בְּשַׁבָּת שׁוּבָה: <b>הַמֶּלֶךְ</b>)</small>",
+     "kind": "instruction",
+     "en": "On Shabbat Shuva:",
+     "when": "shabbatShuva"
+    },
+    {
+     "text": " </small> הַקָּדוֹשׁ שֶׁאֵין כָּמוֹהוּ,",
+     "kind": "prayer",
+     "when": "shabbatShuva"
+    },
+    {
+     "text": " הַמֵּנִיחַ לְעַמּוֹ בְּיוֹם שַׁבַּת קָדְשׁוֹ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כִּי בָם רָצָה לְהָנִיחַ לָהֶם. לְפָנָיו נַעֲבֹד בְּיִרְאָה וָפַחַד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְנוֹדֶה לִשְׁמוֹ בְּכָל יוֹם תָּמִיד מֵעֵין הַבְּרָכוֹת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֵל הַהוֹדָאוֹת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֲדוֹן הַשָּׁלוֹם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " מְקַדֵּשׁ הַשַּׁבָּת וּמְבָרֵךְ שְּׁבִיעִי,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּמֵנִיחַ בִּקְדֻשָּׁה לְעַם מְדֻשְּׁנֵי עֹנֶג,",
+     "kind": "prayer"
+    },
+    {
+     "text": " זֵכֶר לְמַעֲשֵׂה בְרֵאשִׁית: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:5": {
+   "parts": [
+    {
+     "text": "<small>חזן:</small>",
+     "kind": "instruction",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " <b>אֱלֹהֵינוּ</b> וֵאלֹהֵי אֲבוֹתֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " רְצֵה נָא בִּמְנוּחָתֵנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " קַדְּשֵׁנוּ בְּמִצְוֹתֶיךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתֵן חֶלְקֵנוּ בְּתוֹרָתֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שַׂבְּעֵנוּ מִטּוּבָךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְשַׂמַּח נַפְשֵׁנוּ בִּישׁוּעָתֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְטַהֵר לִבֵּנוּ לְעָבְדְּךָ בֶאֱמֶת. וְהַנְחִילֵנוּ יְהֹוָה אֱלֹהֵינוּ בְּאַהֲבָה וּבְרָצוֹן שַׁבַּת קָדְשֶׁךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיָנוּחוּ בָהּ כָּל יִשְׂרָאֵל מְקַדְּשֵׁי שְׁמֶךָ. בָּרוּךְ אַתָּה יְהֹוָה מְקַדֵּשׁ הַשַּׁבָּת: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:6": {
+   "kind": "instruction",
+   "en": "Full Kaddish:"
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:7": {
+   "parts": [
+    {
+     "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיַצְמַח פֻּרְקָנֵה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וִיקָרֵב מְשִׁיחֵהּ. בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאִמְרוּ אָמֵן. <b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ.</b> וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּרִיךְ הוּא. לְעֵלָּא (",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": "<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " דַּאֲמִירָן בְּעָלְמָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאִמְרוּ אָמֵן: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:8": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:9": {
+   "parts": [
+    {
+     "text": "<b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים טוֹבִים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: <b>עֹשֶׂה</b> שָׁלוֹם  (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " <b>הַשָּׁלוֹם</b>)  בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:  ",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:10": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud"
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:11": {
+   "kind": "instruction",
+   "en": "Half Kaddish:"
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:12": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:13": {
+   "parts": [
+    {
+     "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא. יִתְבָּרַךְ.</b> וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּרִיךְ הוּא. לְעֵלָּא (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " דַּאֲמִירָן בְּעָלְמָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאִמְרוּ אָמֵן: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:14": {
+   "parts": [
+    {
+     "text": "<small>חזן:</small>",
+     "kind": "instruction",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " <b>בָּרְכוּ אֶת יְהֹוָה הַמְּבֹרָךְ:</b>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:15": {
+   "parts": [
+    {
+     "text": "<small>קו\"ח:</small>",
+     "kind": "instruction",
+     "en": "Kadosh x3"
+    },
+    {
+     "text": " <b>בָּרוּךְ</b> יְהֹוָה הַמְּבֹרָךְ לְעוֹלָם וָעֵד: ",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:16": {
+   "kind": "instruction",
+   "en": "From Passover until Shavuot, the Omer is counted here."
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:17": {
+   "kind": "prayer",
+   "node": "concl.aleinu"
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:18": {
+   "kind": "prayer",
+   "node": "concl.aleinu"
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:19": {
+   "kind": "instruction",
+   "en": "Mourner's Kaddish",
+   "gloss": "Said by mourners or those saying Kaddish for them"
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:20": {
+   "parts": [
+    {
+     "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵה,",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "mourner",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְיַצְמַח פֻּרְקָנֵה,",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "mourner",
+     "voice": "aloud"
+    },
+    {
+     "text": " וִיקָרֵב מְשִׁיחֵהּ. בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "mourner",
+     "voice": "aloud"
+    },
+    {
+     "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב,",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "mourner",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְאִמְרוּ אָמֵן. <b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ.</b> וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "mourner",
+     "voice": "aloud"
+    },
+    {
+     "text": " בְּרִיךְ הוּא. לְעֵלָּא (",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "mourner",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Add 'far above'",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "mourner",
+     "voice": "aloud"
+    },
+    {
+     "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "mourner",
+     "voice": "aloud"
+    },
+    {
+     "text": " דַּאֲמִירָן בְּעָלְמָא,",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "mourner",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְאִמְרוּ אָמֵן: ",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "mourner",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Shabbat Eve Maariv/Vayechulu:21": {
+   "parts": [
+    {
+     "text": "<b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים טוֹבִים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: <b>עֹשֶׂה</b> שָׁלוֹם ",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "mourner",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small> <small>(בעשי\"ת <b>הַשָּׁלוֹם</b>)</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Add 'the peace'",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " </small> בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:  ",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "mourner",
+     "voice": "aloud"
+    }
+   ]
+  }
+ },
+ "en": {
+  "en:Shabbat Eve Maariv/Shabbat Eve Maariv:1": {
+   "he": [
+    "he:Shabbat Eve Maariv/Shabbat Eve Maariv:2"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shabbat Eve Maariv:4": {
+   "he": [
+    "he:Shabbat Eve Maariv/Shabbat Eve Maariv:4"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shabbat Eve Maariv:6": {
+   "parts": [
+    {
+     "text": "<small>The Chazzan ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>says:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small> Bless Adonoy Who is blessed.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Shabbat Eve Maariv:6"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shabbat Eve Maariv:7": {
+   "he": [
+    "he:Shabbat Eve Maariv/Shabbat Eve Maariv:7"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:1": {
+   "parts": [
+    {
+     "text": "Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Adonoy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " King of the Universe,",
+     "kind": "prayer"
+    },
+    {
+     "text": " With His word He brings on evenings,",
+     "kind": "prayer"
+    },
+    {
+     "text": " with wisdom He opens the gates<sup class=\"footnote-marker\">1</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">These are the gates of sunrise and sunset through which God, in His infinite wisdom, has divided life on earth into two complementary halves.—Rabbi S.R. Hirsch</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " (of heaven);",
+     "kind": "prayer"
+    },
+    {
+     "text": " and with understanding changes<sup class=\"footnote-marker\">2</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">He alternates the three daily periods—evening, morning, and afternoon.—Avudraham</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the times and alternates the seasons,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and arranges the stars in their watches,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<sup class=\"footnote-marker\">3</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">The stars appear as watchmen appointed by God to stand guard over the sleeping world below. He also appointed them their places in definite orbits according to His will and for purposes known to Him alone.—S.R. Hirsch</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " in the sky,",
+     "kind": "prayer"
+    },
+    {
+     "text": " according to His will. He creates day and night,",
+     "kind": "prayer"
+    },
+    {
+     "text": " He rolls the light away from before darkness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and darkness from before light;",
+     "kind": "prayer"
+    },
+    {
+     "text": " He causes day to pass and brings night,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and separates between day and night;",
+     "kind": "prayer"
+    },
+    {
+     "text": " Adonoy of Hosts<sup class=\"footnote-marker\">4</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">His Name ה' צְבָאוֹת means “He Who takes all the infinite variety of hosts and creatures and unites them to act and interact as parts of one unified Universe.”— S.R. Hirsch </i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " is His Name. The Almighty,",
+     "kind": "prayer"
+    },
+    {
+     "text": " [Who is] living and enduring will always reign over us forever and ever. Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Adonoy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Who brings on evening.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:1"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:2": {
+   "parts": [
+    {
+     "text": "[With] An everlasting love<sup class=\"footnote-marker\">5</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">This prayer is an abbreviated form of the אַהֲבָה רַבָּה prayer in the morning service. It thanks God for the sacred gift of Divine Revelation that He granted Israel. It declares that Torah alone is the eternal heritage of the Jewish people and that all other goods and gifts of life are transitory.— S.R. Hirsch </i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " You loved the House of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Your people. Torah and commandments,",
+     "kind": "prayer"
+    },
+    {
+     "text": " statutes and laws,",
+     "kind": "prayer"
+    },
+    {
+     "text": " You taught us. Therefore,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Adonoy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " when we lie down and when we rise,",
+     "kind": "prayer"
+    },
+    {
+     "text": " we will discuss Your statutes,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and rejoice in the words of the teachings of Your Torah and in Your commandments forever. For they are our life and they lengthen our days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and on them we will meditate day and night. [May] Your love never be removed from us Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Adonoy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Who loves His people Israel.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:2"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:3": {
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:3"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:4": {
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:4"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:5": {
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:5"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:6": {
+   "parts": [
+    {
+     "text": "And you shall love Adonoy your God with all your heart and with all your soul and with all your possessions. And these words which I command you today,",
+     "kind": "prayer"
+    },
+    {
+     "text": " shall be upon your heart. And you shall teach them sharply to your children. And you shall discuss them when you sit in your house,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and when you travel on the road,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and when you lie down and when you rise. And you shall bind them for a sign upon your hand,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and they shall be for ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>totafos</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " between your eyes. And you shall write them upon the doorposts of your house and upon your gateways.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:6"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:7": {
+   "parts": [
+    {
+     "text": "And it will be— if you vigilantly obey My commandments which I command you this day,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to love Adonoy your God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and serve Him with your entire hearts and with your entire souls— that I will give rain for your land in its proper time,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the early (autumn) rain and the late (spring) rain;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and you will harvest your grain and your wine and your oil. And I will put grass in your fields for your cattle,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and you will eat and be satisfied. Beware lest your hearts be swayed and you turn astray,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and you worship alien gods and bow to them. And Adonoy's fury will blaze among you,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and He will close off the heavens and there will be no rain and the earth will not yield its produce;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and you will perish swiftly from the good land which Adonoy gives you. Place these words of Mine upon your hearts and upon your souls,",
+     "kind": "prayer"
+    },
+    {
+     "text": "— and bind them for a sign upon your hands,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and they shall be for ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>totafos</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " between your eyes. And you shall teach them to your sons,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to speak them when you sit in your house,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and when you travel on the road,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and when you lie down and when you rise. And you shall write them upon the doorposts of your house and upon your gateways. In order that your days be prolonged,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the days of your children,",
+     "kind": "prayer"
+    },
+    {
+     "text": " upon the land which Adonoy swore to your fathers to give them [for as long] as the heavens are above the earth.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:7"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:8": {
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:8"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:9": {
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:9"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:10": {
+   "parts": [
+    {
+     "text": "—and faithful is all this,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<sup class=\"footnote-marker\">6</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">All that we have affirmed in the Shema, is true and trustworthy.—Etz Yosef</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and it is permanently established with us that he is Adonoy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and there is nothing besides Him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and that we,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " are His people. [He] Who liberated us from the hand of kings,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<sup class=\"footnote-marker\">7</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">He redeemed us from Pharaoh, and saved us from Sichon and Og in the days of Moses and from the thirty-one kings in the days of Joshua.—Etz Yosef</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " [is] our King,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Who redeemed us from the grasp of all the tyrants.<sup class=\"footnote-marker\">8</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">“Tyrants” include Amalek and others who wanted to destroy us.—Etz Yosef</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " [He is] the Almighty Who exacts payment [punishment] from our oppressors,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<sup class=\"footnote-marker\">9</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">The Malbim says that “oppressors” (צָרֵינוּ) refers to those who actively persecute us whereas “enemies” (אוֹיבֵינוּ) refers to those who would rejoice over our misfortune without necessarily contributing to our downfall in an outright manner.</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " and brings retribution on all those who are enemies of our soul. He does great things<sup class=\"footnote-marker\">10</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">“Great things” refers to the way God rules according to the laws of nature and “wonders” refers to those things that are classified as miracles.—Siach Yitzchak</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " beyond comprehension,",
+     "kind": "prayer"
+    },
+    {
+     "text": " miracles and wonders without number. He sustains our soul in life<sup class=\"footnote-marker\">11</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">Not only does God sustain our souls in exile but He also sustains our physical well- being.—Siach Yitzchak</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and does not allow our feet to slip. He makes us tread upon the high places of our enemies,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and exalts our strength over all who hate us. He performed miracles for us and vengeance upon Pharaoh,",
+     "kind": "prayer"
+    },
+    {
+     "text": " signs and wonders in the land of the Hamites. He slew in His wrath,",
+     "kind": "prayer"
+    },
+    {
+     "text": " all the firstborn of Egypt,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and brought out His people,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from their midst to everlasting<sup class=\"footnote-marker\">12</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">The redemption from Egypt is the source for all later redemptions; it is the source from which our final and total salvation will spring. We became free, never again to taste the bitterness of spiritual or physical bondage.—Sfas Emes</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " freedom. He led His children through the divided parts of the Sea of Reeds,",
+     "kind": "prayer"
+    },
+    {
+     "text": " their pursuers and their enemies He drowned in its depths. And His children saw His mighty power— they praised and gave thanks to His Name,",
+     "kind": "prayer"
+    },
+    {
+     "text": " His sovereignty they willingly accepted;",
+     "kind": "prayer"
+    },
+    {
+     "text": " Moses and the children of Israel sang unto You with great joy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and they all said:",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:10"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:11": {
+   "parts": [
+    {
+     "text": "“Who is like You among the mighty,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Adonoy! Who is like You? [You are] adorned in holiness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " awesome in praise,",
+     "kind": "prayer"
+    },
+    {
+     "text": " performing wonders”<sup class=\"footnote-marker\">13</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">Exodus 15:11.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Your children beheld Your sovereignty when You divided the sea before Moses. “This is my God,",
+     "kind": "prayer"
+    },
+    {
+     "text": "”<sup class=\"footnote-marker\">14</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">Exodus 15:2.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " they exclaimed,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and declared,",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:11"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:12": {
+   "parts": [
+    {
+     "text": "“Adonoy will reign forever and ever.”<sup class=\"footnote-marker\">15</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">Exodus 15:18.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:12"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:13": {
+   "parts": [
+    {
+     "text": "And it is said,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “For Adonoy has liberated Jacob and redeemed him from a hand,",
+     "kind": "prayer"
+    },
+    {
+     "text": " mightier than his.”<sup class=\"footnote-marker\">16</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">Jeremiah 31:10.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Adonoy Who has redeemed Israel.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:13"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:14": {
+   "parts": [
+    {
+     "text": "<small>This is the second of the benedictions that follow the Sh'ma.</small><br>Adonoy our God;",
+     "kind": "prayer"
+    },
+    {
+     "text": " make us lie down in peace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our King,",
+     "kind": "prayer"
+    },
+    {
+     "text": " raise us again to good life,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<sup class=\"footnote-marker\">17</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">Undisturbed peace, and strength for a new day of vigorous living are the gifts that night brings and for which we pray to God.—S.R. Hirsch</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and peace Spread over us the shelter of Your peace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and direct us to better ourselves through Your good counsel;",
+     "kind": "prayer"
+    },
+    {
+     "text": "<sup class=\"footnote-marker\">18</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">We particularly ask of Him at night to bless us with wise counsel. Daytime is the time for achievement, but the rest that comes with nightfall is made to allow man to compose his thoughts. By virtue of the complete relaxation it affords, sleep endows the mind and spirit with renewed vigor. We pray therefore for Divine aid so that our nightly rest will help us take wise counsel and affirm worthy resolution for future days.—Avudraham and Siach Yitzchak</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and deliver us speedily for Your Name's sake. Shield us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and remove from us<sup class=\"footnote-marker\">19</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">Shield us from trouble before it comes, and remove it from us if it has already come.—Siach Yitzchak</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " enemies,",
+     "kind": "prayer"
+    },
+    {
+     "text": " pestilence,",
+     "kind": "prayer"
+    },
+    {
+     "text": " sword,",
+     "kind": "prayer"
+    },
+    {
+     "text": " famine and sorrow. Remove the adversary<sup class=\"footnote-marker\">20</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">The Hebrew word שָׂטָן (Satan) used in the Prayer Book refers to the Evil Impulse,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the lower passions which are a hindrance to man’s pursuit of the nobler aims in life. It is against the dominance of this impulse that the Jew prays. The “adversary,",
+     "kind": "prayer"
+    },
+    {
+     "text": "” therefore,",
+     "kind": "prayer"
+    },
+    {
+     "text": " is any person,",
+     "kind": "prayer"
+    },
+    {
+     "text": " spirit,",
+     "kind": "prayer"
+    },
+    {
+     "text": " or Evil Impulse that seduces us to do wrong.— Dover Sholom and others</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " from before us and from behind us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and shelter us in the shadow of Your wings. For,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Almighty,",
+     "kind": "prayer"
+    },
+    {
+     "text": " You are our Protector and Rescuer,",
+     "kind": "prayer"
+    },
+    {
+     "text": " For,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Almighty You are a gracious and merciful King. Guard our going out and our coming in for life and peace for now forever. And spread over us<sup class=\"footnote-marker\">21</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">Up to this point the Shabbos Maariv Service is identical to the week night services. Since this Friday evening prayer is the point of transition to the Shabbos Shemoneh Esrei,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the concluding phrase of this blessing is changed from שׁוֹמֵר עַמוֹ יִשְׂרָאֵל לָעַד ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “Who guards His people Israel forever,",
+     "kind": "prayer"
+    },
+    {
+     "text": "” for the Shabbos does not require protection. The Shabbos itself protects the Jew and causes every thought of grief and anxiety to fade away. It brings us the blissful sense of security that we lack during the week when we feel the need for protection.</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " the shelter of mercy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " life and peace. Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Adonoy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Who spreads the shelter of peace over us and over all His people,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Israel and over Jerusalem.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:14"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:15": {
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:15"
+   ],
+   "kind": "instruction",
+   "en": "On Shabbat:",
+   "gloss": "Said only on Shabbat"
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:16": {
+   "parts": [
+    {
+     "text": "And the Children of Israel shall preserve the Sabbath,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to maintain the Sabbath for their generations as an everlasting covenant. Between Me and between the Children of Israel it is a sign for eternity,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that [in] six days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Adonoy made the heavens and the earth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and on the seventh [day] He abstained from work and rested.<sup class=\"footnote-marker\">22</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">Exodus 31:16-17. This is merely metaphorical, since God of course does not become tired, nor does He require rest.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:16"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:17": {
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:17"
+   ],
+   "kind": "instruction",
+   "en": "On the three pilgrimage festivals:",
+   "gloss": "Said only on Pesach, Shavuot, and Sukkot"
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:18": {
+   "parts": [
+    {
+     "text": "And Moses recounted the appointed seasons of Adonoy to the Children of Israel.<sup class=\"footnote-marker\">23</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">Leviticus 23:44.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:18"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:19": {
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:19"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:20": {
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:20"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Shema & Blessings:21": {
+   "parts": [
+    {
+     "text": "<b>May His great Name be blessed forever and for all eternity.</b> Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and exalted and uplifted,",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Said only during Aseret Yemei Teshuva"
+    },
+    {
+     "text": " honored and elevated and extolled be the Name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed is He;",
+     "kind": "prayer"
+    },
+    {
+     "text": " above (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ten Days of Penitence:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " far above) all the blessings and hymns,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praises and consolations which we utter in the world—and say Amein.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Shema & Blessings:21"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:1": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:1"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:2": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:2"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:3": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:3"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:4": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:4"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:5": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:5"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:6": {
+   "parts": [
+    {
+     "text": "<small>From the Musaf of the first day of Pesach until the Musaf of Shemini Atzeres you should say:</small> He causes the dew to descend.<br><small>From the Musaf of Shemini Atzeres until the Musaf ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>of the first day of Pesach you should say:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small> Causer of the wind to blow and of the rain to fall.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:6"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:7": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:7"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:8": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:8"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:9": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:9"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:10": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:10"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:11": {
+   "parts": [
+    {
+     "text": "You have sanctified the seventh day<sup class=\"footnote-marker\">24</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">The first three and the last three blessings of Shemoneh Esrei are identical in all Sabbath services as well as in the regular weekday Shemoneh Esrei. The intermediate blessing, however, differs in each of the four Sabbath services. The thirteen petitions which make up the intermediate blessings of the weekday Shemoneh Esrei are omitted because prayers for personal needs are not recited on the Sabbath and Festivals. In reciting such personal requests one is reminded of his troubles and shortcomings, and our Sabbaths are not to be desecrated by sadness and misery.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " to Your Name,",
+     "kind": "prayer"
+    },
+    {
+     "text": " [it was] the purpose of making heaven and earth;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and You blessed it above all days and You sanctified it above all seasons. And so it is written in Your Torah:",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:11"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:12": {
+   "parts": [
+    {
+     "text": "And the heavens and the earth were completed and [so were] all their hosts.<sup class=\"footnote-marker\">25</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">The earthly hosts include all vegetation, all the living creatures, and mankind; while the heavenly hosts are the sun, moon, all the stars, and even the celestial beings such as angels.—Ramban</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " And God completed by the seventh day<sup class=\"footnote-marker\">26</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">God completed His work at the precise instant that marked the beginning of the seventh day.—Seporno</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " His work which He had done,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and He abstained on the seventh day,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from all His work which He had done. And God blessed the seventh day and sanctified it for on it He abstained from all His work which God had created to do.<sup class=\"footnote-marker\">27</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">God in His goodness, renews every day, continually the work of creation. On the Sabbath, however, God ceased even from His work of renewal. The renewal of the creation designated for the Sabbath was itself prepared and completed on the eve of the Sabbath.—Vilna Gaon</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:12"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:13": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:13"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:14": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:14"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:15": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:15"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:16": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:16"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:17": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:17"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:18": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:18"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:19": {
+   "parts": [
+    {
+     "text": "the ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Festival of Matzos</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:19"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:20": {
+   "parts": [
+    {
+     "text": "the ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Festival of Sukkos</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:20"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:21": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:21"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:22": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:22"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:23": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:23"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:24": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:24"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:25": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:25"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:26": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:26"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:28": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:28"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:29": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:29"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:30": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:30"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:31": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:31"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:32": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:32"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:33": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:33"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:34": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:34"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:35": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:35"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:37": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:37"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:38": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:38"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:39": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:39"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:40": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:40"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:41": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:41"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Amidah:42": {
+   "he": [
+    "he:Shabbat Eve Maariv/Amidah:42"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:1": {
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:1"
+   ],
+   "kind": "note",
+   "en": "After the Amidah, the congregation repeats Vayechulu aloud and standing as testimony of creation. Halacha requires witnesses to stand and declare testimony together."
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:2": {
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:2"
+   ],
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:3": {
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:3"
+   ],
+   "kind": "note",
+   "en": "The following prayer, Beracha MeEin Sheva (abridged seven blessings), is said only by the Chazzan. Not said on the first night of Passover, in a house of mourning, or in a bridegroom's house. Said only in a permanent place of prayer."
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:4": {
+   "parts": [
+    {
+     "text": "<small>The congregation may recite the following paragraph,",
+     "kind": "prayer"
+    },
+    {
+     "text": " which should then be repeated aloud ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>and </i>",
+     "kind": "instruction",
+     "en": "and"
+    },
+    {
+     "text": "in its entirety ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>by the Chazzan.</i>",
+     "kind": "instruction",
+     "en": "by the Chazzan."
+    },
+    {
+     "text": "</small><br>Shield of [our] fathers with His word,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<sup class=\"footnote-marker\">28</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">This paragraph is a précis of the entire Shemoneh Esrei just recited: The first line refers to the blessing מָגֵן אַבְרָהָם ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “Shield of Abraham.”</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " Resurrector of the dead<sup class=\"footnote-marker\">29</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">This line refers to the blessing מְחַיֵּה הַמֵּתִים ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “Who restores the dead to life.”</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " with His utterance;",
+     "kind": "prayer"
+    },
+    {
+     "text": " *the Almighty,",
+     "kind": "instruction",
+     "en": "Between Rosh Hashanah and Yom Kippur, substitute:",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " the Holy One<sup class=\"footnote-marker\">30</sup>",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": "<i class=\"footnote\">This line refers to the blessing הָאֵל הַקָּדוֹשׁ ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “The Almighty,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Holy One.”</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>(*Between Rosh Hashanah and Yom Kippur,",
+     "kind": "prayer"
+    },
+    {
+     "text": " substitute:)</small> the King,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Holy One) Who has no peer. He gives rest to His people<sup class=\"footnote-marker\">31</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">This line refers to the prayer רְצֵה בִמְנוּחָתֵֽנוּ ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “Be pleased with our rest.”</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " on the day of His holy Shabbos for with them He was pleased to grant them rest. Before Him we will serve<sup class=\"footnote-marker\">32</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">This line refers to the prayer רְצֵה in which we ask God to be pleased with our prayer and restore the Temple service.</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " with fear and trepidation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and give thanks to His Name<sup class=\"footnote-marker\">33</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">This line refers to the blessing of מוֹדִים אֲנַֽחְנוּ לָךְ ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “We are thankful to You.”</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " every day continuously,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from the essence of the blessings.<sup class=\"footnote-marker\">34</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">We thank God each day in accordance with the blessing appropriate for that particular day.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Almighty of thanksgiving,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Master of peace,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<sup class=\"footnote-marker\">35</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">This line refers to the closing prayer of the Shemoneh Esrei, “Bestow peace.”—Avudraham</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Sanctifier of the Shabbos,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Who blesses the seventh day and grants rest in sanctity to a people sated with delight— in commemoration of the work of creation.<sup class=\"footnote-marker\">36</sup>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"footnote\">God commanded us to preserve the Sabbath as a reminder that He created the world.—Etz Yosef</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:4"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:5": {
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:5"
+   ],
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:6": {
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:6"
+   ],
+   "kind": "instruction",
+   "en": "The Chazzan recites the following Kaddish:"
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:7": {
+   "parts": [
+    {
+     "text": "Exalted and sanctified be His great Name in the world which He created according to His will and may He rule His kingdom bring forth His redemption and hasten the coming of His Mashiach in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of the entire House of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " speedily and in the near future— and say Amein. <b>May His great Name be blessed forever and for all eternity.</b> Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and exalted and uplifted,",
+     "kind": "prayer"
+    },
+    {
+     "text": " honored and elevated and extolled be the Name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed is He;",
+     "kind": "instruction",
+     "en": "Ten Days of Penitence:",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " above (",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": "<i>Ten Days of Penitence:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " far above) all the blessings and hymns,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praises and consolations which we utter in the world—and say Amein.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:7"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:8": {
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:8"
+   ],
+   "kind": "prayer",
+   "role": "chazzan",
+   "minyan": true
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:9": {
+   "parts": [
+    {
+     "text": "May there be abundant peace from heaven and good life for us and for all Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " —and say Amein. He Who makes peace (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ten Days of Penitence:</i>",
+     "kind": "instruction",
+     "en": "Ten Days of Penitence:",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " the peace) in His high heavens may He,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " make peace for us and or all Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and say,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:9"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:10": {
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:10"
+   ],
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:11": {
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:11"
+   ],
+   "kind": "instruction",
+   "en": "The Chazzan recites the following half-Kaddish"
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:12": {
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:12"
+   ],
+   "kind": "prayer",
+   "role": "chazzan",
+   "minyan": true
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:13": {
+   "parts": [
+    {
+     "text": "<b>May His great Name be blessed forever and for all eternity.</b> Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and exalted and uplifted,",
+     "kind": "prayer"
+    },
+    {
+     "text": " honored and elevated and extolled be the Name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed is He;",
+     "kind": "prayer"
+    },
+    {
+     "text": " above (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ten Days of Penitence:</i>",
+     "kind": "instruction",
+     "en": "Ten Days of Penitence:",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " far above) all the blessings and hymns,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " praises and consolations which we utter in the world—and say Amein.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:13"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:14": {
+   "parts": [
+    {
+     "text": "<small>The Chazzan",
+     "kind": "instruction",
+     "en": "The Chazzan"
+    },
+    {
+     "text": "<i> says:</i>",
+     "kind": "instruction",
+     "en": "says:"
+    },
+    {
+     "text": "</small> Bless Adonoy Who is blessed.",
+     "kind": "prayer",
+     "role": "chazzan",
+     "minyan": true
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:14"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:15": {
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:15"
+   ],
+   "kind": "prayer",
+   "en": "The congregation responds and the Chazzan repeats:",
+   "role": "congregation_then_chazzan",
+   "minyan": true,
+   "repeat": 3
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:17": {
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:16"
+   ],
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:18": {
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:17",
+    "he:Shabbat Eve Maariv/Vayechulu:18"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:20": {
+   "parts": [
+    {
+     "text": "Exalted and sanctified be His great Name in the world which He created according to His will and may He rule His kingdom bring forth His redemption and hasten the coming of His Mashiach in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of the entire House of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " speedily and in the near future— and say Amein. <b>May His great Name be blessed forever and for all eternity.</b> Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and exalted and uplifted,",
+     "kind": "prayer"
+    },
+    {
+     "text": " honored and elevated and extolled be the Name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed is He;",
+     "kind": "prayer"
+    },
+    {
+     "text": " above (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ten Days of Penitence:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " far above) all the blessings and hymns,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praises and consolations which we utter in the world—and say Amein.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:20"
+   ]
+  },
+  "en:Shabbat Eve Maariv/Vayechulu:21": {
+   "parts": [
+    {
+     "text": "May there be abundant peace from heaven and good life for us and for all Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " —and say Amein. He Who makes peace (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ten Days of Penitence:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the peace) in His high heavens may He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " make peace for us and or all Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and say,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Amein.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat Eve Maariv/Vayechulu:21"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Shabbat Eve Maariv/Shema & Blessings:22",
+   "type": "ambiguous",
+   "detail": "Instruction mentions 'prayer for the three festivals' but no specific text is provided in this chunk; likely refers to a separate leaf or section not included here."
+  },
+  {
+   "id": "he:Shabbat Eve Maariv/Amidah:24",
+   "type": "ambiguous",
+   "detail": "Instruction mentions 'Purim the triple' (Purim in a walled city) but the condition logic for 'triple' Purim is unclear in the source text; using shushanPurim as the condition."
+  },
+  {
+   "id": "he:Shabbat Eve Maariv/Vayechulu:16",
+   "type": "ambiguous",
+   "detail": "Instruction says 'From Passover until Shavuot', but the Omer is counted from the second night of Passover until the day before Shavuot. The condition should be 'omer' (which covers the counting period)."
+  },
+  {
+   "id": "he:Shabbat Eve Maariv/Vayechulu:4",
+   "type": "new_minhag",
+   "detail": "Part 4: Shabbat Shuva insertion 'HaMelech HaKadosh' is standard in Ashkenaz, but some nusachim may vary. Tagged with shabbatShuva."
+  },
+  {
+   "id": "he:Shabbat Eve Maariv/Vayechulu:15",
+   "type": "new_minhag",
+   "detail": "Part 2: 'Kadosh x3' instruction implies repeating the phrase 'Baruch Hashem LeOlam' three times. Some customs say 'Kadosh' three times, others say the full phrase. Tagged as repeat:3 on the phrase."
+  },
+  {
+   "id": "en:Shabbat Eve Maariv/Vayechulu:15",
+   "type": "new_minhag",
+   "detail": "English says 'congregation responds and Chazzan repeats', implying the full phrase is said by both. Hebrew says 'Kadosh x3'. This may be a nusach difference or a translation nuance. Tagged as congregation_then_chazzan with repeat:3."
+  },
+  {
+   "id": "en:Shabbat Eve Maariv/Vayechulu:1",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h3.1-h3; h4.0-h4; h5.1-h5; h7.0-h7; h9.0-h9"
+  },
+  {
+   "id": "en:Shabbat Eve Maariv/Vayechulu:18",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h20.11"
+  }
+ ]
+}

@@ -1,0 +1,1097 @@
+{
+ "nusach": "sefard",
+ "chunk": "Pesach Haggadah [Hallel .. Shir HaShirim]",
+ "leaves": {
+  "Pesach Haggadah/Hallel": {
+   "node": "hallel",
+   "service": "none",
+   "when": "pesach"
+  },
+  "Pesach Haggadah/Nirtzah": {
+   "node": "pesach.haggadah",
+   "service": "none",
+   "when": "pesach"
+  },
+  "Pesach Haggadah/Shir HaShirim": {
+   "node": "x.pesach.haggadah.shir_hashirim",
+   "service": "none",
+   "when": "pesach"
+  }
+ },
+ "he": {
+  "he:Pesach Haggadah/Hallel:1": {
+   "kind": "heading",
+   "en": "Hallel"
+  },
+  "he:Pesach Haggadah/Hallel:2": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Hallel:3": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Hallel:4": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Hallel:5": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Hallel:6": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Hallel:7": {
+   "kind": "speaker",
+   "en": "The head of the table says:",
+   "gloss": "Leader of the Seder"
+  },
+  "he:Pesach Haggadah/Hallel:8": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Pesach Haggadah/Hallel:9": {
+   "kind": "speaker",
+   "en": "And the congregation says:"
+  },
+  "he:Pesach Haggadah/Hallel:10": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Hallel:11": {
+   "kind": "speaker",
+   "en": "The head of the table says:"
+  },
+  "he:Pesach Haggadah/Hallel:12": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Pesach Haggadah/Hallel:13": {
+   "kind": "speaker",
+   "en": "And the congregation says:"
+  },
+  "he:Pesach Haggadah/Hallel:14": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Hallel:15": {
+   "kind": "speaker",
+   "en": "The head of the table says:"
+  },
+  "he:Pesach Haggadah/Hallel:16": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Pesach Haggadah/Hallel:17": {
+   "kind": "speaker",
+   "en": "And the congregation says:"
+  },
+  "he:Pesach Haggadah/Hallel:18": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Hallel:19": {
+   "kind": "speaker",
+   "en": "The head of the table says:"
+  },
+  "he:Pesach Haggadah/Hallel:20": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Pesach Haggadah/Hallel:21": {
+   "kind": "speaker",
+   "en": "And the congregation says:"
+  },
+  "he:Pesach Haggadah/Hallel:22": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Hallel:23": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Hallel:24": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Hallel:25": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Hallel:26": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Hallel:27": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Hallel:28": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Pesach Haggadah/Hallel:29": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Hallel:30": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Pesach Haggadah/Hallel:31": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Hallel:32": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Pesach Haggadah/Hallel:33": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Hallel:34": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Pesach Haggadah/Hallel:35": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Hallel:36": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Hallel:37": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Pesach Haggadah/Hallel:38": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Hallel:39": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Pesach Haggadah/Hallel:40": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Hallel:41": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Pesach Haggadah/Hallel:42": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Hallel:43": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Pesach Haggadah/Hallel:44": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Hallel:45": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Pesach Haggadah/Hallel:46": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Hallel:47": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Pesach Haggadah/Hallel:48": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Hallel:49": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Pesach Haggadah/Hallel:50": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Pesach Haggadah/Hallel:51": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Pesach Haggadah/Hallel:52": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Pesach Haggadah/Hallel:53": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Pesach Haggadah/Hallel:54": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Pesach Haggadah/Hallel:55": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Pesach Haggadah/Hallel:56": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Pesach Haggadah/Hallel:57": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Pesach Haggadah/Hallel:58": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Pesach Haggadah/Hallel:59": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Pesach Haggadah/Hallel:60": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Pesach Haggadah/Hallel:61": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Pesach Haggadah/Hallel:62": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Pesach Haggadah/Hallel:63": {
+   "parts": [
+    {
+     "text": "<small><b>נִשְׁמַת כָּל חַי</b> תְּבָרֵךְ אֶת שִׁמְךָ יְהֹוָה אֱלֹהֵינוּ. וְרוּחַ כָּל בָּשָׂר תְּפָאֵר וּתְרוֹמֵם זִכְרְךָ מַלְכֵּנוּ תָּמִיד: מִן הָעוֹלָם וְעַד הָעוֹלָם אַתָּה אֵל. וּמִבַּלְעָדֶיךָ אֵין לָנוּ מֶלֶךְ גּוֹאֵל וּמוֹשִׁיעַ. פּוֹדֶה וּמַצִּיל וּמְפַרְנֵס וְעוֹנֶה וּמְרַחֵם בְּכָל עֵת צָרָה וְצוּקָה. אֵין לָנוּ מֶלֶךְ עוֹזֵר וְסוֹמֵךְ אֶלָּא אָתָּה: אֱלֹהֵי הָרִאשׁוֹנִים וְהָאַחֲרוֹנִים. אֱלוֹהַּ כָּל בְּרִיוֹת. אֲדוֹן כָּל תּוֹלָדוֹת. הַמְּהֻלָּל בְּכָל <small>(בְּרוֹב)</small>",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": " הַתִּשְׁבָּחוֹת. הַמְּנַהֵג עוֹלָמוֹ בְּחֶסֶד וּבְרִיּוֹתָיו בְּרַחֲמִים: וַיְהֹוָה עֵר. הִנֵּה לֹא יָנוּם וְלֹא יִישָׁן. הַמְעוֹרֵר יְשֵׁנִים. וְהַמֵּקִיץ נִרְדָּמִים. ",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": "<small>(מְחַיֵה מֵתִים וְרוֹפֵא חוֹלִים פּוֹקֵחַ עִוְרִים וְזוֹקֵף כְּפוּפִים)</small>",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": " וְהַמֵּשִׂיחַ אִלְמִים. וְהַמַּתִּיר אֲסוּרִים. וְהַסּוֹמֵךְ נוֹפְלִים. וְהַזּוֹקֵף כְּפוּפִים. וְהַמְּפַעֲנֵחַ נֶעֱלָמִים. וּלְךָ לְבַדְּךָ אֲנַחְנוּ מוֹדִים: </small>",
+     "kind": "prayer",
+     "role": "individual"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Hallel:64": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Hallel:65": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Hallel:66": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Hallel:67": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Hallel:68": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Hallel:69": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Hallel:70": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Hallel:71": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Hallel:72": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Hallel:73": {
+   "kind": "instruction",
+   "en": "I am ready to fulfill the mitzvah of the fourth cup, corresponding to the promise of redemption."
+  },
+  "he:Pesach Haggadah/Hallel:74": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Hallel:75": {
+   "kind": "instruction",
+   "en": "And drink while reclining on the left side."
+  },
+  "he:Pesach Haggadah/Hallel:76": {
+   "parts": [
+    {
+     "text": "<small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " עַל הַגֶּפֶן וְעַל פְּרִי הַגֶּפֶן,",
+     "kind": "prayer"
+    },
+    {
+     "text": " עַל תְּנוּבַת הַשָּׂדֶה וְעַל אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה שֶׁרָצִיתָ וְהִנְחַלְתָּ לַאֲבוֹתֵינוּ לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבֹּעַ מִטּוּבָהּ רַחֶם נָא יְהֹוָה אֱלֹהֵינוּ עַל יִשְׂרָאֵל עַמֶּךָ וְעַל יְרוּשָׁלַיִם עִירֶךָ וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶךָ וְעַל מִזְבְּחֶךָ וְעַל הֵיכָלֶךָ וּבְנֵה יְרוּשָׁלַיִם עִיר הַקֹדֶשׁ בִּמְהֵרָה בְיָמֵינוּ וְהַעֲלֵנוּ לְתוֹכָהּ וְשַׂמְחֵנוּ בְּבִנְיָנָהּ וְנֹאכַל מִפִּרְיָהּ וְנִשְׂבַּע מִטּוּבָהּ וּנְבָרֶכְךָ עָלֶיהָ בִּקְדֻשָׁה וּבְטָהֳרָה <small> <small>(בשבת: <b>וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַׁבָּת הַזֶּה</b>)</small>",
+     "kind": "prayer",
+     "when": "shabbat",
+     "en": "(On Shabbat: And may You be pleased to grant us rest on this Shabbat day)"
+    },
+    {
+     "text": " </small> וְשַׂמְחֵנוּ בְּיוֹם חַג הַמַּצּוֹת הַזֶּה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כִּי אַתָּה יְהֹוָה טוֹב וּמֵטִיב לַכֹּל וְנוֹדֶה לְּךָ עַל הָאָרֶץ וְעַל פְּרִי הַגֶּפֶן. <b>בָּרוּךְ</b> אַתָּה יְהֹוָה עַל הַגֶּפֶן וְעַל פְּרִי הַגֶּפֶן. </small>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Nirtzah:1": {
+   "kind": "heading",
+   "en": "Nirtzah"
+  },
+  "he:Pesach Haggadah/Nirtzah:2": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Nirtzah:3": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Nirtzah:4": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Nirtzah:5": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Nirtzah:6": {
+   "kind": "prayer",
+   "when": "!il"
+  },
+  "he:Pesach Haggadah/Nirtzah:7": {
+   "kind": "instruction",
+   "en": "In the Land of Israel, we say:",
+   "gloss": "Alternative for Israel"
+  },
+  "he:Pesach Haggadah/Nirtzah:8": {
+   "kind": "prayer",
+   "when": "il"
+  },
+  "he:Pesach Haggadah/Nirtzah:9": {
+   "kind": "instruction",
+   "en": "Some have the custom in the Diaspora on the second night of Pesach to count the Omer here:",
+   "gloss": "Custom for second night in Diaspora"
+  },
+  "he:Pesach Haggadah/Nirtzah:10": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:11": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:12": {
+   "parts": [
+    {
+     "kind": "prayer",
+     "when": "diaspora && pesach && hDay == 2",
+     "text": "<small><small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה <small>(יוד, הא, ואו, הא)</small> "
+    },
+    {
+     "kind": "prayer",
+     "when": "diaspora && pesach && hDay == 2",
+     "text": "אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, "
+    },
+    {
+     "kind": "prayer",
+     "when": "diaspora && pesach && hDay == 2",
+     "text": "אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו, "
+    },
+    {
+     "kind": "prayer",
+     "when": "diaspora && pesach && hDay == 2",
+     "text": "וְצִוָּנוּ עַל סְפִירַת הָעֹמֶר:</small></small>"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Nirtzah:13": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:14": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:15": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:16": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:17": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:18": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:19": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:20": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:21": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:22": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:23": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:24": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:25": {
+   "kind": "prayer",
+   "when": "diaspora && pesach && hDay == 2"
+  },
+  "he:Pesach Haggadah/Nirtzah:26": {
+   "kind": "instruction",
+   "en": "On the first night, we say:"
+  },
+  "he:Pesach Haggadah/Nirtzah:27": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:28": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:29": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:30": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:31": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:32": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:33": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:34": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:35": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:36": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:37": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:38": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:39": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:40": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:41": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:42": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:43": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:44": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:45": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:46": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:47": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:48": {
+   "kind": "prayer",
+   "when": "pesach && hDay == 1"
+  },
+  "he:Pesach Haggadah/Nirtzah:49": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Nirtzah:50": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Nirtzah:51": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Nirtzah:52": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Nirtzah:53": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Nirtzah:54": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Nirtzah:55": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Nirtzah:56": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Nirtzah:57": {
+   "kind": "instruction",
+   "en": "On the second night:",
+   "gloss": "Nirtzah is recited on the second night of Pesach in the Diaspora",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:58": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:59": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:60": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:61": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:62": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:63": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:64": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:65": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:66": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:67": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:68": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:69": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:70": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:71": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:72": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:73": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:74": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:75": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:76": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:77": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:78": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:79": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:80": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:81": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:82": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:83": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:84": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:85": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:86": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:87": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:88": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:89": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:90": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:91": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:92": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:93": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:94": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:95": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:96": {
+   "kind": "prayer",
+   "when": "pesach && !il"
+  },
+  "he:Pesach Haggadah/Nirtzah:97": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:98": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:99": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:100": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:101": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:102": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:103": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:104": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:105": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:106": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:107": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:108": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:109": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:110": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:111": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:112": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:113": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:114": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:115": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:116": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:117": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:118": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:119": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:120": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:121": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:122": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:123": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:124": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:125": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:126": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:127": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:128": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:129": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:130": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:131": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:132": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:133": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:134": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:135": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:136": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:137": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:138": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:139": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:140": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:141": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:142": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:143": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:144": {
+   "kind": "prayer",
+   "node": "pesach.haggadah"
+  },
+  "he:Pesach Haggadah/Nirtzah:145": {
+   "kind": "heading",
+   "en": "Who knows nine?"
+  },
+  "he:Pesach Haggadah/Nirtzah:146": {
+   "kind": "heading",
+   "en": "Who knows ten?"
+  },
+  "he:Pesach Haggadah/Nirtzah:147": {
+   "kind": "heading",
+   "en": "Who knows eleven?"
+  },
+  "he:Pesach Haggadah/Nirtzah:148": {
+   "kind": "heading",
+   "en": "Who knows twelve?"
+  },
+  "he:Pesach Haggadah/Nirtzah:149": {
+   "kind": "heading",
+   "en": "Who knows thirteen?"
+  },
+  "he:Pesach Haggadah/Nirtzah:150": {
+   "kind": "heading",
+   "en": "Who knows fourteen?"
+  },
+  "he:Pesach Haggadah/Nirtzah:151": {
+   "kind": "heading",
+   "en": "Who knows fifteen?"
+  },
+  "he:Pesach Haggadah/Nirtzah:152": {
+   "kind": "heading",
+   "en": "Who knows sixteen?"
+  },
+  "he:Pesach Haggadah/Nirtzah:153": {
+   "kind": "heading",
+   "en": "Who knows seventeen?"
+  },
+  "he:Pesach Haggadah/Nirtzah:154": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Pesach Haggadah/Nirtzah:155": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Pesach Haggadah/Nirtzah:156": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Pesach Haggadah/Nirtzah:157": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Pesach Haggadah/Nirtzah:158": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Pesach Haggadah/Nirtzah:159": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Pesach Haggadah/Nirtzah:160": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Pesach Haggadah/Nirtzah:161": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Pesach Haggadah/Nirtzah:162": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Pesach Haggadah/Nirtzah:163": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Pesach Haggadah/Nirtzah:164": {
+   "kind": "note",
+   "en": "One is obligated to study the laws of Pesach and the Exodus from Egypt all night until sleep overtakes us; many have the custom to recite the Song of Songs after the Seder."
+  },
+  "he:Pesach Haggadah/Nirtzah:165": {
+   "kind": "note",
+   "en": "One should not recite the Shema on one's bed, but only the first paragraph of the Shema, and not the other psalms that are recited, for it is a night of watchfulness for the Lord:"
+  },
+  "he:Pesach Haggadah/Shir HaShirim:1": {
+   "kind": "heading",
+   "en": "Song of Songs"
+  },
+  "he:Pesach Haggadah/Shir HaShirim:2": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Shir HaShirim:3": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Shir HaShirim:4": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Shir HaShirim:5": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Shir HaShirim:6": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Shir HaShirim:7": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Shir HaShirim:8": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Shir HaShirim:9": {
+   "kind": "prayer"
+  }
+ },
+ "en": {},
+ "issues": [
+  {
+   "id": "he:Pesach Haggadah/Hallel:49",
+   "type": "missing_text",
+   "detail": "Segment h49 (Laguzar Yam-Suf) is not selected but is part of the Hallel sequence; ensure it is included in the final corpus."
+  },
+  {
+   "id": "he:Pesach Haggadah/Hallel:50",
+   "type": "missing_text",
+   "detail": "Segment h50 (Veha'avir Yisrael) is not selected but is part of the Hallel sequence; ensure it is included in the final corpus."
+  },
+  {
+   "id": "he:Pesach Haggadah/Hallel:51",
+   "type": "missing_text",
+   "detail": "Segment h51 (Vener Paroh) is not selected but is part of the Hallel sequence; ensure it is included in the final corpus."
+  },
+  {
+   "id": "he:Pesach Haggadah/Hallel:52",
+   "type": "missing_text",
+   "detail": "Segment h52 (Lemolech Amu) is not selected but is part of the Hallel sequence; ensure it is included in the final corpus."
+  },
+  {
+   "id": "he:Pesach Haggadah/Nirtzah:12",
+   "type": "ambiguous",
+   "detail": "Draft splits h12 into instruction and prayer, but the text 'ברוך אתה יהוה (יוד, הא, ואו, הא)' is a prayer formula with a gloss. The instruction part should be the gloss only, or the whole segment should be prayer with a note."
+  },
+  {
+   "id": "he:Pesach Haggadah/Nirtzah:13",
+   "type": "ambiguous",
+   "detail": "The text contains placeholders '<<היום יום אחד לעומר:>>' which need to be replaced by the actual day count. This is a dynamic part of the Omer counting."
+  },
+  {
+   "id": "he:Pesach Haggadah/Nirtzah:26",
+   "type": "ambiguous",
+   "detail": "The instruction 'בליל ראשון אומרים' implies the following text is only for the first night. However, the text 'ויהי בחצי הלילה' is a piyyut that is often said on all nights of Pesach in some customs, or only on the first. The condition needs clarification based on the specific nusach."
+  }
+ ]
+}

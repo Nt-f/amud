@@ -1,0 +1,4713 @@
+{
+ "nusach": "koren",
+ "chunk": "Weekdays [Morning Blessings .. Viduy]",
+ "leaves": {
+  "Weekdays/Morning Blessings": {
+   "node": "morning.birkot_hashachar",
+   "service": "shacharit",
+   "when": "true"
+  },
+  "Weekdays/The Binding of Isaac": {
+   "node": "morning.akeidah",
+   "service": "shacharit",
+   "when": "!shabbat && !yomTov"
+  },
+  "Weekdays/Accepting the Sovereignty of Heaven": {
+   "node": "morning.leolam_yehei_adam",
+   "service": "shacharit",
+   "when": "true"
+  },
+  "Weekdays/Offerings": {
+   "node": "korbanot.kiyor",
+   "service": "shacharit",
+   "when": "true"
+  },
+  "Weekdays/The Interpretive Principles of Rabbi Yishmael": {
+   "node": "korbanot.rabbi_yishmael",
+   "service": "none"
+  },
+  "Weekdays/Blessings of the Shema": {
+   "node": "barchu",
+   "service": "shacharit",
+   "when": "minyan"
+  },
+  "Weekdays/Viduy": {
+   "node": "tachanun.vidui",
+   "service": "shacharit",
+   "when": "tachanunShacharit && il"
+  },
+  "Weekdays/The Rabbis' Kaddish": {
+   "node": "kaddish.derabbanan",
+   "service": "shacharit",
+   "when": "minyan && mourner"
+  },
+  "Weekdays/A Psalm Before Verses of Praise": {
+   "node": "pz.mizmor_shir_chanukat",
+   "service": "shacharit",
+   "when": "true"
+  },
+  "Weekdays/Pesukei DeZimra": {
+   "node": "pz.baruch_sheamar",
+   "service": "shacharit",
+   "when": "true"
+  },
+  "Weekdays/The Amida": {
+   "node": "amidah.opening",
+   "service": "shacharit",
+   "when": "true"
+  }
+ },
+ "he": {
+  "he:Weekdays/Morning Blessings:2": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Morning Blessings:3": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Morning Blessings:4": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Morning Blessings:5": {
+   "parts": [
+    {
+     "kind": "prayer",
+     "alt": "gender_blessing",
+     "en": "who has not made me a woman.",
+     "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם<br><i class=\"instruction\"></i> "
+    },
+    {
+     "kind": "instruction",
+     "en": "women:",
+     "gloss": "Alternative for women",
+     "text": "שֶׁלֹּא עָשַֽׂנִי אִשָּׁה. / <i class=\"instruction\"></i> "
+    },
+    {
+     "kind": "prayer",
+     "alt": "gender_blessing",
+     "en": "who has made me according to His will.",
+     "text": "שֶׁעָשַֽׂנִי כִּרְצוֹנוֹ."
+    }
+   ]
+  },
+  "he:Weekdays/Morning Blessings:6": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Morning Blessings:7": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Morning Blessings:8": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Morning Blessings:9": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Morning Blessings:10": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Morning Blessings:11": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Morning Blessings:12": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Morning Blessings:13": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Morning Blessings:14": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Morning Blessings:15": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Morning Blessings:16": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Morning Blessings:17": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Binding of Isaac:2": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Binding of Isaac:3": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Binding of Isaac:5": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Accepting the Sovereignty of Heaven:1": {
+   "parts": [
+    {
+     "kind": "instruction",
+     "en": "A person should always be God-fearing, privately and publicly, acknowledging the truth and speaking it in his heart. He should rise early and say:",
+     "text": "לְעוֹלָם יְהֵא אָדָם יְרֵא שָׁמַֽיִם בְּסֵֽתֶר וּבְגָלוּי<br>וּמוֹדֶה עַל הָאֱמֶת, וְדוֹבֵר אֱמֶת בִּלְבָבוֹ"
+    },
+    {
+     "kind": "prayer",
+     "text": "<br>וְיַשְׁכֵּם וְיֹאמַר:"
+    }
+   ]
+  },
+  "he:Weekdays/Accepting the Sovereignty of Heaven:2": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Accepting the Sovereignty of Heaven:3": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Accepting the Sovereignty of Heaven:4": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Accepting the Sovereignty of Heaven:5": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Accepting the Sovereignty of Heaven:6": {
+   "kind": "instruction",
+   "en": "Happy are we who, early and late, evening and morning, say twice each day –"
+  },
+  "he:Weekdays/Accepting the Sovereignty of Heaven:7": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Accepting the Sovereignty of Heaven:8": {
+   "parts": [
+    {
+     "kind": "instruction",
+     "en": "Quietly:",
+     "text": "<small><i class=\"instruction\">Quietly:</i> "
+    },
+    {
+     "kind": "prayer",
+     "voice": "undertone",
+     "text": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד.<small/>"
+    }
+   ]
+  },
+  "he:Weekdays/Accepting the Sovereignty of Heaven:10": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Accepting the Sovereignty of Heaven:11": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Accepting the Sovereignty of Heaven:12": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Accepting the Sovereignty of Heaven:13": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Accepting the Sovereignty of Heaven:14": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Accepting the Sovereignty of Heaven:15": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:2": {
+   "kind": "heading",
+   "en": "The Basin"
+  },
+  "he:Weekdays/Offerings:3": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:4": {
+   "kind": "heading",
+   "en": "Taking of the Ashes"
+  },
+  "he:Weekdays/Offerings:5": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:6": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:7": {
+   "kind": "heading",
+   "en": "The Daily Sacrifice"
+  },
+  "he:Weekdays/Offerings:8": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:9": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:10": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:11": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:12": {
+   "kind": "heading",
+   "en": "The Incense"
+  },
+  "he:Weekdays/Offerings:13": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:14": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:15": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:16": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:17": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:18": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:20": {
+   "kind": "prayer",
+   "repeat": 3
+  },
+  "he:Weekdays/Offerings:21": {
+   "kind": "prayer",
+   "repeat": 3
+  },
+  "he:Weekdays/Offerings:22": {
+   "kind": "heading",
+   "en": "The Order of the Priestly Functions"
+  },
+  "he:Weekdays/Offerings:23": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:24": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:25": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:26": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:27": {
+   "parts": [
+    {
+     "kind": "instruction",
+     "en": "On Shabbat:",
+     "gloss": "Said on Shabbat",
+     "text": "<small>"
+    },
+    {
+     "kind": "prayer",
+     "when": "shabbat",
+     "text": "בשבת:</small>"
+    }
+   ]
+  },
+  "he:Weekdays/Offerings:28": {
+   "kind": "prayer",
+   "when": "shabbat"
+  },
+  "he:Weekdays/Offerings:29": {
+   "parts": [
+    {
+     "kind": "instruction",
+     "en": "On Rosh Chodesh:",
+     "gloss": "Said on Rosh Chodesh",
+     "text": "<small>"
+    },
+    {
+     "kind": "prayer",
+     "when": "roshChodesh",
+     "text": "בראש חודש:</small>"
+    }
+   ]
+  },
+  "he:Weekdays/Offerings:30": {
+   "kind": "prayer",
+   "when": "roshChodesh"
+  },
+  "he:Weekdays/Offerings:31": {
+   "kind": "heading",
+   "en": "Laws of Offerings, Mishnah Zevachim"
+  },
+  "he:Weekdays/Offerings:32": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:33": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:34": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:35": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:36": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:37": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:38": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Offerings:39": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:1": {
+   "kind": "instruction",
+   "en": "Rabbi Yishmael says: The Torah is expounded by thirteen principles:"
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:2": {
+   "parts": [
+    {
+     "text": "<small>א</small>",
+     "kind": "instruction",
+     "en": "1"
+    },
+    {
+     "text": " מִקַּל וָחֹֽמֶר",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:3": {
+   "parts": [
+    {
+     "text": "<small>ב</small>",
+     "kind": "instruction",
+     "en": "2"
+    },
+    {
+     "text": " וּמִגְּזֵרָה שָׁוָה",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:4": {
+   "parts": [
+    {
+     "text": "<small>ג</small>",
+     "kind": "instruction",
+     "en": "3"
+    },
+    {
+     "text": " מִבִּנְיַן אָב מִכָּתוּב אֶחָד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּמִבִּנְיַן אָב מִשְּׁנֵי כְתוּבִים",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:5": {
+   "parts": [
+    {
+     "text": "<small>ד</small>",
+     "kind": "instruction",
+     "en": "4"
+    },
+    {
+     "text": " מִכְּלָל וּפְרָט",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:6": {
+   "parts": [
+    {
+     "text": "<small>ה</small>",
+     "kind": "instruction",
+     "en": "5"
+    },
+    {
+     "text": " מִפְּרָט וּכְלָל",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:7": {
+   "parts": [
+    {
+     "text": "<small>ו</small>",
+     "kind": "instruction",
+     "en": "6"
+    },
+    {
+     "text": " כְּלָל וּפְרָט וּכְלָל,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אִי אַתָּה דָן אֶלָּא כְּעֵין הַפְּרָט",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:8": {
+   "parts": [
+    {
+     "text": "<small>ז</small>",
+     "kind": "instruction",
+     "en": "7"
+    },
+    {
+     "text": " מִכְּלָל שֶׁהוּא צָרִיךְ לִפְרָט,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּמִפְּרָט שֶׁהוּא צָרִיךְ לִכְלָל",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:9": {
+   "parts": [
+    {
+     "text": "<small>ח</small>",
+     "kind": "instruction",
+     "en": "8"
+    },
+    {
+     "text": " כָּל דָּבָר שֶׁהָיָה בִּכְלָל,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיָצָא מִן הַכְּלָל לְלַמֵּד<br>לֹא לְלַמֵּד עַל עַצְמוֹ יָצָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֶלָּא לְלַמֵּד עַל הַכְּלָל כֻּלּוֹ יָצָא",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:10": {
+   "parts": [
+    {
+     "text": "<small>ט</small>",
+     "kind": "instruction",
+     "en": "9"
+    },
+    {
+     "text": " כָּל דָּבָר שֶׁהָיָה בִּכְלָל,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיָצָא לִטְעֹן טֹֽעַן אֶחָד שֶׁהוּא כְעִנְיָנוֹ<br>יָצָא לְהָקֵל וְלֹא לְהַחֲמִיר",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:11": {
+   "parts": [
+    {
+     "text": "<small>י</small>",
+     "kind": "instruction",
+     "en": "10"
+    },
+    {
+     "text": " כָּל דָּבָר שֶׁהָיָה בִּכְלָל,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיָצָא לִטְעֹן טֹֽעַן אַחֵר שֶׁלֹּא כְעִנְיָנוֹ<br>יָצָא לְהָקֵל וּלְהַחֲמִיר",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:12": {
+   "parts": [
+    {
+     "text": "<small>יא</small>",
+     "kind": "instruction",
+     "en": "11"
+    },
+    {
+     "text": " כָּל דָּבָר שֶׁהָיָה בִּכְלָל,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיָצָא לִדּוֹן בַּדָּבָר הֶחָדָשׁ<br>אִי אַתָּה יָכוֹל לְהַחֲזִירוֹ לִכְלָלוֹ<br>עַד שֶׁיַּחֲזִירֶֽנּוּ הַכָּתוּב לִכְלָלוֹ בְּפֵרוּשׁ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:13": {
+   "parts": [
+    {
+     "text": "<small>יב</small>",
+     "kind": "instruction",
+     "en": "12"
+    },
+    {
+     "text": " דָּבָר הַלָּמֵד מֵעִנְיָנוֹ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְדָבָר הַלָּמֵד מִסּוֹפוֹ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:14": {
+   "parts": [
+    {
+     "text": "◂",
+     "kind": "instruction",
+     "en": "13"
+    },
+    {
+     "text": "<small>יג</small>",
+     "kind": "prayer",
+     "en": "13"
+    },
+    {
+     "text": " וְכֵן שְׁנֵי כְתוּבִים הַמַּכְחִישִׁים זֶה אֶת זֶה<br>עַד שֶׁיָּבוֹא הַכָּתוּב הַשְּׁלִישִׁי וְיַכְרִֽיעַ בֵּינֵיהֶם.",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:15": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Blessings of the Shema:2": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "en": "Leader:",
+   "gloss": "Speaker label"
+  },
+  "he:Weekdays/Blessings of the Shema:3": {
+   "kind": "instruction",
+   "role": "congregation",
+   "en": "Congregation:",
+   "gloss": "Speaker label"
+  },
+  "he:Weekdays/Blessings of the Shema:4": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "en": "Leader:",
+   "gloss": "Speaker label"
+  },
+  "he:Weekdays/Blessings of the Shema:6": {
+   "kind": "prayer",
+   "node": "shema.yotzer_or",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:7": {
+   "kind": "prayer",
+   "node": "shema.yotzer_or",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:8": {
+   "kind": "prayer",
+   "node": "shema.yotzer_or",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:9": {
+   "kind": "prayer",
+   "node": "shema.yotzer_or",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:10": {
+   "kind": "prayer",
+   "node": "shema.yotzer_or",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:11": {
+   "kind": "prayer",
+   "node": "shema.yotzer_or",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:12": {
+   "kind": "prayer",
+   "node": "shema.yotzer_or",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:13": {
+   "kind": "prayer",
+   "node": "shema.yotzer_or",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:14": {
+   "kind": "prayer",
+   "node": "shema.yotzer_or",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:15": {
+   "kind": "prayer",
+   "node": "shema.yotzer_or",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:16": {
+   "kind": "instruction",
+   "node": "shema.yotzer_or",
+   "role": "individual",
+   "en": "May You make a new light shine over Zion...",
+   "gloss": "Added in some customs, often on Rosh Chodesh or holidays",
+   "when": "roshChodesh || yomTov || chanukah"
+  },
+  "he:Weekdays/Blessings of the Shema:17": {
+   "kind": "prayer",
+   "node": "shema.ahava_rabba",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:19": {
+   "kind": "instruction",
+   "node": "shema.ahava_rabba",
+   "role": "individual",
+   "en": "Bring us back in peace...",
+   "gloss": "Added in some customs",
+   "when": "roshChodesh || yomTov || chanukah"
+  },
+  "he:Weekdays/Blessings of the Shema:21": {
+   "kind": "speaker",
+   "role": "chazzan",
+   "en": "God, faithful King!"
+  },
+  "he:Weekdays/Blessings of the Shema:23": {
+   "kind": "prayer",
+   "node": "shema.shema",
+   "role": "individual",
+   "gestures": [
+    "cover_eyes"
+   ]
+  },
+  "he:Weekdays/Blessings of the Shema:24": {
+   "kind": "instruction",
+   "en": "Quietly:",
+   "gloss": "Speaker label"
+  },
+  "he:Weekdays/Blessings of the Shema:26": {
+   "kind": "prayer",
+   "node": "shema.vehaya",
+   "role": "individual",
+   "gestures": [
+    "touch_tefillin"
+   ]
+  },
+  "he:Weekdays/Blessings of the Shema:28": {
+   "kind": "prayer",
+   "node": "shema.vehaya",
+   "role": "individual",
+   "gestures": [
+    "touch_tefillin"
+   ]
+  },
+  "he:Weekdays/Blessings of the Shema:30": {
+   "kind": "prayer",
+   "node": "shema.vehaya",
+   "role": "individual",
+   "gestures": [
+    "touch_tefillin"
+   ]
+  },
+  "he:Weekdays/Blessings of the Shema:31": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:33": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:34": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:35": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:37": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:38": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:39": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:40": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:41": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:42": {
+   "kind": "instruction",
+   "node": "shema.emet_veyatziv",
+   "role": "chazzan",
+   "en": "The Leader repeats:",
+   "gloss": "Speaker label"
+  },
+  "he:Weekdays/Blessings of the Shema:43": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Blessings of the Shema:44": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:46": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:47": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:48": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "individual"
+  },
+  "he:Weekdays/Blessings of the Shema:50": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv",
+   "role": "individual"
+  },
+  "he:Weekdays/Viduy:2": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Viduy:4": {
+   "kind": "prayer",
+   "gestures": [
+    "strike_chest"
+   ]
+  },
+  "he:Weekdays/Viduy:5": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Viduy:7": {
+   "kind": "heading",
+   "en": "Thirteen Attributes"
+  },
+  "he:Weekdays/Viduy:8": {
+   "kind": "prayer",
+   "when": "minyan"
+  },
+  "he:Weekdays/Viduy:10": {
+   "kind": "instruction",
+   "en": "And the Lord passed by before him and proclaimed:",
+   "when": "minyan"
+  },
+  "he:Weekdays/Viduy:11": {
+   "kind": "prayer",
+   "role": "together",
+   "voice": "aloud",
+   "when": "minyan"
+  },
+  "he:Weekdays/The Rabbis' Kaddish:2": {
+   "kind": "instruction",
+   "en": "Mourner:"
+  },
+  "he:Weekdays/The Rabbis' Kaddish:3": {
+   "kind": "instruction",
+   "en": "Congregation and Mourner:"
+  },
+  "he:Weekdays/The Rabbis' Kaddish:4": {
+   "kind": "instruction",
+   "en": "Mourner:"
+  },
+  "he:Weekdays/The Rabbis' Kaddish:5": {
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud"
+  },
+  "he:Weekdays/The Rabbis' Kaddish:6": {
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud"
+  },
+  "he:Weekdays/The Rabbis' Kaddish:8": {
+   "kind": "instruction",
+   "en": "Congregation:"
+  },
+  "he:Weekdays/A Psalm Before Verses of Praise:1": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/A Psalm Before Verses of Praise:2": {
+   "kind": "heading",
+   "en": "Mourner's Kaddish"
+  },
+  "he:Weekdays/A Psalm Before Verses of Praise:4": {
+   "kind": "prayer",
+   "en": "Mourner:",
+   "gloss": "Start of Mourner's Kaddish",
+   "forgot": true
+  },
+  "he:Weekdays/A Psalm Before Verses of Praise:5": {
+   "parts": [
+    {
+     "kind": "instruction",
+     "en": "Congregation and Mourner:",
+     "gloss": "Response line",
+     "text": "<i class=\"instruction\">קהל ואבל:</i> "
+    },
+    {
+     "kind": "prayer",
+     "role": "congregation_then_chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "text": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא."
+    }
+   ]
+  },
+  "he:Weekdays/A Psalm Before Verses of Praise:6": {
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Weekdays/A Psalm Before Verses of Praise:7": {
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Weekdays/A Psalm Before Verses of Praise:9": {
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Weekdays/Pesukei DeZimra:2": {
+   "kind": "instruction",
+   "en": "I hereby prepare my mouth to thank, praise and laud my Creator, for the sake of the unification of the Holy One, blessed be He, and His Divine Presence, through that which is hidden and concealed, in the name of all Israel.",
+   "gloss": "Introductory formula before Baruch She'amar"
+  },
+  "he:Weekdays/Pesukei DeZimra:3": {
+   "kind": "instruction",
+   "en": "Blessed is He who spoke and the world came into being, blessed is He.",
+   "gloss": "Title of the blessing"
+  },
+  "he:Weekdays/Pesukei DeZimra:4": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:5": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:6": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:7": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:8": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:9": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:10": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:12": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:13": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:15": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:16": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:17": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:18": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:19": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:20": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:21": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:22": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:23": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:25": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:26": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:27": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:28": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:29": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:30": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:31": {
+   "parts": [
+    {
+     "text": "וְהָיָה יהוה לְמֶֽלֶךְ עַל־כָּל־הָאָֽרֶץ<br>בַּיּוֹם הַהוּא יִהְיֶה יהוה אֶחָד וּשְׁמוֹ אֶחָד׃<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(וּבְתוֹרָתְךָ כָּתוּב לֵאמֹר,",
+     "kind": "instruction",
+     "en": "(As it is written in Your Torah, saying:"
+    },
+    {
+     "text": " שְׁמַע יִשְׂרָאֵל,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יהוה אֱלֹהֵֽינוּ יהוה אֶחָד׃)</small>",
+     "kind": "instruction",
+     "en": ")"
+    }
+   ]
+  },
+  "he:Weekdays/Pesukei DeZimra:32": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:34": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Pesukei DeZimra:35": {
+   "kind": "heading",
+   "en": "Half Kaddish"
+  },
+  "he:Weekdays/Pesukei DeZimra:36": {
+   "kind": "instruction",
+   "en": "Chazzan:"
+  },
+  "he:Weekdays/Pesukei DeZimra:37": {
+   "kind": "instruction",
+   "en": "Congregation and Chazzan:"
+  },
+  "he:Weekdays/Pesukei DeZimra:38": {
+   "kind": "instruction",
+   "en": "Chazzan:",
+   "gloss": "Leader"
+  },
+  "he:Weekdays/The Amida:2": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "gestures": [
+    "feet_together"
+   ]
+  },
+  "he:Weekdays/The Amida:3": {
+   "kind": "heading",
+   "en": "Patriarchs"
+  },
+  "he:Weekdays/The Amida:4": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/The Amida:5": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Amida:6": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/The Amida:7": {
+   "kind": "heading",
+   "en": "Divine Might"
+  },
+  "he:Weekdays/The Amida:8": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/The Amida:10": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Amida:11": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/The Amida:12": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Amida:13": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/The Amida:15": {
+   "kind": "heading",
+   "en": "Kedushah"
+  },
+  "he:Weekdays/The Amida:17": {
+   "kind": "prayer",
+   "en": "Congregation then Chazzan:",
+   "gloss": "Said in the repetition with a minyan",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "gestures": [
+    "feet_together"
+   ]
+  },
+  "he:Weekdays/The Amida:18": {
+   "kind": "prayer",
+   "en": "Congregation then Chazzan:",
+   "gloss": "Said in the repetition with a minyan",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "gestures": [
+    "rise_on_toes"
+   ],
+   "repeat": 3
+  },
+  "he:Weekdays/The Amida:19": {
+   "kind": "prayer",
+   "en": "Congregation then Chazzan:",
+   "gloss": "Said in the repetition with a minyan",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "gestures": [
+    "rise_on_toes"
+   ]
+  },
+  "he:Weekdays/The Amida:20": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Amida:22": {
+   "kind": "heading",
+   "node": "amidah.kedushat_hashem",
+   "en": "Holiness of God"
+  },
+  "he:Weekdays/The Amida:23": {
+   "kind": "prayer",
+   "role": "individual",
+   "amidah": "silent"
+  },
+  "he:Weekdays/The Amida:25": {
+   "kind": "heading",
+   "node": "amidah.daat",
+   "en": "Knowledge"
+  },
+  "he:Weekdays/The Amida:26": {
+   "kind": "prayer",
+   "role": "individual",
+   "amidah": "silent"
+  },
+  "he:Weekdays/The Amida:27": {
+   "kind": "heading",
+   "node": "amidah.teshuva",
+   "en": "Repentance"
+  },
+  "he:Weekdays/The Amida:28": {
+   "kind": "prayer",
+   "role": "individual",
+   "amidah": "silent"
+  },
+  "he:Weekdays/The Amida:29": {
+   "kind": "heading",
+   "node": "amidah.selicha",
+   "en": "Forgiveness"
+  },
+  "he:Weekdays/The Amida:31": {
+   "kind": "prayer",
+   "role": "individual",
+   "amidah": "silent",
+   "gestures": [
+    "strike_chest"
+   ]
+  },
+  "he:Weekdays/The Amida:32": {
+   "kind": "heading",
+   "node": "amidah.geula",
+   "en": "Redemption"
+  },
+  "he:Weekdays/The Amida:33": {
+   "kind": "prayer",
+   "role": "individual",
+   "amidah": "silent"
+  },
+  "he:Weekdays/The Amida:34": {
+   "kind": "prayer",
+   "role": "individual",
+   "amidah": "silent",
+   "en": "Answer us, Lord, answer us on our Fast Day...",
+   "gloss": "Said on public fast days",
+   "forgot": true
+  },
+  "he:Weekdays/The Amida:35": {
+   "kind": "heading",
+   "node": "amidah.refua",
+   "en": "Healing"
+  },
+  "he:Weekdays/The Amida:36": {
+   "kind": "prayer",
+   "role": "individual",
+   "amidah": "silent"
+  },
+  "he:Weekdays/The Amida:37": {
+   "kind": "prayer",
+   "role": "individual",
+   "amidah": "silent",
+   "en": "May it be Your will...",
+   "gloss": "Personal prayer for the sick"
+  },
+  "he:Weekdays/The Amida:38": {
+   "kind": "prayer",
+   "role": "individual",
+   "amidah": "silent"
+  },
+  "he:Weekdays/The Amida:39": {
+   "kind": "heading",
+   "node": "amidah.shanim",
+   "en": "Blessing of the years"
+  },
+  "he:Weekdays/The Amida:41": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Amida:42": {
+   "kind": "heading",
+   "en": "Ingathering of Exiles",
+   "gloss": "Heading for the blessing"
+  },
+  "he:Weekdays/The Amida:43": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Amida:44": {
+   "kind": "heading",
+   "en": "Justice",
+   "gloss": "Heading for the blessing"
+  },
+  "he:Weekdays/The Amida:45": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Amida:46": {
+   "kind": "heading",
+   "en": "Against Heretics",
+   "gloss": "Heading for the blessing"
+  },
+  "he:Weekdays/The Amida:47": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Amida:48": {
+   "kind": "heading",
+   "en": "The Righteous",
+   "gloss": "Heading for the blessing"
+  },
+  "he:Weekdays/The Amida:49": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Amida:50": {
+   "kind": "heading",
+   "en": "Rebuilding Jerusalem",
+   "gloss": "Heading for the blessing"
+  },
+  "he:Weekdays/The Amida:51": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Amida:52": {
+   "kind": "heading",
+   "en": "Kingdom of David",
+   "gloss": "Heading for the blessing"
+  },
+  "he:Weekdays/The Amida:53": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Amida:54": {
+   "kind": "heading",
+   "en": "Response to Prayer",
+   "gloss": "Heading for the blessing"
+  },
+  "he:Weekdays/The Amida:55": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Amida:56": {
+   "kind": "prayer",
+   "when": "!shabbat && !yomTov",
+   "gloss": "Personal supplication added on weekdays"
+  },
+  "he:Weekdays/The Amida:57": {
+   "kind": "heading",
+   "en": "Temple Service",
+   "gloss": "Heading for the Retzei blessing"
+  },
+  "he:Weekdays/The Amida:58": {
+   "kind": "prayer",
+   "node": "amidah.avoda"
+  },
+  "he:Weekdays/The Amida:59": {
+   "kind": "instruction",
+   "node": "amidah.yaaleh_veyavo",
+   "en": "On Rosh Chodesh:",
+   "gloss": "Instruction for Rosh Chodesh"
+  },
+  "he:Weekdays/The Amida:60": {
+   "kind": "prayer",
+   "node": "amidah.yaaleh_veyavo"
+  },
+  "he:Weekdays/The Amida:61": {
+   "kind": "heading",
+   "en": "Thanksgiving",
+   "gloss": "Heading for the Modim blessing"
+  },
+  "he:Weekdays/The Amida:63": {
+   "kind": "prayer",
+   "node": "amidah.modim",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/The Amida:64": {
+   "kind": "prayer",
+   "node": "amidah.modim_derabbanan",
+   "role": "congregation",
+   "voice": "undertone",
+   "minyan": true
+  },
+  "he:Weekdays/The Amida:65": {
+   "kind": "instruction",
+   "node": "amidah.al_hanissim",
+   "en": "On Chanukah:",
+   "gloss": "Instruction for Chanukah"
+  },
+  "he:Weekdays/The Amida:66": {
+   "kind": "instruction",
+   "node": "amidah.al_hanissim",
+   "en": "On Purim:",
+   "gloss": "Instruction for Purim"
+  },
+  "he:Weekdays/The Amida:67": {
+   "kind": "prayer",
+   "node": "amidah.modim_derabbanan"
+  },
+  "he:Weekdays/The Amida:68": {
+   "kind": "instruction",
+   "node": "amidah.modim_derabbanan",
+   "en": "On the Ten Days of Repentance:",
+   "gloss": "Instruction for Aseret Yemei Teshuva"
+  },
+  "he:Weekdays/The Amida:69": {
+   "kind": "prayer",
+   "node": "amidah.modim_derabbanan"
+  },
+  "he:Weekdays/The Amida:70": {
+   "kind": "instruction",
+   "node": "amidah.birkat_kohanim",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Congregation:",
+   "gloss": "Speaker label for response"
+  },
+  "he:Weekdays/The Amida:71": {
+   "kind": "heading",
+   "en": "Blessing of Peace",
+   "gloss": "Heading for the Sim Shalom blessing"
+  },
+  "he:Weekdays/The Amida:72": {
+   "kind": "prayer",
+   "node": "amidah.shalom"
+  },
+  "he:Weekdays/The Amida:73": {
+   "kind": "instruction",
+   "node": "amidah.shalom",
+   "en": "On the Ten Days of Repentance:",
+   "gloss": "Instruction for Aseret Yemei Teshuva"
+  },
+  "he:Weekdays/The Amida:74": {
+   "kind": "prayer",
+   "node": "amidah.shalom"
+  },
+  "he:Weekdays/The Amida:75": {
+   "kind": "prayer",
+   "node": "amidah.shalom",
+   "en": "Blessed are You, LORD, who makes peace.",
+   "gloss": "Diaspora custom outside Israel during Aseret Yemei Teshuva"
+  },
+  "he:Weekdays/The Amida:77": {
+   "kind": "prayer",
+   "node": "amidah.elokai_netzor"
+  },
+  "he:Weekdays/The Amida:78": {
+   "kind": "prayer",
+   "node": "amidah.elokai_netzor"
+  },
+  "he:Weekdays/The Amida:80": {
+   "kind": "instruction",
+   "node": "amidah.oseh_shalom",
+   "en": "Between Rosh HaShana and Yom Kippur:",
+   "gloss": "Instruction for the alternative text",
+   "forgot": true
+  },
+  "he:Weekdays/The Amida:81": {
+   "kind": "prayer",
+   "node": "amidah.yehi_ratzon_mikdash"
+  }
+ },
+ "en": {
+  "en:Weekdays/Morning Blessings:1": {
+   "he": [],
+   "kind": "instruction",
+   "en": "The following blessings are said aloud by the Leader, but each individual should say them quietly as well. It is our custom to say them standing.",
+   "gloss": "Customary to say aloud with minyan, but individuals say quietly"
+  },
+  "en:Weekdays/Morning Blessings:2": {
+   "he": [
+    "he:Weekdays/Morning Blessings:2"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:3": {
+   "he": [
+    "he:Weekdays/Morning Blessings:3"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:4": {
+   "he": [
+    "he:Weekdays/Morning Blessings:4"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:5": {
+   "parts": [
+    {
+     "text": "Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small> our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " King of the Universe,<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">men:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " who has not made me a woman.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">women:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " who has made me according to His will.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Morning Blessings:5"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:6": {
+   "he": [
+    "he:Weekdays/Morning Blessings:6"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:7": {
+   "he": [
+    "he:Weekdays/Morning Blessings:7"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:8": {
+   "he": [
+    "he:Weekdays/Morning Blessings:8"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:9": {
+   "he": [
+    "he:Weekdays/Morning Blessings:9"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:10": {
+   "he": [
+    "he:Weekdays/Morning Blessings:10"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:11": {
+   "he": [
+    "he:Weekdays/Morning Blessings:11"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:12": {
+   "he": [
+    "he:Weekdays/Morning Blessings:12"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:13": {
+   "he": [
+    "he:Weekdays/Morning Blessings:13"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:14": {
+   "he": [
+    "he:Weekdays/Morning Blessings:14"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:15": {
+   "he": [
+    "he:Weekdays/Morning Blessings:15"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:16": {
+   "he": [
+    "he:Weekdays/Morning Blessings:16"
+   ]
+  },
+  "en:Weekdays/Morning Blessings:17": {
+   "he": [
+    "he:Weekdays/Morning Blessings:17"
+   ]
+  },
+  "en:Weekdays/The Binding of Isaac:1": {
+   "he": [],
+   "kind": "instruction",
+   "en": "On the basis of Jewish mystical tradition, some have the custom of saying daily the biblical passage recounting the Binding of Isaac, the supreme trial of faith in which Abraham demonstrated his love of God above all other loves. On Shabbat and Yom Tov, most omit the introductory and concluding prayers, “Our God and God of our ancestors” and “Master of the Universe.” Others skip to “A person should” on the next page.",
+   "gloss": "Customary on weekdays; omitted on Shabbat/Yom Tov"
+  },
+  "en:Weekdays/The Binding of Isaac:2": {
+   "he": [
+    "he:Weekdays/The Binding of Isaac:2"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/The Binding of Isaac:3": {
+   "he": [
+    "he:Weekdays/The Binding of Isaac:3"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/The Binding of Isaac:4": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Most omit this passage on Shabbat and Yom Tov.",
+   "gloss": "Customary omission on Shabbat/Yom Tov"
+  },
+  "en:Weekdays/The Binding of Isaac:5": {
+   "he": [
+    "he:Weekdays/The Binding of Isaac:5"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:1": {
+   "he": [
+    "he:Weekdays/Accepting the Sovereignty of Heaven:1"
+   ]
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:2": {
+   "he": [
+    "he:Weekdays/Accepting the Sovereignty of Heaven:2"
+   ]
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:3": {
+   "he": [
+    "he:Weekdays/Accepting the Sovereignty of Heaven:3"
+   ]
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:4": {
+   "he": [
+    "he:Weekdays/Accepting the Sovereignty of Heaven:4"
+   ]
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:5": {
+   "he": [
+    "he:Weekdays/Accepting the Sovereignty of Heaven:5"
+   ]
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:6": {
+   "he": [
+    "he:Weekdays/Accepting the Sovereignty of Heaven:6"
+   ]
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:7": {
+   "he": [
+    "he:Weekdays/Accepting the Sovereignty of Heaven:7"
+   ]
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:8": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Quietly:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed be the name of His glorious kingdom for ever and all time.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Accepting the Sovereignty of Heaven:8"
+   ]
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:9": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Some congregations say the entire first paragraph of the Shema (below) at this point.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">If there is a concern that the Shema will not be recited within the prescribed time, then all three paragraphs should be said. See law 340.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:10": {
+   "he": [
+    "he:Weekdays/Accepting the Sovereignty of Heaven:10"
+   ]
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:11": {
+   "he": [
+    "he:Weekdays/Accepting the Sovereignty of Heaven:11"
+   ]
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:12": {
+   "he": [
+    "he:Weekdays/Accepting the Sovereignty of Heaven:12"
+   ]
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:13": {
+   "he": [
+    "he:Weekdays/Accepting the Sovereignty of Heaven:13"
+   ]
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:14": {
+   "he": [
+    "he:Weekdays/Accepting the Sovereignty of Heaven:14"
+   ]
+  },
+  "en:Weekdays/Accepting the Sovereignty of Heaven:15": {
+   "he": [
+    "he:Weekdays/Accepting the Sovereignty of Heaven:15"
+   ]
+  },
+  "en:Weekdays/Offerings:1": {
+   "he": []
+  },
+  "en:Weekdays/Offerings:2": {
+   "he": [
+    "he:Weekdays/Offerings:2"
+   ]
+  },
+  "en:Weekdays/Offerings:3": {
+   "he": [
+    "he:Weekdays/Offerings:3"
+   ]
+  },
+  "en:Weekdays/Offerings:4": {
+   "he": [
+    "he:Weekdays/Offerings:4"
+   ]
+  },
+  "en:Weekdays/Offerings:5": {
+   "he": [
+    "he:Weekdays/Offerings:5"
+   ]
+  },
+  "en:Weekdays/Offerings:6": {
+   "he": [
+    "he:Weekdays/Offerings:6"
+   ]
+  },
+  "en:Weekdays/Offerings:7": {
+   "he": [
+    "he:Weekdays/Offerings:7"
+   ]
+  },
+  "en:Weekdays/Offerings:8": {
+   "he": [
+    "he:Weekdays/Offerings:8"
+   ]
+  },
+  "en:Weekdays/Offerings:9": {
+   "he": [
+    "he:Weekdays/Offerings:9"
+   ]
+  },
+  "en:Weekdays/Offerings:10": {
+   "he": [
+    "he:Weekdays/Offerings:10"
+   ]
+  },
+  "en:Weekdays/Offerings:11": {
+   "he": [
+    "he:Weekdays/Offerings:11"
+   ]
+  },
+  "en:Weekdays/Offerings:12": {
+   "he": [
+    "he:Weekdays/Offerings:12"
+   ]
+  },
+  "en:Weekdays/Offerings:13": {
+   "he": [
+    "he:Weekdays/Offerings:13"
+   ]
+  },
+  "en:Weekdays/Offerings:14": {
+   "he": [
+    "he:Weekdays/Offerings:14"
+   ]
+  },
+  "en:Weekdays/Offerings:15": {
+   "he": [
+    "he:Weekdays/Offerings:15"
+   ]
+  },
+  "en:Weekdays/Offerings:16": {
+   "he": [
+    "he:Weekdays/Offerings:16"
+   ]
+  },
+  "en:Weekdays/Offerings:17": {
+   "he": [
+    "he:Weekdays/Offerings:17"
+   ]
+  },
+  "en:Weekdays/Offerings:18": {
+   "he": [
+    "he:Weekdays/Offerings:18"
+   ]
+  },
+  "en:Weekdays/Offerings:19": {
+   "he": [
+    "he:Weekdays/Offerings:20"
+   ]
+  },
+  "en:Weekdays/Offerings:20": {
+   "he": [
+    "he:Weekdays/Offerings:20"
+   ]
+  },
+  "en:Weekdays/Offerings:21": {
+   "he": [
+    "he:Weekdays/Offerings:21"
+   ]
+  },
+  "en:Weekdays/Offerings:22": {
+   "he": [
+    "he:Weekdays/Offerings:22"
+   ]
+  },
+  "en:Weekdays/Offerings:23": {
+   "he": [
+    "he:Weekdays/Offerings:23"
+   ]
+  },
+  "en:Weekdays/Offerings:24": {
+   "he": [
+    "he:Weekdays/Offerings:24"
+   ]
+  },
+  "en:Weekdays/Offerings:25": {
+   "he": [
+    "he:Weekdays/Offerings:25"
+   ]
+  },
+  "en:Weekdays/Offerings:26": {
+   "he": [
+    "he:Weekdays/Offerings:26"
+   ]
+  },
+  "en:Weekdays/Offerings:27": {
+   "he": [
+    "he:Weekdays/Offerings:27"
+   ]
+  },
+  "en:Weekdays/Offerings:28": {
+   "he": [
+    "he:Weekdays/Offerings:28"
+   ]
+  },
+  "en:Weekdays/Offerings:29": {
+   "he": [
+    "he:Weekdays/Offerings:29"
+   ]
+  },
+  "en:Weekdays/Offerings:30": {
+   "he": [
+    "he:Weekdays/Offerings:30"
+   ]
+  },
+  "en:Weekdays/Offerings:31": {
+   "he": [
+    "he:Weekdays/Offerings:31"
+   ]
+  },
+  "en:Weekdays/Offerings:32": {
+   "he": [
+    "he:Weekdays/Offerings:32"
+   ]
+  },
+  "en:Weekdays/Offerings:33": {
+   "he": [
+    "he:Weekdays/Offerings:33"
+   ]
+  },
+  "en:Weekdays/Offerings:34": {
+   "he": [
+    "he:Weekdays/Offerings:34"
+   ]
+  },
+  "en:Weekdays/Offerings:35": {
+   "he": [
+    "he:Weekdays/Offerings:35"
+   ]
+  },
+  "en:Weekdays/Offerings:36": {
+   "he": [
+    "he:Weekdays/Offerings:36"
+   ]
+  },
+  "en:Weekdays/Offerings:37": {
+   "he": [
+    "he:Weekdays/Offerings:37"
+   ]
+  },
+  "en:Weekdays/Offerings:38": {
+   "he": [
+    "he:Weekdays/Offerings:38"
+   ]
+  },
+  "en:Weekdays/Offerings:39": {
+   "he": [
+    "he:Weekdays/Offerings:39"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:1": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:1"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:2": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:2"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:3": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:3"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:4": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:4"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:5": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:5"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:6": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:6"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:7": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:7"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:8": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:8"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:9": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:9"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:10": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:10"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:11": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:11"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:12": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:12"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:13": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:13"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:14": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:14"
+   ]
+  },
+  "en:Weekdays/The Interpretive Principles of Rabbi Yishmael:15": {
+   "he": [
+    "he:Weekdays/The Interpretive Principles of Rabbi Yishmael:15"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:1": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following blessing and response are said only in the presence of a minyan.</i>",
+     "kind": "instruction",
+     "en": "The following blessing and response are said only in the presence of a minyan.",
+     "gloss": "Minyan requirement",
+     "when": "minyan"
+    },
+    {
+     "text": "<br><i class=\"instruction\">They represent a formal summons to the congregation to engage in an act of collective prayer. The custom of bowing at this point is based on I Chronicles 29:20, “David said to the whole assembly, ‘Now bless the <small>LORD</small> your God.’ All the assembly blessed the <small>LORD</small> God of their fathers and bowed their heads low to the <small>LORD</small> and the King.”</i>",
+     "kind": "instruction",
+     "en": "They represent a formal summons to the congregation to engage in an act of collective prayer. The custom of bowing at this point is based on I Chronicles 29:20...",
+     "gloss": "Context for Barchu",
+     "when": "minyan"
+    },
+    {
+     "text": "<br><i class=\"instruction\">The Leader says the following, bowing at “Bless,” standing straight at “the <small>LORD</small>.”</i>",
+     "kind": "instruction",
+     "en": "The Leader says the following, bowing at “Bless,” standing straight at “the LORD.”",
+     "gloss": "Gesture instruction",
+     "when": "minyan"
+    },
+    {
+     "text": "<br><i class=\"instruction\">The congregation, followed by the Leader, responds, bowing at “Bless,” standing straight at “the <small>LORD</small>.\"</i>",
+     "kind": "instruction",
+     "en": "The congregation, followed by the Leader, responds, bowing at “Bless,” standing straight at “the LORD.”",
+     "gloss": "Gesture instruction",
+     "when": "minyan"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Blessings of the Shema:2",
+    "he:Weekdays/Blessings of the Shema:3",
+    "he:Weekdays/Blessings of the Shema:4"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:2": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction",
+     "en": "Leader:",
+     "gloss": "Speaker label"
+    },
+    {
+     "text": " <small>BLESS</small> the <small>LORD</small>,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " the blessed One.",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Blessings of the Shema:2"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:3": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Congregation:</i>",
+     "kind": "instruction",
+     "en": "Congregation:",
+     "gloss": "Speaker label"
+    },
+    {
+     "text": " Bless the <small>LORD</small>,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": " the blessed One,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": " for ever and all time.",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Blessings of the Shema:3"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:4": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction",
+     "en": "Leader:",
+     "gloss": "Speaker label"
+    },
+    {
+     "text": " Bless the <small>LORD</small>,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " the blessed One,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " for ever and all time.",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Blessings of the Shema:4"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:5": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The custom is to sit from this point until the Amida, since the predominant emotion of this section of the prayers is love rather than awe.</i>",
+     "kind": "instruction",
+     "en": "The custom is to sit from this point until the Amida, since the predominant emotion of this section of the prayers is love rather than awe.",
+     "gloss": "Custom to sit",
+     "gestures": [
+      "sit"
+     ]
+    },
+    {
+     "text": "<br><i class=\"instruction\">Conversation is forbidden until after the Amida. See table on pages 1329–1331.</i>",
+     "kind": "instruction",
+     "en": "Conversation is forbidden until after the Amida. See table on pages 1329–1331.",
+     "gloss": "Prohibition on conversation"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Blessings of the Shema:6"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:6": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:6"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:7": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:7"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:8": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:8"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:9": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:9"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:10": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:10"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:11": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:11"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:12": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All say aloud:</i>",
+     "kind": "instruction",
+     "en": "All say aloud:",
+     "gloss": "Instruction for Kedushah"
+    },
+    {
+     "text": " Holy,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": " holy,",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": " holy is the <small>LORD</small> of hosts;",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": "<br>the whole world is filled with His glory.",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Blessings of the Shema:12"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:13": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:13"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:14": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All say aloud:</i>",
+     "kind": "instruction",
+     "en": "All say aloud:",
+     "gloss": "Instruction for Kedushah"
+    },
+    {
+     "text": " Blessed is the <small>LORD</small>’s glory from His place.",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Blessings of the Shema:14"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:15": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:15"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:16": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:16"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:17": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:17"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:18": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:19"
+   ],
+   "kind": "instruction",
+   "en": "At this point, gather the four tzitziyot of the tallit, holding them in the left hand.",
+   "gloss": "Gesture for Ahavat Olam",
+   "gestures": [
+    "gather_tzitzit"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:19": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:19"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:20": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The Shema must be said with intense concentration. In the first paragraph one should accept, with love, the sovereignty of God; in the second, the mitzvot as the will of God. The end of the third paragraph constitutes fulfillment of the mitzva to remember, morning and evening, the exodus from Egypt. See laws 346–355.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">When not praying with a minyan, say:</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Blessings of the Shema:21"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:21": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:21"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:22": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:23"
+   ],
+   "kind": "instruction",
+   "en": "The following verse should be said aloud, while covering the eyes with the right hand:",
+   "gloss": "Gesture for Shema",
+   "gestures": [
+    "cover_eyes"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:23": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:23"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:24": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Quietly:</i>",
+     "kind": "instruction",
+     "en": "Quietly:",
+     "gloss": "Speaker label"
+    },
+    {
+     "text": " Blessed be the name of His glorious kingdom for ever and all time.</small>",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "undertone"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Blessings of the Shema:24"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:25": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:26"
+   ],
+   "kind": "instruction",
+   "en": "Touch the hand-tefillin at ° and the head-tefillin at °°.",
+   "gloss": "Gesture for VeHayah",
+   "gestures": [
+    "touch_tefillin"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:26": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:26"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:27": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:28"
+   ],
+   "kind": "instruction",
+   "en": "Touch the hand-tefillin at ° and the head-tefillin at °°.",
+   "gloss": "Gesture for VeHayah",
+   "gestures": [
+    "touch_tefillin"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:28": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:28"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:29": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:30"
+   ],
+   "kind": "instruction",
+   "en": "Hold the tzitziyot in the right hand also (some transfer to the right hand), kissing them at °.",
+   "gloss": "Gesture for Vayomer",
+   "gestures": [
+    "kiss_tzitzit"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:30": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:30"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:31": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:31"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:32": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:42"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:33": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:43"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:34": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:34"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:35": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:35"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:36": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:37"
+   ],
+   "kind": "instruction",
+   "en": "At °, kiss the tzitziyot and release them.",
+   "gloss": "Gesture for Emet VeYatziv",
+   "gestures": [
+    "kiss_tzitzit"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:37": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:37"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:38": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:38"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:39": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:39"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:40": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:40"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:41": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:41"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:42": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:42"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:43": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:43"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:44": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:44"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:45": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:46"
+   ],
+   "kind": "instruction",
+   "en": "Stand in preparation for the Amida. Take three steps back before beginning the Amida.",
+   "gloss": "Transition to Amidah",
+   "gestures": [
+    "stand",
+    "three_steps_back"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:46": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:46"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:47": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:47"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:48": {
+   "he": [
+    "he:Weekdays/Blessings of the Shema:48"
+   ]
+  },
+  "en:Weekdays/Blessings of the Shema:49": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Congregants should end the following blessing together with the Leader so as to be able to move directly from the words “redeemed Israel” to the Amida, without the interruption of saying Amen."
+  },
+  "en:Weekdays/Blessings of the Shema:50": {
+   "he": [],
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "en": "Rock of Israel! Arise to the help of Israel. Deliver, as You promised, Judah and Israel. Our Redeemer, the LORD of hosts is His name, the Holy One of Israel. Blessed are You, LORD, who redeemed Israel."
+  },
+  "en:Weekdays/Viduy:1": {
+   "he": [
+    "he:Weekdays/Viduy:2"
+   ]
+  },
+  "en:Weekdays/Viduy:2": {
+   "he": [
+    "he:Weekdays/Viduy:2"
+   ]
+  },
+  "en:Weekdays/Viduy:3": {
+   "he": [
+    "he:Weekdays/Viduy:4"
+   ]
+  },
+  "en:Weekdays/Viduy:4": {
+   "he": [
+    "he:Weekdays/Viduy:4"
+   ]
+  },
+  "en:Weekdays/Viduy:5": {
+   "he": [
+    "he:Weekdays/Viduy:5"
+   ]
+  },
+  "en:Weekdays/Viduy:6": {
+   "he": [
+    "he:Weekdays/Viduy:8"
+   ],
+   "kind": "instruction",
+   "en": "When praying without a minyan continue with 'He is compassionate' on page 144.",
+   "gloss": "Said only with a minyan"
+  },
+  "en:Weekdays/Viduy:7": {
+   "he": [
+    "he:Weekdays/Viduy:7"
+   ]
+  },
+  "en:Weekdays/Viduy:8": {
+   "he": [
+    "he:Weekdays/Viduy:8"
+   ]
+  },
+  "en:Weekdays/Viduy:9": {
+   "he": [
+    "he:Weekdays/Viduy:10"
+   ]
+  },
+  "en:Weekdays/Viduy:10": {
+   "he": [
+    "he:Weekdays/Viduy:10"
+   ]
+  },
+  "en:Weekdays/Viduy:11": {
+   "he": [
+    "he:Weekdays/Viduy:11"
+   ]
+  },
+  "en:Weekdays/Viduy:12": {
+   "he": [
+    "he:Weekdays/Viduy:11"
+   ],
+   "kind": "instruction",
+   "en": "On Mondays and Thursdays continue with 'He is compassionate' on page 144; on other days with 'David said' on page 152.",
+   "gloss": "Continuation depends on day"
+  },
+  "en:Weekdays/The Rabbis' Kaddish:1": {
+   "he": []
+  },
+  "en:Weekdays/The Rabbis' Kaddish:2": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br>in your lifetime<br>and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and in the lifetime<br>of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Rabbis' Kaddish:3": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Rabbis' Kaddish:4": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world –<br>and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Rabbis' Kaddish:5": {
+   "parts": [
+    {
+     "text": "To Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to the teachers,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>their disciples and their disciples’ disciples,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and to all who engage in the study of Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in this (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>in Israel add:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " holy) place or elsewhere,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>may there come to them and you great peace,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>grace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " kindness and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " long life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " ample sustenance<br>and deliverance,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from their Father in Heaven – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Rabbis' Kaddish:6": {
+   "he": []
+  },
+  "en:Weekdays/The Rabbis' Kaddish:7": {
+   "he": []
+  },
+  "en:Weekdays/The Rabbis' Kaddish:8": {
+   "he": []
+  },
+  "en:Weekdays/The Rabbis' Kaddish:9": {
+   "he": []
+  },
+  "en:Weekdays/A Psalm Before Verses of Praise:1": {
+   "he": [
+    "he:Weekdays/A Psalm Before Verses of Praise:1"
+   ]
+  },
+  "en:Weekdays/A Psalm Before Verses of Praise:2": {
+   "he": [
+    "he:Weekdays/A Psalm Before Verses of Praise:2"
+   ]
+  },
+  "en:Weekdays/A Psalm Before Verses of Praise:3": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following prayer, said by mourners, requires the presence of a minyan.</i>",
+     "kind": "instruction",
+     "en": "The following prayer, said by mourners, requires the presence of a minyan."
+    },
+    {
+     "text": "<br><i class=\"instruction\">A transliteration can be found on page 1334.</i>",
+     "kind": "instruction",
+     "en": "A transliteration can be found on page 1334."
+    }
+   ],
+   "he": [
+    "he:Weekdays/A Psalm Before Verses of Praise:4"
+   ]
+  },
+  "en:Weekdays/A Psalm Before Verses of Praise:4": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction",
+     "en": "Mourner:",
+     "gloss": "Start of Mourner's Kaddish",
+     "forgot": true
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br>in your lifetime<br>and in your days,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>and in the lifetime<br>of all the house of Israel,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ],
+   "he": [
+    "he:Weekdays/A Psalm Before Verses of Praise:4"
+   ]
+  },
+  "en:Weekdays/A Psalm Before Verses of Praise:5": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction",
+     "en": "All:",
+     "gloss": "Response line"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ],
+   "he": [
+    "he:Weekdays/A Psalm Before Verses of Praise:5"
+   ]
+  },
+  "en:Weekdays/A Psalm Before Verses of Praise:6": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction",
+     "en": "Mourner:",
+     "gloss": "Praise line"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>blessed be He,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world –<br>and say: Amen.",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ],
+   "he": [
+    "he:Weekdays/A Psalm Before Verses of Praise:6"
+   ]
+  },
+  "en:Weekdays/A Psalm Before Verses of Praise:7": {
+   "he": [
+    "he:Weekdays/A Psalm Before Verses of Praise:7"
+   ],
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "en:Weekdays/A Psalm Before Verses of Praise:8": {
+   "he": [
+    "he:Weekdays/A Psalm Before Verses of Praise:9"
+   ],
+   "kind": "instruction",
+   "en": "Bow, take three steps back, as if taking leave of the Divine Presence, then bow, first left, then right, then center, while saying:",
+   "gloss": "Gestures for the closing of Kaddish"
+  },
+  "en:Weekdays/A Psalm Before Verses of Praise:9": {
+   "he": [
+    "he:Weekdays/A Psalm Before Verses of Praise:9"
+   ],
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "en:Weekdays/Pesukei DeZimra:1": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The introductory blessing to the Pesukei DeZimra (Verses of Praise) is said standing, while holding the two front tzitziyot of the tallit. They are kissed and released at the end of the blessing at “songs of praise” (on next page). From the beginning of this prayer to the end of the Amida, conversation is forbidden. See table on pages 1329–1331 for which congregational responses are permitted.</i>",
+     "kind": "instruction",
+     "en": "The introductory blessing to the Pesukei DeZimra (Verses of Praise) is said standing, while holding the two front tzitziyot of the tallit. They are kissed and released at the end of the blessing at “songs of praise” (on next page). From the beginning of this prayer to the end of the Amida, conversation is forbidden. See table on pages 1329–1331 for which congregational responses are permitted.",
+     "gloss": "Customary practice for Baruch She'amar"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Some say:</i>",
+     "kind": "instruction",
+     "en": "Some say:",
+     "gloss": "Intro to alternative text"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:2"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:2": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:2"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:3": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:3"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:4": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:4"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:5": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:5"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:6": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:6"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:7": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:7"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:8": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:8"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:9": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:9"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:10": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:10"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:11": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following psalm recalls the thanksgiving-offering in Temple times.</i>",
+     "kind": "instruction",
+     "en": "The following psalm recalls the thanksgiving-offering in Temple times.",
+     "gloss": "Context for Mizmor LeTodah"
+    },
+    {
+     "text": "<br><i class=\"instruction\">It is not said on Erev Pesaḥ, on Ḥol HaMo’ed Pesaḥ, or Erev Yom Kippur since no thanksgiving-offerings were brought on these days.</i>",
+     "kind": "instruction",
+     "en": "It is not said on Erev Pesaḥ, on Ḥol HaMo’ed Pesaḥ, or Erev Yom Kippur since no thanksgiving-offerings were brought on these days.",
+     "gloss": "Omission on specific days"
+    },
+    {
+     "text": "<br><i class=\"instruction\">To emphasize its sacrificial nature, the custom is to say it standing.</i>",
+     "kind": "instruction",
+     "en": "To emphasize its sacrificial nature, the custom is to say it standing.",
+     "gloss": "Customary posture"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:12"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:12": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:12"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:13": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:13"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:14": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:16"
+   ],
+   "kind": "instruction",
+   "en": "The line beginning with “You open Your hand” should be said with special concentration, representing as it does the key idea of this Psalm, and of Pesukei DeZimra as a whole, that God is the creator and sustainer of all. Some have the custom to touch the hand-tefillin at °, and the head-tefillin at °°.",
+   "gloss": "Kavanah and custom for Psalm 145"
+  },
+  "en:Weekdays/Pesukei DeZimra:15": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:15"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:16": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:16"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:17": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:20"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:18": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:21"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:19": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:22"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:20": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:23"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:21": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:25"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:22": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:26"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:23": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:27"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:24": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Stand (see commentary) until after “Bless the</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <small><i class=\"instruction\">LORD</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small><i class=\"instruction\">” on page 88.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:28"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:25": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:29"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:26": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:30"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:27": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:31"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:28": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:32"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:29": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:34"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:30": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:35"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:31": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:36"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:32": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:37"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:33": {
+   "he": []
+  },
+  "en:Weekdays/Pesukei DeZimra:34": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:34"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:35": {
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:35"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:36": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom >in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:36"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:37": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:37"
+   ]
+  },
+  "en:Weekdays/Pesukei DeZimra:38": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Pesukei DeZimra:38"
+   ]
+  },
+  "en:Weekdays/The Amida:1": {
+   "he": [
+    "he:Weekdays/The Amida:2"
+   ]
+  },
+  "en:Weekdays/The Amida:2": {
+   "he": [
+    "he:Weekdays/The Amida:2"
+   ]
+  },
+  "en:Weekdays/The Amida:3": {
+   "he": [
+    "he:Weekdays/The Amida:3"
+   ]
+  },
+  "en:Weekdays/The Amida:4": {
+   "he": [
+    "he:Weekdays/The Amida:4"
+   ]
+  },
+  "en:Weekdays/The Amida:5": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Between Rosh HaShana & Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Remember us for life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O King who desires life,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and write us in the book of life –<br>for Your sake,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O God of life.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Amida:5"
+   ]
+  },
+  "en:Weekdays/The Amida:6": {
+   "he": [
+    "he:Weekdays/The Amida:6"
+   ]
+  },
+  "en:Weekdays/The Amida:7": {
+   "he": [
+    "he:Weekdays/The Amida:7"
+   ]
+  },
+  "en:Weekdays/The Amida:8": {
+   "he": [
+    "he:Weekdays/The Amida:8"
+   ]
+  },
+  "en:Weekdays/The Amida:9": {
+   "he": [
+    "he:Weekdays/The Amida:10"
+   ]
+  },
+  "en:Weekdays/The Amida:10": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">In fall and winter:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " He makes the wind blow and the rain fall.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">In Israel, in spring and summer:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " He causes the dew to fall.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Amida:10"
+   ]
+  },
+  "en:Weekdays/The Amida:11": {
+   "he": [
+    "he:Weekdays/The Amida:11"
+   ]
+  },
+  "en:Weekdays/The Amida:12": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Between Rosh HaShana & Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small>  Who is like You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " compassionate Father,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>who remembers His creatures in compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for life?",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Amida:12"
+   ]
+  },
+  "en:Weekdays/The Amida:13": {
+   "he": [
+    "he:Weekdays/The Amida:13"
+   ]
+  },
+  "en:Weekdays/The Amida:14": {
+   "he": [
+    "he:Weekdays/The Amida:15"
+   ]
+  },
+  "en:Weekdays/The Amida:15": {
+   "he": [
+    "he:Weekdays/The Amida:15"
+   ]
+  },
+  "en:Weekdays/The Amida:16": {
+   "he": [
+    "he:Weekdays/The Amida:17"
+   ]
+  },
+  "en:Weekdays/The Amida:17": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong. then Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " נְקַדֵּשׁ We will sanctify Your name on earth,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>as they sanctify it in the highest heavens,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>as is written by Your prophet,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>“And they [the angels] call to one another saying:",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Amida:17"
+   ]
+  },
+  "en:Weekdays/The Amida:18": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong. then Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <small><i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small><small><i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small>▴Holy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " ▴holy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " ▴holy is the <small>LORD</small> of hosts<br>the whole world is filled with His glory.”<br>Those facing them say “Blessed – ”",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Amida:18"
+   ]
+  },
+  "en:Weekdays/The Amida:19": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong. then Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " ▴\"Blessed is the <small>LORD</small>'s glory from His place.\"<br>And in Your holy Writings it is written thus:<br>▴“The <small>LORD</small> shall reign for ever. He is your God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Zion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from generation to generation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Halleluya!”",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Amida:19"
+   ]
+  },
+  "en:Weekdays/The Amida:20": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " From generation to generation we will declare Your greatness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and we will proclaim Your holiness for evermore.<br>Your praise,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " shall not leave our mouth forever,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>for You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " are a great and holy King. Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>the holy God. /",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the holy King.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Amida:20"
+   ]
+  },
+  "en:Weekdays/The Amida:21": {
+   "he": [
+    "he:Weekdays/The Amida:22"
+   ]
+  },
+  "en:Weekdays/The Amida:22": {
+   "he": [
+    "he:Weekdays/The Amida:23"
+   ]
+  },
+  "en:Weekdays/The Amida:23": {
+   "parts": [
+    {
+     "text": "אַתָּה קָדוֹשׁ You are holy and Your name is holy,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and holy ones praise You daily,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Selah!<br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the holy God. /",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the holy King./",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Amida:25"
+   ]
+  },
+  "en:Weekdays/The Amida:24": {
+   "he": [
+    "he:Weekdays/The Amida:26"
+   ]
+  },
+  "en:Weekdays/The Amida:25": {
+   "he": [
+    "he:Weekdays/The Amida:27"
+   ]
+  },
+  "en:Weekdays/The Amida:26": {
+   "he": [
+    "he:Weekdays/The Amida:28"
+   ]
+  },
+  "en:Weekdays/The Amida:27": {
+   "he": [
+    "he:Weekdays/The Amida:29"
+   ]
+  },
+  "en:Weekdays/The Amida:28": {
+   "he": [
+    "he:Weekdays/The Amida:31"
+   ]
+  },
+  "en:Weekdays/The Amida:29": {
+   "he": [
+    "he:Weekdays/The Amida:32"
+   ]
+  },
+  "en:Weekdays/The Amida:30": {
+   "he": [
+    "he:Weekdays/The Amida:33"
+   ]
+  },
+  "en:Weekdays/The Amida:31": {
+   "he": [
+    "he:Weekdays/The Amida:34"
+   ]
+  },
+  "en:Weekdays/The Amida:32": {
+   "he": [
+    "he:Weekdays/The Amida:35"
+   ]
+  },
+  "en:Weekdays/The Amida:33": {
+   "he": [
+    "he:Weekdays/The Amida:41"
+   ]
+  },
+  "en:Weekdays/The Amida:34": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Fast Days the Leader adds:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>עֲנֵֽנוּ Answer us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " answer us on our Fast Day,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for we are in great distress. Look not at our wickedness. Do not hide Your face from us and do not ignore our plea. Be near to our cry;",
+     "kind": "prayer"
+    },
+    {
+     "text": " please let Your loving-kindness comfort us. Even before we call to You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " answer us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as is said,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “Before they call,",
+     "kind": "prayer"
+    },
+    {
+     "text": " I will answer. While they are still speaking,",
+     "kind": "prayer"
+    },
+    {
+     "text": " I will hear.” For You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " are the One who answers in time of distress,",
+     "kind": "prayer"
+    },
+    {
+     "text": " redeems and rescues in all times of trouble and anguish. Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who answers in time of distress.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Amida:35": {
+   "he": [
+    "he:Weekdays/The Amida:42"
+   ]
+  },
+  "en:Weekdays/The Amida:36": {
+   "he": [
+    "he:Weekdays/The Amida:41"
+   ]
+  },
+  "en:Weekdays/The Amida:37": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">The following prayer for a sick person may be said here:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>May it be Your will,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O Lord my God and God of my ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that You speedily send a complete recovery from heaven,",
+     "kind": "prayer"
+    },
+    {
+     "text": " a healing of both soul and body,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to the patient (name),",
+     "kind": "prayer"
+    },
+    {
+     "text": " son/daughter of (mother’s name) among the other afflicted of Israel.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Amida:41"
+   ]
+  },
+  "en:Weekdays/The Amida:38": {
+   "he": [
+    "he:Weekdays/The Amida:41"
+   ]
+  },
+  "en:Weekdays/The Amida:39": {
+   "he": [
+    "he:Weekdays/The Amida:42"
+   ]
+  },
+  "en:Weekdays/The Amida:40": {
+   "he": [
+    "he:Weekdays/The Amida:41"
+   ]
+  },
+  "en:Weekdays/The Amida:41": {
+   "parts": [
+    {
+     "text": "בָּרֵךְ Bless this year for us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small> our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and all its types of produce for good.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">In winter:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Grant rain and dew as a blessing<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">In other seasons:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Grant blessing <br>on the face of the earth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and from its goodness satisfy us,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>blessing our year as the best of years.<br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who blesses the years.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Amida:41"
+   ]
+  },
+  "en:Weekdays/The Amida:42": {
+   "he": [
+    "he:Weekdays/The Amida:43"
+   ]
+  },
+  "en:Weekdays/The Amida:43": {
+   "he": [
+    "he:Weekdays/The Amida:43"
+   ]
+  },
+  "en:Weekdays/The Amida:44": {
+   "he": [
+    "he:Weekdays/The Amida:44"
+   ]
+  },
+  "en:Weekdays/The Amida:45": {
+   "parts": [
+    {
+     "text": "הָשִֽׁיבָה Restore our judges as at first,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and our counselors as at the beginning,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and remove from us sorrow and sighing.<br>May You alone,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>reign over us with loving-kindness and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and vindicate us in justice.<br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>the King who loves righteousness and justice.<br>/",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Between Rosh HaShana and Yom Kippur, end the blessing:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the King of justice./",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Amida:45"
+   ]
+  },
+  "en:Weekdays/The Amida:46": {
+   "he": [
+    "he:Weekdays/The Amida:46"
+   ]
+  },
+  "en:Weekdays/The Amida:47": {
+   "he": [
+    "he:Weekdays/The Amida:47"
+   ]
+  },
+  "en:Weekdays/The Amida:48": {
+   "he": [
+    "he:Weekdays/The Amida:48"
+   ]
+  },
+  "en:Weekdays/The Amida:49": {
+   "he": [
+    "he:Weekdays/The Amida:58"
+   ]
+  },
+  "en:Weekdays/The Amida:50": {
+   "he": [
+    "he:Weekdays/The Amida:59"
+   ]
+  },
+  "en:Weekdays/The Amida:51": {
+   "he": [
+    "he:Weekdays/The Amida:60"
+   ]
+  },
+  "en:Weekdays/The Amida:52": {
+   "he": [
+    "he:Weekdays/The Amida:61"
+   ]
+  },
+  "en:Weekdays/The Amida:53": {
+   "he": [
+    "he:Weekdays/The Amida:63"
+   ]
+  },
+  "en:Weekdays/The Amida:54": {
+   "he": [
+    "he:Weekdays/The Amida:64"
+   ]
+  },
+  "en:Weekdays/The Amida:55": {
+   "he": [
+    "he:Weekdays/The Amida:65"
+   ]
+  },
+  "en:Weekdays/The Amida:56": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">*In times of drought in Israel, add:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>וַעֲנֵֽנוּ And answer us through the attribute of compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Creator of the universe who chooses His people Israel to make known His greatness and majestic glory. You who listen to prayer,",
+     "kind": "prayer"
+    },
+    {
+     "text": " grant dew and rain on the face of the earth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " satisfying the whole universe from Your goodness. Fill our hands from Your blessings and Your hand’s rich gift. Guard and deliver this year from all evil,",
+     "kind": "prayer"
+    },
+    {
+     "text": " all kinds of destruction and punishment,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and give it hope and a peaceful end. Spare us and have compassion on us and on all our produce and fruit,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessing us with bounteous rain. May we merit life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " plenty and peace as in the good years. Remove from us plague,",
+     "kind": "prayer"
+    },
+    {
+     "text": " sword and famine,",
+     "kind": "prayer"
+    },
+    {
+     "text": " wild animals,",
+     "kind": "prayer"
+    },
+    {
+     "text": " captivity and plunder,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the evil instinct and serious and dangerous illnesses and events. Decree for us goodly decrees,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and may Your compassion prevail over Your other attributes,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that You may act toward Your children through the attribute of compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in compassion and favor accept our prayer.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\"> Continue with “for You listen” above.</i></small>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Amida:66"
+   ]
+  },
+  "en:Weekdays/The Amida:57": {
+   "he": [
+    "he:Weekdays/The Amida:67"
+   ]
+  },
+  "en:Weekdays/The Amida:58": {
+   "he": [
+    "he:Weekdays/The Amida:68"
+   ]
+  },
+  "en:Weekdays/The Amida:59": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Rosh Ḥodesh and Ḥol HaMo’ed, say:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>אֱלֹהֵֽינוּ Our God and God of our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may there rise,",
+     "kind": "prayer"
+    },
+    {
+     "text": " come,",
+     "kind": "prayer"
+    },
+    {
+     "text": " reach,",
+     "kind": "prayer"
+    },
+    {
+     "text": " appear,",
+     "kind": "prayer"
+    },
+    {
+     "text": " be favored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " heard,",
+     "kind": "prayer"
+    },
+    {
+     "text": " regarded and remembered before You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our recollection and remembrance,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as well as the remembrance of our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and of the Messiah son of David Your servant,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and of Jerusalem Your holy city,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and of all Your people the house of Israel – for deliverance and well-being,",
+     "kind": "prayer"
+    },
+    {
+     "text": " grace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " loving-kindness and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " life and peace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " on this day of:<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Rosh Ḥodesh:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Rosh Ḥodesh.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Pesaḥ:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Matzot.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Sukkot:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Sukkot.<br>On it remember us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for good;",
+     "kind": "prayer"
+    },
+    {
+     "text": " recollect us for blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and deliver us for life. In accord with Your promise of salvation and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " spare us and be gracious to us;",
+     "kind": "prayer"
+    },
+    {
+     "text": " have compassion on us and deliver us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for our eyes are turned to You because You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " are a gracious and compassionate King.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Amida:69"
+   ]
+  },
+  "en:Weekdays/The Amida:60": {
+   "he": [
+    "he:Weekdays/The Amida:70"
+   ]
+  },
+  "en:Weekdays/The Amida:61": {
+   "he": [
+    "he:Weekdays/The Amida:71"
+   ]
+  },
+  "en:Weekdays/The Amida:62": {
+   "he": [
+    "he:Weekdays/The Amida:72"
+   ]
+  },
+  "en:Weekdays/The Amida:63": {
+   "he": [
+    "he:Weekdays/The Amida:73"
+   ]
+  },
+  "en:Weekdays/The Amida:64": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">During the Leader’s Repetition, the congregation says quietly:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>▾מוֹדִים We give thanks to You,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>for You are the Lord our God<br>and God of our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>God of all flesh,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>who formed us<br>and formed the universe.<br>Blessings and thanks<br>are due to Your great<br>and holy name for giving us life and sustaining us.<br>May You continue<br>to give us life and sustain us;",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and may You gather our exiles to Your holy courts,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>to keep Your decrees,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>do Your will and serve You with a perfect heart,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>for it is for us<br>to give You thanks.<br>Blessed be God to whom thanks­giving is due.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Amida:74"
+   ]
+  },
+  "en:Weekdays/The Amida:65": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Ḥanukka:</i>",
+     "kind": "instruction",
+     "en": "On Ḥanukka:",
+     "gloss": "Instruction for Al HaNissim insertion",
+     "forgot": true
+    },
+    {
+     "text": "<br>עַל הַנִּסִּים [We thank You also] for the miracles,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " the redemption,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " the mighty deeds,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " the salvations,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " and the victories in battle which You performed for our ancestors in those days,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " at this time.<br>בִּימֵי מַתִּתְיָֽהוּ In the days of Mattityahu,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " son of Yoḥanan,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " the High Priest,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " the Hasmonean,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " and his sons,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " the wicked Greek kingdom rose up against Your people Israel to make them forget Your Torah and to force them to transgress the statutes of Your will. It was then that You in Your great compassion stood by them in the time of their distress. You championed their cause,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " judged their claim,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " and avenged their wrong. You delivered the strong into the hands of the weak,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " the many into the hands of the few,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " the impure into the hands of the pure,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " the wicked into the hands of the righteous,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " and the arrogant into the hands of those who were engaged in the study of Your Torah. You made for Yourself great and holy renown in Your world,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " and for Your people Israel You performed a great salvation and redemption as of this very day. Your children then entered the holiest part of Your House,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " cleansed Your Temple,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " purified Your Sanctuary,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " kindled lights in Your holy courts,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " and designated these eight days of Ḥanukka for giving thanks and praise to Your great name.<br>",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": "<i class=\"instruction\">Continue with “For all these things.”</i></small>",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Amida:66": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Purim:</i>",
+     "kind": "instruction",
+     "en": "On Purim:",
+     "gloss": "Instruction for Al HaNissim insertion",
+     "forgot": true
+    },
+    {
+     "text": "<br>עַל הַנִּסִּים [We thank You also] for the miracles,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " the redemption,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " the mighty deeds,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " the salvations,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " and the victories in battle which You performed for our ancestors in those days,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " at this time.<br>בִּימֵי מָרְדְּכַי In the days of Mordekhai and Esther,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " in Shushan the capital,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " the wicked Haman rose up against them and sought to destroy,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " slay and exterminate all the Jews,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " young and old,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " children and women,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " on one day,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " the thirteenth day of the twelfth month,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " which is the month of Adar,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " and to plunder their possessions. Then You in Your great compassion thwarted his counsel,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " frustrated his plans,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " and caused his scheme to recoil on his own head,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " so that they hanged him and his sons on the gallows.<br>",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": "<i class=\"instruction\">Continue with “For all these things.”</i></small>",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Amida:67": {
+   "he": []
+  },
+  "en:Weekdays/The Amida:68": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " And write,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for a good life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " all the children of Your covenant.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Amida:69": {
+   "he": []
+  },
+  "en:Weekdays/The Amida:70": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">The following is said by the Leader during the Repetition of the Amida, except in a house of mourning and on Tisha B’Av. In Israel, if Kohanim bless the congregation, turn to page 838. See laws 370–377.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>Our God and God of our fathers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " bless us with the threefold blessing in the Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " written by the hand of Moses Your servant and pronounced by Aaron and his sons the priests,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Your holy people,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as it is said:<br>May the Lord bless you and protect you.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Cong:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May it be Your will.<br>May the Lord make His face shine on you and be gracious to you.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Cong:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May it be Your will.<br>May the Lord turn His face toward you,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and grant you peace.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Cong:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May it be Your will.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Amida:71": {
+   "he": []
+  },
+  "en:Weekdays/The Amida:72": {
+   "he": []
+  },
+  "en:Weekdays/The Amida:73": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " In the book of life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": " peace and prosperity,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may we and all Your people the house of Israel be remembered and written before You for a good life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and for peace.*</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Amida:74": {
+   "he": []
+  },
+  "en:Weekdays/The Amida:75": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">*Between Rosh HaShana and Yom Kippur<br>outside Israel,</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <i class=\"instruction\">many end the blessing:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who makes peace.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Amida:76": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following verse concludes the Leader’s Repetition of the Amida.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Some also say it here as part of the silent Amida. See law 368.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Amida:77": {
+   "he": []
+  },
+  "en:Weekdays/The Amida:78": {
+   "he": []
+  },
+  "en:Weekdays/The Amida:79": {
+   "he": []
+  },
+  "en:Weekdays/The Amida:80": {
+   "he": []
+  },
+  "en:Weekdays/The Amida:81": {
+   "he": [],
+   "kind": "prayer",
+   "node": "amidah.yehi_ratzon_mikdash"
+  },
+  "en:Weekdays/The Amida:82": {
+   "he": [],
+   "kind": "instruction",
+   "en": "When praying with a minyan, the Amida is repeated aloud by the Leader.",
+   "gloss": "The chazzan repeats the Amidah aloud when there is a minyan"
+  },
+  "en:Weekdays/The Amida:83": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On days when Tahanun is said (see page 144), start Taḥanun on page 152.</i>",
+     "kind": "instruction",
+     "en": "On days when Tahanun is said (see page 144), start Taḥanun on page 152.",
+     "gloss": "Tachanun is omitted on Rosh Chodesh, Chanukah, and other special days"
+    },
+    {
+     "text": "<br><i class=\"instruction\">On Mondays and Thursdays start Taḥanun on page 144.</i>",
+     "kind": "instruction",
+     "en": "On Mondays and Thursdays start Taḥanun on page 144.",
+     "gloss": "Tachanun is said on Mondays and Thursdays"
+    },
+    {
+     "text": "<br><i class=\"instruction\">In Israel, on days on which Taḥanun is said, some say Viduy and the Thirteen Attributes of Divine Compassion on page 109. See law 478a.</i>",
+     "kind": "instruction",
+     "en": "In Israel, on days on which Taḥanun is said, some say Viduy and the Thirteen Attributes of Divine Compassion on page 109. See law 478a.",
+     "gloss": "Custom in Israel to say Vidui and 13 Attributes on days Tachanun is said"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Amida:84": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On fast days (except Tisha B’Av) most congregations say Seliḥot</i>",
+     "kind": "instruction",
+     "en": "On fast days (except Tisha B’Av) most congregations say Seliḥot"
+    },
+    {
+     "text": "<br><i class=\"instruction\">on page 924 before Avinu Malkenu on page 138.</i>",
+     "kind": "instruction",
+     "en": "on page 924 before Avinu Malkenu on page 138.",
+     "gloss": "Selichot are said before Avinu Malkeinu on public fast days"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Amida:85": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Between Rosh HaShana and Yom Kippur (but not on Erev Yom Kippur,</i>",
+     "kind": "instruction",
+     "en": "Between Rosh HaShana and Yom Kippur (but not on Erev Yom Kippur,"
+    },
+    {
+     "text": "<br><i class=\"instruction\">unless it falls on Friday), say Avinu Malkenu on page 138.</i>",
+     "kind": "instruction",
+     "en": "unless it falls on Friday), say Avinu Malkenu on page 138.",
+     "gloss": "Avinu Malkeinu is said during the Ten Days of Repentance, except Erev Yom Kippur unless it is Friday"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Amida:86": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Rosh Ḥodesh, Ḥanukka, Ḥol HaMo’ed, Yom HaAtzma’ut and</i>",
+     "kind": "instruction",
+     "en": "On Rosh Ḥodesh, Ḥanukka, Ḥol HaMo’ed, Yom HaAtzma’ut and"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Yom Yerushalayim, say Hallel on page 732.</i>",
+     "kind": "instruction",
+     "en": "Yom Yerushalayim, say Hallel on page 732.",
+     "gloss": "Hallel is said on these days"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/The Amida:87": {
+   "he": [],
+   "kind": "instruction",
+   "en": "On other days when Taḥanun is not said (see page 144), the Leader says Half Kaddish on page 156.",
+   "gloss": "Half Kaddish is said by the chazzan when Tachanun is omitted"
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Weekdays/Morning Blessings:5",
+   "type": "ambiguous",
+   "detail": "Sefaria text mixes two alternatives (men/women) in one segment without clear instruction on which is default or when to use which. Splitting required."
+  },
+  {
+   "id": "en:Weekdays/Accepting the Sovereignty of Heaven:9",
+   "type": "ambiguous",
+   "detail": "English-only instruction about saying the full Shema paragraphs here if time is short; no Hebrew counterpart in this leaf. Condition unclear (time pressure vs. custom)."
+  },
+  {
+   "id": "he:Weekdays/Blessings of the Shema:16",
+   "type": "ambiguous",
+   "detail": "Part 1: New light insertion condition unclear; tagged as roshChodesh || yomTov || chanukah but may vary by custom."
+  },
+  {
+   "id": "en:Weekdays/Blessings of the Shema:50",
+   "type": "alignment",
+   "detail": "No Hebrew counterpart found in the provided context for the blessing 'Ga'al Yisrael'."
+  },
+  {
+   "id": "he:Weekdays/Viduy:8",
+   "type": "ambiguous",
+   "detail": "The text of h5 (piyyut) is said only when there is a minyan. The English instruction e6 says 'When praying without a minyan continue with...'. This implies h5 is conditional on minyan, but the Hebrew text itself has no explicit rubric. The condition 'minyan' should be applied to h5, h6, and h7."
+  },
+  {
+   "id": "en:Weekdays/The Rabbis' Kaddish:1",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/The Rabbis' Kaddish:2",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/The Rabbis' Kaddish:3",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/The Rabbis' Kaddish:4",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/The Rabbis' Kaddish:5",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/The Rabbis' Kaddish:6",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/The Rabbis' Kaddish:7",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/The Rabbis' Kaddish:8",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/The Rabbis' Kaddish:9",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/The Rabbis' Kaddish:1",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h1.1; h1.2; h1.3; h2.1; h3.1"
+  },
+  {
+   "id": "en:Weekdays/A Psalm Before Verses of Praise:1",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: Marker needs a unique increasing boundary or occurrence: קהל:; found positions [74, 299], previous boundary 32; Marker needs a unique increasing boundary or occurrence: קהל:; found positions [179, 435], previous boundary 32; Marker needs a unique increasing boundary or occurrence: השלום; found positions [5, 60, 100], previous boundary 16; h3.1; h3.2"
+  },
+  {
+   "id": "he:Weekdays/Pesukei DeZimra:2",
+   "type": "ambiguous",
+   "detail": "Text is a Kabbalistic formula (Yichud) not found in all siddurim; some say it, some do not. The siddur presents it as part of the prayer text but it functions as an instruction/intro."
+  },
+  {
+   "id": "en:Weekdays/Pesukei DeZimra:17",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h31.1; h31.2; h31.3; h31.4; h31.5"
+  },
+  {
+   "id": "en:Weekdays/Pesukei DeZimra:33",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: Marker needs a unique increasing boundary or occurrence: לעלא לעלא מכל ברכתא; found positions [304], previous boundary 314; h33.1; h33.2; h33.3; h33.4"
+  },
+  {
+   "id": "he:Weekdays/The Amida:10",
+   "type": "ambiguous",
+   "detail": "The Hebrew text mixes two alternatives (winter/diaspora vs summer/Israel) in one segment without a clear conditional marker in the source text itself, requiring a split based on custom."
+  },
+  {
+   "id": "en:Weekdays/The Amida:1",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: Marker needs a unique increasing boundary or occurrence: {'before': 'זכרנו לחיים', 'occurrence': 1}; found positions [51], previous boundary 51; Marker needs a unique increasing boundary or occurrence: {'before': 'משיב הרוח ומוריד הגשם', 'occurrence': 1}; found positions [34], previous boundary 34; Marker needs a unique increasing boundary or occurrence: {'before': 'מי כמוך אב הרחמים', 'occurrence': 1}; found positions [51], previous boundary 51; Marker needs a unique increasing boundary or occurrence: {'before': 'המלך הקדוש', 'occurrence': 1}; found positions [309], previous boundary 309"
+  },
+  {
+   "id": "he:Weekdays/The Amida:17",
+   "type": "ambiguous",
+   "detail": "Instruction 'קהל then ש\"ץ' implies congregation starts, but standard Ashkenaz custom for Kedushah is chazzan starts 'Yekadesh' then congregation repeats. Need to verify if this siddur intends a different custom or if the instruction is misleading."
+  },
+  {
+   "id": "en:Weekdays/The Amida:17",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h13.0; h13.1; h14.0; h14.1; h14.2"
+  },
+  {
+   "id": "he:Weekdays/The Amida:56",
+   "type": "ambiguous",
+   "detail": "Condition for personal supplication (h48) not explicitly stated; assumed weekdays only based on context."
+  },
+  {
+   "id": "en:Weekdays/The Amida:33",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: Split needs one metadata object per resulting part; h33.1; h33.2; h33.3; h33.4"
+  },
+  {
+   "id": "he:Weekdays/The Amida:75",
+   "type": "ambiguous",
+   "detail": "Instruction 'In a house of mourning' is not explicit in the Hebrew text; inferred from custom."
+  },
+  {
+   "id": "en:Weekdays/The Amida:49",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h51.1; h51.2; h51.3; h51.4; h51.5"
+  },
+  {
+   "id": "en:Weekdays/The Amida:65",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h69.1; h69.2; e65.24; e65.25; e65.26"
+  },
+  {
+   "id": "en:Weekdays/The Amida:81",
+   "type": "alignment",
+   "detail": "English segment e81 has no corresponding Hebrew segment in the provided context."
+  }
+ ]
+}

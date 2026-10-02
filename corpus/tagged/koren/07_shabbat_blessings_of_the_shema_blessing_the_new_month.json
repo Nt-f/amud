@@ -1,0 +1,4423 @@
+{
+ "nusach": "koren",
+ "chunk": "Shabbat [Blessings of the Shema .. Blessing the New Month]",
+ "leaves": {
+  "Shabbat/Blessings of the Shema": {
+   "node": "shema.emet_veyatziv",
+   "service": "shacharit",
+   "when": "shabbat"
+  },
+  "Shabbat/The Amida for Shabbat": {
+   "node": "amidah.oseh_shalom",
+   "service": "shacharit",
+   "when": "shabbat"
+  },
+  "Shabbat/Reading of the Torah": {
+   "node": "torah.vayehi_binsoa",
+   "service": "shacharit",
+   "when": "shabbat || yomTov || hoshanaRaba"
+  },
+  "Shabbat/Prayer for the Welfare of the Government": {
+   "node": "torah.prayer_government",
+   "service": "none",
+   "when": "true"
+  },
+  "Shabbat/Prayer for the State of Israel": {
+   "node": "torah.prayer_state",
+   "service": "shacharit",
+   "when": "true"
+  },
+  "Shabbat/Prayer for Israel's Defense Forces": {
+   "node": "torah.prayer_soldiers",
+   "service": "none"
+  },
+  "Shabbat/Blessing the New Month": {
+   "node": "torah.birkat_hachodesh",
+   "service": "shacharit",
+   "when": "shabbatShekalim"
+  }
+ },
+ "he": {
+  "he:Shabbat/Blessings of the Shema:64": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:65": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:67": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/The Amida for Shabbat:57": {
+   "kind": "prayer",
+   "node": "amidah.yehi_ratzon_mikdash"
+  },
+  "he:Shabbat/The Amida for Shabbat:59": {
+   "kind": "heading",
+   "en": "Full Kaddish",
+   "gloss": "Kaddish Shalem"
+  },
+  "he:Shabbat/The Amida for Shabbat:60": {
+   "kind": "speaker",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Chazzan:"
+  },
+  "he:Shabbat/The Amida for Shabbat:61": {
+   "kind": "speaker",
+   "role": "together",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Congregation and Chazzan:"
+  },
+  "he:Shabbat/The Amida for Shabbat:62": {
+   "kind": "speaker",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Chazzan:"
+  },
+  "he:Shabbat/The Amida for Shabbat:63": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/The Amida for Shabbat:64": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/The Amida for Shabbat:66": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "gestures": [
+    "three_steps_back",
+    "bow_left_right_center"
+   ]
+  },
+  "he:Shabbat/Reading of the Torah:1": {
+   "kind": "heading",
+   "en": "Removing the Torah from the Ark"
+  },
+  "he:Shabbat/Reading of the Torah:2": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Reading of the Torah:3": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Reading of the Torah:4": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Reading of the Torah:5": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Reading of the Torah:6": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Reading of the Torah:8": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Reading of the Torah:11": {
+   "kind": "prayer",
+   "role": "congregation",
+   "repeat": 3,
+   "en": "On Yom Tov (except Shabbat) and Hoshana Raba, say three times:"
+  },
+  "he:Shabbat/Reading of the Torah:13": {
+   "kind": "prayer",
+   "role": "congregation",
+   "en": "On Yom Tov (except Shabbat) continue, inserting appropriate phrase/s in parentheses:"
+  },
+  "he:Shabbat/Reading of the Torah:15": {
+   "kind": "prayer",
+   "role": "congregation",
+   "en": "On Hoshana Raba continue:"
+  },
+  "he:Shabbat/Reading of the Torah:16": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Reading of the Torah:18": {
+   "kind": "prayer",
+   "role": "congregation",
+   "repeat": 3,
+   "en": "Say the following verse three times:"
+  },
+  "he:Shabbat/Reading of the Torah:20": {
+   "kind": "prayer",
+   "role": "congregation",
+   "en": "On Shabbat, Yom Tov and Hoshana Raba:"
+  },
+  "he:Shabbat/Reading of the Torah:22": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Reading of the Torah:24": {
+   "kind": "instruction",
+   "role": "congregation_then_chazzan",
+   "en": "On Hoshana Raba:"
+  },
+  "he:Shabbat/Reading of the Torah:26": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "gestures": [
+    "bow"
+   ]
+  },
+  "he:Shabbat/Reading of the Torah:28": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Reading of the Torah:29": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Reading of the Torah:30": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Reading of the Torah:31": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Reading of the Torah:33": {
+   "kind": "instruction",
+   "role": "congregation",
+   "en": "The Torah scroll is placed on the bima and the Gabbai calls a Kohen to the Torah. See laws 383–397."
+  },
+  "he:Shabbat/Reading of the Torah:35": {
+   "kind": "instruction",
+   "en": "As there is no Kohen, arise (name son of father's name) in place of a Kohen."
+  },
+  "he:Shabbat/Reading of the Torah:36": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Reading of the Torah:38": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Reading of the Torah:41": {
+   "kind": "instruction",
+   "en": "The appropriate Torah portion is read. The Torah portions for Yom Tov are to be found from page 1123; see chart on page 1123."
+  },
+  "he:Shabbat/Reading of the Torah:42": {
+   "kind": "instruction",
+   "role": "oleh",
+   "en": "The Reader shows the oleh the section to be read. The oleh touches the scroll at that place with the tzitzit of his tallit, which he then kisses. Holding the handles of the scroll, he says:"
+  },
+  "he:Shabbat/Reading of the Torah:43": {
+   "kind": "speaker",
+   "role": "congregation",
+   "en": "Cong:"
+  },
+  "he:Shabbat/Reading of the Torah:44": {
+   "kind": "speaker",
+   "role": "oleh",
+   "en": "Oleh:"
+  },
+  "he:Shabbat/Reading of the Torah:46": {
+   "kind": "prayer",
+   "role": "oleh"
+  },
+  "he:Shabbat/Reading of the Torah:48": {
+   "kind": "prayer",
+   "role": "oleh",
+   "en": "After the reading, the oleh says:"
+  },
+  "he:Shabbat/Reading of the Torah:50": {
+   "kind": "prayer",
+   "role": "congregation",
+   "en": "One who has survived a situation of danger (see the commentary) says:"
+  },
+  "he:Shabbat/Reading of the Torah:52": {
+   "kind": "prayer",
+   "role": "congregation",
+   "en": "The congregation responds:"
+  },
+  "he:Shabbat/Reading of the Torah:54": {
+   "kind": "heading",
+   "en": "Mi Sheberach for the Oleh"
+  },
+  "he:Shabbat/Reading of the Torah:55": {
+   "kind": "instruction",
+   "role": "congregation",
+   "en": "On Yom Tov:"
+  },
+  "he:Shabbat/Reading of the Torah:56": {
+   "kind": "heading",
+   "en": "Mi Sheberach for the Sick"
+  },
+  "he:Shabbat/Reading of the Torah:57": {
+   "kind": "instruction",
+   "role": "congregation",
+   "en": "On Yom Tov:"
+  },
+  "he:Shabbat/Reading of the Torah:58": {
+   "kind": "heading",
+   "en": "Mi Sheberach for the Sick (Female)"
+  },
+  "he:Shabbat/Reading of the Torah:59": {
+   "kind": "instruction",
+   "role": "congregation",
+   "en": "On Yom Tov:"
+  },
+  "he:Shabbat/Reading of the Torah:60": {
+   "kind": "heading",
+   "en": "Mi Sheberach for a Newborn Boy"
+  },
+  "he:Shabbat/Reading of the Torah:61": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Reading of the Torah:62": {
+   "kind": "heading",
+   "en": "Mi Sheberach for a Newborn Girl"
+  },
+  "he:Shabbat/Reading of the Torah:63": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Reading of the Torah:64": {
+   "kind": "heading",
+   "en": "Mi Sheberach for a Bar Mitzvah"
+  },
+  "he:Shabbat/Reading of the Torah:65": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Reading of the Torah:66": {
+   "kind": "heading",
+   "en": "Mi Sheberach for a Bat Mitzvah"
+  },
+  "he:Shabbat/Reading of the Torah:67": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Reading of the Torah:68": {
+   "kind": "heading",
+   "en": "Half Kaddish"
+  },
+  "he:Shabbat/Reading of the Torah:70": {
+   "kind": "speaker",
+   "role": "congregation",
+   "en": "Congregation:"
+  },
+  "he:Shabbat/Reading of the Torah:71": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Reading of the Torah:72": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "en": "Reader:"
+  },
+  "he:Shabbat/Reading of the Torah:73": {
+   "kind": "heading",
+   "en": "Hagbahah and Gelilah"
+  },
+  "he:Shabbat/Reading of the Torah:75": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Reading of the Torah:76": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Reading of the Torah:78": {
+   "kind": "heading",
+   "en": "Blessings of the Haftarah"
+  },
+  "he:Shabbat/Reading of the Torah:80": {
+   "kind": "prayer",
+   "role": "oleh"
+  },
+  "he:Shabbat/Reading of the Torah:82": {
+   "kind": "prayer",
+   "role": "oleh"
+  },
+  "he:Shabbat/Reading of the Torah:83": {
+   "kind": "prayer",
+   "role": "oleh"
+  },
+  "he:Shabbat/Reading of the Torah:84": {
+   "kind": "prayer",
+   "role": "oleh"
+  },
+  "he:Shabbat/Reading of the Torah:86": {
+   "kind": "prayer",
+   "role": "oleh",
+   "en": "On Shabbat:"
+  },
+  "he:Shabbat/Reading of the Torah:88": {
+   "kind": "instruction",
+   "role": "oleh",
+   "en": "On Shabbat:"
+  },
+  "he:Shabbat/Reading of the Torah:89": {
+   "kind": "instruction",
+   "role": "oleh",
+   "en": "On Shabbat:"
+  },
+  "he:Shabbat/Reading of the Torah:91": {
+   "kind": "prayer",
+   "role": "oleh"
+  },
+  "he:Shabbat/Reading of the Torah:92": {
+   "kind": "prayer",
+   "role": "oleh"
+  },
+  "he:Shabbat/Reading of the Torah:93": {
+   "kind": "prayer",
+   "role": "oleh"
+  },
+  "he:Shabbat/Prayer for the Welfare of the Government:1": {
+   "kind": "heading",
+   "en": "Prayer for the Welfare of the Government"
+  },
+  "he:Shabbat/Prayer for the Welfare of the Government:3": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Shabbat/Prayer for the Welfare of the Government:4": {
+   "kind": "heading",
+   "en": "Prayer for the Safety of the American Military"
+  },
+  "he:Shabbat/Prayer for the Welfare of the Government:6": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Shabbat/Prayer for the Welfare of the Government:7": {
+   "kind": "heading",
+   "en": "Prayer for the Welfare of the Government"
+  },
+  "he:Shabbat/Prayer for the Welfare of the Government:9": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Shabbat/Prayer for the Welfare of the Government:10": {
+   "kind": "heading",
+   "en": "Prayer for the Safety of the Canadian Military Forces"
+  },
+  "he:Shabbat/Prayer for the Welfare of the Government:12": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Shabbat/Prayer for the State of Israel:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Prayer for the State of Israel:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Prayer for the State of Israel:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Prayer for the State of Israel:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Prayer for the State of Israel:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Prayer for Israel's Defense Forces:2": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Shabbat/Prayer for Israel's Defense Forces:3": {
+   "kind": "heading",
+   "en": "Prayer for those being held in captivity"
+  },
+  "he:Shabbat/Prayer for Israel's Defense Forces:5": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "en": "Prayer for those being held in captivity",
+   "gloss": "Said when there are Israeli captives",
+   "when": "x_captivesPresent"
+  },
+  "he:Shabbat/Blessings of the Shema:2": {
+   "kind": "speaker",
+   "en": "Leader:"
+  },
+  "he:Shabbat/Blessings of the Shema:3": {
+   "kind": "speaker",
+   "en": "Congregation:"
+  },
+  "he:Shabbat/Blessings of the Shema:4": {
+   "kind": "speaker",
+   "en": "Leader:"
+  },
+  "he:Shabbat/Blessings of the Shema:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:22": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:24": {
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud"
+  },
+  "he:Shabbat/Blessings of the Shema:25": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:27": {
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud"
+  },
+  "he:Shabbat/Blessings of the Shema:28": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:29": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:30": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:31": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:32": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:34": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:36": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:38": {
+   "kind": "prayer",
+   "gestures": [
+    "cover_eyes"
+   ]
+  },
+  "he:Shabbat/Blessings of the Shema:39": {
+   "kind": "prayer",
+   "voice": "undertone"
+  },
+  "he:Shabbat/Blessings of the Shema:40": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:41": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:43": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:44": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:46": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Blessings of the Shema:47": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:48": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:50": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:51": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:52": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:53": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:54": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:55": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:56": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:57": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:58": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:60": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:61": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Blessings of the Shema:62": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Blessing the New Month:2": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Blessing the New Month:4": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Shabbat/Blessing the New Month:6": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Shabbat/Blessing the New Month:9": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Blessing the New Month:11": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "en": "Outside Israel"
+  },
+  "he:Shabbat/The Amida for Shabbat:2": {
+   "kind": "prayer",
+   "node": "amidah.opening"
+  },
+  "he:Shabbat/The Amida for Shabbat:3": {
+   "kind": "heading",
+   "en": "Patriarchs"
+  },
+  "he:Shabbat/The Amida for Shabbat:4": {
+   "kind": "prayer",
+   "node": "amidah.avot"
+  },
+  "he:Shabbat/The Amida for Shabbat:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/The Amida for Shabbat:6": {
+   "kind": "prayer",
+   "node": "amidah.avot"
+  },
+  "he:Shabbat/The Amida for Shabbat:7": {
+   "kind": "heading",
+   "en": "Divine Might"
+  },
+  "he:Shabbat/The Amida for Shabbat:8": {
+   "kind": "prayer",
+   "node": "amidah.gevurot"
+  },
+  "he:Shabbat/The Amida for Shabbat:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/The Amida for Shabbat:11": {
+   "kind": "prayer",
+   "node": "amidah.gevurot"
+  },
+  "he:Shabbat/The Amida for Shabbat:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/The Amida for Shabbat:13": {
+   "kind": "prayer",
+   "node": "amidah.gevurot"
+  },
+  "he:Shabbat/The Amida for Shabbat:15": {
+   "kind": "heading",
+   "en": "Kedushah"
+  },
+  "he:Shabbat/The Amida for Shabbat:17": {
+   "kind": "prayer",
+   "node": "amidah.kedusha",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "en": "Congregation and Leader:"
+  },
+  "he:Shabbat/The Amida for Shabbat:18": {
+   "kind": "prayer",
+   "node": "amidah.kedusha",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "gestures": [
+    "rise_on_toes"
+   ],
+   "en": "Congregation and Leader:"
+  },
+  "he:Shabbat/The Amida for Shabbat:19": {
+   "kind": "prayer",
+   "node": "amidah.kedusha",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud"
+  },
+  "he:Shabbat/The Amida for Shabbat:20": {
+   "kind": "prayer",
+   "node": "amidah.kedusha",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "gestures": [
+    "rise_on_toes"
+   ],
+   "en": "Congregation and Leader:"
+  },
+  "he:Shabbat/The Amida for Shabbat:21": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/The Amida for Shabbat:22": {
+   "kind": "speaker",
+   "en": "Congregation and Chazzan:",
+   "gloss": "Ashkenaz custom: Congregation says first, Chazzan repeats"
+  },
+  "he:Shabbat/The Amida for Shabbat:23": {
+   "kind": "speaker",
+   "en": "Chazzan:",
+   "gloss": "Chazzan concludes Kedushah alone"
+  },
+  "he:Shabbat/The Amida for Shabbat:25": {
+   "kind": "heading",
+   "en": "Holiness of God",
+   "gloss": "Start of the blessing of Kedushat HaShem"
+  },
+  "he:Shabbat/The Amida for Shabbat:26": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Shabbat/The Amida for Shabbat:27": {
+   "kind": "heading",
+   "en": "Holiness of the Day",
+   "gloss": "Start of the blessing of Yismach Moshe"
+  },
+  "he:Shabbat/The Amida for Shabbat:28": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Shabbat/The Amida for Shabbat:29": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Shabbat/The Amida for Shabbat:30": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Shabbat/The Amida for Shabbat:31": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Shabbat/The Amida for Shabbat:32": {
+   "kind": "heading",
+   "en": "Temple Service",
+   "gloss": "Start of the blessing of Retzei"
+  },
+  "he:Shabbat/The Amida for Shabbat:33": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Shabbat/The Amida for Shabbat:34": {
+   "kind": "instruction",
+   "en": "On Rosh Chodesh and Chol HaMoed:",
+   "gloss": "Ya'aleh VeYavo insertion",
+   "forgot": true
+  },
+  "he:Shabbat/The Amida for Shabbat:35": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "en": "Ya'aleh VeYavo"
+  },
+  "he:Shabbat/The Amida for Shabbat:36": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Shabbat/The Amida for Shabbat:37": {
+   "kind": "heading",
+   "en": "Thanksgiving",
+   "gloss": "Start of the blessing of Modim"
+  },
+  "he:Shabbat/The Amida for Shabbat:39": {
+   "kind": "prayer",
+   "node": "amidah.modim",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat/The Amida for Shabbat:40": {
+   "kind": "prayer",
+   "node": "amidah.modim_derabbanan",
+   "role": "congregation",
+   "voice": "undertone",
+   "amidah": "repetition",
+   "minyan": true
+  },
+  "he:Shabbat/The Amida for Shabbat:41": {
+   "kind": "instruction",
+   "node": "amidah.al_hanissim",
+   "role": "congregation",
+   "voice": "undertone",
+   "amidah": "repetition",
+   "minyan": true,
+   "en": "On Chanukah:",
+   "gloss": "Insertion in Modim d'Rabbanan"
+  },
+  "he:Shabbat/The Amida for Shabbat:42": {
+   "kind": "instruction",
+   "node": "amidah.al_hanissim",
+   "role": "congregation",
+   "voice": "undertone",
+   "amidah": "repetition",
+   "minyan": true,
+   "en": "On Shushan Purim in Jerusalem:",
+   "gloss": "Insertion in Modim d'Rabbanan"
+  },
+  "he:Shabbat/The Amida for Shabbat:43": {
+   "kind": "prayer",
+   "node": "amidah.modim_derabbanan",
+   "role": "congregation",
+   "voice": "undertone",
+   "amidah": "repetition",
+   "minyan": true
+  },
+  "he:Shabbat/The Amida for Shabbat:44": {
+   "kind": "instruction",
+   "node": "amidah.modim_derabbanan",
+   "role": "congregation",
+   "voice": "undertone",
+   "amidah": "repetition",
+   "minyan": true,
+   "en": "On Shabbat Shuva:",
+   "gloss": "Insertion in Modim d'Rabbanan"
+  },
+  "he:Shabbat/The Amida for Shabbat:45": {
+   "kind": "prayer",
+   "node": "amidah.modim_derabbanan",
+   "role": "congregation",
+   "voice": "undertone",
+   "amidah": "repetition",
+   "minyan": true
+  },
+  "he:Shabbat/The Amida for Shabbat:46": {
+   "kind": "instruction",
+   "node": "amidah.birkat_kohanim",
+   "role": "chazzan",
+   "voice": "aloud",
+   "amidah": "repetition",
+   "minyan": true,
+   "en": "The following is said by the Leader during the Repetition of the Amida, except in a house of mourning and on Tisha B'Av. In Israel, if Kohanim bless the congregation, turn to page 838. See laws 370–377.",
+   "gloss": "Chazzan says Birkat Kohanim if no kohanim are duchening"
+  },
+  "he:Shabbat/The Amida for Shabbat:47": {
+   "kind": "prayer",
+   "node": "amidah.shalom",
+   "role": "chazzan",
+   "voice": "aloud",
+   "amidah": "repetition",
+   "minyan": true,
+   "en": "PEACE"
+  },
+  "he:Shabbat/The Amida for Shabbat:48": {
+   "kind": "prayer",
+   "node": "amidah.shalom",
+   "role": "chazzan",
+   "voice": "aloud",
+   "amidah": "repetition",
+   "minyan": true
+  },
+  "he:Shabbat/The Amida for Shabbat:49": {
+   "kind": "instruction",
+   "node": "amidah.shalom",
+   "role": "chazzan",
+   "voice": "aloud",
+   "amidah": "repetition",
+   "minyan": true,
+   "en": "On Shabbat Shuva:",
+   "gloss": "Insertion in Sim Shalom"
+  },
+  "he:Shabbat/The Amida for Shabbat:50": {
+   "kind": "prayer",
+   "node": "amidah.shalom",
+   "role": "chazzan",
+   "voice": "aloud",
+   "amidah": "repetition",
+   "minyan": true
+  },
+  "he:Shabbat/The Amida for Shabbat:51": {
+   "kind": "instruction",
+   "node": "amidah.shalom",
+   "role": "chazzan",
+   "voice": "aloud",
+   "amidah": "repetition",
+   "minyan": true,
+   "en": "*On Shabbat Shuva outside Israel, many end the blessing:",
+   "gloss": "Alternative ending for Sim Shalom"
+  },
+  "he:Shabbat/The Amida for Shabbat:53": {
+   "kind": "prayer",
+   "node": "amidah.elokai_netzor",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat/The Amida for Shabbat:54": {
+   "kind": "prayer",
+   "node": "amidah.elokai_netzor",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat/The Amida for Shabbat:56": {
+   "kind": "instruction",
+   "node": "amidah.oseh_shalom",
+   "role": "chazzan",
+   "voice": "aloud",
+   "amidah": "repetition",
+   "minyan": true,
+   "en": "On Shabbat Shuva:",
+   "gloss": "Alternative ending for Oseh Shalom"
+  }
+ },
+ "en": {
+  "en:Shabbat/Blessings of the Shema:49": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">At</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <b><i class=\"instruction\">°</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</b><i class=\"instruction\">, kiss the tzitziot and release them.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:50": {
+   "parts": [
+    {
+     "text": "His words live and persist,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>faithful and desirable<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">°</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "for ever and all time.<br>▸So they were for our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so they are for us,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and so they will be for our children<br>and all our generations and for all future generations<br>of the seed of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Your servants.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:51": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:52": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:53": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:54": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:55": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:56": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:57": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:58": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:59": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:60": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:61": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:62": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:63": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:64": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:65": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:66": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Pesaḥ, in many congregations, a short piyut is said here before the Amida (page 1250).</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">No such piyut is said on the eighth day of Pesaḥ, unless it falls on a Shabbat.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:67": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:68": {
+   "he": []
+  },
+  "en:Shabbat/The Amida for Shabbat:49": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Shabbat Shuva:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " In the book of life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": " peace and prosperity,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may we and all Your people the house of Israel be remembered and written before You for a good life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and for peace.*</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:57"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:50": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:57"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:51": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">*On Shabbat Shuva outside Israel, many end the blessing:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who makes peace.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:57"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:52": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following verse concludes the Leader’s Repetition of the Amida.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Some also say it here as part of the silent Amida. See law 368.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:56"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:53": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:53"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:54": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:54"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:55": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:56"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:56": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:56"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:57": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:57"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:58": {
+   "he": []
+  },
+  "en:Shabbat/The Amida for Shabbat:59": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:59"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:60": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom >in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:60"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:61": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:61"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:62": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation uttered in the world – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:62"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:63": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:63"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:64": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:64"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:65": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:66"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:66": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:66"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:1": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:1"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:2": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:2"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:3": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:3"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:4": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:4"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:5": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:5"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:6": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:6"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:7": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:8"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:8": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:8"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:9": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:11"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:10": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:11"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:11": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:11"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:12": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:13"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:13": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:13"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:14": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:15"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:15": {
+   "parts": [
+    {
+     "text": "Master of the Universe,",
+     "kind": "prayer"
+    },
+    {
+     "text": " fulfill my requests for good. Satisfy my desire,",
+     "kind": "prayer"
+    },
+    {
+     "text": " grant my request,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and pardon me for all my iniquities and all iniquities of the members of my household,",
+     "kind": "prayer"
+    },
+    {
+     "text": " with the pardon of loving-kindness and compassion. Purify us from our sins,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our iniquities and our transgressions;",
+     "kind": "prayer"
+    },
+    {
+     "text": " remember us with a memory of favorable deeds before You and be mindful of us in salvation and compassion. Remember us for a good life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for peace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for livelihood and sustenance,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for bread to eat and clothes to wear,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for wealth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " honor and length of days dedicated to Your Torah and its commandments. Grant us discernment and understanding that we may understand and discern its deep secrets. Send healing for all our pain,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and bless all the work of our hands. Ordain for us decrees of good,",
+     "kind": "prayer"
+    },
+    {
+     "text": " salvation and consolation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and nullify all hard and harsh decrees against us. And may the hearts of the government,",
+     "kind": "prayer"
+    },
+    {
+     "text": " its advisers and ministers / ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">in Israel:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " And may the hearts of our ministers and their advisers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " / be favorable toward us. Amen. May this be Your will. ",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Reading of the Torah:15"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:16": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:16"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:17": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:18"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:18": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:18"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:19": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:20"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:20": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:20"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:21": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:22"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:22": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:22"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:23": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:24"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:24": {
+   "parts": [
+    {
+     "text": "One is our God;",
+     "kind": "prayer"
+    },
+    {
+     "text": " great is our Master;",
+     "kind": "prayer"
+    },
+    {
+     "text": " holy (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Hoshana Raba:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and awesome) is His name.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Reading of the Torah:24"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:25": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:26"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:26": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:26"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:27": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:28"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:28": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:28"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:29": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:29"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:30": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:30"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:31": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:31"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:32": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:33"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:33": {
+   "parts": [
+    {
+     "text": "וְיַעֲזֹר May He help,",
+     "kind": "prayer"
+    },
+    {
+     "text": " shield and save all who seek refuge in Him,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and let us say: Amen. Let us all render greatness to our God<br>and give honor to the Torah. *Let the Kohen come forward.<br>Arise (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Kohen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Reading of the Torah:33"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:34": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:35"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:35": {
+   "parts": [
+    {
+     "text": "/As there is no Kohen,",
+     "kind": "prayer"
+    },
+    {
+     "text": " arise (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") in place of a Kohen./",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Reading of the Torah:35"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:36": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:36"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:37": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:38"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:38": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:38"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:39": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The appropriate Torah portion is read. The Torah portions for Yom Tov are to be found from page 1123</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "א",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">; see chart on page 1123.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Reading of the Torah:41"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:40": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:42"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:41": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Oleh:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Bless the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Reading of the Torah:42"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:42": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Bless the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Reading of the Torah:43"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:43": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Oleh:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Bless the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Reading of the Torah:44"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:44": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:46"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:45": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:48"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:46": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Oleh:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small> our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " King of the Universe,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>who has given us the Torah of truth,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>planting everlasting life in our midst.<br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Giver of the Torah.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Reading of the Torah:48"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:47": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:50"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:48": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:50"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:49": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:71"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:50": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:71"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:51": {
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:52": {
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:53": {
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:54": {
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:55": {
+   "parts": [
+    {
+     "text": "May He who blessed our fathers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Abraham,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Isaac and Jacob,",
+     "kind": "prayer"
+    },
+    {
+     "text": " bless (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") who has been called up in honor of the All-Present,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in honor of the Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in honor of the Sabbath (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Yom Tov:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and in honor of the festival). As a reward for this,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " protect and deliver him from all trouble and distress,",
+     "kind": "prayer"
+    },
+    {
+     "text": " all infection and illness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and send blessing and success to all the work of his hands (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Yom Tov:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and may he merit to go up to Jerusalem for the festivals),",
+     "kind": "prayer"
+    },
+    {
+     "text": " together with all Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " his brethren,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let us say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:56": {
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:57": {
+   "parts": [
+    {
+     "text": "May He who blessed our fathers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Abraham,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Isaac and Jacob,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Moses and Aaron,",
+     "kind": "prayer"
+    },
+    {
+     "text": " David and Solomon,",
+     "kind": "prayer"
+    },
+    {
+     "text": " bless and heal one who is ill,",
+     "kind": "prayer"
+    },
+    {
+     "text": " (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>sick person’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>mother’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " on whose behalf (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name of the one making the offering</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") is making a contribution to charity. As a reward for this,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " be filled with compassion for him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to restore his health,",
+     "kind": "prayer"
+    },
+    {
+     "text": " cure him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " strengthen and revive him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " sending him a swift and full recovery from heaven to all his 248 organs and 365 sinews,",
+     "kind": "prayer"
+    },
+    {
+     "text": " amongst the other sick ones in Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " a healing of the spirit and a healing of the body – though on the Sabbath (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Yom Tov:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " on festivals) it is forbidden to cry out,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may healing be quick to come – now,",
+     "kind": "prayer"
+    },
+    {
+     "text": " swiftly and soon,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let us say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:58": {
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:59": {
+   "parts": [
+    {
+     "text": "May He who blessed our fathers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Abraham,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Isaac and Jacob,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Moses and Aaron,",
+     "kind": "prayer"
+    },
+    {
+     "text": " David and Solomon,",
+     "kind": "prayer"
+    },
+    {
+     "text": " bless and heal one who is ill,",
+     "kind": "prayer"
+    },
+    {
+     "text": " (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>sick person’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " daughter of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>mother’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " on whose behalf (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name of the one making the offering</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") is making a contribution to charity. As a reward for this,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " be filled with compassion for her,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to restore her health,",
+     "kind": "prayer"
+    },
+    {
+     "text": " cure her,",
+     "kind": "prayer"
+    },
+    {
+     "text": " strengthen and revive her,",
+     "kind": "prayer"
+    },
+    {
+     "text": " sending her a swift and full recovery from heaven to all her organs and sinews,",
+     "kind": "prayer"
+    },
+    {
+     "text": " amongst the other sick ones in Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " a healing of the spirit and a healing of the body – though on the Sabbath (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Yom Tov:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " on festivals) it is forbidden to cry out,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may healing be quick to come – now,",
+     "kind": "prayer"
+    },
+    {
+     "text": " swiftly and soon,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let us say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:60": {
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:61": {
+   "parts": [
+    {
+     "text": "May He who blessed our fathers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Abraham,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Isaac and Jacob,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Moses and Aaron,",
+     "kind": "prayer"
+    },
+    {
+     "text": " David and Solomon,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Sarah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Rebecca,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Rachel and Leah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " bless the woman who has given birth (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " daughter of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " and her son who has been born to her as an auspicious sign. Her husband,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the child’s father,",
+     "kind": "prayer"
+    },
+    {
+     "text": " is making a contribution to charity. As a reward for this,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may father and mother merit to bring the child into the covenant of Abraham and to a life of Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to the marriage canopy and to good deeds,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let us say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:62": {
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:63": {
+   "parts": [
+    {
+     "text": "May He who blessed our fathers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Abraham,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Isaac and Jacob,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Moses and Aaron,",
+     "kind": "prayer"
+    },
+    {
+     "text": " David and Solomon,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Sarah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Rebecca,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Rachel and Leah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " bless the woman who has given birth (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " daughter of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " and her daughter who has been born to her as an auspicious sign;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and may her name be called in Israel (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>baby’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " daughter of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "). Her husband,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the child’s father,",
+     "kind": "prayer"
+    },
+    {
+     "text": " is making a contribution to charity. As a reward for this,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may father and mother merit to raise her to a life of Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to the marriage canopy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and to good deeds,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let us say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:64": {
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:65": {
+   "parts": [
+    {
+     "text": "May He who blessed our fathers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Abraham,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Isaac and Jacob,",
+     "kind": "prayer"
+    },
+    {
+     "text": " bless (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") who has completed thirteen years and attained the age of the commandments,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who has been called to the Torah to give praise and thanks to God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may His name be blessed,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for all the good He has bestowed on him. May the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " protect and sustain him and direct his heart to be perfect with God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to walk in His ways and keep the commandments all the days of his life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let us say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:66": {
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:67": {
+   "parts": [
+    {
+     "text": "May He who blessed our fathers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Abraham,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Isaac and Jacob,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Sarah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Rebecca,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Rachel and Leah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " bless (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " daughter of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") who has completed twelve years and attained the age of the commandments,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and gives praise and thanks to God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may His name be blessed,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for all the good He has bestowed on her. May the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " protect and sustain her and direct her heart to be perfect with God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to walk in His ways and keep the commandments all the days of her life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let us say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:68": {
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:69": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:68"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:70": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Reader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br> in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Reading of the Torah:70"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:71": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Reading of the Torah:71"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:72": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Reader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world –<br>and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Reading of the Torah:72"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:73": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:73"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:74": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:75"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:75": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:75"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:76": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Some add:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " It is a tree of life to those who grasp it,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and those who uphold it are happy.<br>Its ways are ways of pleasantness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and all its paths are peace.<br>Long life is in its right hand;",
+     "kind": "prayer"
+    },
+    {
+     "text": " in its left,",
+     "kind": "prayer"
+    },
+    {
+     "text": " riches and honor.<br>It pleased the <small>LORD</small> for the sake of [Israel’s] righteousness,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>to make the Torah great and glorious.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Reading of the Torah:76"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:77": {
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:78": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:78"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:79": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:80"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:80": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:80"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:81": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:82"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:82": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:82"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:83": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:83"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:84": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:84"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:85": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:86"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:86": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:86"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:87": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:88"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:88": {
+   "parts": [
+    {
+     "text": "For the Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for divine worship,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for the prophets,",
+     "kind": "prayer"
+    },
+    {
+     "text": " (for this Sabbath day) and for this day of<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Pesaḥ:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Matzot<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Shavuot:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Shavuot<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Sukkot:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Sukkot<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Shemini Atzeret and Simḥat Torah:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Shemini Atzeret",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Reading of the Torah:88"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:89": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:89"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:90": {
+   "he": []
+  },
+  "en:Shabbat/Reading of the Torah:91": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:91"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:92": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:92"
+   ]
+  },
+  "en:Shabbat/Reading of the Torah:93": {
+   "he": [
+    "he:Shabbat/Reading of the Torah:93"
+   ]
+  },
+  "en:Shabbat/Prayer for the Welfare of the Government:1": {
+   "he": [
+    "he:Shabbat/Prayer for the Welfare of the Government:1"
+   ]
+  },
+  "en:Shabbat/Prayer for the Welfare of the Government:2": {
+   "he": [
+    "he:Shabbat/Prayer for the Welfare of the Government:3"
+   ],
+   "kind": "instruction",
+   "en": "The Leader says the following:"
+  },
+  "en:Shabbat/Prayer for the Welfare of the Government:3": {
+   "he": [
+    "he:Shabbat/Prayer for the Welfare of the Government:3"
+   ]
+  },
+  "en:Shabbat/Prayer for the Welfare of the Government:4": {
+   "he": [
+    "he:Shabbat/Prayer for the Welfare of the Government:4"
+   ]
+  },
+  "en:Shabbat/Prayer for the Welfare of the Government:5": {
+   "he": [
+    "he:Shabbat/Prayer for the Welfare of the Government:6"
+   ],
+   "kind": "instruction",
+   "en": "The Leader says the following:"
+  },
+  "en:Shabbat/Prayer for the Welfare of the Government:6": {
+   "he": [
+    "he:Shabbat/Prayer for the Welfare of the Government:6"
+   ]
+  },
+  "en:Shabbat/Prayer for the Welfare of the Government:7": {
+   "he": [
+    "he:Shabbat/Prayer for the Welfare of the Government:7"
+   ]
+  },
+  "en:Shabbat/Prayer for the Welfare of the Government:8": {
+   "he": [
+    "he:Shabbat/Prayer for the Welfare of the Government:9"
+   ],
+   "kind": "instruction",
+   "en": "The Leader says the following:"
+  },
+  "en:Shabbat/Prayer for the Welfare of the Government:9": {
+   "he": [
+    "he:Shabbat/Prayer for the Welfare of the Government:9"
+   ]
+  },
+  "en:Shabbat/Prayer for the Welfare of the Government:10": {
+   "he": [
+    "he:Shabbat/Prayer for the Welfare of the Government:10"
+   ]
+  },
+  "en:Shabbat/Prayer for the Welfare of the Government:11": {
+   "he": [
+    "he:Shabbat/Prayer for the Welfare of the Government:12"
+   ],
+   "kind": "instruction",
+   "en": "The Leader says the following:"
+  },
+  "en:Shabbat/Prayer for the Welfare of the Government:12": {
+   "he": [
+    "he:Shabbat/Prayer for the Welfare of the Government:12"
+   ]
+  },
+  "en:Shabbat/Prayer for the State of Israel:1": {
+   "he": [
+    "he:Shabbat/Prayer for the State of Israel:1"
+   ]
+  },
+  "en:Shabbat/Prayer for the State of Israel:2": {
+   "he": [
+    "he:Shabbat/Prayer for the State of Israel:2"
+   ]
+  },
+  "en:Shabbat/Prayer for the State of Israel:3": {
+   "parts": [
+    {
+     "text": "As for our brothers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the whole house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " remember them in all the lands of our (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">In Israel say:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " their) dispersion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and swiftly lead us (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">In Israel say:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " them) upright to Zion Your city,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and Jerusalem Your dwelling place,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as is written in the Torah of Moses Your servant: “Even if you are scattered to the furthermost lands under the heavens,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from there the <small>LORD</small> your God will gather you and take you back. The <small>LORD</small> your God will bring you to the land your ancestors possessed and you will possess it;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and He will make you more prosperous and numerous than your ancestors. Then the <small>LORD</small> your God will open up your heart and the heart of your descendants,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to love the <small>LORD</small> your God with all your heart and with all your soul,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that you may live.”",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Prayer for the State of Israel:3"
+   ]
+  },
+  "en:Shabbat/Prayer for the State of Israel:4": {
+   "he": [
+    "he:Shabbat/Prayer for the State of Israel:4"
+   ]
+  },
+  "en:Shabbat/Prayer for the State of Israel:5": {
+   "he": [
+    "he:Shabbat/Prayer for the State of Israel:5"
+   ]
+  },
+  "en:Shabbat/Prayer for Israel's Defense Forces:1": {
+   "he": [
+    "he:Shabbat/Prayer for Israel's Defense Forces:2"
+   ]
+  },
+  "en:Shabbat/Prayer for Israel's Defense Forces:2": {
+   "he": [
+    "he:Shabbat/Prayer for Israel's Defense Forces:2"
+   ]
+  },
+  "en:Shabbat/Prayer for Israel's Defense Forces:3": {
+   "he": [
+    "he:Shabbat/Prayer for Israel's Defense Forces:3"
+   ]
+  },
+  "en:Shabbat/Prayer for Israel's Defense Forces:4": {
+   "he": [
+    "he:Shabbat/Prayer for Israel's Defense Forces:5"
+   ]
+  },
+  "en:Shabbat/Prayer for Israel's Defense Forces:5": {
+   "he": [
+    "he:Shabbat/Prayer for Israel's Defense Forces:5"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:1": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following blessing and response are said only in the presence of a minyan.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">They represent a formal summons to the congregation to engage in an act of collective prayer.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">The custom of bowing at this point is based on</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <small><i class=\"instruction\">I</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small> <i class=\"instruction\">Chronicles 29:20, “David said to</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">the whole assembly, ‘Now bless the</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <small><i class=\"instruction\">LORD</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small> <i class=\"instruction\">your God.’ All the assembly blessed</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">the</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <small><i class=\"instruction\">LORD</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small> <i class=\"instruction\">God of their fathers and bowed their heads low to the</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <small><i class=\"instruction\">LORD</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small> <i class=\"instruction\">and the King.”</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">The Leader says the following, bowing at “Bless,” standing straight at “the</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <small><i class=\"instruction\">LORD.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small><i class=\"instruction\">”</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">The congregation, followed by the Leader, responds, bowing at “Bless,”</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">standing straight at “the</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <small><i class=\"instruction\">LORD.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small><i class=\"instruction\">”</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:2": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <small>BLESS</small> the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Blessings of the Shema:2"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:3": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Congregation:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Bless the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Blessings of the Shema:3"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:4": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Bless the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Blessings of the Shema:4"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:5": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The custom is to sit from this point until the Amida, since the predominant emotion of this section of the prayers is love rather than awe.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Conversation is forbidden until after the Amida. See table on pages 1329–1331.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:6": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:6"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:7": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:8": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:8"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:9": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:9"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:10": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:10"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:11": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:12": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:12"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:13": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:14": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:14"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:15": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:15"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:16": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:16"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:17": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:17"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:18": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:18"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:19": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:19"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:20": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:20"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:21": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:21"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:22": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:22"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:23": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:24": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:24"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:25": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:25"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:26": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:27": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:27"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:28": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:28"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:29": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:29"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:30": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:30"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:31": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:31"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:32": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:32"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:33": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:34": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:34"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:35": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The Shema must be said with intense concentration. In the first paragraph one should accept, with love, the sovereignty of God; in the second, the mitzvot as the will of God. The end of the third paragraph constitutes fulfillment of the mitzva to remember, morning and evening, the exodus from Egypt. See laws 349–353.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">When not praying with a minyan, say:</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:36": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:36"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:37": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:38": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:38"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:39": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Quietly:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed be the name of His glorious kingdom for ever and all time.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Blessings of the Shema:39"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:40": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:40"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:41": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:41"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:42": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Hold the tzitziot in the right hand also (some transfer to the right hand), kissing them at</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <b><i class=\"instruction\">°</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</b><i class=\"instruction\">.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:43": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:43"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:44": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">°</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " True –",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Blessings of the Shema:44"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:45": {
+   "he": []
+  },
+  "en:Shabbat/Blessings of the Shema:46": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:46"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:47": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:47"
+   ]
+  },
+  "en:Shabbat/Blessings of the Shema:48": {
+   "he": [
+    "he:Shabbat/Blessings of the Shema:48"
+   ]
+  },
+  "en:Shabbat/Blessing the New Month:1": {
+   "he": [
+    "he:Shabbat/Blessing the New Month:2"
+   ]
+  },
+  "en:Shabbat/Blessing the New Month:2": {
+   "he": [
+    "he:Shabbat/Blessing the New Month:2"
+   ]
+  },
+  "en:Shabbat/Blessing the New Month:3": {
+   "he": [
+    "he:Shabbat/Blessing the New Month:4"
+   ]
+  },
+  "en:Shabbat/Blessing the New Month:4": {
+   "he": [
+    "he:Shabbat/Blessing the New Month:4"
+   ]
+  },
+  "en:Shabbat/Blessing the New Month:5": {
+   "he": [
+    "he:Shabbat/Blessing the New Month:6"
+   ]
+  },
+  "en:Shabbat/Blessing the New Month:6": {
+   "parts": [
+    {
+     "text": "The new month of (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Hebrew month</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") will occur on (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>day of week</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ").<br>May it come to us and all Israel for good.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Blessing the New Month:6"
+   ]
+  },
+  "en:Shabbat/Blessing the New Month:7": {
+   "he": [
+    "he:Shabbat/Blessing the New Month:9",
+    "he:Shabbat/Blessing the New Month:11"
+   ]
+  },
+  "en:Shabbat/Blessing the New Month:8": {
+   "he": [
+    "he:Shabbat/Blessing the New Month:11"
+   ]
+  },
+  "en:Shabbat/Blessing the New Month:9": {
+   "he": [
+    "he:Shabbat/Blessing the New Month:9"
+   ]
+  },
+  "en:Shabbat/Blessing the New Month:10": {
+   "he": [
+    "he:Shabbat/Blessing the New Month:11"
+   ]
+  },
+  "en:Shabbat/Blessing the New Month:11": {
+   "parts": [
+    {
+     "text": "May the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " renew this month for us and for all His people the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " wherever they are,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for good and blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": " gladness and joy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for salvation and consolation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " livelihood and sustenance,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for life and peace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " good tidings and good news,",
+     "kind": "prayer"
+    },
+    {
+     "text": " (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">In winter:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " for rain in its due season,",
+     "kind": "prayer"
+    },
+    {
+     "text": ") for complete healing and imminent redemption,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let us say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Blessing the New Month:11"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:1": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following prayer, until “in former years” on page 494, is said silently, standing with feet together. If there is a minyan, the Amida is repeated aloud by the Leader.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Take three steps forward and at the points indicated by , bend the knees at the first word,</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">bow at the second, and stand straight before saying God’s name.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:2"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:2": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:2"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:3": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:3"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:4": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:4"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:5": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Shabbat Shuva:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Remember us for life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O King who desires life,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and write us in the book of life – for Your sake,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O God of life.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:5"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:6": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:6"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:7": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:7"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:8": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:8"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:9": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:10"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:10": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">In fall & winter:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " He makes the wind blow and the rain fall.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">In Israel, in spring & summer:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " He causes the dew to fall.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:10"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:11": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:11"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:12": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Shabbat Shuva:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Who is like You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " compassionate Father,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>who remembers His creatures in compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for life?",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:12"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:13": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:13"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:14": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:15"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:15": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:15"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:16": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">During the Leader’s Repetition, the following is said standing</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">with feet together, rising on the toes at the words indicated by▴.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:17"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:17": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong. then Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " נְקַדֵּשׁ We will sanctify Your name on earth,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>as they sanctify it in the highest heavens,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>as is written by Your prophet,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>“And they [the angels] call to one another saying:",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:17"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:18": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong. then Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " ▴Holy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " ▴holy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " ▴holy is the <small>LORD</small> of hosts<br>the whole world is filled with His glory.”",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:18"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:19": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:19"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:20": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong. then Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " ▴“Blessed is the <small>LORD</small>’s glory from His place.”",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:20"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:21": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:21"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:22": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong. then Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " ▴“The <small>LORD</small> shall reign for ever. He is your God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Zion,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>from generation to generation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Halleluya!”",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:22"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:23": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " From generation to generation we will declare Your greatness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and we will proclaim Your holiness for evermore.<br>Your praise,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " shall not leave our mouth forever,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>for You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " are a great and holy King. Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>the holy God. /",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Shabbat Shuva:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the holy King./",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:23"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:24": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:25"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:25": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:26"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:26": {
+   "parts": [
+    {
+     "text": " אַתָּה קָדוֹשׁ You are holy and Your name is holy,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and holy ones praise You daily,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Selah!<br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>the holy God. /",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Shabbat Shuva:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the holy King./<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">(If forgotten, repeat the Amida.)</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:27"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:27": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:28"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:28": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:29"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:29": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:30"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:30": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:31"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:31": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:32"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:32": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:33"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:33": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:39"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:34": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:40"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:35": {
+   "parts": [
+    {
+     "text": "אֱלֹהֵֽינוּ Our God and God of our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may there rise,",
+     "kind": "prayer"
+    },
+    {
+     "text": " come,",
+     "kind": "prayer"
+    },
+    {
+     "text": " reach,",
+     "kind": "prayer"
+    },
+    {
+     "text": " appear,",
+     "kind": "prayer"
+    },
+    {
+     "text": " be favored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " heard,",
+     "kind": "prayer"
+    },
+    {
+     "text": " regarded and remembered before You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our recollection and remembrance,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as well as the remembrance of our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and of the Messiah son of David Your servant,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and of Jerusalem Your holy city,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and of all Your people the house of Israel – for deliveranceand well-being,",
+     "kind": "prayer"
+    },
+    {
+     "text": " grace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " loving-kindness and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " life and peace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " on this day of:<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Rosh Ḥodesh:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Rosh Ḥodesh.<br> ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Pesaḥ:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Matzot.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Sukkot:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Sukkot.<br>On it remember us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for good;",
+     "kind": "prayer"
+    },
+    {
+     "text": " recollect us for blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and deliver us for life. In accord with Your promise of salvation and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " spare us and be gracious to us;",
+     "kind": "prayer"
+    },
+    {
+     "text": " have compassion on us and deliver us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for our eyes are turned to You because You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " are a gracious and compassionate King.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:41"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:36": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:42"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:37": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:43"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:38": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:44"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:39": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:45"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:40": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">During the Leader’s Repetition, the congregation says quietly:</small></i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "▾ מוֹדִים We give thanks to You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for You are the Lord our God and God of our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": " God of all flesh,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who formed us and formed the universe. Blessings and thanks are due to Your great and holy name for giving us life and sustaining us. May You continue to give us life and sustain us;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and may You gather our exiles to Your holy courts,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to keep Your decrees,",
+     "kind": "prayer"
+    },
+    {
+     "text": " do Your will and serve You with a perfect heart,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for it is for us to give You thanks. Blessed be God to whom thanks­giving is due.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:46"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:41": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Ḥanukka:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>עַל הַנִּסִּים [We thank You also] for the miracles,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the redemption,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the mighty deeds,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the salvations,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the victories in battle which You performed for our ancestors in those days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " at this time.<br>בִּימֵי מַתִּתְיָֽהוּ In the days of Mattityahu,",
+     "kind": "prayer"
+    },
+    {
+     "text": " son of Yoḥanan,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the High Priest,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Hasmonean,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and his sons,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the wicked Greek kingdom rose up against Your people Israel to make them forget Your Torah and to force them to transgress the statutes of Your will. It was then that You in Your great compassion stood by them in the time of their distress. You championed their cause,",
+     "kind": "prayer"
+    },
+    {
+     "text": " judged their claim,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and avenged their wrong. You delivered the strong into the hands of the weak,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the many into the hands of the few,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the impure into the hands of the pure,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the wicked into the hands of the righteous,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the arrogant into the hands of those who were engaged in the study of Your Torah. You made for Yourself great and holy renown in Your world,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and for Your people Israel You performed a great salvation and redemption as of this very day. Your children then entered the holiest part of Your House,",
+     "kind": "prayer"
+    },
+    {
+     "text": " cleansed Your Temple,",
+     "kind": "prayer"
+    },
+    {
+     "text": " purified Your Sanctuary,",
+     "kind": "prayer"
+    },
+    {
+     "text": " kindled lights in Your holy courts,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and designated these eight days of Ḥanukka for giving thanks and praise to Your great name.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Continue with “For all these things.”</i></small>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:47"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:42": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Shushan Purim in Jerusalem:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>עַל הַנִּסִּים [We thank You also] for the miracles,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the redemption,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the mighty deeds,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the salvations,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the victories in battle which You performed for our ancestors in those days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " at this time.<br>בִּימֵי מָרְדְּכַי In the days of Mordekhai and Esther,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in Shushan the capital,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the wicked Haman rose up against them and sought to destroy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " slay and exterminate all the Jews,",
+     "kind": "prayer"
+    },
+    {
+     "text": " young and old,",
+     "kind": "prayer"
+    },
+    {
+     "text": " children and women,",
+     "kind": "prayer"
+    },
+    {
+     "text": " on one day,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the thirteenth day of the twelfth month,",
+     "kind": "prayer"
+    },
+    {
+     "text": " which is the month of Adar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and to plunder their possessions. Then You in Your great compassion thwarted his counsel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " frustrated his plans,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and caused his scheme to recoil on his own head,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so that they hanged him and his sons on the gallows.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Continue with “For all these things.”</i></small>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:48"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:43": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:49"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:44": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Shabbat Shuva:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " And write,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for a good life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " all the children of Your covenant.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:50"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:45": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:51"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:46": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">The following is said by the Leader during the Repetition of the Amida, except in a house of mourning and on Tisha B’Av. In Israel, if Kohanim bless the congregation, turn to page 838. See laws 370–377.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>Our God and God of our fathers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " bless us with the threefold blessing in the Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " written by the hand of Moses Your servant and pronounced by Aaron and his sons the priests,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Your holy people,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as it is said:<br>May the Lord bless you and protect you.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Cong:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May it be Your will.<br>May the Lord make His face shine on you and be gracious to you.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Cong:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May it be Your will.<br>May the Lord turn His face toward you,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and grant you peace.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Cong:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May it be Your will.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:53"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:47": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:54"
+   ]
+  },
+  "en:Shabbat/The Amida for Shabbat:48": {
+   "he": [
+    "he:Shabbat/The Amida for Shabbat:56"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "en:Shabbat/Blessings of the Shema:49",
+   "type": "alignment",
+   "detail": "English instruction about kissing tzitzit has no Hebrew counterpart in the selected segments."
+  },
+  {
+   "id": "he:Shabbat/The Amida for Shabbat:57",
+   "type": "ambiguous",
+   "detail": "English e49-e51 contains a conditional ending for Shabbat Shuva outside Israel not present in the Hebrew h49."
+  },
+  {
+   "id": "he:Shabbat/Reading of the Torah:52",
+   "type": "misplaced",
+   "detail": "Birkat HaGomel text is present but the instruction for when to say it is missing in the Hebrew segment; the English instruction is in e47."
+  },
+  {
+   "id": "he:Shabbat/Reading of the Torah:71",
+   "type": "ambiguous",
+   "detail": "Instruction 'קהל וקורא' (Congregation and Reader) is ambiguous for Kaddish. Standard custom is Reader leads, Congregation responds. Tagged as congregation for the response line, but the instruction implies joint recitation which is non-standard."
+  },
+  {
+   "id": "he:Shabbat/Prayer for Israel's Defense Forces:5",
+   "type": "new_minhag",
+   "detail": "Condition for saying the prayer for captives depends on current events; using x_captivesPresent"
+  },
+  {
+   "id": "he:Shabbat/Blessing the New Month:6",
+   "type": "ambiguous",
+   "detail": "The text contains placeholders for the month name and day of week, but the exact format for the second day of Rosh Chodesh is unclear. The instruction 'ולמחרתו ביום' suggests a second day, but the structure is ambiguous."
+  },
+  {
+   "id": "he:Shabbat/The Amida for Shabbat:17",
+   "type": "ambiguous",
+   "detail": "Instruction 'קהל וש״ץ' implies congregation then chazzan, but text is a single line; verify if split is needed for role assignment."
+  },
+  {
+   "id": "en:Shabbat/The Amida for Shabbat:1",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: Marker needs a unique increasing boundary or occurrence: {'before': 'זכרנו לחיים', 'occurrence': 1}; found positions [38], previous boundary 38; Marker needs a unique increasing boundary or occurrence: {'before': 'משיב הרוח ומוריד הגשם', 'occurrence': 1}; found positions [34], previous boundary 34; Marker needs a unique increasing boundary or occurrence: {'before': 'מי כמוך אב הרחמים', 'occurrence': 1}; found positions [38], previous boundary 38"
+  },
+  {
+   "id": "en:Shabbat/The Amida for Shabbat:17",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: Preserve existing leaf defaults; h13.0; h13.1; h14.0; h14.1"
+  },
+  {
+   "id": "he:Shabbat/The Amida for Shabbat:51",
+   "type": "ambiguous",
+   "detail": "The siddur indicates an alternative ending for Sim Shalom on Shabbat Shuva outside Israel, but the condition for when to use the standard ending vs. the alternative is not explicitly stated in the text. The alternative is marked with an asterisk and a note."
+  },
+  {
+   "id": "en:Shabbat/The Amida for Shabbat:33",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h35.1; h36.1; h38.1; h40.1; h40.2"
+  }
+ ]
+}

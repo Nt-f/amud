@@ -1,0 +1,2122 @@
+{
+ "nusach": "koren",
+ "chunk": "book [Weekdays .. Shabbat]",
+ "leaves": {
+  "Weekdays/Counting of the Omer": {
+   "node": "sefirat_haomer",
+   "service": "maariv",
+   "when": "omer"
+  },
+  "Weekdays/Shema before Sleep at Night": {
+   "node": "bedtime_shema",
+   "service": "none",
+   "when": "true"
+  },
+  "Shabbat/Eiruvin": {
+   "node": "eruv_chatzerot",
+   "service": "none",
+   "when": "true"
+  },
+  "Shabbat/Candle Lighting": {
+   "node": "shabbat.candle_lighting",
+   "service": "none",
+   "when": "true"
+  },
+  "Shabbat/Kabbalat Shabbat": {
+   "node": "kaddish.derabbanan",
+   "service": "maariv",
+   "when": "true"
+  }
+ },
+ "he": {
+  "he:Weekdays/Counting of the Omer:2": {
+   "kind": "instruction",
+   "en": "For the sake of the unification of the Holy One, blessed be He, and His Divine Presence, in reverence and love, to unify the name Yod-Heh with Vav-Heh in perfect unity in the name of all Israel."
+  },
+  "he:Weekdays/Counting of the Omer:3": {
+   "kind": "instruction",
+   "en": "I am prepared and ready to fulfill the positive commandment of Counting the Omer, as is written in the Torah, “You shall count seven complete weeks from the day following the [Pesaḥ] rest day, when you brought the Omer as a wave-offering. To the day after the seventh week you shall count fifty days. Then you shall present a meal-offering of new grain to the LORD.” May the pleasantness of the LORD our God be upon us. Establish for us the work of our hands, O establish the work of our hands."
+  },
+  "he:Weekdays/Counting of the Omer:4": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Counting of the Omer:5": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:6": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:7": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:8": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:9": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:10": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:11": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:12": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:13": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:14": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:15": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:16": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:17": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:18": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:19": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:20": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:21": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:22": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:23": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:24": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:25": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:26": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:27": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:28": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:29": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:30": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:31": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:32": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:33": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:34": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:35": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:36": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:37": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:38": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:39": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:40": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:41": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:42": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:43": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:44": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:45": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:46": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:47": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:48": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:49": {
+   "kind": "prayer",
+   "when": "omer"
+  },
+  "he:Weekdays/Counting of the Omer:50": {
+   "kind": "instruction",
+   "en": "2 Sivan"
+  },
+  "he:Weekdays/Counting of the Omer:51": {
+   "kind": "instruction",
+   "en": "3 Sivan"
+  },
+  "he:Weekdays/Counting of the Omer:52": {
+   "kind": "instruction",
+   "en": "4 Sivan"
+  },
+  "he:Weekdays/Counting of the Omer:53": {
+   "kind": "instruction",
+   "en": "5 Sivan, Erev Shavuot"
+  },
+  "he:Weekdays/Counting of the Omer:54": {
+   "kind": "prayer",
+   "node": "sefirat_haomer"
+  },
+  "he:Weekdays/Counting of the Omer:56": {
+   "kind": "prayer",
+   "node": "concl.shir_shel_yom"
+  },
+  "he:Weekdays/Counting of the Omer:57": {
+   "kind": "prayer",
+   "node": "concl.anim_zemirot"
+  },
+  "he:Weekdays/Counting of the Omer:58": {
+   "kind": "prayer",
+   "node": "sefirat_haomer"
+  },
+  "he:Weekdays/Shema before Sleep at Night:1": {
+   "kind": "prayer",
+   "en": "I hereby forgive anyone who has angered or provoked me or sinned against me, physically or financially or by failing to give me due respect, or in any other matter relating to me, involuntarily or willingly, inadvertently or deliberately, whether in word or deed: let no one incur punishment because of me."
+  },
+  "he:Weekdays/Shema before Sleep at Night:2": {
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who makes the bonds of sleep fall on my eyes, and slumber on my eyelids. May it be Your will, LORD my God and God of my fathers, that You make me lie down in peace and arise in peace. Let not my imagination, bad dreams or troubling thoughts disturb me. May my bed be flawless before You. Enlighten my eyes lest I sleep the sleep of death, for it is You who illuminates the pupil of the eye. Blessed are You, LORD, who gives light to the whole world in His glory."
+  },
+  "he:Weekdays/Shema before Sleep at Night:4": {
+   "kind": "prayer",
+   "en": "God, faithful King!"
+  },
+  "he:Weekdays/Shema before Sleep at Night:6": {
+   "kind": "prayer",
+   "en": "Listen, Israel: the LORD is our God, the LORD is One."
+  },
+  "he:Weekdays/Shema before Sleep at Night:7": {
+   "parts": [
+    {
+     "kind": "instruction",
+     "en": "Quietly:",
+     "text": "<small><i class=\"instruction\">Quietly:</i> "
+    },
+    {
+     "kind": "prayer",
+     "voice": "undertone",
+     "en": "Blessed be the name of His glorious kingdom for ever and all time.",
+     "text": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד.<small/>"
+    }
+   ]
+  },
+  "he:Weekdays/Shema before Sleep at Night:8": {
+   "kind": "prayer",
+   "en": "Love the LORD your God with all your heart, with all your soul, and with all your might. These words which I command you today shall be on your heart. Teach them repeatedly to your children, speaking of them when you sit at home and when you travel on the way, when you lie down and when you rise. Bind them as a sign on your hand, and they shall be an emblem between your eyes. Write them on the doorposts of your house and gates."
+  },
+  "he:Weekdays/Shema before Sleep at Night:9": {
+   "kind": "prayer",
+   "en": "May the pleasantness of the LORD our God be upon us. Establish for us the work of our hands, O establish the work of our hands."
+  },
+  "he:Weekdays/Shema before Sleep at Night:10": {
+   "kind": "prayer",
+   "en": "He who lives in the shelter of the Most High dwells in the shadow of the Almighty. I say of God, my Refuge and Stronghold, my LORD in whom I trust, that He will save you from the fowler’s snare and the deadly pestilence. With His pinions He will cover you, and beneath His wings you will find shelter; His faithfulness is an encircling shield. You need not fear terror by night, nor the arrow that flies by day; not the pestilence that stalks in darkness, nor the plague that ravages at noon. A thousand may fall at your side, ten thousand at your right hand, but it will not come near you. You will only look with your eyes and see the punishment of the wicked. Because you [have said:] “The LORD is my Refuge,” taking the Most High as your shelter, no harm will befall you, no plague come near your tent, for He will command His angels about you, to guard you in all your ways. They will lift you in their hands, lest your foot stumble on a stone. You will tread on lions and vipers; you will trample on young lions and snakes. [God says:] “Because he loves Me, I will rescue him; I will protect him, because he acknowledges My name. When he calls on Me, I will answer him; I will be with him in distress, I will deliver him and bring him honor. With long life I will satisfy him and show him My salvation. With long life I will satisfy him and show him My salvation."
+  },
+  "he:Weekdays/Shema before Sleep at Night:11": {
+   "kind": "prayer",
+   "en": "LORD, how numerous are my enemies, how many rise against me. Many say of me: “There is no help for him in God,” Selah. But You, LORD, are a shield around me. You are my glory; You raise my head high. I cry aloud to the LORD, and He answers me from His holy mountain, Selah. I lie down to sleep and I wake again, for the LORD supports me. I will not fear the myriad forces ranged against me on all sides. Arise, LORD, save me, O my God; strike all my enemies across the cheek; break the teeth of the wicked. From the LORD comes deliverance; may Your blessing rest upon Your people, Selah."
+  },
+  "he:Weekdays/Shema before Sleep at Night:12": {
+   "kind": "prayer",
+   "en": "Help us lie down, O LORD our God, in peace, and rise up, O our King, to life. Spread over us Your canopy of peace. Direct us with Your good counsel, and save us for the sake of Your name. Shield us and remove from us every enemy, plague, sword, famine and sorrow. Remove the adversary from before and behind us. Shelter us in the shadow of Your wings, for You, God, are our Guardian and Deliverer; You, God, are a gracious and compassionate King. Guard our going out and our coming in, for life and peace, from now and for ever."
+  },
+  "he:Weekdays/Shema before Sleep at Night:13": {
+   "kind": "prayer",
+   "en": "Blessed is the LORD by day, blessed is the LORD by night. Blessed is the LORD when we lie down; blessed is the LORD when we rise. For in Your hand are the souls of the living and the dead, [as it is written:] “In His hand is every living soul, and the breath of all mankind.” Into Your hand I entrust my spirit: You redeemed me, LORD, God of truth. Our God in heaven, bring unity to Your name, establish Your kingdom constantly and reign over us for ever and all time."
+  },
+  "he:Weekdays/Shema before Sleep at Night:14": {
+   "kind": "prayer",
+   "en": "May our eyes see, our hearts rejoice, and our souls be glad in Your true salvation, when Zion is told, “Your God reigns.” The LORD is King, the LORD was King, and the LORD will be King for ever and all time. For sovereignty is Yours, and to all eternity You will reign in glory, for we have no king but You."
+  },
+  "he:Weekdays/Shema before Sleep at Night:15": {
+   "kind": "prayer",
+   "en": "May the angel who rescued me from all harm, bless these boys. May they be called by my name and the names of my fathers Abraham and Isaac, and may they increase greatly on the earth."
+  },
+  "he:Weekdays/Shema before Sleep at Night:16": {
+   "kind": "prayer",
+   "en": "He said, “If you listen carefully to the voice of the LORD your God and do what is right in His eyes, if you pay attention to His commandments and keep all His statutes, I will not bring on you any of the diseases I brought on the Egyptians, for I am the LORD who heals you.” The LORD said to the accuser, “The LORD shall rebuke you, accuser. The LORD who has chosen Jerusalem shall rebuke you! Is not this man a burning stick snatched from the fire?” Look! It is Solomon’s bed, escorted by sixty warriors, the noblest of Israel, all of them wearing the sword, experienced in battle, each with his sword at his side, prepared for the terror of the nights."
+  },
+  "he:Weekdays/Shema before Sleep at Night:18": {
+   "kind": "prayer",
+   "en": "May the LORD bless you and protect you. May the LORD make His face shine on you and be gracious to you. May the LORD turn His face toward you and grant you peace."
+  },
+  "he:Weekdays/Shema before Sleep at Night:20": {
+   "kind": "prayer",
+   "en": "See – the Guardian of Israel neither slumbers nor sleeps."
+  },
+  "he:Weekdays/Shema before Sleep at Night:22": {
+   "kind": "prayer",
+   "repeat": 3,
+   "en": "For Your salvation I hope, LORD. I hope, LORD, for Your salvation. LORD, for Your salvation I hope."
+  },
+  "he:Weekdays/Shema before Sleep at Night:24": {
+   "kind": "prayer",
+   "en": "In the name of the LORD, God of Israel: may Michael be at my right hand, Gabriel, at my left; in front of me, Uriel, behind me, Raphael; and above my head the Presence of God."
+  },
+  "he:Weekdays/Shema before Sleep at Night:25": {
+   "kind": "prayer",
+   "en": "A song of ascents. Happy are all who fear the LORD, who walk in His ways. When you eat the fruit of your labor, happy and fortunate are you. Your wife shall be like a fruitful vine within your house; your sons like olive saplings around your table. So shall the man who fears the LORD be blessed. May the LORD bless you from Zion; may you see the good of Jerusalem all the days of your life; and may you live to see your children’s children. Peace be on Israel!"
+  },
+  "he:Weekdays/Shema before Sleep at Night:27": {
+   "kind": "prayer",
+   "en": "Tremble, and do not sin. Search your heart as you lie on your bed, and be silent. Selah."
+  },
+  "he:Weekdays/Shema before Sleep at Night:28": {
+   "kind": "prayer",
+   "en": "LORD of the Universe, who reigned before the birth of any thing; when by His will all things were made, then was His name proclaimed King. And when all things shall cease to be, He alone will reign in awe. He was, He is, and He shall be glorious for evermore. He is One, there is none else, alone, unique, beyond compare; Without beginning, without end, His might, His rule are everywhere. He is my God; my Redeemer lives. He is the Rock on whom I rely – my banner and my safe retreat, my cup, my portion when I cry. Into His hand my soul I place, when I awake and when I sleep. The LORD is with me, I shall not fear; body and soul from harm will He keep."
+  },
+  "he:Shabbat/Eiruvin:1": {
+   "kind": "heading",
+   "en": "Eiruv Teḥumin"
+  },
+  "he:Shabbat/Eiruvin:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Eiruvin:4": {
+   "kind": "instruction",
+   "en": "By this Eiruv may we be permitted to walk from this place, 2000 cubits in any direction."
+  },
+  "he:Shabbat/Eiruvin:5": {
+   "kind": "heading",
+   "en": "Eiruv Ḥatzerot"
+  },
+  "he:Shabbat/Eiruvin:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Eiruvin:8": {
+   "kind": "instruction",
+   "en": "By this Eiruv may we be permitted to move, carry out and carry in from the houses to the courtyard, or from the courtyard to the houses, or from house to house, for all the houses within the courtyard."
+  },
+  "he:Shabbat/Candle Lighting:2": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "gestures": [
+    "cover_eyes"
+   ],
+   "en": "Blessed are You, LORD our God, King of the Universe, who has made us holy through His commandments, and has commanded us to light the Sabbath light.",
+   "gloss": "Said on Erev Shabbat that is not a Yom Tov"
+  },
+  "he:Shabbat/Candle Lighting:4": {
+   "kind": "instruction",
+   "role": "individual",
+   "voice": "aloud",
+   "en": "On Erev Yom Tov, say the following blessing and then light the candles from an existing flame. If also Shabbat, cover the eyes with the hands after lighting the candles and say the following blessing, adding the words in parentheses.",
+   "gloss": "The parenthetical text is added when Yom Tov coincides with Shabbat"
+  },
+  "he:Shabbat/Candle Lighting:6": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "en": "Blessed are You, LORD our God, King of the Universe, who has given us life, sustained us, and brought us to this time.",
+   "gloss": "Shehecheyanu is said on Yom Tov evenings, except on the last evenings of Pesach"
+  },
+  "he:Shabbat/Candle Lighting:8": {
+   "kind": "instruction",
+   "role": "individual",
+   "voice": "aloud",
+   "gestures": [
+    "cover_eyes"
+   ],
+   "en": "On Erev Yom Kippur, cover the eyes with the hands after lighting the candles, and say (on Shabbat add the words in parentheses):",
+   "gloss": "The parenthetical text is added when Yom Kippur coincides with Shabbat"
+  },
+  "he:Shabbat/Candle Lighting:9": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "en": "Blessed are You, LORD our God, King of the Universe, who has given us life, sustained us, and brought us to this time.",
+   "gloss": "Shehecheyanu is said on Erev Yom Kippur"
+  },
+  "he:Shabbat/Candle Lighting:11": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "en": "May it be Your will, LORD my God and God of my forebears, that You give me grace – me (and my husband/and my father/and my mother/and my sons and my daughters) and all those close to me, and give us and all Israel good and long lives. And remember us with a memory that brings goodness and blessing; come to us with compassion and bless us with great blessings. Build our homes until they are complete, and allow Your Presence to live among us. And may I merit to raise children and grandchildren, each one wise and understanding, loving the LORD and in awe of God, people of truth, holy children, who will cling on to the LORD and light up the world with Torah and with good actions, and with all the kinds of work that serve the Creator. Please, hear my pleading at this time, by the merit of Sarah and Rebecca, Rachel and Leah our mothers, and light our candle that it should never go out, and light up Your face, so that we shall be saved, Amen.",
+   "gloss": "Prayer after candlelighting; add the words in parentheses as appropriate"
+  },
+  "he:Shabbat/Candle Lighting:13": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "en": "Beloved of the soul, Father of compassion, draw Your servant close to Your will. Like a deer will Your servant run and fall prostrate before Your beauty. To him Your love is sweeter than honey from the comb, than any taste."
+  },
+  "he:Shabbat/Candle Lighting:14": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "en": "Glorious, beautiful, radiance of the world, my soul is sick with love for You. Please, God, heal her now by showing her Your tender radiance. Then she will recover her strength and be healed, Be Your servant for eternity."
+  },
+  "he:Shabbat/Candle Lighting:15": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "en": "Ancient of Days, let Your mercy be aroused; please have pity on Your beloved child. How long have I yearned to see the glory of Your strength. Please, my God, my heart’s desire – hasten; do not hide Yourself."
+  },
+  "he:Shabbat/Candle Lighting:16": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "en": "Reveal Yourself, beloved, and spread over me the tabernacle of Your peace. Let the earth shine with Your glory, let us be overjoyed and rejoice in You. Hurry, beloved, for the appointed time has come, and be gracious to me as in the times of old."
+  },
+  "he:Shabbat/Kabbalat Shabbat:59": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud"
+  },
+  "he:Shabbat/Kabbalat Shabbat:60": {
+   "kind": "instruction",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Mourner:"
+  },
+  "he:Shabbat/Kabbalat Shabbat:61": {
+   "kind": "instruction",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "In Israel:"
+  },
+  "he:Shabbat/Kabbalat Shabbat:62": {
+   "kind": "instruction",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Congregation:"
+  },
+  "he:Shabbat/Kabbalat Shabbat:64": {
+   "kind": "instruction",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "On Shabbat Shuva:"
+  },
+  "he:Shabbat/Kabbalat Shabbat:2": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kabbalat Shabbat:3": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kabbalat Shabbat:4": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kabbalat Shabbat:5": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kabbalat Shabbat:6": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kabbalat Shabbat:8": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kabbalat Shabbat:10": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "undertone"
+  },
+  "he:Shabbat/Kabbalat Shabbat:11": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "undertone"
+  },
+  "he:Shabbat/Kabbalat Shabbat:12": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:13": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:14": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:15": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:16": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:17": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:18": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:19": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:20": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:21": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:22": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:23": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:24": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:25": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:26": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:27": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:28": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:29": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:31": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:32": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Kabbalat Shabbat:34": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kabbalat Shabbat:36": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kabbalat Shabbat:37": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat/Kabbalat Shabbat:38": {
+   "kind": "heading",
+   "en": "Mourner's Kaddish"
+  },
+  "he:Shabbat/Kabbalat Shabbat:40": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true
+  },
+  "he:Shabbat/Kabbalat Shabbat:41": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan"
+  },
+  "he:Shabbat/Kabbalat Shabbat:42": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true
+  },
+  "he:Shabbat/Kabbalat Shabbat:43": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true
+  },
+  "he:Shabbat/Kabbalat Shabbat:45": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true
+  },
+  "he:Shabbat/Kabbalat Shabbat:47": {
+   "kind": "commentary",
+   "node": "kabbalat_shabbat.bameh_madlikin"
+  },
+  "he:Shabbat/Kabbalat Shabbat:48": {
+   "kind": "commentary",
+   "node": "kabbalat_shabbat.bameh_madlikin"
+  },
+  "he:Shabbat/Kabbalat Shabbat:49": {
+   "kind": "commentary",
+   "node": "kabbalat_shabbat.bameh_madlikin"
+  },
+  "he:Shabbat/Kabbalat Shabbat:50": {
+   "kind": "commentary",
+   "node": "kabbalat_shabbat.bameh_madlikin"
+  },
+  "he:Shabbat/Kabbalat Shabbat:51": {
+   "kind": "commentary",
+   "node": "kabbalat_shabbat.bameh_madlikin"
+  },
+  "he:Shabbat/Kabbalat Shabbat:52": {
+   "kind": "commentary",
+   "node": "kabbalat_shabbat.bameh_madlikin"
+  },
+  "he:Shabbat/Kabbalat Shabbat:53": {
+   "kind": "commentary",
+   "node": "kabbalat_shabbat.bameh_madlikin"
+  },
+  "he:Shabbat/Kabbalat Shabbat:54": {
+   "kind": "commentary",
+   "node": "kabbalat_shabbat.bameh_madlikin"
+  },
+  "he:Shabbat/Kabbalat Shabbat:55": {
+   "kind": "commentary",
+   "node": "kabbalat_shabbat.bameh_madlikin"
+  },
+  "he:Shabbat/Kabbalat Shabbat:56": {
+   "kind": "heading",
+   "en": "Kaddish d'Rabbanan"
+  },
+  "he:Shabbat/Kabbalat Shabbat:58": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true
+  }
+ },
+ "en": {
+  "en:Weekdays/Counting of the Omer:1": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The Omer is counted each night from the second night of Pesaḥ until the night before Shavuot. See laws 221–224.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Some say the following meditation before the blessing:</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Counting of the Omer:2",
+    "he:Weekdays/Counting of the Omer:3"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:2": {
+   "parts": [
+    {
+     "text": "For the sake of the unification of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and His Divine Presence,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in reverence and love,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>to unify the name ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Yod-Heh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " with ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Vav-Heh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>in perfect unity in the name of all Israel.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Counting of the Omer:2"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:3": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:3"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:4": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:4"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:5": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:5"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:6": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:6"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:7": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:7"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:8": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:8"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:9": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:9"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:10": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:10"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:11": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:11"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:12": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:12"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:13": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:13"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:14": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:14"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:15": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:15"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:16": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:16"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:17": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:17"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:18": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:18"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:19": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:19"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:20": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:20"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:21": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:21"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:22": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:22"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:23": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:23"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:24": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:24"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:25": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:25"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:26": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:26"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:27": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:27"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:28": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:28"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:29": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:29"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:30": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:30"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:31": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:31"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:32": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:32"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:33": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:33"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:34": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:34"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:35": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:35"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:36": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:36"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:37": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:37"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:38": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:38"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:39": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:39"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:40": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:40"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:41": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:41"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:42": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:42"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:43": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:43"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:44": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:44"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:45": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:45"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:46": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:46"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:47": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:47"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:48": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:48"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:49": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:50"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:50": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:51"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:51": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:52"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:52": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:53"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:53": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:54"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:54": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:56"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:55": {
+   "he": []
+  },
+  "en:Weekdays/Counting of the Omer:56": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:56"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:57": {
+   "he": [
+    "he:Weekdays/Counting of the Omer:57"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:58": {
+   "parts": [
+    {
+     "text": "<b>רִבּוֹנוֹ שֶׁל עוֹלָם</b> Master of the Universe,",
+     "kind": "prayer"
+    },
+    {
+     "text": " You commanded us through Your servant Moses to count the Omer,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to cleanse our carapaces and impurities,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as You have written in Your Torah: “You shall count seven complete weeks from the day following the [Pesaḥ] rest day,",
+     "kind": "prayer"
+    },
+    {
+     "text": " when you brought the Omer as a wave-offering. To the day after the seventh week,",
+     "kind": "prayer"
+    },
+    {
+     "text": " you shall count fifty days.” This is so that the souls of Your people Israel may be purified from their uncleanliness. May it also be Your will,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small> our God and God of our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that in the merit of the Omer count that I have counted today,",
+     "kind": "prayer"
+    },
+    {
+     "text": " there may be rectified any defect on my part in the counting of (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>insert the appropriate sefira for each day</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "). May I be cleansed and sanctified with Your holiness on high,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and through this may there flow a rich stream through all worlds,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to rectify our lives,",
+     "kind": "prayer"
+    },
+    {
+     "text": " spirits and souls from any dross and defect,",
+     "kind": "prayer"
+    },
+    {
+     "text": " purifying and sanctifying us with Your sublime holiness. Amen,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Selah.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Counting of the Omer:58"
+   ]
+  },
+  "en:Weekdays/Counting of the Omer:59": {
+   "he": []
+  },
+  "en:Weekdays/Shema before Sleep at Night:1": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:1"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:2": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:2"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:3": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:4"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:4": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:4"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:5": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:6"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:6": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:6"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:7": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Quietly:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed be the name of His glorious kingdom for ever and all time.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:7"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:8": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:8"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:9": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:9"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:10": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:10"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:11": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:11"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:12": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:12"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:13": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:13"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:14": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:14"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:15": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:15"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:16": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:16"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:17": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:18"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:18": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:18"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:19": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:20"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:20": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:20"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:21": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:22"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:22": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:22"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:23": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:24"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:24": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:24"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:25": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:25"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:26": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:27"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:27": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:27"
+   ]
+  },
+  "en:Weekdays/Shema before Sleep at Night:28": {
+   "he": [
+    "he:Weekdays/Shema before Sleep at Night:28"
+   ]
+  },
+  "en:Shabbat/Eiruvin:1": {
+   "he": [
+    "he:Shabbat/Eiruvin:1"
+   ]
+  },
+  "en:Shabbat/Eiruvin:2": {
+   "he": []
+  },
+  "en:Shabbat/Eiruvin:3": {
+   "he": [
+    "he:Shabbat/Eiruvin:3"
+   ]
+  },
+  "en:Shabbat/Eiruvin:4": {
+   "he": [
+    "he:Shabbat/Eiruvin:4"
+   ]
+  },
+  "en:Shabbat/Eiruvin:5": {
+   "he": [
+    "he:Shabbat/Eiruvin:5"
+   ]
+  },
+  "en:Shabbat/Eiruvin:6": {
+   "he": []
+  },
+  "en:Shabbat/Eiruvin:7": {
+   "he": [
+    "he:Shabbat/Eiruvin:7"
+   ]
+  },
+  "en:Shabbat/Eiruvin:8": {
+   "he": [
+    "he:Shabbat/Eiruvin:8"
+   ]
+  },
+  "en:Shabbat/Eiruvin:9": {
+   "he": []
+  },
+  "en:Shabbat/Candle Lighting:1": {
+   "he": [
+    "he:Shabbat/Candle Lighting:2"
+   ]
+  },
+  "en:Shabbat/Candle Lighting:2": {
+   "he": [
+    "he:Shabbat/Candle Lighting:2"
+   ]
+  },
+  "en:Shabbat/Candle Lighting:3": {
+   "he": [
+    "he:Shabbat/Candle Lighting:4"
+   ]
+  },
+  "en:Shabbat/Candle Lighting:4": {
+   "he": [
+    "he:Shabbat/Candle Lighting:4"
+   ]
+  },
+  "en:Shabbat/Candle Lighting:5": {
+   "he": [
+    "he:Shabbat/Candle Lighting:6"
+   ]
+  },
+  "en:Shabbat/Candle Lighting:6": {
+   "he": [
+    "he:Shabbat/Candle Lighting:6"
+   ]
+  },
+  "en:Shabbat/Candle Lighting:7": {
+   "he": [
+    "he:Shabbat/Candle Lighting:8"
+   ]
+  },
+  "en:Shabbat/Candle Lighting:8": {
+   "he": [
+    "he:Shabbat/Candle Lighting:8"
+   ]
+  },
+  "en:Shabbat/Candle Lighting:9": {
+   "he": [
+    "he:Shabbat/Candle Lighting:9"
+   ]
+  },
+  "en:Shabbat/Candle Lighting:10": {
+   "he": [
+    "he:Shabbat/Candle Lighting:11"
+   ]
+  },
+  "en:Shabbat/Candle Lighting:11": {
+   "he": [
+    "he:Shabbat/Candle Lighting:11"
+   ]
+  },
+  "en:Shabbat/Candle Lighting:12": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The service starts with Minḥa for Weekdays on page 206.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Most congregations sing “Beloved of the soul” before the Kabbalat Shabbat service.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">On Yom Tov or Motza’ei Yom Tov falling on Shabbat, or on Shabbat Ḥol HaMo’ed, the service begins with Psalm 92 on page 324.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">On Yom Tov falling on a weekday, the service begins with “Bless” on page 334.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Candle Lighting:13": {
+   "he": [
+    "he:Shabbat/Candle Lighting:13"
+   ]
+  },
+  "en:Shabbat/Candle Lighting:14": {
+   "he": [
+    "he:Shabbat/Candle Lighting:14"
+   ]
+  },
+  "en:Shabbat/Candle Lighting:15": {
+   "he": [
+    "he:Shabbat/Candle Lighting:15"
+   ]
+  },
+  "en:Shabbat/Candle Lighting:16": {
+   "he": [
+    "he:Shabbat/Candle Lighting:16"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat:49": {
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:50": {
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:51": {
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:52": {
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:53": {
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:54": {
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:55": {
+   "parts": [
+    {
+     "text": "Rabbi Elazar said in the name of Rabbi Ḥanina: The disciples of the sages increase peace in the world,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as it is said,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “And all your children shall be taught of the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and great shall be the peace of your children [",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>banayikh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "].” Read not ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>banayikh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " “your children,",
+     "kind": "prayer"
+    },
+    {
+     "text": "” but ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>bonayikh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " “your builders.” Those who love Your Torah have great peace;",
+     "kind": "prayer"
+    },
+    {
+     "text": " there is no stumbling block for them. May there be peace within your ramparts,",
+     "kind": "prayer"
+    },
+    {
+     "text": " prosperity in your palaces. For the sake of my brothers and friends,",
+     "kind": "prayer"
+    },
+    {
+     "text": " I shall say,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “Peace be within you.” For the sake of the House of the <small>LORD</small> our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " I will seek your good. ▸May the <small>LORD</small> grant strength to His people;",
+     "kind": "prayer"
+    },
+    {
+     "text": " may the <small>LORD</small> bless His people with peace.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:56": {
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:57": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following prayer, said by mourners, requires the presence of a minyan.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">A transliteration can be found on page 1333.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:58": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br>in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon –<br>and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:59": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "  May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:60": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world –<br>and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:61": {
+   "parts": [
+    {
+     "text": "To Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to the teachers,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>their disciples and their disciples’ disciples,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and to all who engage in the study of Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in this (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">In Israel add:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " holy) place or elsewhere,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>may there come to them<br>and you great peace,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>grace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " kindness and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " long life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " ample sustenance and deliverance,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>from their Father in Heaven –<br>and say: Amen.<br>May there be great peace from heaven,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and (good) life for us and all Israel –<br>and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:62": {
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:63": {
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:64": {
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:1": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Mourners during the week of Shiva leave the synagogue at this point, returning after 'Come, my Beloved' on page 322.",
+   "gloss": "Instruction for mourners"
+  },
+  "en:Shabbat/Kabbalat Shabbat:2": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:2"
+   ],
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "en:Shabbat/Kabbalat Shabbat:3": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:3"
+   ],
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "en:Shabbat/Kabbalat Shabbat:4": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:4"
+   ],
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "en:Shabbat/Kabbalat Shabbat:5": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:5"
+   ],
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "en:Shabbat/Kabbalat Shabbat:6": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:6"
+   ],
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "en:Shabbat/Kabbalat Shabbat:7": {
+   "he": [],
+   "kind": "instruction",
+   "en": "The following psalm is said standing:",
+   "gloss": "Instruction for standing"
+  },
+  "en:Shabbat/Kabbalat Shabbat:8": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:8"
+   ],
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "en:Shabbat/Kabbalat Shabbat:9": {
+   "he": [],
+   "kind": "instruction",
+   "en": "The following is said in some congregations:",
+   "gloss": "Optional custom"
+  },
+  "en:Shabbat/Kabbalat Shabbat:10": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:10"
+   ],
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "undertone"
+  },
+  "en:Shabbat/Kabbalat Shabbat:11": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:11"
+   ],
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "undertone"
+  },
+  "en:Shabbat/Kabbalat Shabbat:12": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:12"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:13": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:13"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:14": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:14"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:15": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:15"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:16": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:16"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:17": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:17"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:18": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:18"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:19": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:19"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:20": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:20"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:21": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:21"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:22": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:22"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:23": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:23"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:24": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:24"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:25": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:25"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:26": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:26"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:27": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:27"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:28": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:28"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:29": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:29"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:30": {
+   "he": [],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:31": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:31"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:32": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:32"
+   ],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Shabbat/Kabbalat Shabbat:33": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourners during the week of Shiva return to the synagogue at this point.</i>",
+     "kind": "instruction",
+     "en": "Mourners during the week of Shiva return to the synagogue at this point. They are greeted with the following words of consolation.",
+     "gloss": "Instruction for mourners"
+    },
+    {
+     "text": "<br><i class=\"instruction\">They are greeted with the following words of consolation:</i>",
+     "kind": "instruction",
+     "en": "Mourners during the week of Shiva return to the synagogue at this point. They are greeted with the following words of consolation.",
+     "gloss": "Instruction for mourners"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:34": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:34"
+   ],
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "en:Shabbat/Kabbalat Shabbat:35": {
+   "he": [],
+   "kind": "instruction",
+   "en": "On Yom Tov, Motza'ei Yom Tov or Shabbat Ḥol HaMo'ed, Kabbalat Shabbat begins here.",
+   "gloss": "Instruction for Yom Tov"
+  },
+  "en:Shabbat/Kabbalat Shabbat:36": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:36"
+   ],
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "en:Shabbat/Kabbalat Shabbat:37": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:37"
+   ],
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "en:Shabbat/Kabbalat Shabbat:38": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:38"
+   ],
+   "kind": "heading",
+   "en": "MOURNER'S KADDISH"
+  },
+  "en:Shabbat/Kabbalat Shabbat:39": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following prayer, said by mourners, requires the presence of a minyan.</i>",
+     "kind": "instruction",
+     "en": "The following prayer, said by mourners, requires the presence of a minyan. A transliteration can be found on page 1334.",
+     "gloss": "Instruction for mourners"
+    },
+    {
+     "text": "<br><i class=\"instruction\">A transliteration can be found on page 1334.</i>",
+     "kind": "instruction",
+     "en": "The following prayer, said by mourners, requires the presence of a minyan. A transliteration can be found on page 1334.",
+     "gloss": "Instruction for mourners"
+    }
+   ],
+   "he": []
+  },
+  "en:Shabbat/Kabbalat Shabbat:40": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br>in your lifetime and in your days,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    }
+   ],
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:40"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat:41": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "prayer",
+     "role": "congregation"
+    },
+    {
+     "text": "  May His great name be blessed for ever and all time.",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ],
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:41"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat:42": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": "<br>blessed be He,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world –<br>and say: Amen.",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    }
+   ],
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:42"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat:43": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:43"
+   ],
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true
+  },
+  "en:Shabbat/Kabbalat Shabbat:44": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Bow, take three steps back, as if taking leave of the Divine Presence, then bow, first left, then right, then center, while saying:",
+   "gloss": "Instruction for gestures"
+  },
+  "en:Shabbat/Kabbalat Shabbat:45": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:45"
+   ],
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true,
+   "gestures": [
+    "bow_left_right_center",
+    "three_steps_back"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat:46": {
+   "he": [],
+   "kind": "instruction",
+   "en": "The following is not said on Yom Tov, Shabbat Ḥol HaMo'ed or Motza'ei Yom Tov.",
+   "gloss": "Instruction for Yom Tov"
+  },
+  "en:Shabbat/Kabbalat Shabbat:47": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:47"
+   ],
+   "kind": "commentary",
+   "node": "kabbalat_shabbat.bameh_madlikin"
+  },
+  "en:Shabbat/Kabbalat Shabbat:48": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat:48"
+   ],
+   "kind": "commentary",
+   "node": "kabbalat_shabbat.bameh_madlikin"
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Weekdays/Counting of the Omer:53",
+   "type": "missing_text",
+   "detail": "Segment h52 (49 days) is missing from the Hebrew list; the list ends at h51 (48 days)."
+  },
+  {
+   "id": "en:Weekdays/Counting of the Omer:52",
+   "type": "alignment",
+   "detail": "English e52 (48 days) aligns to Hebrew h51 (48 days), but Hebrew h52 (49 days) is missing."
+  },
+  {
+   "id": "en:Weekdays/Counting of the Omer:55",
+   "type": "ambiguous",
+   "detail": "English rubric 'Some add:' has no Hebrew counterpart in the selected segments; likely refers to h54 or h55 but unclear which."
+  },
+  {
+   "id": "en:Shabbat/Eiruvin:2",
+   "type": "ambiguous",
+   "detail": "Instruction text in English only; no Hebrew counterpart in selected segments."
+  },
+  {
+   "id": "he:Shabbat/Candle Lighting:4",
+   "type": "ambiguous",
+   "detail": "The text contains parenthetical options for Shabbat vs. Yom Tov; the exact condition for when to say the full text vs. the shortened text is not explicitly stated in the source."
+  },
+  {
+   "id": "en:Shabbat/Kabbalat Shabbat:49",
+   "type": "misplaced",
+   "detail": "English text is Mishnah Bameh Madlikin, not Kaddish."
+  },
+  {
+   "id": "he:Shabbat/Kabbalat Shabbat:42",
+   "type": "ambiguous",
+   "detail": "Alternative text for Shabbat Shuva needs a specific condition variable."
+  }
+ ]
+}

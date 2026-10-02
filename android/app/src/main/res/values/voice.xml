@@ -1,0 +1,9 @@
+<resources>
+  <string-array name="voice_shacharit"><item>Shacharis</item><item>Shacharit</item><item>morning prayer</item></string-array>
+  <string-array name="voice_mincha"><item>Mincha</item><item>afternoon prayer</item></string-array>
+  <string-array name="voice_maariv"><item>Maariv</item><item>Arvit</item><item>evening prayer</item></string-array>
+  <string-array name="voice_birkat"><item>Birkat HaMazon</item><item>Birkat Hamazon</item><item>grace after meals</item></string-array>
+  <string-array name="voice_derech"><item>Tefillat HaDerech</item><item>travelers prayer</item><item>travel prayer</item></string-array>
+<string-array name="voice_zmanim"><item>next zman</item><item>zmanim</item><item>halachic times</item></string-array>
+<string-array name="voice_omer"><item>Omer</item><item>Omer count</item></string-array>
+</resources>

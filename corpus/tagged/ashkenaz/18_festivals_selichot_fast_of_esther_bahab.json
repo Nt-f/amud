@@ -1,0 +1,1669 @@
+{
+ "nusach": "ashkenaz",
+ "chunk": "Festivals/Selichot [Fast of Esther .. BaHaB]",
+ "leaves": {
+  "Festivals/Selichot/Fast of Esther": {
+   "node": "selichot.fast_day",
+   "when": "taanitEsther",
+   "service": "shacharit"
+  },
+  "Festivals/Selichot/Seventeen of Tamuz": {
+   "node": "selichot.fast_day",
+   "when": "tzomTammuz",
+   "service": "shacharit"
+  },
+  "Festivals/Selichot/Yom Kippur Katan": {
+   "node": "x.selichot.ykk_opening",
+   "when": "yomKippurKatan",
+   "service": "mincha"
+  },
+  "Festivals/Selichot/BaHaB": {
+   "node": "selichot.fast_day",
+   "when": "behab",
+   "service": "shacharit"
+  }
+ },
+ "he": {
+  "he:Festivals/Selichot/Fast of Esther:1": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Fast of Esther:2": {
+   "kind": "prayer",
+   "node": "x.selichot.el_erech_apayim"
+  },
+  "he:Festivals/Selichot/Fast of Esther:3": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Fast of Esther:4": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Fast of Esther:5": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Fast of Esther:6": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Fast of Esther:7": {
+   "kind": "speaker",
+   "en": "Chazzan:",
+   "role": "chazzan",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Fast of Esther:8": {
+   "kind": "prayer",
+   "node": "selichot.fast_day",
+   "role": "chazzan"
+  },
+  "he:Festivals/Selichot/Fast of Esther:9": {
+   "kind": "speaker",
+   "en": "Congregation:",
+   "role": "congregation",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Fast of Esther:10": {
+   "kind": "prayer",
+   "node": "selichot.fast_day",
+   "role": "congregation"
+  },
+  "he:Festivals/Selichot/Fast of Esther:11": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Fast of Esther:12": {
+   "kind": "commentary",
+   "en": "A selichah arranged by the alphabet, signed at the end with its author's name, Menachem son of Machir (may he live, Amen and Amen).",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:13": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:14": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:15": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:16": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:17": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:18": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:19": {
+   "kind": "commentary",
+   "en": "A selichah arranged by the alphabet, signed at the end with its author's name, Shimon bar Yitzchak.",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:20": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:21": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:22": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:23": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:24": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:25": {
+   "kind": "commentary",
+   "en": "A pizmon arranged on the acrostic Tashrak, signed at the end with its author's name, Meshullam.",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:26": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:27": {
+   "parts": [
+    {
+     "text": "במתי: ",
+     "kind": "instruction",
+     "en": "Refrain: \"במתי\"",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "צָר וְאוֹיֵב הִלְטִישׁ עֵינָיו. פִּיהוּ פָעַר לִשְׁאוֹף עָנָיו. עִשֵּׁת בְּשֶׁלּוֹ לְהַשְׁמִיד קְהַל הֲמוֹנָיו. סֶגֶל לְאַבֵּד חָרַת בְּנִשְׁתְּוָנָיו. "
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Fast of Esther:28": {
+   "parts": [
+    {
+     "text": "במתי: ",
+     "kind": "instruction",
+     "en": "Refrain: \"במתי\"",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "נוֹקֵם לְצָרִים וְנוֹטֵר לְאוֹיְבִים. מָדַדְתָּ מִדָּתָם כְּזָדוּ לַאֲהוּבִים. לוֹחֵם וְנִינָיו הוּתְלוּ מֻצְלָבִים. כְּבַחֲרוֹזֶת דָּגִים חוֹרְזוּ תְּחוּבִים. "
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Fast of Esther:29": {
+   "parts": [
+    {
+     "text": "במתי: ",
+     "kind": "instruction",
+     "en": "Refrain: \"במתי\"",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "יוֹם אֲשֶׁר שִׂבְּרוּ צוֹרְרִים. טִבְחָה לָשִׁית בְּעַם נְצוּרִים. חֻלְּפָה הַדָּת וְנָפְלוּ פְגָרִים. זֻלְעֲפוּ זוֹעֲמוּ מוּבָסִים מֻגָרִים. "
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Fast of Esther:30": {
+   "parts": [
+    {
+     "text": "במתי: ",
+     "kind": "instruction",
+     "en": "Refrain: \"במתי\"",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "וּבְכֵן יִתְעַלֶּה שִׁמְךָ וְיִתְנַשֵּׂא. הוֹדְךָ שְׁמֵי שָׁמַיִם כִּסָּה. דַּכִּים בְּרוֹמִמְךָ נְתוּנִים לִמְשִׁסָּה. גֵּיא וַאֲפָסֶיהָ תְּהִלָּתְךָ מְכַסָּה. "
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Fast of Esther:31": {
+   "parts": [
+    {
+     "text": "במתי: ",
+     "kind": "instruction",
+     "en": "Refrain: \"במתי\"",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "בִּינָה הֲגִינֵנוּ עַתָּה וּרְאֵה בַצָּר. בְּאַפְּךָ קוּמָה עַל צוֹרֵר הַצָּר. אָדוֹן קְרָאנוּךָ מִן הַמֵּצָר. אָנָּא הוֹצִיאֵנוּ לַמֶּרְחָב וְחַלְּצֵנוּ מִצָּר. "
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Fast of Esther:32": {
+   "parts": [
+    {
+     "text": "במתי: ",
+     "kind": "instruction",
+     "en": "Refrain: \"במתי\"",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "מְאֹד תַּרְבֶּה לָנוּ מְחִילָה. שְׁמַע תְּפִלָּה וְהַעֲבֵר תִּפְלָה. לוֹחֲצֵינוּ יַשְׁלִימוּ אִתָּנוּ וַעֲוֹנוֹתֵינוּ תַשְׁלִיךְ בִּמְצוּלָה. מִמֶּנּוּ רַחֲמֶיךָ לֹא תִכְלָא "
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Fast of Esther:33": {
+   "kind": "instruction",
+   "en": "Refrain: \"במתי\"",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Fast of Esther:34": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Fast of Esther:35": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Fast of Esther:36": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Fast of Esther:37": {
+   "kind": "prayer",
+   "node": "x.selichot.zechor_brit"
+  },
+  "he:Festivals/Selichot/Fast of Esther:38": {
+   "kind": "prayer",
+   "node": "x.selichot.zechor_brit"
+  },
+  "he:Festivals/Selichot/Fast of Esther:39": {
+   "kind": "prayer",
+   "node": "x.selichot.zechor_brit"
+  },
+  "he:Festivals/Selichot/Fast of Esther:40": {
+   "kind": "prayer",
+   "node": "x.selichot.shema_koleinu",
+   "role": "together"
+  },
+  "he:Festivals/Selichot/Fast of Esther:41": {
+   "kind": "prayer",
+   "node": "tachanun.vidui"
+  },
+  "he:Festivals/Selichot/Fast of Esther:42": {
+   "kind": "prayer",
+   "node": "tachanun.vidui",
+   "gestures": [
+    "strike_chest"
+   ]
+  },
+  "he:Festivals/Selichot/Fast of Esther:43": {
+   "kind": "prayer",
+   "node": "tachanun.vidui"
+  },
+  "he:Festivals/Selichot/Fast of Esther:44": {
+   "kind": "prayer",
+   "node": "x.selichot.aseh_lemaan",
+   "role": "together"
+  },
+  "he:Festivals/Selichot/Fast of Esther:45": {
+   "kind": "prayer",
+   "node": "x.selichot.aneinu",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Festivals/Selichot/Fast of Esther:46": {
+   "kind": "prayer",
+   "node": "x.selichot.mi_sheanah",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Festivals/Selichot/Fast of Esther:47": {
+   "kind": "prayer",
+   "node": "x.selichot.rachamana",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:1": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:2": {
+   "kind": "prayer",
+   "node": "x.selichot.el_erech_apayim"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:3": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:4": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:5": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:6": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:7": {
+   "kind": "speaker",
+   "en": "Chazzan:",
+   "role": "chazzan",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:8": {
+   "kind": "prayer",
+   "node": "selichot.fast_day",
+   "role": "chazzan"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:9": {
+   "kind": "speaker",
+   "en": "Congregation:",
+   "role": "congregation",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:10": {
+   "kind": "prayer",
+   "node": "selichot.fast_day",
+   "role": "congregation"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:11": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:12": {
+   "kind": "commentary",
+   "en": "A selichah arranged by the alphabet.",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:13": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:14": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:15": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:16": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:17": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:18": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:19": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:20": {
+   "kind": "commentary",
+   "en": "A selichah arranged by the alphabet, with the name of its author, Menachem son of Machir.",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:21": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:22": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:23": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:24": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:25": {
+   "kind": "commentary",
+   "en": "A pizmon; the author's name is Shlomo; composed in the meter of one yated and two teru'ot, repeated.",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:26": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:27": {
+   "parts": [
+    {
+     "text": "יום: ",
+     "kind": "instruction",
+     "en": "Refrain: \"יום\"",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "מְאֹד אֶתְחַל וָאֶתְחַלְחַל בְּיוֹם שַׁדַּי דְּחָפַנִי. וְהַשְּׁפִיפוֹן מִצָּפוֹן כְּשִׁבּוֹלֶת שְׁטָפַנִי. מְאוֹר חָשַׁךְ וְגַם שֵׁשַׁךְ כְּמוֹ כַּדּוּר צְנָפַנִי. וְהַצַּיָּד שָׁלַח יָד וְהַצָּפִיר וְהַשָּׂעִיר. "
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:28": {
+   "parts": [
+    {
+     "text": "יום: ",
+     "kind": "instruction",
+     "en": "Refrain: \"יום\"",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "הוֹד לִבִּי וּמִשְׂגַּבִּי הֲלָעַד אַפְּךָ יֶעֱשַׁן. הֲלֹא תִרְאֶה עַם נִלְאֶה אֲשֶׁר הָשְׁחַר כְּמוֹ כִּבְשָׁן. גְּדוֹר פִּרְצִי בְּבֶן פַּרְצִי. וּמֵחֶדֶק לְקוֹט שׁוֹשָׁן. בְּנֵה בֵּית זְבוּל לְהָשִׁיב גְּבוּל. הַכַּרְמֶל וְהַבָּשָׁן. וְעַיִן פְּקַח וְנָקָם קַח מֵאֵצֶר וּמִדִּישָׁן. שְׁפוֹט אִלֵּם וְאָז יְשַׁלֵּם הַמַּבְעֶה וְהַמַּבְעִיר. יוֹם גָּבַר הָאוֹיֵב וַתִּבָּקַע הָעִיר: "
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:29": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:30": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:31": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:32": {
+   "kind": "prayer",
+   "node": "x.selichot.zechor_brit"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:33": {
+   "kind": "prayer",
+   "node": "x.selichot.zechor_brit"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:34": {
+   "kind": "prayer",
+   "node": "x.selichot.zechor_brit"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:35": {
+   "kind": "prayer",
+   "node": "x.selichot.shema_koleinu",
+   "role": "together"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:36": {
+   "kind": "prayer",
+   "node": "tachanun.vidui"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:37": {
+   "kind": "prayer",
+   "node": "tachanun.vidui",
+   "gestures": [
+    "strike_chest"
+   ]
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:38": {
+   "kind": "prayer",
+   "node": "tachanun.vidui"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:39": {
+   "kind": "prayer",
+   "node": "x.selichot.aseh_lemaan",
+   "role": "together"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:40": {
+   "kind": "prayer",
+   "node": "x.selichot.aneinu",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:41": {
+   "kind": "prayer",
+   "node": "x.selichot.mi_sheanah",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Festivals/Selichot/Seventeen of Tamuz:42": {
+   "kind": "prayer",
+   "node": "x.selichot.rachamana",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:1": {
+   "kind": "prayer",
+   "node": "x.selichot.ykk_opening"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:2": {
+   "kind": "commentary",
+   "en": "This piyyut was composed by Rabbi Yehuda Aryeh of Modena; his name is hinted at the beginning of each stanza.",
+   "node": "x.selichot.ykk_opening"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:3": {
+   "kind": "prayer",
+   "node": "x.selichot.ykk_opening"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:5": {
+   "parts": [
+    {
+     "text": "יום: ",
+     "kind": "instruction",
+     "en": "Refrain: \"יום\"",
+     "node": "x.selichot.ykk_opening"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.ykk_opening",
+     "text": "וַדַּאי זְדוֹן לִבִּי אֶצְלוֹ גָלוּי, חוּטֵי עֲוֹנוֹתַי עִם דּוֹק רִשְׁעִי, דִּינִי אֲנִי אֵדָע בָּאֵשׁ קָלוּי, כִּי רַע וּבִישׁ אָרַגְתִּי אֶל פִּשְׁעִי, הוֹלֵךְ בְּיוֹם וָיוֹם אַחַר בִּצְעִי, מִבֵּית מְקוֹם סֵפֶר תִּינוֹק בּוֹרֵחַ. "
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:7": {
+   "parts": [
+    {
+     "text": "יום: ",
+     "kind": "instruction",
+     "en": "Refrain: \"יום\"",
+     "node": "x.selichot.ykk_opening"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.ykk_opening",
+     "text": "אָכֵן בְּחַבְלֵי שָׁוְא עָוֹן מוֹשֵׁךְ, אָחוֹר, לְךָ אֵלִי בָּאתִי נִצָּב, רִפְאוּת לְאֶרֶס מַר נָחָשׁ נוֹשֵׁךְ, שׁוֹאֵל וּמִתְחַנֵּן נִכְאָב נֶעֱצָּב, יוֹשֵׁב בְּעִנוּיֵי אֶבֶן מַחֲצָב, יָד פֶּה וְעַיִן אֵין לִי טַעַם וָרֵיחַ. "
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:9": {
+   "parts": [
+    {
+     "text": "יום: ",
+     "kind": "instruction",
+     "en": "Refrain: \"יום\"",
+     "node": "x.selichot.ykk_opening"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.ykk_opening",
+     "text": "הֵן רֹאשׁ חֳדָשִׁים אֶל עַמְּךָ נָתַתָּ, לִזְמַן כַּפָּרָה עַל כָּל תּוֹלְדוֹתָם, מֵאֵת אֲהוּבֶיךָ שׂוֹטֵן הִשְׁבַּתָּ, עַל כֵּן אֲקַדֶּמְךָ בִּתְחִנָּתָם, מִיּוֹם לְפָנָיו בָּא כִּי אָז אֵיתָם, אָשׁוּב לְאִישׁ תּוֹשָׁב לֹא עוֹד אוֹרֵחַ. "
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:11": {
+   "parts": [
+    {
+     "text": "יום: ",
+     "kind": "instruction",
+     "en": "Refrain: \"יום\"",
+     "node": "x.selichot.ykk_opening"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.ykk_opening",
+     "text": "וּבְרוֹב חֲסָדֶיךָ אַתָּה מַלְכִּי, תָּקוּם תְּרַחֵם אֶת צִיּוֹן קָדְשֵׁנוּ, דִּירַת מְנוּחָתְךָ שִׂים כָּבוֹד, כִּי בָהּ נַעֲלֶה עוֹלוֹת רָאשֵׁי חָדְשֵׁנוּ, נָא אֵל שְׁלַח נוֹשֵׂא נֵזֶר רֹאשֵׁנוּ, כִּי שָׁם לְבָבֵנוּ שׁוֹאֵף זוֹרֵחַ. "
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:13": {
+   "kind": "instruction",
+   "en": "Refrain: \"Yom\"",
+   "node": "x.selichot.ykk_opening"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:15": {
+   "kind": "prayer",
+   "node": "x.selichot.ykk_opening"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:16": {
+   "kind": "instruction",
+   "en": "After the order of the offerings, Ashrei, Half Kaddish, and the silent Amidah, begin here after the chazzan's repetition.",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:17": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:18": {
+   "parts": [
+    {
+     "text": "<em><small>חו\"ק</small></em>",
+     "kind": "speaker",
+     "en": "Chazzan, then congregation:",
+     "role": "chazzan_then_congregation",
+     "node": "selichot.fast_day"
+    },
+    {
+     "kind": "prayer",
+     "node": "selichot.fast_day",
+     "text": "הֲשִׁיבֵנוּ יְהֹוָה אֵלֶיךָ וְנָשׁוּבָה חַדֵּשׁ יָמֵינוּ כְּקֶדֶם: ",
+     "role": "chazzan_then_congregation",
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:19": {
+   "kind": "instruction",
+   "en": "Three times",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:20": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:21": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:22": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:23": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:24": {
+   "kind": "prayer",
+   "node": "selichot.fast_day",
+   "role": "chazzan"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:25": {
+   "kind": "prayer",
+   "node": "selichot.fast_day",
+   "role": "congregation"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:26": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:27": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:28": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:29": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "מַשְׂאַת כַּפַּי מִנְחַת עֶרֶב רְצֵה נָא בְכֹשֶׁר, תִּכּוֹן תְּפִלָּתִי קְטוֹרֶת לְפָנֶיךָ בְּתֹם וּבְיֹשֶׁר, בְּקָרְאִי עֲנֵנִי צוּרִי הַיּוֹם יִפְנֶה: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:30": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "כַּאֲשֶׁר יָבִיאוּ בְּנֵי יִשְׂרָאֵל אֶת הַמִּנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:31": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "רֵיחַ נִיחוֹחַ אִמְרֵי פִי לְפָנֶיךָ צוּר עוֹלָמִים, חֶלְבִּי וְדָמִי הַנִּמְעַט בְּצוֹמִי תְּמוּר חֲלָבִים וְדָמִים, קַבֵּל הֶגְיוֹן לִבִּי אֲשֶׁר עָרַכְתִּי הַיּוֹם ",
+     "role": "chazzan"
+    },
+    {
+     "kind": "note",
+     "en": "Another version: \"zeh kamah yamim\" (\"these several days\")",
+     "node": "x.selichot.piyyut",
+     "text": "<em><small>נ\"א זֶה כַּמָה יָמִים</small></em>"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": " בַּנְעִימִים: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:32": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "כְּחַטָּאת כָּאָשָׁם וְכַמִּנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:33": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "דְרוֹשׁ נָא בְּיוֹם זֶה דּוֹרְשֶׁיךָ וְהִדָּרֵשׁ לָהֶם בְּנִיב שְׂפָתָיִם, שְׁעֵה לְמַעֲמָדָם וְטַהֲרֵם כַּכֶּסֶף מְזֻקָּק שִׁבְעָתָיִם, וּרְצֵה שִׂיחָתָם כְּשֶׂה אַחַת מִן הַצֹאן מִן הַמָּאתָיִם: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:34": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "מִמַּשְׁקֵה יִשְׂרָאֵל לַמִּנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:35": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "כָּלִיל וְעוֹלָה תְּחִנָתִי תֵּחָשֵׁב וּמַשְׂטִינִי רִיב תָּרִיב, וְתוֹצִיא כָאוֹר צִדְקִי טֶרֶם יָבוֹא הַשֶּׁמֶשׁ וְיַעֲרִיב, שָׁפוֹךְ כַּמַיִם לִבּוֹ בִּתְפִלָּתוֹ כָּל אִישׁ. ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:36": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "וְהִקְרִיב הַמַּקְרִיב קָרְבָּנוֹ לַיהֹוָה מִנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:37": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "יְשֻׁרוּן עַמְּךָ יָשִׁיר חַסְדְּךָ בְּטוֹב לֶקַח, הַטֵּה אֵלָיו אָזְנְךָ וּשְׁמָע וְעֵינֶיךָ פְּקַח, וּרְאֵה כִּי טוֹב מִסְתּוֹפֵף בְּשַׁעֲרֵי רַחֲמֶיךָ: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:38": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "וַיִּקַּח מִן הַבָּא בְּיָדוֹ מִנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:39": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "בְּרוֹב רַחֲמֶיךָ אֲמָרַי הַאֲזִינָה יְהֹוָה הֲגִיגִי בִּינָה, אִם נָא מָצָאתִי חֵן בְּעֵינֶיךָ אֱלֹהֵי קֶדֶם מְעוֹנָה, וְלָקַחְתָּ מִנְחָתִי מִיָּדִי אֲשֶׁר הֵבֵאתִי לְךָ בִּתְחִנָּה: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:40": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "וַיְהִי כַּעֲלוֹת הַמִּנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:41": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "שַׁדַּי לֹא מְצָאנוּךָ שַׂגִּיא כֹחַ לָעֵדָה מִקֶּדֶם קָנִיתָ, אֶחָד הַמַּרְבֶּה וְאֶחָד הַמַּמְעִיט בְּשׁוּבוֹ נַפְשׁוֹ רָצִיתָ, אַךְ יְכַוֵּן לִבּוֹ לְפָנֶיךָ בְּמִנְחָתוֹ בְּעֵת הַקְרִיב אוֹתָהּ: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:42": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "וְזֹאת תּוֹרַת הַמִּנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:43": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "בִּהְיוֹת מִזְבְּחִי וּמִקְדָּשִׁי עַל מְכוֹנוֹ וּגְבוּלוֹ, הָיוּ מְכַפְּרִים עָלֵינוּ בִּשְׂעִירִים הָעוֹלִים לְגוֹרָלוֹ, וְעַתָּה בְּאַשְׁמָתֵנוּ לוּ חָפֵץ יְהֹוָה לַהֲמִיתֵנוּ: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:44": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "לֹא לָקַח מִיָּדֵנוּ עוֹלָה וּמִנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:45": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "תַּחֲנוּנִים יְדַבֵּר עַמְּךָ יְבַקֵּשׁ סְלִיחָה בְּלֵב מָר, הִנּוֹ מִתְיַצֵּב עַל מָצוֹר וְעוֹמֵד עַל הַמִּשְׁמָר, מְחַלֶּה פָנֶיךָ לְעֵת מִנְחַת עֶרֶב וּמְצַפֶּה כּוֹפֶר: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:46": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "כִּי אָמַר אֲכַפְּרָה פָנָיו בַּמִּנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:47": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "יְרוּשָׁלַיִם עִירְךָ בְּנֵה וְעָרֶיהָ מִקָּצֶה, אֲסוּרִים רְעוּצִים פְּתַח וְלַחָפְשִׁי הוֹצֵא, וְעָרְבָה לַיהֹוָה מִנְחָתָם כִּימֵי עוֹלָם וְתָשׁוּב וְתִרְצֶה: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:48": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "עוֹד פְּנוֹת אֶל הַמִּנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:49": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "וּנְפוּצוֹת יִשְׂרָאֵל לְקַבֵּץ יָדְךָ שֵׁנִית תּוֹסֵף, כְּרוֹעֶה עֶדְרוֹ תִּרְעֵם בִּנְוֵה טוֹב תְּאַסֵּף, וְיָשֵׁב מְצָרֵף וְטִהַר אֶת בְּנֵי יִשְׂרָאֵל כַּזָּהָב וְכַכָּסֶף: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:50": {
+   "parts": [
+    {
+     "text": "<em><small>חו\"ק</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan, then congregation:",
+     "role": "chazzan_then_congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "וְהָיוּ לַיהֹוָה מַגִּישֵׁי מִנְחָה: ",
+     "role": "chazzan_then_congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:51": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:52": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:53": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:54": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:55": {
+   "kind": "commentary",
+   "en": "A selichah composed by Rabbi Eliezer son of Rabbi Yitzchak HaLevi; his name is hinted at the start of the stanzas.",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:56": {
+   "kind": "speaker",
+   "en": "Chazzan:",
+   "role": "chazzan",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:57": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:58": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "כִּי אָמַר אֲכַפְּרָה פָנָיו בַּמִּנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:59": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "לְהַקְשִׁיב לְמַשְׂטִינֵנוּ מָאֵן תְּמָאֵן, סְאוֹנוֹ בְרַעַשׁ אַל נָא תְּהִי סוֹאֵן, וְאִם עֲוֹנוֹת תִּשְׁמוֹר הֲלֹא רַבּוּ: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:60": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "מֵאֵין עוֹד פְּנוֹת אֶל הַמִּנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:61": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "יִשְׂרָאֵל עַמְּךָ אֲשֶׁר בְּךָ מַאֲמִין, אִם בִּשְׂמֹאל דְּחִיתוֹ קָרְבֵהוּ בִּימִין, בָּא לְשַׁחֵר פָּנֶיךָ: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:62": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "וַיִּקַּח מִן הַבָּא בְיָדוֹ מִנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:63": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "עוֹרְכֵי שֶׁוַע מְשַׁלְמֵי פָרִים שִׂפְתוֹתָם, רְצֵה וְהַשְׁלֵךְ בִּמְצוּלוֹת יָם כָּל חַטֹּאתָם, יֶעֱרַב עָלֶיךָ שִׂיחָתָם וְרִנָּתָם: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:64": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "כַּחַטָּאת וְכָעוֹלָה וְכַמִּנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:65": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "זֵכֶר פַּר פְּנִים וְשָׂעִיר פְּנִימִי וְחִיצוֹן, יִהְיוּ נָא אֲמָרֵינוּ לְפָנֶיךָ לְרָצוֹן, וְתֶעֱרַב מִנְחָתֵנוּ כְּשֶׂה אַחַת מִן הַצֹּאן, מִן הַמָּאתָיִם: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:66": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "מִמַּשְׁקֵה יִשְׂרָאֵל לַמִנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:67": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "רְאֵה כִּי אָזְלַת יָדֵינוּ וְיוֹשְׁבֵי מָרוֹם שָׁחוּ, פַּסּוּ אֱמוּנִים וּבְכֵן לָקָחוּ, כְּבַד פֶּה וַעֲרַל שָׂפָה: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:68": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "וַיִּשְׁלְחוּ בְנֵי יִשְׂרָאֵל בְּיָדוֹ מִנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:69": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "בָּרֵר נִיב שְׂפָתַי כְּשַּׁחַר פָרוּשׂ, עֲנֵנִי וּרְפָא מִזְבַּחֲךָ הֶהָרוּס, חֶלְקַת לְשׁוֹנִי תֶּעֱרַב כַּשֶּׁמֶן לָרוֹס: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:70": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "אֶת הָעוֹלָה וְאֶת הַמִּנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:71": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "בֵּית תְּפִלָּתָם מְקוֹם צָקוּן לַחֲשָׁם, חֲשׁוֹב כִּבִמְקוֹם אֲשֶׁר יְבַשְּׁלוּ שָׁם הַכֹּהֲנִים אֶת הַחַטָּאת וְאֶת הָאָשָׁם: ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:72": {
+   "parts": [
+    {
+     "text": "<em><small>קהל</small></em> - ",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "וַאֲשֶׁר יֹאפוּ אֶת הַמִּנְחָה: ",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:73": {
+   "parts": [
+    {
+     "text": "<em><small>חזן</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "יְצַוֶּה יְהֹוָה חַסְדּוֹ קוֹמְמִיּוּת הֲשִׁיבֵנִי לְנָוִי, לְפָאֵר מְקוֹם מִקְדָּשִׁי לְחַדֵּשׁ הֲדַר זִיוִי, וְיָשַׁב מְצָרֵף וְטִהַר אֶת בְּנֵי לֵוִי. ",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:74": {
+   "parts": [
+    {
+     "text": "<em><small>חו\"ק</small></em> - ",
+     "kind": "speaker",
+     "en": "Chazzan, then congregation:",
+     "role": "chazzan_then_congregation",
+     "node": "x.selichot.piyyut"
+    },
+    {
+     "kind": "prayer",
+     "node": "x.selichot.piyyut",
+     "text": "וְהָיוּ לַיהֹוָה מַגִּישֵׁי מִנְחָה: ",
+     "role": "chazzan_then_congregation"
+    }
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:75": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:76": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:77": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:78": {
+   "kind": "prayer",
+   "node": "x.selichot.tov_hashem"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:79": {
+   "kind": "commentary",
+   "en": "A pizmon; its author's name, Binyamin, is hinted at the start of each stanza.",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:80": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:81": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:82": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:83": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:84": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:85": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:86": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:87": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:88": {
+   "kind": "instruction",
+   "en": "Afterward say ten times \"Rachamana\", for the ten utterances and the Ten Commandments.",
+   "node": "x.selichot.rachamana"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:89": {
+   "kind": "speaker",
+   "en": "Chazzan, then congregation:",
+   "role": "chazzan_then_congregation",
+   "node": "x.selichot.rachamana"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:90": {
+   "kind": "prayer",
+   "node": "x.selichot.rachamana",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:91": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:92": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:93": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:94": {
+   "kind": "prayer",
+   "node": "x.selichot.piyyut"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:95": {
+   "kind": "heading",
+   "en": "The Great Vidui of Rabbeinu Nissim, of blessed memory",
+   "node": "tachanun.vidui"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:96": {
+   "kind": "prayer",
+   "node": "tachanun.vidui"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:97": {
+   "kind": "prayer",
+   "node": "tachanun.vidui"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:98": {
+   "kind": "prayer",
+   "node": "tachanun.vidui",
+   "gestures": [
+    "strike_chest"
+   ]
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:99": {
+   "kind": "prayer",
+   "node": "tachanun.vidui"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:100": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:101": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:102": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:103": {
+   "kind": "instruction",
+   "en": "Once",
+   "node": "x.selichot.shema_declaration"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:104": {
+   "kind": "prayer",
+   "node": "x.selichot.shema_declaration",
+   "role": "together"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:105": {
+   "kind": "instruction",
+   "en": "Three times, quietly",
+   "node": "x.selichot.shema_declaration",
+   "voice": "undertone"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:106": {
+   "kind": "prayer",
+   "node": "x.selichot.shema_declaration",
+   "role": "together",
+   "voice": "undertone",
+   "repeat": 3
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:107": {
+   "kind": "instruction",
+   "en": "Seven times",
+   "node": "x.selichot.shema_declaration"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:108": {
+   "kind": "prayer",
+   "node": "x.selichot.shema_declaration",
+   "role": "together",
+   "repeat": 7
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:109": {
+   "kind": "prayer",
+   "node": "x.selichot.shema_declaration",
+   "role": "together"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:110": {
+   "kind": "prayer",
+   "node": "x.selichot.aneinu",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:111": {
+   "kind": "instruction",
+   "en": "Full Kaddish, Aleinu and Mourner's Kaddish",
+   "node": "kaddish.shalem"
+  },
+  "he:Festivals/Selichot/Yom Kippur Katan:112": {
+   "kind": "prayer",
+   "node": "x.selichot.ykk_psalm8"
+  },
+  "he:Festivals/Selichot/BaHaB:1": {
+   "kind": "prayer",
+   "node": "selichot.fast_day"
+  },
+  "he:Festivals/Selichot/BaHaB:2": {
+   "kind": "prayer",
+   "node": "x.selichot.el_erech_apayim"
+  },
+  "he:Festivals/Selichot/BaHaB:3": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Festivals/Selichot/BaHaB:4": {
+   "kind": "prayer",
+   "node": "tachanun.yud_gimmel_middot",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Festivals/Selichot/BaHaB:4",
+   "type": "missing_text",
+   "detail": "The BaHaB leaf holds only the opening verses and the Thirteen Attributes (4 segments). No piyyut, Vidui, Aneinu or closing; presumably the app composes it from shared Selichot text."
+  },
+  {
+   "id": "he:Festivals/Selichot/Fast of Esther:5",
+   "type": "wrong_vowel",
+   "detail": "וַיּשְׁמַע lacks the hiriq under the yod (should be וַיִּשְׁמַע)."
+  },
+  {
+   "id": "he:Festivals/Selichot/Yom Kippur Katan:3",
+   "type": "alignment",
+   "detail": "Segment ids in the Yom Kippur Katan leaf skip numbers (4, 6, 8, 10, 12, 14), so some stanza lines may have been dropped by the exporter; the piyyut stanzas 3-11 are all printed without a refrain line."
+  },
+  {
+   "id": "he:Festivals/Selichot/Yom Kippur Katan:15",
+   "type": "misplaced",
+   "detail": "Lamnatzeach (Ps. 20) comes before the rubric \"begin here after the chazzan's repetition\" (seg 16), so it is said before Mincha, not within the selichot proper. Leaf service is set to mincha but segments 1-15 precede the Amidah."
+  },
+  {
+   "id": "he:Festivals/Selichot/Yom Kippur Katan:112",
+   "type": "ambiguous",
+   "detail": "Psalm 8 (Lamnatzeach al HaGittit) follows the rubric \"Full Kaddish, Aleinu and Mourner's Kaddish\"; unclear whether it is said before or after them, or at all in the selichot service. Tagged as x.selichot.ykk_psalm8."
+  },
+  {
+   "id": "he:Festivals/Selichot/Yom Kippur Katan:16",
+   "type": "ambiguous",
+   "detail": "The rubric places the selichot after the Mincha Amidah repetition; no condition added beyond yomKippurKatan since the leaf is already scoped."
+  },
+  {
+   "id": "he:Festivals/Selichot/Fast of Esther:33",
+   "type": "engine_bug_risk",
+   "detail": "Refrain cues (\"במתי:\", \"יום:\") are printed as prefixes before each stanza and the last stands alone; a naive reader would show them as text. They are tagged as instructions (refrain cue), the refrain itself being the opening stanza."
+  },
+  {
+   "id": "he:Festivals/Selichot/Yom Kippur Katan:31",
+   "type": "engine_bug_risk",
+   "detail": "Inline variant reading (נ\"א זה כמה ימים) sits inside a prayer line; split out as a note, so a naive reader would say it as part of the text."
+  }
+ ]
+}

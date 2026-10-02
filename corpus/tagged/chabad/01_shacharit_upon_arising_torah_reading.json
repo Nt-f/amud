@@ -1,0 +1,3754 @@
+{
+ "nusach": "chabad",
+ "chunk": "Shacharit [Upon Arising .. Torah Reading]",
+ "leaves": {
+  "Shacharit/Upon Arising": {
+   "node": "morning.modeh_ani",
+   "service": "shacharit"
+  },
+  "Shacharit/Morning Blessings": {
+   "node": "morning.birkot_hashachar",
+   "service": "shacharit"
+  },
+  "Shacharit/Tzitzit and Tallit": {
+   "node": "morning.tzitzit",
+   "service": "shacharit"
+  },
+  "Shacharit/Tefillin": {
+   "node": "morning.tefillin",
+   "service": "shacharit"
+  },
+  "Shacharit/Morning Prayer": {
+   "node": "morning.patach_eliyahu",
+   "service": "shacharit",
+   "when": "true"
+  },
+  "Shacharit/Kaddish DeRabbanan": {
+   "node": "kaddish.derabbanan",
+   "service": "shacharit",
+   "when": "true"
+  },
+  "Shacharit/Hodu": {
+   "node": "pz.hodu",
+   "service": "shacharit",
+   "when": "true"
+  },
+  "Shacharit/Pesukei Dezimra": {
+   "node": "pz.baruch_sheamar",
+   "service": "shacharit"
+  },
+  "Shacharit/Blessings of the Shema": {
+   "node": "shema.emet_veyatziv",
+   "service": "shacharit"
+  },
+  "Shacharit/The Amidah": {
+   "node": "amidah.opening",
+   "service": "shacharit",
+   "when": "true"
+  },
+  "Shacharit/Tachnun": {
+   "node": "tachanun.vidui",
+   "service": "shacharit",
+   "when": "tachanunShacharit"
+  },
+  "Shacharit/Torah Reading": {
+   "node": "torah.vayehi_binsoa",
+   "service": "shacharit",
+   "when": "torahReading"
+  }
+ },
+ "he": {
+  "he:Shacharit/Upon Arising:1": {
+   "kind": "instruction",
+   "en": "Be aware that the merit of rising at midnight, which is a time of favor above. One who cannot rise at midnight every night should at least strive to rise at midnight on some night and be counted among the servants of the Lord, as it says 'all the servants of the Lord who stand in the house of the Lord by night.' On nights when one cannot, one should at least strive to rise some time before dawn, as it says 'I will rise early.' Immediately upon waking, to avoid falling back asleep, one should accustom oneself to reflect on whom one lies before: before the King of Kings, the Blessed One, as it says 'Do not the heavens and the earth fill Me?' If one were lying before a mortal king, one would be in danger of one's life. It is good to accustom oneself to say immediately upon waking this formula:"
+  },
+  "he:Shacharit/Upon Arising:2": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Upon Arising:3": {
+   "kind": "instruction",
+   "en": "And through this one will remember the Lord who stands over him and will rise with alacrity:"
+  },
+  "he:Shacharit/Morning Blessings:1": {
+   "kind": "note",
+   "en": "In this nusach, Modeh Ani contains no Divine Name, so it may be recited before washing hands. However, mentioning the Name in blessings or speaking Torah is forbidden until hands are clean. Contemplating Torah is permitted. One who sleeps clothed may recite blessings and speak Torah without washing, as hands likely didn't touch private areas. The Zohar is stricter: do not mention the Name, study, touch clothes, or walk four cubits before washing. If no water is available, wash with any cleaning substance or a small amount, avoiding eyes, ears, nose, mouth, and armpits. Do not touch food or drink. Women are especially warned about this."
+  },
+  "he:Shacharit/Morning Blessings:2": {
+   "kind": "prayer",
+   "node": "morning.netilat_yadayim"
+  },
+  "he:Shacharit/Morning Blessings:3": {
+   "kind": "note",
+   "en": "Be modest in the bathroom: expose only what is necessary and only when necessary. Do not expose yourself until sitting. Expose only a handbreadth behind and two handbreadths in front. Even outside the bathroom, be modest and do not expose flesh unnecessarily, even at night, for modesty is due to the King of Kings whose glory fills the earth."
+  },
+  "he:Shacharit/Morning Blessings:4": {
+   "kind": "prayer",
+   "node": "morning.asher_yatzar"
+  },
+  "he:Shacharit/Morning Blessings:5": {
+   "kind": "prayer",
+   "node": "morning.elokai_neshama"
+  },
+  "he:Shacharit/Morning Blessings:6": {
+   "kind": "note",
+   "en": "These blessings are recited even if one is not obligated (e.g., if awake all night and didn't change clothes). If awake all night, one may only recite them after dawn. If one slept and is obligated, one may recite them immediately upon obligation, provided it is after midnight. If awake all night and hears the rooster crow after midnight, one may recite 'Hanoten LaSchevi Binah'; if before midnight, wait until after dawn."
+  },
+  "he:Shacharit/Morning Blessings:7": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:8": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:9": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:10": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:11": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:12": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:13": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:14": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:15": {
+   "kind": "note",
+   "en": "This blessing is not recited on Tisha B'Av and Yom Kippur.",
+   "forgot": true
+  },
+  "he:Shacharit/Morning Blessings:16": {
+   "kind": "prayer",
+   "when": "!tishaBav && !yomKippur"
+  },
+  "he:Shacharit/Morning Blessings:17": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:18": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:19": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:20": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:21": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:22": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:23": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:24": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Blessings:25": {
+   "kind": "note",
+   "en": "Be very careful with the Torah blessings: do not speak or recite Torah until you have blessed. One who slept at night blesses upon rising after midnight. If awake all night, bless when it is light, like all morning blessings."
+  },
+  "he:Shacharit/Morning Blessings:26": {
+   "kind": "prayer",
+   "node": "morning.birkot_hatorah"
+  },
+  "he:Shacharit/Morning Blessings:27": {
+   "kind": "prayer",
+   "node": "morning.birkot_hatorah"
+  },
+  "he:Shacharit/Morning Blessings:28": {
+   "kind": "prayer",
+   "node": "morning.birkot_hatorah"
+  },
+  "he:Shacharit/Morning Blessings:29": {
+   "kind": "prayer",
+   "node": "morning.birkot_hatorah"
+  },
+  "he:Shacharit/Morning Blessings:30": {
+   "kind": "prayer",
+   "node": "morning.birkot_hatorah"
+  },
+  "he:Shacharit/Morning Blessings:31": {
+   "kind": "prayer",
+   "node": "morning.birkot_hatorah"
+  },
+  "he:Shacharit/Morning Blessings:32": {
+   "kind": "prayer",
+   "node": "morning.birkot_hatorah"
+  },
+  "he:Shacharit/Tzitzit and Tallit:1": {
+   "kind": "instruction",
+   "en": "One should not recite the blessing on tzitzit in the morning until one can distinguish between the blue that was in the tzitzit and the white in it. Some say this is so that one can see a friend who is accustomed and one who is not accustomed from a distance of four cubits and recognize him. And not in the evening after the beginning of sunset, for then is the beginning of Bein HaShmashot."
+  },
+  "he:Shacharit/Tzitzit and Tallit:2": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tzitzit and Tallit:3": {
+   "kind": "heading",
+   "en": "Order for putting on the Tallit Gadol"
+  },
+  "he:Shacharit/Tzitzit and Tallit:4": {
+   "kind": "instruction",
+   "en": "At the time of checking the tzitzit, one says this:"
+  },
+  "he:Shacharit/Tzitzit and Tallit:5": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tzitzit and Tallit:6": {
+   "kind": "instruction",
+   "en": "When wrapping oneself, one should intend that the Holy One, blessed be He, commanded us to wrap ourselves in it so that we remember all His commandments to do them, as it is said: 'And you shall see it and remember all the commandments of the Lord and do them'."
+  },
+  "he:Shacharit/Tzitzit and Tallit:7": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tzitzit and Tallit:8": {
+   "kind": "instruction",
+   "en": "And he should cover his head and wrap himself like the Ishmaelites, meaning that he should wrap the tallit with the two corners on the right side around his neck and return it to the back through the left side, and the other two corners on the left side should be in front, so that all four tzitzit are on the left side: two in front and two behind. One must be wrapped from the front and from the back down to the chest (and one does not need to cover the head down to the mouth). One should stand wrapped like this for at least the distance of four cubits after the blessing, and afterwards one should push it back as is the custom of the place. In any case, it is a mitzvah to be wrapped in the Tallit Gadol for the entire time of the prayer, covering one's head and body from the front and from the back around the arms, so that the right side rests on the left. It is better to throw the right corner over the left shoulder to the back, so that one is completely wrapped in it, a complete wrapping like the wrapping of the Ishmaelites, somewhat."
+  },
+  "he:Shacharit/Tzitzit and Tallit:9": {
+   "kind": "instruction",
+   "en": "And at the time of wrapping the Tallit Gadol, one says this:"
+  },
+  "he:Shacharit/Tzitzit and Tallit:10": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tefillin:1": {
+   "kind": "instruction",
+   "en": "After putting on the tallit gadol, put on tefillin so they are on you at least during the Shema and Amidah. Intend that the Holy One commanded us to write these four paragraphs, which contain the Uniqueness of His Name and the Exodus from Egypt, so that we remember the miracles and wonders He did for us, which testify to His Uniqueness and that the power and dominion to do as He wills in the heavens and the earth belong to Him. He commanded us to place them on the arm opposite the heart and on the head opposite the brain, so that we subjugate the soul in the brain and the desires and thoughts of our heart to His service. Through putting on tefillin, one remembers the Creator and reduces his pleasures."
+  },
+  "he:Shacharit/Tefillin:2": {
+   "kind": "instruction",
+   "en": "Some have the custom to put on the tefillin of the hand while sitting, based on what is explained in the Zohar, and they also recite the blessing while sitting."
+  },
+  "he:Shacharit/Tefillin:3": {
+   "kind": "instruction",
+   "en": "The place for the tefillin of the hand is on the left hand, at the height of the flesh of the joint between the elbow and the shoulder (called 'elbow' in Yiddish), and this place is called 'kiboret'. Do not place it above the middle of the joint or below at the very bottom, below the kiboret, for it says 'and you shall place these words of Mine upon your heart'; the placement must be opposite the heart, and that is the kiboret, which is directly opposite the heart. Therefore, one must place the tefillin of the hand slightly toward the body so that when one bends the arm down, the tefillin of the hand is directly opposite the heart. Be careful that there is no barrier between the tefillin and the flesh."
+  },
+  "he:Shacharit/Tefillin:4": {
+   "kind": "instruction",
+   "en": "It is forbidden to divert one's mind from the tefillin as long as they are on you. Diversion of mind is only when one stands with lightness of mind, joking, or idle talk, for this violates the awe of God. But if one is occupied with his needs and the fear of God is fixed in his heart to be careful of all sin and iniquity in his dealings, not to go against the sight of His honor, it is not called diversion of mind, even if one's mind is not directly on the tefillin. Therefore, the mitzvah of tefillin is to be wearing them all day, and a person is obligated to touch the tefillin every time he remembers them, so that through this he will remember the remembrances in them and remember God to subjugate the heart and brain to Him, and not come to complete diversion of mind, which is lightness of mind and idle talk. However, it is a superior mitzvah not to divert one's mind from them at all, and to touch them at all times, even while one's mind is on them, so as not to come to diversion of mind at all. Except when occupied with Torah and the Amidah, where there is no diversion of mind. Nevertheless, every time one remembers them, he should touch them."
+  },
+  "he:Shacharit/Tefillin:5": {
+   "kind": "instruction",
+   "en": "After placing the tefillin of the hand on the kiboret, before tightening it, recite the blessing:"
+  },
+  "he:Shacharit/Tefillin:6": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tefillin:7": {
+   "kind": "instruction",
+   "en": "Intend to exempt the tefillin of the head as well. Then tighten the strap within the knot to fulfill the mitzvah of 'and you shall bind them as a sign upon your hand', which is the mitzvah of tightening on the hand itself with this knot, for this tightening on the hand is done with the knot. Be careful that the knot of the yud of the tefillin of the hand does not slip. One may wrap the strap around the titura to strengthen it on the hand, but not around the kitzah. Then make seven windings on the joint of the forearm connected to the hand. Then place the tefillin of the head on the top of the head, being careful that it is exactly in the middle of the width of the head, for they said 'Kadosh' (Holy) is from the right and 'Shema' (Hear) is from the left; in the tefillin, Rashi explains that the paragraphs are in order, and the difference between right and left is only a little, namely the groove between 'Vayehi Ki Yeviakha' and 'Shema'. Therefore, one must be very careful about this. Also, one must watch and see if the grooves between the compartments are stuck together with glue by mistake of the scribe; if so, carefully separate them with the tip of a thin and sharp knife so that they are separated from compartment to compartment all the way down. Therefore, they pass the tefillin thread between compartment to compartment all the way down to separate well and prevent sticking, as stated in the Talmud and poskim brought in the Beit Yosef and the writings of the Ari z\"l. The knot of the tefillin of the head must be at the back of the head, at the height of the nape, in the middle, visible like a dalet on the outside, which is for the eye of the beholder from behind, like a dalet in its writing. If one spoke between the tefillin of the hand and the tefillin of the head, he must recite a blessing on the tefillin of the head."
+  },
+  "he:Shacharit/Tefillin:8": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tefillin:9": {
+   "kind": "instruction",
+   "en": "In what case are these words said? When one spoke about matters not necessary for the tefillin. But if one paused for matters necessary for putting on the tefillin, one does not need to return and recite a blessing on the tefillin of the head. Ideally, one should not pause at all unless it is impossible otherwise. Wrapping the strap around the forearm is not considered a pause, as it is part of the mitzvah itself. But in other matters, even if one paused for holy words, it is a pause. Nevertheless, if one heard Kaddish, Barchu, or Kedushah between the tefillin of the hand and the tefillin of the head, it is permitted to pause and answer with the congregation, even though it causes an additional blessing on the tefillin of the head. It is forbidden to cause an unnecessary blessing, for there are those who say one always blesses on the tefillin of the head on the mitzvah of tefillin even if one did not speak in between. Although one should not act this way initially, as doubtful blessings are to be lenient, regarding the prohibition of causing an unnecessary blessing, they are sufficient to rely on not to cancel answering something holy. After putting on the tefillin of the head, make three windings on the middle finger. First, one winding on the middle joint, then two windings on the lower joint (and wrap the remainder on the palm of the hand). At the end of the windings, tie a knot."
+  },
+  "he:Shacharit/Morning Prayer:1": {
+   "kind": "instruction",
+   "en": "Proper to say before prayer:"
+  },
+  "he:Shacharit/Morning Prayer:2": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Prayer:3": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Prayer:4": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Prayer:5": {
+   "parts": [
+    {
+     "text": "<small>ביום שאין אומרים תחנון אין אומרים זה:</small>",
+     "kind": "instruction",
+     "en": "On days when Tachanun is not said, this is not said:"
+    },
+    {
+     "text": "<br>אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit"
+    },
+    {
+     "text": " זָכְרֵנוּ בְּזִכָּרוֹן טוֹב לְפָנֶיךָ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit"
+    },
+    {
+     "text": " וּפָקְדֵנוּ בִּפְקֻדַּת יְשׁוּעָה וְרַחֲמִים מִשְּׁמֵי שְׁמֵי קֶדֶם,",
+     "kind": "prayer",
+     "when": "tachanunShacharit"
+    },
+    {
+     "text": " וּזְכָר־לָנוּ יְיָ אֱלֹהֵינוּ אַהֲבַת הַקַּדְמוֹנִים אַבְרָהָם יִצְחָק וְיִשְׂרָאֵל עֲבָדֶיךָ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit"
+    },
+    {
+     "text": " וְאֶת־הַבְּרִית וְאֶת־הַחֶסֶד וְאֶת־הַשְּׁבוּעָה שֶׁנִּשְׁבַּעְתָּ לְאַבְרָהָם אָבִינוּ בְּהַר הַמּוֹרִיָּה,",
+     "kind": "prayer",
+     "when": "tachanunShacharit"
+    },
+    {
+     "text": " וְאֶת־הָעֲקֵדָה שֶׁעָקַד אֶת־יִצְחָק בְּנוֹ עַל־גַּבֵּי הַמִּזְבֵּחַ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit"
+    },
+    {
+     "text": " כַּכָּתוּב בְּתוֹרָתֶךָ:",
+     "kind": "prayer",
+     "when": "tachanunShacharit"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:6": {
+   "kind": "prayer",
+   "node": "morning.akeidah"
+  },
+  "he:Shacharit/Morning Prayer:7": {
+   "kind": "instruction",
+   "en": "On days when Tachanun is not said, this is not said:"
+  },
+  "he:Shacharit/Morning Prayer:8": {
+   "kind": "prayer",
+   "when": "tachanunShacharit"
+  },
+  "he:Shacharit/Morning Prayer:9": {
+   "kind": "prayer",
+   "node": "morning.leolam_yehei_adam"
+  },
+  "he:Shacharit/Morning Prayer:10": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Prayer:11": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Prayer:12": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Morning Prayer:13": {
+   "kind": "prayer",
+   "node": "shema.shema"
+  },
+  "he:Shacharit/Morning Prayer:14": {
+   "kind": "instruction",
+   "en": "Blessed be the name of His glorious kingdom for all eternity:"
+  },
+  "he:Shacharit/Morning Prayer:15": {
+   "kind": "prayer",
+   "node": "shema.vehaya"
+  },
+  "he:Shacharit/Morning Prayer:16": {
+   "kind": "prayer",
+   "node": "shema.emet_veyatziv"
+  },
+  "he:Shacharit/Morning Prayer:17": {
+   "kind": "prayer",
+   "node": "shema.emet_veemuna"
+  },
+  "he:Shacharit/Morning Prayer:18": {
+   "kind": "instruction",
+   "en": "It is very proper to say the portion of Terumat HaDeshen and the arrangement of the altar every day. It may be said even before dawn in winter. In summer, say it before the Tamid portion:"
+  },
+  "he:Shacharit/Morning Prayer:19": {
+   "kind": "prayer",
+   "node": "korbanot.terumat_hadeshen"
+  },
+  "he:Shacharit/Morning Prayer:20": {
+   "parts": [
+    {
+     "text": "<small>ביום שאין אומרים תחנון אין אומרים זה:</small>",
+     "kind": "instruction",
+     "en": "On days when Tachanun is not said, this is not said:"
+    },
+    {
+     "text": "<br><b>יְהִי רָצוֹן</b> מִלְּפָנֶֽיךָ יְיָ אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " שֶׁתְּרַחֵם עָלֵֽינוּ וְתִמְחֹל לָֽנוּ עַל כָּל־חַטֹּאתֵֽינוּ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " וּתְכַפֵּר לָֽנוּ עַל כָּל־עֲוֹנוֹתֵֽינוּ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " וְתִמְחֹל וְתִסְלַח לָֽנוּ עַל כָּל־פְּשָׁעֵֽינוּ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " וְשֶׁיִבָּנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵֽינוּ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " וְנַקְרִיב לְפָנֶֽיךָ קָרְבַּן הַתָּמִיד שֶׁיְּכַפֵּר בַּעֲדֵֽנוּ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " כְּמוֹ שֶׁכָּתַֽבְתָּ עָלֵֽינוּ בְּתוֹרָתֶֽךָ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " עַל־יְדֵי משֶׁה עַבְדֶּֽךָ מִפִּי כְבוֹדֶֽךָ כָּאָמוּר:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:21": {
+   "kind": "prayer",
+   "node": "korbanot.tamid"
+  },
+  "he:Shacharit/Morning Prayer:22": {
+   "kind": "prayer",
+   "node": "korbanot.tamid"
+  },
+  "he:Shacharit/Morning Prayer:23": {
+   "kind": "prayer",
+   "node": "korbanot.ketoret"
+  },
+  "he:Shacharit/Morning Prayer:24": {
+   "kind": "prayer",
+   "node": "korbanot.ketoret"
+  },
+  "he:Shacharit/Morning Prayer:25": {
+   "parts": [
+    {
+     "text": "<b>תָּנוּ רַבָּנָן</b>,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " פִּטּוּם הַקְּטֹֽרֶת כֵּיצַד: שְׁלֹש מֵאוֹת וְשִׁשִּׁים וּשְׁמוֹנָה מָנִים הָיוּ בָהּ. שְׁלֹש מֵאוֹת וְשִׁשִּׁים וַחֲמִשָּׁה כְּמִנְיַן יְמוֹת הַחַמָּה,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " מָנֶה לְכָל־יוֹם,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " פְּרַס בַּשַּׁחֲרִית וּפְרַס בֵּין הָעַרְבָּֽיִם,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וּשְׁלשָׁה מָנִים יְתֵרִים,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " שֶׁמֵּהֶם מַכְנִיס כֹּהֵן גָּדוֹל מְלֹא חָפְנָיו בְּיוֹם הַכִּפּוּרִים,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וּמַחֲזִירָן לְמַכְתֶּֽשֶׁת בְּעֶֽרֶב יוֹם הַכִּפּוּרִים,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְשׁוֹחֲקָן יָפָה יָפָה כְּדֵי שֶׁתְּהֵא דַקָּה מִן הַדַּקָּה. וְאַחַד עָשָׂר סַמְּמָנִין הָֽיוּ בָהּ. וְאֵֽלּוּ־הֵן: ",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": "<small>א</small>",
+     "kind": "prayer",
+     "en": "1",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " הַצֳּרִי ",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": "<small>ב</small>",
+     "kind": "prayer",
+     "en": "2",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְהַצִּפֹּֽרֶן, ",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": "<small>ג</small>",
+     "kind": "prayer",
+     "en": "3",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " הַחֶלְבְּנָה ",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": "<small>ד</small>",
+     "kind": "prayer",
+     "en": "4",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְהַלְּבוֹנָה מִשְׁקַל שִׁבְעִים שִׁבְעִים מָנֶה, ",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": "<small>ה</small>",
+     "kind": "prayer",
+     "en": "5",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " מוֹר ",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": "<small>ו</small>",
+     "kind": "prayer",
+     "en": "6",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וּקְצִיעָה, ",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": "<small>ז</small>",
+     "kind": "prayer",
+     "en": "7",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " שִׁבֹּֽלֶת נֵרְדְּ ",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": "<small>ח</small>",
+     "kind": "prayer",
+     "en": "8",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְכַרְכֹּם מִשְׁקַל שִׁשָּׁה עָשָׂר שִׁשָּׁה עָשָׂר מָנֶה, ",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": "<small>ט</small>",
+     "kind": "prayer",
+     "en": "9",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " הַקּשְׁטְ שְׁנֵים עָשָׂר, ",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": "<small>י</small>",
+     "kind": "prayer",
+     "en": "10",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " קִלּוּפָה שְׁלשָׁה, ",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": "<small>יא</small>",
+     "kind": "prayer",
+     "en": "11",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " קִנָּמוֹן תִּשְׁעָה. בֹּרִית כַּרְשִׁינָה תִּשְׁעָה קַבִּין,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " יֵין קַפְרִיסִין סְאִין תְּלָתָא וְקַבִּין תְּלָתָא,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְאִם אֵין לוֹ יֵין קַפְרִיסִין מֵבִיא חֲמַר חִוַּרְיָן עַתִּיק. מֶֽלַח סְדוֹמִית רֹֽבַע,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " מַעֲלֶה עָשָׁן,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " כָּל־שֶׁהוּא. רַבִּי נָתָן הַבַּבְלִי אוֹמֵר: אַף כִּפַּת הַיַּרְדֵּן כָּל־שֶׁהִיא,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְאִם נָֽתַן בָּהּ דְּבַשׁ פְּסָלָהּ,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְאִם חִסַּר אֶחָד מִכָּל־סַמְּמָנֶֽיהָ חַיָּב מִיתָה:",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:26": {
+   "kind": "prayer",
+   "node": "korbanot.eizehu_mekoman"
+  },
+  "he:Shacharit/Morning Prayer:27": {
+   "kind": "prayer",
+   "node": "korbanot.eizehu_mekoman"
+  },
+  "he:Shacharit/Morning Prayer:28": {
+   "kind": "prayer",
+   "node": "korbanot.eizehu_mekoman"
+  },
+  "he:Shacharit/Morning Prayer:29": {
+   "parts": [
+    {
+     "text": "<b>יְיָ</b> צְבָאוֹת עִמָּנוּ,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " מִשְׂגָּב־לָנוּ אֱלֹהֵי יַעֲקֹב סֶלָה ",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": "<small>ג״פ</small>",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": ": יְיָ צְבָאוֹת,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " אַשְׁרֵי אָדָם בֹּטֵחַ בָּךְ ",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": "<small>ג״פ</small>",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": ": יְיָ הוֹשִׁיעָה,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " הַמֶּלֶךְ יַעֲנֵנוּ בְיוֹם־קָרְאֵנוּ ",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": "<small>ג״פ</small>",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": ":<br>וְעָרְבָה לַיָי מִנְחַת יְהוּדָה וִירוּשָׁלָיִם,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמֹנִיּוֹת:",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:30": {
+   "kind": "prayer",
+   "node": "korbanot.abaye"
+  },
+  "he:Shacharit/Morning Prayer:31": {
+   "parts": [
+    {
+     "text": "<b>אָֽנָּא</b>,",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": " בְּכֹֽחַ גְּדֻלַּת יְמִינְךָ,",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": " תַּתִּיר צְרוּרָה. ",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": "<small>אב״ג ית״ץ</small>",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": "<br>קַבֵּל רִנַּת עַמְּךָ,",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": " שַׂגְּבֵֽנוּ,",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": " טַהֲרֵֽנוּ נוֹרָא. ",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": "<small>קר״ע שט״ן</small>",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": "<br>נָא גִבּוֹר,",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": " דּוֹרְשֵׁי יִחוּדְךָ כְּבָבַת שָׁמְרֵם. ",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": "<small>נג״ד יכ״ש</small>",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": "<br>בָּרְכֵם טַהֲרֵם,",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": " רַחֲמֵי צִדְקָתְךָ תָּמִיד גָּמְלֵם. ",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": "<small>בט״ר צת״ג</small>",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": "<br>חֲסִין קָדוֹשׁ,",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": " בְּרוֹב טוּבְךָ נַהֵל עֲדָתֶֽךָ. ",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": "<small>חק״ב טנ״ע</small>",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": "<br>יָחִיד גֵּאֶה לְעַמְּךָ פְּנֵה,",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": " זוֹכְרֵי קְדֻשָּׁתֶֽךָ. ",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": "<small>יג״ל פז״ק</small>",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": "<br>שַׁוְעָתֵֽנוּ קַבֵּל וּשְׁמַע צַעֲקָתֵֽנוּ,",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": " יוֹדֵֽעַ תַּעֲלוּמוֹת. ",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": "<small>שק״ו צי״ת</small>",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    },
+    {
+     "text": "<br>בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד:",
+     "kind": "prayer",
+     "node": "korbanot.ana_bekoach"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:32": {
+   "parts": [
+    {
+     "text": "<small>ביום שאין אומרים תחנון אין אומרים זה:</small>",
+     "kind": "instruction",
+     "en": "On days when Tachanun is not said, this is not said:"
+    },
+    {
+     "text": "<br><b>רִבּֽוֹן</b> הָעוֹלָמִֽים,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " אַתָּֽה צִוִּיתָֽנוּ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " לְהַקְרִֽיב קָרְבַּֽן הַתָּמִֽיד בְּמוֹעֲדֽוֹ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " וּלְהַקְטִֽיר הַקְּטֹֽרֶת בְּזְמַנָּֽהּ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " וְלִהְיוֹת הַכֹּהֲנִים בַּעֲבוֹדָתָם,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " וּלְוִיִּים בְּדוּכָנָם,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " וְיִשְׂרָאֵל בְּמַעֲמָדָם,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " וְעַתָּה בַּעֲוֹנוֹתֵינוּ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " חָרַב בֵּית הַמִּקְדָּֽשׁ וּבֻטַּֽל הַתָּמִֽיד וְהַקְּטֹֽרֶת,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " וְאֵין לָנוּ לֹא כֹהֵן בַּעֲבוֹדָתוֹ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " וְלֹא לֵוִי בְּדוּכָנוֹ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " וְלא יִשְֹרָאֵל בְּמַעֲמָדוֹ: לָכֵן יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " שֶׁיְּהֵא שִֹיחַ שִׂפְתוֹתֵינוּ חָשׁוּב וּמְקֻבָּל לְפָנֶיךָ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " כְּאִלּוּ הִקְרַבְנוּ קָרְבַּן הַתָּמִיד בְּמוֹעֲדוֹ וְעָמַדְנוּ עַל מַעֲמָדוֹ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " וְהִקְּטַרְנוּ הַקְּטֹרֶת בִּזְמַנָּהּ,",
+     "kind": "prayer",
+     "when": "tachanunShacharit",
+     "node": "korbanot.yehi_ratzon"
+    },
+    {
+     "text": " כְּמָה שֶׁנֶּאֱמַר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּנְשַׁלְּמָה פָרִים שְׂפָתֵינוּ: וְנֶּאֱמַר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " זֹאת הַתּוֹרָה לָעֹלָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לַמִּנְחָה וְלַחַטָּאת וְלָאָשָׁם וְלַמִּלּוּאִים וּלְזֶבַח הַשְּׁלָמִים:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:33": {
+   "parts": [
+    {
+     "text": "<small>א</small>",
+     "kind": "prayer",
+     "en": "1",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " אֵיזֶהוּ מְקוֹמָן שֶׁל זְבָחִים,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " קָדְשֵׁי קָדָשִׁים שְׁחִיטָתָן בַּצָּפוֹן. פָּר וְשָׂעִיר שֶׁל יוֹם הַכִּפּוּרִים שְׁחִיטָתָן בַּצָּפוֹן,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְקִבּוּל דָּמָן בִּכְלִי שָׁרֵת בַּצָּפוֹן,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְדָמָן טָעוּן הַזָּיָה עַל בֵּין הַבַּדִּים,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְעַל הַפָּרֹכֶת,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְעַל מִזְבַּח הַזָּהָב. מַתָּנָה אַחַת מֵהֶן מְעַכָּבֶת. שְׁיָרֵי הַדָּם הָיָה שׁוֹפֵךְ עַל יְסוֹד מַעֲרָבִי שֶׁל מִזְבֵּחַ הַחִיצוֹן,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " אִם לֹא נָתַן לֹא עִכֵּב:",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:34": {
+   "parts": [
+    {
+     "text": "<small>ב</small>",
+     "kind": "prayer",
+     "en": "2",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " פָּרִים הַנִּשְֹרָפִים וּשְֹעִירִים הַנִּשְֹרָפִים שְׁחִיטָתָן בַּצָּפוֹן,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְקִבּוּל דָּמָן בִּכְלִי שָׁרֵת בַּצָּפוֹן,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְדָמָן טָעוּן הַזָּיָה עַל הַפָּרֹכֶת,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְעַל מִזְבַּח הַזָּהָב. מַתָּנָה אַחַת מֵהֶן מְעַכָּבֶת,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " שְׁיָרֵי הַדָּם,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " הָיָה שׁוֹפֵךְ עַל יְסוֹד מַעֲרָבִי שֶׁל מִזְבֵּחַ הַחִיצוֹן,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " אִם לֹא נָתַן לֹא עִכֵּב,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " אֵלּוּ וָאֵלּוּ נִשְֹרָפִין בְּבֵית הַדָּשֶׁן:",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:35": {
+   "parts": [
+    {
+     "text": "<small>ג</small>",
+     "kind": "prayer",
+     "en": "3",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " חַטָּאוֹת הַצִּבּוּר וְהַיָּחִיד,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " אֵלּוּ הֵן חַטּאוֹת הַצִּבּוּר: שְֹעִירֵי רָאשֵׁי חֳדָשִׁים וְשֶׁל מוֹעֲדוֹת,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " שְׁחִיטָתָן בַּצָּפוֹן,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְקִבּוּל דָּמָן בִּכְלִי שָׁרֵת בַּצָּפוֹן,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְדָמָן טָעוּן אַרְבַּע מַתָּנוֹת עַל אַרְבַּע קְרָנוֹת,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " כֵּיצַד: עָלָה בַכֶּבֶשׁ וּפָנָה לַסּוֹבֵב,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וּבָא לוֹ לְקֶרֶן דְּרוֹמִית מִזְרָחִית,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " מִזְרָחִית צְפוֹנִית,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " צְפוֹנִית מַעֲרָבִית,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " מַעֲרָבִית דְּרומִית. שְׁיָרֵי הַדָּם הָיָה שׁוֹפֵךְ עַל יְסוֹד דְּרומִי,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְנֶאֱכָלִין לִפְנִים מִן הַקְּלָעִים לְזִכְרֵי כְהֻנָּה בְּכָל מַאֲכָל,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " לְיוֹם וָלַיְלָה עַד חֲצוֹת:",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:36": {
+   "parts": [
+    {
+     "text": "<small>ד</small>",
+     "kind": "prayer",
+     "en": "4",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " הָעוֹלָה,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " קדֶשׁ קָדָשִׁים,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " שְׁחִיטָתָהּ בַּצָּפוֹן,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְקִבּוּל דָּמָהּ בִּכְלִי שָׁרֵת בַּצָּפוֹן,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְדָמָהּ טָעוּן שְׁתֵּי מַתָּנוֹת שֶׁהֵן אַרְבַּע,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וּטְעוּנָה הֶפְשֵׁט וְנִתּוּחַ,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְכָלִיל לָאִשִּׁים:",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:37": {
+   "parts": [
+    {
+     "text": "<small>ה</small>",
+     "kind": "prayer",
+     "en": "5",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " זִבְחֵי שַׁלְמֵי צִבּוּר וַאֲשָׁמוֹת,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " אֵלּוּ הֵן אֲשָׁמות: אֲשַׁם גְּזֵלוֹת,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " אֲשַׁם מְעִילוֹת,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " אֲשַׁם שִׁפְחָה חֲרוּפָה,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " אֲשַׁם נָזִיר,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " אֲשַׁם מְצוֹרָע,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " אָשָׁם תָּלוּי. שְׁחִיטָתָן בַּצָּפוֹן,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְקִבּוּל דָּמָן בִּכְלִי שָׁרֵת בַּצָּפוֹן,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְדָמָן טָעוּן שְׁתֵּי מַתָּנוֹת שֶׁהֵן אַרְבַּע,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְנֶאֱכָלִין לִפְנִים מִן הַקְּלָעִים לְזִכְרֵי כְהֻנָּה,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " בְּכָל מַאֲכָל,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " לְיוֹם וָלַיְלָה עַד חֲצוֹת:",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:38": {
+   "parts": [
+    {
+     "text": "<small>ו</small>",
+     "kind": "prayer",
+     "en": "6",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " הַתּוֹדָה וְאֵיל נָזִיר,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " קָדָשִׁים קַלִּים,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " שְׁחִיטָתָן בְּכָל מָקוֹם בָּעֲזָרָה,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְדָמָן טָעוּן שְׁתֵּי מַתָּנוֹת שֶׁהֵן אַרְבַּע,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְנֶאֱכָלִין בְּכָל הָעִיר,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " לְכָל אָדָם,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " בְּכָל מַאֲכָל,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " לְיוֹם וָלַיְלָה עַד חֲצוֹת: הַמּוּרָם מֵהֶם כַּיּוֹצֵא בָהֶם,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " אֶלָּא שֶׁהַמּוּרָם נֶאֱכָל לַכּהֲנִים לִנְשֵׁיהֶם וְלִבְנֵיהֶם וּלְעַבְדֵיהֶם:",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:39": {
+   "parts": [
+    {
+     "text": "<small>ז</small>",
+     "kind": "prayer",
+     "en": "7",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " שְׁלָמִים,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " קָדָשִׁים קַלִּים,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " שְׁחיטָתָן בְּכָל מָקוֹם בָּעֲזָרָה,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְדָמָן טָעוּן שְׁתֵּי מַתָּנוֹת שֶׁהֵן אַרְבַּע,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְנֶאֱכָלִין בְּכָל הָעִיר,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " לְכָל אָדָם,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " בְּכָל מַאֲכָל,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " לִשְׁנֵי יָמִים וְלַיְלָה אֶחָד. הַמּוּרָם מֵהֶם,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " כַּיּוֹצֵא בָהֶם,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " אֶלָּא,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " שֶׁהַמּוּרָם נֶאֱכָל לַכּהֲנִים לִנְשֵׁיהֶם וְלִבְנֵיהֶם וּלְעַבְדֵיהֶם:",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:40": {
+   "parts": [
+    {
+     "text": "<small>ח</small>",
+     "kind": "prayer",
+     "en": "8",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " הַבְּכוֹר וְהַמַּעֲשֵֹר וְהַפֶּסַח,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " קָדָשִׁים קַלִּים שְׁחִיטָתָן בְּכָל מָקוֹם בָּעֲזָרָה,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְדָמָן טָעוּן מַתָּנָה אֶחָת,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וּבִלְבָד שֶׁיִּתֵּן כְּנֶגֶד הַיְסוֹד. שִׁנָּה בַאֲכִילָתָן,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " הַבְּכוֹר נֶאֱכָל לַכֹּהֲנִים,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְהַמַּעֲשֵֹר לְכָל אָדָם,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְנֶאֱכָלִין בְּכָל הָעִיר,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " בְּכָל מַאֲכָל,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " לִשְׁנֵי יָמִים וְלַיְלָה אֶחָד. הַפֶּסַח אֵינוֹ נֶאֱכָל אֶלָּא בַלַּיְלָה,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְאֵינוֹ נֶאֱכָל אֶלָּא עַד חֲצוֹת,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְאֵינוֹ נֶאֱכָל אֶלָּא לִמְנוּיָו,",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    },
+    {
+     "text": " וְאֵינוֹ נֶאֱכָל אֶלָּא צָלִי:",
+     "kind": "prayer",
+     "node": "korbanot.eizehu_mekoman"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:41": {
+   "parts": [
+    {
+     "text": "<b>רַבִּֽי יִשְׁמָעֵֽאל</b> אוֹמֵֽר,",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " בִּשְׁלֽשׁ עֶשְׂרֵֽה מִדּֽוֹת הַתּוֹרָֽה נִדְרֶֽשֶׁת: ",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": "<small>א</small>",
+     "kind": "prayer",
+     "en": "1",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " מִקַּֽל וָחֹֽמֶר. ",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": "<small>ב</small>",
+     "kind": "prayer",
+     "en": "2",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " וּמִגְּזֵרָֽה שָׁוָֽה. ",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": "<small>ג</small>",
+     "kind": "prayer",
+     "en": "3",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " מִבִּנְיַֽן אָב מִכָּתֽוּב אֶחָֽד,",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " וּמִבִּנְיַֽן אָב מִשְּׁנֵֽי כְתוּבִֽים. ",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": "<small>ד</small>",
+     "kind": "prayer",
+     "en": "4",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " מִכְּלָֽל וּפְרָֽט. ",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": "<small>ה</small>",
+     "kind": "prayer",
+     "en": "5",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " וּמִפְּרָֽט וּכְלָֽל. ",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": "<small>ו</small>",
+     "kind": "prayer",
+     "en": "6",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " כְּלָֽל וּפְרָֽט וּכְלָֽל,",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " אִי אַתָּֽה דָן אֶֽלָּא כְּעֵֽין הַפְּרָֽט. ",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": "<small>ז</small>",
+     "kind": "prayer",
+     "en": "7",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " מִכְּלָֽל שֶׁהֽוּא צָרִֽיךְ לִפְרָֽט,",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " וּמִפְּרָֽט שֶׁהֽוּא צָרִֽיךְ לִכְלָֽל. ",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": "<small>ח</small>",
+     "kind": "prayer",
+     "en": "8",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " כָּל־דָּבָֽר שֶׁהָיָֽה בִּכְלָֽל וְיָצָֽא מִן הַכְּלָֽל לְלַמֵּֽד,",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " לֹא לְלַמֵּֽד עַל עַצְמֽוֹ יָצָֽא,",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " אֶֽלָּא לְלַמֵּֽד עַל־הַכְּלָֽל כֻּלּֽוֹ יָצָֽא. ",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": "<small>ט</small>",
+     "kind": "prayer",
+     "en": "9",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " כָּל־דָּבָֽר שֶׁהָיָֽה בִּכְלָֽל,",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " וְיָצָֽא לִטְעֽוֹן טַֽעַן אֶחָֽד שֶׁהֽוּא כְעִנְיָנֽוֹ,",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " יָצָֽא לְהָקֵֽל וְלֹא לְהַחֲמִֽיר. ",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": "<small>י</small>",
+     "kind": "prayer",
+     "en": "10",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " כָּל־דָּבָֽר שֶׁהָיָֽה בִּכְלָֽל וְיָצָֽא לִטְעֽוֹן טַֽעַן אַחֵֽר שֶׁלֹּֽא כְעִנְיָנֽוֹ,",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " יָצָֽא לְהָקֵֽל וּלְהַחֲמִֽיר. ",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": "<small>יא</small>",
+     "kind": "prayer",
+     "en": "11",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " כָּל־דָּבָֽר שֶׁהָיָֽה בִּכְלָֽל וְיָצָֽא לִדּֽוֹן בְּדָּבָֽר חָדָֽשׁ,",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " אִי אַתָּֽה יָכֽוֹל לְהַחֲזִירֽוֹ לִכְלָלֽוֹ,",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " עַד שֶׁיַּחֲזִירֶֽנּוּ הַכָּתֽוּב לִכְלָלֽוֹ בְּפֵרֽוּשׁ. ",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": "<small>יב</small>",
+     "kind": "prayer",
+     "en": "12",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " דָּבָֽר הַלָּמֵֽד מֵעִנְיָנֽוֹ,",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " וְדָבָֽר הַלָּמֵֽד מִסּוֹפֽוֹ. ",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": "<small>יג</small>",
+     "kind": "prayer",
+     "en": "13",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " וְכֵן (",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": "<small>נ״א</small>",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " וכאן) שְׁנֵי כְתוּבִֽים הַמַּכְחִישִֽׁים זֶה אֶת־זֶה,",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    },
+    {
+     "text": " עַד שֶׁיָּבֹֽא הַכָּתֽוּב הַשְּׁלִישִֽׁי וְיַכְרִֽיעַ בֵּינֵיהֶֽם:",
+     "kind": "prayer",
+     "node": "korbanot.rabbi_yishmael"
+    }
+   ]
+  },
+  "he:Shacharit/Morning Prayer:42": {
+   "kind": "prayer",
+   "node": "korbanot.yehi_ratzon"
+  },
+  "he:Shacharit/Kaddish DeRabbanan:1": {
+   "parts": [
+    {
+     "text": "<b>יִתְגַּדַּֽל</b> וְיִתְקַדַּֽשׁ שְׁמֵהּ רַבָּֽא. ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>אמן</small>",
+     "kind": "instruction",
+     "en": "Amen",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": " בְּעָלְמָֽא דִּי בְרָֽא כִרְעוּתֵהּ וְיַמְלִֽיךְ מַלְכוּתֵֽהּ,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְיַצְמַח פּוּרְקָנֵהּ וִיקָרֵב מְשִׁיחֵהּ. ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>אמן</small>",
+     "kind": "instruction",
+     "en": "Amen",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": " בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּֽי דְכָל־בֵּֽית יִשְׂרָאֵֽל,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " בַּעֲגָלָא וּבִזְמַֽן קָרִיב וְאִמְרֽוּ אָמֵֽן: יְהֵא שְׁמֵהּ רַבָּֽא מְבָרַֽךְ לְעָלַֽם וּלְעָלְמֵֽי עָלְמַיָּֽא. יִתְבָּרֵֽךְ,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְיִשְׁתַּבַּֽח,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְיִתְפָּאֵֽר,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְיִתְרוֹמָֽם,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְיִתְנַשֵּֽׂא,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְיִתְהַדָּֽר,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְיִתְעַלֶּֽה,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְיִתְהַלָּֽל,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא. ",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>אמן</small>",
+     "kind": "instruction",
+     "en": "Amen"
+    },
+    {
+     "text": " לְעֵֽלָּא מִן כָּל־בִּרְכָתָא וְשִׁירָתָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " דַּאֲמִירָן בְּעָלְמָֽא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאִמְרוּ אָמֵן:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shacharit/Kaddish DeRabbanan:2": {
+   "parts": [
+    {
+     "text": "<b>עַל</b> יִשְׂרָאֵֽל וְעַל רַבָּנָֽן. וְעַל תַּלְמִידֵיהוֹן וְעַל כָּל־תַּלְמִידֵֽי תַלְמִידֵיהוֹן. וְעַל כָּל־מָאן דְּעָסְקִין בְּאוֹרַיְתָא. דִּי־בְאַתְרָא הָדֵין וְדִי בְכָל־אֲתַר וַאֲתַר יְהֵא לְהוֹן וּלְכוֹן שְׁלָמָא רַבָּֽא חִנָּא וְחִסְדָּא וְרַחֲמִין וְחַיִּין־אֲרִיכִין וּמְזוֹנָא־רְוִיחָא וּפֻרְקָנָא מִן קֳדָם אֲבוּהוֹן דְבִשְׁמַיָּֽא וְאִמְרוּ אָמֵן: יְהֵא שְׁלָמָא רַבָּֽא מִן־שְׁמַיָּֽא וְחַיִּֽים טוֹבִֽים עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵֽל וְאִמְרֽוּ אָמֵֽן: עֹשֶֽׂה שָׁלֽוֹם (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>בעשי״ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:"
+    },
+    {
+     "text": " הַשָּׁלֽוֹם) בִּמְרוֹמָֽיו הוּא יַעֲשֶֽׂה שָׁלֽוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵֽל וְאִמְרֽוּ אָמֵֽן:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shacharit/Hodu:1": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shacharit/Hodu:2": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shacharit/Hodu:3": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shacharit/Hodu:4": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shacharit/Hodu:5": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shacharit/Hodu:6": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shacharit/Hodu:7": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shacharit/Hodu:8": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shacharit/Pesukei Dezimra:1": {
+   "kind": "instruction",
+   "en": "For the sake of the holy unity...",
+   "gloss": "Kabbalistic intention before Baruch She'amar"
+  },
+  "he:Shacharit/Pesukei Dezimra:2": {
+   "kind": "prayer",
+   "node": "pz.baruch_sheamar"
+  },
+  "he:Shacharit/Pesukei Dezimra:3": {
+   "kind": "prayer",
+   "node": "pz.mizmor_letoda"
+  },
+  "he:Shacharit/Pesukei Dezimra:4": {
+   "kind": "prayer",
+   "node": "pz.yehi_chevod"
+  },
+  "he:Shacharit/Pesukei Dezimra:5": {
+   "kind": "prayer",
+   "node": "pz.ashrei"
+  },
+  "he:Shacharit/Pesukei Dezimra:6": {
+   "kind": "prayer",
+   "node": "pz.halleluyah"
+  },
+  "he:Shacharit/Pesukei Dezimra:7": {
+   "kind": "prayer",
+   "node": "pz.halleluyah"
+  },
+  "he:Shacharit/Pesukei Dezimra:8": {
+   "kind": "prayer",
+   "node": "pz.halleluyah"
+  },
+  "he:Shacharit/Pesukei Dezimra:9": {
+   "kind": "prayer",
+   "node": "pz.halleluyah"
+  },
+  "he:Shacharit/Pesukei Dezimra:10": {
+   "kind": "prayer",
+   "node": "pz.halleluyah"
+  },
+  "he:Shacharit/Pesukei Dezimra:11": {
+   "kind": "prayer",
+   "node": "pz.baruch_hashem_leolam"
+  },
+  "he:Shacharit/Pesukei Dezimra:12": {
+   "kind": "prayer",
+   "node": "pz.vayevarech_david"
+  },
+  "he:Shacharit/Pesukei Dezimra:13": {
+   "kind": "prayer",
+   "node": "pz.vayevarech_david"
+  },
+  "he:Shacharit/Pesukei Dezimra:14": {
+   "kind": "prayer",
+   "node": "pz.vayevarech_david"
+  },
+  "he:Shacharit/Pesukei Dezimra:15": {
+   "kind": "prayer",
+   "node": "pz.shirat_hayam"
+  },
+  "he:Shacharit/Pesukei Dezimra:16": {
+   "kind": "prayer",
+   "node": "pz.yishtabach"
+  },
+  "he:Shacharit/Pesukei Dezimra:17": {
+   "kind": "instruction",
+   "en": "During the Ten Days of Repentment, before Half Kaddish, say this:",
+   "gloss": "Said only in Aseret Yemei Teshuva",
+   "forgot": true
+  },
+  "he:Shacharit/Pesukei Dezimra:18": {
+   "parts": [
+    {
+     "text": "<b>יִתְגַּדַּֽל</b> וְיִתְקַדַּֽשׁ שְׁמֵהּ רַבָּֽא. ",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<small>אמן</small>",
+     "kind": "instruction",
+     "en": "Amen",
+     "node": "kaddish.half",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " בְּעָלְמָֽא דִּי בְרָֽא כִרְעוּתֵהּ וְיַמְלִֽיךְ מַלְכוּתֵֽהּ,",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " וְיַצְמַח פּוּרְקָנֵהּ וִיקָרֵב מְשִׁיחֵהּ. ",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<small>אמן</small>",
+     "kind": "instruction",
+     "en": "Amen",
+     "node": "kaddish.half",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּֽי דְכָל־בֵּֽית יִשְׂרָאֵֽל,",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " בַּעֲגָלָא וּבִזְמַֽן קָרִיב וְאִמְרֽוּ אָמֵֽן: יְהֵא שְׁמֵהּ רַבָּֽא מְבָרַֽךְ לְעָלַֽם וּלְעָלְמֵֽי עָלְמַיָּֽא. יִתְבָּרֵֽךְ,",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " וְיִשְׁתַּבַּֽח,",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " וְיִתְפָּאֵֽר,",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " וְיִתְרוֹמָֽם,",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " וְיִתְנַשֵּֽׂא,",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " וְיִתְהַדָּֽר,",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " וְיִתְעַלֶּֽה,",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " וְיִתְהַלָּֽל,",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא. ",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<small>אמן</small>",
+     "kind": "instruction",
+     "en": "Amen",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " לְעֵֽלָּא מִן כָּל־בִּרְכָתָא וְשִׁירָתָא,",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " דַּאֲמִירָן בְּעָלְמָֽא,",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " וְאִמְרוּ אָמֵן:",
+     "kind": "prayer",
+     "node": "kaddish.half",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shacharit/Pesukei Dezimra:19": {
+   "parts": [
+    {
+     "text": "<small>חזן</small>",
+     "kind": "speaker",
+     "node": "barchu",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "Chazzan:"
+    },
+    {
+     "text": " <b>בָּרְכֽוּ אֶת־יְיָ הַמְבֹרָֽךְ:</b>",
+     "kind": "prayer",
+     "node": "barchu",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shacharit/Pesukei Dezimra:20": {
+   "parts": [
+    {
+     "text": "<small>קהל וחזן</small>",
+     "kind": "speaker",
+     "node": "barchu",
+     "role": "congregation_then_chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "Congregation and Chazzan:"
+    },
+    {
+     "text": " בָּרֽוּךְ יְיָ הַמְבֹרָֽךְ לְעוֹלָֽם וָעֶֽד:",
+     "kind": "prayer",
+     "node": "barchu",
+     "role": "congregation_then_chazzan",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shacharit/Blessings of the Shema:1": {
+   "kind": "instruction",
+   "en": "Blessing over the creation of light and darkness"
+  },
+  "he:Shacharit/Blessings of the Shema:2": {
+   "kind": "instruction",
+   "en": "Blessing over the creation of light and darkness"
+  },
+  "he:Shacharit/Blessings of the Shema:3": {
+   "kind": "instruction",
+   "en": "Blessing over the creation of light and darkness"
+  },
+  "he:Shacharit/Blessings of the Shema:4": {
+   "kind": "instruction",
+   "en": "Blessing over the creation of light and darkness"
+  },
+  "he:Shacharit/Blessings of the Shema:5": {
+   "kind": "instruction",
+   "en": "Blessing over the creation of light and darkness"
+  },
+  "he:Shacharit/Blessings of the Shema:6": {
+   "kind": "instruction",
+   "en": "Blessing over the creation of light and darkness"
+  },
+  "he:Shacharit/Blessings of the Shema:7": {
+   "kind": "instruction",
+   "en": "Blessing over the creation of light and darkness"
+  },
+  "he:Shacharit/Blessings of the Shema:8": {
+   "kind": "instruction",
+   "en": "Blessing over the creation of light and darkness"
+  },
+  "he:Shacharit/Blessings of the Shema:9": {
+   "kind": "instruction",
+   "en": "Blessing of Ahavat Olam"
+  },
+  "he:Shacharit/Blessings of the Shema:10": {
+   "kind": "instruction",
+   "en": "The Shema"
+  },
+  "he:Shacharit/Blessings of the Shema:11": {
+   "kind": "instruction",
+   "en": "Response to the Shema"
+  },
+  "he:Shacharit/Blessings of the Shema:12": {
+   "kind": "instruction",
+   "en": "Vehaya Im Shamoa"
+  },
+  "he:Shacharit/Blessings of the Shema:13": {
+   "kind": "instruction",
+   "en": "Vayomer (Tzitzit)"
+  },
+  "he:Shacharit/Blessings of the Shema:14": {
+   "kind": "instruction",
+   "en": "Emet VeYatziv"
+  },
+  "he:Shacharit/Blessings of the Shema:15": {
+   "kind": "instruction",
+   "en": "Emet VeYatziv"
+  },
+  "he:Shacharit/Blessings of the Shema:16": {
+   "kind": "instruction",
+   "en": "Emet VeYatziv"
+  },
+  "he:Shacharit/Blessings of the Shema:17": {
+   "kind": "instruction",
+   "en": "Emet VeYatziv"
+  },
+  "he:Shacharit/Blessings of the Shema:18": {
+   "kind": "instruction",
+   "en": "Emet VeYatziv"
+  },
+  "he:Shacharit/The Amidah:1": {
+   "kind": "prayer",
+   "node": "amidah.opening"
+  },
+  "he:Shacharit/The Amidah:2": {
+   "kind": "prayer",
+   "node": "amidah.avot"
+  },
+  "he:Shacharit/The Amidah:3": {
+   "parts": [
+    {
+     "text": "<small>בעשי״ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Said only in the silent Amidah"
+    },
+    {
+     "text": " זָכְרֵֽנוּ לְחַיִּֽים,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.avot"
+    },
+    {
+     "text": " מֶֽלֶךְ חָפֵֽץ בַּחַיִּֽים,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.avot"
+    },
+    {
+     "text": " וְכָתְבֵֽנוּ בְּסֵֽפֶר הַחַיִּֽים,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.avot"
+    },
+    {
+     "text": " לְמַעַנְךָֽ אֱלֹהִֽים חַיִּֽים: ",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.avot"
+    }
+   ]
+  },
+  "he:Shacharit/The Amidah:4": {
+   "kind": "prayer",
+   "node": "amidah.avot"
+  },
+  "he:Shacharit/The Amidah:5": {
+   "kind": "prayer",
+   "node": "amidah.gevurot"
+  },
+  "he:Shacharit/The Amidah:6": {
+   "parts": [
+    {
+     "text": "<small>בקיץ</small>",
+     "kind": "instruction",
+     "en": "In summer:",
+     "gloss": "Diaspora Ashkenaz says nothing here in summer"
+    },
+    {
+     "text": " מוֹרִֽיד הַטָּל: ",
+     "kind": "prayer",
+     "when": "!il",
+     "node": "amidah.gevurot"
+    },
+    {
+     "text": "<small>בחורף</small>",
+     "kind": "instruction",
+     "en": "In winter:"
+    },
+    {
+     "text": " מַשִּֽׁיב הָרֽוּחַ וּמוֹרִֽיד הַגֶּֽשֶׁם:",
+     "kind": "prayer",
+     "when": "il",
+     "node": "amidah.gevurot"
+    }
+   ]
+  },
+  "he:Shacharit/The Amidah:7": {
+   "kind": "prayer",
+   "node": "amidah.gevurot"
+  },
+  "he:Shacharit/The Amidah:8": {
+   "parts": [
+    {
+     "text": "<small>בעשי״ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Said only in the silent Amidah"
+    },
+    {
+     "text": " מִי־כָמֽוֹךָ אָב הָרַחֲמָֽן זוֹכֵֽר יְצוּרָֽיו לְחַיִּֽים בְּרַחֲמִים: ",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.gevurot"
+    }
+   ]
+  },
+  "he:Shacharit/The Amidah:9": {
+   "kind": "prayer",
+   "node": "amidah.gevurot"
+  },
+  "he:Shacharit/The Amidah:10": {
+   "kind": "instruction",
+   "en": "When the chazzan repeats the Amidah, the congregation says this:",
+   "gloss": "Kedushah is said only in the repetition"
+  },
+  "he:Shacharit/The Amidah:11": {
+   "parts": [
+    {
+     "text": "<b>אַתָּֽה קָדֽוֹשׁ</b> וְשִׁמְךָֽ קָדֽוֹשׁ,",
+     "kind": "prayer",
+     "node": "amidah.kedusha"
+    },
+    {
+     "text": " וּקְדוֹשִֽׁים בְּכָל־יוֹֽם יְהַלְלֽוּךָ סֶּֽלָה. בָּרֽוּךְ אַתָּֽה יְיָ,",
+     "kind": "prayer",
+     "node": "amidah.kedusha"
+    },
+    {
+     "text": " הָאֵֽל (",
+     "kind": "prayer",
+     "node": "amidah.kedusha"
+    },
+    {
+     "text": "<small>בעשי״ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Said only in the silent Amidah"
+    },
+    {
+     "text": " הַמֶּֽלֶךְ) הַקָּדֽוֹשׁ:",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.kedusha"
+    }
+   ]
+  },
+  "he:Shacharit/The Amidah:12": {
+   "kind": "prayer",
+   "node": "amidah.daat"
+  },
+  "he:Shacharit/The Amidah:13": {
+   "kind": "prayer",
+   "node": "amidah.teshuva"
+  },
+  "he:Shacharit/The Amidah:14": {
+   "kind": "prayer",
+   "node": "amidah.selicha"
+  },
+  "he:Shacharit/The Amidah:15": {
+   "kind": "prayer",
+   "node": "amidah.geula"
+  },
+  "he:Shacharit/The Amidah:16": {
+   "kind": "instruction",
+   "en": "On a public fast day, the chazzan says here Aneinu:",
+   "gloss": "Said only in the repetition"
+  },
+  "he:Shacharit/The Amidah:17": {
+   "kind": "prayer",
+   "node": "amidah.refua"
+  },
+  "he:Shacharit/The Amidah:18": {
+   "parts": [
+    {
+     "text": "<b>בָּרֵךְ עָלֵינוּ</b> יְיָ אֱלֹהֵינוּ אֶת־הַשָּׁנָה הַזֹּאת וְאֵת כָּל־מִינֵי תְבוּאָתָהּ לְטוֹבָה וְתֵן ",
+     "kind": "prayer",
+     "node": "amidah.shanim"
+    },
+    {
+     "text": "<small>בקיץ</small>",
+     "kind": "instruction",
+     "en": "In summer:",
+     "gloss": "Diaspora Ashkenaz says nothing here in summer"
+    },
+    {
+     "text": " בְּרָכָה (",
+     "kind": "prayer",
+     "when": "!il",
+     "node": "amidah.shanim"
+    },
+    {
+     "text": "<small>בחורף</small>",
+     "kind": "instruction",
+     "en": "In winter:"
+    },
+    {
+     "text": " טַל וּמָטָר לִבְרָכָה) עַל פְּנֵי הָאֲדָמָה,",
+     "kind": "prayer",
+     "when": "il",
+     "node": "amidah.shanim"
+    },
+    {
+     "text": " וְשַׂבְּעֵנוּ מִטוּבֶךָ,",
+     "kind": "prayer",
+     "node": "amidah.shanim"
+    },
+    {
+     "text": " וּבָרֵךְ שְׁנָתֵנוּ כַּשָּׁנִים הַטּוֹבוֹת לִבְרָכָה,",
+     "kind": "prayer",
+     "node": "amidah.shanim"
+    },
+    {
+     "text": " כִּי אֵל טוֹב וּמֵטִיב אַתָּה וּמְבָרֵךְ הַשָּׁנִים. בָּרוּךְ אַתָּה יְיָ,",
+     "kind": "prayer",
+     "node": "amidah.shanim"
+    },
+    {
+     "text": " מְבָרֵךְ הַשָּׁנִים:",
+     "kind": "prayer",
+     "node": "amidah.shanim"
+    }
+   ]
+  },
+  "he:Shacharit/The Amidah:19": {
+   "kind": "prayer",
+   "node": "amidah.kibbutz_galuyot"
+  },
+  "he:Shacharit/The Amidah:20": {
+   "parts": [
+    {
+     "text": "<b>הָשִׁיבָה</b> שׁוֹפְטֵינוּ כְּבָרִאשֹׁנָה וְיוֹעֲצֵינוּ כְּבַתְּחִלָּה,",
+     "kind": "prayer",
+     "node": "amidah.din"
+    },
+    {
+     "text": " וְהָסֵר מִמֶּנוּ יָגוֹן וַאֲנָחָה,",
+     "kind": "prayer",
+     "node": "amidah.din"
+    },
+    {
+     "text": " וּמְלוֹךְ עָלֵינוּ אַתָּה יְיָ לְבַדְּךָ בְּחֶסֶד וּבְרַחֲמִים,",
+     "kind": "prayer",
+     "node": "amidah.din"
+    },
+    {
+     "text": " בְּצֶדֶק וּבְמִּשְׁפָּט. בָּרוּךְ אַתָּה יְיָ,",
+     "kind": "prayer",
+     "node": "amidah.din"
+    },
+    {
+     "text": " מֶלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט: (",
+     "kind": "prayer",
+     "node": "amidah.din"
+    },
+    {
+     "text": "<small>בעשי״ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Said only in the silent Amidah"
+    },
+    {
+     "text": " הַמֶּלֶךְ הַמִשְׁפָּט:)",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.din"
+    }
+   ]
+  },
+  "he:Shacharit/The Amidah:21": {
+   "kind": "prayer",
+   "node": "amidah.minim"
+  },
+  "he:Shacharit/The Amidah:22": {
+   "kind": "prayer",
+   "node": "amidah.tzaddikim"
+  },
+  "he:Shacharit/The Amidah:23": {
+   "kind": "prayer",
+   "node": "amidah.yerushalayim"
+  },
+  "he:Shacharit/The Amidah:24": {
+   "kind": "prayer",
+   "node": "amidah.david"
+  },
+  "he:Shacharit/The Amidah:25": {
+   "kind": "prayer",
+   "node": "amidah.shomea_tefilla"
+  },
+  "he:Shacharit/The Amidah:26": {
+   "kind": "prayer",
+   "node": "amidah.avoda"
+  },
+  "he:Shacharit/The Amidah:27": {
+   "parts": [
+    {
+     "text": "<small>בראש חודש ובחול המועד אומרים:</small>",
+     "kind": "instruction",
+     "en": "On Rosh Chodesh and Chol HaMoed, say:"
+    },
+    {
+     "text": "<br>אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " יַעֲלֶה וְיָבֹא,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " וְיַגִּיעַ וְיֵרָאֶה וְיֵרָצֶה,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " וְיִשָּׁמַע וְיִפָּקֵד וְיִזָּכֵר,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " זִכְרוֹנֵנוּ וּפִקְדוֹנֵנוּ,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " וְזִכְרוֹן אֲבוֹתֵינוּ,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " וְזִכְרוֹן מָשִׁיחַ בֶּן־דָּוִד עַבְדֶּךָ,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " וְזִכְרוֹן יְרוּשָׁלַיִם עִיר קָדְשֶׁךָ,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " וְזִכְרוֹן כָּל־עַמְּךָ בֵּית יִשְֹרָאֵל לְפָנֶיךָ לִפְלֵיטָה לְטוֹבָה,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " לְחֵן וּלְחֶסֶד וּלְרַחֲמִים וּלְחַיִּים טוֹבִים וּלְשָׁלוֹם,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " בְּיוֹם ",
+     "kind": "instruction",
+     "en": "On Rosh Chodesh:"
+    },
+    {
+     "text": "<small>בראש חדש:</small>",
+     "kind": "prayer",
+     "en": "On Rosh Chodesh:",
+     "when": "roshChodesh",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " רֹאשׁ הַחֹדֶשׁ הַזֶּה. ",
+     "kind": "instruction",
+     "en": "On Chol HaMoed Pesach:"
+    },
+    {
+     "text": "<small>בחוה״מ פסח:</small>",
+     "kind": "prayer",
+     "en": "On Chol HaMoed Pesach:",
+     "when": "cholHamoedPesach",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " חַג הַמַּצּוֹת הַזֶּה. ",
+     "kind": "instruction",
+     "en": "On Chol HaMoed Sukkot:"
+    },
+    {
+     "text": "<small>בחוה״מ סוכות:</small>",
+     "kind": "prayer",
+     "en": "On Chol HaMoed Sukkot:",
+     "when": "cholHamoedSukkot",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " חַג הַסֻּכּוֹת הַזֶּה. זָכְרֵנוּ יְיָ אֱלֹהֵינוּ בּוֹ לְטוֹבָה. וּפָקְדֵנוּ בוֹ לִבְרָכָה. וְהוֹשִׁיעֵנוּ בוֹ לְחַיִּים טוֹבִים. וּבִדְבַר יְשׁוּעָה וְרַחֲמִים חוּס וְחָנֵּנוּ וְרַחֵם עָלֵינו וְהוֹשִׁיעֵנוּ כִּי אֵלֶיךָ עֵינֵינוּ,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " כִּי אֵל מֶלֶךְ חַנּוּן וְרַחוּם אָתָּה:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shacharit/The Amidah:28": {
+   "kind": "prayer",
+   "node": "amidah.yaaleh_veyavo"
+  },
+  "he:Shacharit/The Amidah:29": {
+   "kind": "prayer",
+   "node": "amidah.modim"
+  },
+  "he:Shacharit/The Amidah:30": {
+   "kind": "instruction",
+   "en": "Modim d'Rabbanan:",
+   "gloss": "Said only in the repetition"
+  },
+  "he:Shacharit/The Amidah:31": {
+   "parts": [
+    {
+     "text": "<small>בחנוכה ופורים אומרים כאן ועל הנסים:</small>",
+     "kind": "instruction",
+     "en": "On Chanukah and Purim, say here Al HaNissim:"
+    },
+    {
+     "text": "<br>וְעַל הַנִּסִּים וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַנִּפְלָאוֹת שֶׁעָשִׂיתָ לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בִּזְּמַן הַזֶּה:",
+     "kind": "prayer",
+     "when": "chanukah || purim",
+     "node": "amidah.al_hanissim"
+    }
+   ]
+  },
+  "he:Shacharit/The Amidah:32": {
+   "parts": [
+    {
+     "text": "<small>לחנוכה—</small>",
+     "kind": "instruction",
+     "en": "For Chanukah:"
+    },
+    {
+     "text": "בִּימֵי מַתִּתְיָהו בֶּן יוֹחָנָן כֹּהֵן גָּדוֹל,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " חַשְׁמוֹנָאִי וּבָנָיו,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " כְּשֶׁעָמְדָה מַלְכוּת יָוָן הָרְשָׁעָה עַל עַמְּךָ יִשְׂרָאֵל,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " לְהַשְׁכִּיחָם תּוֹרָתֶךָ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנֶךָ,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " עָמַדְתָּ לָהֶם בְּעֵת צָרָתָם. רַבְתָּ אֶת־רִיבָם,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " דַּנְתָּ אֶת־דִּינָם,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " נָקַמְתָּ אֶת־נִקְמָתָם,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " מָסַרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " וְרַבִּים בְּיַד מְעַטִּים,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " וּטְמֵאִים בְּיַד טְהוֹרִים,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " וּרְשָׁעִים בְּיַד צַדִּיקִים,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " וְזֵדִים בְּיַד עוֹסְקֵי תוֹרָתֶךָ. וּלְךָ עָשִׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמֶךָ,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " וּלְעַמְּךָ יִשְׂרָאֵל עָשִׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה. וְאַחַר כָּךְ בָּאוּ בָנֶיךָ לִדְבִיר בֵּיתֶךָ,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " וּפִנּוּ אֶת הֵיכָלֶךָ,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " וְטִהֲרוּ אֶת־מִקְדָּשֶׁךָ,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " וְהִדְלִיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶׁךָ,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " וְקָבְעוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵלּוּ,",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " לְהוֹדוֹת וּלְהַלֵּל לְשִׁמְךָ הַגָּדוֹל:",
+     "kind": "prayer",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    }
+   ]
+  },
+  "he:Shacharit/The Amidah:33": {
+   "parts": [
+    {
+     "text": "<small>לפורים—</small>",
+     "kind": "instruction",
+     "en": "For Purim:"
+    },
+    {
+     "text": "בִּימֵי מָרְדְּכַי וְאֶסְתֵּר בְּשׁוּשַׁן הַבִּירָה,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " בִּקֵּשׁ לְהַשְׁמִיד לַהֲרוֹג וּלְאַבֵּד אֶת־כָּל־הַיְּהוּדִים,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " מִנַּעַר וְעַד זָקֵן טַף וְנָשִׁים,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " בְּיוֹם אֶחָד,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " בִּשְׁלֹשָׁה עָשָׂר לְחֹדֶשׁ שְׁנֵים עָשָׂר,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " הוּא חֹדֶשׁ אֲדָר,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " וּשְׁלָלָם לָבוֹז. וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים הֵפַרְתָּ אֶת עֲצָתוֹ,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " וְקִלְקַלְתָּ אֶת מַחֲשַׁבְתּוֹ,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " וַהֲשֵׁבוֹתָ לוֹ גְמוּלוֹ בְּרֹאשׁוֹ,",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " וְתָלוּ אוֹתוֹ וְאֶת־בָּנָיו עַל הָעֵץ:",
+     "kind": "prayer",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    }
+   ]
+  },
+  "he:Shacharit/The Amidah:34": {
+   "kind": "prayer",
+   "node": "amidah.al_hanissim"
+  },
+  "he:Shacharit/The Amidah:35": {
+   "parts": [
+    {
+     "text": "<small>בעשי״ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Said only in the silent Amidah"
+    },
+    {
+     "text": " וּכְתֽוֹב לְחַיִּֽים טוֹבִֽים כָּל־בְּנֵֽי בְרִיתֶֽךָ:",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.al_hanissim"
+    }
+   ]
+  },
+  "he:Shacharit/The Amidah:36": {
+   "kind": "prayer",
+   "node": "amidah.al_hanissim"
+  },
+  "he:Shacharit/The Amidah:37": {
+   "parts": [
+    {
+     "text": "<small>לשליח ציבור:</small>",
+     "kind": "instruction",
+     "en": "For the chazzan:"
+    },
+    {
+     "text": "<br>אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ,",
+     "kind": "prayer",
+     "node": "amidah.birkat_kohanim"
+    },
+    {
+     "text": " בָּרְכֵֽנוּ בַבְּרָכָה הַמְּשֻׁלֶּֽשֶׁת בַּתּוֹרָה,",
+     "kind": "prayer",
+     "node": "amidah.birkat_kohanim"
+    },
+    {
+     "text": " הַכְּתוּבָה עַל־יְדֵי משֶׁה עַבְדֶּֽךָ,",
+     "kind": "prayer",
+     "node": "amidah.birkat_kohanim"
+    },
+    {
+     "text": " הָאֲמוּרָה מִפִּי אַהֲרֹן וּבָנָיו,",
+     "kind": "prayer",
+     "node": "amidah.birkat_kohanim"
+    },
+    {
+     "text": " כֹּהֲנִים עַם קְדוֹשֶֽׁךָ,",
+     "kind": "prayer",
+     "node": "amidah.birkat_kohanim"
+    },
+    {
+     "text": " כָּאָמוּר: יְבָרֶכְךָ יְיָ וְיִשְׁמְרֶֽךָ: ",
+     "kind": "instruction",
+     "en": "Amen"
+    },
+    {
+     "text": "<small>אמן</small>",
+     "kind": "prayer",
+     "en": "Amen",
+     "node": "amidah.birkat_kohanim"
+    },
+    {
+     "text": " יָאֵר יְיָ פָּנָיו אֵלֶֽיךָ,",
+     "kind": "prayer",
+     "node": "amidah.birkat_kohanim"
+    },
+    {
+     "text": " וִיחֻנֶּֽךָּ: ",
+     "kind": "instruction",
+     "en": "Amen"
+    },
+    {
+     "text": "<small>אמן</small>",
+     "kind": "prayer",
+     "en": "Amen",
+     "node": "amidah.birkat_kohanim"
+    },
+    {
+     "text": " יִשָּׂא יְיָ פָּנָיו אֵלֶֽיךָ,",
+     "kind": "prayer",
+     "node": "amidah.birkat_kohanim"
+    },
+    {
+     "text": " וְיָשֵׂם לְךָ שָׁלוֹם: ",
+     "kind": "instruction",
+     "en": "Amen"
+    },
+    {
+     "text": "<small>אמן</small>",
+     "kind": "instruction",
+     "en": "Amen"
+    }
+   ]
+  },
+  "he:Shacharit/The Amidah:38": {
+   "kind": "prayer",
+   "node": "amidah.shalom"
+  },
+  "he:Shacharit/The Amidah:39": {
+   "parts": [
+    {
+     "text": "<small>בעשי״ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Said only in the silent Amidah"
+    },
+    {
+     "text": " וּבְסֵֽפֶר חַיִּים בְּרָכָה וְשָׁלוֹם וּפַרְנָסָה טוֹבָה יְשׁוּעָה וְנֶחָמָה וּגְזֵרוֹת טוֹבוֹת נִזָּכֵר וְנִכָּתֵב לְפָנֶֽיךָ,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.shalom"
+    },
+    {
+     "text": " אֲנַֽחְנוּ וְכָל־עַמְּךָ בֵּית יִשְׂרָאֵל,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.shalom"
+    },
+    {
+     "text": " לְחַיִּים טוֹבִים וּלְשָׁלוֹם:",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.shalom"
+    }
+   ]
+  },
+  "he:Shacharit/The Amidah:40": {
+   "kind": "prayer",
+   "node": "amidah.shalom"
+  },
+  "he:Shacharit/The Amidah:41": {
+   "kind": "prayer",
+   "node": "amidah.elokai_netzor"
+  },
+  "he:Shacharit/The Amidah:42": {
+   "kind": "prayer",
+   "node": "amidah.elokai_netzor"
+  },
+  "he:Shacharit/The Amidah:43": {
+   "parts": [
+    {
+     "text": "<b>עֹשֶׂה</b> שָׁלוֹם (",
+     "kind": "prayer",
+     "node": "amidah.oseh_shalom"
+    },
+    {
+     "text": "<small>בעשי״ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Said only in the silent Amidah"
+    },
+    {
+     "text": " הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.oseh_shalom"
+    },
+    {
+     "text": " וְאִמְרוּ אָמֵן:",
+     "kind": "prayer",
+     "node": "amidah.oseh_shalom"
+    }
+   ]
+  },
+  "he:Shacharit/The Amidah:44": {
+   "kind": "prayer",
+   "node": "amidah.yehi_ratzon_mikdash"
+  },
+  "he:Shacharit/Tachnun:1": {
+   "kind": "instruction",
+   "en": "After the Shemoneh Esrei of Shacharit and Minchah, we say the Confession:",
+   "gloss": "Said on Mondays and Thursdays, and on public fast days and the Ten Days of Repentance"
+  },
+  "he:Shacharit/Tachnun:2": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tachnun:3": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tachnun:4": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tachnun:5": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tachnun:6": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tachnun:7": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tachnun:8": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tachnun:9": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tachnun:10": {
+   "kind": "instruction",
+   "en": "On Mondays and Thursdays:",
+   "gloss": "This section is added on Mondays and Thursdays"
+  },
+  "he:Shacharit/Tachnun:11": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:12": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:13": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:14": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:15": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:16": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:17": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:18": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:19": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:20": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:21": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:22": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:23": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:24": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:25": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:26": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:27": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:28": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:29": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:30": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Shacharit/Tachnun:31": {
+   "parts": [
+    {
+     "text": "<b>מִתְרַצֶּה</b> בְּרַחֲמִים,",
+     "kind": "instruction",
+     "en": "End of the additions for Mondays and Thursdays:",
+     "gloss": "Concludes the Monday/Thursday section"
+    },
+    {
+     "text": " וּמִתְפַּיֵּס בְּתַחֲנוּנִים,",
+     "kind": "instruction",
+     "en": "End of the additions for Mondays and Thursdays:",
+     "gloss": "Concludes the Monday/Thursday section"
+    },
+    {
+     "text": " הִתְרַצֶּה וְהִתְפַּיֵּס לְדוֹר עָנִי,",
+     "kind": "instruction",
+     "en": "End of the additions for Mondays and Thursdays:",
+     "gloss": "Concludes the Monday/Thursday section"
+    },
+    {
+     "text": " כִּי אֵין עוֹזֵר: ",
+     "kind": "instruction",
+     "en": "End of the additions for Mondays and Thursdays:",
+     "gloss": "Concludes the Monday/Thursday section"
+    },
+    {
+     "text": "<small>ע״כ מה שמוסיפין בשני ובחמישי:</small>",
+     "kind": "instruction",
+     "en": "End of the additions for Mondays and Thursdays:",
+     "gloss": "Concludes the Monday/Thursday section"
+    }
+   ]
+  },
+  "he:Shacharit/Tachnun:32": {
+   "parts": [
+    {
+     "text": "<small>בתענית ציבור ובעשי״ת אומרים כאן אבינו מלכנו.<br>אָבִֽינוּ מַלְכֵּֽנוּ חָטָֽאנוּ לְפָנֶֽיךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ אֵין לָֽנוּ מֶֽלֶךְ אֶלָּא אָֽתָּה:<br>אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה עִמָּֽנוּ לְמַֽעַן שְׁמֶֽךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ חַדֵּשׁ (<small>בתענית ציבור:</small>",
+     "kind": "instruction",
+     "en": "On public fast days and the Ten Days of Repentance, we say here Avinu Malkeinu.",
+     "gloss": "Avinu Malkeinu is said on fast days and Aseret Yemei Teshuva"
+    },
+    {
+     "text": " בָּרֵךְ) עָלֵֽינוּ שָׁנָה טוֹבָה:<br>אָבִֽינוּ מַלְכֵּֽנוּ בַּטֵּל מֵעָלֵֽינוּ כָּל־גְּזֵרוֹת קָשׁוֹת:<br>אָבִֽינוּ מַלְכֵּֽנוּ בַּטֵּל מַחְשְׁבוֹת שׂוֹנְאֵֽינוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ הָפֵר עֲצַת אוֹיְבֵֽינוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ כַּלֵּה כָּל־צַר וּמַשְׂטִין מֵעָלֵֽינוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ סְתוֹם פִּיּוֹת מַשְׂטִינֵֽנוּ וּמְקַטְרִיגֵֽנוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ כַּלֵּה דֶּֽבֶר וְחֶֽרֶב וְרָעָב וּשְׁבִי וּמַשְׁחִית מִבְּנֵי בְרִיתֶֽךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ מְנַע מַגֵּפָה מִנַּחֲלָתֶֽךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ סְלַח וּמְחַל לְכָל־עֲוֹנוֹתֵֽינוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ מְחֵה וְהַעֲבֵר פְּשָׁעֵֽינוּ מִנֶּֽגֶד עֵינֶֽיךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ מְחוֹק בְּרַחֲמֶֽיךָ הָרַבִּים כָּל־שִׁטְרֵי חוֹבוֹתֵֽינוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ הַחֲזִירֵֽנוּ בִּתְשׁוּבָה שְׁלֵמָה לְפָנֶֽיךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ שְׁלַח רְפוּאָה שְׁלֵמָה לְחוֹלֵי עַמֶּֽךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ קְרַע רֽוֹעַ גְּזַר דִּינֵֽנוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ זָכְרֵֽנוּ בְּזִכָּרוֹן טוֹב לְפָנֶֽיךָ:<br>",
+     "kind": "prayer",
+     "en": "On public fast days and the Ten Days of Repentance, we say here Avinu Malkeinu.",
+     "gloss": "Avinu Malkeinu is said on fast days and Aseret Yemei Teshuva",
+     "when": "publicFast || aseretYemeiTeshuva"
+    },
+    {
+     "text": "<small>בעשרת ימי תשובה:</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "These lines are added only during Aseret Yemei Teshuva"
+    },
+    {
+     "text": "<br>אָבִֽינוּ מַלְכֵּֽנוּ כָּתְבֵֽנוּ בְּסֵֽפֶר חַיִּים טוֹבִים:<br>אָבִֽינוּ מַלְכֵּֽנוּ כָּתְבֵֽנוּ בְּסֵֽפֶר גְּאֻלָּה וִישׁוּעָה:<br>אָבִֽינוּ מַלְכֵּֽנוּ כָּתְבֵֽנוּ בְּסֵֽפֶר פַּרְנָסָה וְכַלְכָּלָה:<br>אָבִֽינוּ מַלְכֵּֽנוּ כָּתְבֵֽנוּ בְּסֵֽפֶר זְכֻיּוֹת:<br>אָבִֽינוּ מַלְכֵּֽנוּ כָּתְבֵֽנוּ בְּסֵֽפֶר סְלִיחָה וּמְחִילָה:<br>[",
+     "kind": "prayer",
+     "en": "On public fast days and the Ten Days of Repentance, we say here Avinu Malkeinu.",
+     "gloss": "Avinu Malkeinu is said on fast days and Aseret Yemei Teshuva",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": "<small>בתענית ציבור</small>",
+     "kind": "instruction",
+     "en": "On public fast days:",
+     "gloss": "These lines are added only on public fast days"
+    },
+    {
+     "text": "<br><b>אָבִֽינוּ מַלְכֵּֽנוּ זָכְרֵֽנוּ לְחַיִּים טוֹבִים:</b><br><b>אָבִֽינוּ מַלְכֵּֽנוּ זָכְרֵֽנוּ לִגְאֻלָּה וִישׁוּעָה:</b><br><b>אָבִֽינוּ מַלְכֵּֽנוּ זָכְרֵֽנוּ לְפַרְנָסָה וְכַלְכָּלָה:</b><br><b>אָבִֽינוּ מַלְכֵּֽנוּ זָכְרֵֽנוּ לִזְכֻיּוֹת:</b><br><b>אָבִֽינוּ מַלְכֵּֽנוּ זָכְרֵֽנוּ לִסְלִיחָה וּמְחִילָה:</b>]<br>אָבִֽינוּ מַלְכֵּֽנוּ הַצְמַח לָֽנוּ יְשׁוּעָה בְּקָרוֹב:<br>אָבִֽינוּ מַלְכֵּֽנוּ הָרֵם קֶֽרֶן יִשְׂרָאֵל עַמֶּֽךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ הָרֵם קֶֽרֶן מְשִׁיחֶֽךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ מַלֵּא יָדֵֽינוּ מִבִּרְכוֹתֶֽיךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ מַלֵּא אֲסָמֵֽינוּ שָׂבָע:<br>אָבִֽינוּ מַלְכֵּֽנוּ שְׁמַע קוֹלֵֽנוּ חוּס וְרַחֵם עָלֵֽינוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ קַבֵּל בְּרַחֲמִים וּבְרָצוֹן אֶת־תְּפִלָּתֵֽנוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ פְּתַח שַׁעֲרֵי שָׁמַֽיִם לִתְפִלָּתֵֽנוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ זָכוּר כִּי־עָפָר אֲנָֽחְנוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ נָא אַל תְּשִׁיבֵֽנוּ רֵיקָם מִלְּפָנֶֽיךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ תְּהֵא הַשָּׁעָה הַזֹּאת שְׁעַת רַחֲמִים וְעֵת רָצוֹן מִלְּפָנֶֽיךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ חֲמוֹל עָלֵֽינוּ וְעַל עוֹלָלֵֽינוּ וְטַפֵּֽנוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה לְמַֽעַן הֲרוּגִים עַל שֵׁם קָדְשֶֽׁךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה לְמַֽעַן טְבוּחִים עַל יִחוּדֶֽךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה לְמַֽעַן בָּאֵי בָאֵשׁ וּבַמַּֽיִם עַל קִדּוּשׁ שְׁמֶֽךָ:<br>אָבִֽינוּ מַלְכֵּֽנוּ נְקוֹם נִקְמַת דַּם עֲבָדֶֽיךָ הַשָּׁפוּךְ:<br>אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה לְמַעַנְךָ אִם לֺא לְמַעֲנֵֽנוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה לְמַעַנְךָ וְהוֹשִׁיעֵֽנוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה לְמַֽעַן רַחֲמֶֽיךָ הָרַבִּים:<br>אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה לְמַֽעַן שִׁמְךָ הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא שֶׁנִּקְרָא עָלֵֽינוּ:<br>אָבִֽינוּ מַלְכֵּֽנוּ חָנֵּֽנוּ וַעֲנֵֽנוּ כִּי אֵין בָּֽנוּ מַעֲשִׂים עֲשֵׂה עִמָּֽנוּ צְדָקָה וָחֶֽסֶד וְהוֹשִׁיעֵֽנוּ:</small>",
+     "kind": "prayer",
+     "en": "On public fast days and the Ten Days of Repentance, we say here Avinu Malkeinu.",
+     "gloss": "Avinu Malkeinu is said on fast days and Aseret Yemei Teshuva",
+     "when": "publicFast"
+    }
+   ]
+  },
+  "he:Shacharit/Tachnun:33": {
+   "kind": "prayer",
+   "when": "publicFast || aseretYemeiTeshuva"
+  },
+  "he:Shacharit/Tachnun:34": {
+   "kind": "prayer"
+  },
+  "he:Shacharit/Tachnun:35": {
+   "kind": "instruction",
+   "en": "The chazzan says Half Kaddish:",
+   "gloss": "Concludes Tachanun"
+  },
+  "he:Shacharit/Tachnun:36": {
+   "parts": [
+    {
+     "text": "<b>יִתְגַּדַּֽל</b> וְיִתְקַדַּֽשׁ שְׁמֵהּ רַבָּֽא. ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    },
+    {
+     "text": "<small>אמן</small>",
+     "kind": "instruction",
+     "en": "Amen",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "gloss": "Congregation responds"
+    },
+    {
+     "text": " בְּעָלְמָֽא דִּי בְרָֽא כִרְעוּתֵהּ וְיַמְלִֽיךְ מַלְכוּתֵֽהּ,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    },
+    {
+     "text": " וְיַצְמַח פּוּרְקָנֵהּ וִיקָרֵב מְשִׁיחֵהּ. ",
+     "kind": "instruction",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "Amen",
+     "gloss": "Congregation responds"
+    },
+    {
+     "text": "<small>אמן</small>",
+     "kind": "prayer",
+     "en": "The chazzan says Half Kaddish",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּֽי דְכָל־בֵּֽית יִשְׂרָאֵֽל,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    },
+    {
+     "text": " בַּעֲגָלָא וּבִזְמַֽן קָרִיב וְאִמְרֽוּ אָמֵֽן: יְהֵא שְׁמֵהּ רַבָּֽא מְבָרַֽךְ לְעָלַֽם וּלְעָלְמֵֽי עָלְמַיָּֽא. יִתְבָּרֵֽךְ,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    },
+    {
+     "text": " וְיִשְׁתַּבַּֽח,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    },
+    {
+     "text": " וְיִתְפָּאֵֽר,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    },
+    {
+     "text": " וְיִתְרוֹמָֽם,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    },
+    {
+     "text": " וְיִתְנַשֵּֽׂא,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    },
+    {
+     "text": " וְיִתְהַדָּֽר,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    },
+    {
+     "text": " וְיִתְעַלֶּֽה,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    },
+    {
+     "text": " וְיִתְהַלָּֽל,",
+     "kind": "instruction",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "Amen",
+     "gloss": "Congregation responds"
+    },
+    {
+     "text": " שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא. ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    },
+    {
+     "text": "<small>אמן</small>",
+     "kind": "prayer",
+     "en": "The chazzan says Half Kaddish",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " לְעֵֽלָּא מִן כָּל־בִּרְכָתָא וְשִׁירָתָא,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    },
+    {
+     "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    },
+    {
+     "text": " דַּאֲמִירָן בְּעָלְמָֽא,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    },
+    {
+     "text": " וְאִמְרוּ אָמֵן:",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "en": "The chazzan says Half Kaddish"
+    }
+   ]
+  },
+  "he:Shacharit/Torah Reading:1": {
+   "kind": "instruction",
+   "en": "Do not say Al Arich Apayim on Rosh Chodesh, Chanukah, Purim Katan or Purim, the two days of Rosh Hashanah, Erev Pesach, or Tisha B'Av."
+  },
+  "he:Shacharit/Torah Reading:2": {
+   "kind": "prayer",
+   "when": "!roshChodesh && !chanukah && !purim && !purimKatan && !roshHashana && !erevPesach && !tishaBav"
+  },
+  "he:Shacharit/Torah Reading:3": {
+   "kind": "instruction",
+   "en": "When opening the Ark, say this:"
+  },
+  "he:Shacharit/Torah Reading:4": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Shacharit/Torah Reading:5": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Shacharit/Torah Reading:6": {
+   "parts": [
+    {
+     "text": "<small>חזן:</small>",
+     "kind": "instruction",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " <b>גַּדְּלוּ לַייָ אִתִּי,",
+     "kind": "prayer",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו:</b>",
+     "kind": "prayer",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Shacharit/Torah Reading:7": {
+   "parts": [
+    {
+     "text": "<small>והקהל עונים:</small>",
+     "kind": "instruction",
+     "en": "The congregation responds:"
+    },
+    {
+     "text": " <b>לְךָ</b> יְיָ הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶֽרֶת וְהַנֵּֽצַח וְהַהוֹד,",
+     "kind": "prayer",
+     "en": "The congregation responds:",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": " כִּי כֹל בַּשָּׁמַֽיִם וּבָאָֽרֶץ,",
+     "kind": "prayer",
+     "en": "The congregation responds:",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": " לְךָ יְיָ הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ: רוֹמְמוּ יְיָ אֱלֺהֵֽינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו,",
+     "kind": "prayer",
+     "en": "The congregation responds:",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": " קָדוֹשׁ הוּא: רוֹמְמוּ יְיָ אֱלֺהֵֽינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ,",
+     "kind": "prayer",
+     "en": "The congregation responds:",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": " כִּי קָדוֹשׁ יְיָ אֱלֺהֵֽינוּ:",
+     "kind": "prayer",
+     "en": "The congregation responds:",
+     "role": "congregation",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Shacharit/Torah Reading:8": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Shacharit/Torah Reading:9": {
+   "parts": [
+    {
+     "text": "<small>חזן:</small>",
+     "kind": "instruction",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " וְתִגָּלֶה וְתֵרָאֶה מַלְכוּתוֹ עָלֵֽינוּ בִּזְמַן קָרוֹב,",
+     "kind": "prayer",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְיָחוֹן פְּלֵטָתֵֽנוּ וּפְלֵטַת עַמּוֹ בֵּית יִשְׂרָאֵל לְחֵן וּלְחֶֽסֶד וּלְרַחֲמִים וּלְרָצוֹן וְנֹאמַר אָמֵן: הַכֹּל הָבוּ גֹֽדֶל לֵאלֺהֵֽינוּ וּתְנוּ כָבוֹד לַתּוֹרָה,",
+     "kind": "prayer",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " כֹּהֵן קְרָב,",
+     "kind": "prayer",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " יַעֲמֹד (פב״פ) הַכֹּהֵן: בָּרוּךְ שֶׁנָּתַן תּוֹרָה לְעַמּוֹ יִשְׂרָאֵל בִּקְדֻשָּׁתוֹ: ",
+     "kind": "prayer",
+     "en": "Chazzan:",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>קהל:</small>",
+     "kind": "instruction",
+     "en": "Congregation:"
+    },
+    {
+     "text": " וְאַתֶּם הַדְּבֵקִים בַּייָ אֱלֺהֵיכֶם,",
+     "kind": "prayer",
+     "en": "Chazzan:",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": " חַיִּים כֻּלְּכֶם הַיּוֹם:",
+     "kind": "prayer",
+     "en": "Chazzan:",
+     "role": "congregation",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Shacharit/Torah Reading:10": {
+   "parts": [
+    {
+     "text": "<small>כשקורין אותו לתורה יאמר זה:</small>",
+     "kind": "instruction",
+     "en": "When he is called up to the Torah he says:"
+    },
+    {
+     "text": " <b>בָּרְכוּ אֶת־יְיָ הַמְּבֹרָךְ:</b>",
+     "kind": "prayer",
+     "en": "When he is called up to the Torah he says:",
+     "role": "oleh",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Shacharit/Torah Reading:11": {
+   "parts": [
+    {
+     "text": "<small>והקהל עונים:</small>",
+     "kind": "instruction",
+     "en": "The congregation responds:"
+    },
+    {
+     "text": " בָּרוּךְ יְיָ הַמְּבֹרָךְ לְעוֹלָם וָעֶד:",
+     "kind": "prayer",
+     "en": "The congregation responds:",
+     "role": "congregation",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Shacharit/Torah Reading:12": {
+   "parts": [
+    {
+     "text": "<small>והעולה חוזר:</small>",
+     "kind": "instruction",
+     "en": "And the one called up repeats:"
+    },
+    {
+     "text": " בָּרוּךְ יְיָ הַמְּבֹרָךְ לְעוֹלָם וָעֶד:",
+     "kind": "prayer",
+     "en": "And the one called up repeats:",
+     "role": "oleh",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Shacharit/Torah Reading:13": {
+   "kind": "prayer",
+   "role": "oleh",
+   "voice": "aloud",
+   "gestures": [
+    "hold_torah"
+   ]
+  },
+  "he:Shacharit/Torah Reading:14": {
+   "kind": "instruction",
+   "en": "After the reading he blesses:"
+  },
+  "he:Shacharit/Torah Reading:15": {
+   "kind": "prayer",
+   "role": "oleh",
+   "voice": "aloud",
+   "gestures": [
+    "hold_torah"
+   ]
+  },
+  "he:Shacharit/Torah Reading:16": {
+   "kind": "instruction",
+   "en": "After the Torah reading, the chazzan says Half Kaddish."
+  },
+  "he:Shacharit/Torah Reading:17": {
+   "kind": "heading",
+   "en": "Birkat HaGomel"
+  },
+  "he:Shacharit/Torah Reading:18": {
+   "kind": "note",
+   "en": "Four must give thanks: those who went down to the sea and came up, those who traveled through the desert and reached a settlement, those who were sick and were healed, and those who were imprisoned and were released. It is recited over the Torah scroll after the final blessing. If one delayed, one may make up the blessing at any time, though it is proper not to delay more than three days (Shulchan Aruch O.C. 219).",
+   "cite": "שו\"ע או\"ח ריט"
+  },
+  "he:Shacharit/Torah Reading:19": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud"
+  },
+  "he:Shacharit/Torah Reading:20": {
+   "parts": [
+    {
+     "text": "<small>והקהל עונים:</small>",
+     "kind": "instruction",
+     "en": "The congregation responds:"
+    },
+    {
+     "text": " אָמֵן. מִי שֶׁגְּמָלְךָ טוֹב,",
+     "kind": "prayer",
+     "en": "The congregation responds:",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": " הוּא יִגְמָלְךָ כָּל־טוֹב סֶֽלָה:",
+     "kind": "prayer",
+     "en": "The congregation responds:",
+     "role": "congregation",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Shacharit/Torah Reading:21": {
+   "kind": "heading",
+   "en": "Blessing of Baruch Shefartani"
+  },
+  "he:Shacharit/Torah Reading:22": {
+   "kind": "instruction",
+   "en": "When a son reaches thirteen years and one day, the father recites this blessing without God's name and kingdom when his son is called up to the Torah for the first time."
+  },
+  "he:Shacharit/Torah Reading:23": {
+   "kind": "prayer",
+   "role": "head_of_household",
+   "voice": "aloud"
+  },
+  "he:Shacharit/Torah Reading:24": {
+   "kind": "instruction",
+   "en": "When the Torah scroll is raised to show the writing to the people, everyone should try to approach the Ark to be able to read what is written in the Torah scroll at the time of the raising, and say:"
+  },
+  "he:Shacharit/Torah Reading:25": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "gestures": [
+    "look_at_candles"
+   ]
+  },
+  "he:Shacharit/Torah Reading:26": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud"
+  }
+ },
+ "en": {
+  "en:Shacharit/Morning Blessings:5": {
+   "he": [
+    "he:Shacharit/Morning Blessings:5"
+   ]
+  },
+  "en:Shacharit/Morning Prayer:1": {
+   "he": [
+    "he:Shacharit/Morning Prayer:1"
+   ]
+  },
+  "en:Shacharit/Morning Prayer:2": {
+   "he": [
+    "he:Shacharit/Morning Prayer:2"
+   ]
+  },
+  "en:Shacharit/Morning Prayer:3": {
+   "he": [
+    "he:Shacharit/Morning Prayer:3"
+   ]
+  },
+  "en:Shacharit/Morning Prayer:4": {
+   "he": [
+    "he:Shacharit/Morning Prayer:4"
+   ]
+  },
+  "en:Shacharit/Morning Prayer:5": {
+   "he": []
+  },
+  "en:Shacharit/The Amidah:1": {
+   "he": [
+    "he:Shacharit/The Amidah:1"
+   ]
+  },
+  "en:Shacharit/The Amidah:2": {
+   "he": [
+    "he:Shacharit/The Amidah:2"
+   ]
+  },
+  "en:Shacharit/The Amidah:3": {
+   "he": [
+    "he:Shacharit/The Amidah:3"
+   ]
+  },
+  "en:Shacharit/The Amidah:4": {
+   "he": [
+    "he:Shacharit/The Amidah:4"
+   ]
+  },
+  "en:Shacharit/The Amidah:5": {
+   "he": [
+    "he:Shacharit/The Amidah:5"
+   ]
+  },
+  "en:Shacharit/The Amidah:6": {
+   "he": [
+    "he:Shacharit/The Amidah:6"
+   ]
+  },
+  "en:Shacharit/The Amidah:8": {
+   "he": [
+    "he:Shacharit/The Amidah:7"
+   ]
+  },
+  "en:Shacharit/The Amidah:9": {
+   "he": [
+    "he:Shacharit/The Amidah:8"
+   ]
+  },
+  "en:Shacharit/The Amidah:11": {
+   "he": [
+    "he:Shacharit/The Amidah:9"
+   ]
+  },
+  "en:Shacharit/Tachnun:1": {
+   "he": [
+    "he:Shacharit/Tachnun:1"
+   ]
+  },
+  "en:Shacharit/Tachnun:2": {
+   "he": [
+    "he:Shacharit/Tachnun:2"
+   ]
+  },
+  "en:Shacharit/Tachnun:3": {
+   "he": [
+    "he:Shacharit/Tachnun:3"
+   ]
+  },
+  "en:Shacharit/Tachnun:4": {
+   "he": [
+    "he:Shacharit/Tachnun:4"
+   ]
+  },
+  "en:Shacharit/Tachnun:5": {
+   "he": [
+    "he:Shacharit/Tachnun:5"
+   ]
+  },
+  "en:Shacharit/Tachnun:6": {
+   "he": [
+    "he:Shacharit/Tachnun:6"
+   ]
+  },
+  "en:Shacharit/Tachnun:7": {
+   "he": [
+    "he:Shacharit/Tachnun:7"
+   ]
+  },
+  "en:Shacharit/Tachnun:8": {
+   "he": [
+    "he:Shacharit/Tachnun:8"
+   ]
+  },
+  "en:Shacharit/Tachnun:9": {
+   "he": [
+    "he:Shacharit/Tachnun:9"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Shacharit/The Amidah:6",
+   "type": "ambiguous",
+   "detail": "Part 2: Diaspora Ashkenaz does not say Morid HaTal in summer; the instruction 'In summer' implies it is said, but the custom is to say nothing. The condition !il is used to reflect that only Israel says it in summer."
+  },
+  {
+   "id": "he:Shacharit/Tachnun:10",
+   "type": "ambiguous",
+   "detail": "Instruction 'On Mondays and Thursdays' implies a condition, but the siddur does not explicitly state if this section is omitted on other days or if it is an addition. Assuming it is an addition for monThu."
+  }
+ ]
+}

@@ -6,6 +6,7 @@ import 'package:web/web.dart' as web;
 import 'alerts.dart';
 import 'notification_backend.dart';
 import 'timer_backend.dart';
+import '../integrations/web_integrations.dart';
 
 NotificationBackend createBackend() => _WebBackend();
 
@@ -36,6 +37,15 @@ class _WebBackend extends TimerNotificationBackend {
   }
 
   @override
+  Future<void> replaceAll(List<PlannedNotification> plan, {bool exact = false}) async {
+    final pushed = await submitPushPlan([for (final p in plan) {
+      'id': p.id, 'fireAt': p.fireAt.millisecondsSinceEpoch, 'title': p.title, 'body': p.body, 'route': p.route,
+    }]);
+    // A push subscription handles delivery, avoiding duplicate tab notifications.
+    await super.replaceAll(pushed ? const [] : plan, exact: exact);
+  }
+
+  @override
   Future<bool> requestPermission({bool exact = false}) async {
     final result = await web.Notification.requestPermission().toDart;
     return result.toDart == 'granted';
@@ -61,7 +71,7 @@ class _WebBackend extends TimerNotificationBackend {
   }
 
   @override
-  Future<void> showScheduled(PlannedNotification p) => _show(p.title, p.body, 'zman-${p.id}');
+  Future<void> showScheduled(PlannedNotification p) => _show(p.title, p.body, 'zman-${p.id}', p.route);
 
   @override
   Future<void> showNow(String title, String body, {String route = '/zmanim', int id = 999}) => _show(title, body, 'n-$id', route);

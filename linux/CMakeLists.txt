@@ -72,7 +72,20 @@ set_target_properties(${BINARY_NAME}
 
 # Generated plugin build rules, which manage building the plugins and adding
 # them to the application.
+# Establish the app bundle before flutter_js configures its own install path.
+# Repair caches created by its previous plugin-local default as well.
+set(BUILD_BUNDLE_DIR "${PROJECT_BINARY_DIR}/bundle")
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT OR
+   CMAKE_INSTALL_PREFIX STREQUAL "${PROJECT_BINARY_DIR}/plugins/flutter_js/bundle")
+  set(CMAKE_INSTALL_PREFIX "${BUILD_BUNDLE_DIR}" CACHE PATH "App bundle" FORCE)
+  set(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT FALSE)
+endif()
 include(flutter/generated_plugins.cmake)
+# Ayatana 0.6 deprecates the API used by tray_manager 0.5. Keep all other
+# plugin warnings as errors while allowing this upstream compatibility warning.
+if(TARGET tray_manager_plugin)
+  target_compile_options(tray_manager_plugin PRIVATE -Wno-error=deprecated-declarations)
+endif()
 
 
 # === Installation ===

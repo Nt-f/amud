@@ -124,7 +124,7 @@ class TodaySnapshot {
 
 final todaySnapshotProvider = Provider<TodaySnapshot>((ref) {
   final now = ref.watch(nowProvider).value ?? DateTime.now();
-  final civil = ref.watch(civilTodayProvider);
+  final civil = ref.watch(todayProvider);
   final settings = ref.watch(settingsProvider);
   final loc = ref.watch(locationProvider);
   final halachic = ref.watch(halachicTodayProvider);

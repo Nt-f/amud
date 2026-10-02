@@ -1,0 +1,7486 @@
+{
+ "nusach": "koren",
+ "chunk": "book [Preface .. Weekdays]",
+ "leaves": {
+  "Preface": {
+   "node": "front_matter",
+   "service": "none",
+   "when": "true"
+  },
+  "Foreword": {
+   "node": "front_matter",
+   "service": "none",
+   "when": "true"
+  },
+  "Understanding Jewish Prayer": {
+   "node": "front_matter",
+   "service": "none",
+   "when": "true"
+  },
+  "Guide to the Reader": {
+   "node": "front_matter",
+   "service": "none",
+   "when": "true"
+  },
+  "Weekdays/Blessings Over the Torah": {
+   "node": "morning.birkot_hatorah",
+   "service": "shacharit",
+   "when": "true"
+  },
+  "Weekdays/Tallit": {
+   "node": "morning.tzitzit",
+   "service": "shacharit",
+   "when": "true"
+  },
+  "Weekdays/Tefillin": {
+   "node": "morning.tefillin",
+   "service": "shacharit",
+   "when": "!shabbat && !yomTov"
+  },
+  "Weekdays/Preparation for Prayer": {
+   "node": "morning.ma_tovu",
+   "service": "shacharit",
+   "when": "true"
+  },
+  "Weekdays/On Waking": {
+   "node": "morning.modeh_ani",
+   "service": "shacharit",
+   "when": "true"
+  }
+ },
+ "he": {
+  "he:Weekdays/Blessings Over the Torah:2": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Blessings Over the Torah:3": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Blessings Over the Torah:4": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Blessings Over the Torah:5": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Blessings Over the Torah:6": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Blessings Over the Torah:8": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tallit:2": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tallit:3": {
+   "kind": "instruction",
+   "en": "For the sake of the unification of the Holy One, blessed be He, and His Divine Presence, in reverence and love, to unify the name Yod-Heh with Vav-Heh in perfect unity in the name of all Israel."
+  },
+  "he:Weekdays/Tallit:4": {
+   "kind": "instruction",
+   "en": "I am about to wrap myself in this tasseled garment (tallit). So may my soul, my 248 limbs and 365 sinews be wrapped in the light of the tassel (hatzitzit) which amounts to 613 [commandments]. And just as I cover myself with a tasseled garment in this world, so may I be worthy of rabbinical dress and a fine garment in the World to Come in the Garden of Eden. Through the commandment of tassels may my life's-breath, spirit, soul and prayer be delivered from external impediments, and may the tallit spread its wings over them like an eagle stirring up its nest, hovering over its young. May the commandment of the tasseled garment be considered before the Holy One, blessed be He, as if I had fulfilled it in all its specifics, details and intentions, as well as the 613 commandments dependent on it, Amen, Selah."
+  },
+  "he:Weekdays/Tallit:6": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tallit:8": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tefillin:2": {
+   "kind": "instruction",
+   "en": "For the sake of the unification of the Holy One, blessed be He, and His Divine Presence, in reverence and love, to unify the name Yod-Heh with Vav-Heh in perfect unity in the name of all Israel."
+  },
+  "he:Weekdays/Tefillin:3": {
+   "kind": "instruction",
+   "en": "By putting on the tefillin I hereby intend to fulfill the commandment of my Creator who commanded us to wear tefillin, as it is written in His Torah: “Bind them as a sign on your hand, and they shall be an emblem on the center of your head.” They contain these four sections of the Torah: one beginning with Shema [Deut. 6:4–9]; another with Vehaya im shamo’a [ibid. 11:13–21]; the third with Kadesh Li [Ex. 13:1–10]; and the fourth with Vehaya ki yevi’akha [ibid. 13:11–16]. These proclaim the uniqueness and unity of God, blessed be His name in the world. They also remind us of the miracles and wonders which He did for us when He brought us out of Egypt, and that He has the power and the dominion over the highest and the lowest to deal with them as He pleases. He commanded us to place one of the tefillin on the arm in memory of His “outstretched arm” (of redemption), setting it opposite the heart, to subject the desires and designs of our heart to His service, blessed be His name. The other is to be on the head, opposite the brain, so that my mind, whose seat is in the brain, together with my other senses and faculties, may be subjected to His service, blessed be His name. May the spiritual influence of the commandment of the tefillin be with me so that I may have a long life, a flow of holiness, and sacred thoughts, free from any suggestion of sin or iniquity. May the evil inclination neither incite nor entice us, but leave us to serve the LORD, as it is in our hearts to do."
+  },
+  "he:Weekdays/Tefillin:4": {
+   "kind": "instruction",
+   "en": "And may it be Your will, LORD our God and God of our ancestors, that the commandment of tefillin be considered before You as if I had fulfilled it in all its specifics, details and intentions, as well as the 613 commandments dependent on it, Amen, Selah."
+  },
+  "he:Weekdays/Tefillin:6": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Tefillin:8": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Tefillin:10": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "undertone"
+  },
+  "he:Weekdays/Tefillin:11": {
+   "kind": "instruction",
+   "en": "Some say: From Your wisdom, God most high, grant me [wisdom], and from Your understanding, give me understanding. May Your loving-kindness be greatly upon me, and in Your might may my enemies and those who rise against me be subdued. Pour Your goodly oil on the seven branches of the menora so that Your good flows down upon Your creatures. You open Your hand, and satisfy every living thing with favor."
+  },
+  "he:Weekdays/Tefillin:13": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Tefillin:15": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Tefillin:16": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Preparation for Prayer:2": {
+   "kind": "prayer",
+   "node": "morning.ma_tovu"
+  },
+  "he:Weekdays/Preparation for Prayer:3": {
+   "kind": "prayer",
+   "node": "morning.ma_tovu"
+  },
+  "he:Weekdays/Preparation for Prayer:4": {
+   "kind": "prayer",
+   "node": "morning.ma_tovu"
+  },
+  "he:Weekdays/Preparation for Prayer:6": {
+   "kind": "prayer",
+   "node": "morning.adon_olam"
+  },
+  "he:Weekdays/Preparation for Prayer:7": {
+   "kind": "prayer",
+   "node": "morning.adon_olam"
+  },
+  "he:Weekdays/Preparation for Prayer:8": {
+   "kind": "prayer",
+   "node": "morning.adon_olam"
+  },
+  "he:Weekdays/Preparation for Prayer:9": {
+   "kind": "prayer",
+   "node": "morning.adon_olam"
+  },
+  "he:Weekdays/Preparation for Prayer:10": {
+   "kind": "prayer",
+   "node": "morning.adon_olam"
+  },
+  "he:Weekdays/Preparation for Prayer:11": {
+   "kind": "prayer",
+   "node": "morning.adon_olam"
+  },
+  "he:Weekdays/Preparation for Prayer:12": {
+   "kind": "prayer",
+   "node": "morning.adon_olam"
+  },
+  "he:Weekdays/Preparation for Prayer:13": {
+   "kind": "prayer",
+   "node": "morning.adon_olam"
+  },
+  "he:Weekdays/Preparation for Prayer:14": {
+   "kind": "prayer",
+   "node": "morning.adon_olam"
+  },
+  "he:Weekdays/Preparation for Prayer:15": {
+   "kind": "prayer",
+   "node": "morning.adon_olam"
+  },
+  "he:Weekdays/Preparation for Prayer:16": {
+   "kind": "prayer",
+   "node": "morning.yigdal"
+  },
+  "he:Weekdays/Preparation for Prayer:17": {
+   "kind": "prayer",
+   "node": "morning.yigdal"
+  },
+  "he:Weekdays/Preparation for Prayer:18": {
+   "kind": "prayer",
+   "node": "morning.yigdal"
+  },
+  "he:Weekdays/Preparation for Prayer:19": {
+   "kind": "prayer",
+   "node": "morning.yigdal"
+  },
+  "he:Weekdays/Preparation for Prayer:20": {
+   "kind": "prayer",
+   "node": "morning.yigdal"
+  },
+  "he:Weekdays/Preparation for Prayer:21": {
+   "kind": "prayer",
+   "node": "morning.yigdal"
+  },
+  "he:Weekdays/Preparation for Prayer:22": {
+   "kind": "prayer",
+   "node": "morning.yigdal"
+  },
+  "he:Weekdays/Preparation for Prayer:23": {
+   "kind": "prayer",
+   "node": "morning.yigdal"
+  },
+  "he:Weekdays/Preparation for Prayer:24": {
+   "kind": "prayer",
+   "node": "morning.yigdal"
+  },
+  "he:Weekdays/Preparation for Prayer:25": {
+   "kind": "prayer",
+   "node": "morning.yigdal"
+  },
+  "he:Weekdays/Preparation for Prayer:26": {
+   "kind": "prayer",
+   "node": "morning.yigdal"
+  },
+  "he:Weekdays/Preparation for Prayer:27": {
+   "kind": "prayer",
+   "node": "morning.yigdal"
+  },
+  "he:Weekdays/Preparation for Prayer:28": {
+   "kind": "prayer",
+   "node": "morning.yigdal"
+  },
+  "he:Weekdays/On Waking:3": {
+   "kind": "prayer",
+   "en": "I thank You, living and eternal King,"
+  },
+  "he:Weekdays/On Waking:5": {
+   "kind": "prayer",
+   "node": "morning.netilat_yadayim"
+  },
+  "he:Weekdays/On Waking:6": {
+   "kind": "prayer",
+   "node": "morning.asher_yatzar"
+  },
+  "he:Weekdays/On Waking:7": {
+   "kind": "prayer",
+   "node": "morning.elokai_neshama"
+  },
+  "he:Weekdays/On Waking:8": {
+   "kind": "heading",
+   "en": "Putting on Tzitzit",
+   "gloss": "Heading for the tzitzit blessing"
+  },
+  "he:Weekdays/On Waking:10": {
+   "kind": "prayer",
+   "node": "morning.tzitzit"
+  },
+  "he:Weekdays/On Waking:12": {
+   "kind": "prayer",
+   "node": "morning.yehi_ratzon"
+  }
+ },
+ "en": {
+  "en:Preface:1": {
+   "he": [],
+   "kind": "heading"
+  },
+  "en:Preface:2": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:3": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:4": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:5": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:6": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:7": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:8": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:9": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:10": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:11": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:12": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:13": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:14": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:15": {
+   "parts": [
+    {
+     "text": "It is always a privilege to collaborate on a project with those who share our commitment and enthusiasm for bringing out the beauty of ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Tefilla</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". We are grateful to Judith and David Lobel for their support and are proud to have their name grace this edition. Mr. Lobel’s eminently practical suggestions were particularly helpful during the conceptual process. On behalf of the scholars,",
+     "kind": "commentary"
+    },
+    {
+     "text": " editors and designers of this volume,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we thank  you;",
+     "kind": "commentary"
+    },
+    {
+     "text": " on behalf of the users of this Siddur,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we are forever in your debt.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Preface:16": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:17": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Preface:18": {
+   "parts": [
+    {
+     "text": "We can only hope that we have extended the vision of Eliyahu Koren to a new generation and a larger audience,",
+     "kind": "commentary"
+    },
+    {
+     "text": " furthering ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Avodat HaShem</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "  for Jews everywhere.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Preface:19": {
+   "he": [],
+   "kind": "heading"
+  },
+  "en:Preface:20": {
+   "he": [],
+   "kind": "heading"
+  },
+  "en:Foreword:1": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Foreword:2": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Foreword:3": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Foreword:4": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Foreword:5": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Foreword:6": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Foreword:7": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Foreword:8": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Foreword:9": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Foreword:10": {
+   "he": [],
+   "kind": "heading"
+  },
+  "en:Foreword:11": {
+   "he": [],
+   "kind": "heading"
+  },
+  "en:Foreword:12": {
+   "he": [],
+   "kind": "heading"
+  },
+  "en:Understanding Jewish Prayer:49": {
+   "parts": [
+    {
+     "text": "Another is the passage on Shabbat morning following the phrase “who forms light and creates darkness,",
+     "kind": "commentary"
+    },
+    {
+     "text": " makes peace and creates all” (pages 455–457). A brief prayer takes the last word,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “all,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” and builds around it a fivefold set of variations: “",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>All</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " will thank You. ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>All</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " will praise You. ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>All</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " will declare: Nothing is holy as is the LORD. ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>All</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " will exalt You,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Selah,",
+     "kind": "commentary"
+    },
+    {
+     "text": " You who form ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>all.”</i>",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:50": {
+   "parts": [
+    {
+     "text": "Always look for apparent repetition in prayer – like the tenfold “Blessed” in ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Barukh SheAmar</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (“Blessed is He who spoke”),",
+     "kind": "commentary"
+    },
+    {
+     "text": " the eightfold “True” after the Shema,",
+     "kind": "commentary"
+    },
+    {
+     "text": " or the fivefold “All” immediately after ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Barekhu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (“Bless the LORD”) on Shabbat morning. Reiteration is never mere repetition. The prayer is inviting us to meditate on the multiple layers of meaning that may exist in a single word or phrase,",
+     "kind": "commentary"
+    },
+    {
+     "text": " as if words were diamonds and we were turning them this way and that to catch their multiple refractions of light.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:51": {
+   "parts": [
+    {
+     "text": "<big><i>I. Numerical Structures</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>As we have seen,",
+     "kind": "commentary"
+    },
+    {
+     "text": " many of the prayers have an obvious three-part structure,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but in some cases this is repeated in great detail on a smaller scale,",
+     "kind": "commentary"
+    },
+    {
+     "text": " as in fractals.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:52": {
+   "parts": [
+    {
+     "text": "The most striking example is the weekday Amida,",
+     "kind": "commentary"
+    },
+    {
+     "text": " which is composed of three parts: praise–request–acknowledgment. The first and last of these are each constructed in threes: three blessings of praise at the beginning,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and three of acknowledgment at the end. Less obvious is the fact that the middle thirteen blessings – “requests” – ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>also</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " share this structure. There are six individual requests,",
+     "kind": "commentary"
+    },
+    {
+     "text": " followed by six collective ones,",
+     "kind": "commentary"
+    },
+    {
+     "text": " each divided into two groups of three. The individual requests begin with three spiritual needs (understanding,",
+     "kind": "commentary"
+    },
+    {
+     "text": " repentance,",
+     "kind": "commentary"
+    },
+    {
+     "text": " forgiveness) followed by three material ones (deliverance from oppression,",
+     "kind": "commentary"
+    },
+    {
+     "text": " healing,",
+     "kind": "commentary"
+    },
+    {
+     "text": " prosperity). The collective requests begin with three political-historical elements (ingathering of exiles,",
+     "kind": "commentary"
+    },
+    {
+     "text": " restoration of judges,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and an end to internal strife – the “slanderers”),",
+     "kind": "commentary"
+    },
+    {
+     "text": " followed by the three spiritual bases of nationhood (the righteous,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Jerusalem,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the restoration of the Davidic monarchy). The thirteenth,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “Listen to our voice,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” stands outside this structure because it is not directed to any specific request but is,",
+     "kind": "commentary"
+    },
+    {
+     "text": " instead,",
+     "kind": "commentary"
+    },
+    {
+     "text": " a prayer that our prayers be heeded.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:53": {
+   "parts": [
+    {
+     "text": "The number seven is also significant and always indicates holiness,",
+     "kind": "commentary"
+    },
+    {
+     "text": " as in the seventh day,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Shabbat;",
+     "kind": "commentary"
+    },
+    {
+     "text": " the seventh month,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Tishrei with its Days of Awe;",
+     "kind": "commentary"
+    },
+    {
+     "text": " the seventh year,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the “year of release”;",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the fiftieth year,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the Jubilee,",
+     "kind": "commentary"
+    },
+    {
+     "text": " which follows seven cycles of seven years. Seven in Judaism is not a simple prime number. It is the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>one-after-six</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". Six represents the material,",
+     "kind": "commentary"
+    },
+    {
+     "text": " physical,",
+     "kind": "commentary"
+    },
+    {
+     "text": " secular. Ancient Mesopotamia,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the birthplace of Abraham,",
+     "kind": "commentary"
+    },
+    {
+     "text": " originally used a numerical system based on the number six. Western civilization still bears traces of this in the twenty-four hour day (2 × 6 hours of light,",
+     "kind": "commentary"
+    },
+    {
+     "text": " plus 2 × 6 of darkness);",
+     "kind": "commentary"
+    },
+    {
+     "text": " the sixty (10 × 6) minutes in an hour,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and seconds in a minute;",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the 360 degrees in a circle (6 × 6 × 10). All of these originated in astronomy,",
+     "kind": "commentary"
+    },
+    {
+     "text": " at which the ancient Mesopotamians excelled. Judaism acknowledges the six-part structure of time and space,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but adds that God exists ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>beyond</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " time and space. Hence seven – the one beyond six – became the symbol of the holy.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:54": {
+   "parts": [
+    {
+     "text": "Six,",
+     "kind": "commentary"
+    },
+    {
+     "text": " too,",
+     "kind": "commentary"
+    },
+    {
+     "text": " is not a simple number in Judaism. This becomes evident when we read the story of creation in Genesis 1 carefully. The first six days fall into two groups. On the first three,",
+     "kind": "commentary"
+    },
+    {
+     "text": " God created and separated ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>domains</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (1: light and darkness,",
+     "kind": "commentary"
+    },
+    {
+     "text": " 2: upper and lower waters,",
+     "kind": "commentary"
+    },
+    {
+     "text": " 3: sea and dry land). On the second three God ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>populated</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " these domains,",
+     "kind": "commentary"
+    },
+    {
+     "text": " each with its appropriate objects or life-forms (4: sun,",
+     "kind": "commentary"
+    },
+    {
+     "text": " moon and stars,",
+     "kind": "commentary"
+    },
+    {
+     "text": " 5: birds and fish,",
+     "kind": "commentary"
+    },
+    {
+     "text": " 6: land animals and man). The seventh day,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Shabbat,",
+     "kind": "commentary"
+    },
+    {
+     "text": " is ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>holy</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " because it stands ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>outside</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " nature and its causal-scientific  laws.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:55": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:56": {
+   "parts": [
+    {
+     "text": "It follows that sixfold structures in the siddur signal the universe and creation. Thus,",
+     "kind": "commentary"
+    },
+    {
+     "text": " on weekday mornings we say six psalms (145–150) in the Verses of Praise. ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kabbalat Shabbat</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " also contains six psalms,",
+     "kind": "commentary"
+    },
+    {
+     "text": " corresponding to the days of the week,",
+     "kind": "commentary"
+    },
+    {
+     "text": " before ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Lekha Dodi</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " which represents Shabbat itself. The blessing after the Shema repeats the keyword ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Emet</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (“true”) six times to show how God’s love is translated into redemptive activity in a this-worldly time and space.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:57": {
+   "parts": [
+    {
+     "text": "Many prayers such as ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>El Adon</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (page 461) and ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Aleinu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " are constructed in a pattern of fours: four-line verses,",
+     "kind": "commentary"
+    },
+    {
+     "text": " each of four words. Often these reflect Jewish mysticism with its four “worlds”: ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Asiyya</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (Action), ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Yetzira</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (Formation), ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Beri’a</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (Creation) and ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Atzilut</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (Emanation). ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Merkava</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " mysticism,",
+     "kind": "commentary"
+    },
+    {
+     "text": " based on Ezekiel’s vision of the divine chariot,",
+     "kind": "commentary"
+    },
+    {
+     "text": " is an important strand of early rabbinic prayer.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:58": {
+   "parts": [
+    {
+     "text": "The number ten represents the “ten utterances with which the world was created” (the ten places in Genesis 1 where an act of creation is preceded by the words “God said”). That is why ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Barukh SheAmar</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " the blessing before the creation section of the prayers,",
+     "kind": "commentary"
+    },
+    {
+     "text": " begins with a tenfold litany of phrases each beginning with the word “Blessed.”",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:59": {
+   "parts": [
+    {
+     "text": "Fifteen represents the fifteen steps between the courtyards of the Temple,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the fifteen psalms beginning “A song of ascents,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” and the numerical value of the first two letters of God’s holiest name. Hence,",
+     "kind": "commentary"
+    },
+    {
+     "text": " there are fifteen expressions of praise in the paragraph ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Yishtabaḥ</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (page 451),",
+     "kind": "commentary"
+    },
+    {
+     "text": " fifteen adjectives following “the LORD Your God is true” at the end of the Shema in the morning service,",
+     "kind": "commentary"
+    },
+    {
+     "text": " fifteen psalms in the Verses of Praise on Shabbat and Yom Tov mornings,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and so on. There are also more intricate numerical patterns.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:60": {
+   "parts": [
+    {
+     "text": "These are not mere aesthetic conventions like,",
+     "kind": "commentary"
+    },
+    {
+     "text": " for example,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the fourteen-line sonnet form or the four-movement structure of a symphony. As always in Judaism there is a matching of form to content,",
+     "kind": "commentary"
+    },
+    {
+     "text": " structure to substance. The sages understood – as did the ancient Greeks,",
+     "kind": "commentary"
+    },
+    {
+     "text": " amply confirmed by modern science – that ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>reality has a numerical structure</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". Mirroring this structure in prayer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we evoke the sense of a world of order in which we are called upon to respect differences and honor boundaries,",
+     "kind": "commentary"
+    },
+    {
+     "text": " accepting graciously the integrity of natural and moral law.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:61": {
+   "parts": [
+    {
+     "text": "<big><i>J. From Love to Awe</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>The supreme religious emotions are love and awe – in that order. We are commanded to “Love the LORD your God.” We are also commanded to experience the feelings associated with the Hebrew word ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>yira</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " which means “awe,",
+     "kind": "commentary"
+    },
+    {
+     "text": " fear,",
+     "kind": "commentary"
+    },
+    {
+     "text": " reverence.” This is how Maimonides puts it: “When a person contemplates His great and wondrous works and creatures and from them obtains a glimpse of His wisdom,",
+     "kind": "commentary"
+    },
+    {
+     "text": " which is incomparable and infinite,",
+     "kind": "commentary"
+    },
+    {
+     "text": " he will immediately love Him,",
+     "kind": "commentary"
+    },
+    {
+     "text": " praise Him,",
+     "kind": "commentary"
+    },
+    {
+     "text": " glorify Him,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and long with an exceeding longing to know His great name…And when he ponders these matters,",
+     "kind": "commentary"
+    },
+    {
+     "text": " he will recoil frightened,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and realize that he is a small creature,",
+     "kind": "commentary"
+    },
+    {
+     "text": " lowly and obscure,",
+     "kind": "commentary"
+    },
+    {
+     "text": " endowed with slight and slender intelligence,",
+     "kind": "commentary"
+    },
+    {
+     "text": " standing in the presence of He who is perfect in knowledge” (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Yesodei HaTorah</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " 2:2).",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:62": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:63": {
+   "parts": [
+    {
+     "text": "<big><i>4. Creation, Revelation, Redemption</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>One structural principle of the prayers deserves special attention,",
+     "kind": "commentary"
+    },
+    {
+     "text": " since it touches on the fundamentals of Jewish faith. In the twelfth century,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Moses Maimonides enumerated the Thirteen Principles of Jewish Faith. They appear in the siddur in two forms: the poem known as Yigdal (page 25) and a prose version after the end of the morning service (page 203).",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:64": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:65": {
+   "parts": [
+    {
+     "text": "The movement from<i> </i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "creation<i> </i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "to<i> </i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "revelation<i> </i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "to<i> </i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "redemption is one of the great structural motifs of prayer. One example is the three blessings in the morning service,",
+     "kind": "commentary"
+    },
+    {
+     "text": " surrounding the Shema and leading up to the Amida (pages 89–107). The first is about the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>creation</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " of the universe in space and time;",
+     "kind": "commentary"
+    },
+    {
+     "text": " the second is about the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>revelation</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " of the Torah;",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the third is about the miracles of history,",
+     "kind": "commentary"
+    },
+    {
+     "text": " ending with the words,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “who ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>redeemed</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " Israel.”",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:66": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:67": {
+   "parts": [
+    {
+     "text": "The weekday morning service as a whole is constructed on this principle. First come the Verses of Praise,",
+     "kind": "commentary"
+    },
+    {
+     "text": " taken from the book of Psalms,",
+     "kind": "commentary"
+    },
+    {
+     "text": " with their majestic vision of creation. Then follows the central section – the Shema and its blessings,",
+     "kind": "commentary"
+    },
+    {
+     "text": " leading to the Amida – in which we sit,",
+     "kind": "commentary"
+    },
+    {
+     "text": " then stand,",
+     "kind": "commentary"
+    },
+    {
+     "text": " in the immediate presence of God (revelation). Finally we come to the concluding prayers with their central line,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “A ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>redeemer</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " will come to Zion.” The second paragraph of ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Aleinu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " is likewise a vision of redemption.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:68": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:69": {
+   "parts": [
+    {
+     "text": "Rabbi Joseph Soloveitchik suggested that the same sequence is the basis for the threefold structure of the weekday Amida: praise,",
+     "kind": "commentary"
+    },
+    {
+     "text": " request,",
+     "kind": "commentary"
+    },
+    {
+     "text": " thanks. Praise “emerges from an enraptured soul gazing at the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>mysterium</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " <i>magnum</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " of creation,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” request “flows from an aching heart which finds itself in existential depths,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” and thanksgiving “is sung by the person who has attained,",
+     "kind": "commentary"
+    },
+    {
+     "text": " by the grace of God,",
+     "kind": "commentary"
+    },
+    {
+     "text": " redemption.” Creation leads to praise,",
+     "kind": "commentary"
+    },
+    {
+     "text": " revelation to request,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and redemption to thanksgiving.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:70": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:71": {
+   "parts": [
+    {
+     "text": "<big><i>5. Prayer and Study</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>There is one spiritual activity that the sages regarded as even higher than prayer: namely,",
+     "kind": "commentary"
+    },
+    {
+     "text": " study of Torah,",
+     "kind": "commentary"
+    },
+    {
+     "text": " God’s word to humanity and His covenant with our ancestors and us (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Shabbat</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " 10a). The entire ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Pirkei Avot</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (Ethics of the Fathers) is a set of variations on the theme of a life devoted to Torah study. In prayer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we speak to God. Through Torah,",
+     "kind": "commentary"
+    },
+    {
+     "text": " God speaks to us. Praying,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we speak. Studying,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we listen.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:72": {
+   "parts": [
+    {
+     "text": "From earliest times,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the synagogue was a house of study as well as a house of prayer. Gatherings for study (perhaps around the figure of the prophet;",
+     "kind": "commentary"
+    },
+    {
+     "text": " see II Kings 4:23 and the commentaries of Radak and Ralbag; ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Sukka</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " 27b) may well have preceded formal prayer services by many centuries. Accordingly,",
+     "kind": "commentary"
+    },
+    {
+     "text": " interwoven with prayer are acts of study.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:73": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:74": {
+   "parts": [
+    {
+     "text": "In the main section of prayer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the paragraph preceding the Shema is a form of blessing over the Torah (see ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Berakhot</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " 11b),",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the Shema itself represents Torah study (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Menaḥot</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " 99b). The last section of the weekday morning prayers (pages 175–177) was originally associated with the custom of studying ten verses from the prophetic books. Kaddish,",
+     "kind": "commentary"
+    },
+    {
+     "text": " which plays such a large part in the prayers,",
+     "kind": "commentary"
+    },
+    {
+     "text": " had its origin in the house of study as the conclusion of a ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>derasha</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " a public exposition of biblical texts. The entire weekday morning service is thus an extended fugue between study and prayer.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:75": {
+   "parts": [
+    {
+     "text": "This is dramatized in two key phrases: the first is ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Shema Yisrael</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " “Listen,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Israel,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” God’s word through Moses and the Torah,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the second is ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Shema</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " <i>Koleinu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " “Listen to our voice,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” the paragraph within the Amida that summarizes all our requests (see above). These two phrases frame the great dialogue of study and prayer. Faith lives in these two acts of listening: ours to the call of God,",
+     "kind": "commentary"
+    },
+    {
+     "text": " God’s to the cry of humankind.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:76": {
+   "parts": [
+    {
+     "text": "<big><i>6. Prayer and Mysticism</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>Jewish mysticism has played a major role in the prayer book. The most obvious examples are the passage from the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Zohar</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " “Blessed is the name” (page 303),",
+     "kind": "commentary"
+    },
+    {
+     "text": " the Song of Glory (pages 571–573) written by one of the medieval north-European pietists,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the two songs written by the sixteenth-century Safed mystics associated with Rabbi Isaac Luria,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “Beloved of the soul” (page 309) and “Come,",
+     "kind": "commentary"
+    },
+    {
+     "text": " my Beloved” (pages 319–323).",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:77": {
+   "parts": [
+    {
+     "text": "Less obviously,",
+     "kind": "commentary"
+    },
+    {
+     "text": " many of the early post-biblical prayers were deeply influenced by ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Hekhalot</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (“Palace”) and ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Merkava</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (“Chariot”) mysticism,",
+     "kind": "commentary"
+    },
+    {
+     "text": " two esoteric systems that charted the mysteries of creation,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the angelic orders,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the innermost chambers of the divine glory.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:78": {
+   "parts": [
+    {
+     "text": "Undoubtedly,",
+     "kind": "commentary"
+    },
+    {
+     "text": " though,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the most significant mystical contribution to the prayers is the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kedusha</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " said in three different forms,",
+     "kind": "commentary"
+    },
+    {
+     "text": " most notably during the Leader’s Repetition of the Amida. We have noted the two major tributaries of prayer: the spontaneous prayers said by figures in the Hebrew Bible,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the sacrificial service in the Temple. Mysticism is the third,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and its most sublime expression is the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kedusha</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " based on the mystical visions of Isaiah (chapter 6) and Ezekiel (chapters 1–3). There are times in the prayers when we are like prophets,",
+     "kind": "commentary"
+    },
+    {
+     "text": " others when we are like priests,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but there is no more daring leap of faith than during the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kedu­sha</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " when we act out the role of angels singing praises to God in His innermost chambers.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:79": {
+   "parts": [
+    {
+     "text": "Familiarity breeds inattention,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and we can all too easily pass over the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kedusha</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " without noticing its astonishing drama. “The ministering angels do not begin to sing praises in heaven until Israel sings praises down here on earth” (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Ḥullin</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " 91b). “You,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” said God through Isaiah,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “are My witnesses” (Is. 43:10). Israel is “the people I formed for Myself that they might declare My praise” (ibid,",
+     "kind": "commentary"
+    },
+    {
+     "text": " 43:20). We are God’s angels on earth,",
+     "kind": "commentary"
+    },
+    {
+     "text": " His emissaries and ambassadors. The Jewish people,",
+     "kind": "commentary"
+    },
+    {
+     "text": " always small and vulnerable,",
+     "kind": "commentary"
+    },
+    {
+     "text": " have nonetheless been singled out for the most exalted mission ever entrusted to humankind: to be witnesses,",
+     "kind": "commentary"
+    },
+    {
+     "text": " in ourselves,",
+     "kind": "commentary"
+    },
+    {
+     "text": " to something beyond ourselves: to be God’s “signal of transcendence” in a world in which His presence is often hidden.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:80": {
+   "parts": [
+    {
+     "text": "This is a mystical idea,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and like all mysticism it hovers at the edge of intelligibility. Mysticism is the attempt to say the unsayable,",
+     "kind": "commentary"
+    },
+    {
+     "text": " know the unknowable,",
+     "kind": "commentary"
+    },
+    {
+     "text": " to reach out in language to a reality that lies beyond the scope of language. Often in the course of history,",
+     "kind": "commentary"
+    },
+    {
+     "text": " mysticism has tended to devalue the world of the senses in favor of a more exalted realm of disembodied spirituality. Jewish mysticism did not take this course. Instead it chose to bathe our life on earth in the dazzling light of the divine radiance (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Zohar</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " the title of Judaism’s most famous mystical text).",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:81": {
+   "parts": [
+    {
+     "text": "<big><i>7. Reliving History</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>History,",
+     "kind": "commentary"
+    },
+    {
+     "text": " too,",
+     "kind": "commentary"
+    },
+    {
+     "text": " has left its mark on the siddur. There are passages,",
+     "kind": "commentary"
+    },
+    {
+     "text": " indicated in the Commentary,",
+     "kind": "commentary"
+    },
+    {
+     "text": " that were born in the aftermath of tragedy or miraculous redemption. This edition of the siddur also includes suggested orders of service for Yom HaAtzma’ut and Yom Yerushalayim,",
+     "kind": "commentary"
+    },
+    {
+     "text": " marking the birth of the State of Israel in 1948,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the Six Day War of 1967.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:82": {
+   "parts": [
+    {
+     "text": "No less significantly,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the synagogue service invites us at many points to reenact history. The Verses of Praise begin with the song of celebration sung by King David when he brought the Ark to Jerusalem. The verses we sing when we take the Torah scroll from the Ark and when we return it recall the Israelites’ journeys through the wilderness,",
+     "kind": "commentary"
+    },
+    {
+     "text": " when they carried the Ark with them. In one of the most fascinating transitions in the service,",
+     "kind": "commentary"
+    },
+    {
+     "text": " as we move from private meditation to public prayer (pages 79–83),",
+     "kind": "commentary"
+    },
+    {
+     "text": " we recall three epic moments of nation-formation: when David gathered the people to charge them with the task of building the Temple;",
+     "kind": "commentary"
+    },
+    {
+     "text": " when Ezra convened a national assembly to renew the covenant after the return from Babylonian exile;",
+     "kind": "commentary"
+    },
+    {
+     "text": " and when Moses led the Israelites through the Reed Sea. Even the three steps forward we take as we begin the Amida recall the three biblical episodes in which people stepped forward (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>vayigash</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ") as a prelude to prayer: Abraham pleading for the cities of the plain,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Judah pleading with Joseph for Benjamin to be set free,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and Elijah invoking God against the prophets of Ba’al on Mount Carmel.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:83": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:84": {
+   "parts": [
+    {
+     "text": "<big><i>8. Prayer and Faith</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>The siddur is also the book of Jewish faith. Scholars of Judaism,",
+     "kind": "commentary"
+    },
+    {
+     "text": " noting that it contains little systematic theology,",
+     "kind": "commentary"
+    },
+    {
+     "text": " have sometimes concluded that it is a religion of deeds not creeds,",
+     "kind": "commentary"
+    },
+    {
+     "text": " acts not beliefs. They were wrong because they were searching in the wrong place. They were looking for a library of works like Moses Maimonides’ ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Guide for the Perplexed</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". They should have looked instead at the prayer book. The home of Jewish belief is the siddur.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:85": {
+   "parts": [
+    {
+     "text": "At several points,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the prayers have been shaped in response to theological controversy. The opening statement in the morning service after ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Barekhu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " “who forms light and creates darkness,",
+     "kind": "commentary"
+    },
+    {
+     "text": " makes peace and creates all,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” is a protest against dualism,",
+     "kind": "commentary"
+    },
+    {
+     "text": " which had a considerable following in the first four centuries CE in the form of Gnosticism and Manichaeism. Its presence can be traced in the ancient documents discovered in the 1940s,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the Dead Sea Scrolls and the Nag Hammadi codices. Against dualism,",
+     "kind": "commentary"
+    },
+    {
+     "text": " with its vision of perpetual cosmic struggle,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Judaism insists that all reality derives from a single source.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:86": {
+   "parts": [
+    {
+     "text": "The second paragraph of the<i> </i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "Amida,",
+     "kind": "commentary"
+    },
+    {
+     "text": " with its fivefold reference to the resurrection of the dead,",
+     "kind": "commentary"
+    },
+    {
+     "text": " reflects the ancient controversy between the Pharisees and Sadducees. The morning prayer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “My God,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the soul You placed within me is pure” (page 7),",
+     "kind": "commentary"
+    },
+    {
+     "text": " may be directed against the Pauline doctrine of original sin. The Mishna chapter,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “With what wicks may we light?” (pages 329–331),",
+     "kind": "commentary"
+    },
+    {
+     "text": " was probably inserted as part of the polemic against the Karaite sect. The Ten Commandments,",
+     "kind": "commentary"
+    },
+    {
+     "text": " said daily as part of the Temple service immediately after the<i> </i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "Shema,",
+     "kind": "commentary"
+    },
+    {
+     "text": " was removed from the prayers when it was used by sectarians to argue that only these ten commandments were commanded by God.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:87": {
+   "parts": [
+    {
+     "text": "The fact that Jewish faith was written into the prayers,",
+     "kind": "commentary"
+    },
+    {
+     "text": " rather than analyzed in works of theology,",
+     "kind": "commentary"
+    },
+    {
+     "text": " is of immense significance. We do not analyze our faith: we pray it. We do not philosophize about truth: we sing it. Even Maimonides’ Thirteen Principles of Jewish Faith – the most famous creed in the history of Judaism – only entered the mainstream of Jewish consciousness when they were turned into a song and included in the siddur as the hymn known as Yigdal. For Judaism,",
+     "kind": "commentary"
+    },
+    {
+     "text": " theology becomes real when it becomes prayer. We do not talk ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>about</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " God. We talk ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>to</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " God.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:88": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:89": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:90": {
+   "parts": [
+    {
+     "text": "<big><i>9. Prayer and Sacrifice</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>The connection between prayer and sacrifice is deep. As we have seen,",
+     "kind": "commentary"
+    },
+    {
+     "text": " sacrifice is not the only forerunner of our prayers;",
+     "kind": "commentary"
+    },
+    {
+     "text": " many prayers were spoken by figures in the Bible. These were said without any accompanying offering. Yet the sacrificial system is a major tributary of the Jewish river of prayer. After the destruction of the Second Temple,",
+     "kind": "commentary"
+    },
+    {
+     "text": " prayer became a substitute for sacrifice. It is ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>avoda shebalev</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " “the sacrificial service of the heart.” Yet it is just this feature of the prayers that many find difficult to understand or find uplifting. What,",
+     "kind": "commentary"
+    },
+    {
+     "text": " then,",
+     "kind": "commentary"
+    },
+    {
+     "text": " was sacrifice?",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:91": {
+   "parts": [
+    {
+     "text": "The Hebrew word for sacrifice is ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>korban</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " which comes from a root that means “to come,",
+     "kind": "commentary"
+    },
+    {
+     "text": " or bring,",
+     "kind": "commentary"
+    },
+    {
+     "text": " close.” The essential problem to which sacrifice is an answer is: how can we come close to God? This is a profound question – perhaps ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>the</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " question of the religious life – not simply because of the utter disparity between God’s infinity and our finitude,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but also because the very circumstances of life tend to focus our gaze downward to our needs rather than upward to our source. The Hebrew word for universe, ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>olam</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " is connected to the verb meaning “to hide” (see Lev. 4:13;",
+     "kind": "commentary"
+    },
+    {
+     "text": " Deut. 22:1). The physical world is a place in which the presence of God is real,",
+     "kind": "commentary"
+    },
+    {
+     "text": " yet hidden. Our horizon of consciousness is foreshortened. We focus on our own devices and desires. We walk in God’s light,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but often our mind is on other things.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:92": {
+   "parts": [
+    {
+     "text": "How then do we come close to God? By ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>an act of renunciation</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ";",
+     "kind": "commentary"
+    },
+    {
+     "text": " by giving something away;",
+     "kind": "commentary"
+    },
+    {
+     "text": " specifically,",
+     "kind": "commentary"
+    },
+    {
+     "text": " by giving something ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>back</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". The sacrifices of the biblical age were ways in which the individual,",
+     "kind": "commentary"
+    },
+    {
+     "text": " or the nation as a whole,",
+     "kind": "commentary"
+    },
+    {
+     "text": " in effect said: what we have,",
+     "kind": "commentary"
+    },
+    {
+     "text": " God,",
+     "kind": "commentary"
+    },
+    {
+     "text": " is really Yours. The world exists because of You. ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>We</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " exist because of You. Nothing we have is ultimately ours. The fundamental gesture of sacrifice is,",
+     "kind": "commentary"
+    },
+    {
+     "text": " on the face of it,",
+     "kind": "commentary"
+    },
+    {
+     "text": " absurd. What we give to God is something that already belongs to Him. As King David said: “Who am I and who are my people that we should be able to give as generously as this? Everything comes from You,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and we have given You only what comes from Your hand” (I Chr. 29:14). Yet to",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i> give back </i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "to<i> </i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "God is one of the most profound instincts of the soul. Doing so,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we acknowledge our dependency. We cast off the carapace of self-absorption. That is why,",
+     "kind": "commentary"
+    },
+    {
+     "text": " in one of its most striking phrases,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the Torah speaks of sacrifice as being ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>rei’aḥ niḥo’aḥ</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " “sweet savor” to God.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:93": {
+   "parts": [
+    {
+     "text": "One of the sweetest savors of parenthood is when a child,",
+     "kind": "commentary"
+    },
+    {
+     "text": " by now grown to maturity,",
+     "kind": "commentary"
+    },
+    {
+     "text": " brings a parent a gift to express his or her thanks. This too seems absurd. What can a child give a parent that remotely approximates what a parent gives a child,",
+     "kind": "commentary"
+    },
+    {
+     "text": " namely life itself? Yet it is so,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the reverse is also true. The cruelest thing a child can do is ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>not</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " to acknowledge his or her parents. The Talmud attributes to Rabbi Akiva the phrase ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Avinu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " <i>Malkenu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " “Our Father,",
+     "kind": "commentary"
+    },
+    {
+     "text": " our King.” Those two words encapsulate the essence of Jewish worship. God is King – Maker and Sovereign of the vast universe. Yet even before God is our King,",
+     "kind": "commentary"
+    },
+    {
+     "text": " He is our Father,",
+     "kind": "commentary"
+    },
+    {
+     "text": " our Parent,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the One who brought us into being in love,",
+     "kind": "commentary"
+    },
+    {
+     "text": " who nurtured and sustained us,",
+     "kind": "commentary"
+    },
+    {
+     "text": " who taught us His ways,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and who tenderly watches over our destiny. Sacrifice – the gift we bring to God – is the gift of the made to its Maker,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the owned to its Owner,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the child to its Parent. If creation is an act of love,",
+     "kind": "commentary"
+    },
+    {
+     "text": " sacrifice is an acknowledgment of that love.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:94": {
+   "parts": [
+    {
+     "text": "The late Rabbi Joseph Soloveitchik emphasized the difference between ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>ma’aseh mitzva</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " the external act specified by a commandment,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kiyum mitzva</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " the actual fulfillment of a commandment. When the Temple stood,",
+     "kind": "commentary"
+    },
+    {
+     "text": " for example,",
+     "kind": "commentary"
+    },
+    {
+     "text": " a penitent would bring a guilt- or sin-offering to atone for his sin: that was the external act. The fulfillment of the commandment,",
+     "kind": "commentary"
+    },
+    {
+     "text": " though,",
+     "kind": "commentary"
+    },
+    {
+     "text": " lay in confession and contrition,",
+     "kind": "commentary"
+    },
+    {
+     "text": " acts of the mind and will. In biblical times,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the sacrificial order was the external act,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but the internal act – acknowledgment,",
+     "kind": "commentary"
+    },
+    {
+     "text": " dependency,",
+     "kind": "commentary"
+    },
+    {
+     "text": " recognition,",
+     "kind": "commentary"
+    },
+    {
+     "text": " thanks,",
+     "kind": "commentary"
+    },
+    {
+     "text": " praise – was essential to its fulfillment. That is why Judaism was able to survive the destruction of the Temple and the cessation of the sacrificial order. The external act could no longer be performed,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but the internal act remained. That is the link between sacrifice and prayer.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:95": {
+   "parts": [
+    {
+     "text": "The difference between prayer-as-request and prayer-as-sacrifice is that request ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>seeks</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " sacrifice ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>gives</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". The prophets asked,",
+     "kind": "commentary"
+    },
+    {
+     "text": " usually on behalf of the people as a whole,",
+     "kind": "commentary"
+    },
+    {
+     "text": " for forgiveness,",
+     "kind": "commentary"
+    },
+    {
+     "text": " deliverance,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and blessing. The priests who offered sacrifices in the Temple asked for nothing. Sacrificial prayer is the giving back to God what God already owns: our lives,",
+     "kind": "commentary"
+    },
+    {
+     "text": " our days,",
+     "kind": "commentary"
+    },
+    {
+     "text": " our world. Prayer is creation’s gift to its Creator.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:96": {
+   "parts": [
+    {
+     "text": "The prophets were critical of the sacrificial system. They reserved for it some of their most lacerating prose. Yet none proposed its abolition,",
+     "kind": "commentary"
+    },
+    {
+     "text": " because what they opposed was not the sacrificial act,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>ma’aseh</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " without the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kiyum</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " the outer act without the inner acknowledgment that gives the act its meaning and significance. The idea that God can be worshiped through externalities alone is pagan,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and there is nothing worse than the intrusion of paganism into the domain of holiness itself. Then as now,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the sign of paganism is the coexistence of religious worship with injustice and a lack of compassion in the dealings between the worshiper and the world.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:97": {
+   "parts": [
+    {
+     "text": "Sacrifice,",
+     "kind": "commentary"
+    },
+    {
+     "text": " like prayer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " is a transformative act. We should leave the synagogue,",
+     "kind": "commentary"
+    },
+    {
+     "text": " as our ancestors once left the Temple,",
+     "kind": "commentary"
+    },
+    {
+     "text": " seeing ourselves and the universe differently,",
+     "kind": "commentary"
+    },
+    {
+     "text": " freshly conscious that the world is God’s work,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the Torah God’s word,",
+     "kind": "commentary"
+    },
+    {
+     "text": " our fellow believers God’s children,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and our fellow human beings God’s image. We emerge refocused and reenergized,",
+     "kind": "commentary"
+    },
+    {
+     "text": " for we have made the journey back to our source,",
+     "kind": "commentary"
+    },
+    {
+     "text": " to the One who gives life to all. Distant,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we have come close. That is prayer as sacrifice, ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>korban</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " giving back to God a token of what He has given us,",
+     "kind": "commentary"
+    },
+    {
+     "text": " thereby coming to see existence itself as a gift,",
+     "kind": "commentary"
+    },
+    {
+     "text": " to be celebrated and sanctified.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:98": {
+   "parts": [
+    {
+     "text": "<big><i>10. Kavana: Directing the Mind</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>Prayer is more than saying certain words in the right order. It needs concentration,",
+     "kind": "commentary"
+    },
+    {
+     "text": " attention,",
+     "kind": "commentary"
+    },
+    {
+     "text": " engagement of mind and heart,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the left and right hemispheres of the brain. Without devotion,",
+     "kind": "commentary"
+    },
+    {
+     "text": " said Rabbi Baḥye ibn Pakuda,",
+     "kind": "commentary"
+    },
+    {
+     "text": " prayer is like a body without a soul. The key Hebrew word here is ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kavana,</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " meaning mindfulness,",
+     "kind": "commentary"
+    },
+    {
+     "text": " intention,",
+     "kind": "commentary"
+    },
+    {
+     "text": " focus,",
+     "kind": "commentary"
+    },
+    {
+     "text": " direction of the mind. In the context of prayer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " it means several different things.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:99": {
+   "parts": [
+    {
+     "text": "The most basic level is ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kavana le-shem mitzva</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " which means,",
+     "kind": "commentary"
+    },
+    {
+     "text": " having the intention to fulfill a ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>mitzva</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". This means that we do not act for social or aesthetic reasons. We pray because we are commanded to pray. Generally in Judaism there is a long-standing debate about whether the commandments require ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kavana</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " but certainly prayer does,",
+     "kind": "commentary"
+    },
+    {
+     "text": " because it is supremely an act of the mind.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:100": {
+   "parts": [
+    {
+     "text": "At a second level, ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kavana</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " means understanding the words (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>perush hamilim</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "). At least the most important sections of prayer require ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kavana</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " in this sense. Without it,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the words we say would be mere sounds. Understanding the words is,",
+     "kind": "commentary"
+    },
+    {
+     "text": " of course,",
+     "kind": "commentary"
+    },
+    {
+     "text": " made much easier by the existence of translations and commentaries.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:101": {
+   "parts": [
+    {
+     "text": "A third level relates to context. How do I understand my situation when I pray? Maimonides states this principle as follows: “The mind should be ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>freed from all extraneous thoughts</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the one who prays should ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>realize that he is standing before the Divine Presence</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ".” These are essential elements of at least the Amida,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the prayer par excellence in which we are conscious of standing before God. That is why we take three steps forward at the beginning,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and three back at the end – as if we were entering,",
+     "kind": "commentary"
+    },
+    {
+     "text": " then leaving,",
+     "kind": "commentary"
+    },
+    {
+     "text": " sacred space.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:102": {
+   "parts": [
+    {
+     "text": "The fourth level of ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kavana</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " is not merely saying the words but meaning them,",
+     "kind": "commentary"
+    },
+    {
+     "text": " affirming them. Thus,",
+     "kind": "commentary"
+    },
+    {
+     "text": " for example,",
+     "kind": "commentary"
+    },
+    {
+     "text": " while saying the first paragraph of the Shema",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>,</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " we “accept of the yoke of the kingdom of heaven” – declaring our allegiance to God as the supreme authority in our lives. In the second paragraph,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we “accept of the yoke of the commandments.” The word ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Amen</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " means roughly,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “I affirm what has been said.” In prayer we put ourselves into the words. We make a commitment. We declare our faith,",
+     "kind": "commentary"
+    },
+    {
+     "text": " our trust,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and our dependency. We mean what we say.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:103": {
+   "parts": [
+    {
+     "text": "There are,",
+     "kind": "commentary"
+    },
+    {
+     "text": " of course,",
+     "kind": "commentary"
+    },
+    {
+     "text": " higher reaches of ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kavana</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". Mystics and philosophers throughout the ages developed elaborate meditative practices before and during prayer. But at its simplest, ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kavana</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " is the practiced harmony of word and thought,",
+     "kind": "commentary"
+    },
+    {
+     "text": " body and mind. This is how Judah HaLevi described it:",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:104": {
+   "parts": [
+    {
+     "text": "<span class=\"poetry indentAll\">The tongue agrees with the thought,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and does not overstep its bounds,",
+     "kind": "commentary"
+    },
+    {
+     "text": " does not speak in prayer in a mere mechanical way as the starling and the parrot,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but every word is uttered thoughtfully and attentively. This moment forms the heart and fruit of his time,",
+     "kind": "commentary"
+    },
+    {
+     "text": " while the other hours represent the way that leads to it. He looks forward to its approach,",
+     "kind": "commentary"
+    },
+    {
+     "text": " because while it lasts he resembles the spiritual beings,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and is removed from merely animal existence. Those three times of daily prayer are the fruit of his day and night,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the Sabbath is the fruit of the week,",
+     "kind": "commentary"
+    },
+    {
+     "text": " because it has been appointed to establish the connection with the Divine Spirit and to serve God in joy,",
+     "kind": "commentary"
+    },
+    {
+     "text": " not in sadness… (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kuzari</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " III:5,",
+     "kind": "commentary"
+    },
+    {
+     "text": " as translated by Hartwig Hirschfeld) </span>",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:105": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:106": {
+   "parts": [
+    {
+     "text": "Rabbi Menaḥem Mendel of Kotzk once asked: “Why does it say in the Shema,",
+     "kind": "commentary"
+    },
+    {
+     "text": " ‘These words shall be ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>on</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " your heart’? Should it not say,",
+     "kind": "commentary"
+    },
+    {
+     "text": " ‘These words shall be ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>in</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " your heart’? The answer is that the heart is not always open. Therefore we should lay these words on our heart,",
+     "kind": "commentary"
+    },
+    {
+     "text": " so that when it opens,",
+     "kind": "commentary"
+    },
+    {
+     "text": " they will be there,",
+     "kind": "commentary"
+    },
+    {
+     "text": " ready to enter.”",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:107": {
+   "parts": [
+    {
+     "text": "Prayer requires practice. That is implicit in defining prayer as ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>avoda shebalev</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " “service of the heart.” The word ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>avoda</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " service,",
+     "kind": "commentary"
+    },
+    {
+     "text": " also means hard work,",
+     "kind": "commentary"
+    },
+    {
+     "text": " labor,",
+     "kind": "commentary"
+    },
+    {
+     "text": " strenuous activity. We have to work at prayer. But there are also times when the most inarticulate prayer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " said from the heart,",
+     "kind": "commentary"
+    },
+    {
+     "text": " pierces the heavens. What matters is seriousness and honesty. “The LORD is close to all who call on Him,",
+     "kind": "commentary"
+    },
+    {
+     "text": " to all who call on Him in truth.”",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:108": {
+   "parts": [
+    {
+     "text": "<big><i>11. Jacob’s Ladder</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>Prayer is a journey that has been described in many ways. According to the mystics,",
+     "kind": "commentary"
+    },
+    {
+     "text": " it is a journey through the four levels of being – Action,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Formation,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Creation and Emanation. Rabbi Jacob Emden worked out an elaborate scheme in which the prayers represent a movement from the outer courtyards to the Holy of Holies of the Temple in Jerusalem. According to everyone,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the stages of prayer constitute an ascent and descent,",
+     "kind": "commentary"
+    },
+    {
+     "text": " reaching their highest level in the middle,",
+     "kind": "commentary"
+    },
+    {
+     "text": " in the Shema and Amida.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:109": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:110": {
+   "parts": [
+    {
+     "text": "Our sages said that “this place” was Jerusalem. That is midrashic truth. But there is another meaning,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the plain one,",
+     "kind": "commentary"
+    },
+    {
+     "text": " no less transfiguring. The verb the Torah uses, ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>vayifga</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " means “to happen upon,",
+     "kind": "commentary"
+    },
+    {
+     "text": " as if by chance.” “This place” was any place. Any place,",
+     "kind": "commentary"
+    },
+    {
+     "text": " any time,",
+     "kind": "commentary"
+    },
+    {
+     "text": " even the dark of a lonely night,",
+     "kind": "commentary"
+    },
+    {
+     "text": " can be a place and time for prayer. If we have the strength to dream and then,",
+     "kind": "commentary"
+    },
+    {
+     "text": " awakening,",
+     "kind": "commentary"
+    },
+    {
+     "text": " refuse to let go of the dream,",
+     "kind": "commentary"
+    },
+    {
+     "text": " then here,",
+     "kind": "commentary"
+    },
+    {
+     "text": " now,",
+     "kind": "commentary"
+    },
+    {
+     "text": " where I stand,",
+     "kind": "commentary"
+    },
+    {
+     "text": " can be the gate to heaven.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:111": {
+   "parts": [
+    {
+     "text": "Prayer is a ladder and we are the angels. If there is one theme sounded throughout the prayers,",
+     "kind": "commentary"
+    },
+    {
+     "text": " it is creation–revelation–redemption,",
+     "kind": "commentary"
+    },
+    {
+     "text": " or ascent–summit–descent. In the Verses of Praise,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we climb from earth to heaven by meditating on creation. Like a Turner or Monet landscape,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the psalms let us see the universe bathed in light,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>this</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " light is not the light of beauty but of holiness – the light the sages say God made on the first day and “hid for the righteous in the life to come.” Through some of the most magnificent poetry ever written,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we see the world as God’s masterpiece,",
+     "kind": "commentary"
+    },
+    {
+     "text": " suffused with His radiance,",
+     "kind": "commentary"
+    },
+    {
+     "text": " until we reach a crescendo in Psalm 150 with its thirteen-fold repetition of “Praise” in a mere thirty-five words.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:112": {
+   "parts": [
+    {
+     "text": "By the time we reach ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Barekhu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the blessings of the Shema we have neared the summit. Now we are in heaven with the angels. We have reached revelation. The Divine Presence is close,",
+     "kind": "commentary"
+    },
+    {
+     "text": " almost tangible. We speak of love in one of the most hauntingly beautiful of blessings,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “Great love” with its striking phrase: “Our Father,",
+     "kind": "commentary"
+    },
+    {
+     "text": " merciful Father,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the Merciful,",
+     "kind": "commentary"
+    },
+    {
+     "text": " have mercy on us.” Now comes the great declaration of faith at the heart of prayer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the Shema with its passionate profession of the unity of God and the highest of all expressions of love,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “with all your heart,",
+     "kind": "commentary"
+    },
+    {
+     "text": " with all your soul,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and with all your might.” Ending with a reference to the exodus,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the Shema gives way to the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Emet</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " blessing with its emphasis on redemption,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the exodus and the division of the sea. Then comes the Amida,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the supreme height of prayer. Three traditions fuse at this point: the silent Amida said by individuals,",
+     "kind": "commentary"
+    },
+    {
+     "text": " reminding us of prophetic prayer;",
+     "kind": "commentary"
+    },
+    {
+     "text": " the Leader’s Repetition representing priestly worship and prayer as sacrifice;",
+     "kind": "commentary"
+    },
+    {
+     "text": " and then the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kedusha</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " prayer as a mystical experience.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:113": {
+   "parts": [
+    {
+     "text": "From here,",
+     "kind": "commentary"
+    },
+    {
+     "text": " prayer begins its descent. First comes ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Taḥanun</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " in which we speak privately and intimately to the King. At this point,",
+     "kind": "commentary"
+    },
+    {
+     "text": " with a mixture of anguish and plea,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we speak not of God’s love for Israel but of Israel’s defiant love of God: “Yet despite all this we have not forgotten Your name. Please do not forget us.” There is a direct reference back to the Shema: “Guardian of Israel,",
+     "kind": "commentary"
+    },
+    {
+     "text": " guard the remnant of Israel,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and let not Israel perish who declare, ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Shema Yisrael</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ".”",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:114": {
+   "parts": [
+    {
+     "text": "Then comes ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Ashrei</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the subsequent passages,",
+     "kind": "commentary"
+    },
+    {
+     "text": " similar to the Verses of Praise but this time with redemption,",
+     "kind": "commentary"
+    },
+    {
+     "text": " not creation,",
+     "kind": "commentary"
+    },
+    {
+     "text": " as their theme. The key verse is “A redeemer will come to Zion.” The section closes with a prayer that we may become agents of redemption as we reengage with the world (“May it be Your will…that we keep Your laws in this world”). We are now back on earth,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the service complete except for ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Aleinu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " Kaddish  and the Daily Psalm. We are ready to reenter life and its challenges.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:115": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:116": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:117": {
+   "parts": [
+    {
+     "text": "<big><i>12. Is Prayer Answered?</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>Is prayer answered? If God is changeless,",
+     "kind": "commentary"
+    },
+    {
+     "text": " how can we change Him by what we say? Even discounting this,",
+     "kind": "commentary"
+    },
+    {
+     "text": " why do we need to articulate our requests? Surely God,",
+     "kind": "commentary"
+    },
+    {
+     "text": " who sees the heart,",
+     "kind": "commentary"
+    },
+    {
+     "text": " knows our wishes even before we do,",
+     "kind": "commentary"
+    },
+    {
+     "text": " without our having to put them into words. What we wish to happen is either right or wrong in the eyes of God. If it is right,",
+     "kind": "commentary"
+    },
+    {
+     "text": " God will bring it about even if we do not pray. If it is wrong,",
+     "kind": "commentary"
+    },
+    {
+     "text": " God will not bring it about even if we do. So why pray?",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:118": {
+   "parts": [
+    {
+     "text": "The classic Jewish answer is simple but profound. Without a vessel to contain a blessing,",
+     "kind": "commentary"
+    },
+    {
+     "text": " there can be no blessing. If we have no receptacle to catch the rain,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the rain may fall,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but we will have none to drink. If we have no radio receiver,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the sound waves will flow,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but we will be unable to convert them into sound. God’s blessings flow continuously,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but unless we make ourselves into a vessel for them,",
+     "kind": "commentary"
+    },
+    {
+     "text": " they will flow elsewhere. ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Prayer is the act of turning ourselves into a vehicle for the Divine.</i>",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:119": {
+   "parts": [
+    {
+     "text": "Speaking from personal experience,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and from many encounters with people for whom prayer was a lifeline,",
+     "kind": "commentary"
+    },
+    {
+     "text": " I know that our prayers are answered: not always in the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>way</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " we expected,",
+     "kind": "commentary"
+    },
+    {
+     "text": " not always as quickly as we hoped,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>prayer is never in vain</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". Sometimes the answer is,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “No.” If granting a request would do us or others harm,",
+     "kind": "commentary"
+    },
+    {
+     "text": " God will not grant it. But “No” is also an answer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and when God decides that something I have prayed for should not come to pass,",
+     "kind": "commentary"
+    },
+    {
+     "text": " then I pray for the wisdom to understand why. That too is part of spiritual growth: to accept graciously what we cannot or should not change. Nor is prayer a substitute for human effort: on the contrary,",
+     "kind": "commentary"
+    },
+    {
+     "text": " prayer is one of the most powerful sources of energy for human effort. God gives us the strength to achieve what we need to achieve,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and to do what we were placed on earth to do.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:120": {
+   "parts": [
+    {
+     "text": "<i>Prayer changes the world because it changes us</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". At its height,",
+     "kind": "commentary"
+    },
+    {
+     "text": " it is a profoundly transformative experience. If we have truly prayed,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we come in the course of time to know that the world was made,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and we were made,",
+     "kind": "commentary"
+    },
+    {
+     "text": " for a purpose;",
+     "kind": "commentary"
+    },
+    {
+     "text": " that God,",
+     "kind": "commentary"
+    },
+    {
+     "text": " though immeasurably vast,",
+     "kind": "commentary"
+    },
+    {
+     "text": " is also intensely close;",
+     "kind": "commentary"
+    },
+    {
+     "text": " that “were my father and my mother to forsake me,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the LORD would take me in”;",
+     "kind": "commentary"
+    },
+    {
+     "text": " that God is with us in our efforts,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and that we do not labor in vain. We know,",
+     "kind": "commentary"
+    },
+    {
+     "text": " too,",
+     "kind": "commentary"
+    },
+    {
+     "text": " that we are part of the community of faith,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and with us are four thousand years of history and the prayers and hopes of those who came before us. However far we feel from God,",
+     "kind": "commentary"
+    },
+    {
+     "text": " He is there behind us,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and all we have to do is turn to face Him. Faith is born and lives in prayer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and faith is the antidote to fear: “The LORD is the stronghold of my life – of whom shall I be afraid?”",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:121": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:122": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:123": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:124": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:125": {
+   "he": [],
+   "kind": "heading"
+  },
+  "en:Understanding Jewish Prayer:126": {
+   "parts": [
+    {
+     "text": "<big><i>The names of God</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>The two key names,",
+     "kind": "commentary"
+    },
+    {
+     "text": " in prayer as in the Torah,",
+     "kind": "commentary"
+    },
+    {
+     "text": " are (1) the Tetragrammaton,",
+     "kind": "commentary"
+    },
+    {
+     "text": " יהוה,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the “four letter” name,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and (2) אֱלֹהִים ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Elohim</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". They are different in meaning and tone. The sages understood the Tetragrammaton as God’s compassion.",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i> Elohim</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " is God’s attribute of justice.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:127": {
+   "parts": [
+    {
+     "text": "Judah HaLevi (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kuzari</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " IV:1) made a more fundamental distinction. The ancients used the word ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>El</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " or ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Elo’ah</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " to designate a force of nature: the sun,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the sea,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the storm,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and so on. These they personified as gods. Often,",
+     "kind": "commentary"
+    },
+    {
+     "text": " therefore, ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>el</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " or ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>elil</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " denotes an idol. In Hebrew,",
+     "kind": "commentary"
+    },
+    {
+     "text": " monotheism’s mother tongue, ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Elohim</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " in the plural means “the One who is the totality of powers,",
+     "kind": "commentary"
+    },
+    {
+     "text": " forces and causes in the universe.” It refers to God as we experience Him in creation and its natural laws,",
+     "kind": "commentary"
+    },
+    {
+     "text": " as well as in justice and its moral laws (it sometimes also has a secular sense,",
+     "kind": "commentary"
+    },
+    {
+     "text": " meaning those who hold positions of power,",
+     "kind": "commentary"
+    },
+    {
+     "text": " usually judges).",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:128": {
+   "parts": [
+    {
+     "text": "The Tetragrammaton not only has a different meaning,",
+     "kind": "commentary"
+    },
+    {
+     "text": " it is also a word of a different grammatical type. It is God’s ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>proper</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " <i>name</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " standing in relation to Him as the names Abraham or Sarah attach to human beings (hence it is sometimes referred to as ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>HaShem</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " “the name”). The use of a proper name in connection with God means that a direct relationship between us and heaven is possible. We can speak to God,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and He listens. There is a direct connection between the Tetragrammaton and the word “You.” Only a being that has a proper name can we address as “You.” Hence,",
+     "kind": "commentary"
+    },
+    {
+     "text": " in prayer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “You” is always directed to the Tetragrammaton; ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Elohim</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " goes with the third-person,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “He.” Thus, ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Elohim</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " signifies God-as-law,",
+     "kind": "commentary"
+    },
+    {
+     "text": " natural or moral. The Tetragrammaton refers to God as we encounter Him in intimacy,",
+     "kind": "commentary"
+    },
+    {
+     "text": " compassion and love.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:129": {
+   "parts": [
+    {
+     "text": "Though I have followed convention,",
+     "kind": "commentary"
+    },
+    {
+     "text": " rendering the Tetragrammaton as “LORD,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” it should be remembered that “LORD” is not a ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>translation</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " but a ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>substitution</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". So holy was the divine name that it was used only in the Temple. In all other contexts,",
+     "kind": "commentary"
+    },
+    {
+     "text": " it was (and still is) pronounced as ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Adonai</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " which means “my LORD.”",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:130": {
+   "parts": [
+    {
+     "text": "The use of the word ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Eloheinu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " “",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Our</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " God,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” signifies our acceptance of God as the sole object of our worship. Formal acknowledgment of this fact – in the first line of the Shema<i> </i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "– is a pledge of loyalty and service,",
+     "kind": "commentary"
+    },
+    {
+     "text": " called by the sages,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “Acceptance of the yoke of divine kingship.”",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:131": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:132": {
+   "parts": [
+    {
+     "text": "Sometimes God is referred to as קוֹנֶה which,",
+     "kind": "commentary"
+    },
+    {
+     "text": " though I have followed convention by translating it as “Creator,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” literally means “Owner” of heaven and earth. This represents the idea that because God ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>created</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " the universe,",
+     "kind": "commentary"
+    },
+    {
+     "text": " He ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>owns</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " it. The world and its benefits do not belong to us. What we possess,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we hold in trust from God. This is the legal basis of divine sovereignty of the universe – similar to the ancient concept of “eminent domain” by which all ownership of land within a country is ultimately vested in its head of state. As Sovereign of the universe,",
+     "kind": "commentary"
+    },
+    {
+     "text": " God rules by right,",
+     "kind": "commentary"
+    },
+    {
+     "text": " not power.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:133": {
+   "parts": [
+    {
+     "text": "<big><i>Attributes of God</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>Many of the key terms descriptive of God are not precisely translatable because they presuppose the concept of covenant: an open-ended pledge between two or more parties to join their destinies together in a reciprocal bond of loyalty and love. The nearest human equivalents are,",
+     "kind": "commentary"
+    },
+    {
+     "text": " (1) the bond of marriage,",
+     "kind": "commentary"
+    },
+    {
+     "text": " (2) peace treaties between nations. The unique idea of the Torah is that such a covenant can exist between God and humanity.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:134": {
+   "parts": [
+    {
+     "text": "Thus אֱמֶת,",
+     "kind": "commentary"
+    },
+    {
+     "text": " often translated as “true,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” actually means “faithful,",
+     "kind": "commentary"
+    },
+    {
+     "text": " one who acts in accord with his word,",
+     "kind": "commentary"
+    },
+    {
+     "text": " one who honors commitments and promises.” חֶֽסֶד,",
+     "kind": "commentary"
+    },
+    {
+     "text": " translated as “loving-kindness” or “love,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” refers to the emotions and actions that flow from a covenantal bond,",
+     "kind": "commentary"
+    },
+    {
+     "text": " such as between husband and wife,",
+     "kind": "commentary"
+    },
+    {
+     "text": " or between parents and children. It means ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>love translated into deed.</i>",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:135": {
+   "parts": [
+    {
+     "text": "There is no English word for צְְדָקָה,",
+     "kind": "commentary"
+    },
+    {
+     "text": " which means both “justice” and “charity.” צֶֽדֶק,",
+     "kind": "commentary"
+    },
+    {
+     "text": " often translated as “righteousness,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” means “distributive justice,",
+     "kind": "commentary"
+    },
+    {
+     "text": " equity” as opposed to מִשְְְׁפָּט,",
+     "kind": "commentary"
+    },
+    {
+     "text": " which means “legal or retributive justice.” רַחֲמִים  ,",
+     "kind": "commentary"
+    },
+    {
+     "text": " which I have translated as “compassion,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” derives from the word ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>reḥem</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " meaning “a womb.” It signifies the unconditional love of a mother for her child. חֵן,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “grace,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” means gratuitous kindness,",
+     "kind": "commentary"
+    },
+    {
+     "text": " which flows from the generosity of the giver,",
+     "kind": "commentary"
+    },
+    {
+     "text": " not the merits of the recipient.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:136": {
+   "parts": [
+    {
+     "text": "קָדוֹשׁ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i> Holy</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". In general,",
+     "kind": "commentary"
+    },
+    {
+     "text": " this means “separated,",
+     "kind": "commentary"
+    },
+    {
+     "text": " set apart,",
+     "kind": "commentary"
+    },
+    {
+     "text": " standing outside.” Used of God,",
+     "kind": "commentary"
+    },
+    {
+     "text": " it means “He who stands outside nature” because He ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>made</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " nature. Used of the people of Israel (as in “a holy nation,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” Ex. 19:6) it means the people who stand outside the normal laws of nations – defined by land,",
+     "kind": "commentary"
+    },
+    {
+     "text": " language,",
+     "kind": "commentary"
+    },
+    {
+     "text": " race or political structure – because they are the sole nation whose constitutive ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>raison d’être</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " is to serve God as His witnesses to the world. Shabbat is holy time because it stands outside the normal concerns of the week. The Temple is holy space because it is dedicated to the service of God.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:137": {
+   "parts": [
+    {
+     "text": "To stand in the presence of holiness,",
+     "kind": "commentary"
+    },
+    {
+     "text": " as in prayer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " is to enter God’s domain;",
+     "kind": "commentary"
+    },
+    {
+     "text": " that is,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the place where His will rules,",
+     "kind": "commentary"
+    },
+    {
+     "text": " not ours. That is why prayer is like sacrifice,",
+     "kind": "commentary"
+    },
+    {
+     "text": " because both involve a psychological-spiritual act of renunciation. We renounce our will,",
+     "kind": "commentary"
+    },
+    {
+     "text": " accepting His. The Hebrew word for sacrifice, ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>korban</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " means “coming,",
+     "kind": "commentary"
+    },
+    {
+     "text": " or bringing,",
+     "kind": "commentary"
+    },
+    {
+     "text": " close.” Often,",
+     "kind": "commentary"
+    },
+    {
+     "text": " in non-Hebraic languages,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the word “holy” implies distance and awe. In Judaism,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the reverse is also true: Israel encounters holiness as a special closeness to God. This is experienced as both love and awe: love,",
+     "kind": "commentary"
+    },
+    {
+     "text": " because of our closeness to the Infinite;",
+     "kind": "commentary"
+    },
+    {
+     "text": " awe because of the exacting responsibilities this carries with it.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:138": {
+   "parts": [
+    {
+     "text": "<big><i>Other key terms</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>אָמֵן ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Amen</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". Saying “Amen” is what philosophers call a “performative utterance.” It is a formal act of acceptance and affirmation,",
+     "kind": "commentary"
+    },
+    {
+     "text": " meaning,",
+     "kind": "commentary"
+    },
+    {
+     "text": " (1) we believe this to be true,",
+     "kind": "commentary"
+    },
+    {
+     "text": " or (2) we associate ourselves with what has been said. It functions in the Torah as an assent to an oath (for example,",
+     "kind": "commentary"
+    },
+    {
+     "text": " in Deuteronomy 27:15–26). The root ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>’-m-n</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " has a range of senses,",
+     "kind": "commentary"
+    },
+    {
+     "text": " including “to believe,",
+     "kind": "commentary"
+    },
+    {
+     "text": " to trust,",
+     "kind": "commentary"
+    },
+    {
+     "text": " to care,",
+     "kind": "commentary"
+    },
+    {
+     "text": " to be faithful.” In general,",
+     "kind": "commentary"
+    },
+    {
+     "text": " liturgical responses – such as “Blessed is He and blessed is His name” – form an essential link between the Leader and congregation,",
+     "kind": "commentary"
+    },
+    {
+     "text": " turning a prayer ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>on behalf of</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " the community into one assented to ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>by</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " the community. Special significance was attached by the sages to the response during the recital of Kaddish,",
+     "kind": "commentary"
+    },
+    {
+     "text": " “May His great name be blessed for ever and all time.” Indeed for them,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the merit of saying Kaddish is precisely that it evokes this response from the  community.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:139": {
+   "parts": [
+    {
+     "text": "אַתָּה ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>You</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". The gods of the ancient world were at best indifferent,",
+     "kind": "commentary"
+    },
+    {
+     "text": " at worst actively hostile,",
+     "kind": "commentary"
+    },
+    {
+     "text": " to human beings. The God of the philosophers – abstract,",
+     "kind": "commentary"
+    },
+    {
+     "text": " conceptual,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the prime mover or necessary being – can be contemplated but not addressed. The difference between the God of the prophets and the God of the philosophers is that the former knows us,",
+     "kind": "commentary"
+    },
+    {
+     "text": " cares about us,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and listens to us (Judah HaLevi, ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kuzari</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "). Without the word “You” there can be meditation,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but not prayer. The central section of most forms of the Amida begins with the word “You.”",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:140": {
+   "parts": [
+    {
+     "text": "בָּרוּךְְְ ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Blessed</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". When applied to God it means: He is the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>source</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " of all blessings,",
+     "kind": "commentary"
+    },
+    {
+     "text": " not only spiritual but also physical: health,",
+     "kind": "commentary"
+    },
+    {
+     "text": " livelihood,",
+     "kind": "commentary"
+    },
+    {
+     "text": " safety and security. In prayer we learn to see our material enjoyments as God’s blessing,",
+     "kind": "commentary"
+    },
+    {
+     "text": " belonging as they do to the world He created and pronounced good. The root ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>b-r-kh</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " also means (1) to bow,",
+     "kind": "commentary"
+    },
+    {
+     "text": " bend the knee;",
+     "kind": "commentary"
+    },
+    {
+     "text": " (2) a pool or reservoir of water. What connects these is ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>downward movement</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". A blessing is what,",
+     "kind": "commentary"
+    },
+    {
+     "text": " metaphorically,",
+     "kind": "commentary"
+    },
+    {
+     "text": " flows down to earth from heaven.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:141": {
+   "parts": [
+    {
+     "text": "There are several categories of blessings in the siddur: (1) blessings of acknowledgment,",
+     "kind": "commentary"
+    },
+    {
+     "text": " which are forms of praise and thanksgiving;",
+     "kind": "commentary"
+    },
+    {
+     "text": " (2) blessings over the performance of commandments,",
+     "kind": "commentary"
+    },
+    {
+     "text": " which are formal declarations of intent (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kavana</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ") that the act we are about to perform is done because God has commanded us to do so;",
+     "kind": "commentary"
+    },
+    {
+     "text": " (3) blessings over enjoyments (food,",
+     "kind": "commentary"
+    },
+    {
+     "text": " drink,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and so on),",
+     "kind": "commentary"
+    },
+    {
+     "text": " which are acts of redemption in the technical sense of buying something back for secular use that would otherwise be holy,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and thus not available for our personal benefit.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:142": {
+   "parts": [
+    {
+     "text": "מִזְְְמוֹר ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Mizmor</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (“Psalm”) is found 57 times as the heading of a psalm,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and is used nowhere else in Tanakh. Many believe it refers to a song written to be accompanied by musical instruments. תְְּהִלָּה ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Tehilla</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " “song of praise,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” is used only once as superscription to a psalm (Psalm 145);",
+     "kind": "commentary"
+    },
+    {
+     "text": " despite this,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the book of Psalms as a whole is known to Jewish tradition as ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Tehillim</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " “Songs of Praise.” Some psalms carry the name of the person who wrote it or to whom it was dedicated;",
+     "kind": "commentary"
+    },
+    {
+     "text": " others the occasion on which it was sung;",
+     "kind": "commentary"
+    },
+    {
+     "text": " yet others are musical directions. The term לַמְְנַצֵּֽחַ, ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>lamenatze’aḥ,</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " means “for the conductor,",
+     "kind": "commentary"
+    },
+    {
+     "text": " director of music,",
+     "kind": "commentary"
+    },
+    {
+     "text": " choir-master,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” and usually signals a choral work.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:143": {
+   "parts": [
+    {
+     "text": "סֶֽלָה ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Selah.</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " A word of unknown meaning. Some hold that it means “for ever”;",
+     "kind": "commentary"
+    },
+    {
+     "text": " others understand it as an affirmation,",
+     "kind": "commentary"
+    },
+    {
+     "text": " similar to the word “Amen.” Yet others see it as a musical notation,",
+     "kind": "commentary"
+    },
+    {
+     "text": " a signaled pause,",
+     "kind": "commentary"
+    },
+    {
+     "text": " or an indication of the end of a passage.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:144": {
+   "parts": [
+    {
+     "text": "עוֹלָם ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Olam</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". The word ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>olam</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " means both “universe” and “eternity” – the outermost limits of space and time. It may come from the same root as ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>ne’elam</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " “hidden.” This was understood by Jewish mystics,",
+     "kind": "commentary"
+    },
+    {
+     "text": " especially of the Lurianic school,",
+     "kind": "commentary"
+    },
+    {
+     "text": " as meaning that to create a universe,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the Infinite had to contract or limit Himself,",
+     "kind": "commentary"
+    },
+    {
+     "text": " otherwise Infinity would leave no space for finitude. God is present in the physical universe but in a hidden way. We are,",
+     "kind": "commentary"
+    },
+    {
+     "text": " explains Nahmanides,",
+     "kind": "commentary"
+    },
+    {
+     "text": " surrounded by miracles. The world is filled with the radiance of God,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but to see it,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we have to open our eyes. Part of the purpose of prayer is,",
+     "kind": "commentary"
+    },
+    {
+     "text": " in this sense,",
+     "kind": "commentary"
+    },
+    {
+     "text": " to open our eyes.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:145": {
+   "parts": [
+    {
+     "text": "שֵׁם ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Name</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ": How God is perceived by human beings. When He is recognized as the supreme Sovereign,",
+     "kind": "commentary"
+    },
+    {
+     "text": " this is a “sanctification of the name.” When He is forced to exile His people – and thus seen by the nations as if powerless to protect them – this is a “desecration of the name.” The opening words of Kaddish",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>,</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " “Magnified and sanctified may His great name be,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” mean “May the sovereignty of God be ever more widely recognized by human beings.” The closing words of ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Aleinu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " “On that day the LORD shall be One and His name One,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” refer to a time – the Messianic Age – when God will be recognized by all. God does not change;",
+     "kind": "commentary"
+    },
+    {
+     "text": " human recognition of God does. The use of the word “name” marks the distinction between God as He is and as He is humanly perceived.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:146": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:147": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Guide to the Reader:1": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Guide to the Reader:2": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Guide to the Reader:3": {
+   "he": [],
+   "kind": "heading"
+  },
+  "en:Guide to the Reader:4": {
+   "parts": [
+    {
+     "text": "Most Hebrew words are pronounced with a stress on the last syllable. For words where the stress is placed on the penultimate syllable,",
+     "kind": "commentary"
+    },
+    {
+     "text": " a short vertical line (the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>meteg</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ") appears next to the vowel of that syllable,",
+     "kind": "commentary"
+    },
+    {
+     "text": " so readers know how to pronounce the word correctly [מֶֽלֶךְְְ]. However,",
+     "kind": "commentary"
+    },
+    {
+     "text": " this system is not used in the text of the Shema and the Torah readings because their pronunciation is indicated by the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>ta’amei hamikra</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ".",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Guide to the Reader:5": {
+   "parts": [
+    {
+     "text": "We have differentiated between the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kamatz katan</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>oh</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " sound) and the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kamatz gadol</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>ah</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " sound in Sephardi pronunciation) by using a larger symbol for the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kamatz katan</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". See ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Ḥokhma</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " [חָָכְְְמָה]. Similarly,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we have differentiated between the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>sh’va na</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (a pronounced vowel) and the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>sh’va naḥ</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (an unpronounced vowel) by using a larger symbol for the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>sh’va na</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". See ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Nafshekha</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " [נַפְְְשְְׁךָ]. We have followed the rules of grammar for the placement of the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kamatz katan</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " and ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>sh’va na</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ".",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Guide to the Reader:6": {
+   "parts": [
+    {
+     "text": "As is traditional in the Koren Tanakh,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the furtive ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>pataḥ</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " is placed slightly to the right,",
+     "kind": "commentary"
+    },
+    {
+     "text": " rather than centered underneath the letter,",
+     "kind": "commentary"
+    },
+    {
+     "text": " to indicate to the reader that the vowel is pronounced before the consonant rather than after;",
+     "kind": "commentary"
+    },
+    {
+     "text": " for example,",
+     "kind": "commentary"
+    },
+    {
+     "text": " פּוֹתֵֽחַ is pronounced ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>pote’aḥ</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " and not ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>poteḥa</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ".",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Guide to the Reader:7": {
+   "parts": [
+    {
+     "text": "A small arrow (◂) indicates the suggested starting point for the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Shaliaḥ Tzibbur</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". However,",
+     "kind": "commentary"
+    },
+    {
+     "text": " where the local custom differs,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Shaliaḥ Tzibbur</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " should certainly follow that custom.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Guide to the Reader:8": {
+   "parts": [
+    {
+     "text": "We have tried to provide concise instructions for prayer within the text. Expanded explanations and ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>halakhot</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " are provided in the Guides to Prayer at the end of the Siddur.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Guide to the Reader:9": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Guide to the Reader:10": {
+   "parts": [
+    {
+     "text": "In transliterating Hebrew,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we have followed modern Israeli pronunciation. We have transliterated the Hebrew ח with a ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>ḥ</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the כ with a ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>kh</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ". We have also compromised on strict consistency in favor of clarity and ease of use. For example,",
+     "kind": "commentary"
+    },
+    {
+     "text": " although we have generally omitted the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>h</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " at the end of words like “Amida,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” we have retained it in the word “Torah,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” because that is the common spelling.  In addition,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>sh’va na</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " is sometimes represented by an apostrophe and sometimes with an ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>e</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (for example, ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Barekhi</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i> sh’va</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "). We have also used an apostrophe to separate syllables where the correct pronunciation is not readily apparent,",
+     "kind": "commentary"
+    },
+    {
+     "text": " as in ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>mo’ed</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ".",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Guide to the Reader:11": {
+   "parts": [
+    {
+     "text": "There are two Koren typefaces: one used exclusively for Tanakh,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and one for the Siddur. Sections of the Siddur that reproduce complete paragraphs from the Tanakh,",
+     "kind": "commentary"
+    },
+    {
+     "text": " such as much of ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Pesukei DeZimra</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " have been set in the Tanakh typeface. However,",
+     "kind": "commentary"
+    },
+    {
+     "text": " where verses from the Tanakh are quoted within the prayers,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we have in general used the Siddur typeface to maintain a consistent look and feel. Nevertheless all verses from Tanakh conclude with the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>sof pasuk</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (׃),",
+     "kind": "commentary"
+    },
+    {
+     "text": " the double diamond that is the “period” of the Tanakh. This differs from the colon (:) which is used where appropriate in prayers that are not quotations from Tanakh.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Guide to the Reader:12": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Guide to the Reader:13": {
+   "he": [],
+   "kind": "heading"
+  },
+  "en:Guide to the Reader:14": {
+   "he": [],
+   "kind": "heading"
+  },
+  "en:Weekdays/Blessings Over the Torah:1": {
+   "he": []
+  },
+  "en:Weekdays/Blessings Over the Torah:2": {
+   "he": [
+    "he:Weekdays/Blessings Over the Torah:2"
+   ]
+  },
+  "en:Weekdays/Blessings Over the Torah:3": {
+   "he": [
+    "he:Weekdays/Blessings Over the Torah:3"
+   ]
+  },
+  "en:Weekdays/Blessings Over the Torah:4": {
+   "he": [
+    "he:Weekdays/Blessings Over the Torah:4"
+   ]
+  },
+  "en:Weekdays/Blessings Over the Torah:5": {
+   "he": [
+    "he:Weekdays/Blessings Over the Torah:5"
+   ]
+  },
+  "en:Weekdays/Blessings Over the Torah:6": {
+   "he": [
+    "he:Weekdays/Blessings Over the Torah:6"
+   ]
+  },
+  "en:Weekdays/Blessings Over the Torah:7": {
+   "he": [
+    "he:Weekdays/Blessings Over the Torah:8"
+   ]
+  },
+  "en:Weekdays/Blessings Over the Torah:8": {
+   "he": [
+    "he:Weekdays/Blessings Over the Torah:8"
+   ]
+  },
+  "en:Weekdays/Tallit:1": {
+   "he": [
+    "he:Weekdays/Tallit:3",
+    "he:Weekdays/Tallit:4"
+   ]
+  },
+  "en:Weekdays/Tallit:2": {
+   "he": [
+    "he:Weekdays/Tallit:2"
+   ]
+  },
+  "en:Weekdays/Tallit:3": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Some say:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>For the sake of the unification of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and His Divine Presence,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in reverence and love,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to unify the name ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Yod-Heh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " with ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Vav-Heh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " in perfect unity in the name of all Israel.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Tallit:3"
+   ]
+  },
+  "en:Weekdays/Tallit:4": {
+   "parts": [
+    {
+     "text": "I am about to wrap myself in this tasseled garment (tallit). So may my soul,",
+     "kind": "prayer"
+    },
+    {
+     "text": " my 248 limbs and 365 sinews be wrapped in the light of the tassel (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>hatzitzit</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") which amounts to 613 [commandments]. And just as I cover myself with a tasseled garment in this world,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so may I be worthy of rabbinical dress and a fine garment in the World to Come in the Garden of Eden. Through the commandment of tassels may my life’s-breath,",
+     "kind": "prayer"
+    },
+    {
+     "text": " spirit,",
+     "kind": "prayer"
+    },
+    {
+     "text": " soul and prayer be delivered from external impediments,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and may the tallit spread its wings over them like an eagle stirring up its nest,",
+     "kind": "prayer"
+    },
+    {
+     "text": " hovering over its young. May the commandment of the tasseled garment be considered before the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as if I had fulfilled it in all its specifics,",
+     "kind": "prayer"
+    },
+    {
+     "text": " details and intentions,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as well as the 613 commandments dependent on it,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Amen,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Selah.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Tallit:4"
+   ]
+  },
+  "en:Weekdays/Tallit:5": {
+   "he": [
+    "he:Weekdays/Tallit:6"
+   ]
+  },
+  "en:Weekdays/Tallit:6": {
+   "he": [
+    "he:Weekdays/Tallit:6"
+   ]
+  },
+  "en:Weekdays/Tallit:7": {
+   "he": [
+    "he:Weekdays/Tallit:8"
+   ]
+  },
+  "en:Weekdays/Tallit:8": {
+   "he": [
+    "he:Weekdays/Tallit:8"
+   ]
+  },
+  "en:Weekdays/Tefillin:1": {
+   "he": [
+    "he:Weekdays/Tefillin:2"
+   ]
+  },
+  "en:Weekdays/Tefillin:2": {
+   "parts": [
+    {
+     "text": "For the sake of the unification of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and His Divine Presence,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in reverence and love,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to unify the name ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Yod-Heh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " with ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Vav-Heh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " in perfect unity in the name of all Israel.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Tefillin:2"
+   ]
+  },
+  "en:Weekdays/Tefillin:3": {
+   "parts": [
+    {
+     "text": "By putting on the tefillin I hereby intend to fulfill the commandment of my Creator who commanded us to wear tefillin,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as it is written in His Torah: “Bind them as a sign on your hand,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and they shall be an emblem on the center of your head.” They contain these four sections of the Torah: one beginning with ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Shema</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " [Deut. 6:4–9];",
+     "kind": "prayer"
+    },
+    {
+     "text": " another with ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Vehaya im shamo’a</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " [ibid. 11:13–21];",
+     "kind": "prayer"
+    },
+    {
+     "text": " the third with ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Kadesh Li</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " [Ex. 13:1–10];",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the fourth with ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Vehaya ki yevi’akha</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " [ibid. 13:11–16]. These proclaim the uniqueness and unity of God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be His name in the world. They also remind us of the miracles and wonders which He did for us when He brought us out of Egypt,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and that He has the power and the dominion over the highest and the lowest to deal with them as He pleases. He commanded us to place one of the tefillin on the arm in memory of His “outstretched arm” (of redemption),",
+     "kind": "prayer"
+    },
+    {
+     "text": " setting it opposite the heart,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to subject the desires and designs of our heart to His service,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be His name. The other is to be on the head,",
+     "kind": "prayer"
+    },
+    {
+     "text": " opposite the brain,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so that my mind,",
+     "kind": "prayer"
+    },
+    {
+     "text": " whose seat is in the brain,",
+     "kind": "prayer"
+    },
+    {
+     "text": " together with my other senses and faculties,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may be subjected to His service,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be His name. May the spiritual influence of the commandment of the tefillin be with me so that I may have a long life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " a flow of holiness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and sacred thoughts,",
+     "kind": "prayer"
+    },
+    {
+     "text": " free from any suggestion of sin or iniquity. May the evil inclination neither incite nor entice us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " but leave us to serve the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as it is in our hearts to do.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Tefillin:3"
+   ]
+  },
+  "en:Weekdays/Tefillin:4": {
+   "he": [
+    "he:Weekdays/Tefillin:4"
+   ]
+  },
+  "en:Weekdays/Tefillin:5": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Stand and place the hand-tefillin on the biceps of the left arm</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <i class=\"instruction\">(or right arm if you are left-handed), angled toward the heart, and before tightening the strap, say:</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Tefillin:6": {
+   "he": [
+    "he:Weekdays/Tefillin:6"
+   ]
+  },
+  "en:Weekdays/Tefillin:7": {
+   "he": []
+  },
+  "en:Weekdays/Tefillin:8": {
+   "he": [
+    "he:Weekdays/Tefillin:8"
+   ]
+  },
+  "en:Weekdays/Tefillin:9": {
+   "he": []
+  },
+  "en:Weekdays/Tefillin:10": {
+   "he": [
+    "he:Weekdays/Tefillin:10"
+   ]
+  },
+  "en:Weekdays/Tefillin:11": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Some say:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>From Your wisdom,",
+     "kind": "prayer"
+    },
+    {
+     "text": " God most high,",
+     "kind": "prayer"
+    },
+    {
+     "text": " grant me [wisdom],",
+     "kind": "prayer"
+    },
+    {
+     "text": " and from Your understanding,",
+     "kind": "prayer"
+    },
+    {
+     "text": " give me understanding. May Your loving-kindness be greatly upon me,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in Your might may my enemies and those who rise against me be subdued. Pour Your goodly oil on the seven branches of the menora so that Your good flows down upon Your creatures. You open Your hand,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and satisfy every living thing with favor.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Tefillin:11"
+   ]
+  },
+  "en:Weekdays/Tefillin:12": {
+   "he": []
+  },
+  "en:Weekdays/Tefillin:13": {
+   "he": [
+    "he:Weekdays/Tefillin:13"
+   ]
+  },
+  "en:Weekdays/Tefillin:14": {
+   "he": []
+  },
+  "en:Weekdays/Tefillin:15": {
+   "he": [
+    "he:Weekdays/Tefillin:15"
+   ]
+  },
+  "en:Weekdays/Tefillin:16": {
+   "he": [
+    "he:Weekdays/Tefillin:16"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:1": {
+   "he": [],
+   "kind": "instruction",
+   "en": "On entering the synagogue:",
+   "gloss": "Customary to recite upon entering the synagogue"
+  },
+  "en:Weekdays/Preparation for Prayer:2": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:2"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:3": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:3"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:4": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:4"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:5": {
+   "he": [],
+   "kind": "commentary",
+   "en": "The following poems, on this page and the next, both from the Middle Ages, are summary statements of Jewish faith, orienting us to the spiritual contours of the world that we actualize in the mind by the act of prayer."
+  },
+  "en:Weekdays/Preparation for Prayer:6": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:6"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:7": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:7"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:8": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:8"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:9": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:9"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:10": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:10"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:11": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:11"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:12": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:12"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:13": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:13"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:14": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:14"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:15": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:15"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:16": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:16"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:17": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:17"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:18": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:18"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:19": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:19"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:20": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:20"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:21": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:21"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:22": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:22"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:23": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:23"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:24": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:24"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:25": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:25"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:26": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:26"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:27": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:27"
+   ]
+  },
+  "en:Weekdays/Preparation for Prayer:28": {
+   "he": [
+    "he:Weekdays/Preparation for Prayer:28"
+   ]
+  },
+  "en:Weekdays/On Waking:1": {
+   "he": []
+  },
+  "en:Weekdays/On Waking:2": {
+   "he": [
+    "he:Weekdays/On Waking:3"
+   ]
+  },
+  "en:Weekdays/On Waking:3": {
+   "he": [
+    "he:Weekdays/On Waking:3"
+   ]
+  },
+  "en:Weekdays/On Waking:4": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Wash hands and say the following blessings.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Some have the custom to say “Wisdom begins” on page 10 at this point.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/On Waking:5": {
+   "he": [
+    "he:Weekdays/On Waking:5"
+   ]
+  },
+  "en:Weekdays/On Waking:6": {
+   "he": [
+    "he:Weekdays/On Waking:6"
+   ]
+  },
+  "en:Weekdays/On Waking:7": {
+   "he": [
+    "he:Weekdays/On Waking:7"
+   ]
+  },
+  "en:Weekdays/On Waking:8": {
+   "he": [
+    "he:Weekdays/On Waking:8"
+   ]
+  },
+  "en:Weekdays/On Waking:9": {
+   "he": []
+  },
+  "en:Weekdays/On Waking:10": {
+   "he": [
+    "he:Weekdays/On Waking:10"
+   ]
+  },
+  "en:Weekdays/On Waking:11": {
+   "he": []
+  },
+  "en:Weekdays/On Waking:12": {
+   "he": [
+    "he:Weekdays/On Waking:12"
+   ]
+  },
+  "en:Understanding Jewish Prayer:1": {
+   "parts": [
+    {
+     "text": "<big><i>1. Introduction</i>",
+     "kind": "heading",
+     "en": "1. Introduction"
+    },
+    {
+     "text": "</big><br>Prayer is the language of the soul in conversation with God. It is the most intimate gesture of the religious life,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and the most transformative. The very fact that we can pray testifies to the deepest elements of Jewish faith: that the universe did not come into existence accidentally,",
+     "kind": "commentary"
+    },
+    {
+     "text": " nor are our lives destined to be bereft of meaning. The universe exists,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and we exist,",
+     "kind": "commentary"
+    },
+    {
+     "text": " because someone – the One God,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Author of all – brought us into existence with love. It is this belief more than any other that redeems life from solitude and fate from tragedy.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:2": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:3": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:4": {
+   "parts": [
+    {
+     "text": "The siddur is the choral symphony the covenantal people has sung to God across forty centuries,",
+     "kind": "commentary"
+    },
+    {
+     "text": " from the days of the patriarchs until the present day. In it we hear the voices of Israel’s prophets,",
+     "kind": "commentary"
+    },
+    {
+     "text": " priests and kings,",
+     "kind": "commentary"
+    },
+    {
+     "text": " its sages and scholars,",
+     "kind": "commentary"
+    },
+    {
+     "text": " poets and philosophers,",
+     "kind": "commentary"
+    },
+    {
+     "text": " rationalists and mystics,",
+     "kind": "commentary"
+    },
+    {
+     "text": " singing in calibrated harmony. Its libretto weaves together texts from almost every part of the vast library of Jewish spirituality: Torah,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the Prophets,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the Writings,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the classic compendia of the Oral Law – Mishna,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Midrash and Talmud – together with philosophical passages like Maimonides’ “Thirteen Principles of Faith” and extracts from the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Zohar</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " the key text of Jewish mysticism.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:5": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:6": {
+   "parts": [
+    {
+     "text": "Almost every age and major Jewish community has added something of its own: new words,",
+     "kind": "commentary"
+    },
+    {
+     "text": " prayers,",
+     "kind": "commentary"
+    },
+    {
+     "text": " customs and melodies. There are many different liturgies: Ashkenazi,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Sephardi,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Oriental,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Yemenite,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Italian,",
+     "kind": "commentary"
+    },
+    {
+     "text": " those of Rabbi Isaac Luria and the Vilna Gaon and others,",
+     "kind": "commentary"
+    },
+    {
+     "text": " each with its own subdivisions. Each tradition has a character of its own,",
+     "kind": "commentary"
+    },
+    {
+     "text": " to which Jewish law applies the principle ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>nahara nahara ufashteh</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ": “Every river has its own course.” Each of the historic traditions has its own integrity,",
+     "kind": "commentary"
+    },
+    {
+     "text": " its own channel through which words stream from earth to heaven.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:7": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:8": {
+   "parts": [
+    {
+     "text": "<big><i>2. Two Sources of Prayer</i>",
+     "kind": "heading",
+     "en": "2. Two Sources of Prayer"
+    },
+    {
+     "text": "</big><br>The best-known phrase about Jewish religious worship is: “If you serve the LORD your God with all your heart (Deut. 11:13) – what is [the sacrificial] service of the heart (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>avoda shebalev</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ")? This is prayer” (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Sifrei </i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "to Deuteronomy,",
+     "kind": "commentary"
+    },
+    {
+     "text": " 41). Behind these simple words lies a remarkable story.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:9": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:10": {
+   "parts": [
+    {
+     "text": "The other form – generally known as ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>avoda</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " “service” – is sacrifice. Sacrifice could not be less like prayer. As set out from Exodus to Deuteronomy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the sacrificial service is minutely specified. It has its prescribed order: which offerings should be made,",
+     "kind": "prayer"
+    },
+    {
+     "text": " when,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and by whom. It has a designated place: the Tabernacle in the wilderness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and later,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Temple in Jerusalem. There is no room for spontaneity. When two of Aaron’s sons,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Nadav and Avihu,",
+     "kind": "prayer"
+    },
+    {
+     "text": " make a spontaneous offering of incense,",
+     "kind": "prayer"
+    },
+    {
+     "text": " they die (Lev. 10:1–2). The Mosaic books contain two set texts associated with the Temple: the Priestly Blessing (Num. 6:24–26) and the declaration made when bringing the first fruits (Deut. 26:5–10). Certain sacrifices,",
+     "kind": "prayer"
+    },
+    {
+     "text": " such as sin-offerings,",
+     "kind": "prayer"
+    },
+    {
+     "text": " involved verbal confession. Psalms were sung in the Temple,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the Mishna details the prayers said there. But the sacrificial act itself was wordless. It took place in silence.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:11": {
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:12": {
+   "parts": [
+    {
+     "text": "The answer lies in the national crisis and renewal that occurred after the destruction of the First Temple by Nebuchadnezzar in 586 BCE. Psalm 137 has preserved a vivid record of the mood of near-despair among the exiles: “By the rivers of Babylon we sat and wept as we remembered Zion… How can we sing the LORD’s songs in a strange land?” In exile in Babylon,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Jews began to gather to expound the Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " articulate a collective hope of return,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and recall the Temple and its service. These assemblies (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>kinishtu</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " in Babylonian, ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>knesset</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " in Hebrew) were not substitutes for the Temple;",
+     "kind": "prayer"
+    },
+    {
+     "text": " rather,",
+     "kind": "prayer"
+    },
+    {
+     "text": " they were reminders of it. The book of Daniel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " set in Babylon,",
+     "kind": "prayer"
+    },
+    {
+     "text": " speaks of threefold daily prayer facing Jerusalem (Dan. 6:11). The loss of the Temple and the experience of exile led to the emergence of regular gatherings for study and  prayer.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:13": {
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:14": {
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:15": {
+   "parts": [
+    {
+     "text": "One of the results of this religious renewal was the birth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " or growth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " of the synagogue. During the Second Temple period,",
+     "kind": "prayer"
+    },
+    {
+     "text": " priests were divided into twenty-four groups, ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>mishmarot</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " each of which served in the Temple for a week in a rota. They were accompanied by groups of local laypeople, ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>ma’amadot</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " some of whom accompanied them to the Temple,",
+     "kind": "prayer"
+    },
+    {
+     "text": " others of whom stayed in their towns but said prayers to coincide with the sacrifices. Whether the synagogue developed from these ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>ma’amadot</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " or whether its origins were earlier,",
+     "kind": "prayer"
+    },
+    {
+     "text": " by the time the Second Temple was destroyed in 70 CE,",
+     "kind": "prayer"
+    },
+    {
+     "text": " it was a well-established institution.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:16": {
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:17": {
+   "parts": [
+    {
+     "text": "The transition from sacrifice to prayer was not a sudden development. A thousand years earlier,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in his speech at the dedication of the Temple,",
+     "kind": "prayer"
+    },
+    {
+     "text": " King Solomon had emphasized prayer rather than sacrifice (I Kings 8:12–53). Through Isaiah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " God had said “My House shall be called ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>a house of prayer</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " for all peoples” (Is. 56:7). The prophet Hosea had said: “Take words with you and return to the LORD… Instead of bulls we will pay [the offering of] our lips” (Hos. 14:3). Sacrifice was the external accompaniment of an inner act of heart and mind: thanksgiving,",
+     "kind": "prayer"
+    },
+    {
+     "text": " atonement,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and so on. Therefore,",
+     "kind": "prayer"
+    },
+    {
+     "text": " though the outer act was no longer possible,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the inner act remained. That is how sacrifice turned into prayer.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:18": {
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:19": {
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:20": {
+   "parts": [
+    {
+     "text": "In truth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " there is no answer: prayer as we have known it for two millennia draws on both traditions. More remarkably,",
+     "kind": "prayer"
+    },
+    {
+     "text": " we honor both,",
+     "kind": "prayer"
+    },
+    {
+     "text": " because ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>each Amida is said twice</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " once silently by individuals,",
+     "kind": "prayer"
+    },
+    {
+     "text": " a second time aloud and publicly by the Leader. The silent Amida recalls the prayers of individuals in the Bible,",
+     "kind": "prayer"
+    },
+    {
+     "text": " while the Leader’s Repetition recalls the sacrifice: hence there is no Repetition of the evening Amida,",
+     "kind": "prayer"
+    },
+    {
+     "text": " since there was no sacrifice in the evening. In prayer,",
+     "kind": "prayer"
+    },
+    {
+     "text": " two great streams of Jewish spirituality met and became one.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:21": {
+   "parts": [
+    {
+     "text": "<big><i>3. Structures of Prayer</i>",
+     "kind": "heading",
+     "en": "3. Structures of Prayer"
+    },
+    {
+     "text": "</big><br>The Hebrew word for a prayer book, ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>siddur</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " means “order.” At its height,",
+     "kind": "prayer"
+    },
+    {
+     "text": " prayer is an intensely emotional experience. The wonder of praise,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the joy of thanksgiving,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the passion of love,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the trembling of awe,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the broken­heartedness of confession,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the yearning of hope – all these are part of the tonality of prayer. Yet Judaism is also,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and supremely,",
+     "kind": "prayer"
+    },
+    {
+     "text": " a religion of the mind – for untutored emotion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " like a river that bursts its banks,",
+     "kind": "prayer"
+    },
+    {
+     "text": " can be anarchic and destructive. The opening chapter of Genesis,",
+     "kind": "prayer"
+    },
+    {
+     "text": " with its account of creation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " evokes a sense of order. Each day has its task;",
+     "kind": "prayer"
+    },
+    {
+     "text": " each life-form has its place;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the result (until the birth of sin) was harmony. Jewish prayer,",
+     "kind": "prayer"
+    },
+    {
+     "text": " therefore,",
+     "kind": "prayer"
+    },
+    {
+     "text": " has an order. Like a choral symphony,",
+     "kind": "prayer"
+    },
+    {
+     "text": " it has movements,",
+     "kind": "prayer"
+    },
+    {
+     "text": " each with its moods,",
+     "kind": "prayer"
+    },
+    {
+     "text": " its unfolding themes,",
+     "kind": "prayer"
+    },
+    {
+     "text": " its developmental logic. In this section,",
+     "kind": "prayer"
+    },
+    {
+     "text": " I analyze some of these structures.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:22": {
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:23": {
+   "parts": [
+    {
+     "text": "<big><i>A. From Universal to Particular</i>",
+     "kind": "heading",
+     "en": "A. From Universal to Particular"
+    },
+    {
+     "text": "</big><br>In general,",
+     "kind": "prayer"
+    },
+    {
+     "text": " sequences of Jewish prayer move from the universal to the particular. Grace after Meals,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for example,",
+     "kind": "prayer"
+    },
+    {
+     "text": " begins with a blessing thanking God “who in His goodness feeds ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>the whole world</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ".” The second blessing moves to particularities: Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " liberation from slavery,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “the covenant which You sealed in our flesh,",
+     "kind": "prayer"
+    },
+    {
+     "text": "” Torah and the commandments. We thank God “for the land [of Israel] and for the food.” The third is more narrowly focused still. It is about the holy city,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Jerusalem.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:24": {
+   "parts": [
+    {
+     "text": "The same pattern exists in the two blessings before the Shema in the morning and evening service. The first is about the universe (God gives light to the earth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " creates day and night),",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the second is about Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the specific bond of love between God and the Jewish people. Look and you will find many more examples in the siddur. (The one exception is ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Aleinu</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " whose first paragraph is about Jewish particularity and whose second is a universal hope. Regarding this,",
+     "kind": "prayer"
+    },
+    {
+     "text": " see section B. Mirror-Image Symmetry.)",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:25": {
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:26": {
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:27": {
+   "parts": [
+    {
+     "text": "There are universals of human behavior: we call them the Noahide Laws. But we worship God in and through the particularity of our history,",
+     "kind": "prayer"
+    },
+    {
+     "text": " language and heritage. The highest love is not abstract but concrete. Those who truly love,",
+     "kind": "prayer"
+    },
+    {
+     "text": " cherish what makes the beloved different,",
+     "kind": "prayer"
+    },
+    {
+     "text": " unique,",
+     "kind": "prayer"
+    },
+    {
+     "text": " irreplaceable: that is the theme of the greatest of all books of religious love, ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>the </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "Song of Songs. That,",
+     "kind": "prayer"
+    },
+    {
+     "text": " we believe,",
+     "kind": "prayer"
+    },
+    {
+     "text": " is how God loves us.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:28": {
+   "parts": [
+    {
+     "text": "<big><i>B. Mirror-image Symmetry</i>",
+     "kind": "heading",
+     "en": "B. Mirror-image Symmetry"
+    },
+    {
+     "text": "</big><br>Many Torah passages are constructed in the form of a mirror-image symmetry,",
+     "kind": "prayer"
+    },
+    {
+     "text": " technically known as ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>chiasmus</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ": a sequence with the form ABCCBA,",
+     "kind": "prayer"
+    },
+    {
+     "text": " where the second half reverses the order of the first. A precise example is the six-word commandment that forms the central element of the Noahide covenant (Gen. 9:6):",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:29": {
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:30": {
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:31": {
+   "parts": [
+    {
+     "text": "Some prayers have a mirror-image structure. Most of the paragraphs of the Amida,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for example,",
+     "kind": "prayer"
+    },
+    {
+     "text": " finish the same way as they begin (“at the end of a blessing one should say something similar to its beginning,",
+     "kind": "prayer"
+    },
+    {
+     "text": "” ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Pesaḥim</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " 104a). So,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for example,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the sixteenth blessing begins,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “Listen to our voice” and ends “who listens to prayer.” The eighteenth begins,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “We give thanks to You” and ends “to whom thanks are due.” The Amida as a whole begins with a request to God to help us open our mouths in prayer. It ends with a request to God to help us close our mouths from deceitful speech.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:32": {
+   "parts": [
+    {
+     "text": "According to Rabbi Joseph Soloveitchik,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the first and last three blessings of the Amida stand in a mirror-image relationship. The last uses the same key words as the first: kindness (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>ḥessed</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": ") and love (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>ahava</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": "). The penultimate has the same subject as the second: the gift of life and the hidden miracles that surround us constantly. The seventeenth and third are both about holiness. Thus the end of the Amida is a mirror image of its beginning.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:33": {
+   "parts": [
+    {
+     "text": "This explains why ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Aleinu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " – the prayer with which most services end – is constructed in a sequence opposite to all other prayers. Others move from the universal to the particular,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Aleinu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " reverses the order,",
+     "kind": "commentary"
+    },
+    {
+     "text": " beginning with a hymn to particularity (“Who has not made us like the nations of the lands”) and ending with one of the great prayers for universality,",
+     "kind": "commentary"
+    },
+    {
+     "text": " when “",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>all</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " humanity will call on Your name.” ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Aleinu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " gives each service a chiastic structure. Previous prayers have been A–B (universal–particular); ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Aleinu</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " is B–A (particular–universal).",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:34": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:35": {
+   "parts": [
+    {
+     "text": "<big><i>C. Praise, Request, Thanks</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>The sages ruled that the Amida – prayer par excellence – should follow a basic pattern of praise (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>shevaḥ</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "),",
+     "kind": "commentary"
+    },
+    {
+     "text": " request (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>bakasha</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "),",
+     "kind": "commentary"
+    },
+    {
+     "text": " and acknowledgment or thanks (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>hodaya</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "). This is how Maimonides puts it: “The obligation of prayer is that every person should daily,",
+     "kind": "commentary"
+    },
+    {
+     "text": " according to his ability,",
+     "kind": "commentary"
+    },
+    {
+     "text": " offer up supplication and prayer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " first uttering ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>praises</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " of God,",
+     "kind": "commentary"
+    },
+    {
+     "text": " then with humble ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>supplication and</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " <i>petition</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " asking for all that he needs,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and finally offering praise and ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>thanksgiving</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " to the Eternal for the benefits already bestowed on him in rich measure” (Laws of Prayer 1:2).",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:36": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:37": {
+   "parts": [
+    {
+     "text": "<big><i>D. Preparation, Prayer, Meditation</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>Prayer requires intense concentration,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and this takes time. It is impossible to move directly from the stresses and preoccupations of everyday life into the presence of eternity. Nor should prayer end abruptly. It must be internalized if it is to leave its trace within us as we move back into our worldly pursuits. Maimonides writes that because prayer needs mental focus,",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:38": {
+   "parts": [
+    {
+     "text": "<span class=\"poetry indentAll\">One should therefore sit awhile ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>before</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " beginning his prayers,",
+     "kind": "commentary"
+    },
+    {
+     "text": " so as to concentrate his mind. He should then pray in gentle tones,",
+     "kind": "commentary"
+    },
+    {
+     "text": " beseechingly,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and not regard the service as a burden that he is carrying and which he will cast off before proceeding on his way. He should thus sit awhile ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>after</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " concluding the prayers,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and only then leave. The ancient saints used to pause and meditate one hour before prayer and one hour after prayer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and spend an hour in prayer itself. (Laws of Prayer 4:16)</span>",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:39": {
+   "parts": [
+    {
+     "text": "In the morning service,",
+     "kind": "commentary"
+    },
+    {
+     "text": " the Verses of Praise (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Pesukei deZimra</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ") are the preparation. In them,",
+     "kind": "commentary"
+    },
+    {
+     "text": " our thoughts gradually turn from the visible world to its invisible Creator. The Shema,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Amida and their surrounding blessings are prayer as such. The remainder of the service is our meditation as we leave the orbit of heaven and reenter the gravitational field of earth.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:40": {
+   "parts": [
+    {
+     "text": "<big><i>E. Description, Experience, Recollection</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>It is one thing to describe an experience,",
+     "kind": "commentary"
+    },
+    {
+     "text": " another to live it. One of the striking features of the weekday morning service is its threefold repetition of the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kedusha</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " (“Holy,",
+     "kind": "commentary"
+    },
+    {
+     "text": " holy,",
+     "kind": "commentary"
+    },
+    {
+     "text": " holy”),",
+     "kind": "commentary"
+    },
+    {
+     "text": " once before the Shema (known as ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kedushat Yotzer</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ");",
+     "kind": "commentary"
+    },
+    {
+     "text": " a second time during the Leader’s Repetition of the Amida;",
+     "kind": "commentary"
+    },
+    {
+     "text": " and a third time during the prayer “A redeemer will come to Zion” (known as ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kedusha deSidra</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "). The first and third are different from the second in that,",
+     "kind": "commentary"
+    },
+    {
+     "text": " (1) they do not require a ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>minyan</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " and (2) they do not need to be said standing.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:41": {
+   "parts": [
+    {
+     "text": "The ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kedusha</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " – one of the supreme moments of holiness in Jewish prayer – is constructed around the mystical visions of Isaiah and Ezekiel,",
+     "kind": "commentary"
+    },
+    {
+     "text": " of God enthroned in majesty,",
+     "kind": "commentary"
+    },
+    {
+     "text": " surrounded by angels singing His praises. In the first and third ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kedushot</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": ",",
+     "kind": "commentary"
+    },
+    {
+     "text": " we ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>describe</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " the angelic order;",
+     "kind": "commentary"
+    },
+    {
+     "text": " in the second,",
+     "kind": "commentary"
+    },
+    {
+     "text": " we ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>enact</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " it,",
+     "kind": "commentary"
+    },
+    {
+     "text": " using the same words,",
+     "kind": "commentary"
+    },
+    {
+     "text": " but this time in direct,",
+     "kind": "commentary"
+    },
+    {
+     "text": " not reported,",
+     "kind": "commentary"
+    },
+    {
+     "text": " speech (Geonim,",
+     "kind": "commentary"
+    },
+    {
+     "text": " Maimonides). The intensity of ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Kedusha</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " is heightened by this three-movement form: first the anticipation and preparation,",
+     "kind": "commentary"
+    },
+    {
+     "text": " then the experience itself,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and finally the  recollection.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:42": {
+   "parts": [
+    {
+     "text": "<big><i>F. Private, Public, Private</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>The Amida itself – especially on weekday mornings and afternoons – is constructed on a triadic pattern. First it is said silently by the members of the congregation as individuals. Next it is repeated publicly out loud by the Leader. This is then usually followed by private supplications (",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Taḥanun</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "),",
+     "kind": "commentary"
+    },
+    {
+     "text": " also said quietly. As I have suggested above,",
+     "kind": "commentary"
+    },
+    {
+     "text": " this is a way of reenacting the two modes of spirituality from which prayer derives. The silent Amida recalls the intensely personal prayers of the patriarchs and prophets. The public Repetition represents the daily sacrifices offered by the priests in the Temple on behalf of all Israel (there is no Repetition of the evening Amida because there were no sacrifices at night). Thus the prayers weave priestly and prophetic,",
+     "kind": "commentary"
+    },
+    {
+     "text": " individual and collective voices,",
+     "kind": "commentary"
+    },
+    {
+     "text": " into a single three-movement sonata of great depth and  resonance.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:43": {
+   "parts": [
+    {
+     "text": "<big><i>G. Fractals</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>We owe to the scientist Benoit Mandelbrot the concept of fractals: the discovery that phenomena in nature often display the same pattern at different levels of magnitude. A single rock looks like a mountain. Crystals,",
+     "kind": "commentary"
+    },
+    {
+     "text": " snowflakes and ferns are made up of elements that have the same shape as the whole. Fractal geometry is the scientific equivalent of the mystical ability to sense the great in the small: “To see a world in a grain of sand / And a Heaven in a wild flower,",
+     "kind": "commentary"
+    },
+    {
+     "text": " / Hold Infinity in the palm of your hand,",
+     "kind": "commentary"
+    },
+    {
+     "text": " and Eternity in an hour” (William Blake).",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:44": {
+   "parts": [
+    {
+     "text": "The first of the “request” prayers in the daily Amida is a fractal. It replicates in miniature the structure of the Amida<i> </i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "as a whole (Praise–Request–Thanks). It begins with praise: “You grace humanity with knowledge and teach mortals understanding,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” moves to request: “Grace us with the knowledge,",
+     "kind": "commentary"
+    },
+    {
+     "text": " understanding and discernment,",
+     "kind": "commentary"
+    },
+    {
+     "text": "” and ends with thanksgiving: “Blessed are You,",
+     "kind": "commentary"
+    },
+    {
+     "text": " O LORD,",
+     "kind": "commentary"
+    },
+    {
+     "text": " who graciously grants knowledge.” You will find many other fractals in the siddur.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:45": {
+   "he": [],
+   "kind": "commentary"
+  },
+  "en:Understanding Jewish Prayer:46": {
+   "parts": [
+    {
+     "text": "<big><i>H. Midrashic Expansion</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": "</big><br>Midrash is the rabbinic investigation into the meaning of holy texts: the root ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>d-r-sh</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " means “to explore,",
+     "kind": "commentary"
+    },
+    {
+     "text": " enquire,",
+     "kind": "commentary"
+    },
+    {
+     "text": " explain,",
+     "kind": "commentary"
+    },
+    {
+     "text": " expound.” It seeks out the inflections and innuendos of words,",
+     "kind": "commentary"
+    },
+    {
+     "text": " making explicit their implicit dimensions of meaning.",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:47": {
+   "parts": [
+    {
+     "text": "One example occurs in the ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Nishmat</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " prayer on Shabbat morning (page 445). A key phrase in prayer,",
+     "kind": "commentary"
+    },
+    {
+     "text": " spoken by Moses and incorporated into the first paragraph of the Amida,",
+     "kind": "commentary"
+    },
+    {
+     "text": " is “God,",
+     "kind": "commentary"
+    },
+    {
+     "text": " great,",
+     "kind": "commentary"
+    },
+    {
+     "text": " mighty and awesome” (Deut. 10:17). ",
+     "kind": "commentary"
+    },
+    {
+     "text": "<i>Nishmat</i>",
+     "kind": "commentary"
+    },
+    {
+     "text": " meditates on these four words,",
+     "kind": "commentary"
+    },
+    {
+     "text": " one by one:",
+     "kind": "commentary"
+    }
+   ],
+   "he": []
+  },
+  "en:Understanding Jewish Prayer:48": {
+   "he": [],
+   "kind": "commentary"
+  }
+ },
+ "issues": [
+  {
+   "id": "en:Understanding Jewish Prayer:10",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Understanding Jewish Prayer:11",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Understanding Jewish Prayer:12",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Understanding Jewish Prayer:13",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Understanding Jewish Prayer:14",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Understanding Jewish Prayer:15",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Understanding Jewish Prayer:16",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Understanding Jewish Prayer:1",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: e4.14; e4.15; e6.13"
+  }
+ ]
+}

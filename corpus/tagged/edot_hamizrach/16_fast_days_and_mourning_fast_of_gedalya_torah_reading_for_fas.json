@@ -1,0 +1,1251 @@
+{
+ "nusach": "edot_hamizrach",
+ "chunk": "Fast Days and Mourning [Fast of Gedalya .. Torah Reading for Fast Days]",
+ "leaves": {
+  "Fast Days and Mourning/Fast of Gedalya": {
+   "node": "selichot",
+   "service": "shacharit",
+   "when": "tzomGedaliah"
+  },
+  "Fast Days and Mourning/Tenth of Tevet": {
+   "node": "selichot",
+   "service": "shacharit",
+   "when": "asaraBTevet"
+  },
+  "Fast Days and Mourning/Fast of Esther": {
+   "node": "selichot",
+   "service": "shacharit",
+   "when": "taanitEsther"
+  },
+  "Fast Days and Mourning/Seventeenth of Tammuz": {
+   "node": "selichot",
+   "service": "shacharit",
+   "when": "tzomTammuz"
+  },
+  "Fast Days and Mourning/Mourning": {
+   "node": "lifecycle.house_of_mourning",
+   "service": "none"
+  },
+  "Fast Days and Mourning/Torah Reading for Fast Days": {
+   "node": "torah.reading",
+   "service": "none"
+  }
+ },
+ "he": {
+  "he:Fast Days and Mourning/Fast of Gedalya:1": {
+   "kind": "heading",
+   "en": "Fasts and Mourning"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:2": {
+   "kind": "heading",
+   "en": "Selichot for the Fast of Gedaliah"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:3": {
+   "kind": "instruction",
+   "en": "After the repetition, say Vidui and Nefilat Apayim, and then say:"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:4": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:5": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:6": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:7": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:8": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:9": {
+   "kind": "instruction",
+   "en": "According to the order of Aleph-Bet"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:10": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:11": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:12": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:13": {
+   "kind": "instruction",
+   "en": "According to the order of Tesh-Rak"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:14": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:15": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:16": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:17": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:18": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:19": {
+   "kind": "instruction",
+   "en": "According to the order of Aleph-Tet, Bet-Shin"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:20": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:21": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:22": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:23": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:24": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:25": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:26": {
+   "parts": [
+    {
+     "text": "<b>וְעַתָּ֣ה ׀</b> ",
+     "kind": "prayer",
+     "role": "congregation"
+    },
+    {
+     "text": "<small>(דניאל ט טו)</small>",
+     "kind": "instruction",
+     "en": "(Daniel 9:15)"
+    },
+    {
+     "text": " אֲדֹנָ֣י אֱלֹהֵ֗ינוּ אֲשֶׁר֩ הוֹצֵ֨אתָ אֶֽת־עַמְּךָ֜ מֵאֶ֤רֶץ מִצְרַ֙יִם֙ בְּיָ֣ד חֲזָקָ֔ה וַתַּֽעַשׂ־לְךָ֥ שֵׁ֖ם כַּיּ֣וֹם הַזֶּ֑ה חָטָ֖אנוּ רָשָֽׁעְנוּ׃ אֲדֹנָ֗י כְּכׇל־צִדְקֹתֶ֙ךָ֙ יָֽשׇׁב־נָ֤א אַפְּךָ֙ וַחֲמָ֣תְךָ֔ מֵעִֽירְךָ֥ יְרוּשָׁלַ֖‍ִם הַר־קׇדְשֶׁ֑ךָ כִּ֤י בַחֲטָאֵ֙ינוּ֙ וּבַעֲוֺנ֣וֹת אֲבֹתֵ֔ינוּ יְרוּשָׁלַ֧‍ִם וְעַמְּךָ֛ לְחֶרְפָּ֖ה לְכָל־סְבִיבֹתֵֽינוּ׃ וְעַתָּ֣ה ׀ שְׁמַ֣ע אֱלֹהֵ֗ינוּ אֶל־תְּפִלַּ֤ת עַבְדְּךָ֙ וְאֶל־תַּ֣חֲנוּנָ֔יו וְהָאֵ֣ר פָּנֶ֔יךָ עַל־מִקְדָּשְׁךָ֖ הַשָּׁמֵ֑ם לְמַ֖עַן אֲדֹנָֽי׃ הַטֵּ֨ה אֱלֹהַ֥י ׀ אׇזְנְךָ֮ וּֽשְׁמָע֒ פקחה [פְּקַ֣ח] עֵינֶ֗יךָ וּרְאֵה֙ שֹֽׁמְמֹתֵ֔ינוּ וְהָעִ֕יר אֲשֶׁר־נִקְרָ֥א שִׁמְךָ֖ עָלֶ֑יהָ כִּ֣י ׀ לֹ֣א עַל־צִדְקֹתֵ֗ינוּ אֲנַ֨חְנוּ מַפִּילִ֤ים תַּחֲנוּנֵ֙ינוּ֙ לְפָנֶ֔יךָ כִּ֖י עַל־רַחֲמֶ֥יךָ הָרַבִּֽים׃ אֲדֹנָ֤י ׀ שְׁמָ֙עָה֙ אֲדֹנָ֣י ׀ סְלָ֔חָה אֲדֹנָ֛י הַֽקְשִׁ֥יבָה וַעֲשֵׂ֖ה אַל־תְּאַחַ֑ר לְמַֽעַנְךָ֣ אֱלֹהַ֔י כִּֽי־שִׁמְךָ֣ נִקְרָ֔א עַל־עִירְךָ֖ וְעַל־עַמֶּֽךָ׃ אָבִינוּ אָב הָרַחֲמָן,",
+     "kind": "prayer",
+     "role": "congregation"
+    },
+    {
+     "text": " הַרְאֵנוּ אוֹת לְטוֹבָה וְקַבֵּץ נְפוּצוֹתֵינוּ מֵאַרְבַּע כַּנְפוֹת הָאָרֶץ. יַכִּירוּ וְיֵדְעוּ כָּל הַגּוֹיִם כִּי אַתָּה יְהֹוָה אָבִינוּ אָתָּה. אֲנַחְנוּ הַחֹמֶר וְאַתָּה יֹצְרֵנוּ וּמַעֲשֵׂה יָדְךָ כֻּלָּנוּ: אָבִינוּ מַלְכֵּנוּ,",
+     "kind": "prayer",
+     "role": "congregation"
+    },
+    {
+     "text": " צוּרֵנוּ וְגוֹאֲלֵנוּ,",
+     "kind": "prayer",
+     "role": "congregation"
+    },
+    {
+     "text": " ח֧וּסָה יְהֹוָ֣ה עַל־עַמֶּ֗ךָ וְאַל־תִּתֵּ֨ן נַחֲלָתְךָ֤ לְחֶרְפָּה֙ לִמְשׇׁל־בָּ֣ם גּוֹיִ֔ם לָ֚מָּה יֹאמְר֣וּ בָעַמִּ֔ים אַיֵּ֖ה אֱלֹהֵיהֶֽם׃ יָדַעְנוּ יְהֹוָה כִּי חָטָאנוּ. וְאֵין מִי יַעֲמוֹד בַּעֲדֵנוּ אֶלָּא שִׁמְךָ הַגָּדוֹל יַעֲמוֹד לָנוּ בְּעֵת צָרָה. וּכְרַחֵם אָב עַל בָּנִים רַחֵם עָלֵינוּ. חֲמֹל עַל עַמָּךְ וְרַחֵם עַל נַחֲלָתָךְ. חוּסָה נָּא כְּרֹב רַחֲמֶיךָ חָנֵּנוּ מַלְכֵּנוּ וַעֲנֵנוּ. לְךָ יְהֹוָה הַצְּדָקָה עוֹשֵׂה נִפְלָאוֹת בְּכָל עֵת וָעֵת. הַבֵּט נָא וְהוֹשִׁיעָה נָּא צֹאן מַרְעִיתֶךָ. אַל יִמְשָׁל בָּנוּ קֶצֶף כִּי לְךָ יְהֹוָה הַיְשׁוּעָה בְּךָ תוֹחַלְתֵּנוּ. אֱלוֹהַּ סְלִיחוֹת אָנָּא סְלַח נָא. כִּי אֵל טוֹב וְסַלָּח אָתָּה: ",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:27": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:28": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:29": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days and Mourning/Fast of Gedalya:30": {
+   "kind": "instruction",
+   "en": "And the chazzan says Half Kaddish, the Torah is taken out, three people are called for the portion of Vayechal, and the prayer is concluded as on every day. After Hoshi'enu, say Shir Mizmor LeAsaf, Elohim El Dami Lecha."
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:1": {
+   "kind": "heading",
+   "en": "Penitential Prayers for the Tenth of Tevet"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:2": {
+   "kind": "instruction",
+   "en": "After the repetition, say the Confession and Nefilat Apayim (Falling on the Face), and then say:"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:3": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:4": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:5": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:6": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:7": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:8": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:9": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:10": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:11": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:12": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:13": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:14": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:15": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:16": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:17": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:18": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:19": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:20": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:21": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:22": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:23": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:24": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:25": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:26": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:27": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:28": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:29": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:30": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:31": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:32": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:33": {
+   "parts": [
+    {
+     "text": "<b>וְעַתָּ֣ה ׀</b> ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(דניאל ט טו)</small>",
+     "kind": "instruction",
+     "en": "(Daniel 9:15)"
+    },
+    {
+     "text": " אֲדֹנָ֣י אֱלֹהֵ֗ינוּ אֲשֶׁר֩ הוֹצֵ֨אתָ אֶֽת־עַמְּךָ֜ מֵאֶ֤רֶץ מִצְרַ֙יִם֙ בְּיָ֣ד חֲזָקָ֔ה וַתַּֽעַשׂ־לְךָ֥ שֵׁ֖ם כַּיּ֣וֹם הַזֶּ֑ה חָטָ֖אנוּ רָשָֽׁעְנוּ׃ אֲדֹנָ֗י כְּכׇל־צִדְקֹתֶ֙ךָ֙ יָֽשׇׁב־נָ֤א אַפְּךָ֙ וַחֲמָ֣תְךָ֔ מֵעִֽירְךָ֥ יְרוּשָׁלַ֖‍ִם הַר־קׇדְשֶׁ֑ךָ כִּ֤י בַחֲטָאֵ֙ינוּ֙ וּבַעֲוֺנ֣וֹת אֲבֹתֵ֔ינוּ יְרוּשָׁלַ֧‍ִם וְעַמְּךָ֛ לְחֶרְפָּ֖ה לְכָל־סְבִיבֹתֵֽינוּ׃ וְעַתָּ֣ה ׀ שְׁמַ֣ע אֱלֹהֵ֗ינוּ אֶל־תְּפִלַּ֤ת עַבְדְּךָ֙ וְאֶל־תַּ֣חֲנוּנָ֔יו וְהָאֵ֣ר פָּנֶ֔יךָ עַל־מִקְדָּשְׁךָ֖ הַשָּׁמֵ֑ם לְמַ֖עַן אֲדֹנָֽי׃ הַטֵּ֨ה אֱלֹהַ֥י ׀ אׇזְנְךָ֮ וּֽשְׁמָע֒ פקחה [פְּקַ֣ח] עֵינֶ֗יךָ וּרְאֵה֙ שֹֽׁמְמֹתֵ֔ינוּ וְהָעִ֕יר אֲשֶׁר־נִקְרָ֥א שִׁמְךָ֖ עָלֶ֑יהָ כִּ֣י ׀ לֹ֣א עַל־צִדְקֹתֵ֗ינוּ אֲנַ֨חְנוּ מַפִּילִ֤ים תַּחֲנוּנֵ֙ינוּ֙ לְפָנֶ֔יךָ כִּ֖י עַל־רַחֲמֶ֥יךָ הָרַבִּֽים׃ אֲדֹנָ֤י ׀ שְׁמָ֙עָה֙ אֲדֹנָ֣י ׀ סְלָ֔חָה אֲדֹנָ֛י הַֽקְשִׁ֥יבָה וַעֲשֵׂ֖ה אַל־תְּאַחַ֑ר לְמַֽעַנְךָ֣ אֱלֹהַ֔י כִּֽי־שִׁמְךָ֣ נִקְרָ֔א עַל־עִירְךָ֖ וְעַל־עַמֶּֽךָ׃ אָבִינוּ אָב הָרַחֲמָן,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הַרְאֵנוּ אוֹת לְטוֹבָה וְקַבֵּץ נְפוּצוֹתֵינוּ מֵאַרְבַּע כַּנְפוֹת הָאָרֶץ. יַכִּירוּ וְיֵדְעוּ כָּל הַגּוֹיִם כִּי אַתָּה יְהֹוָה אָבִינוּ אָתָּה. אֲנַחְנוּ הַחֹמֶר וְאַתָּה יֹצְרֵנוּ וּמַעֲשֵׂה יָדְךָ כֻּלָּנוּ: אָבִינוּ מַלְכֵּנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " צוּרֵנוּ וְגוֹאֲלֵנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " ח֧וּסָה יְהֹוָ֣ה עַל־עַמֶּ֗ךָ וְאַל־תִּתֵּ֨ן נַחֲלָתְךָ֤ לְחֶרְפָּה֙ לִמְשׇׁל־בָּ֣ם גּוֹיִ֔ם לָ֚מָּה יֹאמְר֣וּ בָעַמִּ֔ים אַיֵּ֖ה אֱלֹהֵיהֶֽם׃ יָדַעְנוּ יְהֹוָה כִּי חָטָאנוּ. וְאֵין מִי יַעֲמוֹד בַּעֲדֵנוּ אֶלָּא שִׁמְךָ הַגָּדוֹל יַעֲמוֹד לָנוּ בְּעֵת צָרָה. וּכְרַחֵם אָב עַל בָּנִים רַחֵם עָלֵינוּ. חֲמֹל עַל עַמָּךְ וְרַחֵם עַל נַחֲלָתָךְ. חוּסָה נָּא כְּרֹב רַחֲמֶיךָ חָנֵּנוּ מַלְכֵּנוּ וַעֲנֵנוּ. לְךָ יְהֹוָה הַצְּדָקָה עוֹשֵׂה נִפְלָאוֹת בְּכָל עֵת וָעֵת. הַבֵּט נָא וְהוֹשִׁיעָה נָּא צֹאן מַרְעִיתֶךָ. אַל יִמְשָׁל בָּנוּ קֶצֶף כִּי לְךָ יְהֹוָה הַיְשׁוּעָה בְּךָ תוֹחַלְתֵּנוּ. אֱלוֹהַּ סְלִיחוֹת אָנָּא סְלַח נָא. כִּי אֵל טוֹב וְסַלָּח אָתָּה:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:34": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:35": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:36": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Tenth of Tevet:37": {
+   "kind": "instruction",
+   "en": "The chazzan says Half Kaddish, the Torah is taken out, three people are called for the reading of Vayechel, and the service concludes as on any other day. After Hoshi'enu, say the Psalm of Asaf, 'Elohim, El Dami Lecha,' as in the morning service."
+  },
+  "he:Fast Days and Mourning/Fast of Esther:1": {
+   "kind": "heading",
+   "en": "Selichot for the Fast of Esther"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:2": {
+   "kind": "instruction",
+   "en": "After the repetition, say the Confession and Nefilat Apayim (Falling on the Face), and then say:"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:3": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:4": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:5": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:6": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:7": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:8": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:9": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:10": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:11": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:12": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:13": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:14": {
+   "kind": "instruction",
+   "en": "According to the order of Aleph-Bet"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:15": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:16": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:17": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:18": {
+   "kind": "instruction",
+   "en": "According to the order of Tesh-Rak"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:19": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:20": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:21": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:22": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:23": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:24": {
+   "kind": "instruction",
+   "en": "According to the order of Aleph-Tet, Bet-Shin"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:25": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:26": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:27": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:28": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:29": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:30": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:31": {
+   "parts": [
+    {
+     "text": "<b>וְעַתָּ֣ה ׀</b> ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(דניאל ט טו)</small>",
+     "kind": "instruction",
+     "en": "(Daniel 9:15)"
+    },
+    {
+     "text": " אֲדֹנָ֣י אֱלֹהֵ֗ינוּ אֲשֶׁר֩ הוֹצֵ֨אתָ אֶֽת־עַמְּךָ֜ מֵאֶ֤רֶץ מִצְרַ֙יִם֙ בְּיָ֣ד חֲזָקָ֔ה וַתַּֽעַשׂ־לְךָ֥ שֵׁ֖ם כַּיּ֣וֹם הַזֶּ֑ה חָטָ֖אנוּ רָשָֽׁעְנוּ׃ אֲדֹנָ֗י כְּכׇל־צִדְקֹתֶ֙ךָ֙ יָֽשׇׁב־נָ֤א אַפְּךָ֙ וַחֲמָ֣תְךָ֔ מֵעִֽירְךָ֥ יְרוּשָׁלַ֖‍ִם הַר־קׇדְשֶׁ֑ךָ כִּ֤י בַחֲטָאֵ֙ינוּ֙ וּבַעֲוֺנ֣וֹת אֲבֹתֵ֔ינוּ יְרוּשָׁלַ֧‍ִם וְעַמְּךָ֛ לְחֶרְפָּ֖ה לְכָל־סְבִיבֹתֵֽינוּ׃ וְעַתָּ֣ה ׀ שְׁמַ֣ע אֱלֹהֵ֗ינוּ אֶל־תְּפִלַּ֤ת עַבְדְּךָ֙ וְאֶל־תַּ֣חֲנוּנָ֔יו וְהָאֵ֣ר פָּנֶ֔יךָ עַל־מִקְדָּשְׁךָ֖ הַשָּׁמֵ֑ם לְמַ֖עַן אֲדֹנָֽי׃ הַטֵּ֨ה אֱלֹהַ֥י ׀ אׇזְנְךָ֮ וּֽשְׁמָע֒ פקחה [פְּקַ֣ח] עֵינֶ֗יךָ וּרְאֵה֙ שֹֽׁמְמֹתֵ֔ינוּ וְהָעִ֕יר אֲשֶׁר־נִקְרָ֥א שִׁמְךָ֖ עָלֶ֑יהָ כִּ֣י ׀ לֹ֣א עַל־צִדְקֹתֵ֗ינוּ אֲנַ֨חְנוּ מַפִּילִ֤ים תַּחֲנוּנֵ֙ינוּ֙ לְפָנֶ֔יךָ כִּ֖י עַל־רַחֲמֶ֥יךָ הָרַבִּֽים׃ אֲדֹנָ֤י ׀ שְׁמָ֙עָה֙ אֲדֹנָ֣י ׀ סְלָ֔חָה אֲדֹנָ֛י הַֽקְשִׁ֥יבָה וַעֲשֵׂ֖ה אַל־תְּאַחַ֑ר לְמַֽעַנְךָ֣ אֱלֹהַ֔י כִּֽי־שִׁמְךָ֣ נִקְרָ֔א עַל־עִירְךָ֖ וְעַל־עַמֶּֽךָ׃ אָבִינוּ אָב הָרַחֲמָן,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הַרְאֵנוּ אוֹת לְטוֹבָה וְקַבֵּץ נְפוּצוֹתֵינוּ מֵאַרְבַּע כַּנְפוֹת הָאָרֶץ. יַכִּירוּ וְיֵדְעוּ כָּל הַגּוֹיִם כִּי אַתָּה יְהֹוָה אָבִינוּ אָתָּה. אֲנַחְנוּ הַחֹמֶר וְאַתָּה יֹצְרֵנוּ וּמַעֲשֵׂה יָדְךָ כֻּלָּנוּ: אָבִינוּ מַלְכֵּנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " צוּרֵנוּ וְגוֹאֲלֵנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " ח֧וּסָה יְהֹוָ֣ה עַל־עַמֶּ֗ךָ וְאַל־תִּתֵּ֨ן נַחֲלָתְךָ֤ לְחֶרְפָּה֙ לִמְשׇׁל־בָּ֣ם גּוֹיִ֔ם לָ֚מָּה יֹאמְר֣וּ בָעַמִּ֔ים אַיֵּ֖ה אֱלֹהֵיהֶֽם׃ יָדַעְנוּ יְהֹוָה כִּי חָטָאנוּ. וְאֵין מִי יַעֲמוֹד בַּעֲדֵנוּ אֶלָּא שִׁמְךָ הַגָּדוֹל יַעֲמוֹד לָנוּ בְּעֵת צָרָה. וּכְרַחֵם אָב עַל בָּנִים רַחֵם עָלֵינוּ. חֲמֹל עַל עַמָּךְ וְרַחֵם עַל נַחֲלָתָךְ. חוּסָה נָּא כְּרֹב רַחֲמֶיךָ חָנֵּנוּ מַלְכֵּנוּ וַעֲנֵנוּ. לְךָ יְהֹוָה הַצְּדָקָה עוֹשֵׂה נִפְלָאוֹת בְּכָל עֵת וָעֵת. הַבֵּט נָא וְהוֹשִׁיעָה נָּא צֹאן מַרְעִיתֶךָ. אַל יִמְשָׁל בָּנוּ קֶצֶף כִּי לְךָ יְהֹוָה הַיְשׁוּעָה בְּךָ תוֹחַלְתֵּנוּ. אֱלוֹהַּ סְלִיחוֹת אָנָּא סְלַח נָא. כִּי אֵל טוֹב וְסַלָּח אָתָּה:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Fast of Esther:32": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:33": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:34": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Fast of Esther:35": {
+   "kind": "instruction",
+   "en": "The chazzan says Half Kaddish, the Torah is taken out, three people are called for the reading of Vayechel, and the service concludes as on any other day. After Hoshi'enu, say the Psalm of Asaf, 'Elohim, El Dami Lecha,' as in the morning service."
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:1": {
+   "kind": "heading",
+   "en": "Selichot for the Seventeenth of Tammuz"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:3": {
+   "kind": "instruction",
+   "en": "After the repetition, say the Confession and Nefilat Apayim (Falling on the Face), and then say:"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:4": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:5": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:6": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:7": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:8": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:9": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:10": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:11": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:12": {
+   "kind": "instruction",
+   "en": "According to the order of Aleph-Bet"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:13": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:14": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:15": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:16": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:17": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:18": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:19": {
+   "kind": "instruction",
+   "en": "According to the order of Aleph-Bet"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:20": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:21": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:22": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:23": {
+   "kind": "instruction",
+   "en": "According to the order of Tesh-Rak"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:24": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:25": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:26": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:27": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:28": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:29": {
+   "kind": "instruction",
+   "en": "According to the order of Aleph-Tet, Bet-Shin"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:30": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:31": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:32": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:33": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:34": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:35": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:36": {
+   "parts": [
+    {
+     "text": "<b>וְעַתָּ֣ה ׀</b> ",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": "<small>(דניאל ט טו)</small>",
+     "kind": "instruction",
+     "en": "(Daniel 9:15)",
+     "role": "individual"
+    },
+    {
+     "text": " אֲדֹנָ֣י אֱלֹהֵ֗ינוּ אֲשֶׁר֩ הוֹצֵ֨אתָ אֶֽת־עַמְּךָ֜ מֵאֶ֤רֶץ מִצְרַ֙יִם֙ בְּיָ֣ד חֲזָקָ֔ה וַתַּֽעַשׂ־לְךָ֥ שֵׁ֖ם כַּיּ֣וֹם הַזֶּ֑ה חָטָ֖אנוּ רָשָֽׁעְנוּ׃ אֲדֹנָ֗י כְּכׇל־צִדְקֹתֶ֙ךָ֙ יָֽשׇׁב־נָ֤א אַפְּךָ֙ וַחֲמָ֣תְךָ֔ מֵעִֽירְךָ֥ יְרוּשָׁלַ֖‍ִם הַר־קׇדְשֶׁ֑ךָ כִּ֤י בַחֲטָאֵ֙ינוּ֙ וּבַעֲוֺנ֣וֹת אֲבֹתֵ֔ינוּ יְרוּשָׁלַ֧‍ִם וְעַמְּךָ֛ לְחֶרְפָּ֖ה לְכָל־סְבִיבֹתֵֽינוּ׃ וְעַתָּ֣ה ׀ שְׁמַ֣ע אֱלֹהֵ֗ינוּ אֶל־תְּפִלַּ֤ת עַבְדְּךָ֙ וְאֶל־תַּ֣חֲנוּנָ֔יו וְהָאֵ֣ר פָּנֶ֔יךָ עַל־מִקְדָּשְׁךָ֖ הַשָּׁמֵ֑ם לְמַ֖עַן אֲדֹנָֽי׃ הַטֵּ֨ה אֱלֹהַ֥י ׀ אׇזְנְךָ֮ וּֽשְׁמָע֒ פקחה [פְּקַ֣ח] עֵינֶ֗יךָ וּרְאֵה֙ שֹֽׁמְמֹתֵ֔ינוּ וְהָעִ֕יר אֲשֶׁר־נִקְרָ֥א שִׁמְךָ֖ עָלֶ֑יהָ כִּ֣י ׀ לֹ֣א עַל־צִדְקֹתֵ֗ינוּ אֲנַ֨חְנוּ מַפִּילִ֤ים תַּחֲנוּנֵ֙ינוּ֙ לְפָנֶ֔יךָ כִּ֖י עַל־רַחֲמֶ֥יךָ הָרַבִּֽים׃ אֲדֹנָ֤י ׀ שְׁמָ֙עָה֙ אֲדֹנָ֣י ׀ סְלָ֔חָה אֲדֹנָ֛י הַֽקְשִׁ֥יבָה וַעֲשֵׂ֖ה אַל־תְּאַחַ֑ר לְמַֽעַנְךָ֣ אֱלֹהַ֔י כִּֽי־שִׁמְךָ֣ נִקְרָ֔א עַל־עִירְךָ֖ וְעַל־עַמֶּֽךָ׃ אָבִינוּ אָב הָרַחֲמָן,",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": " הַרְאֵנוּ אוֹת לְטוֹבָה וְקַבֵּץ נְפוּצוֹתֵינוּ מֵאַרְבַּע כַּנְפוֹת הָאָרֶץ. יַכִּירוּ וְיֵדְעוּ כָּל הַגּוֹיִם כִּי אַתָּה יְהֹוָה אָבִינוּ אָתָּה. אֲנַחְנוּ הַחֹמֶר וְאַתָּה יֹצְרֵנוּ וּמַעֲשֵׂה יָדְךָ כֻּלָּנוּ: אָבִינוּ מַלְכֵּנוּ,",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": " צוּרֵנוּ וְגוֹאֲלֵנוּ,",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": " ח֧וּסָה יְהֹוָ֣ה עַל־עַמֶּ֗ךָ וְאַל־תִּתֵּ֨ן נַחֲלָתְךָ֤ לְחֶרְפָּה֙ לִמְשׇׁל־בָּ֣ם גּוֹיִ֔ם לָ֚מָּה יֹאמְר֣וּ בָעַמִּ֔ים אַיֵּ֖ה אֱלֹהֵיהֶֽם׃ יָדַעְנוּ יְהֹוָה כִּי חָטָאנוּ. וְאֵין מִי יַעֲמוֹד בַּעֲדֵנוּ אֶלָּא שִׁמְךָ הַגָּדוֹל יַעֲמוֹד לָנוּ בְּעֵת צָרָה. וּכְרַחֵם אָב עַל בָּנִים רַחֵם עָלֵינוּ. חֲמֹל עַל עַמָּךְ וְרַחֵם עַל נַחֲלָתָךְ. חוּסָה נָּא כְּרֹב רַחֲמֶיךָ חָנֵּנוּ מַלְכֵּנוּ וַעֲנֵנוּ. לְךָ יְהֹוָה הַצְּדָקָה עוֹשֵׂה נִפְלָאוֹת בְּכָל עֵת וָעֵת. הַבֵּט נָא וְהוֹשִׁיעָה נָּא צֹאן מַרְעִיתֶךָ. אַל יִמְשָׁל בָּנוּ קֶצֶף כִּי לְךָ יְהֹוָה הַיְשׁוּעָה בְּךָ תוֹחַלְתֵּנוּ. אֱלוֹהַּ סְלִיחוֹת אָנָּא סְלַח נָא. כִּי אֵל טוֹב וְסַלָּח אָתָּה:",
+     "kind": "prayer",
+     "role": "individual"
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:37": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:38": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:39": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days and Mourning/Seventeenth of Tammuz:40": {
+   "kind": "instruction",
+   "en": "And the chazzan says Half Kaddish, the Torah is taken out and three people are called up, and the prayer is concluded as on any other day. After Hoshi'enu, they say Shir Mizmor LaAsaf, Elohim El Dami Lecha."
+  },
+  "he:Fast Days and Mourning/Mourning:1": {
+   "kind": "heading",
+   "en": "Mourning"
+  },
+  "he:Fast Days and Mourning/Mourning:2": {
+   "kind": "instruction",
+   "en": "For the seven close relatives, one must tear while standing, and before tearing, recite the blessing:"
+  },
+  "he:Fast Days and Mourning/Mourning:3": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Mourning:4": {
+   "kind": "heading",
+   "en": "Justification of the Judgment"
+  },
+  "he:Fast Days and Mourning/Mourning:5": {
+   "parts": [
+    {
+     "text": "<b>צַדִּ֣יק</b> אַתָּ֣ה יְהֹוָ֑ה וְ֝יָשָׁ֗ר מִשְׁפָּטֶֽיךָ׃ צַדִּ֣יק יְ֭הֹוָה בְּכׇל־דְּרָכָ֑יו וְ֝חָסִ֗יד בְּכׇל־מַעֲשָֽׂיו׃ צִדְקָתְךָ֣ צֶ֣דֶק לְעוֹלָ֑ם וְֽתוֹרָתְךָ֥ אֱמֶֽת׃ מִֽשְׁפְּטֵי־יְהֹוָ֥ה אֱמֶ֑ת צָֽדְק֥וּ יַחְדָּֽו׃ בַּאֲשֶׁ֥ר דְּבַר־מֶ֖לֶךְ שִׁלְט֑וֹן וּמִ֥י יֹֽאמַר־ל֖וֹ מַֽה־תַּעֲשֶֽׂה׃ וְה֣וּא בְ֭אֶחָד וּמִ֣י יְשִׁיבֶ֑נּוּ וְנַפְשׁ֖וֹ אִוְּתָ֣ה וַיָּֽעַשׂ׃ קָטֹ֣ן וְ֭גָדוֹל שָׁ֣ם ה֑וּא וְ֝עֶ֗בֶד חׇפְשִׁ֥י מֵאֲדֹנָֽיו׃ הֵ֣ן בַּ֭עֲבָדָיו לֹ֣א יַאֲמִ֑ין וּ֝בְמַלְאָכָ֗יו יָשִׂ֥ים תׇּהֳלָֽה׃ אַ֤ף ׀ שֹׁכְנֵ֬י בָֽתֵּי־חֹ֗מֶר אֲשֶׁר־בֶּעָפָ֥ר יְסוֹדָ֑ם יְ֝דַכְּא֗וּם לִפְנֵי־עָֽשׁ׃ הַצּוּר֙ תָּמִ֣ים פׇּֽעֳל֔וֹ כִּ֥י כׇל־דְּרָכָ֖יו מִשְׁפָּ֑ט אֵ֤ל אֱמוּנָה֙ וְאֵ֣ין עָ֔וֶל צַדִּ֥יק וְיָשָׁ֖ר הֽוּא׃ דַּיַּן הָאֱמֶת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שֹׁפֵט צֶדֶק וֶאֱמֶת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בָּרוּךְ דַּיָּן הָאֱמֶת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כִּי כָל־מִשְׁפָּטָיו צֶדֶק וֶאֱמֶת:<br><br>הַמְרַחֵם עַל־כָּל־בְּרִיּוֹתָיו הוּא יָחוּס וְיַחְמוֹל וִירַחֵם עַל נֶפֶשׁ רוּחַ וּנְשָׁמָה שֶׁל (פב\"פ) רוּחַ ה' תְּנִיחֶנּוּ (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>לאשה</small>",
+     "kind": "instruction",
+     "en": "For a woman:"
+    },
+    {
+     "text": " תְּנִיחֶנָּה) בְגַן עֵדֶן:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Mourning:6": {
+   "parts": [
+    {
+     "text": "<b>בִּלַּ֤ע</b> הַמָּ֨וֶת֙ לָנֶ֔צַח וּמָחָ֨ה אֲדֹנָ֧י יֱהֹוִ֛ה דִּמְעָ֖ה מֵעַ֣ל כׇּל־פָּנִ֑ים וְחֶרְפַּ֣ת עַמּ֗וֹ יָסִיר֙ מֵעַ֣ל כׇּל־הָאָ֔רֶץ כִּ֥י יְהֹוָ֖ה דִּבֵּֽר׃ יִֽחְי֣וּ מֵתֶ֔יךָ נְבֵלָתִ֖י יְקוּמ֑וּן הָקִ֨יצוּ וְרַנְּנ֜וּ שֹׁכְנֵ֣י עָפָ֗ר כִּ֣י טַ֤ל אוֹרֹת֙ טַלֶּ֔ךָ וָאָ֖רֶץ רְפָאִ֥ים תַּפִּֽיל׃ וְה֤וּא רַח֨וּם ׀ יְכַפֵּ֥ר עָוֺן֮ וְֽלֹא־יַֽ֫שְׁחִ֥ית וְ֭הִרְבָּה לְהָשִׁ֣יב אַפּ֑וֹ וְלֹא־יָ֝עִ֗יר כׇּל־חֲמָתֽוֹ׃ יְהֹוָ֥ה הוֹשִׁ֑יעָה הַ֝מֶּ֗לֶךְ יַעֲנֵ֥נוּ בְיוֹם־קׇרְאֵֽנוּ: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>ואומרים המנחמים:</small>",
+     "kind": "instruction",
+     "en": "And the comforters say:"
+    },
+    {
+     "text": " תְּנֻחֲמוּ מִן הַשָּׁמַיִם: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>עד כאן בימי השבעה</small>",
+     "kind": "instruction",
+     "en": "Until the end of the seven days."
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Mourning:7": {
+   "kind": "instruction",
+   "en": "And afterwards, they say:"
+  },
+  "he:Fast Days and Mourning/Mourning:8": {
+   "parts": [
+    {
+     "text": "<b>מִזְמ֗וֹר</b> לְדָ֫וִ֥ד יְ֭הֹוָה מִי־יָג֣וּר בְּאׇהֳלֶ֑ךָ מִֽי־יִ֝שְׁכֹּ֗ן בְּהַ֣ר קׇדְשֶֽׁךָ׃ הוֹלֵ֣ךְ תָּ֭מִים וּפֹעֵ֥ל צֶ֑דֶק וְדֹבֵ֥ר אֱ֝מֶ֗ת בִּלְבָבֽוֹ׃ לֹֽא־רָגַ֨ל ׀ עַל־לְשֹׁנ֗וֹ לֹא־עָשָׂ֣ה לְרֵעֵ֣הוּ רָעָ֑ה וְ֝חֶרְפָּ֗ה לֹא־נָשָׂ֥א עַל־קְרֹבֽוֹ׃ נִבְזֶ֤ה ׀ בְּֽעֵ֘ינָ֤יו נִמְאָ֗ס וְאֶת־יִרְאֵ֣י יְהֹוָ֣ה יְכַבֵּ֑ד נִשְׁבַּ֥ע לְ֝הָרַ֗ע וְלֹ֣א יָמִֽר׃ כַּסְפּ֤וֹ ׀ לֹא־נָתַ֣ן בְּנֶשֶׁךְ֮ וְשֹׁ֥חַד עַל־נָקִ֗י לֹ֥א לָ֫קָ֥חעֹֽשֵׂה־אֵ֑לֶּה לֹ֖א יִמּ֣וֹט לְעוֹלָֽם׃<br><br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>ויש אומרים:</small>",
+     "kind": "instruction",
+     "en": "Some say:"
+    },
+    {
+     "text": " <b>מִכְתָּ֥ם</b> לְדָוִ֑ד שׇֽׁמְרֵ֥נִי אֵ֝֗ל כִּֽי־חָסִ֥יתִי בָֽךְ׃ אָמַ֣רְתְּ לַֽ֭יהֹוָה אֲדֹנָ֣י אָ֑תָּה ט֝וֹבָתִ֗י בַּל־עָלֶֽיךָ׃ לִ֭קְדוֹשִׁים אֲשֶׁר־בָּאָ֣רֶץ הֵ֑מָּה וְ֝אַדִּירֵ֗י כׇּל־חֶפְצִי־בָֽם׃ יִרְבּ֥וּ עַצְּבוֹתָם֮ אַחֵ֢ר מָ֫הָ֥רוּ בַּל־אַסִּ֣יךְ נִסְכֵּיהֶ֣ם מִדָּ֑ם וּֽבַל־אֶשָּׂ֥א אֶת־שְׁ֝מוֹתָ֗ם עַל־שְׂפָתָֽי׃ יְֽהֹוָ֗ה מְנָת־חֶלְקִ֥י וְכוֹסִ֑י אַ֝תָּ֗ה תּוֹמִ֥יךְ גּוֹרָלִֽי׃ חֲבָלִ֣ים נָֽפְלוּ־לִ֭י בַּנְּעִמִ֑ים אַף־נַ֝חֲלָ֗ת שָֽׁפְרָ֥ה עָלָֽי׃ אֲבָרֵ֗ךְ אֶת־יְ֭הֹוָה אֲשֶׁ֣ר יְעָצָ֑נִי אַף־לֵ֝יל֗וֹת יִסְּר֥וּנִי כִלְיוֹתָֽי׃ שִׁוִּ֬יתִי יְהֹוָ֣ה לְנֶגְדִּ֣י תָמִ֑יד כִּ֥י מִֽ֝ימִינִ֗י בַּל־אֶמּֽוֹט׃ לָכֵ֤ן ׀ שָׂמַ֣ח לִ֭בִּי וַיָּ֣גֶל כְּבוֹדִ֑י אַף־בְּ֝שָׂרִ֗י יִשְׁכֹּ֥ן לָבֶֽטַח׃ כִּ֤י ׀ לֹא־תַעֲזֹ֣ב נַפְשִׁ֣י לִשְׁא֑וֹל לֹֽא־תִתֵּ֥ן חֲ֝סִידְךָ֗ לִרְא֥וֹת שָֽׁחַת׃ תּֽוֹדִיעֵנִי֮ אֹ֤רַח חַ֫יִּ֥ים שֹׂ֣בַע שְׂ֭מָחוֹת אֶת־פָּנֶ֑יךָ נְעִמ֖וֹת בִּימִינְךָ֣ נֶֽצַח׃<br><br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אומרים קדיש יהא שלמא</small>",
+     "kind": "instruction",
+     "en": "They say Kaddish Yeha Shlama."
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Mourning:9": {
+   "kind": "heading",
+   "en": "Grace after Meals for Mourners"
+  },
+  "he:Fast Days and Mourning/Mourning:10": {
+   "parts": [
+    {
+     "text": "<small>אם המסובים שלושה או יותר אומרים</small>",
+     "kind": "instruction",
+     "en": "If there are three or more participants, they say:"
+    },
+    {
+     "text": " <b>הַב</b> לָן וְנִבְרִיךְ לְמַלְכָּא עִלָּאָה קַדִּישָׁא:צ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>והמסובים עונים</small>",
+     "kind": "instruction",
+     "en": "And the participants answer:"
+    },
+    {
+     "text": " שָׁמַֽיִם: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>ואומר המזמן</small>",
+     "kind": "instruction",
+     "en": "And the leader says:"
+    },
+    {
+     "text": " בִּרְשׁוּת מַלְכָּא עִלָּאָה קַדִּישָׁא (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>בשבת</small>",
+     "kind": "instruction",
+     "en": "On Shabbat:"
+    },
+    {
+     "text": " וּבִרְשׁוּת שַׁבָּת מַלְכְּתָא.) וּבִרְשֽׁוּתְכֶֽם.",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אם הם שלשה אומרים:</small>",
+     "kind": "instruction",
+     "en": "If there are three, they say:"
+    },
+    {
+     "text": " נְבָרֵךְ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small><small>בעשרה</small>",
+     "kind": "instruction",
+     "en": "With ten:"
+    },
+    {
+     "text": " אֱלֹהֵינוּ</small> מְנַחֵם אֲבֵלִים שֶׁאָכַלְנוּ מִשֶּׁלּוֹ:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Mourning:11": {
+   "parts": [
+    {
+     "text": "<small>ועונים:</small>",
+     "kind": "instruction",
+     "en": "And they answer:"
+    },
+    {
+     "text": " בָּרוּךְ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(<small>בעשרה</small>",
+     "kind": "instruction",
+     "en": "With ten:"
+    },
+    {
+     "text": " אֱלֹהֵינוּ)</small> מְנַחֵם אֲבֵלִים שֶׁאָכַלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ הַגָּדוֹל חָיִֽינוּ:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Mourning:12": {
+   "parts": [
+    {
+     "text": "<small>וחוזר:</small>",
+     "kind": "instruction",
+     "en": "And he repeats:"
+    },
+    {
+     "text": " בָּרוּךְ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(<small>בעשרה</small>",
+     "kind": "instruction",
+     "en": "With ten:"
+    },
+    {
+     "text": " אֱלֹהֵינוּ)</small> מְנַחֵם אֲבֵלִים שֶׁאָכַלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ הַגָּדוֹל חָיִֽינוּ:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Mourning:13": {
+   "parts": [
+    {
+     "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה. אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם. הָאֵל הַזָּן אוֹתָֽנוּ וְאֶת־הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ. בְּחֵן בְּחֶֽסֶד בְּרֶֽוַח וּבְרַחֲמִים רַבִּים. נֹתֵ֣ן לֶ֭חֶם לְכָל־בָּשָׂ֑ר כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ. וּבְטוּבוֹ הַגָּדוֹל תָּמִיד לֹא חָֽסַר לָֽנוּ. וְאַל־יֶחְסַר לָֽנוּ מָזוֹן תָּמִיד לְעוֹלָם וָעֶד. כִּי הוּא אֵל זָן וּמְפַרְנֵס לַכֹּל. וְשֻׁלְחָנוֹ עָרוּךְ לַכֹּל. וְהִתְקִין מִחְיָה וּמָזוֹן לְכָל־בְּרִיּוֹתָיו אֲשֶׁר בָּרָא בְּרַחֲמָיו וּבְרוֹב חֲסָדָיו. כָּאָמוּר. פּוֹתֵ֥חַ אֶת־יָדֶ֑ךָ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(ר\"ת פא\"י שהוא מספר יאהדונהי ומספר סא\"ל וס\"ת חת\"ך)</small>",
+     "kind": "instruction",
+     "en": "(Acrostic of the letters of the name of God and the number of the letters of the Torah)"
+    },
+    {
+     "text": " וּמַשְׂבִּ֖יעַ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(כמספר חת\"ך)</small>",
+     "kind": "instruction",
+     "en": "(As the number of the letters of the Torah)"
+    },
+    {
+     "text": " לְכָל־חַ֣י רָצֽוֹן. בָּרוּךְ אַתָּה יְהֹוָה. הַזָּן אֶת־הַכֹּל:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Mourning:14": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Mourning:15": {
+   "kind": "instruction",
+   "en": "On Chanukah and Purim, add here about the miracles."
+  },
+  "he:Fast Days and Mourning/Mourning:16": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Mourning:17": {
+   "parts": [
+    {
+     "text": "<b>רַחֵם</b> יְהֹוָה אֱלֹהֵֽינוּ עָלֵֽינוּ וְעַל יִשְׂרָאֵל עַמָּךְ. וְעַל יְרוּשָׁלַֽיִם עִירָךְ. וְעַל הַר צִיּוֹן מִשְׁכַּן כְּבוֹדָךְ. וְעַל הֵיכָלָךְ. וְעַל מְעוֹנָךְ. וְעַל דְּבִירָךְ. וְעַל הַבַּֽיִת הַגָּדוֹל וְהַקָּדוֹשׁ שֶׁנִּקְרָא שִׁמְךָ עָלָיו. אָבִֽינוּ. רְעֵֽנוּ. זוּנֵֽנוּ. פַּרְנְסֵֽנוּ. כַּלְכְּלֵֽנוּ. הַרְוִיחֵֽנוּ הַרְוַח־לָֽנוּ מְהֵרָה מִכָּל־צָרוֹתֵֽינוּ. וְנָא. אַל תַּצְרִיכֵֽנוּ יְהֹוָה אֱלֹהֵֽינוּ. לִידֵי מַתְּנוֹת בָּשָׂר וָדָם וְלֹא לִידֵי הַלְוָאָתָם. אֶלָּא לְיָֽדְךָֽ הַמְּלֵאָה וְהָרְחָבָה. הָעֲשִׁירָה וְהַפְּתוּחָה. יְהִי רָצוֹן שֶׁלֹּא נֵבוֹשׁ בָּעוֹלָם הַזֶּה. וְלֹא נִכָּלֵם לָעוֹלָם הַבָּא. וּמַלְכוּת בֵּית דָּוִד מְשִׁיחָךְ תַּחֲזִירֶֽנָּה לִמְקוֹמָהּ בִּמְהֵרָה בְיָמֵֽינוּ:<br><br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>בשבת אומרים כאן רצה, ובראש חדש יעלה ויבא</small>",
+     "kind": "instruction",
+     "en": "On Shabbat, say Retzei here; on Rosh Chodesh, say Ya'aleh VeYavo."
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Mourning:18": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Mourning:19": {
+   "parts": [
+    {
+     "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֱלֹהֵֽינוּ מֶלֶךְ הָעוֹלָם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הָאֵל אָבִֽינוּ מַלְכֵּנוּ אַדִּירֵנוּ גֹּאֲלֵנוּ קְדוֹשֵׁנוּ קְדוֹשׁ יַעֲקֹב. הַמֶּלֶךְ הַחַי הַטּוֹב וְהַמֵּטִיב אֵל אֱמֶת שׁוֹפֵט בְּצֶדֶק לוֹקֵחַ נְפָשׁוֹת שַׁלִּיט בְּעוֹלָמוֹ לַעֲשׂוֹת כִּרְצוֹנוֹ וַאֲנַחְנוּ עַמּוֹ וַעֲבָדָיו וְעַל הַכֹּל אֲנַחְנוּ חַיָּיבִים לְהוֹדוֹת לוֹ וּלְבָֽרְכוֹ גּוֹדֵר פְּרָצוֹת הוּא יִגְדּוֹר אֶת־הַפִּרְצָה הַזֹּאת מֵעָלֵֽינוּ וּמֵעַל עַמּוֹ יִשְׂרָאֵל בְּרַחֲמִים. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>עונים אָמֵן</small>",
+     "kind": "instruction",
+     "en": "They answer Amen."
+    },
+    {
+     "text": "<br>עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הוּא בְרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְעַל כָּל־עַמּוֹ יִשְׂרָאֵל,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאִמְרוּ אָמֵן:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Mourning:20": {
+   "kind": "heading",
+   "en": "Laying to Rest for a Man"
+  },
+  "he:Fast Days and Mourning/Mourning:21": {
+   "parts": [
+    {
+     "text": "<b>הַמְּרַחֵם</b> עַל־כָּל־בְּרִיּוֹתָיו,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הוּא יָחוּס וְיַחְמוֹל וִירַחֵם עַל נֶפֶשׁ רוּחַ וּנְשָׁמָה שֶׁל ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(פב\"פ)</small>",
+     "kind": "instruction",
+     "en": "(For a Bar Mitzvah boy:)"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " רוּחַ ה' תְּנִיחֶנּוּ בְּגַן עֵדֶן:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Mourning:22": {
+   "kind": "instruction",
+   "en": "For a great man of Torah and fear of Heaven, they say:"
+  },
+  "he:Fast Days and Mourning/Mourning:23": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Mourning:24": {
+   "parts": [
+    {
+     "text": "<b>מְנוּחָה</b> נְכוֹנָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בִּישִׁיבָה עֶלְיוֹנָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּמַעֲלַת קְדוֹשִׁים וּטְהוֹרִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כְּזוֹהַר הָרָקִיעַ מְאִירִים וּמַזְהִירִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְחִלּוּץ עֲצָמִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְכַפָּרַת אֲשָׁמִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְהַרְחָקַת פֶּשַׁע,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְהַקְרָבַת יֶשַׁע,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְחֶמְלָה וַחֲנִינָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " מִלִּפְנֵי שׁוֹכֵן מעוֹנָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְחוּלָקָא טָבָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְחַיֵּי הָעוֹלָם הַבָּא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שָׁם תְּהֵא מְנַת וּמְחִיצַת וִישִׁיבַת נֶפֶשׁ הַשֵּׁם הַטּוֹב הַמְרוּחָם ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(פב\"פ)</small>",
+     "kind": "instruction",
+     "en": "(For a Bar Mitzvah boy:)"
+    },
+    {
+     "text": " רוּחַ ה' תְּנִיחֶנּוּ בְּגַן עֵדֶן,",
+     "kind": "prayer"
+    },
+    {
+     "text": " דְּאִתְפְּטָר מִן עַלְמָא הָדֵין כִּרְעוּת אֱלָהָא מָארֵי שְׁמַיָּא וְאַרְעָא. מֶלֶךְ מַלְכֵי הַמְּלָכִים בְּרַחֲמָיו יְרַחֵם עָלָיו,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיָחוֹס וְיַחְמוֹל עָלָיו. מֶלֶךְ מַלְכֵי הַמּלָכִים בְּרַחֲמָיו יַסְתִּירֵהוּ בְּצֵל כְּנָפָיו וּבְסֵתֶר אָהֳלוֹ לַחֲזוֹת בְּנוֹעַם יְהֹוָה וּלְבַקֵּר בְּהֵיכָלוֹ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּלְקֵץ הַיָּמִין יַעֲמִידֵהוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּמִנַּחַל עֲדָנָיו יַשְׁקֵהוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיִצְרוֹר בִּצְרוֹר הַחַיִּים נִשְׁמָתוֹ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיָשִׂים כָּבוֹד מְנוּחָתוֹ. יְהֹוָה הוּא נַחֲלָתוֹ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיִלָּוֶה אֵלָיו הַשָּׁלוֹם וְעַל מִשְׁכָּבוֹ יִהְיֶה שָׁלוֹם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כְּדִכְתִיב: יָב֣וֹא שָׁל֔וֹם יָנ֖וּחוּ עַל־מִשְׁכְּבוֹתָ֑ם הֹלֵ֖ךְ נְכֹחֽוֹ׃ הוּא וְכָל־בְּנֵי יִשְׂרָאֵל הַשּׁוֹכְבִים עִמּוֹ בִּכְלַל הָרַחֲמִים וְהַסְּלִיחוֹת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְכֵן יְהִי רָצוֹן וְנֹאמַר אָמֵן:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Mourning:25": {
+   "kind": "heading",
+   "en": "Laying to Rest for a Woman"
+  },
+  "he:Fast Days and Mourning/Mourning:26": {
+   "kind": "instruction",
+   "en": "Some have the custom to say:"
+  },
+  "he:Fast Days and Mourning/Mourning:27": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Mourning:28": {
+   "parts": [
+    {
+     "text": "<b>הַמְּרַחֵם</b> עַל־כָּל־בְּרִיּוֹתָיו,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הוּא יָחוּס וְיַחְמוֹל וִירַחֵם עַל נֶפֶשׁ רוּחַ וּנְשָׁמָה שֶׁל ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(פב\"פ)</small>",
+     "kind": "instruction",
+     "en": "(For a Bar Mitzvah boy:)"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " רוּחַ ה' תְּנִיחֶנָּה בְּגַן עֵדֶן:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Mourning:29": {
+   "kind": "instruction",
+   "en": "For a great and important woman, some say:"
+  },
+  "he:Fast Days and Mourning/Mourning:30": {
+   "kind": "prayer"
+  },
+  "he:Fast Days and Mourning/Mourning:31": {
+   "parts": [
+    {
+     "text": "<b>רַחֲמָנָא</b> דְּרַחֲמָנוּתָא דִי לֵיהּ הִיא וּבְמֵימְרֵיהּ אִתְבְּרִיאוּ עָֽלְמַיָּא עַלְמָא הָדֵין וְעַלְמָא דְּאָתֵי וּגְנַז בֵּיהּ צַדְקָנִיּוֹת וְחַסְדָּנִיּוֹת דְּעַבְדָן רְעוּתֵיהּ וּבְמֵימְרֵיהּ וּבִיקָרֵיהּ וּבְתוּקְפֵיהּ יֵאמַר לְמֵיעַל קֳדָמוֹהִי דּוּכְרָן נֶפֶשׁ הָאִשָּׁה הַכְּבֻדָּה וְהַצְּנוּעָה וְהַנִּכְבֶּדֶת מָרַת ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(פב\"פ)</small>",
+     "kind": "instruction",
+     "en": "(For a Bar Mitzvah boy:)"
+    },
+    {
+     "text": " רוּחַ ה' תְּנִיחֶנָּה בְּגַן עֵדֶן,",
+     "kind": "prayer"
+    },
+    {
+     "text": " דְּאִתְפְּטָרַת מִן עַלְמָא הָדֵין כִּרְעוּת אֱלָהָא מָארֵי שְׁמַיָּא וְאַרְעָא. הַמֶּלֶךְ בְּרַחֲמָיו יָחוֹס וְיַחְמוֹל עָלֶיהָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיִלָּוֶה אֵלֶיהָ הַשָּׁלוֹם וְעַל מִשְׁכָּבָה יִהְיֶה שָׁלוֹם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כְּדִכְתִיב: יָב֣וֹא שָׁל֔וֹם יָנ֖וּחוּ עַל־מִשְׁכְּבוֹתָ֑ם הֹלֵ֖ךְ נְכֹחֽוֹ׃ הִיא וְכָל־בְּנוֹת יִשְׂרָאֵל הַשּׁוֹכְבוֹת עִמָּהּ בִּכְלַל הָרַחֲמִים וְהַסְּלִיחוֹת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְכֵן יְהִי רָצוֹן וְנֹאמַר אָמֵן:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Fast Days and Mourning/Torah Reading for Fast Days:1": {
+   "kind": "heading",
+   "en": "Torah Reading for a Public Fast Day"
+  },
+  "he:Fast Days and Mourning/Torah Reading for Fast Days:2": {
+   "parts": [
+    {
+     "text": "<b>וַיְחַ֣ל</b> מֹשֶׁ֔ה אֶת־פְּנֵ֖י יְהֹוָ֣ה אֱלֹהָ֑יו וַיֹּ֗אמֶר לָמָ֤ה יְהֹוָה֙ יֶחֱרֶ֤ה אַפְּךָ֙ בְּעַמֶּ֔ךָ אֲשֶׁ֤ר הוֹצֵ֙אתָ֙ מֵאֶ֣רֶץ מִצְרַ֔יִם בְּכֹ֥חַ גָּד֖וֹל וּבְיָ֥ד חֲזָקָֽה׃ לָ֩מָּה֩ יֹאמְר֨וּ מִצְרַ֜יִם לֵאמֹ֗ר בְּרָעָ֤ה הֽוֹצִיאָם֙ לַהֲרֹ֤ג אֹתָם֙ בֶּֽהָרִ֔ים וּ֨לְכַלֹּתָ֔ם מֵעַ֖ל פְּנֵ֣י הָֽאֲדָמָ֑ה שׁ֚וּב מֵחֲר֣וֹן אַפֶּ֔ךָ וְהִנָּחֵ֥ם עַל־הָרָעָ֖ה לְעַמֶּֽךָ׃ זְכֹ֡ר לְאַבְרָהָם֩ לְיִצְחָ֨ק וּלְיִשְׂרָאֵ֜ל עֲבָדֶ֗יךָ אֲשֶׁ֨ר נִשְׁבַּ֣עְתָּ לָהֶם֮ בָּךְ֒ וַתְּדַבֵּ֣ר אֲלֵהֶ֔ם אַרְבֶּה֙ אֶֽת־זַרְעֲכֶ֔ם כְּכוֹכְבֵ֖י הַשָּׁמָ֑יִם וְכׇל־הָאָ֨רֶץ הַזֹּ֜את אֲשֶׁ֣ר אָמַ֗רְתִּי אֶתֵּן֙ לְזַרְעֲכֶ֔ם וְנָחֲל֖וּ לְעֹלָֽם׃ וַיִּנָּ֖חֶם יְהֹוָ֑ה עַל־הָ֣רָעָ֔ה אֲשֶׁ֥ר דִּבֶּ֖ר לַעֲשׂ֥וֹת לְעַמּֽוֹ׃ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>לוי</small>",
+     "kind": "speaker",
+     "en": "Levi"
+    },
+    {
+     "text": " וַיֹּ֤אמֶר יְהֹוָה֙ אֶל־מֹשֶׁ֔ה פְּסׇל־לְךָ֛ שְׁנֵֽי־לֻחֹ֥ת אֲבָנִ֖ים כָּרִאשֹׁנִ֑ים וְכָתַבְתִּי֙ עַל־הַלֻּחֹ֔ת אֶ֨ת־הַדְּבָרִ֔ים אֲשֶׁ֥ר הָי֛וּ עַל־הַלֻּחֹ֥ת הָרִאשֹׁנִ֖ים אֲשֶׁ֥ר שִׁבַּֽרְתָּ׃ וֶהְיֵ֥ה נָכ֖וֹן לַבֹּ֑קֶר וְעָלִ֤יתָ בַבֹּ֙קֶר֙ אֶל־הַ֣ר סִינַ֔י וְנִצַּבְתָּ֥ לִ֛י שָׁ֖ם עַל־רֹ֥אשׁ הָהָֽר׃ וְאִישׁ֙ לֹֽא־יַעֲלֶ֣ה עִמָּ֔ךְ וְגַם־אִ֥ישׁ אַל־יֵרָ֖א בְּכׇל־הָהָ֑ר גַּם־הַצֹּ֤אן וְהַבָּקָר֙ אַל־יִרְע֔וּ אֶל־מ֖וּל הָהָ֥ר הַהֽוּא׃ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>ישראל</small>",
+     "kind": "speaker",
+     "en": "Israel"
+    },
+    {
+     "text": " וַיִּפְסֹ֡ל שְׁנֵֽי־לֻחֹ֨ת אֲבָנִ֜ים כָּרִאשֹׁנִ֗ים וַיַּשְׁכֵּ֨ם מֹשֶׁ֤ה בַבֹּ֙קֶר֙ וַיַּ֙עַל֙ אֶל־הַ֣ר סִינַ֔י כַּאֲשֶׁ֛ר צִוָּ֥ה יְהֹוָ֖ה אֹת֑וֹ וַיִּקַּ֣ח בְּיָד֔וֹ שְׁנֵ֖י לֻחֹ֥ת אֲבָנִֽים׃ וַיֵּ֤רֶד יְהֹוָה֙ בֶּֽעָנָ֔ן וַיִּתְיַצֵּ֥ב עִמּ֖וֹ שָׁ֑ם וַיִּקְרָ֥א בְשֵׁ֖ם יְהֹוָֽה׃ וַיַּעֲבֹ֨ר יְהֹוָ֥ה ׀ עַל־פָּנָיו֮ וַיִּקְרָא֒ יְהֹוָ֣ה ׀ יְהֹוָ֔ה אֵ֥ל רַח֖וּם וְחַנּ֑וּן אֶ֥רֶךְ אַפַּ֖יִם וְרַב־חֶ֥סֶד וֶאֱמֶֽת׃ <big>נֹ</big>צֵ֥ר‏ חֶ֙סֶד֙ לָאֲלָפִ֔ים נֹשֵׂ֥א עָוֺ֛ן וָפֶ֖שַׁע וְחַטָּאָ֑ה וְנַקֵּה֙ לֹ֣א יְנַקֶּ֔ה פֹּקֵ֣ד ׀ עֲוֺ֣ן אָב֗וֹת עַל־בָּנִים֙ וְעַל־בְּנֵ֣י בָנִ֔ים עַל־שִׁלֵּשִׁ֖ים וְעַל־רִבֵּעִֽים׃ וַיְמַהֵ֖ר מֹשֶׁ֑ה וַיִּקֹּ֥ד אַ֖רְצָה וַיִּשְׁתָּֽחוּ׃ וַיֹּ֡אמֶר אִם־נָא֩ מָצָ֨אתִי חֵ֤ן בְּעֵינֶ֙יךָ֙ אֲדֹנָ֔י יֵֽלֶךְ־נָ֥א אֲדֹנָ֖י בְּקִרְבֵּ֑נוּ כִּ֤י עַם־קְשֵׁה־עֹ֙רֶף֙ ה֔וּא וְסָלַחְתָּ֛ לַעֲוֺנֵ֥נוּ וּלְחַטָּאתֵ֖נוּ וּנְחַלְתָּֽנוּ׃ וַיֹּ֗אמֶר הִנֵּ֣ה אָנֹכִי֮ כֹּרֵ֣ת בְּרִית֒ נֶ֤גֶד כׇּֽל־עַמְּךָ֙ אֶעֱשֶׂ֣ה נִפְלָאֹ֔ת אֲשֶׁ֛ר לֹֽא־נִבְרְא֥וּ בְכׇל־הָאָ֖רֶץ וּבְכׇל־הַגּוֹיִ֑ם וְרָאָ֣ה כׇל־הָ֠עָ֠ם אֲשֶׁר־אַתָּ֨ה בְקִרְבּ֜וֹ אֶת־מַעֲשֵׂ֤ה יְהֹוָה֙ כִּֽי־נוֹרָ֣א ה֔וּא אֲשֶׁ֥ר אֲנִ֖י עֹשֶׂ֥ה עִמָּֽךְ׃",
+     "kind": "prayer"
+    }
+   ]
+  }
+ },
+ "en": {
+  "en:Fast Days and Mourning/Tenth of Tevet:1": {
+   "he": [
+    "he:Fast Days and Mourning/Tenth of Tevet:1"
+   ]
+  },
+  "en:Fast Days and Mourning/Tenth of Tevet:2": {
+   "parts": [
+    {
+     "text": "After the repetition of the Amidah (standing prayer),",
+     "kind": "prayer"
+    },
+    {
+     "text": " we say the Confession and the Falling on the Face (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Nefillat Apayim</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "). And afterwards,",
+     "kind": "prayer"
+    },
+    {
+     "text": " we say:",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Fast Days and Mourning/Tenth of Tevet:2"
+   ]
+  },
+  "en:Fast Days and Mourning/Tenth of Tevet:3": {
+   "he": [
+    "he:Fast Days and Mourning/Tenth of Tevet:3"
+   ]
+  },
+  "en:Fast Days and Mourning/Tenth of Tevet:4": {
+   "he": [
+    "he:Fast Days and Mourning/Tenth of Tevet:4"
+   ]
+  },
+  "en:Fast Days and Mourning/Tenth of Tevet:5": {
+   "he": [
+    "he:Fast Days and Mourning/Tenth of Tevet:5"
+   ]
+  },
+  "en:Fast Days and Mourning/Tenth of Tevet:6": {
+   "he": [
+    "he:Fast Days and Mourning/Tenth of Tevet:6"
+   ]
+  },
+  "en:Fast Days and Mourning/Tenth of Tevet:7": {
+   "he": [
+    "he:Fast Days and Mourning/Tenth of Tevet:7"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "en:Fast Days and Mourning/Tenth of Tevet:5",
+   "type": "wrong_vowel",
+   "detail": "'Coyote' is a mistranslation of 'Wolf' (Za'ev) in the Hebrew text."
+  },
+  {
+   "id": "he:Fast Days and Mourning/Seventeenth of Tammuz:40",
+   "type": "ambiguous",
+   "detail": "The instruction mentions 'Half Kaddish' and 'Torah reading' but does not specify the exact node or condition for the Kaddish or the Torah reading in this specific context (e.g., is it a separate node or part of the service flow?)."
+  }
+ ]
+}

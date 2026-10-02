@@ -1,0 +1,3748 @@
+{
+ "nusach": "koren",
+ "chunk": "Weekdays [Avinu Malkenu .. Personal Supplications]",
+ "leaves": {
+  "Weekdays/Avinu Malkenu": {
+   "node": "avinu_malkeinu",
+   "service": "shacharit",
+   "when": "aseretYemeiTeshuva"
+  },
+  "Weekdays/Reading of the Torah": {
+   "node": "torah.vayehi_binsoa",
+   "service": "shacharit",
+   "when": "torahReading"
+  },
+  "Weekdays/The Daily Psalm": {
+   "node": "concl.shir_shel_yom",
+   "service": "shacharit",
+   "when": "weekday"
+  },
+  "Weekdays/Readings after the Service": {
+   "node": "concl.shesh_zechirot",
+   "service": "none"
+  },
+  "Weekdays/Personal Supplications": {
+   "node": "personal_prayer",
+   "service": "none",
+   "when": "true"
+  },
+  "Weekdays/Tahanun": {
+   "node": "tachanun.vidui",
+   "service": "shacharit",
+   "when": "tachanunShacharit"
+  },
+  "Weekdays/Conclusion of the Service": {
+   "node": "concl.ashrei",
+   "service": "none"
+  }
+ },
+ "he": {
+  "he:Weekdays/Avinu Malkenu:2": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Avinu Malkenu:3": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Avinu Malkenu:4": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Avinu Malkenu:5": {
+   "parts": [
+    {
+     "kind": "prayer",
+     "when": "!aseretYemeiTeshuva",
+     "text": "אָבִֽינוּ מַלְכֵּֽנוּ, "
+    },
+    {
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Said only during Aseret Yemei Teshuva",
+     "text": "בָּרֵךְ/<i class=\"instruction\">בעשרת ימי תשובה:</i> "
+    },
+    {
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "text": "חַדֵּשׁ/ עָלֵֽינוּ שָׁנָה טוֹבָה."
+    }
+   ]
+  },
+  "he:Weekdays/Avinu Malkenu:6": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Avinu Malkenu:7": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Avinu Malkenu:8": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Avinu Malkenu:9": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Avinu Malkenu:10": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Avinu Malkenu:11": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Avinu Malkenu:12": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Avinu Malkenu:13": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Avinu Malkenu:14": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Avinu Malkenu:15": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Avinu Malkenu:17": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Weekdays/Avinu Malkenu:18": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Weekdays/Avinu Malkenu:19": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Weekdays/Avinu Malkenu:20": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Weekdays/Avinu Malkenu:22": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Weekdays/Avinu Malkenu:23": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Weekdays/Avinu Malkenu:24": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Weekdays/Avinu Malkenu:25": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Weekdays/Avinu Malkenu:26": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Weekdays/Avinu Malkenu:28": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation",
+   "gloss": "Said on fast days"
+  },
+  "he:Weekdays/Avinu Malkenu:29": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation",
+   "gloss": "Said on fast days"
+  },
+  "he:Weekdays/Avinu Malkenu:30": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation",
+   "gloss": "Said on fast days"
+  },
+  "he:Weekdays/Avinu Malkenu:31": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation",
+   "gloss": "Said on fast days"
+  },
+  "he:Weekdays/Avinu Malkenu:32": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation",
+   "gloss": "Said on fast days"
+  },
+  "he:Weekdays/Avinu Malkenu:34": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:35": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:36": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:37": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:38": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:39": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:40": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:41": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:42": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:43": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:44": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:45": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:46": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:47": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:48": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:49": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:50": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:51": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:52": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:53": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Weekdays/Avinu Malkenu:54": {
+   "kind": "prayer",
+   "role": "together",
+   "voice": "undertone"
+  },
+  "he:Weekdays/Reading of the Torah:3": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:4": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:6": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:7": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:9": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:11": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:12": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:13": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:15": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:18": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:20": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:22": {
+   "kind": "prayer",
+   "role": "oleh"
+  },
+  "he:Weekdays/Reading of the Torah:23": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Weekdays/Reading of the Torah:24": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Weekdays/Reading of the Torah:25": {
+   "kind": "prayer",
+   "role": "oleh"
+  },
+  "he:Weekdays/Reading of the Torah:27": {
+   "kind": "prayer",
+   "role": "oleh"
+  },
+  "he:Weekdays/Reading of the Torah:29": {
+   "kind": "prayer",
+   "role": "oleh"
+  },
+  "he:Weekdays/Reading of the Torah:31": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Weekdays/Reading of the Torah:34": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:35": {
+   "kind": "heading",
+   "en": "Half Kaddish"
+  },
+  "he:Weekdays/Reading of the Torah:37": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Weekdays/Reading of the Torah:38": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Weekdays/Reading of the Torah:39": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Weekdays/Reading of the Torah:41": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:43": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:45": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:46": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:47": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:48": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:50": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:52": {
+   "kind": "heading",
+   "en": "Returning the Torah to the Ark"
+  },
+  "he:Weekdays/Reading of the Torah:54": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:56": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:58": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Reading of the Torah:60": {
+   "kind": "heading",
+   "en": "Returning the Torah to the Ark"
+  },
+  "he:Weekdays/The Daily Psalm:3": {
+   "kind": "instruction",
+   "en": "Today is the first day of the week, on which the Levites used to say this psalm in the Temple:",
+   "gloss": "Intro to Psalm 24"
+  },
+  "he:Weekdays/The Daily Psalm:4": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Daily Psalm:6": {
+   "kind": "instruction",
+   "en": "Today is the second day of the week, on which the Levites used to say this psalm in the Temple:",
+   "gloss": "Intro to Psalm 48"
+  },
+  "he:Weekdays/The Daily Psalm:7": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Daily Psalm:9": {
+   "kind": "instruction",
+   "en": "Today is the third day of the week, on which the Levites used to say this psalm in the Temple:",
+   "gloss": "Intro to Psalm 82"
+  },
+  "he:Weekdays/The Daily Psalm:10": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Daily Psalm:12": {
+   "kind": "instruction",
+   "en": "Today is the fourth day of the week, on which the Levites used to say this psalm in the Temple:",
+   "gloss": "Intro to Psalm 94"
+  },
+  "he:Weekdays/The Daily Psalm:13": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Daily Psalm:15": {
+   "kind": "instruction",
+   "en": "Today is the fifth day of the week, on which the Levites used to say this psalm in the Temple:",
+   "gloss": "Intro to Psalm 81"
+  },
+  "he:Weekdays/The Daily Psalm:16": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Daily Psalm:18": {
+   "kind": "instruction",
+   "en": "Today is the sixth day of the week, on which the Levites used to say this psalm in the Temple",
+   "gloss": "Intro to Psalm 93"
+  },
+  "he:Weekdays/The Daily Psalm:19": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Daily Psalm:22": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Daily Psalm:25": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Daily Psalm:28": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Daily Psalm:29": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Daily Psalm:30": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Daily Psalm:31": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Daily Psalm:32": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/The Daily Psalm:33": {
+   "kind": "heading",
+   "en": "Kaddish d'Rabbanan"
+  },
+  "he:Weekdays/The Daily Psalm:35": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true
+  },
+  "he:Weekdays/The Daily Psalm:36": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Weekdays/The Daily Psalm:37": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true
+  },
+  "he:Weekdays/The Daily Psalm:38": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true
+  },
+  "he:Weekdays/The Daily Psalm:39": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true
+  },
+  "he:Weekdays/The Daily Psalm:41": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true,
+   "gestures": [
+    "bow_left_right_center"
+   ]
+  },
+  "he:Weekdays/The Daily Psalm:43": {
+   "kind": "instruction",
+   "en": "Bless the Lord, the blessed One.",
+   "gloss": "Israel custom when no Torah reading"
+  },
+  "he:Weekdays/The Daily Psalm:45": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Weekdays/Readings after the Service:2": {
+   "kind": "heading",
+   "en": "The Six Remembrances"
+  },
+  "he:Weekdays/Readings after the Service:3": {
+   "kind": "heading",
+   "en": "The Exodus from Egypt"
+  },
+  "he:Weekdays/Readings after the Service:4": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:5": {
+   "kind": "heading",
+   "en": "The Revelation at Mount Sinai"
+  },
+  "he:Weekdays/Readings after the Service:6": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:7": {
+   "kind": "heading",
+   "en": "Amalek and the Obligation to Erase Him"
+  },
+  "he:Weekdays/Readings after the Service:8": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:9": {
+   "kind": "heading",
+   "en": "The Deeds of Our Ancestors in the Wilderness"
+  },
+  "he:Weekdays/Readings after the Service:10": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:11": {
+   "kind": "heading",
+   "en": "The Deed of Miriam"
+  },
+  "he:Weekdays/Readings after the Service:12": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:13": {
+   "kind": "heading",
+   "en": "The Sabbath"
+  },
+  "he:Weekdays/Readings after the Service:14": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:15": {
+   "kind": "heading",
+   "en": "The Ten Commandments"
+  },
+  "he:Weekdays/Readings after the Service:16": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:17": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:18": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:19": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:20": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:21": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:22": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:23": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:24": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:25": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:26": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:27": {
+   "kind": "heading",
+   "en": "The Thirteen Principles of Faith"
+  },
+  "he:Weekdays/Readings after the Service:28": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:29": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:30": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:31": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:32": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:33": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:34": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:35": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:36": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:37": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:38": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:39": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:40": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:42": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:43": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:44": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:45": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:47": {
+   "kind": "heading",
+   "en": "Prayer Upon Leaving the Synagogue"
+  },
+  "he:Weekdays/Readings after the Service:49": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:51": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:53": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:55": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Readings after the Service:57": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:2": {
+   "kind": "heading",
+   "en": "The Chapter of the Manna"
+  },
+  "he:Weekdays/Personal Supplications:4": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:5": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:6": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:7": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:8": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:9": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:10": {
+   "kind": "heading",
+   "en": "Prayer for Sustenance"
+  },
+  "he:Weekdays/Personal Supplications:11": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:12": {
+   "kind": "heading",
+   "en": "The Chapter of Reverence"
+  },
+  "he:Weekdays/Personal Supplications:14": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:15": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:16": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:17": {
+   "kind": "heading",
+   "en": "The Chapter of Repentance"
+  },
+  "he:Weekdays/Personal Supplications:19": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:20": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:21": {
+   "kind": "heading",
+   "en": "Protection from the Evil Eye"
+  },
+  "he:Weekdays/Personal Supplications:23": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:24": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Personal Supplications:25": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:2": {
+   "kind": "instruction",
+   "en": "On Mondays and Thursdays:",
+   "gloss": "Start of Tachanun on Mon/Thu",
+   "forgot": true
+  },
+  "he:Weekdays/Tahanun:3": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:4": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:5": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:6": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:7": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:8": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:9": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:10": {
+   "kind": "instruction",
+   "en": "Lowering the head",
+   "gloss": "Nefilat Apayim"
+  },
+  "he:Weekdays/Tahanun:12": {
+   "kind": "prayer",
+   "en": "On Sundays, Tuesdays, Wednesdays and Fridays:",
+   "gloss": "Start of Tachanun on other weekdays",
+   "when": "!monThu"
+  },
+  "he:Weekdays/Tahanun:13": {
+   "kind": "prayer",
+   "when": "!monThu"
+  },
+  "he:Weekdays/Tahanun:14": {
+   "kind": "prayer",
+   "when": "!monThu"
+  },
+  "he:Weekdays/Tahanun:16": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Weekdays/Tahanun:17": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Weekdays/Tahanun:18": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Weekdays/Tahanun:19": {
+   "kind": "prayer",
+   "when": "monThu"
+  },
+  "he:Weekdays/Tahanun:38": {
+   "parts": [
+    {
+     "kind": "prayer",
+     "when": "!aseretYemeiTeshuva",
+     "text": "<i class=\"instruction\">ש\"ץ:</i> יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא<br>וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל<br>שְׁמֵהּ דְּקֻדְשָׁא בְּרִיךְ הוּא (<i class=\"instruction\">קהל:</i> בְּרִיךְ הוּא)",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Said only in the Ten Days of Repentance",
+     "text": "<br>לְעֵֽלָּא מִן כָּל בִּרְכָתָא /<i class=\"instruction\">בעשרת ימי תשובה:</i> ",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "text": "לְעֵֽלָּא לְעֵֽלָּא מִכָּל בִּרְכָתָא/<br>וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא<br>דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן. (<i class=\"instruction\">קהל:</i> אָמֵן)",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Weekdays/Conclusion of the Service:2": {
+   "kind": "prayer",
+   "node": "concl.ashrei"
+  },
+  "he:Weekdays/Conclusion of the Service:3": {
+   "kind": "prayer",
+   "node": "concl.ashrei"
+  },
+  "he:Weekdays/Conclusion of the Service:4": {
+   "kind": "prayer",
+   "node": "concl.ashrei"
+  },
+  "he:Weekdays/Conclusion of the Service:6": {
+   "kind": "prayer",
+   "node": "concl.lamnatzeach"
+  },
+  "he:Weekdays/Conclusion of the Service:8": {
+   "kind": "prayer",
+   "node": "concl.uva_letzion"
+  },
+  "he:Weekdays/Conclusion of the Service:9": {
+   "kind": "prayer",
+   "node": "concl.uva_letzion"
+  },
+  "he:Weekdays/Conclusion of the Service:10": {
+   "kind": "prayer",
+   "node": "concl.uva_letzion"
+  },
+  "he:Weekdays/Conclusion of the Service:11": {
+   "kind": "prayer",
+   "node": "concl.uva_letzion"
+  },
+  "he:Weekdays/Conclusion of the Service:12": {
+   "kind": "prayer",
+   "node": "concl.uva_letzion"
+  },
+  "he:Weekdays/Conclusion of the Service:13": {
+   "kind": "prayer",
+   "node": "concl.uva_letzion"
+  },
+  "he:Weekdays/Conclusion of the Service:14": {
+   "kind": "prayer",
+   "node": "concl.uva_letzion"
+  },
+  "he:Weekdays/Conclusion of the Service:15": {
+   "kind": "prayer",
+   "node": "concl.uva_letzion"
+  },
+  "he:Weekdays/Conclusion of the Service:16": {
+   "kind": "prayer",
+   "node": "concl.uva_letzion"
+  },
+  "he:Weekdays/Conclusion of the Service:17": {
+   "kind": "instruction",
+   "en": "Blessed is He, our God, who created us for His glory, separating us from those who go astray; who gave us the Torah of truth, planting within us eternal life. May He open our heart to His Torah, imbuing our heart with the love and awe of Him, that we may do His will and serve Him with a perfect heart, so that we neither toil in vain nor give birth to confusion.",
+   "gloss": "Customary conclusion of the service"
+  },
+  "he:Weekdays/Conclusion of the Service:18": {
+   "kind": "instruction",
+   "en": "May it be Your will, O LORD our God and God of our ancestors, that we keep Your laws in this world, and thus be worthy to live, see and inherit goodness and blessing in the Messianic Age and in the life of the World to Come. So that my soul may sing to You and not be silent. LORD, my God, for ever I will thank You. Blessed is the man who trusts in the LORD, whose trust is in the LORD alone. Trust in the LORD for evermore, for God, the LORD, is an everlasting Rock. Those who know Your name trust in You, for You, LORD, do not forsake those who seek You. The LORD desired, for the sake of Israel’s merit, to make the Torah great and glorious.",
+   "gloss": "Customary conclusion of the service"
+  },
+  "he:Weekdays/Conclusion of the Service:21": {
+   "kind": "heading",
+   "en": "Full Kaddish"
+  },
+  "he:Weekdays/Tahanun:20": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:21": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:22": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:23": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:24": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:25": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:26": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:28": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:29": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:30": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:31": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:32": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:34": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Tahanun:35": {
+   "kind": "heading",
+   "en": "Half Kaddish"
+  },
+  "he:Weekdays/Tahanun:36": {
+   "kind": "speaker",
+   "role": "chazzan",
+   "voice": "aloud",
+   "en": "Chazzan:"
+  },
+  "he:Weekdays/Tahanun:37": {
+   "kind": "speaker",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "en": "Congregation and Chazzan:"
+  },
+  "he:Weekdays/Conclusion of the Service:22": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Leader:"
+  },
+  "he:Weekdays/Conclusion of the Service:23": {
+   "kind": "instruction",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Congregation and Leader:"
+  },
+  "he:Weekdays/Conclusion of the Service:24": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Leader:"
+  },
+  "he:Weekdays/Conclusion of the Service:26": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Congregation:"
+  },
+  "he:Weekdays/Conclusion of the Service:27": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Congregation:"
+  },
+  "he:Weekdays/Conclusion of the Service:29": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "During the Ten Days of Repentance:"
+  },
+  "he:Weekdays/Conclusion of the Service:31": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "gestures": [
+    "stand",
+    "bow"
+   ]
+  },
+  "he:Weekdays/Conclusion of the Service:32": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Conclusion of the Service:34": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Conclusion of the Service:35": {
+   "kind": "heading",
+   "en": "Mourner's Kaddish"
+  },
+  "he:Weekdays/Conclusion of the Service:37": {
+   "kind": "instruction",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Mourner:"
+  },
+  "he:Weekdays/Conclusion of the Service:38": {
+   "kind": "instruction",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Congregation and Mourner:"
+  },
+  "he:Weekdays/Conclusion of the Service:39": {
+   "kind": "instruction",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Mourner:"
+  },
+  "he:Weekdays/Conclusion of the Service:40": {
+   "kind": "instruction",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Congregation:"
+  },
+  "he:Weekdays/Conclusion of the Service:42": {
+   "kind": "instruction",
+   "role": "mourner",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "During the Ten Days of Repentance:"
+  }
+ },
+ "en": {
+  "en:Weekdays/Avinu Malkenu:1": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On fast days (except Tisha B’Av) most congregations say Seliḥot on page 924 before Avinu Malkenu.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Between Rosh HaShana and Yom Kippur (but not on Erev Yom Kippur, unless it falls on Friday), say Avinu Malkenu below.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">The Ark is opened.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Avinu Malkenu:2": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:2"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:3": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:3"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:4": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:4"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:5": {
+   "parts": [
+    {
+     "text": "Our Father our King,",
+     "kind": "prayer"
+    },
+    {
+     "text": " / bless us with / ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Between Rosh HaShana & Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " renew for us / a good year.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Avinu Malkenu:5"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:6": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:6"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:7": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:7"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:8": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:8"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:9": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:9"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:10": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:10"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:11": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:11"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:12": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:12"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:13": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:13"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:14": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:14"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:15": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:15"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:16": {
+   "he": [],
+   "kind": "instruction",
+   "en": "The following nine sentences are said responsively, first by the Leader, then by the congregation:"
+  },
+  "en:Weekdays/Avinu Malkenu:17": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:17"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:18": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:18"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:19": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:19"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:20": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:20"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:21": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Between Rosh HaShana and Yom Kippur:"
+  },
+  "en:Weekdays/Avinu Malkenu:22": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:22"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:23": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:23"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:24": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:24"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:25": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:25"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:26": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:26"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:27": {
+   "he": [],
+   "kind": "instruction",
+   "en": "On Fast Days:"
+  },
+  "en:Weekdays/Avinu Malkenu:28": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:28"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:29": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:29"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:30": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:30"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:31": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:31"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:32": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:32"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:33": {
+   "he": [],
+   "kind": "instruction",
+   "en": "End of responsive reading."
+  },
+  "en:Weekdays/Avinu Malkenu:34": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:34"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:35": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:35"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:36": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:36"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:37": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:37"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:38": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:38"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:39": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:39"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:40": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:40"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:41": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:41"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:42": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:42"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:43": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:43"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:44": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:44"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:45": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:45"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:46": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:46"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:47": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:47"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:48": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:48"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:49": {
+   "he": []
+  },
+  "en:Weekdays/Avinu Malkenu:50": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:50"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:51": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:51"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:52": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:52"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:53": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:53"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:54": {
+   "he": [
+    "he:Weekdays/Avinu Malkenu:54"
+   ]
+  },
+  "en:Weekdays/Avinu Malkenu:55": {
+   "he": []
+  },
+  "en:Weekdays/Avinu Malkenu:56": {
+   "he": []
+  },
+  "en:Weekdays/Reading of the Torah:1": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:3"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:2": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:3",
+    "he:Weekdays/Reading of the Torah:4"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:3": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:3"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:4": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:4"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:5": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:6"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:6": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:6"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:7": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:7"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:8": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:9"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:9": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:9"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:10": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:11"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:11": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:11"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:12": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:12"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:13": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:13"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:14": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:15"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:15": {
+   "parts": [
+    {
+     "text": "May His kingship over us be soon revealed and made manifest. May He be gracious to our surviving remnant,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the remnant of His people the house of Israel in grace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " loving-kindness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " compassion and favor,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let us say: Amen. Let us all render greatness to our God and give honor to the Torah. *Let the Kohen come forward. Arise (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Kohen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Reading of the Torah:15"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:16": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:15"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:17": {
+   "parts": [
+    {
+     "text": "/As there is no Kohen,",
+     "kind": "prayer"
+    },
+    {
+     "text": " arise (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") in place of a Kohen./",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Reading of the Torah:15"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:18": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:18"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:19": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:20"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:20": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:20"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:21": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:22"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:22": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Oleh: </small></i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "Bless the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Reading of the Torah:22"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:23": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Cong: </small></i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "Bless the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Reading of the Torah:23"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:24": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Oleh: </small></i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<small><i class=\"instruction\">Oleh: </small></i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "Bless the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Reading of the Torah:24"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:25": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:25"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:26": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:27"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:27": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Oleh:</small></i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small> our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " King of the Universe,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who has given us the Torah of truth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " planting everlasting life in our midst. Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Giver of the Torah.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Reading of the Torah:27"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:28": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:29"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:29": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:29"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:30": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:31"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:31": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:31"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:32": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:34"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:33": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:34"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:34": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:34"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:35": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:35"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:36": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:37"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:37": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Reader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br> in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Reading of the Torah:37"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:38": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Reading of the Torah:38"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:39": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Reader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world –<br>and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Reading of the Torah:39"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:40": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:41"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:41": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:41"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:42": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:43"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:43": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:43"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:44": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:45"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:45": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:45"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:46": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:46"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:47": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:47"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:48": {
+   "he": [
+    "he:Weekdays/Reading of the Torah:48"
+   ]
+  },
+  "en:Weekdays/Reading of the Torah:49": {
+   "he": [],
+   "kind": "speaker",
+   "en": "All:"
+  },
+  "en:Weekdays/Reading of the Torah:50": {
+   "he": [],
+   "kind": "prayer",
+   "role": "together"
+  },
+  "en:Weekdays/Reading of the Torah:51": {
+   "he": [],
+   "kind": "note",
+   "en": "In some congregations, during the week before a yahrzeit, “God, full of mercy” for a relative is said (page 800)."
+  },
+  "en:Weekdays/Reading of the Torah:52": {
+   "he": [],
+   "kind": "heading",
+   "en": "RETURNING THE TORAH TO THE ARK"
+  },
+  "en:Weekdays/Reading of the Torah:53": {
+   "he": [],
+   "kind": "instruction",
+   "en": "The Ark is opened. The Leader takes the Torah scroll and says:"
+  },
+  "en:Weekdays/Reading of the Torah:54": {
+   "he": [],
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "en:Weekdays/Reading of the Torah:55": {
+   "he": [],
+   "kind": "speaker",
+   "en": "The congregation responds:"
+  },
+  "en:Weekdays/Reading of the Torah:56": {
+   "he": [],
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud"
+  },
+  "en:Weekdays/Reading of the Torah:57": {
+   "he": [],
+   "kind": "instruction",
+   "en": "As the Torah scroll is returned to the Ark, say:"
+  },
+  "en:Weekdays/Reading of the Torah:58": {
+   "he": [],
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud"
+  },
+  "en:Weekdays/Reading of the Torah:59": {
+   "he": [],
+   "kind": "instruction",
+   "en": "As the Torah scroll is placed into the Ark, say:"
+  },
+  "en:Weekdays/Reading of the Torah:60": {
+   "he": [],
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud"
+  },
+  "en:Weekdays/Reading of the Torah:61": {
+   "he": [],
+   "kind": "instruction",
+   "en": "The Ark is closed."
+  },
+  "en:Weekdays/The Daily Psalm:1": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">One of the following psalms is said on the appropriate day of the week as indicated.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">After the psalm, the Mourner's Kaddish on page 182 is said.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Daily Psalm:3"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:2": {
+   "he": []
+  },
+  "en:Weekdays/The Daily Psalm:3": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Sunday:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Today is the first day of the week,",
+     "kind": "prayer"
+    },
+    {
+     "text": " on which the Levites used to say this psalm in the Temple:",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Daily Psalm:3"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:4": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:4"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:5": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:35"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:6": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Monday:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Today is the second day of the week,",
+     "kind": "prayer"
+    },
+    {
+     "text": " on which the Levites used to say this psalm in the Temple:",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Daily Psalm:6"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:7": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:7"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:8": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:35"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:9": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Tuesday:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Today is the third day of the week,",
+     "kind": "prayer"
+    },
+    {
+     "text": " on which the Levites used to say this psalm in the Temple:",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Daily Psalm:9"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:10": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:10"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:11": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:35"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:12": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Wednesday:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Today is the fourth day of the week,",
+     "kind": "prayer"
+    },
+    {
+     "text": " on which the Levites used to say this psalm in the Temple:",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Daily Psalm:12"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:13": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:13"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:14": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:35"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:15": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Thursday:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Today is the fifth day of the week,",
+     "kind": "prayer"
+    },
+    {
+     "text": " on which the Levites used to say this psalm in the Temple:",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Daily Psalm:15"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:16": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:16"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:17": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:35"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:18": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Friday:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Today is the sixth day of the week,",
+     "kind": "prayer"
+    },
+    {
+     "text": " on which the Levites used to say this psalm in the Temple:",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Daily Psalm:18"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:19": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:19"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:20": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:35"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:21": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:22"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:22": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:22"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:23": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:35"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:24": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:25"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:25": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:25"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:26": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:35"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:27": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:28"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:28": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:28"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:29": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:29"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:30": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:30"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:31": {
+   "parts": [
+    {
+     "text": "It was taught in the Academy of Elijah: Whoever studies [Torah] laws every day is assured that he will be destined for the World to Come,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as it is said,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “The ways of the world are His” – read not,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “ways” [",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>halikhot</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "] but “laws” [",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>halakhot</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "].",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Daily Psalm:31"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:32": {
+   "parts": [
+    {
+     "text": "Rabbi Elazar said in the name of Rabbi Ḥanina: The disciples of the sages increase peace in the world,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as it is said,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “And all your children shall be taught of the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and great shall be the peace of your children [",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>banayikh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "].” Read not ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>banayikh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " “your children,",
+     "kind": "prayer"
+    },
+    {
+     "text": "” but ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>bonayikh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " “your builders.” Those who love Your Torah have great peace;",
+     "kind": "prayer"
+    },
+    {
+     "text": " there is no stumbling block for them. May there be peace within your ramparts,",
+     "kind": "prayer"
+    },
+    {
+     "text": " prosperity in your palaces. For the sake of my brothers and friends,",
+     "kind": "prayer"
+    },
+    {
+     "text": " I shall say,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “Peace be within you.” For the sake of the House of the <small>LORD</small> our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " I will seek your good. ▸May the <small>LORD</small> grant strength to His people;",
+     "kind": "prayer"
+    },
+    {
+     "text": " may the <small>LORD</small> bless His people with peace.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Daily Psalm:32"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:33": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:33"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:34": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:35"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:35": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל  Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br>in your lifetime<br>and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and in the lifetime<br>of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Daily Psalm:35"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:36": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Daily Psalm:36"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:37": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world –<br>and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Daily Psalm:37"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:38": {
+   "parts": [
+    {
+     "text": "To Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to the teachers,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>their disciples and their disciples’ disciples,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and to all who engage in the study of Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in this (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>in Israel add:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " holy) place or elsewhere,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>may there come to them and you great peace,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>grace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " kindness and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " long life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " ample sustenance<br>and deliverance,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from their Father in Heaven – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/The Daily Psalm:38"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:39": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:39"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:40": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:41"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:41": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:41"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:42": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:43"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:43": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:43"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:44": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:45"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:45": {
+   "he": [
+    "he:Weekdays/The Daily Psalm:45"
+   ]
+  },
+  "en:Weekdays/The Daily Psalm:46": {
+   "he": []
+  },
+  "en:Weekdays/Readings after the Service:1": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Some say the following daily after morning prayers:"
+  },
+  "en:Weekdays/Readings after the Service:2": {
+   "he": [
+    "he:Weekdays/Readings after the Service:2"
+   ],
+   "kind": "heading",
+   "en": "THE SIX REMEMBRANCES"
+  },
+  "en:Weekdays/Readings after the Service:3": {
+   "he": [
+    "he:Weekdays/Readings after the Service:3"
+   ],
+   "kind": "heading",
+   "en": "The Exodus from Egypt"
+  },
+  "en:Weekdays/Readings after the Service:4": {
+   "he": [
+    "he:Weekdays/Readings after the Service:4"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:5": {
+   "he": [
+    "he:Weekdays/Readings after the Service:5"
+   ],
+   "kind": "heading",
+   "en": "The Revelation at Mount Sinai"
+  },
+  "en:Weekdays/Readings after the Service:6": {
+   "he": [
+    "he:Weekdays/Readings after the Service:6"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:7": {
+   "he": [
+    "he:Weekdays/Readings after the Service:7"
+   ],
+   "kind": "heading",
+   "en": "Amalek"
+  },
+  "en:Weekdays/Readings after the Service:8": {
+   "he": [
+    "he:Weekdays/Readings after the Service:8"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:9": {
+   "he": [
+    "he:Weekdays/Readings after the Service:9"
+   ],
+   "kind": "heading",
+   "en": "The Golden Calf"
+  },
+  "en:Weekdays/Readings after the Service:10": {
+   "he": [
+    "he:Weekdays/Readings after the Service:10"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:11": {
+   "he": [
+    "he:Weekdays/Readings after the Service:11"
+   ],
+   "kind": "heading",
+   "en": "Miriam"
+  },
+  "en:Weekdays/Readings after the Service:12": {
+   "he": [
+    "he:Weekdays/Readings after the Service:12"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:13": {
+   "he": [
+    "he:Weekdays/Readings after the Service:13"
+   ],
+   "kind": "heading",
+   "en": "The Sabbath"
+  },
+  "en:Weekdays/Readings after the Service:14": {
+   "he": [
+    "he:Weekdays/Readings after the Service:14"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:15": {
+   "he": [
+    "he:Weekdays/Readings after the Service:15"
+   ],
+   "kind": "heading",
+   "en": "THE TEN COMMANDMENTS"
+  },
+  "en:Weekdays/Readings after the Service:16": {
+   "he": [
+    "he:Weekdays/Readings after the Service:16"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:17": {
+   "he": [
+    "he:Weekdays/Readings after the Service:17"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:18": {
+   "he": [
+    "he:Weekdays/Readings after the Service:18"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:19": {
+   "he": [
+    "he:Weekdays/Readings after the Service:19"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:20": {
+   "he": [
+    "he:Weekdays/Readings after the Service:20"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:21": {
+   "he": [
+    "he:Weekdays/Readings after the Service:21"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:22": {
+   "he": [
+    "he:Weekdays/Readings after the Service:22"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:23": {
+   "he": [
+    "he:Weekdays/Readings after the Service:23"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:24": {
+   "he": [
+    "he:Weekdays/Readings after the Service:24"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:25": {
+   "he": [
+    "he:Weekdays/Readings after the Service:25"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:26": {
+   "he": [
+    "he:Weekdays/Readings after the Service:26"
+   ],
+   "kind": "heading",
+   "en": "THE THIRTEEN PRINCIPLES OF JEWISH FAITH"
+  },
+  "en:Weekdays/Readings after the Service:27": {
+   "he": [
+    "he:Weekdays/Readings after the Service:27"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:28": {
+   "he": [
+    "he:Weekdays/Readings after the Service:28"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:29": {
+   "he": [
+    "he:Weekdays/Readings after the Service:29"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:30": {
+   "he": [
+    "he:Weekdays/Readings after the Service:30"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:31": {
+   "he": [
+    "he:Weekdays/Readings after the Service:31"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:32": {
+   "he": [
+    "he:Weekdays/Readings after the Service:32"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:33": {
+   "he": [
+    "he:Weekdays/Readings after the Service:33"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:34": {
+   "he": [
+    "he:Weekdays/Readings after the Service:34"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:35": {
+   "he": [
+    "he:Weekdays/Readings after the Service:35"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:36": {
+   "he": [
+    "he:Weekdays/Readings after the Service:36"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:37": {
+   "he": [
+    "he:Weekdays/Readings after the Service:37"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:38": {
+   "he": [
+    "he:Weekdays/Readings after the Service:38"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:39": {
+   "he": [
+    "he:Weekdays/Readings after the Service:39"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:40": {
+   "he": [
+    "he:Weekdays/Readings after the Service:40"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:41": {
+   "he": [],
+   "kind": "instruction",
+   "en": "The following is said after morning and evening prayers:"
+  },
+  "en:Weekdays/Readings after the Service:42": {
+   "he": [
+    "he:Weekdays/Readings after the Service:42"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:43": {
+   "he": [
+    "he:Weekdays/Readings after the Service:43"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:44": {
+   "he": [
+    "he:Weekdays/Readings after the Service:44"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:45": {
+   "he": [
+    "he:Weekdays/Readings after the Service:45"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Readings after the Service:46": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Some say Adon Olam (p. 22) at this point:"
+  },
+  "en:Weekdays/Readings after the Service:47": {
+   "he": [
+    "he:Weekdays/Readings after the Service:47"
+   ],
+   "kind": "heading",
+   "en": "PRAYER UPON LEAVING THE SYNAGOGUE"
+  },
+  "en:Weekdays/Readings after the Service:48": {
+   "he": [
+    "he:Weekdays/Readings after the Service:49"
+   ],
+   "kind": "instruction",
+   "en": "Say while seated:"
+  },
+  "en:Weekdays/Readings after the Service:49": {
+   "he": [
+    "he:Weekdays/Readings after the Service:49"
+   ]
+  },
+  "en:Weekdays/Readings after the Service:50": {
+   "he": []
+  },
+  "en:Weekdays/Readings after the Service:51": {
+   "he": [
+    "he:Weekdays/Readings after the Service:51"
+   ]
+  },
+  "en:Weekdays/Readings after the Service:52": {
+   "he": []
+  },
+  "en:Weekdays/Readings after the Service:53": {
+   "he": [
+    "he:Weekdays/Readings after the Service:53"
+   ]
+  },
+  "en:Weekdays/Readings after the Service:54": {
+   "he": []
+  },
+  "en:Weekdays/Readings after the Service:55": {
+   "he": [
+    "he:Weekdays/Readings after the Service:55"
+   ]
+  },
+  "en:Weekdays/Readings after the Service:56": {
+   "he": []
+  },
+  "en:Weekdays/Readings after the Service:57": {
+   "he": [
+    "he:Weekdays/Readings after the Service:57"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:1": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Some have the custom to read on a daily basis certain passages from the Torah, either in supplication to God that He may grant us our daily needs (both material and spiritual), or as a reminder that all our blessings come ultimately from Him."
+  },
+  "en:Weekdays/Personal Supplications:2": {
+   "he": [
+    "he:Weekdays/Personal Supplications:2"
+   ],
+   "kind": "heading",
+   "en": "THE CHAPTER OF THE MANNA"
+  },
+  "en:Weekdays/Personal Supplications:3": {
+   "he": [],
+   "kind": "instruction",
+   "en": "After the exodus from Egypt, the Israelites depended each day on the manna for their survival. Nowadays, we risk living under the illusion of self-reliance, and forgetting the true source of our sustenance. As early as the thirteenth century, the pupils of the Maharam of Rothenburg recommended reciting the verses which describe the miracle of the manna, as a declaration of faith and an expression of trust and gratitude."
+  },
+  "en:Weekdays/Personal Supplications:4": {
+   "he": [
+    "he:Weekdays/Personal Supplications:4"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:5": {
+   "he": [
+    "he:Weekdays/Personal Supplications:5"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:6": {
+   "he": [
+    "he:Weekdays/Personal Supplications:6"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:7": {
+   "he": [
+    "he:Weekdays/Personal Supplications:7"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:8": {
+   "he": [
+    "he:Weekdays/Personal Supplications:8"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:9": {
+   "he": [
+    "he:Weekdays/Personal Supplications:9"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:10": {
+   "he": [
+    "he:Weekdays/Personal Supplications:10"
+   ],
+   "kind": "heading",
+   "en": "PRAYER FOR SUSTENANCE"
+  },
+  "en:Weekdays/Personal Supplications:11": {
+   "he": [
+    "he:Weekdays/Personal Supplications:11"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:12": {
+   "he": [
+    "he:Weekdays/Personal Supplications:12"
+   ],
+   "kind": "heading",
+   "en": "THE CHAPTER OF REVERENCE"
+  },
+  "en:Weekdays/Personal Supplications:13": {
+   "he": [],
+   "kind": "instruction",
+   "en": "In his final address before his death, Moses charges the people of Israel with loving God and holding Him in reverence, reminding them of God’s combined majesty and humility (see “May God give you,” page 702), and recounting the miracles He has done for them."
+  },
+  "en:Weekdays/Personal Supplications:14": {
+   "he": [
+    "he:Weekdays/Personal Supplications:14"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:15": {
+   "he": [
+    "he:Weekdays/Personal Supplications:15"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:16": {
+   "he": [
+    "he:Weekdays/Personal Supplications:16"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:17": {
+   "he": [
+    "he:Weekdays/Personal Supplications:17"
+   ],
+   "kind": "heading",
+   "en": "THE CHAPTER OF REPENTANCE"
+  },
+  "en:Weekdays/Personal Supplications:18": {
+   "he": [],
+   "kind": "instruction",
+   "en": "This passage comes from the end of Moses’ final address. After describing the blessings which might be conferred by keeping the covenant and the repercussions of breaking it, Moses promises the people that the punishment incurred will not be irrevocable; the gates of repentance are always open, and by returning to God the people might yet be redeemed. These verses were later interwoven into the prayer for the State of Israel (page 522) to express the hope that this first stage of redemption will lead to its full flowering, with the ingathering of all exiles and the opening of our hearts to truly loving and revering God."
+  },
+  "en:Weekdays/Personal Supplications:19": {
+   "he": [
+    "he:Weekdays/Personal Supplications:19"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:20": {
+   "he": [
+    "he:Weekdays/Personal Supplications:20"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:21": {
+   "he": [
+    "he:Weekdays/Personal Supplications:21"
+   ],
+   "kind": "heading",
+   "en": "FOR PROTECTION FROM THE EVIL EYE"
+  },
+  "en:Weekdays/Personal Supplications:22": {
+   "he": [],
+   "kind": "instruction",
+   "en": "The following prayer, based on Rabbi Tzvi Hirsch Kaidanover’s Kav HaYashar (Frankfurt, 1705), incorporates biblical verses as a segula (charm) for God’s protection."
+  },
+  "en:Weekdays/Personal Supplications:23": {
+   "he": [
+    "he:Weekdays/Personal Supplications:23"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:24": {
+   "he": [
+    "he:Weekdays/Personal Supplications:24"
+   ]
+  },
+  "en:Weekdays/Personal Supplications:25": {
+   "he": [
+    "he:Weekdays/Personal Supplications:25"
+   ]
+  },
+  "en:Weekdays/Tahanun:1": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Mondays and Thursdays, when Taḥanun is said, begin with “He is compassionate” below. On other days when Taḥanun is said, begin with “David said” on page 152.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Taḥanun is not said on: Rosh Ḥodesh, Ḥanukka, Tu BiShvat, the 14th and 15th of Adar I</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " Purim and Shushan Purim,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in the month of Nisan,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Yom HaAtzma’ut,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the 14th of Iyar (Pesaḥ Sheni),",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lag BaOmer,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Yom Yerushalayim,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from Rosh Ḥodesh Sivan through the day after Shavuot (in Israel through 12th of Sivan),",
+     "kind": "prayer"
+    },
+    {
+     "text": " Tisha B’Av,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Tu B’Av,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Erev Rosh HaShana,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and from Erev Yom Kippur through the day after Simḥat Torah (in Israel through Rosh Ḥodesh Marḥeshvan).</i><br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Taḥanun is also not said: on the morning of a Brit Mila, either where the brit will take place or where the father, Sandek or Mohel are present; if a groom is present (and some say a bride) on the day of his wedding or during the week of Sheva Berakhot; in a house of mourning.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">In Israel on days on which Taḥanun is said, say Viduy and the Thirteen Attributes of Divine Compassion on page 136. See law 478a.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">The following until “David said” on page 152 is said standing.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Tahanun:2": {
+   "he": [
+    "he:Weekdays/Tahanun:2"
+   ]
+  },
+  "en:Weekdays/Tahanun:3": {
+   "he": [
+    "he:Weekdays/Tahanun:3"
+   ]
+  },
+  "en:Weekdays/Tahanun:4": {
+   "he": [
+    "he:Weekdays/Tahanun:4"
+   ]
+  },
+  "en:Weekdays/Tahanun:5": {
+   "he": [
+    "he:Weekdays/Tahanun:5"
+   ]
+  },
+  "en:Weekdays/Tahanun:6": {
+   "he": [
+    "he:Weekdays/Tahanun:6"
+   ]
+  },
+  "en:Weekdays/Tahanun:7": {
+   "he": [
+    "he:Weekdays/Tahanun:7"
+   ]
+  },
+  "en:Weekdays/Tahanun:8": {
+   "he": [
+    "he:Weekdays/Tahanun:8"
+   ]
+  },
+  "en:Weekdays/Tahanun:9": {
+   "he": [
+    "he:Weekdays/Tahanun:9"
+   ]
+  },
+  "en:Weekdays/Tahanun:10": {
+   "he": [
+    "he:Weekdays/Tahanun:10"
+   ]
+  },
+  "en:Weekdays/Tahanun:11": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Sundays, Tuesdays, Wednesdays and Fridays, begin Taḥanun here.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">The following, until “We do not know” on page 156, is said sitting. When praying in a place where there is a Torah scroll, one should lean forward, resting one’s head on the left arm (unless you are wearing tefillin on the left arm, in which case rest on the right arm out of respect for the tefillin), until in “sudden shame.”</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Tahanun:12": {
+   "he": [
+    "he:Weekdays/Tahanun:12"
+   ]
+  },
+  "en:Weekdays/Tahanun:13": {
+   "he": [
+    "he:Weekdays/Tahanun:13"
+   ]
+  },
+  "en:Weekdays/Tahanun:14": {
+   "he": [
+    "he:Weekdays/Tahanun:14"
+   ]
+  },
+  "en:Weekdays/Tahanun:15": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Sit upright. On Mondays and Thursdays, say the following.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">On other days, continue with “Guardian of Israel” on the next page.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Tahanun:16": {
+   "he": [
+    "he:Weekdays/Tahanun:16"
+   ]
+  },
+  "en:Weekdays/Tahanun:33": {
+   "he": []
+  },
+  "en:Weekdays/Tahanun:34": {
+   "he": [
+    "he:Weekdays/Tahanun:34"
+   ]
+  },
+  "en:Weekdays/Tahanun:35": {
+   "he": [
+    "he:Weekdays/Tahanun:35"
+   ]
+  },
+  "en:Weekdays/Tahanun:36": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br> in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Tahanun:36"
+   ]
+  },
+  "en:Weekdays/Tahanun:37": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Tahanun:37"
+   ]
+  },
+  "en:Weekdays/Tahanun:38": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": " raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Tahanun:38"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:1": {
+   "he": []
+  },
+  "en:Weekdays/Conclusion of the Service:2": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:2"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:3": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:3"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:4": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:4"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:5": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:6"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:6": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:6"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:7": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:9"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:8": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:8"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:9": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:9"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:10": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:10"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:11": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:11"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:12": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:12"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:13": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:13"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:14": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:14"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:15": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:15"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:16": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:16"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:33": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Some add:",
+   "gloss": "Optional verses from Psalms"
+  },
+  "en:Weekdays/Conclusion of the Service:34": {
+   "he": []
+  },
+  "en:Weekdays/Conclusion of the Service:35": {
+   "he": [],
+   "kind": "heading",
+   "en": "MOURNER'S KADDISH"
+  },
+  "en:Weekdays/Conclusion of the Service:36": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following prayer, said by mourners, requires the presence of a minyan.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">A transliteration can be found on page 1334.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Conclusion of the Service:37": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction",
+     "en": "Mourner:"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br>in your lifetime<br>and in your days,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": "<br>and in the lifetime<br>of all the house of Israel,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Conclusion of the Service:38": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Conclusion of the Service:39": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world –<br>and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Conclusion of the Service:40": {
+   "he": []
+  },
+  "en:Weekdays/Conclusion of the Service:41": {
+   "he": []
+  },
+  "en:Weekdays/Conclusion of the Service:42": {
+   "he": []
+  },
+  "en:Weekdays/Tahanun:17": {
+   "he": [
+    "he:Weekdays/Tahanun:20"
+   ]
+  },
+  "en:Weekdays/Tahanun:18": {
+   "he": [
+    "he:Weekdays/Tahanun:21"
+   ]
+  },
+  "en:Weekdays/Tahanun:19": {
+   "he": [
+    "he:Weekdays/Tahanun:22"
+   ]
+  },
+  "en:Weekdays/Tahanun:20": {
+   "he": [
+    "he:Weekdays/Tahanun:23"
+   ]
+  },
+  "en:Weekdays/Tahanun:21": {
+   "he": [
+    "he:Weekdays/Tahanun:24"
+   ]
+  },
+  "en:Weekdays/Tahanun:22": {
+   "he": [
+    "he:Weekdays/Tahanun:25"
+   ]
+  },
+  "en:Weekdays/Tahanun:23": {
+   "he": [
+    "he:Weekdays/Tahanun:26"
+   ]
+  },
+  "en:Weekdays/Tahanun:24": {
+   "he": [
+    "he:Weekdays/Tahanun:28"
+   ]
+  },
+  "en:Weekdays/Tahanun:25": {
+   "he": [
+    "he:Weekdays/Tahanun:29"
+   ]
+  },
+  "en:Weekdays/Tahanun:26": {
+   "he": [
+    "he:Weekdays/Tahanun:30"
+   ]
+  },
+  "en:Weekdays/Tahanun:27": {
+   "he": [
+    "he:Weekdays/Tahanun:31"
+   ]
+  },
+  "en:Weekdays/Tahanun:28": {
+   "he": [
+    "he:Weekdays/Tahanun:32"
+   ]
+  },
+  "en:Weekdays/Tahanun:29": {
+   "he": [
+    "he:Weekdays/Tahanun:34"
+   ]
+  },
+  "en:Weekdays/Tahanun:30": {
+   "he": [
+    "he:Weekdays/Tahanun:35"
+   ]
+  },
+  "en:Weekdays/Tahanun:31": {
+   "he": [
+    "he:Weekdays/Tahanun:36"
+   ]
+  },
+  "en:Weekdays/Tahanun:32": {
+   "he": [
+    "he:Weekdays/Tahanun:37"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:17": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:17"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:18": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:18"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:19": {
+   "he": []
+  },
+  "en:Weekdays/Conclusion of the Service:20": {
+   "he": []
+  },
+  "en:Weekdays/Conclusion of the Service:21": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:21"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:22": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom >in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Conclusion of the Service:22"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:23": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Conclusion of the Service:23"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:24": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation uttered in the world – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Conclusion of the Service:24"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:25": {
+   "he": []
+  },
+  "en:Weekdays/Conclusion of the Service:26": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:26"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:27": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:27"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:28": {
+   "he": []
+  },
+  "en:Weekdays/Conclusion of the Service:29": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:29"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:30": {
+   "he": []
+  },
+  "en:Weekdays/Conclusion of the Service:31": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:31"
+   ]
+  },
+  "en:Weekdays/Conclusion of the Service:32": {
+   "he": [
+    "he:Weekdays/Conclusion of the Service:32"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Weekdays/Avinu Malkenu:54",
+   "type": "missing_text",
+   "detail": "English translation for h49 (h49) is missing in the provided English segments list (e49 is not selected)."
+  },
+  {
+   "id": "en:Weekdays/Avinu Malkenu:49",
+   "type": "missing_text",
+   "detail": "English segment e49 is not selected but corresponds to h44 which is selected."
+  },
+  {
+   "id": "en:Weekdays/Avinu Malkenu:55",
+   "type": "alignment",
+   "detail": "English instruction 'The Ark is closed' has no Hebrew counterpart in the selected segments."
+  },
+  {
+   "id": "en:Weekdays/Avinu Malkenu:56",
+   "type": "alignment",
+   "detail": "English instruction 'During Mincha continue with Tachanun' has no Hebrew counterpart in the selected segments."
+  },
+  {
+   "id": "en:Weekdays/Reading of the Torah:49",
+   "type": "alignment",
+   "detail": "English speaker label 'All:' has no Hebrew counterpart in the provided context."
+  },
+  {
+   "id": "en:Weekdays/Reading of the Torah:50",
+   "type": "alignment",
+   "detail": "English prayer text has no Hebrew counterpart in the provided context."
+  },
+  {
+   "id": "en:Weekdays/Reading of the Torah:51",
+   "type": "alignment",
+   "detail": "English note has no Hebrew counterpart in the provided context."
+  },
+  {
+   "id": "en:Weekdays/Reading of the Torah:52",
+   "type": "alignment",
+   "detail": "English heading has no Hebrew counterpart in the provided context."
+  },
+  {
+   "id": "en:Weekdays/Reading of the Torah:53",
+   "type": "alignment",
+   "detail": "English instruction has no Hebrew counterpart in the provided context."
+  },
+  {
+   "id": "en:Weekdays/Reading of the Torah:54",
+   "type": "alignment",
+   "detail": "English prayer text has no Hebrew counterpart in the provided context."
+  },
+  {
+   "id": "en:Weekdays/Reading of the Torah:55",
+   "type": "alignment",
+   "detail": "English speaker label has no Hebrew counterpart in the provided context."
+  },
+  {
+   "id": "en:Weekdays/Reading of the Torah:56",
+   "type": "alignment",
+   "detail": "English prayer text has no Hebrew counterpart in the provided context."
+  },
+  {
+   "id": "en:Weekdays/Reading of the Torah:57",
+   "type": "alignment",
+   "detail": "English instruction has no Hebrew counterpart in the provided context."
+  },
+  {
+   "id": "en:Weekdays/Reading of the Torah:58",
+   "type": "alignment",
+   "detail": "English prayer text has no Hebrew counterpart in the provided context."
+  },
+  {
+   "id": "en:Weekdays/Reading of the Torah:59",
+   "type": "alignment",
+   "detail": "English instruction has no Hebrew counterpart in the provided context."
+  },
+  {
+   "id": "en:Weekdays/Reading of the Torah:60",
+   "type": "alignment",
+   "detail": "English prayer text has no Hebrew counterpart in the provided context."
+  },
+  {
+   "id": "en:Weekdays/Reading of the Torah:61",
+   "type": "alignment",
+   "detail": "English instruction has no Hebrew counterpart in the provided context."
+  },
+  {
+   "id": "he:Weekdays/The Daily Psalm:43",
+   "type": "ambiguous",
+   "detail": "Instruction 'Bless the Lord' appears as a prayer segment in Hebrew but is an instruction in English; condition for Israel custom when no Torah reading is unclear from text."
+  },
+  {
+   "id": "he:Weekdays/Readings after the Service:51",
+   "type": "missing_text",
+   "detail": "Hebrew text for 'כי כל העמים...' (h46) is missing from the Hebrew segments; it appears in h42 but h46 is a separate segment in the source."
+  },
+  {
+   "id": "he:Weekdays/Tahanun:2",
+   "type": "ambiguous",
+   "detail": "Instruction for Mon/Thu vs other days not explicit in Hebrew text; inferred from English rubric."
+  },
+  {
+   "id": "en:Weekdays/Tahanun:1",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h1.1; h10.1; h17; h18; h19"
+  },
+  {
+   "id": "en:Weekdays/Conclusion of the Service:1",
+   "type": "ambiguous",
+   "detail": "Instruction about touching tefillin at symbols ° and °° appears in English but has no Hebrew counterpart in the selected segments. The symbols are not present in the Hebrew text provided."
+  },
+  {
+   "id": "en:Weekdays/Conclusion of the Service:33",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/Conclusion of the Service:35",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/Conclusion of the Service:37",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/Conclusion of the Service:38",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/Conclusion of the Service:39",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/Conclusion of the Service:40",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/Conclusion of the Service:41",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/Conclusion of the Service:42",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/Conclusion of the Service:33",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: Preserve existing leaf defaults; h29.0; h29.1; h29.2; h29.3"
+  },
+  {
+   "id": "en:Weekdays/Tahanun:17",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h31.1; h31.2; h31.3; h32.1; h33.0"
+  },
+  {
+   "id": "en:Weekdays/Conclusion of the Service:17",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h13; h14; h15; h16; h17.1"
+  }
+ ]
+}

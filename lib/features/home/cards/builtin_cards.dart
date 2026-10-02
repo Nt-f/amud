@@ -14,9 +14,11 @@ import '../../../core/split_row.dart';
 import '../../../core/theme.dart';
 import '../../../core/titles.dart';
 import '../../calendar/calendar_screen.dart';
+import '../../integrations/omer_badge.dart';
 import '../../js_cards/js_card.dart';
 import '../../minyan/minyan.dart';
 import '../../siddur/today_summary.dart';
+import '../../siddur/day_guide_screen.dart';
 import '../../zmanim/zman_catalog.dart';
 import '../card_registry.dart';
 import '../today.dart';
@@ -24,6 +26,7 @@ import 'card_frame.dart';
 
 void registerBuiltInCards(CardRegistry r) {
   r
+    ..register(CardType(type: 'prepareTomorrow', title: 'Prepare for tomorrow', description: 'Tomorrow’s prayer changes, previews and printing', icon: Icons.nights_stay_outlined, defaultSpan: 2, build: (c, ref, cfg) => const PrepareTomorrowCard()))
     ..register(CardType(
       type: 'hebrewDate',
       title: 'Hebrew date',
@@ -72,7 +75,8 @@ void registerBuiltInCards(CardRegistry r) {
       description: 'Tonight\'s count with sefira (only during the Omer)',
       icon: Icons.filter_7,
       defaultSpan: 2,
-      visible: (ref) => omerCountTonight(ref.watch(todaySnapshotProvider)) > 0,
+      visible: (ref, _) => omerCountTonight(ref.watch(todaySnapshotProvider)) > 0,
+      shownWhen: (_) => 'Only during the Omer',
       build: (c, ref, cfg) => const _OmerCard(),
     ))
     ..register(CardType(
@@ -409,6 +413,7 @@ class _OmerCard extends ConsumerWidget {
     final hebFont = ref.watch(settingsProvider.select((s) => s.hebrewFont));
     final theme = Theme.of(context);
     final day = omerCountTonight(t);
+    final counted = ref.watch(omerCountedProvider) == t.halachic.abs();
     if (day == 0) return const SizedBox.shrink();
     final ev = OmerEvent(t.hdate.next(), day);
     final on = theme.colorScheme.onTertiaryContainer;
@@ -420,6 +425,10 @@ class _OmerCard extends ConsumerWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
           child: Row(children: [
+            if (t.afterSunset)
+              IconButton(tooltip: context.tr(counted ? 'Counted tonight' : 'Mark Omer counted'),
+                icon: Icon(counted ? Icons.check_circle : Icons.check_circle_outline),
+                onPressed: counted ? null : () => ref.read(omerCountedProvider.notifier).mark(t.halachic.abs())),
             Text('$day', style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w800, color: on)),
             const SizedBox(width: 12),
             Expanded(

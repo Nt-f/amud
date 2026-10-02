@@ -16,7 +16,7 @@ class LearningScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final today = ref.watch(civilTodayProvider);
+    final today = ref.watch(todayProvider);
     final date = ref.watch(_learnDateProvider) ?? today;
     final hd = HDate.fromAbs(date.abs);
     final s = ref.watch(settingsProvider);

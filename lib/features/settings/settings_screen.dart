@@ -1,6 +1,8 @@
 import 'dart:convert';
+import 'package:geolocator/geolocator.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:siddur_engine/siddur_engine.dart';
@@ -14,6 +16,8 @@ import '../../core/settings.dart';
 import '../../core/titles.dart';
 import '../update/update_service.dart';
 import '../alerts/alerts.dart';
+import '../integrations/reader_device.dart';
+import 'nav_tabs_screen.dart';
 
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
@@ -229,6 +233,11 @@ class SettingsScreen extends ConsumerWidget {
               subtitle: context.tr('Otherwise from 7 days after the molad'),
               value: s.minhagim.kiddushLevana3Days,
               onChanged: (v) => minhag((m) => m.copyWith(kiddushLevana3Days: v))),
+          AdaptiveSwitchTile(
+              title: context.tr('Tefillin on Chol HaMoed'),
+              subtitle: context.tr('Otherwise not worn on Chol HaMoed'),
+              value: s.minhagim.tefillinCholHamoed,
+              onChanged: (v) => minhag((m) => m.copyWith(tefillinCholHamoed: v))),
           AdaptiveSwitchTile(title: context.tr('Mourner (aveil)'), value: s.minhagim.mourner, onChanged: (v) => minhag((m) => m.copyWith(mourner: v))),
         ]),
         AdaptiveSection(header: context.tr('Appearance'), children: [
@@ -300,6 +309,47 @@ class SettingsScreen extends ConsumerWidget {
             subtitle: '${fontLabel(s.hebrewFont, fonts)} · ${context.tr('{n} fonts to preview', {'n': fontCatalog.length + fonts.length})}',
             onTap: () => context.push('/settings/fonts'),
           ),
+          AdaptiveNavTile(
+            icon: Icons.view_week_outlined,
+            title: context.tr('Navigation bar'),
+            subtitle: [for (final id in s.navTabs) context.tr(navTabs.firstWhere((t) => t.$1 == id).$5)].join(' · '),
+            onTap: () => context.push('/settings/tabs'),
+          ),
+        ]),
+        AdaptiveSection(header: context.tr('Reading & device'), children: [
+          AdaptiveSwitchTile(title: context.tr('Keep screen on while reading'), value: s.keepReaderAwake,
+            onChanged: (v) => set((x) => x.copyWith(keepReaderAwake: v))),
+          AdaptiveSwitchTile(title: context.tr('Full-screen reader'), subtitle: context.tr('Hide the phone status and navigation bars while reading'), value: s.fullscreenReader,
+            onChanged: (v) => set((x) => x.copyWith(fullscreenReader: v))),
+          if (!kIsWeb && defaultTargetPlatform == TargetPlatform.android)
+            AdaptiveSwitchTile(
+                title: context.tr('Do Not Disturb while reading'),
+                subtitle: context.tr('Silence calls and notifications in the siddur, and restore them after'),
+                value: s.readerDnd,
+                onChanged: (v) async {
+                  if (v && !await readerDndAccess()) {
+                    // Android asks once, on its own settings screen.
+                    await openReaderDndSettings();
+                    if (!await readerDndAccess()) return;
+                  }
+                  set((x) => x.copyWith(readerDnd: v));
+                }),
+          if (kIsWeb || defaultTargetPlatform != TargetPlatform.linux)
+          AdaptiveSwitchTile(title: context.tr('Offer to update location when traveling'), value: s.travelPrompts,
+            onChanged: (v) async {
+              if (v) {
+                var permission = await Geolocator.checkPermission();
+                if (permission == LocationPermission.denied) permission = await Geolocator.requestPermission();
+                if (permission == LocationPermission.denied || permission == LocationPermission.deniedForever) return;
+              }
+              set((x) => x.copyWith(travelPrompts: v));
+            }),
+          if (!kIsWeb && {TargetPlatform.windows, TargetPlatform.macOS, TargetPlatform.linux}.contains(defaultTargetPlatform))
+          AdaptiveSwitchTile(title: context.tr('Show next zman in desktop tray'), value: s.desktopTray,
+            onChanged: (v) => set((x) => x.copyWith(desktopTray: v))),
+          if (kIsWeb)
+          AdaptiveSwitchTile(title: context.tr('Omer reminder badge'), value: s.omerBadge,
+            onChanged: (v) => set((x) => x.copyWith(omerBadge: v))),
         ]),
         AdaptiveSection(header: context.tr('Notifications & learning'), children: [
           AdaptiveNavTile(icon: Icons.notifications_active_outlined, title: context.tr('Zman alerts'), onTap: () => context.push('/alerts')),
@@ -312,9 +362,17 @@ class SettingsScreen extends ConsumerWidget {
               if (v) await ref.read(notificationBackendProvider).requestPermission(exact: true);
             },
           ),
+          AdaptiveNavTile(icon: Icons.event_repeat, title: context.tr('Personal Hebrew dates'), onTap: () => context.push('/personal-dates')),
+          AdaptiveSwitchTile(title: context.tr('Kiddush Levana reminder'), subtitle: context.tr('At nightfall while the window is open'), value: s.levanaReminder,
+            onChanged: (v) async { if (v && !await ref.read(notificationBackendProvider).requestPermission()) return; set((x) => x.copyWith(levanaReminder: v)); }),
+          AdaptiveSwitchTile(title: context.tr('Birkat HaChama reminder'), value: s.hachamaReminder,
+            onChanged: (v) async { if (v && !await ref.read(notificationBackendProvider).requestPermission()) return; set((x) => x.copyWith(hachamaReminder: v)); }),
           AdaptiveNavTile(icon: Icons.menu_book_outlined, title: context.tr('Daily learning'), onTap: () => context.push('/learning')),
         ]),
         AdaptiveSection(header: context.tr('Advanced'), children: [
+          AdaptiveNavTile(icon: Icons.widgets_outlined, title: context.tr('Card gallery'), onTap: () => context.push('/settings/cards')),
+          AdaptiveNavTile(icon: Icons.link, title: context.tr('Widgets, shortcuts & voice'), onTap: () => context.push('/settings/integrations')),
+
           AdaptiveSwitchTile(
             title: context.tr('Share anonymous usage'),
             subtitle: context.tr('Which screens, features and prayers or texts are opened, to improve Amud. Nothing you type, no names, no exact location.'),
@@ -370,12 +428,49 @@ class CustomRulesScreen extends ConsumerStatefulWidget {
 
 class _CustomRulesScreenState extends ConsumerState<CustomRulesScreen> {
   late final _ctrl = TextEditingController(
-      text: const JsonEncoder.withIndent('  ').convert(ref.read(customRulesProvider).isEmpty
-          ? [
-              {'title': r'^Korbanot$', 'when': 'false', 'labelEn': 'Skipped by my custom'},
-            ]
-          : ref.read(customRulesProvider)));
+      text: const JsonEncoder.withIndent('  ').convert(ref.read(customRulesProvider)));
   String? _error;
+
+  @override
+  void dispose() { _ctrl.dispose(); super.dispose(); }
+
+  void _addRule(Map<String, Object?> rule) {
+    try {
+      final rules = (jsonDecode(_ctrl.text) as List).cast<Map>().map((m) => m.cast<String, Object?>()).toList();
+      SectionRule.fromJson(rule).condition;
+      rules.insert(0, rule); // custom rules are first-match wins
+      setState(() { _ctrl.text = const JsonEncoder.withIndent('  ').convert(rules); _error = null; });
+    } catch (e) { setState(() => _error = '$e'); }
+  }
+
+  Future<void> _buildRule() async {
+    final title = TextEditingController(), label = TextEditingController();
+    var condition = 'true';
+    var regex = false;
+    var invert = false;
+    final result = await showDialog<Map<String, Object?>>(context: context, builder: (c) => StatefulBuilder(builder: (c, update) => AlertDialog(
+      title: Text(context.tr('Build a rule')),
+      content: SizedBox(width: 400, child: SingleChildScrollView(child: Column(mainAxisSize: MainAxisSize.min, children: [
+        TextField(controller: title, decoration: InputDecoration(labelText: context.tr('Section title'))),
+        SwitchListTile.adaptive(title: Text(context.tr('Match with a regular expression')), value: regex, onChanged: (v) => update(() => regex = v)),
+        DropdownButtonFormField<String>(initialValue: condition, items: [
+          const DropdownMenuItem(value: 'true', child: Text('Every day')),
+          for (final variable in ['weekday', 'shabbat', 'yomTov', 'roshChodesh', 'chanukah', 'omer', 'minyan', 'mourner', 'tachanun'])
+            DropdownMenuItem(value: variable, child: Text(DayContext.variableDocs[variable]!)),
+        ], onChanged: (v) => condition = v!),
+        SwitchListTile.adaptive(title: Text(context.tr('Hide when this condition is true')), value: invert, onChanged: (v) => update(() => invert = v)),
+        TextField(controller: label, decoration: InputDecoration(labelText: context.tr('Explanation shown in the reader'))),
+      ]))), actions: [TextButton(onPressed: () => Navigator.pop(c), child: Text(context.tr('Cancel'))),
+        FilledButton(onPressed: () {
+          if (title.text.trim().isEmpty) return;
+          final rule = <String, Object?>{'title': regex ? title.text.trim() : '^${RegExp.escape(title.text.trim())}\$',
+            'when': invert ? '!($condition)' : condition, 'labelEn': label.text.trim()};
+          try { SectionRule.fromJson(rule).condition; Navigator.pop(c, rule); }
+          catch (e) { ScaffoldMessenger.of(c).showSnackBar(SnackBar(content: Text('$e'))); }
+        }, child: Text(context.tr('Add rule')))])));
+    title.dispose(); label.dispose();
+    if (result != null) _addRule(result);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -400,6 +495,19 @@ class _CustomRulesScreenState extends ConsumerState<CustomRulesScreen> {
         ),
       ]),
       body: ListView(padding: const EdgeInsets.all(16), children: [
+        FilledButton.icon(onPressed: _buildRule, icon: const Icon(Icons.add), label: Text(context.tr('Build a rule'))),
+        const SizedBox(height: 12),
+        Text(context.tr('Custom presets'), style: theme.textTheme.titleSmall),
+        Wrap(spacing: 8, children: [
+          ActionChip(label: Text(context.tr('Say Tachanun on Pesach Sheni')), onPressed: () => _addRule({
+            'title': r'tachanun|supplication',
+            'when': 'tachanun || (hMonth == 2 && hDay == 14 && weekday && (shacharit || mincha))',
+            'labelEn': 'Tachanun on Pesach Sheni by my custom',
+          })),
+          ActionChip(label: Text(context.tr('Skip Korbanot')), onPressed: () => _addRule({'title': r'korbanot|korbanos|sacrifices', 'when': 'false', 'labelEn': 'Skipped by my custom'})),
+          ActionChip(label: Text(context.tr('Omit Tachanun')), onPressed: () => _addRule({'title': r'tachanun|supplication', 'when': 'false', 'labelEn': 'Omitted by my custom'})),
+        ]),
+        const SizedBox(height: 12),
         Text(
           'Each rule matches sections by English title (regex) and shows them only when the condition is true. '
           'Fields: title, within?, notWithin?, when, labelEn?, labelHe?, service?.',

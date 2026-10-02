@@ -73,7 +73,10 @@ final List<ZmanDef> builtInZmanim = [
   ZmanDef('tzeit6_45', 'Nightfall (R. Tucazinsky)', 'צאת הכוכבים (6.45°)', ZmanGroup.evening, (z) => z.tzeit(6.45), opinion: '6.45°'),
   ZmanDef('tzeit72', 'Nightfall (Rabbeinu Tam, 72 min)', 'צאת הכוכבים ר״ת', ZmanGroup.evening, (z) => z.tzeit72(),
       opinion: '72 min', defaultFor: {ZmanimOpinion.mga}),
-  ZmanDef('chatzotNight', 'Midnight (Chatzot HaLailah)', 'חצות הלילה', ZmanGroup.night, (z) => z.chatzotNight(), defaultFor: _all),
+  // hebcal's chatzotNight is the midnight before its date (in the early
+  // morning); the day's list wants tonight's, so ask the next day for it.
+  ZmanDef('chatzotNight', 'Midnight (Chatzot HaLailah)', 'חצות הלילה', ZmanGroup.night,
+      (z) => Zmanim(z.gloc, z.plainDate.addDays(1), z.useElevation).chatzotNight(), defaultFor: _all),
 ];
 
 final Map<String, ZmanDef> builtInByKey = {for (final z in builtInZmanim) z.key: z};

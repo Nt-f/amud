@@ -53,7 +53,25 @@ void main() {
     final c = ProviderContainer(overrides: [storageProvider.overrideWithValue(storage)]);
     addTearDown(c.dispose);
     final types = [for (final x in c.read(dashboardProvider)) x.type];
-    expect(types, ['hebrewDate', 'learning', 'minyan', 'candles', 'nextZman', 'calendar', 'zmanimList', 'upcoming']);
+    expect(types,
+        ['hebrewDate', 'levanaWindow', 'learning', 'minyan', 'candles', 'nextZman', 'calendar', 'zmanimList', 'upcoming']);
     expect(c.read(dashboardProvider).firstWhere((x) => x.type == 'calendar').span, 2);
+  });
+
+  test('saved dashboards get Kiddush Levana under the Omer, shown only while open', () async {
+    final dir = await Directory.systemTemp.createTemp('dash');
+    addTearDown(() => dir.delete(recursive: true));
+    final storage = await Storage.openAt(dir.path);
+    await storage.writeJson('dashboardVersion', 3);
+    await storage.writeJson('dashboard', [
+      for (final t in ['hebrewDate', 'omer', 'todayInSiddur', 'upcoming', 'levanaWindow'])
+        CardConfig(id: t, type: t, settings: t == 'levanaWindow' ? const {'onlyWhenOpen': false} : const {}).toJson(),
+    ]);
+    final c = ProviderContainer(overrides: [storageProvider.overrideWithValue(storage)]);
+    addTearDown(c.dispose);
+    final cards = c.read(dashboardProvider);
+    expect([for (final x in cards) x.type], ['hebrewDate', 'omer', 'levanaWindow', 'todayInSiddur', 'upcoming']);
+    // A card the user already had keeps its own setting.
+    expect(cards.firstWhere((x) => x.type == 'levanaWindow').setting<bool>('onlyWhenOpen', true), isFalse);
   });
 }

@@ -1,0 +1,6563 @@
+{
+ "nusach": "sefard",
+ "chunk": "book [Sukkot .. Simchat Torah]",
+ "leaves": {
+  "Sukkot/Order of Hoshanot": {
+   "node": "hoshanot",
+   "service": "shacharit",
+   "when": "sukkot && !hoshanaRaba"
+  },
+  "Sukkot/First Day & Chol HaMoed": {
+   "node": "hoshanot",
+   "service": "shacharit",
+   "when": "sukkot"
+  },
+  "Sukkot/Sabbath": {
+   "node": "hoshanot",
+   "service": "shacharit",
+   "when": "sukkot && shabbat"
+  },
+  "Sukkot/Hoshana Rabba": {
+   "node": "hoshanot",
+   "service": "shacharit",
+   "when": "hoshanaRaba"
+  },
+  "Simchat Torah/Hakafot": {
+   "node": "hakafot",
+   "service": "none",
+   "when": "simchatTorah"
+  },
+  "Simchat Torah/Evening Torah Reading": {
+   "node": "torah.aliyah_blessings",
+   "service": "maariv",
+   "when": "simchatTorah"
+  }
+ },
+ "he": {
+  "he:Sukkot/Order of Hoshanot:1": {
+   "kind": "heading",
+   "en": "Order of Hoshanot"
+  },
+  "he:Sukkot/Order of Hoshanot:2": {
+   "kind": "instruction",
+   "en": "Order of Hoshanot for Sukkot:"
+  },
+  "he:Sukkot/Order of Hoshanot:3": {
+   "kind": "instruction",
+   "en": "If the first day of Sukkot falls on Monday, the Hoshanot order is:"
+  },
+  "he:Sukkot/Order of Hoshanot:4": {
+   "kind": "instruction",
+   "en": "For the sake of Your truth; Foundation Stone; I shall set up my prayer; The nation - 'I am a wall'; 'God of salvations'; The nation, guarded."
+  },
+  "he:Sukkot/Order of Hoshanot:5": {
+   "kind": "instruction",
+   "en": "And if the first day falls on Tuesday, the order is:"
+  },
+  "he:Sukkot/Order of Hoshanot:6": {
+   "kind": "instruction",
+   "en": "For the sake of Your truth; Foundation Stone; I shall set up my prayer; 'God of salvations'; The nation, guarded; The Master who brings salvation."
+  },
+  "he:Sukkot/Order of Hoshanot:7": {
+   "kind": "instruction",
+   "en": "And if the first day falls on Thursday, the order is:"
+  },
+  "he:Sukkot/Order of Hoshanot:8": {
+   "kind": "instruction",
+   "en": "For the sake of Your truth; Foundation Stone; The nation, guarded; I shall set up my prayer; 'God of salvations'; The Master who brings salvation."
+  },
+  "he:Sukkot/Order of Hoshanot:9": {
+   "kind": "instruction",
+   "en": "And if the first day falls on Shabbat, the order is:"
+  },
+  "he:Sukkot/Order of Hoshanot:10": {
+   "kind": "instruction",
+   "en": "The nation, guarded; For the sake of Your truth; I shall set up my prayer; Foundation Stone; 'God of salvations'; The Master who brings salvation."
+  },
+  "he:Sukkot/Order of Hoshanot:11": {
+   "kind": "instruction",
+   "en": "Every day after the hoshanot, we say, Like You saved the great ones in Lud, etc.; Bring salvation to Your people, etc. And on Shabbat, after the Hoshana of The nation, guarded, we say, Like You saved Adam, the work of Your hands, etc."
+  },
+  "he:Sukkot/First Day & Chol HaMoed:1": {
+   "kind": "heading",
+   "en": "Hoshanot for the First Day Holiday and the Intermediate Days"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:2": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:3": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:4": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:5": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:6": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:7": {
+   "kind": "instruction",
+   "en": "For the first day holiday, except when it falls out on Shabbat. In that case, we say this on Sunday, the first day of the intermediate days of the festival:",
+   "gloss": "Said on Chol HaMoed Day 1, unless Yom Tov was on Shabbat (then said on Day 1 of Chol HaMoed)"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:8": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:9": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:10": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:11": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:12": {
+   "kind": "instruction",
+   "en": "For the first day of the intermediate days of the festival, except when the holiday falls out on Shabbat. In that case, we say this on Tuesday, the third day of the intermediate days:",
+   "gloss": "Said on Chol HaMoed Day 3, unless Yom Tov was on Shabbat (then said on Day 3 of Chol HaMoed)"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:13": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:14": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:15": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:16": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:17": {
+   "kind": "instruction",
+   "en": "For Thursday, the third day of the intermediate days of the festival, only when the holiday falls out on Monday:",
+   "gloss": "Said on Chol HaMoed Day 3, only if Yom Tov was on Monday"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:18": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:19": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:20": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:21": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:22": {
+   "kind": "instruction",
+   "en": "When the holiday falls out on Tuesday, we say this on Sunday, the fifth day of the intermediate days. When the holiday comes out on Thursday, we say this on Tuesday, the fifth day of the intermediate days. When the holiday comes out on Shabbat, we say this on Thursday, the fifth day of the intermediate days.",
+   "gloss": "Said on Chol HaMoed Day 5, depending on Yom Tov day"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:23": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:24": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:25": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:26": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:27": {
+   "kind": "instruction",
+   "en": "When the holiday falls out on Monday, we say this on Thursday, the second day of the intermediate days. When the holiday falls out on Tuesday, we say this on Thursday, the second day of the intermediate days.",
+   "gloss": "Said on Chol HaMoed Day 2, if Yom Tov was Mon or Tue"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:28": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:29": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:30": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:31": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:32": {
+   "kind": "instruction",
+   "en": "When the holiday falls out on Monday, we say this on Friday, the fourth day of the intermediate days. When the holiday falls out on Tuesday, we say this on Friday, the third day of the intermediate days. When the holiday falls out on Thursday, we say this on Monday, the fourth day of the intermediate days. When the holiday falls out on Shabbat, we say this on Wednesday the fourth day of the intermediate days.",
+   "gloss": "Said on Chol HaMoed Day 4, depending on Yom Tov day"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:33": {
+   "parts": [
+    {
+     "text": "<small><b>אֵל לְמוֹשָׁעוֹת.</b> בְּאַרְבַּע שָׁבוּעוֹת. גָּשִׁים בְּשַׁוְעוֹת. דּוֹפְקֵי עֶרֶךְ שׁוּעוֹת. <small>(נ\"א שְׁעוֹת)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " הוֹגֵי שַׁעְשְׁעוֹת. וְחִידוֹתָם מִשְׁתַּעְשְׁעוֹת. זוֹעֲקִים לְהַשְׁעוֹת. חוֹכֵי יְשׁוּעוֹת. טְפוּלִים בְּךָ שְׁעוֹת. יוֹדְעֵי בִין שָׁעוֹת. כּוֹרְעֶיךָ בְּשַׁוְעוֹת. לְהָבִין שְׁמוּעוֹת. מִפִּיךָ נִשְׁמָעוֹת. נוֹתֵן תְּשׁוּעוֹת. סְפוּרוֹת מַשְׁמָעוֹת. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(נ\"א מְשַׁמְעוֹת)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " עֵדוּת מַשְׁמִיעוֹת. פּוֹעֵל יְשׁוּעוֹת. צַדִּיק נוֹשָׁעוֹת. קִרְיַת ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(נ\"א קָרֵב)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " תְּשׁוּעוֹת. רֶגֶשׁ תְּשׁוּאוֹת. שָׁלשׁ שָׁעוֹת. הוֹשַׁע נָא: תָּחִישׁ לִתְשׁוּעוֹת. הוֹשַׁע נָא:</small>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Sukkot/First Day & Chol HaMoed:34": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:35": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:36": {
+   "kind": "prayer"
+  },
+  "he:Sukkot/First Day & Chol HaMoed:37": {
+   "kind": "instruction",
+   "en": "Full Kaddish, the Song of the Day, Le'David (Psalms 27), Reading of the Torah, Ashrei, Uva Letzion, the additional prayer, Kaveh and Aleinu."
+  },
+  "he:Sukkot/Sabbath:1": {
+   "kind": "heading",
+   "en": "Hoshanot for the Shabbat"
+  },
+  "he:Sukkot/Sabbath:2": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Sukkot/Sabbath:3": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Sukkot/Sabbath:4": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Sukkot/Sabbath:5": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Sukkot/Sabbath:6": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Sukkot/Sabbath:7": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Sukkot/Sabbath:8": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Sukkot/Sabbath:9": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Sukkot/Sabbath:10": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Sukkot/Sabbath:11": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Sukkot/Sabbath:12": {
+   "kind": "instruction",
+   "en": "Full Kaddish, the Song of the Day, Le'David, Kabbalat Shabbat, Torah reading, Yekum Purkan, Ashrei, Musaf, Kaveh and Aleinu:"
+  },
+  "he:Sukkot/Hoshana Rabba:1": {
+   "kind": "heading",
+   "en": "Hoshanot for Hoshana Rabba"
+  },
+  "he:Sukkot/Hoshana Rabba:2": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:3": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:4": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:5": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:6": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:7": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:8": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:9": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:10": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:11": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:12": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:13": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:14": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:15": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:16": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:17": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:18": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:19": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:20": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:21": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:22": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:23": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:24": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:25": {
+   "kind": "instruction",
+   "en": "Remove the rings from the lulav before the hoshanot."
+  },
+  "he:Sukkot/Hoshana Rabba:26": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:27": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:28": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:29": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:30": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:31": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:32": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:33": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:34": {
+   "parts": [
+    {
+     "text": "<small><small><b><small>(חזן וקהל:)</small>",
+     "kind": "instruction",
+     "en": "(Chazzan and Congregation:)"
+    },
+    {
+     "text": "</b></small> <b>הוֹשַׁע נָא אֵל נָא. אָנָּא הוֹשִׁיעָה נָּא:</b> </small>",
+     "kind": "prayer",
+     "role": "together"
+    }
+   ]
+  },
+  "he:Sukkot/Hoshana Rabba:35": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:36": {
+   "kind": "instruction",
+   "en": "Put down the lulav, take the hoshanah, and hold it until the beating."
+  },
+  "he:Sukkot/Hoshana Rabba:37": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:38": {
+   "parts": [
+    {
+     "text": "<small><small><b><small>(חזן וקהל:)</small>",
+     "kind": "instruction",
+     "en": "(Chazzan and Congregation:)"
+    },
+    {
+     "text": "</b></small> <b>רַחֶם נָא קְהַל עֲדַת יְשֻׁרוּן. סְלַח וּמְחַל עֲוֹנָם וְהוֹשִׁיעֵנוּ אֱלֹהֵי יִשְׁעֵנוּ:</b> </small>",
+     "kind": "prayer",
+     "role": "together"
+    }
+   ]
+  },
+  "he:Sukkot/Hoshana Rabba:39": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:40": {
+   "parts": [
+    {
+     "text": "<small><small><b><small>(חזן וקהל:)</small>",
+     "kind": "instruction",
+     "en": "(Chazzan and Congregation:)"
+    },
+    {
+     "text": "</b></small> <b>שַׁעֲרֵי שָׁמַיִם פְּתַח. וְאוֹצָרְךָ הַטּוֹב לָנוּ תִפְתַּח. תּוֹשִׁיעֵנוּ וְרִיב אַל תִּמְתַּח. וְהוֹשִׁיעֵנוּ אֱלֹהֵי יִשְׁעֵנוּ:</b> </small>",
+     "kind": "prayer",
+     "role": "together"
+    }
+   ]
+  },
+  "he:Sukkot/Hoshana Rabba:41": {
+   "parts": [
+    {
+     "text": "<small><small><b><small>(חזן:)</small>",
+     "kind": "instruction",
+     "en": "(Chazzan:)"
+    },
+    {
+     "text": "</b></small> <b>קוֹל מְבַשֵּׂר מְבַשֵּׂר וְאוֹמֵר:</b> </small>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Sukkot/Hoshana Rabba:42": {
+   "parts": [
+    {
+     "text": "<small><small><b><small>(והקהל חוזר:)</small>",
+     "kind": "instruction",
+     "en": "(Congregation repeats:)"
+    },
+    {
+     "text": "</b></small> <b>קוֹל מְבַשֵּׂר מְבַשֵּׂר וְאוֹמֵר:</b> </small>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Sukkot/Hoshana Rabba:43": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:44": {
+   "parts": [
+    {
+     "text": "<small><small><b><small>(חזן ג\"פ:)</small>",
+     "kind": "instruction",
+     "en": "(Chazzan three times:)"
+    },
+    {
+     "text": "</b></small> <b>קוֹל מְבַשֵּׂר מְבַשֵּׂר וְאוֹמֵר:</b> </small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Sukkot/Hoshana Rabba:45": {
+   "parts": [
+    {
+     "text": "<small><small><b><small>(והקהל חוזר ג\"פ:)</small>",
+     "kind": "instruction",
+     "en": "(Congregation repeats three times:)"
+    },
+    {
+     "text": "</b></small> <b>קוֹל מְבַשֵּׂר מְבַשֵּׂר וְאוֹמֵר:</b> </small>",
+     "kind": "prayer",
+     "role": "congregation",
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Sukkot/Hoshana Rabba:46": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Sukkot/Hoshana Rabba:47": {
+   "kind": "instruction",
+   "en": "The chazzan says Kaddish Titkabal. Then he puts down the lulav, takes the hoshanot, and beats them. One must beat the willow specifically on the ground, as explained in the Zohar. There should be five willow branches, no more and no less. And he should beat them only five times, no more and no less."
+  },
+  "he:Sukkot/Hoshana Rabba:48": {
+   "kind": "instruction",
+   "en": "After beating the willow, say this supplication:"
+  },
+  "he:Sukkot/Hoshana Rabba:49": {
+   "parts": [
+    {
+     "text": "<small><b>יְהִי</b> רָצוֹן מִלְפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ הַבּוֹחֵר בִּנְבִיאִים טוֹבִים וּבְמִנְהָגֵיהֶם הַטּוֹבִים שֶׁתְּקַבֵּל בְּרַחֲמִים וּבְרָצוֹן אֶת תְּפִלָּתֵנוּ וַהֲקָפוֹתֵינוּ וּזְכוֹר לָנוּ זְכוּת שִׁבְעַת תְּמִימֶיךָ וְתָסִיר מְחִיצַת הַבַּרְזֶל הַמַּפְסֶקֶת בֵּינֵינוּ וּבֵינֶיךָ וְתַאֲזִין שַׁוְעָתֵנוּ וְתֵיטִיב לָנוּ הַחֲתִימָה תּוֹלֶה אֶרֶץ עַל בְּלִימָה וְחָתְמֵנוּ בְּסֵפֶר חַיִּים טוֹבִים. וְהַיּוֹם הַזֶּה תִּתֵּן בִּשְׁכִינַת עֻזֶּךָ חָמֵשׁ גְּבוּרוֹת מְמֻתָּקוֹת עַל יְדֵי חֲבִיטַת עֲרָבָה מִנְהַג נְבִיאֶיךָ הַקְּדוֹשִׁים וְתִתְעוֹרֵר הָאַהֲבָה בֵּינֵיהֶם וּתְנַשְּׁקֵנוּ מִנְּשִׁיקוֹת פִּיךָ מַמְתֶּקֶת כָּל הַגְּבוּרוֹת וְכָל הַדִּינִין וְתָאִיר לִשְׁכִינַת עֻזֶּךָ בְשֵׁם <small> <small>(יו\"ד ה\"א וא\"ו)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " </small> שֶׁהוּא טַל אוֹרוֹת טַלֶּךָ וּמִשָּׁם תַּשְׁפִּיעַ שֶׁפַע לְעַבְדְּךָ הַמִּתְפַּלֵּל ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small> <small>(<b>פב\"פ</b>)</small>",
+     "kind": "instruction",
+     "en": "(for the person praying)"
+    },
+    {
+     "text": " </small> לְפָנֶיךָ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(מְחִילָה)</small>",
+     "kind": "instruction",
+     "en": "(forgiveness)"
+    },
+    {
+     "text": " שֶׁתַּאֲרִיךְ יָמָיו וְתִמְחוֹל לוֹ חֲטָאָיו וַעֲוֹנוֹתָיו וּפְשָׁעָיו וְתִפְשׁוֹט יְמִינְךָ וְיָדְךָ לְקַבְּלֵנִי בִּתְשׁוּבָה שְׁלֵמָה לְפָנֶיךָ וְאוֹצָרְךָ הַטּוֹב תִּפְתַּח לְהַשְׂבִּיעַ מַיִם נֶפֶשׁ שׁוֹקֵקָה כְּמוֹ שֶׁכָּתוּב יִפְתַּח יְהֹוָה לְךָ אֶת אוֹצָרוֹ הַטּוֹב אֶת הַשָּׁמַיִם לָתֵת מְטַר אַרְצְךָ בְּעִתּוֹ וּלְבָרֵךְ אֶת כָּל מַעֲשֵׂה יָדֶךָ אָמֵן: </small>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Sukkot/Hoshana Rabba:50": {
+   "kind": "instruction",
+   "en": "The Song of the Day, Le'David (Psalm 27), Torah reading, Ashrei, Uva LeTziyon, Musaf, Kaveh El HaShem, and Aleinu."
+  },
+  "he:Simchat Torah/Hakafot:1": {
+   "kind": "heading",
+   "en": "Hakafot for Simchat Torah"
+  },
+  "he:Simchat Torah/Hakafot:2": {
+   "kind": "instruction",
+   "en": "Custom: Take out all Torah scrolls for evening and morning. Evening: circle 7 times, return all but one, read Zot HaBerakha with 3 men. Day: many readers, all children called. Adult blesses, children listen. Read 'The angel who redeems'."
+  },
+  "he:Simchat Torah/Hakafot:3": {
+   "kind": "instruction",
+   "en": "The chazzan says each verse and the congregation repeats it."
+  },
+  "he:Simchat Torah/Hakafot:4": {
+   "parts": [
+    {
+     "text": "<small><b>אַתָּה הָרְאֵתָ לָדַעַת כִּי יְהֹוָה הוּא הָאֱלֹהִים אֵין עוֹד מִלְבַדּוֹ: לְעֹשֵׂה נִפְלָאוֹת גְּדוֹלוֹת לְבַדּוֹ כִּי לְעוֹלָם חַסְדּוֹ: אֵין כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי וְאֵין כְּמַעֲשֶׂיךָ: יְהִי כְבוֹד יְהֹוָה לְעוֹלָם יִשְׂמַח יְהֹוָה בְּמַעֲשָׂיו: יְהִי שֵׁם יְהֹוָה מְבֹרָךְ מֵעַתָּה וְעַד עוֹלָם: יְהִי יְהֹוָה אֱלֹהֵינוּ עִמָּנוּ כַּאֲשֶׁר הָיָה עִם אֲבוֹתֵינוּ אַל יַעַזְבֵנוּ וְאַל יִטְּשֵׁנוּ: וְאִמְרוּ הוֹשִׁיעֵנוּ אֱלֹהֵי יִשְׁעֵנוּ וְקַבְּצֵנוּ וְהַצִּילֵנוּ מִן הַגּוֹיִם לְהוֹדוֹת לְשֵׁם קָדְשֶׁךָ לְהִשְׁתַּבֵּחַ בִּתְהִלָּתֶךָ: יְהֹוָה מֶלֶךְ יְהֹוָה מָלָךְ יְהֹוָה יִמְלוֹךְ לְעוֹלָם וָעֶד: יְהֹוָה עֹז לְעַמּוֹ יִתֵּן יְהֹוָה יְבָרֵךְ אֶת עַמּוֹ בַשָּׁלוֹם: וְיִהְיוּ נָא אֲמָרֵינוּ לְרָצוֹן לִפְנֵי אֲדוֹן כֹּל: <small>פותחין הארון:</small>",
+     "kind": "prayer",
+     "role": "chazzan_then_congregation"
+    },
+    {
+     "text": " וַיְהִי בִּנְסֹעַ הָאָרוֹן וַיֹּאמֶר משֶׁה קוּמָה יְהֹוָה וְיָפוּצוּ אֹיְבֶיךָ וְיָנֻסוּ מְשַׂנְאֶיךָ מִפָּנֶיךָ: קוּמָה יְהֹוָה לִמְנוּחָתֶךָ אַתָּה וַאֲרוֹן עֻזֶּךָ: כֹּהֲנֶיךָ יִלְבְּשׁוּ צֶדֶק וַחֲסִידֶיךָ יְרַנֵּנוּ: בַּעֲבוּר דָּוִד עַבְדֶּךָ אַל תָּשֵׁב פְּנֵי מְשִׁיחֶךָ: וְאָמַר בַּיּוֹם הַהוּא הִנֵּה אֱלֹהֵינוּ זֶה. קִוִּינוּ לוֹ וְיוֹשִׁיעֵנוּ. זֶה יְהֹוָה קִוִּינוּ לוֹ נָגִילָה וְנִשְׂמְחָה בִּישׁוּעָתוֹ: מַלְכוּתְךָ מַלְכוּת כָּל עֹלָמִים וּמֶמְשַׁלְתְּךָ בְּכָל דּוֹר וָדֹר: כִּי מִצִּיּוֹן תֵּצֵא תוֹרָה וּדְבַר יְהֹוָה מִירוּשָׁלָיִם:</b>  </small>",
+     "kind": "prayer",
+     "role": "chazzan_then_congregation"
+    }
+   ]
+  },
+  "he:Simchat Torah/Hakafot:5": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:6": {
+   "kind": "instruction",
+   "en": "These supplications are from the book Avodat Hakodesh."
+  },
+  "he:Simchat Torah/Hakafot:7": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:8": {
+   "kind": "instruction",
+   "en": "Take out all Torah scrolls, circle the bimah 7 times, and say:"
+  },
+  "he:Simchat Torah/Hakafot:9": {
+   "kind": "heading",
+   "en": "Circle 1:"
+  },
+  "he:Simchat Torah/Hakafot:10": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:11": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:12": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:13": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:14": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:15": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:16": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:17": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:18": {
+   "parts": [
+    {
+     "text": "<small><small><b>יְהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ אַב הָרַחֲמִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שֶׁבִּזְכוּת הַקָּפָה רִאשׁוֹנָה שֶׁהִקַּפְנוּ לַתֵּבָה בְּשִׂמְחַת תּוֹרָתֶךָ הָרוֹמֶזֶת לַחֶסֶ\"ד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יְהִי חַסְדְּךָ יְהֹוָה עָלֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּתְזַכֵּנוּ לְעָבְדְּךָ בְּיִרְאָה וְאַהֲבָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתִהְיֶה אַהֲבָתְךָ תְּקוּעָה בְלִבֵּנוּ תָּמִיד כָּל יְמֵי חַיֵּינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתִהְיֶה יִרְאָתְךָ עַל פָּנֵינוּ לְבִלְתִּי נֶחֱטָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּבְכָל מִדָּה וּמִדָּה שֶׁתִּמְדֹּד לָנוּ נוֹדֶה לְךָ בִּמְאֹד מְאֹד. וּתְזַכֵּנוּ לְהַשְׂכִּיל לְהֵטִיב וְלִגְמֹל חֶסֶד בְּכָל כֹּחֵנוּ בְּגוּפֵנוּ וּמָמוֹנֵינוּ בְּלֵבָב שָׁלֵם. וְיִהְיוּ כָּל מַעֲשֵׂינוּ לְשִׁמְךָ וּלְזִכְרְךָ תַּאֲוַת נָפֶשׁ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּתְזַכֵּנוּ לְהִתְרַחֵק מֵהַקִּנְאָה וְאַכְזָרִיּוּת וְכַעַס,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְלִקְנוֹת מִדַּת הַחֶסֶד בְּקִנְיָן גָּמוּר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּלְמַעַן תּוֹרָתְךָ הַקְּדוֹשָׁה הַנִּתֶּנֶת בְּיָמִין. וּלְמַעַן אַבְרָהָם אֲהוּבֶךָ אִישׁ הַחֶסֶד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " תְּמַלֵּא מִשְׁאֲלוֹת לִבֵּנוּ לְטוֹבָה. יִוָּדַע לְעֵינֵי הַכֹּל טוּבְךָ וְחַסְדְּךָ עִמָּנוּ. <small>(ר\"ת חֶסֶד)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " חַסְדֵּי יְהֹוָה עוֹלָם אָשִׁירָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְדֹר וָדֹר אוֹדִיעַ אֱמוּנָתְךָ בְּפִי: סִתְרִי וּמָגִנִּי אָתָּה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לִדְבָרְךָ יִחָלְתִּי: דְּרָכֶיךָ יְהֹוָה הוֹדִיעֵנִי,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֹרְחוֹתֶיךָ לַמְּדֵנִי: יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהֹוָה צוּרִי וְגֹאֲלִי:</small> </small>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Simchat Torah/Hakafot:19": {
+   "kind": "heading",
+   "en": "Circle 2:"
+  },
+  "he:Simchat Torah/Hakafot:20": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:21": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:22": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:23": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:24": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:25": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:26": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:27": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:28": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:29": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:30": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:31": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:32": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:33": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:34": {
+   "parts": [
+    {
+     "text": "<small><b>יְהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שֶׁבִּזְכוּת הַקָּפָה הַזֹּאת הַשֵּׁנִית הָרוֹמֶזֶת לַגְּבוּרָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " תְּזַכֵּנוּ לְהִתְגַּבֵּר עַל יִצְרֵנוּ. וְתֵן בָּנוּ כֹּחַ לִכְבֹּשׁ תַּאֲוֹתֵינוּ הַגּוּפָנִיּוֹת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּלְמַעַן יִצְחָק עֲקֵדֶךָ נֶאֱזָר בִּגְבוּרָ\"ה. עוֹרְרָה אֶת גְּבוּרָתֶיךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּלְכָה לִישׁוּעָתָה לָנוּ. וּכְמוֹ שֶׁכָּבַשׁ אַבְרָהָם אָבִינוּ אֶת רַחֲמָיו לַעֲשֹוֹת רְצוֹנְךָ בְּלֵבָב שָׁלֵם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כֵּן יִכְבְּשׁוּ רַחֲמֶיךָ אֶת כַּעַסֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיָגֹלּוּ רַחֲמֶיךָ עַל מִדּוֹתֶיךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתִתְנַהֵג עִמָּנוּ יְהֹוָה אֱלֹהֵינוּ בְּמִדַּת הַחֶסֶד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתִכָּנֵס לָנוּ לִפְנִים מִשּׁוּרַת הַדִּין,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּבְטוּבְךָ הַגָּדוֹל יָשׁוּב חֲרוֹן אַפְּךָ מֵעַמְּךָ וּמֵעִירְךָ וּמֵאַרְצְךָ וּמִנַּחֲלָתֶךָ. וּתְבַטֵּל מֵעָלֵינוּ כָּל גְּזֵרוֹת קָשׁוֹת וְרָעוֹת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתִגְזֹר עָלֵינוּ גְּזֵרוֹת טוֹבוֹת כְּרֹב רַחֲמֶיךָ. <small>(ר\"ת גְּבוּרָ\"ה)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " גַּם מִזֵּדִים חֲשֹךְ עַבְדֶּךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אַל יִמְשְׁלוּ בִי אָז אֵיתָם. בְּאֶבְרָתוֹ יָסֶךְ לָךְ וְתַחַת כְּנָפָיו תֶּחְסֶה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " צִנָּה וְסֹחֵרָה אֲמִתּוֹ. וַאֲנַחְנוּ עַמְּךָ וְצֹאן מַרְעִיתֶךָ נוֹדֶה לְךָ לְעוֹלָם לְדוֹר וָדוֹר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " נְסַפֵּר תְּהִלָּתֶךָ. רֹעֵה יִשְׂרָאֵל הַאֲזִינָה נֹהֵג כַּצֹּאן יוֹסֵף,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יֹשֵׁב הַכְּרֻבִים הוֹפִיעָה. הוֹרֵנִי יְהֹוָה דַּרְכֶּךָ אֲהַלֵּךְ בַּאֲמִתֶּךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יַחֵד לְבָבִי לְיִרְאָה שְׁמֶךָ. יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהֹוָה צוּרִי וְגֹאֲלִי: </small> ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Simchat Torah/Hakafot:35": {
+   "kind": "heading",
+   "en": "Circle 3:"
+  },
+  "he:Simchat Torah/Hakafot:36": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:37": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:38": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:39": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:40": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:41": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:42": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:43": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:44": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:45": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:46": {
+   "parts": [
+    {
+     "text": "<b>יְהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שֶׁבִּזְכוּת הַקָּפָה שְׁלִישִׁית הָרוֹמֶזֶת לְתִפְאֶרֶת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " תְּזַכֵּנוּ לִהְיוֹת מֵעֲבָדֶיךָ הַנֶּאֱמַר עֲלֵיהֶם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יִשְׂרָאֵל אֲשֶׁר בְּךָ אֶתְפָּאַר. וּתְזַכֵּנוּ לַעֲסֹק בְּתוֹרָתְךָ הַקְּדוֹשָׁה תּוֹרַת אֱמֶת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתִהְיֶה כָּל מְגַמָּתֵנוּ לְבַקֵּשׁ הָאֱמֶת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּתְחָנֵּנוּ לְמַעַן דַּעַת אֲמִתּוּת דִּינֵי הַתּוֹרָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּתְזַכֵּנוּ לְהִתְרַחֵק מֵהַשֶּׁקֶר וְהַכָּזָב,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְכָל פִּנּוֹת שֶׁנִּפְנֶה יִהְיוּ עַל דְּבַר אֱמֶת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּבִזְכוּת תּוֹרַת אֱמֶת וּזְכוּת יַעֲקֹב אָבִינוּ ע\"ה הֶחָתוּם בְּתִפְאֶרֶת מִדַּת אֱמֶת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּכְתִיב תִּתֵּן אֱמֶת לְיַעֲקֹב,",
+     "kind": "prayer"
+    },
+    {
+     "text": " תַּעֲנֵנוּ וְתַעֲשֶׂה בַּקָּשָׁתֵנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְנִקְרֵאת יְרוּשָׁלַיִם עִיר הָאֱמֶת. עַל כֵּן נְקַוֶּה לְךָ יְהֹוָה אֱלֹהֵינוּ לִרְאוֹת מְהֵרָה בְּתִפְאֶרֶת עֻזֶּךָ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(ר\"ת תִּפְאֶרֶת)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ". תִּקְרַב רִנָּתִי לְפָנֶיךָ יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כִּדְבָרְךָ הֲבִינֵנִי. פְּעָמַי הָכֵן בְּאִמְרָתֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאַל תַּשְׁלֶט בִּי כָל אָוֶן. אַשְׁרֵי אָדָם עוֹז לוֹ בָךְ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " מְסִלּוֹת בִּלְבָבָם. רַחֲמֶיךָ רַבִּים יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כְּמִשְׁפָּטֶיךָ חַיֵּנִי. תְּהִלַּת יְהֹוָה יְדַבֶּר פִּי וִיבָרֵךְ כָּל בָּשָׂר שֵׁם קָדְשׁוֹ לְעוֹלָם וָעֶד. יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהֹוָה צוּרִי וְגוֹאֲלִי:  ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Simchat Torah/Hakafot:47": {
+   "kind": "heading",
+   "en": "Circle 4:"
+  },
+  "he:Simchat Torah/Hakafot:48": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Evening Torah Reading:1": {
+   "kind": "heading",
+   "en": "Order of the reading for Simchat Torah night"
+  },
+  "he:Simchat Torah/Evening Torah Reading:2": {
+   "kind": "prayer",
+   "role": "oleh",
+   "en": "Kohen"
+  },
+  "he:Simchat Torah/Evening Torah Reading:3": {
+   "parts": [
+    {
+     "text": "<b>לוי</b> ",
+     "kind": "prayer",
+     "role": "oleh",
+     "en": "Levi"
+    },
+    {
+     "text": "<small> <small>(ובקצת קהילות קוראים כאן לכהן)</small>",
+     "kind": "instruction",
+     "en": "(In some communities, a Kohen is called here)"
+    },
+    {
+     "text": ": </small> וְלֹא הִכִּירוֹ כִּי הָיוּ יָדָיו כִּידֵי עֵשָׂו אָחִיו שְׂעִרֹת וַיְבָרְכֵהוּ: וַיֹּאמֶר אַתָּה זֶה בְּנִי עֵשָׂו וַיֹּאמֶר אָנִי: וַיֹּאמֶר הַגִּשָׁה לִּי וְאֹכְלָה מִצֵּיד בְּנִי לְמַעַן תְּבָרֶכְךָ נַפְשִׁי וַיַּגֶּשׁ לוֹ וַיֹּאכַל וַיָּבֵא לוֹ יַיִן וַיֵּשְׁתְּ: וַיֹּאמֶר אֵלָיו יִצְחָק אָבִיו גְּשָׁה נָּא וּשְׁקָה לִּי בְּנִי: וַיִּגַּשׁ וַיִּשַּׁק לוֹ וַיָּרַח אֶת רֵיחַ בְּגָדָיו וַיְבָרְכֵהוּ וַיֹּאמֶר רְאֵה רֵיחַ בְּנִי כְּרֵיחַ שָׂדֶה אֲשֶׁר בֵּרְכוֹ יְהוָה:  וְיִתֶּן לְךָ הָאֱלֹהִים מִטַּל הַשָּׁמַיִם וּמִשְׁמַנֵּי הָאָרֶץ וְרֹב דָּגָן וְתִירֹשׁ: יַעַבְדוּךָ עַמִּים ",
+     "kind": "prayer",
+     "role": "congregation"
+    },
+    {
+     "text": "<small>(וישתחו)</small>",
+     "kind": "instruction",
+     "en": "(and bows)"
+    },
+    {
+     "text": " וְיִשְׁתַּחֲווּ לְךָ לְאֻמִּים הֱוֵה גְבִיר לְאַחֶיךָ וְיִשְׁתַּחֲוּוּ לְךָ בְּנֵי אִמֶּךָ אֹרְרֶיךָ אָרוּר וּמְבָרְכֶיךָ בָּרוּךְ:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Simchat Torah/Evening Torah Reading:4": {
+   "parts": [
+    {
+     "text": "<b>ישראל</b> ",
+     "kind": "prayer",
+     "role": "oleh",
+     "en": "Israel"
+    },
+    {
+     "text": "<small> <small>(בקצת קהילות קוראים כאן ללוי)</small>",
+     "kind": "instruction",
+     "en": "(In some communities, a Levi is called here)"
+    },
+    {
+     "text": ": </small> וַיֹּאמֶר יִשְׂרָאֵל אֶל יוֹסֵף רְאֹה פָנֶיךָ לֹא פִלָּלְתִּי וְהִנֵּה הֶרְאָה אֹתִי אֱלֹהִים גַּם אֶת זַרְעֶךָ: וַיּוֹצֵא יוֹסֵף אֹתָם מֵעִם בִּרְכָּיו וַיִּשְׁתַּחוּ לְאַפָּיו אָרְצָה: וַיִּקַּח יוֹסֵף אֶת שְׁנֵיהֶם אֶת אֶפְרַיִם בִּימִינוֹ מִשְּׂמֹאל יִשְׂרָאֵל וְאֶת מְנַשֶּׁה בִשְׂמֹאלוֹ מִימִין יִשְׂרָאֵל וַיַּגֵּשׁ אֵלָיו: וַיִּשְׁלַח יִשְׂרָאֵל אֶת יְמִינוֹ וַיָּשֶׁת עַל רֹאשׁ אֶפְרַיִם וְהוּא הַצָּעִיר וְאֶת שְׂמֹאלוֹ עַל רֹאשׁ מְנַשֶּׁה שִׂכֵּל אֶת יָדָיו כִּי מְנַשֶּׁה הַבְּכוֹר: וַיְבָרֶךְ אֶת יוֹסֵף וַיֹּאמַר הָאֱלֹהִים אֲשֶׁר הִתְהַלְּכוּ אֲבֹתַי לְפָנָיו אַבְרָהָם וְיִצְחָק הָאֱלֹהִים הָרֹעֶה אֹתִי מֵעוֹדִי עַד הַיּוֹם הַזֶּה: הַמַּלְאָךְ הַגֹּאֵל אֹתִי מִכָּל רָע יְבָרֵךְ אֶת הַנְּעָרִים וְיִקָּרֵא בָהֶם שְׁמִי וְשֵׁם אֲבֹתַי אַבְרָהָם וְיִצְחָק וְיִדְגּוּ לָרֹב בְּקֶרֶב הָאָרֶץ:",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Simchat Torah/Evening Torah Reading:5": {
+   "parts": [
+    {
+     "text": "<b><b><small> <small>(בקצת קהילות קוראים כאן לישראל)</small>",
+     "kind": "instruction",
+     "en": "(In some communities, an Israelite is called here)"
+    },
+    {
+     "text": ": </small> וַיַּרְא בִּלְעָם כִּי טוֹב בְּעֵינֵי יְהוָה לְבָרֵךְ אֶת יִשְׂרָאֵל וְלֹא הָלַךְ כְּפַעַם בְּפַעַם לִקְרַאת נְחָשִׁים וַיָּשֶׁת אֶל הַמִּדְבָּר פָּנָיו: וַיִּשָּׂא בִלְעָם אֶת עֵינָיו וַיַּרְא אֶת יִשְׂרָאֵל שֹׁכֵן לִשְׁבָטָיו וַתְּהִי עָלָיו רוּחַ אֱלֹהִים: וַיִּשָּׂא מְשָׁלוֹ וַיֹּאמַר נְאֻם בִּלְעָם בְּנוֹ בְעֹר וּנְאֻם הַגֶּבֶר שְׁתֻם הָעָיִן: נְאֻם שֹׁמֵעַ אִמְרֵי אֵל אֲשֶׁר מַחֲזֵה שַׁדַּי יֶחֱזֶה נֹפֵל וּגְלוּי עֵינָיִם: מַה טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל: כִּנְחָלִים נִטָּיוּ כְּגַנֹּת עֲלֵי נָהָר כַּאֲהָלִים נָטַע יְהוָה כַּאֲרָזִים עֲלֵי מָיִם: יִזַּל מַיִם מִדָּלְיָו וְזַרְעוֹ בְּמַיִם רַבִּים וְיָרֹם מֵאֲגַג מַלְכּוֹ וְתִנַּשֵּׂא מַלְכֻתוֹ: אֵל מוֹצִיאוֹ מִמִּצְרַיִם כְּתוֹעֲפֹת רְאֵם לוֹ יֹאכַל גּוֹיִם צָרָיו וְעַצְמֹתֵיהֶם יְגָרֵם וְחִצָּיו יִמְחָץ: כָּרַע שָׁכַב כַּאֲרִי וּכְלָבִיא מִי יְקִימֶנּוּ מְבָרֲכֶיךָ בָרוּךְ וְאֹרְרֶיךָ אָרוּר: וַיִּחַר אַף בָּלָק אֶל בִּלְעָם וַיִּסְפֹּק אֶת כַּפָּיו וַיֹּאמֶר בָּלָק אֶל בִּלְעָם לָקֹב אֹיְבַי קְרָאתִיךָ וְהִנֵּה בֵּרַכְתָּ בָרֵךְ זֶה שָׁלֹשׁ פְּעָמִים: וְעַתָּה בְּרַח לְךָ אֶל מְקוֹמֶךָ אָמַרְתִּי כַּבֵּד אֲכַבֶּדְךָ וְהִנֵּה מְנָעֲךָ יְהוָה מִכָּבוֹד: וַיֹּאמֶר בִּלְעָם אֶל בָּלָק הֲלֹא גַּם אֶל מַלְאָכֶיךָ אֲשֶׁר שָׁלַחְתָּ אֵלַי דִּבַּרְתִּי לֵאמֹר: אִם יִתֶּן לִי בָלָק מְלֹא בֵיתוֹ כֶּסֶף וְזָהָב לֹא אוּכַל לַעֲבֹר אֶת פִּי יְהוָה לַעֲשׂוֹת טוֹבָה אוֹ רָעָה מִלִּבִּי אֲשֶׁר יְדַבֵּר יְהוָה אֹתוֹ אֲדַבֵּר:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Simchat Torah/Evening Torah Reading:6": {
+   "kind": "instruction",
+   "en": "And they say Yehalelu etc. and return the Torah to the ark; in the morning they say etc., and afterwards they say Aleinu, Kaddish Yatom."
+  },
+  "he:Simchat Torah/Hakafot:65": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Simchat Torah/Hakafot:66": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Simchat Torah/Hakafot:67": {
+   "parts": [
+    {
+     "text": "<b><b>יְהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " שֶׁתַּעֲשֶׂה לְמַעַן רַחֲמֶיךָ וּלְמַעַן הַקָּפָה חֲמִישִׁית הָרוֹמֶזֶת לְמִדַּת הַהוֹד. וּתְזַכֵּנוּ לְכַבֵּד הַתּוֹרָה וְלוֹמְדֶיהָ,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וּלְהַחֲזִיק וּלְאַמֵּץ בִּרְכַּיִם כּוֹשְׁלוֹת,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " הַנֵּי בִּרְכֵּי דְרַבָּנָן דְּשַׁלְהֵי,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וּתְזַכֵּנוּ שֶׁלֹּא נֵלֵךְ בַּעֲצַת רְשָׁעִים,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וְלֹא נִהְיֶה מֵהוֹלְכֵי רָכִיל,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וּלְמַעַן זְכוּת אַהֲרֹן קְדוֹשׁ יְהֹוָה הֶחָתוּם בְּמִדַּת הוֹד לְטוֹבָה,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וּתְזַכֵּנוּ לִרְדֹּף שָׁלוֹם וּלְבַקֵּשׁ שָׁלוֹם וְלָשִׂים שָׁלוֹם וּלְהַרְבּוֹת שָׁלוֹם בָּעוֹלָם וּלְמֶעְבַּד עוּבְדָא דְאַהֲרֹן וְתָשִׂים שָׁלוֹם בֵּינֵינוּ וּתְבָרְכֵנוּ לְחַיִּים טוֹבִים וּלְשָׁלוֹם,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וּבָא לְצִיּוֹן גּוֹאֵל. גָּדוֹל כְּבוֹדוֹ בִּישׁוּעָתֶךָ,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " הוֹד וְהָדָר תְּשַׁוֶּה עָלָיו בִּמְהֵרָה בְיָמֵינוּ ",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": "<small>(ר\"ת הוֹד)</small>",
+     "kind": "instruction",
+     "en": "(Acrostic HOD)"
+    },
+    {
+     "text": ". הַשָּׂם נַפְשֵׁנוּ בַּחַיִּים,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וְלֹא נָתַן לַמּוֹט רַגְלֵינוּ. וַיְהִי יְהֹוָה לִי לְמִשְׂגָּב,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וֵאלֹהַי לְצוּר מַחְסִי. דֶּרֶךְ מִצְוֹתֶיךָ אָרוּץ,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " כִּי תַרְחִיב לִבִּי. יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהֹוָה צוּרִי וְגֹאֲלִי:  </b>",
+     "kind": "prayer",
+     "role": "together"
+    }
+   ]
+  },
+  "he:Simchat Torah/Hakafot:68": {
+   "kind": "instruction",
+   "en": "Circle 6:"
+  },
+  "he:Simchat Torah/Hakafot:69": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Simchat Torah/Hakafot:70": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Simchat Torah/Hakafot:71": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Simchat Torah/Hakafot:72": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Simchat Torah/Hakafot:73": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Simchat Torah/Hakafot:74": {
+   "parts": [
+    {
+     "text": "<b>יְהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " שֶׁתַּעֲשֶׂה לְמַעַן רַחֲמֶיךָ וּלְמַעַן זְכוּת הַקָּפָה הַשִּׁשִּׁית הָרוֹמֶזֶת לַיְּסוֹד,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וְתַצִּילֵנוּ מִכָּל חֵטְא וְעָוֹן וְהִרְהוּר רָע. וְאַתָּה בְּטוּבְךָ הַגָּדוֹל תְּלַקֵּט אֲשֶׁר פִּזַּרְנוּ,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וּתְיַחֵד אֲשֶׁר הִפְרַדְנוּ וּתְתַקֵּן אֲשֶׁר עִוַּתְנוּ,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וְתוֹצִיא לָאוֹר כָּל הַנִּיצוֹצוֹת שֶׁל קְדֻשָּׁה אֲשֶׁר נִטְמְעוּ בֵּין הַקְּלִפּוֹת,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " חַיִ\"ל בָּלַ\"ע וַיְקִיאֶנּוּ,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " מִבִּטְנוֹ יוֹרִישֶׁנּוּ אֵל. וּתְזַכֵּנוּ לִשְׁמֹר עַצְמֵנוּ וּדְרָכֵינוּ מִכָּל חֵטְא,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וְלֹא יִמָּצֵא בָנוּ וְלֹא בְּזַרְעֵנוּ שׁוּם פְּגָם,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וְיִהְיֶה כָּל זַרְעֵנוּ זֶרַע קֹדֶשׁ. וּבִזְכוּת יוֹסֵף צַדִּיקֶךָ הֶחָתוּם בְּמִדַּת הַיְסוֹד תְּרַחֵם עָלֵינוּ אֵל שַׁדַּי,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " יַסֵּד יְסוֹ\"ד צִיּוֹן תְּרוֹמַמְנָה קַרְנוֹת צַדִּיק,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וּבִזְכוּת יוֹסֵף יֹסִיף יְהֹוָה שֵׁנִית יָדוֹ וְיִגְאָלֵנוּ גְּאֻלַּת עוֹלָם בִּמְהֵרָה בְיָמֵינוּ. ",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": "<small>(ר\"ת יְסוֹד)</small>",
+     "kind": "instruction",
+     "en": "(Acrostic YESOD)"
+    },
+    {
+     "text": ". יִשָּׂא בְרָכָה מֵאֵת יְהֹוָה,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " וּצְדָקָה מֵאֱלֹהֵי יִשְׁעוֹ. סוּר מֵרָע וַעֲשֵׂה טוֹב,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " בַּקֵּשׁ שָׁלוֹם וְרָדְפֵהוּ. וְהָיָה כְּעֵץ שָׁתוּל עַל פַּלְגֵי מַיִם אֲשֶׁר פִּרְיוֹ יִתֵּן בְּעִתּוֹ וְעָלֵהוּ לֹא יִבֹּל וְכָל אֲשֶׁר יַעֲשֶׂה יַצְלִיחַ. דְּרָכַי סִפַּרְתִּי וַתַּעֲנֵנִי,",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " לַמְּדֵנִי חֻקֶּיךָ. יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהֹוָה צוּרִי וְגֹאֲלִי:  ",
+     "kind": "prayer",
+     "role": "together"
+    }
+   ]
+  },
+  "he:Simchat Torah/Hakafot:75": {
+   "kind": "instruction",
+   "en": "Circle 7:"
+  },
+  "he:Simchat Torah/Hakafot:76": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Simchat Torah/Hakafot:77": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Simchat Torah/Hakafot:78": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Simchat Torah/Hakafot:79": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Simchat Torah/Hakafot:80": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Simchat Torah/Hakafot:81": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:82": {
+   "kind": "instruction",
+   "en": "On Simchat Torah we say the following from the holy Rebbe and Maggid of Kozhnitz, may his memory be blessed:",
+   "gloss": "Introduction to the following piyyut"
+  },
+  "he:Simchat Torah/Hakafot:83": {
+   "kind": "prayer",
+   "role": "together",
+   "voice": "aloud"
+  },
+  "he:Simchat Torah/Hakafot:84": {
+   "kind": "prayer",
+   "role": "together",
+   "voice": "aloud"
+  },
+  "he:Simchat Torah/Hakafot:85": {
+   "kind": "prayer",
+   "role": "together",
+   "voice": "aloud"
+  },
+  "he:Simchat Torah/Hakafot:86": {
+   "kind": "prayer",
+   "role": "together",
+   "voice": "aloud"
+  },
+  "he:Simchat Torah/Hakafot:87": {
+   "kind": "prayer",
+   "role": "together",
+   "voice": "aloud"
+  },
+  "he:Simchat Torah/Hakafot:88": {
+   "kind": "prayer",
+   "role": "together",
+   "voice": "aloud"
+  },
+  "he:Simchat Torah/Hakafot:89": {
+   "kind": "prayer",
+   "role": "together",
+   "voice": "aloud"
+  },
+  "he:Simchat Torah/Hakafot:90": {
+   "kind": "prayer",
+   "role": "together",
+   "voice": "aloud"
+  },
+  "he:Simchat Torah/Hakafot:91": {
+   "kind": "prayer",
+   "role": "together",
+   "voice": "aloud"
+  },
+  "he:Simchat Torah/Hakafot:92": {
+   "kind": "prayer",
+   "role": "together",
+   "voice": "aloud"
+  },
+  "he:Simchat Torah/Hakafot:93": {
+   "kind": "prayer",
+   "role": "together",
+   "voice": "aloud"
+  },
+  "he:Simchat Torah/Hakafot:94": {
+   "kind": "prayer",
+   "role": "together",
+   "voice": "aloud"
+  },
+  "he:Simchat Torah/Hakafot:95": {
+   "parts": [
+    {
+     "kind": "instruction",
+     "en": "Three times:",
+     "gloss": "Repeat the following line three times",
+     "text": "<b><b>ג\"פ: "
+    },
+    {
+     "kind": "prayer",
+     "role": "together",
+     "voice": "aloud",
+     "text": "<b>דָּוִד מַלְכָּא מְשִׁיחָא יִשְׂמַח עִמָּנוּ:</b> </b></b>"
+    }
+   ]
+  },
+  "he:Simchat Torah/Hakafot:96": {
+   "parts": [
+    {
+     "kind": "instruction",
+     "en": "Three times:",
+     "gloss": "Repeat the following line three times",
+     "text": "<b><b>ג\"פ: "
+    },
+    {
+     "kind": "prayer",
+     "role": "together",
+     "voice": "aloud",
+     "text": "<b>לְשָׁנָה הַבָּאָה בִּירוּשָׁלָיִם:</b> </b></b>"
+    }
+   ]
+  },
+  "he:Simchat Torah/Hakafot:113": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Simchat Torah/Hakafot:114": {
+   "parts": [
+    {
+     "text": "<b>אַשְׁרֵיכֶם</b> יִשְׂרָאֵל. אַשְׁרֵיכֶם יִשְׂרָאֵל. אַשְׁרֵיכֶם יִשְׂרָאֵל. אֲשֶׁר בָּחַר בָּכֶם אֵל. וְהִנְחִילְכֶם הַתּוֹרָה מִמִּדְבָּר ",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": "<small>(נ\"א מִסִּינַי)</small>",
+     "kind": "prayer",
+     "role": "together"
+    },
+    {
+     "text": " מַתָּנָה:  ",
+     "kind": "prayer",
+     "role": "together"
+    }
+   ]
+  },
+  "he:Simchat Torah/Hakafot:115": {
+   "kind": "speaker",
+   "role": "chazzan",
+   "en": "The chazzan:",
+   "gloss": "Speaker label for the following line"
+  },
+  "he:Simchat Torah/Hakafot:116": {
+   "kind": "speaker",
+   "role": "congregation",
+   "en": "The congregation:",
+   "gloss": "Speaker label for the following line"
+  },
+  "he:Simchat Torah/Hakafot:117": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Simchat Torah/Hakafot:118": {
+   "kind": "instruction",
+   "en": "And we bring back all of the Torah scrolls to the ark."
+  },
+  "he:Simchat Torah/Hakafot:119": {
+   "kind": "instruction",
+   "en": "In the Land of Israel on the night of Shemini Atzeret - and outside the Land, on the night of Simchat Torah - we leave one Torah scroll out, and the prayer leader says, \"Shema Yisrael; Exalt; And may He help.\" And some have the custom to call up five men [to read] from Parashat Zot HaBerakha, until [the section that begins with the word,] Meoneh."
+  },
+  "he:Simchat Torah/Hakafot:49": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:50": {
+   "kind": "instruction",
+   "en": "This is the version of the Rebbe and Maggid of Kozhnitz, may his memory be blessed:"
+  },
+  "he:Simchat Torah/Hakafot:51": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:52": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:53": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:54": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:55": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:56": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:57": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:58": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:59": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:60": {
+   "parts": [
+    {
+     "text": "<b><b>יְהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֵל מָלֵא רַחֲמִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שֶׁתַּעֲשֶׂה לְמַעַן זְכוּת הַקָּפָה רְבִיעִית הָרוֹמֶזֶת לְמִדַּת נֶצַח,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּרַחֲמֶיךָ הָרַבִּים אַל יַעַזְבֵנוּ נֶצַח סֶלָה וָעֶד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְנִשְׂמְחָה וְנִרְאֶה נְעִימוֹת בִּימִינְךָ נֶצַח,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּתְזַכֵּנוּ לְכָל הַהַבְטָחוֹת וְנֶחָמוֹת שֶׁהִבְטַחְתָּנוּ ע\"י נְבִיאֶיךָ הַקְּדוֹשִׁים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְגַם נֵצַח יִשְׂרָאֵל לֹא יְשַׁקֵּר וְלֹא יִנָּחֵם. וּתְחַזְּקֵנוּ וּתְאַמְּצֵנוּ לָנֶצַח,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּתְנַצֵּחַ אוֹיְבֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתִסְתֹּם וְתַחֲסֹם פִּי כָּל הַמְקַטְרְגִים עָלֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּלְמַעַן זְכוּת מֹשֶׁה רַעְיָא מְהֵימְנָא הֶחָתוּם בְּמִדַּת הַנֶּצַח,",
+     "kind": "prayer"
+    },
+    {
+     "text": " תָּאִיר עֵינֵינוּ בְּתוֹרָתֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאַחֲרֵי מִצְוֹתֶיךָ תִּרְדֹּף נַפְשֵׁנוּ וְתִגְאָלֵנוּ גְּאֻלַּת עוֹלָם מִגָּלוּת הַחֵל הַזֶּה בִּזְכוּת מֹשֶׁה רַעְיָא מְהֵימְנָא. וְתִבְנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ. וְקוֹל בֶּן לֵוִי תִּסֹּב עַל שִׁירָ\"ה וּנְבָלָ\"ה עִמּוֹ כִּנּוֹר נָעִים עִם נָבֶל,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְנַצֵּחַ עַל מְלֶאכֶת בֵּית יְהֹוָה. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(ר\"ת נֶצַח)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ". נוֹדָע בִּיהוּדָה אֱלֹהִים בְּיִשְׂרָאֵל גָּדוֹל שְׁמוֹ. צֶדֶק לְפָנָיו יְהַלֵּךְ וְיָשֵׂם לְדֶרֶךְ פְּעָמָיו. חָנֵּנִי יְהֹוָה כִּי אֵלֶיךָ אֶקְרָא כָּל הַיּוֹם: יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהֹוָה צוּרִי וְגֹאֲלִי:  </b>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Simchat Torah/Hakafot:61": {
+   "kind": "instruction",
+   "en": "Circle 5:"
+  },
+  "he:Simchat Torah/Hakafot:62": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:63": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:64": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:97": {
+   "parts": [
+    {
+     "text": "<b>יְהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֵל מָלֵא רַחֲמִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שֶׁתַּעֲשֶׂה לְמַעַן רַחֲמֶיךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּבִזְכוּת הַקָּפָה שְׁבִיעִית הָרוֹמֶזֶת לַמַּלְכוּת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתִגָּלֶה וְתֵרָאֶה מַלְכוּתְךָ עָלֵינוּ מְהֵרָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּמְלֹךְ עַל כָּל הָעוֹלָם כֻּלּוֹ בִּכְבוֹדֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְהָיְתָה לַייָ הַמְּלוּכָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְהָיָה יְהֹוָה לְמֶלֶךְ עַל כָּל הָאָרֶץ בַּיּוֹם הַהוּא יִהְיֶה יְהֹוָה אֶחָד וּשְׁמוֹ אֶחָד. וַעֲשֵׂה לְמַעַן דָּוִד הַמֶּלֶךְ ע\"ה הֶחָתוּם בְּמִדַּת מַלְכוּת וְתַשְׁרֶה שְׁכִינָתְךָ עָלֵינוּ. יְהִי יְהֹוָה אֱלֹהֵינוּ עִמָּנוּ כַּאֲשֶׁר הָיָה עִם אֲבוֹתֵינוּ אַל יַעַזְבֵנוּ וְאַל יִטְּשֵׁנוּ. ",
+     "kind": "instruction",
+     "en": "(Acrostic of the word 'Kingship')"
+    },
+    {
+     "text": "<small>(ר\"ת מַלְכוּת)</small>",
+     "kind": "instruction"
+    },
+    {
+     "text": " מְהֻלָּל אֶקְרָא יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּמִן אֹיְבַי אִוָּשֵׁעַ. לְעוֹלָם יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " דְּבָרְךָ נִצָּב בַּשָּׁמָיִם. כִּי חַסְדְּךָ גָּדוֹל עָלָי,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְהִצַּלְתָּ נַפְשִׁי מִשְּׁאוֹל תַּחְתִּיָּה. וַאֲנִי כְּזַיִת רַעֲנָן בְּבֵית אֱלֹהִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בָּטַחְתִּי בְּחֶסֶד אֱלֹהִים עוֹלָם וָעֶד. תַּאֲוַת עֲנָוִים שָׁמַעְתָּ יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " תָּכִין לִבָּם תַּקְשִׁיב אָזְנֶךָ: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Simchat Torah/Hakafot:98": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:99": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:100": {
+   "parts": [
+    {
+     "text": "<b>וּבְכֵן</b> אֵין לָנוּ גּוֹאֵל וּמוֹשִׁיעַ בִּלְתֶּךָ. הַנְּשָׁמָה לָךְ וְהַגּוּף פָּעֳלָךְ חוּסָה עַל עֲמָלָךְ. וּבְכֹחַ שֶׁבַע הַקָּפוֹת שֶׁהִקַּפְנוּ לַתֵּבָה שֶׁבָּהּ סֵפֶר הַתּוֹרָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְשָׂמַחְנוּ לִכְבוֹד תּוֹרָתֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " תִּתְמַלֵּא רַחֲמִים עָלֵינוּ. הֲשִׁיבֵנוּ אָבִינוּ לְתוֹרָתֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְקָרְבֵנוּ מַלְכֵּנוּ לַעֲבוֹדָתֶךָ. וְיִתְמַתְּקוּ הַדִּינִים וְיִכְבְּשׁוּ רַחֲמֶיךָ אֶת כַּעַסְךָ. וְיָגֹּלּוּ רַחֲמֶיךָ עַל מִדּוֹתֶיךָ. וְתוֹצִיא לָאוֹר כָּל נִצּוֹצֵי תוֹרָתֵנוּ וּמִצְוֹתֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיָשׁוּב הַכֹּל לְאֵיתָנוֹ הָרִאשׁוֹן. וְלֹא יִדַּח מִמֶּנּוּ נִדָּח. וּתְזַכֵּנוּ לַעֲסֹק בַּתּוֹרָה לִשְׁמָהּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לִלְמוֹד וּלְלַמֵּד לִשְׁמוֹר וְלַעֲשֹוֹת לְהוֹצִיא לָאוֹר כָּל חֶלְקֵי פַּרְדֵ\"ס תּוֹרָתֵנוּ הַשַּׁיָּכִים לְנַפְשֵׁנוּ רוּחֵנוּ וְנִשְׁמָתֵנוּ. וּתְחָנֵנוּ מֵאִתְּךָ חָכְמָה בִּינָה וָדָעַת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְחַדֵּשׁ חִדּוּשִׁים רַבִּים אֲמִתִּיִים בְּפַרְדֵּ\"ס תּוֹרָתְךָ הַקְּדוֹשָׁה. וְקוּשְׁיוֹת וַהֲוָיוֹת וְיִשּׁוּבִים אֲמִתִּיִּים וְחִדּוּשֵׁי דִינִים לַאֲמִתָּהּ שֶׁל תּוֹרָה. וּבְרוֹב רַחֲמֶיךָ תְּזַכֵּנוּ לְזֶרַע קָדוֹשׁ בָּנִים חֲכָמִים וַחֲסִידִים זֶרַע אֲנָשִׁים וּבָרִיא מַזְלֵיהוּ. וְלֹא יִמָּצֵא בָנוּ וְלֹא בְזַרְעֵנוּ שׁוּם פְּגָם וְשׁוּם פְּסוּל. וְאַתָּה בְרַחֲמֶיךָ תִּתֵּן בָּנוּ כֹּחַ וּבְרִיאוּת וִיכֹלֶת מַסְפִּיק,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְחוֹזֶק וְאֹמֶץ בְּאֵבָרֵינוּ וְגִדֵּינוּ וְגוּפֵינוּ לַעֲמוֹד עַל הַמִּשְׁמָר. וְלֹא יֶאֱרַע לָנוּ שׁוּם מִיחוּשׁ וְשׁוּם כְּאֵב וְנִהְיֶה שְׂמֵחִים וְטוֹבִים וּבְרִיאִים לַעֲבוֹדָתֶךָ. וְתַצִּילֵנוּ מִכָּל רָע. אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ מְלֹךְ עַל כָּל הָעוֹלָם כֻּלּוֹ בִּכְבוֹדֶךָ וְהִנָּשֵׂא עַל כָּל הָאָרֶץ בִּיקָרֶךָ וְהוֹפַע בַּהֲדַר גְּאוֹן עֻזֶּךָ עַל כָּל יוֹשְׁבֵי תֵבֵל אַרְצֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיֵדַע כָּל ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(עשֹיה)</small>",
+     "kind": "instruction",
+     "en": "(Action)"
+    },
+    {
+     "text": " פָּעוּל כִּי אַתָּה פְעַלְתּוֹ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיָבִין כָּל ",
+     "kind": "instruction",
+     "en": "(Formation)"
+    },
+    {
+     "text": "<small>(יצירה)</small>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יְצוּר כִּי אַתָּה יְצַרְתּוֹ,",
+     "kind": "instruction",
+     "en": "(Creation)"
+    },
+    {
+     "text": " וְיֹאמַר כֹּל אֲשֶׁר ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(בריאה)</small>",
+     "kind": "instruction",
+     "en": "(Emanation)"
+    },
+    {
+     "text": " נְשָׁמָה בְאַפּוֹ יְהֹוָה אֱלֹהֵי ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(אצילות)</small>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִשְׂרָאֵל מֶלֶךְ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּמַלְכוּתוֹ בַּכֹּל מָשָׁלָה. קַדְּשֵׁנוּ בְּמִצְוֹתֶיךָ וְתֵן חֶלְקֵנוּ בְּתוֹרָתֶךָ. שַׂבְּעֵנוּ מִטּוּבֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְשַׂמַּח נַפְשֵׁנוּ בִּישׁוּעָתֶךָ וְטַהֵר לִבֵּנוּ לְעָבְדְּךָ בֶּאֱמֶת. וְאַל תַּדִּיחֵנוּ מִפְּנֵי שׁוּם נִבְרָא שֶׁבָּעוֹלָם. וְתַאֲרִיךְ יָמֵינוּ בְּטוֹב,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּשְׁנוֹתֵינוּ בַּנְּעִימִים. וּמַלֵּא שְׁנוֹתֵינוּ שְׁמוֹנִים שָׁנָה. אוֹרֶךְ יָמִים וּשְׁנוֹת חַיִּים תּוֹסִיף לָנוּ לַעֲבוֹדָתֶךָ. וּבְצֵל כְּנָפֶיךָ תַּסְתִּירֵנוּ. וְתַצִּילֵנוּ לָנוּ וּלְכָל בְּנֵי בֵיתֵנוּ מִכָּל גְּזֵרוֹת קָשׁוֹת וְרָעוֹת. וּתְחַדֵּשׁ עָלֵינוּ שָׁנָה טוֹבָה. וְנִהְיֶה שְׁקֵטִים וְשַׁאֲנַנִּים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " דְּשֵׁנִים וְרַעֲנַנִּים לַעֲבוֹדָתֶךָ וּלְיִרְאָתֶךָ. כִּי עִמְּךָ מְקוֹר חַיִּים בְּאוֹרְךָ נִרְאֶה אוֹר. יְהִי חַסְדְּךָ יְהֹוָה עָלֵינוּ כַּאֲשֶׁר יִחַלְנוּ לָךְ. הַרְאֵנוּ יְהֹוָה חַסְדֶּךָ וְיֶשְׁעֲךָ תִּתֶּן לָנוּ. וַאֲנִי בְחַסְדֶּךָ בָטַחְתִּי יָגֵל לִבִּי בִּישׁוּעָתֶךָ אָשִׁירָה לַייָ כִּי גָּמַל עָלָי. הִנֵּה אֵל יְשׁוּעָתִי אֶבְטַח וְלֹא אֶפְחָד. כִּי עָזִי וְזִמְרָת יָהּ יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וַיְהִי לִי לִישׁוּעָה: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Simchat Torah/Hakafot:101": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:102": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:103": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:104": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:105": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:106": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:107": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:108": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:109": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:110": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:111": {
+   "kind": "prayer"
+  },
+  "he:Simchat Torah/Hakafot:112": {
+   "kind": "prayer"
+  }
+ },
+ "en": {
+  "en:Sukkot/Order of Hoshanot:1": {
+   "he": [
+    "he:Sukkot/Order of Hoshanot:1"
+   ]
+  },
+  "en:Sukkot/Order of Hoshanot:2": {
+   "he": [
+    "he:Sukkot/Order of Hoshanot:2"
+   ]
+  },
+  "en:Sukkot/Order of Hoshanot:3": {
+   "he": [
+    "he:Sukkot/Order of Hoshanot:3"
+   ]
+  },
+  "en:Sukkot/Order of Hoshanot:4": {
+   "he": [
+    "he:Sukkot/Order of Hoshanot:4"
+   ]
+  },
+  "en:Sukkot/Order of Hoshanot:5": {
+   "he": [
+    "he:Sukkot/Order of Hoshanot:5"
+   ]
+  },
+  "en:Sukkot/Order of Hoshanot:6": {
+   "he": [
+    "he:Sukkot/Order of Hoshanot:6"
+   ]
+  },
+  "en:Sukkot/Order of Hoshanot:7": {
+   "he": [
+    "he:Sukkot/Order of Hoshanot:7"
+   ]
+  },
+  "en:Sukkot/Order of Hoshanot:8": {
+   "he": [
+    "he:Sukkot/Order of Hoshanot:8"
+   ]
+  },
+  "en:Sukkot/Order of Hoshanot:9": {
+   "he": [
+    "he:Sukkot/Order of Hoshanot:9"
+   ]
+  },
+  "en:Sukkot/Order of Hoshanot:10": {
+   "he": [
+    "he:Sukkot/Order of Hoshanot:10"
+   ]
+  },
+  "en:Sukkot/Order of Hoshanot:11": {
+   "he": [
+    "he:Sukkot/Order of Hoshanot:11"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:1": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:1"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:2": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:2"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:3": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:3"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:4": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:4"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:5": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:5"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:6": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:6"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:7": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:7"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:8": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:8"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:9": {
+   "parts": [
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:9"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:10": {
+   "parts": [
+    {
+     "text": "<b>Like You saved</b> the great ones in Lud (the son of Mitzrayim,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Egypt's namesake) with You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " when You went out to save Your people,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved 'a nation and its leaders' needing the salvation of God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved many legions and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " with them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " hosts of angels,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the pure ones from a house of bondage [when] they subjugated the Compassionate One with their hands,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the drowning ones in the depths of the shreds [when] they were transporting Your glory with them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the base,",
+     "kind": "prayer"
+    },
+    {
+     "text": " singing (Exodus 13:40),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and He saved,",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" [when] the One bursting out was indicated as saved,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved [with] the statement (Exodus 6:6),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and I will take you (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>etchem</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" [but] it is designated,",
+     "kind": "prayer"
+    },
+    {
+     "text": " 'and I will go out with you (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>itchem</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "' so too please save! Like You saved the ones that went around the altar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " loaded with the willow to circle the altar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the wonders of the ark when it was sullied - He distraught Philistia with burning anger and it was saved - so too please save! Like You saved the congregations You sent to Babylonia -  Merciful One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " You [too] were sent for their sake - so too please save! You saved the return of the tribes of Jacob - return and bring back the return of the tents of Jacob and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save! Like You saved the keepers of the commandments and those awaiting salvations - You are the 'God of salvations' - so,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please bring salvation! ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:10"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:11": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:11"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:12": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:12"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:13": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:13"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:14": {
+   "parts": [
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:14"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:15": {
+   "parts": [
+    {
+     "text": "<b>Like You saved</b> the great ones in Lud (the son of Mitzrayim,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Egypt's namesake) with You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " when You went out to save Your people,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved 'a nation and its leaders' needing the salvation of God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved many legions and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " with them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " hosts of angels,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the pure ones from a house of bondage [when] they subjugated the Compassionate One with their hands,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the drowning ones in the depths of the shreds [when] they were transporting Your glory with them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the base,",
+     "kind": "prayer"
+    },
+    {
+     "text": " singing (Exodus 13:40),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and He saved,",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" [when] the One bursting out was indicated as saved,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved [with] the statement (Exodus 6:6),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and I will take you (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>etchem</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" [but] it is designated,",
+     "kind": "prayer"
+    },
+    {
+     "text": " 'and I will go out with you (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>itchem</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "' so too please save! Like You saved the ones that went around the altar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " loaded with the willow to circle the altar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the wonders of the ark when it was sullied - He distraught Philistia with burning anger and it was saved - so too please save! Like You saved the congregations You sent to Babylonia -  Merciful One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " You [too] were sent for their sake - so too please save! You saved the return of the tribes of Jacob - return and bring back the return of the tents of Jacob and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save! Like You saved the keepers of the commandments and those awaiting salvations - You are the 'God of salvations' - so,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please bring salvation! ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:15"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:16": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:16"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:17": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:17"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:18": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:18"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:19": {
+   "parts": [
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:19"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:20": {
+   "parts": [
+    {
+     "text": "<b>Like You saved</b> the great ones in Lud (the son of Mitzrayim,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Egypt's namesake) with You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " when You went out to save Your people,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved 'a nation and its leaders' needing the salvation of God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved many legions and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " with them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " hosts of angels,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the pure ones from a house of bondage [when] they subjugated the Compassionate One with their hands,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the drowning ones in the depths of the shreds [when] they were transporting Your glory with them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the base,",
+     "kind": "prayer"
+    },
+    {
+     "text": " singing (Exodus 13:40),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and He saved,",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" [when] the One bursting out was indicated as saved,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved [with] the statement (Exodus 6:6),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and I will take you (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>etchem</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" [but] it is designated,",
+     "kind": "prayer"
+    },
+    {
+     "text": " 'and I will go out with you (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>itchem</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "' so too please save! Like You saved the ones that went around the altar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " loaded with the willow to circle the altar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the wonders of the ark when it was sullied - He distraught Philistia with burning anger and it was saved - so too please save! Like You saved the congregations You sent to Babylonia -  Merciful One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " You [too] were sent for their sake - so too please save! You saved the return of the tribes of Jacob - return and bring back the return of the tents of Jacob and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save! Like You saved the keepers of the commandments and those awaiting salvations - You are the 'God of salvations' - so,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please bring salvation! ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:20"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:21": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:21"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:22": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:22"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:23": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:23"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:24": {
+   "parts": [
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:24"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:25": {
+   "parts": [
+    {
+     "text": "<b>Like You saved</b> the great ones in Lud (the son of Mitzrayim,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Egypt's namesake) with You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " when You went out to save Your people,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved 'a nation and its leaders' needing the salvation of God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved many legions and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " with them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " hosts of angels,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the pure ones from a house of bondage [when] they subjugated the Compassionate One with their hands,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the drowning ones in the depths of the shreds [when] they were transporting Your glory with them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the base,",
+     "kind": "prayer"
+    },
+    {
+     "text": " singing (Exodus 13:40),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and He saved,",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" [when] the One bursting out was indicated as saved,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved [with] the statement (Exodus 6:6),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and I will take you (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>etchem</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" [but] it is designated,",
+     "kind": "prayer"
+    },
+    {
+     "text": " 'and I will go out with you (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>itchem</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "' so too please save! Like You saved the ones that went around the altar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " loaded with the willow to circle the altar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the wonders of the ark when it was sullied - He distraught Philistia with burning anger and it was saved - so too please save! Like You saved the congregations You sent to Babylonia -  Merciful One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " You [too] were sent for their sake - so too please save! You saved the return of the tribes of Jacob - return and bring back the return of the tents of Jacob and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save! Like You saved the keepers of the commandments and those awaiting salvations - You are the 'God of salvations' - so,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please bring salvation! ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:25"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:26": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:26"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:27": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:27"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:28": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:28"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:29": {
+   "parts": [
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:29"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:30": {
+   "parts": [
+    {
+     "text": "<b>Like You saved</b> the great ones in Lud (the son of Mitzrayim,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Egypt's namesake) with You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " when You went out to save Your people,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved 'a nation and its leaders' needing the salvation of God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved many legions and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " with them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " hosts of angels,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the pure ones from a house of bondage [when] they subjugated the Compassionate One with their hands,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the drowning ones in the depths of the shreds [when] they were transporting Your glory with them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the base,",
+     "kind": "prayer"
+    },
+    {
+     "text": " singing (Exodus 13:40),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and He saved,",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" [when] the One bursting out was indicated as saved,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved [with] the statement (Exodus 6:6),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and I will take you (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>etchem</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" [but] it is designated,",
+     "kind": "prayer"
+    },
+    {
+     "text": " 'and I will go out with you (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>itchem</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "' so too please save! Like You saved the ones that went around the altar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " loaded with the willow to circle the altar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the wonders of the ark when it was sullied - He distraught Philistia with burning anger and it was saved - so too please save! Like You saved the congregations You sent to Babylonia -  Merciful One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " You [too] were sent for their sake - so too please save! You saved the return of the tribes of Jacob - return and bring back the return of the tents of Jacob and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save! Like You saved the keepers of the commandments and those awaiting salvations - You are the 'God of salvations' - so,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please bring salvation! ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:30"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:31": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:31"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:32": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:32"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:33": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:33"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:34": {
+   "parts": [
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:34"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:35": {
+   "parts": [
+    {
+     "text": "<b>Like You saved</b> the great ones in Lud (the son of Mitzrayim,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Egypt's namesake) with You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " when You went out to save Your people,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved 'a nation and its leaders' needing the salvation of God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved many legions and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " with them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " hosts of angels,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the pure ones from a house of bondage [when] they subjugated the Compassionate One with their hands,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the drowning ones in the depths of the shreds [when] they were transporting Your glory with them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the base,",
+     "kind": "prayer"
+    },
+    {
+     "text": " singing (Exodus 13:40),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and He saved,",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" [when] the One bursting out was indicated as saved,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved [with] the statement (Exodus 6:6),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and I will take you (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>etchem</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" [but] it is designated,",
+     "kind": "prayer"
+    },
+    {
+     "text": " 'and I will go out with you (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>itchem</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "' so too please save! Like You saved the ones that went around the altar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " loaded with the willow to circle the altar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the wonders of the ark when it was sullied - He distraught Philistia with burning anger and it was saved - so too please save! Like You saved the congregations You sent to Babylonia -  Merciful One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " You [too] were sent for their sake - so too please save! You saved the return of the tribes of Jacob - return and bring back the return of the tents of Jacob and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save! Like You saved the keepers of the commandments and those awaiting salvations - You are the 'God of salvations' - so,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please bring salvation! ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:35"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:36": {
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:36"
+   ]
+  },
+  "en:Sukkot/First Day & Chol HaMoed:37": {
+   "parts": [
+    {
+     "text": "<i>Full Kaddish, the Song of the Day, <i>Le'David</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " (Psalms 27),",
+     "kind": "prayer"
+    },
+    {
+     "text": " Reading of the Torah, ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ashrei</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ", ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Uva Letzion</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " the additional prayer, ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Kaveh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Aleinu</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ".</i>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/First Day & Chol HaMoed:37"
+   ]
+  },
+  "en:Sukkot/Sabbath:1": {
+   "he": [
+    "he:Sukkot/Sabbath:1"
+   ]
+  },
+  "en:Sukkot/Sabbath:2": {
+   "he": [
+    "he:Sukkot/Sabbath:2"
+   ]
+  },
+  "en:Sukkot/Sabbath:3": {
+   "he": [
+    "he:Sukkot/Sabbath:3"
+   ]
+  },
+  "en:Sukkot/Sabbath:4": {
+   "he": [
+    "he:Sukkot/Sabbath:4"
+   ]
+  },
+  "en:Sukkot/Sabbath:5": {
+   "he": [
+    "he:Sukkot/Sabbath:5"
+   ]
+  },
+  "en:Sukkot/Sabbath:6": {
+   "he": [
+    "he:Sukkot/Sabbath:6"
+   ]
+  },
+  "en:Sukkot/Sabbath:7": {
+   "he": [
+    "he:Sukkot/Sabbath:7"
+   ]
+  },
+  "en:Sukkot/Sabbath:8": {
+   "parts": [
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation! ",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Sabbath:8"
+   ]
+  },
+  "en:Sukkot/Sabbath:9": {
+   "parts": [
+    {
+     "text": "<b>Like You saved</b> Adam,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the work of Your hands,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as a Protector,",
+     "kind": "prayer"
+    },
+    {
+     "text": " on the holy Shabbat you found him atonement and clemency;",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved the distinguished nation hoping for freedom,",
+     "kind": "prayer"
+    },
+    {
+     "text": " they intuited to choose the seventh [day] for repose;",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved the people that You drove like sheep to refreshment,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and You placed a law at Marah upon the waters of rest;",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved Your privileged ones in the Wilderness of Sin in the camp,",
+     "kind": "prayer"
+    },
+    {
+     "text": " they were wise and collected double the bread on the sixth [day];",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved Your followers [who] instructed preparation from their intelligence,",
+     "kind": "prayer"
+    },
+    {
+     "text": " their Shepherd blessed their strength and conceded to them;",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved those sustained in delight from that which was stored - it did not change its appearance,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and its aroma did not cease;",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved those who studied the laws of carrying on Shabbat,",
+     "kind": "prayer"
+    },
+    {
+     "text": " they rested and ceased,",
+     "kind": "prayer"
+    },
+    {
+     "text": " keeping [the laws of] the domains and the perimeters;",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved those who heard the fourth commandment [at] Sinai,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the matter of \"remember,",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" and \"guard,",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" to sanctify the seventh [day];",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved the ones ordered in Jericho to encircle seven [times],",
+     "kind": "prayer"
+    },
+    {
+     "text": " they besieged it until it came down on Shabbat to be victorious;",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved Kohelet and his people in the House of Eternity,",
+     "kind": "prayer"
+    },
+    {
+     "text": " they pleased You with their feasting seven and seven days;",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved those who returned to arise from the exile to redemption,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as they read Your Torah every day on the festival;",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved those who made You rejoice in the new second [Temple],",
+     "kind": "prayer"
+    },
+    {
+     "text": " raising the lulav all seven [days] in the Temple;",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved those that pushed off the pounding of the willow [on] Shabbat,",
+     "kind": "prayer"
+    },
+    {
+     "text": " they placed the willow branches of Motza at the base of the altar;",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved those that rejoiced with soft,",
+     "kind": "prayer"
+    },
+    {
+     "text": " long and tall [willow branches],",
+     "kind": "prayer"
+    },
+    {
+     "text": " in their departure,",
+     "kind": "prayer"
+    },
+    {
+     "text": " they would praise,",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"Beauty is yours\";",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved those who thank and hope but never alter,",
+     "kind": "prayer"
+    },
+    {
+     "text": " we all repeat,",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"We are His and our eyes are towards Him\";",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved those that encircled the winepress of Your hewing with freshness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " they hymn,",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation\";",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved the army of careful ones who serve,",
+     "kind": "prayer"
+    },
+    {
+     "text": " composed,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the double sacrifice of Shabbat,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the burnt-offering and the gift-offering;",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved Your Levites singing upon their stand,",
+     "kind": "prayer"
+    },
+    {
+     "text": " saying,",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"A psalm,",
+     "kind": "prayer"
+    },
+    {
+     "text": " a song for the day of Shabbat\";",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved those comforted by Your commandments [which] always give them enjoyment,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and You will placate and rescue them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and they shall be saved with ease and rest;",
+     "kind": "prayer"
+    },
+    {
+     "text": " like You saved the return of the tribes of Jacob - return and bring back the return of the tents of Jacob and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation! Like You saved the keepers of the commandments and those awaiting salvations - God of salvations - so too please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Sabbath:9"
+   ]
+  },
+  "en:Sukkot/Sabbath:10": {
+   "parts": [
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Sabbath:10"
+   ]
+  },
+  "en:Sukkot/Sabbath:11": {
+   "he": [
+    "he:Sukkot/Sabbath:11"
+   ]
+  },
+  "en:Sukkot/Sabbath:12": {
+   "parts": [
+    {
+     "text": "<i>Full Kaddish, the Song of the Day, <i>Le'David</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " (Psalms 27),",
+     "kind": "prayer"
+    },
+    {
+     "text": " Reading of the Torah, ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Yakum Purkan</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ", ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ashrei</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " the additional prayer, ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Kaveh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Aleinu</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ".</i>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Sabbath:12"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:1": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:1"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:2": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:2"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:3": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:3"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:4": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:4"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:5": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:5"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:6": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:6"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:7": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:7"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:8": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:8"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:9": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:9"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:10": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:10"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:11": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:11"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:12": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:12"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:13": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:13"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:14": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:14"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:15": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:15"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:16": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:16"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:17": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:17"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:18": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:18"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:19": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:19"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:20": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:20"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:21": {
+   "parts": [
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Hoshana Rabba:21"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:22": {
+   "parts": [
+    {
+     "text": "<b>Like You saved</b> the great ones in Lud (the son of Mitzrayim,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Egypt's namesake) with You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " when You went out to save Your people,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved 'a nation and its leaders' needing the salvation of God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved many legions and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " with them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " hosts of angels,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the pure ones from a house of bondage [when] they subjugated the Compassionate One with their hands,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the drowning ones in the depths of the shreds [when] they were transporting Your glory with them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the base,",
+     "kind": "prayer"
+    },
+    {
+     "text": " singing (Exodus 13:40),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and He saved,",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" [when] the One bursting out was indicated as saved,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved [with] the statement (Exodus 6:6),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and I will take you (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>etchem</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" [but] it is designated,",
+     "kind": "prayer"
+    },
+    {
+     "text": " 'and I will go out with you (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>itchem</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "' so too please save! Like You saved the ones that went around the altar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " loaded with the willow to circle the altar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please save! Like You saved the wonders of the ark when it was sullied - He distraught Philistia with burning anger and it was saved - so too please save! Like You saved the congregations You sent to Babylonia -  Merciful One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " You [too] were sent for their sake - so too please save! You saved the return of the tribes of Jacob - return and bring back the return of the tents of Jacob and,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save! Like You saved the keepers of the commandments and those awaiting salvations - You are the 'God of salvations' - so,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too please bring salvation! ",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Hoshana Rabba:22"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:23": {
+   "parts": [
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Hoshana Rabba:23"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:24": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:24"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:25": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:25"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:26": {
+   "parts": [
+    {
+     "text": "<i>Ani Vaho</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation!",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Hoshana Rabba:26"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:27": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:27"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:28": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:28"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:29": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:29"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:30": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:30"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:31": {
+   "parts": [
+    {
+     "text": "<b>God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please</b> - we have strayed like a lost sheep,",
+     "kind": "prayer"
+    },
+    {
+     "text": " do not remove our names from Your book,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save and please bring salvation. God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please tend the sheep marked for slaughter,",
+     "kind": "prayer"
+    },
+    {
+     "text": " subject of rage and killed for You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save and please bring salvation. God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please - Your sheep and the sheep of Your pasture,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Your work and Your companion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save and please bring salvation. God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please - the poor of Your flock,",
+     "kind": "prayer"
+    },
+    {
+     "text": " answer their speech in the time of favor,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save and please bring salvation. God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please - [for] the ones that raise their eye to You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " let those that rise against You be like naught,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save and please bring salvation. God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please - to those that bring You water libations,",
+     "kind": "prayer"
+    },
+    {
+     "text": " let them draw water like that from the springs of salvation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save and please bring salvation. God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please - may saviors go up to Zion;",
+     "kind": "prayer"
+    },
+    {
+     "text": " with You and saved in Your name,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save and please bring salvation. God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please - the One of crimsoned clothing,",
+     "kind": "prayer"
+    },
+    {
+     "text": " be enraged to shake up all the rebels,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save and please bring salvation. God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please - surely remember the ones sold for a ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>lethech</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " or ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>kor</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " [of grain],",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save and please bring salvation. God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please - Your seekers with branches of willows,",
+     "kind": "prayer"
+    },
+    {
+     "text": " listen to their pleas from the Heavens,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save and please bring salvation. God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please,",
+     "kind": "prayer"
+    },
+    {
+     "text": " bless this year with crowning,",
+     "kind": "prayer"
+    },
+    {
+     "text": " desire my words in my prayer on the day of the Hoshanah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please save and please bring salvation. ",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Hoshana Rabba:31"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:32": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:32"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:33": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:33"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:34": {
+   "parts": [
+    {
+     "text": "<i>(The prayer leader and the congregation:)</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Please save,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please God. Please,",
+     "kind": "prayer"
+    },
+    {
+     "text": " please bring salvation.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Hoshana Rabba:34"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:35": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:35"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:36": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:36"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:37": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:37"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:38": {
+   "parts": [
+    {
+     "text": "<i>(The prayer leader and the congregation:)</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Please have mercy upon the congregation of Jeshurun. Forgive and pardon their iniquities and bring us salvation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " God of our salvation.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Hoshana Rabba:38"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:39": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:39"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:40": {
+   "parts": [
+    {
+     "text": "<i>(The prayer leader and the congregation:)</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Open the gates of the heavens,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and open Your goodly storehouses. Bring us salvation and do not lengthen discord. So bring us salvation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " God of our salvation. ",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Hoshana Rabba:40"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:41": {
+   "parts": [
+    {
+     "text": "<i>(The prayer leader:)</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " The voice of the herald proclaims and says.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Hoshana Rabba:41"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:42": {
+   "parts": [
+    {
+     "text": "<i>(The congregation repeats:)</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " The voice of the herald proclaims and says.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Hoshana Rabba:42"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:43": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:43"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:44": {
+   "parts": [
+    {
+     "text": "<i>(The prayer leader three times:)</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " The voice of the herald proclaims and says.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Hoshana Rabba:44"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:45": {
+   "parts": [
+    {
+     "text": "<i>(The congregation repeats three times:)</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " The voice of the herald proclaims and says.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Hoshana Rabba:45"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:46": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:46"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:47": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:47"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:48": {
+   "he": [
+    "he:Sukkot/Hoshana Rabba:48"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:49": {
+   "parts": [
+    {
+     "text": "<b>May it be</b> Your will in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord G0d,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and God of our fathers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who chooses good prophets and their customs - that you accept our prayers and our circles (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>hakafot</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") with mercy and desire. And remember for us the merit of Your seven pure ones,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and remove the iron curtain that separates between You and us. And pay heed to our prayers and make good the sealing for us - suspend the earth over the emptiness - and seal us in the book of goodly life. And upon this day,",
+     "kind": "prayer"
+    },
+    {
+     "text": " give to Your mighty Presence five restrictions (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>gevurot</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") sweetened by the pounding of the willow,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the custom of Your holy prophets;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and arouse love among them and let them be kissed with the kisses of Your mouth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " which sweetens all the restrictions and all of the judgements. And shine upon Your mighty Presence with the name (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Yod hay vav</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " which is dew of lights,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Your dew. And from there,",
+     "kind": "prayer"
+    },
+    {
+     "text": " bring the flow to Your servant who is praying (x,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the son/daughter of y) in front of You (forgiveness),",
+     "kind": "prayer"
+    },
+    {
+     "text": " that You will lengthen his/her days and forgive him/her for all of his/her sins,",
+     "kind": "prayer"
+    },
+    {
+     "text": " iniquities and rebellions;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and stretch forth Your right arm and Your hand to accept me with full repentance in front of You. And open Your goodly storehouse,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to satiate water for the parched soul,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as it is written (Deuteronomy 28:12),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"The Lord will open for you His goodly storehouse,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the heavens,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to provide rain for your land in its season and to bless all your undertakings.\" Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Hoshana Rabba:49"
+   ]
+  },
+  "en:Sukkot/Hoshana Rabba:50": {
+   "parts": [
+    {
+     "text": "<i>The Song of the Day, <i>Le'David</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " (Psalms 27),",
+     "kind": "prayer"
+    },
+    {
+     "text": " Reading of the Torah, ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Ashrei</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ", ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Uva Letzion</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " the additional prayer, ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Kaveh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>Aleinu</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ".</i>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Sukkot/Hoshana Rabba:50"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:1": {
+   "he": [
+    "he:Simchat Torah/Hakafot:1"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:2": {
+   "he": [
+    "he:Simchat Torah/Hakafot:2"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:3": {
+   "he": [
+    "he:Simchat Torah/Hakafot:3"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:4": {
+   "parts": [
+    {
+     "text": "<b>It has been clearly demonstrated to you</b> that the Lord alone is God;",
+     "kind": "prayer"
+    },
+    {
+     "text": " there is none beside Him (Deuteronomy 4:35). Who alone works great marvels,",
+     "kind": "prayer"
+    },
+    {
+     "text": " His steadfast love is eternal (Psalms 136:4). There is none like You among the gods,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and there are no deeds like Yours (Psalms 86:8). May the glory of the Lord endure forever;",
+     "kind": "prayer"
+    },
+    {
+     "text": " may the Lord rejoice in His works (Psalms 104:31). Let the name of the Lord be blessed now and forever (Psalms 113:2). May the Lord our God be with us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as He was with our fathers;",
+     "kind": "prayer"
+    },
+    {
+     "text": " may He never abandon us or forsake us (I Kings 8:57). Declare,",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"Deliver us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our deliverer,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and gather us and save us from the nations,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to acclaim Your holy name,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to glory in Your praise\" (I Chronicles 16:35). [The Lord reigns,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Lord has reigned,",
+     "kind": "prayer"
+    },
+    {
+     "text": "] The Lord will reign for ever and ever (Exodus 15:18). May the Lord grant strength to His people;",
+     "kind": "prayer"
+    },
+    {
+     "text": " may the Lord bestow on His people wellbeing (Psalms 29:11). ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>We open the ark.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " When the Ark was to set out,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Moses would say,",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"Advance,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O Lord;",
+     "kind": "prayer"
+    },
+    {
+     "text": " may Your enemies be scattered,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and may Your foes flee before You (Numbers 10:35). Advance,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O Lord to Your resting-place,",
+     "kind": "prayer"
+    },
+    {
+     "text": " You and Your mighty Ark! Your priests are clothed in triumph;",
+     "kind": "prayer"
+    },
+    {
+     "text": " Your loyal ones sing for joy. For the sake of Your servant David do not reject Your anointed one (Psalms 132:8-10). In that day they shall say,",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"This is our God;",
+     "kind": "prayer"
+    },
+    {
+     "text": " we trusted in Him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and He delivered us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " this is the Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in whom we trusted;",
+     "kind": "prayer"
+    },
+    {
+     "text": " let us rejoice and exult in His deliverance\" (Isaiah 25:9). Your kingship is an eternal kingship;",
+     "kind": "prayer"
+    },
+    {
+     "text": " Your dominion is for all generations (Psalms 145:13).  For instruction shall come forth from Zion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the word of the Lord from Jerusalem (Isaiah 2:3). ",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:4"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:5": {
+   "he": [
+    "he:Simchat Torah/Hakafot:5"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:6": {
+   "he": [
+    "he:Simchat Torah/Hakafot:6"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:7": {
+   "parts": [
+    {
+     "text": "<b>For the sake of</b> the unification of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and His Divine Presence - with fear and with love - to unify the name ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>yod hay</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " with ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>vav hay</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " with a complete unification: Behold we are coming to fulfill the commandment of the custom of holy Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to circle seven times around the platform with the Torah scroll upon it,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and to add to the joy of the Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to rectify its root in the lofty place. And may it be Your will in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that from the power of these circles,",
+     "kind": "prayer"
+    },
+    {
+     "text": " You will knock down the wall of iron that separates between You and us. And may we be surrounded by Torah and commandments from inside and out;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and may we cling to You and to Your Torah always - we,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our seed and the seed of our seed. May the pleasantness of my Master,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " be upon us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the work of our hands established for us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the work of our hands - establish it.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:7"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:8": {
+   "he": [
+    "he:Simchat Torah/Hakafot:8"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:9": {
+   "he": [
+    "he:Simchat Torah/Hakafot:9"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:10": {
+   "he": [
+    "he:Simchat Torah/Hakafot:10"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:11": {
+   "he": [
+    "he:Simchat Torah/Hakafot:11"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:12": {
+   "he": [
+    "he:Simchat Torah/Hakafot:12"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:13": {
+   "he": [
+    "he:Simchat Torah/Hakafot:13"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:14": {
+   "he": [
+    "he:Simchat Torah/Hakafot:14"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:15": {
+   "he": [
+    "he:Simchat Torah/Hakafot:15"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:16": {
+   "he": [
+    "he:Simchat Torah/Hakafot:16"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:17": {
+   "he": [
+    "he:Simchat Torah/Hakafot:17"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:18": {
+   "parts": [
+    {
+     "text": "<b>May it be</b> Your will in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and God of our fathers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Father of mercy - that in the merit of the first circle that we have encircled the platform on Your Simchat Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that hints to kindness (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>chesed</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " that Your kindness will be upon us;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and merit us to serve You in awe and in love. And may Your love always be stuck into our hearts,",
+     "kind": "prayer"
+    },
+    {
+     "text": " all the days of our lives;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and that Your awe be upon our faces,",
+     "kind": "prayer"
+    },
+    {
+     "text": " such that we not sin. And for each and every trait that you give us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " we thank You very very much. And give us the merit to understand,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to do good and to do acts of kindness with all of our ability - with our bodies and with our money - with a full heart. And may all of our deeds be for Your sake and for Your mention with great desire. And give us the merit to distance ourselves from jealousy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " cruelty and anger;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and to acquire the trait of kindness with a complete acquisition - and for the sake of Your holy Torah that is given with [Your] right arm. And for the sake of Abraham,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the man of kindness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " fulfill the requests of our hearts for the good. Make Your goodness and kindness to us known in the eyes of all. (The next three verses begin with the Hebrew letters that spell out the word,",
+     "kind": "prayer"
+    },
+    {
+     "text": " kindness - ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>CheSeD</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ":) I will always sing [about] the kindnesses of God;",
+     "kind": "prayer"
+    },
+    {
+     "text": " with my mouth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " I will make known Your faithfulness from generation to generation (Psalms 89:2). You are my Protector and my Shield;",
+     "kind": "prayer"
+    },
+    {
+     "text": " I have hoped for Your word (Psalms 119:114). Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " guide me in Your ways,",
+     "kind": "prayer"
+    },
+    {
+     "text": " teach me Your paths (Psalms 25:4). May the words of my mouth and the meditations of my heart be acceptable in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " my Rock and my Redeemer.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:18"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:19": {
+   "he": [
+    "he:Simchat Torah/Hakafot:19"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:20": {
+   "he": [
+    "he:Simchat Torah/Hakafot:20"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:21": {
+   "he": [
+    "he:Simchat Torah/Hakafot:21"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:22": {
+   "parts": [
+    {
+     "text": "<b>God who is hidden</b> in the pavillion of oblivion;",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Intellect that is concealed from all thought;",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Cause of causes,",
+     "kind": "prayer"
+    },
+    {
+     "text": " crowned with the highest crown (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>keter</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") - 'they will give You a crown,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord.'",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:22"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:23": {
+   "parts": [
+    {
+     "text": "In the beginning of Your primordial Torah was Your hidden wisdom inscribed. It came from nothing and was concealed. The beginning of wisdom (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>chokhmah</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") is awe of the Lord.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:23"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:24": {
+   "parts": [
+    {
+     "text": "Wide rivers are the streams of faith;",
+     "kind": "prayer"
+    },
+    {
+     "text": " a man of understanding draws these deep waters. Their offshoots are the fifty gates of understanding (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>binah</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "). The faithful ones are guarded by the Lord.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:24"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:25": {
+   "parts": [
+    {
+     "text": "Great God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " all eyes are towards You. Great of kindness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Your kindness (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>chesed</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") is great beyond the heavens. God of Abraham,",
+     "kind": "prayer"
+    },
+    {
+     "text": " remember [it] to Your servants. The kindnesses of the Lord do I mention,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the praises of the Lord.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:25"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:26": {
+   "parts": [
+    {
+     "text": "The One above,",
+     "kind": "prayer"
+    },
+    {
+     "text": " magnificent with power and might (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>gevurah</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " He brings out light from that which has no substitute. Awe of Isaac,",
+     "kind": "prayer"
+    },
+    {
+     "text": " light up our judgment. You are always mighty,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:26"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:27": {
+   "parts": [
+    {
+     "text": "Who is a power like you,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to do great deeds? Strength of Jacob,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Splendor (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>tiferet</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Hearer of prayers - for the Lord is a listener to the destitute.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:27"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:28": {
+   "parts": [
+    {
+     "text": "Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " let the merit of the fathers protect us. Eternal (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>netzach</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") One of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " redeem us from our troubles;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and draw us up and bring us out of the pit of our exile,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to orchestrate the work of the House of the Lord.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:28"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:29": {
+   "parts": [
+    {
+     "text": "From right and left is the nourishment of the prophets,",
+     "kind": "prayer"
+    },
+    {
+     "text": " they derived eternity and majesty (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>hod</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") from them. They are called by the name,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Yachin and Boaz - 'and all your children shall be taught of the Lord.'",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:29"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:30": {
+   "parts": [
+    {
+     "text": "The foundation (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>yesod</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") of the Righteous One is concealed in the seven (spheres);",
+     "kind": "prayer"
+    },
+    {
+     "text": " it is the sign of the covenant for eternity. The source of blessing is the Righteous One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " foundation of the world. You are the Righteous One of the world.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:30"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:31": {
+   "parts": [
+    {
+     "text": "Please quickly raise up the kingdom (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>malkhut</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") of David and Solomon - 'with the crown with which his mother adorned him.' The congregation of Israel is pleasantly called a bride,",
+     "kind": "prayer"
+    },
+    {
+     "text": " a crown of splendor in the hand of God.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:31"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:32": {
+   "parts": [
+    {
+     "text": "Strong One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " unify the ten spheres (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>sefirot</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") as one,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the one who unites the Leader will see lights - those hewn of sapphire shine together. ",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:32"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:33": {
+   "he": [
+    "he:Simchat Torah/Hakafot:33"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:34": {
+   "parts": [
+    {
+     "text": "<b>May it be</b> Your will in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and God of our fathers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Father of mercy - that in the merit of the second circle that we have encircled the platform on Your Simchat Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that hints to might,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that You will give us the merit to overcome our impulse;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and give us the strength to suppress our physical desires. And for the sake of Isaac who was girded by might  (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>gevurah</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " arouse Your might and come to our salvation. And in the way that our father,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Abraham,",
+     "kind": "prayer"
+    },
+    {
+     "text": " suppressed his mercy to do Your will with a full heart;",
+     "kind": "prayer"
+    },
+    {
+     "text": " so too,",
+     "kind": "prayer"
+    },
+    {
+     "text": " let Your mercy suppress Your anger - and let Your mercy roll over Your traits. And may You act towards us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " with the trait of kindness and bring us in beyond the letter of law. And with Your great kindness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " turn away Your fierce anger from Your people,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from Your city,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from Your land and from Your inheritance;",
+     "kind": "prayer"
+    },
+    {
+     "text": " annul all of the harsh and bad decrees from upon us;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and decree good decrees upon us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " according to Your great mercy. (The next five verses begin with the Hebrew letters that spell out the word,",
+     "kind": "prayer"
+    },
+    {
+     "text": " might - ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>GeVURaH</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ":) Also from willful sins keep Your servant;",
+     "kind": "prayer"
+    },
+    {
+     "text": " let them not dominate me;",
+     "kind": "prayer"
+    },
+    {
+     "text": " then shall I be blameless (Psalms 19:14). He will cover you with His pinions;",
+     "kind": "prayer"
+    },
+    {
+     "text": " you will find refuge under His wings;",
+     "kind": "prayer"
+    },
+    {
+     "text": " His fidelity is an encircling shield (Psalms 91:4). And we are Your people and the flock that You tend;",
+     "kind": "prayer"
+    },
+    {
+     "text": " we shall glorify You forever;",
+     "kind": "prayer"
+    },
+    {
+     "text": " for all time we shall tell Your praises (Psalms 79:13). Give ear,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O shepherd of Israel who leads Joseph like a flock;",
+     "kind": "prayer"
+    },
+    {
+     "text": " appear,",
+     "kind": "prayer"
+    },
+    {
+     "text": " You who are enthroned on the cherubim (Psalms 80:2). Teach me Your way,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O Lord;",
+     "kind": "prayer"
+    },
+    {
+     "text": " I will walk in Your truth;",
+     "kind": "prayer"
+    },
+    {
+     "text": " let my heart be undivided in reverence for Your name (Psalms 86:11). May the words of my mouth and the meditations of my heart be acceptable in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " my Rock and my Redeemer.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:34"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:35": {
+   "he": [
+    "he:Simchat Torah/Hakafot:35"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:36": {
+   "he": [
+    "he:Simchat Torah/Hakafot:36"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:37": {
+   "he": [
+    "he:Simchat Torah/Hakafot:37"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:38": {
+   "parts": [
+    {
+     "text": "<b>Who is</b> a power like you,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to do great deeds? Strength of Jacob,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Splendor (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>tiferet</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Hearer of prayers - for the Lord is a listener to the destitute.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:38"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:39": {
+   "parts": [
+    {
+     "text": "Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " let the merit of the fathers protect us. Eternal (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>netzach</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") One of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " redeem us from our troubles;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and draw us up and bring us out of the pit of our exile,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to orchestrate the work of the House of the Lord.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:39"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:40": {
+   "parts": [
+    {
+     "text": "From right and left is the nourishment of the prophets,",
+     "kind": "prayer"
+    },
+    {
+     "text": " they derived eternity and majesty (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>hod</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") from them. They are called by the name,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Yachin and Boaz - and all your children shall be taught of the Lord.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:40"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:41": {
+   "parts": [
+    {
+     "text": "The foundation (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>yesod</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") of the righteous one is concealed in the seven (spheres);",
+     "kind": "prayer"
+    },
+    {
+     "text": " it is the sign of the covenant for eternity. The source of blessing is the Righteous One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " foundation of the world. You are the Righteous One of the world.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:41"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:42": {
+   "parts": [
+    {
+     "text": "Please quickly raise up the kingdom (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>malkhut</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") of David and Solomon - 'with the crown with which his mother adorned him.' The congregation of Israel is pleasantly called a bride,",
+     "kind": "prayer"
+    },
+    {
+     "text": " a crown of splendor in the hand of God.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:42"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:43": {
+   "parts": [
+    {
+     "text": "Strong One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " unify the ten spheres (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>sefirot</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") as one,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the one who unites the Leader will see lights - those hewn of sapphire shine together. Bring near our song in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:43"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:44": {
+   "he": [
+    "he:Simchat Torah/Hakafot:44"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:45": {
+   "he": [
+    "he:Simchat Torah/Hakafot:45"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:46": {
+   "parts": [
+    {
+     "text": "<b>May it be</b> Your will in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and God of our fathers - that in the merit of the third circle that we have encircled the platform on Your Simchat Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that hints to splendor,",
+     "kind": "prayer"
+    },
+    {
+     "text": " You will give us the merit to be from Your servants,",
+     "kind": "prayer"
+    },
+    {
+     "text": " about whom it is stated (Isaiah 49:3),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in whom I glory\";",
+     "kind": "prayer"
+    },
+    {
+     "text": " give us the merit to be occupied with Your holy Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Torah of truth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and that all our objective be to seek the truth. And grace us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for the sake of the knowledge of the truth of the laws of the Torah. And give us the merit to distance ourselves from falsehood and untruth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and that all the corners to which we turn be for the matter of truth. And in the merit of the true Torah and in the merit of our father Jacob,",
+     "kind": "prayer"
+    },
+    {
+     "text": " peace be upon him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who is sealed with splendor,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the trait of truth - and it is written (Micah 7:20),",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"You will give truth to Jacob\" - that You will answer us and fulfill our request,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and that Jerusalem will be called the city of truth. Therefore we hope to You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord our God to quickly see the splendor of Your power. (The next five verses begin with the Hebrew letters that spell out the word,",
+     "kind": "prayer"
+    },
+    {
+     "text": " splendor - ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>TiFEReT</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ":) May my song reach You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O Lord;",
+     "kind": "prayer"
+    },
+    {
+     "text": " grant me understanding according to Your word (Psalms 119:169). Make my feet firm through Your promise;",
+     "kind": "prayer"
+    },
+    {
+     "text": " do not let iniquity dominate me (Psalms 119:133). Happy is the man who finds refuge in You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " whose mind is on the [pilgrim] highways (Psalms 84:6). Your mercies are great,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O Lord;",
+     "kind": "prayer"
+    },
+    {
+     "text": " as is Your rule,",
+     "kind": "prayer"
+    },
+    {
+     "text": " preserve me (Psalms 119:156). My mouth shall utter the praise of the Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and all creatures shall bless His holy name forever and ever (Psalms 145:21). May the words of my mouth and the meditations of my heart be acceptable in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " my Rock and my Redeemer. ",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:46"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:47": {
+   "he": [
+    "he:Simchat Torah/Hakafot:47"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:48": {
+   "he": [
+    "he:Simchat Torah/Hakafot:48"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:65": {
+   "he": [
+    "he:Simchat Torah/Hakafot:65"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:66": {
+   "he": [
+    "he:Simchat Torah/Hakafot:66"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:67": {
+   "parts": [
+    {
+     "text": "<b>May it be</b> Your will in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and God of our fathers - that You should do [it] for the sake of Your mercies and for the sake of the fifth circle that hints to the trait of majesty (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>hod</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "). And give us the merit to honor the Torah and those that study it,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and to strengthen and invigorate weak knees - those are the knees of the rabbis that are fatigued. And merit us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " not to follow the advice of evildoers;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and that we not be from those that spread gossip. And in the merit of Aaron,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the holy one of God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who was sealed with the trait of majesty for the good,",
+     "kind": "prayer"
+    },
+    {
+     "text": " merit us to pursue peace and to seek peace and to make peace - and enhance peace - in the world,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and to do acts of Aaron;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and make peace amongst us and bless us for goodly life and peace - and a redeemer shall come to Zion. Great is his glory through Your salvation;",
+     "kind": "prayer"
+    },
+    {
+     "text": " You have endowed him with majesty and splendor (Psalms 21:6) - speedily in our days. (The next three verses begin with the Hebrew letters that spell out the word,",
+     "kind": "prayer"
+    },
+    {
+     "text": " majesty - ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>HOD</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ":) He who has granted us life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and has not let our feet slip (Psalms 66:9). But the Lord is my haven;",
+     "kind": "prayer"
+    },
+    {
+     "text": " my God is my sheltering Rock (Psalms 94:22). I eagerly pursue Your commandments,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for You broaden my understanding (Psalms 119:32). May the words of my mouth and the meditations of my heart be acceptable in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " my Rock and my Redeemer. ",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:67"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:68": {
+   "he": [
+    "he:Simchat Torah/Hakafot:68"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:69": {
+   "he": [
+    "he:Simchat Torah/Hakafot:69"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:70": {
+   "he": [
+    "he:Simchat Torah/Hakafot:70"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:71": {
+   "he": [
+    "he:Simchat Torah/Hakafot:71"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:72": {
+   "he": [
+    "he:Simchat Torah/Hakafot:72"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:73": {
+   "he": [
+    "he:Simchat Torah/Hakafot:73"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:74": {
+   "parts": [
+    {
+     "text": "<b>May it be</b> Your will in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and God of our fathers - that You should do [it] for the sake of Your mercies and for the sake of the merit of the sixth circle that hints to foundation;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and that You save us from any sin,",
+     "kind": "prayer"
+    },
+    {
+     "text": " iniquity or bad thought. And [may] You - in Your great goodness - gather that which we have scattered,",
+     "kind": "prayer"
+    },
+    {
+     "text": " unify that which we have separated and fix that which we have distorted;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and bring out the light of all the holy sparks that have been mixed up among the husks - 'he has swallowed riches,",
+     "kind": "prayer"
+    },
+    {
+     "text": " but he shall vomit them;",
+     "kind": "prayer"
+    },
+    {
+     "text": " God empties it out of his stomach.' And merit us to guard ourselves and our paths from all sin;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let there not be found any defect in us or in our seed;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and that all of our seed be holy seed. And in the merit of Your righteous one,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Joseph,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who is sealed with the trait of foundation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " have mercy upon us - Omnipotent God - set up the foundation (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>yesod</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") of Zion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " 'the horns of the righteous shall be lifted up.' And in the merit of Joseph,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may the Lord bring back His hand and redeem us in an eternal redemption speedily in our days. (The next four verses begin with the Hebrew letters that spell out the word,",
+     "kind": "prayer"
+    },
+    {
+     "text": " foundation - ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>YeSOD</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ":) He shall carry away a blessing from the Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " a just reward from God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " his Deliverer (Psalms 24:5). Shun evil and do good,",
+     "kind": "prayer"
+    },
+    {
+     "text": " seek peace and pursue it (Psalms 34:15). He is like a tree planted beside streams of water,",
+     "kind": "prayer"
+    },
+    {
+     "text": " which yields its fruit in season,",
+     "kind": "prayer"
+    },
+    {
+     "text": " whose foliage never fades,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and whatever it produces thrives (Psalms 1:3). I have declared my way,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and You have answered me;",
+     "kind": "prayer"
+    },
+    {
+     "text": " teach me Your laws (Psalms 119:26). May the words of my mouth and the meditations of my heart be acceptable in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " my Rock and my Redeemer. ",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:74"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:75": {
+   "he": [
+    "he:Simchat Torah/Hakafot:75"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:76": {
+   "he": [
+    "he:Simchat Torah/Hakafot:76"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:77": {
+   "he": [
+    "he:Simchat Torah/Hakafot:77"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:78": {
+   "he": [
+    "he:Simchat Torah/Hakafot:78"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:79": {
+   "he": [
+    "he:Simchat Torah/Hakafot:79"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:80": {
+   "he": [
+    "he:Simchat Torah/Hakafot:80"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:81": {
+   "he": [
+    "he:Simchat Torah/Hakafot:81"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:82": {
+   "he": [
+    "he:Simchat Torah/Hakafot:82"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:83": {
+   "he": [
+    "he:Simchat Torah/Hakafot:83"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:84": {
+   "he": [
+    "he:Simchat Torah/Hakafot:84"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:85": {
+   "he": [
+    "he:Simchat Torah/Hakafot:85"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:86": {
+   "he": [
+    "he:Simchat Torah/Hakafot:86"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:87": {
+   "he": [
+    "he:Simchat Torah/Hakafot:87"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:88": {
+   "he": [
+    "he:Simchat Torah/Hakafot:88"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:89": {
+   "he": [
+    "he:Simchat Torah/Hakafot:89"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:90": {
+   "he": [
+    "he:Simchat Torah/Hakafot:90"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:91": {
+   "he": [
+    "he:Simchat Torah/Hakafot:91"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:92": {
+   "he": [
+    "he:Simchat Torah/Hakafot:92"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:93": {
+   "he": [
+    "he:Simchat Torah/Hakafot:93"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:94": {
+   "parts": [
+    {
+     "text": "<b>May the Rock of</b> His Kindness command to gather His congregations,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that they be gathered to Him from the four directions;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and to have us lay down on the mount that is the highest of mounts. And the One gathering the dispersed will [also] return - it does not state,",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and He will bring back (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>yashiv</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "\" but rather,",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"and He will return (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>shav</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") and gather\" (Deuteronomy 30:3). Blessed is He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our God who has granted us good - according to His mercy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and abundant kindliness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " He did great things for us. These things and similar ones may He increase for us;",
+     "kind": "prayer"
+    },
+    {
+     "text": " to magnify His great Name,",
+     "kind": "prayer"
+    },
+    {
+     "text": " powerful,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and awesome which is pronounced upon us. Blessed is He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our God Who created us for His glory (Isaiah 43:7) - to extol Him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to praise Him;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and to recount His majesty. Of all peoples,",
+     "kind": "prayer"
+    },
+    {
+     "text": " His kindliness has been powerful over us. Therefore,",
+     "kind": "prayer"
+    },
+    {
+     "text": " with [our] whole heart,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and with [our] whole soul,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and with all [our] possessions,",
+     "kind": "prayer"
+    },
+    {
+     "text": " we proclaim Him King,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and declare His Unity. May the Possessor of peace grant us blessing and peace—from left (north) and from right (south),",
+     "kind": "prayer"
+    },
+    {
+     "text": " peace upon Israel. The merciful One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " He will bless His people with peace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and they will merit to see children and grandchildren occupying themselves with Torah and with commandments,",
+     "kind": "prayer"
+    },
+    {
+     "text": " [bringing] peace upon Israel. Advisor,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Mighty God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Eternal Father,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Prince of peace (Isaiah 9:5).",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:94"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:95": {
+   "parts": [
+    {
+     "text": "<i>Three times:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " David the anointed king will rejoice with us.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:95"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:96": {
+   "parts": [
+    {
+     "text": "<i>Three times:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Next year in Jerusalem.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:96"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:113": {
+   "he": [
+    "he:Simchat Torah/Hakafot:113"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:114": {
+   "he": [
+    "he:Simchat Torah/Hakafot:114"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:115": {
+   "parts": [
+    {
+     "text": "<i>The prayer leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Praise the name of the Lord with me,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for His name alone is exalted.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:115"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:116": {
+   "parts": [
+    {
+     "text": "<i>The congregation:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " His majesty is upon the earth and the heavens.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:116"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:117": {
+   "he": [
+    "he:Simchat Torah/Hakafot:117"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:118": {
+   "he": [
+    "he:Simchat Torah/Hakafot:118"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:119": {
+   "he": [
+    "he:Simchat Torah/Hakafot:119"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:49": {
+   "he": [
+    "he:Simchat Torah/Hakafot:49"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:50": {
+   "he": [
+    "he:Simchat Torah/Hakafot:50"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:51": {
+   "he": [
+    "he:Simchat Torah/Hakafot:51"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:52": {
+   "he": [
+    "he:Simchat Torah/Hakafot:52"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:53": {
+   "he": [
+    "he:Simchat Torah/Hakafot:53"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:54": {
+   "he": [
+    "he:Simchat Torah/Hakafot:54"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:55": {
+   "he": [
+    "he:Simchat Torah/Hakafot:55"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:56": {
+   "he": [
+    "he:Simchat Torah/Hakafot:56"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:57": {
+   "he": [
+    "he:Simchat Torah/Hakafot:57"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:58": {
+   "he": [
+    "he:Simchat Torah/Hakafot:58"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:59": {
+   "he": [
+    "he:Simchat Torah/Hakafot:59"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:60": {
+   "parts": [
+    {
+     "text": "<b>May it be</b> Your will in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and God of our fathers - God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that is full of mercy - that You should do [it] for the sake of the merit of the fourth circle that hints to the trait of eternity. In Your great mercy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " do not abandon us forever,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Eternal One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Selah;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and  we shall rejoice and see delight in Your right arm forever. And merit us all the promises and consolations that You have promised us through Your holy prophets. Moreover,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Glory of Israel does not deceive or change His mind (I Samuel 15:29). And strengthen us and give us courage forever,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and defeat our enemies. And shut and seal the mouth of all of the accusers against us. And for the sake of the merit of Moses,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the faithful servant sealed with the trait of eternity,",
+     "kind": "prayer"
+    },
+    {
+     "text": " light up our eyes in Your Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and make our spirits pursue Your commandments;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and redeem us with a permanent redemption from the exile of this legion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in the merit of Moses,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the faithful servant,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and build the Temple quickly in our days. And the voice of the son of Levi will turn to its song and its harp;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and with it,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the melodious lyre and harp,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to orchestrate over the work of the House of the Lord. (The next three verses begin with the Hebrew letters that spell out the word,",
+     "kind": "prayer"
+    },
+    {
+     "text": " eternity - ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>NeTsaCh</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ":) In Judah is God known;",
+     "kind": "prayer"
+    },
+    {
+     "text": " His name is great in Israel (Psalms 76:2). Justice goes before Him as He sets out on His way (Psalms 85:14). Be gracious to me,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O Lord;",
+     "kind": "prayer"
+    },
+    {
+     "text": " for I cry to You all day long (Psalms 86:3). May the words of my mouth and the meditations of my heart be acceptable in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " my Rock and my Redeemer. ",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:60"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:61": {
+   "he": [
+    "he:Simchat Torah/Hakafot:61"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:62": {
+   "he": [
+    "he:Simchat Torah/Hakafot:62"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:63": {
+   "he": [
+    "he:Simchat Torah/Hakafot:63"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:64": {
+   "he": [
+    "he:Simchat Torah/Hakafot:64"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:97": {
+   "parts": [
+    {
+     "text": "<b>May it be</b> Your will in front of You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and God of our fathers - God that is full of mercy - that You should do [it] for the sake of Your mercy and for the sake of the merit of the seventh circle that hints to kingship. And let Your kingdom be revealed and seen upon us quickly;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and rule over all the world in Your glory. And the kingdom will be the Lord's and He will be King over all of the world;",
+     "kind": "prayer"
+    },
+    {
+     "text": " on that day the Lord will be one and His name shall be One (Zechariah 14:9). And do [it] for the sake of King David,",
+     "kind": "prayer"
+    },
+    {
+     "text": " peace be upon him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who was sealed with the trait of kingship;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and have Your Divine Presence dwell upon us. May the Lord our God be with us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as He was with our fathers;",
+     "kind": "prayer"
+    },
+    {
+     "text": " may He never abandon us or forsake us (I Kings 8:57). (The next five verses begin with the Hebrew letters that spell out the word,",
+     "kind": "prayer"
+    },
+    {
+     "text": " kingship - ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>MaLKhUT</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ":) With praises I call upon the Lord;",
+     "kind": "prayer"
+    },
+    {
+     "text": " from my foes I will be saved (Psalms 18:4). Forever,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Your word stands in the heavens (Psalms 119:89). For Your kindness toward me is great;",
+     "kind": "prayer"
+    },
+    {
+     "text": " You have saved me from the depths of Sheol (Psalms 86:13). But I am like a thriving olive tree in God’s house;",
+     "kind": "prayer"
+    },
+    {
+     "text": " I trust in the kindness of God forever and ever (Psalms 52:10). You have heard the entreaty of the lowly,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O Lord;",
+     "kind": "prayer"
+    },
+    {
+     "text": " may You make their hearts firm,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may You incline Your ear (Psalms 10:17). ",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:97"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:98": {
+   "he": [
+    "he:Simchat Torah/Hakafot:98"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:99": {
+   "he": [
+    "he:Simchat Torah/Hakafot:99"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:100": {
+   "parts": [
+    {
+     "text": "And so we have no redeemer and savior besides You. The soul is Yours and the body is Your work,",
+     "kind": "prayer"
+    },
+    {
+     "text": " have pity on Your labor. And from the power of the seven circles that we have encircled the platform with the Torah scroll upon it,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and have rejoiced for the glory of Your Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may You be filled with mercy for us: Bring us back,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our Father,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to Your Torah;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and bring us near,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our King,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to Your service. And let the judgements be sweetened,",
+     "kind": "prayer"
+    },
+    {
+     "text": " let Your mercy suppress Your anger - and let Your mercy roll over Your traits. And bring out the light from all of the sparks of our Torah and our [performance of the] commandments,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let everything return to its initial strength,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and 'none be kept banished.' And merit us to be occupied with Torah for its own sake - to bring to the light,",
+     "kind": "prayer"
+    },
+    {
+     "text": " all parts of the orchard (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>PaRDeS</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " the letters of which form the acrostic of the different modes of Torah study) of our Torah which belong to our spirits,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our essences and our souls;",
+     "kind": "prayer"
+    },
+    {
+     "text": " the questions,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the arguments,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the true resolutions and the original legal constructs for the truth of the Torah. And in Your great mercy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " merit us to [have] holy seed - wise and pious sons,",
+     "kind": "prayer"
+    },
+    {
+     "text": " 'the seed of men' and of healthy constellation (fortune). And let there not be found any blemish or any defect in us or in our seed. And may You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in Your mercy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " give us power,",
+     "kind": "prayer"
+    },
+    {
+     "text": " health,",
+     "kind": "prayer"
+    },
+    {
+     "text": " sufficient ability and strength and vigor in our limbs,",
+     "kind": "prayer"
+    },
+    {
+     "text": " tendons and bodies to uphold the watch. And may no irritations or pain befall us;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and may we be happy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " good and healthy for Your service;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and rescue us from all evil. God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and God of our fathers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " reign over the whole world in Your glory,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and be exalted over all the land in Your preciousness;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and appear in the beauty of Your magnificent power over all the residents of Your inhabited planet. And every work (referring to ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>assiyah</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " the world of building) shall know that You made it,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and every form (referring to ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>yitzirah</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " the world of formation) shall know that You formed it. And every one that has a soul (referring to ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>briah</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " the world of creation) in its face will say,",
+     "kind": "prayer"
+    },
+    {
+     "text": " \"The Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " God of Israel (referring to ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>atsilut</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " the world of emanation),",
+     "kind": "prayer"
+    },
+    {
+     "text": " is King 'and His kingdom rules over all.'\" Sanctify us with Your commandments,",
+     "kind": "prayer"
+    },
+    {
+     "text": " grant that our portion be in Your Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " satisfy us from Your bounty,",
+     "kind": "prayer"
+    },
+    {
+     "text": " gladden our souls with Your salvation and purify our hearts to serve You in truth. And do not push us away because of any creature in the world,",
+     "kind": "prayer"
+    },
+    {
+     "text": " lengthen our days with goodness and our years with pleasantness. And fill our years,",
+     "kind": "prayer"
+    },
+    {
+     "text": " eighty years;",
+     "kind": "prayer"
+    },
+    {
+     "text": " add to us length of days and years of life for Your service. And shelter us in the shade of Your wings. And rescue us and all the members of our household from all harsh and evil decrees. And initiate a good new year upon us;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let us be still and serene,",
+     "kind": "prayer"
+    },
+    {
+     "text": " fertile and flourishing in Your service and in Your awe. For with You is the source of life;",
+     "kind": "prayer"
+    },
+    {
+     "text": " in Your light will we see light (Psalms 36:10). Let Your kindness be upon us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as we have hoped in You (Psalms 33:22). Show us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Your kindness;",
+     "kind": "prayer"
+    },
+    {
+     "text": " grant us Your deliverance (Psalms 85:8). But I trust in Your kindness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " my heart will exult in Your deliverance;",
+     "kind": "prayer"
+    },
+    {
+     "text": " I will sing to the Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for He has done good to me (Psalms 13:6). Behold the God who gives me triumph;",
+     "kind": "prayer"
+    },
+    {
+     "text": " I am confident,",
+     "kind": "prayer"
+    },
+    {
+     "text": " unafraid;",
+     "kind": "prayer"
+    },
+    {
+     "text": " for Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Lord is my Strength and Might,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and He has been my Deliverance (Isaiah 12:2). ",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Simchat Torah/Hakafot:100"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:101": {
+   "he": [
+    "he:Simchat Torah/Hakafot:101"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:102": {
+   "he": [
+    "he:Simchat Torah/Hakafot:102"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:103": {
+   "he": [
+    "he:Simchat Torah/Hakafot:103"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:104": {
+   "he": [
+    "he:Simchat Torah/Hakafot:104"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:105": {
+   "he": [
+    "he:Simchat Torah/Hakafot:105"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:106": {
+   "he": [
+    "he:Simchat Torah/Hakafot:106"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:107": {
+   "he": [
+    "he:Simchat Torah/Hakafot:107"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:108": {
+   "he": [
+    "he:Simchat Torah/Hakafot:108"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:109": {
+   "he": [
+    "he:Simchat Torah/Hakafot:109"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:110": {
+   "he": [
+    "he:Simchat Torah/Hakafot:110"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:111": {
+   "he": [
+    "he:Simchat Torah/Hakafot:111"
+   ]
+  },
+  "en:Simchat Torah/Hakafot:112": {
+   "he": [
+    "he:Simchat Torah/Hakafot:112"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Sukkot/Order of Hoshanot:3",
+   "type": "ambiguous",
+   "detail": "Condition for 'first day of Sukkot falls on Monday' is not a standard variable; requires calculation of hDay=1 and dow=1 (Monday) or similar logic."
+  },
+  {
+   "id": "he:Simchat Torah/Hakafot:49",
+   "type": "missing_text",
+   "detail": "Hebrew text for Circle 4 (h49) is not selected in the input, but English e49 is present. The Hebrew source for h49 is present in the raw data but marked selected:false."
+  },
+  {
+   "id": "en:Simchat Torah/Hakafot:65",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h74.16; h74.17; h74.18"
+  },
+  {
+   "id": "en:Simchat Torah/Hakafot:113",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h115.1; h116.1"
+  },
+  {
+   "id": "en:Simchat Torah/Hakafot:49",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h60.15; h60.16; h60.17"
+  },
+  {
+   "id": "he:Simchat Torah/Hakafot:97",
+   "type": "engine_bug_risk",
+   "detail": "Unresolved by the tagger: he:Simchat Torah/Hakafot:97: Hebrew rubric/note needs English rendering"
+  },
+  {
+   "id": "he:Simchat Torah/Hakafot:100",
+   "type": "engine_bug_risk",
+   "detail": "Unresolved by the tagger: he:Simchat Torah/Hakafot:100: Hebrew rubric/note needs English rendering"
+  }
+ ]
+}

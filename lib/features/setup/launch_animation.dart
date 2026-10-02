@@ -25,9 +25,9 @@ class LaunchAnimation extends StatefulWidget {
 
 class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderStateMixin {
   // The podium is built (lines land by 1.27 s) and the siddur opens on it
-  // as it lands (1.25–2.1 s), the wordmark rises (2.2–2.8 s), and it all
-  // holds a moment before fading into the app.
-  static const _length = Duration(milliseconds: 3600);
+  // while it settles (0.95–1.8 s), the wordmark rises (1.75–2.35 s), and it
+  // all holds a moment before fading into the app.
+  static const _length = Duration(milliseconds: 3100);
   // Both keep their length when the system asks for reduced motion
   // (AnimationController would otherwise run them 20 times faster, so the
   // logo only blinked); reduced motion is handled here instead.
@@ -94,7 +94,7 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
                   builder: (context, _) {
                     final still = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
                     final t = still ? _length.inMilliseconds / 1000 : _c.value * _length.inMilliseconds / 1000;
-                    final word = _segment(t, 2.2, .6, Curves.easeOut);
+                    final word = _segment(t, 1.75, .6, Curves.easeOut);
                     return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                       CustomPaint(size: const Size.square(240), painter: _MarkPainter(t)),
                       const SizedBox(height: 20),
@@ -166,7 +166,7 @@ class _MarkPainter extends CustomPainter {
     canvas.translate(-16, -20);
 
     // Pages: back layers first, each unfolding from the spine.
-    for (final (color, angle, delay) in [(_fanDeep, 14.0, 1.5), (_fan, 7.0, 1.38), (_paper, 0.0, 1.25)]) {
+    for (final (color, angle, delay) in [(_fanDeep, 14.0, 1.2), (_fan, 7.0, 1.08), (_paper, 0.0, .95)]) {
       final p = _segment(t, delay, .6, _openCurve);
       if (p <= 0) continue;
       final paint = Paint()..color = color.withValues(alpha: p);

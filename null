@@ -1,0 +1,626 @@
+### Siddur Ashkenaz | plain Tue
+  [shacharit] whole=Weekday/Shacharit
+    Preparatory Prayers · Pesukei Dezimra · Blessings of the Shema · Amidah · Post Amidah · Concluding Prayers
+    skipped: Torah Reading, Post Service
+  [mincha] whole=Weekday/Minchah
+    Ashrei · Amida · Post Amidah · Concluding Prayers
+  [maariv] whole=Weekday/Maariv
+    Vehu Rachum · Barchu · Blessings of the Shema · Amidah · Kaddish Shalem · Alenu · Mourner's Kaddish · Birkat HaLevana
+    skipped: Additions for Motza'ei Shabbat, Sefirat HaOmer, LeDavid
+  [night] whole=Weekday/Maariv/Keri'at Shema al Hamita
+    Keri'at Shema al Hamita[x]
+### Siddur Ashkenaz | RC Mon
+  [shacharit] whole=Weekday/Shacharit
+    Preparatory Prayers · Pesukei Dezimra · Blessings of the Shema · Amidah · +Hallel · Torah Reading · Ashrei · Uva Letzion · +Musaf Amidah for Rosh Chodesh · Kaddish Shalem · Alenu · Mourner's Kaddish · Song of the Day · Barchi Nafshi
+    skipped: Post Amidah, Lamenatze'ach, LeDavid, Korbanot (Israel), Post Service
+  [mincha] whole=Weekday/Minchah
+    Ashrei · Amida · Post Amidah · Concluding Prayers
+  [maariv] whole=Weekday/Maariv
+    Vehu Rachum · Barchu · Blessings of the Shema · Amidah · Kaddish Shalem · Alenu · Mourner's Kaddish
+    skipped: Additions for Motza'ei Shabbat, Sefirat HaOmer, LeDavid, Birkat HaLevana
+  [night] whole=Weekday/Maariv/Keri'at Shema al Hamita
+    Keri'at Shema al Hamita[x]
+### Siddur Ashkenaz | CHM Sukkot
+  [shacharit] whole=Weekday/Shacharit
+    Preparatory Prayers · Pesukei Dezimra · Blessings of the Shema · Amidah · +Blessing on Lulav · +Hallel · Torah Reading · Ashrei · Uva Letzion · +Mussaf · +Fifth Day of Sukkot · Kaddish Shalem · Alenu · Mourner's Kaddish · Song of the Day · LeDavid
+    skipped: Post Amidah, Lamenatze'ach, Barchi Nafshi, Korbanot (Israel), Post Service
+  [mincha] whole=Weekday/Minchah
+    Ashrei · Amida · Post Amidah · Concluding Prayers
+  [maariv] whole=Weekday/Maariv
+    Vehu Rachum · Barchu · Blessings of the Shema · Amidah · Kaddish Shalem · Alenu · Mourner's Kaddish · LeDavid
+    skipped: Additions for Motza'ei Shabbat, Sefirat HaOmer, Birkat HaLevana
+  [night] whole=Weekday/Maariv/Keri'at Shema al Hamita
+    Keri'at Shema al Hamita[x]
+### Siddur Ashkenaz | Hoshana Raba
+  [shacharit] whole=Weekday/Shacharit
+    Preparatory Prayers · Pesukei Dezimra · Blessings of the Shema · Amidah · +Blessing on Lulav · +Hallel · Torah Reading · Ashrei · Uva Letzion · +Mussaf · +Hosha'ana Rabba · Kaddish Shalem · Alenu · Mourner's Kaddish · Song of the Day · LeDavid
+    skipped: Post Amidah, Lamenatze'ach, Barchi Nafshi, Korbanot (Israel), Post Service
+  [mincha] whole=Weekday/Minchah
+    Ashrei · Amida · Post Amidah · Concluding Prayers
+  [shabbatEve] whole=null
+    +Candle Lighting{The Koren Shalem Siddur; Ashkenaz}[x] · +Kabbalat Shabbat[x]
+  [maariv] whole=Shabbat/Maariv
+    Barchu · Blessings of the Shema · Veshamru · Half Kaddish · +Amida for Maariv, Shacharit, Mincha[x] · Vay'chulu · Me'ein Sheva · Kaddish Shalem · Aleinu · Mourner's Kaddish · Yigdal · Adon Olam · +Kiddush[x]
+    skipped: Sefirat HaOmer, LeDavid
+  [night] whole=Weekday/Maariv/Keri'at Shema al Hamita
+    Keri'at Shema al Hamita[x]
+### Siddur Ashkenaz | CHM Pesach
+  [shacharit] whole=Weekday/Shacharit
+    Preparatory Prayers · Pesukei Dezimra · Blessings of the Shema · Amidah · +Hallel · Torah Reading · Ashrei · Uva Letzion · +Mussaf · Kaddish Shalem · Alenu · Mourner's Kaddish · Song of the Day
+    skipped: Post Amidah, Lamenatze'ach, Barchi Nafshi, LeDavid, Korbanot (Israel), Post Service
+  [mincha] whole=Weekday/Minchah
+    Ashrei · Amida · Post Amidah · Concluding Prayers
+  [maariv] whole=Weekday/Maariv
+    Vehu Rachum · Barchu · Blessings of the Shema · Amidah · Kaddish Shalem · Sefirat HaOmer · Alenu · Mourner's Kaddish
+    skipped: Additions for Motza'ei Shabbat, LeDavid, Birkat HaLevana
+  [night] whole=Weekday/Maariv/Keri'at Shema al Hamita
+    Keri'at Shema al Hamita[x]
+### Siddur Ashkenaz | Chanukah
+  [shacharit] whole=Weekday/Shacharit
+    Preparatory Prayers · Pesukei Dezimra · Blessings of the Shema · Amidah · +Hallel · Torah Reading · Concluding Prayers
+    skipped: Post Amidah, Post Service
+  [mincha] whole=Weekday/Minchah
+    Ashrei · Amida · Post Amidah · Concluding Prayers
+  [maariv] whole=Weekday/Maariv
+    Vehu Rachum · Barchu · Blessings of the Shema · Amidah · +Service for Lighting Chanukah Candles · Kaddish Shalem · Alenu · Mourner's Kaddish
+    skipped: Additions for Motza'ei Shabbat, Sefirat HaOmer, LeDavid, Birkat HaLevana
+  [night] whole=Weekday/Maariv/Keri'at Shema al Hamita
+    Keri'at Shema al Hamita[x]
+### Siddur Ashkenaz | RC Tevet+Chanukah
+  [shacharit] whole=Weekday/Shacharit
+    Preparatory Prayers · Pesukei Dezimra · Blessings of the Shema · Amidah · +Hallel · Torah Reading · Ashrei · Uva Letzion · +Musaf Amidah for Rosh Chodesh · Kaddish Shalem · Alenu · Mourner's Kaddish · Song of the Day · Barchi Nafshi
+    skipped: Post Amidah, Lamenatze'ach, LeDavid, Korbanot (Israel), Post Service
+  [mincha] whole=Weekday/Minchah
+    Ashrei · Amida · Post Amidah · Concluding Prayers
+  [maariv] whole=Weekday/Maariv
+    Vehu Rachum · Barchu · Blessings of the Shema · Amidah · +Service for Lighting Chanukah Candles · Kaddish Shalem · Alenu · Mourner's Kaddish
+    skipped: Additions for Motza'ei Shabbat, Sefirat HaOmer, LeDavid, Birkat HaLevana
+  [night] whole=Weekday/Maariv/Keri'at Shema al Hamita
+    Keri'at Shema al Hamita[x]
+### Siddur Ashkenaz | 10 Tevet
+  [shacharit] whole=Weekday/Shacharit
+    Preparatory Prayers · Pesukei Dezimra · Blessings of the Shema · Amidah · +Ten of Tevet · Post Amidah · Torah Reading · Concluding Prayers
+    skipped: Post Service
+  [mincha] whole=Weekday/Minchah
+    Ashrei · Amida · Post Amidah · Concluding Prayers
+  [maariv] whole=Weekday/Maariv
+    Vehu Rachum · Barchu · Blessings of the Shema · Amidah · Kaddish Shalem · Alenu · Mourner's Kaddish · Birkat HaLevana
+    skipped: Additions for Motza'ei Shabbat, Sefirat HaOmer, LeDavid
+  [night] whole=Weekday/Maariv/Keri'at Shema al Hamita
+    Keri'at Shema al Hamita[x]
+### Siddur Ashkenaz | Sun after Shabbat
+  [shacharit] whole=Weekday/Shacharit
+    Preparatory Prayers · Pesukei Dezimra · Blessings of the Shema · Amidah · Post Amidah · Concluding Prayers
+    skipped: Torah Reading, Post Service
+  [mincha] whole=Weekday/Minchah
+    Ashrei · Amida · Post Amidah · Concluding Prayers
+  [maariv] whole=Weekday/Maariv
+    Vehu Rachum · Barchu · Blessings of the Shema · Amidah · Kaddish Shalem · Alenu · Mourner's Kaddish · Birkat HaLevana
+    skipped: Additions for Motza'ei Shabbat, Sefirat HaOmer, LeDavid
+  [night] whole=Weekday/Maariv/Keri'at Shema al Hamita
+    Keri'at Shema al Hamita[x]
+### Siddur Ashkenaz | Omer weekday
+  [shacharit] whole=Weekday/Shacharit
+    Preparatory Prayers · Pesukei Dezimra · Blessings of the Shema · Amidah · +Hallel · Torah Reading · Ashrei · Uva Letzion · +Mussaf · Kaddish Shalem · Alenu · Mourner's Kaddish · Song of the Day
+    skipped: Post Amidah, Lamenatze'ach, Barchi Nafshi, LeDavid, Korbanot (Israel), Post Service
+  [mincha] whole=Weekday/Minchah
+    Ashrei · Amida · Post Amidah · Concluding Prayers
+  [shabbatEve] whole=null
+    +Candle Lighting{The Koren Shalem Siddur; Ashkenaz}[x]
+  [maariv] whole=Shabbat/Maariv
+    Barchu · Blessings of the Shema · Half Kaddish · +Amida for Maariv, Shacharit, Mincha[x] · Kaddish Shalem · Sefirat HaOmer · Aleinu · Mourner's Kaddish · Yigdal · Adon Olam · +Kiddush for Yom Tov Evening{The Koren Shalem Siddur; Ashkenaz}[x]
+    skipped: Veshamru, Vay'chulu, Me'ein Sheva, LeDavid
+  [night] whole=Weekday/Maariv/Keri'at Shema al Hamita
+    Keri'at Shema al Hamita[x]
+### Siddur Ashkenaz | Friday
+  [shacharit] whole=Weekday/Shacharit
+    Preparatory Prayers · Pesukei Dezimra · Blessings of the Shema · Amidah · Post Amidah · Concluding Prayers
+    skipped: Torah Reading, Post Service
+  [mincha] whole=Weekday/Minchah
+    Ashrei · Amida · Post Amidah · Concluding Prayers
+  [shabbatEve] whole=null
+    +Candle Lighting{The Koren Shalem Siddur; Ashkenaz}[x] · +Kabbalat Shabbat[x]
+  [maariv] whole=Shabbat/Maariv
+    Barchu · Blessings of the Shema · Veshamru · Half Kaddish · Amidah · Vay'chulu · Me'ein Sheva · Kaddish Shalem · Aleinu · Mourner's Kaddish · Yigdal · Adon Olam · +Kiddush[x]
+    skipped: Sefirat HaOmer, LeDavid
+  [night] whole=Weekday/Maariv/Keri'at Shema al Hamita
+    Keri'at Shema al Hamita[x]
+### Weekday Siddur Chabad | plain Tue
+  [shacharit] whole=Shacharit
+    Upon Arising · Morning Blessings · Tzitzit and Tallit · Tefillin · Morning Prayer · Kaddish DeRabbanan · Hodu · Pesukei Dezimra · Blessings of the Shema · The Amidah · Tachnun · Ashrei Uva LeZion · Song of the Day · Mourner's Kaddish · Kaveh · Aleinu · Rabbenu Tam · Six Remembrances
+    skipped: Torah Reading
+  [mincha] whole=Mincha
+    Korbanot · Ashrei · Amidah · Tachanun · Aleinu
+  [maariv] whole=Maariv
+    Maariv · +Kiddush Levanah
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Weekday Siddur Chabad | RC Mon
+  [shacharit] whole=Shacharit
+    Upon Arising · Morning Blessings · Tzitzit and Tallit · Tefillin · Morning Prayer · Kaddish DeRabbanan · Hodu · Pesukei Dezimra · Blessings of the Shema · The Amidah · +Hallel · Torah Reading · Ashrei Uva LeZion · +Rosh Chodesh · Song of the Day · Mourner's Kaddish · Kaveh · Aleinu · Rabbenu Tam · Six Remembrances
+    skipped: Tachnun
+  [mincha] whole=Mincha
+    Korbanot · Ashrei · Amidah · Aleinu
+    skipped: Tachanun
+  [maariv] whole=Maariv
+    Maariv
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Weekday Siddur Chabad | CHM Sukkot
+  [shacharit] whole=Shacharit
+    Upon Arising · Morning Blessings · Tzitzit and Tallit · Tefillin · Morning Prayer · Kaddish DeRabbanan · Hodu · Pesukei Dezimra · Blessings of the Shema · The Amidah · +Lulav · +Hallel · +Sukkot{Siddur Sefard}[x] · Torah Reading · Ashrei Uva LeZion · +Musaf for Festivals · Song of the Day · Mourner's Kaddish · Kaveh · Aleinu · Rabbenu Tam · Six Remembrances
+    skipped: Tachnun
+  [mincha] whole=Mincha
+    Korbanot · Ashrei · Amidah · Aleinu
+    skipped: Tachanun
+  [maariv] whole=Maariv
+    Maariv
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Weekday Siddur Chabad | Hoshana Raba
+  [shacharit] whole=Shacharit
+    Upon Arising · Morning Blessings · Tzitzit and Tallit · Tefillin · Morning Prayer · Kaddish DeRabbanan · Hodu · Pesukei Dezimra · Blessings of the Shema · The Amidah · +Lulav · +Hallel · +Sukkot{Siddur Sefard}[x] · Torah Reading · Ashrei Uva LeZion · +Musaf for Festivals · Song of the Day · Mourner's Kaddish · Kaveh · Aleinu · Rabbenu Tam · Six Remembrances
+    skipped: Tachnun
+  [mincha] whole=Mincha
+    Korbanot · Ashrei · Amidah · Aleinu
+    skipped: Tachanun
+  [shabbatEve] whole=null
+    +Shabbat Candle Lighting{Siddur Sefard}[x] · +Kabbalat Shabbat{Siddur Sefard}[x]
+  [maariv] whole=Shabbat Eve Maariv
+    Shabbat Eve Maariv{Siddur Sefard} · Shema & Blessings{Siddur Sefard} · +Maariv, Shacharit & Mincha Amidah{Siddur Sefard}[x] · Vayechulu{Siddur Sefard} · +Shabbat Eve Kiddush{Siddur Sefard}[x]
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Weekday Siddur Chabad | CHM Pesach
+  [shacharit] whole=Shacharit
+    Upon Arising · Morning Blessings · Tzitzit and Tallit · Tefillin · Morning Prayer · Kaddish DeRabbanan · Hodu · Pesukei Dezimra · Blessings of the Shema · The Amidah · +Hallel · Torah Reading · Ashrei Uva LeZion · +Musaf for Festivals · Song of the Day · Mourner's Kaddish · Kaveh · Aleinu · Rabbenu Tam · Six Remembrances
+    skipped: Tachnun
+  [mincha] whole=Mincha
+    Korbanot · Ashrei · Amidah · Aleinu
+    skipped: Tachanun
+  [maariv] whole=Maariv
+    Maariv · +Sefirat HaOmer
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Weekday Siddur Chabad | Chanukah
+  [shacharit] whole=Shacharit
+    Upon Arising · Morning Blessings · Tzitzit and Tallit · Tefillin · Morning Prayer · Kaddish DeRabbanan · Hodu · Pesukei Dezimra · Blessings of the Shema · The Amidah · +Hallel · Torah Reading · Ashrei Uva LeZion · Song of the Day · Mourner's Kaddish · Kaveh · Aleinu · Rabbenu Tam · Six Remembrances
+    skipped: Tachnun
+  [mincha] whole=Mincha
+    Korbanot · Ashrei · Amidah · Aleinu
+    skipped: Tachanun
+  [maariv] whole=Maariv
+    Maariv · +Chanukah[x]
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Weekday Siddur Chabad | RC Tevet+Chanukah
+  [shacharit] whole=Shacharit
+    Upon Arising · Morning Blessings · Tzitzit and Tallit · Tefillin · Morning Prayer · Kaddish DeRabbanan · Hodu · Pesukei Dezimra · Blessings of the Shema · The Amidah · +Hallel · Torah Reading · Ashrei Uva LeZion · +Rosh Chodesh · Song of the Day · Mourner's Kaddish · Kaveh · Aleinu · Rabbenu Tam · Six Remembrances
+    skipped: Tachnun
+  [mincha] whole=Mincha
+    Korbanot · Ashrei · Amidah · Aleinu
+    skipped: Tachanun
+  [maariv] whole=Maariv
+    Maariv · +Chanukah[x]
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Weekday Siddur Chabad | 10 Tevet
+  [shacharit] whole=Shacharit
+    Upon Arising · Morning Blessings · Tzitzit and Tallit · Tefillin · Morning Prayer · Kaddish DeRabbanan · Hodu · Pesukei Dezimra · Blessings of the Shema · The Amidah · Tachnun · Torah Reading · Ashrei Uva LeZion · Song of the Day · Mourner's Kaddish · Kaveh · Aleinu · Rabbenu Tam · Six Remembrances
+  [mincha] whole=Mincha
+    Korbanot · Ashrei · Amidah · Tachanun · Aleinu
+  [maariv] whole=Maariv
+    Maariv · +Kiddush Levanah
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Weekday Siddur Chabad | Sun after Shabbat
+  [shacharit] whole=Shacharit
+    Upon Arising · Morning Blessings · Tzitzit and Tallit · Tefillin · Morning Prayer · Kaddish DeRabbanan · Hodu · Pesukei Dezimra · Blessings of the Shema · The Amidah · Tachnun · Ashrei Uva LeZion · Song of the Day · Mourner's Kaddish · Kaveh · Aleinu · Rabbenu Tam · Six Remembrances
+    skipped: Torah Reading
+  [mincha] whole=Mincha
+    Korbanot · Ashrei · Amidah · Tachanun · Aleinu
+  [maariv] whole=Maariv
+    Maariv · +Kiddush Levanah
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Weekday Siddur Chabad | Omer weekday
+  [shacharit] whole=Shacharit
+    Upon Arising · Morning Blessings · Tzitzit and Tallit · Tefillin · Morning Prayer · Kaddish DeRabbanan · Hodu · Pesukei Dezimra · Blessings of the Shema · The Amidah · +Hallel · Torah Reading · Ashrei Uva LeZion · +Musaf for Festivals · Song of the Day · Mourner's Kaddish · Kaveh · Aleinu · Rabbenu Tam · Six Remembrances
+    skipped: Tachnun
+  [mincha] whole=Mincha
+    Korbanot · Ashrei · Amidah · Aleinu
+    skipped: Tachanun
+  [shabbatEve] whole=null
+    +Shabbat Candle Lighting{Siddur Sefard}[x]
+  [maariv] whole=Shabbat Eve Maariv
+    Shabbat Eve Maariv{Siddur Sefard} · Shema & Blessings{Siddur Sefard} · +Maariv, Shacharit & Mincha Amidah{Siddur Sefard}[x] · +Sefirat HaOmer[x] · +Yom Tov Eve Kiddush{Siddur Sefard}[x]
+    skipped: Vayechulu
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Weekday Siddur Chabad | Friday
+  [shacharit] whole=Shacharit
+    Upon Arising · Morning Blessings · Tzitzit and Tallit · Tefillin · Morning Prayer · Kaddish DeRabbanan · Hodu · Pesukei Dezimra · Blessings of the Shema · The Amidah · Tachnun · Ashrei Uva LeZion · Song of the Day · Mourner's Kaddish · Kaveh · Aleinu · Rabbenu Tam · Six Remembrances
+    skipped: Torah Reading
+  [mincha] whole=Mincha
+    Korbanot · Ashrei · Amidah · Aleinu
+    skipped: Tachanun
+  [shabbatEve] whole=null
+    +Shabbat Candle Lighting{Siddur Sefard}[x] · +Kabbalat Shabbat{Siddur Sefard}[x]
+  [maariv] whole=Shabbat Eve Maariv
+    Shabbat Eve Maariv{Siddur Sefard} · Shema & Blessings{Siddur Sefard} · Amidah{Siddur Sefard} · Vayechulu{Siddur Sefard} · +Shabbat Eve Kiddush{Siddur Sefard}[x]
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Sefard | plain Tue
+  [shacharit] whole=Weekday Shacharit
+    Morning Blessings · Blessings on Torah · Morning Prayer · Korbanot · B'raita d'Rabi Yishmael · Hodu · Yishtabach · The Shema · Amidah · Tachanun · Ashrei · Beit Yaakov · Song of the Day · Kaveh · Aleinu
+    skipped: Avinu Malkeinu, For Monday & Thursday, Torah Reading, Barchi Nafshi, L'David Hashem
+  [mincha] whole=Weekday Mincha
+    Korbanot · Amidah · Tachanun
+    skipped: Torah Reading for Fast Day, Avinu Malkeinu
+  [maariv] whole=Weekday Maariv
+    The Shema · Amidah · +Kiddush Levanah
+    skipped: Motzaei Shabbat, Sefirat HaOmer
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Sefard | RC Mon
+  [shacharit] whole=Weekday Shacharit
+    Morning Blessings · Blessings on Torah · Morning Prayer · Korbanot · B'raita d'Rabi Yishmael · Hodu · Yishtabach · The Shema · Amidah · +Hallel · Torah Reading · Ashrei · +Mussaf · Beit Yaakov · Song of the Day · Barchi Nafshi · Kaveh · Aleinu
+    skipped: Tachanun, Avinu Malkeinu, For Monday & Thursday, L'David Hashem
+  [mincha] whole=Weekday Mincha
+    Korbanot · Amidah
+    skipped: Torah Reading for Fast Day, Tachanun, Avinu Malkeinu
+  [maariv] whole=Weekday Maariv
+    The Shema · Amidah
+    skipped: Motzaei Shabbat, Sefirat HaOmer
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Sefard | CHM Sukkot
+  [shacharit] whole=Weekday Shacharit
+    Morning Blessings · Blessings on Torah · Morning Prayer · Korbanot · B'raita d'Rabi Yishmael · Hodu · Yishtabach · The Shema · Amidah · +Shaking Lulav[x] · +Hallel · +Sukkot · Torah Reading · Ashrei · +Yom Tov Musaf Amidah · Beit Yaakov · Song of the Day · L'David Hashem · Kaveh · Aleinu
+    skipped: Tachanun, Avinu Malkeinu, For Monday & Thursday, Barchi Nafshi
+  [mincha] whole=Weekday Mincha
+    Korbanot · Amidah
+    skipped: Torah Reading for Fast Day, Tachanun, Avinu Malkeinu
+  [maariv] whole=Weekday Maariv
+    The Shema · Amidah
+    skipped: Motzaei Shabbat, Sefirat HaOmer
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Sefard | Hoshana Raba
+  [shacharit] whole=Weekday Shacharit
+    Morning Blessings · Blessings on Torah · Morning Prayer · Korbanot · B'raita d'Rabi Yishmael · Hodu · Yishtabach · The Shema · Amidah · +Shaking Lulav[x] · +Hallel · +Sukkot · Torah Reading · Ashrei · +Yom Tov Musaf Amidah · Beit Yaakov · Song of the Day · L'David Hashem · Kaveh · Aleinu
+    skipped: Tachanun, Avinu Malkeinu, For Monday & Thursday, Barchi Nafshi
+  [mincha] whole=Weekday Mincha
+    Korbanot · Amidah
+    skipped: Torah Reading for Fast Day, Tachanun, Avinu Malkeinu
+  [shabbatEve] whole=null
+    +Shabbat Candle Lighting[x] · +Kabbalat Shabbat[x]
+  [maariv] whole=Shabbat Eve Maariv
+    Shabbat Eve Maariv · Shema & Blessings · +Maariv, Shacharit & Mincha Amidah[x] · Vayechulu · +Shabbat Eve Kiddush[x]
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Sefard | CHM Pesach
+  [shacharit] whole=Weekday Shacharit
+    Morning Blessings · Blessings on Torah · Morning Prayer · Korbanot · B'raita d'Rabi Yishmael · Hodu · Yishtabach · The Shema · Amidah · +Hallel · Torah Reading · Ashrei · +Yom Tov Musaf Amidah · Beit Yaakov · Song of the Day · Kaveh · Aleinu
+    skipped: Tachanun, Avinu Malkeinu, For Monday & Thursday, Barchi Nafshi, L'David Hashem
+  [mincha] whole=Weekday Mincha
+    Korbanot · Amidah
+    skipped: Torah Reading for Fast Day, Tachanun, Avinu Malkeinu
+  [maariv] whole=Weekday Maariv
+    The Shema · Amidah · Sefirat HaOmer
+    skipped: Motzaei Shabbat
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Sefard | Chanukah
+  [shacharit] whole=Weekday Shacharit
+    Morning Blessings · Blessings on Torah · Morning Prayer · Korbanot · B'raita d'Rabi Yishmael · Hodu · Yishtabach · The Shema · Amidah · +Hallel · Torah Reading · +Torah Reading · Ashrei · Beit Yaakov · Song of the Day · Kaveh · Aleinu
+    skipped: Tachanun, Avinu Malkeinu, For Monday & Thursday, Barchi Nafshi, L'David Hashem
+  [mincha] whole=Weekday Mincha
+    Korbanot · Amidah
+    skipped: Torah Reading for Fast Day, Tachanun, Avinu Malkeinu
+  [maariv] whole=Weekday Maariv
+    The Shema · Amidah · +Menorah Lighting
+    skipped: Motzaei Shabbat, Sefirat HaOmer
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Sefard | RC Tevet+Chanukah
+  [shacharit] whole=Weekday Shacharit
+    Morning Blessings · Blessings on Torah · Morning Prayer · Korbanot · B'raita d'Rabi Yishmael · Hodu · Yishtabach · The Shema · Amidah · +Hallel · Torah Reading · +Torah Reading · Ashrei · +Mussaf · Beit Yaakov · Song of the Day · Barchi Nafshi · Kaveh · Aleinu
+    skipped: Tachanun, Avinu Malkeinu, For Monday & Thursday, L'David Hashem
+  [mincha] whole=Weekday Mincha
+    Korbanot · Amidah
+    skipped: Torah Reading for Fast Day, Tachanun, Avinu Malkeinu
+  [maariv] whole=Weekday Maariv
+    The Shema · Amidah · +Menorah Lighting
+    skipped: Motzaei Shabbat, Sefirat HaOmer
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Sefard | 10 Tevet
+  [shacharit] whole=Weekday Shacharit
+    Morning Blessings · Blessings on Torah · Morning Prayer · Korbanot · B'raita d'Rabi Yishmael · Hodu · Yishtabach · The Shema · Amidah · +Selichot for Asara B'Tevet · Tachanun · Avinu Malkeinu · Torah Reading · Ashrei · Beit Yaakov · Song of the Day · Kaveh · Aleinu
+    skipped: For Monday & Thursday, Barchi Nafshi, L'David Hashem
+  [mincha] whole=Weekday Mincha
+    Korbanot · Torah Reading for Fast Day · Amidah · Tachanun · Avinu Malkeinu
+  [maariv] whole=Weekday Maariv
+    The Shema · Amidah · +Kiddush Levanah
+    skipped: Motzaei Shabbat, Sefirat HaOmer
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Sefard | Sun after Shabbat
+  [shacharit] whole=Weekday Shacharit
+    Morning Blessings · Blessings on Torah · Morning Prayer · Korbanot · B'raita d'Rabi Yishmael · Hodu · Yishtabach · The Shema · Amidah · Tachanun · Ashrei · Beit Yaakov · Song of the Day · Kaveh · Aleinu
+    skipped: Avinu Malkeinu, For Monday & Thursday, Torah Reading, Barchi Nafshi, L'David Hashem
+  [mincha] whole=Weekday Mincha
+    Korbanot · Amidah · Tachanun
+    skipped: Torah Reading for Fast Day, Avinu Malkeinu
+  [maariv] whole=Weekday Maariv
+    The Shema · Amidah · +Kiddush Levanah
+    skipped: Motzaei Shabbat, Sefirat HaOmer
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Sefard | Omer weekday
+  [shacharit] whole=Weekday Shacharit
+    Morning Blessings · Blessings on Torah · Morning Prayer · Korbanot · B'raita d'Rabi Yishmael · Hodu · Yishtabach · The Shema · Amidah · +Hallel · Torah Reading · Ashrei · +Yom Tov Musaf Amidah · Beit Yaakov · Song of the Day · Kaveh · Aleinu
+    skipped: Tachanun, Avinu Malkeinu, For Monday & Thursday, Barchi Nafshi, L'David Hashem
+  [mincha] whole=Weekday Mincha
+    Korbanot · Amidah
+    skipped: Torah Reading for Fast Day, Tachanun, Avinu Malkeinu
+  [shabbatEve] whole=null
+    +Shabbat Candle Lighting[x]
+  [maariv] whole=Shabbat Eve Maariv
+    Shabbat Eve Maariv · Shema & Blessings · +Maariv, Shacharit & Mincha Amidah[x] · +Sefirat HaOmer[x] · +Yom Tov Eve Kiddush[x]
+    skipped: Vayechulu
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Sefard | Friday
+  [shacharit] whole=Weekday Shacharit
+    Morning Blessings · Blessings on Torah · Morning Prayer · Korbanot · B'raita d'Rabi Yishmael · Hodu · Yishtabach · The Shema · Amidah · Tachanun · Ashrei · Beit Yaakov · Song of the Day · Kaveh · Aleinu
+    skipped: Avinu Malkeinu, For Monday & Thursday, Torah Reading, Barchi Nafshi, L'David Hashem
+  [mincha] whole=Weekday Mincha
+    Korbanot · Amidah
+    skipped: Torah Reading for Fast Day, Tachanun, Avinu Malkeinu
+  [shabbatEve] whole=null
+    +Shabbat Candle Lighting[x] · +Kabbalat Shabbat[x]
+  [maariv] whole=Shabbat Eve Maariv
+    Shabbat Eve Maariv · Shema & Blessings · Amidah · Vayechulu · +Shabbat Eve Kiddush[x]
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Edot HaMizrach | plain Tue
+  [shacharit] whole=Weekday Shacharit
+    Petichat Eliyahu · Order of Talit · Order of Tefillin · Hanna's Prayer · Morning Prayer · Incense Offering · Hodu · Pesukei D'Zimra · The Shema · Amida · Vidui · Ashrei · Uva LeSion · Beit Yaakov · Song of the Day · Kaveh · Alenu
+    skipped: Torah Reading
+  [mincha] whole=Weekday Mincha
+    Offerings · Amida · Vidui · Alenu
+  [maariv] whole=Weekday Arvit
+    Barchu · The Shema · Amidah · Alenu · +Blessing of the Moon[x]
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Edot HaMizrach | RC Mon
+  [shacharit] whole=Weekday Shacharit
+    Petichat Eliyahu · Order of Talit · Order of Tefillin · Hanna's Prayer · Morning Prayer · Incense Offering · Hodu · Pesukei D'Zimra · The Shema · Amida · +Hallel · Torah Reading · Ashrei · Uva LeSion · +Mussaf · Beit Yaakov · Song of the Day · Kaveh · Alenu
+    skipped: Vidui
+  [mincha] whole=Weekday Mincha
+    Offerings · Amida · Alenu
+    skipped: Vidui
+  [maariv] whole=Weekday Arvit
+    Barchu · The Shema · Amidah · Alenu
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Edot HaMizrach | CHM Sukkot
+  [shacharit] whole=Weekday Shacharit
+    Petichat Eliyahu · Order of Talit · Order of Tefillin · Hanna's Prayer · Morning Prayer · Incense Offering · Hodu · Pesukei D'Zimra · The Shema · Amida · +Blessing on Lulav{Siddur Ashkenaz}[x] · +Hallel · +Fifth Day of Sukkot{Siddur Ashkenaz}[x] · Torah Reading · Ashrei · Uva LeSion · +Mussaf · Beit Yaakov · Song of the Day · Kaveh · Alenu
+    skipped: Vidui
+  [mincha] whole=Weekday Mincha
+    Offerings · Amida · Alenu
+    skipped: Vidui
+  [maariv] whole=Weekday Arvit
+    Barchu · The Shema · Amidah · Alenu
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Edot HaMizrach | Hoshana Raba
+  [shacharit] whole=Weekday Shacharit
+    Petichat Eliyahu · Order of Talit · Order of Tefillin · Hanna's Prayer · Morning Prayer · Incense Offering · Hodu · Pesukei D'Zimra · The Shema · Amida · +Blessing on Lulav{Siddur Ashkenaz}[x] · +Hallel · +Hosha'ana Rabba{Siddur Ashkenaz}[x] · Torah Reading · Ashrei · Uva LeSion · +Mussaf · Beit Yaakov · Song of the Day · Kaveh · Alenu
+    skipped: Vidui
+  [mincha] whole=Weekday Mincha
+    Offerings · Amida · Alenu
+    skipped: Vidui
+  [shabbatEve] whole=null
+    +Shabbat Candle Lighting[x] · +Kabbalat Shabbat[x]
+  [maariv] whole=Shabbat Arvit
+    Barchu · The Shema · Magen Avot · Alenu · +Kiddush[x]
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Edot HaMizrach | CHM Pesach
+  [shacharit] whole=Weekday Shacharit
+    Petichat Eliyahu · Order of Talit · Order of Tefillin · Hanna's Prayer · Morning Prayer · Incense Offering · Hodu · Pesukei D'Zimra · The Shema · Amida · +Hallel · Torah Reading · Ashrei · Uva LeSion · +Mussaf · Beit Yaakov · Song of the Day · Kaveh · Alenu
+    skipped: Vidui
+  [mincha] whole=Weekday Mincha
+    Offerings · Amida · Alenu
+    skipped: Vidui
+  [maariv] whole=Weekday Arvit
+    Barchu · The Shema · Amidah · Alenu · +Counting of the Omer
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Edot HaMizrach | Chanukah
+  [shacharit] whole=Weekday Shacharit
+    Petichat Eliyahu · Order of Talit · Order of Tefillin · Hanna's Prayer · Morning Prayer · Incense Offering · Hodu · Pesukei D'Zimra · The Shema · Amida · +Hallel · Torah Reading · Ashrei · Uva LeSion · Beit Yaakov · Song of the Day · Kaveh · Alenu
+    skipped: Vidui
+  [mincha] whole=Weekday Mincha
+    Offerings · Amida · Alenu
+    skipped: Vidui
+  [maariv] whole=Weekday Arvit
+    Barchu · The Shema · Amidah · +Menorah Lighting · Alenu
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Edot HaMizrach | RC Tevet+Chanukah
+  [shacharit] whole=Weekday Shacharit
+    Petichat Eliyahu · Order of Talit · Order of Tefillin · Hanna's Prayer · Morning Prayer · Incense Offering · Hodu · Pesukei D'Zimra · The Shema · Amida · +Hallel · Torah Reading · Ashrei · Uva LeSion · +Mussaf · Beit Yaakov · Song of the Day · Kaveh · Alenu
+    skipped: Vidui
+  [mincha] whole=Weekday Mincha
+    Offerings · Amida · Alenu
+    skipped: Vidui
+  [maariv] whole=Weekday Arvit
+    Barchu · The Shema · Amidah · +Menorah Lighting · Alenu
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Edot HaMizrach | 10 Tevet
+  [shacharit] whole=Weekday Shacharit
+    Petichat Eliyahu · Order of Talit · Order of Tefillin · Hanna's Prayer · Morning Prayer · Incense Offering · Hodu · Pesukei D'Zimra · The Shema · Amida · +Tenth of Tevet · Vidui · Torah Reading · Ashrei · Uva LeSion · Beit Yaakov · Song of the Day · Kaveh · Alenu
+  [mincha] whole=Weekday Mincha
+    Offerings · +Torah Reading for Fast Days · Amida · Vidui · Alenu
+  [maariv] whole=Weekday Arvit
+    Barchu · The Shema · Amidah · Alenu · +Blessing of the Moon[x]
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Edot HaMizrach | Sun after Shabbat
+  [shacharit] whole=Weekday Shacharit
+    Petichat Eliyahu · Order of Talit · Order of Tefillin · Hanna's Prayer · Morning Prayer · Incense Offering · Hodu · Pesukei D'Zimra · The Shema · Amida · Vidui · Ashrei · Uva LeSion · Beit Yaakov · Song of the Day · Kaveh · Alenu
+    skipped: Torah Reading
+  [mincha] whole=Weekday Mincha
+    Offerings · Amida · Vidui · Alenu
+  [maariv] whole=Weekday Arvit
+    Barchu · The Shema · Amidah · Alenu · +Blessing of the Moon[x]
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Edot HaMizrach | Omer weekday
+  [shacharit] whole=Weekday Shacharit
+    Petichat Eliyahu · Order of Talit · Order of Tefillin · Hanna's Prayer · Morning Prayer · Incense Offering · Hodu · Pesukei D'Zimra · The Shema · Amida · +Hallel · Torah Reading · Ashrei · Uva LeSion · +Mussaf · Beit Yaakov · Song of the Day · Kaveh · Alenu
+    skipped: Vidui
+  [mincha] whole=Weekday Mincha
+    Offerings · Amida · Alenu
+    skipped: Vidui
+  [shabbatEve] whole=null
+    +Shabbat Candle Lighting[x]
+  [maariv] whole=Shabbat Arvit
+    Barchu · The Shema · Alenu · +Counting of the Omer[x] · +Yom Tov Eve Kiddush{Siddur Sefard}[x]
+    skipped: Magen Avot
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### Siddur Edot HaMizrach | Friday
+  [shacharit] whole=Weekday Shacharit
+    Petichat Eliyahu · Order of Talit · Order of Tefillin · Hanna's Prayer · Morning Prayer · Incense Offering · Hodu · Pesukei D'Zimra · The Shema · Amida · Vidui · Ashrei · Uva LeSion · Beit Yaakov · Song of the Day · Kaveh · Alenu
+    skipped: Torah Reading
+  [mincha] whole=Weekday Mincha
+    Offerings · Amida · Alenu
+    skipped: Vidui
+  [shabbatEve] whole=null
+    +Shabbat Candle Lighting[x] · +Kabbalat Shabbat[x]
+  [maariv] whole=Shabbat Arvit
+    Barchu · The Shema · Magen Avot · Alenu · +Kiddush[x]
+  [night] whole=Bedtime Shema
+    Bedtime Shema[x]
+### The Koren Shalem Siddur; Ashkenaz | plain Tue
+  [shacharit] whole=null
+    On Waking · Blessings Over the Torah · Tallit · Tefillin · Preparation for Prayer · Morning Blessings · The Binding of Isaac · Accepting the Sovereignty of Heaven · Offerings · The Interpretive Principles of Rabbi Yishmael · A Psalm Before Verses of Praise · Pesukei DeZimra · Blessings of the Shema · The Amida · Tahanun · Conclusion of the Service · The Daily Psalm · Readings after the Service · Personal Supplications
+    skipped: The Rabbis' Kaddish, Viduy, Avinu Malkenu, Reading of the Torah
+  [mincha] whole=Weekdays/Minha for Weekdays
+    Minha for Weekdays
+  [maariv] whole=Weekdays/Ma'ariv for Weekdays
+    Ma'ariv for Weekdays · +Blessing of the New Moon
+  [night] whole=Weekdays/Shema before Sleep at Night
+    Shema before Sleep at Night[x]
+### The Koren Shalem Siddur; Ashkenaz | RC Mon
+  [shacharit] whole=null
+    On Waking · Blessings Over the Torah · Tallit · Tefillin · Preparation for Prayer · Morning Blessings · The Binding of Isaac · Accepting the Sovereignty of Heaven · Offerings · The Interpretive Principles of Rabbi Yishmael · A Psalm Before Verses of Praise · Pesukei DeZimra · Blessings of the Shema · The Amida · +Hallel · Reading of the Torah · +Musaf for Rosh Hodesh · Conclusion of the Service · The Daily Psalm · Readings after the Service · Personal Supplications
+    skipped: The Rabbis' Kaddish, Viduy, Avinu Malkenu, Tahanun
+  [mincha] whole=Weekdays/Minha for Weekdays
+    Minha for Weekdays
+  [maariv] whole=Weekdays/Ma'ariv for Weekdays
+    Ma'ariv for Weekdays
+  [night] whole=Weekdays/Shema before Sleep at Night
+    Shema before Sleep at Night[x]
+### The Koren Shalem Siddur; Ashkenaz | CHM Sukkot
+  [shacharit] whole=null
+    On Waking · Blessings Over the Torah · Tallit · Tefillin · Preparation for Prayer · Morning Blessings · The Binding of Isaac · Accepting the Sovereignty of Heaven · Offerings · The Interpretive Principles of Rabbi Yishmael · A Psalm Before Verses of Praise · Pesukei DeZimra · Blessings of the Shema · The Amida · +Blessing on Taking the Lulav · +Hallel · Reading of the Torah · +Musaf for Festivals · +Hoshanot · Conclusion of the Service · The Daily Psalm · Readings after the Service · Personal Supplications
+    skipped: The Rabbis' Kaddish, Viduy, Avinu Malkenu, Tahanun
+  [mincha] whole=Weekdays/Minha for Weekdays
+    Minha for Weekdays
+  [maariv] whole=Weekdays/Ma'ariv for Weekdays
+    Ma'ariv for Weekdays
+  [night] whole=Weekdays/Shema before Sleep at Night
+    Shema before Sleep at Night[x]
+### The Koren Shalem Siddur; Ashkenaz | Hoshana Raba
+  [shacharit] whole=null
+    On Waking · Blessings Over the Torah · Tallit · Tefillin · Preparation for Prayer · Morning Blessings · The Binding of Isaac · Accepting the Sovereignty of Heaven · Offerings · The Interpretive Principles of Rabbi Yishmael · A Psalm Before Verses of Praise · Pesukei DeZimra · Blessings of the Shema · The Amida · +Blessing on Taking the Lulav · +Hallel · Reading of the Torah · +Musaf for Festivals · +Hoshanot for Hoshana Raba[x] · +Hoshanot · Conclusion of the Service · The Daily Psalm · Readings after the Service · Personal Supplications
+    skipped: The Rabbis' Kaddish, Viduy, Avinu Malkenu, Tahanun
+  [mincha] whole=Weekdays/Minha for Weekdays
+    Minha for Weekdays
+  [shabbatEve] whole=null
+    +Candle Lighting[x] · +Kabbalat Shabbat[x]
+  [maariv] whole=Shabbat/Ma'ariv for Shabbat and Yom Tov
+    Ma'ariv for Shabbat and Yom Tov · +Kiddush and Zemirot for Shabbat Evening[x]
+  [night] whole=Weekdays/Shema before Sleep at Night
+    Shema before Sleep at Night[x]
+### The Koren Shalem Siddur; Ashkenaz | CHM Pesach
+  [shacharit] whole=null
+    On Waking · Blessings Over the Torah · Tallit · Tefillin · Preparation for Prayer · Morning Blessings · The Binding of Isaac · Accepting the Sovereignty of Heaven · Offerings · The Interpretive Principles of Rabbi Yishmael · A Psalm Before Verses of Praise · Pesukei DeZimra · Blessings of the Shema · The Amida · +Hallel · Reading of the Torah · +Musaf for Festivals · Conclusion of the Service · The Daily Psalm · Readings after the Service · Personal Supplications
+    skipped: The Rabbis' Kaddish, Viduy, Avinu Malkenu, Tahanun
+  [mincha] whole=Weekdays/Minha for Weekdays
+    Minha for Weekdays
+  [maariv] whole=Weekdays/Ma'ariv for Weekdays
+    Ma'ariv for Weekdays · +Counting of the Omer
+  [night] whole=Weekdays/Shema before Sleep at Night
+    Shema before Sleep at Night[x]
+### The Koren Shalem Siddur; Ashkenaz | Chanukah
+  [shacharit] whole=null
+    On Waking · Blessings Over the Torah · Tallit · Tefillin · Preparation for Prayer · Morning Blessings · The Binding of Isaac · Accepting the Sovereignty of Heaven · Offerings · The Interpretive Principles of Rabbi Yishmael · A Psalm Before Verses of Praise · Pesukei DeZimra · Blessings of the Shema · The Amida · +Hallel · Reading of the Torah · Conclusion of the Service · The Daily Psalm · Readings after the Service · Personal Supplications
+    skipped: The Rabbis' Kaddish, Viduy, Avinu Malkenu, Tahanun
+  [mincha] whole=Weekdays/Minha for Weekdays
+    Minha for Weekdays
+  [maariv] whole=Weekdays/Ma'ariv for Weekdays
+    Ma'ariv for Weekdays · +Candle Lighting for Hanukka[x]
+  [night] whole=Weekdays/Shema before Sleep at Night
+    Shema before Sleep at Night[x]
+### The Koren Shalem Siddur; Ashkenaz | RC Tevet+Chanukah
+  [shacharit] whole=null
+    On Waking · Blessings Over the Torah · Tallit · Tefillin · Preparation for Prayer · Morning Blessings · The Binding of Isaac · Accepting the Sovereignty of Heaven · Offerings · The Interpretive Principles of Rabbi Yishmael · A Psalm Before Verses of Praise · Pesukei DeZimra · Blessings of the Shema · The Amida · +Hallel · Reading of the Torah · +Musaf for Rosh Hodesh · Conclusion of the Service · The Daily Psalm · Readings after the Service · Personal Supplications
+    skipped: The Rabbis' Kaddish, Viduy, Avinu Malkenu, Tahanun
+  [mincha] whole=Weekdays/Minha for Weekdays
+    Minha for Weekdays
+  [maariv] whole=Weekdays/Ma'ariv for Weekdays
+    Ma'ariv for Weekdays · +Candle Lighting for Hanukka[x]
+  [night] whole=Weekdays/Shema before Sleep at Night
+    Shema before Sleep at Night[x]
+### The Koren Shalem Siddur; Ashkenaz | 10 Tevet
+  [shacharit] whole=null
+    On Waking · Blessings Over the Torah · Tallit · Tefillin · Preparation for Prayer · Morning Blessings · The Binding of Isaac · Accepting the Sovereignty of Heaven · Offerings · The Interpretive Principles of Rabbi Yishmael · A Psalm Before Verses of Praise · Pesukei DeZimra · Blessings of the Shema · The Amida · +Selihot for the Tenth of Tevet · Avinu Malkenu · Tahanun · Reading of the Torah · Conclusion of the Service · The Daily Psalm · Readings after the Service · Personal Supplications
+    skipped: The Rabbis' Kaddish, Viduy
+  [mincha] whole=Weekdays/Minha for Weekdays
+    +Fast Days · Minha for Weekdays
+  [maariv] whole=Weekdays/Ma'ariv for Weekdays
+    Ma'ariv for Weekdays · +Blessing of the New Moon
+  [night] whole=Weekdays/Shema before Sleep at Night
+    Shema before Sleep at Night[x]
+### The Koren Shalem Siddur; Ashkenaz | Sun after Shabbat
+  [shacharit] whole=null
+    On Waking · Blessings Over the Torah · Tallit · Tefillin · Preparation for Prayer · Morning Blessings · The Binding of Isaac · Accepting the Sovereignty of Heaven · Offerings · The Interpretive Principles of Rabbi Yishmael · A Psalm Before Verses of Praise · Pesukei DeZimra · Blessings of the Shema · The Amida · Tahanun · Conclusion of the Service · The Daily Psalm · Readings after the Service · Personal Supplications
+    skipped: The Rabbis' Kaddish, Viduy, Avinu Malkenu, Reading of the Torah
+  [mincha] whole=Weekdays/Minha for Weekdays
+    Minha for Weekdays
+  [maariv] whole=Weekdays/Ma'ariv for Weekdays
+    Ma'ariv for Weekdays · +Blessing of the New Moon
+  [night] whole=Weekdays/Shema before Sleep at Night
+    Shema before Sleep at Night[x]
+### The Koren Shalem Siddur; Ashkenaz | Omer weekday
+  [shacharit] whole=null
+    On Waking · Blessings Over the Torah · Tallit · Tefillin · Preparation for Prayer · Morning Blessings · The Binding of Isaac · Accepting the Sovereignty of Heaven · Offerings · The Interpretive Principles of Rabbi Yishmael · A Psalm Before Verses of Praise · Pesukei DeZimra · Blessings of the Shema · The Amida · +Hallel · Reading of the Torah · +Musaf for Festivals · Conclusion of the Service · The Daily Psalm · Readings after the Service · Personal Supplications
+    skipped: The Rabbis' Kaddish, Viduy, Avinu Malkenu, Tahanun
+  [mincha] whole=Weekdays/Minha for Weekdays
+    Minha for Weekdays
+  [shabbatEve] whole=null
+    +Candle Lighting[x]
+  [maariv] whole=Shabbat/Ma'ariv for Shabbat and Yom Tov
+    Ma'ariv for Shabbat and Yom Tov · +Counting of the Omer[x] · +Kiddush for Yom Tov Evening[x]
+  [night] whole=Weekdays/Shema before Sleep at Night
+    Shema before Sleep at Night[x]
+### The Koren Shalem Siddur; Ashkenaz | Friday
+  [shacharit] whole=null
+    On Waking · Blessings Over the Torah · Tallit · Tefillin · Preparation for Prayer · Morning Blessings · The Binding of Isaac · Accepting the Sovereignty of Heaven · Offerings · The Interpretive Principles of Rabbi Yishmael · A Psalm Before Verses of Praise · Pesukei DeZimra · Blessings of the Shema · The Amida · Tahanun · Conclusion of the Service · The Daily Psalm · Readings after the Service · Personal Supplications
+    skipped: The Rabbis' Kaddish, Viduy, Avinu Malkenu, Reading of the Torah
+  [mincha] whole=Weekdays/Minha for Weekdays
+    Minha for Weekdays
+  [shabbatEve] whole=null
+    +Candle Lighting[x] · +Kabbalat Shabbat[x]
+  [maariv] whole=Shabbat/Ma'ariv for Shabbat and Yom Tov
+    Ma'ariv for Shabbat and Yom Tov · +Kiddush and Zemirot for Shabbat Evening[x]
+  [night] whole=Weekdays/Shema before Sleep at Night
+    Shema before Sleep at Night[x]

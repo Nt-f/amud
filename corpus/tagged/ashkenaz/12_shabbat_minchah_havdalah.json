@@ -1,0 +1,2141 @@
+{
+ "nusach": "ashkenaz",
+ "chunk": "Shabbat [Minchah .. Havdalah]",
+ "leaves": {
+  "Shabbat/Minchah/Ashrei": {
+   "node": "mincha.ashrei",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Uva Letzion": {
+   "node": "concl.uva_letzion",
+   "service": "mincha",
+   "when": "x_uvaLetzionShabbatMincha"
+  },
+  "Shabbat/Minchah/Half Kaddish": {
+   "node": "kaddish.half",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Va'ani Tefillati": {
+   "node": "torah.vayehi_binsoa",
+   "service": "mincha",
+   "when": "torahReading"
+  },
+  "Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Vayehi Binsoa": {
+   "node": "torah.vayehi_binsoa",
+   "service": "mincha",
+   "when": "torahReading"
+  },
+  "Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Berich Shmei": {
+   "node": "torah.berich_shmei",
+   "service": "mincha",
+   "when": "torahReading"
+  },
+  "Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Gadlu": {
+   "node": "torah.gadlu",
+   "service": "mincha",
+   "when": "torahReading"
+  },
+  "Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Lekha Hashem": {
+   "node": "torah.lecha_hashem",
+   "service": "mincha",
+   "when": "torahReading"
+  },
+  "Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Av Harachamim": {
+   "node": "torah.av_harachamim",
+   "service": "mincha",
+   "when": "avHarachamim"
+  },
+  "Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Vetigaleh Veteraeh": {
+   "node": "torah.vetigaleh",
+   "service": "mincha",
+   "when": "torahReading"
+  },
+  "Shabbat/Minchah/Torah Reading/Reading from Sefer/Birkat HaTorah": {
+   "node": "torah.aliyah_blessings",
+   "service": "mincha",
+   "when": "torahReading"
+  },
+  "Shabbat/Minchah/Torah Reading/Reading from Sefer/Raising the Torah": {
+   "node": "torah.hagbah",
+   "service": "mincha",
+   "when": "torahReading"
+  },
+  "Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Yehalelu": {
+   "node": "torah.yehalelu",
+   "service": "mincha",
+   "when": "torahReading"
+  },
+  "Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/LeDavid": {
+   "node": "torah.ledavid_mizmor",
+   "service": "mincha",
+   "when": "torahReading"
+  },
+  "Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Uvenucho Yomar": {
+   "node": "torah.uvnucho_yomar",
+   "service": "mincha",
+   "when": "torahReading"
+  },
+  "Shabbat/Minchah/Amidah/Patriarchs": {
+   "node": "amidah.avot",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Amidah/Divine Might": {
+   "node": "amidah.gevurot",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Amidah/Kedushah": {
+   "node": "amidah.kedusha",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Amidah/Holiness of God": {
+   "node": "amidah.kedushat_hashem",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Amidah/Sanctity of the Day": {
+   "node": "amidah.shabbat.atta_echad",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Amidah/Temple Service": {
+   "node": "amidah.avoda",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Amidah/Thanksgiving/Modim": {
+   "node": "amidah.modim",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Chanukkah": {
+   "node": "amidah.al_hanissim",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Purim": {
+   "node": "amidah.al_hanissim",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Amidah/Peace": {
+   "node": "amidah.shalom",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Amidah/Concluding Passage": {
+   "node": "amidah.elokai_netzor",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Tzidkatkhah Tzedek": {
+   "node": "tzidkatcha",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Kaddish Shalem": {
+   "node": "kaddish.shalem",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Alenu": {
+   "node": "concl.aleinu",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Mourner's Kaddish": {
+   "node": "kaddish.mourners",
+   "service": "mincha"
+  },
+  "Shabbat/Minchah/Barchi Nafshi": {
+   "node": "shabbat.barchi_nafshi",
+   "service": "mincha",
+   "when": "barchiNafshiShabbat"
+  },
+  "Shabbat/Third Meal/Atkinu": {
+   "node": "shabbat.seudah_shlishit",
+   "service": "none"
+  },
+  "Shabbat/Third Meal/Mizmor LeDavid": {
+   "node": "shabbat.seudah_shlishit",
+   "service": "none"
+  },
+  "Shabbat/Third Meal/Yedid Nefesh": {
+   "node": "shabbat.seudah_shlishit",
+   "service": "none"
+  },
+  "Shabbat/Havdalah": {
+   "node": "havdalah",
+   "service": "none",
+   "when": "motzaeiShabbat"
+  }
+ },
+ "he": {
+  "he:Shabbat/Minchah/Ashrei:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Uva Letzion:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Half Kaddish:1": {
+   "parts": [
+    {
+     "text": "<em><small>חזן:</small></em> ",
+     "kind": "speaker",
+     "role": "chazzan",
+     "en": "Chazzan:",
+     "node": "kaddish.half"
+    },
+    {
+     "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.half"
+    },
+    {
+     "text": "[<em><small>קהל:</small></em> ",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "אמן] <br> ",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכון וּבְיומֵיכון וּבְחַיֵּי דְכָל בֵּית יִשרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "[<em><small>קהל:</small></em> ",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "אמן] <br> ",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "<em><small>קהל וחזן:</small></em> ",
+     "kind": "speaker",
+     "role": "together",
+     "en": "Congregation and chazzan:"
+    },
+    {
+     "text": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא: <br> ",
+     "kind": "prayer",
+     "role": "together",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרומַם וְיִתְנַשּא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא. בְּרִיךְ הוּא. ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "[<em><small>קהל:</small></em> ",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "בריך הוא:] <br> ",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "לְעֵלָּא ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "!aseretYemeiTeshuva",
+     "alt": "leela"
+    },
+    {
+     "text": "<em><small>בעשי\"ת ",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "<small>בעשי\"ת:</small>",
+     "alt": "leela"
+    },
+    {
+     "text": "לְעֵלָּא לְעֵלָּא מִכָּל</small></em> ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "aseretYemeiTeshuva",
+     "alt": "leela"
+    },
+    {
+     "text": "מִן כָּל ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "!aseretYemeiTeshuva",
+     "alt": "leela"
+    },
+    {
+     "text": "בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "[<em><small>קהל:</small></em> ",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "אמן]",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Va'ani Tefillati:1": {
+   "kind": "prayer",
+   "gestures": [
+    "ark_open",
+    "stand"
+   ]
+  },
+  "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Vayehi Binsoa:1": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Vayehi Binsoa:2": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Vayehi Binsoa:3": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Berich Shmei:1": {
+   "kind": "prayer",
+   "role": "together",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Gadlu:1": {
+   "parts": [
+    {
+     "text": "חזן - ",
+     "kind": "speaker",
+     "role": "chazzan",
+     "en": "Chazzan:"
+    },
+    {
+     "text": "גַּדְּלוּ לה' אִתִּי וּנְרומְמָה שְׁמו יַחְדָּו: ",
+     "kind": "prayer",
+     "role": "chazzan_then_congregation",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Gadlu:2": {
+   "parts": [
+    {
+     "text": "קהל - ",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "לְךָ ה' הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוד כִּי כל בַּשָּׁמַיִם וּבָאָרֶץ:",
+     "kind": "prayer",
+     "role": "chazzan_then_congregation",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Lekha Hashem:1": {
+   "kind": "prayer",
+   "role": "congregation",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Lekha Hashem:2": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Lekha Hashem:3": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Av Harachamim:1": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Vetigaleh Veteraeh:1": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Vetigaleh Veteraeh:2": {
+   "parts": [
+    {
+     "text": "<em><small>קהל:</small></em> ",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "וְאַתֶּם הַדְּבֵקִים בה' אֱלהֵיכֶם חַיִּים כֻּלְּכֶם הַיּום:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Torah Reading/Reading from Sefer/Birkat HaTorah:1": {
+   "kind": "speaker",
+   "role": "oleh",
+   "en": "The one called up blesses:",
+   "clean": "העולה מברך:"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Reading from Sefer/Birkat HaTorah:2": {
+   "kind": "prayer",
+   "role": "oleh",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Torah Reading/Reading from Sefer/Birkat HaTorah:3": {
+   "kind": "speaker",
+   "role": "congregation",
+   "en": "The congregation responds:",
+   "clean": "והקהל עונים:"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Reading from Sefer/Birkat HaTorah:4": {
+   "kind": "prayer",
+   "role": "congregation",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Torah Reading/Reading from Sefer/Birkat HaTorah:5": {
+   "kind": "speaker",
+   "role": "oleh",
+   "en": "The one called up repeats:",
+   "clean": "והעולה חוזר ואומר:"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Reading from Sefer/Birkat HaTorah:6": {
+   "kind": "prayer",
+   "role": "oleh",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Torah Reading/Reading from Sefer/Birkat HaTorah:7": {
+   "kind": "instruction",
+   "role": "oleh",
+   "en": "And then he blesses:",
+   "clean": "ואח\"כ מברך:"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Reading from Sefer/Birkat HaTorah:8": {
+   "kind": "prayer",
+   "role": "oleh",
+   "minyan": true,
+   "gestures": [
+    "bow"
+   ]
+  },
+  "he:Shabbat/Minchah/Torah Reading/Reading from Sefer/Birkat HaTorah:9": {
+   "kind": "prayer",
+   "role": "oleh",
+   "minyan": true,
+   "gestures": [
+    "bow"
+   ]
+  },
+  "he:Shabbat/Minchah/Torah Reading/Reading from Sefer/Birkat HaTorah:11": {
+   "kind": "instruction",
+   "role": "oleh",
+   "en": "After the reading, the one called up blesses:",
+   "clean": "אחרי הקריאה מברך העולה:",
+   "node": "torah.aliyah_blessings"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Reading from Sefer/Birkat HaTorah:12": {
+   "kind": "prayer",
+   "role": "oleh",
+   "minyan": true,
+   "gestures": [
+    "bow"
+   ]
+  },
+  "he:Shabbat/Minchah/Torah Reading/Reading from Sefer/Raising the Torah:1": {
+   "kind": "instruction",
+   "en": "When the Sefer Torah is raised, say:",
+   "clean": "כשמגביהים הס\"ת אומרים:",
+   "gestures": [
+    "hold_torah"
+   ]
+  },
+  "he:Shabbat/Minchah/Torah Reading/Reading from Sefer/Raising the Torah:2": {
+   "kind": "prayer",
+   "role": "together",
+   "gestures": [
+    "hold_torah"
+   ]
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Yehalelu:1": {
+   "kind": "instruction",
+   "en": "When returning the Sefer Torah to the ark, say:",
+   "clean": "כשמחזירים ספר התורה להיכל אומרים:"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Yehalelu:2": {
+   "parts": [
+    {
+     "text": "חזן - ",
+     "kind": "speaker",
+     "role": "chazzan",
+     "en": "Chazzan:"
+    },
+    {
+     "text": "יְהַלְלוּ אֶת שֵׁם ה' כִּי נִשגָּב שְׁמו לְבַדּו: ",
+     "kind": "prayer",
+     "role": "chazzan_then_congregation",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Yehalelu:3": {
+   "parts": [
+    {
+     "text": "קהל - ",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "הודו עַל אֶרֶץ וְשָׁמָיִם: ",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Yehalelu:4": {
+   "kind": "prayer",
+   "role": "congregation",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/LeDavid:1": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/LeDavid:2": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/LeDavid:3": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/LeDavid:4": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/LeDavid:5": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/LeDavid:6": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/LeDavid:7": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/LeDavid:8": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/LeDavid:9": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/LeDavid:10": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Uvenucho Yomar:1": {
+   "kind": "instruction",
+   "en": "When the Sefer Torah is brought into the ark, say this:",
+   "clean": "כשמכניסים הס\"ת להיכל אומרים זה:"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Uvenucho Yomar:2": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Uvenucho Yomar:3": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Uvenucho Yomar:4": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Uvenucho Yomar:5": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Uvenucho Yomar:6": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Uvenucho Yomar:7": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Uvenucho Yomar:8": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/Uvenucho Yomar:9": {
+   "kind": "prayer",
+   "role": "together",
+   "gestures": [
+    "ark_close"
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Patriarchs:1": {
+   "kind": "prayer",
+   "node": "amidah.opening",
+   "voice": "silent",
+   "gestures": [
+    "stand",
+    "feet_together"
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Patriarchs:3": {
+   "kind": "prayer",
+   "gestures": [
+    "bow"
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Patriarchs:4": {
+   "parts": [
+    {
+     "text": "בעשי\"ת ",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "<small>בעשי\"ת:</small>"
+    },
+    {
+     "text": "זָכְרֵנוּ לְחַיִּים. מֶלֶךְ חָפֵץ בַּחַיִּים. וְכָתְבֵנוּ בְּסֵפֶר הַחַיִּים. לְמַעַנְךָ אֱלהִים חַיִּים: ",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Patriarchs:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Patriarchs:6": {
+   "kind": "prayer",
+   "gestures": [
+    "bow"
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Divine Might:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Divine Might:2": {
+   "parts": [
+    {
+     "text": "בקיץ - ",
+     "kind": "instruction",
+     "when": "moridHatal",
+     "alt": "geshem",
+     "en": "In summer:"
+    },
+    {
+     "text": "מורִיד הַטָּל: ",
+     "kind": "prayer",
+     "when": "moridHatal",
+     "alt": "geshem"
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Divine Might:3": {
+   "parts": [
+    {
+     "text": "בחורף - ",
+     "kind": "instruction",
+     "when": "mashivHaruach",
+     "alt": "geshem",
+     "en": "In winter:"
+    },
+    {
+     "text": "מַשִּׁיב הָרוּחַ וּמורִיד הַגָּשֶּׁם: ",
+     "kind": "prayer",
+     "when": "mashivHaruach",
+     "alt": "geshem"
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Divine Might:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Divine Might:5": {
+   "parts": [
+    {
+     "text": "בעשי\"ת - ",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:"
+    },
+    {
+     "text": "מִי כָמוךָ אַב הָרַחֲמִים. זוכֵר יְצוּרָיו לְחַיִּים בְּרַחֲמִים: ",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Divine Might:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Divine Might:7": {
+   "kind": "prayer",
+   "gestures": [
+    "bow"
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Kedushah:1": {
+   "kind": "instruction",
+   "en": "Kedushah in the chazzan's repetition",
+   "clean": "קדושה בחזרת הש\"ץ",
+   "amidah": "repetition",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Amidah/Kedushah:2": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation",
+   "gestures": [
+    "feet_together"
+   ],
+   "amidah": "repetition",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Amidah/Kedushah:3": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation",
+   "amidah": "repetition",
+   "minyan": true
+  },
+  "he:Shabbat/Minchah/Amidah/Kedushah:4": {
+   "parts": [
+    {
+     "text": "קו\"ח - ",
+     "kind": "speaker",
+     "role": "congregation_then_chazzan",
+     "en": "Congregation, then chazzan:",
+     "amidah": "repetition",
+     "minyan": true
+    },
+    {
+     "text": "קָדושׁ. קָדושׁ. קָדושׁ ה' צְבָאות. מְלא כָל הָאָרֶץ כְּבודו: ",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan",
+     "gestures": [
+      "rise_on_toes"
+     ],
+     "amidah": "repetition",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Kedushah:5": {
+   "parts": [
+    {
+     "text": "חזן - ",
+     "kind": "speaker",
+     "role": "chazzan",
+     "en": "Chazzan:",
+     "amidah": "repetition",
+     "minyan": true
+    },
+    {
+     "text": "לְעֻמָתָם בָּרוּךְ יאמֵרוּ: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "amidah": "repetition",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Kedushah:6": {
+   "parts": [
+    {
+     "text": "קו\"ח - ",
+     "kind": "speaker",
+     "role": "congregation_then_chazzan",
+     "en": "Congregation, then chazzan:",
+     "amidah": "repetition",
+     "minyan": true
+    },
+    {
+     "text": "בָּרוּךְ כְּבוד ה' מִמְּקומו: ",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan",
+     "gestures": [
+      "rise_on_toes"
+     ],
+     "amidah": "repetition",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Kedushah:7": {
+   "parts": [
+    {
+     "text": "חזן - ",
+     "kind": "speaker",
+     "role": "chazzan",
+     "en": "Chazzan:",
+     "amidah": "repetition",
+     "minyan": true
+    },
+    {
+     "text": "וּבְדִבְרֵי קָדְשְׁךָ כָּתוּב לֵאמר: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "amidah": "repetition",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Kedushah:8": {
+   "parts": [
+    {
+     "text": "קו\"ח - ",
+     "kind": "speaker",
+     "role": "congregation_then_chazzan",
+     "en": "Congregation, then chazzan:",
+     "amidah": "repetition",
+     "minyan": true
+    },
+    {
+     "text": "יִמְלךְ ה' לְעולָם. אֱלהַיִךְ צִיּון לְדר וָדר. הַלְלוּיָהּ: ",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan",
+     "gestures": [
+      "rise_on_toes"
+     ],
+     "amidah": "repetition",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Kedushah:9": {
+   "parts": [
+    {
+     "text": "לחזן - ",
+     "kind": "speaker",
+     "role": "chazzan",
+     "en": "The chazzan continues:",
+     "amidah": "repetition",
+     "minyan": true
+    },
+    {
+     "text": "לְדור וָדור נַגִּיד גָּדְלֶךָ וּלְנֵצַח נְצָחִים קְדֻשָּׁתְךָ נַקְדִּישׁ. וְשִׁבְחֲךָ אֱלהֵינוּ מִפִּינוּ לא יָמוּשׁ לְעולָם וָעֶד. כִּי אֵל מֶלֶךְ גָּדול וְקָדושׁ אָתָּה: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "amidah": "repetition",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Kedushah:10": {
+   "parts": [
+    {
+     "text": "בָּרוּךְ אַתָּה ה' הָאֵל ",
+     "kind": "prayer",
+     "node": "amidah.kedushat_hashem",
+     "amidah": "repetition",
+     "gestures": [
+      "bow"
+     ]
+    },
+    {
+     "text": "<em><small>בעשי\"ת ",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "<small>בעשי\"ת:</small>",
+     "node": "amidah.kedushat_hashem",
+     "amidah": "repetition"
+    },
+    {
+     "text": "הַמֶּלֶךְ</small></em> ",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.kedushat_hashem",
+     "amidah": "repetition"
+    },
+    {
+     "text": "הַקָּדושׁ:",
+     "kind": "prayer",
+     "node": "amidah.kedushat_hashem",
+     "amidah": "repetition",
+     "gestures": [
+      "bow"
+     ]
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Holiness of God:1": {
+   "kind": "prayer",
+   "amidah": "silent",
+   "voice": "silent"
+  },
+  "he:Shabbat/Minchah/Amidah/Holiness of God:2": {
+   "parts": [
+    {
+     "text": "בָּרוּךְ אַתָּה ה', הָאֵל ",
+     "kind": "prayer",
+     "amidah": "silent",
+     "gestures": [
+      "bow"
+     ]
+    },
+    {
+     "text": "<em><small>בעשי\"ת ",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "<small>בעשי\"ת:</small>",
+     "amidah": "silent"
+    },
+    {
+     "text": "הַמֶּלֶךְ</small></em> ",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "amidah": "silent"
+    },
+    {
+     "text": "הַקָּדושׁ:",
+     "kind": "prayer",
+     "amidah": "silent",
+     "gestures": [
+      "bow"
+     ]
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Sanctity of the Day:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Sanctity of the Day:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Sanctity of the Day:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Sanctity of the Day:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Sanctity of the Day:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Sanctity of the Day:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Temple Service:1": {
+   "kind": "prayer",
+   "node": "amidah.shabbat.retzei_vimnuchateinu",
+   "gestures": [
+    "bow"
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Temple Service:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Temple Service:4": {
+   "kind": "instruction",
+   "when": "roshChodesh || cholHamoed",
+   "node": "amidah.yaaleh_veyavo",
+   "en": "On Shabbat Rosh Chodesh and Shabbat Chol HaMoed, say Ya'aleh VeYavo:",
+   "clean": "בשבת בראש חודש ובשבת חול המועד אומרים יעלה ויבא:"
+  },
+  "he:Shabbat/Minchah/Amidah/Temple Service:5": {
+   "kind": "prayer",
+   "when": "roshChodesh || cholHamoed",
+   "node": "amidah.yaaleh_veyavo"
+  },
+  "he:Shabbat/Minchah/Amidah/Temple Service:6": {
+   "parts": [
+    {
+     "text": "בראש חדש - ",
+     "kind": "instruction",
+     "when": "roshChodesh",
+     "alt": "yv_day",
+     "node": "amidah.yaaleh_veyavo",
+     "en": "On Rosh Chodesh:"
+    },
+    {
+     "text": "רֹאשׁ הַחֹדֶשׁ: ",
+     "kind": "prayer",
+     "when": "roshChodesh",
+     "alt": "yv_day",
+     "node": "amidah.yaaleh_veyavo"
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Temple Service:7": {
+   "parts": [
+    {
+     "text": "בחוהמ\"פ - ",
+     "kind": "instruction",
+     "when": "cholHamoedPesach",
+     "alt": "yv_day",
+     "node": "amidah.yaaleh_veyavo",
+     "en": "On Chol HaMoed Pesach:"
+    },
+    {
+     "text": "חַג הַמַּצּוֹת: ",
+     "kind": "prayer",
+     "when": "cholHamoedPesach",
+     "alt": "yv_day",
+     "node": "amidah.yaaleh_veyavo"
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Temple Service:8": {
+   "parts": [
+    {
+     "text": "בחוהמ\"ס - ",
+     "kind": "instruction",
+     "when": "cholHamoedSukkot",
+     "alt": "yv_day",
+     "node": "amidah.yaaleh_veyavo",
+     "en": "On Chol HaMoed Sukkot:"
+    },
+    {
+     "text": "חַג הַסֻּכּוֹת: ",
+     "kind": "prayer",
+     "when": "cholHamoedSukkot",
+     "alt": "yv_day",
+     "node": "amidah.yaaleh_veyavo"
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Temple Service:9": {
+   "kind": "prayer",
+   "when": "roshChodesh || cholHamoed",
+   "node": "amidah.yaaleh_veyavo"
+  },
+  "he:Shabbat/Minchah/Amidah/Temple Service:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Temple Service:11": {
+   "kind": "prayer",
+   "gestures": [
+    "bow"
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Modim:1": {
+   "kind": "prayer",
+   "gestures": [
+    "bow_full"
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Modim:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Modim:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Modim:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Modim:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Modim:7": {
+   "kind": "heading",
+   "node": "amidah.modim_derabbanan",
+   "amidah": "repetition",
+   "en": "Modim d'Rabbanan (said by the congregation during the chazzan's Modim)",
+   "clean": "מודים דרבנן:"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Modim:8": {
+   "kind": "prayer",
+   "node": "amidah.modim_derabbanan",
+   "role": "congregation",
+   "amidah": "repetition",
+   "voice": "undertone",
+   "minyan": true,
+   "gestures": [
+    "bow_full"
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Chanukkah:1": {
+   "kind": "instruction",
+   "when": "chanukah || purim",
+   "en": "On Chanukah and on Purim in walled cities, say this:",
+   "clean": "בחנוכה ובפורים דמוקפין אומרים זה:"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Chanukkah:2": {
+   "kind": "prayer",
+   "when": "chanukah || purim"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Chanukkah:4": {
+   "kind": "instruction",
+   "when": "chanukah",
+   "en": "For Chanukah:",
+   "clean": "לחנוכה:"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Chanukkah:5": {
+   "kind": "prayer",
+   "when": "chanukah"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Chanukkah:6": {
+   "kind": "prayer",
+   "when": "chanukah"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Chanukkah:7": {
+   "kind": "prayer",
+   "when": "chanukah"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Purim:1": {
+   "kind": "instruction",
+   "when": "purim",
+   "en": "For Purim:",
+   "clean": "לפורים:"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Purim:2": {
+   "kind": "prayer",
+   "when": "purim"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Purim:3": {
+   "kind": "prayer",
+   "when": "purim"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Purim:4": {
+   "kind": "prayer",
+   "when": "chanukah || purim",
+   "node": "amidah.al_hanissim"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Purim:5": {
+   "parts": [
+    {
+     "text": "<em><small>בש\"ת</small></em> ",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.modim",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "<small>בעשי\"ת:</small>"
+    },
+    {
+     "text": "וּכְתֹב לְחַיִּים טוֹבִים כָּל בְּנֵי בְרִיתֶךָ: ",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.modim"
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Purim:6": {
+   "kind": "prayer",
+   "node": "amidah.modim"
+  },
+  "he:Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Purim:7": {
+   "kind": "prayer",
+   "node": "amidah.modim",
+   "gestures": [
+    "bow"
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Peace:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Peace:2": {
+   "parts": [
+    {
+     "text": "<em><small>בש\"ת</small></em> ",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "<small>בעשי\"ת:</small>"
+    },
+    {
+     "text": "בְּסֵפֶר חַיִּים. בְּרָכָה וְשָׁלוֹם. וּפַרְנָסָה טוֹבָה. יְשׁוּעוֹת וְנֶחָמוֹת. נִזָּכֵר וְנִכָּתֵב לְפָנֶיךָ. אֲנַחְנוּ וְכָל עַמְּךָ בֵּית יִשְׂרָאֵל. לְחַיִּים טוֹבִים וּלְשָׁלוֹם: ",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Peace:3": {
+   "kind": "prayer",
+   "gestures": [
+    "bow"
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Concluding Passage:1": {
+   "kind": "prayer",
+   "node": "amidah.elokai_netzor"
+  },
+  "he:Shabbat/Minchah/Amidah/Concluding Passage:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Concluding Passage:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Concluding Passage:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Amidah/Concluding Passage:5": {
+   "parts": [
+    {
+     "text": "עֹשֶׂה שָׁלוֹם ",
+     "kind": "prayer",
+     "node": "amidah.oseh_shalom",
+     "gestures": [
+      "three_steps_back",
+      "bow_left_right_center"
+     ]
+    },
+    {
+     "text": "<em><small>בש\"ת ",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.oseh_shalom",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "<small>בעשי\"ת:</small>"
+    },
+    {
+     "text": "הַשָּׁלוֹם</small></em> ",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.oseh_shalom"
+    },
+    {
+     "text": "בִּמְרוֹמָיו. הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל. וְאִמְרוּ אָמֵן: ",
+     "kind": "prayer",
+     "node": "amidah.oseh_shalom",
+     "gestures": [
+      "bow_left_right_center"
+     ]
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Amidah/Concluding Passage:6": {
+   "kind": "prayer",
+   "node": "amidah.yehi_ratzon_mikdash"
+  },
+  "he:Shabbat/Minchah/Amidah/Concluding Passage:7": {
+   "kind": "prayer",
+   "node": "amidah.yehi_ratzon_mikdash"
+  },
+  "he:Shabbat/Minchah/Tzidkatkhah Tzedek:1": {
+   "kind": "note",
+   "en": "On days when Tachanun is not said on weekdays, and likewise on the four special Shabbatot (the four parshiyot), Tzidkatcha is not said.",
+   "clean": "בימים שא\"א בו תחנון בחול וכן בד' פרשיות אין אומרים צדקתך:"
+  },
+  "he:Shabbat/Minchah/Tzidkatkhah Tzedek:2": {
+   "kind": "prayer",
+   "when": "tzidkatcha"
+  },
+  "he:Shabbat/Minchah/Tzidkatkhah Tzedek:3": {
+   "kind": "prayer",
+   "when": "tzidkatcha"
+  },
+  "he:Shabbat/Minchah/Tzidkatkhah Tzedek:4": {
+   "kind": "prayer",
+   "when": "tzidkatcha"
+  },
+  "he:Shabbat/Minchah/Kaddish Shalem:1": {
+   "parts": [
+    {
+     "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<em><small>גרסת הגר\"א: יִתְגַּדֵּל וְיִתְקַדֵּשׁ</small></em> ",
+     "kind": "note",
+     "en": "Version of the Vilna Gaon (Gra): \"Yitgadel veyitkadesh\".",
+     "clean": "<small>גרסת הגר\"א: יִתְגַּדֵּל וְיִתְקַדֵּשׁ</small>"
+    },
+    {
+     "text": "שְׁמֵהּ רַבָּא. ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<small><em>ועונים: </em> ",
+     "kind": "instruction",
+     "en": "Those present respond:",
+     "clean": "ועונים:"
+    },
+    {
+     "text": "אמן</small> ",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "בְּעָלְמָא דִי בְרָא כִּרְעוּתֵהּ. וְיַמְלִיךְ מַלְכוּתֵהּ, בְּחַיֵיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵי דְּכָל בֵּית יִשְׂרָאֵל, בַּעֲגַלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן:<br>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<small><em>הקהל עונה:</em> ",
+     "kind": "instruction",
+     "en": "The congregation responds:",
+     "clean": "הקהל עונה:"
+    },
+    {
+     "text": "אמן. יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָא:<small></small></small><br>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָא: יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל , שְׁמֵהּ דְּקוּדְשָׁא בְּרִיךְ הוּא ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<small><em>ועונים: </em>",
+     "kind": "instruction",
+     "en": "Those present respond:",
+     "clean": "ועונים:"
+    },
+    {
+     "text": "בְּרִיךְ הוּא</small><br>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "לְעֵילָא מִן כָּל ",
+     "kind": "prayer",
+     "when": "!aseretYemeiTeshuva",
+     "alt": "leela",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<small><em>בעשרת ימי תשובה במקום לְעֵילָא מִן כָּל: </em> ",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "alt": "leela",
+     "en": "During the Ten Days of Repentance, instead of \"le'eila min kol\":",
+     "clean": "בעשרת ימי תשובה במקום לְעֵילָא מִן כָּל:"
+    },
+    {
+     "text": "לְעֵילָא וּלְעֵילָא מִכָּל </small>",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "alt": "leela",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "בִּרְכָתָא וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחָמָתָא, דַאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<small><em>ועונים: </em> ",
+     "kind": "instruction",
+     "en": "Those present respond:",
+     "clean": "ועונים:"
+    },
+    {
+     "text": "אמן</small><br>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "<small><em>קהל:<em> ",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "קַבֵּל בְּרַחֲמִים וּבְרָצון אֶת תְּפִלָּתֵנוּ: </em></em></small><em><em><br> ",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "תִּתְקַבַּל צְלוֹתְהוֹן וּבָעוּתְהוֹן דְּכָל בֵּית יִשְׂרָאֵל קֳדָם אֲבוּהוֹן דִּי בִשְׁמַיָּא , וְאִמְרוּ אָמֵן. ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<small><em>ועונים: </em>",
+     "kind": "instruction",
+     "en": "Those present respond:",
+     "clean": "ועונים:"
+    },
+    {
+     "text": "אמן</small><br>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "<small><em>קהל: </em>",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "יְהִי שֵׁם יְהוָה מְברָךְ מֵעַתָּה וְעַד עולָם: </small><br>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָא וְחַיִּים עָלֵינו וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<small><em>ועונים: </em>",
+     "kind": "instruction",
+     "en": "Those present respond:",
+     "clean": "ועונים:"
+    },
+    {
+     "text": "אמן</small><br>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "<small><em>קהל: </em>",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "עֶזְרִי מֵעִם יְהוָה עשֵׂה שָׁמַיִם וָאָרֶץ: </small><br>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "עוֹשֶׂה שָׁלוֹם ",
+     "kind": "prayer",
+     "gestures": [
+      "three_steps_back",
+      "bow_left_right_center"
+     ],
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<small><em>בעשרת ימי תשובה: </em>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשרת ימי תשובה:"
+    },
+    {
+     "text": "השלום</small> ",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל, וְאִמְרוּ אָמֵן: ",
+     "kind": "prayer",
+     "gestures": [
+      "bow_left_right_center"
+     ],
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<small><em>ועונים: </em>",
+     "kind": "instruction",
+     "en": "Those present respond:",
+     "clean": "ועונים:"
+    },
+    {
+     "text": "אמן</small></em></em>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Alenu:1": {
+   "parts": [
+    {
+     "text": "עָלֵינוּ לְשַׁבֵּחַ לַאֲדון הַכּל. לָתֵת גְּדֻלָּה לְיוצֵר בְּרֵאשִׁית. שֶׁלּא עָשנוּ כְּגויֵי הָאֲרָצות. וְלא שמָנוּ כְּמִשְׁפְּחות הָאֲדָמָה. שֶׁלּא שם חֶלְקֵנוּ כָּהֶם וְגורָלֵנוּ כְּכָל הֲמונָם:  שֶׁהֵם מִשְׁתַּחֲוִים לְהֶבֶל וְרִיק וּמִתְפַּלְלִים אֶל אֵל לא יושִׁיעַ:  ",
+     "kind": "prayer",
+     "gestures": [
+      "stand"
+     ]
+    },
+    {
+     "text": "וַאֲנַחְנוּ כּורְעִים וּמִשְׁתַּחֲוִים וּמודִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדושׁ בָּרוּךְ הוּא:  ",
+     "kind": "prayer",
+     "gestures": [
+      "bow_full"
+     ]
+    },
+    {
+     "text": "שֶׁהוּא נוטֶה שָׁמַיִם וְיוסֵד אָרֶץ. וּמושַׁב יְקָרו בַּשָּׁמַיִם מִמַּעַל. וּשְׁכִינַת עֻזּו בְּגָבְהֵי מְרומִים:  הוּא אֱלהֵינוּ אֵין עוד. אֱמֶת מַלְכֵּנוּ. אֶפֶס זוּלָתו. כַּכָּתוּב בְּתורָתו. וְיָדַעְתָּ הַיּום וַהֲשֵׁבתָ אֶל לְבָבֶךָ. כִּי ה' הוּא הָאֱלהִים בַּשָּׁמַיִם  מִמַּעַל וְעַל הָאָרֶץ מִתָּחַת. אֵין עוד:   ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Alenu:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Alenu:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Mourner's Kaddish:1": {
+   "parts": [
+    {
+     "text": "<em><small>קדיש יתום:</small></em> <br> ",
+     "kind": "heading",
+     "en": "Mourner's Kaddish:"
+    },
+    {
+     "text": "<em><small>אבל:</small></em> ",
+     "kind": "speaker",
+     "role": "mourner",
+     "en": "Mourner:"
+    },
+    {
+     "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. ",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "[<em><small>קהל:</small></em> ",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "אמן] <br> ",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכון וּבְיומֵיכון וּבְחַיֵּי דְכָל בֵּית יִשרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן: ",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "[<em><small>קהל:</small></em> ",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "אמן] <br> ",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "<em><small>קהל ואבל:</small></em> ",
+     "kind": "speaker",
+     "role": "together",
+     "en": "Congregation and mourner:"
+    },
+    {
+     "text": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא: <br> ",
+     "kind": "prayer",
+     "role": "together",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<em><small>אבל:</small></em> ",
+     "kind": "speaker",
+     "role": "mourner",
+     "en": "Mourner:"
+    },
+    {
+     "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרומַם וְיִתְנַשּא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא. בְּרִיךְ הוּא. ",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "[<em><small>קהל:</small></em> ",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "בריך הוא:] <br> ",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "לְעֵלָּא מִן כָּל ",
+     "kind": "prayer",
+     "when": "!aseretYemeiTeshuva",
+     "alt": "leela",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "בִּרְכָתָא ",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<em><small>בעשי”ת: ",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "alt": "leela",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "<small>בעשי\"ת:</small>"
+    },
+    {
+     "text": "לְעֵלָּא לְעֵלָּא מִכָּל</small></em> ",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "alt": "leela",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן: ",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "[<em><small>קהל:</small></em> ",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "אמן] <br> ",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל כָּל יִשרָאֵל. וְאִמְרוּ אָמֵן: ",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "[<em><small>קהל:</small></em> ",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "אמן] <br> ",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    },
+    {
+     "text": "עושה שָׁלום ",
+     "kind": "prayer",
+     "gestures": [
+      "three_steps_back",
+      "bow_left_right_center"
+     ],
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<em><small>בעשי”ת: ",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "<small>בעשי\"ת:</small>"
+    },
+    {
+     "text": "הַשָּׁלום</small></em> ",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "בִּמְרומָיו הוּא יַעֲשה שָׁלום עָלֵינוּ וְעַל כָּל יִשרָאֵל וְאִמְרוּ אָמֵן: ",
+     "kind": "prayer",
+     "gestures": [
+      "bow_left_right_center"
+     ],
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "[<em><small>קהל:</small></em> ",
+     "kind": "speaker",
+     "role": "congregation",
+     "en": "Congregation:"
+    },
+    {
+     "text": "אמן]",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:22": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:23": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:24": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:25": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:26": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:27": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:28": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:29": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:30": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:31": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:32": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:33": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:34": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Minchah/Barchi Nafshi:35": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Atkinu:1": {
+   "parts": [
+    {
+     "text": "אַתְקִינוּ סְעוּדָתָא דִמְהֵימְנוּתָא שְׁלֵמָתָא, חֶדְוְתָא דְמַלְכָּא קַדִישָׁא. אַתְקִיּנוּ סְעֻדָתָא ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<em><small>נ\"א:סְעוּדָתָא</small></em> ",
+     "kind": "note",
+     "en": "Alternate reading: \"se'udata\".",
+     "clean": "<small>נ\"א: סְעוּדָתָא</small>"
+    },
+    {
+     "text": "דְמַלְכָּא.",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat/Third Meal/Atkinu:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Atkinu:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Atkinu:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Atkinu:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Atkinu:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Atkinu:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Atkinu:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Atkinu:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Atkinu:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Atkinu:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Atkinu:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Mizmor LeDavid:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Mizmor LeDavid:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Mizmor LeDavid:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Mizmor LeDavid:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Mizmor LeDavid:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Mizmor LeDavid:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Yedid Nefesh:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Yedid Nefesh:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Yedid Nefesh:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Third Meal/Yedid Nefesh:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Havdalah:1": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Havdalah:2": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Havdalah:3": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Havdalah:4": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Havdalah:5": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Havdalah:6": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Havdalah:7": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Havdalah:8": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Shabbat/Havdalah:9": {
+   "kind": "prayer",
+   "gestures": [
+    "hold_cup"
+   ],
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Havdalah:11": {
+   "kind": "prayer",
+   "gestures": [
+    "hold_cup"
+   ],
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Havdalah:13": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Havdalah:15": {
+   "kind": "prayer",
+   "gestures": [
+    "look_at_fingernails"
+   ],
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Havdalah:17": {
+   "kind": "prayer",
+   "gestures": [
+    "hold_cup"
+   ],
+   "role": "head_of_household"
+  }
+ },
+ "en": {
+  "en:Shabbat/Havdalah:1": {
+   "he": [
+    "he:Shabbat/Havdalah:1"
+   ]
+  },
+  "en:Shabbat/Havdalah:2": {
+   "he": [
+    "he:Shabbat/Havdalah:2"
+   ]
+  },
+  "en:Shabbat/Havdalah:3": {
+   "he": [
+    "he:Shabbat/Havdalah:3"
+   ]
+  },
+  "en:Shabbat/Havdalah:4": {
+   "he": [
+    "he:Shabbat/Havdalah:4"
+   ]
+  },
+  "en:Shabbat/Havdalah:5": {
+   "he": [
+    "he:Shabbat/Havdalah:5"
+   ]
+  },
+  "en:Shabbat/Havdalah:6": {
+   "he": [
+    "he:Shabbat/Havdalah:6"
+   ]
+  },
+  "en:Shabbat/Havdalah:7": {
+   "he": [
+    "he:Shabbat/Havdalah:7"
+   ]
+  },
+  "en:Shabbat/Havdalah:8": {
+   "he": [
+    "he:Shabbat/Havdalah:8"
+   ]
+  },
+  "en:Shabbat/Havdalah:9": {
+   "he": [
+    "he:Shabbat/Havdalah:9"
+   ]
+  },
+  "en:Shabbat/Havdalah:11": {
+   "he": [
+    "he:Shabbat/Havdalah:11"
+   ]
+  },
+  "en:Shabbat/Havdalah:13": {
+   "he": [
+    "he:Shabbat/Havdalah:13"
+   ]
+  },
+  "en:Shabbat/Havdalah:15": {
+   "he": [
+    "he:Shabbat/Havdalah:15"
+   ]
+  },
+  "en:Shabbat/Havdalah:17": {
+   "he": [
+    "he:Shabbat/Havdalah:17"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Shabbat/Minchah/Uva Letzion:1",
+   "type": "new_minhag",
+   "detail": "x_uvaLetzionShabbatMincha: the congregation says Uva LeTziyon (Kedushah deSidra) at Shabbat Mincha. Most Ashkenazim do not (it is said at Motzaei Shabbat Maariv); the siddur prints it here."
+  },
+  {
+   "id": "he:Shabbat/Minchah/Uva Letzion:1",
+   "type": "engine_bug_risk",
+   "detail": "Uva LeTziyon leaf sits in Shabbat Mincha between Ashrei and Half Kaddish although the usual Ashkenaz custom omits it; a naive reader would always show it."
+  },
+  {
+   "id": "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Av Harachamim:1",
+   "type": "ambiguous",
+   "detail": "Av HaRachamim is normally said at Shabbat Shacharit; many Ashkenazim omit it at Mincha. Tagged with the avHarachamim variable as the siddur prints it; the engine should decide whether it applies at Mincha."
+  },
+  {
+   "id": "he:Shabbat/Minchah/Torah Reading/Removing the Torah from Ark/Vetigaleh Veteraeh:1",
+   "type": "ambiguous",
+   "detail": "Contains the placeholder [פלוני בן פלוני] (name of the kohen) inside the chazzan's text; the app should substitute or show it as a blank."
+  },
+  {
+   "id": "he:Shabbat/Minchah/Torah Reading/Reading from Sefer/Birkat HaTorah:8",
+   "type": "alignment",
+   "detail": "Segments 8 and 9 are one blessing split in two (the ending \"נותן התורה\" is its own segment); segment 10 is missing from the export."
+  },
+  {
+   "id": "he:Shabbat/Minchah/Amidah/Divine Might:2",
+   "type": "new_minhag",
+   "detail": "Summer line \"Morid HaTal\" is tagged with moridHatal (Ashkenaz outside Israel says nothing in summer); the winter line uses mashivHaruach."
+  },
+  {
+   "id": "he:Shabbat/Minchah/Amidah/Holiness of God:2",
+   "type": "duplicate",
+   "detail": "The closing \"Baruch Atah ... HaEl HaKadosh\" is printed both here (silent Amidah) and at the end of the Kedushah leaf (chazzan's repetition); intended, but the engine must show only one per mode."
+  },
+  {
+   "id": "he:Shabbat/Minchah/Amidah/Temple Service:6",
+   "type": "ambiguous",
+   "detail": "Hebrew instructions use dash-separated labels (\"בראש חדש - ...\"); on Shabbat Chol HaMoed Pesach/Sukkot the matching variable is cholHamoedPesach/cholHamoedSukkot (Sukkot includes Hoshana Raba)."
+  },
+  {
+   "id": "he:Shabbat/Minchah/Amidah/Thanksgiving/Al Hanisim for Purim:4",
+   "type": "misplaced",
+   "detail": "Segments 4, 6 and 7 of the Purim leaf (\"ועל כלם יתברך\", \"וכל החיים יודוך\", \"ברוך אתה ה' הטוב שמך\") are the closing of Modim common to every day, not only to Purim/Chanukah; only segments 1-3 are Purim-specific. They are tagged unconditional except segment 4 (tagged chanukah || purim as printed, though the plain Modim also needs it)."
+  },
+  {
+   "id": "he:Shabbat/Minchah/Amidah/Thanksgiving/Modim:5",
+   "type": "missing_text",
+   "detail": "On ordinary days the Modim leaf stops at \"מעולם קוינו לך\" and omits \"ועל כלם יתברך ... הטוב שמך ולך נאה להודות\"; the text exists only in the Purim leaf (segments 4, 6, 7). The engine must splice them in on days without Al HaNissim."
+  },
+  {
+   "id": "he:Shabbat/Minchah/Kaddish Shalem:1",
+   "type": "wrong_vowel",
+   "detail": "Kaddish Shalem text has inconsistent spellings versus the other Kaddish leaves (e.g. \"לְעֵילָא\", \"יְהֵא שְׁמֵהּ ... עָלְמַיָא\" with one yod-qamatz) and the nested <small><em> tags are malformed; reported only, text unchanged."
+  },
+  {
+   "id": "he:Shabbat/Minchah/Kaddish Shalem:1",
+   "type": "engine_bug_risk",
+   "detail": "Malformed nested HTML (<em><em>, unclosed <small>) around the \"קהל: קבל ברחמים\" lines; render from the tagged parts, not the raw HTML. In Ashkenaz usage the part \"קבל ברחמים וברצון\" is the chazzan's and the congregation's response; tagged as the siddur labels it (congregation)."
+  },
+  {
+   "id": "he:Shabbat/Minchah/Mourner's Kaddish:1",
+   "type": "misplaced",
+   "detail": "Mourner's Kaddish: in the Ten Days of Repentance variant the italic alternative (\"לעלא לעלא מכל\") is printed after \"מן כל ברכתא\" instead of in place of \"מן כל\", so substituting alternatives gives \"ברכתא לעלא לעלא מכל ושירתא\". (In the Half Kaddish the italic is placed correctly.) Tagged with alt id leela."
+  },
+  {
+   "id": "he:Shabbat/Third Meal/Mizmor LeDavid:1",
+   "type": "engine_bug_risk",
+   "detail": "Each verse starts with its Hebrew-letter number (\"א \", \"ב \" ...) inside the text; the app should not read it as part of the prayer."
+  },
+  {
+   "id": "he:Shabbat/Third Meal/Yedid Nefesh:1",
+   "type": "alignment",
+   "detail": "Yedid Nefesh verses are in segments 1,3,5,7 (2,4,6 absent from the export)."
+  },
+  {
+   "id": "he:Shabbat/Havdalah:17",
+   "type": "missing_text",
+   "detail": "Havdalah leaf has no rubrics (wine cup first, then spices, then the flame, order and customs) and omits segments 10, 12, 14, 16; Veyiten Lecha/Vihi No'am belong to Motzaei Shabbat Maariv and are not here."
+  },
+  {
+   "id": "he:Shabbat/Havdalah:1",
+   "type": "engine_bug_risk",
+   "detail": "Divine Name is printed as \"יי\" in the Havdalah leaf (elsewhere \"ה'\" or the Tetragrammaton); display rules must treat it as a Name."
+  }
+ ]
+}

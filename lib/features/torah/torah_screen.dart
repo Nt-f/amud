@@ -12,6 +12,7 @@ import '../../core/page_swipe.dart';
 import '../../core/search.dart';
 import '../../core/settings.dart';
 import '../../core/theme.dart';
+import '../../core/typeset/typeset.dart';
 import '../home/today.dart';
 import '../search/search_sources.dart';
 import 'torah_library.dart';
@@ -378,6 +379,15 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
     final lang = s.resolvedLanguage(context.uiLanguage);
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
+    // The library keeps its own sizes but follows the app's typesetting.
+    final ts = TypeScale.of(ref.watch(settingsProvider), hebrewSize: 21 * s.textScale, latinSize: 16 * s.textScale);
+    final heStyle = TextStyle(
+        fontFamily: s.hebrewFont, fontSize: 21 * s.textScale, height: ts.print ? ts.leading(ParagraphRole.body, hebrew: true) : 1.6, color: theme.colorScheme.onSurface);
+    final enStyle = TextStyle(
+        fontFamily: s.latinFont, fontSize: 16 * s.textScale, height: ts.leading(ParagraphRole.body, hebrew: false), color: theme.colorScheme.onSurface);
+    Widget paragraph(List<InlineSpan> spans, TextStyle style, TextDirection dir) => ts.print
+        ? TypesetParagraph(text: TextSpan(style: style, children: spans), textDirection: dir, em: style.fontSize!, align: ts.align(ParagraphRole.body))
+        : Text.rich(TextSpan(children: spans), textDirection: dir, style: style);
     final heUi = context.uiLanguage != UiLanguage.en;
     if (w == null || book == null || widget.siman < 1 || widget.siman > book.length) {
       return Scaffold(appBar: AppBar(), body: const Center(child: CircularProgressIndicator()));
@@ -429,7 +439,7 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
               onNext: swipeTo(widget.siman + 1, 'next'),
               onPrevious: swipeTo(widget.siman - 1, 'previous'),
               child: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+        padding: EdgeInsets.symmetric(horizontal: ts.gutter(MediaQuery.sizeOf(context).width, min: 16)).copyWith(top: 8, bottom: 24),
         child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           for (var n = 1; n <= count; n++)
             Container(
@@ -447,24 +457,16 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
               child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
                 // English-only still shows the Hebrew where there's no translation.
                 if ((lang != TorahTextLanguage.english || !hasEn(n)) && n <= he.length)
-                  Text.rich(
-                    TextSpan(children: [
-                      TextSpan(text: '${gematriya(n)} ', style: TextStyle(color: theme.colorScheme.primary, fontWeight: FontWeight.w700)),
-                      TextSpan(text: s.showNikud ? he[n - 1] : stripNikud(he[n - 1])),
-                    ]),
-                    textDirection: TextDirection.rtl,
-                    style: TextStyle(fontFamily: s.hebrewFont, fontSize: 21 * s.textScale, height: 1.6, color: theme.colorScheme.onSurface),
-                  ),
+                  paragraph([
+                    TextSpan(text: '${gematriya(n)} ', style: TextStyle(color: theme.colorScheme.primary, fontWeight: FontWeight.w700)),
+                    TextSpan(text: s.showNikud ? he[n - 1] : stripNikud(he[n - 1])),
+                  ], heStyle, TextDirection.rtl),
                 if (lang != TorahTextLanguage.hebrew && hasEn(n)) ...[
                   if (lang == TorahTextLanguage.both) const SizedBox(height: 6),
-                  Text.rich(
-                    TextSpan(children: [
-                      TextSpan(text: '$n. ', style: TextStyle(color: theme.colorScheme.primary, fontWeight: FontWeight.w700)),
-                      TextSpan(text: en[n - 1]),
-                    ]),
-                    textDirection: TextDirection.ltr,
-                    style: TextStyle(fontFamily: s.latinFont, fontSize: 16 * s.textScale, height: 1.5, color: theme.colorScheme.onSurface),
-                  ),
+                  paragraph([
+                    TextSpan(text: '$n. ', style: TextStyle(color: theme.colorScheme.primary, fontWeight: FontWeight.w700)),
+                    TextSpan(text: en[n - 1]),
+                  ], enStyle, TextDirection.ltr),
                 ],
               ]),
             ),

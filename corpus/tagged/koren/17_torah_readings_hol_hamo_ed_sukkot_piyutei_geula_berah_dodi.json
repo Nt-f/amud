@@ -1,0 +1,1846 @@
+{
+ "nusach": "koren",
+ "chunk": "Torah Readings [Hol HaMo'ed Sukkot .. Piyutei Geula; Berah Dodi]",
+ "leaves": {
+  "Torah Readings/Hol HaMo'ed Sukkot": {
+   "node": "torah.reading",
+   "service": "shacharit",
+   "when": "cholHamoedSukkot"
+  },
+  "Torah Readings/Shemini Atzeret": {
+   "node": "torah.reading",
+   "service": "shacharit",
+   "when": "shminiAtzeret"
+  },
+  "Torah Readings/Simhat Torah": {
+   "node": "torah.reading",
+   "service": "shacharit",
+   "when": "simchatTorah"
+  },
+  "Torah Readings/Hatan Torah and Hatan Bereshit": {
+   "node": "x.simchat_torah.haftarah",
+   "service": "none",
+   "when": "simchatTorah"
+  },
+  "Torah Readings/Piyutei Geula; Berah Dodi": {
+   "node": "hallel",
+   "service": "shacharit",
+   "when": "pesach"
+  }
+ },
+ "he": {
+  "he:Torah Readings/Hol HaMo'ed Sukkot:1": {
+   "kind": "heading",
+   "en": "Torah reading for the first day of Chol HaMoed Sukkot"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:3": {
+   "kind": "prayer",
+   "when": "!il"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:4": {
+   "kind": "instruction",
+   "when": "!il",
+   "en": "Levi"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:5": {
+   "kind": "instruction",
+   "when": "!il",
+   "en": "Third"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:6": {
+   "kind": "instruction",
+   "when": "!il",
+   "en": "Fourth"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:7": {
+   "kind": "heading",
+   "en": "Torah reading for the second day of Chol HaMoed Sukkot"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:9": {
+   "kind": "prayer",
+   "when": "!il"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:10": {
+   "kind": "instruction",
+   "when": "!il",
+   "en": "Levi"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:11": {
+   "kind": "instruction",
+   "when": "!il",
+   "en": "Third"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:12": {
+   "kind": "instruction",
+   "when": "!il",
+   "en": "Fourth"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:13": {
+   "kind": "heading",
+   "en": "Torah reading for the third day of Chol HaMoed Sukkot"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:15": {
+   "kind": "prayer",
+   "when": "!il"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:16": {
+   "kind": "instruction",
+   "when": "!il",
+   "en": "Levi"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:17": {
+   "kind": "instruction",
+   "when": "!il",
+   "en": "Third"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:18": {
+   "kind": "instruction",
+   "when": "!il",
+   "en": "Fourth"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:19": {
+   "kind": "heading",
+   "en": "Torah reading for the fourth day of Chol HaMoed Sukkot"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:21": {
+   "kind": "prayer",
+   "when": "!il"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:22": {
+   "kind": "instruction",
+   "when": "!il",
+   "en": "Levi"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:23": {
+   "kind": "instruction",
+   "when": "!il",
+   "en": "Third"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:24": {
+   "kind": "instruction",
+   "when": "!il",
+   "en": "Fourth"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:25": {
+   "kind": "heading",
+   "en": "Torah reading for the fifth day of Chol HaMoed Sukkot in Israel"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:27": {
+   "kind": "prayer",
+   "when": "il"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:28": {
+   "kind": "heading",
+   "en": "Torah reading for Hoshana Raba"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:30": {
+   "kind": "prayer",
+   "when": "il"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:31": {
+   "kind": "instruction",
+   "when": "il",
+   "en": "Levi"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:32": {
+   "kind": "instruction",
+   "when": "il",
+   "en": "Third"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:33": {
+   "kind": "instruction",
+   "when": "il",
+   "en": "Fourth"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:34": {
+   "kind": "heading",
+   "en": "Torah reading for Shabbat Chol HaMoed Sukkot"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:36": {
+   "kind": "heading",
+   "en": "Haftara for Shabbat Chol HaMoed Sukkot"
+  },
+  "he:Torah Readings/Hol HaMo'ed Sukkot:37": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Shemini Atzeret:1": {
+   "kind": "heading",
+   "en": "Maftir for Shemini Atzeret and Simchat Torah"
+  },
+  "he:Torah Readings/Shemini Atzeret:3": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Shemini Atzeret:4": {
+   "kind": "heading",
+   "en": "Haftara for Shemini Atzeret outside Israel",
+   "gloss": "Diaspora custom"
+  },
+  "he:Torah Readings/Shemini Atzeret:6": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Simhat Torah:1": {
+   "kind": "heading",
+   "en": "Torah Reading for Simchat Torah"
+  },
+  "he:Torah Readings/Simhat Torah:3": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Simhat Torah:4": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Simhat Torah:5": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Simhat Torah:6": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Simhat Torah:7": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Simhat Torah:8": {
+   "kind": "heading",
+   "en": "The Children's Aliya"
+  },
+  "he:Torah Readings/Simhat Torah:10": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Simhat Torah:12": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Hatan Torah and Hatan Bereshit:1": {
+   "kind": "heading",
+   "en": "Permission for the Chatan Torah"
+  },
+  "he:Torah Readings/Hatan Torah and Hatan Bereshit:3": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Torah Readings/Hatan Torah and Hatan Bereshit:4": {
+   "kind": "heading",
+   "en": "Reading for the Chatan Torah"
+  },
+  "he:Torah Readings/Hatan Torah and Hatan Bereshit:5": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "voice": "aloud",
+   "en": "On Shabbat Chatan Torah:"
+  },
+  "he:Torah Readings/Hatan Torah and Hatan Bereshit:6": {
+   "kind": "heading",
+   "en": "Permission for the Chatan Bereshit"
+  },
+  "he:Torah Readings/Hatan Torah and Hatan Bereshit:8": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Torah Readings/Hatan Torah and Hatan Bereshit:9": {
+   "kind": "heading",
+   "en": "Reading for the Chatan Bereshit"
+  },
+  "he:Torah Readings/Hatan Torah and Hatan Bereshit:11": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Torah Readings/Hatan Torah and Hatan Bereshit:12": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Torah Readings/Hatan Torah and Hatan Bereshit:13": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Torah Readings/Hatan Torah and Hatan Bereshit:14": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Torah Readings/Hatan Torah and Hatan Bereshit:16": {
+   "kind": "heading",
+   "en": "Haftarah for Simchat Torah"
+  },
+  "he:Torah Readings/Hatan Torah and Hatan Bereshit:17": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:1": {
+   "kind": "heading",
+   "en": "Redemption for the First Day of Pesach"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:3": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:4": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:5": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:6": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:8": {
+   "kind": "heading",
+   "en": "Redemption for the Second Day of Pesach"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:9": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:10": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:11": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:12": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:13": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:15": {
+   "kind": "heading",
+   "en": "Redemption for Shabbat Chol HaMoed Pesach"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:17": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:18": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:19": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:20": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:21": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:22": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:24": {
+   "kind": "heading",
+   "en": "Redemption for the Seventh Day of Pesach"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:25": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:26": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:27": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:28": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:29": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:30": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:31": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:32": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:33": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:34": {
+   "kind": "prayer"
+  },
+  "he:Torah Readings/Piyutei Geula; Berah Dodi:35": {
+   "kind": "prayer"
+  }
+ },
+ "en": {
+  "en:Torah Readings/Hol HaMo'ed Sukkot:1": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:1"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:2": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:3"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:3": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:3"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:4": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:4"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:5": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:5"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:6": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:6"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:7": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:7"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:8": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:9"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:9": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:9"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:10": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:10"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:11": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:11"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:12": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:12"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:13": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:13"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:14": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:15"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:15": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:15"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:16": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:16"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:17": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:17"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:18": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:18"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:19": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:19"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:20": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:21"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:21": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:21"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:22": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:22"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:23": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:23"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:24": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:24"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:25": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:25"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:26": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:27"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:27": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:27"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:28": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:28"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:29": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:30"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:30": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:30"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:31": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:31"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:32": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:32"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:33": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:33"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:34": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:34"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:35": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The Torah reading for Shabbat ḥol HaMo’ed Sukkot is the same as that of Shabbat ḥol HaMo’ed Pesaḥ</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "( ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">page</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "1135).",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\"> The Maftir is the Torah reading of the day of ḥol HaMo’ed Sukkot on which Shabbat falls.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:34"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:36": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:36"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:37": {
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:37"
+   ]
+  },
+  "en:Torah Readings/Hol HaMo'ed Sukkot:38": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Continue with the blessings after the Haftara on page </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "514.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Torah Readings/Hol HaMo'ed Sukkot:37"
+   ]
+  },
+  "en:Torah Readings/Shemini Atzeret:1": {
+   "he": [
+    "he:Torah Readings/Shemini Atzeret:1"
+   ]
+  },
+  "en:Torah Readings/Shemini Atzeret:2": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Outside Israel, the Torah Reading for Shemini Atzeret is the same as that of the eighth day of Pesaḥ, page </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "1142",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">. In Israel the Torah Reading for Shemini Atzeret is that of Simḥat Torah, page </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "1160",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">. The following Maftir is then read:</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Torah Readings/Shemini Atzeret:4"
+   ]
+  },
+  "en:Torah Readings/Shemini Atzeret:3": {
+   "he": [
+    "he:Torah Readings/Shemini Atzeret:3"
+   ]
+  },
+  "en:Torah Readings/Shemini Atzeret:4": {
+   "he": [
+    "he:Torah Readings/Shemini Atzeret:4"
+   ]
+  },
+  "en:Torah Readings/Shemini Atzeret:5": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">In Israel, the Haftara for Shemini Atzeret is that of Simḥat Torah, on page 1166</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ".",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Torah Readings/Shemini Atzeret:6"
+   ]
+  },
+  "en:Torah Readings/Shemini Atzeret:6": {
+   "he": [
+    "he:Torah Readings/Shemini Atzeret:6"
+   ]
+  },
+  "en:Torah Readings/Shemini Atzeret:7": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Continue with the blessings after the Haftara on page </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "514.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Torah Readings/Simhat Torah:1": {
+   "he": [
+    "he:Torah Readings/Simhat Torah:1"
+   ]
+  },
+  "en:Torah Readings/Simhat Torah:2": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">In Israel, if Simḥat Torah falls on Shabbat, the first three verses of the reading for the ḥatan Torah </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "(",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\"> page </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "1162",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">b</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ")",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">, from </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "“",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Your sanctuary</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "”",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\"> through </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "“",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">their high places,</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "”",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\"> are read for Shishi</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ".",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Torah Readings/Simhat Torah:3": {
+   "he": [
+    "he:Torah Readings/Simhat Torah:3"
+   ]
+  },
+  "en:Torah Readings/Simhat Torah:4": {
+   "he": [
+    "he:Torah Readings/Simhat Torah:4"
+   ]
+  },
+  "en:Torah Readings/Simhat Torah:5": {
+   "he": [
+    "he:Torah Readings/Simhat Torah:5"
+   ]
+  },
+  "en:Torah Readings/Simhat Torah:6": {
+   "he": [
+    "he:Torah Readings/Simhat Torah:6"
+   ]
+  },
+  "en:Torah Readings/Simhat Torah:7": {
+   "he": [
+    "he:Torah Readings/Simhat Torah:7"
+   ]
+  },
+  "en:Torah Readings/Simhat Torah:8": {
+   "he": [
+    "he:Torah Readings/Simhat Torah:8"
+   ]
+  },
+  "en:Torah Readings/Simhat Torah:9": {
+   "he": []
+  },
+  "en:Torah Readings/Simhat Torah:10": {
+   "he": [
+    "he:Torah Readings/Simhat Torah:10"
+   ]
+  },
+  "en:Torah Readings/Simhat Torah:11": {
+   "he": []
+  },
+  "en:Torah Readings/Simhat Torah:12": {
+   "he": [
+    "he:Torah Readings/Simhat Torah:12"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:1": {
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:1"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:2": {
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:3"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:3": {
+   "parts": [
+    {
+     "text": "By leave of great,",
+     "kind": "prayer"
+    },
+    {
+     "text": " mighty and awesome God;",
+     "kind": "prayer"
+    },
+    {
+     "text": " by leave of [the Torah] who is more precious than fine gold and pearls;",
+     "kind": "prayer"
+    },
+    {
+     "text": " by leave of the holy and chosen Sanhedrin,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the leaders in Torah and heads of the academies,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the elders and young men seated in their rows: I shall open my mouth in poetry and song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in thanks and praise to the One encircled in light,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who gives us life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " sustains us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in pure awe,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who brings us to rejoice at this Simḥat Torah that delights the heart and lights up the eyes,",
+     "kind": "prayer"
+    },
+    {
+     "text": " gives life and richness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " dignity and splendor,",
+     "kind": "prayer"
+    },
+    {
+     "text": " brings happiness to those who walk the straight path of goodness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " lengthens life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " heightens strength of those who love and keep her with care,",
+     "kind": "prayer"
+    },
+    {
+     "text": " attentively,",
+     "kind": "prayer"
+    },
+    {
+     "text": " those busy with her,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who guard her in love and awe. And so,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from the Mighty One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " it should be His will that grace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " kindness and life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " crown and diadem,",
+     "kind": "prayer"
+    },
+    {
+     "text": " be given to (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " the one chosen to complete the Torah. Strengthen him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " bless him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " nurture him in the learning of Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " make him sought after,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " included in the company of learners,",
+     "kind": "prayer"
+    },
+    {
+     "text": " make him worthy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " vital,",
+     "kind": "prayer"
+    },
+    {
+     "text": " honor him in the splendor of light,",
+     "kind": "prayer"
+    },
+    {
+     "text": " make him strong,",
+     "kind": "prayer"
+    },
+    {
+     "text": " crown him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " teach him Torah and its way of thinking,",
+     "kind": "prayer"
+    },
+    {
+     "text": " protect him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " elevate him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " support him with direct assistance,",
+     "kind": "prayer"
+    },
+    {
+     "text": " give him sustenance,",
+     "kind": "prayer"
+    },
+    {
+     "text": " make him refined and righteous among Your created people,",
+     "kind": "prayer"
+    },
+    {
+     "text": " bring him close,",
+     "kind": "prayer"
+    },
+    {
+     "text": " show him mercy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " guard him from pain and precipice,",
+     "kind": "prayer"
+    },
+    {
+     "text": " give him fortitude,",
+     "kind": "prayer"
+    },
+    {
+     "text": " sustain him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " make him whole in broken spirit. Stand,",
+     "kind": "prayer"
+    },
+    {
+     "text": " stand,",
+     "kind": "prayer"
+    },
+    {
+     "text": " stand (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " groom to the Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " give honor to great,",
+     "kind": "prayer"
+    },
+    {
+     "text": " awesome God;",
+     "kind": "prayer"
+    },
+    {
+     "text": " for this you shall merit from the awesome God to see your children and grandchildren busy themselves in Torah and fulfill the commandments amongst this beautiful,",
+     "kind": "prayer"
+    },
+    {
+     "text": " pure people;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and you shall be worthy of rejoicing in the joy of the Temple,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Chosen House,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and your face should light up in righteousness like [the Presence of God through] shining glass,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as Isaiah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " filled with the spirit of wisdom and strength,",
+     "kind": "prayer"
+    },
+    {
+     "text": " prophesied: Rejoice with Jerusalem,",
+     "kind": "prayer"
+    },
+    {
+     "text": " be happy with her,",
+     "kind": "prayer"
+    },
+    {
+     "text": " soon,",
+     "kind": "prayer"
+    },
+    {
+     "text": " rejoice with her in joyfulness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " all you who grieved in pain and mourning. Stand,",
+     "kind": "prayer"
+    },
+    {
+     "text": " stand,",
+     "kind": "prayer"
+    },
+    {
+     "text": " stand (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " groom to the Torah;",
+     "kind": "prayer"
+    },
+    {
+     "text": " by leave of this holy congregation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " complete the Torah. Arise (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " Ḥatan HaTorah.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:3"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:4": {
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:4"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:5": {
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:5"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:6": {
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:6"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:7": {
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:8"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:8": {
+   "parts": [
+    {
+     "text": "By leave of the One higher than all poetry and blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": " awesome above all praise and song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " wise-hearted,",
+     "kind": "prayer"
+    },
+    {
+     "text": " powerful,",
+     "kind": "prayer"
+    },
+    {
+     "text": " mighty,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Ruler of the world,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Master of every creation;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and by leave of [the Torah],",
+     "kind": "prayer"
+    },
+    {
+     "text": " this King’s daughter whose glory lies concealed,",
+     "kind": "prayer"
+    },
+    {
+     "text": " within her,",
+     "kind": "prayer"
+    },
+    {
+     "text": " created first and hidden away,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for two thousand years,",
+     "kind": "prayer"
+    },
+    {
+     "text": " pure,",
+     "kind": "prayer"
+    },
+    {
+     "text": " perfect,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who restores the soul,",
+     "kind": "prayer"
+    },
+    {
+     "text": " returns it;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and with permission from Yeshurun – she is their legacy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " given to be kept and nurtured,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the great leaders of Jacob – who learn to open her,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to complete her,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the crowning splendor of the prince of the Beit Din whose authority is great,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the rabbinical judges,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who turn back conflict from her gate,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the academy heads,",
+     "kind": "prayer"
+    },
+    {
+     "text": " leaders of this dispersed exile. And by leave of this righteous company,",
+     "kind": "prayer"
+    },
+    {
+     "text": " this joyous congregation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " elders and youths of each rank,",
+     "kind": "prayer"
+    },
+    {
+     "text": " together,",
+     "kind": "prayer"
+    },
+    {
+     "text": " gathered,",
+     "kind": "prayer"
+    },
+    {
+     "text": " today,",
+     "kind": "prayer"
+    },
+    {
+     "text": " here,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for Simḥat Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " collected to finish,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and to begin again,",
+     "kind": "prayer"
+    },
+    {
+     "text": " with happiness and awe,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the one as beloved as on the day she was given in all her glory: they delight in her,",
+     "kind": "prayer"
+    },
+    {
+     "text": " not as though old and past,",
+     "kind": "prayer"
+    },
+    {
+     "text": " but as new,",
+     "kind": "prayer"
+    },
+    {
+     "text": " thirsty to drink in and enjoy her precious brilliance for she makes the heart joyous,",
+     "kind": "prayer"
+    },
+    {
+     "text": " effaces sadness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " her comfort delights the soul of those who take pride in her,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who delve into the written and the spoken,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Mishna and the Gemara,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who run to bring their little ones to the house of prayer,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and go out,",
+     "kind": "prayer"
+    },
+    {
+     "text": " do everything to keep her with care – so,",
+     "kind": "prayer"
+    },
+    {
+     "text": " great is their reward from the Mighty One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " everlasting joy is upon their heads,",
+     "kind": "prayer"
+    },
+    {
+     "text": " they long to see the Temple,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the chosen house. And so I have been appointed by the choice of us all to elevate one man,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from all the people among this company;",
+     "kind": "prayer"
+    },
+    {
+     "text": " I found in him a wise heart for elucidating the Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " He seeks justice and kindness with integrity,",
+     "kind": "prayer"
+    },
+    {
+     "text": " his heart has inspired him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " awakening his spirit to giving – he should be the first,",
+     "kind": "prayer"
+    },
+    {
+     "text": " foremost,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to begin the Torah. And now,",
+     "kind": "prayer"
+    },
+    {
+     "text": " arise (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " stand,",
+     "kind": "prayer"
+    },
+    {
+     "text": " take courage,",
+     "kind": "prayer"
+    },
+    {
+     "text": " come,",
+     "kind": "prayer"
+    },
+    {
+     "text": " present yourself,",
+     "kind": "prayer"
+    },
+    {
+     "text": " stand to my right and read out the Beginning – created by the Rock for His glory for which reason we immediately follow completion by beginning again so the accusing angel will not be able to tell lies of this people. Since you are the first to do this perfect commandment – how great will be the goodness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " how abundant your reward: you who are so generous,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may you have no constraint upon your giving;",
+     "kind": "prayer"
+    },
+    {
+     "text": " from the blessing of your Creator,",
+     "kind": "prayer"
+    },
+    {
+     "text": " give,",
+     "kind": "prayer"
+    },
+    {
+     "text": " do not curb your hand,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for the one who honors the Torah with majesty should be honored with healthy contentment. So,",
+     "kind": "prayer"
+    },
+    {
+     "text": " quickly: stand,",
+     "kind": "prayer"
+    },
+    {
+     "text": " stand,",
+     "kind": "prayer"
+    },
+    {
+     "text": " stand (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " groom to “In the beginning,",
+     "kind": "prayer"
+    },
+    {
+     "text": "” with permission from this holy congregation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and bless awesome,",
+     "kind": "prayer"
+    },
+    {
+     "text": " mighty God – quickly,",
+     "kind": "prayer"
+    },
+    {
+     "text": " all will answer after you: Amen. Arise (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " Ḥatan Bereshit.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:8"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:9": {
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:9"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:10": {
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:11"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:11": {
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:11"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:12": {
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:12"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:13": {
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:13"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:14": {
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:14"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:15": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The Maftir for Simḥat Torah is the same as that of Shemini Atzeret on page 1161</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ".",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:17"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:16": {
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:16"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:17": {
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:17"
+   ]
+  },
+  "en:Torah Readings/Hatan Torah and Hatan Bereshit:18": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Continue with the blessings after the Haftara on page </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "514.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Torah Readings/Hatan Torah and Hatan Bereshit:17"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:1": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:1"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:2": {
+   "he": []
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:3": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:3"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:4": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:4"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:5": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:5"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:6": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:6"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:7": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Continue with the Amida on page </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "770.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:8": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:8"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:9": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:9"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:10": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:10"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:11": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:11"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:12": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:12"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:13": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:13"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:14": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Continue with the Amida on page </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "770.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:15": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:15"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:16": {
+   "he": []
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:17": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:17"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:18": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:18"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:19": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:19"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:20": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:20"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:21": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:21"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:22": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:22"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:23": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Shabbat ḥol HaMo’ed, say the Amida on page </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "480",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">. On Yom Tov, say the Amida on page </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "770.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:24": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:24"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:25": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:25"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:26": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:26"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:27": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:27"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:28": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:28"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:29": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:29"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:30": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:30"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:31": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:31"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:32": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:32"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:33": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:33"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:34": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:34"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:35": {
+   "he": [
+    "he:Torah Readings/Piyutei Geula; Berah Dodi:35"
+   ]
+  },
+  "en:Torah Readings/Piyutei Geula; Berah Dodi:36": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Continue with the Amida on page </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "770.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Torah Readings/Hol HaMo'ed Sukkot:3",
+   "type": "ambiguous",
+   "detail": "Diaspora reading for Day 1 is not explicitly marked; assumed !il based on structure."
+  },
+  {
+   "id": "en:Torah Readings/Shemini Atzeret:7",
+   "type": "ambiguous",
+   "detail": "English instruction references page 514 for Haftara blessings; no Hebrew counterpart in this leaf. May be a cross-reference to a separate section."
+  },
+  {
+   "id": "en:Torah Readings/Simhat Torah:2",
+   "type": "ambiguous",
+   "detail": "Instruction refers to a specific page number and text for 'Shishi' (6th aliya) in Israel on Shabbat, but the Hebrew text for that specific alternative is not present in the provided segment. The condition for this instruction is unclear without the alternative text."
+  },
+  {
+   "id": "he:Torah Readings/Hatan Torah and Hatan Bereshit:5",
+   "type": "ambiguous",
+   "detail": "Part 1: Instruction 'On Shabbat Chatan Torah' implies a conditional reading, but Simchat Torah is always on Shabbat. The condition might be redundant or refer to a specific custom where this reading is only used on Simchat Torah itself, not other Shabbatot."
+  },
+  {
+   "id": "en:Torah Readings/Piyutei Geula; Berah Dodi:2",
+   "type": "new_minhag",
+   "detail": "Piyutei Geula are said on specific days of Pesach; the instruction implies a custom that may vary by nusach or community."
+  }
+ ]
+}

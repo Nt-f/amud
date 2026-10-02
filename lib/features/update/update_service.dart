@@ -45,7 +45,7 @@ bool get updatesSupported =>
 bool _assetFor(String name) {
   final n = name.toLowerCase();
   return switch (defaultTargetPlatform) {
-    TargetPlatform.android => n.endsWith('.apk'),
+    TargetPlatform.android => n.endsWith('.apk') && !n.contains('wear'),
     TargetPlatform.windows => n.contains('windows') && (n.endsWith('.zip') || n.endsWith('.exe') || n.endsWith('.msix')),
     TargetPlatform.linux => n.contains('linux') && (n.endsWith('.tar.gz') || n.endsWith('.zip') || n.endsWith('.appimage')),
     _ => false,

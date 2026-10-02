@@ -1,0 +1,3636 @@
+{
+ "nusach": "ashkenaz",
+ "chunk": "Weekday/Maariv [Amidah .. Keri'at Shema al Hamita]",
+ "leaves": {
+  "Weekday/Maariv/Amidah/Patriarchs": {
+   "node": "amidah.avot",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Divine Might": {
+   "node": "amidah.gevurot",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Holiness of God": {
+   "node": "amidah.kedushat_hashem",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Knowledge": {
+   "node": "amidah.daat",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Repentance": {
+   "node": "amidah.teshuva",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Forgiveness": {
+   "node": "amidah.selicha",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Redemption": {
+   "node": "amidah.geula",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Healing": {
+   "node": "amidah.refua",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Gathering the Exiles": {
+   "node": "amidah.kibbutz_galuyot",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Against Enemies": {
+   "node": "amidah.minim",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/The Righteous": {
+   "node": "amidah.tzaddikim",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Rebuilding Jerusalem": {
+   "node": "amidah.yerushalayim",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Kingdom of David": {
+   "node": "amidah.david",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Response to Prayer": {
+   "node": "amidah.shomea_tefilla",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Prosperity": {
+   "node": "amidah.shanim",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Justice": {
+   "node": "amidah.din",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Temple Service": {
+   "node": "amidah.avoda",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Thanksgiving": {
+   "node": "amidah.modim",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Peace": {
+   "node": "amidah.shalom",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Amidah/Concluding Passage": {
+   "node": "amidah.elokai_netzor",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Kaddish Shalem": {
+   "node": "kaddish.shalem",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam": {
+   "node": "motzash.vihi_noam",
+   "service": "maariv",
+   "when": "motzaeiShabbat"
+  },
+  "Weekday/Maariv/Additions for Motza'ei Shabbat/Veyiten Lekha": {
+   "node": "motzash.veyiten_lecha",
+   "service": "none",
+   "when": "motzaeiShabbat"
+  },
+  "Weekday/Maariv/Sefirat HaOmer": {
+   "node": "sefirat_haomer",
+   "service": "maariv",
+   "when": "omer"
+  },
+  "Weekday/Maariv/Alenu": {
+   "node": "concl.aleinu",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/Mourner's Kaddish": {
+   "node": "kaddish.mourners",
+   "service": "maariv"
+  },
+  "Weekday/Maariv/LeDavid": {
+   "node": "concl.ledavid",
+   "service": "maariv",
+   "when": "ledavid"
+  },
+  "Weekday/Maariv/Birkat HaLevana": {
+   "node": "kiddush_levana",
+   "service": "none",
+   "when": "kiddushLevana"
+  },
+  "Weekday/Maariv/Keri'at Shema al Hamita": {
+   "node": "bedtime_shema",
+   "service": "none"
+  }
+ },
+ "he": {
+  "he:Weekday/Maariv/Amidah/Patriarchs:1": {
+   "kind": "note",
+   "en": "The one praying must direct his heart to the meaning of the words he utters; if he cannot, he should at least think of things that humble the heart and direct it to his Father in heaven. He places his feet together as if they were one, takes care to pray quietly, and does not signal with his eyes, purse his lips or point with his fingers. He does not interrupt even for Kaddish or Kedushah.",
+   "clean": "המתפלל צריך שיכוין בליבו פירוש המילות שהוא מוציא בשפתיו. ואם אינו יכול לכוין פירוש המילות לכל הפחות צריך שיחשוב בשעת התפילה בדברים המכניעים את הלב ומכוונים את לבו לאביו שבשמים. יכוין רגליו זה אצל זה כאילו אינן אלא אחת. ויזהר להתפלל בלחש. ולא ירמוז בעיניו ולא יקרוץ בשפתיו ולא יראה באצבעותיו ואינו פוסק אפילו לקדיש וקדושה (קיצשו\"ע יח)",
+   "cite": "קיצור שו\"ע יח",
+   "node": "amidah.opening",
+   "gestures": [
+    "feet_together"
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Patriarchs:2": {
+   "kind": "prayer",
+   "voice": "silent",
+   "node": "amidah.opening",
+   "gestures": [
+    "stand",
+    "feet_together"
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Patriarchs:3": {
+   "parts": [
+    {
+     "text": "<b>בָּרוּךְ</b> אַתָּה",
+     "kind": "prayer",
+     "voice": "silent",
+     "gestures": [
+      "bow"
+     ]
+    },
+    {
+     "text": " יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים וְקוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַֽעַן שְׁמוֹ בְּאַהֲבָה:",
+     "kind": "prayer",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Patriarchs:4": {
+   "parts": [
+    {
+     "text": "<small>בעשי\"ת:</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשי\"ת:",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " זָכְרֵֽנוּ לְחַיִּים מֶֽלֶךְ חָפֵץ בַּחַיִּים וְכָתְבֵֽנוּ בְּסֵֽפֶר הַחַיִּים לְמַעַנְךָ אֱלֹהִים חַיִּים:",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "aseretYemeiTeshuva"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Patriarchs:5": {
+   "kind": "note",
+   "en": "If one did not say \"Zochreinu\" and remembered after already saying \"Baruch Atah Hashem\", he does not go back. If he remembers before saying the Name, even if he already said \"Baruch Atah\", he says \"Zochreinu...\" and continues \"Melech ozer\" in order. One who mistakenly says \"Zochreinu\" during the rest of the year: if he remembers before saying \"uchsoveinu\" he stops and begins \"Melech ozer\"; if he said \"uchsoveinu\" he returns to the beginning of the Amidah.",
+   "clean": "אם לא אמר זכרנו ונזכר לאחר שכבר אמר בא\"י אינו חוזר אבל אם נזכר קודם שאמר השם אף שאמר ברוך אתה אומר זכרנו כו' מלך עוזר כסדר. הטועה ומזכיר זכרנו בשאר ימות השנה אם נזכר קודם שאמר וכתבנו פוסק ומתחיל מלך עוזר וגו' אבל אם אמר וכתבנו חוזר לראש התפלה. (דה\"ח)",
+   "cite": "דה\"ח",
+   "forgot": true
+  },
+  "he:Weekday/Maariv/Amidah/Patriarchs:6": {
+   "parts": [
+    {
+     "text": "מֶֽלֶךְ עוֹזֵר וּמוֹשִֽׁיעַ וּמָגֵן:",
+     "kind": "prayer",
+     "voice": "silent"
+    },
+    {
+     "text": " בָּרוּךְ אַתָּה יְהֹוָה מָגֵן אַבְרָהָם:",
+     "kind": "prayer",
+     "voice": "silent",
+     "gestures": [
+      "bow"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Divine Might:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Divine Might:2": {
+   "kind": "instruction",
+   "en": "In summer:",
+   "clean": "בקיץ:",
+   "when": "moridHatal"
+  },
+  "he:Weekday/Maariv/Amidah/Divine Might:3": {
+   "kind": "prayer",
+   "voice": "silent",
+   "when": "moridHatal",
+   "alt": "geshem"
+  },
+  "he:Weekday/Maariv/Amidah/Divine Might:4": {
+   "kind": "instruction",
+   "en": "In winter:",
+   "clean": "בחורף:",
+   "when": "mashivHaruach"
+  },
+  "he:Weekday/Maariv/Amidah/Divine Might:5": {
+   "kind": "prayer",
+   "voice": "silent",
+   "when": "mashivHaruach",
+   "alt": "geshem"
+  },
+  "he:Weekday/Maariv/Amidah/Divine Might:6": {
+   "kind": "note",
+   "en": "One who erred and did not say \"Mashiv haruach umorid hageshem\" in winter: if he remembers before saying the blessing \"Mechayei hameitim\" he says it where he remembers; if he does not remember until after finishing \"Mechayei hameitim\" he must return to the beginning of the Amidah. If he is in doubt whether he said it: after thirty days it is presumed that he prayed correctly, but within thirty days he must repeat the prayer.",
+   "clean": "טעה ולא אמר בחורף משיב הרוח ומוריד הגשם אם נזכר קודם שאמר הברכה מחיה המתים אומרו במקום שנזכר. אבל אם לא נזכר עד לאחר שסיים הברכה מחיה המתים צריך לחזור לראש התפלה. ואם נסתפק לו אם אמר משיב הרוח או לא אמר. אם הוא לאחר שלושים יום חזקתו שגם עתה התפלל כראוי. אבל בתוך שלושים יום צריך לחזור ולהתפלל (קיצור שו\"ע יט)",
+   "cite": "קיצור שו\"ע יט",
+   "forgot": true,
+   "when": "mashivHaruach"
+  },
+  "he:Weekday/Maariv/Amidah/Divine Might:7": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Divine Might:8": {
+   "parts": [
+    {
+     "text": "<small>בעשי\"ת:</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשי\"ת:",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " מִי כָמֽוֹךָ אַב הָרַחֲמִים זוֹכֵר יְצוּרָיו לְחַיִּים בְּרַחֲמִים:",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "aseretYemeiTeshuva"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Divine Might:9": {
+   "kind": "note",
+   "en": "If one forgot to say \"Mi chamocha Av harachamim\", the law is the same as for \"Zochreinu\".",
+   "clean": "אם שכח לומר מי כמוך דינו כמו בזכרנו.",
+   "forgot": true,
+   "when": "aseretYemeiTeshuva"
+  },
+  "he:Weekday/Maariv/Amidah/Divine Might:10": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Holiness of God:1": {
+   "kind": "instruction",
+   "en": "In the chazzan's repetition, Kedushah is said here:",
+   "clean": "בחזרת הש\"ץ אומרים כאן קדושה:",
+   "when": "false",
+   "node": "amidah.kedusha",
+   "amidah": "repetition",
+   "minyan": true
+  },
+  "he:Weekday/Maariv/Amidah/Holiness of God:2": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Holiness of God:3": {
+   "kind": "prayer",
+   "voice": "silent",
+   "when": "!aseretYemeiTeshuva",
+   "alt": "hakadosh"
+  },
+  "he:Weekday/Maariv/Amidah/Holiness of God:4": {
+   "parts": [
+    {
+     "text": "<small>בעשי\"ת מסיים:</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance, conclude:",
+     "clean": "בעשי\"ת מסיים:",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " בָּרוּךְ אַתָּה יְהֹוָה הַמֶּֽלֶךְ הַקָּדוֹשׁ:",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "aseretYemeiTeshuva",
+     "alt": "hakadosh"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Holiness of God:5": {
+   "kind": "note",
+   "en": "If one erred and concluded \"HaEl hakadosh\": if he remembers within the time of a short phrase (toch kedei dibbur) and says \"HaMelech hakadosh\", he has fulfilled his obligation; otherwise he must return to the beginning of the Amidah. The same applies if he is in doubt whether he said it. During the rest of the year, if one said \"HaMelech hakadosh\" he does not repeat.",
+   "clean": "אם טעה וסיים האל הקדוש אם נזכר בתוך כדי דיבור ואמר המלך הקדוש יצא ואם לאו צריך לחזור לראש התפלה וה\"ה אם מסופק אם אמר צריך לחזור לראש. ובימות השנה אם אמר המלך הקדוש אינו חוזר.",
+   "forgot": true
+  },
+  "he:Weekday/Maariv/Amidah/Knowledge:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Knowledge:2": {
+   "kind": "prayer",
+   "voice": "silent",
+   "when": "motzaeiShabbat || motzaeiYomTov"
+  },
+  "he:Weekday/Maariv/Amidah/Knowledge:3": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Repentance:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Forgiveness:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Redemption:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Healing:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Prosperity:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Prosperity:2": {
+   "parts": [
+    {
+     "text": "<small>בימות החמה:</small>",
+     "kind": "instruction",
+     "en": "In the summer months:",
+     "clean": "בימות החמה:",
+     "when": "!talUmatar"
+    },
+    {
+     "text": " בְּרָכָה",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "!talUmatar",
+     "alt": "tal"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Prosperity:3": {
+   "parts": [
+    {
+     "text": "<small>בימות הגשמים:</small>",
+     "kind": "instruction",
+     "en": "In the rainy season:",
+     "clean": "בימות הגשמים:",
+     "when": "talUmatar"
+    },
+    {
+     "text": " טַל וּמָטָר לִבְרָכָה",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "talUmatar",
+     "alt": "tal"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Prosperity:4": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Prosperity:5": {
+   "kind": "note",
+   "en": "If one forgot to say \"Tal umatar\" and remembers before beginning \"Teka\", he says it where he remembers. If he began \"Teka\", he says it in \"Shomea tefilla\". If he did not remember in \"Shomea tefilla\", he says it between \"Shomea tefilla\" and \"Retzei\". If he forgot there too: if he remembers before moving his feet he returns to the blessing of the years and begins \"Barech aleinu\" and prays in order; if he already moved his feet he returns to the beginning of the Amidah.",
+   "clean": "אם שכח לומר טַל וּמָטָר ונזכר קודם שהתחיל תְּקַע אומרו במקום שנזכר. התחיל לומר תְּקַע יאמרנה בשׁוֹמֵֽעַ תְּפִלָּה. ואם לא נזכר בש\"ת יאמרנה בין ש\"ת לרְצֵה. שכח גם שם אם נזכר קודם שעקר רגליו חוזר לברכת השנים ויתחיל בָּרֵךְ עָלֵֽינוּ ויתפלל כסדר. ואם עקר רגליו חוזר לראש התפלה.",
+   "forgot": true,
+   "when": "talUmatar"
+  },
+  "he:Weekday/Maariv/Amidah/Gathering the Exiles:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Justice:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Justice:2": {
+   "kind": "prayer",
+   "voice": "silent",
+   "when": "!aseretYemeiTeshuva",
+   "alt": "din_end"
+  },
+  "he:Weekday/Maariv/Amidah/Justice:3": {
+   "parts": [
+    {
+     "text": "<small>בעשי\"ת יסיים:</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance, conclude:",
+     "clean": "בעשי\"ת יסיים:",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " בָּרוּךְ אַתָּה יְהֹוָה הַמֶּֽלֶךְ הַמִּשְׁפָּט:",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "aseretYemeiTeshuva",
+     "alt": "din_end"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Justice:4": {
+   "kind": "note",
+   "en": "All year, if one said \"HaMelech hamishpat\" he has fulfilled his obligation and need not repeat. During the Ten Days of Repentance, if one erred and said \"Melech ohev tzedakah umishpat\": if he remembers within the time of a short phrase (toch kedei dibbur) he says \"HaMelech hamishpat\"; if later, he does not say it and is not made to repeat.",
+   "clean": "בכל השנה אם אמר המלך המשפט יצא וא\"צ לחזור. ובעשי\"ת אם טעה ואמר מלך אוהב צדקה ומשפט אם נזכר תוך כדי דבור אומר המלך המשפט. ואם לאחר כ\"ד לא יאמר ואין מחזירין אותו.",
+   "forgot": true
+  },
+  "he:Weekday/Maariv/Amidah/Against Enemies:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/The Righteous:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Rebuilding Jerusalem:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Kingdom of David:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Response to Prayer:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Temple Service:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Temple Service:2": {
+   "kind": "instruction",
+   "en": "On Rosh Chodesh and Chol HaMoed say this:",
+   "clean": "בראש חדש ובחול המועד אומרים זה:",
+   "when": "roshChodesh || cholHamoed",
+   "node": "amidah.yaaleh_veyavo"
+  },
+  "he:Weekday/Maariv/Amidah/Temple Service:3": {
+   "parts": [
+    {
+     "text": "<b>אֱלֹהֵֽינוּ</b> וֵאלֹהֵי אֲבוֹתֵֽינוּ. יַעֲלֶה וְיָבֹא וְיַגִּֽיעַ וְיֵרָאֶה וְיֵרָצֶה וְיִשָּׁמַע וְיִפָּקֵד וְיִזָּכֵר זִכְרוֹנֵֽנוּ וּפִקְדוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ. וְזִכְרוֹן מָשִֽׁיחַ בֶּן דָּוִד עַבְדֶּֽךָ. וְזִכְרוֹן יְרוּשָׁלַֽיִם עִיר קָדְשֶֽׁךָ. וְזִכְרוֹן כָּל עַמְּ֒ךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ. לִפְלֵיטָה לְטוֹבָה לְחֵן וּלְחֶֽסֶד וּלְרַחֲמִים לְחַיִּים וּלְשָׁלוֹם. בְּיוֹם ",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": "<small>לר\"ח:</small>",
+     "kind": "instruction",
+     "en": "For Rosh Chodesh:",
+     "clean": "לר\"ח:",
+     "when": "roshChodesh",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " רֹאשׁ הַחֹֽדֶשׁ הַזֶּה:",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "roshChodesh",
+     "alt": "yaaleh_day",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " <small>לפסח:</small>",
+     "kind": "instruction",
+     "en": "For Pesach:",
+     "clean": "לפסח:",
+     "when": "cholHamoedPesach",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " חַג הַמַּצּוֹת הַזֶּה:",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "cholHamoedPesach",
+     "alt": "yaaleh_day",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " <small>לסכות:</small>",
+     "kind": "instruction",
+     "en": "For Sukkot:",
+     "clean": "לסכות:",
+     "when": "cholHamoedSukkot",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " חַג הַסֻּכּוֹת הַזֶּה:",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "cholHamoedSukkot",
+     "alt": "yaaleh_day",
+     "node": "amidah.yaaleh_veyavo"
+    },
+    {
+     "text": " זָכְרֵֽנוּ יְהֹוָה אֱלֹהֵֽינוּ בּוֹ לְטוֹבָה. וּפָקְדֵֽנוּ בוֹ לִבְרָכָה. וְהוֹשִׁיעֵֽנוּ בוֹ לְחַיִּים. וּבִדְבַר יְשׁוּעָה וְרַחֲמִים חוּס וְחָנֵּֽנוּ וְרַחֵם עָלֵֽינוּ וְהוֹשִׁיעֵֽנוּ. כִּי אֵלֶֽיךָ עֵינֵֽינוּ כִּי אֵל מֶֽלֶךְ חַנּוּן וְרַחוּם אָֽתָּה:",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Temple Service:4": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Thanksgiving:1": {
+   "kind": "note",
+   "en": "When saying \"Modim\" one bows head and body like a reed until all the vertebrae of the spine loosen. One bows quickly, in one motion, and rises slowly, head first and then body, so that it is not a burden.",
+   "clean": "כשאומר מודים כורע ראשו וגופו כאגמון עד שיתפקקו כל חוליות שבשדרה. וכשהוא כורע יכרע במהירות בפעם אחת וכשהוא זוקף זוקף בנחת ראשו תחלה ואחר כך גופו שלא תהא עליו כמשאוי (שו\"ע או\"ח סי' קיג)",
+   "cite": "שו\"ע או\"ח סי' קיג",
+   "gestures": [
+    "bow_full"
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Thanksgiving:2": {
+   "parts": [
+    {
+     "text": "<b>מוֹדִים</b> אֲנַֽחְנוּ לָךְ שָׁאַתָּה הוּא יְהֹוָה",
+     "kind": "prayer",
+     "voice": "silent",
+     "gestures": [
+      "bow_full"
+     ]
+    },
+    {
+     "text": " אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ לְעוֹלָם וָעֶד צוּר חַיֵּֽינוּ מָגֵן יִשְׁעֵֽנוּ אַתָּה הוּא לְדוֹר וָדוֹר נֽוֹדֶה לְּךָ וּנְסַפֵּר תְּהִלָּתֶֽךָ עַל־חַיֵּֽינוּ הַמְּסוּרִים בְּיָדֶֽךָ וְעַל נִשְׁמוֹתֵֽינוּ הַפְּקוּדוֹת לָךְ וְעַל נִסֶּֽיךָ שֶׁבְּכָל יוֹם עִמָּֽנוּ וְעַל נִפְלְאוֹתֶֽיךָ וְטוֹבוֹתֶֽיךָ שֶׁבְּכָל עֵת עֶֽרֶב וָבֹֽקֶר וְצָהֳרָֽיִם הַטּוֹב כִּי לֹא כָלוּ רַחֲמֶֽיךָ וְהַמְרַחֵם כִּי לֹא תַֽמּוּ חֲסָדֶֽיךָ מֵעוֹלָם קִוִּֽינוּ לָךְ:",
+     "kind": "prayer",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Thanksgiving:3": {
+   "parts": [
+    {
+     "text": "<small>בחנוכה ופורים אומרים על הנסים.",
+     "kind": "instruction",
+     "en": "On Chanukah and Purim say \"Al hanissim\".",
+     "clean": "בחנוכה ופורים אומרים על הנסים.",
+     "when": "chanukah || purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " שכח לומר על הנסים ונזכר קודם שאמר השם מברכת הטוב שמך אפילו אמר ברוך אתה חוזר ואומר על הנסים. אבל אם כבר סיים הברכה או שאמר ברוך א\"י אינו חוזר (דה\"ח תרפ\"ב ותרצ\"ג).</small>",
+     "kind": "note",
+     "forgot": true,
+     "en": "If one forgot to say \"Al hanissim\" and remembers before saying the Name in the blessing \"HaTov shimcha\", he goes back and says it, even if he already said \"Baruch\". But if he already finished the blessing, or said \"Baruch Atah Hashem\", he does not go back.",
+     "cite": "דה\"ח תרפ\"ב ותרצ\"ג",
+     "clean": "שכח לומר על הנסים ונזכר קודם שאמר השם מברכת הטוב שמך אפילו אמר ברוך אתה חוזר ואומר על הנסים. אבל אם כבר סיים הברכה או שאמר ברוך א\"י אינו חוזר (דה\"ח תרפ\"ב ותרצ\"ג).",
+     "when": "chanukah || purim",
+     "node": "amidah.al_hanissim"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Thanksgiving:4": {
+   "kind": "prayer",
+   "voice": "silent",
+   "when": "chanukah || purim",
+   "node": "amidah.al_hanissim"
+  },
+  "he:Weekday/Maariv/Amidah/Thanksgiving:5": {
+   "parts": [
+    {
+     "text": "<small>בחנוכה:</small>",
+     "kind": "instruction",
+     "en": "On Chanukah:",
+     "clean": "בחנוכה:",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " <b>בִּימֵי מַתִּתְיָֽהוּ</b> בֶּן יוֹחָנָן כֹּהֵן גָּדוֹל חַשְׁמוֹנָאִי וּבָנָיו כְּשֶׁעָמְ֒דָה מַלְכוּת יָוָן הָרְ֒שָׁעָה עַל־עַמְּ֒ךָ יִשְׂרָאֵל לְהַשְׁכִּיחָם תּוֹרָתֶֽךָ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנֶֽךָ, וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים עָמַֽדְתָּ לָהֶם בְּעֵת צָרָתָם רַֽבְתָּ אֶת־רִיבָם דַּֽנְתָּ אֶת־דִּינָם נָקַֽמְתָּ אֶת־נִקְמָתָם מָסַֽרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים וְרַבִּים בְּיַד מְעַטִּים וּטְמֵאִים בְּיַד טְהוֹרִים וּרְשָׁעִים בְּיַד צַדִּיקִים וְזֵדִים בְּיַד עוֹסְ֒קֵי תוֹרָתֶֽךָ וּלְךָ עָשִֽׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמֶֽךָ וּלְעַמְּ֒ךָ יִשְׂרָאֵל עָשִֽׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה וְאַחַר־כֵּן בָּֽאוּ בָנֶֽיךָ לִדְבִיר בֵּיתֶֽךָ וּפִנּוּ אֶת־הֵיכָלֶֽךָ וְטִהֲרוּ אֶת־מִקְדָּשֶֽׁךָ וְהִדְלִֽיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶֽׁךָ וְקָבְ֒עוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵֽלּוּ לְהוֹדוֹת וּלְהַלֵּל לְשִׁמְךָ הַגָּדוֹל:",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Thanksgiving:6": {
+   "parts": [
+    {
+     "text": "<small>בפורים:</small>",
+     "kind": "instruction",
+     "en": "On Purim:",
+     "clean": "בפורים:",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    },
+    {
+     "text": " <b>בִּימֵי מָרְדְּ֒כַי וְאֶסְתֵּר</b> בְּשׁוּשַׁן הַבִּירָה כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע בִּקֵּשׁ לְהַשְׁמִיד לַהֲרוֹג וּלְאַבֵּד אֶת־כָּל־הַיְּהוּדִים מִנַּֽעַר וְעַד־זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד בִּשְׁלוֹשָׁה עָשָׂר לְחֹֽדֶשׁ שְׁנֵים־עָשָׂר הוּא־חֹֽדֶשׁ אֲדָר וּשְׁלָלָם לָבוֹז: וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים הֵפַֽרְתָּ אֶת־עֲצָתוֹ וְקִלְקַֽלְתָּ אֶת־מַחֲשַׁבְתּוֹ וַהֲשֵׁבֽוֹתָ לּוֹ גְּמוּלוֹ בְּרֹאשׁוֹ וְתָלוּ אוֹתוֹ וְאֶת־בָּנָיו עַל־הָעֵץ (וְעָשִׂיתָ עמָּהֶם נֵס וָפֶלֶא וְנוֹדֶה לְשִׁמְךָ הָגָּדוֹל סֶלָה):",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "purim",
+     "node": "amidah.al_hanissim"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Thanksgiving:7": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Thanksgiving:8": {
+   "parts": [
+    {
+     "text": "<small>בעשי\"ת:</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשי\"ת:",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " וּכְתוֹב לְחַיִּים טוֹבִים כָּל בְּנֵי בְרִיתֶֽךָ:",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "aseretYemeiTeshuva"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Thanksgiving:9": {
+   "kind": "note",
+   "en": "If one forgot to say \"Uchtov\": if he remembers before saying the Name in the blessing \"HaTov shimcha\" he goes back; if he did not remember until after saying the Name he does not go back, as explained above regarding \"Zochreinu\" and \"Mi chamocha\".",
+   "clean": "אם שכח לומר וכתוב אם נזכר קודם שאמר השם מברכת הטוב חוזר ואם לא נזכר עד לאחר שאמר השם אינו חוזר כמו שנתבאר לעיל אצל זכרנו ומי כמוך. (דה\"ח סי' תקפ\"ב)",
+   "cite": "דה\"ח סי' תקפ\"ב",
+   "forgot": true,
+   "when": "aseretYemeiTeshuva"
+  },
+  "he:Weekday/Maariv/Amidah/Thanksgiving:10": {
+   "parts": [
+    {
+     "text": "<b>וְכֹל הַחַיִּים</b> יוֹדֽוּךָ סֶּֽלָה וִיהַלְ֒לוּ אֶת־שִׁמְךָ בֶּאֱמֶת הָאֵל יְשׁוּעָתֵֽנוּ וְעֶזְרָתֵֽנוּ סֶֽלָה:",
+     "kind": "prayer",
+     "voice": "silent"
+    },
+    {
+     "text": " בָּרוּךְ אַתָּה יְהֹוָה הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת:",
+     "kind": "prayer",
+     "voice": "silent",
+     "gestures": [
+      "bow"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Peace:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Peace:2": {
+   "parts": [
+    {
+     "text": "<small>בעשי\"ת:</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשי\"ת:",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " בְּסֵֽפֶר חַיִּים בְּרָכָה וְשָׁלוֹם וּפַרְנָסָה טוֹבָה נִזָּכֵר וְנִכָּתֵב לְפָנֶֽיךָ אֲנַֽחְנוּ וְכָל עַמְּךָ בֵּית יִשְׂרָאֵל לְחַיִּים טוֹבִים וּלְשָׁלוֹם:",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " (בָּרוּךְ אַתָּה יְהֹוָה עֹשֶׂה הַשָּׁלוֹם:)",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "aseretYemeiTeshuva && x_peaceEndsOsehHaShalom",
+     "alt": "peace_end"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Peace:3": {
+   "kind": "note",
+   "en": "If one did not say \"BeSefer chayim\": once he has finished the blessing, or even only said \"Baruch Atah Hashem\", he does not go back. It seems proper to say \"BeSefer\" immediately after finishing \"HaMevarech es amo Yisrael bashalom\", before \"Yihyu leratzon\", since the Amidah is already complete. (According to Rabbeinu Tam one always says it at the end of a blessing even where one does not return; those who disagree hold that where there is no need to return it would be an interruption in the middle of the Amidah, which is not the case here.)",
+   "clean": "ואם לא אמר בְּסֵֽפֶר חַיִּים כיון שסיים הברכה או רק בא\"י אינו חוזר. ונ\"ל דבזה ראוי לומר בספר תיכף כשסיים המברך את עמו ישראל בשלום קודם יהיו לרצון כיון שכבר גמר התפלה. (דהא לר\"ת לעולם אומרים בסוף ברכה אפילו בדבר שאין מחזירין אלא דהחולקים סוברים כיון דא\"צ לחזור א\"כ הוי הפסק באמצע תפלה מה שאין כן כאן.) (חיי אדם כלל כ\"ד סעי' כ\"ה)",
+   "cite": "חיי אדם כלל כ\"ד סעי' כ\"ה",
+   "forgot": true,
+   "when": "aseretYemeiTeshuva"
+  },
+  "he:Weekday/Maariv/Amidah/Peace:4": {
+   "kind": "prayer",
+   "voice": "silent",
+   "when": "!(aseretYemeiTeshuva && x_peaceEndsOsehHaShalom)",
+   "alt": "peace_end"
+  },
+  "he:Weekday/Maariv/Amidah/Concluding Passage:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Concluding Passage:2": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Weekday/Maariv/Amidah/Concluding Passage:3": {
+   "parts": [
+    {
+     "text": "עֹשֶׂה ",
+     "kind": "prayer",
+     "voice": "silent",
+     "gestures": [
+      "three_steps_back",
+      "bow_left_right_center"
+     ],
+     "node": "amidah.oseh_shalom"
+    },
+    {
+     "text": "(<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשי\"ת:",
+     "when": "aseretYemeiTeshuva",
+     "node": "amidah.oseh_shalom"
+    },
+    {
+     "text": " הַשָּׁלוֹם)",
+     "kind": "prayer",
+     "voice": "silent",
+     "when": "aseretYemeiTeshuva",
+     "gestures": [
+      "three_steps_back",
+      "bow_left_right_center"
+     ],
+     "node": "amidah.oseh_shalom"
+    },
+    {
+     "text": " שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן:",
+     "kind": "prayer",
+     "voice": "silent",
+     "gestures": [
+      "three_steps_back",
+      "bow_left_right_center"
+     ],
+     "node": "amidah.oseh_shalom"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Amidah/Concluding Passage:4": {
+   "kind": "prayer",
+   "voice": "silent",
+   "node": "amidah.yehi_ratzon_mikdash"
+  },
+  "he:Weekday/Maariv/Kaddish Shalem:1": {
+   "parts": [
+    {
+     "text": "<small>בחול אומר החזן קדיש שלם.",
+     "kind": "instruction",
+     "en": "On weekdays the chazzan says Whole Kaddish (Kaddish Shalem).",
+     "clean": "בחול אומר החזן קדיש שלם.",
+     "when": "!motzaeiShabbat"
+    },
+    {
+     "text": " במוצאי שבת אומר חצי קדיש ואחר כך אומרים הקהל <b>וִיהִי נֹֽעַם וְאַתָּה קָדוֹשׁ</b>:</small>",
+     "kind": "instruction",
+     "en": "On Motzaei Shabbat the chazzan says Half Kaddish, and then the congregation says \"Viyehi noam\" and \"Ve'atah kadosh\".",
+     "clean": "במוצאי שבת אומר חצי קדיש ואחר כך אומרים הקהל וִיהִי נֹֽעַם וְאַתָּה קָדוֹשׁ:",
+     "when": "motzaeiShabbat"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Kaddish Shalem:2": {
+   "parts": [
+    {
+     "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " (<b>אָמֵן</b>)",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Kaddish Shalem:3": {
+   "parts": [
+    {
+     "text": "בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ ",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Kaddish Shalem:4": {
+   "kind": "prayer",
+   "node": "kaddish.shalem",
+   "role": "congregation",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Weekday/Maariv/Kaddish Shalem:5": {
+   "kind": "prayer",
+   "node": "kaddish.shalem",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Weekday/Maariv/Kaddish Shalem:6": {
+   "parts": [
+    {
+     "text": "לְעֵֽלָּא מִן־כָּל־",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "!aseretYemeiTeshuva",
+     "alt": "leela"
+    },
+    {
+     "text": " (<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשי\"ת:",
+     "when": "aseretYemeiTeshuva",
+     "node": "kaddish.shalem"
+    },
+    {
+     "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "aseretYemeiTeshuva",
+     "alt": "leela"
+    },
+    {
+     "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ ",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Kaddish Shalem:7": {
+   "parts": [
+    {
+     "text": "תִּתְקַבֵּל צְלוֹתְ֒הוֹן וּבָעוּתְ֒הוֹן דְּכָל בֵּית יִשְׂרָאֵל קֳדָם אֲבוּהוֹן דִּי בִשְׁ֒מַיָּא וְאִמְרוּ",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " אָמֵן:",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Kaddish Shalem:8": {
+   "parts": [
+    {
+     "text": "יְהֵא שְׁלָמָֽא רַבָּֽא מִן־שְׁמַיָּֽא וְחַיִּים עָלֵֽינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Kaddish Shalem:9": {
+   "parts": [
+    {
+     "text": "עוֹשֶׂה ",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "שָׁלוֹם",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "!aseretYemeiTeshuva",
+     "alt": "oseh"
+    },
+    {
+     "text": " (<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשי\"ת:",
+     "when": "aseretYemeiTeshuva",
+     "node": "kaddish.shalem"
+    },
+    {
+     "text": " הַשָּׁלוֹם)",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "aseretYemeiTeshuva",
+     "alt": "oseh"
+    },
+    {
+     "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "gestures": [
+      "bow_left_right_center"
+     ]
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "node": "kaddish.shalem",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:1": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:2": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:3": {
+   "kind": "prayer",
+   "node": "x.motzash.veatah_kadosh"
+  },
+  "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:4": {
+   "kind": "prayer",
+   "node": "x.motzash.veatah_kadosh"
+  },
+  "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:5": {
+   "kind": "prayer",
+   "node": "x.motzash.veatah_kadosh"
+  },
+  "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:6": {
+   "kind": "prayer",
+   "node": "x.motzash.veatah_kadosh"
+  },
+  "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:7": {
+   "kind": "prayer",
+   "node": "x.motzash.veatah_kadosh"
+  },
+  "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:8": {
+   "kind": "prayer",
+   "node": "x.motzash.veatah_kadosh"
+  },
+  "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:9": {
+   "kind": "prayer",
+   "node": "x.motzash.veatah_kadosh"
+  },
+  "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:10": {
+   "kind": "prayer",
+   "node": "x.motzash.veatah_kadosh"
+  },
+  "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:11": {
+   "kind": "prayer",
+   "node": "x.motzash.veatah_kadosh"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:1": {
+   "kind": "note",
+   "en": "After the Amidah in Maariv we begin to count the Omer, which starts on the night of the 16th of Nisan and continues for 49 days. If one forgot to count at the beginning of the night, he counts for the rest of the night. Each person is obligated to count for himself. One must count standing, and bless first. He counts days and weeks: on the first day he stands, blesses \"al sefiras ha'omer\" and says \"Today is one day of the Omer\"; and so on until seven days, when he says \"Today is seven days, which are one week\"; on the eighth day, \"eight days, which are one week and one day\"; until the fourteenth, \"fourteen days, which are two weeks\", and so on. Now that the Omer offering is no longer brought, the counting is only rabbinic, in memory of the Temple. If one is in doubt whether he counted, he counts again without a blessing.",
+   "clean": "ערבית אחר התפלה מתחילין לספור העומר שזמנו מתחלת ליל ט\"ז בניסן ומונה והולך מ\"ט יום. שכח לספור בתחלת הלילה הולך וסופר כל הלילה. ומצוה על כל אחד ואחד לספור לעצמו. וצריך לספור מעומד ולברך תחלה. וסופר הימים והשבועות כיצד ביום הראשון עומד ומברך על ספירת העומר היום יום אחד עד שמגיע לשבעה ימים ואז יאמר היום שבעה ימים שהם שבוע אחד וביום שמונה יאמר היום שמונה ימים שהם שבוע אחד ויום אחד עד שיגיע לי\"ד יאמר היום ארבעה עשר ימים שהם ב' שבועות וכן לעולם. (טור או\"ח תפ\"ט). ועתה בעונותינו שנתבטלה הבאת העומר אין הספירה מן התורה אלא מדרבנן זכר למקדש. ואם נסתפק לו אם מנה או לא מנה חוזר ומונה בלא ברכה. (אבודרהם).",
+   "cite": "טור או\"ח תפ\"ט; אבודרהם"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:2": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:3": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:4": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:5": {
+   "kind": "prayer",
+   "gestures": [
+    "stand"
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:6": {
+   "parts": [
+    {
+     "text": "<small>ט\"ז ניסן</small><br>1.",
+     "kind": "instruction",
+     "en": "16 Nisan (Omer day 1)",
+     "when": "omerDay == 1"
+    },
+    {
+     "text": " הַיּוֹם יוֹם אֶחָד בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 1",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:7": {
+   "parts": [
+    {
+     "text": "<small>י\"ז ניסן</small><br>2.",
+     "kind": "instruction",
+     "en": "17 Nisan (Omer day 2)",
+     "when": "omerDay == 2"
+    },
+    {
+     "text": " הַיּוֹם שְׁנֵי יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 2",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:8": {
+   "parts": [
+    {
+     "text": "<small>י\"ח ניסן</small><br>3.",
+     "kind": "instruction",
+     "en": "18 Nisan (Omer day 3)",
+     "when": "omerDay == 3"
+    },
+    {
+     "text": " הַיּוֹם שְׁלשָׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 3",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:9": {
+   "parts": [
+    {
+     "text": "<small>י\"ט ניסן</small><br>4.",
+     "kind": "instruction",
+     "en": "19 Nisan (Omer day 4)",
+     "when": "omerDay == 4"
+    },
+    {
+     "text": " הַיּוֹם אַרְבָּעָה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 4",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:10": {
+   "parts": [
+    {
+     "text": "<small>כ ניסן</small><br>5.",
+     "kind": "instruction",
+     "en": "20 Nisan (Omer day 5)",
+     "when": "omerDay == 5"
+    },
+    {
+     "text": " הַיּוֹם חֲמִשָּׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 5",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:11": {
+   "parts": [
+    {
+     "text": "<small>כ\"א ניסן </small><br>6.",
+     "kind": "instruction",
+     "en": "21 Nisan (Omer day 6)",
+     "when": "omerDay == 6"
+    },
+    {
+     "text": " הַיּוֹם שִׁשָּׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 6",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:12": {
+   "parts": [
+    {
+     "text": "<small>כ\"ב ניסן </small><br>7.",
+     "kind": "instruction",
+     "en": "22 Nisan (Omer day 7)",
+     "when": "omerDay == 7"
+    },
+    {
+     "text": " הַיּוֹם שִׁבְעָה יָמִים שֶׁהֵם שָׁבֽוּעַ אֶחָד בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 7",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:13": {
+   "parts": [
+    {
+     "text": "<small>כ\"ג ניסן</small><br>8.",
+     "kind": "instruction",
+     "en": "23 Nisan (Omer day 8)",
+     "when": "omerDay == 8"
+    },
+    {
+     "text": " הַיּוֹם שְׁמוֹנָה יָמִים שֶׁהֵם שָׁבֽוּעַ אֶחָד וְיוֹם אֶחָד בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 8",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:14": {
+   "parts": [
+    {
+     "text": "<small>כ\"ד ניסן</small><br>9.",
+     "kind": "instruction",
+     "en": "24 Nisan (Omer day 9)",
+     "when": "omerDay == 9"
+    },
+    {
+     "text": " הַיּוֹם תִּשְׁעָה יָמִים שֶׁהֵם שָׁבֽוּעַ אֶחָד וּשְׁנֵי יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 9",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:15": {
+   "parts": [
+    {
+     "text": "<small>כ\"ה ניסן</small><br>10.",
+     "kind": "instruction",
+     "en": "25 Nisan (Omer day 10)",
+     "when": "omerDay == 10"
+    },
+    {
+     "text": " הַיּוֹם עֲשָׂרָה יָמִים שֶׁהֵם שָׁבֽוּעַ אֶחָד וּשְׁלשָׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 10",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:16": {
+   "parts": [
+    {
+     "text": "<small>כ\"ו ניסן</small><br>11.",
+     "kind": "instruction",
+     "en": "26 Nisan (Omer day 11)",
+     "when": "omerDay == 11"
+    },
+    {
+     "text": " הַיּוֹם אַחַד עָשָׂר יוֹם שֶׁהֵם שָׁבֽוּעַ אֶחָד וְאַרְבָּעָה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 11",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:17": {
+   "parts": [
+    {
+     "text": "<small>כ\"ז ניסן</small><br>12.",
+     "kind": "instruction",
+     "en": "27 Nisan (Omer day 12)",
+     "when": "omerDay == 12"
+    },
+    {
+     "text": " הַיּוֹם שְׁנֵים עָשָׂר יוֹם שֶׁהֵם שָׁבֽוּעַ אֶחָד וַחֲמִשָּׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 12",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:18": {
+   "parts": [
+    {
+     "text": "<small>כ\"ח ניסן</small><br>13.",
+     "kind": "instruction",
+     "en": "28 Nisan (Omer day 13)",
+     "when": "omerDay == 13"
+    },
+    {
+     "text": " הַיּוֹם שְׁלשָׁה עָשָׂר יוֹם שֶׁהֵם שָׁבֽוּעַ אֶחָד וְשִׁשָּׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 13",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:19": {
+   "parts": [
+    {
+     "text": "<small>כ\"ט ניסן</small><br>14.",
+     "kind": "instruction",
+     "en": "29 Nisan (Omer day 14)",
+     "when": "omerDay == 14"
+    },
+    {
+     "text": " הַיּוֹם אַרְבָּעָה עָשָׂר יוֹם שֶׁהֵם שְׁנֵי שָׁבוּעוֹת בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 14",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:20": {
+   "parts": [
+    {
+     "text": "<small>ל ניסן</small><br>15.",
+     "kind": "instruction",
+     "en": "30 Nisan (Omer day 15)",
+     "when": "omerDay == 15"
+    },
+    {
+     "text": " הַיּוֹם חֲמִשָּׁה עָשָׂר יוֹם שֶׁהֵם שְׁנֵי שָׁבוּעוֹת וְיוֹם אֶחָד בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 15",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:21": {
+   "parts": [
+    {
+     "text": "<small>א אייר</small><br>16.",
+     "kind": "instruction",
+     "en": "1 Iyar (Omer day 16)",
+     "when": "omerDay == 16"
+    },
+    {
+     "text": " הַיּוֹם שִׁשָּׁה עָשָׂר יוֹם שֶׁהֵם שְׁנֵי שָׁבוּעוֹת וּשְׁנֵי יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 16",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:22": {
+   "parts": [
+    {
+     "text": "<small>ב אייר</small><br>17.",
+     "kind": "instruction",
+     "en": "2 Iyar (Omer day 17)",
+     "when": "omerDay == 17"
+    },
+    {
+     "text": " הַיּוֹם שִׁבְעָה עָשָׂר יוֹם שֶׁהֵם שְׁנֵי שָׁבוּעוֹת וּשְׁלשָׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 17",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:23": {
+   "parts": [
+    {
+     "text": "<small>ג אייר</small><br>18.",
+     "kind": "instruction",
+     "en": "3 Iyar (Omer day 18)",
+     "when": "omerDay == 18"
+    },
+    {
+     "text": " הַיּוֹם שְׁמוֹנָה עָשָׂר יוֹם שֶׁהֵם שְׁנֵי שָׁבוּעוֹת וְאַרְבָּעָה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 18",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:24": {
+   "parts": [
+    {
+     "text": "<small>ד אייר</small><br>19.",
+     "kind": "instruction",
+     "en": "4 Iyar (Omer day 19)",
+     "when": "omerDay == 19"
+    },
+    {
+     "text": " הַיּוֹם תִּשְׁעָה עָשָׂר יוֹם שֶׁהֵם שְׁנֵי שָׁבוּעוֹת וַחֲמִשָּׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 19",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:25": {
+   "parts": [
+    {
+     "text": "<small>ה אייר</small><br>20.",
+     "kind": "instruction",
+     "en": "5 Iyar (Omer day 20)",
+     "when": "omerDay == 20"
+    },
+    {
+     "text": " הַיּוֹם עֶשְׂרִים יוֹם שֶׁהֵם שְׁנֵי שָׁבוּעוֹת וְשִׁשָּׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 20",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:26": {
+   "parts": [
+    {
+     "text": "<small>ו אייר</small><br>21.",
+     "kind": "instruction",
+     "en": "6 Iyar (Omer day 21)",
+     "when": "omerDay == 21"
+    },
+    {
+     "text": " הַיּוֹם אֶחָד וְעֶשְׂרִים יוֹם שֶׁהֵם שְׁלשָׁה שָׁבוּעוֹת בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 21",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:27": {
+   "parts": [
+    {
+     "text": "<small>ז אייר</small><br>22.",
+     "kind": "instruction",
+     "en": "7 Iyar (Omer day 22)",
+     "when": "omerDay == 22"
+    },
+    {
+     "text": " הַיּוֹם שְׁנַֽיִם וְעֶשְׂרִים יוֹם שֶׁהֵם שְׁלשָׁה שָׁבוּעוֹת וְיוֹם אֶחָד בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 22",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:28": {
+   "parts": [
+    {
+     "text": "<small>ח אייר</small><br>23.",
+     "kind": "instruction",
+     "en": "8 Iyar (Omer day 23)",
+     "when": "omerDay == 23"
+    },
+    {
+     "text": " הַיּוֹם שְׁלשָׁה וְעֶשְׂרִים יוֹם שֶׁהֵם שְׁלשָׁה שָׁבוּעוֹת וּשְׁנֵי יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 23",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:29": {
+   "parts": [
+    {
+     "text": "<small>ט אייר</small><br>24.",
+     "kind": "instruction",
+     "en": "9 Iyar (Omer day 24)",
+     "when": "omerDay == 24"
+    },
+    {
+     "text": " הַיּוֹם אַרְבָּעָה וְעֶשְׂרִים יוֹם שֶׁהֵם שְׁלשָׁה שָׁבוּעוֹת וּשְׁלשָׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 24",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:30": {
+   "parts": [
+    {
+     "text": "<small>י אייר</small><br>25.",
+     "kind": "instruction",
+     "en": "10 Iyar (Omer day 25)",
+     "when": "omerDay == 25"
+    },
+    {
+     "text": " הַיּוֹם חֲמִשָׁה וְעֶשְׂרִים יוֹם שֶׁהֵם שְׁלשָׁה שָׁבוּעוֹת וְאַרְבָּעָה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 25",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:31": {
+   "parts": [
+    {
+     "text": "<small>י\"א אייר</small><br>26.",
+     "kind": "instruction",
+     "en": "11 Iyar (Omer day 26)",
+     "when": "omerDay == 26"
+    },
+    {
+     "text": " הַיּוֹם שִׁשָּׁה וְעֶשְׂרִים יוֹם שֶׁהֵם שְׁלשָׁה שָׁבוּעוֹת וַחֲמִשָּׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 26",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:32": {
+   "parts": [
+    {
+     "text": "<small>י\"ב אייר</small><br>27.",
+     "kind": "instruction",
+     "en": "12 Iyar (Omer day 27)",
+     "when": "omerDay == 27"
+    },
+    {
+     "text": " הַיּוֹם שִׁבְעָה וְעֶשְׂרִים יוֹם שֶׁהֵם שְׁלשָׁה שָׁבוּעוֹת וְשִׁשָּׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 27",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:33": {
+   "parts": [
+    {
+     "text": "<small>י\"ג אייר</small><br>28.",
+     "kind": "instruction",
+     "en": "13 Iyar (Omer day 28)",
+     "when": "omerDay == 28"
+    },
+    {
+     "text": " הַיּוֹם שְׁמוֹנָה וְעֶשְׂרִים יוֹם שֶׁהֵם אַרְבָּעָה שָׁבוּעוֹת בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 28",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:34": {
+   "parts": [
+    {
+     "text": "<small>י\"ד אייר</small><br>29.",
+     "kind": "instruction",
+     "en": "14 Iyar (Omer day 29)",
+     "when": "omerDay == 29"
+    },
+    {
+     "text": " הַיּוֹם תִּשְׁעָה וְעֶשְׂרִים יוֹם שֶׁהֵם אַרְבָּעָה שָׁבוּעוֹת וְיוֹם אֶחָד בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 29",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:35": {
+   "parts": [
+    {
+     "text": "<small>ט\"ו אייר</small><br>30.",
+     "kind": "instruction",
+     "en": "15 Iyar (Omer day 30)",
+     "when": "omerDay == 30"
+    },
+    {
+     "text": " הַיּוֹם שְׁלשִׁים יוֹם שֶׁהֵם אַרְבָּעָה שָׁבוּעוֹת וּשְׁנֵי יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 30",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:36": {
+   "parts": [
+    {
+     "text": "<small>ט\"ז אייר</small><br>31.",
+     "kind": "instruction",
+     "en": "16 Iyar (Omer day 31)",
+     "when": "omerDay == 31"
+    },
+    {
+     "text": " הַיּוֹם אֶחָד וּשְׁלשִׁים יוֹם שֶׁהֵם אַרְבָּעָה שָׁבוּעוֹת וּשְׁלשָׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 31",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:37": {
+   "parts": [
+    {
+     "text": "<small>י\"ז אייר</small><br>32.",
+     "kind": "instruction",
+     "en": "17 Iyar (Omer day 32)",
+     "when": "omerDay == 32"
+    },
+    {
+     "text": " הַיּוֹם שְׁנַֽיִם וּשְׁלשִׁים יוֹם שֶׁהֵם אַרְבָּעָה שָׁבוּעוֹת וְאַרְבָּעָה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 32",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:38": {
+   "parts": [
+    {
+     "text": "<small>י\"ח אייר</small><br>33.",
+     "kind": "instruction",
+     "en": "18 Iyar (Omer day 33)",
+     "when": "omerDay == 33"
+    },
+    {
+     "text": " הַיּוֹם שְׁלשָׁה וּשְׁלשִׁים יוֹם שֶׁהֵם אַרְבָּעָה שָׁבוּעוֹת וַחֲמִשָּׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 33",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:39": {
+   "parts": [
+    {
+     "text": "<small>י\"ט אייר</small><br>34.",
+     "kind": "instruction",
+     "en": "19 Iyar (Omer day 34)",
+     "when": "omerDay == 34"
+    },
+    {
+     "text": " הַיּוֹם אַרְבָּעָה וּשְׁלשִׁים יוֹם שֶׁהֵם אַרְבָּעָה שָׁבוּעוֹת וְשִׁשָּׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 34",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:40": {
+   "parts": [
+    {
+     "text": "<small>כ אייר</small><br>35.",
+     "kind": "instruction",
+     "en": "20 Iyar (Omer day 35)",
+     "when": "omerDay == 35"
+    },
+    {
+     "text": " הַיּוֹם חֲמִשָּׁה וּשְׁלשִׁים יוֹם שֶׁהֵם חֲמִשָּׁה שָׁבוּעוֹת בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 35",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:41": {
+   "parts": [
+    {
+     "text": "<small>כ\"א אייר</small><br>36.",
+     "kind": "instruction",
+     "en": "21 Iyar (Omer day 36)",
+     "when": "omerDay == 36"
+    },
+    {
+     "text": " הַיּוֹם שִׁשָּׁה וּשְׁלשִׁים יוֹם שֶׁהֵם חֲמִשָּׁה שָׁבוּעוֹת וְיוֹם אֶחָד בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 36",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:42": {
+   "parts": [
+    {
+     "text": "<small>כ\"ב אייר</small><br>37.",
+     "kind": "instruction",
+     "en": "22 Iyar (Omer day 37)",
+     "when": "omerDay == 37"
+    },
+    {
+     "text": " הַיּוֹם שִׁבְעָה וּשְׁלשִׁים יוֹם שֶׁהֵם חֲמִשָּׁה שָׁבוּעוֹת וּשְׁנֵי יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 37",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:43": {
+   "parts": [
+    {
+     "text": "<small>כ\"ג אייר</small><br>38.",
+     "kind": "instruction",
+     "en": "23 Iyar (Omer day 38)",
+     "when": "omerDay == 38"
+    },
+    {
+     "text": " הַיּוֹם שְׁמוֹנָה וּשְׁלשִׁים יוֹם שֶׁהֵם חֲמִשָּׁה שָׁבוּעוֹת וּשְׁלשָׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 38",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:44": {
+   "parts": [
+    {
+     "text": "<small>כ\"ד אייר</small><br>39.",
+     "kind": "instruction",
+     "en": "24 Iyar (Omer day 39)",
+     "when": "omerDay == 39"
+    },
+    {
+     "text": " הַיּוֹם תִּשְׁעָה וּשְׁלשִׁים יוֹם שֶׁהֵם חֲמִשָּׁה שָׁבוּעוֹת וְאַרְבָּעָה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 39",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:45": {
+   "parts": [
+    {
+     "text": "<small>כ\"ה אייר</small><br>40.",
+     "kind": "instruction",
+     "en": "25 Iyar (Omer day 40)",
+     "when": "omerDay == 40"
+    },
+    {
+     "text": " הַיּוֹם אַרְבָּעִים יוֹם שֶׁהֵם חֲמִשָּׁה שָׁבוּעוֹת וַחֲמִשָּׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 40",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:46": {
+   "parts": [
+    {
+     "text": "<small>כ\"ו אייר</small><br>41.",
+     "kind": "instruction",
+     "en": "26 Iyar (Omer day 41)",
+     "when": "omerDay == 41"
+    },
+    {
+     "text": " הַיּוֹם אֶחָד וְאַרְבָּעִים יוֹם שֶׁהֵם חֲמִשָּׁה שָׁבוּעוֹת וְשִׁשָּׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 41",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:47": {
+   "parts": [
+    {
+     "text": "<small>כ\"ז אייר</small><br>42.",
+     "kind": "instruction",
+     "en": "27 Iyar (Omer day 42)",
+     "when": "omerDay == 42"
+    },
+    {
+     "text": " הַיּוֹם שְׁנַֽיִם וְאַרְבָּעִים יוֹם שֶׁהֵם שִׁשָּׁה שָׁבוּעוֹת בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 42",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:48": {
+   "parts": [
+    {
+     "text": "<small>כ\"ח אייר</small><br>43.",
+     "kind": "instruction",
+     "en": "28 Iyar (Omer day 43)",
+     "when": "omerDay == 43"
+    },
+    {
+     "text": " הַיּוֹם שְׁלשָׁה וְאַרְבָּעִים יוֹם שֶׁהֵם שִׁשָּׁה שָׁבוּעוֹת וְיוֹם אֶחָד בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 43",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:49": {
+   "parts": [
+    {
+     "text": "<small>כ\"ט אייר</small><br>44.",
+     "kind": "instruction",
+     "en": "29 Iyar (Omer day 44)",
+     "when": "omerDay == 44"
+    },
+    {
+     "text": " הַיּוֹם אַרְבָּעָה וְאַרְבָּעִים יוֹם שֶׁהֵם שִׁשָּׁה שָׁבוּעוֹת וּשְׁנֵי יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 44",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:50": {
+   "parts": [
+    {
+     "text": "<small>א סיון</small><br>45.",
+     "kind": "instruction",
+     "en": "1 Sivan (Omer day 45)",
+     "when": "omerDay == 45"
+    },
+    {
+     "text": " הַיּוֹם חֲמִשָּׁה וְאַרְבָּעִים יוֹם שֶׁהֵם שִׁשָּׁה שָׁבוּעוֹת וּשְׁלשָׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 45",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:51": {
+   "parts": [
+    {
+     "text": "<small>ב סיון</small><br>46.",
+     "kind": "instruction",
+     "en": "2 Sivan (Omer day 46)",
+     "when": "omerDay == 46"
+    },
+    {
+     "text": " הַיּוֹם שִׁשָּׁה וְאַרְבָּעִים יוֹם שֶׁהֵם שִׁשָּׁה שָׁבוּעוֹת וְאַרְבָּעָה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 46",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:52": {
+   "parts": [
+    {
+     "text": "<small>ג סיון</small><br>47.",
+     "kind": "instruction",
+     "en": "3 Sivan (Omer day 47)",
+     "when": "omerDay == 47"
+    },
+    {
+     "text": " הַיּוֹם שִׁבְעָה וְאַרְבָּעִים יוֹם שֶׁהֵם שִׁשָּׁה שָׁבוּעוֹת וַחֲמִשָּׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 47",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:53": {
+   "parts": [
+    {
+     "text": "<small>ד סיון</small><br>48.",
+     "kind": "instruction",
+     "en": "4 Sivan (Omer day 48)",
+     "when": "omerDay == 48"
+    },
+    {
+     "text": " הַיּוֹם שְׁמוֹנָה וְאַרְבָּעִים יוֹם שֶׁהֵם שִׁשָּׁה שָׁבוּעוֹת וְשִׁשָּׁה יָמִים בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 48",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:54": {
+   "parts": [
+    {
+     "text": "<small>ה סיון</small><br>49.",
+     "kind": "instruction",
+     "en": "5 Sivan (Omer day 49)",
+     "when": "omerDay == 49"
+    },
+    {
+     "text": " הַיּוֹם תִּשְׁעָה וְאַרְבָּעִים יוֹם שֶׁהֵם שִׁבְעָה שָׁבוּעוֹת בָּעֹֽמֶר:",
+     "kind": "prayer",
+     "when": "omerDay == 49",
+     "gestures": [
+      "stand"
+     ]
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:55": {
+   "kind": "prayer",
+   "node": "x.omer.harachaman"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:56": {
+   "kind": "prayer",
+   "node": "x.omer.lamnatzeach"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:57": {
+   "kind": "prayer",
+   "node": "x.omer.ana_bekoach"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:58": {
+   "kind": "prayer",
+   "node": "x.omer.ana_bekoach"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:59": {
+   "kind": "prayer",
+   "node": "x.omer.ana_bekoach"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:60": {
+   "kind": "prayer",
+   "node": "x.omer.ana_bekoach"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:61": {
+   "kind": "prayer",
+   "node": "x.omer.ana_bekoach"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:62": {
+   "kind": "prayer",
+   "node": "x.omer.ana_bekoach"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:63": {
+   "kind": "prayer",
+   "node": "x.omer.ana_bekoach"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:64": {
+   "kind": "prayer",
+   "node": "x.omer.ana_bekoach"
+  },
+  "he:Weekday/Maariv/Sefirat HaOmer:65": {
+   "parts": [
+    {
+     "text": "<b>רִבּוֹנוֹ</b> שֶׁל עוֹלָם אַתָּה צִוִּיתָֽנוּ עַל יְדֵי משֶׁה עַבְדֶּֽךָ לִסְפֹּר סְפִירַת הָֽעֹמֶר כְּדֵי לְטַהֲרֵֽנוּ מִקְּ֒לִפּוֹתֵֽינוּ וּמִטֻּמְאוֹתֵֽינוּ כְּמוֹ שֶׁכָּתַֽבְתָּ בְּתוֹרָתֶֽךָ וּסְפַרְתֶּם לָכֶם מִמָּחֳרַת הַשַּׁבָּת מִיּוֹם הֲבִיאֲכֶם אֶת־עֹֽמֶר הַתְּ֒נוּפָה שֶֽׁבַע שַׁבָּתוֹת תְּמִימוֹת תִּהְיֶֽינָה עַד מִמָּחֳרַת הַשַּׁבָּת הַשְּׁ֒בִיעִית תִּסְפְּ֒רוּ חֲמִשִּׁים יוֹם כְּדֵי שֶׁיִּטָּהֲרוּ נַפְשׁוֹת עַמְּ֒ךָ יִשְׂרָאֵל מִזֻּהֲמָתָם: וּבְכֵן יְהִי רָצוֹן מִלְּ֒פָנֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ שֶׁבִּזְכוּת סְפִירַת הָעֹֽמֶר שֶׁסָּפַֽרְתִּי הַיּוֹם יְתֻקַּן מַה שֶּׁפָּגַֽמְתִּי בִּסְפִירָה ",
+     "kind": "prayer",
+     "node": "x.omer.ribono_shel_olam"
+    },
+    {
+     "text": "<small>(השייכת לאותו הלילה)</small>",
+     "kind": "instruction",
+     "en": "(the one that belongs to that night)",
+     "clean": "השייכת לאותו הלילה",
+     "node": "x.omer.ribono_shel_olam"
+    },
+    {
+     "text": " וְאֶטָּהֵר וְאֶתְקַדֵּשׁ בִּקְדֻשָּׁה שֶׁל מַֽעְלָה וְעַל יְדֵי זֶה יֻשְׁפַּע שֶֽׁפַע רַב בְּכָל־הָעוֹלָמוֹת וּלְתַקֵּן אֶת־נַפְשׁוֹתֵֽינוּ וְרוּחוֹתֵֽינוּ וְנִשְׁמוֹתֵֽינוּ מִכָּל־סִיג וּפְגַם וּלְטַהֲרֵֽנוּ וּלְקַדְּ֒שֵֽׁנוּ בִּקְדֻשָּׁתְ֒ךָ הָעֶלְיוֹנָה אָמֵן סֶֽלָה:",
+     "kind": "prayer",
+     "node": "x.omer.ribono_shel_olam"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Alenu:1": {
+   "parts": [
+    {
+     "text": "<b>עָלֵֽינוּ</b> לְשַׁבֵּֽחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֺּא עָשָֽׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֺא שָׂמָֽנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֺּא שָׂם חֶלְקֵֽנוּ כָּהֶם וְגוֹרָלֵֽנוּ כְּכָל הֲמוֹנָם: שֶׁהֵם מִשְׁתַּחֲוִים לָהֶֽבֶל וָרִיק וּמִתְפַּלְּ֒לִים אֶל אֵל לֹא יוֹשִֽׁיעַ, ",
+     "kind": "prayer",
+     "gestures": [
+      "stand"
+     ]
+    },
+    {
+     "text": "וַאֲנַֽחְנוּ כּוֹרְ֒עִים וּמִשְׁתַּחֲוִים וּמוֹדִים לִפְנֵי מֶֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא, ",
+     "kind": "prayer",
+     "gestures": [
+      "bow_full"
+     ]
+    },
+    {
+     "text": "שֶׁהוּא נוֹטֶה שָׁמַֽיִם וְיוֹסֵד אָֽרֶץ, וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַֽיִם מִמַּֽעַל, וּשְׁ֒כִינַת עֻזּוֹ בְּגָבְ֒הֵי מְרוֹמִים, הוּא אֱלֺהֵֽינוּ אֵין עוֹד, אֱמֶת מַלְכֵּֽנוּ אֶֽפֶס זוּלָתוֹ כַּכָּתוּב בְּתוֹרָתוֹ וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל לְבָבֶֽךָ כִּי יְהֹוָה הוּא הָאֱלֺהִים בַּשָּׁמַֽיִם מִמַּֽעַל וְעַל הָאָֽרֶץ מִתָּֽחַת אֵין עוֹד:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Alenu:2": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Mourner's Kaddish:1": {
+   "parts": [
+    {
+     "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " (<b>אָמֵן</b>)",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Mourner's Kaddish:2": {
+   "parts": [
+    {
+     "text": "בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ ",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Mourner's Kaddish:3": {
+   "kind": "prayer",
+   "node": "kaddish.mourners",
+   "role": "congregation",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Weekday/Maariv/Mourner's Kaddish:4": {
+   "kind": "prayer",
+   "node": "kaddish.mourners",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Weekday/Maariv/Mourner's Kaddish:5": {
+   "parts": [
+    {
+     "text": "לְעֵֽלָּא מִן־כָּל־",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "!aseretYemeiTeshuva",
+     "alt": "leela"
+    },
+    {
+     "text": " (<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשי\"ת:",
+     "when": "aseretYemeiTeshuva",
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "aseretYemeiTeshuva",
+     "alt": "leela"
+    },
+    {
+     "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ ",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Mourner's Kaddish:6": {
+   "parts": [
+    {
+     "text": "יְהֵא שְׁלָמָֽא רַבָּֽא מִן־שְׁמַיָּֽא וְחַיִּים עָלֵֽינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Mourner's Kaddish:7": {
+   "parts": [
+    {
+     "text": "עוֹשֶׂה ",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "שָׁלוֹם",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "!aseretYemeiTeshuva",
+     "alt": "oseh"
+    },
+    {
+     "text": " (<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשי\"ת:",
+     "when": "aseretYemeiTeshuva",
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " הַשָּׁלוֹם)",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "aseretYemeiTeshuva",
+     "alt": "oseh"
+    },
+    {
+     "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "gestures": [
+      "bow_left_right_center"
+     ]
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/LeDavid:1": {
+   "kind": "note",
+   "en": "It is a good custom to say the psalm \"LeDavid Hashem ori\" after every prayer, especially from Rosh Chodesh Elul until Hoshana Rabbah.",
+   "clean": "מנהג טוב לומר אחר כל תפלה מזמור לדוד ה׳‬ אורי וישעי. ובפרט מר״ח אלול עד הושענא רבא (מורה באצבע סי' לז).",
+   "cite": "מורה באצבע סי' לז"
+  },
+  "he:Weekday/Maariv/LeDavid:2": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/LeDavid:3": {
+   "parts": [
+    {
+     "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " (<b>אָמֵן</b>)",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/LeDavid:4": {
+   "parts": [
+    {
+     "text": "בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ ",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/LeDavid:5": {
+   "kind": "prayer",
+   "node": "kaddish.mourners",
+   "role": "congregation",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Weekday/Maariv/LeDavid:6": {
+   "kind": "prayer",
+   "node": "kaddish.mourners",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Weekday/Maariv/LeDavid:7": {
+   "parts": [
+    {
+     "text": "לְעֵֽלָּא מִן־כָּל־",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "!aseretYemeiTeshuva",
+     "alt": "leela"
+    },
+    {
+     "text": " (<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשי\"ת:",
+     "when": "aseretYemeiTeshuva",
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "aseretYemeiTeshuva",
+     "alt": "leela"
+    },
+    {
+     "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ ",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/LeDavid:8": {
+   "parts": [
+    {
+     "text": "יְהֵא שְׁלָמָֽא רַבָּֽא מִן־שְׁמַיָּֽא וְחַיִּים עָלֵֽינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/LeDavid:9": {
+   "parts": [
+    {
+     "text": "עוֹשֶׂה ",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "שָׁלוֹם",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "!aseretYemeiTeshuva",
+     "alt": "oseh"
+    },
+    {
+     "text": " (<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשי\"ת:",
+     "when": "aseretYemeiTeshuva",
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " הַשָּׁלוֹם)",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "when": "aseretYemeiTeshuva",
+     "alt": "oseh"
+    },
+    {
+     "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "gestures": [
+      "bow_left_right_center"
+     ]
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "node": "kaddish.mourners",
+     "role": "congregation",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:1": {
+   "kind": "note",
+   "en": "Kiddush Levana is said only at night, while the moon is shining and one benefits from its light. There must be no barrier between oneself and the moon, and the same applies if it is covered by clouds; but if it is covered by thin, light cloud one may bless. If one began the blessing and the moon became covered, he finishes the blessing.",
+   "clean": "אין לקדש החדש אלא בלילה בעת שהלבנה זורחת ונהנין מאורה (אגור). צריך שלא יהיה מסך מבדיל בינו לבין הלבנה. והוא הדין אם נתכסה בעבים. אבל אם נתכסה בעב דק וקלוש מברך. ואם התחיל לברך ונתכסה גומר הברכה.",
+   "cite": "אגור"
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:2": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:3": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:4": {
+   "kind": "prayer",
+   "gestures": [
+    "stand",
+    "look_at_moon"
+   ]
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:5": {
+   "parts": [
+    {
+     "text": "<small>ג\"פ</small>",
+     "kind": "instruction",
+     "en": "Three times:",
+     "clean": "ג\"פ:"
+    },
+    {
+     "text": " בָּרוּךְ יוֹצְרֵךְ בָּרוּךְ עוֹשֵׂךְ בָּרוּךְ קוֹנֵךְ בָּרוּךְ בּוֹרְאֵךְ:",
+     "kind": "prayer",
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:6": {
+   "parts": [
+    {
+     "text": "<small>ג\"פ</small>",
+     "kind": "instruction",
+     "en": "Three times:",
+     "clean": "ג\"פ:"
+    },
+    {
+     "text": " כְּשֵׁם שֶׁאֲנִי רוֹקֵד כְּנֶגְדֵּךְ וְאֵינִי יָכוֹל לִנְגֽוֹעַ בָּךְ כַּךְ לֹא יוּכְלוּ כָּל־אוֹיְבַי לִנְגֽוֹעַ בִּי לְרָעָה:",
+     "kind": "prayer",
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:7": {
+   "parts": [
+    {
+     "text": "<small>ג\"פ</small>",
+     "kind": "instruction",
+     "en": "Three times:",
+     "clean": "ג\"פ:"
+    },
+    {
+     "text": " תִּפֹּל עֲלֵיהֶם אֵימָֽתָה וָפַֽחַד בִּגְדֹל זְרוֹעֲךָ יִדְּמוּ כָּאָֽבֶן:",
+     "kind": "prayer",
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:8": {
+   "parts": [
+    {
+     "text": "<small>ג\"פ</small>",
+     "kind": "instruction",
+     "en": "Three times:",
+     "clean": "ג\"פ:"
+    },
+    {
+     "text": " כָּאָֽבֶן יִדְּמוּ זְרוֹעֲךָ בִּגְדֹל וָפַֽחַד אֵימָֽתָה עֲלֵיהֶם תִּפֹּל:",
+     "kind": "prayer",
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:9": {
+   "parts": [
+    {
+     "text": "<small>ג\"פ</small>",
+     "kind": "instruction",
+     "en": "Three times:",
+     "clean": "ג\"פ:"
+    },
+    {
+     "text": " דָּוִד מֶֽלֶךְ יִשְׂרָאֵל חַי וְקַיָּם:",
+     "kind": "prayer",
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:10": {
+   "parts": [
+    {
+     "text": "<small>אומרים לג' גברי</small>",
+     "kind": "instruction",
+     "en": "Said to three men:",
+     "clean": "אומרים לג' גברי"
+    },
+    {
+     "text": " <b>שָׁלוֹם עֲלֵיכֶם:</b>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:11": {
+   "parts": [
+    {
+     "text": "<small>ומשיבים</small>",
+     "kind": "instruction",
+     "en": "And they answer:",
+     "clean": "ומשיבים:"
+    },
+    {
+     "text": " <b>עֲלֵיכֶם שָׁלוֹם:</b>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:12": {
+   "parts": [
+    {
+     "text": "<small>ג\"פ</small>",
+     "kind": "instruction",
+     "en": "Three times:",
+     "clean": "ג\"פ:"
+    },
+    {
+     "text": " סִמָּן טוֹב וּמַזָּל טוֹב יְהֵא לָֽנוּ וּלְכָל יִשְׂרָאֵל אָמֵן:",
+     "kind": "prayer",
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:13": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:14": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:15": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:16": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:17": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Birkat HaLevana:18": {
+   "kind": "instruction",
+   "en": "Say Aleinu and the Mourner's Kaddish.",
+   "clean": "אומרים עלינו לשבח וקדיש יתום:"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:1": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:2": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:3": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:4": {
+   "kind": "prayer",
+   "gestures": [
+    "cover_eyes"
+   ]
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:5": {
+   "parts": [
+    {
+     "kind": "note",
+     "en": "One should pause briefly between \"Echad\" and \"Baruch\", because the essence of accepting the yoke of the kingship of Heaven is the first verse.",
+     "text": "<small>יש להפסיק מעט בין אחד לברוך כי עיקר קבול עול מלכות שמים היא פסוק ראשון.",
+     "clean": "יש להפסיק מעט בין אחד לברוך כי עיקר קבול עול מלכות שמים היא פסוק ראשון."
+    },
+    {
+     "text": " ויאמר בלחש:</small>",
+     "kind": "instruction",
+     "en": "And say quietly:",
+     "clean": "ויאמר בלחש:"
+    }
+   ]
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:6": {
+   "kind": "prayer",
+   "voice": "undertone"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:7": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:8": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:9": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:10": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:11": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:12": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:13": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:14": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:15": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:16": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:17": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:18": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:19": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:20": {
+   "kind": "instruction",
+   "en": "Say each verse three times:",
+   "clean": "יאמר כל פסוק ג\"פ:"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:21": {
+   "kind": "prayer",
+   "repeat": 3
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:22": {
+   "kind": "prayer",
+   "repeat": 3
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:23": {
+   "kind": "prayer",
+   "repeat": 3
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:24": {
+   "kind": "prayer",
+   "repeat": 3
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:25": {
+   "kind": "prayer"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:26": {
+   "kind": "instruction",
+   "en": "Say each verse three times:",
+   "clean": "יאמר כל פסוק ג\"פ:"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:27": {
+   "kind": "prayer",
+   "repeat": 3
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:28": {
+   "kind": "prayer",
+   "node": "concl.adon_olam"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:29": {
+   "kind": "prayer",
+   "node": "concl.adon_olam"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:30": {
+   "kind": "prayer",
+   "node": "concl.adon_olam"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:31": {
+   "kind": "prayer",
+   "node": "concl.adon_olam"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:32": {
+   "kind": "prayer",
+   "node": "concl.adon_olam"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:33": {
+   "kind": "prayer",
+   "node": "concl.adon_olam"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:34": {
+   "kind": "prayer",
+   "node": "concl.adon_olam"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:35": {
+   "kind": "prayer",
+   "node": "concl.adon_olam"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:36": {
+   "kind": "prayer",
+   "node": "concl.adon_olam"
+  },
+  "he:Weekday/Maariv/Keri'at Shema al Hamita:37": {
+   "kind": "prayer",
+   "node": "concl.adon_olam"
+  }
+ },
+ "en": {
+  "en:Weekday/Maariv/Amidah/Patriarchs:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Patriarchs:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Patriarchs:2": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Patriarchs:2"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Patriarchs:3": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Patriarchs:3"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Patriarchs:4": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Patriarchs:4"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Patriarchs:5": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Patriarchs:5"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Patriarchs:6": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Patriarchs:6"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Divine Might:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Divine Might:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Divine Might:2": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Divine Might:2"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Divine Might:3": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Divine Might:3"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Divine Might:4": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Divine Might:4"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Divine Might:5": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Divine Might:5"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Divine Might:6": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Divine Might:6"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Divine Might:7": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Divine Might:7"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Divine Might:8": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Divine Might:8"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Divine Might:9": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Divine Might:9"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Divine Might:10": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Divine Might:10"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Holiness of God:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Holiness of God:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Holiness of God:2": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Holiness of God:2"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Holiness of God:3": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Holiness of God:3"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Holiness of God:4": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Holiness of God:4"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Holiness of God:5": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Holiness of God:5"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Knowledge:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Knowledge:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Knowledge:2": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Knowledge:2"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Knowledge:3": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Knowledge:3"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Repentance:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Repentance:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Forgiveness:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Forgiveness:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Redemption:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Redemption:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Healing:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Healing:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Prosperity:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Prosperity:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Prosperity:2": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Prosperity:2"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Prosperity:3": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Prosperity:3"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Prosperity:4": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Prosperity:4"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Prosperity:5": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Prosperity:5"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Gathering the Exiles:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Gathering the Exiles:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Justice:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Justice:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Justice:2": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Justice:2"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Justice:3": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Justice:3"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Justice:4": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Justice:4"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Against Enemies:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Against Enemies:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/The Righteous:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/The Righteous:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Rebuilding Jerusalem:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Rebuilding Jerusalem:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Kingdom of David:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Kingdom of David:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Response to Prayer:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Response to Prayer:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Temple Service:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Temple Service:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Temple Service:2": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Temple Service:2"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Temple Service:3": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Temple Service:3"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Temple Service:4": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Temple Service:4"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Thanksgiving:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Thanksgiving:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Thanksgiving:2": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Thanksgiving:2"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Thanksgiving:3": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Thanksgiving:3"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Thanksgiving:4": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Thanksgiving:4"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Thanksgiving:5": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Thanksgiving:5"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Thanksgiving:6": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Thanksgiving:6"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Thanksgiving:7": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Thanksgiving:7"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Thanksgiving:8": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Thanksgiving:8"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Thanksgiving:9": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Thanksgiving:9"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Thanksgiving:10": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Thanksgiving:10"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Peace:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Peace:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Peace:2": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Peace:2"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Peace:3": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Peace:3"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Peace:4": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Peace:4"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Concluding Passage:1": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Concluding Passage:1"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Concluding Passage:2": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Concluding Passage:2"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Concluding Passage:3": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Concluding Passage:3"
+   ]
+  },
+  "en:Weekday/Maariv/Amidah/Concluding Passage:4": {
+   "he": [
+    "he:Weekday/Maariv/Amidah/Concluding Passage:4"
+   ]
+  },
+  "en:Weekday/Maariv/Kaddish Shalem:1": {
+   "he": [
+    "he:Weekday/Maariv/Kaddish Shalem:1"
+   ]
+  },
+  "en:Weekday/Maariv/Kaddish Shalem:2": {
+   "he": [
+    "he:Weekday/Maariv/Kaddish Shalem:2"
+   ]
+  },
+  "en:Weekday/Maariv/Kaddish Shalem:3": {
+   "he": [
+    "he:Weekday/Maariv/Kaddish Shalem:3"
+   ]
+  },
+  "en:Weekday/Maariv/Kaddish Shalem:4": {
+   "he": [
+    "he:Weekday/Maariv/Kaddish Shalem:4"
+   ]
+  },
+  "en:Weekday/Maariv/Kaddish Shalem:5": {
+   "he": [
+    "he:Weekday/Maariv/Kaddish Shalem:5"
+   ]
+  },
+  "en:Weekday/Maariv/Kaddish Shalem:6": {
+   "he": [
+    "he:Weekday/Maariv/Kaddish Shalem:6"
+   ]
+  },
+  "en:Weekday/Maariv/Kaddish Shalem:7": {
+   "he": [
+    "he:Weekday/Maariv/Kaddish Shalem:7"
+   ]
+  },
+  "en:Weekday/Maariv/Kaddish Shalem:8": {
+   "he": [
+    "he:Weekday/Maariv/Kaddish Shalem:8"
+   ]
+  },
+  "en:Weekday/Maariv/Kaddish Shalem:9": {
+   "he": [
+    "he:Weekday/Maariv/Kaddish Shalem:9"
+   ]
+  },
+  "en:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:1": {
+   "he": [
+    "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:1"
+   ]
+  },
+  "en:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:2": {
+   "he": [
+    "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:2"
+   ]
+  },
+  "en:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:3": {
+   "he": [
+    "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:3"
+   ]
+  },
+  "en:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:4": {
+   "he": [
+    "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:4"
+   ]
+  },
+  "en:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:5": {
+   "he": [
+    "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:5"
+   ]
+  },
+  "en:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:6": {
+   "he": [
+    "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:6"
+   ]
+  },
+  "en:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:7": {
+   "he": [
+    "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:7"
+   ]
+  },
+  "en:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:8": {
+   "he": [
+    "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:8"
+   ]
+  },
+  "en:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:9": {
+   "he": [
+    "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:9"
+   ]
+  },
+  "en:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:10": {
+   "he": [
+    "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:10"
+   ]
+  },
+  "en:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:11": {
+   "he": [
+    "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:11"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:1": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:1"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:3": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:3"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:4": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:4"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:5": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:5"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:55": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:55"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:56": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:56"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:57": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:57"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:58": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:58"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:59": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:59"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:60": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:60"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:61": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:61"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:62": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:62"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:63": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:63"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:64": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:64"
+   ]
+  },
+  "en:Weekday/Maariv/Sefirat HaOmer:65": {
+   "he": [
+    "he:Weekday/Maariv/Sefirat HaOmer:65"
+   ]
+  },
+  "en:Weekday/Maariv/Alenu:1": {
+   "he": [
+    "he:Weekday/Maariv/Alenu:1"
+   ]
+  },
+  "en:Weekday/Maariv/Alenu:2": {
+   "he": [
+    "he:Weekday/Maariv/Alenu:2"
+   ]
+  },
+  "en:Weekday/Maariv/Mourner's Kaddish:1": {
+   "he": [
+    "he:Weekday/Maariv/Mourner's Kaddish:1"
+   ]
+  },
+  "en:Weekday/Maariv/Mourner's Kaddish:2": {
+   "he": [
+    "he:Weekday/Maariv/Mourner's Kaddish:2"
+   ]
+  },
+  "en:Weekday/Maariv/Mourner's Kaddish:3": {
+   "he": [
+    "he:Weekday/Maariv/Mourner's Kaddish:3"
+   ]
+  },
+  "en:Weekday/Maariv/Mourner's Kaddish:4": {
+   "he": [
+    "he:Weekday/Maariv/Mourner's Kaddish:4"
+   ]
+  },
+  "en:Weekday/Maariv/Mourner's Kaddish:5": {
+   "he": [
+    "he:Weekday/Maariv/Mourner's Kaddish:5"
+   ]
+  },
+  "en:Weekday/Maariv/Mourner's Kaddish:6": {
+   "he": [
+    "he:Weekday/Maariv/Mourner's Kaddish:6"
+   ]
+  },
+  "en:Weekday/Maariv/Mourner's Kaddish:7": {
+   "he": [
+    "he:Weekday/Maariv/Mourner's Kaddish:7"
+   ]
+  },
+  "en:Weekday/Maariv/LeDavid:1": {
+   "he": [
+    "he:Weekday/Maariv/LeDavid:1"
+   ]
+  },
+  "en:Weekday/Maariv/LeDavid:2": {
+   "he": [
+    "he:Weekday/Maariv/LeDavid:2"
+   ]
+  },
+  "en:Weekday/Maariv/LeDavid:3": {
+   "he": [
+    "he:Weekday/Maariv/LeDavid:3"
+   ]
+  },
+  "en:Weekday/Maariv/LeDavid:4": {
+   "he": [
+    "he:Weekday/Maariv/LeDavid:4"
+   ]
+  },
+  "en:Weekday/Maariv/LeDavid:5": {
+   "he": [
+    "he:Weekday/Maariv/LeDavid:5"
+   ]
+  },
+  "en:Weekday/Maariv/LeDavid:6": {
+   "he": [
+    "he:Weekday/Maariv/LeDavid:6"
+   ]
+  },
+  "en:Weekday/Maariv/LeDavid:7": {
+   "he": [
+    "he:Weekday/Maariv/LeDavid:7"
+   ]
+  },
+  "en:Weekday/Maariv/LeDavid:8": {
+   "he": [
+    "he:Weekday/Maariv/LeDavid:8"
+   ]
+  },
+  "en:Weekday/Maariv/LeDavid:9": {
+   "he": [
+    "he:Weekday/Maariv/LeDavid:9"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:1": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:1"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:2": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:2"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:4": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:4"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:5": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:5"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:6": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:6"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:7": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:7"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:8": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:8"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:9": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:9"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:10": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:10"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:11": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:11"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:12": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:12"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:13": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:13"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:14": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:14"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:15": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:15"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:16": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:16"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:17": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:17"
+   ]
+  },
+  "en:Weekday/Maariv/Birkat HaLevana:18": {
+   "he": [
+    "he:Weekday/Maariv/Birkat HaLevana:18"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:1": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:1"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:2": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:2"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:3": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:3"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:4": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:4"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:5": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:5"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:6": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:6"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:7": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:7"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:8": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:8"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:9": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:9"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:10": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:10"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:11": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:11"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:12": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:12"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:13": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:13"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:14": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:14"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:15": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:15"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:16": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:16"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:17": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:17"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:18": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:18"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:19": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:19"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:20": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:20"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:21": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:21"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:22": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:22"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:23": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:23"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:24": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:24"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:25": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:25"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:26": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:26"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:27": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:27"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:28": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:28"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:29": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:29"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:30": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:30"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:31": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:31"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:32": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:32"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:33": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:33"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:34": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:34"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:35": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:35"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:36": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:36"
+   ]
+  },
+  "en:Weekday/Maariv/Keri'at Shema al Hamita:37": {
+   "he": [
+    "he:Weekday/Maariv/Keri'at Shema al Hamita:37"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "Weekday/Maariv/Additions for Motza'ei Shabbat/Veyiten Lekha",
+   "type": "missing_text",
+   "detail": "The Veyiten Lecha leaf is empty in both Hebrew and English (title only). The text of Veyiten Lecha is missing."
+  },
+  {
+   "id": "he:Weekday/Maariv/Additions for Motza'ei Shabbat/Viyehi Noam:2",
+   "type": "wrong_vowel",
+   "detail": "\"ישֵׁב בְּסֵֽתֶר\": the first yod has no holam; the word should read יֹשֵׁב. Same in Keri'at Shema al Hamita:11 (reported there too)."
+  },
+  {
+   "id": "he:Weekday/Maariv/Keri'at Shema al Hamita:11",
+   "type": "wrong_vowel",
+   "detail": "\"ישֵׁב\": the yod has no holam (should be יֹשֵׁב)."
+  },
+  {
+   "id": "he:Weekday/Maariv/Amidah/Holiness of God:1",
+   "type": "engine_bug_risk",
+   "detail": "Shacharit boilerplate: \"in the chazzan's repetition Kedushah is said here\". Maariv has no chazzan's repetition or Kedushah, so the rubric is tagged when:\"false\" (amidah repetition, minyan) so it never shows. A naive reader would print it."
+  },
+  {
+   "id": "he:Weekday/Maariv/Kaddish Shalem:1",
+   "type": "engine_bug_risk",
+   "detail": "On Motzaei Shabbat the order is: Half Kaddish (segments 2-6, up to \"veimru amen\"), then the Viyehi Noam leaf (Viyehi noam, Yosheiv beseter, Ve'atah kadosh), then the rest of Kaddish Shalem (segments 7-9, from \"Titkabel\"). The leaf is printed as one block before Viyehi Noam, so the reader must split the Kaddish leaf around that leaf on Motzaei Shabbat. Segments 2-6 are tagged kaddish.shalem for both cases."
+  },
+  {
+   "id": "he:Weekday/Maariv/Amidah/Knowledge:2",
+   "type": "ambiguous",
+   "detail": "\"Atah chonantanu\" (the Havdalah addition) is printed in <small> with no rubric saying when. Tagged motzaeiShabbat || motzaeiYomTov (the English puts it in parentheses with no rubric either)."
+  },
+  {
+   "id": "he:Weekday/Maariv/Amidah/Peace:2",
+   "type": "new_minhag",
+   "detail": "x_peaceEndsOsehHaShalom: during the Ten Days one concludes the last blessing with \"Oseh haShalom\" (printed in parentheses) instead of \"HaMevarech es amo Yisrael bashalom\". Practice varies; the siddur offers it only parenthetically. The usual ending (segment 4) is hidden only when aseretYemeiTeshuva && x_peaceEndsOsehHaShalom."
+  },
+  {
+   "id": "x_peaceEndsOsehHaShalom",
+   "type": "new_variable",
+   "detail": "x_peaceEndsOsehHaShalom: user/community concludes the Amidah's peace blessing with \"Oseh haShalom\" during the Ten Days of Repentance."
+  },
+  {
+   "id": "Weekday/Maariv/Sefirat HaOmer",
+   "type": "alignment",
+   "detail": "English is missing for the 49 daily counts (segments 6-54) and for segment 2 (Leshem yichud); only English segments 1, 3, 4, 5 and 55-65 exist."
+  },
+  {
+   "id": "he:Weekday/Maariv/Birkat HaLevana:3",
+   "type": "alignment",
+   "detail": "No English segment for the Hebrew \"Hineni muchan umezuman\" / Leshem yichud (segment 3); English ids go 2 then 4."
+  },
+  {
+   "id": "he:Weekday/Maariv/Birkat HaLevana:18",
+   "type": "misplaced",
+   "detail": "The rubric says to say Aleinu and the Mourner's Kaddish after Kiddush Levana, but the Alenu and Mourner's Kaddish leaves come before the Levana leaf in this chunk. When Levana is said, Aleinu and Kaddish should follow it (and not be said twice)."
+  },
+  {
+   "id": "Weekday/Maariv/Birkat HaLevana",
+   "type": "ambiguous",
+   "detail": "Condition kiddushLevana is documented as \"within the Kiddush Levana window (by day)\", but Kiddush Levana is said at night; used as the closest existing variable."
+  },
+  {
+   "id": "he:Weekday/Maariv/Keri'at Shema al Hamita:20",
+   "type": "ambiguous",
+   "detail": "\"Each verse three times\": taken to cover Yevarechecha, Hinei lo yanum, Lishuatecha and Beshem Hashem (21-24); the second rubric (26) covers only Rigzu (27). Shir Hamaalot (25) is said once."
+  },
+  {
+   "id": "he:Weekday/Maariv/Amidah/Patriarchs:5",
+   "type": "engine_bug_risk",
+   "detail": "English placeholder cross-references (\"see page 000\") appear in the English for the forgotten Zochreinu note and in Birkat HaLevana:18 (\"p. 000\"); the app should not show page numbers."
+  },
+  {
+   "id": "Weekday/Maariv/LeDavid",
+   "type": "engine_bug_risk",
+   "detail": "The leaf includes its own Mourner's Kaddish (segments 3-9) shown only when ledavid applies; the leaf must be hidden as a whole when LeDavid is not said (the earlier Mourner's Kaddish leaf still shows). Whether LeDavid is said at Maariv at all varies by community."
+  }
+ ]
+}

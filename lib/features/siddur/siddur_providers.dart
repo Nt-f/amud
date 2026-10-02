@@ -108,6 +108,7 @@ String? findSection(SchemaNode root, String key, {required bool shabbat}) {
     'omer': [r'sefirat ha.?omer', r'counting (?:of )?the omer'],
     'hallel': [r'^hallel$', r'/hallel$'],
     'havdalah': [r'havdal'],
+    'birkatHaChama': [r'birkat ha.?chama', r'birkas ha.?chama', r'blessing of the sun'],
     'kiddushLevana': [r'birkat ha.?levana', r'kiddush levan', r'blessing of the (?:new )?moon'],
   }[key];
   if (patterns == null) return null;
@@ -129,12 +130,11 @@ String? findSection(SchemaNode root, String key, {required bool shabbat}) {
 ({Applicability ap, String? labelEn, String? labelHe}) sectionStatus(
     SiddurResolver resolver, SchemaNode node, DayContext Function(Service) contexts,
     [Service fallback = Service.shacharit]) {
-  final rule = resolver.sectionRuleFor(node);
+  final rule = resolver.effectiveRuleFor(node);
   if (rule != null && rule.when != 'true') {
-    final unknown = <String>{};
-    final ok = rule.condition.eval(contexts(SiddurResolver.serviceFor(node, fallback)).env, unknown);
-    if (unknown.isNotEmpty) return (ap: Applicability.unknown, labelEn: rule.labelEn, labelHe: rule.labelHe);
-    return (ap: ok ? Applicability.today : Applicability.notToday, labelEn: rule.labelEn, labelHe: rule.labelHe);
+    final ap = resolver.ruleApplicability(rule, contexts(SiddurResolver.serviceFor(node, fallback)));
+    if (ap != Applicability.always) return (ap: ap, labelEn: rule.labelEn, labelHe: rule.labelHe);
+    return (ap: Applicability.always, labelEn: null, labelHe: null);
   }
   if (rule != null || node.isLeaf) return (ap: Applicability.always, labelEn: null, labelHe: null);
   final svc = SiddurResolver.serviceFor(node, fallback);

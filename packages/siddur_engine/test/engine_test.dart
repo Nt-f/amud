@@ -124,7 +124,7 @@ void main() {
       expect(segs.where((s) => s.excluded), isEmpty);
       expect(segs.expand((s) => s.he!.runs).where((r) => r.applicability == Applicability.notToday), isEmpty);
       // Chol HaMoed Sukkot: Ya'aleh VeYavo is said with the Sukkot option;
-      // Rosh Chodesh and Pesach stay beside it, crossed out.
+      // Rosh Chodesh and Pesach are hidden like anything else not said.
       final sukkot = SiddurResolver()
           .resolve(node, sel, (s) => DayContext(HDate(18, Months.tishrei, 5787), il: false, service: s),
               options: const ResolveOptions(excluded: ExcludedDisplay.hide))
@@ -132,7 +132,7 @@ void main() {
           .firstWhere((s) => stripHtml(s.he!.segment.html).contains('יַעֲלֶה'));
       expect(sukkot.applicability, Applicability.today);
       final options = sukkot.he!.runs.where((r) => r.applicability != Applicability.always && !r.marker).toList();
-      expect(options.map((r) => r.applicability), [Applicability.notToday, Applicability.notToday, Applicability.today]);
+      expect(options.map((r) => r.applicability), [Applicability.today]);
       expect(segs.where((s) => stripHtml(s.he!.segment.html).contains('יַעֲלֶה')), isEmpty);
       expect(items.whereType<CollapsedSectionItem>(), isEmpty);
       expect(items.whereType<ExcludedGroupItem>(), isEmpty);
@@ -201,6 +201,27 @@ void main() {
       final enNotes = run(const ResolveOptions(showTranslation: false, notesHebrew: false));
       expect(enNotes.where((s) => s.kind != SegmentKind.prayer && s.he != null), isEmpty);
       expect(enNotes.where((s) => s.kind == SegmentKind.prayer && s.he == null), isEmpty);
+    });
+
+    test("English rubrics that can't sit beside the Hebrew aren't left pointing at nothing", () async {
+      // The Shema with te'amim (5 lines) and the Metsudah English (12)
+      // split it differently, so the English can't be lined up with it.
+      final he = book.versions.firstWhere((v) => v.language == 'he' && v.versionTitle.toLowerCase().contains('cantillation'));
+      final en = book.versions.firstWhere((v) => v.language == 'en' && v.versionTitle.contains('Metsudah'));
+      final sel = VersionSelection([await lib.version(he)], [await lib.version(en)]);
+      List<SegmentItem> run(ResolveOptions o) => SiddurResolver()
+          .resolve(root.find('Weekday/Shacharit/Blessings of the Shema/Shema')!, sel,
+              (s) => DayContext(HDate(5, Months.cheshvan, 5786), il: false, service: s),
+              options: o)
+          .whereType<SegmentItem>()
+          .toList();
+      String text(SegmentItem s) => stripHtml(s.tr?.segment.html ?? '');
+      final notes = run(const ResolveOptions(showTranslation: false, notesHebrew: false));
+      expect(notes.where((s) => s.he != null), isNotEmpty);
+      expect(notes.where((s) => s.he == null && s.kind != SegmentKind.note), isEmpty);
+      // With the English shown, they stay with the lines they introduce.
+      final both = run(const ResolveOptions());
+      expect(both.where((s) => s.he == null && text(s).startsWith('The following')), isNotEmpty);
     });
   });
 

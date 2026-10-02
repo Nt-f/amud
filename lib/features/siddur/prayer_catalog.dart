@@ -58,6 +58,7 @@ const catalogGroups = <CatalogGroup>[
         [r'musaf (?:amidah )?for rosh (?:c)?hodesh$', r'^rosh c?hodesh/mussaf$', r'^musaf for rosh chodesh$', r'^rosh chodesh$'],
         when: 'roshChodesh'),
     _levana,
+    CatalogItem('birkatHaChama', 'Birkat HaChama', 'ברכת החמה', [r'birkat ha.?chama', r'birkas ha.?chama', r'blessing of the sun']),
     CatalogItem('birkatHachodesh', 'Blessing the New Month', 'ברכת החודש',
         [r'blessing(?:s)? (?:of|the) (?:the )?new month$', r'birkat ha.?chodesh$', r'blessing of new month$'],
         when: 'shabbatMevarchim'),
@@ -225,3 +226,20 @@ ItemTime itemTime(CatalogItem item, DayContext day, DayContext night) {
   if (item.evening && c.eval(night.env)) return ItemTime.tonight;
   return ItemTime.none;
 }
+
+/// Explicit-nusach links never silently substitute a different nusach.
+final nusachSectionRefProvider = FutureProvider.family<PrayerRef?, (String, String, int)>((ref, k) async {
+  final (nusachName, key, dateAbs) = k;
+  final nusach = Nusach.values.where((n) => n.name == nusachName).firstOrNull;
+  if (nusach == null || nusach == Nusach.other) return null;
+  final manifest = await ref.watch(manifestProvider.future);
+  final first = await ref.watch(defaultBookProvider.future);
+  DayContext contexts(Service service) => ref.watch(dayContextProvider((dateAbs, service)));
+  for (final book in bookSearchOrder(manifest, first).where((b) => nusachOf(b) == nusach)) {
+    final root = await ref.watch(bookIndexProvider(book).future);
+    final id = findSectionOn(root, key, contexts);
+    final node = id == null ? null : root.find(id);
+    if (node != null && hasText(await ref.watch(versionSelectionProvider(book).future), node)) return PrayerRef(book, node);
+  }
+  return null;
+});

@@ -1,5 +1,8 @@
 import 'dart:async';
-import 'dart:ui' show PlatformDispatcher;
+import 'package:app_links/app_links.dart';
+import 'package:flutter/foundation.dart';
+import 'features/integrations/platform_runtime.dart';
+import 'features/integrations/prayer_links.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -16,16 +19,20 @@ import 'features/alerts/notification_backend.dart';
 import 'features/home/card_registry.dart';
 import 'features/update/update_service.dart';
 import 'features/home/cards/builtin_cards.dart';
+import 'features/integrations/seasonal_windows.dart';
 
-Future<void> main() async {
+Future<void> main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
+  if (!kIsWeb) AppLinks(); // Capture a cold-start link before asynchronous initialization.
   initHebcal(); // IANA tz database + learning schedules
   final storage = await Storage.open();
 
   // Cards are modular: each feature registers its card types here.
   final registry = CardRegistry();
   registerBuiltInCards(registry);
+  registerSeasonalCards(registry);
 
+  final initialLink = args.map(Uri.tryParse).whereType<Uri>().map(routeFromLink).whereType<String>().firstOrNull;
   final container = ProviderContainer(overrides: [
     storageProvider.overrideWithValue(storage),
     cardRegistryProvider.overrideWithValue(registry),
@@ -42,7 +49,10 @@ Future<void> main() async {
     return false;
   };
 
-  runApp(UncontrolledProviderScope(container: container, child: const _Lifecycle(child: SiddurApp())));
+  runApp(UncontrolledProviderScope(container: container, child: const PlatformRuntime(child: _Lifecycle(child: SiddurApp()))));
+  if (initialLink != null) {
+    WidgetsBinding.instance.addPostFrameCallback((_) => openFromOutside(container.read(routerProvider), initialLink));
+  }
 
   // Analytics starts after the first frame too; events before then wait.
   final settings = container.read(settingsProvider);

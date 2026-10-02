@@ -1,0 +1,40 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+  <capability android:name="actions.intent.OPEN_APP_FEATURE">
+    <intent android:action="android.intent.action.VIEW">
+      <url-template android:value="amud://voice/{prayer}" />
+      <parameter android:name="feature" android:key="prayer" />
+    </intent>
+    <intent android:action="android.intent.action.VIEW" android:data="amud://siddur" />
+  </capability>
+  <shortcut android:shortcutId="shacharit">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_shacharit" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="mincha">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_mincha" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="maariv">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_maariv" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="birkat">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_birkat" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="derech">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_derech" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="zmanim">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE"><parameter-binding android:key="feature" android:value="@array/voice_zmanim" /></capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="omer">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE"><parameter-binding android:key="feature" android:value="@array/voice_omer" /></capability-binding>
+  </shortcut>
+</shortcuts>

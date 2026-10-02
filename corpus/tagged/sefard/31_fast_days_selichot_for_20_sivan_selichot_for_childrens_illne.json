@@ -1,0 +1,763 @@
+{
+ "nusach": "sefard",
+ "chunk": "Fast Days [Selichot for 20 Sivan .. Selichot for Childrens' Illness]",
+ "leaves": {
+  "Fast Days/Selichot for 20 Sivan": {
+   "node": "selichot",
+   "service": "none",
+   "when": "hMonth == 4 && hDay == 20"
+  },
+  "Fast Days/El Maleh Prayer": {
+   "node": "personal_prayer",
+   "service": "none",
+   "when": "tzomTammuz"
+  },
+  "Fast Days/Selichot for 17 Tamuz": {
+   "node": "selichot",
+   "service": "shacharit",
+   "when": "tzomTammuz"
+  },
+  "Fast Days/Selichot for Childrens' Illness": {
+   "node": "selichot",
+   "service": "none"
+  }
+ },
+ "he": {
+  "he:Fast Days/Selichot for 20 Sivan:1": {
+   "kind": "heading",
+   "en": "Selichot for the 20th of Sivan"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:2": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:3": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:4": {
+   "kind": "instruction",
+   "en": "And the Lord passed before him and proclaimed:",
+   "cite": "Exodus 34:6"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:5": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:6": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:7": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:8": {
+   "kind": "instruction",
+   "en": "Our God and God of our fathers:"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:9": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:10": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:11": {
+   "kind": "instruction",
+   "en": "And the Lord passed before him and proclaimed:",
+   "cite": "Exodus 34:6"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:12": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:13": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:14": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:15": {
+   "kind": "instruction",
+   "en": "Our God and God of our fathers"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:16": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:17": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:18": {
+   "kind": "instruction",
+   "en": "And the Lord passed before him and proclaimed:",
+   "cite": "Exodus 34:6"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:19": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:20": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:21": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:22": {
+   "kind": "instruction",
+   "en": "Based on the Aleph-Bet acrostic, doubled; signed at the end by the author, Shlomo HaKatan Hazak."
+  },
+  "he:Fast Days/Selichot for 20 Sivan:23": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:24": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:25": {
+   "kind": "instruction",
+   "en": "And the Lord passed before him and proclaimed:",
+   "cite": "Exodus 34:6"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:26": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:27": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:28": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:29": {
+   "kind": "instruction",
+   "en": "Based on the Aleph-Bet acrostic, each line complete in the language of Scripture; signed at the end by the author, Hillel ben Yaakov, Hazak v'Emet, Amen v'Amen."
+  },
+  "he:Fast Days/Selichot for 20 Sivan:30": {
+   "kind": "instruction",
+   "en": "Our God and God of our fathers"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:31": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:32": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:33": {
+   "kind": "instruction",
+   "en": "And the Lord passed before him and proclaimed:",
+   "cite": "Exodus 34:6"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:34": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:35": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:36": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:37": {
+   "kind": "instruction",
+   "en": "Selichah based on the Aleph-Bet acrostic, doubled."
+  },
+  "he:Fast Days/Selichot for 20 Sivan:38": {
+   "kind": "instruction",
+   "en": "Our God and God of our fathers:"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:39": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:40": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:41": {
+   "kind": "instruction",
+   "en": "And the Lord passed before him and proclaimed:",
+   "cite": "Exodus 34:6"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:42": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:43": {
+   "kind": "instruction",
+   "en": "Refrain: The author's name in acrostic: Emeth."
+  },
+  "he:Fast Days/Selichot for 20 Sivan:44": {
+   "parts": [
+    {
+     "text": "<b>יְהֹוָה</b> יְהֹוָה אֵל רַחוּם. וְחַנּוּן. אֶרֶךְ אַפַּיִם. וְרַב חֶסֶד וֶאֱמֶת. נֹצֵר חֶסֶד לָאֲלָפִים. נֹשֵׂא עָוֹן. וָפֶשַׁע. וְחַטָּאָה. וְנַקֵּה. וְסָלַחְתָּ לַעֲוֹנֵנוּ וּלְחַטָּאתֵנוּ וּנְחַלְתָּנוּ: אֶזְכְּרָה אֱלֹהִים וְאֶהֱמָיָה. בִּרְאוֹתִי כָּל עִיר עַל תִּלָּהּ בְּנוּיָה. וְעִיר הָאֱלֹהִים מֻשְׁפֶּלֶת עַד שְׁאוֹל תַּחְתִּיָּה. וּבְכָל זֹאת אָנוּ לְיָהּ וְעֵינֵינוּ לְיָהּ. ",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": "<small>יי, יי:</small>",
+     "kind": "instruction",
+     "en": "Yah, Yah:"
+    },
+    {
+     "text": " מִדַּת הָרַחֲמִים עָלֵינוּ הִתְגַּלְגְּלִי. וְלִפְנֵי קוֹנֵךְ תְּחִנָּתֵנוּ הַפִּילִי. וּבְעַד עַמֵּךְ רַחֲמִים שַׁאֲלִי. כִּי כָל לֵבָב דַּוָּי וְכָל רֹאשׁ לָחֳלִי. ",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": "<small>יי, יי:</small>",
+     "kind": "instruction",
+     "en": "Yah, Yah:"
+    },
+    {
+     "text": " תָּמַכְתִּי יְתֵדוֹתַי בִּשְׁלֹשׁ עֶשְׂרֵה תֵבוֹת. וּבְשַׁעֲרֵי דְמָעוֹת כִּי לֹא נִשְׁלָבוֹת. לָכֵן שָׁפַכְתִּי שִׂיחַ פְּנֵי בוֹחֵן לִבּוֹת. בָּטוּחַ אֲנִי בָּאֵלֶּה וּבִזְכוּת שְׁלֹשֶׁת אָבוֹת. ",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": "<small>יי, יי:</small>",
+     "kind": "instruction",
+     "en": "Yah, Yah:"
+    },
+    {
+     "text": " יְהִי רָצוֹן מִלְּפָנֶיךָ שׁוֹמֵעַ קוֹל בִּכְיוֹת. שֶׁתָּשִׂים דִּמְעוֹתֵינוּ בְּנֹאדְךָ לִהְיוֹת. וְתַצִּילֵנוּ מִכָּל גְּזֵרוֹת אַכְזָרִיּוֹת. כִּי לְךָ לְבַד עֵינֵינוּ תְלוּיוֹת. ",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": "<small>יי, יי:</small>",
+     "kind": "instruction",
+     "en": "Yah, Yah:"
+    }
+   ]
+  },
+  "he:Fast Days/Selichot for 20 Sivan:45": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:46": {
+   "kind": "instruction",
+   "en": "And the Lord passed before him and proclaimed:",
+   "cite": "Exodus 34:6"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:47": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:48": {
+   "kind": "instruction",
+   "en": "Akedah based on the Aleph-Bet acrostic; signed at the end by the author, Meir bar Yitzhak Elazar, Hazak v'Emet."
+  },
+  "he:Fast Days/El Maleh Prayer:1": {
+   "kind": "heading",
+   "en": "El Maleh Rachamim for the 17th of Tammuz"
+  },
+  "he:Fast Days/El Maleh Prayer:2": {
+   "kind": "instruction",
+   "en": "For the great luminary, Rabbi Yechiel Michel of Nemirov, who was martyred for the sanctification of God in the year 5508 (1748):"
+  },
+  "he:Fast Days/El Maleh Prayer:3": {
+   "kind": "instruction",
+   "en": "Based on the acrostic Aleph-Bet:"
+  },
+  "he:Fast Days/El Maleh Prayer:4": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:5": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:6": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:7": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:8": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:9": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:10": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:11": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:12": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:13": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:14": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:15": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:16": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:17": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:18": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:19": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:20": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:21": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:22": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:23": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:24": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/El Maleh Prayer:25": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:1": {
+   "kind": "heading",
+   "en": "Selichot for the Seventeenth of Tammuz"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:2": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:3": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:4": {
+   "kind": "instruction",
+   "en": "And the Lord passed before him and proclaimed:"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:5": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:6": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:7": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:8": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "role": "chazzan"
+    },
+    {
+     "text": " <b>סְלַח</b> נָא לַעֲוֹן הָעָם הַזֶּה כְּגֹדֶל חַסְדֶּךָ וְכַאֲשֶׁר נָשָׂאתָ לָעָם הַזֶּה מִמִּצְרַיִם וְעַד הֵנָּה וְשָׁם נֶאֱמַר: </b></b>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:9": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "role": "congregation"
+    },
+    {
+     "text": " <b>וַיֹּאמֶר</b> יְהֹוָה סָלַחְתִּי כִּדְבָרֶךָ: </b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:10": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:11": {
+   "kind": "instruction",
+   "en": "Selichah based on Aleph-Bet:"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:12": {
+   "kind": "instruction",
+   "en": "Our God and God of our fathers:"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:13": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:14": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:15": {
+   "kind": "instruction",
+   "en": "And the Lord passed before him and proclaimed:"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:16": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:17": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:18": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:19": {
+   "kind": "instruction",
+   "en": "Selichah based on Aleph-Bet and the name of the author Menachem bar Rabbi Meir:"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:20": {
+   "kind": "instruction",
+   "en": "Our God and God of our fathers"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:21": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:22": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:23": {
+   "kind": "instruction",
+   "en": "And the Lord passed before him and proclaimed:"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:24": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:25": {
+   "parts": [
+    {
+     "text": "<b><b><small>פזמון שם המחבר שלמה <small>(ומיוסד במשקל יתד ושני תנועות ויתד ושני תנועות)</small>",
+     "kind": "instruction",
+     "en": "Refrain, name of the author Shlomo (and based on the meter of a stake and two movements, and a stake and two movements)"
+    },
+    {
+     "text": ":</small> </b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:26": {
+   "parts": [
+    {
+     "text": "<b>שְׁעֵה</b> נֶאֱסַר. אֲשֶׁר נִמְסַר. בְּיַד בָּבֶל וְגַם שֵׂעִיר. לְךָ יֶהֱמֶה זֶה כַּמֶּה וְיִתְחַנֵּן כְּבֶן צָעִיר. יוֹם גָּבַר הָאוֹיֵב וַתִּבָּקַע הָעִיר: לְזֹאת אִכַּף. וְאֶסְפּוֹק כַּף. בְּיוֹם חִמֵּשׁ פִּזְרוֹנִי. וְעַל רֶגֶל הָעֵגֶל הַלּוּחוֹת יְצָאוּנִי. וְגַם הִשְׁמִיד הַתָּמִיד וּבַסּוּגַר הֱבִיאַנִי. וְהוּשַׂם אֱלִיל בְּהֵיכַל כְּלִיל וּמֵעֲצָתוֹ כְּלָאַנִי. וְהַמִּנְחָה הוּנָחָה וְדָתְךָ צָר בָּאֵשׁ הִבְעִיר. ",
+     "kind": "prayer",
+     "role": "congregation"
+    },
+    {
+     "text": "<small>יום:</small>",
+     "kind": "instruction",
+     "en": "Day:"
+    },
+    {
+     "text": " מְאֹד אֶתְחַל וָאֶתְחַלְחַל בְּיוֹם שַׁדַּי דְּחָפַנִי. וְהַשְּׁפִיפוֹן מִצָּפוֹן כְּשִׁבּוֹלֶת שְׁטָפַנִי. מְאוֹר חָשַׁךְ וְגַם שֵׁשַׁךְ כְּמוֹ כַּדּוּר צְנָפַנִי. וְהַצַּיָּד שָׁלַח יָד וְהַצָּפִיר וְהַשָּׂעִיר. ",
+     "kind": "prayer",
+     "role": "congregation"
+    },
+    {
+     "text": "<small>יום:</small>",
+     "kind": "instruction",
+     "en": "Day:"
+    },
+    {
+     "text": " הוֹד לִבִּי וּמִשְׂגַּבִּי הֲלָעַד אַפְּךָ יֶעֱשַׁן. הֲלֹא תִרְאֶה עַם נִלְאֶה אֲשֶׁר הָשְׁחַר כְּמוֹ כִּבְשָׁן. גְּדוֹר פִּרְצִי בְּבֶן פַּרְצִי. וּמֵחֶדֶק לְקוֹט שׁוֹשָׁן. בְּנֵה בֵּית זְבוּל לְהָשִׁיב גְּבוּל. הַכַּרְמֶל וְהַבָּשָׁן. וְעַיִן פְּקַח וְנָקָם קַח מֵאֵצֶר וּמִדִּישָׁן. שְׁפוֹט אִלֵּם וְאָז יְשַׁלֵּם הַמַּבְעֶה וְהַמַּבְעִיר. יוֹם גָּבַר הָאוֹיֵב וַתִּבָּקַע הָעִיר: ",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:27": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:28": {
+   "kind": "instruction",
+   "en": "And the Lord passed before him and proclaimed:"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:29": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:30": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:31": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:32": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:33": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:34": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:35": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:36": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:37": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:38": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:39": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 17 Tamuz:40": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:49": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:50": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:51": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:52": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:53": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:54": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:55": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:56": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:57": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:58": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:59": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:60": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:61": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:62": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:63": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Selichot for 20 Sivan:64": {
+   "kind": "instruction",
+   "en": "Nefilat Apayim. And He is Merciful, Guardian of Israel",
+   "gloss": "Prostration followed by VeHu Rachum"
+  },
+  "he:Fast Days/Selichot for Childrens' Illness:1": {
+   "kind": "heading",
+   "en": "Selichot for the Illness of Children"
+  },
+  "he:Fast Days/Selichot for Childrens' Illness:2": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Selichot for Childrens' Illness:3": {
+   "parts": [
+    {
+     "text": "<b>אֵל</b> נָא רְפָא נָא תַּחֲלוּאֵי גֶפֶן פּוֹרִיָּה. בּוֹשָׁה וַחֲפוּרָה וְאֻמְלַל פִּרְיָהּ. גְּאָלֶנָּה מִשַּׁחַת וּמִמַּכָּה טְרִיָּה. עֲנֵנוּ כְּשֶׁעָנִיתָ לְאַבְרָהָם אָבִינוּ בְּהַר הַמּוֹרִיָּה. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>חטאנו:</small>",
+     "kind": "instruction",
+     "en": "We have sinned:"
+    },
+    {
+     "text": " דִּגְלֵי עָם פְּדוּיֵי בִּזְרוֹעַ חָשׂוּף. הַצֵּל מִנֶּגֶף וְאַל יִהְיוּ לְשִׁסּוּף. וְתַעֲנֶה קְרִיאָתֵנוּ לְמַעֲשֵׂה יָדֶיךָ תִּכְסוֹף. עֲנֵנוּ כְּשֶׁעָנִיתָ לַאֲבוֹתֵינוּ עַל יַם סוּף. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>חטאנו:</small>",
+     "kind": "instruction",
+     "en": "We have sinned:"
+    },
+    {
+     "text": " זְכוּת צוּר חֻצַּב הַיּוֹם לָנוּ תְגַל. חָשְׂכֵנוּ מֵאֶנֶף וּנְחֵנוּ בְּיוֹשֶׁר מַעְגָּל. טַהֵר טֻמְאָתֵנוּ וְלִמְאוֹר תּוֹרָתְךָ עֵינֵינוּ גַל. עֲנֵנוּ כְּשֶׁעָנִיתָ לִיהוֹשֻׁעַ בַּגִּלְגָּל. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>חטאנו:</small>",
+     "kind": "instruction",
+     "en": "We have sinned:"
+    },
+    {
+     "text": " יָהּ רְאֵה דֶשֶׁן עָקוּד וְהַצְמַח לָנוּ תְרוּפָה. כַּלֵּה שׁוֹד וָשֶׁבֶר סַעַר וְסוּפָה. לַמְּדֵנוּ וְחַכְּמֵנוּ אִמְרָתְךָ הַצְּרוּפָה. עֲנֵנוּ כְּשֶׁעָנִיתָ לִשְׁמוּאֵל בַּמִּצְפָּה. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>חטאנו:</small>",
+     "kind": "instruction",
+     "en": "We have sinned:"
+    },
+    {
+     "text": " מוּתְמָם מֵרֶחֶם שָׁרָשָׁיו אַל תַּקְמֵל. נַקֵּנוּ מִכֶּתֶם וְשֶׁמֶץ וְלֹא נֵאָמֵל. סְעָדֵנוּ וְנִוָּשֵׁעָה וְאָרְחוֹת חֲסָדֶיךָ נִגָּמֵל. עֲנֵנוּ כְּשֶׁעָנִיתָ לְאֵלִיָּהוּ בְּהַר הַכַּרְמֶל. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>חטאנו:</small>",
+     "kind": "instruction",
+     "en": "We have sinned:"
+    },
+    {
+     "text": " עוֹדְדֵנוּ בְּצֶדֶק מָשׁוּי מִמַּיִם וְכַפֵּר זָדוֹן וּמְשׁוּגָה. פְּדֵנוּ מִמְּהוּמַת מָוֶת וְאָחוֹר בַּל נָסּוֹגָה. צַוֵּה יְשׁוּעָתֵנוּ וּבַעֲוֹנוֹתֵינוּ אַל נִתְמוֹגְגָה. עֲנֵנוּ כְּשֶׁעָנִיתָ לְיוֹנָה בִּמְעֵי הַדָּגָה. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>חטאנו:</small>",
+     "kind": "instruction",
+     "en": "We have sinned:"
+    },
+    {
+     "text": " קְדֻשַּׁת אִישׁ חֲסִידֶךָ זְכוֹר לִיפַת פַּעֲמַיִם. רַחֲמֶיךָ תְּעוֹרֵר כִּי לֻקִּינוּ בְּכִפְלַיִם. שׁוּבֵנוּ תֹּקֶף לְיִרְאָתֶךָ וְלֹא נֵחָשֵׂף שׁוּלַיִם. עֲנֵנוּ כְּשֶׁעָנִיתָ לְדָוִד וְלִשְׁלֹמֹה בְנוֹ בִּירוּשָׁלַיִם. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>חטאנו:</small>",
+     "kind": "instruction",
+     "en": "We have sinned:"
+    }
+   ]
+  },
+  "he:Fast Days/Selichot for Childrens' Illness:4": {
+   "kind": "note",
+   "en": "Some add this only on Ta'anit Esther.",
+   "gloss": "Customary variation for Ta'anit Esther"
+  },
+  "he:Fast Days/Selichot for Childrens' Illness:5": {
+   "parts": [
+    {
+     "text": "<b>תַּעֲנֶה</b> לְקוֹרְאֶיךָ וְהַסְכֵּת מִמְּעוֹנִים. תִּשְׁמַע שַׁוְעַת צוֹעֲקֶיךָ. שׁוֹמֵעַ אֶל אֶבְיוֹנִים. תְּרַחֵם עַל בָּנֶיךָ כְּרַחֵם אָב עַל בָּנִים. עֲנֵנוּ כְּשֶׁעָנִיתָ לְמָרְדְּכַי וְאֶסְתֵּר. וְתָלוּ עַל הָעֵץ חֲמִשִׁים הָאָב עִם הַבָּנִים. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>חטאנו:</small>",
+     "kind": "instruction",
+     "en": "We have sinned:"
+    }
+   ]
+  }
+ },
+ "en": {
+  "en:Fast Days/Selichot for 20 Sivan:9": {
+   "he": [
+    "he:Fast Days/Selichot for 20 Sivan:9"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Fast Days/El Maleh Prayer:2",
+   "type": "ambiguous",
+   "detail": "The date '5508' (1748) is specific to the Nemirov massacre, but the heading says '17th of Tammuz'. The 17th of Tammuz is a public fast for the destruction of the Temple, but this specific El Maleh is for the Nemirov pogrom. The siddur may be conflating the two or using this text for the fast day in this nusach. The text itself is a specific memorial for Nemirov."
+  },
+  {
+   "id": "he:Fast Days/Selichot for 20 Sivan:48",
+   "type": "ambiguous",
+   "detail": "Note about the author of the Akedah piyyut (Meir bar Yitzchak Elazar) is present but not selected; unclear if it should be tagged as a note or omitted."
+  },
+  {
+   "id": "he:Fast Days/Selichot for Childrens' Illness:1",
+   "type": "alignment",
+   "detail": "No English segment provided for heading"
+  },
+  {
+   "id": "he:Fast Days/Selichot for Childrens' Illness:2",
+   "type": "alignment",
+   "detail": "No English segment provided for prayer"
+  },
+  {
+   "id": "he:Fast Days/Selichot for Childrens' Illness:3",
+   "type": "alignment",
+   "detail": "No English segment provided for prayer"
+  },
+  {
+   "id": "he:Fast Days/Selichot for Childrens' Illness:4",
+   "type": "alignment",
+   "detail": "No English segment provided for note"
+  },
+  {
+   "id": "he:Fast Days/Selichot for Childrens' Illness:5",
+   "type": "alignment",
+   "detail": "No English segment provided for prayer"
+  }
+ ]
+}

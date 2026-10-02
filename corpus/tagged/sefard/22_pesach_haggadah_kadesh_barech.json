@@ -1,0 +1,1046 @@
+{
+ "nusach": "sefard",
+ "chunk": "Pesach Haggadah [Kadesh .. Barech]",
+ "leaves": {
+  "Pesach Haggadah/Kadesh": {
+   "node": "yomtov.kiddush",
+   "service": "none",
+   "when": "pesach"
+  },
+  "Pesach Haggadah/Urchatz": {
+   "node": "pesach.haggadah",
+   "service": "none"
+  },
+  "Pesach Haggadah/Karpas": {
+   "node": "pesach.haggadah",
+   "service": "none"
+  },
+  "Pesach Haggadah/Yachatz": {
+   "node": "pesach.haggadah",
+   "service": "none"
+  },
+  "Pesach Haggadah/Maggid": {
+   "node": "pesach.haggadah",
+   "service": "none",
+   "when": "pesach"
+  },
+  "Pesach Haggadah/Rochtzoh": {
+   "node": "meal.netilat_yadayim",
+   "service": "none"
+  },
+  "Pesach Haggadah/Motzi, Matzah": {
+   "node": "pesach.haggadah",
+   "service": "none"
+  },
+  "Pesach Haggadah/Maror": {
+   "node": "pesach.haggadah",
+   "service": "none"
+  },
+  "Pesach Haggadah/Korech": {
+   "node": "pesach.haggadah",
+   "service": "none"
+  },
+  "Pesach Haggadah/Tzafun": {
+   "node": "pesach.haggadah",
+   "service": "none"
+  },
+  "Pesach Haggadah/Barech": {
+   "node": "birkat_hamazon",
+   "service": "none",
+   "when": "true"
+  },
+  "Pesach Haggadah/Shulchan Orech": {
+   "node": "pesach.haggadah",
+   "service": "none",
+   "when": "pesach"
+  }
+ },
+ "he": {
+  "he:Pesach Haggadah/Kadesh:1": {
+   "kind": "heading",
+   "en": "Pesach Haggadah"
+  },
+  "he:Pesach Haggadah/Kadesh:2": {
+   "kind": "heading",
+   "en": "Kiddush"
+  },
+  "he:Pesach Haggadah/Kadesh:3": {
+   "kind": "instruction",
+   "en": "On Shabbat, begin with:",
+   "gloss": "Start the Kiddush with the Shabbat verses"
+  },
+  "he:Pesach Haggadah/Kadesh:4": {
+   "kind": "prayer",
+   "when": "shabbat"
+  },
+  "he:Pesach Haggadah/Kadesh:5": {
+   "kind": "prayer",
+   "when": "shabbat"
+  },
+  "he:Pesach Haggadah/Kadesh:6": {
+   "kind": "instruction",
+   "en": "On a weekday, begin with:",
+   "gloss": "Start the Kiddush with the invitation to the guests"
+  },
+  "he:Pesach Haggadah/Kadesh:7": {
+   "kind": "instruction",
+   "en": "Our masters, rabbis, and teachers:",
+   "gloss": "Invitation to the guests to begin the Kiddush"
+  },
+  "he:Pesach Haggadah/Kadesh:8": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Kadesh:9": {
+   "parts": [
+    {
+     "text": "<small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֲשֶׁר בָּחַר בָּנוּ מִכָּל עָם וְרוֹמְמָנוּ מִכָּל לָשׁוֹן וְקִדְּשָׁנוּ בְּמִצְוֹתָיו. וַתִּתֶּן לָנוּ יְהֹוָה אֱלֹהֵינוּ בְּאַהֲבָה <small> <small>(בשבת <b>שַׁבָּתוֹת לִמְנוּחָה וּ</b>)</small>",
+     "kind": "prayer",
+     "when": "shabbat"
+    },
+    {
+     "text": " </small>מוֹעֲדִים לְשִׂמְחָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " חַגִּים וּזְמַנִּים לְשָׂשׂוֹן,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֶת יוֹם ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small> <small>(בשבת: <b>הַשַׁבָּת הַזֶה וְאֶת יוֹם</b>)</small>",
+     "kind": "prayer",
+     "when": "shabbat"
+    },
+    {
+     "text": " </small> חַג הַמַצוֹת הַזֶה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " זְמַן חֵרוּתֵנוּ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small> <small>(בשבת: <b>בְּאַהֲבָה,",
+     "kind": "prayer",
+     "when": "shabbat"
+    },
+    {
+     "text": "</b>)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " </small>מִקְרָא קֹדֶשׁ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " זֵכֶר לִיצִיאַת מִצְרָיִם. כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ מִכָּל הָעַמִּים, ",
+     "kind": "prayer",
+     "when": "shabbat"
+    },
+    {
+     "text": "<small> <small>(בשבת: <b>וְשַׁבָּת</b>)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " </small>וּמוֹעֲדֵי קָדְשֶׁךָ ",
+     "kind": "prayer",
+     "when": "shabbat"
+    },
+    {
+     "text": "<small> <small>(בשבת: <b>בְּאַהֲבָה וּבְרָצוֹן,",
+     "kind": "prayer"
+    },
+    {
+     "text": "</b>)</small>",
+     "kind": "prayer",
+     "when": "shabbat"
+    },
+    {
+     "text": " </small>בְּשִׂמְחָה וּבְשָׂשׂוֹן הִנְחַלְתָּנוּ. <b>בָּרוּךְ</b> אַתָּה יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " מְקַדֵּשׁ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small> <small>(בשבת: <b>הַשַׁבָּת וְ</b>)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " </small>יִשְׂרָאֵל וְהַזְּמַנִּים:</small>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Kadesh:10": {
+   "kind": "instruction",
+   "en": "On Motzaei Shabbat, add:",
+   "gloss": "Add the blessing over fire and the Havdalah blessing"
+  },
+  "he:Pesach Haggadah/Kadesh:11": {
+   "kind": "prayer",
+   "when": "motzaeiShabbat"
+  },
+  "he:Pesach Haggadah/Kadesh:12": {
+   "kind": "prayer",
+   "when": "motzaeiShabbat"
+  },
+  "he:Pesach Haggadah/Kadesh:13": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Kadesh:14": {
+   "kind": "instruction",
+   "en": "Drink a large cup of wine while reclining"
+  },
+  "he:Pesach Haggadah/Urchatz:1": {
+   "kind": "heading",
+   "en": "Washing the hands"
+  },
+  "he:Pesach Haggadah/Urchatz:2": {
+   "kind": "instruction",
+   "en": "We wash the hands, but do not recite the blessing 'Al Netilat Yadayim'."
+  },
+  "he:Pesach Haggadah/Karpas:1": {
+   "kind": "heading",
+   "en": "Karpas"
+  },
+  "he:Pesach Haggadah/Karpas:2": {
+   "kind": "instruction",
+   "en": "We dip the karpas (less than an olive's bulk) in salt water and recite the blessing."
+  },
+  "he:Pesach Haggadah/Karpas:3": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Yachatz:1": {
+   "kind": "heading",
+   "en": "Yachatz (Breaking the middle matzah)"
+  },
+  "he:Pesach Haggadah/Yachatz:2": {
+   "kind": "instruction",
+   "en": "The head of the house breaks the middle matzah into two and hides the larger half for the Afikomen."
+  },
+  "he:Pesach Haggadah/Maggid:1": {
+   "kind": "heading",
+   "en": "Maggid"
+  },
+  "he:Pesach Haggadah/Maggid:2": {
+   "kind": "instruction",
+   "en": "Reveal the commandments, lift the plate, and say aloud:"
+  },
+  "he:Pesach Haggadah/Maggid:3": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:4": {
+   "kind": "instruction",
+   "en": "Remove the plate from the table. Pour the second cup. Here the child or one of the guests asks:"
+  },
+  "he:Pesach Haggadah/Maggid:5": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:6": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:7": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:8": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:9": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:10": {
+   "kind": "instruction",
+   "en": "Place the plate on the table. The matzot should be uncovered during the recitation of the Haggadah."
+  },
+  "he:Pesach Haggadah/Maggid:11": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:12": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:13": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:14": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:15": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:16": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:17": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:18": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:19": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:20": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:21": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:22": {
+   "kind": "instruction",
+   "en": "Cover the matzot and lift the cup."
+  },
+  "he:Pesach Haggadah/Maggid:23": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:24": {
+   "kind": "instruction",
+   "en": "Set down the cup and uncover the matzot."
+  },
+  "he:Pesach Haggadah/Maggid:25": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:26": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:27": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:28": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:29": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:30": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:31": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:32": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:33": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:34": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:35": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:36": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:37": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:38": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:39": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:40": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:41": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:42": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:43": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:44": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:45": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:46": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:47": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Maggid:48": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Pesach Haggadah/Rochtzoh:1": {
+   "kind": "heading",
+   "en": "Washing the hands"
+  },
+  "he:Pesach Haggadah/Rochtzoh:2": {
+   "kind": "instruction",
+   "en": "We take the hands and recite the blessing."
+  },
+  "he:Pesach Haggadah/Rochtzoh:3": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Motzi, Matzah:1": {
+   "kind": "heading",
+   "en": "Motzi, Matzah"
+  },
+  "he:Pesach Haggadah/Motzi, Matzah:2": {
+   "kind": "instruction",
+   "en": "Take the matzot in the order they were placed: the broken piece between the two whole ones. Hold all three in your hand. Recite 'Hamotzi' with intent on the top matzah, and 'Al Achilat Matzah' with intent on the broken one. Then break off an olive-sized piece from the top whole matzah and a second olive-sized piece from the broken one. Dip them in salt and eat the two pieces while reclining."
+  },
+  "he:Pesach Haggadah/Motzi, Matzah:3": {
+   "kind": "prayer",
+   "node": "meal.hamotzi"
+  },
+  "he:Pesach Haggadah/Motzi, Matzah:4": {
+   "kind": "prayer",
+   "node": "brachot.mitzvot"
+  },
+  "he:Pesach Haggadah/Maror:1": {
+   "kind": "heading",
+   "en": "Maror"
+  },
+  "he:Pesach Haggadah/Maror:2": {
+   "kind": "instruction",
+   "en": "Each person at the table takes an olive-sized piece of maror, dips it in charoset, shakes off the excess charoset, recites the blessing, and eats it without reclining."
+  },
+  "he:Pesach Haggadah/Maror:3": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Korech:1": {
+   "kind": "heading",
+   "en": "Korech"
+  },
+  "he:Pesach Haggadah/Korech:2": {
+   "kind": "instruction",
+   "en": "Each person at the table takes an olive-bulk of the third matzah and an olive-bulk of maror, wraps them together, and eats them while reclining, without a blessing. Before eating, one says:"
+  },
+  "he:Pesach Haggadah/Korech:3": {
+   "kind": "note",
+   "en": "In remembrance of the Temple, as Hillel did. Hillel used to wrap matzah and maror together and eat them, to fulfill the verse: 'With matzah and bitter herbs they shall eat it.'"
+  },
+  "he:Pesach Haggadah/Tzafun:1": {
+   "kind": "heading",
+   "en": "Tzafun"
+  },
+  "he:Pesach Haggadah/Tzafun:2": {
+   "kind": "instruction",
+   "en": "After the meal, each person takes an olive-sized piece of the hidden matzah (the Afikoman) and eats it while reclining. It must be eaten before midnight."
+  },
+  "he:Pesach Haggadah/Barech:1": {
+   "kind": "heading",
+   "en": "Blessing"
+  },
+  "he:Pesach Haggadah/Barech:2": {
+   "kind": "instruction",
+   "en": "We pour the third cup and recite Birkat HaMazon."
+  },
+  "he:Pesach Haggadah/Barech:3": {
+   "kind": "instruction",
+   "en": "Before Birkat HaMazon, we say:"
+  },
+  "he:Pesach Haggadah/Barech:4": {
+   "parts": [
+    {
+     "text": "<small><small><small><b>שִׁיר</b> הַמַּעֲלוֹת בְּשׁוּב יְהֹוָה אֶת שִׁיבַת צִיּוֹן הָיִינוּ כְּחֹלְמִים: אָז יִמָּלֵא שְׂחוֹק פִּינוּ וּלְשׁוֹנֵנוּ רִנָּה אָז יֹאמְרוּ בַגּוֹיִם הִגְדִּיל יְהֹוָה לַעֲשׂוֹת עִם אֵלֶּה: הִגְדִּיל יְהֹוָה לַעֲשׂוֹת עִמָּנוּ הָיִינוּ שְׂמֵחִים: שׁוּבָה יְהֹוָה אֶת <small>(שבותנו)</small>",
+     "kind": "prayer",
+     "node": "birkat_hamazon.shir_hamaalot"
+    },
+    {
+     "text": " שְׁבִיתֵנוּ כַּאֲפִיקִים בַּנֶּגֶב: הַזֹּרְעִים בְּדִמְעָה בְּרִנָּה יִקְצֹרוּ: הָלוֹךְ יֵלֵךְ וּבָכֹה נֹשֵׂא מֶשֶׁךְ הַזָּרַע בֹּא יָבוֹא בְרִנָּה נֹשֵׂא אֲלֻמֹּתָיו:</small></small> </small>",
+     "kind": "prayer",
+     "node": "birkat_hamazon.shir_hamaalot"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Barech:5": {
+   "kind": "instruction",
+   "en": "Mayim Acharonim (washing hands after the meal) is obligatory before Birkat HaMazon. Do not interrupt between the washing and the blessing, even with Torah study. Place your tallit on your head while reciting Birkat HaMazon, in accordance with 'Prepare yourselves to meet your God, O Israel.' When lifting the cup to bless, it is customary to say:"
+  },
+  "he:Pesach Haggadah/Barech:6": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Barech:7": {
+   "kind": "instruction",
+   "en": "Three who ate together are obligated in Zimun. The Zimun is as follows:"
+  },
+  "he:Pesach Haggadah/Barech:8": {
+   "parts": [
+    {
+     "text": "<small><small><b>המזמן אומר:</b></small>",
+     "kind": "speaker",
+     "en": "The one who invites says:"
+    },
+    {
+     "text": " <b>רַבּוֹתַי.</b> מִיר וֶועלֶן בֶּענְטְשְׁן ",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": "<small>(אוֹ רַבּוֹתַי נְבָרֵךְ)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "en": "(Or: Friends, let us bless)"
+    },
+    {
+     "text": ":</small>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Barech:9": {
+   "parts": [
+    {
+     "text": "<small><small><b>המסובים עונים:</b></small>",
+     "kind": "speaker",
+     "en": "The guests answer:"
+    },
+    {
+     "text": " <b>יְהִי</b> שֵׁם יְהֹוָה מְבֹרָךְ מֵעַתָּה וְעַד עוֹלָם:</small>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Barech:10": {
+   "parts": [
+    {
+     "text": "<small><small><b>המזמן אומר:</b></small>",
+     "kind": "speaker",
+     "en": "The one who invites says:"
+    },
+    {
+     "text": " <b>יְהִי</b> שֵׁם יְהֹוָה מְבֹרָךְ מֵעַתָּה וְעַד עוֹלָם: </small>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Barech:11": {
+   "parts": [
+    {
+     "kind": "prayer",
+     "role": "chazzan",
+     "text": "<small><b>בִּרְשׁוּת</b> מָרָנָן וְרַבּוֹתַי נְבָרֵךְ <small> <small>("
+    },
+    {
+     "kind": "instruction",
+     "en": "(With ten or more: 'Our God')",
+     "text": "בעשרה או יותר "
+    },
+    {
+     "kind": "prayer",
+     "role": "chazzan",
+     "text": "<b>אֱלֹהֵינוּ</b>)</small> </small> שֶׁאָכַלְנוּ מִשֶּׁלּוֹ:</small>"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Barech:12": {
+   "parts": [
+    {
+     "kind": "prayer",
+     "role": "congregation",
+     "text": "<small><small><b>המסובים עונים:</b></small> <b>בָּרוּךְ</b> <small> <small>("
+    },
+    {
+     "kind": "instruction",
+     "en": "(With ten or more: 'Our God')",
+     "text": "בעשרה או יותר "
+    },
+    {
+     "kind": "prayer",
+     "role": "congregation",
+     "text": "<b>אֱלֹהֵינוּ</b>)</small> </small> שֶׁאָכַלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִינוּ:</small>"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Barech:13": {
+   "parts": [
+    {
+     "kind": "prayer",
+     "role": "chazzan",
+     "text": "<small><small><b>והמזמן חוזר:</b></small> <b>בָּרוּךְ</b> <small> <small>("
+    },
+    {
+     "kind": "instruction",
+     "en": "(With ten or more: 'Our God')",
+     "text": "בעשרה או יותר "
+    },
+    {
+     "kind": "prayer",
+     "role": "chazzan",
+     "text": "<b>אֱלֹהֵינוּ</b>)</small> </small> שֶׁאָכַלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִינוּ:</small>"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Barech:14": {
+   "parts": [
+    {
+     "kind": "prayer",
+     "role": "congregation",
+     "text": "<small><small><b>מי שלא אכל עונה:</b></small> <b>בָּרוּךְ</b> <small> <small>("
+    },
+    {
+     "kind": "instruction",
+     "en": "(With ten or more: 'Our God')",
+     "text": "בעשרה או יותר "
+    },
+    {
+     "kind": "prayer",
+     "role": "congregation",
+     "text": "<b>אֱלֹהֵינוּ</b>)</small> </small> וּמְבוֹרָךְ שְׁמוֹ תָּמִיד לְעוֹלָם וָעֶד:</small>"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Barech:15": {
+   "parts": [
+    {
+     "text": "<small><small>( <small>יחיד אינו אומר:</small>",
+     "kind": "instruction",
+     "en": "An individual does not say:"
+    },
+    {
+     "text": " <b>בָּרוּךְ הוּא וּבָרוּךְ שְׁמוֹ</b>)</small></small>",
+     "kind": "prayer",
+     "role": "individual"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Barech:16": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Barech:17": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Barech:18": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Barech:19": {
+   "parts": [
+    {
+     "text": "<small><b>רַחֶם</b> נָא יְהֹוָה אֱלֹהֵינוּ עַל יִשְׂרָאֵל עַמֶּךָ. וְעַל יְרוּשָׁלַיִם עִירֶךָ. וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶךָ. וְעַל מַלְכוּת בֵּית דָּוִד מְשִׁיחֶךָ. וְעַל הַבַּיִת הַגָּדוֹל וְהַקָּדוֹשׁ שֶׁנִּקְרָא שִׁמְךָ עָלָיו: אֱלֹהֵינוּ. אָבִינוּ. רְעֵנוּ זוּנֵנוּ פַּרְנְסֵנוּ וְכַלְכְּלֵנוּ וְהַרְוִיחֵנוּ. וְהַרְוַח לָנוּ יְהֹוָה אֱלֹהֵינוּ מְהֵרָה מִכָּל צָרוֹתֵינוּ. וְנָא אַל תַּצְרִיכֵנוּ יְהֹוָה אֱלֹהֵינוּ לֹא לִידֵי מַתְּנַת בָּשָׂר וָדָם וְלֹא לִידֵי הַלְוָאָתָם. כִּי אִם לְיָדְךָ הַמְּלֵאָה. הַפְּתוּחָה. הַקְּדוֹשָׁה וְהָרְחָבָה. שֶׁלֹּא נֵבוֹשׁ וְלֹא נִכָּלֵם <small> <small>(<b>וְלֹא נִכָּשֵׁל</b>)</small>",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": " </small> לְעוֹלָם וָעֶד:</small>",
+     "kind": "prayer",
+     "role": "individual"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Barech:20": {
+   "kind": "instruction",
+   "en": "On Shabbat, add:"
+  },
+  "he:Pesach Haggadah/Barech:21": {
+   "kind": "prayer",
+   "role": "individual",
+   "minyan": true,
+   "en": "On Shabbat, add:"
+  },
+  "he:Pesach Haggadah/Barech:22": {
+   "kind": "prayer",
+   "role": "individual",
+   "minyan": true,
+   "en": "On Yom Tov, add:"
+  },
+  "he:Pesach Haggadah/Barech:23": {
+   "kind": "instruction",
+   "en": "If one forgot to say Retzei on Shabbat or Ya'aleh VeYavo and remembered before saying the Name in the blessing of Boneh Yerushalayim, say it there. But if one said the Name and remembered before starting HaTov VeHaMeitiv, say:"
+  },
+  "he:Pesach Haggadah/Barech:24": {
+   "kind": "instruction",
+   "en": "On Yom Tov, say:"
+  },
+  "he:Pesach Haggadah/Barech:25": {
+   "kind": "prayer",
+   "role": "individual",
+   "minyan": true,
+   "en": "On Yom Tov, say:"
+  },
+  "he:Pesach Haggadah/Barech:26": {
+   "kind": "instruction",
+   "en": "When it falls on Shabbat:"
+  },
+  "he:Pesach Haggadah/Barech:27": {
+   "kind": "prayer",
+   "role": "individual",
+   "minyan": true,
+   "en": "When it falls on Shabbat:"
+  },
+  "he:Pesach Haggadah/Barech:28": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Barech:29": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Barech:30": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Barech:31": {
+   "kind": "instruction",
+   "en": "If one is eating at another's table, bless the host, even children at their father's table, the father at his children's table, and the wife says the same:"
+  },
+  "he:Pesach Haggadah/Barech:32": {
+   "kind": "instruction",
+   "en": "For a male:"
+  },
+  "he:Pesach Haggadah/Barech:33": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Barech:34": {
+   "kind": "instruction",
+   "en": "For a female:"
+  },
+  "he:Pesach Haggadah/Barech:35": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Barech:36": {
+   "parts": [
+    {
+     "text": "<small><b>הָרַחֲמָן</b> הוּא יְבָרֵךְ אֶת <small>(אָבִי מוֹרִי)</small>",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": " בַּעַל הַבַּיִת הַזֶּה וְאֶת ",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": "<small>(אִמִּי מוֹרָתִי)</small>",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": " בַּעֲלַת הַבַּיִת הַזֶּה. אוֹתָם וְאֶת בֵּיתָם וְאֶת זַרְעָם וְאֶת כָּל אֲשֶׁר לָהֶם. ",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": "<small>( <small><b>ואם סמוך על שלחן עצמו יאמר:</b></small>",
+     "kind": "instruction",
+     "en": "(If sitting at one's own table, say:"
+    },
+    {
+     "text": " הָרַחֲמָן הוּא יְבָרֵךְ אוֹתִי וְאֶת אִשְׁתִּי וְאֶת זַרְעִי וְאֶת כָּל אֲשֶׁר לִי)</small>,",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": " אוֹתָנוּ וְאֶת כָּל אֲשֶׁר לָנוּ. כְּמוֹ שֶׁנִּתְבָּרְכוּ אֲבוֹתֵינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב,",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": " בַּכּל. מִכֹּל. כֹּל. כֵּן יְבָרֵךְ אוֹתָנוּ כֻּלָּנוּ יַחַד בִּבְרָכָה שְׁלֵמָה. וְנאמַר אָמֵן:</small>",
+     "kind": "prayer",
+     "role": "individual"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Barech:37": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Barech:38": {
+   "parts": [
+    {
+     "text": "<small><small>בשבת:</small>",
+     "kind": "instruction",
+     "en": "On Shabbat:"
+    },
+    {
+     "text": " <b>הָרַחֲמָן</b> הוּא יַנְחִילֵנוּ יוֹם שֶׁכֻּלּוֹ שַׁבָּת וּמְנוּחָה לְחַיֵּי הָעוֹלָמִים:</small>",
+     "kind": "prayer",
+     "role": "individual"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Barech:39": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Barech:40": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Barech:41": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Barech:42": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Barech:43": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Barech:44": {
+   "kind": "instruction",
+   "en": "Drink while leaning to the left."
+  },
+  "he:Pesach Haggadah/Barech:45": {
+   "kind": "instruction",
+   "en": "Pour the fifth cup, the cup of Elijah the Prophet, open the door, and say:"
+  },
+  "he:Pesach Haggadah/Barech:46": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Pesach Haggadah/Maggid:49": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:50": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:51": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:52": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:53": {
+   "kind": "instruction",
+   "en": "Custom: Drip a drop from the cup while saying 'Blood and Fire...' and the ten plagues (Datzach, Adash, Be'achav) together, fifteen times.",
+   "gloss": "Instruction for the custom of dripping wine during the recitation of the plagues."
+  },
+  "he:Pesach Haggadah/Maggid:54": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:55": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:56": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:57": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:58": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:59": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:60": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:61": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:62": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:63": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:64": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:65": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:66": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:67": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:68": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:69": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:70": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:71": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:72": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:73": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:74": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:75": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:76": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:77": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:78": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:79": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:80": {
+   "kind": "instruction",
+   "en": "Point to the arm and be careful not to raise it too high."
+  },
+  "he:Pesach Haggadah/Maggid:81": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:82": {
+   "kind": "instruction",
+   "en": "Show the matzah to those seated and say:"
+  },
+  "he:Pesach Haggadah/Maggid:83": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:84": {
+   "kind": "instruction",
+   "en": "Show the maror to those seated and say:"
+  },
+  "he:Pesach Haggadah/Maggid:85": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:86": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:87": {
+   "kind": "instruction",
+   "en": "Raise the cup until Hallelujah."
+  },
+  "he:Pesach Haggadah/Maggid:88": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:89": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:90": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:91": {
+   "kind": "instruction",
+   "en": "Raise the cup until Ga'al Yisrael."
+  },
+  "he:Pesach Haggadah/Maggid:92": {
+   "parts": [
+    {
+     "text": "<small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֲשֶׁר גְּאָלָנוּ וְגָאַל אֶת אֲבוֹתֵינוּ מִמִּצְרַיִם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְהִגִּיעָנוּ הַלַּיְלָה הַזֶּה לֶאֱכָל בּוֹ מַצָּה וּמָרוֹר. כֵּן יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ יַגִּיעֵנוּ לְמוֹעֲדִים וְלִרְגָלִים אֲחֵרִים הַבָּאִים לִקְרָאתֵנוּ לְשָׁלוֹם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שְׂמֵחִים בְּבִנְיַן עִירֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְשָׂשִׂים בַּעֲבוֹדָתֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְנֹאכַל שָׁם מִן הַזְּבָחִים וּמִן הַפְּסָחִים <small> <small>(במוצ\"ש אומרים: <b>מִן הַפְּסָחִים וּמִן הַזְּבָחִים</b>)</small>",
+     "kind": "instruction",
+     "en": "On Motzaei Shabbat say: 'from the Passover offerings and the sacrifices'",
+     "gloss": "Instruction for the variation on Motzaei Shabbat."
+    },
+    {
+     "text": " </small> אֲשֶׁר יַגִּיעַ דָּמָם עַל קִיר מִזְבַּחֲךָ לְרָצוֹן וְנוֹדֶה לְךָ שִׁיר חָדָשׁ עַל גְּאֻלָּתֵנוּ וְעַל פְּדוּת נַפְשֵׁנוּ: <b>בָּרוּךְ</b> אַתָּה יְהֹוָה גָּאַל יִשְׂרָאֵל:</small>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Pesach Haggadah/Maggid:93": {
+   "kind": "prayer"
+  },
+  "he:Pesach Haggadah/Maggid:94": {
+   "kind": "instruction",
+   "en": "Drink the cup while leaning to the left."
+  },
+  "he:Pesach Haggadah/Shulchan Orech:1": {
+   "kind": "heading",
+   "en": "The Set Table"
+  },
+  "he:Pesach Haggadah/Shulchan Orech:2": {
+   "kind": "instruction",
+   "en": "They eat and drink the prepared meal. It is customary to eat hard-boiled eggs first. One should not eat too much, so that the eating of the Afikomen is not considered a heavy meal."
+  }
+ },
+ "en": {},
+ "issues": [
+  {
+   "id": "he:Pesach Haggadah/Shulchan Orech:1",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: Alignment needs a selected English alias; Alignment needs a selected English alias"
+  }
+ ]
+}

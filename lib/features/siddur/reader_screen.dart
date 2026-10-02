@@ -10,6 +10,7 @@ import 'package:siddur_engine/siddur_engine.dart';
 
 import '../../core/analytics.dart';
 import '../../core/l10n.dart';
+import '../../core/text_report.dart';
 import '../../core/adaptive.dart';
 import '../../core/focus_mode.dart';
 import '../../core/fonts.dart';
@@ -22,13 +23,21 @@ import '../../core/settings.dart';
 import '../../core/split_row.dart';
 import '../../core/theme.dart';
 import '../../core/titles.dart';
+import '../../core/typeset/typeset.dart';
 import 'reader_grouping.dart';
+import 'reader_typography.dart';
+import 'reading_marks.dart';
 import 'prayer_catalog.dart';
 import 'reader_jump.dart';
+import '../integrations/prayer_links.dart';
+import '../integrations/hachama_reader.dart';
+import 'package:flutter/services.dart';
 import 'reader_settings_sheet.dart';
 import 'related_prayers.dart';
 import 'siddur_providers.dart';
 import 'today_plan.dart';
+import 'day_guide_screen.dart';
+import 'prayer_insights.dart';
 
 typedef _ReaderKey = ({String book, String node, String expanded, int dateAbs});
 
@@ -84,9 +93,11 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
   /// Text is selected: sideways drags move its handles, so swiping
   /// doesn't turn the page.
   bool _selected = false;
+  String _selectedText = '';
 
   void _selectionChanged(SelectedContent? c) {
-    final selected = c != null && c.plainText.isNotEmpty;
+    _selectedText = c?.plainText ?? '';
+    final selected = _selectedText.isNotEmpty;
     if (selected != _selected) setState(() => _selected = selected);
   }
 
@@ -97,6 +108,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
   // marks the current key point.
   final _scroll = ItemScrollController();
   final _positions = ItemPositionsListener.create();
+  final _offsetScroll = ScrollOffsetController();
   List<JumpPoint> _jumps = const [];
   int _active = 0;
 
@@ -158,6 +170,64 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     ];
   }
 
+  Future<void> _explainSelection(SchemaNode? node) async {
+    try {
+      await _loadSelectionInsight();
+    } catch (_) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.tr('Unable to load the explanation. Please try again.'))));
+    }
+  }
+
+  Future<void> _loadSelectionInsight() async {
+    final date = ref.read(readerDaytimeDateProvider);
+    final key = (book: widget.book, node: widget.nodeId, expanded: (_expanded.toList()..sort()).join('|'), dateAbs: date.abs());
+    final selected = normalizeRubric(_selectedText);
+    if (selected.isEmpty) return;
+    final root = await ref.read(bookIndexProvider(widget.book).future);
+    final versions = await ref.read(versionSelectionProvider(widget.book).future);
+    final resolver = await ref.read(resolverProvider(widget.book).future);
+    final settings = ref.read(settingsProvider);
+    final items = resolver.resolve(root.find(key.node) ?? root, versions,
+      (svc) => DayContext.forService(date, svc, il: settings.location.il, minhagim: settings.minhagim),
+      options: const ResolveOptions(excluded: ExcludedDisplay.dim, showHebrew: true, showTranslation: true, showNotes: true),
+    );
+    final matches = <SegmentItem>[];
+    for (final item in items) {
+      final segments = switch (item) { SegmentItem s => [s], ExcludedGroupItem g => g.items, _ => <SegmentItem>[] };
+      for (final segment in segments) {
+        if ([segment.he, segment.tr].any((s) => s != null && normalizeRubric(s.segment.html).contains(selected))) { matches.add(segment); }
+      }
+    }
+    if (!mounted) return;
+    if (matches.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.tr('Select words within a single line to explain it.'))));
+      return;
+    }
+    final match = matches.length == 1 ? matches.single : await showDialog<SegmentItem>(
+      context: context, builder: (context) => AlertDialog(
+        title: Text(context.tr('Choose the passage')),
+        content: SizedBox(width: 520, height: 360, child: ListView(children: [
+          for (final item in matches) ListTile(
+            title: Text(item.node.en),
+            subtitle: Text(item.he?.segment.plain ?? item.tr?.segment.plain ?? '', maxLines: 3, overflow: TextOverflow.ellipsis),
+            onTap: () => Navigator.pop(context, item),
+          ),
+        ])),
+        actions: [TextButton(onPressed: () => Navigator.pop(context), child: Text(context.tr('Cancel')))],
+      ),
+    );
+    if (match == null || !mounted) return;
+    final service = SiddurResolver.serviceFor(match.node, Service.shacharit);
+    final day = ref.read(dayContextProvider((date.abs(), service)));
+    final rule = resolver.sectionRuleFor(match.node);
+    if (mounted) {
+      await showLineInsight(context, match, day, book: widget.book, sectionCondition: rule?.when, sources: [
+      for (final list in [versions.hebrew, versions.translation])
+        if (versions.pick(list, match.node.path).$1 != null) versions.pick(list, match.node.path).$1!,
+    ]);
+    }
+  }
+
   void _doubleTap() {
     toggleFocusMode();
     // Double-tap also selects a word; drop it once the gesture is done.
@@ -194,6 +264,15 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
           ]);
         }),
         actions: [
+          IconButton(tooltip: context.tr("Why today?"), icon: const Icon(Icons.help_outline), onPressed: () => openDayGuide(context, date)),
+          IconButton(
+            tooltip: context.tr('Copy prayer link'), icon: const Icon(Icons.link),
+            onPressed: () async {
+              final link = Uri.https('amud.page', '/app/read/${widget.book}', {'node': widget.nodeId});
+              await Clipboard.setData(ClipboardData(text: link.toString()));
+              if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.tr('Link copied'))));
+            },
+          ),
           IconButton(
             tooltip: context.tr('Date'),
             icon: Badge(isLabelVisible: picked != null, child: const Icon(Icons.event)),
@@ -238,7 +317,15 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
             Router.neglect(context, () => context.pushReplacement(readerPath(r.book, r.id, standalone: widget.standalone)));
           };
 
-    return Scaffold(
+    return CallbackShortcuts(
+      bindings: {
+        for (var i = 0; i < 9; i++)
+          SingleActivator(LogicalKeyboardKey(LogicalKeyboardKey.digit1.keyId + i)): () { if (i < _jumps.length && _scroll.isAttached) _jump(_jumps[i]); },
+        const SingleActivator(LogicalKeyboardKey.pageDown): () => _pageOffset(1),
+        const SingleActivator(LogicalKeyboardKey.pageUp): () => _pageOffset(-1),
+        const SingleActivator(LogicalKeyboardKey.escape): () { if (focusMode.state) toggleFocusMode(); },
+      },
+      child: Focus(autofocus: true, child: Scaffold(
       body: Column(children: [
         // Focus mode: the bars slide up out of view; the text keeps clear
         // of the status bar.
@@ -266,18 +353,34 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
           ),
         ),
       ]),
+    )),
     );
   }
 
+  void _pageOffset(int direction) {
+    if (!_scroll.isAttached) return;
+    _offsetScroll.animateScroll(offset: direction * MediaQuery.sizeOf(context).height * 0.8,
+        duration: const Duration(milliseconds: 220), curve: Curves.easeOut);
+  }
+
   Widget _listView(BuildContext context, List<Widget Function(BuildContext)> rows, SchemaNode? node) {
-    final wide = MediaQuery.sizeOf(context).width > 700;
+    final width = MediaQuery.sizeOf(context).width;
+    final wide = width > 700;
+    final s = ref.watch(settingsProvider);
+    // Printed pages keep a readable measure: on a wide window the column
+    // stays centered rather than running the lines out to the edges.
+    final side = TypeScale.of(s).gutter(width, min: wide ? 48 : 16, sideBySide: wide && s.layout == TextLayout.sideBySide);
     return SelectionArea(
       key: _selection,
       onSelectionChanged: _selectionChanged,
+      contextMenuBuilder: (context, state) => textReportMenu(context, state,
+          selectedText: _selectedText, location: '${widget.book} / ${node?.en ?? widget.nodeId} (${widget.nodeId})',
+          onExplain: () => _explainSelection(node)),
       child: ScrollablePositionedList.builder(
         itemScrollController: _scroll,
         itemPositionsListener: _positions,
-        padding: EdgeInsets.fromLTRB(wide ? 48 : 16, 8, wide ? 48 : 16, 96),
+        scrollOffsetController: _offsetScroll,
+        padding: EdgeInsets.fromLTRB(side, 8, side, 96),
         itemCount: rows.length + 1,
         itemBuilder: (c, i) => i == rows.length
             ? (node == null ? const SizedBox.shrink() : RelatedPrayers(book: widget.book, node: node, standalone: widget.standalone))
@@ -315,8 +418,48 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         _ => const <SegmentItem>[],
       };
       for (final si in segs) {
-        if (si.kind == SegmentKind.prayer && !si.excluded && started.add(si.node.id)) _openers.add(si.key);
+        // A verse before the prayer proper ("אדני שפתי תפתח") leaves the
+        // opening to the line after it.
+        if (si.kind == SegmentKind.prayer && !si.excluded && !isPreamble(si) && started.add(si.node.id)) _openers.add(si.key);
       }
+    }
+    // Rubrics before a centered line are centered with it ("center:"
+    // keys), past any further rubrics in between.
+    final ts = TypeScale.of(s);
+    final flat = [
+      for (final it in list)
+        ...switch (it) {
+          SegmentItem x => [x],
+          ExcludedGroupItem g => g.items,
+          _ => const <SegmentItem>[],
+        },
+    ];
+    bool rubric(SegmentItem x) => x.kind == SegmentKind.instruction || x.kind == SegmentKind.speaker;
+    for (var k = 0; k < flat.length; k++) {
+      if (!rubric(flat[k])) continue;
+      var n = k + 1;
+      while (n < flat.length && rubric(flat[n])) {
+        n++;
+      }
+      if (n < flat.length && flat[n].kind == SegmentKind.prayer && ts.align(paragraphRole(flat[n], opening: false)) == ParagraphAlign.center) {
+        _openers.add('center:${flat[k].key}');
+      }
+    }
+    // A responsive "oreo" (Yotzer's Kedushah: קדוש… / והאופנים… / ברוך
+    // כבוד…) is centered as a whole, the line between the verses too.
+    if (ts.print) {
+      for (var k = 0; k < list.length; k++) {
+        for (final x in _togetherRun(list, k) ?? const <SegmentItem>[]) {
+          _openers.add('center:${x.key}');
+        }
+      }
+    }
+    // Who says a line is shown where it changes ("role:" keys).
+    String? lastRole;
+    for (final it in list) {
+      if (it is! SegmentItem || it.kind != SegmentKind.prayer || it.excluded) continue;
+      if (it.role != lastRole && it.role != null) _openers.add('role:${it.key}');
+      lastRole = it.role;
     }
     // Opened directly on the repetition (e.g. Kedushah): show it as is.
     final groupChazarah = node == null || !isChazarahNode(node);
@@ -369,6 +512,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         rows.add((c) => _ChazarahHeader(
               title: titles.toSet().join(' · '),
               open: open,
+              gap: s.typesetting ? TypeScale.of(s).controlGap : 6,
               onTap: () => setState(() => _toggledChazarah.contains(key) ? _toggledChazarah.remove(key) : _toggledChazarah.add(key)),
             ));
         if (open) {
@@ -407,11 +551,11 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     final s = ref.read(settingsProvider);
     switch (it) {
       case ExcludedGroupItem g when _expandedGroups.contains(g.key):
-        return [for (final si in g.items) (c) => _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key))];
+        return [for (final si in g.items) (c) => _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), centered: _openers.contains('center:${si.key}'))];
       case SegmentItem si when si.kind == SegmentKind.note && s.collapseNotes:
         final open = _toggledNotes.contains(si.key);
         void toggle() => setState(() => open ? _toggledNotes.remove(si.key) : _toggledNotes.add(si.key));
-        return [(c) => _NoteRow(item: si, open: open, onTap: toggle, child: open ? _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key)) : null)];
+        return [(c) => _NoteRow(item: si, open: open, onTap: toggle, child: open ? _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), centered: _openers.contains('center:${si.key}')) : null)];
       default:
         return [(c) => _item(c, it, layout)];
     }
@@ -425,6 +569,30 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
       h.labelEn == null &&
       _plain(h.node.en).isNotEmpty &&
       _plain(h.node.en) == _plain(prev.node.en);
+
+  /// The lines from [start] to the last of a run said "together with the
+  /// chazzan", with whatever sits between (the "oreo": קדוש… / והאופנים… /
+  /// ברוך כבוד…); null unless there are at least two such lines.
+  static List<SegmentItem>? _togetherRun(List<RenderItem> list, int start) {
+    bool plain(RenderItem it) =>
+        it is SegmentItem && it.kind == SegmentKind.prayer && !it.excluded && it.applicability == Applicability.always;
+    final first = list[start];
+    if (!plain(first) || (first as SegmentItem).role != 'together') return null;
+    var last = start;
+    var together = 1;
+    for (var j = start + 1; j < list.length; j++) {
+      final it = list[j];
+      if (!plain(it) || (it as SegmentItem).node != first.node) break;
+      if (it.role == 'together') {
+        last = j;
+        together++;
+      } else if (it.role != null) {
+        break;
+      }
+    }
+    if (together < 2) return null;
+    return [for (var j = start; j <= last; j++) list[j] as SegmentItem];
+  }
 
   static SchemaNode? _unitLeafOf(RenderItem it) {
     final n = switch (it) {
@@ -450,6 +618,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     switch (it) {
       case HeadingItem h:
         if (h.level == 0 && h.node.isLeaf) return const SizedBox(height: 4);
+        if (s.typesetting) return _PrintHeading(h);
         final size = (24 - h.level * 3).clamp(15, 24).toDouble() * s.textScale;
         return Padding(
           padding: EdgeInsets.only(top: h.level == 0 ? 4 : 20, bottom: 6),
@@ -471,6 +640,26 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
                     style: TextStyle(fontFamily: s.hebrewFont, fontSize: size, fontWeight: FontWeight.w700, color: theme.colorScheme.primary)),
             ]);
           }),
+        );
+      case InsertedSectionItem ins when s.typesetting:
+        // Something the page tells the reader, not a control: set as a
+        // rubric between rules.
+        final ts = TypeScale.of(s);
+        return Padding(
+          padding: EdgeInsets.only(top: ts.sectionGap * 0.6, bottom: ts.line * 0.15),
+          child: RuledLabel(
+            color: colors.todayBar,
+            child: Column(mainAxisSize: MainAxisSize.min, children: [
+                Text(context.tr('Added today: {label}', {'label': context.prayerTitle(s, ins.labelEn, ins.labelHe)}),
+                    textAlign: TextAlign.center,
+                    style: theme.textTheme.labelLarge?.copyWith(color: colors.todayBar, letterSpacing: 0.6, fontWeight: FontWeight.w700)),
+                if (!context.prayerTitleIsHebrew(s) && context.prayerSubtitle(s, ins.labelEn, ins.labelHe) != null)
+                  Text(ins.labelHe,
+                      textDirection: TextDirection.rtl,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontFamily: s.hebrewFont, fontSize: 16 * s.textScale, color: colors.todayBar)),
+            ]),
+          ),
         );
       case InsertedSectionItem ins:
         return Container(
@@ -527,7 +716,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
           ]),
         );
       case SegmentItem si:
-        return _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key));
+        return _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), centered: _openers.contains('center:${si.key}'));
     }
   }
 }
@@ -553,14 +742,18 @@ String readerPath(String book, String nodeId, {bool standalone = false}) => stan
 /// …), opened standalone from Home.
 class SectionReaderScreen extends ConsumerWidget {
   final String section;
-  const SectionReaderScreen({super.key, required this.section});
+  final String? nusach;
+  const SectionReaderScreen({super.key, required this.section, this.nusach});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final date = ref.watch(readerDaytimeDateProvider).abs();
-    final found = ref.watch(sectionRefProvider((section, date)));
+    final key = normalizePrayer(section);
+    final found = nusach == null ? ref.watch(sectionRefProvider((key, date))) : ref.watch(nusachSectionRefProvider((nusach!, key, date)));
+    if (found.hasError) return Scaffold(appBar: AppBar(), body: Center(child: Text(context.tr('Unable to open this prayer'))));
     if (!found.hasValue) return Scaffold(appBar: AppBar(), body: adaptiveProgress());
     final r = found.value;
+    if (r == null && key == 'birkatHaChama') return const HachamaReader();
     if (r == null) return Scaffold(appBar: AppBar(), body: Center(child: Text(context.tr('Not found in this siddur'))));
     return ReaderScreen(key: ValueKey('${r.book}|${r.id}'), book: r.book, nodeId: r.id, standalone: true);
   }
@@ -602,6 +795,32 @@ class DayBanner extends ConsumerWidget {
   }
 }
 
+/// "If: …": a line said only in some circumstance the reader knows.
+class _IfChip extends StatelessWidget {
+  final String label;
+  const _IfChip(this.label);
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = SiddurColors.of(context);
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+      decoration: BoxDecoration(
+          border: Border.all(color: colors.marker.withValues(alpha: 0.6)), borderRadius: BorderRadius.circular(20)),
+      child: Row(mainAxisSize: MainAxisSize.min, children: [
+        Icon(Icons.help_outline, size: 11, color: colors.marker),
+        const SizedBox(width: 3),
+        Flexible(
+          child: Text(label,
+              style: Theme.of(context).textTheme.labelSmall?.copyWith(height: 1.2, color: colors.marker),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis),
+        ),
+      ]),
+    );
+  }
+}
+
 class _TodayChip extends StatelessWidget {
   final String label;
   const _TodayChip(this.label);
@@ -624,6 +843,50 @@ class _TodayChip extends StatelessWidget {
   }
 }
 
+/// A heading set as in print: the Hebrew title centered, the English
+/// beneath it in tracked capitals, a section ornament above a new section.
+class _PrintHeading extends ConsumerWidget {
+  final HeadingItem h;
+  const _PrintHeading(this.h);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(settingsProvider);
+    final ts = TypeScale.of(s);
+    final theme = Theme.of(context);
+    final color = theme.colorScheme.primary;
+    final size = (24 - h.level * 3).clamp(15, 24).toDouble() * s.textScale;
+    final f = context.titleFormsFor(s);
+    // An untitled Hebrew node repeats the English title.
+    final showHe = f.he && (h.node.he != h.node.en || !f.en);
+    final en = context.term(h.node.en);
+    return Padding(
+      padding: EdgeInsets.only(top: h.level == 0 ? 4 : ts.sectionGap * (h.level == 1 ? 0.5 : 0.35), bottom: ts.line * 0.22),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        if (h.level == 1) SectionOrnament(height: ts.line * 0.75, color: theme.colorScheme.outline),
+        if (showHe)
+          Text(h.node.he,
+              textDirection: TextDirection.rtl,
+              textAlign: TextAlign.center,
+              style: TextStyle(fontFamily: s.hebrewFont, fontSize: size * (h.level == 0 ? 1.1 : 1), height: 1.3, fontWeight: FontWeight.w700, color: color)),
+        if (f.en)
+          Text(showHe ? en.toUpperCase() : en,
+              textAlign: TextAlign.center,
+              style: showHe
+                  ? theme.textTheme.labelMedium?.copyWith(
+                      fontSize: (size * 0.5).clamp(10.5, 16), letterSpacing: 1.6, fontWeight: FontWeight.w600, color: color.withValues(alpha: 0.75))
+                  : theme.textTheme.titleMedium?.copyWith(fontSize: size * 0.85, fontWeight: FontWeight.w600, color: color)),
+        if (h.applicability == Applicability.today && s.highlightToday && h.labelEn != null)
+          Padding(
+            padding: const EdgeInsets.only(top: 4),
+            child: Center(child: _TodayChip(conditionLabel(context, s, h.labelEn, h.labelHe))),
+          ),
+        if (h.level >= 2) Center(child: Container(margin: const EdgeInsets.only(top: 6), width: 28, height: 0.8, color: color.withValues(alpha: 0.4))),
+      ]),
+    );
+  }
+}
+
 class _CollapsedTile extends ConsumerWidget {
   final IconData icon;
   final String title;
@@ -635,33 +898,22 @@ class _CollapsedTile extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
-    final hebFont = ref.watch(settingsProvider.select((s) => s.hebrewFont));
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(12),
-        onTap: onTap,
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: theme.colorScheme.outlineVariant),
-          ),
-          child: Row(children: [
-            Icon(icon, size: 18, color: theme.colorScheme.outline),
-            const SizedBox(width: 10),
-            Expanded(
-              child: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(title, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.outline)),
-                  if (subtitle != null && subtitle!.isNotEmpty) Text(subtitle!, style: theme.textTheme.bodySmall),
-                ]),
-                if (he != null) Text(he!, textDirection: TextDirection.rtl, style: TextStyle(fontFamily: hebFont, color: theme.colorScheme.outline)),
-              ]),
-            ),
-          ]),
-        ),
-      ),
+    final s = ref.watch(settingsProvider);
+    final tone = theme.colorScheme.outline;
+    // Hidden text: a dashed edge, set off from the words around it.
+    return ReaderControl(
+      icon: icon,
+      tone: tone,
+      dashed: true,
+      gap: TypeScale.of(s).controlGap,
+      onTap: onTap,
+      title: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
+        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(title),
+          if (subtitle != null && subtitle!.isNotEmpty) Text(subtitle!, style: theme.textTheme.bodySmall?.copyWith(color: tone.withValues(alpha: 0.85))),
+        ]),
+        if (he != null) Text(he!, textDirection: TextDirection.rtl, style: TextStyle(fontFamily: s.hebrewFont, color: tone)),
+      ]),
     );
   }
 }
@@ -712,15 +964,29 @@ class _SegmentView extends ConsumerWidget {
 
   /// The first prayer line of its section: starts in bold.
   final bool opening;
-  const _SegmentView({required this.item, required this.layout, this.compact = false, this.opening = false});
+
+  /// Who says it changes here: show the role.
+  final bool roleStart;
+
+  /// Centered with the lines around it: a rubric introducing a centered
+  /// line (Barchu's "the chazzan says"), or the middle of a responsive run.
+  final bool centered;
+  const _SegmentView(
+      {required this.item,
+      required this.layout,
+      this.compact = false,
+      this.opening = false,
+      this.roleStart = false,
+      this.centered = false});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final s = ref.watch(settingsProvider);
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
-    final heSize = 22.0 * s.textScale;
-    final enSize = 16.0 * s.textScale;
+    final ts = TypeScale.of(s);
+    // What the line is decides its size, leading, spacing and alignment.
+    final role = paragraphRole(item, opening: opening);
     // Only the words said get the "today" treatment; a note about today
     // reads as a note.
     final today = item.applicability == Applicability.today && s.highlightToday && item.kind == SegmentKind.prayer;
@@ -729,11 +995,17 @@ class _SegmentView extends ConsumerWidget {
     // the one that is, rather than labelled.
     final strike = excluded && item.option;
 
-    TextStyle heBase = TextStyle(fontFamily: s.hebrewFont, fontSize: heSize, height: 1.65, color: theme.colorScheme.onSurface);
-    TextStyle enBase = TextStyle(fontFamily: s.latinFont, fontSize: enSize, height: 1.5, color: theme.colorScheme.onSurface);
+    TextStyle heBase = TextStyle(
+        fontFamily: s.hebrewFont, fontSize: ts.size(role, hebrew: true), height: ts.leading(role, hebrew: true), color: theme.colorScheme.onSurface);
+    TextStyle enBase = TextStyle(
+        fontFamily: s.latinFont, fontSize: ts.size(role, hebrew: false), height: ts.leading(role, hebrew: false), color: theme.colorScheme.onSurface);
     if (item.kind != SegmentKind.prayer) {
-      heBase = heBase.copyWith(fontSize: heSize * 0.7, color: colors.instruction);
-      enBase = enBase.copyWith(fontSize: enSize * 0.85, fontStyle: FontStyle.italic, color: colors.instruction);
+      heBase = heBase.copyWith(color: colors.instruction);
+      enBase = enBase.copyWith(fontStyle: FontStyle.italic, color: colors.instruction);
+    }
+    if (ts.print && (role == ParagraphRole.keystone || role == ParagraphRole.proclamation)) {
+      heBase = heBase.copyWith(fontWeight: FontWeight.w600);
+      enBase = enBase.copyWith(fontWeight: FontWeight.w600);
     }
     if (item.kind == SegmentKind.speaker) {
       heBase = heBase.copyWith(fontWeight: FontWeight.w700);
@@ -754,19 +1026,60 @@ class _SegmentView extends ConsumerWidget {
           builder: (c) => SafeArea(child: Padding(padding: const EdgeInsets.fromLTRB(20, 0, 20, 20), child: SelectableText(note))),
         );
 
+    // Instructions shown in English alone sit on the right, with the
+    // Hebrew column they belong to.
+    final rightAligned = item.he == null && item.tr != null && item.kind != SegmentKind.prayer;
+
     Widget text(ResolvedSegment seg, TextStyle base, bool rtl, {InlineSpan? lead}) {
       String marks(String h) => seg.segment.hebrew ? hebrewMarks(h, teamim: s.showTeamim, nikud: s.showNikud) : h;
       if (seg.segment.hebrew) {
         final all = seg.runs.map((r) => marks(r.html)).join();
-        base = base.copyWith(fontFamily: hebrewFamilyFor(s.hebrewFont, teamim: hasTeamim(all), nikud: hasNikud(all)));
+        final teamim = hasTeamim(all);
+        base = base.copyWith(
+            fontFamily: hebrewFamilyFor(s.hebrewFont, teamim: teamim, nikud: hasNikud(all)),
+            height: ts.leading(role, hebrew: true, marks: teamim));
       }
       final html = SefariaHtml(base, instructionStyle: TextStyle(color: colors.instruction, fontStyle: FontStyle.italic), onFootnote: footnote);
-      final spans = <InlineSpan>[?lead];
+      // A change of speaker starts a new paragraph: the congregation's
+      // "Amen" sits on its own line, on the far side, marked "Cong.". An
+      // instruction ("ועונים:") goes with the words after it.
+      final runs = seg.runs;
+      final roles = List<String?>.filled(runs.length, item.role);
+      String? next = item.role;
+      for (var i = runs.length - 1; i >= 0; i--) {
+        if (!runs[i].marker) next = runs[i].role ?? item.role;
+        roles[i] = next;
+      }
+      // (who says it, its spans, whether it starts a paragraph found inside
+      // the line, like Hallel's "מה אשיב").
+      final paragraphs = <(String?, List<InlineSpan>, bool)>[(roles.isEmpty ? item.role : roles.first, [?lead], false)];
       var inOptions = false;
-      for (final (i, r) in seg.runs.indexed) {
+      for (final (i, r) in runs.indexed) {
+        if (i > 0 && roles[i] != roles[i - 1]) {
+          paragraphs.add((roles[i], [], false));
+          inOptions = false;
+          if (roles[i] != item.role && roles[i] != null) {
+            paragraphs.last.$2.add(TextSpan(
+                // Isolated, so "Cong." keeps its full stop inside Hebrew text.
+                text: '\u2068${readingRoleShort(context, roles[i])}\u2069 ',
+                style: base.copyWith(fontSize: (base.fontSize ?? 16) * 0.55, color: colors.marker, fontWeight: FontWeight.w600)));
+          }
+        }
+        final spans = paragraphs.last.$2;
         var h = r.html;
         if (i == 0 && !r.marker && item.kind == SegmentKind.prayer) {
           h = normalizeOpeningBold(h, opening: opening, addIfMissing: seg.segment.hebrew);
+        }
+        if (seg.segment.hebrew && !r.marker && item.kind == SegmentKind.prayer) h = verseNumbers(h);
+        // A phrase that depends on a personal circumstance, where the
+        // siddur's own instruction doesn't already say so.
+        if (!r.marker &&
+            r.applicability == Applicability.unknown &&
+            r.labelEn != null &&
+            (i == 0 || (!runs[i - 1].marker && runs[i - 1].labelEn != r.labelEn))) {
+          spans.add(TextSpan(
+              text: '\u2068${conditionLabel(context, s, r.labelEn, r.labelHe)}\u2069 ',
+              style: base.copyWith(fontSize: (base.fontSize ?? 16) * 0.55, color: colors.marker, fontWeight: FontWeight.w600)));
         }
         // Each labelled option ("לר"ח: …", "לפסח: …") starts its own line so
         // the choices are easy to tell apart.
@@ -787,9 +1100,35 @@ class _SegmentView extends ConsumerWidget {
         } else if (r.applicability == Applicability.notToday) {
           st = base.copyWith(color: colors.excluded, decoration: TextDecoration.lineThrough, decorationColor: colors.excluded);
         }
-        spans.addAll(html.parse(marks(h), style: st));
+        // A psalm printed whole breaks into the paragraphs a siddur prints.
+        final pieces = seg.segment.hebrew && !r.marker && item.kind == SegmentKind.prayer ? splitParagraphs(h) : [h];
+        spans.addAll(html.parse(marks(pieces.first), style: st));
+        for (final piece in pieces.skip(1)) {
+          final (number, words) = splitLeadingVerse(piece);
+          paragraphs.add((roles[i], [
+            ...html.parse(marks(number), style: st),
+            ...enlargeOpening(html.parse(marks(words), style: st), ts.openingWord, lineHeight: base.height ?? 1.65),
+          ], true));
+        }
       }
-      return Text.rich(TextSpan(children: spans), textDirection: rtl ? TextDirection.rtl : TextDirection.ltr, textAlign: TextAlign.start);
+      final dir = rtl ? TextDirection.rtl : TextDirection.ltr;
+      Widget paragraph((String?, List<InlineSpan>, bool) p, {required bool first}) {
+        var spans = p.$2;
+        // A section's first words, set large as in a printed siddur.
+        if (first && rtl && role == ParagraphRole.opening) spans = enlargeOpening(spans, ts.openingWord, lineHeight: base.height ?? 1.65);
+        final align = centered && ts.print
+            ? ParagraphAlign.center
+            : isResponse(p.$1) && p.$1 != item.role
+                ? ParagraphAlign.end
+                : (rightAligned && !rtl ? ParagraphAlign.end : ts.align(role));
+        final w = TypesetParagraph(text: TextSpan(children: spans), textDirection: dir, em: base.fontSize ?? 16, align: align, balance: ts.print);
+        return p.$3 && !first ? Padding(padding: EdgeInsets.only(top: ts.print ? ts.space(ParagraphRole.opening).top : 4), child: w) : w;
+      }
+      final shown = [for (final p in paragraphs) if (p.$2.isNotEmpty) p];
+      if (shown.length <= 1) return paragraph(shown.isEmpty ? paragraphs.first : shown.single, first: true);
+      return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        for (final (i, p) in shown.indexed) paragraph(p, first: i == 0),
+      ]);
     }
 
     final he = item.he;
@@ -799,7 +1138,18 @@ class _SegmentView extends ConsumerWidget {
     // "Said only on…" labels sit inline at the start of the text instead
     // of on a line of their own.
     InlineSpan? lead;
-    if (today || (excluded && !strike && item.labelEn != null)) {
+    // A personal circumstance ("If: Ten or more ate together"): said or not
+    // is the reader's call, so it's labelled rather than judged.
+    final ifLine = item.applicability == Applicability.unknown && item.labelEn != null;
+    if (ifLine) {
+      lead = WidgetSpan(
+        alignment: PlaceholderAlignment.middle,
+        child: Padding(
+          padding: const EdgeInsetsDirectional.only(end: 6),
+          child: _IfChip(conditionLabel(context, s, item.labelEn, item.labelHe)),
+        ),
+      );
+    } else if (today || (excluded && !strike && item.labelEn != null)) {
       final l = conditionLabel(context, s, item.labelEn, item.labelHe);
       lead = WidgetSpan(
         alignment: PlaceholderAlignment.middle,
@@ -822,24 +1172,39 @@ class _SegmentView extends ConsumerWidget {
     } else {
       body = Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
         ?heW,
-        if (heW != null && trW != null) const SizedBox(height: 4),
+        if (heW != null && trW != null) SizedBox(height: ts.print ? ts.line * 0.12 : 4),
         ?trW,
       ]);
     }
     if (heW == null && trW == null) return const SizedBox.shrink();
 
-    final content = body;
-    if (!today) return Padding(padding: EdgeInsets.symmetric(vertical: compact ? 3 : 5), child: content);
+    final reading = item.kind == SegmentKind.prayer && !excluded
+        ? readingLabels(context, item, withRole: roleStart, undertone: isUndertone(item))
+        : const <String>[];
+    final content = reading.isEmpty
+        ? body
+        : Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            Text(reading.join(' · '),
+                // Over a centered line, the label is centered too.
+                textAlign: centered && ts.print || ts.align(role) == ParagraphAlign.center ? TextAlign.center : null,
+                style: theme.textTheme.labelSmall?.copyWith(color: colors.marker, fontWeight: FontWeight.w600),
+                textDirection: item.he != null && context.uiLanguage != UiLanguage.en ? TextDirection.rtl : null),
+            const SizedBox(height: 2),
+            body,
+          ]);
+    final space = ts.space(role, compact: compact);
+    if (!today) return Padding(padding: space, child: content);
+    // The bar is laid over the fill rather than measured beside it: the
+    // paragraphs size themselves from their width (see TypesetParagraph),
+    // which an intrinsic-height row can't ask of them.
     return Container(
-      margin: EdgeInsets.symmetric(vertical: compact ? 2 : 4),
+      margin: ts.print ? space : EdgeInsets.symmetric(vertical: compact ? 2 : 4),
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(color: colors.todayFill, borderRadius: BorderRadius.circular(10)),
-      child: IntrinsicHeight(
-        child: Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-          Expanded(child: Padding(padding: const EdgeInsets.fromLTRB(10, 4, 10, 4), child: content)),
-          Container(width: 4, color: colors.todayBar),
-        ]),
-      ),
+      child: Stack(children: [
+        Padding(padding: const EdgeInsetsDirectional.fromSTEB(10, 4, 14, 4), child: content),
+        PositionedDirectional(top: 0, bottom: 0, end: 0, width: 4, child: ColoredBox(color: colors.todayBar)),
+      ]),
     );
   }
 }
@@ -861,43 +1226,27 @@ class _ChazarahHeader extends StatelessWidget {
   final String title;
   final bool open;
   final VoidCallback onTap;
-  const _ChazarahHeader({required this.title, required this.open, required this.onTap});
+  final double gap;
+  const _ChazarahHeader({required this.title, required this.open, required this.onTap, this.gap = 6});
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
     final label = context.term('Chazarat HaShatz');
-    return Padding(
-      padding: EdgeInsets.only(top: 6, bottom: open ? 0 : 6),
-      child: Opacity(
-        opacity: open ? 1 : 0.75,
-        child: Material(
-          color: colors.chazarahFill,
-          borderRadius: open ? const BorderRadius.vertical(top: Radius.circular(12)) : BorderRadius.circular(12),
-          child: InkWell(
-            borderRadius: open ? const BorderRadius.vertical(top: Radius.circular(12)) : BorderRadius.circular(12),
-            onTap: onTap,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              child: Row(children: [
-                Icon(Icons.record_voice_over_outlined, size: 18, color: colors.chazarah),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Text.rich(
-                    TextSpan(children: [
-                      TextSpan(text: label, style: const TextStyle(fontWeight: FontWeight.w700)),
-                      if (title.isNotEmpty) TextSpan(text: ' · $title'),
-                    ]),
-                    style: theme.textTheme.bodyMedium?.copyWith(color: colors.chazarah),
-                  ),
-                ),
-                Text(context.tr(open ? 'Hide' : 'Show'), style: theme.textTheme.labelMedium?.copyWith(color: colors.chazarah)),
-                Icon(open ? Icons.expand_less : Icons.expand_more, size: 18, color: colors.chazarah),
-              ]),
-            ),
-          ),
-        ),
+    return Opacity(
+      opacity: open ? 1 : 0.8,
+      child: ReaderControl(
+        icon: Icons.record_voice_over_outlined,
+        tone: colors.chazarah,
+        open: open,
+        attachedBelow: open,
+        gap: gap,
+        onTap: onTap,
+        title: Text.rich(TextSpan(children: [
+          TextSpan(text: label, style: const TextStyle(fontWeight: FontWeight.w700)),
+          if (title.isNotEmpty) TextSpan(text: ' · $title'),
+        ])),
+        trailing: Text(context.tr(open ? 'Hide' : 'Show')),
       ),
     );
   }
@@ -934,42 +1283,42 @@ class _NoteRow extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
-    final hebFont = ref.watch(settingsProvider.select((s) => s.hebrewFont));
+    final s = ref.watch(settingsProvider);
+    final gap = TypeScale.of(s).controlGap;
     final seg = item.tr ?? item.he;
     final excerpt = seg == null ? '' : stripHtml(seg.segment.html).replaceAll(RegExp(r'\s+'), ' ').trim();
     final rtl = seg?.segment.hebrew ?? false;
-    final header = InkWell(
-      borderRadius: BorderRadius.circular(10),
+    final header = ReaderControl(
+      icon: Icons.menu_book_outlined,
+      tone: colors.note,
+      open: open,
+      attachedBelow: child != null,
+      gap: gap,
       onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-        child: Row(children: [
-          Icon(Icons.menu_book_outlined, size: 16, color: colors.note),
-          const SizedBox(width: 8),
-          Text(context.tr('Halachic note'), style: theme.textTheme.labelMedium?.copyWith(color: colors.note, fontWeight: FontWeight.w700)),
-          const SizedBox(width: 8),
-          Expanded(
-            child: open
-                ? const SizedBox.shrink()
-                : Text(excerpt,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    textDirection: rtl ? TextDirection.rtl : TextDirection.ltr,
-                    style: theme.textTheme.bodySmall?.copyWith(color: colors.note.withValues(alpha: 0.8), fontFamily: rtl ? hebFont : null)),
-          ),
-          Icon(open ? Icons.expand_less : Icons.expand_more, size: 18, color: colors.note),
-        ]),
-      ),
+      title: Text(context.tr('Halachic note'), style: const TextStyle(fontWeight: FontWeight.w700)),
+      subtitle: open
+          ? null
+          : Text(excerpt,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              textDirection: rtl ? TextDirection.rtl : TextDirection.ltr,
+              style: TextStyle(fontFamily: rtl ? s.hebrewFont : null)),
     );
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 3),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: colors.note.withValues(alpha: 0.3)),
-      ),
+    if (child == null) return header;
+    // The note hangs from its control, inside the same tinted edge.
+    return Padding(
+      padding: EdgeInsets.only(bottom: gap),
       child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
         header,
-        if (child != null) Padding(padding: const EdgeInsets.fromLTRB(10, 0, 10, 6), child: child),
+        Container(
+          padding: const EdgeInsets.fromLTRB(12, 2, 12, 8),
+          decoration: BoxDecoration(
+            color: colors.note.withValues(alpha: 0.04),
+            borderRadius: const BorderRadius.vertical(bottom: Radius.circular(14)),
+            border: Border.all(color: colors.note.withValues(alpha: 0.35)),
+          ),
+          child: DefaultTextStyle.merge(style: theme.textTheme.bodyMedium, child: child!),
+        ),
       ]),
     );
   }
@@ -1017,7 +1366,7 @@ class _UnitCard extends ConsumerWidget {
         const Divider(height: 16),
         for (var i = 0; i < body.length; i++)
           if (!isRedundantRubric(body[i], i + 1 < body.length ? body[i + 1] : null, s))
-            _SegmentView(item: body[i], layout: layout, compact: true, opening: openers.contains(body[i].key)),
+            _SegmentView(item: body[i], layout: layout, compact: true, opening: openers.contains(body[i].key), roleStart: openers.contains('role:${body[i].key}'), centered: openers.contains('center:${body[i].key}')),
       ]),
     );
   }

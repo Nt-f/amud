@@ -124,6 +124,12 @@ jobs:
           name: amud-android
           path: amud-android.apk
 
+      - run: cp build/wear/outputs/apk/release/wear-release.apk amud-wear-os.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: amud-wear-os
+          path: amud-wear-os.apk
+
   linux:
     needs: [version, test]
     runs-on: ubuntu-22.04
@@ -132,7 +138,7 @@ jobs:
       - name: Linux build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev libnotify-dev
+          sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev libnotify-dev libayatana-appindicator3-dev
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
@@ -141,6 +147,7 @@ jobs:
       - run: flutter pub get
       - run: flutter build linux --release --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }}
       # The binary needs lib/ and data/ beside it; ship the bundle folder.
+      - run: cp tool/integrations/install_linux_links.sh build/linux/x64/release/bundle/
       - run: tar -czf amud-linux-x64.tar.gz -C build/linux/x64/release/bundle .
       - uses: actions/upload-artifact@v4
         with:
@@ -240,6 +247,7 @@ jobs:
           body_path: notes.md
           files: |
             amud-android.apk
+            amud-wear-os.apk
             amud-windows.zip
             amud-linux-x64.tar.gz
             amud-macos.zip

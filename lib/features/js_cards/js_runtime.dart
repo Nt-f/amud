@@ -15,8 +15,8 @@ const jsCardTimeout = Duration(seconds: 15);
 
 /// Sandboxed evaluation of user-authored card scripts.
 ///
-/// App Store compliance: scripts are authored by the user on-device (not
-/// downloaded from us), run in the platform's own engine (JavaScriptCore on
+/// Scripts are authored or explicitly installed by the user and run in the
+/// platform's own engine (JavaScriptCore on
 /// iOS/macOS, QuickJS on Android/desktop, a Web Worker on web; no bundled
 /// V8 or JIT) with no native bridges, and can only return declarative JSON
 /// that the app renders with native widgets. Their only way out is `fetch()`,

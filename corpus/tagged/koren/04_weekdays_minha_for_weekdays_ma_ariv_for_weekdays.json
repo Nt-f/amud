@@ -1,0 +1,5351 @@
+{
+ "nusach": "koren",
+ "chunk": "Weekdays [Minha for Weekdays .. Ma'ariv for Weekdays]",
+ "leaves": {
+  "Weekdays/Minha for Weekdays": {
+   "node": "mincha.ashrei",
+   "service": "mincha",
+   "when": "true"
+  },
+  "Weekdays/Ma'ariv for Weekdays": {
+   "node": "maariv.shir_hamaalot",
+   "service": "maariv",
+   "when": "true"
+  }
+ },
+ "he": {
+  "he:Weekdays/Minha for Weekdays:1": {
+   "kind": "prayer",
+   "node": "mincha.ashrei"
+  },
+  "he:Weekdays/Minha for Weekdays:2": {
+   "kind": "prayer",
+   "node": "mincha.ashrei"
+  },
+  "he:Weekdays/Minha for Weekdays:3": {
+   "kind": "prayer",
+   "node": "mincha.ashrei"
+  },
+  "he:Weekdays/Minha for Weekdays:4": {
+   "kind": "heading",
+   "en": "Half Kaddish",
+   "cite": "kaddish.half"
+  },
+  "he:Weekdays/Minha for Weekdays:5": {
+   "kind": "instruction",
+   "node": "kaddish.half",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Chazzan:"
+  },
+  "he:Weekdays/Minha for Weekdays:6": {
+   "kind": "instruction",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Congregation and Chazzan:"
+  },
+  "he:Weekdays/Minha for Weekdays:7": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Chazzan:"
+  },
+  "he:Weekdays/Minha for Weekdays:9": {
+   "kind": "heading",
+   "en": "Amidah",
+   "cite": "amidah.opening"
+  },
+  "he:Weekdays/Minha for Weekdays:11": {
+   "kind": "prayer",
+   "node": "amidah.opening",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:12": {
+   "kind": "prayer",
+   "node": "amidah.opening",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:13": {
+   "kind": "heading",
+   "en": "Patriarchs",
+   "cite": "amidah.avot"
+  },
+  "he:Weekdays/Minha for Weekdays:14": {
+   "kind": "prayer",
+   "node": "amidah.avot",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:15": {
+   "kind": "prayer",
+   "en": "During the Ten Days of Repentance:",
+   "cite": "Zachreinu",
+   "gloss": "Said only in the silent Amidah",
+   "when": "aseretYemeiTeshuva",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:16": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:17": {
+   "kind": "heading",
+   "en": "Divine Might",
+   "cite": "amidah.gevurot"
+  },
+  "he:Weekdays/Minha for Weekdays:18": {
+   "kind": "prayer",
+   "node": "amidah.gevurot",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:20": {
+   "kind": "prayer",
+   "node": "amidah.gevurot",
+   "role": "individual",
+   "voice": "silent",
+   "en": "In winter:",
+   "when": "mashivHaruach"
+  },
+  "he:Weekdays/Minha for Weekdays:21": {
+   "kind": "prayer",
+   "node": "amidah.gevurot",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:22": {
+   "kind": "prayer",
+   "en": "During the Ten Days of Repentance:",
+   "when": "aseretYemeiTeshuva",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:23": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:25": {
+   "kind": "heading",
+   "en": "Kedushah",
+   "cite": "amidah.kedusha"
+  },
+  "he:Weekdays/Minha for Weekdays:27": {
+   "kind": "instruction",
+   "node": "amidah.kedusha",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Congregation then Chazzan:"
+  },
+  "he:Weekdays/Minha for Weekdays:28": {
+   "kind": "instruction",
+   "node": "amidah.kedusha",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Congregation then Chazzan:"
+  },
+  "he:Weekdays/Minha for Weekdays:29": {
+   "kind": "instruction",
+   "node": "amidah.kedusha",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Congregation then Chazzan:"
+  },
+  "he:Weekdays/Minha for Weekdays:30": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true,
+   "en": "Chazzan:"
+  },
+  "he:Weekdays/Minha for Weekdays:32": {
+   "kind": "heading",
+   "en": "Holiness of God",
+   "cite": "amidah.kedushat_hashem"
+  },
+  "he:Weekdays/Minha for Weekdays:33": {
+   "kind": "prayer",
+   "node": "amidah.kedushat_hashem",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:35": {
+   "kind": "heading",
+   "en": "Knowledge",
+   "cite": "amidah.daat"
+  },
+  "he:Weekdays/Minha for Weekdays:36": {
+   "kind": "prayer",
+   "node": "amidah.daat",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:37": {
+   "kind": "heading",
+   "en": "Repentance",
+   "cite": "amidah.teshuva"
+  },
+  "he:Weekdays/Minha for Weekdays:38": {
+   "kind": "prayer",
+   "node": "amidah.teshuva",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:39": {
+   "kind": "heading",
+   "en": "Forgiveness",
+   "cite": "amidah.selicha"
+  },
+  "he:Weekdays/Minha for Weekdays:41": {
+   "kind": "prayer",
+   "node": "amidah.selicha",
+   "role": "individual",
+   "voice": "silent",
+   "gestures": [
+    "strike_chest"
+   ]
+  },
+  "he:Weekdays/Minha for Weekdays:42": {
+   "kind": "heading",
+   "en": "Redemption",
+   "cite": "amidah.geula"
+  },
+  "he:Weekdays/Minha for Weekdays:43": {
+   "kind": "prayer",
+   "node": "amidah.geula",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:44": {
+   "kind": "prayer",
+   "en": "On fast days:",
+   "when": "publicFast",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:45": {
+   "kind": "heading",
+   "en": "Healing",
+   "cite": "amidah.refua"
+  },
+  "he:Weekdays/Minha for Weekdays:46": {
+   "kind": "prayer",
+   "node": "amidah.refua",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:47": {
+   "kind": "prayer",
+   "node": "amidah.refua",
+   "role": "individual",
+   "voice": "silent",
+   "en": "Prayer for a sick person:"
+  },
+  "he:Weekdays/Minha for Weekdays:48": {
+   "kind": "prayer",
+   "node": "amidah.refua",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:49": {
+   "kind": "heading",
+   "en": "Blessing of the Years",
+   "cite": "amidah.shanim"
+  },
+  "he:Weekdays/Minha for Weekdays:51": {
+   "kind": "prayer",
+   "node": "amidah.shanim",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:52": {
+   "kind": "heading",
+   "en": "Ingathering of Exiles",
+   "cite": "amidah.kibbutz_galuyot"
+  },
+  "he:Weekdays/Minha for Weekdays:53": {
+   "kind": "prayer",
+   "node": "amidah.kibbutz_galuyot",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:54": {
+   "kind": "heading",
+   "en": "Justice",
+   "cite": "amidah.din"
+  },
+  "he:Weekdays/Minha for Weekdays:55": {
+   "kind": "prayer",
+   "node": "amidah.din",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:56": {
+   "kind": "heading",
+   "en": "Against Heretics",
+   "cite": "amidah.minim"
+  },
+  "he:Weekdays/Minha for Weekdays:57": {
+   "kind": "prayer",
+   "node": "amidah.minim",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Weekdays/Minha for Weekdays:58": {
+   "kind": "heading",
+   "en": "For the Righteous"
+  },
+  "he:Weekdays/Minha for Weekdays:59": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:60": {
+   "kind": "heading",
+   "en": "Rebuilding Jerusalem"
+  },
+  "he:Weekdays/Minha for Weekdays:61": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:62": {
+   "kind": "prayer",
+   "when": "tishaBav"
+  },
+  "he:Weekdays/Minha for Weekdays:63": {
+   "kind": "heading",
+   "en": "Kingdom of David"
+  },
+  "he:Weekdays/Minha for Weekdays:64": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:65": {
+   "kind": "heading",
+   "en": "Response to Prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:66": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:67": {
+   "kind": "prayer",
+   "when": "publicFast"
+  },
+  "he:Weekdays/Minha for Weekdays:68": {
+   "kind": "heading",
+   "en": "Temple Service"
+  },
+  "he:Weekdays/Minha for Weekdays:69": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:70": {
+   "kind": "prayer",
+   "when": "roshChodesh || cholHamoed"
+  },
+  "he:Weekdays/Minha for Weekdays:71": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:72": {
+   "kind": "heading",
+   "en": "Thanksgiving"
+  },
+  "he:Weekdays/Minha for Weekdays:74": {
+   "kind": "prayer",
+   "gestures": [
+    "bow"
+   ]
+  },
+  "he:Weekdays/Minha for Weekdays:75": {
+   "kind": "prayer",
+   "amidah": "repetition",
+   "minyan": true,
+   "en": "Modim d'Rabbanan"
+  },
+  "he:Weekdays/Minha for Weekdays:76": {
+   "kind": "prayer",
+   "when": "chanukah"
+  },
+  "he:Weekdays/Minha for Weekdays:77": {
+   "kind": "prayer",
+   "when": "purim"
+  },
+  "he:Weekdays/Minha for Weekdays:78": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:79": {
+   "kind": "prayer",
+   "when": "aseretYemeiTeshuva"
+  },
+  "he:Weekdays/Minha for Weekdays:80": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:81": {
+   "kind": "prayer",
+   "when": "publicFast",
+   "minyan": true,
+   "en": "Birkat Kohanim (in repetition)"
+  },
+  "he:Weekdays/Minha for Weekdays:82": {
+   "kind": "heading",
+   "en": "Blessing of Peace"
+  },
+  "he:Weekdays/Minha for Weekdays:83": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:84": {
+   "kind": "prayer",
+   "when": "aseretYemeiTeshuva"
+  },
+  "he:Weekdays/Minha for Weekdays:85": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:86": {
+   "kind": "prayer",
+   "when": "!il && aseretYemeiTeshuva",
+   "alt": "osehShalom"
+  },
+  "he:Weekdays/Minha for Weekdays:88": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:89": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:90": {
+   "parts": [
+    {
+     "text": "<small>רִבּוֹן כָּל הָעוֹלָמִים,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " הֲרֵי אֲנִי לְפָנֶֽיךָ בְּתַעֲנִית נְדָבָה לְמָחָר. יְהִי רָצוֹן מִלְּפָנֶֽיךָ יהוה אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " שֶׁתְּקַבְּלֵֽנִי בְּאַהֲבָה וּבְרָצוֹן,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " וְתָבֹא לְפָנֶֽיךָ תְּפִלָּתִי,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " וְתַעֲנֶה עֲתִירָתִי בְּרַחֲמֶֽיךָ הָרַבִּים,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " כִּי אַתָּה שׁוֹמֵֽעַ תְּפִלַּת כָּל־פֶּה.</small>",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": "<br><small>רִבּוֹן כָּל הָעוֹלָמִים,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " גָּלוּי וְיָדֽוּעַ לְפָנֶֽיךָ,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " בִּזְמַן שֶׁבֵּית הַמִּקְדָּשׁ קַיָּם,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " אָדָם חוֹטֵא וּמַקְרִיב קָרְבָּן,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " וְאֵין מַקְרִיבִין מִמֶּֽנּוּ אֶלָּא חֶלְבּוֹ וְדָמוֹ,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים מְכַפֵּר. וְעַכְשָׁו יָשַֽׁבְתִּי בְתַעֲנִית,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " וְנִתְמַעֵט חֶלְבִּי וְדָמִי. יְהִי רָצוֹן מִלְּפָנֶֽיךָ,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " שֶׁיְּהֵא מִעוּט חֶלְבִּי וְדָמִי שֶׁנִּתְמַעֵט הַיּוֹם,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " כְּאִלּוּ הִקְרַבְתִּיו עַל־גַּבֵּי הַמִּזְבֵּֽחַ,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " וְתִרְצֵֽנִי.</small>",
+     "kind": "prayer",
+     "when": "publicFast"
+    }
+   ]
+  },
+  "he:Weekdays/Minha for Weekdays:92": {
+   "kind": "prayer",
+   "alt": "osehShalom",
+   "gestures": [
+    "bow_left_right_center"
+   ],
+   "when": "!aseretYemeiTeshuva"
+  },
+  "he:Weekdays/Minha for Weekdays:93": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:96": {
+   "kind": "heading",
+   "en": "Order of Tachanun"
+  },
+  "he:Weekdays/Minha for Weekdays:99": {
+   "kind": "heading",
+   "en": "Lowering the Head"
+  },
+  "he:Weekdays/Minha for Weekdays:100": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:101": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:102": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:104": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:105": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:106": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:107": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:108": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:110": {
+   "kind": "prayer"
+  },
+  "he:Weekdays/Minha for Weekdays:111": {
+   "kind": "heading",
+   "en": "Full Kaddish"
+  },
+  "he:Weekdays/Minha for Weekdays:112": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "voice": "aloud",
+   "en": "Chazzan:"
+  },
+  "he:Weekdays/Minha for Weekdays:113": {
+   "kind": "instruction",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "en": "Congregation and Chazzan:"
+  },
+  "he:Weekdays/Minha for Weekdays:114": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "voice": "aloud",
+   "en": "Chazzan:"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:2": {
+   "kind": "prayer",
+   "node": "maariv.shir_hamaalot"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:3": {
+   "kind": "heading",
+   "en": "Shema and its blessings"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:5": {
+   "kind": "instruction",
+   "en": "Bless",
+   "gloss": "Bowing at this word"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:6": {
+   "kind": "instruction",
+   "en": "Bless",
+   "gloss": "Bowing at this word"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:7": {
+   "kind": "instruction",
+   "en": "Bless",
+   "gloss": "Bowing at this word"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:8": {
+   "kind": "prayer",
+   "node": "shema.hamaariv_aravim"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:9": {
+   "kind": "prayer",
+   "node": "shema.ahavat_olam"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:11": {
+   "kind": "prayer",
+   "node": "shema.ahavat_olam"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:13": {
+   "kind": "prayer",
+   "node": "shema.shema",
+   "gestures": [
+    "cover_eyes"
+   ]
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:14": {
+   "kind": "prayer",
+   "en": "Quietly:",
+   "gloss": "Undertone",
+   "node": "shema.shema",
+   "voice": "undertone"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:15": {
+   "kind": "prayer",
+   "node": "shema.vehaya"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:16": {
+   "kind": "prayer",
+   "node": "shema.vayomer"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:17": {
+   "kind": "prayer",
+   "node": "shema.vayomer"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:18": {
+   "kind": "prayer",
+   "node": "shema.emet_veemuna"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:20": {
+   "kind": "prayer",
+   "node": "shema.emet_veemuna",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:21": {
+   "kind": "prayer",
+   "node": "shema.emet_veemuna"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:22": {
+   "kind": "prayer",
+   "node": "shema.emet_veemuna"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:23": {
+   "kind": "prayer",
+   "node": "shema.emet_veemuna"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:24": {
+   "kind": "prayer",
+   "node": "shema.emet_veemuna"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:25": {
+   "kind": "prayer",
+   "node": "shema.emet_veemuna"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:26": {
+   "kind": "prayer",
+   "node": "shema.hashkiveinu"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:28": {
+   "kind": "prayer",
+   "node": "shema.baruch_hashem_leolam_maariv"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:29": {
+   "kind": "prayer",
+   "node": "shema.baruch_hashem_leolam_maariv"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:30": {
+   "kind": "prayer",
+   "node": "shema.baruch_hashem_leolam_maariv"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:31": {
+   "kind": "prayer",
+   "node": "shema.yiru_eineinu"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:32": {
+   "kind": "heading",
+   "en": "Half Kaddish"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:33": {
+   "kind": "prayer",
+   "en": "Chazzan:",
+   "gloss": "Leader",
+   "node": "kaddish.half",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:34": {
+   "kind": "prayer",
+   "en": "Congregation and Chazzan:",
+   "gloss": "Together",
+   "node": "kaddish.half",
+   "role": "together",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:35": {
+   "kind": "prayer",
+   "en": "Chazzan:",
+   "gloss": "Leader",
+   "node": "kaddish.half",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:36": {
+   "kind": "heading",
+   "en": "Amidah"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:38": {
+   "kind": "prayer",
+   "node": "amidah.opening",
+   "voice": "silent"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:39": {
+   "kind": "heading",
+   "en": "Patriarchs"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:40": {
+   "kind": "prayer",
+   "node": "amidah.avot",
+   "voice": "silent"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:41": {
+   "kind": "prayer",
+   "en": "During the Ten Days of Repentance:",
+   "gloss": "Insertion for Aseret Yemei Teshuva",
+   "node": "amidah.avot",
+   "voice": "silent",
+   "minyan": true
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:42": {
+   "kind": "prayer",
+   "node": "amidah.avot",
+   "voice": "silent"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:43": {
+   "kind": "heading",
+   "en": "Divine Might"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:44": {
+   "kind": "prayer",
+   "node": "amidah.gevurot",
+   "voice": "silent"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:46": {
+   "kind": "prayer",
+   "en": "In winter:",
+   "gloss": "Diaspora winter",
+   "node": "amidah.gevurot",
+   "voice": "silent",
+   "minyan": true
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:47": {
+   "kind": "prayer",
+   "node": "amidah.gevurot",
+   "voice": "silent"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:48": {
+   "kind": "prayer",
+   "en": "During the Ten Days of Repentance:",
+   "gloss": "Insertion for Aseret Yemei Teshuva",
+   "node": "amidah.gevurot",
+   "voice": "silent",
+   "minyan": true
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:49": {
+   "kind": "prayer",
+   "node": "amidah.gevurot",
+   "voice": "silent"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:50": {
+   "kind": "heading",
+   "en": "Holiness of God"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:51": {
+   "kind": "prayer",
+   "node": "amidah.kedushat_hashem",
+   "voice": "silent"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:52": {
+   "kind": "heading",
+   "en": "Knowledge"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:53": {
+   "kind": "prayer",
+   "node": "amidah.daat",
+   "voice": "silent"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:54": {
+   "kind": "prayer",
+   "en": "On Shabbat:",
+   "gloss": "Insertion for Shabbat",
+   "node": "amidah.daat",
+   "voice": "silent",
+   "minyan": true
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:55": {
+   "kind": "prayer",
+   "node": "amidah.daat",
+   "voice": "silent"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:56": {
+   "kind": "heading",
+   "en": "Repentance"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:57": {
+   "kind": "prayer",
+   "node": "amidah.teshuva"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:58": {
+   "kind": "heading",
+   "en": "Forgiveness"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:60": {
+   "kind": "prayer",
+   "node": "amidah.selicha"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:61": {
+   "kind": "heading",
+   "en": "Redemption"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:62": {
+   "kind": "prayer",
+   "node": "amidah.geula"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:63": {
+   "kind": "heading",
+   "en": "Healing"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:64": {
+   "kind": "prayer",
+   "node": "amidah.refua"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:65": {
+   "kind": "instruction",
+   "en": "Prayer for the sick",
+   "gloss": "Optional prayer for a specific sick person"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:66": {
+   "kind": "prayer",
+   "node": "amidah.refua"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:67": {
+   "kind": "heading",
+   "en": "Blessing of the years"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:69": {
+   "kind": "prayer",
+   "node": "amidah.shanim",
+   "en": "Grant dew and rain as a blessing / Grant blessing"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:70": {
+   "kind": "heading",
+   "en": "Ingathering of exiles"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:71": {
+   "kind": "prayer",
+   "node": "amidah.kibbutz_galuyot"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:72": {
+   "kind": "heading",
+   "en": "Restoration of justice"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:73": {
+   "kind": "prayer",
+   "node": "amidah.din"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:74": {
+   "kind": "heading",
+   "en": "Against heretics"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:75": {
+   "kind": "prayer",
+   "node": "amidah.minim"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:76": {
+   "kind": "heading",
+   "en": "The righteous"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:77": {
+   "kind": "prayer",
+   "node": "amidah.tzaddikim"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:78": {
+   "kind": "heading",
+   "en": "Rebuilding Jerusalem"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:79": {
+   "kind": "prayer",
+   "node": "amidah.yerushalayim"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:80": {
+   "kind": "heading",
+   "en": "Kingdom of David"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:81": {
+   "kind": "prayer",
+   "node": "amidah.david"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:82": {
+   "kind": "heading",
+   "en": "Response to prayer"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:83": {
+   "kind": "prayer",
+   "node": "amidah.shomea_tefilla"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:85": {
+   "kind": "heading",
+   "en": "Temple service"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:86": {
+   "kind": "prayer",
+   "node": "amidah.avoda"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:87": {
+   "kind": "prayer",
+   "en": "Ya'aleh VeYavo",
+   "gloss": "Said on Rosh Chodesh and Chol HaMoed"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:88": {
+   "kind": "prayer",
+   "node": "amidah.avoda"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:89": {
+   "kind": "heading",
+   "en": "Thanksgiving"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:91": {
+   "kind": "prayer",
+   "node": "amidah.modim"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:92": {
+   "kind": "prayer",
+   "en": "Al HaNissim for Chanukah",
+   "gloss": "Said on Chanukah",
+   "when": "chanukah"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:93": {
+   "kind": "prayer",
+   "en": "Al HaNissim for Purim",
+   "gloss": "Said on Purim",
+   "when": "purim"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:94": {
+   "kind": "prayer",
+   "node": "amidah.modim"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:95": {
+   "kind": "prayer",
+   "en": "Between Rosh HaShana and Yom Kippur:",
+   "gloss": "Add 'And write for a good life...'",
+   "when": "aseretYemeiTeshuva"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:96": {
+   "kind": "prayer",
+   "node": "amidah.modim"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:97": {
+   "kind": "heading",
+   "en": "Peace"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:98": {
+   "kind": "prayer",
+   "node": "amidah.shalom"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:99": {
+   "kind": "prayer",
+   "en": "Between Rosh HaShana and Yom Kippur:",
+   "gloss": "Add 'In the book of life...'",
+   "when": "aseretYemeiTeshuva"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:100": {
+   "kind": "prayer",
+   "node": "amidah.shalom"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:101": {
+   "kind": "instruction",
+   "en": "Said only if one did not say 'Oseh Shalom' in the silent Amidah",
+   "gloss": "Alternative ending for Shalom"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:103": {
+   "kind": "prayer",
+   "node": "amidah.elokai_netzor"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:104": {
+   "kind": "prayer",
+   "node": "amidah.elokai_netzor"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:106": {
+   "kind": "prayer",
+   "node": "amidah.oseh_shalom"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:107": {
+   "kind": "prayer",
+   "node": "amidah.yehi_ratzon_mikdash"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:109": {
+   "kind": "heading",
+   "en": "Kaddish Shalem"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:110": {
+   "kind": "instruction",
+   "node": "kaddish.shalem",
+   "role": "chazzan",
+   "voice": "aloud",
+   "en": "Chazzan:",
+   "gloss": "Leader says"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:111": {
+   "kind": "instruction",
+   "node": "kaddish.shalem",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud",
+   "en": "Congregation and Chazzan:",
+   "gloss": "Together"
+  },
+  "he:Weekdays/Minha for Weekdays:115": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Minha for Weekdays:116": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Minha for Weekdays:118": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Minha for Weekdays:120": {
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Minha for Weekdays:121": {
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Minha for Weekdays:123": {
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Minha for Weekdays:124": {
+   "kind": "heading",
+   "en": "Mourner's Kaddish"
+  },
+  "he:Weekdays/Minha for Weekdays:126": {
+   "kind": "instruction",
+   "en": "Mourner:"
+  },
+  "he:Weekdays/Minha for Weekdays:127": {
+   "kind": "instruction",
+   "en": "Congregation and Mourner:"
+  },
+  "he:Weekdays/Minha for Weekdays:128": {
+   "kind": "instruction",
+   "en": "Mourner:"
+  },
+  "he:Weekdays/Minha for Weekdays:129": {
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Minha for Weekdays:131": {
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:112": {
+   "parts": [
+    {
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "en": "Beyond every blessing",
+     "text": "<i class=\"instruction\">ש\"ץ:</i> יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא<br>וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל<br>שְׁמֵהּ דְּקֻדְשָׁא בְּרִיךְ הוּא (<i class=\"instruction\">קהל:</i> בְּרִיךְ הוּא)",
+     "when": "!aseretYemeiTeshuva"
+    },
+    {
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Said during Aseret Yemei Teshuva",
+     "forgot": true,
+     "text": "<br>לְעֵֽלָּא מִן כָּל בִּרְכָתָא /<i class=\"instruction\">בעשרת ימי תשובה:</i> ",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "en": "Beyond every blessing",
+     "gloss": "Said during Aseret Yemei Teshuva",
+     "forgot": true,
+     "text": "לְעֵֽלָּא לְעֵֽלָּא מִכָּל בִּרְכָתָא/<br>וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא<br>דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן. (<i class=\"instruction\">קהל:</i> אָמֵן)",
+     "when": "aseretYemeiTeshuva"
+    }
+   ]
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:113": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:114": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:116": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "when": "!aseretYemeiTeshuva"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:119": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:120": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:122": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:123": {
+   "kind": "heading",
+   "en": "Mourner's Kaddish"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:125": {
+   "parts": [
+    {
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "en": "Beyond every blessing",
+     "text": "<i class=\"instruction\">אבל:</i> יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר<br>וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל<br>שְׁמֵהּ דְּקֻדְשָׁא בְּרִיךְ הוּא (<i class=\"instruction\">קהל:</i> בְּרִיךְ הוּא)",
+     "when": "!aseretYemeiTeshuva"
+    },
+    {
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Said during Aseret Yemei Teshuva",
+     "forgot": true,
+     "text": "<br>לְעֵֽלָּא מִן כָּל בִּרְכָתָא<br> /<i class=\"instruction\">בעשרת ימי תשובה:</i> ",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "en": "Beyond every blessing",
+     "gloss": "Said during Aseret Yemei Teshuva",
+     "forgot": true,
+     "text": "לְעֵֽלָּא לְעֵֽלָּא מִכָּל בִּרְכָתָא/<br>וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא<br>דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן. (<i class=\"instruction\">קהל:</i> אָמֵן)",
+     "when": "aseretYemeiTeshuva"
+    }
+   ]
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:126": {
+   "kind": "prayer",
+   "role": "congregation",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:127": {
+   "parts": [
+    {
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "en": "Beyond every blessing",
+     "text": "<i class=\"instruction\">אבל:</i> יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר<br>וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל<br>שְׁמֵהּ דְּקֻדְשָׁא בְּרִיךְ הוּא (<i class=\"instruction\">קהל:</i> בְּרִיךְ הוּא)",
+     "when": "!aseretYemeiTeshuva"
+    },
+    {
+     "kind": "instruction",
+     "en": "During the Ten Days of Repentance:",
+     "gloss": "Said during Aseret Yemei Teshuva",
+     "forgot": true,
+     "text": "<br>לְעֵֽלָּא מִן כָּל בִּרְכָתָא<br> /<i class=\"instruction\">בעשרת ימי תשובה:</i> ",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "en": "Beyond every blessing",
+     "gloss": "Said during Aseret Yemei Teshuva",
+     "forgot": true,
+     "text": "לְעֵֽלָּא לְעֵֽלָּא מִכָּל בִּרְכָתָא/<br>וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא<br>דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן. (<i class=\"instruction\">קהל:</i> אָמֵן)",
+     "when": "aseretYemeiTeshuva"
+    }
+   ]
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:128": {
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:130": {
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud",
+   "when": "!aseretYemeiTeshuva"
+  },
+  "he:Weekdays/Ma'ariv for Weekdays:132": {
+   "kind": "prayer",
+   "role": "individual"
+  }
+ },
+ "en": {
+  "en:Weekdays/Minha for Weekdays:1": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:1"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:2": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:2"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:3": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:3"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:4": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:4"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:5": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom >in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:5"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:6": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:6"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:7": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:7"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:8": {
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:9": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:9"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:10": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:11",
+    "he:Weekdays/Minha for Weekdays:12"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:11": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:11"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:12": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:12"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:13": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:13"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:14": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:14"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:15": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Remember us for life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O King who desires life,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and write us in the book of life –<br>for Your sake,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O God of life.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:15"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:16": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:16"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:17": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:17"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:18": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:18"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:19": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:20"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:20": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">In fall and winter:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " He makes the wind blow and the rain fall.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">In Israel, in spring and summer:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " He causes the dew to fall.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:20"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:21": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:21"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:22": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Who is like You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " compassionate Father,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>who remembers His creatures in compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for life?</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:22"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:23": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:23"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:24": {
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:25": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:25"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:26": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">During the Leader’s Repetition, the following is said standing</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\"> ith feet together, rising on the toes at the words indicated by▴.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:27": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong. then Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " נְקַדֵּשׁ We will sanctify Your name on earth,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>as they sanctify it in the highest heavens,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>as is written by Your prophet,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>“And they [the angels] call to one another saying:",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:27"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:28": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong. then Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " ▴Holy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " ▴holy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " ▴holy is the <small>LORD</small> of hosts<br>the whole world is filled with His glory.”<br>Those facing them say “Blessed – ”",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:28"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:29": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Cong. then Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " ▴\"Blessed is the <small>LORD</small>'s glory from His place.\"<br>And in Your holy Writings it is written thus:<br>▴“The <small>LORD</small> shall reign for ever. He is your God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Zion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from generation to generation,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Halleluya!”",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:29"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:30": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " From generation to generation we will declare Your greatness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and we will proclaim Your holiness for evermore.<br>Your praise,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " shall not leave our mouth forever,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>for You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " are a great and holy King. Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>the holy God. /",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the holy King./",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:30"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:31": {
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:32": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:32"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:33": {
+   "parts": [
+    {
+     "text": "אַתָּה קָדוֹשׁ You are holy and Your name is holy,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and holy ones praise You daily,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Selah!<br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the holy God. /",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the holy King./",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:33"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:34": {
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:35": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:35"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:36": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:36"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:37": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:37"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:38": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:38"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:39": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:39"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:40": {
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:41": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:41"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:42": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:42"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:43": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:43"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:44": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On fast days the Leader adds:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>עֲנֵֽנוּ Answer us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " answer us on our Fast Day,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for we are in great distress. Look not at our wickedness. Do not hide Your face from us and do not ignore our plea. Be near to our cry;",
+     "kind": "prayer"
+    },
+    {
+     "text": " please let Your loving-kindness comfort us. Even before we call to You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " answer us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as it is said,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “Before they call,",
+     "kind": "prayer"
+    },
+    {
+     "text": " I will answer. While they are still speaking,",
+     "kind": "prayer"
+    },
+    {
+     "text": " I will hear.” For You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " are the One who answers in time of distress,",
+     "kind": "prayer"
+    },
+    {
+     "text": " redeems and rescues in all times of trouble and anguish. Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who answers in time of distress.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:44"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:45": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:45"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:46": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:46"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:47": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">The following prayer for a sick person may be said here:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>May it be Your will,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O Lord my God and God of my ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that You speedily send a complete recovery from heaven,",
+     "kind": "prayer"
+    },
+    {
+     "text": " a healing of both soul and body,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to the patient (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": " son/daughter of (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">mother’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") among the other afflicted of Israel.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:47"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:48": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:48"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:49": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:58"
+   ],
+   "kind": "heading",
+   "en": "PROSPERITY"
+  },
+  "en:Weekdays/Minha for Weekdays:50": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The phrase “Grant dew and rain as a blessing” is said from December 5th</i>",
+     "kind": "instruction",
+     "en": "Instructions for Tal Umatar and Beracha"
+    },
+    {
+     "text": "<br><i class=\"instruction\">(in the year before a civil leap year, December 6th) until Pesaḥ. In Israel, it is said from the 7th of Marḥeshvan. The phrase “Grant blessing” is said from Ḥol HaMo’ed Pesaḥ until December 4th (in the year before a civil leap year, December 5th). In Israel it is said through the 6th of Marḥeshvan. See laws 147–149.</i>",
+     "kind": "instruction",
+     "en": "Instructions for Tal Umatar and Beracha"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:59"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:51": {
+   "parts": [
+    {
+     "text": "בָּרֵךְ Bless this year for us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small> our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and all its types of produce for good.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">In winter:</i>",
+     "kind": "instruction",
+     "en": "In winter:"
+    },
+    {
+     "text": " Grant rain and dew as a blessing<br>",
+     "kind": "prayer",
+     "when": "mashivHaruach"
+    },
+    {
+     "text": "<i class=\"instruction\">In other seasons:</i>",
+     "kind": "instruction",
+     "en": "In other seasons:"
+    },
+    {
+     "text": " Grant blessing <br>on the face of the earth,",
+     "kind": "prayer",
+     "when": "!mashivHaruach"
+    },
+    {
+     "text": " and from its goodness satisfy us,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>blessing our year as the best of years.<br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who blesses the years.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:59"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:52": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:60"
+   ],
+   "kind": "heading",
+   "en": "INGATHERING OF EXILES"
+  },
+  "en:Weekdays/Minha for Weekdays:53": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:61"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:54": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:62"
+   ],
+   "kind": "heading",
+   "en": "JUSTICE"
+  },
+  "en:Weekdays/Minha for Weekdays:55": {
+   "parts": [
+    {
+     "text": "הָשִֽׁיבָה Restore our judges as at first,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and our counselors as at the beginning,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and remove from us sorrow and sighing.<br>May You alone,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>reign over us with loving-kindness and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and vindicate us in justice.<br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>the King who loves righteousness and justice.<br>/",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Between Rosh HaShana and Yom Kippur, end the blessing:</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " the King of justice./",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:63"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:56": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:64"
+   ],
+   "kind": "heading",
+   "en": "AGAINST INFORMERS"
+  },
+  "en:Weekdays/Minha for Weekdays:57": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:65"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:58": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:66"
+   ],
+   "kind": "heading",
+   "en": "THE RIGHTEOUS"
+  },
+  "en:Weekdays/Minha for Weekdays:59": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:67"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:60": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:68"
+   ],
+   "kind": "heading",
+   "en": "REBUILDING JERUSALEM"
+  },
+  "en:Weekdays/Minha for Weekdays:61": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:69"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:62": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">*On Tisha B’Av all conclude as follows:</i>",
+     "kind": "instruction",
+     "when": "tishaBav",
+     "en": "*On Tisha B'Av all conclude as follows:"
+    },
+    {
+     "text": "<br>נַחֵם Console,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " O Lord our God,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " the mourners of Zion and the mourners of Jerusalem,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " and the city that is in sorrow,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " laid waste,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " scorned and desolate;",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " that grieves for the loss of its children,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " that is laid waste of its dwellings,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " robbed of its glory,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " desolate without inhabitants. She sits with her head covered like a barren childless woman. Legions have devoured her;",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " idolaters have taken possession of her;",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " they have put Your people Israel to the sword and deliberately killed the devoted followers of the Most High. Therefore Zion weeps bitterly,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " and Jerusalem raises her voice. My heart,",
+     "kind": "instruction",
+     "when": "tishaBav",
+     "en": "Continue with “May the offshoot” below."
+    },
+    {
+     "text": " my heart grieves for those they killed;",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " I am in anguish,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " I am in anguish for those they killed. For You,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " O Lord,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " consumed it with fire,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " and with fire You will rebuild it in the future,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " as is said,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " “And I Myself will be a wall of fire around it,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " says the Lord,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " and I will be its glory within.” Blessed are You,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": " who consoles Zion and rebuilds Jerusalem.<br>",
+     "kind": "prayer",
+     "when": "tishaBav"
+    },
+    {
+     "text": "<i class=\"instruction\">Continue with “May the offshoot” below.</i></small>",
+     "kind": "prayer",
+     "when": "tishaBav"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:70"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:63": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:71"
+   ],
+   "kind": "heading",
+   "en": "KINGDOM OF DAVID"
+  },
+  "en:Weekdays/Minha for Weekdays:64": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:72"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:65": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:74"
+   ],
+   "kind": "heading",
+   "en": "RESPONSE TO PRAYER"
+  },
+  "en:Weekdays/Minha for Weekdays:66": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:75"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:67": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">*At this point on fast days, the congregation adds “Answer us” below.<br>In times of drought in Israel, say “And answer us” on page 124.</i>",
+     "kind": "instruction",
+     "when": "publicFast",
+     "en": "*At this point on fast days, the congregation adds “Answer us” below."
+    },
+    {
+     "text": "<br>עֲנֵֽנוּ Answer us,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " answer us on our Fast Day,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " for we are in great distress. Look not at our wickedness. Do not hide Your face from us and do not ignore our plea. Be near to our cry;",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " please let Your loving-kindness comfort us. Even before we call to You,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " answer us,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " as is said,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " “Before they call,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " I will answer. While they are still speaking,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " I will hear.” For You,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " are the One who answers in time of distress,",
+     "kind": "instruction",
+     "when": "publicFast",
+     "en": "Continue with “for You listen” above."
+    },
+    {
+     "text": " redeems and rescues in all times of trouble and anguish.<br>",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": "<i class=\"instruction\">Continue with “for You listen” above.</i></small>",
+     "kind": "prayer",
+     "when": "publicFast"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:76"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:68": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:77"
+   ],
+   "kind": "heading",
+   "en": "TEMPLE SERVICE"
+  },
+  "en:Weekdays/Minha for Weekdays:69": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:78"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:70": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Rosh Ḥodesh and Ḥol HaMo’ed, say:</i>",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": "<br>אֱלֹהֵֽינוּ Our God and God of our ancestors,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " may there rise,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " come,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " reach,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " appear,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " be favored,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " heard,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " regarded and remembered before You,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " our recollection and remembrance,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " as well as the remembrance of our ancestors,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " and of the Messiah son of David Your servant,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " and of Jerusalem Your holy city,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " and of all Your people the house of Israel – for deliverance and well-being,",
+     "kind": "instruction",
+     "when": "roshChodesh || cholHamoed",
+     "en": "On Rosh Ḥodesh:"
+    },
+    {
+     "text": " grace,",
+     "kind": "prayer",
+     "when": "roshChodesh"
+    },
+    {
+     "text": " loving-kindness and compassion,",
+     "kind": "instruction",
+     "when": "roshChodesh || cholHamoed",
+     "en": "On Pesaḥ:"
+    },
+    {
+     "text": " life and peace,",
+     "kind": "prayer",
+     "when": "pesach"
+    },
+    {
+     "text": " on this day of:<br>",
+     "kind": "instruction",
+     "when": "roshChodesh || cholHamoed",
+     "en": "On Sukkot:"
+    },
+    {
+     "text": "<i class=\"instruction\">On Rosh Ḥodesh:</i>",
+     "kind": "prayer",
+     "when": "sukkot"
+    },
+    {
+     "text": " Rosh Ḥodesh.<br>",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": "<i class=\"instruction\">On Pesaḥ:</i>",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " the Festival of Matzot.<br>",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": "<i class=\"instruction\">On Sukkot:</i>",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " the Festival of Sukkot.<br>On it remember us,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " Lord our God,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " for good;",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " recollect us for blessing,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " and deliver us for life. In accord with Your promise of salvation and compassion,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " spare us and be gracious to us;",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " have compassion on us and deliver us,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " for our eyes are turned to You because You,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " God,",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": " are a gracious and compassionate King.</small>",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:79"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:71": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:80"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:72": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:81"
+   ],
+   "kind": "heading",
+   "en": "THANKSGIVING"
+  },
+  "en:Weekdays/Minha for Weekdays:73": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:82"
+   ],
+   "kind": "instruction",
+   "en": "Bow at the first nine words."
+  },
+  "en:Weekdays/Minha for Weekdays:74": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:83"
+   ],
+   "kind": "prayer",
+   "gestures": [
+    "bow"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:75": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">During the Leader’s Repetition, the congregation says quietly:</i>",
+     "kind": "instruction",
+     "amidah": "repetition",
+     "minyan": true,
+     "en": "During the Leader’s Repetition, the congregation says quietly:"
+    },
+    {
+     "text": "<br>מוֹדִים We give thanks to You,",
+     "kind": "prayer",
+     "amidah": "repetition",
+     "minyan": true
+    },
+    {
+     "text": "<br>for You are the Lord our God<br>and God of our ancestors,",
+     "kind": "prayer",
+     "amidah": "repetition",
+     "minyan": true
+    },
+    {
+     "text": "<br>God of all flesh,",
+     "kind": "prayer",
+     "amidah": "repetition",
+     "minyan": true
+    },
+    {
+     "text": "<br>who formed us<br>and formed the universe.<br>Blessings and thanks<br>are due to Your great<br>and holy name for giving us life and sustaining us.<br>May You continue<br>to give us life and sustain us;",
+     "kind": "prayer",
+     "amidah": "repetition",
+     "minyan": true
+    },
+    {
+     "text": "<br>and may You gather our exiles to Your holy courts,",
+     "kind": "prayer",
+     "amidah": "repetition",
+     "minyan": true
+    },
+    {
+     "text": "<br>to keep Your decrees,",
+     "kind": "prayer",
+     "amidah": "repetition",
+     "minyan": true
+    },
+    {
+     "text": "<br>do Your will and serve You with a perfect heart,",
+     "kind": "prayer",
+     "amidah": "repetition",
+     "minyan": true
+    },
+    {
+     "text": "<br>for it is for us<br>to give You thanks.<br>Blessed be God to whom thanks­giving is due.</small>",
+     "kind": "prayer",
+     "amidah": "repetition",
+     "minyan": true
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:84"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:76": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Ḥanukka:</i>",
+     "kind": "instruction",
+     "when": "chanukah",
+     "en": "On Ḥanukka:"
+    },
+    {
+     "text": "<br>עַל הַנִּסִּים [We thank You also] for the miracles,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " the redemption,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " the mighty deeds,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " the salvations,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " and the victories in battle which You performed for our ancestors in those days,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " at this time.<br>בִּימֵי מַתִּתְיָֽהוּ In the days of Mattityahu,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " son of Yoḥanan,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " the High Priest,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " the Hasmonean,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " and his sons,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " the wicked Greek kingdom rose up against Your people Israel to make them forget Your Torah and to force them to transgress the statutes of Your will. It was then that You in Your great compassion stood by them in the time of their distress. You championed their cause,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " judged their claim,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " and avenged their wrong. You delivered the strong into the hands of the weak,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " the many into the hands of the few,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " the impure into the hands of the pure,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " the wicked into the hands of the righteous,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " and the arrogant into the hands of those who were engaged in the study of Your Torah. You made for Yourself great and holy renown in Your world,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " and for Your people Israel You performed a great salvation and redemption as of this very day. Your children then entered the holiest part of Your House,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " cleansed Your Temple,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " purified Your Sanctuary,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " kindled lights in Your holy courts,",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": " and designated these eight days of Ḥanukka for giving thanks and praise to Your great name.<br>",
+     "kind": "prayer",
+     "when": "chanukah"
+    },
+    {
+     "text": "<i class=\"instruction\">Continue with “For all these things.”</i></small>",
+     "kind": "instruction",
+     "when": "chanukah",
+     "en": "Continue with “For all these things.”"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:85"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:77": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Purim:</i>",
+     "kind": "instruction",
+     "when": "purim",
+     "en": "On Purim:"
+    },
+    {
+     "text": "<br>עַל הַנִּסִּים [We thank You also] for the miracles,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " the redemption,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " the mighty deeds,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " the salvations,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " and the victories in battle which You performed for our ancestors in those days,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " at this time.<br>בִּימֵי מָרְדְּכַי In the days of Mordekhai and Esther,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " in Shushan the capital,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " the wicked Haman rose up against them and sought to destroy,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " slay and exterminate all the Jews,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " young and old,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " children and women,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " on one day,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " the thirteenth day of the twelfth month,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " which is the month of Adar,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " and to plunder their possessions. Then You in Your great compassion thwarted his counsel,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " frustrated his plans,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " and caused his scheme to recoil on his own head,",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": " so that they hanged him and his sons on the gallows.<br>",
+     "kind": "prayer",
+     "when": "purim"
+    },
+    {
+     "text": "<i class=\"instruction\">Continue with “For all these things.”</i></small>",
+     "kind": "prayer",
+     "when": "purim"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:86"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:78": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:88"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:79": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "Between Rosh HaShana and Yom Kippur:"
+    },
+    {
+     "text": " And write,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " for a good life,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " all the children of Your covenant.</small>",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:89"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:80": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:90"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:81": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On public fast days only, the following is said by the Leader during the Repetition of the Amida, except in a house of mourning. In Israel, on Fast Days, if Kohanim bless the congregation, turn to page 838. See laws 370–377.</i>",
+     "kind": "instruction",
+     "when": "publicFast",
+     "minyan": true,
+     "en": "On public fast days only, the following is said by the Leader during the Repetition of the Amida, except in a house of mourning."
+    },
+    {
+     "text": "<br>Our God and God of our fathers,",
+     "kind": "prayer",
+     "when": "publicFast",
+     "minyan": true
+    },
+    {
+     "text": " bless us with the threefold blessing in the Torah,",
+     "kind": "prayer",
+     "when": "publicFast",
+     "minyan": true
+    },
+    {
+     "text": " written by the hand of Moses Your servant and pronounced by Aaron and his sons the priests,",
+     "kind": "prayer",
+     "when": "publicFast",
+     "minyan": true
+    },
+    {
+     "text": " Your holy people,",
+     "kind": "prayer",
+     "when": "publicFast",
+     "minyan": true
+    },
+    {
+     "text": " as it is said:<br>May the Lord bless you and protect you.<br>",
+     "kind": "prayer",
+     "when": "publicFast",
+     "minyan": true
+    },
+    {
+     "text": "<i class=\"instruction\">Cong:</i>",
+     "kind": "instruction",
+     "when": "publicFast",
+     "minyan": true,
+     "en": "Cong:"
+    },
+    {
+     "text": " May it be Your will.<br>May the Lord make His face shine on you and be gracious to you.<br>",
+     "kind": "prayer",
+     "when": "publicFast",
+     "minyan": true
+    },
+    {
+     "text": "<i class=\"instruction\">Cong:</i>",
+     "kind": "instruction",
+     "when": "publicFast",
+     "minyan": true,
+     "en": "Cong:"
+    },
+    {
+     "text": " May it be Your will.<br>May the Lord turn His face toward you,",
+     "kind": "prayer",
+     "when": "publicFast",
+     "minyan": true
+    },
+    {
+     "text": " and grant you peace.<br>",
+     "kind": "instruction",
+     "when": "publicFast",
+     "minyan": true,
+     "en": "Cong:"
+    },
+    {
+     "text": "<i class=\"instruction\">Cong:</i>",
+     "kind": "prayer",
+     "when": "publicFast",
+     "minyan": true
+    },
+    {
+     "text": " May it be Your will.</small>",
+     "kind": "prayer",
+     "when": "publicFast",
+     "minyan": true
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:92"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:82": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:93"
+   ],
+   "kind": "heading",
+   "en": "PEACE"
+  },
+  "en:Weekdays/Minha for Weekdays:83": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:96"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:84": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "Between Rosh HaShana and Yom Kippur:"
+    },
+    {
+     "text": " In the book of life,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " blessing,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " peace and prosperity,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " may we and all Your people the house of Israel be remembered and written before You for a good life,",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": " and for peace.*</small>",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:99"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:85": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:100"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:86": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">*Between Rosh HaShana and Yom Kippur<br>outside Israel,</i>",
+     "kind": "instruction",
+     "when": "!il && aseretYemeiTeshuva",
+     "alt": "osehShalom",
+     "en": "*Between Rosh HaShana and Yom Kippur outside Israel,"
+    },
+    {
+     "text": " <i class=\"instruction\">many end the blessing:</i>",
+     "kind": "instruction",
+     "when": "!il && aseretYemeiTeshuva",
+     "alt": "osehShalom",
+     "en": "many end the blessing:"
+    },
+    {
+     "text": "<br>Blessed are You,",
+     "kind": "prayer",
+     "when": "!il && aseretYemeiTeshuva",
+     "alt": "osehShalom"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer",
+     "when": "!il && aseretYemeiTeshuva",
+     "alt": "osehShalom"
+    },
+    {
+     "text": " who makes peace.</small>",
+     "kind": "prayer",
+     "when": "!il && aseretYemeiTeshuva",
+     "alt": "osehShalom"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:101"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:87": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:102"
+   ],
+   "kind": "instruction",
+   "en": "The following verse concludes the Leader’s Repetition of the Amida."
+  },
+  "en:Weekdays/Minha for Weekdays:88": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:104"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:89": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:105"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:90": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">*A person undertaking a personal fast says the following in Minḥa before the fast:</i>",
+     "kind": "instruction",
+     "when": "publicFast",
+     "en": "*A person undertaking a personal fast says the following in Minḥa before the fast:"
+    },
+    {
+     "text": "<br>Master of all worlds,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " I hereby take upon myself before You a voluntary fast tomorrow. May it be Your will,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " Lord my God and God of my ancestors,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " that You accept me in love and favor,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " that my prayer may come before You,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " and that You may answer my entreaty in Your great compassion,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " for You hear the prayer of every mouth.</small><br><small>",
+     "kind": "instruction",
+     "when": "publicFast",
+     "en": "On the afternoon of the fast, the following is said:"
+    },
+    {
+     "text": "<i class=\"instruction\">On the afternoon of the fast, the following is said:</i>",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": "<br>Master of all worlds,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " it is revealed and known to You that when the Temple stood,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " a person who sinned would offer a sacrifice,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " of which were offered only the fat and blood,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " yet You in Your great compassion granted atonement. Now I have fasted,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " and my fat and blood have been diminished. May it be Your will that this diminution today of my fat and blood be as if I had offered them before You on the altar,",
+     "kind": "prayer",
+     "when": "publicFast"
+    },
+    {
+     "text": " and may You show me favor.</small>",
+     "kind": "prayer",
+     "when": "publicFast"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:106"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:91": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:107"
+   ],
+   "kind": "instruction",
+   "en": "Bow, take three steps back, then bow, first left, then right, then center, while saying:"
+  },
+  "en:Weekdays/Minha for Weekdays:92": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:108"
+   ],
+   "kind": "prayer",
+   "gestures": [
+    "bow_left_right_center"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:93": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:110"
+   ],
+   "kind": "prayer"
+  },
+  "en:Weekdays/Minha for Weekdays:94": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:111"
+   ],
+   "kind": "instruction",
+   "en": "On days when Taḥanun is not said, the Leader says Full Kaddish on page 234."
+  },
+  "en:Weekdays/Minha for Weekdays:95": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:112"
+   ],
+   "kind": "instruction",
+   "en": "Between Rosh HaShana and Yom Kippur and on fast days, except days when TaḤanun is not said, Avinu Malkenu is said here."
+  },
+  "en:Weekdays/Minha for Weekdays:96": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:113"
+   ],
+   "kind": "heading",
+   "en": "TAḤANUN"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:1": {
+   "he": []
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:2": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:2"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:3": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:3"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:4": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The Leader says the following, bowing at “Bless,” standing straight at “the</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <small><i class=\"instruction\">LORD</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small><i class=\"instruction\">”; the congregation, followed by the Leader, responds, bowing at “Bless,” standing straight at “the</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <small><i class=\"instruction\">LORD</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small><i class=\"instruction\">”:</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:5"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:5": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <small>BLESS</small> the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:5"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:6": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Congregation:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Bless the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:6"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:7": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Bless the <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the blessed One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:7"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:8": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:8"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:9": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:9"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:10": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The Shema must be said with intense concentration. See laws 349–353.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">When not with a minyan, say:</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:11"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:11": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:11"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:12": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:13"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:13": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:13"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:14": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Quietly:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed be the name of His glorious kingdom for ever and all time.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:14"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:15": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:15"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:16": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:16"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:17": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:17"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:18": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:18"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:19": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:20"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:20": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:20"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:21": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:21"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:22": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:22"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:23": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:23"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:24": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:24"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:25": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:25"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:26": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:26"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:27": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:28"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:28": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:28"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:29": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:29"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:30": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:30"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:31": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:31"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:32": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:32"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:33": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom >in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:33"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:34": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:34"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:35": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:35"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:36": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:36"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:37": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:38"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:38": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:38"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:39": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:39"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:40": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:40"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:41": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Between Rosh HaShana & Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small> Remember us for life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O King who desires life,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and write us in the book of life –<br>for Your sake,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O God of life.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:41"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:42": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:42"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:43": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:43"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:44": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:44"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:45": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:46"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:46": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">In fall and winter:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " He makes the wind blow and the rain fall.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">In Israel, in spring and summer:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " He causes the dew to fall.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:46"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:47": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:47"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:48": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Between Rosh HaShana & Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small>  Who is like You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " compassionate Father,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>who remembers His creatures in compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for life?",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:48"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:49": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:57"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:50": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:58"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:51": {
+   "parts": [
+    {
+     "text": "אַתָּה קָדוֹשׁ You are holy and Your name is holy,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and holy ones praise You daily,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Selah!<br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the holy God. /",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the holy King./",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\"><br>(If forgotten, repeat the Amida.)</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:60"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:52": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:61"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:53": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:62"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:54": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Motza’ei Shabbat and Motza’ei Yom Tov add:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>אַתָּה חוֹנַנְתָּֽנוּ You have graced us with the knowledge of Your Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and taught us to perform the statutes of Your will. You have distinguished,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " between sacred and profane,",
+     "kind": "prayer"
+    },
+    {
+     "text": " light and darkness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Israel and the nations,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and between the seventh day and the six days of work. Our Father,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our King,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may the days approaching us bring peace;",
+     "kind": "prayer"
+    },
+    {
+     "text": " may we be free from all sin,",
+     "kind": "prayer"
+    },
+    {
+     "text": " cleansed from all iniquity,",
+     "kind": "prayer"
+    },
+    {
+     "text": " holding fast to our reverence of You. And</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:63"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:55": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:64"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:56": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:65"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:57": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:66"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:58": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:67"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:59": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:69"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:60": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:70"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:61": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:71"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:62": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:72"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:63": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:73"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:64": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:74"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:65": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">The following prayer for a sick person may be said here:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>May it be Your will,",
+     "kind": "prayer"
+    },
+    {
+     "text": " O Lord my God and God of my ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that You speedily send a complete recovery from heaven,",
+     "kind": "prayer"
+    },
+    {
+     "text": " a healing of both soul and body,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to the patient (name),",
+     "kind": "prayer"
+    },
+    {
+     "text": " son/daughter of (mother’s name) among the other afflicted of Israel.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:75"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:66": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:76"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:67": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:77"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:68": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:78"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:69": {
+   "parts": [
+    {
+     "text": "בָּרֵךְ Bless this year for us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small> our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and all its types of produce for good.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">In winter:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Grant dew and rain as a blessing<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">In other seasons:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Grant blessing<br>on the face of the earth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and from its goodness satisfy us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessing our year as the best of years.<br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who blesses the years.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:79"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:70": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:80"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:71": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:81"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:72": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:82"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:73": {
+   "parts": [
+    {
+     "text": "הָשִֽׁיבָה Restore our judges as at first,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and our counselors as at the beginning,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and remove from us sorrow and sighing.<br>May You alone,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>reign over us<br>with loving-kindness and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and vindicate us in justice.<br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>the King who loves righteousness and justice.<br>/",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Between Rosh HaShana and Yom Kippur, end the blessing:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the King of justice./",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:83"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:74": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:85"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:75": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:86"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:76": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:87"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:77": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:88"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:78": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:89"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:79": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:91"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:80": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:92"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:81": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:93"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:82": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:94"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:83": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:95"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:84": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:96"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:85": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:97"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:86": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:98"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:87": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Rosh Ḥodesh and Ḥol HaMo’ed, say:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>אֱלֹהֵֽינוּ Our God and God of our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may there rise,",
+     "kind": "prayer"
+    },
+    {
+     "text": " come,",
+     "kind": "prayer"
+    },
+    {
+     "text": " reach,",
+     "kind": "prayer"
+    },
+    {
+     "text": " appear,",
+     "kind": "prayer"
+    },
+    {
+     "text": " be favored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " heard,",
+     "kind": "prayer"
+    },
+    {
+     "text": " regarded and remembered before You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our recollection and remembrance,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as well as the remembrance of our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and of the Messiah son of David Your servant,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and of Jerusalem Your holy city,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and of all Your people the house of Israel – for deliverance and well-being,",
+     "kind": "prayer"
+    },
+    {
+     "text": " grace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " loving-kindness and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " life and peace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " on this day of:<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Rosh Ḥodesh:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Rosh Ḥodesh.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Pesaḥ:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Matzot.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Sukkot:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Sukkot.<br>On it remember us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for good;",
+     "kind": "prayer"
+    },
+    {
+     "text": " recollect us for blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and deliver us for life. In accord with Your promise of salvation and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": " spare us and be gracious to us;",
+     "kind": "prayer"
+    },
+    {
+     "text": " have compassion on us and deliver us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for our eyes are turned to You because You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " are a gracious and compassionate King.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:99"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:88": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:100"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:89": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:101"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:90": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:103"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:91": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:104"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:92": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Ḥanukka:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>עַל הַנִּסִּים [We thank You also] for the miracles,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the redemption,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the mighty deeds,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the salvations,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the victories in battle which You performed for our ancestors in those days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " at this time.<br>בִּימֵי מַתִּתְיָֽהוּ In the days of Mattityahu,",
+     "kind": "prayer"
+    },
+    {
+     "text": " son of Yoḥanan,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the High Priest,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Hasmonean,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and his sons,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the wicked Greek kingdom rose up against Your people Israel to make them forget Your Torah and to force them to transgress the statutes of Your will. It was then that You in Your great compassion stood by them in the time of their distress. You championed their cause,",
+     "kind": "prayer"
+    },
+    {
+     "text": " judged their claim,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and avenged their wrong. You delivered the strong into the hands of the weak,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the many into the hands of the few,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the impure into the hands of the pure,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the wicked into the hands of the righteous,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the arrogant into the hands of those who were engaged in the study of Your Torah. You made for Yourself great and holy renown in Your world,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and for Your people Israel You performed a great salvation and redemption as of this very day. Your children then entered the holiest part of Your House,",
+     "kind": "prayer"
+    },
+    {
+     "text": " cleansed Your Temple,",
+     "kind": "prayer"
+    },
+    {
+     "text": " purified Your Sanctuary,",
+     "kind": "prayer"
+    },
+    {
+     "text": " kindled lights in Your holy courts,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and designated these eight days of Ḥanukka for giving thanks and praise to Your great name.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Continue with “For all these things.”</i></small>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:106"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:93": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">On Purim:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br>עַל הַנִּסִּים [We thank You also] for the miracles,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the redemption,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the mighty deeds,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the salvations,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the victories in battle which You performed for our ancestors in those days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " at this time.<br>בִּימֵי מָרְדְּכַי In the days of Mordekhai and Esther,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in Shushan the capital,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the wicked Haman rose up against them and sought to destroy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " slay and exterminate all the Jews,",
+     "kind": "prayer"
+    },
+    {
+     "text": " young and old,",
+     "kind": "prayer"
+    },
+    {
+     "text": " children and women,",
+     "kind": "prayer"
+    },
+    {
+     "text": " on one day,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the thirteenth day of the twelfth month,",
+     "kind": "prayer"
+    },
+    {
+     "text": " which is the month of Adar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and to plunder their possessions. Then You in Your great compassion thwarted his counsel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " frustrated his plans,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and caused his scheme to recoil on his own head,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so that they hanged him and his sons on the gallows.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Continue with “For all these things.”</i></small>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:107"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:94": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:109"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:95": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " And write,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for a good life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " all the children of Your covenant.</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:110"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:96": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:111"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:97": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Taḥanun is not said on Erev Shabbat and Erev Yom Tov. It is also not said on the following days: Rosh Ḥodesh, Ḥanukka, Tu BiShvat, the 14th and 15th of Adar</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <small><i class=\"instruction\">I</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small><i class=\"instruction\">, Purim and Shushan Purim, Yom HaAtzma’ut, Lag BaOmer, Yom Yerushalayim, Tisha B’Av, Tu B’Av, and the preceding afternoons, the month of Nisan, the 14th of Iyar (Pesaḥ Sheni), from Rosh Ḥodesh Sivan through the day after Shavuot (in Israel through 12th of Sivan), and from Erev Yom Kippur through the day after Simḥat Torah (in Israel through Rosh Ḥodesh Marḥeshvan). Taḥanun is also not said: on the occasion of a Brit Mila, either where the brit will take place or where the father, Sandek or Mohel are present; if a groom is present (and some say, a bride) on the day of his wedding or during the week of Sheva Berakhot; in a house of mourning.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Minha for Weekdays:115"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:98": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:116"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:99": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:118"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:100": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:120"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:101": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:121"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:102": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:123"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:103": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:124"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:104": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:126"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:105": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:127"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:106": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:128"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:107": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:129"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:108": {
+   "he": [
+    "he:Weekdays/Minha for Weekdays:131"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:109": {
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:110": {
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:111": {
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:112": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom >in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:113": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction",
+     "en": "All:"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:114": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader:</i>",
+     "kind": "instruction",
+     "en": "Leader:"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " uplifted and lauded be the name of the Holy One,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " praise and consolation uttered in the world – and say: Amen.",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:115": {
+   "he": [],
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "en:Weekdays/Minha for Weekdays:116": {
+   "he": [],
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "en:Weekdays/Minha for Weekdays:117": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Bow, take three steps back, as if taking leave of the Divine Presence, then bow, first left, then right, then center, while saying:",
+   "gloss": "Gesture for Oseh Shalom"
+  },
+  "en:Weekdays/Minha for Weekdays:118": {
+   "he": [],
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "gestures": [
+    "bow_left_right_center"
+   ]
+  },
+  "en:Weekdays/Minha for Weekdays:119": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Stand while saying Aleinu. Bow at ▾"
+  },
+  "en:Weekdays/Minha for Weekdays:120": {
+   "he": [],
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "gestures": [
+    "bow_full"
+   ],
+   "gloss": "Bow at the bow marker"
+  },
+  "en:Weekdays/Minha for Weekdays:121": {
+   "he": [],
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud"
+  },
+  "en:Weekdays/Minha for Weekdays:122": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Some add:"
+  },
+  "en:Weekdays/Minha for Weekdays:123": {
+   "he": [],
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "gloss": "Optional addition to Aleinu"
+  },
+  "en:Weekdays/Minha for Weekdays:124": {
+   "he": [],
+   "kind": "heading",
+   "en": "MOURNER'S KADDISH"
+  },
+  "en:Weekdays/Minha for Weekdays:125": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following prayer, said by mourners, requires the presence of a minyan.</i>",
+     "kind": "instruction",
+     "en": "The following prayer, said by mourners, requires the presence of a minyan.",
+     "gloss": "Requires minyan"
+    },
+    {
+     "text": "<br><i class=\"instruction\">A transliteration can be found on page 1334.</i>",
+     "kind": "instruction",
+     "en": "A transliteration can be found on page 1334."
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:126": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction",
+     "en": "Mourner:"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br>in your lifetime<br>and in your days,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>and in the lifetime<br>of all the house of Israel,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:127": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction",
+     "en": "All:"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:128": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction",
+     "en": "Mourner:"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>blessed be He,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world –<br>and say: Amen.",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "minyan": true
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Minha for Weekdays:129": {
+   "he": [],
+   "kind": "prayer",
+   "role": "congregation",
+   "en": "May there be great peace from heaven, and life for us and all Israel – and say: Amen."
+  },
+  "en:Weekdays/Minha for Weekdays:130": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Bow, take three steps back, as if taking leave of the Divine Presence, then bow, first left, then right, then center, while saying:",
+   "gloss": "Gestures for Oseh Shalom"
+  },
+  "en:Weekdays/Minha for Weekdays:131": {
+   "he": [],
+   "kind": "prayer",
+   "role": "congregation",
+   "en": "May He who makes peace in His high places, make peace for us and all Israel – and say: Amen.",
+   "gloss": "Oseh Shalom"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:97": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:114"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:98": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:114"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:99": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " In the book of life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": " peace and prosperity,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may we and all Your people the house of Israel be remembered and written before You for a good life,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and for peace.*</small>",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:114"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:100": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:116"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:101": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">*Between Rosh HaShana and Yom Kippur<br>outside Israel,</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " <i class=\"instruction\">many end the blessing:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small><br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who makes peace.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:116"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:102": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:122"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:103": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:122"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:104": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:122"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:105": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:116"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:106": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:116"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:107": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:107"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:108": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:109"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:109": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:109"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:110": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small> יִתְגַּדַּל Magnified and sanctified may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom >in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:110"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:111": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small> May His great name be blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:111"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:112": {
+   "parts": [
+    {
+     "text": "<small><i class=\"instruction\">Leader:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small> Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation uttered in the world – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:112"
+   ]
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:113": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:130"
+   ],
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "en": "May the prayers and pleas of all Israel be accepted by their Father in heaven"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:114": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:130"
+   ],
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "en": "May there be great peace from heaven, and life for us and all Israel"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:115": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:130"
+   ],
+   "kind": "instruction",
+   "en": "Bow, take three steps back, as if taking leave of the Divine Presence, then bow, first left, then right, then center, while saying:",
+   "gloss": "Gestures for Oseh Shalom"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:116": {
+   "he": [
+    "he:Weekdays/Ma'ariv for Weekdays:130"
+   ],
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "en": "May He who makes peace in His high places, make peace for us and all Israel"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:117": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Yom HaAtzma’ut (in Israel and many communities outside Israel) the service continues with “Listen, Israel” on page 916.</i>",
+     "kind": "instruction",
+     "en": "On Yom HaAtzma’ut (in Israel and many communities outside Israel) the service continues with “Listen, Israel” on page 916. From the second night of Pesaḥ until the night before Shavuot, the Omer is counted here (page 284). On Purim, Megillat Esther is read (page 1224); on Tisha B’Av, Megillat Eikha is read (page 1190)."
+    },
+    {
+     "text": "<br><i class=\"instruction\">From the second night of Pesaḥ until the night before Shavuot, the Omer is counted here ( page 284).</i>",
+     "kind": "instruction",
+     "en": "On Yom HaAtzma’ut (in Israel and many communities outside Israel) the service continues with “Listen, Israel” on page 916. From the second night of Pesaḥ until the night before Shavuot, the Omer is counted here (page 284). On Purim, Megillat Esther is read (page 1224); on Tisha B’Av, Megillat Eikha is read (page 1190)."
+    },
+    {
+     "text": "<br><i class=\"instruction\">On Purim, Megillat Esther is read (page 1224);</i>",
+     "kind": "instruction",
+     "en": "On Yom HaAtzma’ut (in Israel and many communities outside Israel) the service continues with “Listen, Israel” on page 916. From the second night of Pesaḥ until the night before Shavuot, the Omer is counted here (page 284). On Purim, Megillat Esther is read (page 1224); on Tisha B’Av, Megillat Eikha is read (page 1190)."
+    },
+    {
+     "text": "<br><i class=\"instruction\">on Tisha B’Av, Megillat Eikha is read (page 1190).</i>",
+     "kind": "instruction",
+     "en": "On Yom HaAtzma’ut (in Israel and many communities outside Israel) the service continues with “Listen, Israel” on page 916. From the second night of Pesaḥ until the night before Shavuot, the Omer is counted here (page 284). On Purim, Megillat Esther is read (page 1224); on Tisha B’Av, Megillat Eikha is read (page 1190)."
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:118": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Stand while saying Aleinu. Bow at"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:119": {
+   "he": [],
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "en": "It is our duty to praise the Master of all, and ascribe greatness to the Author of creation, who has not made us like the nations of the lands nor placed us like the families of the earth; who has not made our portion like theirs, nor our destiny like all their multitudes. (For they worship vanity and emptiness, and pray to a god who cannot save.) But we bow in worship and thank the Supreme King of kings, the Holy One, blessed be He, who extends the heavens and establishes the earth, whose throne of glory is in the heavens above, and whose power’s Presence is in the highest of heights. He is our God; there is no other. Truly He is our King, there is none else, as it is written in His Torah: “You shall know and take to heart this day that the LORD is God, in heaven above and on earth below. There is no other.”"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:120": {
+   "he": [],
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "en": "Therefore, we place our hope in You, LORD our God, that we may soon see the glory of Your power, when You will remove abominations from the earth, and idols will be utterly destroyed, when the world will be perfected under the sovereignty of the Almighty, when all humanity will call on Your name, to turn all the earth’s wicked toward You. All the world’s inhabitants will realize and know that to You every knee must bow and every tongue swear loyalty. Before You, LORD our God, they will kneel and bow down and give honor to Your glorious name. They will all accept the yoke of Your kingdom, and You will reign over them soon and for ever. For the kingdom is Yours, and to all eternity You will reign in glory, as it is written in Your Torah: “The LORD will reign for ever and ever.” And it is said: “Then the LORD shall be King over all the earth; on that day the LORD shall be One and His name One.”"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:121": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Some add:"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:122": {
+   "he": [],
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "en": "Have no fear of sudden terror or of the ruin when it overtakes the wicked. Devise your strategy, but it will be thwarted; propose your plan, but it will not stand, for God is with us. When you grow old, I will still be the same. When your hair turns gray, I will still carry you. I made you, I will bear you, I will carry you, and I will rescue you."
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:123": {
+   "he": [],
+   "kind": "heading",
+   "en": "MOURNER’S KADDISH"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:124": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following prayer, said by mourners, requires the presence of a minyan.</i>",
+     "kind": "instruction",
+     "en": "The following prayer, said by mourners, requires the presence of a minyan. A transliteration can be found on page 1334."
+    },
+    {
+     "text": "<br><i class=\"instruction\">A transliteration can be found on page 1334.</i>",
+     "kind": "instruction",
+     "en": "The following prayer, said by mourners, requires the presence of a minyan. A transliteration can be found on page 1334."
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:125": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction",
+     "en": "Mourner:"
+    },
+    {
+     "text": " יִתְגַּדַּל  Magnified and sanctified may His great name be,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "en": "Magnified and sanctified may His great name be, in the world He created by His will. May He establish His kingdom in your lifetime and in your days, and in the lifetime of all the house of Israel, swiftly and soon – and say: Amen."
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br>in your lifetime<br>and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and in the lifetime<br>of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:126": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction",
+     "en": "All:"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "en": "May His great name be blessed for ever and all time."
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:127": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction",
+     "en": "Mourner:"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer",
+     "role": "mourner",
+     "voice": "aloud",
+     "en": "Blessed and praised, glorified and exalted, raised and honored, uplifted and lauded be the name of the Holy One, blessed be He, beyond any blessing, song, praise and consolation uttered in the world – and say: Amen."
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world –<br>and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:128": {
+   "he": [],
+   "kind": "prayer",
+   "role": "mourner",
+   "voice": "aloud",
+   "en": "May there be great peace from heaven, and life for us and all Israel – and say: Amen."
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:129": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Bow, take three steps back, as if taking leave of the Divine Presence, then bow, first left, then right, then center, while saying:",
+   "gloss": "Customary conclusion of Maariv",
+   "forgot": true
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:130": {
+   "he": [],
+   "kind": "prayer",
+   "en": "May He who makes peace in His high places, make peace for us and all Israel – and say: Amen.",
+   "gloss": "Oseh Shalom, said at the conclusion of Maariv"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:131": {
+   "he": [],
+   "kind": "instruction",
+   "en": "From the second day of Rosh Chodesh Elul through Shemini Atzeret (in Israel through Hoshana Raba), the following psalm is said:",
+   "gloss": "LeDavid (Psalm 27) is recited during this period"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:132": {
+   "he": [],
+   "kind": "prayer",
+   "en": "By David. The LORD is my light and my salvation – whom then shall I fear? ... Hope in the LORD. Be strong and of good courage, and hope in the LORD!"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:133": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Mourner's Kaddish (on previous page)",
+   "gloss": "Refers to the Mourner's Kaddish printed earlier"
+  },
+  "en:Weekdays/Ma'ariv for Weekdays:134": {
+   "he": [],
+   "kind": "instruction",
+   "en": "In a house of mourning the service continues on page 1060.",
+   "gloss": "Special procedure for davening in a shiva house"
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Weekdays/Minha for Weekdays:62",
+   "type": "ambiguous",
+   "detail": "Text is in <small> but no explicit instruction says 'only on Tisha B'Av'. Context implies it, but siddur text is ambiguous."
+  },
+  {
+   "id": "he:Weekdays/Ma'ariv for Weekdays:46",
+   "type": "ambiguous",
+   "detail": "Instruction 'In winter' vs 'In Israel in summer' implies a calendar condition not explicitly defined in variables for this specific phrasing. Need to map to mashivHaruach/moridHatal logic."
+  },
+  {
+   "id": "he:Weekdays/Ma'ariv for Weekdays:69",
+   "type": "ambiguous",
+   "detail": "Winter/summer conditions for talUmatar depend on location (Israel vs Diaspora) and specific dates; siddur text implies Diaspora dates but does not explicitly state 'Diaspora'."
+  },
+  {
+   "id": "en:Weekdays/Minha for Weekdays:109",
+   "type": "missing_text",
+   "detail": "English instruction 'Stand at▴' has no Hebrew counterpart in selected segments."
+  },
+  {
+   "id": "en:Weekdays/Minha for Weekdays:100",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h97.1; h97.2; h98.1; h98.2; h99.1"
+  },
+  {
+   "id": "en:Weekdays/Minha for Weekdays:125",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/Minha for Weekdays:126",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/Minha for Weekdays:127",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/Minha for Weekdays:128",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Weekdays/Minha for Weekdays:113",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: e114.9; e126.5; e128.9; e128.10; e128.11"
+  },
+  {
+   "id": "en:Weekdays/Minha for Weekdays:129",
+   "type": "missing_text",
+   "detail": "Hebrew text for 'Oseh Shalom' (Oseh Shalom) is missing from the Hebrew segments in this leaf."
+  },
+  {
+   "id": "en:Weekdays/Minha for Weekdays:130",
+   "type": "missing_text",
+   "detail": "Hebrew text for the instruction 'Bow, take three steps back...' is missing from the Hebrew segments."
+  },
+  {
+   "id": "en:Weekdays/Minha for Weekdays:131",
+   "type": "missing_text",
+   "detail": "Hebrew text for 'Oseh Shalom' (Oseh Shalom) is missing from the Hebrew segments in this leaf."
+  },
+  {
+   "id": "he:Weekdays/Ma'ariv for Weekdays:107",
+   "type": "ambiguous",
+   "detail": "Yehi Ratzon text appears before Kaddish Shalem in this chunk; verify if it belongs to Aleinu or is a separate concluding prayer."
+  },
+  {
+   "id": "en:Weekdays/Ma'ariv for Weekdays:100",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: Preserve existing leaf defaults; Preserve existing leaf defaults; Marker needs a unique increasing boundary or occurrence: עשה שלום; found positions [0, 94], previous boundary 0; h109.1; h109.2"
+  },
+  {
+   "id": "he:Weekdays/Ma'ariv for Weekdays:130",
+   "type": "ambiguous",
+   "detail": "The text mixes the standard Oseh Shalom with the Aseret Yemei Teshuva variant in one segment. The instruction 'בעשרת ימי תשובה' suggests the second part is conditional, but the first part is also present. Need to confirm if the first part is said only outside Aseret Yemei Teshuva or if both are said in some customs."
+  },
+  {
+   "id": "en:Weekdays/Ma'ariv for Weekdays:113",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h109.0; h109.1; h109.2; h109.3; h109.4"
+  }
+ ]
+}

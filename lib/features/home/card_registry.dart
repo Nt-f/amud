@@ -48,7 +48,11 @@ class CardType {
 
   /// Whether the card shows right now (e.g. Sefirat HaOmer only during
   /// the Omer); hidden cards take no space on the dashboard.
-  final bool Function(WidgetRef ref)? visible;
+  final bool Function(WidgetRef ref, CardConfig config)? visible;
+
+  /// When the card is conditional, says when it shows ("Only during the
+  /// Omer"), for the add and edit screens; null for a card always shown.
+  final String? Function(CardConfig config)? shownWhen;
   const CardType({
     required this.type,
     required this.title,
@@ -59,6 +63,7 @@ class CardType {
     this.defaults = const {},
     this.editor,
     this.visible,
+    this.shownWhen,
   });
 }
 
@@ -74,6 +79,7 @@ final cardRegistryProvider = Provider<CardRegistry>((ref) => throw Unimplemented
 const defaultDashboard = [
   CardConfig(id: 'd1', type: 'hebrewDate', span: 2),
   CardConfig(id: 'd5', type: 'omer', span: 2),
+  CardConfig(id: 'd12', type: 'levanaWindow', span: 2, settings: {'onlyWhenOpen': true}),
   CardConfig(id: 'd4', type: 'todayInSiddur', span: 2),
   CardConfig(id: 'd9', type: 'quickPrayers', span: 2),
   CardConfig(id: 'd6', type: 'learning', span: 1, settings: {'schedules': ['dafYomi', 'mishnaYomi', 'rambam1']}),
@@ -86,7 +92,21 @@ const defaultDashboard = [
 ];
 
 /// Bumped when saved dashboards should adopt a new arrangement.
-const _dashboardVersion = 3;
+const _dashboardVersion = 4;
+
+/// v4: the Kiddush Levana window sits under Sefirat HaOmer, shown only
+/// while the window is open.
+List<CardConfig> _migrateV4(List<CardConfig> l) {
+  final out = [...l];
+  final i = out.indexWhere((c) => c.type == 'levanaWindow');
+  final levana = i < 0
+      ? const CardConfig(id: 'd12', type: 'levanaWindow', span: 2, settings: {'onlyWhenOpen': true})
+      : out.removeAt(i);
+  final omer = out.indexWhere((c) => c.type == 'omer');
+  final date = out.indexWhere((c) => c.type == 'hebrewDate');
+  out.insert(omer >= 0 ? omer + 1 : (date >= 0 ? date + 1 : 0), levana);
+  return out;
+}
 
 /// v3: the Calendar tab became a card, placed under Shabbat & Yom Tov and
 /// the next zman (above the zmanim list).
@@ -95,6 +115,12 @@ const _dashboardVersion = 3;
 /// in the siddur" come quick prayers, then daily learning beside the
 /// minyan card, then Shabbat & Yom Tov beside the next zman.
 List<CardConfig> _migrate(List<CardConfig> l, int from) {
+  l = _migrateBefore4(l, from);
+  if (from < 4) l = _migrateV4(l);
+  return l;
+}
+
+List<CardConfig> _migrateBefore4(List<CardConfig> l, int from) {
   if (from < 2) l = _migrateV2(l);
   if (from < 3 && !l.any((c) => c.type == 'calendar')) {
     final out = [...l];

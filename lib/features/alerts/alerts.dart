@@ -10,6 +10,8 @@ import '../../core/providers.dart';
 import '../../core/settings.dart';
 import '../zmanim/zman_catalog.dart';
 import 'notification_backend.dart';
+import '../personal_dates/personal_dates.dart';
+import '../integrations/seasonal_windows.dart';
 import 'timer_backend.dart';
 import '../../core/analytics.dart';
 
@@ -79,7 +81,8 @@ class PlannedNotification {
   final String title;
   final String body;
   final String alertId;
-  const PlannedNotification(this.id, this.fireAt, this.title, this.body, this.alertId);
+  final String route;
+  const PlannedNotification(this.id, this.fireAt, this.title, this.body, this.alertId, {this.route = '/zmanim'});
 }
 
 /// Pure planning logic: expands alerts into notifications for the coming
@@ -215,20 +218,24 @@ class AlertScheduler {
     await backend.init();
     if (backend is TimerNotificationBackend) backend.onPlanExhausted = reschedule;
     final settings = ref.read(settingsProvider);
-    final plan = planNotifications(
+    final now = DateTime.now();
+    final plan = <PlannedNotification>[...planNotifications(
       alerts: ref.read(alertsProvider),
       location: ref.read(locationProvider),
       zmanim: ref.read(zmanResolverProvider),
       settings: settings,
-      now: DateTime.now(),
+      now: now,
       max: backend.maxPending,
-    );
+    ), ...planPersonalDates(ref.read(personalDatesProvider), settings, now),
+       ...planSeasonalReminders(settings, now)];
+    plan.sort((a, b) => a.fireAt.compareTo(b.fireAt));
+    final limited = plan.take(backend.maxPending).toList();
     try {
-      await backend.replaceAll(plan, exact: settings.exactAlarms);
+      await backend.replaceAll(limited, exact: settings.exactAlarms);
     } catch (e, st) {
       debugPrint('Notification scheduling failed: $e\n$st');
     }
-    return plan.length;
+    return limited.length;
   }
 }
 
@@ -239,8 +246,9 @@ final alertSchedulerProvider = Provider<AlertScheduler>((ref) {
   final timer = Timer.periodic(const Duration(hours: 6), (_) => s.reschedule());
   ref.onDispose(timer.cancel);
   // Re-plan whenever inputs change.
+  ref.listen(personalDatesProvider, (_, _) => s.reschedule());
   ref.listen(alertsProvider, (_, _) => s.reschedule());
   ref.listen(customZmanimProvider, (_, _) => s.reschedule());
-  ref.listen(settingsProvider.select((x) => (x.location, x.useElevation, x.exactAlarms, x.minhagim)), (_, _) => s.reschedule());
+  ref.listen(settingsProvider.select((x) => (x.location, x.useElevation, x.exactAlarms, x.minhagim, x.levanaReminder, x.hachamaReminder)), (_, _) => s.reschedule());
   return s;
 });

@@ -7,6 +7,7 @@ import '../../core/l10n.dart';
 import '../../core/fonts.dart';
 import '../../core/settings.dart';
 import '../settings/font_gallery_screen.dart';
+import '../settings/typesetting_options.dart';
 import 'versions_screen.dart';
 
 Future<void> showReaderSettings(BuildContext context, String book) => showModalBottomSheet<void>(
@@ -49,6 +50,13 @@ class _ReaderSettings extends ConsumerWidget {
               textDirection: TextDirection.rtl,
               textAlign: TextAlign.center,
               style: TextStyle(fontFamily: s.hebrewFont, fontSize: 22 * s.textScale, height: 1.6)),
+          const TypesettingOptions(),
+          SwitchListTile.adaptive(contentPadding: EdgeInsets.zero,
+            title: Text(context.tr('Keep screen on while reading')), value: s.keepReaderAwake,
+            onChanged: (v) => n.update((x) => x.copyWith(keepReaderAwake: v))),
+          SwitchListTile.adaptive(contentPadding: EdgeInsets.zero,
+            title: Text(context.tr('Full-screen reader')), value: s.fullscreenReader,
+            onChanged: (v) => n.update((x) => x.copyWith(fullscreenReader: v))),
           SheetLabel(context.tr('Prayer text')),
           ChoiceBar<TextLayout>(
             options: [

@@ -9,11 +9,14 @@ import '../../core/fonts.dart';
 import '../../core/hebrew_text.dart';
 import '../../core/html_text.dart';
 import '../../core/l10n.dart';
+import '../../core/text_report.dart';
 import '../../core/page_swipe.dart';
 import '../../core/settings.dart';
 import '../../core/split_row.dart';
 import '../../core/theme.dart';
+import '../../core/typeset/typeset.dart';
 import '../settings/font_gallery_screen.dart';
+import '../settings/typesetting_options.dart';
 import 'tehillim_data.dart';
 import 'tehillim_progress.dart';
 
@@ -37,9 +40,11 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
   /// Text is selected: sideways drags move its handles, so swiping
   /// doesn't turn the page.
   bool _selected = false;
+  String _selectedText = '';
 
   void _selectionChanged(SelectedContent? c) {
-    final selected = c != null && c.plainText.isNotEmpty;
+    _selectedText = c?.plainText ?? '';
+    final selected = _selectedText.isNotEmpty;
     if (selected != _selected) setState(() => _selected = selected);
   }
 
@@ -119,9 +124,13 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
     int? lastChapter;
     for (final ps in p.passages) {
       final book = bookOf(ps.chapter);
-      if (book != lastBook) rows.add((c) => _BookHeader(book));
+      final newBook = book != lastBook;
+      if (newBook) rows.add((c) => _BookHeader(book));
       lastBook = book;
-      if (ps.chapter != lastChapter) rows.add((c) => _ChapterHeader(ps.chapter));
+      // Between psalms, an ornament (the book header already marks a
+      // new book).
+      final ornament = rows.isNotEmpty && !newBook;
+      if (ps.chapter != lastChapter) rows.add((c) => _ChapterHeader(ps.chapter, ornament: ornament));
       lastChapter = ps.chapter;
       final letter = stanzaLetter(ps);
       if (letter.isNotEmpty) rows.add((c) => _StanzaHeader(letter));
@@ -144,10 +153,14 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
       }
     }
     rows.add((c) => _Footer(portion: p));
+    final side = TypeScale.of(s, hebrewSize: 24 * s.textScale)
+        .gutter(MediaQuery.sizeOf(context).width, min: wide ? 48 : 16, sideBySide: wide && s.layout == TextLayout.sideBySide);
     return SelectionArea(
       onSelectionChanged: _selectionChanged,
+      contextMenuBuilder: (context, state) => textReportMenu(context, state,
+          selectedText: _selectedText, location: 'Tehillim / ${p.titleEn} / ${p.rangeLabel}'),
       child: ListView.builder(
-        padding: EdgeInsets.fromLTRB(wide ? 48 : 16, 8, wide ? 48 : 16, 96),
+        padding: EdgeInsets.fromLTRB(side, 8, side, 96),
         itemCount: rows.length,
         itemBuilder: (c, i) => rows[i](c),
       ),
@@ -179,7 +192,10 @@ class _BookHeader extends StatelessWidget {
 
 class _ChapterHeader extends ConsumerWidget {
   final int chapter;
-  const _ChapterHeader(this.chapter);
+
+  /// Set off from the psalm before it (print-style typesetting).
+  final bool ornament;
+  const _ChapterHeader(this.chapter, {this.ornament = false});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -187,8 +203,8 @@ class _ChapterHeader extends ConsumerWidget {
     final read = ref.watch(tehillimProgressProvider.select((x) => x.read.contains(chapter)));
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
-    return Padding(
-      padding: const EdgeInsets.only(top: 20, bottom: 6),
+    final header = Padding(
+      padding: EdgeInsets.only(top: s.typesetting && ornament ? 4 : 20, bottom: 6),
       child: Row(children: [
         IconButton(
           tooltip: context.tr(read ? 'Mark as unread' : 'Mark as read'),
@@ -213,6 +229,11 @@ class _ChapterHeader extends ConsumerWidget {
         ),
       ]),
     );
+    if (!s.typesetting || !ornament) return header;
+    return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+      Padding(padding: const EdgeInsets.only(top: 16), child: SectionOrnament(height: 24 * s.textScale, color: theme.colorScheme.outline)),
+      header,
+    ]);
   }
 }
 
@@ -255,48 +276,55 @@ class _Verse extends ConsumerWidget {
     final showEn = s.showTranslationText;
 
     final verses = flow ?? [(verse, he, en)];
+    final ts = TypeScale.of(s, hebrewSize: 24 * s.textScale);
+    // Plain setting: as before, a flowing paragraph justified, single
+    // verses ragged. Print: the type scale decides, and each psalm opens
+    // with a large first word.
+    final align = ts.print ? ts.align(ParagraphRole.body) : (flow != null ? ParagraphAlign.justify : ParagraphAlign.start);
+    final opens = ts.print && verses.first.$1 == 1;
+    Widget paragraph(List<InlineSpan> spans, TextDirection dir, TextStyle base, ParagraphAlign align) => ts.print
+        ? TypesetParagraph(text: TextSpan(children: spans), textDirection: dir, em: base.fontSize!, align: align)
+        : Text.rich(TextSpan(children: spans),
+            textDirection: dir, textAlign: align == ParagraphAlign.justify ? TextAlign.justify : TextAlign.start);
     Widget? heW;
     if (showHe) {
       final htmls = [for (final v in verses) hebrewMarks(prepareVerse(v.$2, ketiv: t.ketiv), teamim: s.showTeamim, nikud: s.showNikud)];
       final all = htmls.join();
+      final teamim = hasTeamim(all);
       final base = TextStyle(
-        fontFamily: hebrewFamilyFor(s.hebrewFont, teamim: hasTeamim(all), nikud: hasNikud(all)),
+        fontFamily: hebrewFamilyFor(s.hebrewFont, teamim: teamim, nikud: hasNikud(all)),
         fontSize: 24 * s.textScale,
-        height: 1.75,
+        height: ts.print ? ts.leading(ParagraphRole.body, hebrew: true, marks: teamim) : 1.75,
         color: theme.colorScheme.onSurface,
       );
       final parser = SefariaHtml(base);
-      heW = Text.rich(
-        TextSpan(children: [
-          for (var i = 0; i < verses.length; i++) ...[
-            if (t.verseNumbers)
-              TextSpan(
-                text: '${hebrewNumeral(verses[i].$1).replaceAll(RegExp('[׳״]'), '')} ',
-                style: base.copyWith(fontSize: base.fontSize! * 0.6, color: colors.marker, fontWeight: FontWeight.w700),
-              ),
-            ...parser.parse(htmls[i]),
-            if (i < verses.length - 1) TextSpan(text: ' ', style: base),
-          ],
-        ]),
-        textDirection: TextDirection.rtl,
-        textAlign: flow != null ? TextAlign.justify : TextAlign.start,
-      );
+      heW = paragraph([
+        for (var i = 0; i < verses.length; i++) ...[
+          if (t.verseNumbers)
+            TextSpan(
+              text: '${hebrewNumeral(verses[i].$1).replaceAll(RegExp('[׳״]'), '')} ',
+              style: base.copyWith(fontSize: base.fontSize! * 0.6, color: colors.marker, fontWeight: FontWeight.w700),
+            ),
+          ...(i == 0 && opens
+              ? enlargeOpening(parser.parse(htmls[i]), ts.openingWord, lineHeight: base.height!)
+              : parser.parse(htmls[i])),
+          if (i < verses.length - 1) TextSpan(text: ' ', style: base),
+        ],
+      ], TextDirection.rtl, base, align);
     }
     Widget? enW;
     if (showEn) {
-      final base = TextStyle(fontFamily: s.latinFont, fontSize: 16 * s.textScale, height: 1.5, color: theme.colorScheme.onSurface);
+      final base = TextStyle(
+          fontFamily: s.latinFont, fontSize: 16 * s.textScale, height: ts.leading(ParagraphRole.body, hebrew: false), color: theme.colorScheme.onSurface);
       final parser = SefariaHtml(base);
-      enW = Text.rich(
-        TextSpan(children: [
-          for (var i = 0; i < verses.length; i++) ...[
-            if (t.verseNumbers)
-              TextSpan(text: '${verses[i].$1} ', style: base.copyWith(fontSize: base.fontSize! * 0.75, color: colors.marker, fontWeight: FontWeight.w700)),
-            ...parser.parse(verses[i].$3),
-            if (i < verses.length - 1) TextSpan(text: ' ', style: base),
-          ],
-        ]),
-        textDirection: TextDirection.ltr,
-      );
+      enW = paragraph([
+        for (var i = 0; i < verses.length; i++) ...[
+          if (t.verseNumbers)
+            TextSpan(text: '${verses[i].$1} ', style: base.copyWith(fontSize: base.fontSize! * 0.75, color: colors.marker, fontWeight: FontWeight.w700)),
+          ...parser.parse(verses[i].$3),
+          if (i < verses.length - 1) TextSpan(text: ' ', style: base),
+        ],
+      ], TextDirection.ltr, base, ts.print ? align : ParagraphAlign.start);
     }
     final Widget body;
     if (heW != null && enW != null && s.layout == TextLayout.sideBySide && wide) {
@@ -437,6 +465,7 @@ class _TehillimSettings extends ConsumerWidget {
             selected: s.layout == TextLayout.sideBySide ? TextLayout.interleaved : s.layout,
             onChanged: (v) => n.update((x) => x.copyWith(layout: v)),
           ),
+          const TypesettingOptions(),
           ListTile(
             contentPadding: EdgeInsets.zero,
             leading: const Icon(Icons.font_download_outlined),

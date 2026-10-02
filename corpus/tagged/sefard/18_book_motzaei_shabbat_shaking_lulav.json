@@ -1,0 +1,797 @@
+{
+ "nusach": "sefard",
+ "chunk": "book [Motzaei Shabbat  .. Shaking Lulav]",
+ "leaves": {
+  "Motzaei Shabbat /Havdala": {
+   "node": "havdalah",
+   "service": "none",
+   "when": "motzaeiShabbat"
+  },
+  "Motzaei Shabbat /Hamavdil": {
+   "node": "motzash.vihi_noam",
+   "service": "maariv",
+   "when": "motzaeiShabbat"
+  },
+  "Motzaei Shabbat /Melava Malka Zemirot": {
+   "node": "shabbat.melaveh_malkah",
+   "service": "none",
+   "when": "motzaeiShabbat"
+  },
+  "Shaking Lulav": {
+   "node": "lulav",
+   "service": "none"
+  }
+ },
+ "he": {
+  "he:Motzaei Shabbat /Havdala:1": {
+   "kind": "heading",
+   "en": "Order of Havdalah"
+  },
+  "he:Motzaei Shabbat /Havdala:2": {
+   "kind": "instruction",
+   "en": "One takes the cup in hand and says:"
+  },
+  "he:Motzaei Shabbat /Havdala:3": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Havdala:4": {
+   "kind": "instruction",
+   "en": "The sages of our teachers and rabbis say:"
+  },
+  "he:Motzaei Shabbat /Havdala:5": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Havdala:6": {
+   "parts": [
+    {
+     "text": "<small><b>על הבשמים:</b></small>",
+     "kind": "instruction",
+     "en": "Over the spices:"
+    },
+    {
+     "text": " בָּרוּךְ אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם. בּוֹרֵא מִינֵי בְשָׂמִים: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Havdala:7": {
+   "parts": [
+    {
+     "text": "<small><b>על הנר:</b></small>",
+     "kind": "instruction",
+     "en": "Over the candle:"
+    },
+    {
+     "text": " בָּרוּךְ אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם. בּוֹרֵא מְאוֹרֵי הָאֵשׁ: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Havdala:8": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Hamavdil:1": {
+   "kind": "heading",
+   "en": "Song for Motzaei Shabbat"
+  },
+  "he:Motzaei Shabbat /Hamavdil:2": {
+   "kind": "note",
+   "en": "The author of this song is Yitzchak HaKatan, whose name is written in the acrostic starting from the second line."
+  },
+  "he:Motzaei Shabbat /Hamavdil:3": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:1": {
+   "kind": "heading",
+   "en": "Zemirot for the Melaveh Malkah meal"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:2": {
+   "parts": [
+    {
+     "text": "<b>אַתְקִינוּ</b> סְעוּדָתָא דִמְהֵימְנוּתָא. שְׁלֵמָתָא חֶדְוָתָא דְּמַלְכָּא קַדִּישָׁא: אַתְקִינוּ סְעוּדָתָא דְמַלְכָּא. דָּא הִיא סְעוּדָתָא דְדָוִד מַלְכָּא מְשִׁיחָא. אַבְרָהָם יִצְחָק וְיַעֲקֹב אַתְיָן לְסַעֲדָא בַּהֲדֵיהּ: דָּוִד מֶלֶךְ יִשְׂרָאֵל חַי וְקַיָּם: סִימָן טוֹב וּמַזָּל טוֹב יְהֵא לָנוּ וּלְכָל יִשְׂרָאֵל אָמֵן: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small><b><small>(ג\"פ:)</small></b></small>",
+     "kind": "instruction",
+     "en": "(Three times:)",
+     "gloss": "Customary to repeat the preceding verse three times"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:3": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:4": {
+   "kind": "note",
+   "en": "The author of this song is named Jacob Manoi, and his name is signed in the first letters of the verses, starting from the second verse."
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:5": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:6": {
+   "kind": "note",
+   "en": "The author of the song is Rabbi Shila, and his name is signed in the last letters of the first words of the song."
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:7": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:8": {
+   "kind": "note",
+   "en": "The author of this song is named Elazar, and his name is signed in the first letters of the verses."
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:9": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:10": {
+   "kind": "note",
+   "en": "The author of the song is Rabbi Avraham, and his name is signed in the first letters of the verses."
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:11": {
+   "parts": [
+    {
+     "text": "<b>אֱלֹהִים</b> יִסְעָדֵנוּ. בְּרָכָה בִּמְאוֹדֵנוּ. וְזֶבֶד טוֹב יִזְבְּדֵנוּ. בְּכָל מִשְׁלַח יָדֵינוּ. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small><b>אֱלֹהִים יִסְעָדֵנוּ</b></small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּיוֹם רִאשׁוֹן לִמְלָאכָה. יְצַו אִתָּנוּ בְּרָכָה. וְיוֹם הַשֵּׁנִי כָּכָה. יַמְתִּיק אֶת סוֹדֵנוּ. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small><b>אֱלֹהִים יִסְעָדֵנוּ</b></small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " רַבֵּה צְבָאֵי יִשְׁעִי. בַּשְּׁלִישִׁי וּבָרְבִיעִי. בַּחֲמִישִׁי אַךְ לֹא בְעִי. יִשְׁלַח אֶת פּוֹדֵנוּ. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small><b>אֱלֹהִים יִסְעָדֵנוּ</b></small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " הָכֵן טְבוֹחַ טֶבַח. בְּיוֹם הַשִּׁשִּׁי זֶבַח. קוֹדֶשׁ הִלּוּל וָשֶׁבַח עַל כָּל מַחֲמַדֵּינוּ. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small><b>אֱלֹהִים יִסְעָדֵנוּ</b></small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " מַעֲדַנִּים לְנַפְשֵׁנוּ. נִתַּן בְּיוֹם קָדְשֵׁנוּ. וְרַעֲנָנָה עַרְשֵׂנוּ. וְלַיְלָה אוֹר בַּעֲדֵנוּ. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small><b>אֱלֹהִים יִסְעָדֵנוּ</b></small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּרָכָה בִּמְאוֹדֵנוּ. וְזֶבֶד טוֹב יִזְבְּדֵנוּ. בְּכָל מִשְׁלַח יָדֵינוּ: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:12": {
+   "kind": "note",
+   "en": "The author of the song is Rabbi Nachman, and his name is signed in the first letters of the verses."
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:13": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:14": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:15": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:16": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:17": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:18": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:19": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:20": {
+   "parts": [
+    {
+     "text": "<b>נ</b>וֹפֶת תִּטּוֹפְנָה. שִׂפְתֵי בְנֵי יוֹנָה. כִּי בָא עֵת לְחֶנְנָהּ. צִיּוֹן נַחֲלַת צְבִי [",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>ס\"א</small>",
+     "kind": "instruction",
+     "en": "MS reads:",
+     "gloss": "Variant reading from a manuscript"
+    },
+    {
+     "text": " נַחֲלָתֵינוּ]: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:21": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:22": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:23": {
+   "kind": "note",
+   "en": "This song is based on the Aleph-Bet. The author signed his name \"Yishai bar Mordechai Chazak\" in every half-verse, and this song is found in the Beraita."
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:24": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:25": {
+   "parts": [
+    {
+     "text": "<b>אָמַר</b> יְהֹוָה לְיַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ": ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:26": {
+   "parts": [
+    {
+     "text": "<b>בָּ</b>חַר יְהֹוָה בְּיַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:27": {
+   "parts": [
+    {
+     "text": "<b>גָּ</b>אַל יְהֹוָה אֶת יַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:28": {
+   "parts": [
+    {
+     "text": "<b>דָּ</b>רַךְ כּוֹכָב מִיַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:29": {
+   "parts": [
+    {
+     "text": "<b>הַ</b>בָּאִים יַשְׁרֵשׁ יַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:30": {
+   "parts": [
+    {
+     "text": "<b>וְ</b>יֵרְדְּ מִיַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:31": {
+   "parts": [
+    {
+     "text": "<b>זְ</b>כֹר זֹאת לְיַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:32": {
+   "parts": [
+    {
+     "text": "<b>חֶ</b>דְוַת יְשׁוּעוֹת יַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:33": {
+   "parts": [
+    {
+     "text": "<b>ט</b>וֹבוּ אוֹהָלֶיךָ יַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:34": {
+   "parts": [
+    {
+     "text": "<b>י</b>וֹרוּ מִשְׁפָּטֶיךָ לְיַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:35": {
+   "parts": [
+    {
+     "text": "<b>כִּ</b>י לֹא נַחַשׁ בְּיַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:36": {
+   "parts": [
+    {
+     "text": "<b>לֹ</b>א הִבִּיט אָוֶן בְּיַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:37": {
+   "parts": [
+    {
+     "text": "<b>מִ</b>י מָנָה עֲפַר יַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:38": {
+   "parts": [
+    {
+     "text": "<b>נִ</b>שְׁבַּע יְהֹוָה לְיַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:39": {
+   "parts": [
+    {
+     "text": "<b>סְ</b>לַח נָא לַעֲוֹן יַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:40": {
+   "parts": [
+    {
+     "text": "<b>עַ</b>תָּה הָשֵׁב שְׁבוּת יַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:41": {
+   "parts": [
+    {
+     "text": "<b>פָּ</b>דָה יְהֹוָה אֶת יַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:42": {
+   "parts": [
+    {
+     "text": "<b>צַ</b>וֵּה יְשׁוּעוֹת יַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:43": {
+   "parts": [
+    {
+     "text": "<b>ק</b>וֹל קוֹל יַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:44": {
+   "parts": [
+    {
+     "text": "<b>רָ</b>נִי וְשִׂמְחִי לְיַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:45": {
+   "parts": [
+    {
+     "text": "<b>שָׁ</b>ב יְהֹוָה אֶת שְׁבוּת יַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:46": {
+   "parts": [
+    {
+     "text": "<b>תִּ</b>תֵּן אֱמֶת לְיַעֲקֹב. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>אַל תִּירָא עַבְדִּי יַעֲקֹב</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:47": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:48": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:49": {
+   "kind": "instruction",
+   "en": "Eliyahu the Prophet. Eliyahu the Tishbite. Eliyahu the Gileadite. May he come speedily with the Messiah, son of David:",
+   "gloss": "Refrain after each verse"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:50": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:51": {
+   "kind": "instruction",
+   "en": "Eliyahu the Prophet. Eliyahu the Tishbite. Eliyahu the Gileadite. May he come speedily with the Messiah, son of David:",
+   "gloss": "Refrain after each verse"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:52": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:53": {
+   "kind": "instruction",
+   "en": "Eliyahu the Prophet. Eliyahu the Tishbite. Eliyahu the Gileadite. May he come speedily with the Messiah, son of David:",
+   "gloss": "Refrain after each verse"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:54": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:55": {
+   "kind": "instruction",
+   "en": "Eliyahu the Prophet. Eliyahu the Tishbite. Eliyahu the Gileadite. May he come speedily with the Messiah, son of David:",
+   "gloss": "Refrain after each verse"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:56": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:57": {
+   "kind": "instruction",
+   "en": "Eliyahu the Prophet. Eliyahu the Tishbite. Eliyahu the Gileadite. May he come speedily with the Messiah, son of David:",
+   "gloss": "Refrain after each verse"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:58": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:59": {
+   "kind": "instruction",
+   "en": "Eliyahu the Prophet. Eliyahu the Tishbite. Eliyahu the Gileadite. May he come speedily with the Messiah, son of David:",
+   "gloss": "Refrain after each verse"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:60": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:61": {
+   "kind": "instruction",
+   "en": "Eliyahu the Prophet. Eliyahu the Tishbite. Eliyahu the Gileadite. May he come speedily with the Messiah, son of David:",
+   "gloss": "Refrain after each verse"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:62": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:63": {
+   "kind": "instruction",
+   "en": "Eliyahu the Prophet. Eliyahu the Tishbite. Eliyahu the Gileadite. May he come speedily with the Messiah, son of David:",
+   "gloss": "Refrain after each verse"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:64": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:65": {
+   "kind": "instruction",
+   "en": "Eliyahu the Prophet. Eliyahu the Tishbite. Eliyahu the Gileadite. May he come speedily with the Messiah, son of David:",
+   "gloss": "Refrain after each verse"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:66": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:67": {
+   "kind": "instruction",
+   "en": "This is the meal of King David."
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:68": {
+   "kind": "instruction",
+   "en": "Fourteen verses from three letters"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:69": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:70": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:71": {
+   "kind": "instruction",
+   "en": "Ten verses from the Ramban z\"l; one must have great kavanah when reciting them."
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:72": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:73": {
+   "kind": "instruction",
+   "en": "Eleven verses that begin with Nun and end with Nun; they are good for protection from fear."
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:74": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:75": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:76": {
+   "kind": "instruction",
+   "en": "Three verses suitable for protection."
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:77": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:78": {
+   "kind": "instruction",
+   "en": "Seven verses from Isaiah that begin with Kaf and end with Kaf."
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:79": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:80": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:81": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:82": {
+   "kind": "instruction",
+   "en": "The custom of the Chassidim is to say Vayishlach on Motzaei Shabbat when going on a journey that week:"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:83": {
+   "kind": "prayer"
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:84": {
+   "kind": "instruction",
+   "en": "This prayer is ancient and holy, as the Sages mentioned it in the Yerushalmi, end of Chapter Ein Omdim."
+  },
+  "he:Motzaei Shabbat /Melava Malka Zemirot:85": {
+   "parts": [
+    {
+     "text": "<b>רִבּוֹן</b> הָעוֹלָמִים אָב הָרַחֲמִים וְהַסְּלִיחוֹת. בְּסִימָן טוֹב וּבְמַזָּל טוֹב הָחֵל עָלֵינוּ אֶת שֵׁשֶׁת יְמֵי הַמַּעֲשֶׂה ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small> <small>(כשחל יו\"ט באמצע השבוע יאמר רק <b>יְמֵי הַמַּעֲשֶׂה</b>)</small>",
+     "kind": "instruction",
+     "en": "(If a Yom Tov falls in the middle of the week, say only 'days of creation')"
+    },
+    {
+     "text": " </small> הַבָּאִים לִקְרָאתֵנוּ לְשָׁלוֹם. חֲשׁוּכִים מִכָּל חֵטְא וָפֶשַׁע וּמְנֻקִּים מִכָּל עָוֹן וְאַשְׁמָה וָרֶשַׁע. וּמְדֻבָּקִים בְּתַלְמוּד תּוֹרָה וּבְמַעֲשִׂים טוֹבִים. וְחָנֵּנוּ דֵעָה בִּינָה וְהַשְׂכֵּל מֵאִתְּךָ. וְתַשְׁמִיעֵנוּ בָהֶם שָׂשׂוֹן וְשִׂמְחָה. וְלֹא תַעֲלֶה קִנְאָתֵנוּ עַל לֵב אָדָם. וְלֹא קִנְאַת אָדָם תַּעֲלֶה עַל לִבֵּנוּ: מַלְכֵּנוּ אֱלהֵינוּ. הָאָב הָרַחֲמָן. שִׂים בְּרָכָה וּרְוָחָה וְהַצְלָחָה בְּכָל מַעֲשֵׂה יָדֵינוּ. וְכָל הַיּוֹעֵץ עָלֵינוּ וְעַל עַמְּךָ בֵּית יִשְׂרָאֵל עֵצָה טוֹבָה וּמַחֲשָׁבָה טוֹבָה. אַמְּצוֹ וּבָרְכוֹ גַּדְּלוֹ וְקַיְּמוֹ. קַיֵּם עֲצָתוֹ. כַּדָּבָר שֶׁנֶּאֱמַר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יִתֶּן לְךָ כִלְבָבֶךָ וְכָל עֲצָתְךָ יְמַלֵּא. וְנֶאֱמַר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתִגְזַר אוֹמֶר וְיָקָם לָךְ. וְעַל דְּרָכֶיךָ נָגַהּ אוֹר: וְכָל הַיּוֹעֵץ עָלֵינוּ וְעַל כָּל עַמְּךָ בֵּית יִשְׂרָאֵל עֵצָה שֶׁאֵינָהּ טוֹבָה וּמַחֲשָׁבָה שֶׁאֵינָהּ טוֹבָה. תּוּפַר עֲצָתוֹ. כַּדָּבָר שֶׁנֶּאֱמַר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יְהֹוָה הֵפִיר עֲצַת גּוֹיִם הֵנִיא מַחְשְׁבוֹת עַמִּים. וְנֶאֱמַר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " עֻצוּ עֵצָה וְתֻפָר דַּבְּרוּ דָּבָר וְלֹא יָקוּם כִּי עִמָּנוּ אֵל: וּפְתַח לָנוּ יְהֹוָה אֱלֹהֵינוּ אַב הָרַחֲמִים אֲדוֹן הַסְּלִיחוֹת בָּזֶה הַשָּׁבוּעַ וּבְכָל שָׁבוּעַ. שַׁעֲרֵי אוֹרָה. שַׁעֲרֵי אֹרֶךְ יָמִים וְשָׁנִים. שַׁעֲרֵי אֲרִיכַת אַפַּיִם. שַׁעֲרֵי בְרָכָה. שַׁעֲרֵי בִינָה. שַׁעֲרֵי גִילָה. שַׁעֲרֵי גְדוּלָה. שַׁעֲרֵי גְאוּלָה. שַׁעֲרֵי גְבוּרָה. שַׁעֲרֵי דִיצָה. שַׁעֲרֵי דֵעָה. שַׁעֲרֵי הוֹד. שַׁעֲרֵי הָדָר. שַׁעֲרֵי הַצְלָחָה. שַׁעֲרֵי הַרְוָחָה. שַׁעֲרֵי וַעַד טוֹב. שַׁעֲרֵי זְרִיזוּת. שַׁעֲרֵי זִמְרָה. שַׁעֲרֵי זְכֻיּוֹת. שַׁעֲרֵי זִיו. שַׁעֲרֵי זוֹהַר תּוֹרָה. שַׁעֲרֵי זוֹהַר חָכְמָה. שַׁעֲרֵי זוֹהַר בִּינָה. שַׁעֲרֵי זוֹהַר דַּעַת. שַׁעֲרֵי חֶדְוָה. שַׁעֲרֵי חֶמְלָה. שַׁעֲרֵי חֵן וָחֶסֶד. שַׁעֲרֵי חַיִּים טוֹבִים. שַׁעֲרֵי חָכְמָה. שַׁעֲרֵי טוֹבָה. שַׁעֲרֵי טוֹהַר. שַׁעֲרֵי יְשׁוּעָה. שַׁעֲרֵי ישֶׁר. שַׁעֲרֵי כַפָּרָה. שַׁעֲרֵי כַלְכָּלָה. שַׁעֲרֵי כָבוֹד. שַׁעֲרֵי לִמּוּד. שַׁעֲרֵי מָזוֹן. שַׁעֲרֵי מְנוּחוֹת. שַׁעֲרֵי מְחִילוֹת. שַׁעֲרֵי מַדָּע. שַׁעֲרֵי נֶחָמָה. שַׁעֲרֵי נְקִיּוּת. שַׁעֲרֵי סְלִיחָה. שַׁעֲרֵי סִיַּעְתָּא דִשְׁמַיָּא. שַׁעֲרֵי עֶזְרָה. שַׁעֲרֵי פְדוּת. שַׁעֲרֵי פַרְנָסָה טוֹבָה. שַׁעֲרֵי צְדָקָה. שַׁעֲרֵי צָהֳלָה. שַׁעֲרֵי קְדוּשָׁה. שַׁעֲרֵי קוֹמְמִיוּת. שַׁעֲרֵי רַחֲמִים. שַׁעֲרֵי רָצוֹן. שַׁעֲרֵי רְפוּאָה שְׁלֵמָה. שַׁעֲרֵי שָׁלוֹם. שַׁעֲרֵי שִׂמְחָה. שַׁעֲרֵי שְׁמוּעוֹת טוֹבוֹת. שַׁעֲרֵי שַׁלְוָה. שַׁעֲרֵי תוֹרָה. שַׁעֲרֵי תְפִלָּה. שַׁעֲרֵי תְשׁוּבָה. שַׁעֲרֵי תְשׁוּעָה. כְּדִכְתִיב,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּתְשׁוּעַת צַדִּיקִים מֵיְהֹוָה מָעוּזָם בְּעֵת צָרָה. וַיַּעַזְרֵם יְהֹוָה וַיְפַלְּטֵם יְפַלְּטֵם מֵרְשָׁעִים וְיוֹשִׁיעֵם כִּי חָסוּ בוֹ: וְנֶאֱמַר. חָשַׂף יְהֹוָה אֶת זְרוֹעַ קָדְשׁוֹ לְעֵינֵי כָּל הַגּוֹיִם וְרָאוּ כָּל אַפְסֵי אָרֶץ אֵת יְשׁוּעַת אֱלהֵינוּ: וְנֶאֱמַר. קוֹל צוֹפַיִךְ נָשְׂאוּ קוֹל יַחְדָּו יְרַנֵּנוּ. כִּי עַיִן בְּעַיִן יִרְאוּ בְּשׁוּב יְהֹוָה צִיּוֹן: וְקַיֶּם לָנוּ יְהֹוָה אֱלֹהֵינוּ מִקְרָא שֶׁכָּתוּב. מַה נָּאווּ עַל הֶהָרִים רַגְלֵי מְבַשֵּׂר מַשְׁמִיעַ שָׁלוֹם מְבַשֵּׂר טוֹב מַשְׁמִיעַ יְשׁוּעָה אוֹמֵר לְצִיּוֹן מָלַךְ אֱלהָיִךְ. רִאשׁוֹן לְצִיּוֹן הִנֵּה הִנָּם וְלִירוּשָׁלַיִם מְבַשֵּׂר אֶתֵּן. אָמֵן סֶלָּה: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shaking Lulav:1": {
+   "kind": "heading",
+   "en": "Order of Taking the Lulav"
+  },
+  "he:Shaking Lulav:2": {
+   "kind": "instruction",
+   "en": "A beautiful prayer to say before taking the lulav:"
+  },
+  "he:Shaking Lulav:3": {
+   "kind": "prayer"
+  },
+  "he:Shaking Lulav:4": {
+   "kind": "prayer"
+  },
+  "he:Shaking Lulav:5": {
+   "kind": "prayer"
+  },
+  "he:Shaking Lulav:6": {
+   "kind": "instruction",
+   "en": "On the first time one blesses on the lulav, also recite Shehecheyanu."
+  },
+  "he:Shaking Lulav:7": {
+   "kind": "prayer",
+   "when": "sukkot"
+  }
+ },
+ "en": {},
+ "issues": [
+  {
+   "id": "he:Shaking Lulav:7",
+   "type": "ambiguous",
+   "detail": "Shehecheyanu is said on the first day of Sukkot (or first time one takes the lulav), but the condition 'sukkot' covers the whole festival. The siddur text implies 'first time' but the instruction in h6 is general. A more precise condition like 'sukkot && hoshanaDay==1' or a minhag variable might be needed."
+  }
+ ]
+}

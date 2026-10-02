@@ -1,71 +1,6 @@
 {
-  "$comment": "Per-book overrides for the siddur engine. sections: extra SectionRule objects (title/within/notWithin regex, when condition, labelEn/labelHe, service). segments: explicit {path, index, when}. inserts: {after|before: nodeId, insert: nodeId, when} splice sections into a service flow on the days they apply. Conditions use the variables documented in DayContext.variableDocs.",
+  "$comment": "Per-book overrides for the siddur engine. sections: extra SectionRule objects (title/within/notWithin regex, when condition, labelEn/labelHe, service). segments: explicit {path, index, when}. inserts: {after|before: nodeId, insert: nodeId, when} splice sections into a service flow on the days they apply. Conditions use the variables documented in DayContext.variableDocs. Books with a tagged corpus (assets/corpus) take their inserts from the service graph (corpus/graph.json) instead.",
   "Siddur Ashkenaz": {
-    "inserts": [
-      {
-        "after": "Weekday/Shacharit/Amidah",
-        "insert": "Festivals/Rosh Chodesh/Hallel",
-        "when": "hallel",
-        "labelEn": "Hallel",
-        "labelHe": "הלל"
-      },
-      {
-        "after": "Weekday/Shacharit/Torah Reading",
-        "insert": "Festivals/Rosh Chodesh/Musaf Amidah for Rosh Chodesh",
-        "when": "roshChodesh && !cholHamoed",
-        "labelEn": "Musaf for Rosh Chodesh",
-        "labelHe": "מוסף לראש חודש"
-      },
-      {
-        "after": "Weekday/Shacharit/Torah Reading",
-        "insert": "Festivals/Shalosh Regalim/Mussaf",
-        "when": "cholHamoed",
-        "labelEn": "Musaf for Chol HaMoed",
-        "labelHe": "מוסף לחול המועד"
-      },
-      {
-        "after": "Shabbat/Shacharit/Amidah",
-        "insert": "Festivals/Rosh Chodesh/Hallel",
-        "when": "hallel",
-        "labelEn": "Hallel",
-        "labelHe": "הלל"
-      },
-      {
-        "after": "Weekday/Shacharit/Post Amidah",
-        "insert": "Festivals/Selichot/Fast of Gedalia",
-        "when": "tzomGedaliah",
-        "labelEn": "Selichot",
-        "labelHe": "סליחות"
-      },
-      {
-        "after": "Weekday/Shacharit/Post Amidah",
-        "insert": "Festivals/Selichot/Ten of Tevet",
-        "when": "asaraBTevet",
-        "labelEn": "Selichot",
-        "labelHe": "סליחות"
-      },
-      {
-        "after": "Weekday/Shacharit/Post Amidah",
-        "insert": "Festivals/Selichot/Fast of Esther",
-        "when": "taanitEsther",
-        "labelEn": "Selichot",
-        "labelHe": "סליחות"
-      },
-      {
-        "after": "Weekday/Shacharit/Post Amidah",
-        "insert": "Festivals/Selichot/Seventeen of Tamuz",
-        "when": "tzomTammuz",
-        "labelEn": "Selichot",
-        "labelHe": "סליחות"
-      },
-      {
-        "after": "Weekday/Maariv/Amidah",
-        "insert": "Festivals/Chanukah",
-        "when": "chanukah",
-        "labelEn": "Chanukah candles",
-        "labelHe": "הדלקת נרות חנוכה"
-      }
-    ],
     "defaultVersions": {
       "he": [
         "The Metsudah siddur, 1981",
@@ -79,29 +14,6 @@
     }
   },
   "Siddur Sefard": {
-    "inserts": [
-      {
-        "after": "Weekday Shacharit/Amidah",
-        "insert": "Rosh Chodesh/Hallel",
-        "when": "hallel",
-        "labelEn": "Hallel",
-        "labelHe": "הלל"
-      },
-      {
-        "after": "Weekday Shacharit/Torah Reading",
-        "insert": "Rosh Chodesh/Mussaf",
-        "when": "roshChodesh",
-        "labelEn": "Musaf for Rosh Chodesh",
-        "labelHe": "מוסף לראש חודש"
-      },
-      {
-        "after": "Weekday Shacharit/Torah Reading",
-        "insert": "Chanukah/Torah Reading",
-        "when": "chanukah",
-        "labelEn": "Chanukah Torah reading",
-        "labelHe": "קריאת התורה לחנוכה"
-      }
-    ],
     "defaultVersions": {
       "he": [
         "The Metsudah siddur, 1981",
@@ -144,22 +56,6 @@
     ]
   },
   "Siddur Edot HaMizrach": {
-    "inserts": [
-      {
-        "after": "Weekday Shacharit/Amida",
-        "insert": "Rosh Hodesh/Hallel",
-        "when": "hallel",
-        "labelEn": "Hallel",
-        "labelHe": "הלל"
-      },
-      {
-        "after": "Weekday Shacharit/Uva LeSion",
-        "insert": "Rosh Hodesh/Mussaf",
-        "when": "roshChodesh",
-        "labelEn": "Musaf for Rosh Chodesh",
-        "labelHe": "מוסף לראש חודש"
-      }
-    ],
     "defaultVersions": {
       "he": [
         " Shaliehsaboo Edition",
@@ -196,22 +92,6 @@
     ]
   },
   "Weekday Siddur Chabad": {
-    "inserts": [
-      {
-        "after": "Shacharit/The Amidah",
-        "insert": "Hallel",
-        "when": "hallel",
-        "labelEn": "Hallel",
-        "labelHe": "הלל"
-      },
-      {
-        "after": "Shacharit/Ashrei Uva LeZion",
-        "insert": "Rosh Chodesh",
-        "when": "roshChodesh",
-        "labelEn": "Rosh Chodesh",
-        "labelHe": "ראש חודש"
-      }
-    ],
     "defaultVersions": {
       "he": [
         "Wikisource"
@@ -222,22 +102,6 @@
     }
   },
   "The Koren Shalem Siddur; Ashkenaz": {
-    "inserts": [
-      {
-        "after": "Weekdays/The Amida",
-        "insert": "Festivals/Hallel",
-        "when": "hallel",
-        "labelEn": "Hallel",
-        "labelHe": "הלל"
-      },
-      {
-        "after": "Weekdays/Reading of the Torah",
-        "insert": "Festivals/Musaf for Rosh Hodesh",
-        "when": "roshChodesh",
-        "labelEn": "Musaf for Rosh Chodesh",
-        "labelHe": "מוסף לראש חודש"
-      }
-    ],
     "defaultVersions": {
       "he": [
         "Hebrew Edition; Koren Publishers Jerusalem, 2017"

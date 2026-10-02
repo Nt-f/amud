@@ -28,6 +28,10 @@ class TextRun {
 
   /// Part of a run of alternatives within the line (see [Segment.option]).
   bool option = false;
+
+  /// Who says this run, when it differs within the line (corpus `role`,
+  /// e.g. the congregation's "Amen" inside the chazzan's Kaddish).
+  String? role;
 }
 
 class Segment {
@@ -68,6 +72,20 @@ class Segment {
   /// Part of a passage said only in the chazzan's repetition, printed
   /// inside the Amidah (Birkas Kohanim; see [SegmentAnalyzer]).
   bool chazarah = false;
+
+  /// How it is read, from the corpus (null for heuristic analysis): who
+  /// says it (`chazzan`, `congregation_then_chazzan`, …), how loud
+  /// (`silent`, `undertone`, `aloud`), what one does, how many times.
+  String? role;
+  String? voice;
+  List<String> gestures = const [];
+  int? repeat;
+
+  /// Said only with a minyan.
+  bool minyan = false;
+
+  /// English rendering of a Hebrew instruction or note.
+  String? en;
 
   Segment({
     required this.ref,

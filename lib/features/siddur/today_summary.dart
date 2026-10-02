@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:siddur_engine/siddur_engine.dart';
+import 'package:hebcal/hebcal.dart';
 
 import '../../core/l10n.dart';
 import '../../core/providers.dart';
@@ -11,6 +12,7 @@ import '../../core/split_row.dart';
 import '../../core/titles.dart';
 import '../home/cards/card_frame.dart';
 import '../home/today.dart';
+import 'day_guide_screen.dart';
 
 enum ChangeKind { add, omit, info }
 
@@ -42,8 +44,9 @@ List<LiturgyChange> summarizeDay(DayContext shacharit, DayContext mincha, DayCon
   add(d['publicFast'], ChangeKind.add, 'Aneinu (fast day)', 'עננו');
   add(d['roshChodesh'] || d['cholHamoed'] || d['yomTov'] || d['shabbat'], ChangeKind.add, 'Musaf', 'מוסף');
   add(d['torahReading'] && !d['shabbat'], ChangeKind.info, 'Torah reading', 'קריאת התורה');
-  add(!d['shabbat'] && !d['yomTov'] && !d['tachanunShacharit'], ChangeKind.omit, 'No Tachanun at Shacharit', 'אין אומרים תחנון בשחרית');
-  add(!d['shabbat'] && !d['yomTov'] && d['tachanunShacharit'] && !mincha['tachanunMincha'], ChangeKind.omit, 'No Tachanun at Mincha', 'אין תחנון במנחה');
+  final customOmission = d.minhagim.houseOfMourning || d.minhagim.bris || d.minhagim.chatan;
+  add(!d['shabbat'] && !d['yomTov'] && (!d['tachanunShacharit'] || customOmission), ChangeKind.omit, 'No Tachanun at Shacharit', 'אין אומרים תחנון בשחרית');
+  add(!d['shabbat'] && !d['yomTov'] && d['tachanunShacharit'] && !customOmission && !mincha['tachanunMincha'], ChangeKind.omit, 'No Tachanun at Mincha', 'אין תחנון במנחה');
   add(d['ledavid'], ChangeKind.add, 'LeDavid Hashem Ori (Psalm 27)', 'לדוד ה׳ אורי');
   add(d['mashivHaruach'], ChangeKind.info, 'Mashiv HaRuach u\'Morid HaGeshem', 'משיב הרוח ומוריד הגשם');
   add(!d['mashivHaruach'], ChangeKind.info, 'Morid HaTal (Sefard/Israel) · none (Ashkenaz, diaspora)', 'מוריד הטל');
@@ -60,7 +63,8 @@ List<LiturgyChange> summarizeDay(DayContext shacharit, DayContext mincha, DayCon
 }
 
 /// The service for the time of day: Shacharit until midday (chatzot),
-/// Mincha until sunset, Maariv after.
+/// Mincha until sunset, Maariv after, through the night until the day
+/// turns over at dawn (see todayProvider).
 String currentServiceKey(TodaySnapshot t) {
   final chatzot = t.zmanim['chatzot'], sunset = t.zmanim['sunset'];
   if (chatzot != null && t.now.isBefore(chatzot)) return 'shacharit';
@@ -94,6 +98,8 @@ class TodayInSiddurCard extends ConsumerWidget {
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         for (final c in changes) _row(context, s, theme, colors, c),
         if (changes.isEmpty) Text(context.tr('A regular weekday.')),
+        TextButton.icon(onPressed: () => openDayGuide(context, hd), icon: const Icon(Icons.help_outline, size: 18), label: Text(context.tr("Why today?"))),
+        TextButton.icon(onPressed: () => openDayGuide(context, HDate.fromAbs(ref.read(todayProvider).abs + 1)), icon: const Icon(Icons.nights_stay_outlined, size: 18), label: Text(context.tr("Prepare for tomorrow"))),
         const SizedBox(height: 6),
         Text(
             context.tr('Tap to open {service}', {

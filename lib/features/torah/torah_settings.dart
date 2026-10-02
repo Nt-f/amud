@@ -6,6 +6,7 @@ import '../../core/fonts.dart';
 import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../settings/font_gallery_screen.dart';
+import '../settings/typesetting_options.dart';
 import '../../core/analytics.dart';
 
 enum TorahTextLanguage { auto, hebrew, both, english }
@@ -143,6 +144,8 @@ class _TorahTextSettings extends ConsumerWidget {
               padding: const EdgeInsets.only(top: 4),
               child: Text(context.tr('Hebrew and English with an English interface; otherwise Hebrew.'), style: theme.textTheme.bodySmall),
             ),
+          // Shared with the siddur, unlike the rest of this sheet.
+          const TypesettingOptions(),
           const SizedBox(height: 16),
           ListTile(
             contentPadding: EdgeInsets.zero,

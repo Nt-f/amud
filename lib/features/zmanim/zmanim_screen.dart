@@ -25,7 +25,7 @@ class ZmanimScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final civil = ref.watch(civilTodayProvider);
+    final civil = ref.watch(todayProvider);
     final date = ref.watch(_zmanimDateProvider) ?? civil;
     final isToday = date == civil;
     final s = ref.watch(settingsProvider);

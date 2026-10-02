@@ -40,7 +40,7 @@ class CalendarView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final today = ref.watch(civilTodayProvider);
+    final today = ref.watch(todayProvider);
     final ym = ref.watch(_monthProvider) ?? (today.year, today.month);
     final selected = ref.watch(_selectedProvider) ?? today;
     final events = ref.watch(calendarMonthProvider(ym));

@@ -264,3 +264,38 @@ final _speaker = RegExp(
     caseSensitive: false);
 
 bool isSpeakerLabel(String html) => _speaker.hasMatch(normalizeRubric(html));
+
+/// Short labels ("Rosh Chodesh", "ראש חודש") for a condition written in the
+/// corpus, where no instruction in the text names it: from the rubric
+/// table, one per identifier, "Not …" for a negated one. Null when none of
+/// its identifiers has a label.
+RubricMatch? labelsForCondition(String expression) {
+  final en = <String>[];
+  final he = <String>[];
+  // Negation reaches through parentheses: "!(cholHamoed && x)" is "not on
+  // Chol HaMoed".
+  final negated = <bool>[false];
+  var not = false;
+  for (final m in RegExp(r'!(?!=)|\(|\)|[A-Za-z_]\w*').allMatches(expression)) {
+    final t = m.group(0)!;
+    if (t == '!') {
+      not = !not;
+    } else if (t == '(') {
+      negated.add(negated.last != not);
+      not = false;
+    } else if (t == ')') {
+      if (negated.length > 1) negated.removeLast();
+    } else {
+      final neg = negated.last != not;
+      not = false;
+      final e = _english.where((x) => x.cond == t).firstOrNull;
+      if (e == null) continue;
+      final l = (neg ? 'Not on ${e.en}' : e.en, neg ? 'לא ב${e.he}' : e.he);
+      if (!en.contains(l.$1)) {
+        en.add(l.$1);
+        he.add(l.$2);
+      }
+    }
+  }
+  return en.isEmpty ? null : RubricMatch(expression, en, he);
+}

@@ -4,6 +4,7 @@ import 'package:hebcal/hebcal.dart';
 
 import 'analyzer.dart';
 import 'condition.dart';
+import 'corpus.dart';
 import 'day_context.dart';
 import 'model.dart';
 import 'rubrics.dart';
@@ -190,7 +191,11 @@ class ResolvedRun {
 
   /// One of several alternatives side by side in the line.
   final bool option;
-  const ResolvedRun(this.html, this.marker, this.applicability, this.labelEn, this.labelHe, {this.option = false});
+
+  /// Who says this run when it differs from the line's [SegmentItem.role].
+  final String? role;
+  const ResolvedRun(this.html, this.marker, this.applicability, this.labelEn, this.labelHe,
+      {this.option = false, this.role});
 }
 
 class ResolvedSegment {
@@ -222,8 +227,21 @@ class SegmentItem extends RenderItem {
 
   /// Said only in the chazzan's repetition (see [Segment.chazarah]).
   final bool chazarah;
+
+  /// How it is read (corpus only; see [Segment.role]).
+  final String? role;
+  final String? voice;
+  final List<String> gestures;
+  final int? repeat;
   const SegmentItem(super.key, this.node, this.he, this.tr, this.kind, this.applicability, this.labelEn,
-      this.labelHe, this.excluded, {this.announces = false, this.option = false, this.chazarah = false});
+      this.labelHe, this.excluded,
+      {this.announces = false,
+      this.option = false,
+      this.chazarah = false,
+      this.role,
+      this.voice,
+      this.gestures = const [],
+      this.repeat});
 }
 
 /// Consecutive segments that aren't said today, folded into one row.
@@ -257,6 +275,10 @@ class SiddurResolver {
   final List<CuratedNote> curatedNotes;
   final SegmentAnalyzer analyzer;
 
+  /// Tagged segments for this book (see corpus.dart), used for every leaf
+  /// whose selected Hebrew version is the corpus's.
+  final Corpus? corpus;
+
   SiddurResolver({
     List<SectionRule>? sectionRules,
     this.segmentRules = const [],
@@ -265,6 +287,7 @@ class SiddurResolver {
     List<ContentRule>? contentRules,
     List<CuratedNote>? curatedNotes,
     this.analyzer = const SegmentAnalyzer(),
+    this.corpus,
   })  : sectionRules = sectionRules ?? defaultSectionRules,
         callouts = callouts ?? defaultCallouts,
         contentRules = contentRules ?? defaultContentRules,
@@ -295,7 +318,30 @@ class SiddurResolver {
         contentRules: contentRules,
         curatedNotes: curatedNotes,
         analyzer: analyzer,
+        corpus: corpus,
       );
+
+  /// Uses [corpus] for this book; its service-graph insertions replace the
+  /// hand-written ones (rules.json) where it has any.
+  SiddurResolver withCorpus(Corpus? corpus) => SiddurResolver(
+        sectionRules: sectionRules,
+        segmentRules: segmentRules,
+        insertRules: corpus == null || corpus.inserts.isEmpty ? insertRules : corpus.inserts,
+        callouts: callouts,
+        contentRules: contentRules,
+        curatedNotes: curatedNotes,
+        analyzer: analyzer,
+        corpus: corpus,
+      );
+
+  /// The corpus service of a leaf, where the corpus says which it belongs to.
+  Service? _corpusService(SchemaNode node) => switch (corpus?.leaf(node.id)?.service) {
+        'shacharit' => Service.shacharit,
+        'mincha' => Service.mincha,
+        'maariv' => Service.maariv,
+        'musaf' => Service.musaf,
+        _ => null,
+      };
 
   static Service serviceFor(SchemaNode node, [Service fallback = Service.other]) {
     var s = fallback;
@@ -318,12 +364,42 @@ class SiddurResolver {
     return null;
   }
 
+  /// The rule deciding whether [node] is said: its section rule, else (for
+  /// a leaf in the corpus) the leaf's own condition.
+  SectionRule? effectiveRuleFor(SchemaNode node) {
+    final rule = sectionRuleFor(node);
+    if (rule != null) return rule;
+    final leafWhen = corpus?.leaf(node.id)?.when;
+    if (leafWhen == null) return null;
+    final ifs = [
+      for (final m in RegExp(r'\bif_\w+').allMatches(leafWhen))
+        if (corpus!.labels[m.group(0)] != null) corpus!.labels[m.group(0)]!
+    ];
+    final l = ifs.isNotEmpty
+        ? RubricMatch(leafWhen, ['If: ${ifs.join(' / ')}'], ['If: ${ifs.join(' / ')}'])
+        : labelsForCondition(leafWhen);
+    return SectionRule(
+        title: '^${RegExp.escape(node.en)}\$', when: leafWhen, labelEn: l?.labelEn ?? node.en, labelHe: l?.labelHe ?? node.he);
+  }
+
+  /// Whether [rule] holds for [ctx], as the reader judges it: customs the
+  /// app doesn't offer (x_…) are off, and a condition true on any ordinary
+  /// day ("not Tisha B'Av") counts as always said.
+  Applicability ruleApplicability(SectionRule rule, DayContext ctx) {
+    if (rule.when == 'true') return Applicability.always;
+    final ap = _eval(rule.condition, ctx);
+    return ap == Applicability.today && _ordinary(rule.when, ctx.service) ? Applicability.always : ap;
+  }
+
   static const _fastDayOnly = RubricMatch('fastDay', ['Fast day'], ['תענית']);
   static final _birkatKohanimLeaf = RegExp(r'[kc]oh?anim|priestly', caseSensitive: false);
 
   Applicability _eval(Condition c, DayContext ctx) {
     final unknown = <String>{};
     final v = c.eval(ctx.env, unknown);
+    // Customs the corpus names but the app doesn't offer yet (x_…) are
+    // off: the siddur's main text is said.
+    unknown.removeWhere((id) => id.startsWith('x_'));
     if (unknown.isNotEmpty) return Applicability.unknown;
     return v ? Applicability.today : Applicability.notToday;
   }
@@ -387,6 +463,22 @@ class SiddurResolver {
       }
     }
     _resolveNode(node, versions, contexts, options, out, baseLevel, baseService, inherited, true);
+    // A section opened on a day none of it is said (Hoshanot in Cheshvan)
+    // would be a blank page when hiding: show what isn't said, folded.
+    if (options.excluded == ExcludedDisplay.hide && !out.any((i) => i is SegmentItem || i is DynamicItem)) {
+      return resolve(node, versions, contexts,
+          options: ResolveOptions(
+            excluded: ExcludedDisplay.collapse,
+            showNotes: options.showNotes,
+            conciseNotes: options.conciseNotes,
+            showInstructions: options.showInstructions,
+            showTranslation: options.showTranslation,
+            showHebrew: options.showHebrew,
+            notesHebrew: options.notesHebrew,
+            notesTranslation: options.notesTranslation,
+            forceExpanded: options.forceExpanded,
+          ));
+    }
     _dropUnsaidOptionSets(out);
     return switch (options.excluded) {
       ExcludedDisplay.collapse => _group(out),
@@ -468,13 +560,13 @@ class SiddurResolver {
 
   void _resolveNode(SchemaNode node, VersionSelection versions, ContextProvider contexts, ResolveOptions options,
       List<RenderItem> out, int baseLevel, Service service, Applicability inherited, bool isTop) {
-    final svc = serviceFor(node, service);
+    final svc = _corpusService(node) ?? serviceFor(node, service);
     final ctx = contexts(svc);
-    final rule = sectionRuleFor(node);
-    var ap = Applicability.always;
-    if (rule != null && rule.when != 'true') {
-      ap = _eval(rule.condition, ctx);
-    }
+    // A corpus leaf's own condition counts unless the leaf was opened
+    // directly (the reader asked for it by name).
+    final own = sectionRuleFor(node);
+    final rule = own ?? (isTop ? null : effectiveRuleFor(node));
+    final ap = rule == null ? Applicability.always : ruleApplicability(rule, ctx);
     final excluded = inherited == Applicability.notToday || ap == Applicability.notToday;
     final forced = options.forceExpanded.contains(node.id);
     if (excluded && !forced && !isTop) {
@@ -545,9 +637,25 @@ class SiddurResolver {
     final (trInfo, trRaw) = options.showTranslation || options.notesTranslation
         ? versions.pick(versions.translation, leaf.path)
         : (null, null);
-    final he = heInfo == null ? const <Segment>[] : analyzed(heInfo, leaf, heRaw!);
-    final tr = trInfo == null ? const <Segment>[] : analyzed(trInfo, leaf, trRaw!);
-    final aligned = he.isNotEmpty && tr.isNotEmpty && he.length == tr.length;
+    // The corpus, when the selected Hebrew is the version it tagged.
+    final cl = corpus?.leaf(leaf.id);
+    final fromCorpus = cl?.he != null && heInfo != null && heInfo.versionTitle.trim() == cl!.he!.version.trim();
+    final List<Segment> he;
+    var tr = const <Segment>[];
+    List<Segment?>? trByHe;
+    if (fromCorpus) {
+      he = _analysisCache.putIfAbsent('corpus|he|${leaf.id}', () => corpusSegments(cl.he!.segments, hebrew: true, labels: corpus!.labels));
+      if (cl.en != null && trInfo != null && trInfo.versionTitle.trim() == cl.en!.version.trim()) {
+        final en = _analysisCache.putIfAbsent('corpus|en|${leaf.id}', () => corpusSegments(cl.en!.segments, hebrew: false, labels: corpus!.labels));
+        trByHe = alignedTranslation(cl.he!, cl.en!, en);
+      } else if (trInfo != null) {
+        tr = analyzed(trInfo, leaf, trRaw!);
+      }
+    } else {
+      he = heInfo == null ? const <Segment>[] : analyzed(heInfo, leaf, heRaw!);
+      tr = trInfo == null ? const <Segment>[] : analyzed(trInfo, leaf, trRaw!);
+    }
+    final aligned = trByHe != null || (he.isNotEmpty && tr.isNotEmpty && he.length == tr.length);
 
     final noted = _noted;
     void curated(Segment h) {
@@ -562,6 +670,14 @@ class SiddurResolver {
     }
 
     void emit(int i, Segment? h, Segment? t) {
+      // A Hebrew instruction with no English line gets the corpus's
+      // English rendering of it.
+      if (t == null && h != null && h.en != null && trInfo != null) {
+        t = Segment(ref: h.ref, html: h.en!, hebrew: false, kind: h.kind, runs: [TextRun(h.en!, RunKind.text)])
+          ..rubric = h.rubric
+          ..announces = h.announces
+          ..followsPrevious = h.followsPrevious;
+      }
       final primary = h ?? t!;
       if (options.conciseNotes) {
         if (h != null && h.kind == SegmentKind.prayer && !sectionExcluded) curated(h);
@@ -581,20 +697,25 @@ class SiddurResolver {
       // Either language may be the one that recognized the passage.
       // A section that is itself Birkas Kohanim (the kohanim's, on Yom Tov)
       // is what the reader opened, not an aside in it.
-      final chazarah = !_birkatKohanimLeaf.hasMatch(leaf.en) && ((h?.chazarah ?? false) || (aligned && (t?.chazarah ?? false)));
+      final chazarah = fromCorpus
+          ? (h?.chazarah ?? false)
+          : !_birkatKohanimLeaf.hasMatch(leaf.en) && ((h?.chazarah ?? false) || (aligned && (t?.chazarah ?? false)));
       // At Mincha the chazzan says Birkas Kohanim only on a fast day; some
       // siddurim print it there without saying so.
-      if (chazarah && rubric == null && ctx.service == Service.mincha) rubric = _fastDayOnly;
+      if (!fromCorpus && chazarah && rubric == null && ctx.service == Service.mincha) rubric = _fastDayOnly;
       // Prayer text and notes each have their own language choice.
       final prayer = primary.kind == SegmentKind.prayer;
       if (!(prayer ? options.showHebrew : options.notesHebrew)) h = null;
       if (!(prayer ? options.showTranslation : options.notesTranslation)) t = null;
       if (h == null && t == null) return;
       var ap = rubric == null ? Applicability.always : _eval(rubric.condition, ctx);
+      if (ap == Applicability.today && _ordinary(rubric!.expression, ctx.service)) ap = Applicability.always;
       if (sectionExcluded) ap = Applicability.notToday;
       final isExcluded = ap == Applicability.notToday;
-      if (isExcluded && options.excluded == ExcludedDisplay.hide && !primary.option) return;
-      final hide = options.excluded == ExcludedDisplay.hide && !primary.option;
+      // Hide means hidden, alternatives included; only a section opened
+      // directly on a day it isn't said still shows, dimmed.
+      final hide = options.excluded == ExcludedDisplay.hide && !sectionExcluded;
+      if (isExcluded && hide) return;
       final heRuns = h == null ? null : _runs(h, ctx, hide);
       final trRuns = t == null ? null : _runs(t, ctx, hide);
       if (heRuns == null && trRuns == null) return;
@@ -610,11 +731,19 @@ class SiddurResolver {
         isExcluded,
         announces: (h ?? t)!.announces,
         option: (h ?? t)!.option,
-        chazarah: chazarah || (h == null && !_birkatKohanimLeaf.hasMatch(leaf.en) && (t?.chazarah ?? false)),
+        chazarah: chazarah || (!fromCorpus && h == null && !_birkatKohanimLeaf.hasMatch(leaf.en) && (t?.chazarah ?? false)),
+        role: primary.role,
+        voice: primary.voice,
+        gestures: primary.gestures,
+        repeat: primary.repeat,
       ));
     }
 
-    if (aligned) {
+    if (trByHe != null) {
+      for (var i = 0; i < he.length; i++) {
+        emit(i, he[i], trByHe[i]);
+      }
+    } else if (aligned) {
       for (var i = 0; i < he.length; i++) {
         emit(i, he[i], tr[i]);
       }
@@ -623,10 +752,33 @@ class SiddurResolver {
         emit(i, he[i], null);
       }
       for (var i = 0; i < tr.length; i++) {
+        // A rubric that couldn't be placed beside the Hebrew ("The
+        // following three words…", "The chazan repeats:") would point at
+        // nothing from after the whole text. Without its English lines
+        // around it, leave it out; notes still read on their own.
+        final pointer = tr[i].kind == SegmentKind.instruction || tr[i].kind == SegmentKind.speaker;
+        if (pointer && he.isNotEmpty && !options.showTranslation) continue;
         emit(i, null, tr[i]);
       }
     }
   }
+
+  Applicability _runApplicability(TextRun r, DayContext ctx) {
+    if (r.rubric == null) return Applicability.always;
+    final ap = _eval(r.rubric!.condition, ctx);
+    return ap == Applicability.today && _ordinary(r.rubric!.expression, ctx.service) ? Applicability.always : ap;
+  }
+
+  /// A condition that holds on an ordinary weekday ("!tishaBav", "!(cholHamoed
+  /// && noTefillinCholHamoed)", "minyan"): when it holds it isn't news, so
+  /// no "today" label. Judged by evaluating it on a plain weekday.
+  static final _ordinaryCache = <String, bool>{};
+  static bool _ordinary(String expression, [Service service = Service.shacharit]) =>
+      _ordinaryCache.putIfAbsent('$service|$expression', () {
+        // 13 Cheshvan 5786: a Tuesday with no occasion at all.
+        final plain = DayContext(HDate(13, Months.cheshvan, 5786), il: false, service: service);
+        return Condition.parse(expression).eval(plain.env);
+      });
 
   /// Resolves inline runs; with [hide], phrases not said today are dropped
   /// and a segment left with no text returns null.
@@ -636,36 +788,17 @@ class SiddurResolver {
         ResolvedRun(
           r.html,
           r.kind == RunKind.marker,
-          r.rubric == null ? Applicability.always : _eval(r.rubric!.condition, ctx),
+          _runApplicability(r, ctx),
           r.rubric?.labelEn,
           r.rubric?.labelHe,
           option: r.option,
+          role: r.role,
         ),
     ];
     if (!hide) return ResolvedSegment(s, runs);
     bool blank(ResolvedRun r) => r.html.replaceAll(RegExp(r'<[^>]*>'), '').trim().isEmpty;
-    // Runs of adjacent options ("Rosh Chodesh / Pesach / Sukkos"): when one
-    // of them is said the others stay, crossed out, so the sentence still
-    // reads as printed. Lone additions not said today ("בעשי"ת מסיים: …")
-    // go.
-    final kept = <ResolvedRun>[];
-    var group = <ResolvedRun>[];
-    void flush() {
-      final said = group.any((r) => !r.marker && r.applicability != Applicability.notToday && !blank(r));
-      kept.addAll(said ? group : group.where((r) => r.applicability != Applicability.notToday));
-      group = [];
-    }
-
-    for (final r in runs) {
-      if (r.applicability == Applicability.always && !r.marker && !blank(r)) {
-        flush();
-        kept.add(r);
-      } else {
-        group.add(r);
-      }
-    }
-    flush();
-    final hasText = kept.any((r) => !r.marker && r.applicability != Applicability.notToday && !blank(r));
+    final kept = [for (final r in runs) if (r.applicability != Applicability.notToday) r];
+    final hasText = kept.any((r) => !r.marker && !blank(r));
     return hasText ? ResolvedSegment(s, kept) : null;
   }
 }

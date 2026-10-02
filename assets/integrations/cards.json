@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "cards": [
+    {
+      "id": "sunset",
+      "title": "Sunset",
+      "description": "Sunset in your saved location",
+      "author": "Amud",
+      "script": "function render(ctx) { return {title: 'Sunset', icon: 'sun', children: [{type: 'text', text: ctx.zmanim.sunset.time, style: 'headline'}, {type: 'text', text: ctx.location.name}]}; }"
+    },
+    {
+      "id": "omer",
+      "title": "Tonight’s Omer",
+      "description": "The next Omer count",
+      "author": "Amud",
+      "script": "function render(ctx) { return {title: 'Tonight’s Omer', icon: 'calendar', children: [{type: 'text', text: ctx.omerTonight ? String(ctx.omerTonight) : 'Outside the Omer season', style: 'headline'}]}; }"
+    },
+    {
+      "id": "parsha",
+      "title": "Weekly parsha",
+      "description": "Upcoming Torah reading in Hebrew and English",
+      "author": "Amud",
+      "script": "function render(ctx) { return {title: 'Weekly parsha', icon: 'book', children: [{type: 'text', text: ctx.parsha.he, style: 'hebrew'}, {type: 'text', text: ctx.parsha.en}]}; }"
+    }
+  ]
+}

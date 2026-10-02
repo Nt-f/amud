@@ -1,0 +1,2471 @@
+{
+ "nusach": "edot_hamizrach",
+ "chunk": "book [Counting of the Omer .. Song of Songs]",
+ "leaves": {
+  "Counting of the Omer": {
+   "node": "sefirat_haomer",
+   "service": "none",
+   "when": "omer"
+  },
+  "Blessing of the Moon": {
+   "node": "kiddush_levana",
+   "service": "none"
+  },
+  "Bedtime Shema": {
+   "node": "bedtime_shema",
+   "service": "none",
+   "when": "true"
+  },
+  "Song of Songs": {
+   "node": "shabbat.shir_hashirim",
+   "service": "shacharit",
+   "when": "shabbat"
+  },
+  "Shabbat Candle Lighting": {
+   "node": "shabbat.candle_lighting",
+   "service": "none",
+   "when": "true"
+  }
+ },
+ "he": {
+  "he:Counting of the Omer:1": {
+   "kind": "heading",
+   "en": "Counting of the Omer"
+  },
+  "he:Counting of the Omer:2": {
+   "parts": [
+    {
+     "text": "<small><b>לְשֵׁם</b> יִחוּד קֻדְשָׁא בְּרִיךְ הוּא וּשְׁכִינְתֵּיהּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בִּדְחִֽילוּ וּרְחִֽימוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּרְחִֽימוּ וּדְחִֽילוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְיַחֲדָא שֵׁם יוֹ\"ד קֵ\"א בְּוָא\"ו קֵ\"א בְּיִחוּדָא שְׁלִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּשֵׁם כָּל־יִשְׂרָאֵל. וּבְשֵׁם כָּל־הַנְּפָשׁוֹת וְהָרוּחוֹת וְהַנְּשָׁמוֹת הַמִּתְיַחֲסִים אֶל־שָׁרְשֵׁי נַפְשֵֽׁנוּ וְרוּחֵֽנוּ וְנִשְׁמָתֵֽנוּ וּמַלְבּוּשֵׁיהֶם וְהַקְּרוֹבִים לָהֶם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שֶׁמִּכְּלָלוּת אֲצִילוּת בְּרִיאָה יְצִירָה עֲשִׂיָּה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּמִכָּל־פְּרָטֵי אֲצִילוּת בְּרִיאָה יְצִירָה עֲשִׂיָּה דְּכָל־פַּרְצוּף וּסְפִירָה דִּפְרָטֵי אֲצִילוּת בְּרִיאָה יְצִירָה עֲשִׂיָּה. הֲרֵֽינִי מוּכָן וּמְזֻמָּן לְקַיֵּם מִצְוַת עֲשֵׂה שֶׁל סְפִירַת הָעֹֽמֶר לִסְפּוֹר יָמִים וְשָׁבוּעוֹת כַּאֲשֶׁר צִוָּֽנוּ יְהֹוָה אֱלֹהֵֽינוּ בְּתוֹרָתוֹ הַקְּדוֹשָׁה <small><small>(בליל מ\"ט ידלג הפסוקים)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּסְפַרְתֶּ֤ם לָכֶם֙ מִמׇּחֳרַ֣ת הַשַּׁבָּ֔ת מִיּוֹם֙ הֲבִ֣יאֲכֶ֔ם אֶת־עֹ֖מֶר הַתְּנוּפָ֑ה שֶׁ֥בַע שַׁבָּת֖וֹת תְּמִימֹ֥ת תִּהְיֶֽינָה: עַ֣ד מִֽמׇּחֳרַ֤ת הַשַּׁבָּת֙ הַשְּׁבִיעִ֔ת תִּסְפְּר֖וּ חֲמִשִּׁ֣ים י֑וֹם וְהִקְרַבְתֶּ֛ם מִנְחָ֥ה חֲדָשָׁ֖ה לַיהֹוָֽה: וְנֶאֱמַר שִׁבְעָ֥ה שָׁבֻעֹ֖ת תִּסְפׇּר־לָ֑ךְ מֵהָחֵ֤ל חֶרְמֵשׁ֙ בַּקָּמָ֔ה תָּחֵ֣ל לִסְפֹּ֔ר שִׁבְעָ֖ה שָׁבֻעֽוֹת׃</small> לַעֲשׂוֹת נַֽחַת רֽוּחַ לְיֽוֹצְרֵֽנוּ וְלַעֲשׂוֹת רְצוֹן בּֽוֹרְאֵֽנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֲשֶׁר קִדְּשָֽׁנוּ בְּמִצְוֹתָיו וְצִוָּֽנוּ בְּמִצְוָה זוֹ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְתַקֵּן שֹֽׁרֶשׁ מִצְוָה זוֹ בְּמָקוֹם עֶלְיוֹן בְּשִׁעוּר קוֹמָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְהַשְׁלִים אִילָן הָעֶלְיוֹן וּלְהַשְׁלִים אָדָם הָעֶלְיוֹן,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּלְהָקִים אֶת־סֻכַּת דָּוִד לְהַחֲזִיר עֲטָרָה לְיָשְׁנָֽהּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְבָרֵר וּלְתַקֵּן וּלְהַעֲלוֹת כָּל־הַנְּפָשׁוֹת וְהָרוּחוֹת וְהַנְּשָׁמוֹת וְנִיצוֹצֵי הַקְּדֻשָּׁה שֶׁנָּֽפְלֽוּ בַּקְּלִפָּה עַל־יְדֵי אָדָם הָרִאשׁוֹן וְעַל יָדֵֽינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּגִלְגּוּלִים אֵֽלּוּ וּבְגִלְגּוּלִים אֲחֵרִים וּשְׁאֵרִית הָרַפַ\"ח נִיצוֹצִין וּלְהַשְׁלִים שְׁלֵמוּת תִּקּוּן נַפְשֵֽׁנוּ רוּחֵֽנוּ וְנִשְׁמָתֵֽנוּ שֶׁמִּכְּלָלוּת אֲצִילוּת בְּרִיאָה יְצִירָה עֲשִׂיָּה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּמִכָּל־פְּרָטֵי אֲצִילוּת בְּרִיאָה יְצִירָה עֲשִׂיָּה דְּכָל־פַּרְצוּף וּסְפִירָה דִּפְרָטֵי אֲצִילוּת בְּרִיאָה יְצִירָה עֲשִׂיָּה הַמִּתְיַחֲסִים אֶל תִּקּוּן מִצְוָה זוֹ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְגַם לְהַשְׁלִים שְׁלֵמוּת תִּקּוּן אֶבְרֵי נְפָשׁוֹת רוּחוֹת וּנְשָׁמוֹת דְּכָל־יִשְׂרָאֵל הַחַיִּים וְהַמֵּתִים הַחֲסֵרִים מִתִּקּוּן מִצְוָה זוֹ. <br>וִיהִי רָצוֹן מִלְּפָנֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שֶׁיִּהְיֶה עַתָּה עֵת רָצוֹן לְפָנֶֽיךָ לִהְיוֹת עוֹלָה מִצְוָה זוֹ לְתַקֵּן אֶת־כָּל־פְּגָמֵֽינוּ וּפְגָמֵי אָדָם הָרִאשׁוֹן אֲשֶׁר פָּגַֽמְנוּ בִּכְלָלוּת אֲצִילוּת בְּרִיאָה יְצִירָה עֲשִׂיָּה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּבְכָל־צַלְמֵי לְבוּשֵׁי נֶֽפֶשׁ רֽוּחַ נְשָׁמָה חַיָּה יְחִידָה דַּאֲצִילוּת בְּרִיאָה יְצִירָה עֲשִׂיָּה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּלְצָרֵף וּלְבָרֵר וּלְהָסִיר הַסִּיגִים מִצַּלְמֵי לְבוּשֵׁי נֶֽפֶשׁ רֽוּחַ נְשָׁמָה חַיָּה יְחִידָה דִּכְלָלוּת וּפְרָטוּת אֲצִילוּת בְּרִיאָה יְצִירָה עֲשִׂיָּה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּלְבָרֵר חֶלְקֵי הַנֶּֽפֶשׁ שֶׁנִּפְגְּמוּ וְנָֽפְלֽוּ בְּנֹֽגַהּ דַאֲצִילוּת בְּרִיאָה יְצִירָה עֲשִׂיָּה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְנֹֽגַהּ כָּאוֹר תִּהְיֶה אֶל מְקוֹם הַקֹּֽדֶשׁ.<br>אָֽנָּֽא יְהֹוָה הַפְרֵד נָא מֵעָלֵֽינוּ צַד הָרַע שֶׁבַּיֵּֽצֶר הָרָע,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּתְזַכְּכֵֽנוּ וּתְלַבְּנֵֽנוּ בְּכֹֽחַ הַיֵּֽצֶר הַטּוֹב,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיִתְיַחֲדוּ אַרְבַּע אוֹתִיּוֹת הַשֵּׁם (יהוה) בָּרוּךְ הוּא בְּיִחוּדָא שְׁלִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיִהְיוּ כִּסֵּא שָׁלֵם אֲשֶׁר בָּהֶם יִתְפַּשֵּׁט שֶֽׁפַע אֵין סוֹף,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיִתְיַחֲדוּ אַבָּֽא וְאִמָּֽא בְּיִחוּדָא שְׁלִים (יאההויה\"ה) וְיִזְדַּוְּגוּ (זו\"ן) תִּפְאֶֽרֶת וּמַלְכוּת זִוּוּגָא שְׁלִים בְּשֵׁם (יאהדונה\"י) וּמִשָּׁם יִמָּשֵׁךְ שֶֽׁפַע וּבְרָכָה בְּכָל־הָעוֹלָמוֹת לְזַכֵּךְ נַפְשֵֽׁנוּ רוּחֵֽנוּ וְנִשְׁמָתֵֽנוּ שֶׁיִּהְיוּ רְאוּיִם לְעוֹרֵר מַיִּין נוּקְבִין וּלְהַמְשִׁיךְ מַיִּין דְּכוּרִין,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאַל־יְעַכֵּב שׁוּם חֵטְא וְעָוֹן וְהִרְהוּר רָע אֶת־הַמִּצְוָה הַזֹּאת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתַעֲלֶה לְרָצוֹן לְרֵֽיחַ נִיחֽוֹחַ לְפָנֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ. <br>וִיהִי רָצוֹן מִלְּפָנֶֽיךָ יְהֹוָה אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שֶׁבְּכֹֽחַ מִצְוַת הַסְּפִירָה הַזֹּאת יְתֻקָּן מַה־שֶּׁפָּגַֽמְתִּי בִּסְפִירוֹת זְעֵיר אַנְפִּין וְנוּקְבֵיהּ שֶׁהֵם תִּפְאֶֶֽרֶת וּמַלְכוּת שֶׁל הַלַּֽיְלָה הַזֹּאת. וִיהִי רָצוֹן מִלְּפָנֶֽיךָ שֶׁיִּהְיֶה חָשׁוּב וּמְקֻבָּל וּמְרֻצֶּה לְפָנֶֽיךָ הֲבַל הַיּוֹצֵא מִפִּֽינוּ בְּהַבְּרָכָה וְהַסְּפִירָה שֶׁל הָעֹֽמֶר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְהַמְשִׁיךְ אוֹר מַקִּיף בַּמָּקוֹם הָרָאוּי כִּרְצוֹנֶֽךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיִהְיֶה חָשׁוּב וּמְקֻבָּל וּמְרֻצֶּה שִֽׂיחַ שִׂפְתוֹתֵֽינוּ בְּבַקָּשָׁתֵֽנוּ עַל חֲזָרַת עֲבוֹדַת בֵּית הַמִּקְדָּשׁ לִמְקוֹמָהּ לְתַקֵּן בְּאוֹר פְּנִימִי כִּרְצוֹנֶֽךָ. וִיהִ֤י ׀ נֹ֤עַם אֲדֹנָ֥י אֱלֹהֵ֗ינוּ עָ֫לֵ֥ינוּ וּמַעֲשֵׂ֣ה יָ֭דֵינוּ כּוֹנְנָ֥ה עָלֵ֑ינוּ וּֽמַעֲשֵׂ֥ה יָ֝דֵ֗ינוּ כּוֹנְנֵֽהוּ: (ב' פעמים)<br>רִבּוֹן עָֽלְמָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " טִיבוּ סַגִּי עֲבַדְתְּ עִם עַמָּךְ יִשְׂרָאֵל דְּאִתְרְעִית בְּהוּ בִּלְחוֹדַֽיְיהוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וַעֲבַדְתְּ לוֹן עַמָּא יְחִידָאָה בְעָֽלְמָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְקָרִית לוֹן גּוֹי אֶחָד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וִיהַבְתְּ לוֹן אוֹרַיְתָא דִקְשׁוֹט,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּפָקַדְתְּ לוֹן בְּכַמָּה פִקּוּדִין לְאִתְעַטְּרָא בְהוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וִיהַבְתְּ לוֹן חֵילָא לְמֶעְבַּד רְעוּתָךְ. וּבְאִתְעֲרוּתָא דִילְהוֹן לְתַֽתָּא בְּמִלִּין וּבְעוֹבָדָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יִתְעַר חֵילָא לְעֵֽלָּא.<br>רִבּוֹן עָֽלְמָא אֲנַן בָּעֵֽינָן לְאִשְׁתַּדְּלָא בִיקָרָךְ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יְהֵא רַעֲוָא קַמָּךְ לְמֵיהַב לָן חֵילָא לְאִתְעֲרָא בִיקָרָךְ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּלְמֶעְבַּד רְעוּתָךְ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּלְסַדְּרָא כֹֽלָּא כִּדְקָא יָאוּת. וְאַף עַל גַּב דְּלֵית אֲנַן יָֽדְעִֽין לְשַׁוְּאָה רְעוּתָא וְלִבָּא לְתַקְּנָא כֹֽלָּא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יְהֵא רַעֲוָא קַמָּךְ דְּתִתְרְעֵי בְמִלִּין דִּילָן,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתַתְקִין תִּקּוּנָא דִלְעֵֽלָּא כִּדְקָא יָאוּת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּתְחַשֵּׁב לָן כְּאִלוּ אִשְׁתַּדַּלְנָא בִיקָרָךְ כִּרְעוּתָךְ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְסַדְּרָא כֹֽלָּא כִּדְקָא יָאוּת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּלְתַקְּנָא בְמִלִּין דִּילָן לְהַהוּא דַרְגָּא דְּאִצְטְרִיךְ לְאִתְתַּקְּנָא. וִיהִ֤י ׀ נֹ֤עַם אֲדֹנָ֥י אֱלֹהֵ֗ינוּ עָ֫לֵ֥ינוּ וּמַעֲשֵׂ֣ה יָ֭דֵינוּ כּוֹנְנָ֥ה עָלֵ֑ינוּ וּֽמַעֲשֵׂ֥ה יָ֝דֵ֗ינוּ כּוֹנְנֵֽהוּ:<br><br>יש אומרים נוסך קצרה<br>לְשֵׁם יִחוּד קֻדְשָׁא בְּרִיךְ הוּא וּשְׁכִינְתֵּיהּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בִּדְחִֽילוּ וּרְחִֽימוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּרְחִֽימוּ וּדְחִֽילוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְיַחֲדָא שֵׁם יוֹ\"ד קֵ\"א בְּוָא\"ו קֵ\"א בְּיִחוּדָא שְׁלִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּשֵׁם כָּל־יִשְׂרָאֵל. הִנֵּה אֲנַֽחְנוּ בָּאִים לְקַיֵּם מִצְוַת עֲשֵׂה שֶׁל סְפִירַת הָעֹֽמֶר לִסְפּוֹר יָמִים וְשָׁבוּעוֹת כַּאֲשֶׁר צִוָּֽנוּ יְהֹוָה אֱלֹהֵֽינוּ בְּתוֹרָתוֹ הַקְּדוֹשָׁה ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small><small>(בליל מ\"ט ידלג הפסוקים)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּסְפַרְתֶּ֤ם לָכֶם֙ מִמׇּחֳרַ֣ת הַשַּׁבָּ֔ת מִיּוֹם֙ הֲבִ֣יאֲכֶ֔ם אֶת־עֹ֖מֶר הַתְּנוּפָ֑ה שֶׁ֥בַע שַׁבָּת֖וֹת תְּמִימֹ֥ת תִּהְיֶֽינָה: עַ֣ד מִֽמׇּחֳרַ֤ת הַשַּׁבָּת֙ הַשְּׁבִיעִ֔ת תִּסְפְּר֖וּ חֲמִשִּׁ֣ים י֑וֹם וְהִקְרַבְתֶּ֛ם מִנְחָ֥ה חֲדָשָׁ֖ה לַיהֹוָֽה: וְנֶאֱמַר שִׁבְעָ֥ה שָׁבֻעֹ֖ת תִּסְפׇּר־לָ֑ךְ מֵהָחֵ֤ל חֶרְמֵשׁ֙ בַּקָּמָ֔ה תָּחֵ֣ל לִסְפֹּ֔ר שִׁבְעָ֖ה שָׁבֻעֽוֹת׃</small> לַעֲשׂוֹת נַֽחַת רֽוּחַ לְיֽוֹצְרֵֽנוּ וְלַעֲשׂוֹת רְצוֹן בּֽוֹרְאֵֽנוּ. וִיהִ֤י ׀ נֹ֤עַם אֲדֹנָ֥י אֱלֹהֵ֗ינוּ עָ֫לֵ֥ינוּ וּמַעֲשֵׂ֣ה יָ֭דֵינוּ כּוֹנְנָ֥ה עָלֵ֑ינוּ וּֽמַעֲשֵׂ֥ה יָ֝דֵ֗ינוּ כּוֹנְנֵֽהוּ: יְהֹוָה֮ יִגְמֹ֢ר בַּ֫עֲדִ֥י יְ֭הֹוָה חַסְדְּךָ֣ לְעוֹלָ֑ם מַעֲשֵׂ֖י יָדֶ֣יךָ אַל־תֶּֽרֶף: אֶ֭קְרָא לֵֽאלֹהִ֣ים עֶלְי֑וֹן לָ֝אֵ֗ל גֹּמֵ֥ר עָלָֽי: וְנֶאֱמַר: וָאֶעֱבֹ֤ר עָלַ֙יִךְ֙ וָֽאֶרְאֵ֔ךְ מִתְבּוֹסֶ֖סֶת בְּדָמָ֑יִךְ וָאֹ֤מַר לָךְ֙ בְּדָמַ֣יִךְ חֲיִ֔י וָאֹ֥מַר לָ֖ךְ בְּדָמַ֥יִךְ חֲיִֽי: בָּרְכִ֥י נַפְשִׁ֗י אֶת־יְהֹ֫וָ֥ה יְהֹוָ֣ה אֱ֭לֹהַי גָּדַ֣לְתָּ מְּאֹ֑ד ה֖וֹד וְהָדָ֣ר לָבָֽשְׁתָּ: עֹֽטֶה־א֭וֹר כַּשַּׂלְמָ֑ה נוֹטֶ֥ה שָׁ֝מַ֗יִם כַּיְרִיעָֽה:</small> ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Counting of the Omer:3": {
+   "parts": [
+    {
+     "text": "<small>הש\"ץ אומר:</small>",
+     "kind": "instruction",
+     "en": "The chazzan says:"
+    },
+    {
+     "text": " בִּרְשׁוּת מוֹרַי וְרַבּוֹתַי. ",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": "<small>והקהל עונים:</small>",
+     "kind": "instruction",
+     "en": "The congregation responds:"
+    },
+    {
+     "text": " שָׁמַיִם ",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Counting of the Omer:4": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:5": {
+   "kind": "instruction",
+   "en": "16th Nissan"
+  },
+  "he:Counting of the Omer:6": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:7": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:8": {
+   "kind": "instruction",
+   "en": "17th Nissan"
+  },
+  "he:Counting of the Omer:9": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:10": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:11": {
+   "kind": "instruction",
+   "en": "18th Nissan"
+  },
+  "he:Counting of the Omer:12": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:13": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:14": {
+   "kind": "instruction",
+   "en": "19th Nissan"
+  },
+  "he:Counting of the Omer:15": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:16": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:17": {
+   "kind": "instruction",
+   "en": "20th Nissan"
+  },
+  "he:Counting of the Omer:18": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:19": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:20": {
+   "kind": "instruction",
+   "en": "21st Nissan"
+  },
+  "he:Counting of the Omer:21": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:22": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:23": {
+   "kind": "instruction",
+   "en": "22nd Nissan"
+  },
+  "he:Counting of the Omer:24": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:25": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:26": {
+   "kind": "instruction",
+   "en": "23rd Nissan"
+  },
+  "he:Counting of the Omer:27": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:28": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:29": {
+   "kind": "instruction",
+   "en": "24th Nissan"
+  },
+  "he:Counting of the Omer:30": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:31": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:32": {
+   "kind": "instruction",
+   "en": "25th Nissan"
+  },
+  "he:Counting of the Omer:33": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:34": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:35": {
+   "kind": "instruction",
+   "en": "26th Nissan"
+  },
+  "he:Counting of the Omer:36": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:37": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:38": {
+   "kind": "instruction",
+   "en": "27th Nissan"
+  },
+  "he:Counting of the Omer:39": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:40": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:41": {
+   "kind": "instruction",
+   "en": "28th Nissan"
+  },
+  "he:Counting of the Omer:42": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:43": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:44": {
+   "kind": "instruction",
+   "en": "29th Nissan"
+  },
+  "he:Counting of the Omer:45": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:46": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:47": {
+   "kind": "instruction",
+   "en": "30th Nissan"
+  },
+  "he:Counting of the Omer:48": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:97": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:98": {
+   "kind": "instruction",
+   "en": "17 Iyar"
+  },
+  "he:Counting of the Omer:99": {
+   "kind": "prayer",
+   "when": "omerDay==33"
+  },
+  "he:Counting of the Omer:100": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:101": {
+   "kind": "instruction",
+   "en": "18 Iyar"
+  },
+  "he:Counting of the Omer:102": {
+   "kind": "prayer",
+   "when": "omerDay==34"
+  },
+  "he:Counting of the Omer:103": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:104": {
+   "kind": "instruction",
+   "en": "19 Iyar"
+  },
+  "he:Counting of the Omer:105": {
+   "kind": "prayer",
+   "when": "omerDay==35"
+  },
+  "he:Counting of the Omer:106": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:107": {
+   "kind": "instruction",
+   "en": "20 Iyar"
+  },
+  "he:Counting of the Omer:108": {
+   "kind": "prayer",
+   "when": "omerDay==36"
+  },
+  "he:Counting of the Omer:109": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:110": {
+   "kind": "instruction",
+   "en": "21 Iyar"
+  },
+  "he:Counting of the Omer:111": {
+   "kind": "prayer",
+   "when": "omerDay==37"
+  },
+  "he:Counting of the Omer:112": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:113": {
+   "kind": "instruction",
+   "en": "22 Iyar"
+  },
+  "he:Counting of the Omer:114": {
+   "kind": "prayer",
+   "when": "omerDay==38"
+  },
+  "he:Counting of the Omer:115": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:116": {
+   "kind": "instruction",
+   "en": "23 Iyar"
+  },
+  "he:Counting of the Omer:117": {
+   "kind": "prayer",
+   "when": "omerDay==39"
+  },
+  "he:Counting of the Omer:118": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:119": {
+   "kind": "instruction",
+   "en": "24 Iyar"
+  },
+  "he:Counting of the Omer:120": {
+   "kind": "prayer",
+   "when": "omerDay==40"
+  },
+  "he:Counting of the Omer:121": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:122": {
+   "kind": "instruction",
+   "en": "25 Iyar"
+  },
+  "he:Counting of the Omer:123": {
+   "kind": "prayer",
+   "when": "omerDay==41"
+  },
+  "he:Counting of the Omer:124": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:125": {
+   "kind": "instruction",
+   "en": "26 Iyar"
+  },
+  "he:Counting of the Omer:126": {
+   "kind": "prayer",
+   "when": "omerDay==42"
+  },
+  "he:Counting of the Omer:127": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:128": {
+   "kind": "instruction",
+   "en": "27 Iyar"
+  },
+  "he:Counting of the Omer:129": {
+   "kind": "prayer",
+   "when": "omerDay==43"
+  },
+  "he:Counting of the Omer:130": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:131": {
+   "kind": "instruction",
+   "en": "28 Iyar"
+  },
+  "he:Counting of the Omer:132": {
+   "kind": "prayer",
+   "when": "omerDay==44"
+  },
+  "he:Counting of the Omer:133": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:134": {
+   "kind": "instruction",
+   "en": "29 Iyar"
+  },
+  "he:Counting of the Omer:135": {
+   "kind": "prayer",
+   "when": "omerDay==45"
+  },
+  "he:Counting of the Omer:136": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:137": {
+   "kind": "instruction",
+   "en": "1 Sivan"
+  },
+  "he:Counting of the Omer:138": {
+   "kind": "prayer",
+   "when": "omerDay==46"
+  },
+  "he:Counting of the Omer:139": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:140": {
+   "kind": "instruction",
+   "en": "2 Sivan"
+  },
+  "he:Counting of the Omer:141": {
+   "kind": "prayer",
+   "when": "omerDay==47"
+  },
+  "he:Counting of the Omer:142": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:143": {
+   "kind": "instruction",
+   "en": "3 Sivan"
+  },
+  "he:Counting of the Omer:144": {
+   "kind": "prayer",
+   "when": "omerDay==48"
+  },
+  "he:Counting of the Omer:49": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:50": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:51": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:52": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:53": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:54": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:55": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:56": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:57": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:58": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:59": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:60": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:61": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:62": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:63": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:64": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:65": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:66": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:67": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:68": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:69": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:70": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:71": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:72": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:73": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:74": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:75": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:76": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:77": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:78": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:79": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:80": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:81": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:82": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:83": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:84": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:85": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:86": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:87": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:88": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:89": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:90": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:91": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:92": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:93": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:94": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:95": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:96": {
+   "kind": "prayer"
+  },
+  "he:Counting of the Omer:145": {
+   "kind": "prayer",
+   "when": "omerDay==46"
+  },
+  "he:Counting of the Omer:146": {
+   "kind": "instruction",
+   "en": "4 Sivan:",
+   "gloss": "Date for the following line",
+   "forgot": true
+  },
+  "he:Counting of the Omer:147": {
+   "kind": "prayer",
+   "when": "omerDay==48"
+  },
+  "he:Counting of the Omer:148": {
+   "kind": "prayer",
+   "when": "omerDay==48"
+  },
+  "he:Counting of the Omer:149": {
+   "kind": "instruction",
+   "en": "5 Sivan:",
+   "gloss": "Date for the following line",
+   "forgot": true
+  },
+  "he:Counting of the Omer:150": {
+   "kind": "prayer",
+   "when": "omerDay==49"
+  },
+  "he:Counting of the Omer:151": {
+   "kind": "prayer",
+   "when": "omerDay==49"
+  },
+  "he:Counting of the Omer:152": {
+   "kind": "prayer",
+   "when": "omerDay==49"
+  },
+  "he:Counting of the Omer:153": {
+   "parts": [
+    {
+     "text": "<b>לַמְנַצֵּ֥חַ</b> ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(תהילים ס״ז:א׳-ג׳)</small>",
+     "kind": "instruction",
+     "en": "(Psalms 67:1-3)"
+    },
+    {
+     "text": " בִּנְגִינֹ֗ת מִזְמ֥וֹר שִֽׁיר׃ אֱֽלֹהִ֗ים יְחׇנֵּ֥נוּ וִיבָרְכֵ֑נוּ יָ֤אֵֽר פָּנָ֖יו אִתָּ֣נוּ סֶֽלָה׃ לָדַ֣עַת בָּאָ֣רֶץ דַּרְכֶּ֑ךָ בְּכׇל־גּ֝וֹיִ֗ם יְשׁוּעָתֶֽךָ׃ יוֹד֖וּךָ עַמִּ֥ים ׀ אֱלֹהִ֑ים י֝וֹד֗וּךָ עַמִּ֥ים כֻּלָּֽם׃ יִ֥שְׂמְח֥וּ וִירַנְּנ֗וּ לְאֻ֫מִּ֥ים כִּֽי־תִשְׁפֹּ֣ט עַמִּ֣ים מִישֹׁ֑ר וּלְאֻמִּ֓ים ׀ בָּאָ֖רֶץ תַּנְחֵ֣ם סֶֽלָה׃ יוֹד֖וּךָ עַמִּ֥ים ׀ אֱלֹהִ֑ים י֝וֹד֗וּךָ עַמִּ֥ים כֻּלָּֽם׃ אֶ֭רֶץ נָתְנָ֣ה יְבוּלָ֑הּ יְ֝בָרְכֵ֗נוּ אֱלֹהִ֥ים אֱלֹהֵֽינוּ׃ יְבָרְכֵ֥נוּ אֱלֹהִ֑ים וְיִֽירְא֥וּ א֝וֹת֗וֹ כׇּל־אַפְסֵי־אָֽרֶץ׃ ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Counting of the Omer:154": {
+   "parts": [
+    {
+     "text": "אָֽנָּֽא בְּכֹֽחַ. גְּדוּלַת יְמִינֶֽךָ. תַּתִּיר צְרוּרָה:  ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(אב\"ג ית\"ץ)</small>",
+     "kind": "instruction",
+     "en": "(Ab\"G Yt\"T)"
+    }
+   ]
+  },
+  "he:Counting of the Omer:155": {
+   "parts": [
+    {
+     "text": "קַבֵּל רִנַּת. עַמֶּֽךָ שַׂגְּבֵֽנוּ. טַהֲרֵֽנוּ נוֹרָא: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(קר\"ע שט\"ן)</small>",
+     "kind": "instruction",
+     "en": "(Kr\"E ShT\"N)"
+    }
+   ]
+  },
+  "he:Counting of the Omer:156": {
+   "parts": [
+    {
+     "text": "נָא גִבּוֹר. דּֽוֹרְשֵֽׁי יִחוּדֶֽךָ. כְּבָבַת שָׁמְרֵם: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(נג\"ד יכ\"ש)</small>",
+     "kind": "instruction",
+     "en": "(Ng\"D Yk\"Sh)"
+    }
+   ]
+  },
+  "he:Counting of the Omer:157": {
+   "parts": [
+    {
+     "text": "בָּֽרְכֵֽם טַהֲרֵם. רַחֲמֵי צִדְקָתֶֽךָ. תָּמִיד גָּמְלֵם: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(בט\"ר צת\"ג)</small>",
+     "kind": "instruction",
+     "en": "(Bt\"R TzT\"G)"
+    }
+   ]
+  },
+  "he:Counting of the Omer:158": {
+   "parts": [
+    {
+     "text": "חֲסִין קָדוֹשׁ. בְּרֹב טֽוּבְךָֽ. נַהֵל עֲדָתֶֽךָ: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(חק\"ב טנ\"ע)</small>",
+     "kind": "instruction",
+     "en": "(Hk\"B Tn\"E)"
+    }
+   ]
+  },
+  "he:Counting of the Omer:159": {
+   "parts": [
+    {
+     "text": "יָחִיד גֵּאֶה. לְעַמְּךָ פְנֵה. זֽוֹכְרֵֽי קְדֻשָּׁתֶֽךָ: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(יג\"ל פז\"ק)</small>",
+     "kind": "instruction",
+     "en": "(Yg\"L Pz\"K)"
+    }
+   ]
+  },
+  "he:Counting of the Omer:160": {
+   "parts": [
+    {
+     "text": "שַׁוְעָתֵֽנוּ קַבֵּל. וּשְׁמַע צַעֲקָתֵֽנוּ. יוֹדֵֽעַ תַּעֲלוּמוֹת: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(שק\"ו צי\"ת)</small>",
+     "kind": "instruction",
+     "en": "(ShK\"V TzY\"T)"
+    }
+   ]
+  },
+  "he:Counting of the Omer:161": {
+   "parts": [
+    {
+     "text": "<small>ואומר בלחש:</small>",
+     "kind": "instruction",
+     "en": "And say quietly:"
+    },
+    {
+     "text": " בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד:",
+     "kind": "prayer",
+     "voice": "undertone"
+    }
+   ]
+  },
+  "he:Blessing of the Moon:1": {
+   "kind": "heading",
+   "en": "Blessing of the Moon"
+  },
+  "he:Blessing of the Moon:2": {
+   "parts": [
+    {
+     "text": "<b>לַמְנַצֵּ֗חַ</b> ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(תהילים י״ט:א׳-ג׳)</small>",
+     "kind": "instruction",
+     "en": "(Psalms 19:1-3)"
+    },
+    {
+     "text": " מִזְמ֥וֹר לְדָוִֽד׃ הַשָּׁמַ֗יִם מְֽסַפְּרִ֥ים כְּבֽוֹד־אֵ֑ל וּֽמַעֲשֵׂ֥ה יָ֝דָ֗יו מַגִּ֥יד הָרָקִֽיעַ׃ י֣וֹם לְ֭יוֹם יַבִּ֣יעַֽ אֹ֑מֶר וְלַ֥יְלָה לְּ֝לַ֗יְלָה יְחַוֶּה־דָּֽעַת׃ אֵֽין־אֹ֭מֶר וְאֵ֣ין דְּבָרִ֑ים בְּ֝לִ֗י נִשְׁמָ֥ע קוֹלָֽם׃ בְּכׇל־הָאָ֨רֶץ ׀ יָ֘צָ֤א קַוָּ֗ם וּבִקְצֵ֣ה תֵ֭בֵל מִלֵּיהֶ֑ם לַ֝שֶּׁ֗מֶשׁ שָֽׂם־אֹ֥הֶל בָּהֶֽם׃ וְה֗וּא כְּ֭חָתָן יֹצֵ֣א מֵחֻפָּת֑וֹ יָשִׂ֥ישׂ כְּ֝גִבּ֗וֹר לָר֥וּץ אֹֽרַח׃ מִקְצֵ֤ה הַשָּׁמַ֨יִם ׀ מֽוֹצָא֗וֹ וּתְקוּפָת֥וֹ עַל־קְצוֹתָ֑ם וְאֵ֥ין נִ֝סְתָּ֗ר מֵחַמָּתֽוֹ׃ תּ֘וֹרַ֤ת יְהֹוָ֣ה תְּ֭מִימָה מְשִׁ֣יבַת נָ֑פֶשׁ עֵד֥וּת יְהֹוָ֥ה נֶ֝אֱמָנָ֗ה מַחְכִּ֥ימַת פֶּֽתִי׃ פִּקּ֘וּדֵ֤י יְהֹוָ֣ה יְ֭שָׁרִים מְשַׂמְּחֵי־לֵ֑ב מִצְוַ֥ת יְהֹוָ֥ה בָּ֝רָ֗ה מְאִירַ֥ת עֵינָֽיִם׃ יִרְאַ֤ת יְהֹוָ֨ה ׀ טְהוֹרָה֮ עוֹמֶ֢דֶת לָ֫עַ֥ד מִֽשְׁפְּטֵי־יְהֹוָ֥ה אֱמֶ֑ת צָֽדְק֥וּ יַחְדָּֽו׃ הַֽנֶּחֱמָדִ֗ים מִ֭זָּהָב וּמִפַּ֣ז רָ֑ב וּמְתוּקִ֥ים מִ֝דְּבַ֗שׁ וְנֹ֣פֶת צוּפִֽים׃ גַּֽם־עַ֭בְדְּךָ נִזְהָ֣ר בָּהֶ֑ם בְּ֝שׇׁמְרָ֗ם עֵ֣קֶב רָֽב׃ שְׁגִיא֥וֹת מִֽי־יָבִ֑ין מִֽנִּסְתָּר֥וֹת נַקֵּֽנִי׃ גַּ֤ם מִזֵּדִ֨ים ׀ חֲשֹׂ֬ךְ עַבְדֶּ֗ךָ אַֽל־יִמְשְׁלוּ־בִ֣י אָ֣ז אֵיתָ֑ם וְ֝נִקֵּ֗יתִי מִפֶּ֥שַֽׁע רָֽב׃ יִ֥הְיֽוּ לְרָצ֨וֹן ׀ אִמְרֵי־פִ֡י וְהֶגְי֣וֹן לִבִּ֣י לְפָנֶ֑יךָ יְ֝הֹוָ֗ה צוּרִ֥י וְגֹאֲלִֽי׃",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Blessing of the Moon:3": {
+   "kind": "prayer"
+  },
+  "he:Blessing of the Moon:4": {
+   "parts": [
+    {
+     "text": "<b>הַ֥לְלוּיָ֨הּ</b> ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(תהלים קמח)</small>",
+     "kind": "instruction",
+     "en": "(Psalms 148)"
+    },
+    {
+     "text": " ׀ הַֽלְל֣וּ אֶת־יְ֭הֹוָה מִן־הַשָּׁמַ֑יִם הַֽ֝לְל֗וּהוּ בַּמְּרוֹמִֽים׃ הַֽלְל֥וּהוּ כׇל־מַלְאָכָ֑יו הַ֝לְל֗וּהוּ כׇּל־צְבָאָֽו׃ הַֽ֭לְלוּהוּ שֶׁ֣מֶשׁ וְיָרֵ֑חַ הַֽ֝לְל֗וּהוּ כׇּל־כּ֥וֹכְבֵי אֽוֹר׃ הַֽ֭לְלוּהוּ שְׁמֵ֣י הַשָּׁמָ֑יִם וְ֝הַמַּ֗יִם אֲשֶׁ֤ר ׀ מֵעַ֬ל הַשָּׁמָֽיִם׃ יְֽ֭הַלְלוּ אֶת־שֵׁ֣ם יְהֹוָ֑ה כִּ֤י ה֖וּא צִוָּ֣ה וְנִבְרָֽאוּ׃ וַיַּעֲמִידֵ֣ם לָעַ֣ד לְעוֹלָ֑ם חׇק־נָ֝תַ֗ן וְלֹ֣א יַעֲבֽוֹר׃ ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Blessing of the Moon:5": {
+   "parts": [
+    {
+     "text": "<small>כשיאמר \"כי אראה שמיך מעשה אצבעותיך\" יסתכל בלבנה, אבל כשיתחיל לברך לא יראה בה עוד כלל <small>(בא\"ח ש\"ב ויקרא הכ\"ג)</small>",
+     "kind": "instruction",
+     "en": "When he says \"For I will see your heavens, the work of your fingers,\" he will look at the moon, but when he begins to recite the blessing, he will no longer look at it at all (Baalach Shab 2:2, Leviticus 23).",
+     "cite": "בא\"ח ש\"ב ויקרא הכ\"ג"
+    },
+    {
+     "text": ".</small> ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Blessing of the Moon:6": {
+   "kind": "prayer"
+  },
+  "he:Blessing of the Moon:7": {
+   "kind": "instruction",
+   "en": "Before the blessing, he will say:"
+  },
+  "he:Blessing of the Moon:8": {
+   "parts": [
+    {
+     "text": "<small><b>לְשֵׁם </b> יִחוּד קֻדְשָׁא בְּרִיךְ הוּא וּשְׁכִינְתֵּהּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בִּדְחִילוּ וּרְחִימוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּרְחִימוּ וּדְחִילוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְיַחֲדָא שֵׁם יוֹ\"ד קֵ\"י בְּוָא\"ו קֵ\"י בְּיִחוּדָא שְׁלִים בְּשֵׁם כָּל־יִשְׂרָאֵל. הִנֵּה אֲנַחְנוּ בָּאִים לְבָרֵךְ בִּרְכַּת הַלְּבָנָה כְּמוֹ שֶׁתִּקְּנוּ לָנוּ רַבּוֹתֵינוּ זִכְרוֹנָם לִבְרָכָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " עִם כָּל־הַמִּצְוֹת הַכְּלוּלוֹת בָּהּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְתַקֵּן אֶת־שָׁרְשָׁהּ בְּמָקוֹם עֶלְיוֹן,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לַעֲשׂוֹת נַחַת רוּחַ לְיוֹצְרֵנוּ וְלַעֲשׂוֹת רְצוֹן בּוֹרְאֵנוּ. וִיהִ֤י ׀ נֹ֤עַם אֲדֹנָ֥י אֱלֹהֵ֗ינוּ עָ֫לֵ֥ינוּ וּמַעֲשֵׂ֣ה יָ֭דֵינוּ כּוֹנְנָ֥ה עָלֵ֑ינוּ וּֽמַעֲשֵׂ֥ה יָ֝דֵ֗ינוּ כּוֹנְנֵֽהוּ: </small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>שתי פעמים</small> ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Blessing of the Moon:9": {
+   "kind": "prayer"
+  },
+  "he:Blessing of the Moon:10": {
+   "kind": "prayer"
+  },
+  "he:Blessing of the Moon:11": {
+   "kind": "prayer"
+  },
+  "he:Blessing of the Moon:12": {
+   "kind": "prayer"
+  },
+  "he:Blessing of the Moon:13": {
+   "parts": [
+    {
+     "text": "<b>בָּרוּךְ</b> יוֹצְרִיךְ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בָּרוּךְ עוֹשִׂיךְ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בָּרוּךְ קוֹנִיךְ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בָּרוּךְ בּוֹרְאִיךְ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כְּשֵׁם שֶׁאֲנַחְנוּ מְרַקְּדִים ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>ידלג ג\"פ <small>(בא\"ח ש\"ב ויקרא הכ\"ה)</small>",
+     "kind": "instruction",
+     "en": "Jump three times (Baalach Shab 2:2, Leviticus 25)",
+     "cite": "בא\"ח ש\"ב ויקרא הכ\"ה"
+    },
+    {
+     "text": "</small> כְּנֶגְדִּיךְ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאֵין אֲנַחְנוּ יְכוֹלִים לִגַּע בִּיךְ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כָּךְ אִם יְרַקְּדוּ אֲחֵרִים כְּנֶגְדֵּנוּ לְהַזִּיקֵנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לֹא יוּכְלוּ לִגַּע בָּנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְלֹא יִשְׁלְטוּ בָנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְלֹא יַעֲשׂוּ בָנוּ שׁוּם רֹשֶׁם. תִּפֹּ֨ל עֲלֵיהֶ֤ם אֵימָ֙תָה֙ וָפַ֔חַד בִּגְדֹ֥ל זְרוֹעֲךָ֖ יִדְּמ֣וּ כָּאָ֑בֶן: כָּאָבֶן יִדְּמוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " זְרוֹעֲךָ בִּגְדֹל,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וָפַחַד אֵימָתָה עֲלֵיהֶם תִּפֹּל: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Blessing of the Moon:14": {
+   "kind": "instruction",
+   "en": "He will say \"with a good sign\" until he prays over them three times"
+  },
+  "he:Blessing of the Moon:15": {
+   "parts": [
+    {
+     "text": "<b>דָּוִד</b> מֶלֶךְ יִשְׂרָאֵל חַי וְקַיָּם ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>שלש פעמים</small>",
+     "kind": "instruction",
+     "en": "Three times"
+    },
+    {
+     "text": ". אָמֵן,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אָמֵן,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אָמֵן: נֶצַח,",
+     "kind": "prayer"
+    },
+    {
+     "text": " נֶצַח,",
+     "kind": "prayer"
+    },
+    {
+     "text": " נֶצַח: סֶלָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " סֶלָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " סֶלָה: וָעֶד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וָעֶד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וָעֶד: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Blessing of the Moon:16": {
+   "parts": [
+    {
+     "text": "לֵ֣ב טָ֭הוֹר בְּרָא־לִ֣י אֱלֹהִ֑ים וְר֥וּחַ נָ֝כ֗וֹן חַדֵּ֥שׁ בְּקִרְבִּֽי׃ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>שבע פעמים</small> ",
+     "kind": "instruction",
+     "en": "Seven times"
+    }
+   ]
+  },
+  "he:Blessing of the Moon:17": {
+   "parts": [
+    {
+     "text": "<b>שִׁ֗יר</b> ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(תהילים קכ״א:א׳-ב׳)</small>",
+     "kind": "instruction",
+     "en": "(Psalms 121:1-2)"
+    },
+    {
+     "text": " לַֽמַּ֫עֲל֥וֹת אֶשָּׂ֣א עֵ֭ינַי אֶל־הֶהָרִ֑ים מֵ֝אַ֗יִן יָבֹ֥א עֶזְרִֽי׃ עֶ֭זְרִי מֵעִ֣ם יְהֹוָ֑ה עֹ֝שֵׂ֗ה שָׁמַ֥יִם וָאָֽרֶץ׃ אַל־יִתֵּ֣ן לַמּ֣וֹט רַגְלֶ֑ךָ אַל־יָ֝נ֗וּם שֹׁמְרֶֽךָ׃ הִנֵּ֣ה לֹֽא־יָ֭נוּם וְלֹ֣א יִישָׁ֑ן שׁ֝וֹמֵ֗ר יִשְׂרָאֵֽל׃ יְהֹוָ֥ה שֹׁמְרֶ֑ךָ יְהֹוָ֥ה צִ֝לְּךָ֗ עַל־יַ֥ד יְמִינֶֽךָ׃ יוֹמָ֗ם הַשֶּׁ֥מֶשׁ לֹֽא־יַכֶּ֗כָּה וְיָרֵ֥חַ בַּלָּֽיְלָה׃ יְֽהֹוָ֗ה יִשְׁמׇרְךָ֥ מִכָּל־רָ֑ע יִ֝שְׁמֹ֗ר אֶת־נַפְשֶֽׁךָ׃ יְֽהֹוָ֗ה יִשְׁמׇר־צֵאתְךָ֥ וּבוֹאֶ֑ךָ מֵ֝עַתָּ֗ה וְעַד־עוֹלָֽם׃",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Blessing of the Moon:18": {
+   "parts": [
+    {
+     "text": "<b>הַ֥לְלוּיָ֨הּ</b> ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(תהילים ק״נ:א׳-ב׳)</small>",
+     "kind": "instruction",
+     "en": "(Psalms 150:1-2)"
+    },
+    {
+     "text": " ׀ הַֽלְלוּ־אֵ֥ל בְּקָדְשׁ֑וֹ הַֽ֝לְל֗וּהוּ בִּרְקִ֥יעַ עֻזּֽוֹ׃ הַלְל֥וּהוּ בִגְבוּרֹתָ֑יו הַ֝לְל֗וּהוּ כְּרֹ֣ב גֻּדְלֽוֹ׃ הַ֭לְלוּהוּ בְּתֵ֣קַע שׁוֹפָ֑ר הַ֝לְל֗וּהוּ בְּנֵ֣בֶל וְכִנּֽוֹר׃ הַ֭לְלוּהוּ בְּתֹ֣ף וּמָח֑וֹל הַֽ֝לְל֗וּהוּ בְּמִנִּ֥ים וְעֻגָֽב׃ הַלְל֥וּהוּ בְצִלְצְלֵי־שָׁ֑מַע הַֽ֝לְל֗וּהוּ בְּֽצִלְצְלֵ֥י תְרוּעָֽה׃ כֹּ֣ל הַ֭נְּשָׁמָה תְּהַלֵּ֥ל יָ֗הּ הַֽלְלוּיָֽהּ׃",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Blessing of the Moon:19": {
+   "kind": "note",
+   "en": "A teaching from the school of Rabbi Ishmael states: Were the children of Yisrael to merit no more than greeting their Father in Heaven once a month, it would suffice for them. Abaye said: Therefore, let us recite it standing.",
+   "cite": "תנא דבי רבי ישמעאל"
+  },
+  "he:Blessing of the Moon:20": {
+   "kind": "instruction",
+   "en": "And they say Kaddish over Yisrael"
+  },
+  "he:Blessing of the Moon:21": {
+   "parts": [
+    {
+     "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. <small>[אָמֵן]</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " בְּעָלְמָא דִּי בְרָא,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " כִּרְעוּתֵה,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְיַמְלִיךְ מַלְכוּתֵה,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְיַצְמַח פֻּרְקָנֵה,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וִיקָרֵב מְשִׁיחֵהּ. ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>[אָמֵן]</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְאִמְרוּ אָמֵן. ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>[אָמֵן]</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " יְהֵא שְׁמֵיהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ. וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " בְּרִיךְ הוּא. ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>[אָמֵן]</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " לְעֵלָּא מִן כָּל בִּרְכָתָא שִׁירָתָא,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " דַּאֲמִירָן בְּעָלְמָא,",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְאִמְרוּ אָמֵן. ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>[אָמֵן]</small></small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Blessing of the Moon:22": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Blessing of the Moon:23": {
+   "parts": [
+    {
+     "text": "<small><b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא. חַיִּים וְשָׂבָע וִישׁוּעָה וְנֶחָמָה. וְשֵׁיזָבָא וּרְפוּאָה וּגְאוּלָה וּסְלִיחָה וְכַפָּרָה וְרֶוַח וְהַצָּלָה לָנוּ וּלְכָל עַמּוֹ יִשְׂרָאֵל. וְאִמְרוּ אָמֵן. <small>[אָמֵן]</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<br>עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו. הוּא בְּרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל עַמּוֹ יִשְׂרָאֵל. וְאִמְרוּ אָמֵן. ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>[אָמֵן]</small>  </small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Blessing of the Moon:24": {
+   "kind": "instruction",
+   "en": "And after the Kaddish, some say"
+  },
+  "he:Blessing of the Moon:25": {
+   "kind": "prayer"
+  },
+  "he:Blessing of the Moon:26": {
+   "parts": [
+    {
+     "text": "<small>ואומרים שלש פעמים:</small>",
+     "kind": "instruction",
+     "en": "And say three times:"
+    },
+    {
+     "text": " שָׁלוֹם עֲלֵיכֶם. ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Bedtime Shema:1": {
+   "kind": "heading",
+   "en": "Recitation of Shema upon the Bed"
+  },
+  "he:Bedtime Shema:2": {
+   "parts": [
+    {
+     "text": "<small>אם נשאר ער עד אחר חצות יקרא ק\"ש שעל המטה חצי שעה לפני חצות, ואם שכח לקרוא קודם חצות יכול לקרוא כל סדר ק\"ש אחר חצות <small>(רב פעלים ח\"ב ס\"ב)</small>",
+     "kind": "instruction",
+     "en": "If one remains awake until after midnight, one recites the Bedtime Shema half an hour before midnight. If one forgot to recite it before midnight, one may recite the entire order after midnight.",
+     "cite": "רב פעלים ח\"ב ס\"ב"
+    },
+    {
+     "text": ".</small> ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Bedtime Shema:3": {
+   "kind": "prayer"
+  },
+  "he:Bedtime Shema:5": {
+   "kind": "prayer"
+  },
+  "he:Bedtime Shema:6": {
+   "kind": "instruction",
+   "en": "In this blessing, do not say the Name and Kingship, but meditate it in your heart."
+  },
+  "he:Bedtime Shema:7": {
+   "parts": [
+    {
+     "text": "<b>בָּרוּךְ</b> ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(אַתָּה יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " הַמַּפִּיל חֶבְלֵי שֵׁנָה עַל־עֵינָי וּתְנוּמָה עַל־עַפְעַפַּי,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּמֵאִיר לְאִישׁוֹן בַּת־עָֽיִן. יְהִי רָצוֹן מִלְּפָנֶֽיךָ יְהֹוָה אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי שֶׁתַּשְׁכִּיבֵֽנִי לְשָׁלוֹם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתַעֲמִידֵֽנִי לְחַיִּים טוֹבִים וּלְשָׁלוֹם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתֵן חֶלְקִי בְּתוֹרָתֶֽךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְתַרְגִּילֵֽנִי לִדְבַר מִצְוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאַל־תַּרְגִּילֵֽנִי לִדְבַר עֲבֵרָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאַל־תְּבִיאֵֽנִי לִידֵי חֵטְא. וְלֹא לִידֵי נִסָּיוֹן וְלֹא לִידֵי בִזָּיוֹן,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְיִשְׁלוֹט בִּי יֵֽצֶר הַטּוֹב וְאַל־יִשְׁלוֹט בִּי יֵֽצֶר הָרָע. וְתַצִּילֵֽנִי מִיֵּֽצֶר הָרָע וּמֵחוֹלָאִים רָעִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאַל־יַבְהִילֽוּנִי חֲלוֹמוֹת רָעִים וְהִרְהוּרִים רָעִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּתְהֵא מִטָּתִי שְׁלֵמָה לְפָנֶֽיךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְהָאֵר עֵינַי פֶּן אִישַׁן הַמָּֽוֶת. בָּרוּךְ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(אַתָּה יְהֹוָה)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " הַמֵּאִיר לָעוֹלָם כֻּלּוֹ בִּכְבוֹדוֹ: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Bedtime Shema:8": {
+   "kind": "instruction",
+   "en": "One must be very careful in reciting the Bedtime Shema, as it is one of the four Shema recitations a person is obligated to say every day.",
+   "cite": "בא\"ח פקודי הי\"א"
+  },
+  "he:Bedtime Shema:9": {
+   "kind": "prayer"
+  },
+  "he:Bedtime Shema:10": {
+   "parts": [
+    {
+     "text": "<small><small>בלחש:</small>",
+     "kind": "instruction",
+     "en": "Silently:"
+    },
+    {
+     "text": "  בָּרוּךְ שֵּׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד:</small> ",
+     "kind": "prayer",
+     "voice": "undertone"
+    }
+   ]
+  },
+  "he:Bedtime Shema:11": {
+   "kind": "prayer"
+  },
+  "he:Bedtime Shema:12": {
+   "kind": "prayer"
+  },
+  "he:Bedtime Shema:13": {
+   "kind": "prayer"
+  },
+  "he:Bedtime Shema:14": {
+   "parts": [
+    {
+     "text": "<small>וחוזר ואומר</small>",
+     "kind": "instruction",
+     "en": "And one repeats and says:"
+    },
+    {
+     "text": " יְהֹוָה אֱלֹהֵיכֶם אֱמֶת. ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Bedtime Shema:15": {
+   "kind": "prayer"
+  },
+  "he:Bedtime Shema:16": {
+   "parts": [
+    {
+     "text": "<b>הִנֵּ֗ה</b> מִטָּתוֹ֙ שֶׁלִּשְׁלֹמֹ֔ה שִׁשִּׁ֥ים גִּבֹּרִ֖ים סָבִ֣יב לָ֑הּ מִגִּבֹּרֵ֖י יִשְׂרָאֵֽל׃ כֻּלָּם֙ אֲחֻ֣זֵי חֶ֔רֶב מְלֻמְּדֵ֖י מִלְחָמָ֑ה אִ֤ישׁ חַרְבּוֹ֙ עַל־יְרֵכ֔וֹ מִפַּ֖חַד בַּלֵּילֽוֹת׃ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>ג' פעמים</small> ",
+     "kind": "instruction",
+     "en": "3 times"
+    }
+   ]
+  },
+  "he:Bedtime Shema:17": {
+   "kind": "prayer"
+  },
+  "he:Bedtime Shema:18": {
+   "parts": [
+    {
+     "text": "<b>יֹ֭שֵׁב</b> ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(תהילים צ״א)</small>",
+     "kind": "instruction",
+     "en": "(Psalms 91)"
+    },
+    {
+     "text": " בְּסֵ֣תֶר עֶלְי֑וֹן בְּצֵ֥ל שַׁ֝דַּ֗י יִתְלוֹנָֽן׃ אֹמַ֗ר לַ֭יהֹוָה מַחְסִ֣י וּמְצוּדָתִ֑י אֱ֝לֹהַ֗י אֶבְטַח־בּֽוֹ׃ כִּ֤י ה֣וּא יַ֭צִּילְךָ מִפַּ֥ח יָק֗וּשׁ מִדֶּ֥בֶר הַוּֽוֹת׃ בְּאֶבְרָת֨וֹ ׀ יָ֣סֶךְ לָ֭ךְ וְתַחַת־כְּנָפָ֣יו תֶּחְסֶ֑ה צִנָּ֖ה וְסֹחֵרָ֣ה אֲמִתּֽוֹ׃ לֹֽא־תִ֭ירָא מִפַּ֣חַד לָ֑יְלָה מֵ֝חֵ֗ץ יָע֥וּף יוֹמָֽם׃ מִ֭דֶּבֶר בָּאֹ֣פֶל יַהֲלֹ֑ךְ מִ֝קֶּ֗טֶב יָשׁ֥וּד צׇהֳרָֽיִם׃ יִפֹּ֤ל מִצִּדְּךָ֨ ׀ אֶ֗לֶף וּרְבָבָ֥ה מִימִינֶ֑ךָ אֵ֝לֶ֗יךָ לֹ֣א יִגָּֽשׁ׃ רַ֭ק בְּעֵינֶ֣יךָ תַבִּ֑יט וְשִׁלֻּמַ֖ת רְשָׁעִ֣ים תִּרְאֶֽה׃ כִּֽי־אַתָּ֣ה יְהֹוָ֣ה מַחְסִ֑י. ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Bedtime Shema:19": {
+   "kind": "instruction",
+   "en": "One should stand and say the Vidui, bow one's head, and strike one's fist on one's heart at each word of confession. Do not say it on Shabbat night or on days when Tachanun is not said. Also do not say it on Motzaei Shabbat until midnight, nor on Motzaei Yom Tov or Rosh Chodesh, and the like."
+  },
+  "he:Bedtime Shema:20": {
+   "kind": "prayer",
+   "gestures": [
+    "stand",
+    "bow",
+    "strike_chest"
+   ]
+  },
+  "he:Bedtime Shema:21": {
+   "kind": "instruction",
+   "en": "Afterwards, one says \"Ana BeKoach\" in its entirety every night, and after finishing it, one repeats the verse corresponding to that night 3 times."
+  },
+  "he:Bedtime Shema:22": {
+   "parts": [
+    {
+     "text": "<small>ליל א</small>",
+     "kind": "instruction",
+     "en": "Night A"
+    },
+    {
+     "text": " אָֽנָּֽא בְּכֹֽחַ. גְּדוּלַת יְמִינֶֽךָ. תַּתִּיר צְרוּרָה: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(אב\"ג ית\"ץ)</small>",
+     "kind": "instruction",
+     "en": "(Ab\"G Yt\"T)"
+    }
+   ]
+  },
+  "he:Bedtime Shema:23": {
+   "parts": [
+    {
+     "text": "<small>ליל ב</small>",
+     "kind": "instruction",
+     "en": "Night B"
+    },
+    {
+     "text": " קַבֵּל רִנַּת. עַמֶּֽךָ שַׂגְּבֵֽנוּ. טַהֲרֵֽנוּ נוֹרָא: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(קר\"ע שט\"ן)</small>",
+     "kind": "instruction",
+     "en": "(Kr\"E ShT\"N)"
+    }
+   ]
+  },
+  "he:Bedtime Shema:24": {
+   "parts": [
+    {
+     "text": "<small>ליל ג</small>",
+     "kind": "instruction",
+     "en": "Night G"
+    },
+    {
+     "text": " נָא גִבּוֹר. דּֽוֹרְשֵֽׁי יִחוּדֶֽךָ. כְּבָבַת שָׁמְרֵם: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(נג\"ד יכ\"ש)</small>",
+     "kind": "instruction",
+     "en": "(Ng\"D Yk\"Sh)"
+    }
+   ]
+  },
+  "he:Bedtime Shema:25": {
+   "parts": [
+    {
+     "text": "<small>ליל ד</small>",
+     "kind": "instruction",
+     "en": "Night D"
+    },
+    {
+     "text": " בָּֽרְכֵֽם טַהֲרֵם. רַחֲמֵי צִדְקָתֶֽךָ. תָּמִיד גָּמְלֵם: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(בט\"ר צת\"ג)</small> ",
+     "kind": "instruction",
+     "en": "(Bt\"R TzT\"G)"
+    }
+   ]
+  },
+  "he:Bedtime Shema:26": {
+   "parts": [
+    {
+     "text": "<small>ליל ה</small>",
+     "kind": "instruction",
+     "en": "Night H"
+    },
+    {
+     "text": " חֲסִין קָדוֹשׁ. בְּרֹב טֽוּבְךָֽ. נַהֵל עֲדָתֶֽךָ: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(חק\"ב טנ\"ע)</small>",
+     "kind": "instruction",
+     "en": "(Hk\"B Tn\"E)"
+    }
+   ]
+  },
+  "he:Bedtime Shema:27": {
+   "parts": [
+    {
+     "text": "<small>ליל ו</small>",
+     "kind": "instruction",
+     "en": "Night V"
+    },
+    {
+     "text": " יָחִיד גֵּאֶה. לְעַמְּךָ פְנֵה. זֽוֹכְרֵֽי קְדֻשָּׁתֶֽךָ: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(יג\"ל פז\"ק)</small>",
+     "kind": "instruction",
+     "en": "(Yg\"L Pz\"K)"
+    }
+   ]
+  },
+  "he:Bedtime Shema:28": {
+   "parts": [
+    {
+     "text": "<small>ליל שבת</small>",
+     "kind": "instruction",
+     "en": "Night Shabbat"
+    },
+    {
+     "text": " שַׁוְעָתֵֽנוּ קַבֵּל. וּשְׁמַע צַעֲקָתֵֽנוּ. יוֹדֵֽעַ תַּעֲלוּמוֹת: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(שק\"ו צי\"ת)</small>",
+     "kind": "instruction",
+     "en": "(ShK\"V TzY\"T)"
+    }
+   ]
+  },
+  "he:Bedtime Shema:29": {
+   "parts": [
+    {
+     "text": "<small><small>בלחש:</small>",
+     "kind": "instruction",
+     "en": "Silently:"
+    },
+    {
+     "text": "  בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד:</small> ",
+     "kind": "prayer",
+     "voice": "undertone"
+    }
+   ]
+  },
+  "he:Bedtime Shema:30": {
+   "kind": "prayer"
+  },
+  "he:Song of Songs:1": {
+   "kind": "heading",
+   "en": "Song of Songs"
+  },
+  "he:Song of Songs:3": {
+   "kind": "instruction",
+   "en": "For the sake of the holy union of the Holy One, blessed be He, and His Shekhinah. With awe and love, and with love and awe. To unite the Name Yod-Heh with Vav-Heh in a complete union (YHWH). In the name of all Israel. Behold, we come to sing with a pleasant voice the Song of Songs, to repair its root in the upper place, to bring joy to our Creator and to do the will of our Maker. May the favor of the Lord our God be upon us, and may the work of our hands be established upon us; establish the work of our hands:",
+   "gloss": "Kabbalistic introduction to the Song of Songs, said before the reading."
+  },
+  "he:Song of Songs:4": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Song of Songs:5": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Song of Songs:6": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Song of Songs:7": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Song of Songs:8": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Song of Songs:9": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Song of Songs:10": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Song of Songs:11": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Song of Songs:12": {
+   "parts": [
+    {
+     "text": "<b>כֶּ֣רֶם</b> הָיָ֤ה לִשְׁלֹמֹה֙ בְּבַ֣עַל הָמ֔וֹן נָתַ֥ן אֶת־הַכֶּ֖רֶם לַנֹּטְרִ֑ים אִ֛ישׁ יָבִ֥א בְּפִרְי֖וֹ אֶ֥לֶף כָּֽסֶף׃ כַּרְמִ֥י שֶׁלִּ֖י לְפָנָ֑י הָאֶ֤לֶף לְךָ֙ שְׁלֹמֹ֔ה וּמָאתַ֖יִם לְנֹטְרִ֥ים אֶת־פִּרְיֽוֹ׃ הַיּוֹשֶׁ֣בֶת בַּגַּנִּ֗ים חֲבֵרִ֛ים מַקְשִׁיבִ֥ים לְקוֹלֵ֖ךְ הַשְׁמִיעִֽנִי׃ בְּרַ֣ח ׀ דּוֹדִ֗י וּֽדְמֵה־לְךָ֤ לִצְבִי֙ א֚וֹ לְעֹ֣פֶר הָֽאַיָּלִ֔ים עַ֖ל הָרֵ֥י בְשָׂמִֽים׃ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>הַיּוֹשֶׁ֣בֶת בַּגַּנִּ֗ים חֲבֵרִ֛ים מַקְשִׁיבִ֥ים לְקוֹלֵ֖ךְ הַשְׁמִיעִֽנִי׃</small> ",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud",
+     "en": "The one sitting in the gardens, friends are listening to your voice; make it heard."
+    }
+   ]
+  },
+  "he:Song of Songs:13": {
+   "kind": "instruction",
+   "en": "Master of the worlds, may it be Your will, Lord our God and God of our fathers, that by the merit of the Song of Songs which we read, which is holy of holies, by the merit of its verses, its words, its letters, its vowel points, its cantillation, its combinations, its hints, and its holy, pure, and awesome secrets that come from it, may this hour be an hour of mercy, an hour of listening, an hour of hearing, and we call and You answer, we entreat and You grant, and our reading of the Song of Songs may be accepted before You as if we attained all the wonderful and awesome secrets that are sealed and hidden in it in all its aspects, and may we merit the place from which souls, spirits, and neshamot are carved, and as if we did all that is incumbent upon us to achieve in this incarnation or in other incarnations, and to be among those who ascend and merit the World to Come, with the rest of the righteous and pious. And fulfill all the desires of our heart for good, and be with our hearts and our words in our thoughts, and with our hands in our deeds, and send blessing, success, and prosperity in all our works, and raise us from the dust of our poverty, and lift us from the refuse of our destitution, and return Your Shekhinah to Your holy city speedily in our days. Amen.",
+   "gloss": "Kabbalistic concluding prayer for the Song of Songs."
+  },
+  "he:Shabbat Candle Lighting:1": {
+   "kind": "heading",
+   "en": "Order of Lighting Shabbat Candles"
+  },
+  "he:Shabbat Candle Lighting:2": {
+   "parts": [
+    {
+     "text": "<small><small>לפני הדלקת נרות תתן ג' פרוטות לצדקה ותאמר</small>",
+     "kind": "instruction",
+     "en": "Before lighting the candles, give three coins to charity and say:"
+    },
+    {
+     "text": "<br>לְשֵׁם יִחוּד קֻדְשָׁא בְּרִיךְ הוּא וּשְׁכִינְתֵּיהּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בִּדְחִילוּ וּרְחִימוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּרְחִימוּ וּדְחִילוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְיַחֲדָא שֵׁם יוֹ\"ד קֵ\"י בְּוָא\"ו קֵ\"י בְּיִחוּדָא שְׁלִים (יהוה) בְּשֵׁם כָּל־יִשְׂרָאֵל. הֲרֵֽינִי בָּא לְקַיֵּם מִצְוַת עֲשֵׂה שֶׁל הַצְדָקָה וַהֲרֵֽינִי נוֹתֶנֶת ב' פְּרוּטוֹת לִצְדָקָה וְעוֹד הֲרֵֽינִי נוֹתֶנֶת פְּרוּטָה אַחַת לִצְדָקָה לְתַקֵּן אֶת שֽׁוֹרֶשׁ מִצְוָה זוֹ וְכָל תַּרְיַ\"ג מִצוֹת הַכְּלוּלוֹת בָּם בְּמָקוֹם עֶלְיוֹן. וִיהִ֤י ׀ נֹ֤עַם אֲדֹנָ֥י אֱלֹהֵ֗ינוּ עָ֫לֵ֥ינוּ וּמַעֲשֵׂ֣ה יָ֭דֵינוּ כּוֹנְנָ֥ה עָלֵ֑ינוּ וּֽמַעֲשֵׂ֥ה יָ֝דֵ֗ינוּ כּוֹנְנֵֽהוּ׃ <br><br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>ואח\"כ תאמר</small>",
+     "kind": "instruction",
+     "en": "Then say:"
+    },
+    {
+     "text": "<br>לְשֵׁם יִחוּד קֻדְשָׁא בְּרִיךְ הוּא וּשְׁכִינְתֵּיהּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בִּדְחִילוּ וּרְחִימוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּרְחִימוּ וּדְחִילוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְיַחֲדָא שֵׁם יוֹ\"ד קֵ\"י בְּוָא\"ו קֵ\"י בְּיִחוּדָא שְׁלִים (יהוה) בְּשֵׁם כָּל־יִשְׂרָאֵל. הֲרֵֽינִי בָּא לְקַיֵּם מִצְוַת עֲשֵׂה דְּרַבָּנָן לְהַדְלִיק ב' נֵרוֹת לִכְבוֹד שַׁבָּת אֶחָד כְּנֶגֶד זָכוֹר וְאֶחָד כְּנֶגֶד שָׁמוֹר ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(ואם מדלקת ז' תאמר וְעוֹד הֲרֵינִי מַדְלֶקֶת ה' כְדֵי שֶׁיִהְיֶה סַךְ הַכֹּל ז' שֶׁהֵם כְּנֶגֶד ז' עוֹלִים לְסֵפֶר תוֹרָה)</small>",
+     "kind": "prayer",
+     "when": "x_sevenCandles"
+    },
+    {
+     "text": " לְתַקֵּן אֶת שֽׁוֹרֶשׁ מִצְוָה זוֹ בְּמָקוֹם עֶלְיוֹן. וִיהִ֤י ׀ נֹ֤עַם אֲדֹנָ֥י אֱלֹהֵ֗ינוּ עָ֫לֵ֥ינוּ וּמַעֲשֵׂ֣ה יָ֭דֵינוּ כּוֹנְנָ֥ה עָלֵ֑ינוּ וּֽמַעֲשֵׂ֥ה יָ֝דֵ֗ינוּ כּוֹנְנֵֽהוּ׃</small> ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Candle Lighting:3": {
+   "parts": [
+    {
+     "text": "<small>ואחר הדלקת נרות שבת תברך:</small>",
+     "kind": "instruction",
+     "en": "After lighting the Shabbat candles, bless:"
+    },
+    {
+     "text": "<br><b>בָּרוּךְ</b> אַתָּה יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת:<br><br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>תפלה לאחר הדלקת נרות<br>יְהִי רָצוֹן מִלְפָנֶיךָ יְהֹוָה אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי שֶׁתָּחוּס וּתְרַחֵם עָלַי וְתַגְדִּיל חַסְדְּךָ עִמָּדִי לָתֵת לִי זֶרַע אֲנָשִׁים עוֹשֵׂי רְצוֹנֶךָ וְעוֹסְקִים בְּתוֹרָתְךָ לִשְׁמָהּ וְיִהְיוּ מְאִירִים בַּתוֹרָה בִּזְכוּת נֵרוֹת הַשַּׁבָּת הַלָּלוּ כְּמוֹ שֶׁכָּתוּב כִּ֤י נֵ֣ר מִ֭צְוָה וְת֣וֹרָה א֑וֹר. וְגַם תָּחוּס וּתְרַחֵם עַל בַּעֲלִי (פלוני בן פלוני) וְתִתֶּן לוֹ אוֹרֶךְ יָמִים וּשְׁנוֹת חַיִּים עִם בְּרָכָה וְהַצְלָחָה וּתְסַיְּעֵהוּ לַעֲשׂוֹת רְצוֹנְךָ בִּשְׁלֵימוּת כֵּן יְהִי רָצוֹן אָמֵן: וִיהִ֤י ׀ נֹ֤עַם אֲדֹנָ֥י אֱלֹהֵ֗ינוּ עָ֫לֵ֥ינוּ וּמַעֲשֵׂ֣ה יָ֭דֵינוּ כּוֹנְנָ֥ה עָלֵ֑ינוּ וּֽמַעֲשֵׂ֥ה יָ֝דֵ֗ינוּ כּוֹנְנֵֽהוּ׃ יִ֥הְיֽוּ לְרָצ֨וֹן ׀ אִמְרֵי־פִ֡י וְהֶגְי֣וֹן לִבִּ֣י לְפָנֶ֑יךָ יְ֝הֹוָ֗ה צוּרִ֥י וְגֹאֲלִֽי׃</small> ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Candle Lighting:4": {
+   "kind": "instruction",
+   "en": "Before lighting the candle of a festival, bless:"
+  },
+  "he:Shabbat Candle Lighting:5": {
+   "parts": [
+    {
+     "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small><small>אם חל בשבת תוסיף:</small>",
+     "kind": "instruction",
+     "en": "If it falls on Shabbat, add:"
+    },
+    {
+     "text": " (שַׁבָּת וְ)</small>יוֹם טוֹב: ",
+     "kind": "prayer",
+     "when": "shabbat"
+    }
+   ]
+  },
+  "he:Shabbat Candle Lighting:6": {
+   "kind": "instruction",
+   "en": "On a festival when saying Shehecheyanu in Kiddush, women also bless Shehecheyanu when lighting the candles."
+  },
+  "he:Shabbat Candle Lighting:7": {
+   "kind": "prayer",
+   "when": "yomTov"
+  }
+ },
+ "en": {
+  "en:Counting of the Omer:1": {
+   "he": [
+    "he:Counting of the Omer:1"
+   ]
+  },
+  "en:Counting of the Omer:2": {
+   "he": [
+    "he:Counting of the Omer:2"
+   ]
+  },
+  "en:Counting of the Omer:3": {
+   "he": [
+    "he:Counting of the Omer:3"
+   ]
+  },
+  "en:Counting of the Omer:4": {
+   "he": [
+    "he:Counting of the Omer:4"
+   ]
+  },
+  "en:Counting of the Omer:5": {
+   "he": [
+    "he:Counting of the Omer:5"
+   ]
+  },
+  "en:Counting of the Omer:6": {
+   "he": [
+    "he:Counting of the Omer:6"
+   ]
+  },
+  "en:Counting of the Omer:9": {
+   "he": [
+    "he:Counting of the Omer:9"
+   ]
+  },
+  "en:Counting of the Omer:12": {
+   "he": [
+    "he:Counting of the Omer:12"
+   ]
+  },
+  "en:Counting of the Omer:15": {
+   "he": [
+    "he:Counting of the Omer:15"
+   ]
+  },
+  "en:Counting of the Omer:18": {
+   "he": [
+    "he:Counting of the Omer:18"
+   ]
+  },
+  "en:Counting of the Omer:20": {
+   "he": [
+    "he:Counting of the Omer:21"
+   ]
+  },
+  "en:Counting of the Omer:21": {
+   "he": [
+    "he:Counting of the Omer:24"
+   ]
+  },
+  "en:Counting of the Omer:24": {
+   "he": [
+    "he:Counting of the Omer:27"
+   ]
+  },
+  "en:Counting of the Omer:27": {
+   "he": [
+    "he:Counting of the Omer:30"
+   ]
+  },
+  "en:Counting of the Omer:30": {
+   "he": [
+    "he:Counting of the Omer:33"
+   ]
+  },
+  "en:Counting of the Omer:33": {
+   "he": [
+    "he:Counting of the Omer:36"
+   ]
+  },
+  "en:Counting of the Omer:36": {
+   "he": [
+    "he:Counting of the Omer:39"
+   ]
+  },
+  "en:Counting of the Omer:39": {
+   "he": [
+    "he:Counting of the Omer:42"
+   ]
+  },
+  "en:Counting of the Omer:42": {
+   "he": [
+    "he:Counting of the Omer:45"
+   ]
+  },
+  "en:Counting of the Omer:45": {
+   "he": [
+    "he:Counting of the Omer:48"
+   ]
+  },
+  "en:Counting of the Omer:48": {
+   "he": [
+    "he:Counting of the Omer:49"
+   ]
+  },
+  "en:Counting of the Omer:51": {
+   "he": [
+    "he:Counting of the Omer:51"
+   ]
+  },
+  "en:Counting of the Omer:54": {
+   "he": [
+    "he:Counting of the Omer:52"
+   ]
+  },
+  "en:Counting of the Omer:57": {
+   "he": [
+    "he:Counting of the Omer:53"
+   ]
+  },
+  "en:Counting of the Omer:60": {
+   "he": [
+    "he:Counting of the Omer:54"
+   ]
+  },
+  "en:Counting of the Omer:63": {
+   "he": [
+    "he:Counting of the Omer:55"
+   ]
+  },
+  "en:Counting of the Omer:66": {
+   "he": [
+    "he:Counting of the Omer:56"
+   ]
+  },
+  "en:Counting of the Omer:69": {
+   "he": [
+    "he:Counting of the Omer:57"
+   ]
+  },
+  "en:Counting of the Omer:72": {
+   "he": [
+    "he:Counting of the Omer:58"
+   ]
+  },
+  "en:Counting of the Omer:75": {
+   "he": [
+    "he:Counting of the Omer:59"
+   ]
+  },
+  "en:Counting of the Omer:78": {
+   "he": [
+    "he:Counting of the Omer:60"
+   ]
+  },
+  "en:Counting of the Omer:81": {
+   "he": [
+    "he:Counting of the Omer:61"
+   ]
+  },
+  "en:Counting of the Omer:84": {
+   "he": [
+    "he:Counting of the Omer:62"
+   ]
+  },
+  "en:Counting of the Omer:87": {
+   "he": [
+    "he:Counting of the Omer:63"
+   ]
+  },
+  "en:Counting of the Omer:90": {
+   "he": [
+    "he:Counting of the Omer:64"
+   ]
+  },
+  "en:Counting of the Omer:93": {
+   "he": [
+    "he:Counting of the Omer:65"
+   ]
+  },
+  "en:Counting of the Omer:96": {
+   "he": [
+    "he:Counting of the Omer:66"
+   ]
+  },
+  "en:Counting of the Omer:99": {
+   "he": [
+    "he:Counting of the Omer:67"
+   ]
+  },
+  "en:Counting of the Omer:102": {
+   "he": [
+    "he:Counting of the Omer:68"
+   ]
+  },
+  "en:Counting of the Omer:105": {
+   "he": [
+    "he:Counting of the Omer:69"
+   ]
+  },
+  "en:Counting of the Omer:108": {
+   "he": [
+    "he:Counting of the Omer:70"
+   ]
+  },
+  "en:Counting of the Omer:111": {
+   "he": [
+    "he:Counting of the Omer:71"
+   ]
+  },
+  "en:Counting of the Omer:114": {
+   "he": [
+    "he:Counting of the Omer:72"
+   ]
+  },
+  "en:Counting of the Omer:117": {
+   "he": [
+    "he:Counting of the Omer:73"
+   ]
+  },
+  "en:Counting of the Omer:120": {
+   "he": [
+    "he:Counting of the Omer:74"
+   ]
+  },
+  "en:Counting of the Omer:123": {
+   "he": [
+    "he:Counting of the Omer:75"
+   ]
+  },
+  "en:Counting of the Omer:126": {
+   "he": [
+    "he:Counting of the Omer:76"
+   ]
+  },
+  "en:Counting of the Omer:129": {
+   "he": [
+    "he:Counting of the Omer:77"
+   ]
+  },
+  "en:Counting of the Omer:132": {
+   "he": [
+    "he:Counting of the Omer:49"
+   ]
+  },
+  "en:Counting of the Omer:135": {
+   "he": [
+    "he:Counting of the Omer:50"
+   ]
+  },
+  "en:Counting of the Omer:138": {
+   "he": [
+    "he:Counting of the Omer:51"
+   ]
+  },
+  "en:Counting of the Omer:141": {
+   "he": [
+    "he:Counting of the Omer:52"
+   ]
+  },
+  "en:Counting of the Omer:144": {
+   "he": [
+    "he:Counting of the Omer:53"
+   ]
+  },
+  "en:Counting of the Omer:147": {
+   "he": [
+    "he:Counting of the Omer:54"
+   ]
+  },
+  "en:Counting of the Omer:150": {
+   "he": [
+    "he:Counting of the Omer:55"
+   ]
+  },
+  "en:Counting of the Omer:152": {
+   "he": [
+    "he:Counting of the Omer:56"
+   ]
+  },
+  "en:Counting of the Omer:153": {
+   "he": [
+    "he:Counting of the Omer:57"
+   ]
+  },
+  "en:Counting of the Omer:154": {
+   "he": [
+    "he:Counting of the Omer:58"
+   ]
+  },
+  "en:Counting of the Omer:155": {
+   "he": [
+    "he:Counting of the Omer:59"
+   ]
+  },
+  "en:Counting of the Omer:156": {
+   "he": [
+    "he:Counting of the Omer:60"
+   ]
+  },
+  "en:Counting of the Omer:157": {
+   "he": [
+    "he:Counting of the Omer:61"
+   ]
+  },
+  "en:Counting of the Omer:158": {
+   "he": [
+    "he:Counting of the Omer:62"
+   ]
+  },
+  "en:Counting of the Omer:159": {
+   "he": [
+    "he:Counting of the Omer:63"
+   ]
+  },
+  "en:Counting of the Omer:160": {
+   "he": [
+    "he:Counting of the Omer:64"
+   ]
+  },
+  "en:Counting of the Omer:161": {
+   "he": [
+    "he:Counting of the Omer:65"
+   ]
+  },
+  "en:Blessing of the Moon:1": {
+   "he": [
+    "he:Blessing of the Moon:1"
+   ]
+  },
+  "en:Blessing of the Moon:2": {
+   "he": [
+    "he:Blessing of the Moon:2"
+   ]
+  },
+  "en:Blessing of the Moon:3": {
+   "he": [
+    "he:Blessing of the Moon:3"
+   ]
+  },
+  "en:Blessing of the Moon:4": {
+   "he": [
+    "he:Blessing of the Moon:4"
+   ]
+  },
+  "en:Blessing of the Moon:5": {
+   "he": [
+    "he:Blessing of the Moon:5"
+   ]
+  },
+  "en:Blessing of the Moon:6": {
+   "he": [
+    "he:Blessing of the Moon:6"
+   ]
+  },
+  "en:Blessing of the Moon:7": {
+   "he": [
+    "he:Blessing of the Moon:7"
+   ]
+  },
+  "en:Blessing of the Moon:8": {
+   "he": [
+    "he:Blessing of the Moon:8"
+   ]
+  },
+  "en:Blessing of the Moon:9": {
+   "he": [
+    "he:Blessing of the Moon:9"
+   ]
+  },
+  "en:Blessing of the Moon:10": {
+   "he": [
+    "he:Blessing of the Moon:10"
+   ]
+  },
+  "en:Blessing of the Moon:11": {
+   "he": [
+    "he:Blessing of the Moon:11"
+   ]
+  },
+  "en:Blessing of the Moon:12": {
+   "he": [
+    "he:Blessing of the Moon:12"
+   ]
+  },
+  "en:Blessing of the Moon:13": {
+   "he": [
+    "he:Blessing of the Moon:13"
+   ]
+  },
+  "en:Blessing of the Moon:14": {
+   "he": [
+    "he:Blessing of the Moon:14"
+   ]
+  },
+  "en:Blessing of the Moon:15": {
+   "he": [
+    "he:Blessing of the Moon:15"
+   ]
+  },
+  "en:Blessing of the Moon:16": {
+   "he": [
+    "he:Blessing of the Moon:16"
+   ]
+  },
+  "en:Blessing of the Moon:17": {
+   "he": [
+    "he:Blessing of the Moon:17"
+   ]
+  },
+  "en:Blessing of the Moon:18": {
+   "he": [
+    "he:Blessing of the Moon:18"
+   ]
+  },
+  "en:Blessing of the Moon:19": {
+   "he": [
+    "he:Blessing of the Moon:19"
+   ]
+  },
+  "en:Blessing of the Moon:20": {
+   "he": [
+    "he:Blessing of the Moon:20"
+   ]
+  },
+  "en:Blessing of the Moon:21": {
+   "he": [
+    "he:Blessing of the Moon:21"
+   ]
+  },
+  "en:Blessing of the Moon:22": {
+   "he": [
+    "he:Blessing of the Moon:22"
+   ]
+  },
+  "en:Blessing of the Moon:23": {
+   "he": [
+    "he:Blessing of the Moon:23"
+   ]
+  },
+  "en:Blessing of the Moon:24": {
+   "he": [
+    "he:Blessing of the Moon:24"
+   ]
+  },
+  "en:Blessing of the Moon:25": {
+   "he": [
+    "he:Blessing of the Moon:25"
+   ]
+  },
+  "en:Blessing of the Moon:26": {
+   "he": [
+    "he:Blessing of the Moon:26"
+   ]
+  },
+  "en:Bedtime Shema:1": {
+   "he": [
+    "he:Bedtime Shema:1"
+   ]
+  },
+  "en:Bedtime Shema:3": {
+   "he": [
+    "he:Bedtime Shema:3"
+   ]
+  },
+  "en:Bedtime Shema:5": {
+   "he": [
+    "he:Bedtime Shema:5"
+   ]
+  },
+  "en:Bedtime Shema:6": {
+   "he": []
+  },
+  "en:Bedtime Shema:7": {
+   "he": [
+    "he:Bedtime Shema:7"
+   ]
+  },
+  "en:Bedtime Shema:8": {
+   "he": [
+    "he:Bedtime Shema:8"
+   ]
+  },
+  "en:Bedtime Shema:9": {
+   "he": [
+    "he:Bedtime Shema:9"
+   ]
+  },
+  "en:Bedtime Shema:10": {
+   "he": [
+    "he:Bedtime Shema:10"
+   ]
+  },
+  "en:Bedtime Shema:11": {
+   "he": [
+    "he:Bedtime Shema:11"
+   ]
+  },
+  "en:Bedtime Shema:12": {
+   "he": [
+    "he:Bedtime Shema:12"
+   ]
+  },
+  "en:Bedtime Shema:13": {
+   "he": [
+    "he:Bedtime Shema:13"
+   ]
+  },
+  "en:Bedtime Shema:14": {
+   "he": [
+    "he:Bedtime Shema:14"
+   ]
+  },
+  "en:Bedtime Shema:15": {
+   "he": [
+    "he:Bedtime Shema:15"
+   ]
+  },
+  "en:Bedtime Shema:16": {
+   "he": [
+    "he:Bedtime Shema:16"
+   ]
+  },
+  "en:Bedtime Shema:17": {
+   "he": [
+    "he:Bedtime Shema:17"
+   ]
+  },
+  "en:Bedtime Shema:18": {
+   "he": [
+    "he:Bedtime Shema:18"
+   ]
+  },
+  "en:Bedtime Shema:19": {
+   "he": [
+    "he:Bedtime Shema:19",
+    "he:Bedtime Shema:20"
+   ]
+  },
+  "en:Bedtime Shema:30": {
+   "he": [
+    "he:Bedtime Shema:30"
+   ]
+  },
+  "en:Shabbat Candle Lighting:1": {
+   "he": [
+    "he:Shabbat Candle Lighting:1"
+   ]
+  },
+  "en:Shabbat Candle Lighting:3": {
+   "he": [
+    "he:Shabbat Candle Lighting:3"
+   ]
+  },
+  "en:Shabbat Candle Lighting:5": {
+   "he": [
+    "he:Shabbat Candle Lighting:5"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Counting of the Omer:2",
+   "type": "ambiguous",
+   "detail": "Instruction to skip verses on 49th day is embedded in prayer text; needs split."
+  },
+  {
+   "id": "he:Counting of the Omer:146",
+   "type": "ambiguous",
+   "detail": "Instruction '4 Sivan' appears to be a date marker for the following line, but the condition logic for Omer days vs calendar dates needs verification. Tagged as instruction with gloss."
+  },
+  {
+   "id": "en:Bedtime Shema:6",
+   "type": "missing_text",
+   "detail": "English text for Hashkiveinu (h2) is missing in the Hebrew source; the Hebrew source only contains the instruction about timing and the citation."
+  },
+  {
+   "id": "he:Bedtime Shema:2",
+   "type": "ambiguous",
+   "detail": "The Hebrew instruction mentions reciting the order after midnight, but the actual text of Hashkiveinu (the blessing) is not present in the Hebrew segments provided in this chunk, only the instruction."
+  },
+  {
+   "id": "en:Bedtime Shema:19",
+   "type": "missing_text",
+   "detail": "English segment e17 contains only dots '......' and no actual text."
+  },
+  {
+   "id": "he:Shabbat Candle Lighting:2",
+   "type": "ambiguous",
+   "detail": "Kabbalistic text with specific customs (3 coins, specific unifications) not standard in all nusachim; marked as optional via x_sevenCandles for the 7-candle variant."
+  }
+ ]
+}

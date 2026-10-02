@@ -1,0 +1,3219 @@
+{
+ "nusach": "koren",
+ "chunk": "The Cycle of Life [Brit Mila .. Birkat HaMazon in a House of Mourning]",
+ "leaves": {
+  "The Cycle of Life/Brit Mila": {
+   "node": "lifecycle.brit_mila",
+   "service": "none"
+  },
+  "The Cycle of Life/Pidyon HaBen": {
+   "node": "lifecycle.pidyon_haben",
+   "service": "none"
+  },
+  "The Cycle of Life/Prayer after Childbirth": {
+   "node": "lifecycle.childbirth",
+   "service": "none"
+  },
+  "The Cycle of Life/Zeved HaBat": {
+   "node": "x.zeved_habat",
+   "service": "none"
+  },
+  "The Cycle of Life/Marriage Service": {
+   "node": "lifecycle.wedding",
+   "service": "none"
+  },
+  "The Cycle of Life/Sheva Berakhot": {
+   "node": "birkat_hamazon.sheva_brachot",
+   "service": "none"
+  },
+  "The Cycle of Life/Prayer for Recovery from Illness": {
+   "node": "personal_prayer",
+   "service": "none"
+  },
+  "The Cycle of Life/Prayer after Recovery from Illness": {
+   "node": "personal_prayer",
+   "service": "none"
+  },
+  "The Cycle of Life/Confession before Death": {
+   "node": "lifecycle.vidui_deathbed",
+   "service": "none"
+  },
+  "The Cycle of Life/Prayer in a House of Mourning": {
+   "node": "lifecycle.house_of_mourning",
+   "service": "none"
+  },
+  "The Cycle of Life/Birkat HaMazon in a House of Mourning": {
+   "node": "birkat_hamazon.zimun",
+   "service": "none",
+   "when": "houseOfMourning"
+  },
+  "The Cycle of Life/Funeral Service": {
+   "node": "lifecycle.burial",
+   "service": "none"
+  }
+ },
+ "he": {
+  "he:The Cycle of Life/Brit Mila:2": {
+   "kind": "instruction",
+   "en": "Welcome."
+  },
+  "he:The Cycle of Life/Brit Mila:4": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:The Cycle of Life/Brit Mila:6": {
+   "kind": "instruction",
+   "en": "The mohel:"
+  },
+  "he:The Cycle of Life/Brit Mila:7": {
+   "kind": "instruction",
+   "en": "The congregation:"
+  },
+  "he:The Cycle of Life/Brit Mila:9": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent",
+   "en": "If I forget you, O Jerusalem..."
+  },
+  "he:The Cycle of Life/Brit Mila:11": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud"
+  },
+  "he:The Cycle of Life/Brit Mila:13": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation",
+   "voice": "aloud"
+  },
+  "he:The Cycle of Life/Brit Mila:15": {
+   "kind": "instruction",
+   "en": "This is the seat of Elijah the prophet, may he be remembered for good."
+  },
+  "he:The Cycle of Life/Brit Mila:17": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:The Cycle of Life/Brit Mila:19": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Brit Mila:21": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:The Cycle of Life/Brit Mila:23": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:The Cycle of Life/Brit Mila:25": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud",
+   "en": "Blessed are You... who has given us life..."
+  },
+  "he:The Cycle of Life/Brit Mila:27": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Brit Mila:29": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:The Cycle of Life/Brit Mila:30": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:The Cycle of Life/Brit Mila:31": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:The Cycle of Life/Brit Mila:32": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:The Cycle of Life/Brit Mila:34": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Brit Mila:36": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:The Cycle of Life/Brit Mila:39": {
+   "kind": "heading",
+   "en": "Birkat HaMazon at a Brit Mila"
+  },
+  "he:The Cycle of Life/Brit Mila:40": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:The Cycle of Life/Brit Mila:41": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:The Cycle of Life/Brit Mila:42": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:The Cycle of Life/Brit Mila:43": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Brit Mila:44": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:The Cycle of Life/Brit Mila:45": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Brit Mila:46": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:The Cycle of Life/Brit Mila:47": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Brit Mila:48": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:The Cycle of Life/Brit Mila:49": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Brit Mila:50": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:The Cycle of Life/Brit Mila:53": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:The Cycle of Life/Brit Mila:55": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:The Cycle of Life/Brit Mila:56": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:The Cycle of Life/Brit Mila:58": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:The Cycle of Life/Brit Mila:59": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:The Cycle of Life/Brit Mila:60": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:The Cycle of Life/Pidyon HaBen:2": {
+   "kind": "instruction",
+   "en": "The father, presenting his child to the Kohen, declares:"
+  },
+  "he:The Cycle of Life/Pidyon HaBen:3": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:The Cycle of Life/Pidyon HaBen:5": {
+   "kind": "instruction",
+   "en": "The Kohen checks with the mother that this is her firstborn, and then asks if she has miscarried before this child. If her answer is no, he asks the father:"
+  },
+  "he:The Cycle of Life/Pidyon HaBen:7": {
+   "kind": "instruction",
+   "en": "The father replies:"
+  },
+  "he:The Cycle of Life/Pidyon HaBen:9": {
+   "kind": "instruction",
+   "en": "Holding the redemption money, the father says:"
+  },
+  "he:The Cycle of Life/Pidyon HaBen:10": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:The Cycle of Life/Pidyon HaBen:12": {
+   "kind": "instruction",
+   "en": "The redemption money is given to the Kohen, who then returns the child to his father. The Kohen takes a cup of wine and says:"
+  },
+  "he:The Cycle of Life/Pidyon HaBen:14": {
+   "kind": "instruction",
+   "en": "Placing his right hand on the head of the child, the Kohen blesses him as follows:"
+  },
+  "he:The Cycle of Life/Prayer after Childbirth:2": {
+   "kind": "instruction",
+   "en": "On entering the synagogue, say:"
+  },
+  "he:The Cycle of Life/Prayer after Childbirth:3": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Prayer after Childbirth:4": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Prayer after Childbirth:6": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:The Cycle of Life/Prayer after Childbirth:8": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Prayer after Childbirth:9": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:The Cycle of Life/Prayer after Childbirth:10": {
+   "kind": "prayer",
+   "role": "head_of_household",
+   "gloss": "For a boy"
+  },
+  "he:The Cycle of Life/Prayer after Childbirth:11": {
+   "kind": "prayer",
+   "role": "head_of_household",
+   "gloss": "For a girl"
+  },
+  "he:The Cycle of Life/Prayer after Childbirth:13": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "gloss": "Priestly blessing (if baby is brought to synagogue)"
+  },
+  "he:The Cycle of Life/Zeved HaBat:2": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Zeved HaBat:4": {
+   "kind": "prayer",
+   "when": "x_firstDaughter"
+  },
+  "he:The Cycle of Life/Zeved HaBat:6": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Zeved HaBat:7": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Zeved HaBat:8": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Zeved HaBat:9": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Zeved HaBat:11": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Zeved HaBat:12": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Zeved HaBat:14": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Zeved HaBat:16": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Marriage Service:1": {
+   "kind": "heading",
+   "en": "Blessings of Betrothal"
+  },
+  "he:The Cycle of Life/Marriage Service:3": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Marriage Service:4": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Marriage Service:6": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Sheva Berakhot:1": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Sheva Berakhot:2": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Sheva Berakhot:3": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Sheva Berakhot:4": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Sheva Berakhot:5": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Sheva Berakhot:6": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Sheva Berakhot:7": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Sheva Berakhot:9": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Sheva Berakhot:10": {
+   "kind": "heading",
+   "en": "Zimun for the Sheva Berakhot meal"
+  },
+  "he:The Cycle of Life/Sheva Berakhot:12": {
+   "kind": "instruction",
+   "en": "Gentlemen, let us say grace."
+  },
+  "he:The Cycle of Life/Sheva Berakhot:13": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Sheva Berakhot:14": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:The Cycle of Life/Sheva Berakhot:15": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Sheva Berakhot:17": {
+   "kind": "instruction",
+   "en": "With the permission of (my father and teacher / my mother and teacher / the Kohanim / our teacher the Rabbi / the master of this house / the mistress of this house) my masters and teachers, let us bless our God, in whose dwelling place is joy, from whose food we have eaten."
+  },
+  "he:The Cycle of Life/Sheva Berakhot:18": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Sheva Berakhot:19": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:The Cycle of Life/Prayer for Recovery from Illness:1": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Prayer for Recovery from Illness:2": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Prayer for Recovery from Illness:3": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Prayer for Recovery from Illness:4": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Prayer for Recovery from Illness:5": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Prayer for Recovery from Illness:6": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Prayer after Recovery from Illness:2": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Prayer after Recovery from Illness:3": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Confession before Death:2": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:The Cycle of Life/Confession before Death:3": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:The Cycle of Life/Confession before Death:5": {
+   "kind": "prayer",
+   "role": "individual",
+   "repeat": 3
+  },
+  "he:The Cycle of Life/Confession before Death:7": {
+   "kind": "prayer",
+   "role": "individual",
+   "repeat": 3
+  },
+  "he:The Cycle of Life/Confession before Death:9": {
+   "kind": "prayer",
+   "role": "individual",
+   "repeat": 7
+  },
+  "he:The Cycle of Life/Confession before Death:11": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:2": {
+   "kind": "prayer",
+   "node": "tehillim"
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:4": {
+   "kind": "prayer",
+   "node": "tehillim"
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:5": {
+   "kind": "heading",
+   "en": "Memorial Prayer"
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:6": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:8": {
+   "parts": [
+    {
+     "kind": "instruction",
+     "en": "For a man, say:",
+     "gloss": "Insert the name and father's name here",
+     "text": "(<i class=\"instruction\">פלוני</i> בֶּן <i class=\"instruction\">פלוני</i>) "
+    },
+    {
+     "kind": "prayer",
+     "when": "!x_deceasedFemale",
+     "text": "אֲשֶׁר נֶאֱסַף אֶל עַמָּיו. חוּס וַחֲמֹל עָלָיו, סְלַח וּמְחַל לְכָל פְּשָׁעָיו. כִּי אָדָם אֵין צַדִּיק בָּאָֽרֶץ, אֲשֶׁר יַעֲשֶׂה־טּוֹב וְלֹא יֶחֱטָא: זְכֹר לוֹ צִדְקָתוֹ אֲשֶׁר עָשָׂה, וִיהִי שְׂכָרוֹ אִתּוֹ, וּפְעֻלָּתוֹ לְפָנָיו. אָנָּא הַסְתֵּר אֶת נִשְׁמָתוֹ בְּצֵל כְּנָפֶֽיךָ, הוֹדִיעֵֽהוּ אֹֽרַח חַיִּים, שֹֽׂבַע שְׂמָחוֹת אֶת פָּנֶֽיךָ, נְעִימוֹת בִּימִינְךָ נֶֽצַח, וְתַשְׁפִּֽיעַ לוֹ מֵרֹב טוּב הַצָּפוּן<br>לַצַּדִּיקִים."
+    }
+   ]
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:10": {
+   "parts": [
+    {
+     "kind": "instruction",
+     "en": "For a woman, say:",
+     "gloss": "Insert the name and father's name here",
+     "text": "(<i class=\"instruction>פלונית</i> בַּת <i class=\"instruction\">פלוני</i>) "
+    },
+    {
+     "kind": "prayer",
+     "when": "x_deceasedFemale",
+     "text": "אֲשֶׁר נֶאֶסְפָה אֶל עַמֶּֽיהָ. חוּס וַחֲמֹל עָלֶֽיהָ, סְלַח<br>וּמְחַל לְכָל פְּשָׁעֶֽיהָ. כִּי אָדָם אֵין צַדִּיק בָּאָֽרֶץ, אֲשֶׁר יַעֲשֶׂה־טּוֹב וְלֹא יֶחֱטָא: זְכֹר לָהּ צִדְקָתָהּ אֲשֶׁר עָשְׂתָה, וִיהִי שְׂכָרָהּ אִתָּהּ, וּפְעֻלָּתָהּ לְפָנֶֽיהָ. אָנָּא הַסְתֵּר אֶת נִשְׁמָתָהּ בְּצֵל כְּנָפֶֽיךָ, הוֹדִיעֶֽהָ אֹֽרַח חַיִּים, שֹֽׂבַע שְׂמָחוֹת אֶת פָּנֶֽיךָ, נְעִימוֹת בִּימִינְךָ נֶֽצַח, וְתַשְׁפִּֽיעַ לָהּ מֵרֹב טוּב הַצָּפוּן לַצַּדִּיקִים."
+    }
+   ]
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:12": {
+   "parts": [
+    {
+     "kind": "instruction",
+     "en": "For a boy, say:",
+     "gloss": "Insert the name and father's name here",
+     "text": "(<i class=\"instruction\">פלוני</i> בֶּן <i class=\"instruction\">פלוני</i>) "
+    },
+    {
+     "kind": "prayer",
+     "when": "!x_deceasedFemale",
+     "text": "אֲשֶׁר נֶאֱסַף אֶל עַמָּיו. זְכֹר לוֹ צִדְקָתוֹ אֲשֶׁר עָשָׂה, וִיהִי שְׂכָרוֹ אִתּוֹ, וּפְעֻלָּתוֹ לְפָנָיו. אָנָּא הַסְתֵּר אֶת נִשְׁמָתוֹ בְּצֵל כְּנָפֶֽיךָ, הוֹדִיעֵֽהוּ אֹֽרַח חַיִּים, שֹֽׂבַע שְׂמָחוֹת אֶת פָּנֶֽיךָ, נְעִימוֹת בִּימִינְךָ נֶֽצַח, וְתַשְׁפִּֽיעַ לוֹ מֵרֹב טוּב הַצָּפוּן לַצַּדִּיקִים."
+    }
+   ]
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:14": {
+   "parts": [
+    {
+     "kind": "instruction",
+     "en": "For a girl, say:",
+     "gloss": "Insert the name and father's name here",
+     "text": "(<i class=\"instruction>פלונית</i> בַּת <i class=\"instruction\">פלוני</i>) "
+    },
+    {
+     "kind": "prayer",
+     "when": "x_deceasedFemale",
+     "text": "אֲשֶׁר נֶאֶסְפָה אֶל עַמֶּֽיהָ. זְכוֹר לָהּ צִדְקָתָהּ אֲשֶׁר עָשְׂתָה, וִיהִי שְׂכָרָהּ אִתָּהּ, וּפְעֻלָּתָהּ לְפָנֶֽיהָ. אָנָּא הַסְתֵּר אֶת נִשְׁמָתָהּ בְּצֵל כְּנָפֶֽיךָ, הוֹדִיעֶֽהָ אֹֽרַח חַיִּים, שֹֽׂבַע שְׂמָחוֹת אֶת פָּנֶֽיךָ, נְעִימוֹת בִּימִינְךָ נֶֽצַח, וְתַשְׁפִּֽיעַ לָהּ מֵרֹב טוּב הַצָּפוּן לַצַּדִּיקִים."
+    }
+   ]
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:15": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:16": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:18": {
+   "kind": "prayer",
+   "when": "x_deceasedChild"
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:20": {
+   "kind": "prayer",
+   "when": "x_deceasedChild"
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:22": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:23": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:24": {
+   "kind": "heading",
+   "en": "Mourner's Kaddish"
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:26": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:27": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:28": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:29": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true
+  },
+  "he:The Cycle of Life/Prayer in a House of Mourning:31": {
+   "kind": "prayer",
+   "role": "congregation",
+   "minyan": true,
+   "gestures": [
+    "bow_left_right_center"
+   ]
+  },
+  "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:1": {
+   "kind": "instruction",
+   "en": "Gentlemen, let us say grace.",
+   "gloss": "Zimun call in a house of mourning"
+  },
+  "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:2": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:3": {
+   "kind": "instruction",
+   "en": "With your permission, let us bless the One who comforts mourners from whose food we have eaten."
+  },
+  "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:4": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:6": {
+   "kind": "prayer",
+   "role": "congregation",
+   "gloss": "For those who did not eat"
+  },
+  "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:7": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:8": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:10": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:11": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:The Cycle of Life/Funeral Service:1": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:3": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:5": {
+   "kind": "heading",
+   "en": "Tzadok HaDin (The Righteousness of the Judgment)"
+  },
+  "he:The Cycle of Life/Funeral Service:6": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:7": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:8": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:9": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:10": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:11": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:12": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:13": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:14": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:15": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:16": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:17": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:18": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:19": {
+   "kind": "prayer"
+  },
+  "he:The Cycle of Life/Funeral Service:21": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true,
+   "en": "Mourner's Kaddish"
+  },
+  "he:The Cycle of Life/Funeral Service:22": {
+   "kind": "prayer",
+   "role": "congregation",
+   "en": "Congregation response"
+  },
+  "he:The Cycle of Life/Funeral Service:23": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true,
+   "en": "Mourner's Kaddish (conclusion)"
+  },
+  "he:The Cycle of Life/Funeral Service:24": {
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true,
+   "en": "Kaddish d'Rabbanan"
+  },
+  "he:The Cycle of Life/Funeral Service:26": {
+   "kind": "prayer",
+   "role": "congregation",
+   "en": "Congregation response"
+  },
+  "he:The Cycle of Life/Funeral Service:28": {
+   "kind": "instruction",
+   "en": "Comforting the mourners",
+   "gloss": "Said to mourners after the funeral"
+  },
+  "he:The Cycle of Life/Funeral Service:30": {
+   "kind": "instruction",
+   "en": "May you have no further grief",
+   "gloss": "Optional conclusion"
+  },
+  "he:The Cycle of Life/Funeral Service:32": {
+   "kind": "instruction",
+   "en": "May they of the city grow like the grass of the earth",
+   "gloss": "Custom to throw grass"
+  },
+  "he:The Cycle of Life/Funeral Service:34": {
+   "kind": "instruction",
+   "en": "Remember that we are dust",
+   "gloss": "Alternative custom"
+  },
+  "he:The Cycle of Life/Funeral Service:36": {
+   "kind": "instruction",
+   "en": "After leaving the cemetery, wash hands and say:"
+  }
+ },
+ "en": {
+  "en:The Cycle of Life/Brit Mila:1": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:2"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:2": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:2"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:3": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:4"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:4": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:4"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:5": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following verses, through “</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<small><i class=\"instruction\">LORD</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "</small><i class=\"instruction\">, please, grant us success,” are only said in Israel.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Brit Mila:6",
+    "he:The Cycle of Life/Brit Mila:7",
+    "he:The Cycle of Life/Brit Mila:9",
+    "he:The Cycle of Life/Brit Mila:11",
+    "he:The Cycle of Life/Brit Mila:13"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:6": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mohel:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Happy are those You choose and bring near to dwell in Your courts.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Brit Mila:6"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:7": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May we be sated with the goodness of Your House,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Your holy Temple.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Brit Mila:7"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:8": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:9"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:9": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:9"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:10": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:11"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:11": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:11"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:12": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:13"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:13": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:13"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:14": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:15"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:15": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:15"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:16": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:17"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:17": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:17"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:18": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:19"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:19": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:19"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:20": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:21"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:21": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:21"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:22": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:23"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:23": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:23"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:24": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:25"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:25": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:25"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:26": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:27"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:27": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:27"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:28": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:29"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:29": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:29"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:30": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:30"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:31": {
+   "parts": [
+    {
+     "text": "אֱלֹהֵֽינוּ Our God and God of our fathers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " preserve this child to his father and mother,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let his name be called in Israel (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>baby’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "). May the father rejoice in the issue of his body,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the mother be glad with the fruit of her womb,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as is written,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “May your father and mother rejoice,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and she who bore you be glad.” And it is said,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “Then I passed by you and saw you downtrodden in your blood,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and I said to you: In your blood,",
+     "kind": "prayer"
+    },
+    {
+     "text": " live;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and I said to you: In your blood,",
+     "kind": "prayer"
+    },
+    {
+     "text": " live.”",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Brit Mila:31"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:32": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:32"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:33": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:34"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:34": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:34"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:35": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:36"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:36": {
+   "parts": [
+    {
+     "text": "May this child (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>baby’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") become great. Just as he has entered into the covenant,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so may he enter into Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " marriage and good deeds.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Brit Mila:36"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:37": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The Sandak also drinks some of the wine; some drops are given to the baby.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">The cup is then sent to the mother, who also drinks from it.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:38": {
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:39": {
+   "he": [
+    "he:The Cycle of Life/Brit Mila:39"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:40": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Gentlemen,",
+     "kind": "prayer"
+    },
+    {
+     "text": " let us say grace.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Others</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May the name of the <small>LORD</small> be blessed from now and for ever.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May the name of the <small>LORD</small> be blessed from now and for ever.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Brit Mila:40"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:41": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader then others</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " We give thanks to Your name among the faithful.<br>Blessed are you to the <small>LORD</small>.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Brit Mila:41"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:42": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " With permission of the Almighty,",
+     "kind": "prayer"
+    },
+    {
+     "text": " awesome and revered,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>a refuge in times of trouble,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>Almighty,",
+     "kind": "prayer"
+    },
+    {
+     "text": " girded with strength –<br>majestic on high,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the <small>LORD</small>.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Brit Mila:42"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:43": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Others</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " We give thanks to Your name among the faithful.<br>Blessed are you to the <small>LORD</small>.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Brit Mila:43"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:44": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " With permission of the holy Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>pure and clear,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>given to us as a heritage<br>by Moses the servant of the <small>LORD</small>.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Brit Mila:44"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:45": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Others</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " We give thanks to Your name among the faithful.<br>Blessed are you to the <small>LORD</small>.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Brit Mila:45"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:46": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " With permission of the priests,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Levites,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>I call upon the God of the Hebrews,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>declaring His glory to the furthest isles,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and offering blessings to the <small>LORD</small>.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Brit Mila:46"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:47": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Others</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " We give thanks to Your name among the faithful.<br>Blessed are you to the <small>LORD</small>.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Brit Mila:47"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:48": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " With the permission of the rabbis,",
+     "kind": "prayer"
+    },
+    {
+     "text": " teachers and friends,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>I open my lips with song,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>saying from my innermost being:<br>“Blessed is he that comes in the name of the <small>LORD</small>.”",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Brit Mila:48"
+   ]
+  },
+  "en:The Cycle of Life/Brit Mila:49": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Others</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " We give thanks to Your name among the faithful.<br>Blessed are you to the <small>LORD</small>.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:50": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " With your permission,",
+     "kind": "prayer"
+    },
+    {
+     "text": " my masters and teachers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " let us bless (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">in a minyan: </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": ") the One from whose food we have eaten.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Others</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed be (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">in a minyan:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": ") the One from whose food we have eaten,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and by whose goodness we live.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed be (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">in a minyan:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": ") the One from whose food we have eaten,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and by whose goodness we live.<br>Blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and blessed be His name.",
+     "kind": "prayer"
+    }
+   ],
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:51": {
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:52": {
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:53": {
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:54": {
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:55": {
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:56": {
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:57": {
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:58": {
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:59": {
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:60": {
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:61": {
+   "he": []
+  },
+  "en:The Cycle of Life/Brit Mila:62": {
+   "he": []
+  },
+  "en:The Cycle of Life/Pidyon HaBen:1": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">A firstborn male child, must be redeemed on the 31st day of his birth – unless the father is a Kohen or Levi, or the mother is a daughter of a Kohen or a Levi. If the 31st day falls on Shabbat or Yom Tov, the ceremony is postponed to the following weekday.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">The father, presenting his child to the Kohen, declares:</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Pidyon HaBen:2"
+   ]
+  },
+  "en:The Cycle of Life/Pidyon HaBen:2": {
+   "he": [
+    "he:The Cycle of Life/Pidyon HaBen:2"
+   ]
+  },
+  "en:The Cycle of Life/Pidyon HaBen:3": {
+   "he": [
+    "he:The Cycle of Life/Pidyon HaBen:3"
+   ]
+  },
+  "en:The Cycle of Life/Pidyon HaBen:4": {
+   "he": [
+    "he:The Cycle of Life/Pidyon HaBen:5"
+   ]
+  },
+  "en:The Cycle of Life/Pidyon HaBen:5": {
+   "he": [
+    "he:The Cycle of Life/Pidyon HaBen:5"
+   ]
+  },
+  "en:The Cycle of Life/Pidyon HaBen:6": {
+   "he": [
+    "he:The Cycle of Life/Pidyon HaBen:7"
+   ]
+  },
+  "en:The Cycle of Life/Pidyon HaBen:7": {
+   "he": [
+    "he:The Cycle of Life/Pidyon HaBen:7"
+   ]
+  },
+  "en:The Cycle of Life/Pidyon HaBen:8": {
+   "he": [
+    "he:The Cycle of Life/Pidyon HaBen:9"
+   ]
+  },
+  "en:The Cycle of Life/Pidyon HaBen:9": {
+   "he": [
+    "he:The Cycle of Life/Pidyon HaBen:9"
+   ]
+  },
+  "en:The Cycle of Life/Pidyon HaBen:10": {
+   "he": [
+    "he:The Cycle of Life/Pidyon HaBen:10"
+   ]
+  },
+  "en:The Cycle of Life/Pidyon HaBen:11": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The redemption money is given to the Kohen, who then returns the child to his father.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">The Kohen takes a cup of wine and says:</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Pidyon HaBen:12"
+   ]
+  },
+  "en:The Cycle of Life/Pidyon HaBen:12": {
+   "he": [
+    "he:The Cycle of Life/Pidyon HaBen:12"
+   ]
+  },
+  "en:The Cycle of Life/Pidyon HaBen:13": {
+   "he": [
+    "he:The Cycle of Life/Pidyon HaBen:14"
+   ]
+  },
+  "en:The Cycle of Life/Pidyon HaBen:14": {
+   "he": [
+    "he:The Cycle of Life/Pidyon HaBen:14"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Childbirth:1": {
+   "he": [
+    "he:The Cycle of Life/Prayer after Childbirth:2"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Childbirth:2": {
+   "he": [
+    "he:The Cycle of Life/Prayer after Childbirth:2"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Childbirth:3": {
+   "he": [
+    "he:The Cycle of Life/Prayer after Childbirth:3"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Childbirth:4": {
+   "he": [
+    "he:The Cycle of Life/Prayer after Childbirth:4"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Childbirth:5": {
+   "he": [
+    "he:The Cycle of Life/Prayer after Childbirth:6"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Childbirth:6": {
+   "he": [
+    "he:The Cycle of Life/Prayer after Childbirth:6"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Childbirth:7": {
+   "he": [
+    "he:The Cycle of Life/Prayer after Childbirth:8"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Childbirth:8": {
+   "he": [
+    "he:The Cycle of Life/Prayer after Childbirth:8"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Childbirth:9": {
+   "he": [
+    "he:The Cycle of Life/Prayer after Childbirth:9"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Childbirth:10": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">For a boy:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " הַיֶּֽלֶד the boy that has been born to us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to revere You and serve You in truth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and to walk in the path of righteousness. Protect our tender child in all his ways. Favor him with knowledge,",
+     "kind": "prayer"
+    },
+    {
+     "text": " understanding and discernment,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let his portion be in Your Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so that he may sanctify Your great name,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and become a comfort to us as we grow old. As for me,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may my prayer come to You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " at a time of favor. O God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in Your great love,",
+     "kind": "prayer"
+    },
+    {
+     "text": " answer me with Your faithful salvation.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Prayer after Childbirth:10"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Childbirth:11": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">For a girl:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " הַיַּלְדָּה the girl that has been born to us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to revere You and serve You in truth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and to walk in the path of righteousness. Protect our tender child in all her ways. Favor her with knowledge,",
+     "kind": "prayer"
+    },
+    {
+     "text": " understanding and discernment,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let her portion be in Your Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so that she may sanctify Your great name,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and become a comfort to us as we grow old. As for me,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may my prayer come to You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " at a time of favor. O God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in Your great love,",
+     "kind": "prayer"
+    },
+    {
+     "text": " answer me with Your faithful salvation.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Prayer after Childbirth:11"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Childbirth:12": {
+   "he": [
+    "he:The Cycle of Life/Prayer after Childbirth:13"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Childbirth:13": {
+   "he": [
+    "he:The Cycle of Life/Prayer after Childbirth:13"
+   ]
+  },
+  "en:The Cycle of Life/Zeved HaBat:1": {
+   "he": [],
+   "kind": "instruction",
+   "en": "The mother or father says:",
+   "gloss": "This instruction is only in English"
+  },
+  "en:The Cycle of Life/Zeved HaBat:2": {
+   "he": [
+    "he:The Cycle of Life/Zeved HaBat:2"
+   ],
+   "kind": "prayer"
+  },
+  "en:The Cycle of Life/Zeved HaBat:3": {
+   "he": [],
+   "kind": "instruction",
+   "en": "If this is their first daughter, they add:",
+   "gloss": "Conditional instruction only in English"
+  },
+  "en:The Cycle of Life/Zeved HaBat:4": {
+   "he": [
+    "he:The Cycle of Life/Zeved HaBat:4"
+   ],
+   "kind": "prayer",
+   "when": "x_firstDaughter"
+  },
+  "en:The Cycle of Life/Zeved HaBat:5": {
+   "he": [],
+   "kind": "instruction",
+   "en": "The Rabbi says:",
+   "gloss": "This instruction is only in English"
+  },
+  "en:The Cycle of Life/Zeved HaBat:6": {
+   "parts": [
+    {
+     "text": "מִי שֶׁבֵּרַךְ He who blessed our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>Abraham,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Isaac and Jacob,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Moses and Aaron,",
+     "kind": "prayer"
+    },
+    {
+     "text": " David and Solomon,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>Sarah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Rebecca,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Rachel and Leah –<br>may He bless (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>mother’s name</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": " daughter of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>her mother’s name</i>",
+     "kind": "prayer"
+    },
+    {
+     "text": "),",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>who has given birth.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Zeved HaBat:6"
+   ]
+  },
+  "en:The Cycle of Life/Zeved HaBat:7": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">If the baby has already been named in the synagogue:</i>",
+     "kind": "instruction",
+     "en": "If the baby has already been named in the synagogue:",
+     "gloss": "Conditional instruction only in English"
+    },
+    {
+     "text": " and her newborn daughter,",
+     "kind": "prayer",
+     "en": "If the baby has already been named in the synagogue:",
+     "gloss": "Conditional instruction only in English",
+     "when": "x_namedInSynagogue"
+    },
+    {
+     "text": " (",
+     "kind": "instruction",
+     "en": "If the baby has already been named in the synagogue:",
+     "gloss": "Conditional instruction only in English"
+    },
+    {
+     "text": "<i>baby’s name</i>",
+     "kind": "instruction",
+     "en": "If the baby has already been named in the synagogue:",
+     "gloss": "Conditional instruction only in English"
+    },
+    {
+     "text": " daughter of ",
+     "kind": "instruction",
+     "en": "If the baby has already been named in the synagogue:",
+     "gloss": "Conditional instruction only in English"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction",
+     "en": "If the baby has already been named in the synagogue:",
+     "gloss": "Conditional instruction only in English"
+    },
+    {
+     "text": "),",
+     "kind": "instruction",
+     "en": "If the baby has already been named in the synagogue:",
+     "gloss": "Conditional instruction only in English"
+    },
+    {
+     "text": "<br>born in favor.",
+     "kind": "instruction",
+     "en": "If the baby has already been named in the synagogue:",
+     "gloss": "Conditional instruction only in English"
+    }
+   ],
+   "he": []
+  },
+  "en:The Cycle of Life/Zeved HaBat:8": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">If the baby has not been named in the synagogue:</i>",
+     "kind": "instruction",
+     "en": "If the baby has not been named in the synagogue:",
+     "gloss": "Conditional instruction only in English"
+    },
+    {
+     "text": " and her newborn daughter,",
+     "kind": "prayer",
+     "en": "If the baby has not been named in the synagogue:",
+     "gloss": "Conditional instruction only in English",
+     "when": "!x_namedInSynagogue"
+    },
+    {
+     "text": " born in favor,",
+     "kind": "instruction",
+     "en": "If the baby has not been named in the synagogue:",
+     "gloss": "Conditional instruction only in English"
+    },
+    {
+     "text": " whose name in Israel shall be called (",
+     "kind": "instruction",
+     "en": "If the baby has not been named in the synagogue:",
+     "gloss": "Conditional instruction only in English"
+    },
+    {
+     "text": "<i>baby’s name</i>",
+     "kind": "instruction",
+     "en": "If the baby has not been named in the synagogue:",
+     "gloss": "Conditional instruction only in English"
+    },
+    {
+     "text": " daughter of ",
+     "kind": "instruction",
+     "en": "If the baby has not been named in the synagogue:",
+     "gloss": "Conditional instruction only in English"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction",
+     "en": "If the baby has not been named in the synagogue:",
+     "gloss": "Conditional instruction only in English"
+    },
+    {
+     "text": ").",
+     "kind": "instruction",
+     "en": "If the baby has not been named in the synagogue:",
+     "gloss": "Conditional instruction only in English"
+    }
+   ],
+   "he": []
+  },
+  "en:The Cycle of Life/Zeved HaBat:9": {
+   "he": [
+    "he:The Cycle of Life/Zeved HaBat:9"
+   ],
+   "kind": "prayer"
+  },
+  "en:The Cycle of Life/Zeved HaBat:10": {
+   "he": [],
+   "kind": "instruction",
+   "en": "The parents bless the child:",
+   "gloss": "This instruction is only in English"
+  },
+  "en:The Cycle of Life/Zeved HaBat:11": {
+   "he": [
+    "he:The Cycle of Life/Zeved HaBat:11"
+   ],
+   "kind": "prayer"
+  },
+  "en:The Cycle of Life/Zeved HaBat:12": {
+   "he": [
+    "he:The Cycle of Life/Zeved HaBat:12"
+   ],
+   "kind": "prayer"
+  },
+  "en:The Cycle of Life/Zeved HaBat:13": {
+   "he": [],
+   "kind": "instruction",
+   "en": "If grandparents are present, they say the following blessing:",
+   "gloss": "Conditional instruction only in English"
+  },
+  "en:The Cycle of Life/Zeved HaBat:14": {
+   "he": [
+    "he:The Cycle of Life/Zeved HaBat:14"
+   ],
+   "kind": "prayer",
+   "when": "x_grandparentsPresent"
+  },
+  "en:The Cycle of Life/Zeved HaBat:15": {
+   "he": [],
+   "kind": "instruction",
+   "en": "All say:",
+   "gloss": "This instruction is only in English"
+  },
+  "en:The Cycle of Life/Zeved HaBat:16": {
+   "he": [
+    "he:The Cycle of Life/Zeved HaBat:16"
+   ],
+   "kind": "prayer"
+  },
+  "en:The Cycle of Life/Marriage Service:1": {
+   "he": [
+    "he:The Cycle of Life/Marriage Service:1"
+   ]
+  },
+  "en:The Cycle of Life/Marriage Service:2": {
+   "he": [
+    "he:The Cycle of Life/Marriage Service:3"
+   ]
+  },
+  "en:The Cycle of Life/Marriage Service:3": {
+   "he": [
+    "he:The Cycle of Life/Marriage Service:3"
+   ]
+  },
+  "en:The Cycle of Life/Marriage Service:4": {
+   "he": [
+    "he:The Cycle of Life/Marriage Service:4"
+   ]
+  },
+  "en:The Cycle of Life/Marriage Service:5": {
+   "he": [
+    "he:The Cycle of Life/Marriage Service:6"
+   ]
+  },
+  "en:The Cycle of Life/Marriage Service:6": {
+   "he": [
+    "he:The Cycle of Life/Marriage Service:6"
+   ]
+  },
+  "en:The Cycle of Life/Marriage Service:7": {
+   "he": []
+  },
+  "en:The Cycle of Life/Sheva Berakhot:1": {
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:1"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:2": {
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:2"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:3": {
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:3"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:4": {
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:4"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:5": {
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:5"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:6": {
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:6"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:7": {
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:7"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:8": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The bride and bridegroom both drink from the wine.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">The bridegroom breaks a glass in memory of the destruction of the Temple. Some say the following beforehand:</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:The Cycle of Life/Sheva Berakhot:9": {
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:9"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:10": {
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:10"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:11": {
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:12"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:12": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Gentlemen,",
+     "kind": "prayer"
+    },
+    {
+     "text": " let us say grace.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:12"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:13": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Others</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May the name of the <small>LORD</small> be blessed from now and for ever.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:13"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:14": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "May the name of the <small>LORD</small> be blessed from now and for ever.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:14"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:15": {
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:15"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:16": {
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:17"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:17": {
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:17"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:18": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Others</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed be our God in whose dwelling place is joy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from whose food we have eaten,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and by whose goodness we live.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:18"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:19": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed be our God in whose dwelling place is joy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from whose food we have eaten,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and by whose goodness we live.<br>Blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and blessed be His name.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Sheva Berakhot:19"
+   ]
+  },
+  "en:The Cycle of Life/Sheva Berakhot:20": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Continue with Birkat HaMazon on page 978, at the end of which say the</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Sheva Berakhot (on previous page) over a cup of wine, beginning with the second blessing,</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">“who has created all,” and ending with the first blessing, that over the wine.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:The Cycle of Life/Prayer for Recovery from Illness:1": {
+   "he": [
+    "he:The Cycle of Life/Prayer for Recovery from Illness:1"
+   ]
+  },
+  "en:The Cycle of Life/Prayer for Recovery from Illness:2": {
+   "he": [
+    "he:The Cycle of Life/Prayer for Recovery from Illness:2"
+   ]
+  },
+  "en:The Cycle of Life/Prayer for Recovery from Illness:3": {
+   "he": [
+    "he:The Cycle of Life/Prayer for Recovery from Illness:3"
+   ]
+  },
+  "en:The Cycle of Life/Prayer for Recovery from Illness:4": {
+   "he": [
+    "he:The Cycle of Life/Prayer for Recovery from Illness:4"
+   ]
+  },
+  "en:The Cycle of Life/Prayer for Recovery from Illness:5": {
+   "he": [
+    "he:The Cycle of Life/Prayer for Recovery from Illness:5"
+   ]
+  },
+  "en:The Cycle of Life/Prayer for Recovery from Illness:6": {
+   "he": [
+    "he:The Cycle of Life/Prayer for Recovery from Illness:6"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Recovery from Illness:1": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Say Psalms 23 and 103 on page 1044. Then continue with:"
+  },
+  "en:The Cycle of Life/Prayer after Recovery from Illness:2": {
+   "he": [
+    "he:The Cycle of Life/Prayer after Recovery from Illness:2"
+   ]
+  },
+  "en:The Cycle of Life/Prayer after Recovery from Illness:3": {
+   "he": [
+    "he:The Cycle of Life/Prayer after Recovery from Illness:3"
+   ]
+  },
+  "en:The Cycle of Life/Confession before Death:1": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following confession is said by one near death.</i>",
+     "kind": "instruction",
+     "en": "The following confession is said by one near death. He or she should be told: 'Do not fear. Many confessed their sins, and then recovered. Everyone who does confess has reward in the World to Come' (Shabbat 32a)."
+    },
+    {
+     "text": "<br><i class=\"instruction\">He or she should be told: “Do not fear. Many confessed their sins, and then recovered. Everyone who does confess has reward in the World to Come” (Shabbat 32a).</i>",
+     "kind": "instruction",
+     "en": "The following confession is said by one near death. He or she should be told: 'Do not fear. Many confessed their sins, and then recovered. Everyone who does confess has reward in the World to Come' (Shabbat 32a)."
+    }
+   ],
+   "he": []
+  },
+  "en:The Cycle of Life/Confession before Death:2": {
+   "he": [
+    "he:The Cycle of Life/Confession before Death:2"
+   ],
+   "kind": "prayer"
+  },
+  "en:The Cycle of Life/Confession before Death:3": {
+   "he": [
+    "he:The Cycle of Life/Confession before Death:3"
+   ],
+   "kind": "prayer"
+  },
+  "en:The Cycle of Life/Confession before Death:4": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">When the end is approaching, the following should be said.</i>",
+     "kind": "instruction",
+     "en": "When the end is approaching, the following should be said. Repeat three times:"
+    },
+    {
+     "text": "<br><i class=\"instruction\">Repeat three times:</i>",
+     "kind": "instruction",
+     "en": "When the end is approaching, the following should be said. Repeat three times:"
+    }
+   ],
+   "he": []
+  },
+  "en:The Cycle of Life/Confession before Death:5": {
+   "he": [
+    "he:The Cycle of Life/Confession before Death:5"
+   ],
+   "kind": "prayer"
+  },
+  "en:The Cycle of Life/Confession before Death:6": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Repeat three times:"
+  },
+  "en:The Cycle of Life/Confession before Death:7": {
+   "he": [
+    "he:The Cycle of Life/Confession before Death:7"
+   ],
+   "kind": "prayer"
+  },
+  "en:The Cycle of Life/Confession before Death:8": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Repeat seven times:"
+  },
+  "en:The Cycle of Life/Confession before Death:9": {
+   "he": [
+    "he:The Cycle of Life/Confession before Death:9"
+   ],
+   "kind": "prayer"
+  },
+  "en:The Cycle of Life/Confession before Death:10": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Once:"
+  },
+  "en:The Cycle of Life/Confession before Death:11": {
+   "he": [
+    "he:The Cycle of Life/Confession before Death:11"
+   ],
+   "kind": "prayer"
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:1": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">After the regular service, the following psalm is read in a house of mourning during</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">the shiva week. On those days on which Taḥanun is not said, Psalm 16 (below) is substituted.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:2"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:2": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:2"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:3": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:4"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:4": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:4"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:5": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:5"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:6": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:6"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:7": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:8"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:8": {
+   "parts": [
+    {
+     "text": "(",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") who has been gathered to his people. Have mercy on him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " pardon all his transgressions,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for there is no one so righteous on earth as to have done only good and never sinned. Remember the righteousness that he did,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let his reward be with him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " his recompense before him. O shelter his soul in the shadow of Your wings. Make known to him the path of life. In Your presence is fullness of joy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " at Your right hand bliss for evermore. Bestow upon him the great goodness that is stored up for the righteous.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:8"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:9": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:10"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:10": {
+   "parts": [
+    {
+     "text": "(",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " daughter of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") who has been gathered to her people. Have mercy on her,",
+     "kind": "prayer"
+    },
+    {
+     "text": " pardon all her transgressions,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for there is no one so righteous on earth as to have done only good and never sinned. Remember the righteousness that she did,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let her reward be with her,",
+     "kind": "prayer"
+    },
+    {
+     "text": " her recompense before her. O shelter her soul in the shadow of Your wings. Make known to her the path of life. In Your presence is fullness of joy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " at Your right hand bliss for evermore. Bestow upon her the great goodness that is stored up for the righteous.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:10"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:11": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:12"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:12": {
+   "parts": [
+    {
+     "text": "(",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " son of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") who has been gathered to his people. Remember the righteousness that he did,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let his reward be with him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " his recompense before him. O shelter his soul in the shadow of Your wings. Make known to him the path of life. In Your presence is fullness of joy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " at Your right hand bliss for evermore. Bestow upon him the great goodness that is stored up for the righteous.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:12"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:13": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:14"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:14": {
+   "parts": [
+    {
+     "text": "(",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " daughter of ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>father’s name</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") who has been gathered to her people. Remember the righteousness that she did,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let her reward be with her,",
+     "kind": "prayer"
+    },
+    {
+     "text": " her recompense before her. O shelter her soul in the shadow of Your wings. Make known to her the path of life. In Your presence is fullness of joy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " at Your right hand bliss for evermore. Bestow upon her the great goodness that is stored up for the righteous.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:14"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:15": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:15"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:16": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:16"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:17": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:18"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:18": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:18"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:19": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:20"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:20": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:20"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:21": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:22"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:22": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:22"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:23": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:23"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:24": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:24"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:25": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The following prayer, said by mourners, requires the presence of a minyan.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">A transliteration can be found on page 1334.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:26"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:26": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " יִתְגַּדַּל Magnified and sanctified<br>may His great name be,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br>in your lifetime and in your days,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and in the lifetime of all the house of Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:26"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:27": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May His great name be blessed<br>for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:27"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:28": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>glorified and exalted,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>blessed be He,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": " song,",
+     "kind": "prayer"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world – and say: Amen.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:28"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:29": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:29"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:30": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:31"
+   ]
+  },
+  "en:The Cycle of Life/Prayer in a House of Mourning:31": {
+   "he": [
+    "he:The Cycle of Life/Prayer in a House of Mourning:31"
+   ]
+  },
+  "en:The Cycle of Life/Birkat HaMazon in a House of Mourning:1": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Gentlemen,",
+     "kind": "prayer"
+    },
+    {
+     "text": " let us say grace.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:1"
+   ]
+  },
+  "en:The Cycle of Life/Birkat HaMazon in a House of Mourning:2": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Others</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May the name of the <small>LORD</small> be blessed from now and for ever.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:2"
+   ]
+  },
+  "en:The Cycle of Life/Birkat HaMazon in a House of Mourning:3": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May the name of the <small>LORD</small> be blessed from now and for ever.<br>With your permission,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>let us bless the One who comforts mourners<br>from whose food we have eaten.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:3"
+   ]
+  },
+  "en:The Cycle of Life/Birkat HaMazon in a House of Mourning:4": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Others</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed be the One who comforts mourners,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from whose food we have eaten,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and by whose goodness we live.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:4"
+   ]
+  },
+  "en:The Cycle of Life/Birkat HaMazon in a House of Mourning:5": {
+   "he": [
+    "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:6"
+   ]
+  },
+  "en:The Cycle of Life/Birkat HaMazon in a House of Mourning:6": {
+   "he": [
+    "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:6"
+   ]
+  },
+  "en:The Cycle of Life/Birkat HaMazon in a House of Mourning:7": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed be the One who comforts mourners,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>from whose food we have eaten,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and by whose goodness we live.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:7"
+   ]
+  },
+  "en:The Cycle of Life/Birkat HaMazon in a House of Mourning:8": {
+   "he": [
+    "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:8"
+   ]
+  },
+  "en:The Cycle of Life/Birkat HaMazon in a House of Mourning:9": {
+   "he": [
+    "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:10"
+   ]
+  },
+  "en:The Cycle of Life/Birkat HaMazon in a House of Mourning:10": {
+   "he": [
+    "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:10"
+   ]
+  },
+  "en:The Cycle of Life/Birkat HaMazon in a House of Mourning:11": {
+   "he": [
+    "he:The Cycle of Life/Birkat HaMazon in a House of Mourning:11"
+   ]
+  },
+  "en:The Cycle of Life/Birkat HaMazon in a House of Mourning:12": {
+   "he": []
+  },
+  "en:The Cycle of Life/Funeral Service:1": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:1"
+   ],
+   "kind": "commentary"
+  },
+  "en:The Cycle of Life/Funeral Service:2": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:3"
+   ],
+   "kind": "instruction",
+   "en": "While on the way to the grave, say:"
+  },
+  "en:The Cycle of Life/Funeral Service:3": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:3"
+   ],
+   "kind": "commentary"
+  },
+  "en:The Cycle of Life/Funeral Service:4": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">After the funeral, the following is said, except on days on which Taḥanun</i>",
+     "kind": "instruction",
+     "en": "After the funeral, the following is said, except on days on which Taḥanun is omitted, or after nightfall. Some say the following before the funeral."
+    },
+    {
+     "text": "<br><i class=\"instruction\">is omitted, or after nightfall. Some say the following before the funeral.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Funeral Service:5"
+   ]
+  },
+  "en:The Cycle of Life/Funeral Service:5": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:5"
+   ],
+   "kind": "heading",
+   "en": "THE ACCEPTANCE OF JUDGMENT"
+  },
+  "en:The Cycle of Life/Funeral Service:6": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:6"
+   ],
+   "kind": "commentary"
+  },
+  "en:The Cycle of Life/Funeral Service:7": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:7"
+   ],
+   "kind": "commentary"
+  },
+  "en:The Cycle of Life/Funeral Service:8": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:8"
+   ],
+   "kind": "commentary"
+  },
+  "en:The Cycle of Life/Funeral Service:9": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:9"
+   ],
+   "kind": "commentary"
+  },
+  "en:The Cycle of Life/Funeral Service:10": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:10"
+   ],
+   "kind": "commentary"
+  },
+  "en:The Cycle of Life/Funeral Service:11": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:11"
+   ],
+   "kind": "commentary"
+  },
+  "en:The Cycle of Life/Funeral Service:12": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:12"
+   ],
+   "kind": "commentary"
+  },
+  "en:The Cycle of Life/Funeral Service:13": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:13"
+   ],
+   "kind": "commentary"
+  },
+  "en:The Cycle of Life/Funeral Service:14": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:14"
+   ],
+   "kind": "commentary"
+  },
+  "en:The Cycle of Life/Funeral Service:15": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:15"
+   ],
+   "kind": "commentary"
+  },
+  "en:The Cycle of Life/Funeral Service:16": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:16"
+   ],
+   "kind": "commentary"
+  },
+  "en:The Cycle of Life/Funeral Service:17": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:19"
+   ],
+   "kind": "prayer",
+   "en": "to proclaim that the LORD is upright; He is my Rock, in whom there is no wrong."
+  },
+  "en:The Cycle of Life/Funeral Service:18": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:18"
+   ],
+   "kind": "prayer",
+   "en": "The LORD has given and the LORD has taken away: blessed be the name of the LORD."
+  },
+  "en:The Cycle of Life/Funeral Service:19": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:19"
+   ],
+   "kind": "prayer",
+   "en": "He is compassionate; He forgives iniquity and does not destroy. Repeatedly He suppresses His anger, not rousing His full wrath."
+  },
+  "en:The Cycle of Life/Funeral Service:20": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:21"
+   ],
+   "kind": "instruction",
+   "en": "The following Kaddish, said by the mourners, requires the presence of a minyan."
+  },
+  "en:The Cycle of Life/Funeral Service:21": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish"
+    },
+    {
+     "text": " Magnified and sanctified may His great name be,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish"
+    },
+    {
+     "text": "<br>in the world that will in future be renewed,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish"
+    },
+    {
+     "text": "<br>reviving the dead and raising them up to eternal life.<br>He will rebuild the city of Jerusalem and in it reestablish His Temple.<br>He will remove alien worship from the earth and restore to its place the worship of Heaven.<br>Then the Holy One,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish"
+    },
+    {
+     "text": " will reign in His sovereignty and splendor.<br>May it be in your lifetime and in your days,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish"
+    },
+    {
+     "text": " and in the lifetime of all the house of Israel,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish"
+    },
+    {
+     "text": "<br>swiftly and soon – and say: Amen.",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Funeral Service:21"
+   ]
+  },
+  "en:The Cycle of Life/Funeral Service:22": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">All:</i>",
+     "kind": "prayer",
+     "role": "congregation",
+     "en": "Congregation response"
+    },
+    {
+     "text": " May His great name be blessed for ever and all time.",
+     "kind": "prayer",
+     "role": "congregation",
+     "en": "Congregation response"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Funeral Service:22"
+   ]
+  },
+  "en:The Cycle of Life/Funeral Service:23": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Mourner:</i>",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish (conclusion)"
+    },
+    {
+     "text": " Blessed and praised,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish (conclusion)"
+    },
+    {
+     "text": " glorified and exalted,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish (conclusion)"
+    },
+    {
+     "text": "<br>raised and honored,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish (conclusion)"
+    },
+    {
+     "text": " uplifted and lauded<br>be the name of the Holy One,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish (conclusion)"
+    },
+    {
+     "text": " blessed be He,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish (conclusion)"
+    },
+    {
+     "text": "<br>beyond any blessing,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish (conclusion)"
+    },
+    {
+     "text": " song,",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish (conclusion)"
+    },
+    {
+     "text": " praise and consolation<br>uttered in the world – and say: Amen.",
+     "kind": "prayer",
+     "role": "mourner",
+     "minyan": true,
+     "en": "Mourner's Kaddish (conclusion)"
+    }
+   ],
+   "he": [
+    "he:The Cycle of Life/Funeral Service:23"
+   ]
+  },
+  "en:The Cycle of Life/Funeral Service:24": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:24"
+   ],
+   "kind": "prayer",
+   "role": "mourner",
+   "minyan": true,
+   "en": "Kaddish d'Rabbanan"
+  },
+  "en:The Cycle of Life/Funeral Service:25": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:26"
+   ],
+   "kind": "instruction",
+   "en": "Bow, take three steps back, as if taking leave of the Divine Presence, then bow, first left, then right, then center, while saying:"
+  },
+  "en:The Cycle of Life/Funeral Service:26": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:26"
+   ],
+   "kind": "prayer",
+   "role": "congregation",
+   "en": "Congregation response"
+  },
+  "en:The Cycle of Life/Funeral Service:27": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:28"
+   ],
+   "kind": "instruction",
+   "en": "After the funeral, those present form two rows, the mourners pass between them, and the following is said to them:"
+  },
+  "en:The Cycle of Life/Funeral Service:28": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:28"
+   ],
+   "kind": "instruction",
+   "en": "May the Almighty comfort you among the other mourners of Zion and Jerusalem."
+  },
+  "en:The Cycle of Life/Funeral Service:29": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:30"
+   ],
+   "kind": "instruction",
+   "en": "Some conclude with:"
+  },
+  "en:The Cycle of Life/Funeral Service:30": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:30"
+   ],
+   "kind": "instruction",
+   "en": "May you have no further grief"
+  },
+  "en:The Cycle of Life/Funeral Service:31": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:32"
+   ],
+   "kind": "instruction",
+   "en": "Some have the custom to pick blades of grass and throw them over their shoulders, saying:"
+  },
+  "en:The Cycle of Life/Funeral Service:32": {
+   "he": [
+    "he:The Cycle of Life/Funeral Service:32"
+   ],
+   "kind": "instruction",
+   "en": "May they of the city grow like the grass of the earth"
+  },
+  "en:The Cycle of Life/Funeral Service:33": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Or:"
+  },
+  "en:The Cycle of Life/Funeral Service:34": {
+   "he": [],
+   "kind": "instruction",
+   "en": "Remember that we are dust."
+  },
+  "en:The Cycle of Life/Funeral Service:35": {
+   "he": [],
+   "kind": "instruction",
+   "en": "After leaving the cemetery, it is customary to wash one's hands and say:"
+  },
+  "en:The Cycle of Life/Funeral Service:36": {
+   "he": [],
+   "kind": "prayer",
+   "en": "He will destroy death for ever, and the LORD God will wipe away the tears from all faces and remove the reproach of His people from the whole earth, for the LORD has spoken."
+  }
+ },
+ "issues": [
+  {
+   "id": "he:The Cycle of Life/Brit Mila:25",
+   "type": "ambiguous",
+   "detail": "Instruction says 'In Israel the father adds (some outside Israel add it as well)'. Condition unclear."
+  },
+  {
+   "id": "en:The Cycle of Life/Brit Mila:49",
+   "type": "misplaced",
+   "detail": "Zimun text (Birkat HaMazon) appears in Brit Mila leaf; likely belongs in lifecycle.brit_mila meal section or is a generic placeholder."
+  },
+  {
+   "id": "en:The Cycle of Life/Zeved HaBat:1",
+   "type": "new_minhag",
+   "detail": "English-only instruction 'The mother or father says:' implies a role not specified in Hebrew text."
+  },
+  {
+   "id": "en:The Cycle of Life/Marriage Service:7",
+   "type": "alignment",
+   "detail": "English instruction mentions Sheva Berakhot on next page; no corresponding Hebrew segment in this chunk."
+  },
+  {
+   "id": "he:The Cycle of Life/Prayer in a House of Mourning:8",
+   "type": "new_minhag",
+   "detail": "x_deceasedFemale: The deceased is female (used for gender-specific wording in memorial prayers)"
+  },
+  {
+   "id": "he:The Cycle of Life/Prayer in a House of Mourning:18",
+   "type": "new_minhag",
+   "detail": "x_deceasedChild: The deceased was a child (used for specific consolation for parents)"
+  },
+  {
+   "id": "en:The Cycle of Life/Birkat HaMazon in a House of Mourning:12",
+   "type": "ambiguous",
+   "detail": "Instruction refers to page 986; context does not include that text. App may need to jump to a different chunk."
+  },
+  {
+   "id": "he:The Cycle of Life/Funeral Service:28",
+   "type": "ambiguous",
+   "detail": "Text 'אותך/אותך/אתכם' has multiple forms; unclear which is default or when each applies."
+  },
+  {
+   "id": "he:The Cycle of Life/Funeral Service:26",
+   "type": "ambiguous",
+   "detail": "Text 'עשה שלום/השלום' has multiple forms; unclear which is default or when each applies."
+  },
+  {
+   "id": "he:The Cycle of Life/Funeral Service:23",
+   "type": "ambiguous",
+   "detail": "Text 'לעלא מכל ברכתא/לעלא לעלא מכל ברכתא' has multiple forms; unclear which is default or when each applies."
+  },
+  {
+   "id": "en:The Cycle of Life/Funeral Service:17",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: h20.1; h22.1"
+  }
+ ]
+}

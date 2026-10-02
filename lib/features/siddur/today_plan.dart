@@ -179,9 +179,63 @@ TodayPlan buildTodayPlan({
     return PlanService(key, en, he, entries, tonight: tonight, skipped: skipped, whole: PrayerRef(book, node));
   }
 
+  /// A weekday service as the service graph lays it out for the default
+  /// siddur (corpus/graph.json): its own sections in order, with what the
+  /// day adds placed among them (Hallel after the Amidah, Musaf after Uva
+  /// LeTziyon…). A section holding such a placement is opened into its
+  /// parts, so the plan lists them in the order they're said. Null when the
+  /// siddur has no corpus for it.
+  PlanService? graphService(String name, String key, String en, String he, Service svc, {bool tonight = false}) {
+    final from = books.first;
+    final gs = from.resolver.corpus?.services[name];
+    if (gs == null || gs.sections.isEmpty) return null;
+    final (book, root, resolver) = (from.title, from.root, from.resolver);
+    final env = contexts(svc).env;
+    final applying = [for (final r in gs.inserts) if (r.condition.eval(env)) r];
+    bool said(SchemaNode n) => sectionStatus(resolver, n, contexts, svc).ap != Applicability.notToday;
+    // Of a section with a part for each day (the Hoshanot), today's part:
+    // only when every other part is for another day.
+    SchemaNode todays(SchemaNode n) {
+      final status = {for (final c in n.children) c: sectionStatus(resolver, c, contexts, svc).ap};
+      final today = [for (final e in status.entries) if (e.value == Applicability.today) e.key];
+      final others = status.values.where((a) => a != Applicability.today);
+      return today.length == 1 && others.every((a) => a == Applicability.notToday) ? today.single : n;
+    }
+
+    final entries = <PlanEntry>[];
+    final skipped = <SchemaNode>[];
+    void place(SchemaNode n, bool before) {
+      for (final r in applying) {
+        if (r.before != before || r.anchor != n.id) continue;
+        final target = root.find(r.insert);
+        if (target != null) entries.add(PlanEntry(PrayerRef(book, todays(target)), addedEn: r.labelEn, addedHe: r.labelHe));
+      }
+    }
+
+    void visit(SchemaNode n) {
+      place(n, true);
+      if (!said(n)) {
+        skipped.add(n);
+      } else if (!n.isLeaf && applying.any((r) => r.anchor.startsWith('${n.id}/'))) {
+        n.children.forEach(visit);
+      } else {
+        entries.add(PlanEntry(PrayerRef(book, n)));
+      }
+      place(n, false);
+    }
+
+    final nodes = [for (final p in gs.sections) ?root.find(p)];
+    nodes.forEach(visit);
+    final whole = gs.whole == null ? null : root.find(gs.whole!);
+    return PlanService(key, en, he, entries,
+        tonight: tonight, skipped: skipped, whole: whole == null ? null : PrayerRef(book, whole));
+  }
+
   bool has(PlanService s, bool Function(PlanEntry e) test) => s.entries.any(test);
-  bool contains(PlanService s, PrayerRef r) =>
-      s.entries.any((e) => e.book == r.book && (e.node == r.node || r.id.startsWith('${e.node.id}/')));
+  // Already there: the same section, one containing it, or a part of it
+  // (today's Hoshana of the Hoshanot).
+  bool contains(PlanService s, PrayerRef r) => s.entries.any((e) =>
+      e.book == r.book && (e.node == r.node || r.id.startsWith('${e.node.id}/') || e.node.id.startsWith('${r.id}/')));
 
   // The service's own copy of a catalogued prayer (Shabbat Maariv's
   // Sefirat HaOmer, not the weekday one the catalog found).
@@ -209,8 +263,14 @@ TodayPlan buildTodayPlan({
 
   final ashkenaz = nusachOf(book) == Nusach.ashkenaz;
 
+  // Weekday services come from the service graph where the siddur has a
+  // corpus; Shabbat, Yom Tov and other siddurim from their sections below.
+  final weekdayDay = !day['shabbat'] && !day['yomTov'];
+  final weekdayNight = !night['shabbat'] && !night['yomTov'];
+
   // Morning.
-  final shacharit = service('shacharit', 'Shacharit', 'שחרית', Service.shacharit);
+  final shacharit = (weekdayDay ? graphService('shacharit.weekday', 'shacharit', 'Shacharit', 'שחרית', Service.shacharit) : null) ??
+      service('shacharit', 'Shacharit', 'שחרית', Service.shacharit);
   if (shacharit != null) {
     services.add(shacharit);
     if (day['hallel']) add(shacharit, 'hallel', 'Hallel', 'הלל', after: (e) => _amidah.hasMatch(e.node.en));
@@ -255,7 +315,8 @@ TodayPlan buildTodayPlan({
   }
 
   // Afternoon.
-  final mincha = service('mincha', 'Mincha', 'מנחה', Service.mincha);
+  final mincha = (weekdayDay ? graphService('mincha.weekday', 'mincha', 'Mincha', 'מנחה', Service.mincha) : null) ??
+      service('mincha', 'Mincha', 'מנחה', Service.mincha);
   if (mincha != null) services.add(mincha);
 
   // Shabbat and Yom Tov evening: candles, Kabbalat Shabbat.
@@ -268,7 +329,9 @@ TodayPlan buildTodayPlan({
   }
 
   // Evening.
-  final maariv = service('maariv', 'Maariv', 'ערבית', Service.maariv, tonight: true);
+  final maariv =
+      (weekdayNight ? graphService('maariv.weekday', 'maariv', 'Maariv', 'ערבית', Service.maariv, tonight: true) : null) ??
+          service('maariv', 'Maariv', 'ערבית', Service.maariv, tonight: true);
   if (maariv != null) {
     services.add(maariv);
     if (night['chanukah']) add(maariv, 'chanukah', 'Chanukah', 'חנוכה', after: (e) => _amidah.hasMatch(e.node.en));

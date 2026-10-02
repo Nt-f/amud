@@ -27,6 +27,10 @@ const features = [
       'Show prayer titles in English, Hebrew or both, whatever the app language. Under Settings → Siddur, or Text settings in the reader.'),
   Feature(5, Icons.local_library, 'Torah tab',
       "Download the Kitzur Shulchan Aruch from Sefaria to learn offline, with today's Kitzur Yomi marked. More books are on the way. The calendar is now a card on Home."),
+  Feature(6, Icons.help_outline, 'Why today?', 'See why prayers are added or omitted for a chosen date, with your location and customs.'),
+  Feature(7, Icons.menu_book, 'Explain this line', 'Select words in the siddur and choose Explain this line for a translation, curated context and applicable prayer conditions.'),
+  Feature(8, Icons.nights_stay_outlined, 'Prepare for tomorrow', 'Preview tomorrow’s prayer changes from Home, or add the Prepare for tomorrow dashboard card.'),
+  Feature(9, Icons.print, 'Print siddur for any date', 'Choose a date and services in the Siddur tab, then preview, print or save a PDF with Hebrew and optional translation.'),
 ];
 
 int get latestFeature => features.last.id;

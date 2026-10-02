@@ -1,0 +1,996 @@
+{
+ "nusach": "sefard",
+ "chunk": "book [Shabbat Mincha .. Third Meal]",
+ "leaves": {
+  "Shabbat Mincha/Pirkei Avot": {
+   "node": "shabbat.pirkei_avot",
+   "service": "mincha",
+   "when": "shabbat && mincha && !yomTov"
+  },
+  "Third Meal/Zemirot": {
+   "node": "shabbat.zemirot",
+   "service": "shacharit",
+   "when": "shabbat"
+  },
+  "Third Meal/Motzaei Shabbat Prayers": {
+   "node": "shabbat.melaveh_malkah",
+   "service": "maariv",
+   "when": "motzaeiShabbat"
+  },
+  "Third Meal/Gott Fun Avraham": {
+   "node": "shabbat.seudah_shlishit",
+   "service": "shacharit",
+   "when": "motzaeiShabbat"
+  }
+ },
+ "he": {
+  "he:Shabbat Mincha/Pirkei Avot:1:1": {
+   "kind": "heading",
+   "en": "Pirkei Avot"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:1:19": {
+   "kind": "heading",
+   "en": "Rabbi Chanania ben Akavia said: The Holy One, blessed be He, desired to confer merit upon Israel; therefore He gave them Torah and mitzvot abundantly, as it is said: 'The Lord desires, for the sake of His righteousness, to magnify the Torah and glorify it.'"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:2:17": {
+   "kind": "heading",
+   "en": "Rabbi Chanania ben Akavia said: The Holy One, blessed be He, desired to confer merit upon Israel; therefore He gave them Torah and mitzvot abundantly, as it is said: 'The Lord desires, for the sake of His righteousness, to magnify the Torah and glorify it.'"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:18": {
+   "parts": [
+    {
+     "text": "<b>יח</b> הוּא הָיָה אוֹמֵר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " חָבִיב אָדָם שֶׁנִּבְרָא בְצֶלֶם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " חִבָּה יְתֵרָה נוֹדַעַת לוֹ שֶׁנִּבְרָא בְצֶלֶם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שֶׁנֶּאֱמַר: כִּי בְצֶלֶם אֱלֹהִים עָשָׂה אֶת הָאָדָם. חֲבִיבִין יִשְׂרָאֵל שֶׁנִּקְרְאוֹ בָנִים לַמָּקוֹם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " חִבָּה יְתֵרָה נוֹדַעַת לָהֶם שֶׁנִּקְרְאוֹ בָנִים לַמָּקוֹם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שֶׁנֶּאֱמַר: בָּנִים אַתֶּם לַיהֹוָה ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>צריך לקרוא <small>לַדוֹנָי</small>",
+     "kind": "instruction",
+     "en": "Must read 'Ladoni'"
+    },
+    {
+     "text": "</small> אֱלֹהֵיכֶם. חֲבִיבִין יִשְׂרָאֵל שֶׁנִּתַּן לָהֶם כְּלִי חֶמְדָּה. חִבָּה יְתֵרָה נוֹדַעַת לָהֶם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שֶׁנִּתַּן לָהֶם כְּלִי חֶמְדָּה שֶׁבּוֹ נִבְרָא הָעוֹלָם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שֶׁנֶּאֱמַר: כִּי לֶקַח טוֹב נָתַתִּי לָכֶם. תּוֹרָתִי אַל תַּעֲזֹבוּ: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:22": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:23": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:24": {
+   "parts": [
+    {
+     "text": "<b>כג</b> רַבִּי אֶלְעָזָר ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(בֶּן)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " חִסְמָא אוֹמֵר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " קִנִּין וּפִתְחֵי נִדָּה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הֵן הֵן גּוּפֵי הֲלָכוֹת. תְּקוּפוֹת וְגִימַטְרִיָּאוֹת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " פַּרְפְּרָאוֹת לַחָכְמָה:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Mincha/Pirkei Avot:3:25": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:22": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:23": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:24": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:25": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:26": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:27": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:28": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:29": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:4:30": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:11": {
+   "parts": [
+    {
+     "text": "<b>יא</b> אַרְבַּע מִדּוֹת בַּדֵּעוֹת: נֹחַ לִכְעוֹס וְנֹחַ לִרְצוֹת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יָצָא שְׂכָרוֹ בְהֶפְסֵדוֹ. קָשֶׁה לִכְעוֹס וְקָשֶׁה לִרְצוֹת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יָצָא הֶפְסֵדוֹ בִשְׂכָרוֹ. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(כך גרס הרע\"ב, ויש גורסים להפך)</small>",
+     "kind": "instruction",
+     "en": "(This is the text of the Ra'avad; some manuscripts read the opposite)"
+    },
+    {
+     "text": ". קָשֶׁה לִכְעוֹס וְנֹחַ לִרְצוֹת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " חָסִיד. נֹחַ לִכְעוֹס וְקָשֶׁה לִרְצוֹת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " רָשָׁע: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:22": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:23": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:24": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:5:25": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:6:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:6:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:6:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:6:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:6:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:6:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:6:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:6:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:6:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:6:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:6:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Mincha/Pirkei Avot:6:12": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Zemirot:1": {
+   "kind": "heading",
+   "en": "Zemirot for the Third Meal"
+  },
+  "he:Third Meal/Zemirot:2": {
+   "kind": "instruction",
+   "en": "It is customary to say the following passage from the Zohar:"
+  },
+  "he:Third Meal/Zemirot:3": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Third Meal/Zemirot:4": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Third Meal/Zemirot:5": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:6": {
+   "parts": [
+    {
+     "text": "<small>מחבר הזמר רבי יצחק לוריא זצ\"ל <small>(האר\"י הקדוש)</small>",
+     "kind": "instruction",
+     "en": "Author of the poem: Rabbi Yitzchak Luria (the Ari HaKadosh)"
+    },
+    {
+     "text": " ושמו חתום בראש הבתים:</small>",
+     "kind": "instruction",
+     "en": "and his name is signed at the beginning of the verses:"
+    }
+   ]
+  },
+  "he:Third Meal/Zemirot:7": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:8": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:9": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:10": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:11": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:12": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:13": {
+   "parts": [
+    {
+     "text": "<b>וְ</b>הָא אַזְמִין. עַתִּיק יוֹמִין. לְמִנְחָה ",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": "<small> <small>(<b>לְמִצְחָא</b>)</small>",
+     "kind": "prayer",
+     "role": "individual"
+    },
+    {
+     "text": " </small> עֲדֵי יְהוֹן חַלְפִין: ",
+     "kind": "prayer",
+     "role": "individual"
+    }
+   ]
+  },
+  "he:Third Meal/Zemirot:14": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:15": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:16": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:17": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:18": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:19": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:20": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:21": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:22": {
+   "kind": "instruction",
+   "en": "Before eating, say this:"
+  },
+  "he:Third Meal/Zemirot:23": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:24": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:25": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:26": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:27": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:28": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:29": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:30": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:31": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:32": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:33": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:34": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:35": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:36": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:37": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:38": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:39": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:40": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:41": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:42": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:43": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:44": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:45": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:46": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:47": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:48": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Third Meal/Zemirot:49": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Zemirot:50": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Zemirot:51": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Zemirot:52": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Zemirot:53": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Zemirot:54": {
+   "kind": "note",
+   "en": "The author of the zemer is Rabbi Yehuda HaLevi, and his name is signed in the acrostic of the stanzas."
+  },
+  "he:Third Meal/Zemirot:55": {
+   "parts": [
+    {
+     "text": "<b>י</b>וֹם שַׁבָּתוֹן אֵין לִשְׁכֹּחַ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " זִכְרוֹ כְּרֵיחַ הַנִּיחֹחַ, ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>יוֹנָה מָצְאָה בוֹ מָנוֹחַ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְשָׁם יָנוּחוּ יְגִיעֵי כֹחַ:</small>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Third Meal/Zemirot:56": {
+   "parts": [
+    {
+     "text": "<b>הַ</b>יּוֹם נִכְבָּד לִבְנֵי אֱמוּנִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " זְהִירִים לְשָׁמְרוֹ אָבוֹת וּבָנִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " חָקוּק בִּשְׁנֵי לֻחוֹת אֲבָנִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " מֵרֹב אוֹנִים וְאַמִּיץ כֹּחַ: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>יוֹנָה מָצְאָה בוֹ מָנוֹחַ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְשָׁם יָנוּחוּ יְגִיעֵי כֹחַ:</small>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Third Meal/Zemirot:57": {
+   "parts": [
+    {
+     "text": "<b>וּ</b>בָאוֹ כֻלָּם בִּבְרִית יַחַד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " נַעֲשֶׂה וְנִשְׁמַע אָמְרוּ כְּאֶחָד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּפָתְחוּ וְעָנוּ יְהֹוָה אֶחָד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בָּרוּךְ הַנּוֹתֵן לַיָּעֵף כֹּחַ: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>יוֹנָה מָצְאָה בוֹ מָנוֹחַ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְשָׁם יָנוּחוּ יְגִיעֵי כֹחַ:</small>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Third Meal/Zemirot:58": {
+   "parts": [
+    {
+     "text": "<b>דִּ</b>בֶּר בְּקָדְשׁוֹ בְּהַר הַמּוֹר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יוֹם הַשְּׁבִיעִי זָכוֹר וְשָׁמוֹר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְכל פִּקּוּדָיו יַחַד לִגְמֹר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " חַזֵּק מָתְנַיִם וְאַמֵּץ כֹּחַ. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>יוֹנָה מָצְאָה בוֹ מָנוֹחַ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְשָׁם יָנוּחוּ יְגִיעֵי כֹחַ:</small>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Third Meal/Zemirot:59": {
+   "parts": [
+    {
+     "text": "<b>הָ</b>עָם אֲשֶׁר נָע כַּצֹּאן תָּעָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יִזְכֹּר לְפֹקְדוֹ בְּרִית וּשְׁבוּעָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְבַל יַעֲבוֹר בָּם מִקְרֵה רָעָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כַּאֲשֶׁר נִשְׁבַּעְתָּ עַל מֵי נֹחַ. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>יוֹנָה מָצְאָה בוֹ מָנוֹחַ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְשָׁם יָנוּחוּ יְגִיעֵי כֹחַ:</small>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Third Meal/Zemirot:60": {
+   "kind": "note",
+   "en": "Words: Dunash ben Labrat. Acrostic: Dunash in every stanza."
+  },
+  "he:Third Meal/Zemirot:61": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Zemirot:62": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Zemirot:63": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Zemirot:64": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Zemirot:65": {
+   "kind": "instruction",
+   "en": "Before the Grace after Meals for all Shabbat meals, wash hands with the final washing (Mayim Acharonim) and say:"
+  },
+  "he:Third Meal/Zemirot:66": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Zemirot:67": {
+   "kind": "instruction",
+   "en": "Then say the Grace after Meals, and after the meal say:"
+  },
+  "he:Third Meal/Zemirot:68": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Motzaei Shabbat Prayers:1": {
+   "kind": "heading",
+   "en": "Order for Motzaei Shabbat"
+  },
+  "he:Third Meal/Motzaei Shabbat Prayers:2": {
+   "kind": "instruction",
+   "en": "Pray the Maariv service for Motzaei Shabbat, and afterwards say this:"
+  },
+  "he:Third Meal/Motzaei Shabbat Prayers:3": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Motzaei Shabbat Prayers:4": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Motzaei Shabbat Prayers:5": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Motzaei Shabbat Prayers:6": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Motzaei Shabbat Prayers:7": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Motzaei Shabbat Prayers:8": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Motzaei Shabbat Prayers:9": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Motzaei Shabbat Prayers:10": {
+   "kind": "commentary",
+   "en": "Rabbi Yochanan said: In every place where you find the greatness of the Holy One, blessed be He, there you find His humility. This is written in the Torah, taught in the Prophets, and repeated three times in the Writings."
+  },
+  "he:Third Meal/Motzaei Shabbat Prayers:11": {
+   "kind": "commentary",
+   "en": "Written in the Torah: For the Lord your God is the God of gods and the Lord of lords, the great, mighty, and awesome God who shows no partiality and takes no bribe. And it is written immediately after: He executes justice for the orphan and the widow, and loves the stranger, giving him food and clothing. Taught in the Prophets: For thus says the High and Lofty One who dwells in eternity, whose name is Holy: I dwell in the high and holy place, and also with the contrite and lowly of spirit, to revive the spirit of the lowly and to revive the heart of the contrite. Repeated three times in the Writings: Sing to God, sing praises to His name; extol Him who rides upon the clouds; His name is the Lord, and rejoice before Him. And it is written immediately after: A father of orphans and a defender of widows is God in His holy dwelling. May the Lord our God be with us as He was with our fathers; may He not forsake us and may He not abandon us. And you who cling to the Lord your God are alive, all of you, today. For the Lord will comfort Zion; He will comfort all her ruins, and will make her wilderness like Eden, and her desert like the garden of the Lord; joy and gladness will be found in her, thanksgiving and the voice of song. For the Lord's sake He will magnify the Torah and glorify it."
+  },
+  "he:Third Meal/Motzaei Shabbat Prayers:12": {
+   "kind": "prayer"
+  },
+  "he:Third Meal/Gott Fun Avraham:1": {
+   "kind": "heading",
+   "en": "Request for Motzaei Shabbat"
+  },
+  "he:Third Meal/Gott Fun Avraham:2": {
+   "kind": "heading",
+   "en": "A great segulah for success"
+  },
+  "he:Third Meal/Gott Fun Avraham:3": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud"
+  },
+  "he:Third Meal/Gott Fun Avraham:4": {
+   "kind": "instruction",
+   "role": "individual",
+   "voice": "aloud",
+   "en": "(3 times:)",
+   "gloss": "Custom to repeat the prayer three times"
+  },
+  "he:Third Meal/Gott Fun Avraham:5": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "aloud"
+  },
+  "he:Third Meal/Gott Fun Avraham:6": {
+   "kind": "instruction",
+   "role": "individual",
+   "voice": "aloud",
+   "en": "(3 times:)",
+   "gloss": "Custom to repeat the prayer three times"
+  }
+ },
+ "en": {},
+ "issues": [
+  {
+   "id": "he:Third Meal/Zemirot:49",
+   "type": "missing_text",
+   "detail": "Segment h49 (and h50-h52) is not selected in the input but appears to be part of the Zemirot sequence (acrostic 'Miyud'). The input only selects up to h48. The remaining verses are missing from the selection."
+  },
+  {
+   "id": "he:Third Meal/Gott Fun Avraham:3",
+   "type": "new_minhag",
+   "detail": "Yiddish prayer 'Gott Fun Avraham' is a specific minhag for Motzaei Shabbat Seudah Shlishit; not standard in all nusachim."
+  }
+ ]
+}

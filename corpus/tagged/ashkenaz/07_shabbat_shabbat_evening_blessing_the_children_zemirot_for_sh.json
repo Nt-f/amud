@@ -1,0 +1,1764 @@
+{
+ "nusach": "ashkenaz",
+ "chunk": "Shabbat/Shabbat Evening [Blessing the Children .. Zemirot for Shabbat Evening]",
+ "leaves": {
+  "Shabbat/Shabbat Evening/Blessing the Children": {
+   "node": "shabbat.blessing_children",
+   "service": "none"
+  },
+  "Shabbat/Shabbat Evening/Shalom Aleichem": {
+   "node": "shabbat.shalom_aleichem",
+   "service": "none"
+  },
+  "Shabbat/Shabbat Evening/Kiddush": {
+   "node": "shabbat.kiddush_night",
+   "service": "none"
+  },
+  "Shabbat/Shabbat Evening/Ribon Kol HaOlamim": {
+   "node": "x.shabbat.ribon_kol_haolamim",
+   "service": "none"
+  },
+  "Shabbat/Shabbat Evening/Eshet Chayil": {
+   "node": "shabbat.eshet_chayil",
+   "service": "none"
+  },
+  "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh": {
+   "node": "x.zemirot.kol_mekadesh",
+   "service": "none"
+  },
+  "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha": {
+   "node": "x.zemirot.menucha_vesimcha",
+   "service": "none"
+  },
+  "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut": {
+   "node": "x.zemirot.ma_yedidut",
+   "service": "none"
+  },
+  "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael": {
+   "node": "x.zemirot.yom_zeh_leyisrael",
+   "service": "none"
+  },
+  "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon": {
+   "node": "x.zemirot.yah_ribon",
+   "service": "none"
+  },
+  "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi": {
+   "node": "x.zemirot.tzamah_nafshi",
+   "service": "none"
+  },
+  "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo": {
+   "node": "x.zemirot.tzur_mishelo",
+   "service": "none"
+  }
+ },
+ "he": {
+  "he:Shabbat/Shabbat Evening/Blessing the Children:1": {
+   "kind": "instruction",
+   "en": "It is the custom of Israel to bless the children on Friday nights when returning from the synagogue."
+  },
+  "he:Shabbat/Shabbat Evening/Blessing the Children:2": {
+   "parts": [
+    {
+     "text": "<small>לבן</small>",
+     "kind": "instruction",
+     "en": "For a boy:"
+    },
+    {
+     "text": " יְשִׂימְךָ אֱלֹהִים כְּאֶפְרַיִם וְכִמְנַשֶּׁה: יְבָרֶכְךָ יְהֹוָה וְיִשְׁמְרֶךָ: יָאֵר יְהֹוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָ: יִשָּׁא יְהֹוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat/Shabbat Evening/Blessing the Children:3": {
+   "parts": [
+    {
+     "text": "<small>לבת</small>",
+     "kind": "instruction",
+     "en": "For a girl:"
+    },
+    {
+     "text": " יְשִׂימֵךְ אֱלֹהִים כְּשָׂרָה רִבְקָה רָחֵל וְלֵאָה. יְבָרֶכְךָ יְהֹוָה וְיִשְׁמְרֶךָ: יָאֵר יְהֹוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָ: יִשָּׁא יְהֹוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat/Shabbat Evening/Shalom Aleichem:1": {
+   "kind": "instruction",
+   "en": "On returning home from the synagogue, say this:",
+   "clean": "כשבא מבית הכנסת לביתו יאמר זה:"
+  },
+  "he:Shabbat/Shabbat Evening/Shalom Aleichem:2": {
+   "parts": [
+    {
+     "text": "שָׁלוֹם עֲלֵיכֶם מַלְאֲכֵי הַשָּׁרֵת מַלְאֲכֵי עֶלְיוֹן מִמֶּֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא: ",
+     "kind": "prayer",
+     "repeat": 3
+    },
+    {
+     "text": "<small>ג\"פ</small>",
+     "kind": "instruction",
+     "en": "Three times",
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Shabbat/Shabbat Evening/Shalom Aleichem:3": {
+   "parts": [
+    {
+     "text": "בּוֹאֲכֶם לְשָׁלוֹם מַלְאֲכֵי הַשָּׁלוֹם מַלְאֲכֵי עֶלְיוֹן מִמֶּֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא: ",
+     "kind": "prayer",
+     "repeat": 3
+    },
+    {
+     "text": "<small>ג\"פ</small>",
+     "kind": "instruction",
+     "en": "Three times",
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Shabbat/Shabbat Evening/Shalom Aleichem:4": {
+   "parts": [
+    {
+     "text": "בָּרְכוּנִי לְשָׁלוֹם מַלְאֲכֵי הַשָּׁלוֹם מַלְאֲכֵי עֶלְיוֹן מִמֶּֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא: ",
+     "kind": "prayer",
+     "repeat": 3
+    },
+    {
+     "text": "<small>ג\"פ</small>",
+     "kind": "instruction",
+     "en": "Three times",
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Shabbat/Shabbat Evening/Shalom Aleichem:5": {
+   "parts": [
+    {
+     "text": "צֵאתְכֶם לְשָׁלוֹם מַלְאֲכֵי הַשָּׁלוֹם מַלְאֲכֵי עֶלְיוֹן מִמֶּֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא: ",
+     "kind": "prayer",
+     "repeat": 3
+    },
+    {
+     "text": "<small>ג\"פ</small>",
+     "kind": "instruction",
+     "en": "Three times",
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Shabbat/Shabbat Evening/Shalom Aleichem:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Kiddush:1": {
+   "kind": "instruction",
+   "en": "Quietly:",
+   "voice": "undertone"
+  },
+  "he:Shabbat/Shabbat Evening/Kiddush:2": {
+   "kind": "prayer",
+   "voice": "undertone",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Shabbat Evening/Kiddush:3": {
+   "kind": "instruction",
+   "en": "Aloud:",
+   "voice": "aloud"
+  },
+  "he:Shabbat/Shabbat Evening/Kiddush:4": {
+   "kind": "prayer",
+   "voice": "aloud",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Shabbat Evening/Kiddush:5": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Shabbat Evening/Kiddush:6": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Shabbat Evening/Kiddush:7": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Shabbat Evening/Ribon Kol HaOlamim:1": {
+   "kind": "note",
+   "en": "Say this prayer every Friday night after the Amidah, before leaving the synagogue.",
+   "clean": "תפילה זו יאמר בכל ליל שבת אחר תפלתו קודם צאתו מבית הכנסת:"
+  },
+  "he:Shabbat/Shabbat Evening/Ribon Kol HaOlamim:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Ribon Kol HaOlamim:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Ribon Kol HaOlamim:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Ribon Kol HaOlamim:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Ribon Kol HaOlamim:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Eshet Chayil:22": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:22": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:23": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:24": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:25": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:26": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:27": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:28": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:29": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:30": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:31": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:32": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:33": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:9": {
+   "parts": [
+    {
+     "text": "וְתַפְנוּקֵי מַעֲדַנִּים. בְּכָל שָׁלשׁ פְּעָמִים. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>להתענג:</small>",
+     "kind": "instruction",
+     "en": "Repeat the refrain: \"Lehit'anneg…\""
+    }
+   ]
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:13": {
+   "parts": [
+    {
+     "text": "שֵֽׁשֶׁת יָמִים תַּעֲבֽוֹדוּ. וּבַשְּׁ֒בִיעִי נָגִֽילָה. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>להתענג:</small>",
+     "kind": "instruction",
+     "en": "Repeat the refrain: \"Lehit'anneg…\""
+    }
+   ]
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:17": {
+   "parts": [
+    {
+     "text": "וְלַהֲגוֹת בְּאִמְרֵי שֶֽׁפֶר. בְּכָל פִּנּוֹת וּמַחֲנוֹת. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>להתענג:</small>",
+     "kind": "instruction",
+     "en": "Repeat the refrain: \"Lehit'anneg…\""
+    }
+   ]
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:21": {
+   "parts": [
+    {
+     "text": "כַּשּׁוֹשַׁנִּים סוּגָה. בּוֹ יָנֽוּחוּ בֵּן וּבַת. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>להתענג:</small>",
+     "kind": "instruction",
+     "en": "Repeat the refrain: \"Lehit'anneg…\""
+    }
+   ]
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:22": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:23": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:24": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:25": {
+   "parts": [
+    {
+     "text": "פְּדוּתֵֽנוּ תַצְמִֽיחַ. וְנָס יָגוֹן וַאֲנָחָה. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>להתענג:</small>",
+     "kind": "instruction",
+     "en": "Repeat the refrain: \"Lehit'anneg…\""
+    }
+   ]
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:22": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:23": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:24": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:25": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:26": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:27": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:28": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:29": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:30": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:31": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:32": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:33": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael:34": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:22": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:23": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:24": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:25": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:22": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:23": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:24": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:25": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:26": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:27": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:28": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:22": {
+   "kind": "prayer"
+  }
+ },
+ "en": {
+  "en:Shabbat/Shabbat Evening/Blessing the Children:1": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Blessing the Children:1"
+   ],
+   "kind": "commentary"
+  },
+  "en:Shabbat/Shabbat Evening/Blessing the Children:2": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Blessing the Children:2"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Blessing the Children:3": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Blessing the Children:3"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Shalom Aleichem:1": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Shalom Aleichem:1"
+   ],
+   "kind": "commentary"
+  },
+  "en:Shabbat/Shabbat Evening/Shalom Aleichem:2": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Shalom Aleichem:2"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Shalom Aleichem:3": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Shalom Aleichem:3"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Shalom Aleichem:4": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Shalom Aleichem:4"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Shalom Aleichem:5": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Shalom Aleichem:5"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Shalom Aleichem:6": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Shalom Aleichem:6"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Kiddush:1": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Kiddush:1"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Kiddush:2": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Kiddush:2"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Kiddush:3": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Kiddush:3"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Kiddush:4": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Kiddush:4"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Kiddush:5": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Kiddush:5"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Kiddush:6": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Kiddush:6"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Kiddush:7": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Kiddush:7"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:1": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:1"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:2": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:2"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:3": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:3"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:4": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:4"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:5": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:5"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:6": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:6"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:7": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:7"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:8": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:8"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:9": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:9"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:10": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:10"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:11": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:11"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:12": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:12"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:13": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:13"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:14": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:14"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:15": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:15"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:16": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:16"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:17": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:17"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:18": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:18"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:19": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:19"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:20": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:20"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:21": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:21"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Eshet Chayil:22": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Eshet Chayil:22"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:1": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:1"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:2": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:2"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:3": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:3"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:4": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:4"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:5": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:5"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:6": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:6"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:7": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:7"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:8": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:8"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:9": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:9"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:10": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:10"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:11": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:11"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:12": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:12"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:13": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:13"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:14": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:14"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:15": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:15"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:16": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:16"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:17": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:17"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:18": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:18"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:19": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:19"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:20": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:20"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:21": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:21"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:22": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:22"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:23": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:23"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:24": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:24"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:25": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:25"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:26": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:26"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:27": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:27"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:28": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:28"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:29": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:29"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:1": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:1"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:2": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:2"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:3": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:3"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:4": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:4"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:5": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:5"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:6": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:6"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:7": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:7"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:8": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:8"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:9": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:9"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:10": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:10"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:11": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:11"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:12": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:12"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:13": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:13"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:14": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:14"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:15": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:15"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:16": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:16"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:17": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:17"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:18": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:18"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:19": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:19"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:20": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha:20"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:1": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:1"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:2": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:2"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:3": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:3"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:4": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:4"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:5": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:5"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:6": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:6"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:7": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:7"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:8": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:8"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:9": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:9"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:10": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:10"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:11": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:11"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:12": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:12"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:13": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:13"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:14": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:14"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:15": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:15"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:16": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:16"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:17": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:17"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:18": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:18"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:19": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:19"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:20": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:20"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:21": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:21"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:22": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:22"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:23": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:23"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:24": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:24"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:25": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:25"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:1": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:1"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:2": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:1"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:3": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:2"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:4": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:2"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:6": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:3"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:7": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:3"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:8": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:4"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:9": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:4"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:11": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:5"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:12": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:5"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:13": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:6"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:14": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:6"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:16": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:7"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:17": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:7"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:18": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:8"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:19": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:8"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:21": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:9"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:22": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:9"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:23": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:10"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:24": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:10"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:26": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:11"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:27": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:11"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:28": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:12"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:29": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:12"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:48": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:19"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:49": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:19"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:50": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:20"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:51": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:20"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:53": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:21"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:54": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:21"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:55": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:22"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:56": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:22"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:1": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:1"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:2": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:2"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:3": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:3"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:4": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:4"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:5": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:5"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:6": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:6"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:7": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:7"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:8": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:8"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:9": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:9"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:10": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:10"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:11": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:11"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:12": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:12"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:13": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:13"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:14": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:14"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:15": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:15"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:16": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:16"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:17": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:17"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:18": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:18"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:19": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:19"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:20": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:20"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:21": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:21"
+   ]
+  },
+  "en:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:22": {
+   "he": [
+    "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:22"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi:13",
+   "type": "alignment",
+   "detail": "English covers only Hebrew lines 1-12 and 19-22; Hebrew lines 13-18 and 23-28 have no English. English lines are half-lines (two English segments per Hebrew line), and English ids skip numbers (5,10,15,20,25,30-47,52)."
+  },
+  {
+   "id": "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh:30",
+   "type": "ambiguous",
+   "detail": "Hebrew lines 30-33 are an optional bracketed stanza (\"Kadshem\") printed in square brackets; no English. Tagged as ordinary prayer; whether it is sung varies by custom."
+  },
+  {
+   "id": "he:Shabbat/Shabbat Evening/Kiddush:7",
+   "type": "ambiguous",
+   "detail": "Parenthesized phrases \"(כי הוא יום)\" and \"(כי בנו בחרת ... מכל העמים)\" are variants/optional per community; left as one prayer part without condition."
+  },
+  {
+   "id": "he:Shabbat/Shabbat Evening/Kiddush:4",
+   "type": "ambiguous",
+   "detail": "Kiddush begins at he:2 \"ויהי ערב ויהי בקר\" (quietly) and continues in he:4 \"יום הששי\"; the two are one verse split across segments. Whole Kiddush is said by the head of household; Vayechulu customarily standing."
+  },
+  {
+   "id": "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut:9",
+   "type": "ambiguous",
+   "detail": "\"<small>להתענג:</small>\" is a cue to repeat the bold refrain (he:5 \"להתענג בתענוגים...\"); tagged as instruction, not prayer text."
+  },
+  {
+   "id": "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon:5",
+   "type": "duplicate",
+   "detail": "Refrain printed in <small> after each stanza (he:5,10,15,20,25); intentional repetition of the chorus (he:1-2), tagged as prayer."
+  },
+  {
+   "id": "he:Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo:7",
+   "type": "duplicate",
+   "detail": "Refrain printed in <small> after each stanza (he:7,12,17,22); intentional repeat of he:1-2, tagged as prayer."
+  },
+  {
+   "id": "he:Shabbat/Shabbat Evening/Ribon Kol HaOlamim:1",
+   "type": "misplaced",
+   "detail": "Rubric says this is said after the Amidah at the end of Friday night davening, before leaving the synagogue, yet it is placed here after Kiddush/Eshet Chayil in the home sequence."
+  },
+  {
+   "id": "he:Shabbat/Shabbat Evening/Blessing the Children:1",
+   "type": "engine_bug_risk",
+   "detail": "Blessing the children and Shalom Aleichem/Eshet Chayil/Kiddush are home rituals, not part of Maariv; a reader showing this chunk inside the synagogue service would be wrong."
+  }
+ ]
+}

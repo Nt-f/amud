@@ -1,0 +1,2271 @@
+{
+ "nusach": "sefard",
+ "chunk": "book [Purim .. Fast Days]",
+ "leaves": {
+  "Purim/Parashat Zachor": {
+   "node": "torah.vayehi_binsoa",
+   "service": "shacharit",
+   "when": "shabbatZachor"
+  },
+  "Purim/Megillah Reading": {
+   "node": "purim.megillah",
+   "service": "none"
+  },
+  "Purim/Order of Purim Day": {
+   "node": "purim.megillah",
+   "service": "shacharit",
+   "when": "purim"
+  },
+  "Purim/Krovetz L'Purim": {
+   "node": "x.purim.krovetz",
+   "service": "none",
+   "when": "purim"
+  },
+  "Purim/Torah Reading": {
+   "node": "torah.reading",
+   "service": "none"
+  },
+  "Fast Days/Yom Kippur Katan": {
+   "node": "selichot",
+   "service": "shacharit",
+   "when": "yomKippurKatan"
+  },
+  "Fast Days/Selichot for BaHaB": {
+   "node": "selichot",
+   "service": "shacharit",
+   "when": "behab"
+  }
+ },
+ "he": {
+  "he:Purim/Parashat Zachor:1": {
+   "kind": "heading",
+   "en": "Purim"
+  },
+  "he:Purim/Parashat Zachor:2": {
+   "kind": "heading",
+   "en": "Parashat Zachor"
+  },
+  "he:Purim/Parashat Zachor:3": {
+   "kind": "instruction",
+   "en": "The Torah scroll is taken out and the weekly portion is read; for Maftir, the portion of Zachor is read."
+  },
+  "he:Purim/Parashat Zachor:4": {
+   "kind": "prayer",
+   "node": "torah.reading"
+  },
+  "he:Purim/Megillah Reading:49": {
+   "kind": "prayer"
+  },
+  "he:Purim/Megillah Reading:50": {
+   "kind": "instruction",
+   "en": "And also remember Charbona for good:"
+  },
+  "he:Purim/Megillah Reading:51": {
+   "kind": "instruction",
+   "en": "After this, say VeAtah Kadosh etc. Kaddish Shalem without Titkabal. On Motzaei Shabbat, say Vihi No'am and VeAtah Kadosh. Kaddish Shalem. LaMenatze'ach Al Aylat HaShachar. Psalm 100. Barchu. Aleinu. See above after Maariv."
+  },
+  "he:Purim/Order of Purim Day:1": {
+   "kind": "heading",
+   "en": "Order of Purim Day"
+  },
+  "he:Purim/Order of Purim Day:2": {
+   "kind": "instruction",
+   "en": "On Purim day, we pray as on any weekday. (Some pray the 'Kerovatz' and recite Al HaNissim in the Amidah; after the Amidah, they say Half Kaddish, take out the Torah, and call up three people to read from the parashah of B'shalach.)",
+   "cite": "(ויש שמתפללי \"קרובץ\" ואומרים בהודאה על הניסים, ולאחר שמונה עשרה חצי קדיש, ומוציאים ס\"ת וקוראים ג' עולים בפרשת בשלח:)",
+   "gloss": "Custom of 'Kerovatz' (shortened service) varies; not universal."
+  },
+  "he:Purim/Krovetz L'Purim:1": {
+   "kind": "heading",
+   "en": "Krovetz for Purim"
+  },
+  "he:Purim/Krovetz L'Purim:2": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:3": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:4": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:5": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:6": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:7": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:8": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:9": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:10": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:11": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:12": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:13": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:14": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:15": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:16": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:17": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:18": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:19": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:20": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:21": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:22": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:23": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:24": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:25": {
+   "parts": [
+    {
+     "text": "<b>רְפָאֵנוּ</b> יְהֹוָה וְנֵרָפֵא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הוֹשִׁיעֵנוּ וְנִוָּשֵׁעָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כִּי תְהִלָּתֵנוּ אָתָּה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְהַעֲלֵה ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(אֲרוּכָה וּמַרְפֵּא לְכָל תַּחֲלוּאֵינוּ וּלְכָל מַכְאוֹבֵינוּ וּלְכָל מַכּוֹתֵינוּ)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ",",
+     "kind": "prayer"
+    },
+    {
+     "text": " רְפוּאָה שְׁלֵמָה לְכָל מַכּוֹתֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כִּי אֵל רוֹפֵא נֶאֱמָן וְרַחֲמָן אָתָּה.",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Purim/Krovetz L'Purim:26": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:27": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:28": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:29": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:30": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:31": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:32": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:33": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:34": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:35": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:36": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:37": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:38": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:39": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:40": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:41": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:42": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:43": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:44": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:45": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:46": {
+   "parts": [
+    {
+     "text": "<b>אֶת</b> צֶמַח דָּוִד עַבְדְּךָ מְהֵרָה תַצְמִיחַ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְקַרְנוּ תָרוּם בִּישׁוּעָתֶךָ. כִּי לִישׁוּעָתְךָ קִוִּינוּ כָּל הַיּוֹם. וּמְצַפִּים ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(לְךָ)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " לִיְשׁוּעָה. בָּרוּךְ אַתָּה יְהֹוָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " מַצְמִיחַ קֶרֶן יְשׁוּעָה: ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Purim/Krovetz L'Purim:47": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:48": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:49": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:50": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:51": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:52": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:53": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:54": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:55": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:56": {
+   "parts": [
+    {
+     "text": "<b>בִּימֵי מָרְדְּכַי</b> וְאֶסְתֵּר בְּשׁוּשַׁן הַבִּירָה כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע בִּקֵּשׁ לְהַשְׁמִיד לַהֲרוֹג וּלְאַבֵּד אֶת כָּל הַיְּהוּדִים מִנַּעַר וְעַד זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד בִּשְׁלֹשָׁה עָשָׂר לְחֹדֶשׁ שְׁנֵים עָשָׂר הוּא חֹדֶשׁ אֲדָר וּשְׁלָלָם לָבוֹז וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים הֵפַרְתָּ אֶת עֲצָתוֹ וְקִלְקַלְתָּ אֶת מַחֲשַׁבְתּוֹ וַהֲשֵׁבוֹתָ לוֹ גְמוּלוֹ בְרֹאשׁוֹ וְתָלוּ אוֹתוֹ וְאֶת בָּנָיו עַל הָעֵץ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(וְעָשִׂיתָ עִמָּהֶם נִסִּים וְנִפְלָאוֹת וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Purim/Krovetz L'Purim:57": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:58": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:59": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:60": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:61": {
+   "kind": "heading",
+   "en": "Priestly Blessing"
+  },
+  "he:Purim/Krovetz L'Purim:62": {
+   "parts": [
+    {
+     "text": "<b>שִׂים</b> שָׁלוֹם טוֹבָה וּבְרָכָה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " חַיִּים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " חֵן וָחֶסֶד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְרַחֲמִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל עַמֶּךָ. בָּרְכֵנוּ אָבִינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כֻּלָּנוּ כְּאֶחָד ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(יַחַד)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּאוֹר פָּנֶיךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ יְהֹוָה אֱלֹהֵינוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " תּוֹרַת חַיִּים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְאַהֲבַת חֶסֶד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּצְדָקָה וּבְרָכָה וְרַחֲמִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְחַיִּים וְשָׁלוֹם. ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(וְכָל טוּב)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": " וְטוֹב יִהְיֶה בְּעֵינֶיךָ לְבָרְכֵנוּ וּלְבָרֵךְ אֶת כָּל עַמְּךָ יִשְׂרָאֵל בְּכָל עֵת וּבְכָל שָׁעָה בִּשְׁלוֹמֶךָ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּרֹב עֹז וְשָׁלוֹם. ",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Purim/Krovetz L'Purim:63": {
+   "kind": "prayer"
+  },
+  "he:Purim/Krovetz L'Purim:64": {
+   "kind": "prayer"
+  },
+  "he:Purim/Torah Reading:1": {
+   "kind": "heading",
+   "en": "Torah Reading for Purim"
+  },
+  "he:Purim/Torah Reading:2": {
+   "kind": "prayer"
+  },
+  "he:Purim/Torah Reading:3": {
+   "kind": "instruction",
+   "en": "Half Kaddish. The Megillah is read with its blessings before and after. After the Megillah, continue with Ashrei and Uva LeTziyon until the end of the service as on other days."
+  },
+  "he:Fast Days/Yom Kippur Katan:1": {
+   "kind": "heading",
+   "en": "Fasts and Mourning"
+  },
+  "he:Fast Days/Yom Kippur Katan:2": {
+   "kind": "heading",
+   "en": "Order of Yom Kippur Katan"
+  },
+  "he:Fast Days/Yom Kippur Katan:3": {
+   "kind": "prayer",
+   "node": "selichot"
+  },
+  "he:Fast Days/Yom Kippur Katan:4": {
+   "kind": "note",
+   "en": "This piyyut was composed by Rabbi Yehuda Aryeh of Modena; his name is hinted at in the beginning of each line."
+  },
+  "he:Fast Days/Yom Kippur Katan:5": {
+   "parts": [
+    {
+     "text": "<b>יוֹם</b> זֶה יְהִי מִשְׁקַל כָּל חַטֹּאתַי,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בָּטֵל בְּמִעוּטוֹ כִּדְמוּת יָרֵחַ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הַיּוֹם לְבַד מִסְפַּר זָכִיוֹתַי,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יַרְבֶּה וְיָצִיץ צִיץ וִיהִי פוֹרֵחַ. <b>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>יום:</small></b>",
+     "kind": "instruction",
+     "en": "Day:"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:6": {
+   "parts": [
+    {
+     "text": "<b><b>וַדַּאי זְדוֹן לִבִּי אֶצְלוֹ גָלוּי,",
+     "kind": "prayer"
+    },
+    {
+     "text": " חוּטֵי עֲוֹנוֹתַי עִם דּוֹק רִשְׁעִי,",
+     "kind": "prayer"
+    },
+    {
+     "text": " דִּינִי אֲנִי אֵדָע בָּאֵשׁ קָלוּי,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כִּי רַע וּבִישׁ אָרַגְתִּי אֶל פִּשְׁעִי,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הוֹלֵךְ בְּיוֹם וָיוֹם אַחַר בִּצְעִי,",
+     "kind": "prayer"
+    },
+    {
+     "text": " מִבֵּית מְקוֹם סֵפֶר תִּינוֹק בּוֹרֵחַ. <b>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>יום:</small></b></b></b>",
+     "kind": "instruction",
+     "en": "Day:"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:7": {
+   "parts": [
+    {
+     "text": "<b><b>אָכֵן בְּחַבְלֵי שָׁוְא עָוֹן מוֹשֵׁךְ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אָחוֹר,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְךָ אֵלִי בָּאתִי נִצָּב,",
+     "kind": "prayer"
+    },
+    {
+     "text": " רִפְאוּת לְאֶרֶס מַר נָחָשׁ נוֹשֵׁךְ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " שׁוֹאֵל וּמִתְחַנֵּן נִכְאָב נֶעֱצָּב,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יוֹשֵׁב בְּעִנוּיֵי אֶבֶן מַחֲצָב,",
+     "kind": "prayer"
+    },
+    {
+     "text": " יָד פֶּה וְעַיִן אֵין לִי טַעַם וָרֵיחַ. <b>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>יום:</small></b></b></b>",
+     "kind": "instruction",
+     "en": "Day:"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:8": {
+   "parts": [
+    {
+     "text": "<b><b>הֵן רֹאשׁ חֳדָשִׁים אֶל עַמְּךָ נָתַתָּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לִזְמַן כַּפָּרָה עַל כָּל תּוֹלְדוֹתָם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " מֵאֵת אֲהוּבֶיךָ שׂוֹטֵן הִשְׁבַּתָּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " עַל כֵּן אֲקַדֶּמְךָ בִּתְחִנָּתָם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " מִיּוֹם לְפָנָיו בָּא כִּי אָז אֵיתָם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אָשׁוּב לְאִישׁ תּוֹשָׁב לֹא עוֹד אוֹרֵחַ. <b>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>יום:</small></b></b></b>",
+     "kind": "instruction",
+     "en": "Day:"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:9": {
+   "parts": [
+    {
+     "text": "<b><b>וּבְרוֹב חֲסָדֶיךָ אַתָּה מַלְכִּי,",
+     "kind": "prayer"
+    },
+    {
+     "text": " תָּקוּם תְּרַחֵם אֶת צִיּוֹן קָדְשֵׁנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " דִּירַת מְנוּחָתְךָ שִׂים כָּבוֹד,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כִּי בָהּ נַעֲלֶה עוֹלוֹת רָאשֵׁי חָדְשֵׁנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " נָא אֵל שְׁלַח נוֹשֵׂא נֵזֶר רֹאשֵׁנוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כִּי שָׁם לְבָבֵנוּ שׁוֹאֵף זוֹרֵחַ. <b>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>יום:</small></b></b></b>",
+     "kind": "instruction",
+     "en": "Day:"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:10": {
+   "kind": "prayer",
+   "node": "pz.mizmor_shir_chanukat"
+  },
+  "he:Fast Days/Yom Kippur Katan:11": {
+   "kind": "instruction",
+   "en": "Order of offerings: say Ashrei, Half Kaddish, and the Amidah; after the chazzan's repetition, begin here."
+  },
+  "he:Fast Days/Yom Kippur Katan:12": {
+   "parts": [
+    {
+     "text": "<b>לְכוּ</b> וְנָשׁוּבָה אֶל יְהֹוָה כִּי הוּא טָרָף וְיִרְפָּאֵנוּ יַךְ וְיַחְבְּשֵׁנוּ: יְחַיֵּינוּ מִיּוֹמָיִם בַּיּוֹם הַשְּׁלִישִׁי יְקִמֵנוּ וְנִחְיֶה לְפָנָיו: כִּי לֹא עַל צִדְקֹתֵינוּ אֲנַחְנוּ מַפִּילִים תַּחֲנוּנֵינוּ לְפָנֶיךָ כִּי עַל רַחֲמֶיךָ הָרַבִּים: אֲדֹנָי שְׁמָעָה אֲדֹנָי סְלָחָה אֲדֹנָי הַקְשִׁיבָה וַעֲשֵׂה אַל תְּאַחַר לְמַעַנְךָ אֱלֹהַי,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כִּי שִׁמְךָ נִקְרָא עַל עִירְךָ וְעַל עַמֶּךָ: ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>ג\"פ:</small>",
+     "kind": "instruction",
+     "en": "Three times:"
+    },
+    {
+     "text": " הֲשִׁיבֵנוּ יְהֹוָה אֵלֶיךָ וְנָשׁוּבָה חַדֵּשׁ יָמֵינוּ כְּקֶדֶם:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:13": {
+   "parts": [
+    {
+     "text": "<b><b><small><b>ג\"פ:</b></small>",
+     "kind": "instruction",
+     "en": "Three times:"
+    },
+    {
+     "text": " <b>אֵל</b> מֶלֶךְ יוֹשֵׁב עַל כִּסֵּא רַחֲמִים מִתְנַהֵג בַּחֲסִידוּת,",
+     "kind": "prayer"
+    },
+    {
+     "text": " מוֹחֵל עֲוֹנוֹת עַמּוֹ מַעֲבִיר רִאשׁוֹן רִאשׁוֹן,",
+     "kind": "prayer"
+    },
+    {
+     "text": " מַרְבֶּה מְחִילָה לְחַטָּאִים וּסְלִיחָה לַפּוֹשְׁעִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " עֹשֶׂה צְדָקוֹת עִם כָּל בָּשָׂר וָרוּחַ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לֹא כְרָעָתָם תִּגְמוֹל,",
+     "kind": "prayer"
+    },
+    {
+     "text": " אֵל הוֹרֵיתָ לָּנוּ לוֹמַר שְׁלֹשׁ עֶשְׂרֵה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּזְכָר לָנוּ הַיּוֹם בְּרִית שְׁלשׁ עֶשְׂרֵה,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כְּהוֹדַעְתָּ לֶעָנָיו מִקֶּדֶם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " כְּמוֹ שֶׁכָּתוּב וַיֵּרֶד יְהֹוָה בֶּעָנָן וַיִּתְיַצֵּב עִמּוֹ שָׁם,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וַיִּקְרָא בְשֵׁם יְהֹוָה:</b></b>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:14": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Yom Kippur Katan:15": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Yom Kippur Katan:16": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Yom Kippur Katan:17": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Yom Kippur Katan:18": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Yom Kippur Katan:19": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Yom Kippur Katan:20": {
+   "kind": "note",
+   "en": "Selicha. Composed by Rabbi Mordechai bar Shabbetai Aruch; his name is hinted at in the beginning of each line."
+  },
+  "he:Fast Days/Yom Kippur Katan:21": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Yom Kippur Katan:22": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " מַשְׂאַת כַּפַּי מִנְחַת עֶרֶב רְצֵה נָא בְכֹשֶׁר,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " תִּכּוֹן תְּפִלָּתִי קְטוֹרֶת לְפָנֶיךָ בְּתֹם וּבְיֹשֶׁר,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " בְּקָרְאִי עֲנֵנִי צוּרִי הַיּוֹם יִפְנֶה:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:23": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " כַּאֲשֶׁר יָבִיאוּ בְּנֵי יִשְׂרָאֵל אֶת הַמִּנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:24": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " רֵיחַ נִיחוֹחַ אִמְרֵי פִי לְפָנֶיךָ צוּר עוֹלָמִים,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " חֶלְבִּי וְדָמִי הַנִּמְעַט בְּצוֹמִי תְּמוּר חֲלָבִים וְדָמִים,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " קַבֵּל הֶגְיוֹן לִבִּי אֲשֶׁר עָרַכְתִּי הַיּוֹם ",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": "<small>(נ\"א זֶה כַּמָה יָמִים)</small>",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " בַּנְעִימִים:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:25": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " כְּחַטָּאת כָּאָשָׁם וְכַמִּנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:26": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " דְרוֹשׁ נָא בְּיוֹם זֶה דּוֹרְשֶׁיךָ וְהִדָּרֵשׁ לָהֶם בְּנִיב שְׂפָתָיִם,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " שְׁעֵה לְמַעֲמָדָם וְטַהֲרֵם כַּכֶּסֶף מְזֻקָּק שִׁבְעָתָיִם,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " וּרְצֵה שִׂיחָתָם כְּשֶׂה אַחַת מִן הַצֹאן מִן הַמָּאתָיִם:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:27": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " מִמַּשְׁקֵה יִשְׂרָאֵל לַמִּנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:28": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " כָּלִיל וְעוֹלָה תְּחִנָתִי תֵּחָשֵׁב וּמַשְׂטִינִי רִיב תָּרִיב,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " וְתוֹצִיא כָאוֹר צִדְקִי טֶרֶם יָבוֹא הַשֶּׁמֶשׁ וְיַעֲרִיב,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " שָׁפוֹךְ כַּמַיִם לִבּוֹ בִּתְפִלָּתוֹ כָּל אִישׁ. </b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:29": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " וְהִקְרִיב הַמַּקְרִיב קָרְבָּנוֹ לַיהֹוָה מִנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:30": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " יְשֻׁרוּן עַמְּךָ יָשִׁיר חַסְדְּךָ בְּטוֹב לֶקַח,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " הַטֵּה אֵלָיו אָזְנְךָ וּשְׁמָע וְעֵינֶיךָ פְּקַח,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " וּרְאֵה כִּי טוֹב מִסְתּוֹפֵף בְּשַׁעֲרֵי רַחֲמֶיךָ:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:31": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " וַיִּקַּח מִן הַבָּא בְּיָדוֹ מִנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:32": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " בְּרוֹב רַחֲמֶיךָ אֲמָרַי הַאֲזִינָה יְהֹוָה הֲגִיגִי בִּינָה,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " אִם נָא מָצָאתִי חֵן בְּעֵינֶיךָ אֱלֹהֵי קֶדֶם מְעוֹנָה,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " וְלָקַחְתָּ מִנְחָתִי מִיָּדִי אֲשֶׁר הֵבֵאתִי לְךָ בִּתְחִנָּה:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:33": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " וַיְהִי כַּעֲלוֹת הַמִּנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:34": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " שַׁדַּי לֹא מְצָאנוּךָ שַׂגִּיא כֹחַ לָעֵדָה מִקֶּדֶם קָנִיתָ,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " אֶחָד הַמַּרְבֶּה וְאֶחָד הַמַּמְעִיט בְּשׁוּבוֹ נַפְשׁוֹ רָצִיתָ,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " אַךְ יְכַוֵּן לִבּוֹ לְפָנֶיךָ בְּמִנְחָתוֹ בְּעֵת הַקְרִיב אוֹתָהּ:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:35": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " וְזֹאת תּוֹרַת הַמִּנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:36": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " בִּהְיוֹת מִזְבְּחִי וּמִקְדָּשִׁי עַל מְכוֹנוֹ וּגְבוּלוֹ,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " הָיוּ מְכַפְּרִים עָלֵינוּ בִּשְׂעִירִים הָעוֹלִים לְגוֹרָלוֹ,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " וְעַתָּה בְּאַשְׁמָתֵנוּ לוּ חָפֵץ יְהֹוָה לַהֲמִיתֵנוּ:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:37": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " לֹא לָקַח מִיָּדֵנוּ עוֹלָה וּמִנְחָה: </b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:38": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " תַּחֲנוּנִים יְדַבֵּר עַמְּךָ יְבַקֵּשׁ סְלִיחָה בְּלֵב מָר,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " הִנּוֹ מִתְיַצֵּב עַל מָצוֹר וְעוֹמֵד עַל הַמִּשְׁמָר,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " מְחַלֶּה פָנֶיךָ לְעֵת מִנְחַת עֶרֶב וּמְצַפֶּה כּוֹפֶר:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:39": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " כִּי אָמַר אֲכַפְּרָה פָנָיו בַּמִּנְחָה: </b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:40": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " יְרוּשָׁלַיִם עִירְךָ בְּנֵה וְעָרֶיהָ מִקָּצֶה,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " אֲסוּרִים רְעוּצִים פְּתַח וְלַחָפְשִׁי הוֹצֵא,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " וְעָרְבָה לַיהֹוָה מִנְחָתָם כִּימֵי עוֹלָם וְתָשׁוּב וְתִרְצֶה:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:41": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " עוֹד פְּנוֹת אֶל הַמִּנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:42": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " וּנְפוּצוֹת יִשְׂרָאֵל לְקַבֵּץ יָדְךָ שֵׁנִית תּוֹסֵף,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " כְּרוֹעֶה עֶדְרוֹ תִּרְעֵם בִּנְוֵה טוֹב תְּאַסֵּף,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " וְיָשֵׁב מְצָרֵף וְטִהַר אֶת בְּנֵי יִשְׂרָאֵל כַּזָּהָב וְכַכָּסֶף:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:43": {
+   "parts": [
+    {
+     "text": "<b><b><small>חו\"ק:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " וְהָיוּ לַיהֹוָה מַגִּישֵׁי מִנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:44": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Yom Kippur Katan:45": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Yom Kippur Katan:46": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Yom Kippur Katan:47": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Yom Kippur Katan:48": {
+   "kind": "note",
+   "en": "Selicha. Composed by Rabbi Eliezer bar Rabbi Yitzchak HaLevi; his name is hinted at in the beginning of the lines."
+  },
+  "he:Fast Days/Yom Kippur Katan:49": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:",
+     "gloss": "Leader of the responsive piyyut"
+    },
+    {
+     "text": " <b>אֱלֹהַי</b> בְּשַׂר עַמְּךָ מִפַּחְדְּךָ סָמָר,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " וְתָמִיד עוֹמֵד עַל מִשְׁמָר,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " וּמְצַפֶּה לְעֵת מִנְחַת עָרֶב:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:50": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:",
+     "gloss": "Responding to the chazzan"
+    },
+    {
+     "text": " כִּי אָמַר אֲכַפְּרָה פָנָיו בַּמִּנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:51": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " לְהַקְשִׁיב לְמַשְׂטִינֵנוּ מָאֵן תְּמָאֵן,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " סְאוֹנוֹ בְרַעַשׁ אַל נָא תְּהִי סוֹאֵן,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " וְאִם עֲוֹנוֹת תִּשְׁמוֹר הֲלֹא רַבּוּ:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:52": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " מֵאֵין עוֹד פְּנוֹת אֶל הַמִּנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:53": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " יִשְׂרָאֵל עַמְּךָ אֲשֶׁר בְּךָ מַאֲמִין,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " אִם בִּשְׂמֹאל דְּחִיתוֹ קָרְבֵהוּ בִּימִין,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " בָּא לְשַׁחֵר פָּנֶיךָ:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:54": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " וַיִּקַּח מִן הַבָּא בְיָדוֹ מִנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:55": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " עוֹרְכֵי שֶׁוַע מְשַׁלְמֵי פָרִים שִׂפְתוֹתָם,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " רְצֵה וְהַשְׁלֵךְ בִּמְצוּלוֹת יָם כָּל חַטֹּאתָם,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " יֶעֱרַב עָלֶיךָ שִׂיחָתָם וְרִנָּתָם:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:56": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " כַּחַטָּאת וְכָעוֹלָה וְכַמִּנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:57": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " זֵכֶר פַּר פְּנִים וְשָׂעִיר פְּנִימִי וְחִיצוֹן,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " יִהְיוּ נָא אֲמָרֵינוּ לְפָנֶיךָ לְרָצוֹן,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " וְתֶעֱרַב מִנְחָתֵנוּ כְּשֶׂה אַחַת מִן הַצֹּאן,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " מִן הַמָּאתָיִם:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:58": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " מִמַּשְׁקֵה יִשְׂרָאֵל לַמִנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:59": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " רְאֵה כִּי אָזְלַת יָדֵינוּ וְיוֹשְׁבֵי מָרוֹם שָׁחוּ,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " פַּסּוּ אֱמוּנִים וּבְכֵן לָקָחוּ,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " כְּבַד פֶּה וַעֲרַל שָׂפָה:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:60": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " וַיִּשְׁלְחוּ בְנֵי יִשְׂרָאֵל בְּיָדוֹ מִנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:61": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " בָּרֵר נִיב שְׂפָתַי כְּשַּׁחַר פָרוּשׂ,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " עֲנֵנִי וּרְפָא מִזְבַּחֲךָ הֶהָרוּס,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " חֶלְקַת לְשׁוֹנִי תֶּעֱרַב כַּשֶּׁמֶן לָרוֹס:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:62": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " אֶת הָעוֹלָה וְאֶת הַמִּנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:63": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " בֵּית תְּפִלָּתָם מְקוֹם צָקוּן לַחֲשָׁם,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " חֲשׁוֹב כִּבִמְקוֹם אֲשֶׁר יְבַשְּׁלוּ שָׁם הַכֹּהֲנִים אֶת הַחַטָּאת וְאֶת הָאָשָׁם:</b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:64": {
+   "parts": [
+    {
+     "text": "<b><b><small>קהל:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " וַאֲשֶׁר יֹאפוּ אֶת הַמִּנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:65": {
+   "parts": [
+    {
+     "text": "<b><b><small>חזן:</small>",
+     "kind": "speaker",
+     "en": "Chazzan:"
+    },
+    {
+     "text": " יְצַוֶּה יְהֹוָה חַסְדּוֹ קוֹמְמִיּוּת הֲשִׁיבֵנִי לְנָוִי,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " לְפָאֵר מְקוֹם מִקְדָּשִׁי לְחַדֵּשׁ הֲדַר זִיוִי,",
+     "kind": "prayer",
+     "role": "chazzan"
+    },
+    {
+     "text": " וְיָשַׁב מְצָרֵף וְטִהַר אֶת בְּנֵי לֵוִי. </b></b>",
+     "kind": "prayer",
+     "role": "chazzan"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:66": {
+   "parts": [
+    {
+     "text": "<b><b><small>חו\"ק:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": " וְהָיוּ לַיהֹוָה מַגִּישֵׁי מִנְחָה:</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:67": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:68": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:69": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:70": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:71": {
+   "kind": "instruction",
+   "en": "Refrain. The author's name Benjamin is hinted at the beginning of each line."
+  },
+  "he:Fast Days/Yom Kippur Katan:72": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:73": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:74": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:75": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:76": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:77": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:78": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:79": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:80": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:81": {
+   "kind": "instruction",
+   "en": "Then say ten 'Rachmana' to correspond to the Ten Sayings and the Ten Commandments."
+  },
+  "he:Fast Days/Yom Kippur Katan:82": {
+   "parts": [
+    {
+     "text": "<b><b><small>חו\"ק:</small>",
+     "kind": "speaker",
+     "en": "Congregation:"
+    },
+    {
+     "text": ":</b></b>",
+     "kind": "prayer",
+     "role": "congregation"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:83": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Yom Kippur Katan:84": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Yom Kippur Katan:85": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Yom Kippur Katan:86": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Yom Kippur Katan:87": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Yom Kippur Katan:88": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Yom Kippur Katan:89": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Yom Kippur Katan:90": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Yom Kippur Katan:91": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Yom Kippur Katan:92": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Fast Days/Yom Kippur Katan:93": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:94": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:95": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:96": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Fast Days/Yom Kippur Katan:97": {
+   "kind": "instruction",
+   "en": "The Great Vidui of Rabbi Nissim zt\"l:"
+  },
+  "he:Fast Days/Yom Kippur Katan:98": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Fast Days/Yom Kippur Katan:99": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Fast Days/Yom Kippur Katan:100": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Fast Days/Yom Kippur Katan:101": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Fast Days/Yom Kippur Katan:102": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Fast Days/Yom Kippur Katan:103": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Fast Days/Yom Kippur Katan:104": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Fast Days/Yom Kippur Katan:105": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Fast Days/Yom Kippur Katan:106": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Fast Days/Yom Kippur Katan:107": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Fast Days/Yom Kippur Katan:108": {
+   "parts": [
+    {
+     "text": "<b><b><small>פעם אחת:</small>",
+     "kind": "instruction",
+     "en": "Once:"
+    },
+    {
+     "text": " <b>שְׁמַע</b> יִשְׂרָאֵל יְהֹוָה אֱלֹהֵינוּ יְהֹוָה אֶחָד:</b></b>",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:109": {
+   "parts": [
+    {
+     "text": "<b><b><small>ג\"פ בלחש:</small>",
+     "kind": "instruction",
+     "en": "Three times silently:"
+    },
+    {
+     "text": " <b>בָּרוּךְ</b> שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד:</b></b>",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "repeat": 3
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:110": {
+   "parts": [
+    {
+     "text": "<b><b><small>ז' פעמים:</small>",
+     "kind": "instruction",
+     "en": "Seven times:"
+    },
+    {
+     "text": " <b>יְהֹוָה הוּא הָאֱלֹהִים:</b></b></b>",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent",
+     "repeat": 7
+    }
+   ]
+  },
+  "he:Fast Days/Yom Kippur Katan:111": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Fast Days/Yom Kippur Katan:112": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Fast Days/Yom Kippur Katan:113": {
+   "kind": "instruction",
+   "en": "Full Kaddish, Aleinu, and Kol Nidrei"
+  },
+  "he:Fast Days/Yom Kippur Katan:114": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Fast Days/Selichot for BaHaB:1": {
+   "kind": "heading",
+   "en": "Selichot for the fast days of Monday and Thursday and the fast of BeHaB"
+  },
+  "he:Fast Days/Selichot for BaHaB:2": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Selichot for BaHaB:3": {
+   "kind": "prayer"
+  },
+  "he:Fast Days/Selichot for BaHaB:4": {
+   "kind": "instruction",
+   "en": "And the Lord passed before him and proclaimed:"
+  },
+  "he:Fast Days/Selichot for BaHaB:5": {
+   "kind": "prayer"
+  },
+  "he:Purim/Megillah Reading:1": {
+   "kind": "heading",
+   "en": "Megillah Reading"
+  },
+  "he:Purim/Megillah Reading:2": {
+   "kind": "instruction",
+   "en": "Before reading the Megillah, the chazzan recites the blessings standing; the congregation also stands to fulfill the obligation of the blessing and the reading."
+  },
+  "he:Purim/Megillah Reading:3": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Purim/Megillah Reading:4": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Purim/Megillah Reading:5": {
+   "kind": "instruction",
+   "en": "On the night of Purim, one recites the blessing Shehecheyanu. On the day of Purim, one also recites it, intending to cover all the mitzvot of the day: reading the Megillah, sending gifts of food, the festive meal, and gifts to the poor."
+  },
+  "he:Purim/Megillah Reading:6": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Purim/Megillah Reading:7": {
+   "kind": "instruction",
+   "en": "The Megillah is read."
+  },
+  "he:Purim/Megillah Reading:8": {
+   "parts": [
+    {
+     "text": "<b><small>(א)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "</b> וַיְהִי בִּימֵי אֲחַשְׁוֵרוֹשׁ הוּא אֲחַשְׁוֵרוֹשׁ הַמֹּלֵךְ מֵהֹדּוּ וְעַד כּוּשׁ שֶׁבַע וְעֶשְׂרִים וּמֵאָה מְדִינָה: בַּיָּמִים הָהֵם כְּשֶׁבֶת הַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ עַל כִּסֵּא מַלְכוּתוֹ אֲשֶׁר בְּשׁוּשַׁן הַבִּירָה: בִּשְׁנַת שָׁלוֹשׁ לְמָלְכוֹ עָשָׂה מִשְׁתֶּה לְכָל שָׂרָיו וַעֲבָדָיו חֵיל פָּרַס וּמָדַי הַפַּרְתְּמִים וְשָׂרֵי הַמְּדִינוֹת לְפָנָיו: בְּהַרְאֹתוֹ אֶת עֹשֶׁר כְּבוֹד מַלְכוּתוֹ וְאֶת יְקָר תִּפְאֶרֶת גְּדוּלָּתוֹ יָמִים רַבִּים שְׁמוֹנִים וּמְאַת יוֹם: וּבִמְלוֹאת הַיָּמִים הָאֵלֶּה עָשָׂה הַמֶּלֶךְ לְכָל הָעָם הַנִּמְצְאִים בְּשׁוּשַׁן הַבִּירָה לְמִגָּדוֹל וְעַד קָטָן מִשְׁתֶּה שִׁבְעַת יָמִים בַּחֲצַר גִּנַּת בִּיתַן הַמֶּלֶךְ: חוּר כַּרְפַּס וּתְכֵלֶת אָחוּז בְּחַבְלֵי בוּץ וְאַרְגָּמָן עַל גְּלִילֵי כֶסֶף וְעַמּוּדֵי שֵׁשׁ מִטּוֹת זָהָב וָכֶסֶף עַל רִצְפַת בַּהַט וָשֵׁשׁ וְדַר וְסֹחָרֶת: וְהַשְׁקוֹת בִּכְלֵי זָהָב וְכֵלִים מִכֵּלִים שׁוֹנִים וְיֵין מַלְכוּת רָב כְּיַד הַמֶּלֶךְ: וְהַשְּׁתִיָּה כַדָּת אֵין אֹנֵס כִּי כֵן יִסַּד הַמֶּלֶךְ עַל כָּל רַב בֵּיתוֹ לַעֲשׂוֹת כִּרְצוֹן אִישׁ וָאִישׁ: גַּם וַשְׁתִּי הַמַּלְכָּה עָשְׂתָה מִשְׁתֵּה נָשִׁים בֵּית הַמַּלְכוּת אֲשֶׁר לַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ: בַּיּוֹם הַשְּׁבִיעִי כְּטוֹב לֵב הַמֶּלֶךְ בַּיָּיִן אָמַר לִמְהוּמָן בִּזְּתָא חַרְבוֹנָא בִּגְתָא וַאֲבַגְתָא זֵתַר וְכַרְכַּס שִׁבְעַת הַסָּרִיסִים הַמְשָׁרְתִים אֶת פְּנֵי הַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ: לְהָבִיא אֶת וַשְׁתִּי הַמַּלְכָּה לִפְנֵי הַמֶּלֶךְ בְּכֶתֶר מַלְכוּת לְהַרְאוֹת הָעַמִּים וְהַשָּׂרִים אֶת יָפְיָהּ כִּי טוֹבַת מַרְאֶה הִיא: וַתְּמָאֵן הַמַּלְכָּה וַשְׁתִּי לָבוֹא בִּדְבַר הַמֶּלֶךְ אֲשֶׁר בְּיַד הַסָּרִיסִים וַיִּקְצֹף הַמֶּלֶךְ מְאֹד וַחֲמָתוֹ בָּעֲרָה בוֹ: וַיֹּאמֶר הַמֶּלֶךְ לַחֲכָמִים יֹדְעֵי הָעִתִּים כִּי כֵן דְּבַר הַמֶּלֶךְ לִפְנֵי כָּל יֹדְעֵי דָּת וָדִין: וְהַקָּרֹב אֵלָיו כַּרְשְׁנָא שֵׁתָר אַדְמָתָא תַרְשִׁישׁ מֶרֶס מַרְסְנָא מְמוּכָן שִׁבְעַת שָׂרֵי פָּרַס וּמָדַי רֹאֵי פְּנֵי הַמֶּלֶךְ הַיֹּשְׁבִים רִאשֹׁנָה בַּמַּלְכוּת: כְּדָת מַה לַּעֲשׂוֹת בַּמַּלְכָּה וַשְׁתִּי עַל אֲשֶׁר לֹא עָשְׂתָה אֶת מַאֲמַר הַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ בְּיַד הַסָּרִיסִים: וַיֹּאמֶר ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(מומכן)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " מְמוּכָן לִפְנֵי הַמֶּלֶךְ וְהַשָּׂרִים לֹא עַל הַמֶּלֶךְ לְבַדּ<b>וֹ</b> עָוְתָ<b>ה</b> וַשְׁתִּ<b>י</b> הַמַּלְכָּ<b>ה</b> כִּי עַל כָּל הַשָּׂרִים וְעַל כָּל הָעַמִּים אֲשֶׁר בְּכָל מְדִינוֹת הַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ: כִּי יֵצֵא דְבַר הַמַּלְכָּה עַל כָּל הַנָּשִׁים לְהַבְזוֹת בַּעְלֵיהֶן בְּעֵינֵיהֶן בְּאָמְרָם הַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ אָמַר לְהָבִיא אֶת וַשְׁתִּי הַמַּלְכָּה לְפָנָיו וְלֹא בָאָה: וְהַיּוֹם הַזֶּה תֹּאמַרְנָה שָׂרוֹת פָּרַס וּמָדַי אֲשֶׁר שָׁמְעוּ אֶת דְּבַר הַמַּלְכָּה לְכֹל שָׂרֵי הַמֶּלֶךְ וּכְדַי בִּזָּיוֹן וָקָצֶף: אִם עַל הַמֶּלֶךְ טוֹב יֵצֵא דְבַר מַלְכוּת מִלְּפָנָיו וְיִכָּתֵב בְּדָתֵי פָרַס וּמָדַי וְלֹא יַעֲבוֹר אֲשֶׁר לֹא תָבוֹא וַשְׁתִּי לִפְנֵי הַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ וּמַלְכוּתָהּ יִתֵּן הַמֶּלֶךְ לִרְעוּתָהּ הַטּוֹבָה מִמֶּנָּה: וְנִשְׁמַע פִּתְגָם הַמֶּלֶךְ אֲשֶׁר יַעֲשֶׂה בְּכָל מַלְכוּתוֹ כִּי רַבָּה <b>הִ</b>יא <b>וְ</b>כָל <b>הַ</b>נָּשִׁים <b>יִ</b>תְּנוּ יְקָר לְבַעְלֵיהֶן לְמִגָּדוֹל וְעַד קָטָן: וַיִּיטַב הַדָּבָר בְּעֵינֵי הַמֶּלֶךְ וְהַשָּׂרִים וַיַּעַשׂ הַמֶּלֶךְ כִּדְבַר מְמוּכָן: וַיִּשְׁלַח סְפָרִים אֶל כָּל מְדִינוֹת הַמֶּלֶךְ אֶל מְדִינָה וּמְדִינָה כִּכְתָבָהּ וְאֶל עַם וָעָם כִּלְשׁוֹנוֹ לִהְיוֹת כָּל אִישׁ שֹׂרֵר ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(<b>שֹׁרֵר</b>)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " בְּבֵיתוֹ וּמְדַבֵּר כִּלְשׁוֹן עַמּוֹ: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Purim/Megillah Reading:9": {
+   "parts": [
+    {
+     "text": "<b><small>(ב)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "</b> אַחַר הַדְּבָרִים הָאֵלֶּה כְּשֹׁךְ חֲמַת הַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ זָכַר אֶת וַשְׁתִּי וְאֵת אֲשֶׁר עָשָׂתָה וְאֵת אֲשֶׁר נִגְזַר עָלֶיהָ: וַיֹּאמְרוּ נַעֲרֵי הַמֶּלֶךְ מְשָׁרְתָיו יְבַקְשׁוּ לַמֶּלֶךְ נְעָרוֹת בְּתוּלוֹת טוֹבוֹת מַרְאֶה: וְיַפְקֵד הַמֶּלֶךְ פְּקִידִים בְּכָל מְדִינוֹת מַלְכוּתוֹ וְיִקְבְּצוּ אֶת כָּל נַעֲרָה בְתוּלָה טוֹבַת מַרְאֶה אֶל שׁוּשַׁן הַבִּירָה אֶל בֵּית הַנָּשִׁים אֶל יַד הֵגֶא סְרִיס הַמֶּלֶךְ שֹׁמֵר הַנָּשִׁים וְנָתוֹן תַּמְרוּקֵיהֶן: וְהַנַּעֲרָה אֲשֶׁר תִּיטַב בְּעֵינֵי הַמֶּלֶךְ תִּמְלֹךְ תַּחַת וַשְׁתִּי וַיִּיטַב הַדָּבָר בְּעֵינֵי הַמֶּלֶךְ וַיַּעַשׂ כֵּן: אִישׁ יְהוּדִי הָיָה בְּשׁוּשַׁן הַבִּירָה וּשְׁמוֹ מָרְדֳּכַי בֶּן יָאִיר בֶּן שִׁמְעִי בֶּן קִישׁ אִישׁ יְמִינִי: אֲשֶׁר הָגְלָה מִירוּשָׁלַיִם עִם הַגֹּלָה אֲשֶׁר הָגְלְתָה עִם יְכָנְיָה מֶלֶךְ יְהוּדָה אֲשֶׁר הֶגְלָה נְבוּכַדְנֶאצַּר מֶלֶךְ בָּבֶל: וַיְהִי אֹמֵן אֶת הֲדַסָּה הִיא אֶסְתֵּר בַּת דֹּדוֹ כִּי אֵין לָהּ אָב וָאֵם וְהַנַּעֲרָה יְפַת תֹּאַר וְטוֹבַת מַרְאֶה וּבְמוֹת אָבִיהָ וְאִמָּהּ לְקָחָהּ מָרְדֳּכַי לוֹ לְבַת: וַיְהִי בְּהִשָּׁמַע דְּבַר הַמֶּלֶךְ וְדָתוֹ וּבְהִקָּבֵץ נְעָרוֹת רַבּוֹת אֶל שׁוּשַׁן הַבִּירָה אֶל יַד הֵגָי וַתִּלָּקַח אֶסְתֵּר אֶל בֵּית הַמֶּלֶךְ אֶל יַד הֵגַי שֹׁמֵר הַנָּשִׁים: וַתִּיטַב הַנַּעֲרָה בְעֵינָיו וַתִּשָּׂא חֶסֶד לְפָנָיו וַיְבַהֵל אֶת תַּמְרוּקֶיהָ וְאֶת מָנוֹתֶהָ לָתֵת לָהּ וְאֵת שֶׁבַע הַנְּעָרוֹת הָרְאֻיוֹת לָתֶת לָהּ מִבֵּית הַמֶּלֶךְ וַיְשַׁנֶּהָ וְאֶת נַעֲרוֹתֶיהָ לְטוֹב בֵּית הַנָּשִׁים: לֹא הִגִּידָה אֶסְתֵּר אֶת עַמָּהּ וְאֶת מוֹלַדְתָּהּ כִּי מָרְדֳּכַי צִוָּה עָלֶיהָ אֲשֶׁר לֹא תַגִּיד: וּבְכָל יוֹם וָיוֹם מָרְדֳּכַי מִתְהַלֵּךְ לִפְנֵי חֲצַר בֵּית הַנָּשִׁים לָדַעַת אֶת שְׁלוֹם אֶסְתֵּר וּמַה יֵּעָשֶׂה בָּהּ: וּבְהַגִּיעַ תֹּר נַעֲרָה וְנַעֲרָה לָבוֹא אֶל הַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ מִקֵּץ הֱיוֹת לָהּ כְּדָת הַנָּשִׁים שְׁנֵים עָשָׂר חֹדֶשׁ כִּי כֵּן יִמְלְאוּ יְמֵי מְרוּקֵיהֶן שִׁשָּׁה חֳדָשִׁים בְּשֶׁמֶן הַמֹּר וְשִׁשָּׁה חֳדָשִׁים בַּבְּשָׂמִים וּבְתַמְרוּקֵי הַנָּשִׁים: וּבָזֶה הַנַּעֲרָה בָּאָה אֶל הַמֶּלֶךְ אֵת כָּל אֲשֶׁר תֹּאמַר יִנָּתֵן לָהּ לָבוֹא עִמָּהּ מִבֵּית הַנָּשִׁים עַד בֵּית הַמֶּלֶךְ: בָּעֶרֶב הִיא בָאָה וּבַבֹּקֶר הִיא שָׁבָה אֶל בֵּית הַנָּשִׁים שֵׁנִי אֶל יַד שַׁעֲשְׁגַז סְרִיס הַמֶּלֶךְ שֹׁמֵר הַפִּילַגְשִׁים לֹא תָבוֹא עוֹד אֶל הַמֶּלֶךְ כִּי אִם חָפֵץ בָּהּ הַמֶּלֶךְ וְנִקְרְאָה בְשֵׁם: וּבְהַגִּיעַ תֹּר אֶסְתֵּר בַּת אֲבִיחַיִל דֹּד מָרְדֳּכַי אֲשֶׁר לָקַח לוֹ לְבַת לָבוֹא אֶל הַמֶּלֶךְ לֹא בִקְשָׁה דָּבָר כִּי אִם אֶת אֲשֶׁר יֹאמַר הֵגַי סְרִיס הַמֶּלֶךְ שֹׁמֵר הַנָּשִׁים וַתְּהִי אֶסְתֵּר נֹשֵׂאת חֵן בְּעֵינֵי כָּל רֹאֶיהָ: וַתִּלָּקַח אֶסְתֵּר אֶל הַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ אֶל בֵּית מַלְכוּתוֹ בַּחֹדֶשׁ הָעֲשִׂירִי הוּא חֹדֶשׁ טֵבֵת בִּשְׁנַת שֶׁבַע לְמַלְכוּתוֹ: וַיֶּאֱהַב הַמֶּלֶךְ אֶת אֶסְתֵּר מִכָּל הַנָּשִׁים וַתִּשָּׂא חֵן וָחֶסֶד לְפָנָיו מִכָּל הַבְּתוּלֹת וַיָּשֶׂם כֶּתֶר מַלְכוּת בְּרֹאשָׁהּ וַיַּמְלִיכֶהָ תַּחַת וַשְׁתִּי: וַיַּעַשׂ הַמֶּלֶךְ מִשְׁתֶּה גָדוֹל לְכָל שָׂרָיו וַעֲבָדָיו אֵת מִשְׁתֵּה אֶסְתֵּר וַהֲנָחָה לַמְּדִינוֹת עָשָׂה וַיִּתֵּן מַשְׂאֵת כְּיַד הַמֶּלֶךְ: וּבְהִקָּבֵץ בְּתוּלוֹת שֵׁנִית וּמָרְדֳּכַי יֹשֵׁב בְּשַׁעַר הַמֶּלֶךְ: אֵין אֶסְתֵּר מַגֶּדֶת מוֹלַדְתָּהּ וְאֶת עַמָּהּ כַּאֲשֶׁר צִוָּה עָלֶיהָ מָרְדֳּכָי וְאֶת מַאֲמַר מָרְדֳּכַי אֶסְתֵּר עֹשָׂה כַּאֲשֶׁר הָיְתָה בְאָמְנָה אִתּוֹ: בַּיָּמִים הָהֵם וּמָרְדֳּכַי יֹשֵׁב בְּשַׁעַר הַמֶּלֶךְ קָצַף בִּגְתָן וָתֶרֶשׁ שְׁנֵי סָרִיסֵי הַמֶּלֶךְ מִשֹּׁמְרֵי הַסַּף וַיְבַקְשׁוּ לִשְׁלֹחַ יָד בַּמֶּלֶךְ אֲחַשְׁוֵרֹשׁ: וַיִּוָּדַע הַדָּבָר לְמָרְדֳּכַי וַיַּגֵּד לְאֶסְתֵּר הַמַּלְכָּה וַתֹּאמֶר אֶסְתֵּר לַמֶּלֶךְ בְּשֵׁם מָרְדֳּכָי: וַיְבֻקַּשׁ הַדָּבָר וַיִּמָּצֵא וַיִּתָּלוּ שְׁנֵיהֶם עַל עֵץ וַיִּכָּתֵב בְּסֵפֶר דִּבְרֵי הַיָּמִים לִפְנֵי הַמֶּלֶךְ: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Purim/Megillah Reading:10": {
+   "parts": [
+    {
+     "text": "<b><small>(ג)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "</b> אַחַר הַדְּבָרִים הָאֵלֶּה גִּדַּל הַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ אֶת הָמָן בֶּן הַמְּדָתָא הָאֲגָגִי וַיְנַשְּׂאֵהוּ וַיָּשֶׂם אֶת כִּסְאוֹ מֵעַל כָּל הַשָּׂרִים אֲשֶׁר אִתּוֹ: וְכָל עַבְדֵי הַמֶּלֶךְ אֲשֶׁר בְּשַׁעַר הַמֶּלֶךְ כֹּרְעִים וּמִשְׁתַּחֲוִים לְהָמָן כִּי כֵן צִוָּה לוֹ הַמֶּלֶךְ וּמָרְדֳּכַי לֹא יִכְרַע וְלֹא יִשְׁתַּחֲוֶה: וַיֹּאמְרוּ עַבְדֵי הַמֶּלֶךְ אֲשֶׁר בְּשַׁעַר הַמֶּלֶךְ לְמָרְדֳּכָי מַדּוּעַ אַתָּה עוֹבֵר אֵת מִצְוַת הַמֶּלֶךְ: וַיְהִי <b>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(בְּאָמְרָם)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "</b> כְּאָמְרָם אֵלָיו יוֹם וָיוֹם וְלֹא שָׁמַע אֲלֵיהֶם וַיַּגִּידוּ לְהָמָן לִרְאוֹת הֲיַעַמְדוּ דִּבְרֵי מָרְדֳּכַי כִּי הִגִּיד לָהֶם אֲשֶׁר הוּא יְהוּדִי: וַיַּרְא הָמָן כִּי אֵין מָרְדֳּכַי כֹּרֵעַ וּמִשְׁתַּחֲוֶה לוֹ וַיִּמָּלֵא הָמָן חֵמָה: וַיִּבֶז בְּעֵינָיו לִשְׁלֹח יָד בְּמָרְדֳּכַי לְבַדּוֹ כִּי הִגִּידוּ לוֹ אֶת עַם מָרְדֳּכָי וַיְבַקֵּשׁ הָמָן לְהַשְׁמִיד אֶת כָּל הַיְּהוּדִים אֲשֶׁר בְּכָל מַלְכוּת אֲחַשְׁוֵרוֹשׁ עַם מָרְדֳּכָי: בַּחֹדֶשׁ הָרִאשׁוֹן הוּא חֹדֶשׁ נִיסָן בִּשְׁנַת שְׁתֵּים עֶשְׂרֵה לַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ הִפִּיל פּוּר הוּא הַגּוֹרָל לִפְנֵי הָמָן מִיּוֹם לְיוֹם וּמֵחֹדֶשׁ לְחֹדֶשׁ שְׁנֵים עָשָׂר הוּא חֹדֶשׁ אֲדָר: וַיֹּאמֶר הָמָן לַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ יֶשְׁנוֹ עַם אֶחָד מְפֻזָּר וּמְפֹרָד בֵּין הָעַמִּים בְּכֹל מְדִינוֹת מַלְכוּתֶךָ וְדָתֵיהֶם שֹׁנוֹת מִכָּל עָם וְאֶת דָּתֵי הַמֶּלֶךְ אֵינָם עֹשִׂים וְלַמֶּלֶךְ אֵין שׁוֶֹה לְהַנִּיחָם: אִם עַל הַמֶּלֶךְ טוֹב יִכָּתֵב לְאַבְּדָם וַעֲשֶׂרֶת אֲלָפִים כִּכַּר כֶּסֶף אֶשְׁקוֹל עַל יְדֵי עֹשֵׂי הַמְּלָאכָה לְהָבִיא אֶל גִּנְזֵי הַמֶּלֶךְ: וַיָּסַר הַמֶּלֶךְ אֶת טַבַּעְתּוֹ מֵעַל יָדוֹ וַיִּתְּנָהּ לְהָמָן בֶּן הַמְּדָתָא הָאֲגָגִי צֹרֵר הַיְּהוּדִים: וַיֹּאמֶר הַמֶּלֶךְ לְהָמָן הַכֶּסֶף נָתוּן לָךְ וְהָעָם לַעֲשׂוֹת בּוֹ כַּטּוֹב בְּעֵינֶיךָ: וַיִּקָּרְאוּ סֹפְרֵי הַמֶּלֶךְ בַּחֹדֶשׁ הָרִאשׁוֹן בִּשְׁלוֹשָׁה עָשָׂר יוֹם בּוֹ וַיִּכָּתֵב כְּכָל אֲשֶׁר צִוָּה הָמָן אֶל אֲחַשְׁדַּרְפְּנֵי הַמֶּלֶךְ וְאֶל הַפַּחוֹת אֲשֶׁר עַל מְדִינָה וּמְדִינָה וְאֶל שָׂרֵי עַם וָעָם מְדִינָה וּמְדִינָה כִּכְתָבָהּ וְעַם וָעָם כִּלְשׁוֹנוֹ בְּשֵׁם הַמֶּלֶךְ אֲחַשְׁוֵרֹשׁ נִכְתָּב וְנֶחְתָּם בְּטַבַּעַת הַמֶּלֶךְ: וְנִשְׁלוֹחַ סְפָרִים בְּיַד הָרָצִים אֶל כָּל מְדִינוֹת הַמֶּלֶךְ לְהַשְׁמִיד לַהֲרֹג וּלְאַבֵּד אֶת כָּל הַיְּהוּדִים מִנַּעַר וְעַד זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד בִּשְׁלוֹשָׁה עָשָׂר לְחֹדֶשׁ שְׁנֵים עָשָׂר הוּא חֹדֶשׁ אֲדָר וּשְׁלָלָם לָבוֹז: פַּתְשֶׁגֶן הַכְּתָב לְהִנָּתֵן דָּת בְּכָל מְדִינָה וּמְדִינָה גָּלוּי לְכָל הָעַמִּים לִהְיוֹת עֲתִדִים לַיּוֹם הַזֶּה: הָרָצִים יָצְאוּ דְחוּפִים בִּדְבַר הַמֶּלֶךְ וְהַדָּת נִתְּנָה בְּשׁוּשַׁן הַבִּירָה וְהַמֶּלֶךְ וְהָמָן יָשְׁבוּ לִשְׁתּוֹת וְהָעִיר שׁוּשָׁן נָבוֹכָה: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Purim/Megillah Reading:11": {
+   "parts": [
+    {
+     "text": "<b><small>(ד)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "</b> וּמָרְדֳּכַי יָדַע אֶת כָּל אֲשֶׁר נַעֲשָׂה וַיִּקְרַע מָרְדֳּכַי אֶת בְּגָדָיו וַיִּלְבַּשׁ שַׂק וָאֵפֶר וַיֵּצֵא בְּתוֹךְ הָעִיר וַיִּזְעַק זְעָקָה גְדֹלָה וּמָרָה: וַיָּבוֹא עַד לִפְנֵי שַׁעַר הַמֶּלֶךְ כִּי אֵין לָבוֹא אֶל שַׁעַר הַמֶּלֶךְ בִּלְבוּשׁ שָׂק: וּבְכָל מְדִינָה וּמְדִינָה מְקוֹם אֲשֶׁר דְּבַר הַמֶּלֶךְ וְדָתוֹ מַגִּיעַ אֵבֶל גָּדוֹל לַיְּהוּדִים וְצוֹם וּבְכִי וּמִסְפֵּד שַׂק וָאֵפֶר יֻצַּע לָרַבִּים: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(ותבואינה)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וַתָּבוֹאנָה נַעֲרוֹת אֶסְתֵּר וְסָרִיסֶיהָ וַיַּגִּידוּ לָהּ וַתִּתְחַלְחַל הַמַּלְכָּה מְאֹד וַתִּשְׁלַח בְּגָדִים לְהַלְבִּישׁ אֶת מָרְדֳּכַי וּלְהָסִיר שַׂקּוֹ מֵעָלָיו וְלֹא קִבֵּל: וַתִּקְרָא אֶסְתֵּר לַהֲתָךְ מִסָּרִיסֵי הַמֶּלֶךְ אֲשֶׁר הֶעֱמִיד לְפָנֶיהָ וַתְּצַוֵּהוּ עַל מָרְדֳּכָי לָדַעַת מַה זֶּה וְעַל מַה זֶּה: וַיֵּצֵא הֲתָךְ אֶל מָרְדֳּכָי אֶל רְחוֹב הָעִיר אֲשֶׁר לִפְנֵי שַׁעַר הַמֶּלֶךְ: וַיַּגֶּד לוֹ מָרְדֳּכַי אֵת כָּל אֲשֶׁר קָרָהוּ וְאֵת פָּרָשַׁת הַכֶּסֶף אֲשֶׁר אָמַר הָמָן לִשְׁקוֹל עַל גִּנְזֵי הַמֶּלֶךְ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(ביהודיים)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " בַּיְּהוּדִים לְאַבְּדָם: וְאֶת פַּתְשֶׁגֶן כְּתָב הַדָּת אֲשֶׁר נִתַּן בְּשׁוּשָׁן לְהַשְׁמִידָם נָתַן לוֹ לְהַרְאוֹת אֶת אֶסְתֵּר וּלְהַגִּיד לָהּ וּלְצַוּוֹת עָלֶיהָ לָבוֹא אֶל הַמֶּלֶךְ לְהִתְחַנֶּן לוֹ וּלְבַקֵּשׁ מִלְּפָנָיו עַל עַמָּהּ: וַיָּבוֹא הֲתָךְ וַיַּגֵּד לְאֶסְתֵּר אֵת דִּבְרֵי מָרְדֳּכָי: וַתֹּאמֶר אֶסְתֵּר לַהֲתָךְ וַתְּצַוֵּהוּ אֶל מָרְדֳּכָי: כָּל עַבְדֵי הַמֶּלֶךְ וְעַם מְדִינוֹת הַמֶּלֶךְ יוֹדְעִים אֲשֶׁר כָּל אִישׁ וְאִשָּׁה אֲשֶׁר יָבוֹא אֶל הַמֶּלֶךְ אֶל הֶחָצֵר הַפְּנִימִית אֲשֶׁר לֹא יִקָּרֵא אַחַת דָּתוֹ לְהָמִית לְבַד מֵאֲשֶׁר יוֹשִׁיט לוֹ הַמֶּלֶךְ אֶת שַׁרְבִיט הַזָּהָב וְחָיָה וַאֲנִי לֹא נִקְרֵאתִי לָבוֹא אֶל הַמֶּלֶךְ זֶה שְׁלוֹשִׁים יוֹם: וַיַּגִּידוּ לְמָרְדֳּכָי אֵת דִּבְרֵי אֶסְתֵּר: וַיֹּאמֶר מָרְדֳּכַי לְהָשִׁיב אֶל אֶסְתֵּר אַל תְּדַמִּי בְנַפְשֵׁךְ לְהִמָּלֵט בֵּית הַמֶּלֶךְ מִכָּל הַיְּהוּדִים: כִּי אִם הַחֲרֵשׁ תַּחֲרִישִׁי בָּעֵת הַזֹּאת רֶוַח וְהַצָּלָה יַעֲמוֹד לַיְּהוּדִים מִמָּקוֹם אַחֵר וְאַתְּ וּבֵית אָבִיךְ תֹּאבֵדוּ וּמִי יוֹדֵעַ אִם לְעֵת כָּזֹאת הִגַּעַתְּ לַמַּלְכוּת: וַתֹּאמֶר אֶסְתֵּר לְהָשִׁיב אֶל מָרְדֳּכָי: לֵךְ כְּנוֹס אֶת כָּל הַיְּהוּדִים הַנִּמְצְאִים בְּשׁוּשָׁן וְצוּמוּ עָלַי וְאַל תֹּאכְלוּ וְאַל תִּשְׁתּוּ שְׁלֹשֶׁת יָמִים לַיְלָה וָיוֹם גַּם אֲנִי וְנַעֲרֹתַי אָצוּם כֵּן וּבְכֵן אָבוֹא אֶל הַמֶּלֶךְ אֲשֶׁר לֹא כַדָּת וְכַאֲשֶׁר אָבַדְתִּי אָבָדְתִּי: וַיַּעֲבֹר מָרְדֳּכָי וַיַּעַשׂ כְּכֹל אֲשֶׁר צִוְּתָה עָלָיו אֶסְתֵּר: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Purim/Megillah Reading:12": {
+   "parts": [
+    {
+     "text": "<b><small>(ה)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "</b> וַיְהִי בַּיּוֹם הַשְּׁלִישִׁי וַתִּלְבַּשׁ אֶסְתֵּר מַלְכוּת וַתַּעֲמֹד בַּחֲצַר בֵּית הַמֶּלֶךְ הַפְּנִימִית נֹכַח בֵּית הַמֶּלֶךְ וְהַמֶּלֶךְ יוֹשֵׁב עַל כִּסֵּא מַלְכוּתוֹ בְּבֵית הַמַּלְכוּת נֹכַח פֶּתַח הַבָּיִת: וַיְהִי כִרְאוֹת הַמֶּלֶךְ אֶת אֶסְתֵּר הַמַּלְכָּה עֹמֶדֶת בֶּחָצֵר נָשְׂאָה חֵן בְּעֵינָיו וַיּוֹשֶׁט הַמֶּלֶךְ לְאֶסְתֵּר אֶת שַׁרְבִיט הַזָּהָב אֲשֶׁר בְּיָדוֹ וַתִּקְרַב אֶסְתֵּר וַתִּגַּע בְּרֹאשׁ הַשַּׁרְבִיט: וַיֹּאמֶר לָהּ הַמֶּלֶךְ מַה לָּךְ אֶסְתֵּר הַמַּלְכָּה וּמַה בַּקָּשָׁתֵךְ עַד חֲצִי הַמַּלְכוּת וְיִנָּתֵן לָךְ: וַתֹּאמֶר אֶסְתֵּר אִם עַל הַמֶּלֶךְ טוֹב <b>יָ</b>בוֹא <b>הַ</b>מֶּלֶךְ <b>וְ</b>הָמָן <b>הַ</b>יּוֹם אֶל הַמִּשְׁתֶּה אֲשֶׁר עָשִׂיתִי לוֹ: וַיֹּאמֶר הַמֶּלֶךְ מַהֲרוּ אֶת הָמָן לַעֲשׂוֹת אֶת דְּבַר אֶסְתֵּר וַיָּבֹא הַמֶּלֶךְ וְהָמָן אֶל הַמִּשְׁתֶּה אֲשֶׁר עָשְׂתָה אֶסְתֵּר: וַיֹּאמֶר הַמֶּלֶךְ לְאֶסְתֵּר בְּמִשְׁתֵּה הַיַּיִן מַה שְּׁאֵלָתֵךְ וְיִנָּתֵן לָךְ וּמַה בַּקָּשָׁתֵךְ עַד חֲצִי הַמַּלְכוּת וְתֵעָשׂ: וַתַּעַן אֶסְתֵּר וַתֹּאמַר שְׁאֵלָתִי וּבַקָּשָׁתִי: אִם מָצָאתִי חֵן בְּעֵינֵי הַמֶּלֶךְ וְאִם עַל הַמֶּלֶךְ טוֹב לָתֵת אֶת שְׁאֵלָתִי וְלַעֲשׂוֹת אֶת בַּקָּשָׁתִי יָבוֹא הַמֶּלֶךְ וְהָמָן אֶל הַמִּשְׁתֶּה אֲשֶׁר אֶעֱשֶׂה לָהֶם וּמָחָר אֶעֱשֶׂה כִּדְבַר הַמֶּלֶךְ: וַיֵּצֵא הָמָן בַּיּוֹם הַהוּא שָׂמֵחַ וְטוֹב לֵב וְכִרְאוֹת הָמָן אֶת מָרְדֳּכַי בְּשַׁעַר הַמֶּלֶךְ וְלֹא קָם וְלֹא זָע מִמֶּנּוּ וַיִּמָּלֵא הָמָן עַל מָרְדֳּכַי חֵמָה: וַיִּתְאַפַּק הָמָן וַיָּבוֹא אֶל בֵּיתוֹ וַיִּשְׁלַח וַיָּבֵא אֶת אֹהֲבָיו וְאֶת זֶרֶשׁ אִשְׁתּוֹ: וַיְסַפֵּר לָהֶם הָמָן אֶת כְּבוֹד עָשְׁרוֹ וְרֹב בָּנָיו וְאֵת כָּל אֲשֶׁר גִּדְּלוֹ הַמֶּלֶךְ וְאֵת אֲשֶׁר נִשְּׂאוֹ עַל הַשָּׂרִים וְעַבְדֵי הַמֶּלֶךְ: וַיֹּאמֶר הָמָן אַף לֹא הֵבִיאָה אֶסְתֵּר הַמַּלְכָּה עִם הַמֶּלֶךְ אֶל הַמִּשְׁתֶּה אֲשֶׁר עָשָׂתָה כִּי אִם אוֹתִי וְגַם לְמָחָר אֲנִי קָרוּא לָהּ עִם הַמֶּלֶךְ: וְכָל זֶ<b>ה</b> אֵינֶנּ<b>וּ</b> שׁוֶֹ<b>ה</b> לִ<b>י</b> בְּכָל עֵת אֲשֶׁר אֲנִי רֹאֶה אֶת מָרְדֳּכַי הַיְּהוּדִי יוֹשֵׁב בְּשַׁעַר הַמֶּלֶךְ: וַתֹּאמֶר לוֹ זֶרֶשׁ אִשְׁתּוֹ וְכָל אֹהֲבָיו יַעֲשׂוּ עֵץ גָּבֹהַּ חֲמִשִּׁים אַמָּה וּבַבֹּקֶר אֱמֹר לַמֶּלֶךְ וְיִתְלוּ אֶת מָרְדֳּכַי עָלָיו וּבֹא עִם הַמֶּלֶךְ אֶל הַמִּשְׁתֶּה שָׂמֵחַ וַיִּיטַב הַדָּבָר לִפְנֵי הָמָן וַיַּעַשׂ הָעֵץ: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Purim/Megillah Reading:13": {
+   "parts": [
+    {
+     "text": "<b><small>(ו)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "</b> בַּלַּיְלָה הַהוּא נָדְדָה שְׁנַת הַמֶּלֶךְ וַיֹּאמֶר לְהָבִיא אֶת סֵפֶר הַזִּכְרֹנוֹת דִּבְרֵי הַיָּמִים וַיִּהְיוּ נִקְרָאִים לִפְנֵי הַמֶּלֶךְ: וַיִּמָּצֵא כָתוּב אֲשֶׁר הִגִּיד מָרְדֳּכַי עַל בִּגְתָנָא וָתֶרֶשׁ שְׁנֵי סָרִיסֵי הַמֶּלֶךְ מִשֹּׁמְרֵי הַסַּף אֲשֶׁר בִּקְשׁוּ לִשְׁלֹחַ יָד בַּמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ: וַיֹּאמֶר הַמֶּלֶךְ מַה נַּעֲשָׂה יְקָר וּגְדוּלָּה לְמָרְדֳּכַי עַל זֶה וַיֹּאמְרוּ נַעֲרֵי הַמֶּלֶךְ מְשָׁרְתָיו לֹא נַעֲשָׂה עִמּוֹ דָּבָר: וַיֹּאמֶר הַמֶּלֶךְ מִי בֶחָצֵר וְהָמָן בָּא לַחֲצַר בֵּית הַמֶּלֶךְ הַחִיצוֹנָה לֵאמֹר לַמֶּלֶךְ לִתְלוֹת אֶת מָרְדֳּכַי עַל הָעֵץ אֲשֶׁר הֵכִין לוֹ: וַיֹּאמְרוּ נַעֲרֵי הַמֶּלֶךְ אֵלָיו הִנֵּה הָמָן עֹמֵד בֶּחָצֵר וַיֹּאמֶר הַמֶּלֶךְ יָבוֹא: וַיָּבוֹא הָמָן וַיֹּאמֶר לוֹ הַמֶּלֶךְ מַה לַעֲשׂוֹת בָּאִישׁ אֲשֶׁר הַמֶּלֶךְ חָפֵץ בִּיקָרוֹ וַיֹּאמֶר הָמָן בְּלִבּוֹ לְמִי יַחְפֹּץ הַמֶּלֶךְ לַעֲשׂוֹת יְקָר יוֹתֵר מִמֶּנִּי: וַיֹּאמֶר הָמָן אֶל הַמֶּלֶךְ אִישׁ אֲשֶׁר הַמֶּלֶךְ חָפֵץ בִּיקָרוֹ: יָבִיאוּ לְבוּשׁ מַלְכוּת אֲשֶׁר לָבַשׁ בּוֹ הַמֶּלֶךְ וְסוּס אֲשֶׁר רָכַב עָלָיו הַמֶּלֶךְ וַאֲשֶׁר נִתַּן כֶּתֶר מַלְכוּת בְּרֹאשׁוֹ: וְנָתוֹן הַלְּבוּשׁ וְהַסּוּס עַל יַד אִישׁ מִשָּׂרֵי הַמֶּלֶךְ הַפַּרְתְּמִים וְהִלְבִּישׁוּ אֶת הָאִישׁ אֲשֶׁר הַמֶּלֶךְ חָפֵץ בִּיקָרוֹ וְהִרְכִּיבֻהוּ עַל הַסּוּס בִּרְחוֹב הָעִיר וְקָרְאוּ לְפָנָיו כָּכָה יֵעָשֶׂה לָאִישׁ אֲשֶׁר הַמֶּלֶךְ חָפֵץ בִּיקָרוֹ: וַיֹּאמֶר הַמֶּלֶךְ לְהָמָן מַהֵר קַח אֶת הַלְּבוּשׁ וְאֶת הַסּוּס כַּאֲשֶׁר דִּבַּרְתָּ וַעֲשֵׂה כֵן לְמָרְדֳּכַי הַיְּהוּדִי הַיּוֹשֵׁב בְּשַׁעַר הַמֶּלֶךְ אַל תַּפֵּל דָּבָר מִכֹּל אֲשֶׁר דִּבַּרְתָּ: וַיִּקַּח הָמָן אֶת הַלְּבוּשׁ וְאֶת הַסּוּס וַיַּלְבֵּשׁ אֶת מָרְדֳּכָי וַיַּרְכִּיבֵהוּ בִּרְחוֹב הָעִיר וַיִּקְרָא לְפָנָיו כָּכָה יֵעָשֶׂה לָאִישׁ אֲשֶׁר הַמֶּלֶךְ חָפֵץ בִּיקָרוֹ: וַיָּשָׁב מָרְדֳּכַי אֶל שַׁעַר הַמֶּלֶךְ וְהָמָן נִדְחַף אֶל בֵּיתוֹ אָבֵל וַחֲפוּי רֹאשׁ: וַיְסַפֵּר הָמָן לְזֶרֶשׁ אִשְׁתּוֹ וּלְכָל אֹהֲבָיו אֵת כָּל אֲשֶׁר קָרָהוּ וַיֹּאמְרוּ לוֹ חֲכָמָיו וְזֶרֶשׁ אִשְׁתּוֹ אִם מִזֶּרַע הַיְּהוּדִים מָרְדֳּכַי אֲשֶׁר הַחִלּוֹתָ לִנְפֹּל לְפָנָיו לֹא תוּכַל לוֹ כִּי נָפוֹל תִּפּוֹל לְפָנָיו: עוֹדָם מְדַבְּרִים עִמּוֹ וְסָרִיסֵי הַמֶּלֶךְ הִגִּיעוּ וַיַּבְהִלוּ לְהָבִיא אֶת הָמָן אֶל הַמִּשְׁתֶּה אֲשֶׁר עָשְׂתָה אֶסְתֵּר: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Purim/Megillah Reading:14": {
+   "parts": [
+    {
+     "text": "<b><small>(ז)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "</b> וַיָּבֹא הַמֶּלֶךְ וְהָמָן לִשְׁתּוֹת עִם אֶסְתֵּר הַמַּלְכָּה: וַיֹּאמֶר הַמֶּלֶךְ לְאֶסְתֵּר גַּם בַּיּוֹם הַשֵּׁנִי בְּמִשְׁתֵּה הַיַּיִן מַה שְּׁאֵלָתֵךְ אֶסְתֵּר הַמַּלְכָּה וְתִנָּתֵן לָךְ וּמַה בַּקָּשָׁתֵךְ עַד חֲצִי הַמַּלְכוּת וְתֵעָשׂ: וַתַּעַן אֶסְתֵּר הַמַּלְכָּה וַתֹּאמַר אִם מָצָאתִי חֵן בְּעֵינֶיךָ הַמֶּלֶךְ וְאִם עַל הַמֶּלֶךְ טוֹב תִּנָּתֶן לִי נַפְשִׁי בִּשְׁאֵלָתִי וְעַמִּי בְּבַקָּשָׁתִי: כִּי נִמְכַּרְנוּ אֲנִי וְעַמִּי לְהַשְׁמִיד לַהֲרוֹג וּלְאַבֵּד וְאִלּוּ לַעֲבָדִים וְלִשְׁפָחוֹת נִמְכַּרְנוּ הֶחֱרַשְׁתִּי כִּי אֵין הַצָּר שׁוֶֹה בְּנֵזֶק הַמֶּלֶךְ: וַיֹּאמֶר הַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ וַיֹּאמֶר לְאֶסְתֵּר הַמַּלְכָּה מִי הוּא זֶה וְאֵי זֶה הוּא אֲשֶׁר מְלָאוֹ לִבּוֹ לַעֲשׂוֹת כֵּן: וַתֹּאמֶר אֶסְתֵּר אִישׁ צַר וְאוֹיֵב הָמָן הָרָע הַזֶּה וְהָמָן נִבְעַת מִלִּפְנֵי הַמֶּלֶךְ וְהַמַּלְכָּה: וְהַמֶּלֶךְ קָם בַּחֲמָתוֹ מִמִּשְׁתֵּה הַיַּיִן אֶל גִּנַּת הַבִּיתָן וְהָמָן עָמַד לְבַקֵּשׁ עַל נַפְשׁוֹ מֵאֶסְתֵּר הַמַּלְכָּה כִּי רָאָה כִּ<b>י</b> כָלְתָ<b>ה</b> אֵלָי<b>ו</b> הָרָעָ<b>ה</b> מֵאֵת הַמֶּלֶךְ: וְהַמֶּלֶךְ שָׁב מִגִּנַּת הַבִּיתָן אֶל בֵּית מִשְׁתֵּה הַיַּיִן וְהָמָן נֹפֵל עַל הַמִּטָּה אֲשֶׁר אֶסְתֵּר עָלֶיהָ וַיֹּאמֶר הַמֶּלֶךְ הֲגַם לִכְבּוֹשׁ אֶת הַמַּלְכָּה עִמִּי בַּבָּיִת הַדָּבָר יָצָא מִפִּי הַמֶּלֶךְ וּפְנֵי הָמָן חָפוּ: וַיֹּאמֶר חַרְבוֹנָה אֶחָד מִן הַסָּרִיסִים לִפְנֵי הַמֶּלֶךְ גַּם הִנֵּה הָעֵץ אֲשֶׁר עָשָׂה הָמָן לְמָרְדֳּכַי אֲשֶׁר דִּבֶּר טוֹב עַל הַמֶּלֶךְ עֹמֵד בְּבֵית הָמָן גָּבֹהַּ חֲמִשִּׁים אַמָּה וַיֹּאמֶר הַמֶּלֶךְ תְּלֻהוּ עָלָיו: וַיִּתְלוּ אֶת הָמָן עַל הָעֵץ אֲשֶׁר הֵכִין לְמָרְדֳּכָי וַחֲמַת הַמֶּלֶךְ שָׁכָכָה: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Purim/Megillah Reading:15": {
+   "parts": [
+    {
+     "text": "<b><small>(ח)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "</b> בַּיּוֹם הַהוּא נָתַן הַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ לְאֶסְתֵּר הַמַּלְכָּה אֶת בֵּית הָמָן צֹרֵר ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(היהודיים)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " הַיְּהוּדִים וּמָרְדֳּכַי בָּא לִפְנֵי הַמֶּלֶךְ כִּי הִגִּידָה אֶסְתֵּר מַה הוּא לָהּ: וַיָּסַר הַמֶּלֶךְ אֶת טַבַּעְתּוֹ אֲשֶׁר הֶעֱבִיר מֵהָמָן וַיִּתְּנָהּ לְמָרְדֳּכָי וַתָּשֶׂם אֶסְתֵּר אֶת מָרְדֳּכַי עַל בֵּית הָמָן: וַתּוֹסֶף אֶסְתֵּר וַתְּדַבֵּר לִפְנֵי הַמֶּלֶךְ וַתִּפֹּל לִפְנֵי רַגְלָיו וַתֵּבְךְּ וַתִּתְחַנֶּן לוֹ לְהַעֲבִיר אֶת רָעַת הָמָן הָאֲגָגִי וְאֵת מַחֲשַׁבְתּוֹ אֲשֶׁר חָשַׁב עַל הַיְּהוּדִים: וַיּוֹשֶׁט הַמֶּלֶךְ לְאֶסְתֵּר אֵת שַׁרְבִט הַזָּהָב וַתָּקָם אֶסְתֵּר וַתַּעֲמֹד לִפְנֵי הַמֶּלֶךְ: וַתֹּאמֶר אִם עַל הַמֶּלֶךְ טוֹב וְאִם מָצָאתִי חֵן לְפָנָיו וְכָשֵׁר הַדָּבָר לִפְנֵי הַמֶּלֶךְ וְטוֹבָה אֲנִי בְּעֵינָיו יִכָּתֵב לְהָשִׁיב אֶת הַסְּפָרִים מַחֲשֶׁבֶת הָמָן בֶּן הַמְּדָתָא הָאֲגָגִי אֲשֶׁר כָּתַב לְאַבֵּד אֶת הַיְּהוּדִים אֲשֶׁר בְּכָל מְדִינוֹת הַמֶּלֶךְ: כִּי אֵיכָכָה אוּכַל וְרָאִיתִי בָּרָעָה אֲשֶׁר יִמְצָא אֶת עַמִּי וְאֵיכָכָה אוּכַל וְרָאִיתִי בְּאָבְדַן מוֹלַדְתִּי: וַיֹּאמֶר הַמֶּלֶךְ אֲחַשְׁוֵרֹשׁ לְאֶסְתֵּר הַמַּלְכָּה וּלְמָרְדֳּכַי הַיְּהוּדִי הִנֵּה בֵית הָמָן נָתַתִּי לְאֶסְתֵּר וְאֹתוֹ תָּלוּ עַל הָעֵץ עַל אֲשֶׁר שָׁלַח יָדוֹ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(ביהודיים)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " בַּיְּהוּדִים: וְאַתֶּם כִּתְבוּ עַל הַיְּהוּדִים כַּטּוֹב בְּעֵינֵיכֶם בְּשֵׁם הַמֶּלֶךְ וְחִתְמוּ בְּטַבַּעַת הַמֶּלֶךְ כִּי כְתָב אֲשֶׁר נִכְתָּב בְּשֵׁם הַמֶּלֶךְ וְנַחְתּוֹם בְּטַבַּעַת הַמֶּלֶךְ אֵין לְהָשִׁיב: וַיִּקָּרְאוּ סֹפְרֵי הַמֶּלֶךְ בָּעֵת הַהִיא בַּחֹדֶשׁ הַשְּׁלִישִׁי הוּא חֹדֶשׁ סִיוָן בִּשְׁלוֹשָׁה וְעֶשְׂרִים בּוֹ וַיִּכָּתֵב כְּכָל אֲשֶׁר צִוָּה מָרְדֳּכַי אֶל הַיְּהוּדִים וְאֶל הָאֲחַשְׁדַּרְפְּנִים וְהַפַּחוֹת וְשָׂרֵי הַמְּדִינוֹת אֲשֶׁר מֵהֹדּוּ וְעַד כּוּשׁ שֶׁבַע וְעֶשְׂרִים וּמֵאָה מְדִינָה מְדִינָה וּמְדִינָה כִּכְתָבָהּ וְעַם וָעָם כִּלְשֹׁנוֹ וְאֶל הַיְּהוּדִים כִּכְתָבָם וְכִלְשׁוֹנָם: וַיִּכְתֹּב בְּשֵׁם הַמֶּלֶךְ אֲחַשְׁוֵרֹשׁ וַיַּחְתֹּם בְּטַבַּעַת הַמֶּלֶךְ וַיִּשְׁלַח סְפָרִים בְּיַד הָרָצִים בַּסּוּסִים רֹכְבֵי הָרֶכֶשׁ הָאֲחַשְׁתְּרָנִים בְּנֵי הָרַמָּכִים: אֲשֶׁר נָתַן הַמֶּלֶךְ לַיְּהוּדִים אֲשֶׁר בְּכָל עִיר וָעִיר לְהִקָּהֵל וְלַעֲמֹד עַל נַפְשָׁם לְהַשְׁמִיד וְלַהֲרֹג וּלְאַבֵּד אֶת כָּל חֵיל עַם וּמְדִינָה הַצָּרִים אֹתָם טַף וְנָשִׁים וּשְׁלָלָם לָבוֹז: בְּיוֹם אֶחָד בְּכָל מְדִינוֹת הַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ בִּשְׁלוֹשָׁה עָשָׂר לְחֹדֶשׁ שְׁנֵים עָשָׂר הוּא חֹדֶשׁ אֲדָר: פַּתְשֶׁגֶן הַכְּתָב לְהִנָּתֵן דָּת בְּכָל מְדִינָה וּמְדִינָה גָּלוּי לְכָל הָעַמִּים וְלִהְיוֹת ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(היהודיים)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " הַיְּהוּדִים ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(עתודים)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " עֲתִידִים לַיּוֹם הַזֶּה לְהִנָּקֵם מֵאֹיְבֵיהֶם: הָרָצִים רֹכְבֵי הָרֶכֶשׁ הָאֲחַשְׁתְּרָנִים יָצְאוּ מְבֹהָלִים וּדְחוּפִים בִּדְבַר הַמֶּלֶךְ וְהַדָּת נִתְּנָה בְּשׁוּשַׁן הַבִּירָה: וּמָרְדֳּכַי יָצָא מִלִּפְנֵי הַמֶּלֶךְ בִּלְבוּשׁ מַלְכוּת תְּכֵלֶת וָחוּר וַעֲטֶרֶת זָהָב גְּדוֹלָה וְתַכְרִיךְ בּוּץ וְאַרְגָּמָן וְהָעִיר שׁוּשָׁן צָהֲלָה וְשָׂמֵחָה: לַיְּהוּדִים הָיְתָה אוֹרָה וְשִׂמְחָה וְשָׂשֹׂן וִיקָר: וּבְכָל מְדִינָה וּמְדִינָה וּבְכָל עִיר וָעִיר מְקוֹם אֲשֶׁר דְּבַר הַמֶּלֶךְ וְדָתוֹ מַגִּיעַ שִׂמְחָה וְשָׂשׂוֹן לַיְּהוּדִים מִשְׁתֶּה וְיוֹם טוֹב וְרַבִּים מֵעַמֵּי הָאָרֶץ מִתְיַהֲדִים כִּי נָפַל פַּחַד הַיְּהוּדִים עֲלֵיהֶם: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Purim/Megillah Reading:16": {
+   "parts": [
+    {
+     "text": "<b><small>(ט)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "</b> וּבִשְׁנֵים עָשָׂר חֹדֶשׁ הוּא חֹדֶשׁ אֲדָר בִּשְׁלוֹשָׁה עָשָׂר יוֹם בּוֹ אֲשֶׁר הִגִּיעַ דְּבַר הַמֶּלֶךְ וְדָתוֹ לְהֵעָשׂוֹת בַּיּוֹם אֲשֶׁר שִׂבְּרוּ אֹיְבֵי הַיְּהוּדִים לִשְׁלוֹט בָּהֶם וְנַהֲפוֹךְ הוּא אֲשֶׁר יִשְׁלְטוּ הַיְּהוּדִים הֵמָּה בְּשֹׂנְאֵיהֶם: נִקְהֲלוּ הַיְּהוּדִים בְּעָרֵיהֶם בְּכָל מְדִינוֹת הַמֶּלֶךְ אֳחַשְׁוֵרוֹשׁ לִשְׁלֹחַ יָד בִּמְבַקְשֵׁי רָעָתָם וְאִישׁ לֹא עָמַד לִפְנֵיהֶם ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(<b>בִּפְנֵיהֶם</b>)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " כִּי נָפַל פַּחְדָּם עַל כָּל הָעַמִּים: וְכָל שָׂרֵי הַמְּדִינוֹת וְהָאֲחַשְׁדַּרְפְּנִים וְהַפַּחוֹת וְעֹשֵׂי הַמְּלָאכָה אֲשֶׁר לַמֶּלֶךְ מְנַשְּׂאִים אֶת הַיְּהוּדִים כִּי נָפַל פַּחַד מָרְדֳּכַי עֲלֵיהֶם: כִּי גָדוֹל מָרְדֳּכַי בְּבֵית הַמֶּלֶךְ וְשָׁמְעוֹ הוֹלֵךְ בְּכָל הַמְּדִינוֹת כִּי הָאִישׁ מָרְדֳּכַי הוֹלֵךְ וְגָדוֹל: וַיַּכּוּ הַיְּהוּדִים בְּכָל אֹיְבֵיהֶם מַכַּת חֶרֶב וְהֶרֶג וְאַבְדָן וַיַּעֲשׂוּ בְשֹׂנְאֵיהֶם כִּרְצוֹנָם: וּבְשׁוּשַׁן הַבִּירָה הָרְגוּ הַיְּהוּדִים וְאַבֵּד חֲמֵשׁ מֵאוֹת אִישׁ: וְאֵת פַּרְשַׁנְדָּתָא וְאֵת דַּלְפוֹן וְאֵת אַסְפָּתָא: וְאֵת פּוֹרָתָא וְאֵת אֲדַלְיָא וְאֵת אֲרִידָתָא: וְאֵת פַּרְמַשְׁתָּא וְאֵת אֲרִיסַי וְאֵת אֲרִדַי וְאֵת וַיְזָתָא: עֲשֶׂרֶת בְּנֵי הָמָן בֶּן הַמְּדָתָא צֹרֵר הַיְּהוּדִים הָרָגוּ וּבַבִּזָּה לֹא שָׁלְחוּ אֶת יָדָם: בַּיּוֹם הַהוּא בָּא מִסְפַּר הַהֲרוּגִים בְּשׁוּשַׁן הַבִּירָה לִפְנֵי הַמֶּלֶךְ: וַיֹּאמֶר הַמֶּלֶךְ לְאֶסְתֵּר הַמַּלְכָּה בְּשׁוּשַׁן הַבִּירָה הָרְגוּ הַיְּהוּדִים וְאַבֵּד חֲמֵשׁ מֵאוֹת אִישׁ וְאֵת עֲשֶׂרֶת בְּנֵי הָמָן בִּשְׁאָר מְדִינוֹת הַמֶּלֶךְ מֶה עָשׂוּ וּמַה שְּׁאֵלָתֵךְ וְיִנָּתֵן לָךְ וּמַה בַּקָּשָׁתֵךְ עוֹד וְתֵעָשׂ: וַתֹּאמֶר אֶסְתֵּר אִם עַל הַמֶּלֶךְ טוֹב יִנָּתֵן גַּם מָחָר לַיְּהוּדִים אֲשֶׁר בְּשׁוּשָׁן לַעֲשׂוֹת כְּדָת הַיּוֹם וְאֵת עֲשֶׂרֶת בְּנֵי הָמָן יִתְלוּ עַל הָעֵץ: וַיֹּאמֶר הַמֶּלֶךְ לְהֵעָשׂוֹת כֵּן וַתִּנָּתֵן דָּת בְּשׁוּשָׁן וְאֵת עֲשֶׂרֶת בְּנֵי הָמָן תָּלוּ: וַיִּקָּהֲלוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(היהודיים)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " הַיְּהוּדִים אֲשֶׁר בְּשׁוּשָׁן גַּם בְּיוֹם אַרְבָּעָה עָשָׂר לְחֹדֶשׁ אֲדָר וַיַּהַרְגוּ בְשׁוּשָׁן שְׁלֹשׁ מֵאוֹת אִישׁ וּבַבִּזָּה לֹא שָׁלְחוּ אֶת יָדָם: וּשְׁאָר הַיְּהוּדִים אֲשֶׁר בִּמְדִינוֹת הַמֶּלֶךְ נִקְהֲלוּ וְעָמֹד עַל נַפְשָׁם וְנוֹחַ מֵאֹיְבֵיהֶם וְהָרֹג בְּשֹׂנְאֵיהֶם חֲמִשָּׁה וְשִׁבְעִים אָלֶף וּבַבִּזָּה לֹא שָׁלְחוּ אֶת יָדָם: בְּיוֹם שְׁלֹשָׁה עָשָׂר לְחֹדֶשׁ אֲדָר וְנוֹחַ בְּאַרְבָּעָה עָשָׂר בּוֹ וְעָשֹׂה אֹתוֹ יוֹם מִשְׁתֶּה וְשִׂמְחָה: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(והיהודיים)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְהַיְּהוּדִים אֲשֶׁר בְּשׁוּשָׁן נִקְהֲלוּ בִּשְׁלֹשָׁה עָשָׂר בּוֹ וּבְאַרְבָּעָה עָשָׂר בּוֹ וְנוֹחַ בַּחֲמִשָּׁה עָשָׂר בּוֹ וְעָשֹׂה אֹתוֹ יוֹם מִשְׁתֶּה וְשִׂמְחָה: עַל כֵּן הַיְּהוּדִים ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(הפרוזים)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " הַפְּרָזִים הַיֹּשְׁבִים בְּעָרֵי הַפְּרָזוֹת עֹשִׂים אֵת יוֹם אַרְבָּעָה עָשָׂר לְחֹדֶשׁ אֲדָר שִׂמְחָה וּמִשְׁתֶּה וְיוֹם טוֹב וּמִשְׁלוֹחַ מָנוֹת אִישׁ לְרֵעֵהוּ: וַיִּכְתֹּב מָרְדֳּכַי אֶת הַדְּבָרִים הָאֵלֶּה וַיִּשְׁלַח סְפָרִים אֶל כָּל הַיְּהוּדִים אֲשֶׁר בְּכָל מְדִינוֹת הַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ הַקְּרוֹבִים וְהָרְחוֹקִים: לְקַיֵּם עֲלֵיהֶם לִהְיוֹת עֹשִׂים אֵת יוֹם אַרְבָּעָה עָשָׂר לְחֹדֶשׁ אֲדָר וְאֵת יוֹם חֲמִשָּׁה עָשָׂר בּוֹ בְּכָל שָׁנָה וְשָׁנָה: כַּיָּמִים אֲשֶׁר נָחוּ בָהֶם הַיְּהוּדִים מֵאוֹיְבֵיהֶם וְהַחֹדֶשׁ אֲשֶׁר נֶהְפַּךְ לָהֶם מִיָּגוֹן לְשִׂמְחָה וּמֵאֵבֶל לְיוֹם טוֹב לַעֲשׂוֹת אוֹתָם יְמֵי מִשְׁתֶּה וְשִׂמְחָה וּמִשְׁלוֹחַ מָנוֹת אִישׁ לְרֵעֵהוּ וּמַתָּנוֹת לָאֶבְיוֹנִים: וְקִבֵּל הַיְּהוּדִים אֵת אֲשֶׁר הֵחֵלּוּ לַעֲשׂוֹת וְאֵת אֲשֶׁר כָּתַב מָרְדֳּכַי אֲלֵיהֶם: כִּי הָמָן בֶּן הַמְּדָתָא הָאֲגָגִי צֹרֵר כָּל הַיְּהוּדִים חָשַׁב עַל הַיְּהוּדִים לְאַבְּדָם וְהִפִּיל פּוּר הוּא הַגּוֹרָל לְהֻמָּם וּלְאַבְּדָם: וּבְבֹאָהּ לִפְנֵי הַמֶּלֶךְ אָמַר עִם הַסֵּפֶר יָשׁוּב מַחֲשַׁבְתּוֹ הָרָעָה אֲשֶׁר חָשַׁב עַל הַיְּהוּדִים עַל רֹאשׁוֹ וְתָלוּ אֹתוֹ וְאֶת בָּנָיו עַל הָעֵץ: עַל כֵּן קָרְאוּ לַיָּמִים הָאֵלֶּה פוּרִים עַל שֵׁם הַפּוּר עַל כֵּן עַל כָּל דִּבְרֵי הָאִגֶּרֶת הַזֹּאת וּמָה רָאוּ עַל כָּכָה וּמָה הִגִּיעַ אֲלֵיהֶם: קִיְּמוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(וקבל)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " וְקִבְּלוּ הַיְּהוּדִים עֲלֵיהֶם וְעַל זַרְעָם וְעַל כָּל הַנִּלְוִים עֲלֵיהֶם וְלֹא יַעֲבוֹר לִהְיוֹת עֹשִׂים אֵת שְׁנֵי הַיָּמִים הָאֵלֶּה כִּכְתָבָם וְכִזְמַנָּם בְּכָל שָׁנָה וְשָׁנָה: וְהַיָּמִים הָאֵלֶּה נִזְכָּרִים וְנַעֲשִׂים בְּכָל דּוֹר וָדוֹר מִשְׁפָּחָה וּמִשְׁפָּחָה מְדִינָה וּמְדִינָה וְעִיר וָעִיר וִימֵי הַפּוּרִים הָאֵלֶּה לֹא יַעַבְרוּ מִתּוֹךְ הַיְּהוּדִים וְזִכְרָם לֹא יָסוּף מִזַּרְעָם: וַתִּכְתֹּב אֶסְתֵּר הַמַּלְכָּה בַת אֲבִיחַיִל וּמָרְדֳּכַי הַיְּהוּדִי אֶת כָּל תֹּקֶף לְקַיֵּם אֵת אִגֶּרֶת הַפּוּרִים הַזֹּאת הַשֵּׁנִית: וַיִּשְׁלַח סְפָרִים אֶל כָּל הַיְּהוּדִים אֶל שֶׁבַע וְעֶשְׂרִים וּמֵאָה מְדִינָה מַלְכוּת אֲחַשְׁוֵרוֹשׁ דִּבְרֵי שָׁלוֹם וֶאֱמֶת: לְקַיֵּם אֵת יְמֵי הַפֻּרִים הָאֵלֶּה בִּזְמַנֵּיהֶם כַּאֲשֶׁר קִיַּם עֲלֵיהֶם מָרְדֳּכַי הַיְּהוּדִי וְאֶסְתֵּר הַמַּלְכָּה וְכַאֲשֶׁר קִיְּמוּ עַל נַפְשָׁם וְעַל זַרְעָם דִּבְרֵי הַצֹּמוֹת וְזַעֲקָתָם: וּמַאֲמַר אֶסְתֵּר קִיַּם דִּבְרֵי הַפֻּרִים הָאֵלֶּה וְנִכְתָּב בַּסֵּפֶר: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Purim/Megillah Reading:17": {
+   "parts": [
+    {
+     "text": "<b><small>(י)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "</b> וַיָּשֶׂם הַמֶּלֶךְ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>(אחשרש)</small>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    },
+    {
+     "text": " אֲחַשְׁוֵרוֹשׁ מַס עַל הָאָרֶץ וְאִיֵּי הַיָּם: וְכָל מַעֲשֵׂה תָקְפּוֹ וּגְבוּרָתוֹ וּפָרָשַׁת גְּדֻלַּת מָרְדֳּכַי אֲשֶׁר גִּדְּלוֹ הַמֶּלֶךְ הֲלוֹא הֵם כְּתוּבִים עַל סֵפֶר דִּבְרֵי הַיָּמִים לְמַלְכֵי מָדַי וּפָרָס: כִּי מָרְדֳּכַי הַיְּהוּדִי מִשְׁנֶה לַמֶּלֶךְ אֲחַשְׁוֵרוֹשׁ וְגָדוֹל לַיְּהוּדִים וְרָצוּי לְרֹב אֶחָיו דֹּרֵשׁ טוֹב לְעַמּוֹ וְדֹבֵר שָׁלוֹם לְכָל זַרְעוֹ: ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Purim/Megillah Reading:18": {
+   "kind": "instruction",
+   "en": "After reading the Megillah, it is rolled up, and then the blessing is recited:"
+  },
+  "he:Purim/Megillah Reading:19": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud"
+  },
+  "he:Purim/Megillah Reading:20": {
+   "kind": "instruction",
+   "en": "In the morning, one begins Shoshanat Yaakov:"
+  },
+  "he:Purim/Megillah Reading:21": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:22": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:23": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:24": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:25": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:26": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:27": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:28": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:29": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:30": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:31": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:32": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:33": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:34": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:35": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:36": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:37": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:38": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:39": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:40": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:41": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:42": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:43": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:44": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:45": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:46": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:47": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  },
+  "he:Purim/Megillah Reading:48": {
+   "kind": "prayer",
+   "role": "chazzan_then_congregation"
+  }
+ },
+ "en": {
+  "en:Purim/Krovetz L'Purim:55": {
+   "he": []
+  },
+  "en:Purim/Krovetz L'Purim:56": {
+   "he": []
+  }
+ },
+ "issues": [
+  {
+   "id": "en:Purim/Krovetz L'Purim:55",
+   "type": "alignment",
+   "detail": "English text 'We thank You for the miracles...' has no corresponding Hebrew segment in the selected range; likely belongs to a different section or is a standalone English introduction."
+  },
+  {
+   "id": "he:Purim/Krovetz L'Purim:62",
+   "type": "ambiguous",
+   "detail": "Parenthetical text (יחד) and (וכל טוב) in Birkat Kohanim: unclear if these are optional additions for specific customs or if they indicate a split between chazzan and congregation roles."
+  },
+  {
+   "id": "he:Fast Days/Yom Kippur Katan:49",
+   "type": "missing_text",
+   "detail": "Responsive piyyut lines (Chazzan/Congregation) are present in source but not selected; ensure they are included in the final tagged file if they are part of the standard text."
+  }
+ ]
+}

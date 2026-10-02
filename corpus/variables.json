@@ -1,0 +1,340 @@
+{
+ "dow": {
+  "doc": "Day of week, 0=Sunday … 6=Shabbat"
+ },
+ "hDay": {
+  "doc": "Day of Hebrew month"
+ },
+ "hMonth": {
+  "doc": "Hebrew month number (Nisan=1 … Adar II=13)"
+ },
+ "hYear": {
+  "doc": "Hebrew year"
+ },
+ "il": {
+  "doc": "Israel customs (vs diaspora)"
+ },
+ "diaspora": {
+  "doc": "Diaspora customs"
+ },
+ "shacharit": {
+  "doc": "Service is Shacharit"
+ },
+ "musaf": {
+  "doc": "Service is Musaf"
+ },
+ "mincha": {
+  "doc": "Service is Mincha"
+ },
+ "maariv": {
+  "doc": "Service is Maariv/Arvit"
+ },
+ "weekday": {
+  "doc": "Not Shabbat and not Yom Tov"
+ },
+ "shabbat": {
+  "doc": "Shabbat"
+ },
+ "erevShabbat": {
+  "doc": "Friday"
+ },
+ "motzaeiShabbat": {
+  "doc": "Saturday night (Maariv after Shabbat)"
+ },
+ "yomTov": {
+  "doc": "Yom Tov (including Rosh Hashana, Yom Kippur)"
+ },
+ "motzaeiYomTov": {
+  "doc": "Night after Yom Tov"
+ },
+ "cholHamoed": {
+  "doc": "Chol HaMoed (Pesach or Sukkot)"
+ },
+ "cholHamoedPesach": {
+  "doc": "Chol HaMoed Pesach"
+ },
+ "cholHamoedSukkot": {
+  "doc": "Chol HaMoed Sukkot (incl. Hoshana Raba)"
+ },
+ "roshChodesh": {
+  "doc": "Rosh Chodesh"
+ },
+ "roshChodeshDay": {
+  "doc": "Which day of a 2-day Rosh Chodesh (1 or 2)"
+ },
+ "erevRoshChodesh": {
+  "doc": "Day before Rosh Chodesh"
+ },
+ "roshHashana": {
+  "doc": "Rosh Hashana"
+ },
+ "yomKippur": {
+  "doc": "Yom Kippur"
+ },
+ "erevYomKippur": {
+  "doc": "Erev Yom Kippur"
+ },
+ "aseretYemeiTeshuva": {
+  "doc": "Rosh Hashana through Yom Kippur"
+ },
+ "shabbatShuva": {
+  "doc": "Shabbat between RH and YK"
+ },
+ "sukkot": {
+  "doc": "Sukkot (1st day through Hoshana Raba)"
+ },
+ "hoshanaRaba": {
+  "doc": "Hoshana Raba"
+ },
+ "shminiAtzeret": {
+  "doc": "Shmini Atzeret"
+ },
+ "simchatTorah": {
+  "doc": "Simchat Torah (Shmini Atzeret in Israel)"
+ },
+ "pesach": {
+  "doc": "Pesach (all days)"
+ },
+ "pesachFirstDays": {
+  "doc": "First day(s) of Pesach"
+ },
+ "pesachLastDays": {
+  "doc": "Last day(s) of Pesach"
+ },
+ "shavuot": {
+  "doc": "Shavuot"
+ },
+ "chanukah": {
+  "doc": "Chanukah"
+ },
+ "chanukahDay": {
+  "doc": "Day of Chanukah 1-8 (0 if not Chanukah)"
+ },
+ "purim": {
+  "doc": "Purim (14 Adar, or 15 in a walled city)"
+ },
+ "shushanPurim": {
+  "doc": "15 Adar"
+ },
+ "purimKatan": {
+  "doc": "Purim Katan (14/15 Adar I)"
+ },
+ "publicFast": {
+  "doc": "Public fast day (not Yom Kippur/Tisha B'Av)"
+ },
+ "fastDay": {
+  "doc": "Any fast day (incl. Tisha B'Av, not Yom Kippur)"
+ },
+ "tishaBav": {
+  "doc": "Tisha B'Av"
+ },
+ "tzomGedaliah": {
+  "doc": "Tzom Gedaliah"
+ },
+ "asaraBTevet": {
+  "doc": "Asara B'Tevet"
+ },
+ "taanitEsther": {
+  "doc": "Ta'anit Esther"
+ },
+ "tzomTammuz": {
+  "doc": "17 Tammuz"
+ },
+ "yomKippurKatan": {
+  "doc": "Yom Kippur Katan"
+ },
+ "behab": {
+  "doc": "Ta'anit BeHaB"
+ },
+ "threeWeeks": {
+  "doc": "Bein HaMetzarim"
+ },
+ "nineDays": {
+  "doc": "Rosh Chodesh Av – Tisha B'Av"
+ },
+ "elul": {
+  "doc": "Month of Elul"
+ },
+ "ledavid": {
+  "doc": "LeDavid (Psalm 27) season"
+ },
+ "mashivHaruach": {
+  "doc": "Say Mashiv HaRuach (winter)"
+ },
+ "moridHatal": {
+  "doc": "Say Morid HaTal (summer, Sefard/Israel)"
+ },
+ "talUmatar": {
+  "doc": "Say V'ten tal u'matar"
+ },
+ "omer": {
+  "doc": "During Sefirat HaOmer (day count > 0)"
+ },
+ "omerDay": {
+  "doc": "Omer day 1-49 for this Hebrew date (0 if none)"
+ },
+ "hallel": {
+  "doc": "Hallel said (half or whole)"
+ },
+ "wholeHallel": {
+  "doc": "Whole Hallel"
+ },
+ "halfHallel": {
+  "doc": "Half Hallel"
+ },
+ "tachanun": {
+  "doc": "Tachanun said at this service"
+ },
+ "tachanunShacharit": {
+  "doc": "Tachanun said at Shacharit"
+ },
+ "tachanunMincha": {
+  "doc": "Tachanun said at Mincha"
+ },
+ "monThu": {
+  "doc": "Monday or Thursday"
+ },
+ "torahReading": {
+  "doc": "Torah reading at this service"
+ },
+ "avinuMalkeinu": {
+  "doc": "Avinu Malkeinu said"
+ },
+ "tzidkatcha": {
+  "doc": "Tzidkatcha Tzedek said (Shabbat Mincha)"
+ },
+ "avHarachamim": {
+  "doc": "Av HaRachamim said"
+ },
+ "barchiNafshiShabbat": {
+  "doc": "Barchi Nafshi at Shabbat Mincha (winter)"
+ },
+ "pirkeiAvot": {
+  "doc": "Pirkei Avot at Shabbat Mincha (summer)"
+ },
+ "shabbatMevarchim": {
+  "doc": "Shabbat before Rosh Chodesh (not Tishrei)"
+ },
+ "yomHaatzmaut": {
+  "doc": "Yom HaAtzma'ut"
+ },
+ "yomYerushalayim": {
+  "doc": "Yom Yerushalayim"
+ },
+ "yomHazikaron": {
+  "doc": "Yom HaZikaron"
+ },
+ "isruChag": {
+  "doc": "Day after a Pilgrimage festival"
+ },
+ "kiddushLevana": {
+  "doc": "Within the Kiddush Levana window (by day)"
+ },
+ "eruvTavshilin": {
+  "doc": "Eruv Tavshilin needed today"
+ },
+ "yizkor": {
+  "doc": "Yizkor day"
+ },
+ "minyan": {
+  "doc": "Praying with a minyan"
+ },
+ "mourner": {
+  "doc": "User is a mourner"
+ },
+ "aveilut": {
+  "doc": "Sefira or Three Weeks mourning period"
+ },
+ "leapYear": {
+  "doc": "Hebrew leap year"
+ },
+ "shabbatShekalim": {
+  "doc": "Shabbat Shekalim",
+  "proposed": true
+ },
+ "shabbatZachor": {
+  "doc": "Shabbat Zachor",
+  "proposed": true
+ },
+ "shabbatParah": {
+  "doc": "Shabbat Parah",
+  "proposed": true
+ },
+ "shabbatHachodesh": {
+  "doc": "Shabbat HaChodesh",
+  "proposed": true
+ },
+ "shabbatHagadol": {
+  "doc": "Shabbat HaGadol",
+  "proposed": true
+ },
+ "shabbatChazon": {
+  "doc": "Shabbat Chazon",
+  "proposed": true
+ },
+ "shabbatNachamu": {
+  "doc": "Shabbat Nachamu",
+  "proposed": true
+ },
+ "erevPesach": {
+  "doc": "Erev Pesach"
+ },
+ "erevTishaBav": {
+  "doc": "Erev Tisha B'Av",
+  "proposed": true
+ },
+ "tuBishvat": {
+  "doc": "15 Shevat",
+  "proposed": true
+ },
+ "tuBav": {
+  "doc": "15 Av",
+  "proposed": true
+ },
+ "lagBaomer": {
+  "doc": "Lag BaOmer",
+  "proposed": true
+ },
+ "pesachSheni": {
+  "doc": "Pesach Sheni",
+  "proposed": true
+ },
+ "hoshanaDay": {
+  "doc": "Day of Sukkot for Hoshanot 1-7 (0 if none)"
+ },
+ "yomTovDay": {
+  "doc": "Which day of a Yom Tov (1 or 2)"
+ },
+ "firstDayRoshHashana": {
+  "doc": "First day of Rosh Hashana",
+  "proposed": true
+ },
+ "secondDayRoshHashana": {
+  "doc": "Second day of Rosh Hashana",
+  "proposed": true
+ },
+ "chazarah": {
+  "doc": "Inside the chazzan's repetition of the Amidah (vs the silent Amidah)",
+  "proposed": true
+ },
+ "kohanim": {
+  "doc": "Kohanim say Birkat Kohanim at this service (Israel daily; diaspora on Yom Tov)"
+ },
+ "birkatKohanimChazzan": {
+  "doc": "Chazzan says Elokeinu ve'Elokei avoteinu (no kohanim duchening, not a house of mourning, not Tisha B'Av)"
+ },
+ "houseOfMourning": {
+  "doc": "Davening in a shiva house"
+ },
+ "bris": {
+  "doc": "A bris is held at this minyan",
+  "proposed": true
+ },
+ "chatan": {
+  "doc": "A chatan is present (no Tachanun)",
+  "proposed": true
+ },
+ "noTefillinCholHamoed": {
+  "doc": "Custom of not wearing tefillin on Chol HaMoed"
+ }
+}

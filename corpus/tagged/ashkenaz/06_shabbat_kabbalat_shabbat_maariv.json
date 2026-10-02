@@ -1,0 +1,3398 @@
+{
+ "nusach": "ashkenaz",
+ "chunk": "Shabbat [Kabbalat Shabbat .. Maariv]",
+ "leaves": {
+  "Shabbat/Kabbalat Shabbat/Yedid Nefesh": {
+   "node": "x.kabbalat_shabbat.yedid_nefesh",
+   "service": "maariv",
+   "when": "x_saysYedidNefesh"
+  },
+  "Shabbat/Kabbalat Shabbat/Psalm 95": {
+   "node": "kabbalat_shabbat.psalms",
+   "service": "maariv"
+  },
+  "Shabbat/Kabbalat Shabbat/Psalm 96": {
+   "node": "kabbalat_shabbat.psalms",
+   "service": "maariv"
+  },
+  "Shabbat/Kabbalat Shabbat/Psalm 97": {
+   "node": "kabbalat_shabbat.psalms",
+   "service": "maariv"
+  },
+  "Shabbat/Kabbalat Shabbat/Psalm 98": {
+   "node": "kabbalat_shabbat.psalms",
+   "service": "maariv"
+  },
+  "Shabbat/Kabbalat Shabbat/Psalm 99": {
+   "node": "kabbalat_shabbat.psalms",
+   "service": "maariv"
+  },
+  "Shabbat/Kabbalat Shabbat/Psalm 29": {
+   "node": "kabbalat_shabbat.psalms",
+   "service": "maariv"
+  },
+  "Shabbat/Kabbalat Shabbat/Ana Bekoach": {
+   "node": "kabbalat_shabbat.ana_bekoach",
+   "service": "maariv",
+   "when": "x_saysAnaBekoach"
+  },
+  "Shabbat/Kabbalat Shabbat/Lekha Dodi": {
+   "node": "kabbalat_shabbat.lecha_dodi",
+   "service": "maariv"
+  },
+  "Shabbat/Kabbalat Shabbat/Psalm 92": {
+   "node": "kabbalat_shabbat.mizmor_shir",
+   "service": "maariv"
+  },
+  "Shabbat/Kabbalat Shabbat/Psalm 93": {
+   "node": "kabbalat_shabbat.hashem_malach",
+   "service": "maariv"
+  },
+  "Shabbat/Kabbalat Shabbat/Mourner's Kaddish": {
+   "node": "kaddish.mourners",
+   "service": "maariv"
+  },
+  "Shabbat/Kabbalat Shabbat/Bameh Madlikin": {
+   "node": "kabbalat_shabbat.bameh_madlikin",
+   "service": "maariv"
+  },
+  "Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan": {
+   "node": "kaddish.derabbanan",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Barchu": {
+   "node": "barchu",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Blessings of the Shema/First Blessing before Shema": {
+   "node": "shema.hamaariv_aravim",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Blessings of the Shema/Second Blessing before Shema": {
+   "node": "shema.ahavat_olam",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Blessings of the Shema/Shema": {
+   "node": "shema.shema",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Blessings of the Shema/First Blessing after Shema": {
+   "node": "shema.emet_veemuna",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Blessings of the Shema/Second Blessing after Shema": {
+   "node": "shema.hashkiveinu",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Veshamru": {
+   "node": "shema.veshamru",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Half Kaddish": {
+   "node": "kaddish.half",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Amidah/Patriarchs": {
+   "node": "amidah.avot",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Amidah/Divine Might": {
+   "node": "amidah.gevurot",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Amidah/Holines of God's Name": {
+   "node": "amidah.kedushat_hashem",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Amidah/Sanctity of the Day": {
+   "node": "amidah.shabbat.atta_kidashta",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Amidah/Temple Service": {
+   "node": "amidah.avoda",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Amidah/Thanksgiving": {
+   "node": "amidah.modim",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Amidah/Peace": {
+   "node": "amidah.shalom",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Amidah/Concluding Passage": {
+   "node": "amidah.elokai_netzor",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Vay'chulu": {
+   "node": "maariv.vayechulu",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Me'ein Sheva": {
+   "node": "maariv.magen_avot",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Kaddish Shalem": {
+   "node": "kaddish.shalem",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Sefirat HaOmer": {
+   "node": "sefirat_haomer",
+   "service": "maariv",
+   "when": "omer"
+  },
+  "Shabbat/Maariv/Aleinu": {
+   "node": "concl.aleinu",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Mourner's Kaddish": {
+   "node": "kaddish.mourners",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/LeDavid": {
+   "node": "concl.ledavid",
+   "service": "maariv",
+   "when": "ledavid"
+  },
+  "Shabbat/Maariv/Yigdal": {
+   "node": "concl.yigdal",
+   "service": "maariv"
+  },
+  "Shabbat/Maariv/Adon Olam": {
+   "node": "concl.adon_olam",
+   "service": "maariv"
+  }
+ },
+ "he": {
+  "he:Shabbat/Kabbalat Shabbat/Yedid Nefesh:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Yedid Nefesh:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Yedid Nefesh:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Yedid Nefesh:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Psalm 95:1": {
+   "kind": "instruction",
+   "when": "yomTov || cholHamoed",
+   "en": "When Yom Tov falls on Shabbat, and on Shabbat Chol HaMoed, begin with Mizmor LeDavid (Psalm 29), skipping Psalms 95-99.",
+   "node": "kabbalat_shabbat.psalms"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Psalm 95:2": {
+   "kind": "prayer",
+   "when": "!(yomTov || cholHamoed)"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Psalm 96:1": {
+   "kind": "prayer",
+   "when": "!(yomTov || cholHamoed)"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Psalm 97:1": {
+   "kind": "prayer",
+   "when": "!(yomTov || cholHamoed)"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Psalm 98:1": {
+   "kind": "prayer",
+   "when": "!(yomTov || cholHamoed)"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Psalm 99:1": {
+   "kind": "prayer",
+   "when": "!(yomTov || cholHamoed)"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Psalm 29:1": {
+   "kind": "prayer",
+   "gestures": [
+    "stand"
+   ]
+  },
+  "he:Shabbat/Kabbalat Shabbat/Ana Bekoach:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:1": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:2": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:3": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:4": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:5": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:6": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:7": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:8": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:9": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:10": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:11": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:12": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:13": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:14": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:15": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:16": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:17": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:18": {
+   "kind": "prayer",
+   "role": "responsive",
+   "gestures": [
+    "stand",
+    "turn_west"
+   ]
+  },
+  "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:19": {
+   "kind": "prayer",
+   "role": "responsive",
+   "gestures": [
+    "stand",
+    "turn_west"
+   ]
+  },
+  "he:Shabbat/Kabbalat Shabbat/Psalm 92:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Psalm 93:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Mourner's Kaddish:1": {
+   "parts": [
+    {
+     "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "(<b>אָמֵן</b>)",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>בְּרִיךְ הוּא</b>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " לְעֵֽלָּא מִן־כָּל־ ",
+     "alt": "kd_alt",
+     "when": "!aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "(<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "node": "kaddish.mourners",
+     "clean": "(בעשי\"ת"
+    },
+    {
+     "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)",
+     "alt": "kd_alt",
+     "when": "aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " עַל יִשְׂרָאֵל וְעַל רַבָּנָן וְעַל תַלְמִידֵיהוֹן וְעַל כָּל תַּלְמִידֵי תַלְמִידֵיהוֹן. וְעַל כָּל מָאן דְּעָסְ֒קִין בְּאוֹרַיְתָא. דִּי בְאַתְרָא הָדֵין וְדִי בְכָל אֲתַר וַאֲתַר. יְהֵא לְהוֹן וּלְכוֹן שְׁלָמָא רַבָּא חִנָּא וְחִסְדָּא וְרַחֲמִין וְחַיִּין אֲרִיכִין וּמְזוֹנָא רְוִיחֵי וּפוּרְקָנָא מִן קֳדָם אֲבוּהוֹן דְבִשְׁמַיָּא (וְאַרְעָא) וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " יְהֵא שְׁלָמָֽא רַבָּֽא מִן־שְׁמַיָּֽא וְחַיִּים עָלֵֽינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "עוֹשֶׂה שָׁלוֹם ",
+     "alt": "kd_alt",
+     "when": "!aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "(<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "node": "kaddish.mourners",
+     "clean": "(בעשי\"ת"
+    },
+    {
+     "text": " הַשָּׁלוֹם)",
+     "alt": "kd_alt",
+     "when": "aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    }
+   ]
+  },
+  "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:1": {
+   "parts": [
+    {
+     "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    },
+    {
+     "text": "(<b>אָמֵן</b>)",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    }
+   ]
+  },
+  "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:2": {
+   "parts": [
+    {
+     "text": "בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    }
+   ]
+  },
+  "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:3": {
+   "kind": "prayer",
+   "role": "congregation",
+   "minyan": true,
+   "node": "kaddish.derabbanan"
+  },
+  "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:4": {
+   "parts": [
+    {
+     "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    },
+    {
+     "text": "<b>בְּרִיךְ הוּא</b>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    }
+   ]
+  },
+  "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:5": {
+   "parts": [
+    {
+     "text": "לְעֵֽלָּא מִן־כָּל־ ",
+     "alt": "kd_alt",
+     "when": "!aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    },
+    {
+     "text": "(<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "node": "kaddish.derabbanan",
+     "clean": "(בעשי\"ת"
+    },
+    {
+     "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)",
+     "alt": "kd_alt",
+     "when": "aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    },
+    {
+     "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    }
+   ]
+  },
+  "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:6": {
+   "parts": [
+    {
+     "text": "עַל יִשְׂרָאֵל וְעַל רַבָּנָן וְעַל תַלְמִידֵיהוֹן וְעַל כָּל תַּלְמִידֵי תַלְמִידֵיהוֹן. וְעַל כָּל מָאן דְּעָסְ֒קִין בְּאוֹרַיְתָא. דִּי בְאַתְרָא הָדֵין וְדִי בְכָל אֲתַר וַאֲתַר. יְהֵא לְהוֹן וּלְכוֹן שְׁלָמָא רַבָּא חִנָּא וְחִסְדָּא וְרַחֲמִין וְחַיִּין אֲרִיכִין וּמְזוֹנָא רְוִיחֵי וּפוּרְקָנָא מִן קֳדָם אֲבוּהוֹן דְבִשְׁמַיָּא (וְאַרְעָא) וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    }
+   ]
+  },
+  "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:7": {
+   "parts": [
+    {
+     "text": "יְהֵא שְׁלָמָֽא רַבָּֽא מִן־שְׁמַיָּֽא וְחַיִּים עָלֵֽינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    }
+   ]
+  },
+  "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:8": {
+   "parts": [
+    {
+     "text": "עוֹשֶׂה ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    },
+    {
+     "text": "שָׁלוֹם ",
+     "alt": "kd_alt",
+     "when": "!aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    },
+    {
+     "text": "(<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "node": "kaddish.derabbanan",
+     "clean": "(בעשי\"ת"
+    },
+    {
+     "text": " הַשָּׁלוֹם)",
+     "alt": "kd_alt",
+     "when": "aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    },
+    {
+     "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.derabbanan"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Barchu:1": {
+   "parts": [
+    {
+     "text": "<small>חזן:</small>",
+     "kind": "speaker",
+     "role": "chazzan",
+     "en": "Chazzan:",
+     "clean": "חזן:"
+    },
+    {
+     "text": " <b>בָּרְ֒כוּ אֶת יְהֹוָה הַמְ֒בֹרָךְ:</b>",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "gestures": [
+      "bow"
+     ]
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Barchu:2": {
+   "parts": [
+    {
+     "text": "<small>קהל וחזן:</small>",
+     "kind": "speaker",
+     "role": "congregation_then_chazzan",
+     "en": "Congregation, then chazzan:",
+     "clean": "קהל וחזן:"
+    },
+    {
+     "text": " <b>בָּרוּךְ</b> יְהֹוָה הַמְ֒בֹרָךְ לְעוֹלָם וָעֶד:",
+     "kind": "prayer",
+     "role": "congregation_then_chazzan",
+     "minyan": true,
+     "gestures": [
+      "bow"
+     ]
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Blessings of the Shema/First Blessing before Shema:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Blessings of the Shema/Second Blessing before Shema:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Blessings of the Shema/Shema:1": {
+   "parts": [
+    {
+     "text": "<small>יחיד אומר</small>",
+     "kind": "instruction",
+     "when": "!minyan",
+     "en": "When praying without a minyan, say:",
+     "clean": "יחיד אומר"
+    },
+    {
+     "text": " אֵל מֶֽלֶךְ נֶאֱמָן:",
+     "kind": "prayer",
+     "when": "!minyan"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Blessings of the Shema/Shema:2": {
+   "kind": "prayer",
+   "gestures": [
+    "cover_eyes"
+   ]
+  },
+  "he:Shabbat/Maariv/Blessings of the Shema/Shema:3": {
+   "parts": [
+    {
+     "text": "<small>יש להפסיק מעט בין אחד לברוך כי עיקר קבול עול מלכות שמים היא פסוק ראשון. ויאמר בלחש:</small>",
+     "kind": "note",
+     "en": "There should be a slight pause between \"echad\" and \"Baruch\", since the main acceptance of the yoke of Heaven is the first verse. Say the next line quietly.",
+     "clean": "יש להפסיק מעט בין אחד לברוך כי עיקר קבול עול מלכות שמים היא פסוק ראשון. ויאמר בלחש:"
+    },
+    {
+     "text": "<br><small>בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד:</small>",
+     "kind": "prayer",
+     "voice": "undertone"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Blessings of the Shema/Shema:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Blessings of the Shema/Shema:5": {
+   "kind": "prayer",
+   "node": "shema.vehaya"
+  },
+  "he:Shabbat/Maariv/Blessings of the Shema/Shema:6": {
+   "parts": [
+    {
+     "text": "<b>וַֽיֹּאמֶר֯</b> יְהֹוָה◌֯ אֶ֯ל־משֶׁה לֵּאמֹר: דַּבֵּר֯ אֶ֯ל־בְּנֵי יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵהֶם וְעָשׂוּ לָהֶם צִיצִת עַל־כַּנְפֵי בִגְ֒דֵיהֶם לְדֹרֹתָם וְנָתְ֒נוּ עַל־צִיצִת הַכָּנָף֯ פְּ֯תִיל תְּכֵֽלֶת: וְהָיָה לָכֶם לְצִיצִת וּרְאִיתֶם֯ אֹ֯תוֹ וּזְכַרְתֶּם֯ אֶ֯ת־כָּל־מִצְוֹת֯ יְ֯הֹוָה וַעֲשִׂיתֶם֯ אֹ֯תָם וְלֹא תָתֽוּרוּ אַחֲרֵי לְבַבְכֶם וְאַחֲרֵי עֵינֵיכֶם אֲשֶׁר֯־אַ֯תֶּם זֹנִים֯ אַ֯חֲרֵיהֶם: לְמַֽעַן תִּזְכְּרוּ וַעֲשִׂיתֶם֯ אֶ֯ת־כָּל־מִצְוֹתָי וִהְיִיתֶם קְדשִׁים לֵאלֹהֵיכֶם: אֲנִי יְהֹוָה אֱלֹהֵיכֶם֯ אֲ֯שֶׁר הוֹצֵֽאתִי אֶתְ֒כֶם֯ מֵ֯אֶֽרֶץ מִצְרַֽיִם לִהְיוֹת לָכֶם לֵאלֹהִים֯ אֲ֯נִי יְהֹוָה אֱלֹהֵיכֶם֯:",
+     "kind": "prayer",
+     "node": "shema.vayomer"
+    },
+    {
+     "text": "<br><small>יש לצרף <b>אֱלֹהֵיכֶם</b> ל<b>אֱמֶת</b></small>",
+     "kind": "instruction",
+     "en": "Join \"Elokeichem\" to \"emet\".",
+     "node": "shema.vayomer",
+     "clean": "יש לצרף <b>אֱלֹהֵיכֶם</b> ל<b>אֱמֶת</b>"
+    },
+    {
+     "text": " אֱ֯מֶת",
+     "kind": "prayer",
+     "node": "shema.emet_veemuna"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Blessings of the Shema/Shema:7": {
+   "parts": [
+    {
+     "text": "<small>שליח ציבור:</small>",
+     "kind": "speaker",
+     "role": "chazzan",
+     "en": "Chazzan:",
+     "node": "shema.vayomer",
+     "clean": "שליח ציבור:"
+    },
+    {
+     "text": " יְהֹוָה אֱלֹהֵיכֶם֯ אֱ֯מֶת:",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "shema.vayomer"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Blessings of the Shema/First Blessing after Shema:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Blessings of the Shema/First Blessing after Shema:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Blessings of the Shema/First Blessing after Shema:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Blessings of the Shema/Second Blessing after Shema:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Veshamru:1": {
+   "parts": [
+    {
+     "text": "<small>לשבת:</small>",
+     "kind": "instruction",
+     "en": "On Shabbat:",
+     "when": "shabbat",
+     "clean": "לשבת:"
+    },
+    {
+     "text": " וְשָׁמְ֒רוּ בְנֵי־יִשְׂרָאֵל אֶת־הַשַּׁבָּת. לַעֲשׂוֹת אֶת־הַשַּׁבָּת לְדֹרֹתָם בְּרִית עוֹלָם: בֵּינִי וּבֵין בְּנֵי יִשְׂרָאֵל אוֹת הִיא לְעֹלָם. כִּי־שֵֽׁשֶׁת יָמִים עָשָׂה יְהֹוָה אֶת־הַשָּׁמַֽיִם וְאֶת־הָאָֽרֶץ וּבַיּוֹם הַשְּׁ֒בִיעִי שָׁבַת וַיִּנָּפַשׁ:",
+     "kind": "prayer",
+     "when": "shabbat"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Veshamru:2": {
+   "parts": [
+    {
+     "text": "<small>לשלש רגלים:</small>",
+     "kind": "instruction",
+     "en": "On the three festivals (Pesach, Shavuot, Sukkot):",
+     "when": "pesach || shavuot || sukkot || shminiAtzeret || simchatTorah",
+     "clean": "לשלש רגלים:"
+    },
+    {
+     "text": " וַיְדַבֵּר משֶׁה אֶת מוֹעֲדֵי יְהֹוָה אֶל בְּנֵי יִשְׂרָאֵל:",
+     "kind": "prayer",
+     "when": "pesach || shavuot || sukkot || shminiAtzeret || simchatTorah"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Half Kaddish:1": {
+   "parts": [
+    {
+     "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.half"
+    },
+    {
+     "text": "(<b>אָמֵן</b>)",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.half"
+    },
+    {
+     "text": " בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.half"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.half"
+    },
+    {
+     "text": " ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.half"
+    },
+    {
+     "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.half"
+    },
+    {
+     "text": " יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.half"
+    },
+    {
+     "text": "<b>בְּרִיךְ הוּא</b>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.half"
+    },
+    {
+     "text": " לְעֵֽלָּא מִן־כָּל־ ",
+     "alt": "kd_alt",
+     "when": "!aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.half"
+    },
+    {
+     "text": "(<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "node": "kaddish.half",
+     "clean": "(בעשי\"ת"
+    },
+    {
+     "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)",
+     "alt": "kd_alt",
+     "when": "aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.half"
+    },
+    {
+     "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.half"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.half"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Amidah/Patriarchs:1": {
+   "kind": "prayer",
+   "node": "amidah.opening",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Patriarchs:2": {
+   "kind": "prayer",
+   "gestures": [
+    "bow"
+   ],
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Patriarchs:3": {
+   "parts": [
+    {
+     "text": "<small>בעשי\"ת:</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשי\"ת:"
+    },
+    {
+     "text": " זָכְרֵֽנוּ לְחַיִּים מֶֽלֶךְ חָפֵץ בַּחַיִּים וְכָתְבֵֽנוּ בְּסֵֽפֶר הַחַיִּים לְמַעַנְךָ אֱלֹהִים חַיִּים:",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Amidah/Patriarchs:4": {
+   "parts": [
+    {
+     "text": "מֶֽלֶךְ עוֹזֵר וּמוֹשִֽׁיעַ וּמָגֵן: ",
+     "kind": "prayer",
+     "voice": "silent"
+    },
+    {
+     "text": "בָּרוּךְ אַתָּה יְהֹוָה מָגֵן אַבְרָהָם:",
+     "kind": "prayer",
+     "gestures": [
+      "bow"
+     ],
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Amidah/Divine Might:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Divine Might:2": {
+   "parts": [
+    {
+     "text": "<small>בחורף:</small>",
+     "kind": "instruction",
+     "when": "mashivHaruach",
+     "en": "In winter:",
+     "clean": "בחורף:"
+    },
+    {
+     "text": " מַשִּׁיב הָרֽוּחַ וּמוֹרִיד הַגֶּֽשֶׁם: ",
+     "kind": "prayer",
+     "when": "mashivHaruach",
+     "alt": "geshem",
+     "voice": "silent"
+    },
+    {
+     "text": "<small>בקיץ:</small>",
+     "kind": "instruction",
+     "when": "moridHatal",
+     "en": "In summer:",
+     "clean": "בקיץ:"
+    },
+    {
+     "text": " מוֹרִיד הַטָּל",
+     "kind": "prayer",
+     "when": "moridHatal",
+     "alt": "geshem",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Amidah/Divine Might:3": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Divine Might:4": {
+   "parts": [
+    {
+     "text": "<small>בעשי\"ת:</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשי\"ת:"
+    },
+    {
+     "text": " מִי כָמֽוֹךָ אַב הָרַחֲמִים זוֹכֵר יְצוּרָיו לְחַיִּים בְּרַחֲמִים:",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Amidah/Divine Might:5": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Holines of God's Name:1": {
+   "parts": [
+    {
+     "text": "<b>אַתָּה קָדוֹשׁ</b> וְשִׁמְךָ קָדוֹשׁ וּקְדוֹשִׁים בְּכָל־יוֹם יְהַלְלֽוּךָ סֶּֽלָה. ",
+     "kind": "prayer",
+     "voice": "silent"
+    },
+    {
+     "text": "בָּרוּךְ אַתָּה יְהֹוָה הָאֵל הַקָּדוֹשׁ: ",
+     "kind": "prayer",
+     "when": "!aseretYemeiTeshuva",
+     "alt": "kedusha_chatima",
+     "voice": "silent"
+    },
+    {
+     "text": "<small>בעשי\"ת מסיים:</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance, conclude:",
+     "clean": "בעשי\"ת מסיים:"
+    },
+    {
+     "text": " בָּרוּךְ אַתָּה יְהֹוָה הַמֶּֽלֶךְ הַקָּדוֹשׁ:",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "alt": "kedusha_chatima",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Amidah/Sanctity of the Day:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Sanctity of the Day:2": {
+   "kind": "prayer",
+   "node": "amidah.shabbat.vayechulu",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Sanctity of the Day:3": {
+   "kind": "prayer",
+   "node": "amidah.shabbat.retzei_vimnuchateinu",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Temple Service:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Temple Service:2": {
+   "parts": [
+    {
+     "text": "<small>בראש חדש ובחול המועד אומרים זה:</small>",
+     "kind": "instruction",
+     "en": "On Rosh Chodesh and Chol HaMoed, say this:",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo",
+     "clean": "בראש חדש ובחול המועד אומרים זה:"
+    },
+    {
+     "text": "<br><b>אֱלֹהֵֽינוּ</b> וֵאלֹהֵי אֲבוֹתֵֽינוּ. יַעֲלֶה וְיָבֹא וְיַגִּֽיעַ וְיֵרָאֶה וְיֵרָצֶה וְיִשָּׁמַע וְיִפָּקֵד וְיִזָּכֵר זִכְרוֹנֵֽנוּ וּפִקְדוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ. וְזִכְרוֹן מָשִֽׁיחַ בֶּן דָּוִד עַבְדֶּֽךָ. וְזִכְרוֹן יְרוּשָׁלַֽיִם עִיר קָדְשֶֽׁךָ. וְזִכְרוֹן כָּל עַמְּ֒ךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ. לִפְלֵיטָה לְטוֹבָה לְחֵן וּלְחֶֽסֶד וּלְרַחֲמִים לְחַיִּים וּלְשָׁלוֹם. בְּיוֹם ",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo",
+     "voice": "silent"
+    },
+    {
+     "text": "<small>לר\"ח:</small>",
+     "kind": "instruction",
+     "en": "On Rosh Chodesh:",
+     "when": "roshChodesh",
+     "node": "amidah.yaaleh_veyavo",
+     "clean": "לר\"ח:"
+    },
+    {
+     "text": " רֹאשׁ הַחֹֽדֶשׁ הַזֶּה: ",
+     "kind": "prayer",
+     "when": "roshChodesh",
+     "alt": "yaaleh_day",
+     "node": "amidah.yaaleh_veyavo",
+     "voice": "silent"
+    },
+    {
+     "text": "<small>לפסח:</small>",
+     "kind": "instruction",
+     "en": "On Pesach:",
+     "when": "cholHamoedPesach",
+     "node": "amidah.yaaleh_veyavo",
+     "clean": "לפסח:"
+    },
+    {
+     "text": " חַג הַמַּצּוֹת הַזֶּה: ",
+     "kind": "prayer",
+     "when": "cholHamoedPesach",
+     "alt": "yaaleh_day",
+     "node": "amidah.yaaleh_veyavo",
+     "voice": "silent"
+    },
+    {
+     "text": "<small>לסכות:</small>",
+     "kind": "instruction",
+     "en": "On Sukkot:",
+     "when": "cholHamoedSukkot",
+     "node": "amidah.yaaleh_veyavo",
+     "clean": "לסכות:"
+    },
+    {
+     "text": " חַג הַסֻּכּוֹת הַזֶּה:",
+     "kind": "prayer",
+     "when": "cholHamoedSukkot",
+     "alt": "yaaleh_day",
+     "node": "amidah.yaaleh_veyavo",
+     "voice": "silent"
+    },
+    {
+     "text": " זָכְרֵֽנוּ יְהֹוָה אֱלֹהֵֽינוּ בּוֹ לְטוֹבָה. וּפָקְדֵֽנוּ בוֹ לִבְרָכָה. וְהוֹשִׁיעֵֽנוּ בוֹ לְחַיִּים. וּבִדְבַר יְשׁוּעָה וְרַחֲמִים חוּס וְחָנֵּֽנוּ וְרַחֵם עָלֵֽינוּ וְהוֹשִׁיעֵֽנוּ. כִּי אֵלֶֽיךָ עֵינֵֽינוּ כִּי אֵל מֶֽלֶךְ חַנּוּן וְרַחוּם אָֽתָּה:",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed",
+     "node": "amidah.yaaleh_veyavo",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Amidah/Temple Service:3": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Thanksgiving:1": {
+   "kind": "prayer",
+   "gestures": [
+    "bow_full"
+   ],
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Thanksgiving:2": {
+   "parts": [
+    {
+     "text": "<small>בחנוכה ופורים אומרים כאן ועל הנסים",
+     "kind": "instruction",
+     "en": "On Chanukah and Purim, say here \"Al HaNissim\".",
+     "when": "chanukah || purim",
+     "node": "amidah.al_hanissim",
+     "clean": "בחנוכה ופורים אומרים כאן ועל הנסים"
+    },
+    {
+     "text": "<br><b>עַל הַנִּסִּים</b> וְעַל הַפֻּרְקָן וְעַל הַגְּ֒בוּרוֹת וְעַל הַתְּ֒שׁוּעוֹת וְעַל הַמִּלְחָמוֹת שֶׁעָשִֽׂיתָ לַאֲבוֹתֵֽינוּ בַּיָּמִים הָהֵם בִּזְּ֒מַן הַזֶּה:</small>",
+     "kind": "prayer",
+     "when": "chanukah || purim",
+     "node": "amidah.al_hanissim",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Amidah/Thanksgiving:3": {
+   "parts": [
+    {
+     "text": "<small>בחנוכה:</small>",
+     "kind": "instruction",
+     "en": "On Chanukah:",
+     "when": "chanukah",
+     "node": "amidah.al_hanissim",
+     "clean": "בחנוכה:"
+    },
+    {
+     "text": " <b>בִּימֵי מַתִּתְיָֽהוּ</b> בֶּן יוֹחָנָן כֹּהֵן גָּדוֹל חַשְׁמוֹנָאִי וּבָנָיו כְּשֶׁעָמְ֒דָה מַלְכוּת יָוָן הָרְ֒שָׁעָה עַל־עַמְּ֒ךָ יִשְׂרָאֵל לְהַשְׁכִּיחָם תּוֹרָתֶֽךָ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנֶֽךָ, וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים עָמַֽדְתָּ לָהֶם בְּעֵת צָרָתָם רַֽבְתָּ אֶת־רִיבָם דַּֽנְתָּ אֶת־דִּינָם נָקַֽמְתָּ אֶת־נִקְמָתָם מָסַֽרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים וְרַבִּים בְּיַד מְעַטִּים וּטְמֵאִים בְּיַד טְהוֹרִים וּרְשָׁעִים בְּיַד צַדִּיקִים וְזֵדִים בְּיַד עוֹסְ֒קֵי תוֹרָתֶֽךָ וּלְךָ עָשִֽׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמֶֽךָ וּלְעַמְּ֒ךָ יִשְׂרָאֵל עָשִֽׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה וְאַחַר־כֵּן בָּֽאוּ בָנֶֽיךָ לִדְבִיר בֵּיתֶֽךָ וּפִנּוּ אֶת־הֵיכָלֶֽךָ וְטִהֲרוּ אֶת־מִקְדָּשֶֽׁךָ וְהִדְלִֽיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶֽׁךָ וְקָבְ֒עוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵֽלּוּ לְהוֹדוֹת וּלְהַלֵּל לְשִׁמְךָ הַגָּדוֹל:",
+     "kind": "prayer",
+     "when": "chanukah",
+     "alt": "nes",
+     "node": "amidah.al_hanissim",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Amidah/Thanksgiving:4": {
+   "parts": [
+    {
+     "text": "<small>בפורים:</small>",
+     "kind": "instruction",
+     "en": "On Purim:",
+     "when": "purim",
+     "node": "amidah.al_hanissim",
+     "clean": "בפורים:"
+    },
+    {
+     "text": " <b>בִּימֵי מָרְדְּ֒כַי וְאֶסְתֵּר</b> בְּשׁוּשַׁן הַבִּירָה כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע בִּקֵּשׁ לְהַשְׁמִיד לַהֲרוֹג וּלְאַבֵּד אֶת־כָּל־הַיְּהוּדִים מִנַּֽעַר וְעַד־זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד בִּשְׁלוֹשָׁה עָשָׂר לְחֹֽדֶשׁ שְׁנֵים־עָשָׂר הוּא־חֹֽדֶשׁ אֲדָר וּשְׁלָלָם לָבוֹז: וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים הֵפַֽרְתָּ אֶת־עֲצָתוֹ וְקִלְקַֽלְתָּ אֶת־מַחֲשַׁבְתּוֹ וַהֲשֵׁבֽוֹתָ לּוֹ גְּמוּלוֹ בְּרֹאשׁוֹ וְתָלוּ אוֹתוֹ וְאֶת־בָּנָיו עַל־הָעֵץ ",
+     "kind": "prayer",
+     "when": "purim",
+     "alt": "nes",
+     "node": "amidah.al_hanissim",
+     "voice": "silent"
+    },
+    {
+     "text": "(וְעָשִׂיתָ עמָּהֶם נֵס וָפֶלֶא וְנוֹדֶה לְשִׁמְךָ הָגָּדוֹל סֶלָה):",
+     "kind": "prayer",
+     "when": "purim && x_saysNesVafele",
+     "node": "amidah.al_hanissim",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Amidah/Thanksgiving:5": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Thanksgiving:6": {
+   "parts": [
+    {
+     "text": "<small>בעשי\"ת:</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "clean": "בעשי\"ת:"
+    },
+    {
+     "text": " וּכְתוֹב לְחַיִּים טוֹבִים כָּל בְּנֵי בְרִיתֶֽךָ:",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Amidah/Thanksgiving:7": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Peace:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Peace:2": {
+   "parts": [
+    {
+     "text": "<small>בעשי\"ת:</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance continue here:",
+     "clean": "בעשי\"ת:"
+    },
+    {
+     "text": " בְּסֵֽפֶר חַיִּים בְּרָכָה וְשָׁלוֹם וּפַרְנָסָה טוֹבָה נִזָּכֵר וְנִכָּתֵב לְפָנֶֽיךָ אֲנַֽחְנוּ וְכָל עַמְּךָ בֵּית יִשְׂרָאֵל לְחַיִּים טוֹבִים וּלְשָׁלוֹם: ",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "voice": "silent"
+    },
+    {
+     "text": "(בָּרוּךְ אַתָּה יְהֹוָה עֹשֶׂה הַשָּׁלוֹם:)",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva",
+     "alt": "shalom_chatima",
+     "gestures": [
+      "bow"
+     ],
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Amidah/Peace:3": {
+   "kind": "prayer",
+   "when": "!aseretYemeiTeshuva",
+   "alt": "shalom_chatima",
+   "gestures": [
+    "bow"
+   ],
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Concluding Passage:1": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Concluding Passage:2": {
+   "kind": "prayer",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Amidah/Concluding Passage:3": {
+   "parts": [
+    {
+     "text": "עֹשֶׂה ",
+     "kind": "prayer",
+     "node": "amidah.oseh_shalom",
+     "gestures": [
+      "bow_left_right_center"
+     ],
+     "voice": "silent"
+    },
+    {
+     "text": "(<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "node": "amidah.oseh_shalom",
+     "clean": "(בעשי\"ת"
+    },
+    {
+     "text": " הַשָּׁלוֹם)",
+     "alt": "oseh_shalom",
+     "when": "aseretYemeiTeshuva",
+     "kind": "prayer",
+     "node": "amidah.oseh_shalom",
+     "gestures": [
+      "bow_left_right_center"
+     ],
+     "voice": "silent"
+    },
+    {
+     "text": " שָׁלוֹם",
+     "alt": "oseh_shalom",
+     "when": "!aseretYemeiTeshuva",
+     "kind": "prayer",
+     "node": "amidah.oseh_shalom",
+     "gestures": [
+      "bow_left_right_center"
+     ],
+     "voice": "silent"
+    },
+    {
+     "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן:",
+     "kind": "prayer",
+     "node": "amidah.oseh_shalom",
+     "gestures": [
+      "bow_left_right_center"
+     ],
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Amidah/Concluding Passage:4": {
+   "kind": "prayer",
+   "node": "amidah.yehi_ratzon_mikdash",
+   "voice": "silent"
+  },
+  "he:Shabbat/Maariv/Vay'chulu:1": {
+   "kind": "speaker",
+   "role": "together",
+   "en": "The chazzan and the congregation say Vayechulu."
+  },
+  "he:Shabbat/Maariv/Vay'chulu:2": {
+   "kind": "prayer",
+   "role": "together",
+   "gestures": [
+    "stand"
+   ]
+  },
+  "he:Shabbat/Maariv/Me'ein Sheva:1": {
+   "kind": "note",
+   "en": "The chazzan does not repeat the Amidah itself, but repeats Me'ein Sheva (an abridged Amidah) because of Yom Tov that falls on Shabbat, when Vayechulu cannot be said, and also to fulfil the obligation of one who is not proficient. It must be said as in the Amidah, standing, as testimony."
+  },
+  "he:Shabbat/Maariv/Me'ein Sheva:2": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/Maariv/Me'ein Sheva:3": {
+   "kind": "note",
+   "en": "The congregation says Me'ein Sheva without the opening and closing blessings; an individual says it too."
+  },
+  "he:Shabbat/Maariv/Me'ein Sheva:4": {
+   "parts": [
+    {
+     "text": "מָגֵן אָבוֹת בִּדְבָרוֹ. מְחַיֵּה מֵתִים בְּמַאֲמָרוֹ. ",
+     "kind": "prayer",
+     "role": "together",
+     "minyan": true
+    },
+    {
+     "text": "הָאֵל הַקָּדוֹשׁ ",
+     "kind": "prayer",
+     "role": "together",
+     "minyan": true,
+     "when": "!aseretYemeiTeshuva",
+     "alt": "mein_kadosh"
+    },
+    {
+     "text": "<small>(הַמֶּלֶךְ הַקָּדוֹשׁ)</small>",
+     "kind": "prayer",
+     "role": "together",
+     "minyan": true,
+     "when": "aseretYemeiTeshuva",
+     "alt": "mein_kadosh"
+    },
+    {
+     "text": " שֶׁאֵין כָּמֽוֹהוּ. הַמֵּנִֽיחַ לְעַמּוֹ בְּיוֹם שַׁבַּת קָדְשׁוֹ. כִּי בָם רָצָה לְהָנִֽיחַ לָהֶם. לְפָנָיו נַעֲבוֹד בְּיִרְאָה וָפַֽחַד. וְנוֹדֶה לִשְׁמוֹ בְּכָל יוֹם תָּמִיד מֵעֵין הַבְּ֒רָכוֹת: אֵל הַהוֹדָאוֹת. אֲדוֹן הַשָּׁלוֹם. מְקַדֵּשׁ הַשַּׁבָּת וּמְבָרֵךְ שְׁבִיעִי. וּמֵנִֽיחַ בִּקְדֻשָּׁה לְעַם מְדֻשְּׁ֒נֵי עֹֽנֶג זֵֽכֶר לְמַעֲשֵׂה בְרֵאשִׁית:",
+     "kind": "prayer",
+     "role": "together",
+     "minyan": true
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Me'ein Sheva:5": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "voice": "aloud",
+   "minyan": true
+  },
+  "he:Shabbat/Maariv/Kaddish Shalem:1": {
+   "parts": [
+    {
+     "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    },
+    {
+     "text": "(<b>אָמֵן</b>)",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Kaddish Shalem:2": {
+   "parts": [
+    {
+     "text": "בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Kaddish Shalem:3": {
+   "kind": "prayer",
+   "role": "congregation",
+   "minyan": true,
+   "node": "kaddish.shalem"
+  },
+  "he:Shabbat/Maariv/Kaddish Shalem:4": {
+   "parts": [
+    {
+     "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    },
+    {
+     "text": "<b>בְּרִיךְ הוּא</b>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Kaddish Shalem:5": {
+   "parts": [
+    {
+     "text": "לְעֵֽלָּא מִן־כָּל־ ",
+     "alt": "kd_alt",
+     "when": "!aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    },
+    {
+     "text": "(<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "node": "kaddish.shalem",
+     "clean": "(בעשי\"ת"
+    },
+    {
+     "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)",
+     "alt": "kd_alt",
+     "when": "aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    },
+    {
+     "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Kaddish Shalem:6": {
+   "parts": [
+    {
+     "text": "תִּתְקַבֵּל צְלוֹתְ֒הוֹן וּבָעוּתְ֒הוֹן דְּכָל בֵּית יִשְׂרָאֵל קֳדָם אֲבוּהוֹן דִּי בִשְׁ֒מַיָּא וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    },
+    {
+     "text": "אָמֵן:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Kaddish Shalem:7": {
+   "parts": [
+    {
+     "text": "יְהֵא שְׁלָמָֽא רַבָּֽא מִן־שְׁמַיָּֽא וְחַיִּים עָלֵֽינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Kaddish Shalem:8": {
+   "parts": [
+    {
+     "text": "עוֹשֶׂה ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    },
+    {
+     "text": "שָׁלוֹם ",
+     "alt": "kd_alt",
+     "when": "!aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    },
+    {
+     "text": "(<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "node": "kaddish.shalem",
+     "clean": "(בעשי\"ת"
+    },
+    {
+     "text": " הַשָּׁלוֹם)",
+     "alt": "kd_alt",
+     "when": "aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    },
+    {
+     "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.shalem"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Sefirat HaOmer:1": {
+   "kind": "note",
+   "clean": "ערבית אחר התפלה מתחילין לספור העומר שזמנו מתחלת ליל ט\"ז בניסן ומונה והולך מ\"ט יום. שכח לספור בתחלת הלילה הולך וסופר כל הלילה. ומצוה על כל אחד ואחד לספור לעצמו. וצריך לספור מעומד ולברך תחלה. וסופר הימים והשבועות כיצד ביום הראשון עומד ומברך על ספירת העומר היום יום אחד עד שמגיע לשבעה ימים ואז יאמר היום שבעה ימים שהם שבוע אחד וביום שמונה יאמר היום שמונה ימים שהם שבוע אחד ויום אחד עד שיגיע לי\"ד יאמר היום ארבעה עשר ימים שהם ב' שבועות וכן לעולם.. ועתה בעונותינו שנתבטלה הבאת העומר אין הספירה מן התורה אלא מדרבנן זכר למקדש. ואם נסתפק לו אם מנה או לא מנה חוזר ומונה בלא ברכה..",
+   "cite": "טור או\"ח תפ\"ט; אבודרהם",
+   "en": "At Maariv, after the Amidah, we begin counting the Omer, starting the night of 16 Nisan and counting 49 days. If one forgot at the start of the night, he counts for the rest of the night. Each person must count for himself, standing, after the blessing. Days and weeks are counted together (e.g. \"today is fourteen days, which is two weeks\"). Today, with no Omer offering, the count is rabbinic, in memory of the Temple. If one is unsure whether he counted, he counts again without a blessing."
+  },
+  "he:Shabbat/Maariv/Sefirat HaOmer:2": {
+   "kind": "prayer",
+   "gestures": [
+    "stand"
+   ]
+  },
+  "he:Shabbat/Maariv/Sefirat HaOmer:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Sefirat HaOmer:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Sefirat HaOmer:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Sefirat HaOmer:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Sefirat HaOmer:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Sefirat HaOmer:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Sefirat HaOmer:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Sefirat HaOmer:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Sefirat HaOmer:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Sefirat HaOmer:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Sefirat HaOmer:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Sefirat HaOmer:14": {
+   "parts": [
+    {
+     "text": "<b>רִבּוֹנוֹ</b> שֶׁל עוֹלָם אַתָּה צִוִּיתָֽנוּ עַל יְדֵי משֶׁה עַבְדֶּֽךָ לִסְפֹּר סְפִירַת הָֽעֹמֶר כְּדֵי לְטַהֲרֵֽנוּ מִקְּ֒לִפּוֹתֵֽינוּ וּמִטֻּמְאוֹתֵֽינוּ כְּמוֹ שֶׁכָּתַֽבְתָּ בְּתוֹרָתֶֽךָ וּסְפַרְתֶּם לָכֶם מִמָּחֳרַת הַשַּׁבָּת מִיּוֹם הֲבִיאֲכֶם אֶת־עֹֽמֶר הַתְּ֒נוּפָה שֶֽׁבַע שַׁבָּתוֹת תְּמִימוֹת תִּהְיֶֽינָה עַד מִמָּחֳרַת הַשַּׁבָּת הַשְּׁ֒בִיעִית תִּסְפְּ֒רוּ חֲמִשִּׁים יוֹם כְּדֵי שֶׁיִּטָּהֲרוּ נַפְשׁוֹת עַמְּ֒ךָ יִשְׂרָאֵל מִזֻּהֲמָתָם: וּבְכֵן יְהִי רָצוֹן מִלְּ֒פָנֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ שֶׁבִּזְכוּת סְפִירַת הָעֹֽמֶר שֶׁסָּפַֽרְתִּי הַיּוֹם יְתֻקַּן מַה שֶּׁפָּגַֽמְתִּי בִּסְפִירָה ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(השייכת לאותו הלילה)</small>",
+     "kind": "instruction",
+     "en": "(the one belonging to that night)",
+     "clean": "(השייכת לאותו הלילה)"
+    },
+    {
+     "text": " וְאֶטָּהֵר וְאֶתְקַדֵּשׁ בִּקְדֻשָּׁה שֶׁל מַֽעְלָה וְעַל יְדֵי זֶה יֻשְׁפַּע שֶֽׁפַע רַב בְּכָל־הָעוֹלָמוֹת וּלְתַקֵּן אֶת־נַפְשׁוֹתֵֽינוּ וְרוּחוֹתֵֽינוּ וְנִשְׁמוֹתֵֽינוּ מִכָּל־סִיג וּפְגַם וּלְטַהֲרֵֽנוּ וּלְקַדְּ֒שֵֽׁנוּ בִּקְדֻשָּׁתְ֒ךָ הָעֶלְיוֹנָה אָמֵן סֶֽלָה:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Aleinu:1": {
+   "parts": [
+    {
+     "text": "<b>עָלֵֽינוּ</b> לְשַׁבֵּֽחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֺּא עָשָֽׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֺא שָׂמָֽנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֺּא שָׂם חֶלְקֵֽנוּ כָּהֶם וְגוֹרָלֵֽנוּ כְּכָל הֲמוֹנָם: שֶׁהֵם מִשְׁתַּחֲוִים לָהֶֽבֶל וָרִיק וּמִתְפַּלְּ֒לִים אֶל אֵל לֹא יוֹשִֽׁיעַ, ",
+     "kind": "prayer"
+    },
+    {
+     "text": "וַאֲנַֽחְנוּ כּוֹרְ֒עִים וּמִשְׁתַּחֲוִים וּמוֹדִים לִפְנֵי מֶֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא, ",
+     "kind": "prayer",
+     "gestures": [
+      "bow_full"
+     ]
+    },
+    {
+     "text": "שֶׁהוּא נוֹטֶה שָׁמַֽיִם וְיוֹסֵד אָֽרֶץ, וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַֽיִם מִמַּֽעַל, וּשְׁ֒כִינַת עֻזּוֹ בְּגָבְ֒הֵי מְרוֹמִים, הוּא אֱלֺהֵֽינוּ אֵין עוֹד, אֱמֶת מַלְכֵּֽנוּ אֶֽפֶס זוּלָתוֹ כַּכָּתוּב בְּתוֹרָתוֹ וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל לְבָבֶֽךָ כִּי יְהֹוָה הוּא הָאֱלֺהִים בַּשָּׁמַֽיִם מִמַּֽעַל וְעַל הָאָֽרֶץ מִתָּֽחַת אֵין עוֹד:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Aleinu:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/Mourner's Kaddish:1": {
+   "parts": [
+    {
+     "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "(<b>אָמֵן</b>)",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Mourner's Kaddish:2": {
+   "parts": [
+    {
+     "text": "בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Mourner's Kaddish:3": {
+   "kind": "prayer",
+   "role": "congregation",
+   "minyan": true,
+   "node": "kaddish.mourners"
+  },
+  "he:Shabbat/Maariv/Mourner's Kaddish:4": {
+   "parts": [
+    {
+     "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>בְּרִיךְ הוּא</b>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Mourner's Kaddish:5": {
+   "parts": [
+    {
+     "text": "לְעֵֽלָּא מִן־כָּל־ ",
+     "alt": "kd_alt",
+     "when": "!aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "(<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "node": "kaddish.mourners",
+     "clean": "(בעשי\"ת"
+    },
+    {
+     "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)",
+     "alt": "kd_alt",
+     "when": "aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Mourner's Kaddish:6": {
+   "parts": [
+    {
+     "text": "יְהֵא שְׁלָמָֽא רַבָּֽא מִן־שְׁמַיָּֽא וְחַיִּים עָלֵֽינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Mourner's Kaddish:7": {
+   "parts": [
+    {
+     "text": "עוֹשֶׂה ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "שָׁלוֹם ",
+     "alt": "kd_alt",
+     "when": "!aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "(<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "node": "kaddish.mourners",
+     "clean": "(בעשי\"ת"
+    },
+    {
+     "text": " הַשָּׁלוֹם)",
+     "alt": "kd_alt",
+     "when": "aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/LeDavid:1": {
+   "kind": "note",
+   "clean": "מנהג טוב לומר אחר כל תפלה מזמור לדוד ה׳‬ אורי וישעי. ובפרט מר״ח אלול עד הושענא רבא.",
+   "cite": "מורה באצבע סי' לז",
+   "en": "It is a good custom to say, after every prayer, the psalm \"LeDavid HaShem Ori\", especially from Rosh Chodesh Elul until Hoshana Rabbah."
+  },
+  "he:Shabbat/Maariv/LeDavid:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Maariv/LeDavid:3": {
+   "parts": [
+    {
+     "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "(<b>אָמֵן</b>)",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/LeDavid:4": {
+   "parts": [
+    {
+     "text": "בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/LeDavid:5": {
+   "kind": "prayer",
+   "role": "congregation",
+   "minyan": true,
+   "node": "kaddish.mourners"
+  },
+  "he:Shabbat/Maariv/LeDavid:6": {
+   "parts": [
+    {
+     "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>בְּרִיךְ הוּא</b>",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/LeDavid:7": {
+   "parts": [
+    {
+     "text": "לְעֵֽלָּא מִן־כָּל־ ",
+     "alt": "kd_alt",
+     "when": "!aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "(<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "node": "kaddish.mourners",
+     "clean": "(בעשי\"ת"
+    },
+    {
+     "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)",
+     "alt": "kd_alt",
+     "when": "aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/LeDavid:8": {
+   "parts": [
+    {
+     "text": "יְהֵא שְׁלָמָֽא רַבָּֽא מִן־שְׁמַיָּֽא וְחַיִּים עָלֵֽינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/LeDavid:9": {
+   "parts": [
+    {
+     "text": "עוֹשֶׂה ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "שָׁלוֹם ",
+     "alt": "kd_alt",
+     "when": "!aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "(<small>בעשי\"ת</small>",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva",
+     "en": "During the Ten Days of Repentance:",
+     "node": "kaddish.mourners",
+     "clean": "(בעשי\"ת"
+    },
+    {
+     "text": " הַשָּׁלוֹם)",
+     "alt": "kd_alt",
+     "when": "aseretYemeiTeshuva",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ ",
+     "kind": "prayer",
+     "role": "chazzan",
+     "voice": "aloud",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    },
+    {
+     "text": "<b>אָמֵן</b>:",
+     "kind": "prayer",
+     "role": "congregation",
+     "minyan": true,
+     "node": "kaddish.mourners"
+    }
+   ]
+  },
+  "he:Shabbat/Maariv/Yigdal:1": {
+   "kind": "commentary",
+   "en": "A hymn based on the thirteen principles of faith, attributed to Rabbi Daniel ben Yehuda of Rome."
+  },
+  "he:Shabbat/Maariv/Yigdal:2": {
+   "kind": "heading",
+   "en": "The existence of God"
+  },
+  "he:Shabbat/Maariv/Yigdal:3": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Yigdal:4": {
+   "kind": "heading",
+   "en": "The unity of God"
+  },
+  "he:Shabbat/Maariv/Yigdal:5": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Yigdal:6": {
+   "kind": "heading",
+   "en": "God is not a body"
+  },
+  "he:Shabbat/Maariv/Yigdal:7": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Yigdal:8": {
+   "kind": "heading",
+   "en": "God's eternity"
+  },
+  "he:Shabbat/Maariv/Yigdal:9": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Yigdal:10": {
+   "kind": "heading",
+   "en": "God alone is to be worshipped"
+  },
+  "he:Shabbat/Maariv/Yigdal:11": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Yigdal:12": {
+   "kind": "heading",
+   "en": "Prophecy"
+  },
+  "he:Shabbat/Maariv/Yigdal:13": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Yigdal:14": {
+   "kind": "heading",
+   "en": "Moses' prophecy is true"
+  },
+  "he:Shabbat/Maariv/Yigdal:15": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Yigdal:16": {
+   "kind": "heading",
+   "en": "The Torah is from Heaven"
+  },
+  "he:Shabbat/Maariv/Yigdal:17": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Yigdal:18": {
+   "kind": "heading",
+   "en": "The Torah is unchangeable"
+  },
+  "he:Shabbat/Maariv/Yigdal:19": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Yigdal:20": {
+   "kind": "heading",
+   "en": "Divine providence"
+  },
+  "he:Shabbat/Maariv/Yigdal:21": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Yigdal:22": {
+   "kind": "heading",
+   "en": "Reward and punishment"
+  },
+  "he:Shabbat/Maariv/Yigdal:23": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Yigdal:24": {
+   "kind": "heading",
+   "en": "The coming of the Messiah"
+  },
+  "he:Shabbat/Maariv/Yigdal:25": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Yigdal:26": {
+   "kind": "heading",
+   "en": "Resurrection of the dead"
+  },
+  "he:Shabbat/Maariv/Yigdal:27": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Adon Olam:1": {
+   "kind": "instruction",
+   "en": "Say the hymn \"Adon Olam\", which speaks of the unity and providence of God."
+  },
+  "he:Shabbat/Maariv/Adon Olam:2": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Adon Olam:3": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Adon Olam:4": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Adon Olam:5": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Adon Olam:6": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Adon Olam:7": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Adon Olam:8": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Adon Olam:9": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Adon Olam:10": {
+   "kind": "prayer",
+   "role": "together"
+  },
+  "he:Shabbat/Maariv/Adon Olam:11": {
+   "kind": "prayer",
+   "role": "together"
+  }
+ },
+ "en": {
+  "en:Shabbat/Kabbalat Shabbat/Yedid Nefesh:1": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Yedid Nefesh:1"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Yedid Nefesh:2": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Yedid Nefesh:2"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Yedid Nefesh:3": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Yedid Nefesh:3"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Yedid Nefesh:4": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Yedid Nefesh:4"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Psalm 95:2": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Psalm 95:2"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Psalm 96:1": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Psalm 96:1"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Psalm 97:1": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Psalm 97:1"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Psalm 98:1": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Psalm 98:1"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Psalm 99:1": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Psalm 99:1"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Psalm 29:1": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Psalm 29:1"
+   ],
+   "parts": [
+    {
+     "text": "<i>It is customary to stand during the recitation of the following psalm.</i><br>",
+     "kind": "instruction",
+     "gestures": [
+      "stand"
+     ]
+    },
+    {
+     "text": "A Psalm of David. Ascribe to Adonoy— you sons of the mighty<sup class=\"footnote-marker\">33</sup><i class=\"footnote\"> According to Targum, ‘sons of the mighty’ refers to the angels who are called upon to give praise to God. The Sages say that ‘the mighty’ refers to the Patriarchs who were mighty in their faith of God and steadfast in carrying out His will. Thus ‘sons of the mighty’ refers to all Jewry.</i> — ascribe to Adonoy glory and might. Ascribe to Adonoy the glory due His Name, prostrate yourselves before Adonoy in the splendor of holiness.<sup class=\"footnote-marker\">34</sup><i class=\"footnote\">Etz Yosef says that this refers to the Bais haMikdash.</i> Adonoy's voice is upon the waters.<sup class=\"footnote-marker\">35</sup><i class=\"footnote\">God’s voice was heard when He split the Sea of Reeds after the exodus from Egypt.—Etz Yosef</i> Almighty of glory thunders, Adonoy is upon [the] many waters. The voice of Adonoy is in power, the voice of Adonoy is in beauty.<sup class=\"footnote-marker\">36</sup><i class=\"footnote\">This translation follows S.R. Hirsch. Others translate ‘Adonoy’s voice is with power, Adonoy’s voice is with beauty.’</i> The voice of Adonoy breaks cedars, Adonoy shatters the cedars of Lebanon.<sup class=\"footnote-marker\">37</sup><i class=\"footnote\">The Psalmist refers to a forest in the Holy Land where there is an abundance of tall cedar trees.—Radak</i> He makes them leap like a calf, Lebanon and Sirion like unicorns. The voice of Adonoy hews out flames of fire.<sup class=\"footnote-marker\">38</sup><i class=\"footnote\">When God spoke at Sinai, His commandments came forth like a flame in the form of visible letters and words. These letters penetrated the tablets of stone and engraved themselves on them.—Rashi According to Radak the verse describes how God’s wrath will pour down upon His enemies like a bolt of fiery lightning.</i> The voice of Adonoy makes the desert tremble, Adonoy makes tremble the desert of Kadesh. The voice of Adonoy causes hinds to calve,<sup class=\"footnote-marker\">39</sup><i class=\"footnote\">The birth canal of the hind is very narrow and it is often impossible for the offspring to pass through. God’s voice in the thunder frightens the hind and causes it to have such strong contractions that the canal expands and the offspring is born.—Rashi</i> and strips the forests bare; and in His Sanctuary all proclaim [His] glory. Adonoy sat enthroned (even) at the flood<sup class=\"footnote-marker\">40</sup><i class=\"footnote\">Even in the face of the total corruption of mankind at the time of the flood, God sat unchanged and unshaken upon the throne of His Sovereignty.—S.R. Hirsch</i> Adonoy is enthroned as King forever. Adonoy will give strength to His people; Adonoy will bless His people with peace.<sup class=\"footnote-marker\">41</sup><i class=\"footnote\">After the coming of the Messiah there will be an end to all wars and conflicts.—Radak</i>",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Ana Bekoach:1": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Ana Bekoach:1"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:1": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:1"
+   ],
+   "parts": [
+    {
+     "text": "<i> This poem was written by Rabbi Solomon Halevy Alkabetz, whose name שְׁלֹמֹה הַלֵוִי is spelled out by the first letter of each stanza. In this poem, the bridegroom (Israel) calls to his Beloved Friend (God) asking that He join him in welcoming his bride (the Sabbath). The concept of welcoming the Sabbath goes back to Talmudic times. Rabbi Chanina robed himself and stood at sunset on the eve of the Sabbath and exclaimed, “Come! Let us go forth to welcome the Sabbath Queen.” Rabbi Yanai garbed himself in festive attire on Sabbath eve and exclaimed; “Come bride, Come bride” (</i>Shabbos<i> 119a).</i><br>",
+     "kind": "commentary"
+    },
+    {
+     "text": "Come my Beloved Friend to greet the bride, let us welcome the Sabbath.",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:2": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:2"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:3": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:3"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:4": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:4"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:5": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:5"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:6": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:6"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:7": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:7"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:8": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:8"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:9": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:9"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:10": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:10"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:11": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:11"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:12": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:12"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:13": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:13"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:14": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:14"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:15": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:15"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:16": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:16"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:17": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:17"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:18": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:18"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Lekha Dodi:19": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:19"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Psalm 92:1": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Psalm 92:1"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Psalm 93:1": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Psalm 93:1"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Mourner's Kaddish:1": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Mourner's Kaddish:1"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Bameh Madlikin:9": {
+   "he": [],
+   "kind": "prayer"
+  },
+  "en:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:1": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:1"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:2": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:2"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:3": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:3"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:4": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:4"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:5": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:5"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:6": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:6"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:7": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:7"
+   ]
+  },
+  "en:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:8": {
+   "he": [
+    "he:Shabbat/Kabbalat Shabbat/Kaddish DeRabbanan:8"
+   ]
+  },
+  "en:Shabbat/Maariv/Barchu:1": {
+   "he": [
+    "he:Shabbat/Maariv/Barchu:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Barchu:2": {
+   "he": [
+    "he:Shabbat/Maariv/Barchu:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Blessings of the Shema/First Blessing before Shema:1": {
+   "he": [
+    "he:Shabbat/Maariv/Blessings of the Shema/First Blessing before Shema:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Blessings of the Shema/Second Blessing before Shema:1": {
+   "he": [
+    "he:Shabbat/Maariv/Blessings of the Shema/Second Blessing before Shema:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Blessings of the Shema/Shema:1": {
+   "he": [
+    "he:Shabbat/Maariv/Blessings of the Shema/Shema:1"
+   ],
+   "parts": [
+    {
+     "text": "<i>The following three words should be said when praying without a minyan:</i> ",
+     "kind": "instruction",
+     "when": "!minyan"
+    },
+    {
+     "text": "(Almighty, faithful King)",
+     "kind": "prayer",
+     "when": "!minyan"
+    }
+   ]
+  },
+  "en:Shabbat/Maariv/Blessings of the Shema/Shema:2": {
+   "he": [
+    "he:Shabbat/Maariv/Blessings of the Shema/Shema:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Blessings of the Shema/Shema:3": {
+   "he": [
+    "he:Shabbat/Maariv/Blessings of the Shema/Shema:3"
+   ],
+   "parts": [
+    {
+     "text": "<i>The following three lines are to be said silently:</i> ",
+     "kind": "note"
+    },
+    {
+     "text": "Blessed [is His] Name, Whose glorious kingdom is forever and ever.",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "en:Shabbat/Maariv/Blessings of the Shema/Shema:4": {
+   "he": [
+    "he:Shabbat/Maariv/Blessings of the Shema/Shema:4"
+   ]
+  },
+  "en:Shabbat/Maariv/Blessings of the Shema/Shema:5": {
+   "he": [
+    "he:Shabbat/Maariv/Blessings of the Shema/Shema:5"
+   ]
+  },
+  "en:Shabbat/Maariv/Blessings of the Shema/Shema:6": {
+   "he": [
+    "he:Shabbat/Maariv/Blessings of the Shema/Shema:6"
+   ]
+  },
+  "en:Shabbat/Maariv/Blessings of the Shema/Shema:7": {
+   "he": [
+    "he:Shabbat/Maariv/Blessings of the Shema/Shema:7"
+   ],
+   "parts": [
+    {
+     "text": "<i>The chazan repeats:</i> ",
+     "kind": "speaker"
+    },
+    {
+     "text": "Adonoy, your God, is true.",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "en:Shabbat/Maariv/Blessings of the Shema/First Blessing after Shema:1": {
+   "he": [
+    "he:Shabbat/Maariv/Blessings of the Shema/First Blessing after Shema:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Blessings of the Shema/First Blessing after Shema:2": {
+   "he": [
+    "he:Shabbat/Maariv/Blessings of the Shema/First Blessing after Shema:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Blessings of the Shema/First Blessing after Shema:3": {
+   "he": [
+    "he:Shabbat/Maariv/Blessings of the Shema/First Blessing after Shema:3"
+   ]
+  },
+  "en:Shabbat/Maariv/Blessings of the Shema/Second Blessing after Shema:1": {
+   "he": [
+    "he:Shabbat/Maariv/Blessings of the Shema/Second Blessing after Shema:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Veshamru:1": {
+   "he": [
+    "he:Shabbat/Maariv/Veshamru:1"
+   ],
+   "parts": [
+    {
+     "text": "<small>On Shabbos say:</small> ",
+     "kind": "instruction",
+     "when": "shabbat"
+    },
+    {
+     "text": "And the Children of Israel shall preserve the Sabbath, to maintain the Sabbath for their generations as an everlasting covenant. Between Me and between the Children of Israel it is a sign for eternity, that [in] six days, Adonoy made the heavens and the earth, and on the seventh [day] He abstained from work and rested.<sup class=\"footnote-marker\">22</sup><i class=\"footnote\">Exodus 31:16-17. This is merely metaphorical, since God of course does not become tired, nor does He require rest.</i>",
+     "kind": "prayer",
+     "when": "shabbat"
+    }
+   ]
+  },
+  "en:Shabbat/Maariv/Veshamru:2": {
+   "he": [
+    "he:Shabbat/Maariv/Veshamru:2"
+   ],
+   "parts": [
+    {
+     "text": "<small>On Pesach, Shavuos and Sukkos, say:</small> ",
+     "kind": "instruction",
+     "when": "pesach || shavuot || sukkot || shminiAtzeret || simchatTorah"
+    },
+    {
+     "text": "And Moses recounted the appointed seasons of Adonoy to the Children of Israel.<sup class=\"footnote-marker\">23</sup><i class=\"footnote\">Leviticus 23:44.</i>",
+     "kind": "prayer",
+     "when": "pesach || shavuot || sukkot || shminiAtzeret || simchatTorah"
+    }
+   ]
+  },
+  "en:Shabbat/Maariv/Half Kaddish:1": {
+   "he": [
+    "he:Shabbat/Maariv/Half Kaddish:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Patriarchs:1": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Patriarchs:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Patriarchs:2": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Patriarchs:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Patriarchs:3": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Patriarchs:3"
+   ],
+   "parts": [
+    {
+     "text": "<i>(During the Ten Days of Penitence add:</i> ",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": "Remember us for life King, Who desires life; and inscribe us in the Book of Life, for Your sake, Living God.)",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    }
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Patriarchs:4": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Patriarchs:4"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Divine Might:1": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Divine Might:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Divine Might:2": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Divine Might:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Divine Might:3": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Divine Might:3"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Divine Might:4": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Divine Might:4"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Divine Might:5": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Divine Might:5"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Holines of God's Name:1": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Holines of God's Name:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Sanctity of the Day:1": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Sanctity of the Day:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Sanctity of the Day:2": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Sanctity of the Day:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Sanctity of the Day:3": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Sanctity of the Day:3"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Temple Service:1": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Temple Service:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Temple Service:2": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Temple Service:2"
+   ],
+   "parts": [
+    {
+     "text": "<i>On regular weekdays continue, “And may our eyes”. On Rosh Chodesh and on Chol HaMoed, the following prayer is added:</i><br>",
+     "kind": "instruction",
+     "when": "roshChodesh || cholHamoed"
+    },
+    {
+     "text": "Our God and God of our fathers, may there ascend, come, and reach, appear, be desired, and heard, counted and recalled our remembrance and reckoning; the remembrance of our fathers; the remembrance of the Messiah the son of David, Your servant; the remembrance of Jerusalem, city of Your Sanctuary and the remembrance of Your entire people, the House of Israel, before You for survival, for well-being, for favor, kindliness, compassion, for life and peace on this day of the: <i>Rosh Chodesh/Festival of Matzos/Festival of Sukkos</i>. Remember us Adonoy, our God, on this day for well-being; be mindful of us on this day for blessing, and deliver us for life. In accord with the promise of deliverance and compassion, spare us and favor us, have compassion on us and deliver us; for our eyes are directed to You, because You are the Almighty Who is King, Gracious, and Merciful.",
+     "kind": "prayer",
+     "when": "roshChodesh || cholHamoed"
+    }
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Temple Service:3": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Temple Service:3"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Thanksgiving:1": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Thanksgiving:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Thanksgiving:2": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Thanksgiving:2"
+   ],
+   "parts": [
+    {
+     "text": "<small><i>On Chanukah and Purim:</i>",
+     "kind": "instruction",
+     "when": "chanukah || purim"
+    },
+    {
+     "text": "[We thank You] for the miracles, for the redemption, for the mighty deeds, for the deliverances and for the wars that You performed for our fathers in those days at this season.</small>",
+     "kind": "prayer",
+     "when": "chanukah || purim"
+    }
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Thanksgiving:3": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Thanksgiving:3"
+   ],
+   "parts": [
+    {
+     "text": "<i>On Chanukah:</i> ",
+     "kind": "instruction",
+     "when": "chanukah"
+    },
+    {
+     "text": "In the days of Matisyahu, son of Yochanan the High Priest, the Hasmonean and his sons, when the evil Greek kingdom rose up against Your people Israel to make them forget Your Torah and to turn them away from the statutes of Your will— You, in Your abundant mercy, stood by them in their time of distress, You defended their cause, You judged their grievances, You avenged them. You delivered the mighty into the hands of the weak, many into the hands of the few, defiled people into the hands of the undefiled, the wicked into the hands of the righteous, and insolent [sinners] into the hands of diligent students of Your Torah. And You made Yourself a great and sanctified name in Your world. And for Your people, Israel, You performed a great deliverance and redemption unto this very day. Afterwards, Your sons entered the Holy of Holies of Your Abode, cleaned Your Temple, purified Your Sanctuary, and kindled lights in the Courtyards of Your Sanctuary, and designated these eight days of Chanukah to thank and praise Your great Name.",
+     "kind": "prayer",
+     "when": "chanukah"
+    }
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Thanksgiving:4": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Thanksgiving:4"
+   ],
+   "parts": [
+    {
+     "text": "<i>On Purim:</i> ",
+     "kind": "instruction",
+     "when": "purim"
+    },
+    {
+     "text": "In the days of Mordechai and Esther in Shushan the Capital [of Persia], when the evil Haman rose up against them, he sought to destroy, to kill, and to annihilate all the Jews, young and old, infants and women, in one day, the thirteenth day of the twelfth month, which is the month of Adar, and to plunder their wealth<sup class=\"footnote-marker\">53</sup><i class=\"footnote\">The usual procedure of those times was that all the wealth of executed people reverted to the monarch. In contrast to the norm, Haman decreed that Jewish possessions would be free for all to enjoy. He did this to provide added incentive to the populace who might have hesitated to kill Jews if they had nothing to gain.</i>— And You, in Your abundant mercy, annulled his counsel, frustrated his intention, and brought his evil plan upon his own head, and they hanged him and his sons upon the gallows. And You made a miracle and a wonder for them, and we are thankful to Your great name forever. ",
+     "kind": "prayer",
+     "when": "purim"
+    }
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Thanksgiving:5": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Thanksgiving:5"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Thanksgiving:6": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Thanksgiving:6"
+   ],
+   "parts": [
+    {
+     "text": "<i>During the Ten Days of Penitence, add:</i> ",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": "Inscribe for a good life all the children of Your covenant.",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    }
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Thanksgiving:7": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Thanksgiving:7"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Peace:1": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Peace:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Peace:2": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Peace:2"
+   ],
+   "parts": [
+    {
+     "text": "<i>During the Ten Days of Penitence continue here:</i> ",
+     "kind": "instruction",
+     "when": "aseretYemeiTeshuva"
+    },
+    {
+     "text": "May we be remembered and inscribed before You in the book of life, blessing, peace and abundant maintenance; we and all Your people, the House of Israel, for a good life and peace.",
+     "kind": "prayer",
+     "when": "aseretYemeiTeshuva"
+    }
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Peace:3": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Peace:3"
+   ],
+   "when": "!aseretYemeiTeshuva"
+  },
+  "en:Shabbat/Maariv/Amidah/Concluding Passage:1": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Concluding Passage:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Concluding Passage:2": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Concluding Passage:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Concluding Passage:3": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Concluding Passage:3"
+   ]
+  },
+  "en:Shabbat/Maariv/Amidah/Concluding Passage:4": {
+   "he": [
+    "he:Shabbat/Maariv/Amidah/Concluding Passage:4"
+   ]
+  },
+  "en:Shabbat/Maariv/Vay'chulu:1": {
+   "he": [
+    "he:Shabbat/Maariv/Vay'chulu:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Vay'chulu:2": {
+   "he": [
+    "he:Shabbat/Maariv/Vay'chulu:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Me'ein Sheva:1": {
+   "he": [
+    "he:Shabbat/Maariv/Me'ein Sheva:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Me'ein Sheva:2": {
+   "he": [
+    "he:Shabbat/Maariv/Me'ein Sheva:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Me'ein Sheva:3": {
+   "he": [
+    "he:Shabbat/Maariv/Me'ein Sheva:3"
+   ]
+  },
+  "en:Shabbat/Maariv/Me'ein Sheva:4": {
+   "he": [
+    "he:Shabbat/Maariv/Me'ein Sheva:4"
+   ]
+  },
+  "en:Shabbat/Maariv/Me'ein Sheva:5": {
+   "he": [
+    "he:Shabbat/Maariv/Me'ein Sheva:5"
+   ]
+  },
+  "en:Shabbat/Maariv/Kaddish Shalem:1": {
+   "he": [
+    "he:Shabbat/Maariv/Kaddish Shalem:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Kaddish Shalem:2": {
+   "he": [
+    "he:Shabbat/Maariv/Kaddish Shalem:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Kaddish Shalem:3": {
+   "he": [
+    "he:Shabbat/Maariv/Kaddish Shalem:3"
+   ]
+  },
+  "en:Shabbat/Maariv/Kaddish Shalem:4": {
+   "he": [
+    "he:Shabbat/Maariv/Kaddish Shalem:4"
+   ]
+  },
+  "en:Shabbat/Maariv/Kaddish Shalem:5": {
+   "he": [
+    "he:Shabbat/Maariv/Kaddish Shalem:5"
+   ]
+  },
+  "en:Shabbat/Maariv/Kaddish Shalem:6": {
+   "he": [
+    "he:Shabbat/Maariv/Kaddish Shalem:6"
+   ]
+  },
+  "en:Shabbat/Maariv/Kaddish Shalem:7": {
+   "he": [
+    "he:Shabbat/Maariv/Kaddish Shalem:7"
+   ]
+  },
+  "en:Shabbat/Maariv/Kaddish Shalem:8": {
+   "he": [
+    "he:Shabbat/Maariv/Kaddish Shalem:8"
+   ]
+  },
+  "en:Shabbat/Maariv/Sefirat HaOmer:1": {
+   "he": [
+    "he:Shabbat/Maariv/Sefirat HaOmer:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Sefirat HaOmer:2": {
+   "he": [
+    "he:Shabbat/Maariv/Sefirat HaOmer:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Sefirat HaOmer:4": {
+   "he": [
+    "he:Shabbat/Maariv/Sefirat HaOmer:4"
+   ]
+  },
+  "en:Shabbat/Maariv/Sefirat HaOmer:5": {
+   "he": [
+    "he:Shabbat/Maariv/Sefirat HaOmer:5"
+   ]
+  },
+  "en:Shabbat/Maariv/Sefirat HaOmer:6": {
+   "he": [
+    "he:Shabbat/Maariv/Sefirat HaOmer:6"
+   ]
+  },
+  "en:Shabbat/Maariv/Sefirat HaOmer:7": {
+   "he": [
+    "he:Shabbat/Maariv/Sefirat HaOmer:7"
+   ]
+  },
+  "en:Shabbat/Maariv/Sefirat HaOmer:8": {
+   "he": [
+    "he:Shabbat/Maariv/Sefirat HaOmer:8"
+   ]
+  },
+  "en:Shabbat/Maariv/Sefirat HaOmer:9": {
+   "he": [
+    "he:Shabbat/Maariv/Sefirat HaOmer:9"
+   ]
+  },
+  "en:Shabbat/Maariv/Sefirat HaOmer:10": {
+   "he": [
+    "he:Shabbat/Maariv/Sefirat HaOmer:10"
+   ]
+  },
+  "en:Shabbat/Maariv/Sefirat HaOmer:11": {
+   "he": [
+    "he:Shabbat/Maariv/Sefirat HaOmer:11"
+   ]
+  },
+  "en:Shabbat/Maariv/Sefirat HaOmer:12": {
+   "he": [
+    "he:Shabbat/Maariv/Sefirat HaOmer:12"
+   ]
+  },
+  "en:Shabbat/Maariv/Sefirat HaOmer:13": {
+   "he": [
+    "he:Shabbat/Maariv/Sefirat HaOmer:13"
+   ]
+  },
+  "en:Shabbat/Maariv/Sefirat HaOmer:14": {
+   "he": [
+    "he:Shabbat/Maariv/Sefirat HaOmer:14"
+   ]
+  },
+  "en:Shabbat/Maariv/Aleinu:1": {
+   "he": [
+    "he:Shabbat/Maariv/Aleinu:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Aleinu:2": {
+   "he": [
+    "he:Shabbat/Maariv/Aleinu:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Mourner's Kaddish:1": {
+   "he": [
+    "he:Shabbat/Maariv/Mourner's Kaddish:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Mourner's Kaddish:2": {
+   "he": [
+    "he:Shabbat/Maariv/Mourner's Kaddish:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Mourner's Kaddish:3": {
+   "he": [
+    "he:Shabbat/Maariv/Mourner's Kaddish:3"
+   ]
+  },
+  "en:Shabbat/Maariv/Mourner's Kaddish:4": {
+   "he": [
+    "he:Shabbat/Maariv/Mourner's Kaddish:4"
+   ]
+  },
+  "en:Shabbat/Maariv/Mourner's Kaddish:5": {
+   "he": [
+    "he:Shabbat/Maariv/Mourner's Kaddish:5"
+   ]
+  },
+  "en:Shabbat/Maariv/Mourner's Kaddish:6": {
+   "he": [
+    "he:Shabbat/Maariv/Mourner's Kaddish:6"
+   ]
+  },
+  "en:Shabbat/Maariv/Mourner's Kaddish:7": {
+   "he": [
+    "he:Shabbat/Maariv/Mourner's Kaddish:7"
+   ]
+  },
+  "en:Shabbat/Maariv/LeDavid:1": {
+   "he": [
+    "he:Shabbat/Maariv/LeDavid:1"
+   ]
+  },
+  "en:Shabbat/Maariv/LeDavid:2": {
+   "he": [
+    "he:Shabbat/Maariv/LeDavid:2"
+   ]
+  },
+  "en:Shabbat/Maariv/LeDavid:3": {
+   "he": [
+    "he:Shabbat/Maariv/LeDavid:3"
+   ]
+  },
+  "en:Shabbat/Maariv/LeDavid:4": {
+   "he": [
+    "he:Shabbat/Maariv/LeDavid:4"
+   ]
+  },
+  "en:Shabbat/Maariv/LeDavid:5": {
+   "he": [
+    "he:Shabbat/Maariv/LeDavid:5"
+   ]
+  },
+  "en:Shabbat/Maariv/LeDavid:6": {
+   "he": [
+    "he:Shabbat/Maariv/LeDavid:6"
+   ]
+  },
+  "en:Shabbat/Maariv/LeDavid:7": {
+   "he": [
+    "he:Shabbat/Maariv/LeDavid:7"
+   ]
+  },
+  "en:Shabbat/Maariv/LeDavid:8": {
+   "he": [
+    "he:Shabbat/Maariv/LeDavid:8"
+   ]
+  },
+  "en:Shabbat/Maariv/LeDavid:9": {
+   "he": [
+    "he:Shabbat/Maariv/LeDavid:9"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:1": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:2": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:3": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:3"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:4": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:4"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:5": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:5"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:6": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:6"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:7": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:7"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:8": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:8"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:9": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:9"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:10": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:10"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:11": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:11"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:12": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:12"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:13": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:13"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:14": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:14"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:15": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:15"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:16": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:16"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:17": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:17"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:18": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:18"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:19": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:19"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:20": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:20"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:21": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:21"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:22": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:22"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:23": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:23"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:24": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:24"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:25": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:25"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:26": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:26"
+   ]
+  },
+  "en:Shabbat/Maariv/Yigdal:27": {
+   "he": [
+    "he:Shabbat/Maariv/Yigdal:27"
+   ]
+  },
+  "en:Shabbat/Maariv/Adon Olam:1": {
+   "he": [
+    "he:Shabbat/Maariv/Adon Olam:1"
+   ]
+  },
+  "en:Shabbat/Maariv/Adon Olam:2": {
+   "he": [
+    "he:Shabbat/Maariv/Adon Olam:2"
+   ]
+  },
+  "en:Shabbat/Maariv/Adon Olam:3": {
+   "he": [
+    "he:Shabbat/Maariv/Adon Olam:3"
+   ]
+  },
+  "en:Shabbat/Maariv/Adon Olam:4": {
+   "he": [
+    "he:Shabbat/Maariv/Adon Olam:4"
+   ]
+  },
+  "en:Shabbat/Maariv/Adon Olam:5": {
+   "he": [
+    "he:Shabbat/Maariv/Adon Olam:5"
+   ]
+  },
+  "en:Shabbat/Maariv/Adon Olam:6": {
+   "he": [
+    "he:Shabbat/Maariv/Adon Olam:6"
+   ]
+  },
+  "en:Shabbat/Maariv/Adon Olam:7": {
+   "he": [
+    "he:Shabbat/Maariv/Adon Olam:7"
+   ]
+  },
+  "en:Shabbat/Maariv/Adon Olam:8": {
+   "he": [
+    "he:Shabbat/Maariv/Adon Olam:8"
+   ]
+  },
+  "en:Shabbat/Maariv/Adon Olam:9": {
+   "he": [
+    "he:Shabbat/Maariv/Adon Olam:9"
+   ]
+  },
+  "en:Shabbat/Maariv/Adon Olam:10": {
+   "he": [
+    "he:Shabbat/Maariv/Adon Olam:10"
+   ]
+  },
+  "en:Shabbat/Maariv/Adon Olam:11": {
+   "he": [
+    "he:Shabbat/Maariv/Adon Olam:11"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Shabbat/Kabbalat Shabbat/Yedid Nefesh:1",
+   "type": "new_minhag",
+   "detail": "x_saysYedidNefesh: Yedid Nefesh before Kabbalat Shabbat is a later custom, not said by every Ashkenazi community. True when the user wants it."
+  },
+  {
+   "id": "he:Shabbat/Kabbalat Shabbat/Ana Bekoach:1",
+   "type": "new_minhag",
+   "detail": "x_saysAnaBekoach: Ana BeKoach before Lecha Dodi is a custom that many Ashkenazi communities omit. True when the user wants it."
+  },
+  {
+   "id": "he:Shabbat/Kabbalat Shabbat/Lekha Dodi:18",
+   "type": "ambiguous",
+   "detail": "Lecha Dodi is tagged role responsive for every line (chazzan and congregation alternate verse and refrain); communities differ. turn_west and stand placed on the last verse (Bo'i VeShalom) and the refrain after it."
+  },
+  {
+   "id": "en:Shabbat/Kabbalat Shabbat/Bameh Madlikin:9",
+   "type": "missing_text",
+   "detail": "Bameh Madlikin (Hebrew, Shabbat ch. 2) is empty; only the English of the closing paragraph (Rabbi Elazar said in the name of Rabbi Chanina...) is present, with no Hebrew. Bameh Madlikin is omitted when Yom Tov falls on Shabbat; the leaf has no Hebrew to attach that condition to."
+  },
+  {
+   "id": "he:Shabbat/Maariv/Veshamru:2",
+   "type": "ambiguous",
+   "detail": "\"Lishalosh regalim\" tagged pesach||shavuot||sukkot||shminiAtzeret||simchatTorah (Yom Tov that is also Shabbat, or Chol HaMoed Shabbat); Rosh Hashana and Yom Kippur excluded. Whether Veshamru itself is said on Friday night Yom Tov varies by community."
+  },
+  {
+   "id": "he:Shabbat/Maariv/Amidah/Divine Might:2",
+   "type": "engine_bug_risk",
+   "detail": "Summer \"morid hatal\" is printed here, but Ashkenaz outside Israel says nothing in summer. Tagged moridHatal (false for diaspora Ashkenaz) so it is hidden; the winter line is mashivHaruach. The English segment mixes the Musaf Shemini Atzeret/Pesach dates for both and is aligned whole."
+  },
+  {
+   "id": "he:Shabbat/Maariv/Amidah/Temple Service:2",
+   "type": "ambiguous",
+   "detail": "Rubric says \"Rosh Chodesh and Chol HaMoed\". Tagged roshChodesh||cholHamoed. On Shabbat Chol HaMoed / Yom Tov Friday night a different Sanctity-of-the-Day text is normally used (Atah Vechartanu); this chunk is the plain-Shabbat flow."
+  },
+  {
+   "id": "he:Shabbat/Maariv/Amidah/Thanksgiving:4",
+   "type": "new_minhag",
+   "detail": "x_saysNesVafele: the parenthesized \"ve-asita imahem nes va-fele ve-node leshimcha hagadol selah\" at the end of the Purim Al HaNissim is said only by some; its parentheses in the siddur mark it optional."
+  },
+  {
+   "id": "he:Shabbat/Maariv/Amidah/Peace:2",
+   "type": "ambiguous",
+   "detail": "In the Ten Days the siddur prints the chatima \"Oseh HaShalom\" in parentheses, and seg 3 gives the usual \"HaMevarech et amo Yisrael baShalom\". Tagged: Ten Days -> Oseh HaShalom (Ashkenaz custom), otherwise HaMevarech. Sefardi/other custom differs."
+  },
+  {
+   "id": "he:Shabbat/Maariv/Me'ein Sheva:1",
+   "type": "ambiguous",
+   "detail": "Me'ein Sheva (Magen Avot) is said only with a minyan, and not on the first night of Pesach that falls on Friday night, nor in a house of mourning/bridegroom (per the English note). Tagged minyan:true only; no calendar condition. The Hebrew note on why it is repeated (\"Yom Tov on Shabbat where Vayechulu cannot be said\") is hard to reconcile with Vayechulu being printed just before it."
+  },
+  {
+   "id": "he:Shabbat/Maariv/Sefirat HaOmer:3",
+   "type": "engine_bug_risk",
+   "detail": "Segment 3 is \"Hayom [...]\": the day count itself is a placeholder (no Hebrew day/week text, no English counterpart). The app must generate the count for omerDay and week/day split."
+  },
+  {
+   "id": "he:Shabbat/Maariv/Sefirat HaOmer:5",
+   "type": "alignment",
+   "detail": "English Omer leaf has no segment for Hebrew seg 3 (Hayom [...]). Segments 4-14 align by number."
+  },
+  {
+   "id": "he:Shabbat/Maariv/LeDavid:3",
+   "type": "ambiguous",
+   "detail": "The Kaddish after LeDavid is gated with the leaf by ledavid (Elul to Hoshana Rabbah); the ordinary Mourner's Kaddish earlier in Maariv is ungated. Mourner's Kaddish segments have no mourner condition: the app should decide from the mourner variable."
+  }
+ ]
+}

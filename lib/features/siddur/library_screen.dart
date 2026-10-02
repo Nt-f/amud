@@ -20,6 +20,8 @@ import 'reader_screen.dart';
 import 'siddur_providers.dart';
 import '../home/today.dart';
 import 'today_summary.dart';
+import 'day_guide_screen.dart';
+import 'siddur_print.dart';
 
 /// Siddur tab: today's services for the default nusach plus all books.
 class LibraryScreen extends ConsumerWidget {
@@ -52,6 +54,10 @@ class LibraryScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(context.tr('Siddur')),
+        actions: [
+          IconButton(tooltip: context.tr('Siddur for a date'), icon: const Icon(Icons.event_note), onPressed: () => openDayGuide(context, ref.read(readerDaytimeDateProvider))),
+          IconButton(tooltip: context.tr('Print siddur'), icon: const Icon(Icons.print), onPressed: () => openSiddurPrint(context, ref.read(readerDaytimeDateProvider))),
+        ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(PageSearchBar.height),
           child: PageSearchBar(page: 'siddur', hint: context.tr('Search prayers')),

@@ -130,6 +130,9 @@ class SefariaHtml {
       case 'u':
         return s.copyWith(decoration: TextDecoration.underline);
       case 'sup':
+        // Verse numbers keep the text's size, so a highlight behind them
+        // runs level with the words; a faint color sets them apart.
+        if (attrs.contains('verse')) return s.copyWith(color: instructionStyle?.color?.withValues(alpha: 0.7), fontWeight: FontWeight.w400);
         return s.copyWith(fontSize: (s.fontSize ?? 16) * 0.65);
       default:
         return s;

@@ -4,6 +4,7 @@ library;
 
 export 'src/analyzer.dart';
 export 'src/condition.dart';
+export 'src/corpus.dart';
 export 'src/day_context.dart';
 export 'src/model.dart';
 export 'src/resolver.dart';

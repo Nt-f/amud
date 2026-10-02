@@ -41,7 +41,8 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
       'in_israel': s.location.il,
       'share_usage': s.shareUsage,
     });
-    context.go('/');
+    final destination = GoRouterState.of(context).uri.queryParameters['returnTo'];
+    context.go(destination != null && destination.startsWith('/') && !destination.startsWith('//') && !destination.startsWith('/setup') ? destination : '/');
   }
 
   void _go(int page) {

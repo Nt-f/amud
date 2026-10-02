@@ -74,7 +74,7 @@ class _ItemTile extends ConsumerWidget {
     final found = ref.watch(prayerRefProvider(item.key));
     final r = found.value;
     // Not in any bundled siddur.
-    if (found.hasValue && r == null) return const SizedBox.shrink();
+    if (found.hasValue && r == null && item.key != 'birkatHaChama') return const SizedBox.shrink();
     final defaultBook = ref.watch(defaultBookProvider).value;
     final book = r == null || r.book == defaultBook ? null : ref.watch(bookProvider(r.book)).value;
     final sub = [
@@ -88,6 +88,7 @@ class _ItemTile extends ConsumerWidget {
         : Text(sub.join(' · '), style: theme.textTheme.bodySmall?.copyWith(color: time == ItemTime.none ? null : colors.todayBar));
     final leading = Icon(time == ItemTime.none ? Icons.menu_book_outlined : Icons.today, color: time == ItemTime.none ? null : colors.todayBar);
     void open(SchemaNode n) => context.push(readerPath(r!.book, n.id));
+    if (r == null && item.key == 'birkatHaChama') return ListTile(leading: leading, title: title, onTap: () => context.push('/pray/birkatHaChama'));
     if (r == null) return ListTile(leading: leading, title: title, enabled: false);
 
     // Sections with a part for each day (the Hoshanot) list the parts,

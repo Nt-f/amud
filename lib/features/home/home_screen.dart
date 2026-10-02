@@ -95,7 +95,9 @@ class HomeScreen extends ConsumerWidget {
               ListTile(
                 leading: CircleAvatar(child: Icon(t.icon)),
                 title: Text(context.tr(t.title)),
-                subtitle: Text(context.tr(t.description)),
+                subtitle: _ShownWhen(
+                    text: context.tr(t.description),
+                    when: t.shownWhen?.call(CardConfig(id: '', type: t.type, settings: t.defaults))),
                 onTap: () => Navigator.pop(ctx, t),
               ),
           ]),
@@ -164,7 +166,7 @@ class _Grid extends ConsumerWidget {
     final rows = <List<CardConfig>>[];
     var used = cols;
     for (final card in cards) {
-      if (!(registry[card.type]?.visible?.call(ref) ?? true)) continue;
+      if (!(registry[card.type]?.visible?.call(ref, card) ?? true)) continue;
       final span = _span(card, cols);
       if (used + span > cols) {
         rows.add([]);
@@ -230,7 +232,10 @@ class _EditList extends ConsumerWidget {
             contentPadding: const EdgeInsetsDirectional.only(start: 16, end: 4),
             leading: Icon(t?.icon ?? Icons.help_outline),
             title: Text(c.setting<String>('title', '').isNotEmpty ? c.setting<String>('title', '') : context.tr(t?.title ?? c.type)),
-            subtitle: Text(context.tr(c.span >= 2 ? 'Wide' : 'Compact')),
+            subtitle: _ShownWhen(
+                text: context.tr(c.span >= 2 ? 'Wide' : 'Compact'),
+                when: t?.shownWhen?.call(c),
+                hiddenNow: !(t?.visible?.call(ref, c) ?? true)),
             onTap: t?.editor == null ? null : () => _configure(context, ref, t!, c),
             trailing: Row(mainAxisSize: MainAxisSize.min, children: [
               PopupMenuButton<VoidCallback>(
@@ -349,12 +354,17 @@ class _RenderEqualHeightRow extends RenderBox
     }
     final rtl = _textDirection == TextDirection.rtl;
     var x = 0.0;
+    var tallest = height;
     for (var c = firstChild; c != null; c = childAfter(c)) {
-      c.layout(BoxConstraints.tightFor(width: c.size.width, height: height), parentUsesSize: true);
+      // At least the row's height, not exactly it: tight constraints would
+      // make each card a relayout boundary, so a card whose content grows
+      // later (data arriving) would overflow without the row hearing of it.
+      c.layout(BoxConstraints(minWidth: c.size.width, maxWidth: c.size.width, minHeight: height), parentUsesSize: true);
       (c.parentData! as _RowParentData).offset = Offset(rtl ? constraints.maxWidth - x - c.size.width : x, 0);
       x += c.size.width + _gap;
+      if (c.size.height > tallest) tallest = c.size.height;
     }
-    size = constraints.constrain(Size(constraints.maxWidth, height));
+    size = constraints.constrain(Size(constraints.maxWidth, tallest));
   }
 
   @override
@@ -362,4 +372,36 @@ class _RenderEqualHeightRow extends RenderBox
 
   @override
   void paint(PaintingContext context, Offset offset) => defaultPaint(context, offset);
+}
+
+/// A card's description with, for a conditional card, when it shows (and
+/// whether it is hidden right now), so a card missing from the dashboard
+/// isn't a mystery.
+class _ShownWhen extends StatelessWidget {
+  final String text;
+  final String? when;
+  final bool hiddenNow;
+  const _ShownWhen({required this.text, this.when, this.hiddenNow = false});
+
+  @override
+  Widget build(BuildContext context) {
+    final w = when;
+    if (w == null) return Text(text);
+    final theme = Theme.of(context);
+    final color = theme.colorScheme.tertiary;
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Text(text),
+      const SizedBox(height: 2),
+      Row(children: [
+        Icon(Icons.visibility_outlined, size: 14, color: color),
+        const SizedBox(width: 4),
+        Flexible(
+          child: Text(
+            hiddenNow ? '${context.tr(w)} · ${context.tr('hidden now')}' : context.tr(w),
+            style: theme.textTheme.labelSmall?.copyWith(color: color),
+          ),
+        ),
+      ]),
+    ]);
+  }
 }

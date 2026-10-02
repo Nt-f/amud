@@ -46,7 +46,7 @@ class _CustomZmanEditorState extends ConsumerState<_CustomZmanEditor> {
 
   @override
   Widget build(BuildContext context) {
-    final today = ref.watch(civilTodayProvider);
+    final today = ref.watch(todayProvider);
     final z = ref.watch(zmanimProvider(today));
     final loc = ref.watch(locationProvider);
     final hour12 = ref.watch(settingsProvider.select((s) => s.hour12));

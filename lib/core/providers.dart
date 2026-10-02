@@ -8,6 +8,7 @@ import 'package:hebcal/hebcal.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 import 'package:timezone/timezone.dart' as tz;
 
+import 'day_start.dart';
 import 'settings.dart';
 import 'storage.dart';
 
@@ -49,11 +50,34 @@ class CustomRulesNotifier extends Notifier<List<Map<String, Object?>>> {
 
 final customRulesProvider = NotifierProvider<CustomRulesNotifier, List<Map<String, Object?>>>(CustomRulesNotifier.new);
 
+/// Books with a tagged corpus (assets/corpus, built by
+/// tool/corpus/build_assets.py).
+const corpusFiles = {
+  'Siddur Ashkenaz': 'assets/corpus/ashkenaz.json.gz',
+  'Weekday Siddur Chabad': 'assets/corpus/chabad.json.gz',
+  'Siddur Sefard': 'assets/corpus/sefard.json.gz',
+  'Siddur Edot HaMizrach': 'assets/corpus/edot_hamizrach.json.gz',
+  'The Koren Shalem Siddur; Ashkenaz': 'assets/corpus/koren.json.gz',
+};
+
+final corpusProvider = FutureProvider.family<Corpus?, String>((ref, bookTitle) async {
+  final file = corpusFiles[bookTitle];
+  if (file == null) return null;
+  final List<int> bytes;
+  try {
+    bytes = await _BundleSource().readBytes(file);
+  } catch (_) {
+    return null; // Not tagged yet: the engine's own analysis is used.
+  }
+  return Corpus.fromJson(jsonDecode(utf8.decode(_gunzip(bytes))) as Map<String, Object?>);
+});
+
 final resolverProvider = FutureProvider.family<SiddurResolver, String>((ref, bookTitle) async {
   final rules = await ref.watch(rulesProvider.future);
   final custom = ref.watch(customRulesProvider);
+  final corpus = await ref.watch(corpusProvider(bookTitle).future);
   final bookRules = (rules[bookTitle] as Map<String, dynamic>?) ?? const {};
-  return SiddurResolver().withOverrides(bookRules).withOverrides({'sections': custom});
+  return SiddurResolver().withOverrides(bookRules).withOverrides({'sections': custom}).withCorpus(corpus);
 });
 
 /// Ticks every 30 seconds (and immediately) so countdowns stay fresh.
@@ -66,12 +90,13 @@ final locationProvider = Provider<Location>((ref) => ref.watch(settingsProvider.
 
 tz.Location tzLocationOf(Location l) => l.tzLocation;
 
-/// The civil (wall-clock) date at the user's location.
-final civilTodayProvider = Provider<PlainDate>((ref) {
+/// Today's date at the user's location, turning over at dawn by their
+/// opinion rather than midnight (see dayAt): until dawn it's still the
+/// night before, for the siddur, zmanim, learning and calendar alike.
+final todayProvider = Provider<PlainDate>((ref) {
   final now = ref.watch(nowProvider).value ?? DateTime.now();
-  final loc = ref.watch(locationProvider);
-  final local = tz.TZDateTime.from(now, loc.tzLocation);
-  return PlainDate(local.year, local.month, local.day);
+  final s = ref.watch(settingsProvider.select((s) => (s.useElevation, s.opinion)));
+  return dayAt(now, ref.watch(locationProvider), useElevation: s.$1, opinion: s.$2);
 });
 
 /// The current halachic Hebrew date (advances at sunset).
@@ -105,8 +130,7 @@ final focusModeProvider = StateProvider<bool>((ref) => false);
 final readerDaytimeDateProvider = Provider<HDate>((ref) {
   final picked = ref.watch(readerDateProvider);
   if (picked != null) return picked;
-  final civil = ref.watch(civilTodayProvider);
-  return HDate.fromAbs(civil.abs);
+  return HDate.fromAbs(ref.watch(todayProvider).abs);
 });
 
 /// Holidays/events for a Hebrew year (cached by hebcal).

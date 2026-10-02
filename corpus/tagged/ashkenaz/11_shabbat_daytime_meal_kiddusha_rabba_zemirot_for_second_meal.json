@@ -1,0 +1,792 @@
+{
+ "nusach": "ashkenaz",
+ "chunk": "Shabbat/Daytime Meal [Kiddusha Rabba .. Zemirot for Second Meal]",
+ "leaves": {
+  "Shabbat/Daytime Meal/Kiddusha Rabba": {
+   "node": "shabbat.kiddush_day",
+   "service": "none"
+  },
+  "Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon": {
+   "node": "x.zemirot.baruch_kel_elyon",
+   "service": "none"
+  },
+  "Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad": {
+   "node": "x.zemirot.yom_zeh_mechubad",
+   "service": "none"
+  },
+  "Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton": {
+   "node": "x.zemirot.yom_shabbaton",
+   "service": "none"
+  },
+  "Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai": {
+   "node": "x.zemirot.shimru_shabtotai",
+   "service": "none"
+  },
+  "Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera": {
+   "node": "x.zemirot.ki_eshmera",
+   "service": "none"
+  },
+  "Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah": {
+   "node": "x.zemirot.dror_yikrah",
+   "service": "none"
+  }
+ },
+ "he": {
+  "he:Shabbat/Daytime Meal/Kiddusha Rabba:1": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Daytime Meal/Kiddusha Rabba:3": {
+   "kind": "prayer",
+   "role": "head_of_household"
+  },
+  "he:Shabbat/Daytime Meal/Kiddusha Rabba:5": {
+   "kind": "prayer",
+   "role": "head_of_household",
+   "gestures": [
+    "hold_cup"
+   ]
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:25": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:27": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:29": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:31": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:33": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:37": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:39": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:41": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:43": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:45": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:49": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:51": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:53": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:55": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:57": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:61": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:63": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:65": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:67": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:69": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:73": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:75": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:77": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:79": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:81": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Baruch Kel Elyon:83": {
+   "kind": "commentary",
+   "en": "Author: R. Baruch bar Shmuel of Mainz"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:23": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:26": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:29": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:31": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:33": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:35": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:38": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:42": {
+   "parts": [
+    {
+     "text": "לֹא תְחַסַּר ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<em><small>נ\"א: תֶחְסַר</small></em>",
+     "kind": "note",
+     "en": "Alternate reading: תֶחְסַר"
+    },
+    {
+     "text": " כֹּל בּוֹ וְאָכַלְתָּ,",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:44": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:46": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:48": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:51": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:54": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:56": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:58": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:60": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:63": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:67": {
+   "kind": "commentary",
+   "en": "Author: R. Israel the Convert, a righteous convert of the 12th century"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:23": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:25": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:27": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:29": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:31": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:33": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:35": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:37": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:39": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:41": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:43": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:45": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:47": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:49": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Shabbaton:51": {
+   "kind": "commentary",
+   "en": "Author: R. Yehuda HaLevi"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:2": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:23": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:24": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:25": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:26": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:27": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:28": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:29": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:31": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:32": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:33": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:34": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:35": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:36": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:37": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:38": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:22": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:24": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:26": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:28": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:31": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:33": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:35": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:37": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:40": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:42": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:44": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:46": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:49": {
+   "kind": "commentary",
+   "en": "Author: R. Avraham ibn Ezra"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:1": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:21": {
+   "parts": [
+    {
+     "text": "וְגַם בָּבֶל ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<em><small>נ\"א: אֱדוֹם</small></em>",
+     "kind": "note",
+     "en": "Alternate reading: אֱדוֹם"
+    },
+    {
+     "text": " אֲשֶׁר גָּבְרָה.",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:23": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:25": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:28": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:30": {
+   "parts": [
+    {
+     "text": "הֲדַס שִׁטָּה בְּרוֹשׁ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<em><small>נ\"א: בְּרֹאשׁ</small></em>",
+     "kind": "note",
+     "en": "Alternate reading: בְּרֹאשׁ"
+    },
+    {
+     "text": " תִּדְהָר.",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:32": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:34": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:37": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:39": {
+   "parts": [
+    {
+     "text": "בְּמוֹג לֵבָב וּבִמְגִנָּה ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<em><small>נ\"א: וּבַמְגִנָּה</small></em>.",
+     "kind": "note",
+     "en": "Alternate reading: וּבַמְגִנָּה"
+    }
+   ]
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:41": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:43": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:46": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:48": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:50": {
+   "parts": [
+    {
+     "text": "נְצוֹר מִצְוַת קְדֹשֶׁךָ ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<em><small>נ\"א: אֱלֹהֶיךָ</small></em>",
+     "kind": "note",
+     "en": "Alternate reading: אֱלֹהֶיךָ"
+    }
+   ]
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:52": {
+   "kind": "prayer"
+  },
+  "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Dror Yikrah:55": {
+   "kind": "commentary",
+   "en": "Author: Dunash ben Labrat"
+  }
+ },
+ "en": {
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:1": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:1"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:4": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:4"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:6": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:6"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:8": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:8"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:10": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:10"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:13": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:13"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:17": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:17"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:19": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:19"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:21": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:21"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:23": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:23"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:26": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:26"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:29": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:29"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:31": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:31"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:33": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:33"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:35": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:35"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:38": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:38"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:42": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:42"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:44": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:44"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:46": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:46"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:48": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:48"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:51": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:51"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:54": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:54"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:56": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:56"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:58": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:58"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:60": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:60"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:63": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:63"
+   ]
+  },
+  "en:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:67": {
+   "he": [
+    "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:67"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:13",
+   "type": "missing_text",
+   "detail": "Refrain abbreviated with ellipsis (שַׁבַּת הַיּוֹם לה', וּלְווּ עָלַי...); the same abbreviated refrain closes every stanza."
+  },
+  {
+   "id": "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Shimru Shabtotai:4",
+   "type": "wrong_vowel",
+   "detail": "וְלְּווּ has a stray dagesh/shva; should read וְלוּוּ."
+  },
+  {
+   "id": "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:44",
+   "type": "wrong_vowel",
+   "detail": "וְשָּׂבָעְתָּ has an evident stray dagesh on the sin."
+  },
+  {
+   "id": "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Yom Zeh Mechubad:13",
+   "type": "wrong_vowel",
+   "detail": "מְכֻבַּד in the refrain is vowelled differently from מְכֻבָּד in segment 1; inconsistent."
+  },
+  {
+   "id": "he:Shabbat/Daytime Meal/Zemirot for Second Meal/Ki Eshmera:1",
+   "type": "ambiguous",
+   "detail": "Ki Eshmera is unvocalized and unpunctuated, unlike other zemirot here; a stray <em><small>בו</small></em> in seg 26 is left inside the prayer."
+  }
+ ]
+}

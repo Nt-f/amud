@@ -1,0 +1,3983 @@
+{
+ "nusach": "koren",
+ "chunk": "book [Festivals .. Giving Thanks]",
+ "leaves": {
+  "Festivals/Selihot for the Fast of Esther": {
+   "node": "selichot",
+   "service": "none",
+   "when": "taanitEsther"
+  },
+  "Festivals/Selihot for the Seventeenth of Tammuz": {
+   "node": "selichot",
+   "service": "none",
+   "when": "tzomTammuz"
+  },
+  "Festivals/Selihot; All Days": {
+   "node": "tachanun.vidui",
+   "service": "shacharit",
+   "when": "tachanun"
+  },
+  "Giving Thanks/Birkat HaMazon; Grace after Meals": {
+   "node": "birkat_hamazon",
+   "service": "none",
+   "when": "true"
+  },
+  "Giving Thanks/Blessings on Mitzvot": {
+   "node": "brachot.mitzvot",
+   "service": "none"
+  },
+  "Giving Thanks/Blessings on Pleasures, Sights and Sounds": {
+   "node": "brachot.reiyah",
+   "service": "none"
+  },
+  "Giving Thanks/Consecration of a House": {
+   "node": "lifecycle.house_of_mourning",
+   "service": "none"
+  },
+  "Giving Thanks/The Traveler's Prayer": {
+   "node": "tefillat_haderech",
+   "service": "none"
+  }
+ },
+ "he": {
+  "he:Festivals/Selihot for the Fast of Esther:1": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:2": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:4": {
+   "kind": "instruction",
+   "en": "Congregation then Leader:",
+   "gloss": "Introduces the 13 Attributes"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:6": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:8": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:9": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:10": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:11": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:13": {
+   "kind": "instruction",
+   "en": "And the LORD said, I have forgiven as you asked.",
+   "gloss": "Biblical citation"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:15": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:16": {
+   "kind": "instruction",
+   "en": "Our God and God of our fathers:",
+   "gloss": "Introduces the acrostic piyyut"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:17": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:18": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:20": {
+   "kind": "instruction",
+   "en": "Congregation then Leader:",
+   "gloss": "Introduces the 13 Attributes"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:22": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:24": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:25": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:26": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:27": {
+   "kind": "instruction",
+   "en": "Our God and God of our fathers:",
+   "gloss": "Introduces the acrostic piyyut"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:28": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:29": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:31": {
+   "kind": "instruction",
+   "en": "Congregation then Leader:",
+   "gloss": "Introduces the 13 Attributes"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:33": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:35": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:37": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:38": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:39": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:40": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:41": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:42": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:43": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Fast of Esther:44": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:66": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:67": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:68": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:69": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:70": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:71": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:72": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:73": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:74": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:76": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:77": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:79": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:80": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:81": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:83": {
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:84": {
+   "kind": "instruction",
+   "en": "The Ark is closed."
+  },
+  "he:Festivals/Selihot; All Days:1": {
+   "kind": "heading",
+   "en": "Confession"
+  },
+  "he:Festivals/Selihot; All Days:2": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot; All Days:4": {
+   "kind": "prayer",
+   "gestures": [
+    "strike_chest"
+   ]
+  },
+  "he:Festivals/Selihot; All Days:5": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot; All Days:6": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot; All Days:7": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot; All Days:9": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot; All Days:10": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot; All Days:11": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot; All Days:12": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:2": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:4": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:5": {
+   "kind": "heading",
+   "en": "Birkat HaMazon"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:7": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:9": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:11": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:12": {
+   "kind": "heading",
+   "en": "Order of the Zimun"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:14": {
+   "kind": "instruction",
+   "en": "Gentlemen, let us say grace.",
+   "gloss": "Leader invites the group to begin the Grace after Meals"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:15": {
+   "kind": "prayer",
+   "role": "congregation",
+   "en": "May the name of the LORD be blessed from now and for ever."
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:16": {
+   "kind": "prayer",
+   "role": "chazzan",
+   "en": "May the name of the LORD be blessed from now and for ever."
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:17": {
+   "kind": "instruction",
+   "en": "With your permission, (my father and teacher / my mother and teacher / the Kohanim present / our teacher the Rabbi / the master of this house / the mistress of this house)",
+   "gloss": "Leader asks permission from those with precedence"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:18": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "en": "in a minyan",
+   "gloss": "Add 'our God' when there is a minyan"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:19": {
+   "kind": "instruction",
+   "role": "congregation",
+   "en": "in a minyan:",
+   "gloss": "Add 'our God' when there is a minyan"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:21": {
+   "kind": "instruction",
+   "role": "congregation",
+   "en": "in a minyan:",
+   "gloss": "Add 'our God' when there is a minyan"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:22": {
+   "kind": "instruction",
+   "role": "chazzan",
+   "en": "in a minyan:",
+   "gloss": "Add 'our God' when there is a minyan"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:23": {
+   "kind": "prayer",
+   "role": "congregation",
+   "en": "Blessed be He, and blessed be His name."
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:24": {
+   "kind": "heading",
+   "en": "Blessing of Nourishment"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:25": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:26": {
+   "kind": "heading",
+   "en": "Blessing of the Land"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:27": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:28": {
+   "kind": "prayer",
+   "en": "On Chanukah:",
+   "gloss": "Insert this paragraph on Chanukah",
+   "when": "chanukah"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:29": {
+   "kind": "prayer",
+   "en": "On Purim:",
+   "gloss": "Insert this paragraph on Purim",
+   "when": "purim"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:30": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:31": {
+   "kind": "heading",
+   "en": "Blessing for Jerusalem"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:32": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:34": {
+   "kind": "prayer",
+   "en": "On Shabbat:",
+   "gloss": "Insert this paragraph on Shabbat",
+   "when": "shabbat"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:36": {
+   "kind": "instruction",
+   "en": "On Rosh Chodesh:",
+   "gloss": "Insert 'Rosh Chodesh' here",
+   "when": "roshChodesh"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:38": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:39": {
+   "kind": "heading",
+   "en": "Blessing of God's Goodness"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:40": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:42": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:43": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:44": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:45": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:46": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:47": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:48": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:49": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:50": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:52": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:53": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:55": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:57": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:59": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:61": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:62": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:64": {
+   "kind": "prayer",
+   "en": "On Shabbat:",
+   "gloss": "Insert this paragraph on Shabbat",
+   "when": "shabbat"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:65": {
+   "kind": "prayer",
+   "en": "On Rosh Chodesh:",
+   "gloss": "Insert this paragraph on Rosh Chodesh",
+   "when": "roshChodesh"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:66": {
+   "kind": "instruction",
+   "en": "On Rosh Hashana:"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:67": {
+   "kind": "instruction",
+   "en": "On Yom Tov:"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:68": {
+   "kind": "instruction",
+   "en": "On Sukkot:"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:69": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:70": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:74": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:76": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:78": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:80": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:82": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:84": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:85": {
+   "kind": "heading",
+   "en": "Blessing after food -- Al HaMichya"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:87": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:88": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:89": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:90": {
+   "kind": "prayer",
+   "when": "shabbat"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:91": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:93": {
+   "kind": "heading",
+   "en": "Borei Nefashot"
+  },
+  "he:Giving Thanks/Birkat HaMazon; Grace after Meals:95": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Mitzvot:2": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Mitzvot:3": {
+   "kind": "instruction",
+   "en": "Declaration for separating teruma and tithes:",
+   "gloss": "Said in Israel when separating teruma and first tithe"
+  },
+  "he:Giving Thanks/Blessings on Mitzvot:5": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Mitzvot:6": {
+   "kind": "instruction",
+   "en": "Declaration for redeeming the second tithe:",
+   "gloss": "Said in Israel when redeeming the second tithe"
+  },
+  "he:Giving Thanks/Blessings on Mitzvot:8": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Mitzvot:10": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Mitzvot:12": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Mitzvot:14": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Mitzvot:16": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Mitzvot:18": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:2": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:4": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:6": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:8": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:10": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:12": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:14": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:16": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:18": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:20": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:22": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:24": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:26": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:28": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:30": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:32": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:34": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:36": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:38": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:40": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:42": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:44": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:45": {
+   "kind": "heading",
+   "en": "Additional Blessings"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:47": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:49": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:50": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:52": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:54": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/Consecration of a House:1": {
+   "kind": "prayer",
+   "node": "pz.mizmor_shir_chanukat"
+  },
+  "he:Giving Thanks/Consecration of a House:2": {
+   "kind": "prayer",
+   "node": "pz.mizmor_shir_chanukat"
+  },
+  "he:Giving Thanks/Consecration of a House:3": {
+   "kind": "prayer",
+   "node": "lifecycle.house_of_mourning"
+  },
+  "he:Giving Thanks/Consecration of a House:5": {
+   "kind": "prayer",
+   "node": "lifecycle.house_of_mourning"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:1": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:2": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:4": {
+   "kind": "instruction",
+   "en": "Congregation then Leader:",
+   "gloss": "Introduces the Thirteen Attributes"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:6": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:8": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:9": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:10": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:11": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:13": {
+   "kind": "instruction",
+   "en": "Congregation then Leader:",
+   "gloss": "Introduces the Thirteen Attributes"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:15": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:16": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:17": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:18": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:20": {
+   "kind": "instruction",
+   "en": "Congregation then Leader:",
+   "gloss": "Introduces the Thirteen Attributes"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:22": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:24": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:25": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:26": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:27": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:28": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:29": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:31": {
+   "kind": "instruction",
+   "en": "Congregation then Leader:",
+   "gloss": "Introduces the Thirteen Attributes"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:33": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:35": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:37": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:38": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:39": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:40": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:41": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:42": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:43": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:44": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:46": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:48": {
+   "kind": "instruction",
+   "en": "Congregation then Leader:",
+   "gloss": "Introduces the Thirteen Attributes"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:50": {
+   "kind": "prayer",
+   "role": "congregation_then_chazzan",
+   "voice": "aloud"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:52": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:53": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:54": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:55": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:56": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:57": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:58": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:59": {
+   "kind": "prayer"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:61": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:62": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:63": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:64": {
+   "kind": "prayer",
+   "role": "congregation"
+  },
+  "he:Festivals/Selihot for the Seventeenth of Tammuz:65": {
+   "kind": "prayer",
+   "role": "chazzan"
+  },
+  "he:Giving Thanks/The Traveler's Prayer:2": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/The Traveler's Prayer:3": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/The Traveler's Prayer:5": {
+   "kind": "prayer"
+  },
+  "he:Giving Thanks/The Traveler's Prayer:7": {
+   "kind": "prayer",
+   "repeat": 3
+  },
+  "he:Giving Thanks/The Traveler's Prayer:8": {
+   "kind": "prayer"
+  }
+ },
+ "en": {
+  "en:Festivals/Selihot for the Fast of Esther:1": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:1"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:2": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:2"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:3": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:4"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:4": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:4"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:5": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:6"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:6": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:6"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:7": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:8"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:8": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:8"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:9": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:9"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:10": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:10"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:11": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:11"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:12": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:13"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:13": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:13"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:14": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:15"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:15": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:15"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:16": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:16"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:17": {
+   "parts": [
+    {
+     "text": "אָדָם When a man rose up against us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " convulsions of trembling seized us. When he attached himself to a government of flattery,",
+     "kind": "prayer"
+    },
+    {
+     "text": " we almost stumbled and fell. They cheerfully closed an agreement to sell us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as a person with an unwanted mound gives it away quite freely to one with an unwanted pit. There was no defense. They said,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “Come,",
+     "kind": "prayer"
+    },
+    {
+     "text": " let us annihilate them from among nations: the name of Israel shall be recalled no more.” My eyes turned heavenward and I called on You to curse my enemies: “Cut off name and remnant;",
+     "kind": "prayer"
+    },
+    {
+     "text": " expunge their name,",
+     "kind": "prayer"
+    },
+    {
+     "text": " let it rot. And be Enemy to my enemies;",
+     "kind": "prayer"
+    },
+    {
+     "text": " bring them down in the very deceptions with which they deceived the people of Jacob.” And they said,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “The <small>LORD</small> will not see;",
+     "kind": "prayer"
+    },
+    {
+     "text": " the God of Jacob will not comprehend.” Yet God tormented the scattered ones and made them mournful – but did not mean to destroy them utterly. They were guilty on the face of things,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and so He terrorized them. By the taking off of a ring,",
+     "kind": "prayer"
+    },
+    {
+     "text": " He made them tremble. But God fulfilled the good of His word,",
+     "kind": "prayer"
+    },
+    {
+     "text": " raising them up in the view of nations. “In their enemies’ land He did not reject them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and did not detest them to the point of destruction.” He revealed the premonition of events for a nation begrimed and scratched over. He wrote “I shall surely hide (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>astir</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") Myself” to hint at Esther,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and fragrant “pure myrrh,",
+     "kind": "prayer"
+    },
+    {
+     "text": "” translated “mar-dokh,",
+     "kind": "prayer"
+    },
+    {
+     "text": "” to hint at Mordekhai;",
+     "kind": "prayer"
+    },
+    {
+     "text": " all to put an end to Haman on the morrow,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “From (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>hamin</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ") the tree” foreshadowing his gallows. “In place of the thorn bush,",
+     "kind": "prayer"
+    },
+    {
+     "text": " shall rise up a cypress,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and in place of the nettle,",
+     "kind": "prayer"
+    },
+    {
+     "text": " shall rise up myrtle.” The king who listened to lies,",
+     "kind": "prayer"
+    },
+    {
+     "text": " dictated accusation and sorrow. He wrapped himself in priestly clothes,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Ahasuerus,",
+     "kind": "prayer"
+    },
+    {
+     "text": " having mistaken his reckoning of the End. He ordered “other vessels” to be used,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from the Quarry from which the world was hewn;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the devil too,",
+     "kind": "prayer"
+    },
+    {
+     "text": " came and placed himself among them. When the people in Shushan ate of their destroyer’s meat,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the king opened his mouth wide to accuse them,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to give them over into the hands of the one who was ready to pay their price. The Rock,",
+     "kind": "prayer"
+    },
+    {
+     "text": " meanwhile,",
+     "kind": "prayer"
+    },
+    {
+     "text": " agreed to write a letter to destroy their hope;",
+     "kind": "prayer"
+    },
+    {
+     "text": " “I said that I would yield them up,",
+     "kind": "prayer"
+    },
+    {
+     "text": " would put an end to their memory among mankind.” The angels,",
+     "kind": "prayer"
+    },
+    {
+     "text": " messengers of peace,",
+     "kind": "prayer"
+    },
+    {
+     "text": " wept bitterly,",
+     "kind": "prayer"
+    },
+    {
+     "text": " crying out,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “Compassionate One,",
+     "kind": "prayer"
+    },
+    {
+     "text": " look to the covenant and do not break it,",
+     "kind": "prayer"
+    },
+    {
+     "text": " pushing it away!” The Torah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " too,",
+     "kind": "prayer"
+    },
+    {
+     "text": " heard of it and put on clothes of widowhood and sorrow;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and she laid her hands upon her head and walked along,",
+     "kind": "prayer"
+    },
+    {
+     "text": " crying as she went. [Elijah] The Tishbite wrapped a covering of sackcloth around his waist. He hurried and told the three fathers who sleep in the Cave of Makhpelah,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and then hastened to the Shepherd,",
+     "kind": "prayer"
+    },
+    {
+     "text": " [Moses] – “What do you mean by sleeping? Rouse yourself! Get up and call out to your God – perhaps He may change His mind!” He told [Mordekhai] Bilshan of the pronouncement that had been sealed in clay – but not in blood. They learnt from the example of Nineveh how to overturn anger after a decree;",
+     "kind": "prayer"
+    },
+    {
+     "text": " the son of Kish knocked at the door of the school,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and covered himself in sackcloth and sat down on the earth. For three days he gathered the children before him – thirsty,",
+     "kind": "prayer"
+    },
+    {
+     "text": " hidden from by God – so that,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in the voice of Jacob,",
+     "kind": "prayer"
+    },
+    {
+     "text": " they might weaken the hand of the bold-faced king. His hands raised steadily to God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Mordekhai prayed,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “Save us now from insult;",
+     "kind": "prayer"
+    },
+    {
+     "text": " that he should not come and slaughter us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " mothers and children together.” Those and those,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from all sides,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the children of my mighty ones and teachers,",
+     "kind": "prayer"
+    },
+    {
+     "text": " all cried out,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and their plea rose up to the <small>LORD</small>. And God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " when those plaintive calls reached Him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " asked,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “And what is this bleating of sheep that meets My ears?” The shepherd Moses answered Him,",
+     "kind": "prayer"
+    },
+    {
+     "text": " “These are the little ones of the holy offspring. <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " save ones condemned to die,",
+     "kind": "prayer"
+    },
+    {
+     "text": " from the evil enemy.” The compassion of the Gracious One was stirred,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and He was moved to weep for what had happened. And so it was that when the King of Israel read the letter,",
+     "kind": "prayer"
+    },
+    {
+     "text": " He tore it to pieces. The Jew suspended sons below and father above. Each man covered three ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>amot</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": ";",
+     "kind": "prayer"
+    },
+    {
+     "text": " the fourth ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>amah</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " above was space exposed. Mordekhai saw a double revenge,",
+     "kind": "prayer"
+    },
+    {
+     "text": " was delighted,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and spoke praises: “I was returned to my post and he was hanged!” Esther wrote with emphasis,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that a Hallel of thanks should be read on that day;",
+     "kind": "prayer"
+    },
+    {
+     "text": " and what the beloved ones accepted down below was established above. A banner shall be raised by those who bear witness,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to make the wonder known now,",
+     "kind": "prayer"
+    },
+    {
+     "text": " as it was then. And at this time – may relief and salvation rise up for the Jews.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:17"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:18": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:18"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:19": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:20"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:20": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:20"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:21": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:22"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:22": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:22"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:23": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:24"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:24": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:24"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:25": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:25"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:26": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:26"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:27": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:27"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:28": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:28"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:29": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:29"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:30": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:31"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:31": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:31"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:32": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:33"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:33": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:33"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:34": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:35"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:35": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:35"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:36": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:37"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:37": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:37"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:38": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:38"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:39": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:39"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:40": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:40"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:41": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:41"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:42": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:42"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:43": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:43"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:44": {
+   "he": [
+    "he:Festivals/Selihot for the Fast of Esther:44"
+   ]
+  },
+  "en:Festivals/Selihot for the Fast of Esther:45": {
+   "he": []
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:49": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:66"
+   ],
+   "kind": "instruction",
+   "en": "All say aloud:",
+   "gloss": "Start of the responsive section"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:50": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:67"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:51": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:68"
+   ],
+   "kind": "instruction",
+   "en": "Continue:",
+   "gloss": "Congregation continues the responsive pattern"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:52": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:69"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:53": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:70"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:54": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:71"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:55": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:72"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:56": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:73"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:57": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:74"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:58": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:76"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:59": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:77"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:60": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:79"
+   ],
+   "kind": "instruction",
+   "en": "Some say responsively (all continue with “Remember the covenant” on the next page):",
+   "gloss": "Optional responsive reading for some lines"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:61": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:80"
+   ],
+   "kind": "prayer",
+   "role": "responsive",
+   "gloss": "Optional responsive line"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:62": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:81"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:63": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:83"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:64": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:84"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:65": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:63"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:66": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:64"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:67": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:65"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:68": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:66"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:69": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:67"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:70": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:68"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:71": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:69"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:72": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:70"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:73": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:71"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:74": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:72"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:75": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:73"
+   ],
+   "kind": "instruction",
+   "en": "On the Fast of Esther add:",
+   "gloss": "Conditional addition for Ta'anit Esther"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:76": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:74"
+   ],
+   "kind": "prayer",
+   "role": "responsive",
+   "gloss": "Conditional responsive line for Ta'anit Esther"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:77": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:76"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:78": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:77"
+   ],
+   "kind": "instruction",
+   "en": "All continue:",
+   "gloss": "Resuming the standard responsive pattern"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:79": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:79"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:80": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:80"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:81": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:81"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:82": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">The Ark is opened. The following until</i>",
+     "kind": "instruction",
+     "en": "The Ark is opened. The following until ◂ is said responsively, verse by verse:",
+     "gloss": "Instruction for the responsive reading of the final section"
+    },
+    {
+     "text": " ◂ ",
+     "kind": "instruction",
+     "en": "The Ark is opened. The following until ◂ is said responsively, verse by verse:",
+     "gloss": "Instruction for the responsive reading of the final section"
+    },
+    {
+     "text": "<i class=\"instruction\">is said responsively, verse by verse:</i>",
+     "kind": "instruction",
+     "en": "The Ark is opened. The following until ◂ is said responsively, verse by verse:",
+     "gloss": "Instruction for the responsive reading of the final section"
+    }
+   ],
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:83"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:83": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:83"
+   ],
+   "kind": "prayer",
+   "role": "responsive"
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:84": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:84"
+   ],
+   "kind": "instruction",
+   "en": "The Ark is closed."
+  },
+  "en:Festivals/Selihot; All Days:1": {
+   "he": [
+    "he:Festivals/Selihot; All Days:1"
+   ]
+  },
+  "en:Festivals/Selihot; All Days:2": {
+   "he": [
+    "he:Festivals/Selihot; All Days:2"
+   ]
+  },
+  "en:Festivals/Selihot; All Days:3": {
+   "he": []
+  },
+  "en:Festivals/Selihot; All Days:4": {
+   "he": [
+    "he:Festivals/Selihot; All Days:4"
+   ]
+  },
+  "en:Festivals/Selihot; All Days:5": {
+   "he": [
+    "he:Festivals/Selihot; All Days:5"
+   ]
+  },
+  "en:Festivals/Selihot; All Days:6": {
+   "he": [
+    "he:Festivals/Selihot; All Days:6"
+   ]
+  },
+  "en:Festivals/Selihot; All Days:7": {
+   "he": [
+    "he:Festivals/Selihot; All Days:7"
+   ]
+  },
+  "en:Festivals/Selihot; All Days:8": {
+   "he": []
+  },
+  "en:Festivals/Selihot; All Days:9": {
+   "he": [
+    "he:Festivals/Selihot; All Days:9"
+   ]
+  },
+  "en:Festivals/Selihot; All Days:10": {
+   "he": [
+    "he:Festivals/Selihot; All Days:10"
+   ]
+  },
+  "en:Festivals/Selihot; All Days:11": {
+   "he": [
+    "he:Festivals/Selihot; All Days:11"
+   ]
+  },
+  "en:Festivals/Selihot; All Days:12": {
+   "he": [
+    "he:Festivals/Selihot; All Days:12"
+   ]
+  },
+  "en:Festivals/Selihot; All Days:13": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:1": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:2"
+   ],
+   "kind": "instruction",
+   "en": "On washing hands before eating bread (see laws 409–413):"
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:2": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:2"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:3": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:4"
+   ],
+   "kind": "instruction",
+   "en": "Before eating bread:"
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:4": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:4"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:5": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:5"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:6": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:7"
+   ],
+   "kind": "instruction",
+   "en": "On days when Taḥanun is said:"
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:7": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:7"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:8": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:9"
+   ],
+   "kind": "instruction",
+   "en": "On days when Taḥanun is omitted (such as Shabbat and Yom Tov, see full list on page 144):"
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:9": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:9"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:10": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:11"
+   ],
+   "kind": "instruction",
+   "en": "Some say:"
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:11": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:11"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:12": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:12"
+   ],
+   "kind": "heading",
+   "en": "ZIMMUN / INVITATION"
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:13": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">For the zimmun said at a wedding or during the week of Sheva Berakhot, see page 1042. At a Brit, see page 1020. In the house of a mourner when there are three or more men, see page 1068.</i>",
+     "kind": "instruction",
+     "en": "For the zimmun said at a wedding or during the week of Sheva Berakhot, see page 1042. At a Brit, see page 1020. In the house of a mourner when there are three or more men, see page 1068."
+    },
+    {
+     "text": "<br><i class=\"instruction\">When three or more men say Birkat HaMazon together, the following zimmun is said.</i>",
+     "kind": "instruction",
+     "en": "When three or more men say Birkat HaMazon together, the following zimmun is said."
+    },
+    {
+     "text": "<br><i class=\"instruction\">When three or more women say Birkat HaMazon, substitute “Friends” for “Gentlemen.”</i>",
+     "kind": "instruction",
+     "en": "When three or more women say Birkat HaMazon, substitute “Friends” for “Gentlemen.”"
+    },
+    {
+     "text": "<br><i class=\"instruction\">The leader should ask permission from those with precedence to lead the Birkat HaMazon.</i>",
+     "kind": "instruction",
+     "en": "The leader should ask permission from those with precedence to lead the Birkat HaMazon."
+    }
+   ],
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:14": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction",
+     "en": "Leader"
+    },
+    {
+     "text": " Gentlemen,",
+     "kind": "prayer"
+    },
+    {
+     "text": " let us say grace.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:14"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:15": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Others</i>",
+     "kind": "instruction",
+     "en": "Others"
+    },
+    {
+     "text": " May the name of the <small>LORD</small> be blessed from now and for ever.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:15"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:16": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction",
+     "en": "Leader"
+    },
+    {
+     "text": " May the name of the <small>LORD</small> be blessed from now and for ever.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:16"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:17": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:17"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:18": {
+   "parts": [
+    {
+     "text": "my masters and teachers,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>let us bless (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">in a minyan</i>",
+     "kind": "instruction",
+     "en": "in a minyan",
+     "gloss": "Add 'our God' when there is a minyan"
+    },
+    {
+     "text": " our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": ") the One from whose food we have eaten.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:18"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:19": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Others</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed be (",
+     "kind": "instruction",
+     "en": "in a minyan:",
+     "gloss": "Add 'our God' when there is a minyan"
+    },
+    {
+     "text": "<i class=\"instruction\">in a minyan:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": ") the One from whose food we have eaten,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and by whose goodness we live.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:19"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:20": {
+   "he": [],
+   "kind": "instruction",
+   "en": "* People present who have not taken part in the meal say:"
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:21": {
+   "parts": [
+    {
+     "text": "*Blessed be (",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">in a minyan:</i>",
+     "kind": "instruction",
+     "en": "in a minyan:",
+     "gloss": "Add 'our God' when there is a minyan"
+    },
+    {
+     "text": " our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": ") the One whose name is continually blessed for ever and all time.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:21"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:22": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Leader</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Blessed be (",
+     "kind": "instruction",
+     "en": "in a minyan:",
+     "gloss": "Add 'our God' when there is a minyan"
+    },
+    {
+     "text": "<i class=\"instruction\">in a minyan: </i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": ") the One from whose food we have eaten,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and by whose goodness we live.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:22"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:23": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:23"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:24": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:24"
+   ],
+   "kind": "heading",
+   "en": "BLESSING OF NOURISHMENT"
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:25": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:25"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:26": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:26"
+   ],
+   "kind": "heading",
+   "en": "BLESSING OF LAND"
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:27": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:27"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:28": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Ḥanukka:</i>",
+     "kind": "instruction",
+     "en": "On Ḥanukka:"
+    },
+    {
+     "text": " עַל הַנִּסִּים [We thank You also] for the miracles,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the redemption,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the mighty deeds,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the salvations,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the victories in battle which You performed for our ancestors in those days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " at this time<br>.בִּימֵי מַתִּתְיָֽהוּ In the days of Mattityahu,",
+     "kind": "prayer"
+    },
+    {
+     "text": " son of Yoḥanan,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the High Priest,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the Hasmonean,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and his sons,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the wicked Greek kingdom rose up against Your people Israel to make them forget Your Torah and to force them to transgress the statutes of Your will. It was then that You in Your great compassion stood by them in the time of their distress. You championed their cause,",
+     "kind": "prayer"
+    },
+    {
+     "text": " judged their claim,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and avenged their wrong. You delivered the strong into the hands of the weak,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the many into the hands of the few,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the impure into the hands of the pure,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the wicked into the hands of the righteous,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the arrogant into the hands of those who were engaged in the study of Your Torah. You made for Yourself great and holy renown in Your world,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and for Your people Israel You performed a great salvation and redemption as of this very day. Your children then entered the holiest part of Your House,",
+     "kind": "prayer"
+    },
+    {
+     "text": " cleansed Your Temple,",
+     "kind": "prayer"
+    },
+    {
+     "text": " purified Your Sanctuary,",
+     "kind": "prayer"
+    },
+    {
+     "text": " kindled lights in Your holy courts,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and designated these eight days of Ḥanukka for giving thanks and praise to Your great name.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Continue with “For all this.”</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:28"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:29": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Purim:</i>",
+     "kind": "instruction",
+     "en": "On Purim:"
+    },
+    {
+     "text": " עַל הַנִּסִּים [We thank You also] for the miracles,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the redemption,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the mighty deeds,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the salvations,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and the victories in battle which You performed for our ancestors in those days,",
+     "kind": "prayer"
+    },
+    {
+     "text": " at this time<br>.בִּימֵי מָרְדְּכַי In the days of Mordekhai and Esther,",
+     "kind": "prayer"
+    },
+    {
+     "text": " in Shushan the capital,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the wicked Haman rose up against them and sought to destroy,",
+     "kind": "prayer"
+    },
+    {
+     "text": " slay and exterminate all the Jews,",
+     "kind": "prayer"
+    },
+    {
+     "text": " young and old,",
+     "kind": "prayer"
+    },
+    {
+     "text": " children and women,",
+     "kind": "prayer"
+    },
+    {
+     "text": " on one day,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the thirteenth day of the twelfth month,",
+     "kind": "prayer"
+    },
+    {
+     "text": " which is the month of Adar,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and to plunder their possessions. Then You in Your great compassion thwarted his counsel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " frustrated his plans,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and caused his scheme to recoil on his own head,",
+     "kind": "prayer"
+    },
+    {
+     "text": " so that they hanged him and his sons on the gallows.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">Continue with “For all this.”</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:29"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:30": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:30"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:31": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:31"
+   ],
+   "kind": "heading",
+   "en": "BLESSING FOR JERUSALEM"
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:32": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:32"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:33": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:34"
+   ],
+   "kind": "instruction",
+   "en": "On Shabbat, say:"
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:34": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:34"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:35": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:36"
+   ],
+   "kind": "instruction",
+   "en": "On Rosh Ḥodesh and Festivals, say:"
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:36": {
+   "parts": [
+    {
+     "text": "אֱלֹהֵֽינוּ Our God and God of our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>may there rise,",
+     "kind": "prayer"
+    },
+    {
+     "text": " come,",
+     "kind": "prayer"
+    },
+    {
+     "text": " reach,",
+     "kind": "prayer"
+    },
+    {
+     "text": " appear,",
+     "kind": "prayer"
+    },
+    {
+     "text": " be favored,",
+     "kind": "prayer"
+    },
+    {
+     "text": " heard,",
+     "kind": "prayer"
+    },
+    {
+     "text": " regarded<br>and remembered before You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " our recollection and remembrance,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>as well as the remembrance of our ancestors,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and of the Messiah son of David Your servant,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and of Jerusalem Your holy city,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and of all Your people the house of Israel –<br>for deliverance and well-being,",
+     "kind": "prayer"
+    },
+    {
+     "text": " grace,",
+     "kind": "instruction",
+     "en": "On Rosh Ḥodesh:",
+     "when": "roshChodesh"
+    },
+    {
+     "text": " loving-kindness and compassion,",
+     "kind": "instruction",
+     "en": "On Rosh HaShana:",
+     "when": "roshHashana"
+    },
+    {
+     "text": " life and peace,",
+     "kind": "instruction",
+     "en": "On Pesaḥ:",
+     "when": "pesach"
+    },
+    {
+     "text": " on this day of:<br>",
+     "kind": "instruction",
+     "en": "On Shavuot:",
+     "when": "shavuot"
+    },
+    {
+     "text": "<i class=\"instruction\">On Rosh Ḥodesh:</i>",
+     "kind": "instruction",
+     "en": "On Sukkot:",
+     "when": "sukkot"
+    },
+    {
+     "text": " Rosh Ḥodesh.<br>",
+     "kind": "instruction",
+     "en": "On Shemini Atzeret & Simḥat Torah:",
+     "when": "shminiAtzeret || simchatTorah"
+    },
+    {
+     "text": "<i class=\"instruction\">On Rosh HaShana:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Day of Memorial.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Pesaḥ:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Matzot.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Shavuot:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Shavuot.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Sukkot:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Sukkot.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Shemini Atzeret & Simḥat Torah:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " the Festival of Shemini Atzeret.<br>On it remember us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small> our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for good;",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>recollect us for blessing,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and deliver us for life.<br>In accord with Your promise of salvation and compassion,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>spare us and be gracious to us;",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>have compassion on us and deliver us,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>for our eyes are turned to You because You are God,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>gracious and compassionate (King).",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:36"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:37": {
+   "he": [],
+   "kind": "instruction",
+   "en": "In the house of a mourner, “Comfort” on page 1068 is substituted for the next two paragraphs."
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:38": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:38"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:39": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:39"
+   ],
+   "kind": "heading",
+   "en": "BLESSING OF GOD'S GOODNESS"
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:40": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:40"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:41": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:42"
+   ],
+   "kind": "heading",
+   "en": "ADDITIONAL REQUESTS"
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:42": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:42"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:43": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:43"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:44": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:44"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:45": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:45"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:46": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:46"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:47": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:47"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:48": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:48"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:49": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:66"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:50": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:67"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:51": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:52": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:53": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:54": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:55": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:56": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:57": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:58": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:59": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:60": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:61": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:62": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:63": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:64": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Shabbat:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May the Compassionate One let us inherit the time,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that will be entirely Shabbat and rest for life everlasting.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:64"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:65": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Rosh Ḥodesh:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May the Compassionate One renew this month for us,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>for good and blessing.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:65"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:66": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Rosh HaShana:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May the Compassionate One renew for us this year,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for good and blessing.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:66"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:67": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Yom Tov:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May the Compassionate One let us inherit the day,",
+     "kind": "prayer"
+    },
+    {
+     "text": " that is all good.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:67"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:68": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Sukkot:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " May the Compassionate One restore for us,",
+     "kind": "prayer"
+    },
+    {
+     "text": " the fallen Tabernacle of David.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:68"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:69": {
+   "parts": [
+    {
+     "text": "הָרַחֲמָן May the Compassionate One make us worthy of the Messianic Age and life in the World to Come.<br>He gives great /",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>On Shabbat, Festivals, and Rosh Ḥodesh:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " He is a tower of / salvation to His king,",
+     "kind": "prayer"
+    },
+    {
+     "text": " showing kindness to His anointed,",
+     "kind": "prayer"
+    },
+    {
+     "text": " to David and his descendants for ever. He who makes peace in His high places,",
+     "kind": "prayer"
+    },
+    {
+     "text": " may He make peace for us and all Israel,",
+     "kind": "prayer"
+    },
+    {
+     "text": " and let us say: Amen. ",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:69"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:70": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:70"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:71": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:72": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:73": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:74": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:74"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:75": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:76": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:76"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:77": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:78": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:78"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:79": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:80": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:80"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:81": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:82": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:82"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:83": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">Before eating fruit for the first time in a season, the following is said.</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">This blessing is also said when buying or wearing a new garment of significant value (e.g. a dress or suit); entering a new home for the first time; or hearing personal good news.</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:84": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:84"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:85": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:85"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:86": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:87": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:87"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:88": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">After grain products (but not bread or matza):</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " for the nourishment and sustenance,<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">After wine or grape juice:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " for the vine and the fruit of the vine,<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">After grapes, figs, olives, pomegranates or dates:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " for the tree and the fruit of the tree,</i><br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">After grain products (but not bread or matza), and wine or grape juice:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " for the nourishment and sustenance and for the vine and the fruit of the vine,",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:88"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:89": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:89"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:90": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">On Shabbat:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Be pleased to refresh us on this Sabbath Day.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Rosh Ḥodesh:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Remember us for good on this day of the New Moon.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Rosh HaShana:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Remember us for good on this Day of Remembrance.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Pesaḥ:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Grant us joy on this Festival of Matzot.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Shavuot:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Grant us joy on this Festival of Shavuot.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Sukkot:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Grant us joy on this Festival of Sukkot.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">On Shemini Atzeret & Simḥat Torah:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " Grant us joy on this Festival of Shemini Atzeret.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:90"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:91": {
+   "parts": [
+    {
+     "text": "For You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small>,",
+     "kind": "prayer"
+    },
+    {
+     "text": " are good and do good to all and we thank You for the land<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">After grain products (but not bread or matza):</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and for the nourishment. Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for the land and for the nourishment.<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">After wine or grape juice:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and for the fruit of the vine.* Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for the land and for the fruit of the vine.*<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">After grapes, figs, olives, pomegranates or dates:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and for the fruit.** Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for the land and for the fruit.**<br>",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i class=\"instruction\">After grain products (but not bread or matza), and wine or grape juice:</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and for the nourishment and for the fruit of the vine.* <br>Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " Lord,",
+     "kind": "prayer"
+    },
+    {
+     "text": " for the land and for the nourishment and the fruit of the vine.*",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:91"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:92": {
+   "parts": [
+    {
+     "text": "<i class=\"instruction\">* If the wine is from Israel, then substitute “her vine” for “the vine.”</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": "<br><i class=\"instruction\">** If the fruit is from Israel, then substitute “her fruit” for “the fruit.”</i>",
+     "kind": "instruction"
+    }
+   ],
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:93": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:93"
+   ]
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:94": {
+   "he": []
+  },
+  "en:Giving Thanks/Birkat HaMazon; Grace after Meals:95": {
+   "he": [
+    "he:Giving Thanks/Birkat HaMazon; Grace after Meals:95"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:1": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:2"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:2": {
+   "parts": [
+    {
+     "text": "Blessed are You,",
+     "kind": "prayer"
+    },
+    {
+     "text": " <small>LORD</small> our God,",
+     "kind": "prayer"
+    },
+    {
+     "text": " King of the Universe,",
+     "kind": "prayer"
+    },
+    {
+     "text": " who has made us holy through His commandments,",
+     "kind": "prayer"
+    },
+    {
+     "text": "<br>and has commanded us to separate ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>terumot</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " and tithes.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:2"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:3": {
+   "parts": [
+    {
+     "text": "Whatever [of the allocated portion] is more than one in a hundred of everything here,",
+     "kind": "prayer"
+    },
+    {
+     "text": " is hereby declared to be ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>teruma gedola</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " [the priestly portion] and is the northern portion. The one in a hundred that remains here,",
+     "kind": "prayer"
+    },
+    {
+     "text": " together with nine equal portions on the upper side of this produce are declared to be the first [levitical] tithe. The one in a hundred I have made first tithe is hereby declared to be ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>terumat ma’aser</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " [the tithe-of-the-tithe set aside for the priests]. Nine other equal portions on the lower side of the produce are declared to be second tithe,",
+     "kind": "prayer"
+    },
+    {
+     "text": " but if this produce must have the tithe of the poor separated from it,",
+     "kind": "prayer"
+    },
+    {
+     "text": " let them be the tithe of the poor.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:3"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:4": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:5"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:5": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:5"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:6": {
+   "parts": [
+    {
+     "text": "This second tithe,",
+     "kind": "prayer"
+    },
+    {
+     "text": " together with its additional fifth,",
+     "kind": "prayer"
+    },
+    {
+     "text": " is hereby redeemed by one ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<i>peruta</i>",
+     "kind": "instruction"
+    },
+    {
+     "text": " of the coins I have set aside for the redemption of the second tithe.",
+     "kind": "prayer"
+    }
+   ],
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:6"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:7": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:8"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:8": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:8"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:9": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:10"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:10": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:10"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:11": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:12"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:12": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:12"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:13": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:14"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:14": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:14"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:15": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:16"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:16": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:16"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:17": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:18"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Mitzvot:18": {
+   "he": [
+    "he:Giving Thanks/Blessings on Mitzvot:18"
+   ]
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:1": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:2"
+   ],
+   "kind": "instruction",
+   "en": "On wearing new clothes:",
+   "gloss": "Blessing for new clothes"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:2": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:2"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who clothes the naked."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:3": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:4"
+   ],
+   "kind": "instruction",
+   "en": "On smelling fragrant shrubs or trees:",
+   "gloss": "Blessing for fragrant trees"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:4": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:4"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who creates fragrant trees."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:5": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:6"
+   ],
+   "kind": "instruction",
+   "en": "On smelling fragrant herbs, grasses or flowers:",
+   "gloss": "Blessing for fragrant plants"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:6": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:6"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who creates fragrant plants."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:7": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:8"
+   ],
+   "kind": "instruction",
+   "en": "On smelling fragrant fruit:",
+   "gloss": "Blessing for fragrant fruit"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:8": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:8"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who gives pleasant fragrance to fruits."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:9": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:10"
+   ],
+   "kind": "instruction",
+   "en": "On smelling persimmon oil:",
+   "gloss": "Blessing for persimmon oil"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:10": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:10"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who creates pleasing perfume."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:11": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:12"
+   ],
+   "kind": "instruction",
+   "en": "On all other scents:",
+   "gloss": "Blessing for other scents"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:12": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:12"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who creates the various spices."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:13": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:14"
+   ],
+   "kind": "instruction",
+   "en": "On seeing the wonders of nature, such as lightning, and on the 28-year solar cycle:",
+   "gloss": "Blessing for wonders of nature"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:14": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:14"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, Author of creation."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:15": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:16"
+   ],
+   "kind": "instruction",
+   "en": "On hearing thunder or experiencing a hurricane:",
+   "gloss": "Blessing for thunder/hurricane"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:16": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:16"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, whose power and might fill the world."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:17": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:18"
+   ],
+   "kind": "instruction",
+   "en": "On seeing a rainbow:",
+   "gloss": "Blessing for rainbow"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:18": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:18"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who remembers the covenant, is faithful to the covenant, and fulfills His word."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:19": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:20"
+   ],
+   "kind": "instruction",
+   "en": "On seeing the ocean or the Mediterranean Sea for the first time in thirty days:",
+   "gloss": "Blessing for the sea"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:20": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:20"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who has made the great sea."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:21": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:22"
+   ],
+   "kind": "instruction",
+   "en": "On seeing trees blossoming for the first time in the year:",
+   "gloss": "Blessing for blossoming trees"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:22": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:22"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who has withheld nothing from His world, but has created in it beautiful creatures and trees for human beings to enjoy."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:23": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:24"
+   ],
+   "kind": "instruction",
+   "en": "On seeing beautiful scenes of nature:",
+   "gloss": "Blessing for beautiful scenes"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:24": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:24"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who has [created] such things in His world."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:25": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:26"
+   ],
+   "kind": "instruction",
+   "en": "On seeing unusual people or animals:",
+   "gloss": "Blessing for unusual creatures"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:26": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:26"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who makes [all] creatures different."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:27": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:28"
+   ],
+   "kind": "instruction",
+   "en": "On hearing good news from which others as well as oneself will benefit:",
+   "gloss": "Blessing for good news"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:28": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:28"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who is good and does good."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:29": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:30"
+   ],
+   "kind": "instruction",
+   "en": "On hearing bad news, and said by a mourner before the ritual tearing of the garment:",
+   "gloss": "Blessing for bad news"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:30": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:30"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, the true Judge."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:31": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:32"
+   ],
+   "kind": "instruction",
+   "en": "On seeing an outstanding Torah scholar:",
+   "gloss": "Blessing for Torah scholar"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:32": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:32"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who has shared of His wisdom with those who revere Him."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:33": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:34"
+   ],
+   "kind": "instruction",
+   "en": "On seeing an outstanding secular scholar:",
+   "gloss": "Blessing for secular scholar"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:34": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:34"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who has given of His wisdom to human beings."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:35": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:36"
+   ],
+   "kind": "instruction",
+   "en": "On seeing a Monarch or Head of State:",
+   "gloss": "Blessing for monarch"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:36": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:36"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who has given of His glory to human beings."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:37": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:38"
+   ],
+   "kind": "instruction",
+   "en": "On seeing 600,000 Jews together in Israel:",
+   "gloss": "Blessing for large gathering"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:38": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:38"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who knows all secrets."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:39": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:40"
+   ],
+   "kind": "instruction",
+   "en": "On seeing Jewish settlements in Israel:",
+   "gloss": "Blessing for settlements"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:40": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:40"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who establishes the border of the widow."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:41": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:42"
+   ],
+   "kind": "instruction",
+   "en": "On seeing the place where miracles occurred to the Jewish people:",
+   "gloss": "Blessing for ancestral miracles"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:42": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:42"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who performed miracles for our ancestors in this place."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:43": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:44"
+   ],
+   "kind": "instruction",
+   "en": "On seeing the place where miracles occurred to oneself or one’s family (insert the relevant words):",
+   "gloss": "Blessing for personal miracles"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:44": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:44"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who performed a miracle for me (my father / my mother / my ancestors) in this place."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:45": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:45"
+   ],
+   "kind": "heading",
+   "en": "Additional Blessings"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:46": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:47"
+   ],
+   "kind": "instruction",
+   "en": "After relieving oneself and washing one’s hands, say:",
+   "gloss": "Blessing after using the restroom"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:47": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:47"
+   ],
+   "kind": "prayer",
+   "en": "Blessed are You, LORD our God, King of the Universe, who formed man in wisdom and created in him many orifices and cavities. It is revealed and known before the throne of Your glory that were one of them to be ruptured or blocked, it would be impossible to survive and stand before You. Blessed are You, LORD, Healer of all flesh who does wondrous deeds."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:48": {
+   "he": [
+    "he:Giving Thanks/Blessings on Pleasures, Sights and Sounds:49"
+   ],
+   "kind": "instruction",
+   "en": "On visiting a cemetery, or seeing a Jewish grave, for the first time in thirty days:",
+   "gloss": "Blessing at a cemetery"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:49": {
+   "he": [],
+   "kind": "prayer",
+   "node": "brachot.reiyah",
+   "en": "Blessed are You, LORD our God, King of the Universe, who formed you in judgment, who nourished and sustained you in judgment, who brought death on you in judgment, who knows the number of you all in judgment, and who in the future will restore you to life in judgment. Blessed are You, LORD, who revives the dead."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:50": {
+   "he": [],
+   "kind": "prayer",
+   "node": "brachot.reiyah",
+   "en": "You are eternally mighty, LORD. You give life to the dead and have great power to save. He sustains the living with loving-kindness, and with great compassion revives the dead. He supports the fallen, heals the sick, sets captives free, and keeps His faith with those who sleep in the dust. Who is like You, Master of might, and who can compare to You, O King who brings death and gives life, and makes salvation grow? Faithful are You to revive the dead."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:51": {
+   "he": [],
+   "kind": "instruction",
+   "en": "In special cases of urgency only (see law 363), the following short form of the Amida may be said. First say the first three blessings of the Amida from “O LORD” on page 108 until “the holy God” page 114, then say:"
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:52": {
+   "he": [],
+   "kind": "prayer",
+   "node": "personal_prayer",
+   "en": "הביננו Grant us understanding, LORD our God, to know Your ways. Sensitize our hearts so that we may revere You, and forgive us so that we may be redeemed. Keep us far from suffering and satisfy us with the pastures of Your land. Gather our scattered people from the four quarters of the earth. May those who go astray be judged according to Your will: raise Your hand against the wicked. May the righteous rejoice in the rebuilding of Your city, the restoration of Your Temple, the flowering of Your servant David’s glory, and the radiant light of the son of Jesse, Your anointed. May You answer us even before we call. Blessed are You, LORD, who hears prayer."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:53": {
+   "he": [],
+   "kind": "instruction",
+   "en": "In extreme cases where there is no time to say the abbreviated Amida above, one may say the following. However, if prayer is then possible at a later time, one should say the complete Amida."
+  },
+  "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:54": {
+   "he": [],
+   "kind": "prayer",
+   "node": "personal_prayer",
+   "en": "צרכי The needs of Your people Israel are many, and their patience is thin. May it be Your will, LORD our God and God of our ancestors, to give each one of them enough to sustain him, and to every single body, all that it lacks – and perform what is right in Your eyes. Blessed are You, LORD, who listens to prayer."
+  },
+  "en:Giving Thanks/Consecration of a House:1": {
+   "he": [
+    "he:Giving Thanks/Consecration of a House:1"
+   ]
+  },
+  "en:Giving Thanks/Consecration of a House:2": {
+   "he": [
+    "he:Giving Thanks/Consecration of a House:2"
+   ]
+  },
+  "en:Giving Thanks/Consecration of a House:3": {
+   "he": [
+    "he:Giving Thanks/Consecration of a House:3"
+   ]
+  },
+  "en:Giving Thanks/Consecration of a House:4": {
+   "he": []
+  },
+  "en:Giving Thanks/Consecration of a House:5": {
+   "he": [
+    "he:Giving Thanks/Consecration of a House:5"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:1": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:1"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:2": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:2"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:3": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:4"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:4": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:6"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:5": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:6"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:6": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:6"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:7": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:8"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:8": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:8"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:9": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:9"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:10": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:10"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:11": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:11"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:12": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:13"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:13": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:15"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:14": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:16"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:15": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:16"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:16": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:17"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:17": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:17"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:18": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:18"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:19": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:20"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:20": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:22"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:21": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:22"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:22": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:22"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:23": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:24"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:24": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:24"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:25": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:25"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:26": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:26"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:27": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:27"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:28": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:28"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:29": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:29"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:30": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:31"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:31": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:33"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:32": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:33"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:33": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:33"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:34": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:35"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:35": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:35"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:36": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:37"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:37": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:37"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:38": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:38"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:39": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:39"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:40": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:40"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:41": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:41"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:42": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:42"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:43": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:43"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:44": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:44"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:45": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:46"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:46": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:46"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:47": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:48"
+   ]
+  },
+  "en:Festivals/Selihot for the Seventeenth of Tammuz:48": {
+   "he": [
+    "he:Festivals/Selihot for the Seventeenth of Tammuz:50"
+   ]
+  },
+  "en:Giving Thanks/The Traveler's Prayer:1": {
+   "he": []
+  },
+  "en:Giving Thanks/The Traveler's Prayer:2": {
+   "he": [
+    "he:Giving Thanks/The Traveler's Prayer:2"
+   ]
+  },
+  "en:Giving Thanks/The Traveler's Prayer:3": {
+   "he": [
+    "he:Giving Thanks/The Traveler's Prayer:3"
+   ]
+  },
+  "en:Giving Thanks/The Traveler's Prayer:4": {
+   "he": [
+    "he:Giving Thanks/The Traveler's Prayer:5"
+   ]
+  },
+  "en:Giving Thanks/The Traveler's Prayer:5": {
+   "he": [
+    "he:Giving Thanks/The Traveler's Prayer:5"
+   ]
+  },
+  "en:Giving Thanks/The Traveler's Prayer:6": {
+   "he": [
+    "he:Giving Thanks/The Traveler's Prayer:7"
+   ]
+  },
+  "en:Giving Thanks/The Traveler's Prayer:7": {
+   "he": [
+    "he:Giving Thanks/The Traveler's Prayer:7"
+   ]
+  },
+  "en:Giving Thanks/The Traveler's Prayer:8": {
+   "he": [
+    "he:Giving Thanks/The Traveler's Prayer:8"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Giving Thanks/Birkat HaMazon; Grace after Meals:66",
+   "type": "missing_text",
+   "detail": "Hebrew text for Rosh Hashana Harachman is missing in the source."
+  },
+  {
+   "id": "he:Giving Thanks/Birkat HaMazon; Grace after Meals:67",
+   "type": "missing_text",
+   "detail": "Hebrew text for Yom Tov Harachman is missing in the source."
+  },
+  {
+   "id": "he:Giving Thanks/Birkat HaMazon; Grace after Meals:68",
+   "type": "missing_text",
+   "detail": "Hebrew text for Sukkot Harachman is missing in the source."
+  },
+  {
+   "id": "he:Giving Thanks/Birkat HaMazon; Grace after Meals:69",
+   "type": "missing_text",
+   "detail": "Hebrew text for the final Harachman (Mashiach) is missing in the source."
+  },
+  {
+   "id": "en:Giving Thanks/Birkat HaMazon; Grace after Meals:49",
+   "type": "missing_text",
+   "detail": "English text for State of Israel Harachman is present but Hebrew counterpart h38 is selected as prayer without specific instruction; ensure alignment."
+  },
+  {
+   "id": "en:Giving Thanks/Birkat HaMazon; Grace after Meals:50",
+   "type": "missing_text",
+   "detail": "English text for IDF Harachman is present but Hebrew counterpart h39 is selected as prayer without specific instruction; ensure alignment."
+  },
+  {
+   "id": "en:Giving Thanks/Birkat HaMazon; Grace after Meals:53",
+   "type": "missing_text",
+   "detail": "English segment e53 (Harachman Yivarech) is missing from the provided list; likely corresponds to h41."
+  },
+  {
+   "id": "en:Giving Thanks/Birkat HaMazon; Grace after Meals:54",
+   "type": "missing_text",
+   "detail": "English segment e54 (Oti...) is missing from the provided list; likely corresponds to h42."
+  },
+  {
+   "id": "en:Giving Thanks/Birkat HaMazon; Grace after Meals:55",
+   "type": "missing_text",
+   "detail": "English segment e55 (Et Baal HaBayit...) is missing from the provided list; likely corresponds to h43."
+  },
+  {
+   "id": "en:Giving Thanks/Birkat HaMazon; Grace after Meals:56",
+   "type": "missing_text",
+   "detail": "English segment e56 (Et Avi Mori...) is missing from the provided list; likely corresponds to h44."
+  },
+  {
+   "id": "en:Giving Thanks/Birkat HaMazon; Grace after Meals:57",
+   "type": "missing_text",
+   "detail": "English segment e57 (VeEt Kol HaMasvin...) is missing from the provided list; likely corresponds to h45."
+  },
+  {
+   "id": "en:Giving Thanks/Birkat HaMazon; Grace after Meals:58",
+   "type": "missing_text",
+   "detail": "English segment e58 (BeMerom...) is missing from the provided list; likely corresponds to h46."
+  },
+  {
+   "id": "en:Giving Thanks/Birkat HaMazon; Grace after Meals:59",
+   "type": "missing_text",
+   "detail": "English segment e59 (Harachman Yanchilenu...) is missing from the provided list; likely corresponds to h47."
+  },
+  {
+   "id": "en:Giving Thanks/Birkat HaMazon; Grace after Meals:60",
+   "type": "missing_text",
+   "detail": "English segment e60 (Harachman Yechadesh...) is missing from the provided list; likely corresponds to h48."
+  },
+  {
+   "id": "en:Giving Thanks/Birkat HaMazon; Grace after Meals:61",
+   "type": "missing_text",
+   "detail": "English segment e61 (Harachman Yechadesh...) is missing from the provided list; likely corresponds to h49."
+  },
+  {
+   "id": "en:Giving Thanks/Birkat HaMazon; Grace after Meals:62",
+   "type": "missing_text",
+   "detail": "English segment e62 (Harachman Yanchilenu...) is missing from the provided list; likely corresponds to h50."
+  },
+  {
+   "id": "en:Giving Thanks/Birkat HaMazon; Grace after Meals:63",
+   "type": "missing_text",
+   "detail": "English segment e63 (Harachman Yekim...) is missing from the provided list; likely corresponds to h51."
+  },
+  {
+   "id": "en:Giving Thanks/Birkat HaMazon; Grace after Meals:64",
+   "type": "missing_text",
+   "detail": "English segment e64 (Harachman Yezachenu...) is missing from the provided list; likely corresponds to h52."
+  },
+  {
+   "id": "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:49",
+   "type": "new_minhag",
+   "detail": "Blessing on seeing a grave (Baruch Dayan HaEmet) is customarily said; condition unclear if limited to first time in 30 days or any time."
+  },
+  {
+   "id": "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:50",
+   "type": "new_minhag",
+   "detail": "El Malei Rachamim is customarily said at funerals or on graves; condition unclear if limited to first time in 30 days or any time."
+  },
+  {
+   "id": "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:52",
+   "type": "new_minhag",
+   "detail": "Abbreviated Amidah for urgent situations; condition unclear if limited to specific circumstances beyond 'urgency'."
+  },
+  {
+   "id": "en:Giving Thanks/Blessings on Pleasures, Sights and Sounds:54",
+   "type": "new_minhag",
+   "detail": "Shortest form of prayer for extreme urgency; condition unclear if limited to specific circumstances beyond 'extreme cases'."
+  },
+  {
+   "id": "en:Giving Thanks/Consecration of a House:4",
+   "type": "ambiguous",
+   "detail": "English instruction 'Where appropriate' lacks a clear Hebrew counterpart or condition in the source text."
+  },
+  {
+   "id": "he:Giving Thanks/The Traveler's Prayer:2",
+   "type": "new_minhag",
+   "detail": "Part 1: Minhag variable x_returnSameDay needed for the parenthetical line 'ותחזירנו לביתנו לשלום'"
+  },
+  {
+   "id": "en:Giving Thanks/The Traveler's Prayer:1",
+   "type": "alignment",
+   "detail": "Not aligned by the tagger (left unaligned on its last attempt)."
+  },
+  {
+   "id": "en:Giving Thanks/The Traveler's Prayer:1",
+   "type": "engine_bug_risk",
+   "detail": "Tagger commands skipped on the last attempt: Split needs one metadata object per resulting part; Alignment needs known Hebrew segment aliases"
+  }
+ ]
+}

@@ -77,7 +77,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {
     for (const key of await caches.keys()) {
-      if (key !== CACHE && key !== RUNTIME) await caches.delete(key);
+      if (key !== CACHE && key !== RUNTIME && !key.startsWith('amud-voice-')) await caches.delete(key);
     }
     // Same-origin files cached at runtime belong to the old deployment.
     const runtime = await caches.open(RUNTIME);
@@ -90,6 +90,18 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('message', (event) => {
   if (event.data === 'skipWaiting') self.skipWaiting();
+});
+
+// Push is delivered by the optional VAPID server while the app is closed.
+self.addEventListener('push', (event) => {
+  event.waitUntil((async () => {
+    let data;
+    try { data = event.data.json(); } catch (_) { return; }
+    const route = typeof data.route === 'string' && data.route.startsWith('/') && !data.route.startsWith('//') ? data.route : '/zmanim';
+    await self.registration.showNotification(String(data.title || 'Amud'), {
+      body: String(data.body || ''), icon: 'icons/Icon-192.png', tag: 'amud-' + data.id, data: route,
+    });
+  })());
 });
 
 // Tapping a notification focuses the open app (or opens it) on the page it
@@ -112,6 +124,8 @@ self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
+
+  if (url.pathname.includes('/api/push/')) return;
 
   // App shell: serve cached index.html for navigations (offline-first),
   // refreshing it in the background.

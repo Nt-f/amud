@@ -135,6 +135,16 @@ class AppSettings {
   final bool collapseChazarah;
   final bool showInstructions;
   final bool highlightToday;
+
+  /// Set the reader's text like a printed siddur (see core/typeset): sizes
+  /// that follow what each paragraph is, ornaments between sections.
+  final bool typesetting;
+
+  /// Justify the lines of the reader's paragraphs (with [typesetting]).
+  final bool justifyText;
+
+  /// How much paragraph sizes differ from one another, 0 (uniform) to 1.
+  final double typeContrast;
   final Minhagim minhagim;
   final AppThemeMode themeMode;
 
@@ -159,6 +169,20 @@ class AppSettings {
 
   /// Send anonymous usage statistics (see analytics.dart).
   final bool shareUsage;
+  final bool keepReaderAwake;
+  final bool fullscreenReader;
+
+  /// Android: turn on Do Not Disturb while reading (and back off after).
+  final bool readerDnd;
+  final bool travelPrompts;
+  final bool desktopTray;
+  final bool omerBadge;
+  final bool levanaReminder;
+  final bool hachamaReminder;
+
+  /// The tabs on the navigation bar, in order (see nav_tabs_screen.dart).
+  /// Settings is always among them, so the bar can be changed back.
+  final List<String> navTabs;
 
   const AppSettings({
     this.location = SavedLocation.newYork,
@@ -171,7 +195,7 @@ class AppSettings {
     this.hebrewVersions = const {},
     this.translationVersions = const {},
     this.layout = TextLayout.hebrewOnly,
-    this.notesLanguage = NotesLanguage.bilingual,
+    this.notesLanguage = NotesLanguage.english,
     this.titleLanguage = TitleLanguage.auto,
     this.uiLanguage = UiLanguage.en,
     this.ashkenaziSpelling = true,
@@ -181,13 +205,16 @@ class AppSettings {
     this.textScale = 1.0,
     this.hebrewFont = 'TaameyFrankCLM',
     this.latinFont,
-    this.excludedDisplay = ExcludedDisplay.collapse,
+    this.excludedDisplay = ExcludedDisplay.hide,
     this.showNotes = true,
     this.conciseNotes = true,
     this.collapseNotes = true,
     this.collapseChazarah = true,
     this.showInstructions = true,
     this.highlightToday = true,
+    this.typesetting = true,
+    this.justifyText = true,
+    this.typeContrast = 0.5,
     this.minhagim = const Minhagim(),
     this.themeMode = AppThemeMode.system,
     this.warmth = 0,
@@ -198,6 +225,15 @@ class AppSettings {
     this.setupDone = false,
     this.seenFeatures = 0,
     this.shareUsage = true,
+    this.keepReaderAwake = true,
+    this.fullscreenReader = false,
+    this.readerDnd = false,
+    this.travelPrompts = false,
+    this.desktopTray = false,
+    this.omerBadge = false,
+    this.levanaReminder = false,
+    this.hachamaReminder = false,
+    this.navTabs = const ['home', 'siddur', 'zmanim', 'torah', 'settings'],
   });
 
   AppSettings copyWith({
@@ -228,6 +264,9 @@ class AppSettings {
     bool? collapseChazarah,
     bool? showInstructions,
     bool? highlightToday,
+    bool? typesetting,
+    bool? justifyText,
+    double? typeContrast,
     Minhagim? minhagim,
     AppThemeMode? themeMode,
     double? warmth,
@@ -238,6 +277,15 @@ class AppSettings {
     bool? setupDone,
     int? seenFeatures,
     bool? shareUsage,
+    bool? keepReaderAwake,
+    bool? fullscreenReader,
+    bool? readerDnd,
+    bool? travelPrompts,
+    bool? desktopTray,
+    bool? omerBadge,
+    bool? levanaReminder,
+    bool? hachamaReminder,
+    List<String>? navTabs,
   }) =>
       AppSettings(
         location: location ?? this.location,
@@ -267,6 +315,9 @@ class AppSettings {
         collapseChazarah: collapseChazarah ?? this.collapseChazarah,
         showInstructions: showInstructions ?? this.showInstructions,
         highlightToday: highlightToday ?? this.highlightToday,
+        typesetting: typesetting ?? this.typesetting,
+        justifyText: justifyText ?? this.justifyText,
+        typeContrast: typeContrast ?? this.typeContrast,
         minhagim: minhagim ?? this.minhagim,
         themeMode: themeMode ?? this.themeMode,
         warmth: warmth ?? this.warmth,
@@ -277,6 +328,15 @@ class AppSettings {
         setupDone: setupDone ?? this.setupDone,
         seenFeatures: seenFeatures ?? this.seenFeatures,
         shareUsage: shareUsage ?? this.shareUsage,
+        keepReaderAwake: keepReaderAwake ?? this.keepReaderAwake,
+        fullscreenReader: fullscreenReader ?? this.fullscreenReader,
+        readerDnd: readerDnd ?? this.readerDnd,
+        travelPrompts: travelPrompts ?? this.travelPrompts,
+        desktopTray: desktopTray ?? this.desktopTray,
+        omerBadge: omerBadge ?? this.omerBadge,
+        levanaReminder: levanaReminder ?? this.levanaReminder,
+        hachamaReminder: hachamaReminder ?? this.hachamaReminder,
+        navTabs: navTabs ?? this.navTabs,
       );
 
   /// Bumped when defaults change in a way existing installs should adopt.
@@ -311,6 +371,9 @@ class AppSettings {
         'collapseChazarah': collapseChazarah,
         'showInstructions': showInstructions,
         'highlightToday': highlightToday,
+        'typesetting': typesetting,
+        'justifyText': justifyText,
+        'typeContrast': typeContrast,
         'minhagim': minhagim.toJson(),
         'themeMode': themeMode.name,
         'warmth': warmth,
@@ -321,6 +384,15 @@ class AppSettings {
         'setupDone': setupDone,
         'seenFeatures': seenFeatures,
         'shareUsage': shareUsage,
+        'keepReaderAwake': keepReaderAwake,
+        'fullscreenReader': fullscreenReader,
+        'readerDnd': readerDnd,
+        'travelPrompts': travelPrompts,
+        'desktopTray': desktopTray,
+        'omerBadge': omerBadge,
+        'levanaReminder': levanaReminder,
+        'hachamaReminder': hachamaReminder,
+        'navTabs': navTabs,
       };
 
   factory AppSettings.fromJson(Map<String, Object?> j) {
@@ -380,6 +452,9 @@ class AppSettings {
       collapseChazarah: pick('collapseChazarah', d.collapseChazarah),
       showInstructions: pick('showInstructions', d.showInstructions),
       highlightToday: pick('highlightToday', d.highlightToday),
+      typesetting: pick('typesetting', d.typesetting),
+      justifyText: pick('justifyText', d.justifyText),
+      typeContrast: orElse(() => (j['typeContrast'] as num).toDouble().clamp(0.0, 1.0), d.typeContrast),
       minhagim: orElse(() => Minhagim.fromJson((j['minhagim'] as Map).cast<String, Object?>()), d.minhagim),
       // The former sepia theme is light with a warm temperature.
       themeMode: j['themeMode'] == 'sepia' ? AppThemeMode.light : byName(AppThemeMode.values, 'themeMode', d.themeMode),
@@ -391,6 +466,20 @@ class AppSettings {
       setupDone: pick('setupDone', d.setupDone),
       seenFeatures: orElse(() => (j['seenFeatures'] as num).toInt(), d.seenFeatures),
       shareUsage: pick('shareUsage', d.shareUsage),
+      keepReaderAwake: pick('keepReaderAwake', d.keepReaderAwake),
+      fullscreenReader: pick('fullscreenReader', d.fullscreenReader),
+      readerDnd: pick('readerDnd', d.readerDnd),
+      travelPrompts: pick('travelPrompts', d.travelPrompts),
+      desktopTray: pick('desktopTray', d.desktopTray),
+      omerBadge: pick('omerBadge', d.omerBadge),
+      levanaReminder: pick('levanaReminder', d.levanaReminder),
+      hachamaReminder: pick('hachamaReminder', d.hachamaReminder),
+      navTabs: orElse(() {
+        final tabs = {for (final v in j['navTabs'] as List) if (v is String && d.navTabs.contains(v)) v};
+        final list = tabs.contains('settings') ? tabs.toList() : [...tabs, 'settings'];
+        // The bar needs two tabs at least.
+        return list.length >= 2 ? list : d.navTabs;
+      }, d.navTabs),
     );
   }
 

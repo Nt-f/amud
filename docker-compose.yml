@@ -5,3 +5,32 @@ services:
     ports:
       - "8088:8088"
     restart: unless-stopped
+    networks:
+      default: {}
+      push-proxy:
+        ipv4_address: 172.30.86.2
+
+  push:
+    profiles: [push]
+    build: tool/web_push
+    networks:
+      push-proxy:
+        ipv4_address: 172.30.86.3
+    restart: unless-stopped
+    volumes:
+      - push-data:/data
+    environment:
+      PUSH_TRUSTED_PROXIES: 172.30.86.2/32
+      VAPID_PUBLIC_KEY: ${VAPID_PUBLIC_KEY:-}
+      VAPID_PRIVATE_KEY: ${VAPID_PRIVATE_KEY:-}
+      VAPID_CONTACT: ${VAPID_CONTACT:-mailto:admin@amud.page}
+      PUSH_PUBLIC_ORIGIN: ${PUSH_PUBLIC_ORIGIN:-https://amud.page}
+
+volumes:
+  push-data:
+
+networks:
+  push-proxy:
+    ipam:
+      config:
+        - subnet: 172.30.86.0/24

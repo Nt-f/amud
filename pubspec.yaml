@@ -1,7 +1,7 @@
 name: amud
 description: "Offline, interactive siddur with Sefaria texts, a full Hebcal port, zmanim, notifications and a customizable home screen."
 publish_to: 'none'
-version: 0.6.1+1
+version: 0.7.0+1
 
 environment:
   sdk: ^3.11.0
@@ -20,7 +20,7 @@ dependencies:
   go_router: ^17.5.0
   hive_ce: ^2.20.1
   hive_ce_flutter: ^2.3.4
-  archive: ^4.3.0
+  archive: ">=4.0.0 <4.1.0"
   timezone: ^0.10.1
   flutter_timezone: ^5.1.0
   flutter_local_notifications: ^18.0.1
@@ -36,6 +36,17 @@ dependencies:
   scrollable_positioned_list: ^0.3.8
   firebase_core: ^4.15.0
   firebase_analytics: ^12.6.0
+  wakelock_plus: ^1.7.0
+  quick_actions: ^1.1.1
+  app_links: ^7.0.0
+  home_widget: ^0.10.0
+  tray_manager: ^0.5.3
+  window_manager: ^0.5.2
+  path_provider: ^2.1.6
+  sherpa_onnx: ^1.13.8
+  record: ^6.2.1
+  pdf: ^3.12.0
+  printing: ^5.14.0
 
 dev_dependencies:
   flutter_test:
@@ -46,6 +57,9 @@ flutter:
   uses-material-design: true
   assets:
     - assets/sefaria/
+    - assets/corpus/
+    - assets/integrations/
+    - assets/voice/
     - assets/rules/
     - assets/fonts/
     - assets/tehillim/

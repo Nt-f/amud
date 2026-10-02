@@ -1,0 +1,1144 @@
+{
+ "nusach": "edot_hamizrach",
+ "chunk": "Shabbat Evening [Shalom Alekhem .. Songs for Shabbat]",
+ "leaves": {
+  "Shabbat Evening/Eshet Hayil": {
+   "node": "shabbat.eshet_chayil",
+   "service": "shacharit",
+   "when": "shabbat"
+  },
+  "Shabbat Evening/Atkenu Seudata": {
+   "node": "shabbat.candle_lighting",
+   "service": "maariv",
+   "when": "shabbat"
+  },
+  "Shabbat Evening/Kiddush": {
+   "node": "shabbat.kiddush_night",
+   "service": "maariv",
+   "when": "erevShabbat"
+  },
+  "Shabbat Evening/Blessing of Children": {
+   "node": "shabbat.blessing_children",
+   "service": "shacharit",
+   "when": "shabbat"
+  },
+  "Shabbat Evening/First Meal": {
+   "node": "shabbat.seudah_shlishit",
+   "service": "shacharit",
+   "when": "shabbat"
+  },
+  "Shabbat Evening/Zohar": {
+   "node": "shabbat.zemirot",
+   "service": "shacharit",
+   "when": "shabbat"
+  },
+  "Shabbat Evening/Songs for Shabbat": {
+   "node": "kabbalat_shabbat.psalms",
+   "service": "maariv",
+   "when": "shabbat"
+  },
+  "Shabbat Evening/Shalom Alekhem": {
+   "node": "shabbat.shalom_aleichem",
+   "service": "maariv",
+   "when": "shabbat"
+  }
+ },
+ "he": {
+  "he:Shabbat Evening/Eshet Hayil:1": {
+   "kind": "heading",
+   "en": "Eshet Chayil"
+  },
+  "he:Shabbat Evening/Eshet Hayil:2": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Eshet Hayil:3": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:1": {
+   "kind": "heading",
+   "en": "Let us prepare the meal"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:2": {
+   "parts": [
+    {
+     "text": "<b>אַתְקִינוּ</b> סְעֻדָּתָא דִּמְהֵימְנוּתָא שְׁלֵימָתָא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " חֶדְוָתָא דְמַלְכָּא קַדִּישָׁא: אַתְקִינוּ סְעֻדָּתָא דְמַלְכָּא,",
+     "kind": "prayer"
+    },
+    {
+     "text": " דָּא הִיא סְעֻדָּתָא דַּחֲקַל תַּפּוּחִין קַדִּישִׁין ",
+     "kind": "prayer"
+    },
+    {
+     "text": "<small>(וּזְעֵיר אַנְפִּין ועַתִּיקָא קַדִּישָׁא אַתְיָן לסַעֲדָא בַּהֲדֵיהּ)</small>",
+     "kind": "prayer"
+    },
+    {
+     "text": ":",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Evening/Atkenu Seudata:3": {
+   "kind": "instruction",
+   "en": "The custom in all places is to say Azmar Bishvachin before Kiddush"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:15": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:16": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:17": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:18": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:19": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:20": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:21": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:22": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:23": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:24": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:25": {
+   "kind": "instruction",
+   "en": "It is customary to say from the Zohar, Parashat Vayakhel, page 207b"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:26": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:27": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:28": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Atkenu Seudata:29": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Kiddush:1": {
+   "kind": "heading",
+   "en": "Kiddush for the Night of Shabbat"
+  },
+  "he:Shabbat Evening/Kiddush:2": {
+   "kind": "instruction",
+   "en": "Before the Kiddush, some say the following unification formula, in the language of the Sages:"
+  },
+  "he:Shabbat Evening/Kiddush:3": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat Evening/Kiddush:4": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat Evening/Kiddush:5": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat Evening/Kiddush:6": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat Evening/Kiddush:7": {
+   "parts": [
+    {
+     "text": "<small><small>יש נוהגים לומר נוסך קצרה (כף החיים ס' רע\"א ס\"ק ס\"ג)</small>",
+     "kind": "instruction",
+     "en": "Some have the custom to say a shorter version (Kaf HaChaim 263:63):"
+    },
+    {
+     "text": "</small><br>לְשֵׁם יִחוּד קֻדְשָׁא בְּרִיךְ הוּא וּשְׁכִינְתֵּיהּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בִּדְחִֽילוּ וּרְחִֽימוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " וּרְחִֽימוּ וּדְחִֽילוּ,",
+     "kind": "prayer"
+    },
+    {
+     "text": " לְיַחֲדָא שֵׁם יוֹ\"ד קֵ\"א בְּוָא\"ו קֵ\"א בְּיִחוּדָא שְׁלִים,",
+     "kind": "prayer"
+    },
+    {
+     "text": " בְּשֵׁם כָּל־יִשְׂרָאֵל,",
+     "kind": "prayer"
+    },
+    {
+     "text": " הֲרֵֽינִי בָּא לְקַיֵּם מִצְוַת עֲשֵׂה דְאוֹרַיְתָא לְקַדֵּשׁ הַשַּׁבָּת בִּדְבָרִים כְּמוֹ שֶׁכָּתוּב זָכ֛וֹר אֶת־י֥וֹם הַשַּׁבָּ֖ת לְקַדְּשֽׁוֹ. וְמִצְוַת עֲשֵׂה דְרַבָּנָן לְקַדֵּשׁ עַל־הַיָּֽיִן. וְמִצְוַת סְעוּדָת לֵיל שַׁבָּת. לְתַקֵּן שֹֽׁרֶשׁ מִצְוֹת אֵֽלּוּ בְּמָקוֹם עֶלְיוֹן. וִיהִ֤י ׀ נֹ֤עַם אֲדֹנָ֥י אֱלֹהֵ֗ינוּ עָ֫לֵ֥ינוּ וּמַעֲשֵׂ֣ה יָ֭דֵינוּ כּוֹנְנָ֥ה עָלֵ֑ינוּ וּֽמַעֲשֵׂ֥ה יָ֝דֵ֗ינוּ כּוֹנְנֵֽהוּ:",
+     "kind": "prayer"
+    }
+   ]
+  },
+  "he:Shabbat Evening/Kiddush:8": {
+   "parts": [
+    {
+     "text": "<small>יש נוהגים לומר</small>",
+     "kind": "instruction",
+     "en": "Some have the custom to say:"
+    },
+    {
+     "text": "<br><b>מִזְמ֥וֹר</b> לְדָוִ֑ד יְהֹוָ֥ה רֹ֝עִ֗י לֹ֣א אֶחְסָֽר׃ בִּנְא֣וֹת דֶּ֭שֶׁא יַרְבִּיצֵ֑נִי עַל מֵ֖י מְנֻח֣וֹת יְנַהֲלֵֽנִי׃ נַפְשִׁ֥י יְשׁוֹבֵ֑ב יַֽנְחֵ֥נִי בְמַעְגְּלֵי־צֶ֝֗דֶק לְמַ֣עַן שְׁמֽוֹ׃ גַּ֤ם כִּֽי־אֵלֵ֨ךְ בְּגֵ֪יא צַלְמָ֡וֶת לֹא־אִ֘ירָ֤א רָ֗ע כִּי־אַתָּ֥ה עִמָּדִ֑י שִׁבְטְךָ֥ וּ֝מִשְׁעַנְתֶּ֗ךָ הֵ֣מָּה יְנַֽחֲמֻֽנִי׃ תַּעֲרֹ֬ךְ לְפָנַ֨י ׀ שֻׁלְחָ֗ן נֶ֥גֶד צֹרְרָ֑י דִּשַּׁ֥נְתָּ בַשֶּׁ֥מֶן רֹ֝אשִׁ֗י כּוֹסִ֥י רְוָיָֽה׃ אַ֤ךְ ׀ ט֤וֹב וָחֶ֣סֶד יִ֭רְדְּפוּנִי כׇּל־יְמֵ֣י חַיָּ֑י וְשַׁבְתִּ֥י בְּבֵית־יְ֝הֹוָ֗ה לְאֹ֣רֶךְ יָמִֽים׃",
+     "kind": "prayer",
+     "role": "individual",
+     "voice": "silent"
+    }
+   ]
+  },
+  "he:Shabbat Evening/Kiddush:9": {
+   "kind": "prayer",
+   "role": "individual",
+   "voice": "silent"
+  },
+  "he:Shabbat Evening/Kiddush:10": {
+   "parts": [
+    {
+     "text": "<small>ואומר המקדש</small>",
+     "kind": "instruction",
+     "en": "And the one saying Kiddush says:"
+    },
+    {
+     "text": " סַבְרִי מָרָנָן, ",
+     "kind": "prayer",
+     "role": "head_of_household",
+     "voice": "aloud"
+    },
+    {
+     "text": "<small>ועונים</small>",
+     "kind": "instruction",
+     "en": "And the diners answer:"
+    },
+    {
+     "text": " <small>לְחַיִּים</small>",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    },
+    {
+     "text": ". ",
+     "kind": "prayer",
+     "role": "congregation",
+     "voice": "aloud"
+    }
+   ]
+  },
+  "he:Shabbat Evening/Kiddush:11": {
+   "kind": "prayer",
+   "role": "head_of_household",
+   "voice": "aloud"
+  },
+  "he:Shabbat Evening/Kiddush:12": {
+   "kind": "instruction",
+   "en": "He should intend to fulfill the biblical commandment of Kiddush, and the rabbinic commandment over the wine."
+  },
+  "he:Shabbat Evening/Kiddush:13": {
+   "kind": "prayer",
+   "role": "head_of_household",
+   "voice": "aloud"
+  },
+  "he:Shabbat Evening/Kiddush:14": {
+   "kind": "instruction",
+   "en": "He sits and drinks."
+  },
+  "he:Shabbat Evening/Blessing of Children:1": {
+   "kind": "heading",
+   "en": "Blessing of the Children"
+  },
+  "he:Shabbat Evening/Blessing of Children:2": {
+   "kind": "instruction",
+   "en": "The children should kiss their parents' hands; when kissing the mother's hands, one should intend that there is a secret in the matter. It is good for the father to place his hands on their heads and bless them."
+  },
+  "he:Shabbat Evening/Blessing of Children:3": {
+   "kind": "speaker",
+   "en": "For a son:"
+  },
+  "he:Shabbat Evening/Blessing of Children:4": {
+   "kind": "prayer",
+   "role": "head_of_household",
+   "voice": "aloud"
+  },
+  "he:Shabbat Evening/Blessing of Children:5": {
+   "kind": "speaker",
+   "en": "For a daughter:"
+  },
+  "he:Shabbat Evening/Blessing of Children:6": {
+   "kind": "prayer",
+   "role": "head_of_household",
+   "voice": "aloud"
+  },
+  "he:Shabbat Evening/First Meal:1": {
+   "kind": "heading",
+   "en": "First Meal"
+  },
+  "he:Shabbat Evening/First Meal:2": {
+   "kind": "instruction",
+   "en": "Hurry to wash hands for the meal after Kiddush. Some say:",
+   "cite": "בא\"ח וירא הי\"א"
+  },
+  "he:Shabbat Evening/First Meal:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/First Meal:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/First Meal:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/First Meal:6": {
+   "kind": "instruction",
+   "en": "Hold two loaves in both hands and recite HaMotzi. Some recite these verses before the blessing."
+  },
+  "he:Shabbat Evening/First Meal:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/First Meal:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/First Meal:9": {
+   "kind": "instruction",
+   "en": "Break off a piece and dip it in salt three times."
+  },
+  "he:Shabbat Evening/First Meal:10": {
+   "kind": "instruction",
+   "en": "Before the meal, some say:"
+  },
+  "he:Shabbat Evening/First Meal:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Zohar:1": {
+   "kind": "heading",
+   "en": "Zohar for the First Meal"
+  },
+  "he:Shabbat Evening/Zohar:2": {
+   "kind": "instruction",
+   "en": "Some say Zohar, Parashat Yitro, p. 8a"
+  },
+  "he:Shabbat Evening/Zohar:3": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Zohar:4": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Zohar:5": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Zohar:6": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Zohar:7": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Zohar:8": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Zohar:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Zohar:10": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Zohar:11": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Zohar:12": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Zohar:13": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Zohar:14": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Zohar:15": {
+   "kind": "instruction",
+   "en": "Mishnayot for the first meal are found at the end of the siddur"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:1": {
+   "kind": "heading",
+   "en": "Songs for Shabbat"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:2": {
+   "kind": "heading",
+   "en": "Bar Yochai"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:3": {
+   "kind": "instruction",
+   "en": "Acrostic: Shimon Lavi",
+   "cite": "סימן שמעון לביא"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:4": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:5": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:6": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:7": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:8": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:9": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:10": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:11": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:12": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:13": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:14": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:15": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:16": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:17": {
+   "kind": "heading",
+   "en": "Ki Ashmora Shabbat"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:18": {
+   "kind": "instruction",
+   "en": "Words: Rabbi Avraham Ibn Ezra. Acrostic: Avraham.",
+   "cite": "מלים: רבי אברהם אבן עזרא זצ\"ל. סימן: אברהם."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:19": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:20": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:21": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:22": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:23": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:24": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:25": {
+   "kind": "heading",
+   "en": "Deror Yikra"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:26": {
+   "kind": "instruction",
+   "en": "Words: Dunash ben Labrat. Acrostic: Dunash in every house.",
+   "cite": "מלים: דונש בן לברט. סימן: דונש בכל בית."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:27": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:28": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:29": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:30": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:31": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:32": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:33": {
+   "kind": "heading",
+   "en": "Yom Shabbaton"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:34": {
+   "kind": "instruction",
+   "en": "Words: Rabbi Yehuda Halevi. Acrostic: Yehuda.",
+   "cite": "מלים: רבי יהודה הלוי. סימן: יהודה."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:35": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:36": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:37": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:38": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:39": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:40": {
+   "kind": "heading",
+   "en": "Mah Yedidut"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:41": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:42": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:43": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:44": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:45": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:46": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:47": {
+   "kind": "heading",
+   "en": "Yodukh Ra'iyoni"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:48": {
+   "kind": "instruction",
+   "en": "Words: Rabbi Yisrael Najara. Acrostic: Yisrael.",
+   "cite": "מלים: רבי ישראל נג'ארה. סימן: ישראל."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:49": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:50": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:51": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:52": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:53": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:54": {
+   "kind": "heading",
+   "en": "Blessed is the Supreme God"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:55": {
+   "kind": "instruction",
+   "en": "Acrostic: Baruch Chazak."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:56": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:57": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:58": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:59": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:60": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:61": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:62": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:63": {
+   "kind": "heading",
+   "en": "The Day of Shabbat"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:64": {
+   "kind": "instruction",
+   "en": "Acrostic: Menatzor."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:65": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:66": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:67": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:68": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:69": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:70": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:71": {
+   "kind": "heading",
+   "en": "I love my Shabbat"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:72": {
+   "kind": "instruction",
+   "en": "Words: Rabbi Eliezer ben David. Acrostic: Eliezer."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:73": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:74": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:75": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:76": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:77": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:78": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:79": {
+   "kind": "heading",
+   "en": "To You I call, O Lord"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:80": {
+   "kind": "instruction",
+   "en": "Words: Rabbi Shlomo Zareh."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:81": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:82": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:83": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:84": {
+   "kind": "heading",
+   "en": "I will sing to God"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:85": {
+   "kind": "instruction",
+   "en": "Words: Rabbi Moshe Halevi. Acrostic: Moshe Halevi Chazak."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:86": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:87": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:88": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:89": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:90": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:91": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:92": {
+   "kind": "heading",
+   "en": "To the Most High God"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:93": {
+   "kind": "instruction",
+   "en": "Words: Rabbi Moshe Ashkar the Kohen. Acrostic: Eliyahu."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:94": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:95": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:96": {
+   "kind": "prayer",
+   "role": "individual"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:97": {
+   "kind": "heading",
+   "en": "This Day for Israel"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:98": {
+   "kind": "instruction",
+   "en": "Words: Rabbi Isaac Luria. Acrostic: Isaac Luria Strong."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:99": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:100": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:101": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:102": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:103": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:104": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:105": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:106": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:107": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:108": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:109": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:110": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:111": {
+   "kind": "heading",
+   "en": "Lord of the Universe"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:112": {
+   "kind": "instruction",
+   "en": "Words: Rabbi Israel Levi Najara. Acrostic: Israel."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:113": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:114": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:115": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:116": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:117": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:118": {
+   "kind": "heading",
+   "en": "Let Us Rejoice, Hallelujah"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:119": {
+   "kind": "instruction",
+   "en": "Words: Asher Mizrahi. Acrostic: Asher."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:120": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:121": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:122": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:123": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:124": {
+   "kind": "heading",
+   "en": "Rest and Joy"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:125": {
+   "kind": "instruction",
+   "en": "Acrostic: Moses."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:126": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:127": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:128": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:129": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:130": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:131": {
+   "kind": "heading",
+   "en": "My Beloved"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:132": {
+   "kind": "instruction",
+   "en": "Words: Asher Mizrahi. Acrostic: Asher."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:133": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:134": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:135": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:136": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:137": {
+   "kind": "heading",
+   "en": "Keep My Sabbaths"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:138": {
+   "kind": "instruction",
+   "en": "Words: Rabbi Solomon Ibn Gabirol. Acrostic: Solomon Strong."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:139": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:140": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:141": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:142": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:143": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:144": {
+   "kind": "heading",
+   "en": "Help Me, God"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:145": {
+   "kind": "instruction",
+   "en": "Words: Rabbi Raphael Anatvi. Acrostic: Edes."
+  },
+  "he:Shabbat Evening/Songs for Shabbat:146": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:147": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Songs for Shabbat:148": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Shalom Alekhem:1": {
+   "kind": "heading",
+   "en": "Order for the Night of Shabbat"
+  },
+  "he:Shabbat Evening/Shalom Alekhem:2": {
+   "kind": "heading",
+   "en": "Shalom Aleichem"
+  },
+  "he:Shabbat Evening/Shalom Alekhem:3": {
+   "kind": "instruction",
+   "en": "This is the order of Kiddush based on the words of Rabbi Isaac Luria: After Maariv, enter your home. Upon entering the place of the table, say aloud and with great joy: 'Shabbat Shalom' and kiss the hands of your father and mother if they are alive. Then look at the light of the candles you blessed, and look at two candles, intending that one corresponds to 'Zachor' and one to 'Shamor'. Also intend that they correspond to the first Heh and the last Heh of the Tetragrammaton; although seven candles were lit for the honor of Shabbat, you should look only at two, intending that the upper candles shine. Then stand in the place where you sit at the table and say aloud: 'This is the meal of the King of the Jews.' Then circle the table to the right, and return to the place where you stood before the circling. Then, standing there, take in your hand two bundles of myrtle, one corresponding to 'Zachor' and one to 'Shamor', hold them and join them together as they grow between your two hands, bless over them 'Trees of spices' and smell them. After smelling, immediately, while they are still joined between your hands, say: 'Zachor and Shamor were said in one utterance,' and also say this verse: 'A pleasing fragrance to the Lord,' for in these words are hinted all the intentions of the blessing of the smell. Then circle the table a second time in silence while holding the myrtle. (Sha'ar HaKavanot, Shabbat, Beginning of Parshat Bereishit, 29).",
+   "cite": "בא\"ח ש\"ב בראשית הכ\"ט"
+  },
+  "he:Shabbat Evening/Shalom Alekhem:4": {
+   "parts": [
+    {
+     "text": "<b>שָׁלוֹם</b> עֲלֵיכֶם מַלְאֲכֵי הַשָּׁרֵת מַלְאֲכֵי עֶלְיוֹן מֶֽלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא: ",
+     "kind": "prayer",
+     "repeat": 3
+    },
+    {
+     "text": "<small>ג' פעמים</small> ",
+     "kind": "instruction",
+     "en": "3 times"
+    }
+   ]
+  },
+  "he:Shabbat Evening/Shalom Alekhem:5": {
+   "parts": [
+    {
+     "text": "<b>בּוֹאֲכֶם</b> לְשָׁלוֹם מַלְאֲכֵי הַשָּׁלוֹם מַלְאֲכֵי עֶלְיוֹן מֶֽלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא: ",
+     "kind": "prayer",
+     "repeat": 3
+    },
+    {
+     "text": "<small>ג' פעמים</small> ",
+     "kind": "instruction",
+     "en": "3 times"
+    }
+   ]
+  },
+  "he:Shabbat Evening/Shalom Alekhem:6": {
+   "parts": [
+    {
+     "text": "<b>בָּרְכֽוּנִי</b> לְשָׁלוֹם מַלְאֲכֵי הַשָּׁלוֹם מַלְאֲכֵי עֶלְיוֹן מֶֽלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא: ",
+     "kind": "prayer",
+     "repeat": 3
+    },
+    {
+     "text": "<small>ג' פעמים</small> ",
+     "kind": "instruction",
+     "en": "3 times"
+    }
+   ]
+  },
+  "he:Shabbat Evening/Shalom Alekhem:7": {
+   "parts": [
+    {
+     "text": "<b>בְּשִׁבְתְּכֶם</b> לְשָׁלוֹם מַלְאֲכֵי הַשָּׁלוֹם מַלְאֲכֵי עֶלְיוֹן מֶֽלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא: ",
+     "kind": "prayer",
+     "repeat": 3
+    },
+    {
+     "text": "<small>ג' פעמים</small> ",
+     "kind": "instruction",
+     "en": "3 times"
+    }
+   ]
+  },
+  "he:Shabbat Evening/Shalom Alekhem:8": {
+   "parts": [
+    {
+     "text": "<b>בְּצֵֽאתְכֶֽם</b> לְשָׁלוֹם מַלְאֲכֵי הַשָּׁלוֹם מַלְאֲכֵי עֶלְיוֹן מֶֽלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא: ",
+     "kind": "prayer",
+     "repeat": 3
+    },
+    {
+     "text": "<small>ג' פעמים</small> ",
+     "kind": "instruction",
+     "en": "3 times"
+    }
+   ]
+  },
+  "he:Shabbat Evening/Shalom Alekhem:9": {
+   "kind": "prayer"
+  },
+  "he:Shabbat Evening/Shalom Alekhem:10": {
+   "kind": "instruction",
+   "en": "Then, without interruption, immediately say the following verses (Sha'ar HaKavanot, Shabbat, Beginning of Parshat Bereishit, 29)",
+   "cite": "בא\"ח ש\"ב בראשית הכ\"ט"
+  }
+ },
+ "en": {
+  "en:Shabbat Evening/Kiddush:1": {
+   "he": [
+    "he:Shabbat Evening/Kiddush:1"
+   ]
+  },
+  "en:Shabbat Evening/Kiddush:9": {
+   "he": [
+    "he:Shabbat Evening/Kiddush:9"
+   ]
+  },
+  "en:Shabbat Evening/Kiddush:10": {
+   "he": [
+    "he:Shabbat Evening/Kiddush:10"
+   ]
+  },
+  "en:Shabbat Evening/Kiddush:11": {
+   "he": [
+    "he:Shabbat Evening/Kiddush:11"
+   ]
+  },
+  "en:Shabbat Evening/Kiddush:13": {
+   "he": [
+    "he:Shabbat Evening/Kiddush:13"
+   ]
+  },
+  "en:Shabbat Evening/Blessing of Children:1": {
+   "he": [
+    "he:Shabbat Evening/Blessing of Children:1"
+   ]
+  },
+  "en:Shabbat Evening/Blessing of Children:3": {
+   "he": [
+    "he:Shabbat Evening/Blessing of Children:3"
+   ]
+  },
+  "en:Shabbat Evening/Blessing of Children:4": {
+   "he": [
+    "he:Shabbat Evening/Blessing of Children:4"
+   ]
+  },
+  "en:Shabbat Evening/Blessing of Children:5": {
+   "he": [
+    "he:Shabbat Evening/Blessing of Children:5"
+   ]
+  },
+  "en:Shabbat Evening/Blessing of Children:6": {
+   "he": [
+    "he:Shabbat Evening/Blessing of Children:6"
+   ]
+  },
+  "en:Shabbat Evening/First Meal:1": {
+   "he": [
+    "he:Shabbat Evening/First Meal:1"
+   ]
+  },
+  "en:Shabbat Evening/First Meal:5": {
+   "he": [
+    "he:Shabbat Evening/First Meal:5"
+   ]
+  },
+  "en:Shabbat Evening/First Meal:8": {
+   "he": [
+    "he:Shabbat Evening/First Meal:8"
+   ]
+  }
+ },
+ "issues": [
+  {
+   "id": "he:Shabbat Evening/Atkenu Seudata:18",
+   "type": "ambiguous",
+   "detail": "Parenthetical text in Azmar Bishvachin (h18) is printed in small font; unclear if it is a standard part of the poem or a conditional addition."
+  },
+  {
+   "id": "he:Shabbat Evening/Songs for Shabbat:145",
+   "type": "ambiguous",
+   "detail": "Acrostic 'Edes' (עדס) is unclear; may be a specific custom or typo for a different word."
+  }
+ ]
+}

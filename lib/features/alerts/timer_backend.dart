@@ -53,5 +53,5 @@ abstract class TimerNotificationBackend implements NotificationBackend {
   }
 
   /// Shows a planned notification; platforms may tag it by id.
-  Future<void> showScheduled(PlannedNotification p) => showNow(p.title, p.body);
+  Future<void> showScheduled(PlannedNotification p) => showNow(p.title, p.body, route: p.route);
 }
