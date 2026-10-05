@@ -34,6 +34,7 @@ import 'features/siddur/versions_screen.dart';
 import 'features/tehillim/tehillim_data.dart';
 import 'features/tehillim/tehillim_reader.dart';
 import 'features/tehillim/tehillim_screen.dart';
+import 'features/torah/shnayim_mikra.dart';
 import 'features/torah/torah_screen.dart';
 import 'features/zmanim/zmanim_screen.dart';
 
@@ -113,6 +114,7 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                 path: '/torah',
                 builder: (c, s) => const TorahScreen(),
                 routes: [
+                  GoRoute(path: 'shnayim-mikra', builder: (c, s) => const ShnayimMikraScreen()),
                   GoRoute(
                     path: ':category',
                     builder: (c, s) => TorahCategoryScreen(category: s.pathParameters['category']!),

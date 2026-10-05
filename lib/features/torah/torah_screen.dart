@@ -15,8 +15,10 @@ import '../../core/theme.dart';
 import '../../core/typeset/typeset.dart';
 import '../home/today.dart';
 import '../search/search_sources.dart';
+import 'shnayim_mikra.dart';
 import 'torah_library.dart';
 import 'torah_settings.dart';
+import 'verse_snap.dart';
 
 String _name(BuildContext context, String en, String he) => context.uiLanguage == UiLanguage.en ? context.term(en) : he;
 
@@ -44,6 +46,7 @@ class TorahScreen extends ConsumerWidget {
             ])
           : ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
         DownloadPanel(works: all, label: context.tr('Download everything')),
+        const ShnayimMikraTile(),
         const SizedBox(height: 8),
         for (final c in torahCategories)
           _WorkTile(
@@ -358,13 +361,15 @@ class TorahReaderScreen extends ConsumerStatefulWidget {
 }
 
 class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with FocusModeReader {
-  final _firstKey = GlobalKey();
+  /// One per se'if, for scrolling to today's portion and [VerseSnap].
+  final _keys = <GlobalKey>[];
   bool _scrolled = false;
 
   void _scrollToHighlight() {
-    if (_scrolled || widget.from == null) return;
+    final from = widget.from;
+    if (_scrolled || from == null || from > _keys.length) return;
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      final ctx = _firstKey.currentContext;
+      final ctx = _keys[from - 1].currentContext;
       if (ctx == null) return;
       _scrolled = true;
       Scrollable.ensureVisible(ctx, alignment: 0.05, duration: const Duration(milliseconds: 300));
@@ -399,6 +404,9 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
     bool hasEn(int n) => n <= en.length && en[n - 1].trim().isNotEmpty;
     final from = widget.from;
     final to = widget.to ?? count;
+    while (_keys.length < count) {
+      _keys.add(GlobalKey());
+    }
     _scrollToHighlight();
     readingText({
       'work': w.id,
@@ -438,12 +446,15 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
               child: PageSwipe(
               onNext: swipeTo(widget.siman + 1, 'next'),
               onPrevious: swipeTo(widget.siman - 1, 'previous'),
+              child: VerseSnap(
+              verses: _keys.sublist(0, count),
+              enabled: s.snapToVerse,
               child: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: ts.gutter(MediaQuery.sizeOf(context).width, min: 16)).copyWith(top: 8, bottom: 24),
         child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           for (var n = 1; n <= count; n++)
             Container(
-              key: n == from ? _firstKey : null,
+              key: _keys[n - 1],
               margin: const EdgeInsets.only(bottom: 10),
               padding: const EdgeInsets.all(10),
               decoration: from != null && n >= from && n <= to
@@ -504,6 +515,7 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
                 style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.outline)),
           ],
         ]),
+              ),
               ),
               ),
             ),

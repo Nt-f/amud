@@ -16,6 +16,7 @@ export 'src/halacha.dart';
 export 'src/hdate.dart';
 export 'src/holidays.dart';
 export 'src/learning/learning.dart';
+export 'src/leyning.dart';
 export 'src/locale.dart';
 export 'src/location.dart';
 export 'src/molad.dart';
