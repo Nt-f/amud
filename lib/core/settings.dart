@@ -91,6 +91,10 @@ enum AppThemeMode {
 /// Which zmanim methodology to show by default.
 enum ZmanimOpinion { gra, mga, baalHatanya }
 
+/// Every tab the navigation bar can show (see NavTabsScreen); the default
+/// bar shows all but the Shiurim tab.
+const allNavTabIds = {'home', 'siddur', 'zmanim', 'torah', 'shiurim', 'settings'};
+
 class AppSettings {
   final SavedLocation location;
   final bool useElevation;
@@ -475,7 +479,7 @@ class AppSettings {
       levanaReminder: pick('levanaReminder', d.levanaReminder),
       hachamaReminder: pick('hachamaReminder', d.hachamaReminder),
       navTabs: orElse(() {
-        final tabs = {for (final v in j['navTabs'] as List) if (v is String && d.navTabs.contains(v)) v};
+        final tabs = {for (final v in j['navTabs'] as List) if (v is String && allNavTabIds.contains(v)) v};
         final list = tabs.contains('settings') ? tabs.toList() : [...tabs, 'settings'];
         // The bar needs two tabs at least.
         return list.length >= 2 ? list : d.navTabs;

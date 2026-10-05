@@ -15,6 +15,7 @@ const navTabs = <NavTab>[
   ('siddur', Icons.menu_book_outlined, Icons.menu_book, CupertinoIcons.book, 'Siddur'),
   ('zmanim', Icons.wb_twilight_outlined, Icons.wb_twilight, CupertinoIcons.sunrise, 'Zmanim'),
   ('torah', Icons.local_library_outlined, Icons.local_library, CupertinoIcons.book_circle, 'Torah'),
+  ('shiurim', Icons.straighten_outlined, Icons.straighten, CupertinoIcons.resize, 'Shiurim'),
   ('settings', Icons.settings_outlined, Icons.settings, CupertinoIcons.settings, 'Settings'),
 ];
 

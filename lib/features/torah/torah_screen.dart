@@ -45,6 +45,15 @@ class TorahScreen extends ConsumerWidget {
           : ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
         DownloadPanel(works: all, label: context.tr('Download everything')),
         const SizedBox(height: 8),
+        Card(
+          child: ListTile(
+            leading: Icon(Icons.straighten, color: Theme.of(context).colorScheme.primary),
+            title: Text(context.tr('Shiurim')),
+            subtitle: Text(context.tr("Kezayis, revi'is, amah and every other measure, by each posek")),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => context.go('/shiurim'),
+          ),
+        ),
         for (final c in torahCategories)
           _WorkTile(
             icon: c.icon,
