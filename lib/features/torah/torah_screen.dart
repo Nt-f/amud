@@ -15,7 +15,7 @@ import '../../core/theme.dart';
 import '../../core/typeset/typeset.dart';
 import '../home/today.dart';
 import '../search/search_sources.dart';
-import 'shnayim_mikra.dart';
+import 'shnayim_mikra_screen.dart';
 import 'torah_library.dart';
 import 'torah_settings.dart';
 import 'verse_snap.dart';
