@@ -24,6 +24,7 @@ import 'features/settings/offline_screen.dart';
 import 'features/settings/location_screen.dart';
 import 'features/settings/nav_tabs_screen.dart';
 import 'features/settings/settings_screen.dart';
+import 'features/shiurim/shiurim_screen.dart';
 import 'features/setup/launch_animation.dart';
 import 'features/setup/setup_screen.dart';
 import 'features/update/update_screen.dart';
@@ -158,6 +159,7 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                 ],
               ),
             ]),
+            StatefulShellBranch(routes: [GoRoute(path: '/shiurim', builder: (c, s) => const ShiurimScreen())]),
             StatefulShellBranch(routes: [
               GoRoute(
                 path: '/settings',
@@ -217,7 +219,7 @@ class SiddurApp extends ConsumerWidget {
 }
 
 /// The first screen of each tab, in [navTabs] order.
-const _tabRoots = {'/', '/siddur', '/zmanim', '/torah', '/settings'};
+const _tabRoots = {'/', '/siddur', '/zmanim', '/torah', '/shiurim', '/settings'};
 
 /// Native navigation chrome: Cupertino tab bar on iOS/macOS, Material 3
 /// navigation bar on phones, navigation rail on wide screens (tablet/web).

@@ -66,6 +66,11 @@ PWA). iOS builds are released unsigned, for sideloading.
   for offline learning. Halacha has the Kitzur Shulchan Aruch, with today's
   Kitzur Yomi highlighted; Chumash, Gemara and the other categories are still
   in progress.
+- **Shiurim:** kezayis, revi'is, amah, techum Shabbos and the other common
+  shiurim by each posek (Rav Chaim Na'eh by default, with Rav Moshe Feinstein,
+  the Chazon Ish and others beside him), a converter between every Gemara
+  unit and metric or imperial, and the source of every figure. Offline; open
+  it from the Torah tab, or add it to the navigation bar.
 - **Tehillim:** the day's portion by month or by week, Shir shel Yom, and your progress saved.
 - **Reminders:** notifications before any zman, such as candle lighting or
   the latest Shema.
