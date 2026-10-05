@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:app_links/app_links.dart';
 import 'package:flutter/foundation.dart';
+import 'features/torah/shnayim_mikra_screen.dart';
 import 'features/integrations/platform_runtime.dart';
 import 'features/integrations/prayer_links.dart';
 
@@ -31,6 +32,7 @@ Future<void> main(List<String> args) async {
   final registry = CardRegistry();
   registerBuiltInCards(registry);
   registerSeasonalCards(registry);
+  registerShnayimMikraCard(registry);
 
   final initialLink = args.map(Uri.tryParse).whereType<Uri>().map(routeFromLink).whereType<String>().firstOrNull;
   final container = ProviderContainer(overrides: [

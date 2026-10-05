@@ -12,9 +12,12 @@ import '../../core/hebrew_text.dart';
 import '../../core/l10n.dart';
 import '../../core/settings.dart';
 import '../../core/theme.dart';
+import '../home/card_registry.dart';
+import '../home/cards/card_frame.dart';
 import '../home/today.dart';
 import '../settings/font_gallery_screen.dart';
 import 'shnayim_mikra.dart';
+import 'torah_library.dart';
 import 'torah_settings.dart';
 import 'verse_snap.dart';
 
@@ -154,7 +157,12 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
             child: Column(mainAxisSize: MainAxisSize.min, children: [
               Text(context.tr('Download failed. Check your connection and try again.'), textAlign: TextAlign.center),
               const SizedBox(height: 12),
-              FilledButton(onPressed: () => ref.invalidate(shnayimMikraProvider(name)), child: Text(context.tr('Retry'))),
+              FilledButton(
+                  onPressed: () {
+                    ref.invalidate(chumashBookProvider);
+                    ref.invalidate(shnayimMikraProvider(name));
+                  },
+                  child: Text(context.tr('Retry'))),
               TextButton.icon(
                 icon: const Icon(Icons.open_in_new),
                 label: Text(context.tr('Open on Sefaria')),
@@ -167,7 +175,10 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
           child: Column(mainAxisSize: MainAxisSize.min, children: [
             const CircularProgressIndicator(),
             const SizedBox(height: 12),
-            Text(context.tr('Downloading from Sefaria…')),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Text(context.tr('Downloading the Chumash from Sefaria, once. After this it works offline.'), textAlign: TextAlign.center),
+            ),
           ]),
         ),
     };
@@ -213,7 +224,7 @@ class _Aliyah extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final s = ref.watch(settingsProvider);
+    final s = ref.watch(mikraStyleProvider);
     final sm = ref.watch(shnayimMikraSettingsProvider);
     final snap = ref.watch(torahSettingsProvider.select((t) => t.snapToVerse));
     final theme = Theme.of(context);
@@ -286,8 +297,8 @@ class _Aliyah extends ConsumerWidget {
   }
 }
 
-/// Shnayim Mikra's text options. Layout, font, te'amim, nikud and
-/// highlighting are the siddur's own settings, so both read alike.
+/// Shnayim Mikra's options. Its text style is the siddur's until "Same
+/// text style as the siddur" is turned off; then it has its own.
 Future<void> _showSettings(BuildContext context) => showModalBottomSheet<void>(
       context: context,
       isScrollControlled: true,
@@ -299,13 +310,14 @@ class _Settings extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final s = ref.watch(settingsProvider);
-    final n = ref.read(settingsProvider.notifier);
+    final siddur = ref.watch(settingsProvider);
     final sm = ref.watch(shnayimMikraSettingsProvider);
     final smn = ref.read(shnayimMikraSettingsProvider.notifier);
+    final style = ref.watch(mikraStyleProvider);
     final snap = ref.watch(torahSettingsProvider.select((t) => t.snapToVerse));
     final userFonts = ref.watch(fontsProvider);
     final theme = Theme.of(context);
+    void own(ShnayimMikraSettings Function(ShnayimMikraSettings) f) => smn.update(f);
     Widget toggle(String title, bool value, ValueChanged<bool> onChanged, {String? subtitle}) => SwitchListTile.adaptive(
         contentPadding: EdgeInsets.zero,
         title: Text(context.tr(title)),
@@ -317,50 +329,106 @@ class _Settings extends ConsumerWidget {
         constraints: BoxConstraints(maxHeight: MediaQuery.sizeOf(context).height * 0.85),
         child: ListView(shrinkWrap: true, padding: const EdgeInsets.fromLTRB(20, 0, 20, 20), children: [
           Text(context.tr('Shnayim Mikra'), style: theme.textTheme.titleLarge),
-          toggle('Show each verse twice', sm.repeatVerse, (v) => smn.update((x) => x.copyWith(repeatVerse: v)),
+          toggle('Show each verse twice', sm.repeatVerse, (v) => own((x) => x.copyWith(repeatVerse: v)),
               subtitle: 'Off to read the verse twice yourself'),
-          toggle('Show Targum Onkelos', sm.showTargum, (v) => smn.update((x) => x.copyWith(showTargum: v))),
+          toggle('Show Targum Onkelos', sm.showTargum, (v) => own((x) => x.copyWith(showTargum: v))),
           toggle('Snap to each verse', snap, (v) => ref.read(torahSettingsProvider.notifier).update((x) => x.copyWith(snapToVerse: v)),
               subtitle: 'When you stop scrolling near the end of a verse, the next one moves to the top.'),
           SheetLabel(context.tr('Text')),
-          Text(context.tr('Shared with the siddur.'), style: theme.textTheme.bodySmall),
-          Row(children: [
-            const Icon(Icons.text_decrease, size: 18),
-            Expanded(
-              child: Slider.adaptive(
-                value: s.textScale,
-                min: 0.7,
-                max: 2.2,
-                divisions: 30,
-                label: '${(s.textScale * 100).round()}%',
-                onChanged: (v) => n.update((x) => x.copyWith(textScale: v)),
+          toggle('Same text style as the siddur', !sm.ownStyle,
+              (v) => own((x) => v ? x.copyWith(ownStyle: false) : x.startOwnStyle(siddur)),
+              subtitle: sm.ownStyle
+                  ? 'Changes here are for Shnayim Mikra only.'
+                  : 'Turn off to choose a font and layout for Shnayim Mikra only. Your siddur stays as it is.'),
+          if (!sm.ownStyle)
+            Text('${fontLabel(style.hebrewFont, userFonts)} · ${_layoutLabel(context, style.layout)}', style: theme.textTheme.bodySmall)
+          else ...[
+            Row(children: [
+              const Icon(Icons.text_decrease, size: 18),
+              Expanded(
+                child: Slider.adaptive(
+                  value: style.textScale,
+                  min: 0.7,
+                  max: 2.2,
+                  divisions: 30,
+                  label: '${(style.textScale * 100).round()}%',
+                  onChanged: (v) => own((x) => x.copyWith(textScale: v)),
+                ),
               ),
+              const Icon(Icons.text_increase, size: 18),
+            ]),
+            ChoiceBar<TextLayout>(
+              options: [
+                (TextLayout.hebrewOnly, context.tr('Hebrew'), Icons.format_textdirection_r_to_l),
+                (TextLayout.interleaved, context.tr('Bilingual'), Icons.view_stream),
+                (TextLayout.sideBySide, context.tr('Side by side'), Icons.view_column),
+              ],
+              selected: style.layout == TextLayout.translationOnly ? TextLayout.interleaved : style.layout,
+              onChanged: (v) => own((x) => x.copyWith(layout: v)),
             ),
-            const Icon(Icons.text_increase, size: 18),
-          ]),
-          ChoiceBar<TextLayout>(
-            options: [
-              (TextLayout.hebrewOnly, context.tr('Hebrew'), Icons.format_textdirection_r_to_l),
-              (TextLayout.interleaved, context.tr('Bilingual'), Icons.view_stream),
-              (TextLayout.sideBySide, context.tr('Side by side'), Icons.view_column),
-            ],
-            selected: s.layout == TextLayout.translationOnly ? TextLayout.interleaved : s.layout,
-            onChanged: (v) => n.update((x) => x.copyWith(layout: v)),
-          ),
-          const SizedBox(height: 8),
-          ListTile(
-            contentPadding: EdgeInsets.zero,
-            leading: const Icon(Icons.font_download_outlined),
-            title: Text(context.tr('Hebrew font')),
-            subtitle: Text(fontLabel(s.hebrewFont, userFonts)),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () => Navigator.of(context, rootNavigator: true).push(MaterialPageRoute<void>(builder: (_) => const FontGalleryScreen())),
-          ),
-          toggle("Show te'amim (trop)", s.showTeamim, (v) => n.update((x) => x.copyWith(showTeamim: v))),
-          toggle('Show nikud (vowels)', s.showNikud, (v) => n.update((x) => x.copyWith(showNikud: v))),
-          toggle("Highlight today's aliyah", s.highlightToday, (v) => n.update((x) => x.copyWith(highlightToday: v))),
+            const SizedBox(height: 8),
+            ListTile(
+              contentPadding: EdgeInsets.zero,
+              leading: const Icon(Icons.font_download_outlined),
+              title: Text(context.tr('Hebrew font')),
+              subtitle: Text(fontLabel(style.hebrewFont, userFonts)),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => Navigator.of(context, rootNavigator: true).push(MaterialPageRoute<void>(
+                  builder: (_) => FontGalleryScreen(
+                        selectedFont: mikraStyleProvider.select((x) => x.hebrewFont),
+                        chooseFont: (ref, family) => ref.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(hebrewFont: family)),
+                      ))),
+            ),
+            SheetLabel(context.tr('English font')),
+            Wrap(spacing: 6, runSpacing: 6, children: [
+              for (final (family, label) in latinFontChoices)
+                ChoiceChip(
+                  label: Text(family == null ? context.tr(label) : label, style: TextStyle(fontFamily: family)),
+                  selected: style.latinFont == family,
+                  onSelected: (_) => own((x) => x.copyWith(latinFont: () => family)),
+                ),
+            ]),
+            toggle("Show te'amim (trop)", style.showTeamim, (v) => own((x) => x.copyWith(showTeamim: v))),
+            toggle('Show nikud (vowels)', style.showNikud, (v) => own((x) => x.copyWith(showNikud: v))),
+            toggle("Highlight today's aliyah", style.highlightToday, (v) => own((x) => x.copyWith(highlightToday: v))),
+          ],
+          SheetLabel(context.tr('Offline')),
+          const _OfflineStatus(),
         ]),
       ),
+    );
+  }
+}
+
+String _layoutLabel(BuildContext context, TextLayout l) => context.tr(switch (l) {
+      TextLayout.hebrewOnly => 'Hebrew',
+      TextLayout.sideBySide => 'Side by side',
+      _ => 'Bilingual',
+    });
+
+/// Whether the Chumash is downloaded, with a button to download it now.
+class _OfflineStatus extends ConsumerWidget {
+  const _OfflineStatus();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final d = ref.watch(chumashDownloadProvider);
+    final theme = Theme.of(context);
+    if (d.have.length == 5) {
+      return ListTile(
+        contentPadding: EdgeInsets.zero,
+        leading: Icon(Icons.offline_pin, color: theme.colorScheme.primary),
+        title: Text(context.tr('Available offline · {size}', {'size': formatBytes(d.bytes)})),
+        subtitle: Text(context.tr('All five books, with Onkelos and English.')),
+      );
+    }
+    return ListTile(
+      contentPadding: EdgeInsets.zero,
+      leading: const Icon(Icons.download),
+      title: Text(context.tr(d.busy ? 'Downloading… {n} of 5 books' : 'Download the Chumash for offline use', {'n': d.have.length})),
+      subtitle: Text(context.tr(d.failed ? 'Download failed. Check your connection and try again.' : 'Downloads from Sefaria once, then works offline.')),
+      trailing: d.busy ? const SizedBox.square(dimension: 20, child: CircularProgressIndicator(strokeWidth: 2)) : null,
+      onTap: d.busy ? null : () => ref.read(chumashDownloadProvider.notifier).downloadAll().catchError((_) {}),
     );
   }
 }
@@ -484,6 +552,68 @@ class _ParshaRow extends StatelessWidget {
             ),
         ]),
       ),
+    );
+  }
+}
+
+/// The Home card: this week's parsha, today's aliyah and the week so far,
+/// with a button to check today's off.
+void registerShnayimMikraCard(CardRegistry r) => r.register(CardType(
+      type: 'shnayimMikra',
+      title: 'Shnayim Mikra',
+      description: "This week's parsha, an aliyah a day, and your progress",
+      icon: Icons.auto_stories,
+      defaultSpan: 2,
+      build: (c, ref, cfg) => const _ShnayimMikraCard(),
+    ));
+
+class _ShnayimMikraCard extends ConsumerWidget {
+  const _ShnayimMikraCard();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final week = _thisWeek(ref);
+    final theme = Theme.of(context);
+    final c = theme.colorScheme;
+    if (week == null) {
+      return CardFrame(title: context.tr('Shnayim Mikra'), icon: Icons.auto_stories, child: Text(context.tr('No reading today')));
+    }
+    final name = week.reading.parsha.join('-');
+    final year = week.shabbat.getFullYear();
+    final done = ref.watch(shnayimMikraProgressProvider)[year] ?? const {};
+    bool isDone(int a) => done.contains(ShnayimMikraProgress.entry(name, a));
+    return CardFrame(
+      title: context.tr('Shnayim Mikra'),
+      icon: Icons.auto_stories,
+      onTap: () => context.push('/torah/shnayim-mikra'),
+      trailing: IconButton(
+        tooltip: context.tr(isDone(week.aliyah) ? 'Aliyah {n} done' : 'Mark aliyah {n} done', {'n': week.aliyah}),
+        icon: Icon(isDone(week.aliyah) ? Icons.check_circle : Icons.check_circle_outline, color: c.primary),
+        onPressed: () => ref.read(shnayimMikraProgressProvider.notifier).toggle(year, name, week.aliyah),
+      ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text(renderParshaName(week.reading.parsha, context.hebcalLocale), style: theme.textTheme.titleMedium),
+        Text('${context.tr('Aliyah {n}', {'n': week.aliyah})} · ${_day(context, week.aliyah)}', style: theme.textTheme.bodyMedium),
+        const SizedBox(height: 10),
+        // The week: one square per aliyah, filled when done, today's ringed.
+        Row(children: [
+          for (var a = 1; a <= 7; a++)
+            Container(
+              width: 20,
+              height: 20,
+              margin: const EdgeInsetsDirectional.only(end: 4),
+              decoration: BoxDecoration(
+                color: isDone(a) ? c.primary : c.surfaceContainerHighest,
+                borderRadius: BorderRadius.circular(4),
+                border: a == week.aliyah ? Border.all(color: c.primary, width: 2) : null,
+              ),
+              child: isDone(a) ? Icon(Icons.check, size: 14, color: c.onPrimary) : null,
+            ),
+          const SizedBox(width: 6),
+          Text(context.tr('{n} of 7 this week', {'n': [for (var a = 1; a <= 7; a++) if (isDone(a)) a].length}),
+              style: theme.textTheme.bodySmall?.copyWith(color: c.outline)),
+        ]),
+      ]),
     );
   }
 }

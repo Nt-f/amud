@@ -6,11 +6,14 @@ import 'package:amud/core/settings.dart';
 import 'package:amud/core/storage.dart';
 import 'package:amud/core/theme.dart';
 import 'package:amud/features/torah/shnayim_mikra.dart';
+import 'package:amud/features/home/card_registry.dart';
 import 'package:amud/features/torah/shnayim_mikra_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hebcal/hebcal.dart';
+import 'package:http/http.dart' as http;
+import 'package:http/testing.dart';
 
 void main() {
   setUpAll(initHebcal);
@@ -61,13 +64,13 @@ void main() {
 
   test('packs verses with their Targum', () {
     final packed = packShnayimMikra((
-      parsha: 'Noach',
+      name: 'Noach',
       begin: (chapter: 6, verse: 9),
       mikra: body(['אֵלֶּה', 'וַיּוֹלֶד'], en: ['This is the line of Noah.']),
       targum: body(['אִלֵּין']),
     ));
     final s = unpackShnayimMikra(packed);
-    expect(s.parsha, 'Noach');
+    expect(s.name, 'Noach');
     expect(s.verses, hasLength(2));
     expect(s.verses[0].at, (chapter: 6, verse: 9));
     expect(s.verses[0].he, 'אֵלֶּה');
@@ -112,12 +115,70 @@ void main() {
     expect(again.read(shnayimMikraProgressProvider.notifier).done(5788, 'Noach', 1), isFalse);
   });
 
+  test('the Chumash downloads once, then every parsha works offline', () async {
+    final c = await container();
+    final asked = <String>[];
+    // Sefaria, in miniature: Bereshit 6–11 with English and Onkelos.
+    final sefaria = MockClient((req) async {
+      final ref = req.url.pathSegments.last;
+      asked.add(ref);
+      final chapters = [for (var ch = 1; ch <= 11; ch++) [for (var v = 1; v <= 32; v++) '$ch:$v']];
+      return http.Response.bytes(
+          ref.startsWith('Onkelos_')
+              ? body([for (final ch in chapters) [for (final v in ch) 'ת $v']])
+              : body(chapters, en: [for (final ch in chapters) [for (final v in ch) 'en $v']]),
+          200);
+    });
+    final noach = await http.runWithClient(() => c.read(shnayimMikraProvider('Noach').future), () => sefaria);
+    // Bereshit came first, so Noach opened; the rest finish behind it.
+    expect(asked.take(2), ['Genesis', 'Onkelos_Genesis']);
+    await c.read(chumashDownloadProvider.notifier).downloadAll();
+    expect(asked, hasLength(10));
+    expect(c.read(chumashDownloadProvider).have, {1, 2, 3, 4, 5});
+    expect(noach.verses.first.at, (chapter: 6, verse: 9));
+    expect(noach.verses.last.at, (chapter: 11, verse: 32));
+    expect(noach.verses.first.targum, 'ת 6:9');
+    expect(noach.verses.first.en, 'en 6:9');
+
+    // No connection at all: another parsha still opens, from storage.
+    final offline = ProviderContainer(overrides: [storageProvider.overrideWithValue(c.read(storageProvider))]);
+    addTearDown(offline.dispose);
+    final bereshit = await http.runWithClient(
+        () => offline.read(shnayimMikraProvider('Bereshit').future), () => MockClient((_) => throw const SocketException('offline')));
+    expect(bereshit.verses.first.at, (chapter: 1, verse: 1));
+    expect(asked, hasLength(10));
+  });
+
+  test("its own text style starts from the siddur's and leaves it alone", () async {
+    final c = await container();
+    final siddur = c.read(settingsProvider.notifier);
+    final mikra = c.read(shnayimMikraSettingsProvider.notifier);
+    siddur.update((x) => x.copyWith(hebrewFont: 'TaameyFrankCLM', layout: TextLayout.hebrewOnly));
+    // Following the siddur: its changes show here.
+    expect(c.read(mikraStyleProvider).hebrewFont, 'TaameyFrankCLM');
+    // Its own style starts as the siddur's...
+    mikra.update((x) => x.startOwnStyle(c.read(settingsProvider)));
+    expect(c.read(mikraStyleProvider).layout, TextLayout.hebrewOnly);
+    // ...and from then on neither changes the other.
+    mikra.update((x) => x.copyWith(hebrewFont: 'DavidLibre', layout: TextLayout.sideBySide));
+    siddur.update((x) => x.copyWith(textScale: 1.4));
+    expect(c.read(mikraStyleProvider).hebrewFont, 'DavidLibre');
+    expect(c.read(mikraStyleProvider).textScale, isNot(1.4));
+    expect(c.read(settingsProvider).hebrewFont, 'TaameyFrankCLM');
+    expect(c.read(settingsProvider).layout, TextLayout.hebrewOnly);
+    // Back to the siddur's, keeping the own style for next time.
+    mikra.update((x) => x.copyWith(ownStyle: false));
+    expect(c.read(mikraStyleProvider).hebrewFont, 'TaameyFrankCLM');
+    expect(c.read(shnayimMikraSettingsProvider).hebrewFont, 'DavidLibre');
+  });
+
   testWidgets('the reader follows the siddur layout and its own options', (tester) async {
     late ProviderContainer c;
     await tester.runAsync(() async {
       c = await container();
-      await c.read(storageProvider).writeBlob('shnayim-mikra', packShnayimMikra((
-        parsha: 'Noach',
+      // Bereshit as downloaded, here only from Noach's first verse.
+      await c.read(storageProvider).writeBlob('shnayim-mikra:1', packShnayimMikra((
+        name: 'Genesis',
         begin: (chapter: 6, verse: 9),
         mikra: body(['אלה תולדת נח'], en: ['This is the line of Noah.']),
         targum: body(['אלין תולדת נח']),
@@ -153,6 +214,28 @@ void main() {
     await tester.pump();
     expect(c.read(shnayimMikraProgressProvider.notifier).done(5790, 'Noach', 1), isTrue);
     // Stop the app clock's timer before the test ends.
+    await tester.pumpWidget(const SizedBox());
+    c.dispose();
+  });
+
+  testWidgets("the Home card checks off today's aliyah", (tester) async {
+    late ProviderContainer c;
+    await tester.runAsync(() async => c = await container());
+    final registry = CardRegistry();
+    registerShnayimMikraCard(registry);
+    final type = registry['shnayimMikra']!;
+    await tester.pumpWidget(UncontrolledProviderScope(
+      container: c,
+      child: MaterialApp(
+        theme: buildTheme(c.read(settingsProvider), Brightness.light),
+        home: Scaffold(body: Consumer(builder: (context, ref, _) => type.build(context, ref, const CardConfig(id: 'x', type: 'shnayimMikra')))),
+      ),
+    ));
+    expect(find.text('Shnayim Mikra'), findsOneWidget);
+    expect(find.textContaining('0 of 7 this week'), findsOneWidget);
+    await tester.tap(find.byIcon(Icons.check_circle_outline));
+    await tester.pump();
+    expect(find.textContaining('1 of 7 this week'), findsOneWidget);
     await tester.pumpWidget(const SizedBox());
     c.dispose();
   });

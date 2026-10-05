@@ -8,6 +8,7 @@ import 'package:http/http.dart' as http;
 
 import '../../core/analytics.dart';
 import '../../core/providers.dart';
+import '../../core/settings.dart';
 
 /// This week's Shnayim Mikra: the parsha of the coming Shabbat (or of the
 /// next Shabbat without a holiday reading) and today's aliyah, one a day
@@ -39,8 +40,8 @@ List<(ParshaReading, HDate)> parshiyotOfYear(int year, bool il) {
 /// A verse with its Targum Onkelos and translation ('' where missing).
 typedef MikraVerse = ({Verse at, String he, String targum, String en});
 
-/// A downloaded parsha.
-typedef MikraText = ({String parsha, List<MikraVerse> verses, String enCredit});
+/// Downloaded text: a book of the Torah, or one parsha of it.
+typedef MikraText = ({String name, List<MikraVerse> verses, String enCredit});
 
 const _books = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy'];
 
@@ -68,18 +69,17 @@ List<(Verse, String)> sefariaVerses(List<int> body, Verse begin, {String lang = 
   ];
 }
 
-/// The text of a parsha with Onkelos and translation, from Sefaria
-/// responses ([mikra] holds the Hebrew and English versions), gzipped for
+/// Verses with Onkelos and translation, from Sefaria responses ([mikra] holds the Hebrew and English versions), gzipped for
 /// storage.
 @visibleForTesting
-List<int> packShnayimMikra(({String parsha, Verse begin, List<int> mikra, List<int> targum}) input) {
+List<int> packShnayimMikra(({String name, Verse begin, List<int> mikra, List<int> targum}) input) {
   final targum = {for (final (v, t) in sefariaVerses(input.targum, input.begin)) v: t};
   final en = {for (final (v, t) in sefariaVerses(input.mikra, input.begin, lang: 'en')) v: t};
   final enVersion = _version(input.mikra, 'en');
   final title = '${enVersion?['versionTitle'] ?? ''}'.trim();
   final license = '${enVersion?['license'] ?? ''}'.trim();
   return GZipEncoder().encodeBytes(utf8.encode(jsonEncode({
-    'parsha': input.parsha,
+    'name': input.name,
     'enCredit': license.isEmpty || license == 'unknown' ? title : '$title ($license)',
     'verses': [
       for (final (v, t) in sefariaVerses(input.mikra, input.begin)) [v.chapter, v.verse, t, targum[v] ?? '', en[v] ?? ''],
@@ -91,7 +91,7 @@ List<int> packShnayimMikra(({String parsha, Verse begin, List<int> mikra, List<i
 MikraText unpackShnayimMikra(List<int> bytes) {
   final j = jsonDecode(utf8.decode(GZipDecoder().decodeBytes(bytes))) as Map<String, Object?>;
   return (
-    parsha: j['parsha'] as String,
+    name: j['name'] as String,
     enCredit: '${j['enCredit'] ?? ''}',
     verses: [
       for (final v in (j['verses'] as List).cast<List>())
@@ -100,58 +100,229 @@ MikraText unpackShnayimMikra(List<int> bytes) {
   );
 }
 
-/// Only the latest parsha is kept: one download covers the week.
-const _blobKey = 'shnayim-mikra';
+String _bookKey(int book) => 'shnayim-mikra:$book';
 
-/// A parsha (named as in [ParshaReading.parsha], joined with "-"),
-/// downloaded from Sefaria the first time.
-final shnayimMikraProvider = FutureProvider.family<MikraText, String>((ref, parsha) async {
-  final storage = ref.read(storageProvider);
-  final stored = storage.readBlob(_blobKey);
-  if (stored != null) {
-    final s = await compute(unpackShnayimMikra, stored);
-    if (s.parsha == parsha) return s;
-  }
-  final r = ParshaReading.of(parsha.split('-'))!;
-  final client = http.Client();
-  try {
-    Future<List<int>> get(String ref, String versions) async {
-      final res = await client.get(Uri.parse('https://www.sefaria.org/api/v3/texts/$ref?$versions&return_format=text_only'));
-      if (res.statusCode != 200) throw Exception('HTTP ${res.statusCode}');
-      return res.bodyBytes;
+/// The five books with Onkelos and English, downloaded from Sefaria all at
+/// once the first time and kept, so every parsha works offline after that.
+typedef ChumashState = ({Set<int> have, int bytes, bool busy, bool failed});
+
+class ChumashDownload extends Notifier<ChumashState> {
+  Future<void>? _running;
+
+  @override
+  ChumashState build() {
+    final storage = ref.watch(storageProvider);
+    var bytes = 0;
+    final have = <int>{};
+    for (var b = 1; b <= 5; b++) {
+      if (storage.readBlob(_bookKey(b)) case final blob?) {
+        have.add(b);
+        bytes += blob.length;
+      }
     }
-
-    final (mikra, targum) = await (
-      get(sefariaRange(r), 'version=hebrew&version=english'),
-      get(sefariaRange(r, onkelos: true), 'version=hebrew'),
-    ).wait;
-    final packed = await compute(packShnayimMikra, (parsha: parsha, begin: r.begin, mikra: mikra, targum: targum));
-    await storage.writeBlob(_blobKey, packed);
-    analytics.event('shnayim_mikra_download', {'parsha': parsha});
-    return compute(unpackShnayimMikra, packed);
-  } finally {
-    client.close();
+    return (have: have, bytes: bytes, busy: false, failed: false);
   }
+
+  bool get complete => state.have.length == 5;
+
+  /// Downloads the books not yet kept, [first] first, so a reader waiting
+  /// for it opens as soon as it's in; one download at a time.
+  Future<void> downloadAll({int first = 1}) => _running ??= _download(first).whenComplete(() => _running = null);
+
+  Future<void> _download(int first) async {
+    // Called while a reader's text is first loading: change state after.
+    await Future<void>.delayed(Duration.zero);
+    final storage = ref.read(storageProvider);
+    state = (have: state.have, bytes: state.bytes, busy: true, failed: false);
+    analytics.event('shnayim_mikra_download', {'status': 'start'});
+    final client = http.Client();
+    try {
+      Future<List<int>> get(String ref, String versions) async {
+        final res = await client.get(Uri.parse('https://www.sefaria.org/api/v3/texts/$ref?$versions&return_format=text_only'));
+        if (res.statusCode != 200) throw Exception('HTTP ${res.statusCode}');
+        return res.bodyBytes;
+      }
+
+      for (final b in [first, for (var b = 1; b <= 5; b++) if (b != first) b]) {
+        if (state.have.contains(b)) continue;
+        final (mikra, targum) = await (
+          get(_books[b - 1], 'version=hebrew&version=english'),
+          get('Onkelos_${_books[b - 1]}', 'version=hebrew'),
+        ).wait;
+        final packed = await compute(packShnayimMikra, (name: _books[b - 1], begin: (chapter: 1, verse: 1), mikra: mikra, targum: targum));
+        await storage.writeBlob(_bookKey(b), packed);
+        ref.invalidate(chumashBookProvider(b));
+        state = (have: {...state.have, b}, bytes: state.bytes + packed.length, busy: true, failed: false);
+      }
+      state = (have: state.have, bytes: state.bytes, busy: false, failed: false);
+      analytics.event('shnayim_mikra_download', {'status': 'done', 'kb': state.bytes ~/ 1024});
+    } catch (e) {
+      state = (have: state.have, bytes: state.bytes, busy: false, failed: true);
+      analytics.event('shnayim_mikra_download', {'status': 'failed', 'error': e.runtimeType.toString()});
+      rethrow;
+    } finally {
+      client.close();
+    }
+  }
+}
+
+final chumashDownloadProvider = NotifierProvider<ChumashDownload, ChumashState>(ChumashDownload.new);
+
+/// One book (1 = Bereshit), downloading the Chumash first if needed.
+/// Invalidate the family to retry after a failed download.
+final chumashBookProvider = FutureProvider.family<MikraText, int>((ref, book) async {
+  var blob = ref.read(storageProvider).readBlob(_bookKey(book));
+  if (blob == null) {
+    await ref.read(chumashDownloadProvider.notifier).downloadAll(first: book);
+    blob = ref.read(storageProvider).readBlob(_bookKey(book));
+    if (blob == null) throw StateError('${_books[book - 1]} was not downloaded');
+  }
+  return compute(unpackShnayimMikra, blob);
 });
 
-/// What Shnayim Mikra shows besides the siddur's text settings, which it
-/// follows (layout, fonts, te'amim, nikud).
+/// A parsha's verses (named as in [ParshaReading.parsha], joined with "-").
+final shnayimMikraProvider = FutureProvider.family<MikraText, String>((ref, parsha) async {
+  final r = ParshaReading.of(parsha.split('-'))!;
+  final book = await ref.watch(chumashBookProvider(r.book).future);
+  int key(Verse v) => v.chapter * 1000 + v.verse;
+  return (
+    name: parsha,
+    enCredit: book.enCredit,
+    verses: [for (final v in book.verses) if (key(v.at) >= key(r.begin) && key(v.at) <= key(r.end)) v],
+  );
+});
+
+/// How Shnayim Mikra is shown. Its text style follows the siddur's until
+/// [ownStyle] is turned on; then it has its own, starting from the
+/// siddur's, and changing either leaves the other alone.
 class ShnayimMikraSettings {
   /// Each verse twice, as it's read; once to read it twice by yourself.
   final bool repeatVerse;
   final bool showTargum;
-  const ShnayimMikraSettings({this.repeatVerse = true, this.showTargum = true});
+  final bool ownStyle;
 
-  ShnayimMikraSettings copyWith({bool? repeatVerse, bool? showTargum}) =>
-      ShnayimMikraSettings(repeatVerse: repeatVerse ?? this.repeatVerse, showTargum: showTargum ?? this.showTargum);
+  /// The own style; null where it hasn't been set (the siddur's is used).
+  final TextLayout? layout;
+  final String? hebrewFont;
+  final String? latinFont;
+  final double? textScale;
+  final bool? showTeamim;
+  final bool? showNikud;
+  final bool? highlightToday;
 
-  Map<String, Object?> toJson() => {'repeatVerse': repeatVerse, 'showTargum': showTargum};
+  const ShnayimMikraSettings({
+    this.repeatVerse = true,
+    this.showTargum = true,
+    this.ownStyle = false,
+    this.layout,
+    this.hebrewFont,
+    this.latinFont,
+    this.textScale,
+    this.showTeamim,
+    this.showNikud,
+    this.highlightToday,
+  });
 
-  factory ShnayimMikraSettings.fromJson(Map<String, Object?> j) => ShnayimMikraSettings(
-        repeatVerse: j['repeatVerse'] is bool ? j['repeatVerse'] as bool : true,
-        showTargum: j['showTargum'] is bool ? j['showTargum'] as bool : true,
+  ShnayimMikraSettings copyWith({
+    bool? repeatVerse,
+    bool? showTargum,
+    bool? ownStyle,
+    TextLayout? layout,
+    String? hebrewFont,
+    String? Function()? latinFont,
+    double? textScale,
+    bool? showTeamim,
+    bool? showNikud,
+    bool? highlightToday,
+  }) =>
+      ShnayimMikraSettings(
+        repeatVerse: repeatVerse ?? this.repeatVerse,
+        showTargum: showTargum ?? this.showTargum,
+        ownStyle: ownStyle ?? this.ownStyle,
+        layout: layout ?? this.layout,
+        hebrewFont: hebrewFont ?? this.hebrewFont,
+        latinFont: latinFont != null ? latinFont() : this.latinFont,
+        textScale: textScale ?? this.textScale,
+        showTeamim: showTeamim ?? this.showTeamim,
+        showNikud: showNikud ?? this.showNikud,
+        highlightToday: highlightToday ?? this.highlightToday,
       );
+
+  /// Starts an own style from the siddur's current one.
+  ShnayimMikraSettings startOwnStyle(AppSettings s) => copyWith(
+        ownStyle: true,
+        layout: layout ?? s.layout,
+        hebrewFont: hebrewFont ?? s.hebrewFont,
+        latinFont: () => latinFont ?? s.latinFont,
+        textScale: textScale ?? s.textScale,
+        showTeamim: showTeamim ?? s.showTeamim,
+        showNikud: showNikud ?? s.showNikud,
+        highlightToday: highlightToday ?? s.highlightToday,
+      );
+
+  /// The style to read with: the siddur's, or the own one.
+  MikraStyle style(AppSettings s) => ownStyle
+      ? (
+          layout: layout ?? s.layout,
+          hebrewFont: hebrewFont ?? s.hebrewFont,
+          latinFont: latinFont ?? s.latinFont,
+          textScale: textScale ?? s.textScale,
+          showTeamim: showTeamim ?? s.showTeamim,
+          showNikud: showNikud ?? s.showNikud,
+          highlightToday: highlightToday ?? s.highlightToday,
+        )
+      : (
+          layout: s.layout,
+          hebrewFont: s.hebrewFont,
+          latinFont: s.latinFont,
+          textScale: s.textScale,
+          showTeamim: s.showTeamim,
+          showNikud: s.showNikud,
+          highlightToday: s.highlightToday,
+        );
+
+  Map<String, Object?> toJson() => {
+        'repeatVerse': repeatVerse,
+        'showTargum': showTargum,
+        'ownStyle': ownStyle,
+        'layout': layout?.name,
+        'hebrewFont': hebrewFont,
+        'latinFont': latinFont,
+        'textScale': textScale,
+        'showTeamim': showTeamim,
+        'showNikud': showNikud,
+        'highlightToday': highlightToday,
+      };
+
+  factory ShnayimMikraSettings.fromJson(Map<String, Object?> j) {
+    bool? flag(String k) => j[k] is bool ? j[k] as bool : null;
+    return ShnayimMikraSettings(
+      repeatVerse: flag('repeatVerse') ?? true,
+      showTargum: flag('showTargum') ?? true,
+      ownStyle: flag('ownStyle') ?? false,
+      layout: TextLayout.values.asNameMap()[j['layout']],
+      hebrewFont: j['hebrewFont'] is String ? j['hebrewFont'] as String : null,
+      latinFont: j['latinFont'] is String ? j['latinFont'] as String : null,
+      textScale: j['textScale'] is num ? (j['textScale'] as num).toDouble() : null,
+      showTeamim: flag('showTeamim'),
+      showNikud: flag('showNikud'),
+      highlightToday: flag('highlightToday'),
+    );
+  }
 }
+
+typedef MikraStyle = ({
+  TextLayout layout,
+  String hebrewFont,
+  String? latinFont,
+  double textScale,
+  bool showTeamim,
+  bool showNikud,
+  bool highlightToday,
+});
+
+/// The text style Shnayim Mikra reads with.
+final mikraStyleProvider = Provider<MikraStyle>((ref) => ref.watch(shnayimMikraSettingsProvider).style(ref.watch(settingsProvider)));
 
 class ShnayimMikraSettingsNotifier extends Notifier<ShnayimMikraSettings> {
   static const _key = 'shnayimMikraSettings';
