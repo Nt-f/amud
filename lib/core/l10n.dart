@@ -871,7 +871,6 @@ const Map<String, (String, String)> _strings = {
   'Show each verse twice': ('הצגת כל פסוק פעמיים', 'ווייזן יעדן פסוק צוויי מאל'),
   'Off to read the verse twice yourself': ('כבוי כדי לקרוא את הפסוק פעמיים בעצמכם', 'אויסגעלאשן כדי צו ליינען דעם פסוק צוויי מאל אליין'),
   'Show Targum Onkelos': ('הצגת תרגום אונקלוס', 'ווייזן תרגום אונקלוס'),
-  'Shared with the siddur.': ('משותף עם הסידור.', 'געמיינזאם מיטן סידור.'),
   "Highlight today's aliyah": ('הדגשת העלייה של היום', 'אונטערשטרייכן היינטיגע עליה'),
   'Shnayim Mikra · {year}': ('שניים מקרא · {year}', 'שנים מקרא · {year}'),
   '{done} of {total} aliyot · {whole} of {parshiyot} parshiyot': ('{done} מתוך {total} עליות · {whole} מתוך {parshiyot} פרשות', '{done} פון {total} עליות · {whole} פון {parshiyot} פרשיות'),
