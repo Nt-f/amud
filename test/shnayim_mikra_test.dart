@@ -345,12 +345,52 @@ void main() {
     c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(rashiScript: false));
     await tester.pump();
     expect(tester.widget<RichText>(rashi).text.style?.fontFamily, isNot('NotoRashiHebrew'));
-    // His English, where the layout shows English, unless it's turned off.
+    c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(rashiScript: true));
+    await tester.pump();
+    // His English, when it's turned on and the layout shows English.
     final rashiEn = find.textContaining('it tells his praise', findRichText: true);
+    c.read(settingsProvider.notifier).update((x) => x.copyWith(layout: TextLayout.interleaved));
+    await tester.pump();
+    expect(rashiEn, findsNothing);
+    c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(rashiEnglish: true));
+    await tester.pump();
+    expect(rashiEn, findsOneWidget);
+    c.read(settingsProvider.notifier).update((x) => x.copyWith(layout: TextLayout.hebrewOnly));
+    await tester.pump();
     expect(rashiEn, findsNothing);
     c.read(settingsProvider.notifier).update((x) => x.copyWith(layout: TextLayout.interleaved));
     await tester.pump();
-    expect(rashiEn, findsOneWidget);
+
+    // In the order chosen: here the English first, then the verse and Rashi.
+    final pasuk = find.textContaining('אלה תולדת נח', findRichText: true);
+    final english = find.textContaining('This is the line of Noah.', findRichText: true);
+    double y(Finder f) => tester.getTopLeft(f).dy;
+    expect(y(pasuk), lessThan(y(rashi)));
+    expect(y(rashi), lessThan(y(english)));
+    expect(y(english), lessThan(y(rashiEn)));
+    c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(order: [
+          MikraPart.english,
+          MikraPart.rashiEnglish,
+          MikraPart.verse,
+          MikraPart.rashi,
+          MikraPart.verseAgain,
+          MikraPart.targum,
+        ]));
+    await tester.pump();
+    expect(y(english), lessThan(y(rashiEn)));
+    expect(y(rashiEn), lessThan(y(pasuk)));
+    expect(y(pasuk), lessThan(y(rashi)));
+    // Side by side, each language keeps that order in its own column.
+    await tester.binding.setSurfaceSize(const Size(1000, 800));
+    c.read(settingsProvider.notifier).update((x) => x.copyWith(layout: TextLayout.sideBySide));
+    await tester.pump();
+    expect(tester.getTopLeft(english).dx, lessThan(tester.getTopLeft(pasuk).dx));
+    expect(y(english), lessThan(y(rashiEn)));
+    expect(y(pasuk), lessThan(y(rashi)));
+    await tester.binding.setSurfaceSize(null);
+    c.read(settingsProvider.notifier).update((x) => x.copyWith(layout: TextLayout.interleaved));
+    c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(order: MikraPart.values));
+    await tester.pump();
     expect(find.textContaining('English: The Contemporary Torah (CC-BY-NC).', findRichText: true), findsNWidgets(2));
     c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(rashiEnglish: false));
     await tester.pump();
@@ -366,6 +406,79 @@ void main() {
     await tester.pump();
     expect(c.read(shnayimMikraProgressProvider.notifier).done(5790, 'Noach', 1), isTrue);
     // Stop the app clock's timer before the test ends.
+    await tester.pumpWidget(const SizedBox());
+    c.dispose();
+  });
+
+  test('a saved order keeps the parts it knows, and adds new ones', () {
+    ShnayimMikraSettings read(Object? order) => ShnayimMikraSettings.fromJson({'order': order});
+    expect(read(null).order, MikraPart.values);
+    // Unknown and repeated names go; missing ones come back after the part
+    // they follow by default.
+    expect(read(['english', 'verse', 'english', 'shmoo', 'rashi']).order,
+        [MikraPart.english, MikraPart.rashiEnglish, MikraPart.verse, MikraPart.verseAgain, MikraPart.targum, MikraPart.rashi]);
+    const custom = ShnayimMikraSettings(order: [
+      MikraPart.rashi,
+      MikraPart.verse,
+      MikraPart.english,
+      MikraPart.verseAgain,
+      MikraPart.rashiEnglish,
+      MikraPart.targum,
+    ]);
+    expect(ShnayimMikraSettings.fromJson(custom.toJson()).order, custom.order);
+  });
+
+  testWidgets('the settings sheet turns parts on and off, and drags them into order', (tester) async {
+    late ProviderContainer c;
+    await tester.runAsync(() async {
+      c = await container();
+      await c.read(storageProvider).writeBlob('shnayim-mikra:1', packShnayimMikra((
+        name: 'Genesis',
+        begin: (chapter: 6, verse: 9),
+        mikra: body(['אלה תולדת נח'], en: ['This is the line of Noah.']),
+        targum: body(['אלין תולדת נח']),
+      )));
+    });
+    // From the defaults, whatever earlier tests left behind.
+    c.read(shnayimMikraSettingsProvider.notifier).update((_) => const ShnayimMikraSettings());
+    await tester.binding.setSurfaceSize(const Size(500, 1400));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    await tester.pumpWidget(UncontrolledProviderScope(
+      container: c,
+      child: MaterialApp(
+        theme: buildTheme(c.read(settingsProvider), Brightness.light),
+        home: const ShnayimMikraScreen(parsha: 'Noach', year: 5790),
+      ),
+    ));
+    await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 200)));
+    await tester.pump();
+    await tester.tap(find.byIcon(Icons.text_fields));
+    await tester.pumpAndSettle();
+
+    // Checking off the Targum hides it.
+    final targum = find.ancestor(of: find.text('Targum Onkelos'), matching: find.byType(ListTile));
+    await tester.tap(find.descendant(of: targum, matching: find.byType(Checkbox)));
+    await tester.pump();
+    expect(c.read(shnayimMikraSettingsProvider).showTargum, isFalse);
+
+    // Dragging the verse below "Verse again" and the Targum.
+    final handle = find.descendant(
+        of: find.ancestor(of: find.text('Verse'), matching: find.byType(ListTile)), matching: find.byIcon(Icons.drag_handle));
+    final rowHeight = tester.getSize(targum).height;
+    final drag = await tester.startGesture(tester.getCenter(handle));
+    await tester.pump(const Duration(milliseconds: 20));
+    for (var i = 0; i < 10; i++) {
+      await drag.moveBy(Offset(0, rowHeight * 2.2 / 10));
+      await tester.pump(const Duration(milliseconds: 20));
+    }
+    await drag.up();
+    await tester.pumpAndSettle();
+    expect(c.read(shnayimMikraSettingsProvider).order.take(3), [MikraPart.verseAgain, MikraPart.targum, MikraPart.verse]);
+
+    // Reset puts it back.
+    await tester.tap(find.text('Reset'));
+    await tester.pump();
+    expect(c.read(shnayimMikraSettingsProvider).order, MikraPart.values);
     await tester.pumpWidget(const SizedBox());
     c.dispose();
   });

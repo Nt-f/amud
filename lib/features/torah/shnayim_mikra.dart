@@ -365,6 +365,20 @@ final rashiBookProvider = FutureProvider.family<RashiText, int>((ref, book) asyn
   return compute(unpackRashi, blob);
 });
 
+/// What's shown for each verse; [ShnayimMikraSettings.order] puts them in
+/// the order the reader likes.
+enum MikraPart {
+  verse,
+  verseAgain,
+  targum,
+  rashi,
+  english,
+  rashiEnglish;
+
+  /// Shown in the English column, and only where the layout shows English.
+  bool get inEnglish => this == MikraPart.english || this == MikraPart.rashiEnglish;
+}
+
 /// How Shnayim Mikra is shown. Its text style follows the siddur's until
 /// [ownStyle] is turned on; then it has its own, starting from the
 /// siddur's, and changing either leaves the other alone.
@@ -381,6 +395,12 @@ class ShnayimMikraSettings {
   final bool rashiScript;
   final bool rashiNikud;
   final bool rashiEnglish;
+
+  /// The verse's translation, where the layout shows English.
+  final bool showEnglish;
+
+  /// The parts of each verse, in the order shown: every part, once.
+  final List<MikraPart> order;
   final bool ownStyle;
 
   /// The own style; null where it hasn't been set (the siddur's is used).
@@ -398,7 +418,9 @@ class ShnayimMikraSettings {
     this.showRashi = false,
     this.rashiScript = true,
     this.rashiNikud = true,
-    this.rashiEnglish = true,
+    this.rashiEnglish = false,
+    this.showEnglish = true,
+    this.order = MikraPart.values,
     this.ownStyle = false,
     this.layout,
     this.hebrewFont,
@@ -416,6 +438,8 @@ class ShnayimMikraSettings {
     bool? rashiScript,
     bool? rashiNikud,
     bool? rashiEnglish,
+    bool? showEnglish,
+    List<MikraPart>? order,
     bool? ownStyle,
     TextLayout? layout,
     String? hebrewFont,
@@ -432,6 +456,8 @@ class ShnayimMikraSettings {
         rashiScript: rashiScript ?? this.rashiScript,
         rashiNikud: rashiNikud ?? this.rashiNikud,
         rashiEnglish: rashiEnglish ?? this.rashiEnglish,
+        showEnglish: showEnglish ?? this.showEnglish,
+        order: order ?? this.order,
         ownStyle: ownStyle ?? this.ownStyle,
         layout: layout ?? this.layout,
         hebrewFont: hebrewFont ?? this.hebrewFont,
@@ -441,6 +467,30 @@ class ShnayimMikraSettings {
         showNikud: showNikud ?? this.showNikud,
         highlightToday: highlightToday ?? this.highlightToday,
       );
+
+  /// Whether [part] is turned on (English parts also need a layout with
+  /// English).
+  bool shows(MikraPart part) => switch (part) {
+        MikraPart.verse => true,
+        MikraPart.verseAgain => repeatVerse,
+        MikraPart.targum => showTargum,
+        MikraPart.rashi => showRashi,
+        MikraPart.english => showEnglish,
+        MikraPart.rashiEnglish => rashiEnglish,
+      };
+
+  /// Turns [part] on or off; the verse itself is always shown.
+  ShnayimMikraSettings withPart(MikraPart part, bool on) => switch (part) {
+        MikraPart.verse => this,
+        MikraPart.verseAgain => copyWith(repeatVerse: on),
+        MikraPart.targum => copyWith(showTargum: on),
+        MikraPart.rashi => copyWith(showRashi: on),
+        MikraPart.english => copyWith(showEnglish: on),
+        MikraPart.rashiEnglish => copyWith(rashiEnglish: on),
+      };
+
+  /// Rashi, in Hebrew or English, is shown, so he's downloaded.
+  bool get needsRashi => showRashi || rashiEnglish;
 
   /// Starts an own style from the siddur's current one.
   ShnayimMikraSettings startOwnStyle(AppSettings s) => copyWith(
@@ -482,6 +532,8 @@ class ShnayimMikraSettings {
         'rashiScript': rashiScript,
         'rashiNikud': rashiNikud,
         'rashiEnglish': rashiEnglish,
+        'showEnglish': showEnglish,
+        'order': [for (final p in order) p.name],
         'ownStyle': ownStyle,
         'layout': layout?.name,
         'hebrewFont': hebrewFont,
@@ -500,7 +552,9 @@ class ShnayimMikraSettings {
       showRashi: flag('showRashi') ?? false,
       rashiScript: flag('rashiScript') ?? true,
       rashiNikud: flag('rashiNikud') ?? true,
-      rashiEnglish: flag('rashiEnglish') ?? true,
+      rashiEnglish: flag('rashiEnglish') ?? false,
+      showEnglish: flag('showEnglish') ?? true,
+      order: _order(j['order']),
       ownStyle: flag('ownStyle') ?? false,
       layout: TextLayout.values.asNameMap()[j['layout']],
       hebrewFont: j['hebrewFont'] is String ? j['hebrewFont'] as String : null,
@@ -511,6 +565,21 @@ class ShnayimMikraSettings {
       highlightToday: flag('highlightToday'),
     );
   }
+}
+
+/// A saved order: the parts it names, in that order, with any it's missing
+/// (added in a later version) after the part they follow by default.
+List<MikraPart> _order(Object? names) {
+  final parts = MikraPart.values.asNameMap();
+  final order = <MikraPart>[];
+  for (final n in names is List ? names : const []) {
+    if (parts[n] case final p? when !order.contains(p)) order.add(p);
+  }
+  for (final p in MikraPart.values) {
+    // After the part it follows by default, or first.
+    if (!order.contains(p)) order.insert(p.index == 0 ? 0 : order.indexOf(MikraPart.values[p.index - 1]) + 1, p);
+  }
+  return order;
 }
 
 typedef MikraStyle = ({

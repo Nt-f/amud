@@ -150,7 +150,7 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
                     : context.tr('Text and Targum Onkelos from Sefaria. English: {credit}.', {'credit': value.enCredit}),
                 textAlign: TextAlign.center,
                 style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.outline)),
-            if (ref.watch(shnayimMikraSettingsProvider.select((x) => x.showRashi)))
+            if (ref.watch(shnayimMikraSettingsProvider.select((x) => x.needsRashi)))
               Text(
                   switch (ref.watch(rashiBookProvider(reading.book)).value?.enCredit) {
                     final credit? when credit.isNotEmpty => context.tr('Rashi from Sefaria. English: {credit}.', {'credit': credit}),
@@ -238,7 +238,7 @@ class _Aliyah extends ConsumerWidget {
     final s = ref.watch(mikraStyleProvider);
     final sm = ref.watch(shnayimMikraSettingsProvider);
     final snap = ref.watch(torahSettingsProvider.select((t) => t.snapToVerse));
-    final rashi = sm.showRashi ? ref.watch(rashiBookProvider(book)) : null;
+    final rashi = sm.needsRashi ? ref.watch(rashiBookProvider(book)) : null;
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
     int key(Verse v) => v.chapter * 1000 + v.verse;
@@ -272,46 +272,61 @@ class _Aliyah extends ConsumerWidget {
 
     Widget verse(MikraVerse v, GlobalKey k) {
       final number = '${gematriya(v.at.chapter)}:${gematriya(v.at.verse)} ';
-      final he = Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-        for (var i = 0; i < (sm.repeatVerse ? 2 : 1); i++)
-          Text.rich(TextSpan(children: [TextSpan(text: number, style: mark), TextSpan(text: marks(v.he))]),
-              textDirection: TextDirection.rtl, style: heStyle),
-        if (sm.showTargum && v.targum.isNotEmpty)
-          Text.rich(TextSpan(children: [TextSpan(text: 'ת״א ', style: mark), TextSpan(text: hebrewMarks(v.targum, teamim: false, nikud: s.showNikud))]),
-              textDirection: TextDirection.rtl, style: targumStyle),
-        for (final (i, r) in (rashi?.value?.verses[v.at]?.he ?? const <RashiComment>[]).indexed)
-          Padding(
-            padding: const EdgeInsets.only(top: 4),
-            child: Text.rich(
-                TextSpan(children: [
-                  if (i == 0) TextSpan(text: 'רש״י ', style: mark),
-                  if (r.dh.isNotEmpty) TextSpan(text: '${hebrewMarks(r.dh, teamim: false, nikud: sm.rashiNikud)} ', style: const TextStyle(fontWeight: FontWeight.w700)),
-                  TextSpan(text: hebrewMarks(r.text, teamim: false, nikud: sm.rashiNikud)),
-                ]),
-                textDirection: TextDirection.rtl,
-                style: rashiStyle),
-          ),
-      ]);
-      final rashiEn = sm.rashiEnglish ? rashi?.value?.verses[v.at]?.en ?? const <RashiComment>[] : const <RashiComment>[];
-      final en = layout == TextLayout.hebrewOnly || v.en.isEmpty && rashiEn.isEmpty
+      final pasuk = Text.rich(TextSpan(children: [TextSpan(text: number, style: mark), TextSpan(text: marks(v.he))]),
+          textDirection: TextDirection.rtl, style: heStyle);
+      final rashiHe = rashi?.value?.verses[v.at]?.he ?? const <RashiComment>[];
+      final rashiEn = rashi?.value?.verses[v.at]?.en ?? const <RashiComment>[];
+      Widget? comments(List<RashiComment> list, {required bool hebrew}) => list.isEmpty
           ? null
           : Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-              if (v.en.isNotEmpty)
-                Text.rich(TextSpan(children: [TextSpan(text: '${v.at.chapter}:${v.at.verse} ', style: mark), TextSpan(text: v.en)]),
-                    textDirection: TextDirection.ltr, style: enStyle),
-              for (final (i, r) in rashiEn.indexed)
-                Padding(
-                  padding: const EdgeInsets.only(top: 4),
-                  child: Text.rich(
-                      TextSpan(children: [
-                        if (i == 0) TextSpan(text: 'Rashi ', style: mark),
-                        if (r.dh.isNotEmpty) TextSpan(text: '${r.dh} ', style: const TextStyle(fontWeight: FontWeight.w700)),
-                        TextSpan(text: r.text),
-                      ]),
-                      textDirection: TextDirection.ltr,
-                      style: rashiEnStyle),
-                ),
+              for (final (i, r) in list.indexed)
+                Text.rich(
+                    TextSpan(children: [
+                      if (i == 0) TextSpan(text: hebrew ? 'רש״י ' : 'Rashi ', style: mark),
+                      if (r.dh.isNotEmpty)
+                        TextSpan(
+                            text: '${hebrew ? hebrewMarks(r.dh, teamim: false, nikud: sm.rashiNikud) : r.dh} ',
+                            style: const TextStyle(fontWeight: FontWeight.w700)),
+                      TextSpan(text: hebrew ? hebrewMarks(r.text, teamim: false, nikud: sm.rashiNikud) : r.text),
+                    ]),
+                    textDirection: hebrew ? TextDirection.rtl : TextDirection.ltr,
+                    style: hebrew ? rashiStyle : rashiEnStyle),
             ]);
+      Widget? part(MikraPart p) => switch (p) {
+            MikraPart.verse || MikraPart.verseAgain => pasuk,
+            MikraPart.targum when v.targum.isNotEmpty => Text.rich(
+                TextSpan(children: [TextSpan(text: 'ת״א ', style: mark), TextSpan(text: hebrewMarks(v.targum, teamim: false, nikud: s.showNikud))]),
+                textDirection: TextDirection.rtl,
+                style: targumStyle),
+            MikraPart.rashi => comments(rashiHe, hebrew: true),
+            MikraPart.english when v.en.isNotEmpty => Text.rich(
+                TextSpan(children: [TextSpan(text: '${v.at.chapter}:${v.at.verse} ', style: mark), TextSpan(text: v.en)]),
+                textDirection: TextDirection.ltr,
+                style: enStyle),
+            MikraPart.rashiEnglish => comments(rashiEn, hebrew: false),
+            _ => null,
+          };
+      // The parts turned on, in the reader's order; English ones only where
+      // the layout shows English.
+      final parts = [
+        for (final p in sm.order)
+          if (sm.shows(p) && (!p.inEnglish || layout != TextLayout.hebrewOnly))
+            if (part(p) case final w?) (p, w),
+      ];
+      Widget column(Iterable<Widget> ws) => Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            for (final (i, w) in ws.indexed) i == 0 ? w : Padding(padding: const EdgeInsets.only(top: 4), child: w),
+          ]);
+      final english = [for (final (p, w) in parts) if (p.inEnglish) w];
+      final hebrew = [for (final (p, w) in parts) if (!p.inEnglish) w];
+      // Side by side: English on the left and Hebrew on the right, each in
+      // the chosen order.
+      final body = layout == TextLayout.sideBySide && english.isNotEmpty
+          ? Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Expanded(child: column(english)),
+              const SizedBox(width: 24),
+              Expanded(child: column(hebrew)),
+            ])
+          : column([for (final (_, w) in parts) w]);
       return Container(
         key: k,
         margin: const EdgeInsets.only(bottom: 10),
@@ -323,11 +338,7 @@ class _Aliyah extends ConsumerWidget {
                 border: BorderDirectional(start: BorderSide(color: colors.todayBar, width: 3)),
               )
             : null,
-        child: en == null
-            ? he
-            : layout == TextLayout.sideBySide
-                ? Row(crossAxisAlignment: CrossAxisAlignment.start, children: [Expanded(child: en), const SizedBox(width: 24), Expanded(child: he)])
-                : Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [he, const SizedBox(height: 6), en]),
+        child: body,
       );
     }
 
@@ -396,20 +407,49 @@ class _Settings extends ConsumerWidget {
         constraints: BoxConstraints(maxHeight: MediaQuery.sizeOf(context).height * 0.85),
         child: ListView(shrinkWrap: true, padding: const EdgeInsets.fromLTRB(20, 0, 20, 20), children: [
           Text(context.tr('Shnayim Mikra'), style: theme.textTheme.titleLarge),
-          toggle('Show each verse twice', sm.repeatVerse, (v) => own((x) => x.copyWith(repeatVerse: v)),
-              subtitle: 'Off to read the verse twice yourself'),
-          toggle('Show Targum Onkelos', sm.showTargum, (v) => own((x) => x.copyWith(showTargum: v))),
-          toggle('Show Rashi', sm.showRashi, (v) => own((x) => x.copyWith(showRashi: v)),
-              subtitle: "Rashi's commentary under each verse. Downloads from Sefaria once."),
+          SheetLabel(context.tr('Each verse')),
+          Row(children: [
+            Expanded(child: Text(context.tr('Choose what to show. Drag to reorder.'), style: theme.textTheme.bodySmall)),
+            TextButton(
+                onPressed: () => own((x) => x.copyWith(order: MikraPart.values)),
+                child: Text(context.tr('Reset'))),
+          ]),
+          ReorderableListView(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            buildDefaultDragHandles: false,
+            onReorder: (a, b) => own((x) {
+              final order = [...x.order];
+              if (b > a) b--;
+              order.insert(b, order.removeAt(a));
+              return x.copyWith(order: order);
+            }),
+            children: [
+              for (final (i, p) in sm.order.indexed)
+                ListTile(
+                  key: ValueKey(p),
+                  contentPadding: EdgeInsets.zero,
+                  leading: Checkbox(
+                    value: sm.shows(p),
+                    // The verse itself is always there.
+                    onChanged: p == MikraPart.verse ? null : (v) => own((x) => x.withPart(p, v ?? false)),
+                  ),
+                  title: Text(context.tr(_partLabel(p))),
+                  subtitle: switch (p) {
+                    MikraPart.rashi || MikraPart.rashiEnglish when !sm.needsRashi => Text(context.tr('Downloads from Sefaria once.')),
+                    _ when p.inEnglish && style.layout == TextLayout.hebrewOnly => Text(context.tr('Not shown in the Hebrew layout')),
+                    _ => null,
+                  },
+                  trailing: ReorderableDragStartListener(index: i, child: const Icon(Icons.drag_handle)),
+                ),
+            ],
+          ),
           if (sm.showRashi)
             toggle('Rashi script', sm.rashiScript, (v) => own((x) => x.copyWith(rashiScript: v)),
                 subtitle: 'Off to show Rashi in the Hebrew font'),
           if (sm.showRashi)
             toggle('Rashi with nikud', sm.rashiNikud, (v) => own((x) => x.copyWith(rashiNikud: v)),
                 subtitle: 'Where Sefaria has Rashi with vowels'),
-          if (sm.showRashi)
-            toggle('Rashi in English', sm.rashiEnglish, (v) => own((x) => x.copyWith(rashiEnglish: v)),
-                subtitle: 'With the English of each verse, when the layout shows English'),
           toggle('Snap to each verse', snap, (v) => ref.read(torahSettingsProvider.notifier).update((x) => x.copyWith(snapToVerse: v)),
               subtitle: 'When you stop scrolling near the end of a verse, the next one moves to the top.'),
           SheetLabel(context.tr('Text')),
@@ -472,12 +512,21 @@ class _Settings extends ConsumerWidget {
           ],
           SheetLabel(context.tr('Offline')),
           const _OfflineStatus(),
-          if (sm.showRashi || ref.watch(rashiDownloadProvider).have.isNotEmpty) const _RashiOfflineStatus(),
+          if (sm.needsRashi || ref.watch(rashiDownloadProvider).have.isNotEmpty) const _RashiOfflineStatus(),
         ]),
       ),
     );
   }
 }
+
+String _partLabel(MikraPart p) => switch (p) {
+      MikraPart.verse => 'Verse',
+      MikraPart.verseAgain => 'Verse again',
+      MikraPart.targum => 'Targum Onkelos',
+      MikraPart.rashi => 'Rashi',
+      MikraPart.english => 'English',
+      MikraPart.rashiEnglish => 'Rashi in English',
+    };
 
 String _layoutLabel(BuildContext context, TextLayout l) => context.tr(switch (l) {
       TextLayout.hebrewOnly => 'Hebrew',
