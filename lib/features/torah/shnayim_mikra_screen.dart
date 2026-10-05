@@ -100,9 +100,10 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
       return Scaffold(appBar: AppBar(title: Text(context.tr('Shnayim Mikra'))), body: Center(child: Text(context.tr('No reading today'))));
     }
     final name = reading.parsha.join('-');
-    final isThisWeek = week != null && week.reading.parsha.join('-') == name;
-    final today = isThisWeek ? week.aliyah : null;
     final year = widget.year ?? week?.shabbat.getFullYear() ?? ref.watch(todaySnapshotProvider).hdate.getFullYear();
+    // The same parsha opened from another year's chart isn't this week's.
+    final isThisWeek = week != null && week.reading.parsha.join('-') == name && week.shabbat.getFullYear() == year;
+    final today = isThisWeek ? week.aliyah : null;
     final aliyah = _aliyah ?? today ?? 1;
     final progress = ref.watch(shnayimMikraProgressProvider);
     bool done(int n) => progress[year]?.contains(ShnayimMikraProgress.entry(name, n)) ?? false;
@@ -617,7 +618,7 @@ class _ProgressState extends ConsumerState<ShnayimMikraProgressScreen> {
       aliyot += n;
       if (n == 7) whole++;
     }
-    final thisWeek = week?.reading.parsha.join('-');
+    final thisWeek = week != null && week.shabbat.getFullYear() == year ? week.reading.parsha.join('-') : null;
 
     return Scaffold(
       appBar: AppBar(
