@@ -127,6 +127,7 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
       AsyncData(:final value) => _Aliyah(
           key: ValueKey(aliyah),
           text: value,
+          book: reading.book,
           range: reading.aliyot[aliyah - 1],
           keys: _keys(value.verses.length),
           today: aliyah == today,
@@ -149,6 +150,13 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
                     : context.tr('Text and Targum Onkelos from Sefaria. English: {credit}.', {'credit': value.enCredit}),
                 textAlign: TextAlign.center,
                 style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.outline)),
+            if (ref.watch(shnayimMikraSettingsProvider.select((x) => x.showRashi)))
+              Text(
+                  switch (ref.watch(rashiBookProvider(reading.book)).value?.enCredit) {
+                    final credit? when credit.isNotEmpty => context.tr('Rashi from Sefaria. English: {credit}.', {'credit': credit}),
+                    _ => context.tr('Rashi from Sefaria.'),
+                  },
+                  textAlign: TextAlign.center, style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.outline)),
           ]),
         ),
       AsyncError() => Center(
@@ -214,19 +222,23 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
 /// One aliyah's verses, in the siddur's layout and type settings.
 class _Aliyah extends ConsumerWidget {
   final MikraText text;
+
+  /// The book of the Torah, 1 = Bereshit, for Rashi.
+  final int book;
   final (Verse, Verse) range;
   final List<GlobalKey> keys;
 
   /// Today's aliyah, highlighted as the siddur marks what's said today.
   final bool today;
   final Widget footer;
-  const _Aliyah({super.key, required this.text, required this.range, required this.keys, required this.today, required this.footer});
+  const _Aliyah({super.key, required this.text, required this.book, required this.range, required this.keys, required this.today, required this.footer});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final s = ref.watch(mikraStyleProvider);
     final sm = ref.watch(shnayimMikraSettingsProvider);
     final snap = ref.watch(torahSettingsProvider.select((t) => t.snapToVerse));
+    final rashi = sm.showRashi ? ref.watch(rashiBookProvider(book)) : null;
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
     int key(Verse v) => v.chapter * 1000 + v.verse;
@@ -247,7 +259,14 @@ class _Aliyah extends ConsumerWidget {
         fontFamily: hebrewFamilyFor(s.hebrewFont, teamim: false, nikud: s.showNikud),
         fontSize: 19 * s.textScale,
         color: theme.colorScheme.onSurfaceVariant);
+    // Rashi in Rashi script, or in the Hebrew font without te'amim.
+    final rashiStyle = heStyle.copyWith(
+        fontFamily: sm.rashiScript ? 'NotoRashiHebrew' : hebrewFamilyFor(s.hebrewFont, teamim: false, nikud: sm.rashiNikud),
+        fontSize: 17 * s.textScale,
+        height: 1.6,
+        color: theme.colorScheme.onSurfaceVariant);
     final enStyle = TextStyle(fontFamily: s.latinFont, fontSize: 17 * s.textScale, height: 1.5, color: theme.colorScheme.onSurface);
+    final rashiEnStyle = enStyle.copyWith(fontSize: 15 * s.textScale, color: theme.colorScheme.onSurfaceVariant);
     final mark = TextStyle(color: theme.colorScheme.primary, fontWeight: FontWeight.w700, fontSize: 14 * s.textScale);
     String marks(String he) => hebrewMarks(he, teamim: s.showTeamim, nikud: s.showNikud);
 
@@ -260,11 +279,39 @@ class _Aliyah extends ConsumerWidget {
         if (sm.showTargum && v.targum.isNotEmpty)
           Text.rich(TextSpan(children: [TextSpan(text: 'ת״א ', style: mark), TextSpan(text: hebrewMarks(v.targum, teamim: false, nikud: s.showNikud))]),
               textDirection: TextDirection.rtl, style: targumStyle),
+        for (final (i, r) in (rashi?.value?.verses[v.at]?.he ?? const <RashiComment>[]).indexed)
+          Padding(
+            padding: const EdgeInsets.only(top: 4),
+            child: Text.rich(
+                TextSpan(children: [
+                  if (i == 0) TextSpan(text: 'רש״י ', style: mark),
+                  if (r.dh.isNotEmpty) TextSpan(text: '${hebrewMarks(r.dh, teamim: false, nikud: sm.rashiNikud)} ', style: const TextStyle(fontWeight: FontWeight.w700)),
+                  TextSpan(text: hebrewMarks(r.text, teamim: false, nikud: sm.rashiNikud)),
+                ]),
+                textDirection: TextDirection.rtl,
+                style: rashiStyle),
+          ),
       ]);
-      final en = layout == TextLayout.hebrewOnly || v.en.isEmpty
+      final rashiEn = sm.rashiEnglish ? rashi?.value?.verses[v.at]?.en ?? const <RashiComment>[] : const <RashiComment>[];
+      final en = layout == TextLayout.hebrewOnly || v.en.isEmpty && rashiEn.isEmpty
           ? null
-          : Text.rich(TextSpan(children: [TextSpan(text: '${v.at.chapter}:${v.at.verse} ', style: mark), TextSpan(text: v.en)]),
-              textDirection: TextDirection.ltr, style: enStyle);
+          : Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+              if (v.en.isNotEmpty)
+                Text.rich(TextSpan(children: [TextSpan(text: '${v.at.chapter}:${v.at.verse} ', style: mark), TextSpan(text: v.en)]),
+                    textDirection: TextDirection.ltr, style: enStyle),
+              for (final (i, r) in rashiEn.indexed)
+                Padding(
+                  padding: const EdgeInsets.only(top: 4),
+                  child: Text.rich(
+                      TextSpan(children: [
+                        if (i == 0) TextSpan(text: 'Rashi ', style: mark),
+                        if (r.dh.isNotEmpty) TextSpan(text: '${r.dh} ', style: const TextStyle(fontWeight: FontWeight.w700)),
+                        TextSpan(text: r.text),
+                      ]),
+                      textDirection: TextDirection.ltr,
+                      style: rashiEnStyle),
+                ),
+            ]);
       return Container(
         key: k,
         margin: const EdgeInsets.only(bottom: 10),
@@ -285,15 +332,35 @@ class _Aliyah extends ConsumerWidget {
     }
 
     final verseKeys = keys.sublist(0, verses.length);
-    return VerseSnap(
-      verses: verseKeys,
-      enabled: snap,
-      child: ListView.builder(
-        padding: EdgeInsets.fromLTRB(16, 0, 16, 24 + MediaQuery.paddingOf(context).bottom),
-        itemCount: verses.length + 1,
-        itemBuilder: (context, i) => i < verses.length ? verse(verses[i], verseKeys[i]) : footer,
+    // While Rashi downloads, or if he couldn't, the verses show without him.
+    final rashiNote = switch (rashi) {
+      AsyncLoading() => ListTile(
+          dense: true,
+          leading: const SizedBox.square(dimension: 18, child: CircularProgressIndicator(strokeWidth: 2)),
+          title: Text(context.tr('Downloading Rashi from Sefaria, once. After this it works offline.')),
+        ),
+      AsyncError() => ListTile(
+          dense: true,
+          leading: Icon(Icons.error_outline, color: theme.colorScheme.error),
+          title: Text(context.tr('Download failed. Check your connection and try again.')),
+          trailing: TextButton(onPressed: () => ref.invalidate(rashiBookProvider(book)), child: Text(context.tr('Retry'))),
+        ),
+      _ => null,
+    };
+    return Column(children: [
+      ?rashiNote,
+      Expanded(
+        child: VerseSnap(
+          verses: verseKeys,
+          enabled: snap,
+          child: ListView.builder(
+            padding: EdgeInsets.fromLTRB(16, 0, 16, 24 + MediaQuery.paddingOf(context).bottom),
+            itemCount: verses.length + 1,
+            itemBuilder: (context, i) => i < verses.length ? verse(verses[i], verseKeys[i]) : footer,
+          ),
+        ),
       ),
-    );
+    ]);
   }
 }
 
@@ -332,6 +399,17 @@ class _Settings extends ConsumerWidget {
           toggle('Show each verse twice', sm.repeatVerse, (v) => own((x) => x.copyWith(repeatVerse: v)),
               subtitle: 'Off to read the verse twice yourself'),
           toggle('Show Targum Onkelos', sm.showTargum, (v) => own((x) => x.copyWith(showTargum: v))),
+          toggle('Show Rashi', sm.showRashi, (v) => own((x) => x.copyWith(showRashi: v)),
+              subtitle: "Rashi's commentary under each verse. Downloads from Sefaria once."),
+          if (sm.showRashi)
+            toggle('Rashi script', sm.rashiScript, (v) => own((x) => x.copyWith(rashiScript: v)),
+                subtitle: 'Off to show Rashi in the Hebrew font'),
+          if (sm.showRashi)
+            toggle('Rashi with nikud', sm.rashiNikud, (v) => own((x) => x.copyWith(rashiNikud: v)),
+                subtitle: 'Where Sefaria has Rashi with vowels'),
+          if (sm.showRashi)
+            toggle('Rashi in English', sm.rashiEnglish, (v) => own((x) => x.copyWith(rashiEnglish: v)),
+                subtitle: 'With the English of each verse, when the layout shows English'),
           toggle('Snap to each verse', snap, (v) => ref.read(torahSettingsProvider.notifier).update((x) => x.copyWith(snapToVerse: v)),
               subtitle: 'When you stop scrolling near the end of a verse, the next one moves to the top.'),
           SheetLabel(context.tr('Text')),
@@ -394,6 +472,7 @@ class _Settings extends ConsumerWidget {
           ],
           SheetLabel(context.tr('Offline')),
           const _OfflineStatus(),
+          if (sm.showRashi || ref.watch(rashiDownloadProvider).have.isNotEmpty) const _RashiOfflineStatus(),
         ]),
       ),
     );
@@ -429,6 +508,33 @@ class _OfflineStatus extends ConsumerWidget {
       subtitle: Text(context.tr(d.failed ? 'Download failed. Check your connection and try again.' : 'Downloads from Sefaria once, then works offline.')),
       trailing: d.busy ? const SizedBox.square(dimension: 20, child: CircularProgressIndicator(strokeWidth: 2)) : null,
       onTap: d.busy ? null : () => ref.read(chumashDownloadProvider.notifier).downloadAll().catchError((_) {}),
+    );
+  }
+}
+
+/// Whether Rashi is downloaded, with a button to download him now.
+class _RashiOfflineStatus extends ConsumerWidget {
+  const _RashiOfflineStatus();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final d = ref.watch(rashiDownloadProvider);
+    final theme = Theme.of(context);
+    if (d.have.length == 5) {
+      return ListTile(
+        contentPadding: EdgeInsets.zero,
+        leading: Icon(Icons.offline_pin, color: theme.colorScheme.primary),
+        title: Text(context.tr('Rashi available offline · {size}', {'size': formatBytes(d.bytes)})),
+        subtitle: Text(context.tr('Rashi on all five books, in Hebrew and English.')),
+      );
+    }
+    return ListTile(
+      contentPadding: EdgeInsets.zero,
+      leading: const Icon(Icons.download),
+      title: Text(context.tr(d.busy ? 'Downloading Rashi… {n} of 5 books' : 'Download Rashi for offline use', {'n': d.have.length})),
+      subtitle: Text(context.tr(d.failed ? 'Download failed. Check your connection and try again.' : 'Downloads from Sefaria once, then works offline.')),
+      trailing: d.busy ? const SizedBox.square(dimension: 20, child: CircularProgressIndicator(strokeWidth: 2)) : null,
+      onTap: d.busy ? null : () => ref.read(rashiDownloadProvider.notifier).downloadAll().catchError((_) {}),
     );
   }
 }

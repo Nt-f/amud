@@ -149,6 +149,109 @@ void main() {
     expect(asked, hasLength(10));
   });
 
+  test("Rashi's comments: the dibbur hamatchil, then the comment", () {
+    expect(rashiComment('<b>בראשית ברא.</b> אמר רבי יצחק'), (dh: 'בראשית ברא.', text: 'אמר רבי יצחק'));
+    // A dash after it, footnotes and other markup go.
+    expect(
+        rashiComment('<b>ויאמר</b> - לא <i>היה</i><sup class="footnote-marker">1</sup><i class="footnote">הערה</i> צריך&nbsp;להתחיל'),
+        (dh: 'ויאמר', text: 'לא היה צריך להתחיל'));
+    // Without a bold opening, it's all comment.
+    expect(rashiComment('אמר רבי יצחק'), (dh: '', text: 'אמר רבי יצחק'));
+  });
+
+  test('packs Rashi by verse in Hebrew and English, leaving out verses he passes over', () {
+    final rashi = unpackRashi(packRashi(body([
+      [
+        ['<b>בראשית</b> אמר רבי יצחק', '<b>ברא אלהים</b> ולא אמר'],
+        <String>[],
+        ['<b>תהו ובהו</b> תהו לשון תמה'],
+      ],
+      [
+        '',
+        ['<b>ויכלו</b> כלה מלאכתו'],
+      ],
+    ], en: [
+      [
+        ['<b>IN THE BEGINNING</b> — Rabbi Isaac said'],
+        <String>[],
+        <String>[],
+        ['<b>UNFORMED AND VOID</b> astonishment'],
+      ],
+    ])));
+    expect(rashi.verses.keys, [(chapter: 1, verse: 1), (chapter: 1, verse: 3), (chapter: 1, verse: 4), (chapter: 2, verse: 2)]);
+    expect(rashi.verses[(chapter: 1, verse: 1)]!.he, [(dh: 'בראשית', text: 'אמר רבי יצחק'), (dh: 'ברא אלהים', text: 'ולא אמר')]);
+    expect(rashi.verses[(chapter: 1, verse: 1)]!.en, [(dh: 'IN THE BEGINNING', text: 'Rabbi Isaac said')]);
+    expect(rashi.verses[(chapter: 1, verse: 3)]!.en, isEmpty);
+    // English only where the Hebrew has none here: kept, by its own verse.
+    expect(rashi.verses[(chapter: 1, verse: 4)]!.he, isEmpty);
+    expect(rashi.verses[(chapter: 2, verse: 2)]!.he.single.dh, 'ויכלו');
+    expect(rashi.enCredit, 'The Contemporary Torah (CC-BY-NC)');
+    // Without an English version, no credit.
+    expect(unpackRashi(packRashi(body([[['<b>א</b> ב']]]))).enCredit, '');
+  });
+
+  test('Rashi in Hebrew is taken from a vocalized version where Sefaria has one', () {
+    List<int> versions(List<(String, bool, Object)> he) => utf8.encode(jsonEncode({
+          'versions': [
+            for (final (title, primary, text) in he) {'language': 'he', 'versionTitle': title, 'isPrimary': primary, 'text': text},
+          ],
+        }));
+    final rashi = unpackRashi(packRashi(versions([
+      ('Plain', true, [
+        [
+          ['<b>בראשית</b> אמר רבי יצחק'],
+          ['<b>והארץ</b> היתה'],
+        ],
+      ]),
+      ('Vocalized', false, [
+        [
+          ['<b>בְּרֵאשִׁית</b> אָמַר רַבִּי יִצְחָק'],
+        ],
+      ]),
+    ])));
+    expect(rashi.verses[(chapter: 1, verse: 1)]!.he.single, (dh: 'בְּרֵאשִׁית', text: 'אָמַר רַבִּי יִצְחָק'));
+    // Where the vocalized version has nothing, the main one.
+    expect(rashi.verses[(chapter: 1, verse: 2)]!.he.single, (dh: 'והארץ', text: 'היתה'));
+    // With no vocalized version, the main one, though it's listed second.
+    final plain = unpackRashi(packRashi(versions([
+      ('Other', false, [[['<b>א</b> אחר']]]),
+      ('Plain', true, [[['<b>א</b> עיקר']]]),
+    ])));
+    expect(plain.verses[(chapter: 1, verse: 1)]!.he.single.text, 'עיקר');
+  });
+
+  test('Rashi downloads once, with his markup, then works offline', () async {
+    final c = await container();
+    final asked = <Uri>[];
+    final sefaria = MockClient((req) async {
+      asked.add(req.url);
+      final book = req.url.pathSegments.last.replaceFirst('Rashi_on_', '');
+      return http.Response.bytes(
+          body([
+            [
+              ['<b>$book</b> 1:1'],
+            ],
+          ]),
+          200);
+    });
+    final exodus = await http.runWithClient(() => c.read(rashiBookProvider(2).future), () => sefaria);
+    expect(asked.first.pathSegments.last, 'Rashi_on_Exodus');
+    // Not text only: the bold sets off the dibbur hamatchil.
+    // Every Hebrew version, to find one with nikud.
+    expect(asked.first.queryParametersAll['version'], ['hebrew|all', 'english']);
+    expect(exodus.verses[(chapter: 1, verse: 1)]!.he, [(dh: 'Exodus', text: '1:1')]);
+    await http.runWithClient(() => c.read(rashiDownloadProvider.notifier).downloadAll(), () => sefaria);
+    expect(asked, hasLength(5));
+    expect(c.read(rashiDownloadProvider).have, {1, 2, 3, 4, 5});
+
+    final offline = ProviderContainer(overrides: [storageProvider.overrideWithValue(c.read(storageProvider))]);
+    addTearDown(offline.dispose);
+    final numbers = await http.runWithClient(
+        () => offline.read(rashiBookProvider(4).future), () => MockClient((_) => throw const SocketException('offline')));
+    expect(numbers.verses[(chapter: 1, verse: 1)]!.he.single.dh, 'Numbers');
+    expect(asked, hasLength(5));
+  });
+
   test("its own text style starts from the siddur's and leaves it alone", () async {
     final c = await container();
     final siddur = c.read(settingsProvider.notifier);
@@ -208,6 +311,55 @@ void main() {
     expect(find.textContaining('אלה תולדת נח', findRichText: true), findsOneWidget);
     expect(find.textContaining('אלין תולדת נח', findRichText: true), findsNothing);
     expect(find.textContaining('This is the line of Noah.', findRichText: true), findsNothing);
+
+    // Rashi, once he's downloaded: in Rashi script, or in the Hebrew font.
+    await tester.runAsync(() async {
+      await c.read(storageProvider).writeBlob('shnayim-mikra-rashi:1', packRashi(body([
+        for (var ch = 1; ch < 6; ch++) <List<String>>[],
+        [
+          for (var v = 1; v < 9; v++) <String>[],
+          ['<b>אֵלֶּה תּוֹלְדוֹת נֹחַ</b> הוֹאִיל וְהִזְכִּירוֹ סִפֵּר בְּשִׁבְחוֹ'],
+        ],
+      ], en: [
+        for (var ch = 1; ch < 6; ch++) <List<String>>[],
+        [
+          for (var v = 1; v < 9; v++) <String>[],
+          ['<b>THESE ARE THE GENERATIONS OF NOAH</b> since Scripture mentions him, it tells his praise'],
+        ],
+      ])));
+    });
+    c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(showRashi: true));
+    await tester.pump();
+    await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 200)));
+    await tester.pump();
+    final rashi = find.textContaining('הוֹאִיל וְהִזְכִּירוֹ סִפֵּר בְּשִׁבְחוֹ', findRichText: true);
+    expect(rashi, findsOneWidget);
+    expect(tester.widget<RichText>(rashi).text.style?.fontFamily, 'NotoRashiHebrew');
+    // His nikud, on its own switch.
+    c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(rashiNikud: false));
+    await tester.pump();
+    expect(rashi, findsNothing);
+    expect(find.textContaining('הואיל והזכירו ספר בשבחו', findRichText: true), findsOneWidget);
+    c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(rashiNikud: true));
+    await tester.pump();
+    c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(rashiScript: false));
+    await tester.pump();
+    expect(tester.widget<RichText>(rashi).text.style?.fontFamily, isNot('NotoRashiHebrew'));
+    // His English, where the layout shows English, unless it's turned off.
+    final rashiEn = find.textContaining('it tells his praise', findRichText: true);
+    expect(rashiEn, findsNothing);
+    c.read(settingsProvider.notifier).update((x) => x.copyWith(layout: TextLayout.interleaved));
+    await tester.pump();
+    expect(rashiEn, findsOneWidget);
+    expect(find.textContaining('English: The Contemporary Torah (CC-BY-NC).', findRichText: true), findsNWidgets(2));
+    c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(rashiEnglish: false));
+    await tester.pump();
+    expect(rashiEn, findsNothing);
+    c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(showRashi: false));
+    await tester.pump();
+    expect(rashi, findsNothing);
+    c.read(settingsProvider.notifier).update((x) => x.copyWith(layout: TextLayout.hebrewOnly));
+    await tester.pump();
 
     // Checking off the aliyah saves it and moves on to the next.
     await tester.tap(find.textContaining('Mark aliyah 1 done'));

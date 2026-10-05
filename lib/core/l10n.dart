@@ -886,6 +886,24 @@ const Map<String, (String, String)> _strings = {
   'Download the Chumash for offline use': ('הורדת החומש לשימוש ללא חיבור', 'אראפלאדן דעם חומש פאר אן אינטערנעט'),
   'Open on Sefaria': ('פתיחה בספריא', 'עפענען אין ספריא'),
   'Text and Targum Onkelos from Sefaria.': ('המקרא ותרגום אונקלוס מספריא.', 'דער פסוק און תרגום אונקלוס פון ספריא.'),
+  'Show Rashi': ('הצגת רש״י', 'ווייזן רש״י'),
+  "Rashi's commentary under each verse. Downloads from Sefaria once.":
+      ('פירוש רש״י מתחת לכל פסוק. יורד מספריא פעם אחת.', 'רש״י אונטער יעדן פסוק. ווערט אראפגעלאדן פון ספריא איין מאל.'),
+  'Rashi script': ('כתב רש״י', 'רש״י כתב'),
+  'Off to show Rashi in the Hebrew font': ('כבוי כדי להציג את רש״י בגופן העברי', 'אויסגעלאשן כדי צו ווייזן רש״י אינעם העברעאישן שריפט'),
+  'Rashi from Sefaria. English: {credit}.': ('רש״י מספריא. אנגלית: {credit}.', 'רש״י פון ספריא. ענגליש: {credit}.'),
+  'Rashi with nikud': ('רש״י בניקוד', 'רש״י מיט נקודות'),
+  'Where Sefaria has Rashi with vowels': ('היכן שיש בספריא רש״י מנוקד', 'וואו ספריא האט רש״י מיט נקודות'),
+  'Rashi in English': ('רש״י באנגלית', 'רש״י אויף ענגליש'),
+  'With the English of each verse, when the layout shows English':
+      ('עם האנגלית של כל פסוק, כשהפריסה מציגה אנגלית', 'מיט דעם ענגליש פון יעדן פסוק, ווען דער אויסשטעל ווייזט ענגליש'),
+  'Rashi from Sefaria.': ('רש״י מספריא.', 'רש״י פון ספריא.'),
+  'Downloading Rashi from Sefaria, once. After this it works offline.':
+      ('מוריד את רש״י מספריא, פעם אחת. אחר כך זה עובד ללא חיבור.', 'לאדט אראפ רש״י פון ספריא, איין מאל. דערנאך ארבעט עס אן אינטערנעט.'),
+  'Rashi available offline · {size}': ('רש״י זמין ללא חיבור · {size}', 'רש״י צוטריטלעך אן אינטערנעט · {size}'),
+  'Rashi on all five books, in Hebrew and English.': ('רש״י על כל חמשת החומשים, בעברית ובאנגלית.', 'רש״י אויף אלע פינף חומשים, אויף לשון קודש און ענגליש.'),
+  'Downloading Rashi… {n} of 5 books': ('מוריד את רש״י… {n} מתוך 5 חומשים', 'לאדט אראפ רש״י… {n} פון 5 חומשים'),
+  'Download Rashi for offline use': ('הורדת רש״י לשימוש ללא חיבור', 'אראפלאדן רש״י פאר אן אינטערנעט'),
   'Snap to each verse': ('הצמדה לכל פסוק', 'אנכאפן יעדן פסוק'),
   'When you stop scrolling near the end of a verse, the next one moves to the top.':
       ('כשמפסיקים לגלול סמוך לסוף פסוק, הפסוק הבא עולה לראש המסך.', 'ווען איר הערט אויף צו סקראלן נאנט צום סוף פון א פסוק, רוקט זיך דער קומענדיקער ארויף.'),

@@ -75,6 +75,12 @@ flutter:
     - family: NotoSerifHebrew
       fonts:
         - asset: assets/fonts/NotoSerifHebrew.ttf
+    # Rashi script, for Rashi's commentary in Shnayim Mikra.
+    - family: NotoRashiHebrew
+      fonts:
+        - asset: assets/fonts/NotoRashiHebrew-Regular.ttf
+        - asset: assets/fonts/NotoRashiHebrew-Bold.ttf
+          weight: 700
     - family: DavidLibre
       fonts:
         - asset: assets/fonts/DavidLibre-Regular.ttf
