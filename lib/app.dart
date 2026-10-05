@@ -20,6 +20,7 @@ import 'features/calendar/calendar_screen.dart';
 import 'features/home/home_screen.dart';
 import 'features/learning/learning_screen.dart';
 import 'features/settings/font_gallery_screen.dart';
+import 'features/settings/offline_screen.dart';
 import 'features/settings/location_screen.dart';
 import 'features/settings/nav_tabs_screen.dart';
 import 'features/settings/settings_screen.dart';
@@ -149,6 +150,7 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                 routes: [
                   GoRoute(path: 'location', parentNavigatorKey: _rootKey, builder: (c, s) => const LocationScreen()),
                   GoRoute(path: 'fonts', parentNavigatorKey: _rootKey, builder: (c, s) => const FontGalleryScreen()),
+                  GoRoute(path: 'offline', parentNavigatorKey: _rootKey, builder: (c, s) => const OfflineScreen()),
                   GoRoute(path: 'integrations', parentNavigatorKey: _rootKey, builder: (c, s) => const IntegrationsScreen()),
                   GoRoute(path: 'cards', parentNavigatorKey: _rootKey, builder: (c, s) => const CardGalleryScreen()),
                   GoRoute(path: 'rules', parentNavigatorKey: _rootKey, builder: (c, s) => const CustomRulesScreen()),

@@ -369,6 +369,14 @@ class SettingsScreen extends ConsumerWidget {
             onChanged: (v) async { if (v && !await ref.read(notificationBackendProvider).requestPermission()) return; set((x) => x.copyWith(hachamaReminder: v)); }),
           AdaptiveNavTile(icon: Icons.menu_book_outlined, title: context.tr('Daily learning'), onTap: () => context.push('/learning')),
         ]),
+        AdaptiveSection(header: context.tr('Offline'), children: [
+          AdaptiveNavTile(
+            icon: Icons.offline_pin_outlined,
+            title: context.tr('Offline & storage'),
+            subtitle: context.tr('What works without a connection, downloads, and the room they take'),
+            onTap: () => context.push('/settings/offline'),
+          ),
+        ]),
         AdaptiveSection(header: context.tr('Advanced'), children: [
           AdaptiveNavTile(icon: Icons.widgets_outlined, title: context.tr('Card gallery'), onTap: () => context.push('/settings/cards')),
           AdaptiveNavTile(icon: Icons.link, title: context.tr('Widgets, shortcuts & voice'), onTap: () => context.push('/settings/integrations')),

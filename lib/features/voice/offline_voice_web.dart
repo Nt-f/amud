@@ -34,6 +34,7 @@ class OfflineVoiceBackend {
     return true;
   }
 
+  /// Downloads the files not yet in, continuing any that were cut off.
   Future<void> install(void Function(double) progress) async {
     final cache = await _cache();
     final client = http.Client();
@@ -41,13 +42,25 @@ class OfflineVoiceBackend {
     var completed = 0;
     try {
       for (final file in voiceModelFiles) {
-        final bytes = BytesBuilder(copy: false);
+        // Checked when it was downloaded, before it was stored whole.
+        final have = await cache.match(_key(file.name).toJS).toDart;
+        if (have != null && have.headers.get('Content-Length') == '${file.size}') {
+          completed += file.size;
+          progress(completed / voiceModelBytes);
+          continue;
+        }
+        final part = _CachePart(cache, (i) => _key('${file.name}.part$i'));
         await downloadVoiceFile(
           client,
           file,
-          bytes.add,
+          part,
           (count) => progress((completed + count) / voiceModelBytes),
         );
+        await part.flush();
+        final bytes = BytesBuilder(copy: false);
+        await for (final chunk in part.read()) {
+          bytes.add(chunk);
+        }
         await cache
             .put(
               _key(file.name).toJS,
@@ -59,6 +72,7 @@ class OfflineVoiceBackend {
               ),
             )
             .toDart;
+        await part.reset();
         completed += file.size;
       }
       await cache
@@ -71,6 +85,25 @@ class OfflineVoiceBackend {
       client.close();
       _download = null;
     }
+  }
+
+  /// Bytes stored: the model, and any download in progress.
+  Future<int> size() async {
+    final cache = await _cache();
+    var bytes = 0;
+    for (final request in (await cache.keys().toDart).toDart) {
+      final response = await cache.match(request).toDart;
+      bytes += int.tryParse(response?.headers.get('Content-Length') ?? '') ?? 0;
+    }
+    return bytes;
+  }
+
+  /// Deletes the model, and any download in progress.
+  Future<void> remove() async {
+    _download?.close();
+    _worker?.terminate();
+    _worker = null;
+    await web.window.caches.delete('amud-voice-$voiceModelRevision').toDart;
   }
 
   Future<String> transcribe(Float32List samples, {String language = ''}) async {
@@ -142,5 +175,77 @@ class OfflineVoiceBackend {
     _worker = null;
     _pending?.completeError(StateError('Voice navigation closed.'));
     _pending = null;
+  }
+}
+
+/// A file being downloaded, kept in the cache in pieces of [_piece] bytes
+/// (the cache can't append), so a closed tab loses at most one piece.
+class _CachePart implements VoicePart {
+  static const _piece = 8 * 1024 * 1024;
+  final web.Cache cache;
+  final String Function(int) key;
+  final _buffer = BytesBuilder(copy: false);
+  int? _pieces;
+  _CachePart(this.cache, this.key);
+
+  Future<web.Response?> _get(int i) => cache.match(key(i).toJS).toDart;
+
+  /// The pieces kept, counted from the first until one is missing.
+  Future<int> _count() async {
+    if (_pieces case final n?) return n;
+    var n = 0;
+    while (await _get(n) != null) {
+      n++;
+    }
+    return _pieces = n;
+  }
+
+  @override
+  Future<int> length() async {
+    var bytes = _buffer.length;
+    for (var i = 0; i < await _count(); i++) {
+      bytes += int.parse((await _get(i))!.headers.get('Content-Length')!);
+    }
+    return bytes;
+  }
+
+  @override
+  Stream<List<int>> read() async* {
+    for (var i = 0; i < await _count(); i++) {
+      yield (await (await _get(i))!.arrayBuffer().toDart).toDart.asUint8List();
+    }
+    if (_buffer.isNotEmpty) yield _buffer.toBytes();
+  }
+
+  @override
+  Future<void> append(List<int> bytes) async {
+    _buffer.add(bytes);
+    if (_buffer.length >= _piece) await flush();
+  }
+
+  /// Stores what's buffered as the next piece.
+  Future<void> flush() async {
+    if (_buffer.isEmpty) return;
+    final n = await _count();
+    final bytes = _buffer.takeBytes();
+    await cache
+        .put(
+          key(n).toJS,
+          web.Response(
+            bytes.toJS,
+            web.ResponseInit(headers: web.Headers()..set('Content-Length', '${bytes.length}')),
+          ),
+        )
+        .toDart;
+    _pieces = n + 1;
+  }
+
+  @override
+  Future<void> reset() async {
+    _buffer.clear();
+    for (var i = 0; i < await _count(); i++) {
+      await cache.delete(key(i).toJS).toDart;
+    }
+    _pieces = 0;
   }
 }
