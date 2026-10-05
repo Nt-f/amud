@@ -38,6 +38,9 @@ class _VoiceScreenState extends ConsumerState<VoiceScreen>
   Timer? _limit;
   BytesBuilder _pcm = BytesBuilder(copy: false);
   bool _ready = false, _busy = false, _recording = false;
+
+  /// Part of the model is in from a download that stopped.
+  bool _partial = false;
   double? _progress;
   String? _message;
   String _query = '';
@@ -53,7 +56,13 @@ class _VoiceScreenState extends ConsumerState<VoiceScreen>
   Future<void> _checkModel() async {
     try {
       final ready = await _backend.ready();
-      if (mounted) setState(() => _ready = ready);
+      final partial = !ready && await _backend.size() > 0;
+      if (mounted) {
+        setState(() {
+          _ready = ready;
+          _partial = partial;
+        });
+      }
     } catch (_) {
       if (mounted) {
         setState(() => _message = 'Unable to access voice model storage.');
@@ -100,8 +109,11 @@ class _VoiceScreenState extends ConsumerState<VoiceScreen>
     } catch (_) {
       if (mounted) {
         setState(
-          () => _message =
-              'Model download failed. Check your connection and free storage, then retry.',
+          () {
+            _partial = true;
+            _message =
+                'Model download stopped. Check your connection and free storage, then continue: it picks up where it left off.';
+          },
         );
       }
     } finally {
@@ -367,7 +379,7 @@ class _VoiceScreenState extends ConsumerState<VoiceScreen>
             FilledButton.icon(
               onPressed: _busy ? null : _install,
               icon: const Icon(Icons.download),
-              label: Text(context.tr('Download voice model')),
+              label: Text(context.tr(_partial ? 'Continue download' : 'Download voice model')),
             ),
           ],
           if (_progress != null) ...[

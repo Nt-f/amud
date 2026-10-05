@@ -36,7 +36,9 @@ class _WorkerJsRuntime implements JsCardRuntime {
           if (!done.isCompleted) worker.postMessage(jsonEncode(r).toJS);
         });
       } else if (m['type'] == 'done' && !done.isCompleted) {
-        done.complete(m['ok'] == true ? JsCardResult(m['value']) : JsCardResult(null, '${m['error']}'));
+        done.complete(m['ok'] == true
+            ? JsCardResult(m['value'], null, fetcher.failed)
+            : JsCardResult(null, '${m['error']}', fetcher.failed));
       }
     }).toJS;
     worker.onerror = ((web.Event e) {

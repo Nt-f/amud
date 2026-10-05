@@ -41,6 +41,11 @@ class Storage {
   }
 
   Future<void> writeJson(String key, Object? value) => _kv.put(key, jsonEncode(value));
+  Future<void> deleteJson(String key) => _kv.delete(key);
+
+  /// The keys saved, for listing what's kept on the device.
+  Iterable<String> get jsonKeys => _kv.keys.cast<String>();
+  Iterable<String> get blobKeys => _blobs.keys.cast<String>();
 
   List<int>? readBlob(String key) => _blobs.get(key);
   Future<void> writeBlob(String key, List<int> bytes) => _blobs.put(key, bytes);

@@ -19,6 +19,10 @@ class JsFetcher {
 
   final http.Client Function() _client;
   int _count = 0;
+
+  /// A request couldn't be made (no connection, or it timed out), so the
+  /// card's result may be missing its data.
+  bool failed = false;
   JsFetcher({http.Client Function()? client}) : _client = client ?? http.Client.new;
 
   /// Answers a `{type: 'fetch', id, url, method, headers, body}` message from
@@ -65,8 +69,10 @@ class JsFetcher {
       if (key != null && res.statusCode == 200) _cache[key] = (DateTime.now(), result);
       return result;
     } on TimeoutException {
+      failed = true;
       return fail('Request timed out after ${requestTimeout.inSeconds} seconds');
     } catch (e) {
+      failed = true;
       return fail('$e');
     } finally {
       client.close();

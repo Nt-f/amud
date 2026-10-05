@@ -26,39 +26,80 @@ final voiceModelBytes = voiceModelFiles.fold<int>(
   (sum, file) => sum + file.size,
 );
 
+/// What's kept of a model file while it downloads, so an interrupted
+/// download picks up where it stopped instead of starting over.
+abstract class VoicePart {
+  /// Bytes kept so far.
+  Future<int> length();
+
+  /// The bytes kept so far, to check the whole file once it's in.
+  Stream<List<int>> read();
+
+  Future<void> append(List<int> bytes);
+
+  /// Throws away what's kept, to start the file over.
+  Future<void> reset();
+}
+
 /// Download only public model weights, never recordings or transcripts.
+/// Continues from what [part] already has where the server allows it; the
+/// whole file is checked against its hash when it's in.
 Future<void> downloadVoiceFile(
   http.Client client,
   ({String name, int size, String hash}) file,
-  void Function(List<int>) write,
+  VoicePart part,
   void Function(int) progress,
 ) async {
-  final uri = Uri.parse(
-    'https://huggingface.co/csukuangfj/sherpa-onnx-whisper-small/resolve/$voiceModelRevision/${file.name}',
-  );
-  final response = await client
-      .send(http.Request('GET', uri))
-      .timeout(const Duration(seconds: 30));
-  if (response.statusCode != 200) {
-    throw StateError('Model download failed (${response.statusCode}).');
+  var have = await part.length();
+  if (have > file.size) {
+    await part.reset();
+    have = 0;
+  }
+  http.StreamedResponse? response;
+  if (have < file.size) {
+    final uri = Uri.parse(
+      'https://huggingface.co/csukuangfj/sherpa-onnx-whisper-small/resolve/$voiceModelRevision/${file.name}',
+    );
+    final request = http.Request('GET', uri);
+    if (have > 0) request.headers['Range'] = 'bytes=$have-';
+    response = await client.send(request).timeout(const Duration(seconds: 30));
+    if (have > 0 && response.statusCode == 200) {
+      // The server sent the whole file instead: start it over.
+      await part.reset();
+      have = 0;
+    } else if (response.statusCode != (have > 0 ? 206 : 200)) {
+      throw StateError('Model download failed (${response.statusCode}).');
+    }
   }
   final digest = _DigestSink();
   final hash = sha256.startChunkedConversion(digest);
   var received = 0;
   try {
-    await for (final chunk in response.stream.timeout(
-      const Duration(seconds: 30),
-    )) {
-      received += chunk.length;
-      if (received > file.size) throw StateError('Unexpected model file size.');
-      hash.add(chunk);
-      write(chunk);
+    if (have > 0) {
+      await for (final chunk in part.read()) {
+        received += chunk.length;
+        hash.add(chunk);
+      }
+      if (received != have) throw StateError('Model download failed (partial file changed).');
       progress(received);
+    }
+    if (response != null) {
+      await for (final chunk in response.stream.timeout(
+        const Duration(seconds: 30),
+      )) {
+        received += chunk.length;
+        if (received > file.size) throw StateError('Unexpected model file size.');
+        hash.add(chunk);
+        await part.append(chunk);
+        progress(received);
+      }
     }
   } finally {
     hash.close();
   }
   if (received != file.size || digest.value.toString() != file.hash) {
+    // Whatever was kept is bad: the next try starts this file over.
+    await part.reset();
     throw StateError('Model verification failed. Retry the download.');
   }
 }

@@ -6,7 +6,9 @@ import 'js_runtime_stub.dart'
 class JsCardResult {
   final Object? value;
   final String? error;
-  const JsCardResult(this.value, [this.error]);
+  /// One of the script's requests couldn't reach the network.
+  final bool fetchFailed;
+  const JsCardResult(this.value, [this.error, this.fetchFailed = false]);
   bool get ok => error == null;
 }
 
