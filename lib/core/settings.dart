@@ -180,9 +180,16 @@ class AppSettings {
   final bool levanaReminder;
   final bool hachamaReminder;
 
-  /// The tabs on the navigation bar, in order (see nav_tabs_screen.dart).
-  /// Settings is always among them, so the bar can be changed back.
+  /// The tabs and shortcuts on the navigation bar, in order (see
+  /// nav_tabs_screen.dart). Settings is always among them, so the bar can be
+  /// changed back.
   final List<String> navTabs;
+
+  /// The navigation bar shows labels under its icons.
+  final bool navLabels;
+
+  /// The Settings sections that are open; the rest show only their header.
+  final List<String> expandedSettings;
 
   const AppSettings({
     this.location = SavedLocation.newYork,
@@ -234,6 +241,8 @@ class AppSettings {
     this.levanaReminder = false,
     this.hachamaReminder = false,
     this.navTabs = const ['home', 'siddur', 'zmanim', 'torah', 'settings'],
+    this.navLabels = true,
+    this.expandedSettings = const ['location'],
   });
 
   AppSettings copyWith({
@@ -286,6 +295,8 @@ class AppSettings {
     bool? levanaReminder,
     bool? hachamaReminder,
     List<String>? navTabs,
+    bool? navLabels,
+    List<String>? expandedSettings,
   }) =>
       AppSettings(
         location: location ?? this.location,
@@ -337,6 +348,8 @@ class AppSettings {
         levanaReminder: levanaReminder ?? this.levanaReminder,
         hachamaReminder: hachamaReminder ?? this.hachamaReminder,
         navTabs: navTabs ?? this.navTabs,
+        navLabels: navLabels ?? this.navLabels,
+        expandedSettings: expandedSettings ?? this.expandedSettings,
       );
 
   /// Bumped when defaults change in a way existing installs should adopt.
@@ -393,6 +406,8 @@ class AppSettings {
         'levanaReminder': levanaReminder,
         'hachamaReminder': hachamaReminder,
         'navTabs': navTabs,
+        'navLabels': navLabels,
+        'expandedSettings': expandedSettings,
       };
 
   factory AppSettings.fromJson(Map<String, Object?> j) {
@@ -475,11 +490,14 @@ class AppSettings {
       levanaReminder: pick('levanaReminder', d.levanaReminder),
       hachamaReminder: pick('hachamaReminder', d.hachamaReminder),
       navTabs: orElse(() {
-        final tabs = {for (final v in j['navTabs'] as List) if (v is String && d.navTabs.contains(v)) v};
+        // Ids the bar doesn't know (from a newer version) are skipped there.
+        final tabs = {for (final v in j['navTabs'] as List) if (v is String) v};
         final list = tabs.contains('settings') ? tabs.toList() : [...tabs, 'settings'];
-        // The bar needs two tabs at least.
+        // The bar needs two items at least.
         return list.length >= 2 ? list : d.navTabs;
       }, d.navTabs),
+      navLabels: pick('navLabels', d.navLabels),
+      expandedSettings: orElse(() => [for (final v in j['expandedSettings'] as List) if (v is String) v], d.expandedSettings),
     );
   }
 

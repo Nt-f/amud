@@ -85,16 +85,30 @@ class FilterKeywords extends StatelessWidget {
 }
 
 /// A settings group: inset-grouped on iOS, a titled card elsewhere.
+///
+/// With [onExpandedChanged] it folds: the header shows a chevron and opens
+/// or closes the group, which shows only its header while closed. A search
+/// above (a [ListFilter]) opens the groups it matches.
 class AdaptiveSection extends StatelessWidget {
   final String? header;
   final String? footer;
+  final IconData? icon;
   final List<Widget> children;
-  const AdaptiveSection({super.key, this.header, this.footer, required this.children});
+  final bool expanded;
+  final ValueChanged<bool>? onExpandedChanged;
+  const AdaptiveSection({
+    super.key,
+    this.header,
+    this.footer,
+    this.icon,
+    required this.children,
+    this.expanded = true,
+    this.onExpandedChanged,
+  });
 
   /// The rows a [ListFilter] above leaves: all of them when the header
   /// matches, otherwise the tiles whose title or subtitle does.
-  List<Widget> _visible(BuildContext context) {
-    final q = ListFilter.of(context);
+  List<Widget> _visible(BuildContext context, SearchQuery? q) {
     // Each text in the interface language and in the English it was
     // translated from.
     List<String?> both(List<String?> texts) => [for (final t in texts) ...[t, if (t != null) englishOf(t)]];
@@ -110,33 +124,76 @@ class AdaptiveSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final children = _visible(context);
+    final q = ListFilter.of(context);
+    final children = _visible(context, q);
     if (children.isEmpty) return const SizedBox.shrink();
-    if (isCupertinoPlatform) {
-      return CupertinoListSection.insetGrouped(
-        header: header == null ? null : Text(header!.toUpperCase()),
-        footer: footer == null ? null : Text(footer!),
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        children: children,
+    final foldable = onExpandedChanged != null && header != null && q == null;
+    final open = !foldable || expanded;
+    final theme = Theme.of(context);
+    final cupertino = isCupertinoPlatform;
+
+    Widget? title;
+    if (header != null) {
+      final text = Text(
+        cupertino ? header!.toUpperCase() : header!,
+        style: cupertino ? null : theme.textTheme.titleSmall?.copyWith(color: theme.colorScheme.primary),
+      );
+      title = !foldable
+          ? text
+          : Semantics(
+              button: true,
+              expanded: open,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(8),
+                onTap: () => onExpandedChanged!(!open),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6),
+                  child: Row(children: [
+                    if (icon != null) ...[
+                      Icon(icon, size: 20, color: cupertino ? null : theme.colorScheme.primary),
+                      const SizedBox(width: 10),
+                    ],
+                    Expanded(child: text),
+                    AnimatedRotation(
+                      turns: open ? 0.5 : 0,
+                      duration: const Duration(milliseconds: 200),
+                      child: Icon(Icons.expand_more, size: 22, color: theme.colorScheme.onSurfaceVariant),
+                    ),
+                  ]),
+                ),
+              ),
+            );
+    }
+
+    Widget body;
+    if (cupertino) {
+      body = !open
+          ? Padding(padding: const EdgeInsets.fromLTRB(36, 8, 28, 4), child: DefaultTextStyle.merge(
+              style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 13, color: CupertinoColors.secondaryLabel.resolveFrom(context)),
+              child: title!))
+          : CupertinoListSection.insetGrouped(
+              header: title,
+              footer: footer == null ? null : Text(footer!),
+              backgroundColor: theme.scaffoldBackgroundColor,
+              children: children,
+            );
+    } else {
+      body = Padding(
+        padding: EdgeInsets.fromLTRB(16, open ? 8 : 2, 16, open ? 8 : 2),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          if (title != null) Padding(padding: EdgeInsets.fromLTRB(8, foldable ? 2 : 8, 8, foldable ? 0 : 6), child: title),
+          if (open) Card(clipBehavior: Clip.antiAlias, child: Column(children: children)),
+          if (open && footer != null)
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8, 6, 8, 0),
+              child: Text(footer!, style: theme.textTheme.bodySmall),
+            ),
+        ]),
       );
     }
-    final theme = Theme.of(context);
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        if (header != null)
-          Padding(
-            padding: const EdgeInsets.fromLTRB(8, 8, 8, 6),
-            child: Text(header!, style: theme.textTheme.titleSmall?.copyWith(color: theme.colorScheme.primary)),
-          ),
-        Card(clipBehavior: Clip.antiAlias, child: Column(children: children)),
-        if (footer != null)
-          Padding(
-            padding: const EdgeInsets.fromLTRB(8, 6, 8, 0),
-            child: Text(footer!, style: theme.textTheme.bodySmall),
-          ),
-      ]),
-    );
+    return foldable
+        ? AnimatedSize(duration: const Duration(milliseconds: 200), curve: Curves.easeInOut, alignment: Alignment.topCenter, child: body)
+        : body;
   }
 }
 
