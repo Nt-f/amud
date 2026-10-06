@@ -15,6 +15,7 @@ import '../../core/theme.dart';
 import '../../core/typeset/typeset.dart';
 import '../home/today.dart';
 import '../search/search_sources.dart';
+import '../tehillim/tehillim_screen.dart';
 import 'torah_library.dart';
 import 'torah_settings.dart';
 
@@ -44,6 +45,7 @@ class TorahScreen extends ConsumerWidget {
             ])
           : ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
         DownloadPanel(works: all, label: context.tr('Download everything')),
+        const TehillimCard(),
         const SizedBox(height: 8),
         for (final c in torahCategories)
           _WorkTile(

@@ -20,7 +20,7 @@ void main() {
 
   test('bar items are tabs with a branch or shortcuts with a route', () {
     expect(NavItem.of('torah')?.branch, 3);
-    expect(NavItem.of('tehillim')?.route, '/siddur/tehillim');
+    expect(NavItem.of('tehillim')?.route, '/torah/tehillim');
     expect(NavItem.of('someday-feature'), isNull);
   });
 

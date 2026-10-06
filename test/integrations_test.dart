@@ -84,7 +84,7 @@ void main() {
         '/siddur/book/Siddur/read',
         '/siddur/ashkenaz/mincha',
         '/torah/halacha/work/read',
-        '/siddur/tehillim/read',
+        '/torah/tehillim/read',
       ]) {
         expect(isReaderRoute(path), isTrue);
       }

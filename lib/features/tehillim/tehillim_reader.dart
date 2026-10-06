@@ -20,7 +20,7 @@ import '../settings/typesetting_options.dart';
 import 'tehillim_data.dart';
 import 'tehillim_progress.dart';
 
-String tehillimReadPath(Portion p) => Uri(path: '/siddur/tehillim/read', queryParameters: {
+String tehillimReadPath(Portion p) => Uri(path: '/torah/tehillim/read', queryParameters: {
       'p': p.encoded,
       'en': p.titleEn,
       'he': p.titleHe,

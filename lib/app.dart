@@ -76,21 +76,12 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                 builder: (c, s) => LibraryScreen(section: s.uri.queryParameters['section']),
                 routes: [
                   GoRoute(path: 'seasons', builder: (c, s) => const SeasonsScreen()),
+                  // Tehillim moved to the Torah tab; links saved before (shortcuts,
+                  // widgets) still lead there.
                   GoRoute(
                     path: 'tehillim',
-                    builder: (c, s) => const TehillimScreen(),
-                    routes: [
-                      GoRoute(
-                        path: 'read',
-                        builder: (c, s) {
-                          final q = s.uri.queryParameters;
-                          return TehillimReaderScreen(
-                            key: ValueKey(s.uri.toString()),
-                            portion: Portion(q['en'] ?? 'Tehillim', q['he'] ?? 'תהלים', Portion.decode(q['p'] ?? '1')),
-                          );
-                        },
-                      ),
-                    ],
+                    redirect: (c, s) => s.uri.replace(path: s.uri.path.replaceFirst('/siddur/', '/torah/')).toString(),
+                    routes: [GoRoute(path: 'read', redirect: (c, s) => s.uri.replace(path: '/torah/tehillim/read').toString())],
                   ),
                   GoRoute(
                     path: 'book/:book',
@@ -114,6 +105,22 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                 path: '/torah',
                 builder: (c, s) => const TorahScreen(),
                 routes: [
+                  GoRoute(
+                    path: 'tehillim',
+                    builder: (c, s) => const TehillimScreen(),
+                    routes: [
+                      GoRoute(
+                        path: 'read',
+                        builder: (c, s) {
+                          final q = s.uri.queryParameters;
+                          return TehillimReaderScreen(
+                            key: ValueKey(s.uri.toString()),
+                            portion: Portion(q['en'] ?? 'Tehillim', q['he'] ?? 'תהלים', Portion.decode(q['p'] ?? '1')),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
                   GoRoute(
                     path: ':category',
                     builder: (c, s) => TorahCategoryScreen(category: s.pathParameters['category']!),

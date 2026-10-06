@@ -25,7 +25,7 @@ typedef NavShortcut = (String id, IconData icon, IconData cupertino, String labe
 
 const navShortcuts = <NavShortcut>[
   ('calendar', Icons.calendar_month_outlined, CupertinoIcons.calendar, 'Calendar', '/calendar'),
-  ('tehillim', Icons.auto_stories_outlined, CupertinoIcons.book_solid, 'Tehillim', '/siddur/tehillim'),
+  ('tehillim', Icons.auto_stories_outlined, CupertinoIcons.book_solid, 'Tehillim', '/torah/tehillim'),
   ('learning', Icons.school_outlined, CupertinoIcons.lightbulb, 'Learning', '/learning'),
   ('alerts', Icons.notifications_active_outlined, CupertinoIcons.bell, 'Alerts', '/alerts'),
   ('personal-dates', Icons.event_repeat, CupertinoIcons.calendar_badge_plus, 'Dates', '/personal-dates'),
