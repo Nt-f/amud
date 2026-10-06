@@ -142,6 +142,11 @@ class DayContext {
       DayContext(service == Service.maariv ? daytimeDate.next() : daytimeDate,
           il: il, service: service, minhagim: minhagim);
 
+  /// This day with the reader's answers to personal circumstances
+  /// (`if_…`) filled in: each is then judged true or false, not unknown.
+  DayContext withChoices(Map<String, bool> answers) =>
+      answers.isEmpty ? this : DayContext._(hdate, il, service, minhagim, Map.unmodifiable({...env, ...answers}), labels, labelsHe);
+
   bool operator [](String name) {
     final v = env[name];
     return v is bool ? v : (v is num ? v != 0 : false);

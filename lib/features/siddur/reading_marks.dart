@@ -62,14 +62,52 @@ final _verse = RegExp(r'(^|[.:׃]\s+|<br>\s*)([\u05d0-\u05ea]{1,3})\s+(?=[\u05d0
 
 /// A verse number run into its verse with no space ("יבמָה אָשִׁיב"): a
 /// numeral's unpointed letters straight before a pointed one.
+///
+/// Plenty of ordinary words look the same (סומֵךְ, נוטֶה, עלַת: a first
+/// letter with no vowel of its own), so a glued numeral is only believed
+/// when it continues a sequence: it is the verse after the one before it.
 final _gluedVerse = RegExp(r'(^|[.:׃]\s+|<br>\s*)((?:[קרשת]?[יכלמנסעפצ]?[א-ט]|[קרשת]?[יכלמנסעפצ]|[קרשת]|ט[וז]))(?=[א-ת][֑-ׇ])');
+
+const _numerals = {
+  'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9, 'י': 10, 'כ': 20, 'ל': 30, 'מ': 40,
+  'נ': 50, 'ס': 60, 'ע': 70, 'פ': 80, 'צ': 90, 'ק': 100, 'ר': 200, 'ש': 300, 'ת': 400,
+};
+
+/// The value of Hebrew numeral letters (טו is 15), or null for anything else.
+int? _numeralValue(String s) {
+  var n = 0;
+  for (final c in s.split('')) {
+    final v = _numerals[c];
+    if (v == null) return null;
+    n += v;
+  }
+  return n;
+}
 
 /// Verse numbers printed in the text ("א הַלְלוּ יָהּ… ב יְהִי…"): small and
 /// faint, so the psalm reads as verses. A number has no vowels; the word
-/// after it does.
-String verseNumbers(String html) => html
-    .replaceAllMapped(_verse, (m) => '${m[1]}<sup class="verse">${m[2]}</sup> ')
-    .replaceAllMapped(_gluedVerse, (m) => '${m[1]}<sup class="verse">${m[2]}</sup> ');
+/// after it does. A spaced number is taken as it stands; one run into its
+/// word must follow the number before it (see [_gluedVerse]).
+String verseNumbers(String html) {
+  final hits = <(Match, bool)>[
+    for (final m in _verse.allMatches(html)) (m, false),
+    for (final m in _gluedVerse.allMatches(html)) (m, true),
+  ]..sort((a, b) => a.$1.start.compareTo(b.$1.start));
+  final out = StringBuffer();
+  var at = 0;
+  int? last;
+  for (final (m, glued) in hits) {
+    if (m.start < at) continue;
+    final n = _numeralValue(m[2]!);
+    if (glued && (n == null || last == null || n != last + 1)) continue;
+    out
+      ..write(html.substring(at, m.start))
+      ..write('${m[1]}<sup class="verse">${m[2]}</sup> ');
+    at = m.end;
+    last = n;
+  }
+  return out.toString() + html.substring(at);
+}
 
 /// The small line above a prayer saying how it is read, from the corpus:
 /// who says it (where that changes), in an undertone, what one does, how

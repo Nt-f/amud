@@ -153,6 +153,9 @@ Split a segment into parts when it mixes things that need different tags:
 | `node` | node key | Overrides the leaf's `node`. |
 | `role` | see below | Who says it. |
 | `voice` | `silent` \| `undertone` \| `aloud` | How it's said, when it matters (the silent Amidah is `silent`; Baruch shem kevod in the Shema is `undertone`; the chazzan's Kaddish is `aloud`). |
+| `align` | `start` \| `center` \| `end` \| `justify` | How the reader sets the line (the segment takes its first part's): flush to the start (right for Hebrew), centered, flush to the end, or justified. Leave it out to let the reader decide by what the line is (the Shema and Kedushah are centered already); set it only where the siddur prints it differently. Instructions centre over a centered prayer by themselves. |
+| `fold` | text | English title. Consecutive segments whose first part has the same `fold` collapse into one tappable row with that title (the zimun, Al Naharot); tap to open. Set it on the first part of each segment in the run. `foldHe` is the Hebrew title. |
+| `select` | choice id | Draws a selector above this line for a choice the reader makes (`table`: whose table one ate at; `occasion`: bris, wedding, pidyon haben). The picked option answers the `if_…` conditions that follow, so tag the lines it governs with them. Choices are defined in `lib/features/siddur/reader_choices.dart`; the line itself should be an always-shown instruction. |
 | `amidah` | `silent` \| `repetition` | Inside an Amidah: said only in the silent prayer or only in the chazzan's repetition (Kedushah, Modim d'Rabbanan, Birkat Kohanim…). |
 | `minyan` | `true` | Requires a minyan (Kaddish, Barchu, Kedushah, repetition, Torah reading, Birkat Kohanim…). |
 | `gestures` | list, see below | What to do while saying it. |

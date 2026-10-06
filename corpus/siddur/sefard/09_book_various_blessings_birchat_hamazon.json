@@ -280,35 +280,36 @@
       "he": {
         "version": "The Metsudah siddur, 1981",
         "segs": [
-          {"ref": "2", "kind": "prayer", "text": "<b>עַל־נַהֲרוֹת</b> בָּבֶל שָׁם יָשַֽׁבְנוּ גַּם־בָּכִֽינוּ בְּזָכְרֵֽנוּ אֶת־צִיּוֹן: עַל־עֲרָבִים בְּתוֹכָהּ תָּלִֽינוּ כִּנֹּרוֹתֵֽינוּ: כִּי שָׁם שְׁאֵלֽוּנוּ שׁוֹבֵֽינוּ דִּבְרֵי־שִׁיר וְתוֹלָלֵֽינוּ שִׂמְחָה שִֽׁירוּ לָֽנוּ מִשִּׁיר צִיּוֹן: אֵיךְ נָשִׁיר אֶת־שִׁיר־יְהֹוָה עַל אַדְמַת נֵכָר: אִם־אֶשְׁכָּחֵךְ יְרוּשָׁלָֽםִ תִּשְׁכַּח יְמִינִי: תִּדְבַּק לְשׁוֹנִי לְחִכִּי אִם־לֺא אֶזְכְּרֵֽכִי אִם־לֺא אַעֲלֶה אֶת־יְרוּשָׁלַֽםִ עַל רֹאשׁ שִׂמְחָתִי: זְכֹר יְהֹוָה לִבְנֵי אֱדוֹם אֵת יוֹם יְרוּשָׁלָֽםִ הָאֹמְ֒רִים עָֽרוּ עָֽרוּ עַד הַיְ֒סוֹד בָּהּ: בַּת־בָּבֶל הַשְּׁ֒דוּדָה אַשְׁרֵי שֶׁיְּ֒שַׁלֶּם־לָךְ אֶת־גְּמוּלֵךְ שֶׁגָּמַלְתְּ לָֽנוּ: אַשְׁרֵי שֶׁיֹּאחֵז וְנִפֵּץ אֶת־עֹלָלַֽיִךְ אֶל־הַסָּֽלַע:"},
-          {"ref": "4", "kind": "prayer", "text": "<b>שִׁיר הַמַּעֲלוֹת</b> בְּשׁוּב יְהֹוָה אֶת־שִׁיבַת צִיּוֹן הָיִֽינוּ כְּחֹלְ֒מִים: אָז יִמָּלֵא שְׂחוֹק פִּֽינוּ וּלְשׁוֹנֵֽנוּ רִנָּה, אָז יֹאמְ֒רוּ בַגּוֹיִם הִגְדִּיל יְהֹוָה לַעֲשׂוֹת עִם־אֵֽלֶּה: הִגְדִּיל יְהֹוָה לַעֲשׂוֹת עִמָּֽנוּ, הָיִֽינוּ שְׂמֵחִים: שׁוּבָה יְהֹוָה אֶת־שְׁבִיתֵֽנוּ כַּאֲפִיקִים בַּנֶּֽגֶב: הַזֹּרְ֒עִים בְּדִמְעָה, בְּרִנָּה יִקְצֹֽרוּ: הָלוֹךְ יֵלֵךְ וּבָכֹה, נֹשֵׂא מֶֽשֶׁךְ־הַזָּֽרַע, בֹּא־יָבֹא בְרִנָּה, נֹשֵׂא אֲלֻמֹּתָיו:"},
-          {"ref": "9", "kind": "instruction", "en": "Gentlemen, let us say the blessing:", "gloss": "Zimun call", "text": "<b>רַבּוֹתַי נְבָרֵךְ:</b>"},
-          {"ref": "11", "kind": "prayer", "role": "congregation", "text": "<b>יְהִי שֵׁם</b> יְהֹוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם:"},
-          {"ref": "13", "kind": "prayer", "role": "chazzan", "text": "<b>יְהִי שֵׁם</b> יְהֹוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם:"},
-          {"ref": "14", "kind": "instruction", "en": "And continues:", "text": "<small>וממשיך:</small>"},
+          {"ref": "0", "kind": "instruction", "node": "birkat_hamazon", "select": "occasion", "en": "Special occasion", "text": "<small>בסעודת מצוה:</small>"},
+          {"ref": "2", "kind": "prayer", "when": "weekday && !if_festiveMeal", "fold": "Al Naharot", "foldHe": "על נהרות", "text": "<b>עַל־נַהֲרוֹת</b> בָּבֶל שָׁם יָשַֽׁבְנוּ גַּם־בָּכִֽינוּ בְּזָכְרֵֽנוּ אֶת־צִיּוֹן: עַל־עֲרָבִים בְּתוֹכָהּ תָּלִֽינוּ כִּנֹּרוֹתֵֽינוּ: כִּי שָׁם שְׁאֵלֽוּנוּ שׁוֹבֵֽינוּ דִּבְרֵי־שִׁיר וְתוֹלָלֵֽינוּ שִׂמְחָה שִֽׁירוּ לָֽנוּ מִשִּׁיר צִיּוֹן: אֵיךְ נָשִׁיר אֶת־שִׁיר־יְהֹוָה עַל אַדְמַת נֵכָר: אִם־אֶשְׁכָּחֵךְ יְרוּשָׁלָֽםִ תִּשְׁכַּח יְמִינִי: תִּדְבַּק לְשׁוֹנִי לְחִכִּי אִם־לֺא אֶזְכְּרֵֽכִי אִם־לֺא אַעֲלֶה אֶת־יְרוּשָׁלַֽםִ עַל רֹאשׁ שִׂמְחָתִי: זְכֹר יְהֹוָה לִבְנֵי אֱדוֹם אֵת יוֹם יְרוּשָׁלָֽםִ הָאֹמְ֒רִים עָֽרוּ עָֽרוּ עַד הַיְ֒סוֹד בָּהּ: בַּת־בָּבֶל הַשְּׁ֒דוּדָה אַשְׁרֵי שֶׁיְּ֒שַׁלֶּם־לָךְ אֶת־גְּמוּלֵךְ שֶׁגָּמַלְתְּ לָֽנוּ: אַשְׁרֵי שֶׁיֹּאחֵז וְנִפֵּץ אֶת־עֹלָלַֽיִךְ אֶל־הַסָּֽלַע:"},
+          {"ref": "4", "kind": "prayer", "when": "shabbat || yomTov || if_festiveMeal", "fold": "Shir HaMaalot", "foldHe": "שיר המעלות", "text": "<b>שִׁיר הַמַּעֲלוֹת</b> בְּשׁוּב יְהֹוָה אֶת־שִׁיבַת צִיּוֹן הָיִֽינוּ כְּחֹלְ֒מִים: אָז יִמָּלֵא שְׂחוֹק פִּֽינוּ וּלְשׁוֹנֵֽנוּ רִנָּה, אָז יֹאמְ֒רוּ בַגּוֹיִם הִגְדִּיל יְהֹוָה לַעֲשׂוֹת עִם־אֵֽלֶּה: הִגְדִּיל יְהֹוָה לַעֲשׂוֹת עִמָּֽנוּ, הָיִֽינוּ שְׂמֵחִים: שׁוּבָה יְהֹוָה אֶת־שְׁבִיתֵֽנוּ כַּאֲפִיקִים בַּנֶּֽגֶב: הַזֹּרְ֒עִים בְּדִמְעָה, בְּרִנָּה יִקְצֹֽרוּ: הָלוֹךְ יֵלֵךְ וּבָכֹה, נֹשֵׂא מֶֽשֶׁךְ־הַזָּֽרַע, בֹּא־יָבֹא בְרִנָּה, נֹשֵׂא אֲלֻמֹּתָיו:"},
+          {"ref": "9", "kind": "instruction", "fold": "Zimun", "foldHe": "זימון", "en": "Gentlemen, let us say the blessing:", "gloss": "Zimun call", "text": "<b>רַבּוֹתַי נְבָרֵךְ:</b>"},
+          {"ref": "11", "kind": "prayer", "role": "congregation", "fold": "Zimun", "foldHe": "זימון", "text": "<b>יְהִי שֵׁם</b> יְהֹוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם:"},
+          {"ref": "13", "kind": "prayer", "role": "chazzan", "fold": "Zimun", "foldHe": "זימון", "text": "<b>יְהִי שֵׁם</b> יְהֹוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם:"},
+          {"ref": "14", "kind": "instruction", "fold": "Zimun", "foldHe": "זימון", "en": "And continues:", "text": "<small>וממשיך:</small>"},
           {"ref": "15", "parts": [
-            {"kind": "prayer", "role": "chazzan", "text": "<b>בִּרְשׁוּת</b> מָרָנָן וְרַבָּנָן וְרַבּוֹתַי נְבָרֵךְ ("},
+            {"kind": "prayer", "role": "chazzan", "fold": "Zimun", "foldHe": "זימון", "text": "<b>בִּרְשׁוּת</b> מָרָנָן וְרַבָּנָן וְרַבּוֹתַי נְבָרֵךְ ("},
             {"kind": "instruction", "en": "With ten:", "gloss": "Add 'our God' if minyan present", "text": "<small>בעשרה</small>"},
             {"kind": "prayer", "role": "chazzan", "text": " אֱלֺהֵֽינוּ) שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ:"}
           ]},
           {"ref": "17", "parts": [
-            {"kind": "prayer", "role": "congregation", "text": "<b>בָּרוּךְ</b> ("},
+            {"kind": "prayer", "role": "congregation", "fold": "Zimun", "foldHe": "זימון", "text": "<b>בָּרוּךְ</b> ("},
             {"kind": "instruction", "en": "With ten:", "gloss": "Add 'our God' if minyan present", "text": "<small>בעשרה</small>"},
             {"kind": "prayer", "role": "congregation", "text": " אֱלֺהֵֽינוּ) שֶֽׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ:"}
           ]},
           {"ref": "19", "parts": [
-            {"kind": "prayer", "role": "chazzan", "text": "<b>בָּרוּךְ</b> ("},
+            {"kind": "prayer", "role": "chazzan", "fold": "Zimun", "foldHe": "זימון", "text": "<b>בָּרוּךְ</b> ("},
             {"kind": "instruction", "en": "With ten:", "gloss": "Add 'our God' if minyan present", "text": "<small>בעשרה</small>"},
             {"kind": "prayer", "role": "chazzan", "text": " אֱלֺהֵֽינוּ) שֶֽׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ:"}
           ]},
-          {"ref": "21", "kind": "prayer", "role": "congregation", "minyan": true, "text": "בָּרוּךְ הוּא וּבָרוּךְ שְׁמוֹ:"},
-          {"ref": "24", "kind": "instruction", "en": "Gentlemen, let us say the blessing:", "gloss": "Zimun call for Sheva Brachos", "text": "<b>רַבּוֹתַי נְבָרֵךְ:</b>"},
-          {"ref": "26", "kind": "prayer", "role": "congregation", "text": "<b>יְהִי שֵׁם</b> יְהֹוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם:"},
-          {"ref": "28", "kind": "prayer", "role": "chazzan", "text": "<b>יְהִי שֵׁם</b> יְהֹוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם:"},
-          {"ref": "30", "kind": "prayer", "role": "chazzan", "text": "<b>דְּוַי הָסֵר</b> וְגַם חָרוֹן, וְאָז אִלֵּם בְּשִׁיר יָרוֹן, נְחֵֽנוּ בְּמַעְגְּ֒לֵי צֶֽדֶק, שְׁעֵה בִּרְכַּת (בְּנֵי יְשֻׁרוּן) בְּנֵי אַהֲרֹן:"},
-          {"ref": "31", "kind": "prayer", "role": "chazzan", "text": "<b>בִּרְשׁוּת</b> מָרָנָן וְרַבָּנָן וְרַבּוֹתַי נְבָרֵךְ אֱלֺהֵֽינוּ שֶׁהַשִּׁמְחָה בִּמְעוֹנוֹ (וְ)שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ:"},
-          {"ref": "33", "kind": "prayer", "role": "congregation", "text": "<b>בָּרוּךְ</b> אֱלֺהֵֽינוּ שֶׁהַשִּׁמְחָה בִּמְעוֹנוֹ (וְ)שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ:"},
-          {"ref": "35", "kind": "prayer", "role": "chazzan", "text": "<b>בָּרוּךְ</b> אֱלֺהֵֽינוּ שֶׁהַשִּׁמְחָה בִּמְעוֹנוֹ (וְ)שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ:"},
+          {"ref": "21", "kind": "prayer", "role": "congregation", "fold": "Zimun", "foldHe": "זימון", "minyan": true, "text": "בָּרוּךְ הוּא וּבָרוּךְ שְׁמוֹ:"},
+          {"ref": "24", "kind": "instruction", "when": "if_wedding", "fold": "Zimun for Sheva Berachot", "foldHe": "זימון לשבע ברכות", "en": "Gentlemen, let us say the blessing:", "gloss": "Zimun call for Sheva Brachos", "text": "<b>רַבּוֹתַי נְבָרֵךְ:</b>"},
+          {"ref": "26", "kind": "prayer", "when": "if_wedding", "role": "congregation", "fold": "Zimun for Sheva Berachot", "foldHe": "זימון לשבע ברכות", "text": "<b>יְהִי שֵׁם</b> יְהֹוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם:"},
+          {"ref": "28", "kind": "prayer", "when": "if_wedding", "role": "chazzan", "fold": "Zimun for Sheva Berachot", "foldHe": "זימון לשבע ברכות", "text": "<b>יְהִי שֵׁם</b> יְהֹוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם:"},
+          {"ref": "30", "kind": "prayer", "when": "if_wedding", "role": "chazzan", "fold": "Zimun for Sheva Berachot", "foldHe": "זימון לשבע ברכות", "text": "<b>דְּוַי הָסֵר</b> וְגַם חָרוֹן, וְאָז אִלֵּם בְּשִׁיר יָרוֹן, נְחֵֽנוּ בְּמַעְגְּ֒לֵי צֶֽדֶק, שְׁעֵה בִּרְכַּת (בְּנֵי יְשֻׁרוּן) בְּנֵי אַהֲרֹן:"},
+          {"ref": "31", "kind": "prayer", "when": "if_wedding", "role": "chazzan", "fold": "Zimun for Sheva Berachot", "foldHe": "זימון לשבע ברכות", "text": "<b>בִּרְשׁוּת</b> מָרָנָן וְרַבָּנָן וְרַבּוֹתַי נְבָרֵךְ אֱלֺהֵֽינוּ שֶׁהַשִּׁמְחָה בִּמְעוֹנוֹ (וְ)שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ:"},
+          {"ref": "33", "kind": "prayer", "when": "if_wedding", "role": "congregation", "fold": "Zimun for Sheva Berachot", "foldHe": "זימון לשבע ברכות", "text": "<b>בָּרוּךְ</b> אֱלֺהֵֽינוּ שֶׁהַשִּׁמְחָה בִּמְעוֹנוֹ (וְ)שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ:"},
+          {"ref": "35", "kind": "prayer", "when": "if_wedding", "role": "chazzan", "fold": "Zimun for Sheva Berachot", "foldHe": "זימון לשבע ברכות", "text": "<b>בָּרוּךְ</b> אֱלֺהֵֽינוּ שֶׁהַשִּׁמְחָה בִּמְעוֹנוֹ (וְ)שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ:"},
           {"ref": "36", "kind": "note", "en": "This blessing was instituted by Moses our teacher, peace be upon him, when the manna descended for Israel.", "cite": "ברכה זו משה רבינו ע\"ה תקנה כשירד המן לישראל", "text": "<small>ברכה זו משה רבינו ע\"ה תקנה כשירד המן לישראל</small>"},
           {"ref": "37", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם הַזָּן אֶת־הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶֽסֶד וּבְרַחֲמִים הוּא נוֹתֵן לֶֽחֶם לְכָל־בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ וּבְטוּבוֹ הַגָּדוֹל תָּמִיד לֺא־חָסַר לָֽנוּ וְאַל־יֶחְסַר לָֽנוּ מָזוֹן לְעוֹלָם וָעֶד בַּעֲבוּר שְׁמוֹ הַגָּדוֹל כִּי הוּא אֵל זָן וּמְפַרְנֵס לַכֹּל וּמֵטִיב לַכֹּל וּמֵכִין מָזוֹן לְכָל־בְּרִיּוֹתָיו אֲשֶׁר בָּרָא. כָּאָמוּר, פּוֹתֵֽחַ אֶת־יָדֶֽךָ וּמַשְׂבִּֽיעַ לְכָל־חַי רָצוֹן: בָּרוּךְ אַתָּה יְהֹוָה הַזָּן אֶת־הַכֹּל:"},
           {"ref": "38", "kind": "note", "en": "This blessing was instituted by Joshua when Israel entered the land.", "cite": "ברכה זו יהושע תקנה כשנכנסו ישראל לארץ", "text": "<small>ברכה זו יהושע תקנה כשנכנסו ישראל לארץ</small>"},
@@ -352,11 +353,12 @@
           {"ref": "69", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>הָרַחֲמָן</b> הוּא יִשְׁבּוֹר עֻלֵּֽנוּ מֵעַל צַוָּארֵֽנוּ וְהוּא יוֹלִיכֵֽנוּ קוֹמְ֒מִיּוּת לְאַרְצֵֽנוּ:"},
           {"ref": "70", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>הָרַחֲמָן</b> הוּא יִשְׁלַח לָֽנוּ בְּרָכָה מְרֻבָּה בַּבַּֽיִת הַזֶּה וְעַל־שֻׁלְחָן זֶה שֶׁאָכַֽלְנוּ עָלָיו:"},
           {"ref": "71", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>הָרַחֲמָן</b> הוּא יִשְׁלַח לָֽנוּ אֶת־אֵלִיָּֽהוּ הַנָּבִיא זָכוּר לַטּוֹב, וִיבַשֶּׂר־לָֽנוּ בְּשׂוֹרוֹת טוֹבוֹת יְשׁוּעוֹת וְנֶחָמוֹת:"},
-          {"ref": "73", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>הָרַחֲמָן</b> הוּא יְבָרֵךְ אֶת־(אָבִי מוֹרִי) בַּֽעַל הַבַּֽיִת הַזֶּה, וְאֶת־(אִמִּי מוֹרָתִי) בַּעֲלַת הַבַּֽיִת הַזֶּה, אוֹתָם וְאֶת־בֵּיתָם וְאֶת־זַרְעָם וְאֶת־כָּל־אֲשֶׁר לָהֶם"},
-          {"ref": "75", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>הָרַחֲמָן</b> הוּא יְבָרֵךְ אוֹתִי (וְאֶת־אִשְׁתִּי/בַּעֲלִי וְאֶת־זַרְעִי) וְאֶת־כָּל־אֲשֶׁר לִי."},
+          {"ref": "72a", "kind": "instruction", "node": "birkat_hamazon", "select": "table", "en": "Whose table did you eat at?", "text": "<small>סמוך על שלחן:</small>"},
+          {"ref": "73", "kind": "prayer", "when": "if_eatingAtParentsTable", "node": "birkat_hamazon", "text": "<b>הָרַחֲמָן</b> הוּא יְבָרֵךְ אֶת־(אָבִי מוֹרִי) בַּֽעַל הַבַּֽיִת הַזֶּה, וְאֶת־(אִמִּי מוֹרָתִי) בַּעֲלַת הַבַּֽיִת הַזֶּה, אוֹתָם וְאֶת־בֵּיתָם וְאֶת־זַרְעָם וְאֶת־כָּל־אֲשֶׁר לָהֶם"},
+          {"ref": "75", "kind": "prayer", "when": "if_eatingAtOwnTable", "node": "birkat_hamazon", "text": "<b>הָרַחֲמָן</b> הוּא יְבָרֵךְ אוֹתִי (וְאֶת־אִשְׁתִּי/בַּעֲלִי וְאֶת־זַרְעִי) וְאֶת־כָּל־אֲשֶׁר לִי."},
           {"ref": "76", "kind": "prayer", "node": "birkat_hamazon", "text": "אוֹתָֽנוּ וְאֶת־כָּל־אֲשֶׁר לָֽנוּ, כְּמוֹ שֶׁנִּתְבָּרְ֒כוּ אֲבוֹתֵֽינוּ, אַבְרָהָם יִצְחָק וְיַעֲקֹב: בַּכֹּל, מִכֹּל, כֹּל, כֵּן יְבָרֵךְ אוֹתָֽנוּ כֻּלָּֽנוּ יַֽחַד, בִּבְרָכָה שְׁלֵמָה, וְנֹאמַר אָמֵן:"},
-          {"ref": "78", "kind": "prayer", "text": "<b>הָרַחֲמָן</b> הוּא יְבָרֵךְ אֶת בַּֽעַל הַבַּֽיִת הַזֶּה, וְאֶת אִשְׁתּוֹ בַּעֲלַת הַבַּֽיִת הַזֶּה, אוֹתָם וְאֶת בֵּיתָם וְאֶת זַרְעָם וְאֶת כָּל אֲשֶׁר לָהֶם. יְהִי רָצוֹן שֶׁלֺּא יֵבוֹשׁ בַּֽעַל הַבַּֽיִת בָּעוֹלָם הַזֶּה וְלֺא יִכָּלֵם לָעוֹלָם הַבָּא וְיִצְלַח מְאֹד בְּכָל־נְכָסָיו וְיִהְיוּ נְכָסָיו וּנְכָסֵֽינוּ מֻצְלָחִים וּקְרוֹבִים לָעִיר וְאַל־יִשְׁלֺט שָׂטָן לֺא בְמַעֲשֵׂי יָדָיו וְלֺא בְמַעֲשֵׂי יָדֵֽינוּ וְאַל יִזְדַּקֵּר לֺא לְפָנָיו וְלֺא לְפָנֵֽינוּ שׁוּם דְּבַר הִרְהוּר חֵטְא וַעֲבֵרָה וְעָוֹן מֵעַתָּה וְעַד עוֹלָם:"},
-          {"ref": "79", "kind": "prayer", "text": "<b>בַּמָּרוֹם</b> יְלַמְּ֒דוּ עֲלֵיהֶם וְעָלֵֽינוּ זְכוּת שֶׁתְּ֒הֵא לְמִשְׁמֶֽרֶת שָׁלוֹם, וְנִשָּׂא בְרָכָה מֵאֵת יְהֹוָה וּצְדָקָה מֵאֱלֺהֵי יִשְׁעֵֽנוּ, וְנִמְצָא חֵן וְשֵֽׂכֶל טוֹב בְּעֵינֵי אֱלֺהִים וְאָדָם:"},
+          {"ref": "78", "kind": "prayer", "when": "if_guest", "text": "<b>הָרַחֲמָן</b> הוּא יְבָרֵךְ אֶת בַּֽעַל הַבַּֽיִת הַזֶּה, וְאֶת אִשְׁתּוֹ בַּעֲלַת הַבַּֽיִת הַזֶּה, אוֹתָם וְאֶת בֵּיתָם וְאֶת זַרְעָם וְאֶת כָּל אֲשֶׁר לָהֶם. יְהִי רָצוֹן שֶׁלֺּא יֵבוֹשׁ בַּֽעַל הַבַּֽיִת בָּעוֹלָם הַזֶּה וְלֺא יִכָּלֵם לָעוֹלָם הַבָּא וְיִצְלַח מְאֹד בְּכָל־נְכָסָיו וְיִהְיוּ נְכָסָיו וּנְכָסֵֽינוּ מֻצְלָחִים וּקְרוֹבִים לָעִיר וְאַל־יִשְׁלֺט שָׂטָן לֺא בְמַעֲשֵׂי יָדָיו וְלֺא בְמַעֲשֵׂי יָדֵֽינוּ וְאַל יִזְדַּקֵּר לֺא לְפָנָיו וְלֺא לְפָנֵֽינוּ שׁוּם דְּבַר הִרְהוּר חֵטְא וַעֲבֵרָה וְעָוֹן מֵעַתָּה וְעַד עוֹלָם:"},
+          {"ref": "79", "kind": "prayer", "when": "if_guest", "text": "<b>בַּמָּרוֹם</b> יְלַמְּ֒דוּ עֲלֵיהֶם וְעָלֵֽינוּ זְכוּת שֶׁתְּ֒הֵא לְמִשְׁמֶֽרֶת שָׁלוֹם, וְנִשָּׂא בְרָכָה מֵאֵת יְהֹוָה וּצְדָקָה מֵאֱלֺהֵי יִשְׁעֵֽנוּ, וְנִמְצָא חֵן וְשֵֽׂכֶל טוֹב בְּעֵינֵי אֱלֺהִים וְאָדָם:"},
           {"ref": "80", "kind": "instruction", "en": "On Shabbat say:", "text": "<small>בשבת אומר:</small>"},
           {"ref": "81", "kind": "prayer", "when": "shabbat", "text": "<b>הָרַחֲמָן</b> הוּא יַנְחִילֵֽנוּ יוֹם שֶׁכֻּלּוֹ שַׁבָּת וּמְנוּחָה לְחַיֵּי הָעוֹלָמִים:"},
           {"ref": "82", "kind": "instruction", "en": "On Rosh Chodesh:", "text": "<small>בראש חודש:</small>"},
@@ -585,7 +587,7 @@
             {"kind": "instruction", "text": "<i class=\"footnote\">May we not be “ashamed” in this world due to poverty and may we not be “humiliated” in the World-to-Come, because of our transgressions. Poverty often brings shame which in turn might cause a person to lose faith.—<i>Etz Yosef</i>"},
             {"kind": "prayer", "text": "</i> forever and ever."}
           ]},
-          {"ref": "49", "translates": ["50"], "text": "<i>On regular weekdays, continue, \"Rebuild\". On Shabbos add:</i>"},
+          {"ref": "49", "translates": [], "text": "<i>On regular weekdays, continue, \"Rebuild\". On Shabbos add:</i>"},
           {"ref": "50", "translates": ["50"], "parts": [
             {"kind": "prayer", "text": "May it please You,"},
             {"kind": "prayer", "text": " to strengthen us Adonoy,"},
@@ -609,21 +611,21 @@
             {"kind": "prayer", "text": " city of Your Sanctuary,"},
             {"kind": "prayer", "text": " for You are the Master of deliverance and the Master of consolation."}
           ]},
-          {"ref": "51", "translates": ["80", "82", "84", "86", "88"], "text": "<i>On Rosh Chodesh and Yom Tov add:</i>"},
-          {"ref": "52", "translates": ["90"], "text": "Our God and God of our fathers, may there ascend, come, and reach, appear, be desired, and heard, counted and recalled our remembrance and reckoning; the remembrance of our fathers; the remembrance of the Messiah the son of David, Your servant; the remembrance of Jerusalem, city of Your Sanctuary; and the remembrance of Your entire people, the House of Israel, before You for survival, for well-being, for favor, kindliness, compassion, for good life and peace on this day of:"},
-          {"ref": "53", "translates": ["81"], "text": "<i>Rosh Chodesh</i>"},
-          {"ref": "54", "translates": ["83"], "parts": [
+          {"ref": "51", "translates": [], "text": "<i>On Rosh Chodesh and Yom Tov add:</i>"},
+          {"ref": "52", "translates": ["52"], "text": "Our God and God of our fathers, may there ascend, come, and reach, appear, be desired, and heard, counted and recalled our remembrance and reckoning; the remembrance of our fathers; the remembrance of the Messiah the son of David, Your servant; the remembrance of Jerusalem, city of Your Sanctuary; and the remembrance of Your entire people, the House of Israel, before You for survival, for well-being, for favor, kindliness, compassion, for good life and peace on this day of:"},
+          {"ref": "53", "translates": ["53"], "text": "<i>Rosh Chodesh</i>"},
+          {"ref": "54", "translates": ["54"], "parts": [
             {"kind": "prayer", "text": "the "},
             {"kind": "instruction", "text": "<i>Festival of Matzos</i>"}
           ]},
-          {"ref": "56", "translates": ["85"], "parts": [
+          {"ref": "56", "translates": ["56"], "parts": [
             {"kind": "prayer", "text": "the "},
             {"kind": "instruction", "text": "<i>Festival of Sukkos</i>"}
           ]},
-          {"ref": "57", "translates": ["87"], "text": "the Festival of Shmini Atseres"},
-          {"ref": "58", "translates": ["89"], "text": "<i>Remembrance</i>"},
-          {"ref": "60", "translates": ["90"], "text": "Remember us Adonoy, our God, on this day for well-being; be mindful of us on this day for blessing, and deliver us for good life. In accord with the promise of deliverance and compassion, spare us and favor us, have compassion on us and deliver us; for to You our eyes are directed because You are the Almighty Who is King, Gracious, and Merciful."},
-          {"ref": "61", "translates": ["94", "96", "100", "102", "104", "106"], "parts": [
+          {"ref": "57", "translates": ["57"], "text": "the Festival of Shmini Atseres"},
+          {"ref": "58", "translates": ["58"], "text": "<i>Remembrance</i>"},
+          {"ref": "60", "translates": ["60"], "text": "Remember us Adonoy, our God, on this day for well-being; be mindful of us on this day for blessing, and deliver us for good life. In accord with the promise of deliverance and compassion, spare us and favor us, have compassion on us and deliver us; for to You our eyes are directed because You are the Almighty Who is King, Gracious, and Merciful."},
+          {"ref": "61", "translates": [], "parts": [
             {"kind": "prayer", "text": "<i>If you forgot to say רְצֵה or יַעֲלֶה וְיָבֹא and became aware of it <i>before<i> starting the fourth blessing (הַטּוֹב וְהַמֵּטִיב),"},
             {"kind": "prayer", "text": " or even if you are in doubt,"},
             {"kind": "prayer", "text": " see below for the appropriate blessing. If you reminded yourself </i>"},
@@ -634,7 +636,7 @@
             {"kind": "prayer", "text": " Shavuos and Sukkos. On Chol Ha-Moed or on Rosh Chodesh days that do not fall on Shabbos,"},
             {"kind": "prayer", "text": " you need not repeat the Birkas Hamazon even though you began the blessing of הַטּוֹב וְהַמֵּטִיב.</i></i></i>"}
           ]},
-          {"ref": "62", "translates": ["91"], "parts": [
+          {"ref": "62", "translates": ["62"], "parts": [
             {"kind": "prayer", "text": "Rebuild Jerusalem,"},
             {"kind": "prayer", "text": " city of the Holy Sanctuary,"},
             {"kind": "prayer", "text": " speedily,"},
@@ -644,8 +646,8 @@
             {"kind": "instruction", "text": "<i class=\"footnote\">It is unusual for one to answer Amein after his own blessing. This blessing ends with Amein because it marks the end of the three blessings, authority for which is derived from Deuteronomy (8:10) and separates them from the next blessing which is Rabbinic in origin.—<i>Maseches Berachos</i>"},
             {"kind": "prayer", "text": " 45b</i>"}
           ]},
-          {"ref": "63", "translates": [], "text": "<small><b>FOURTH BERACHA</b></small>"},
-          {"ref": "64", "translates": ["90"], "parts": [
+          {"ref": "63", "translates": ["63"], "text": "<small><b>FOURTH BERACHA</b></small>"},
+          {"ref": "64", "translates": ["64"], "parts": [
             {"kind": "prayer", "text": "Blessed are You,"},
             {"kind": "prayer", "text": " Adonoy our God,"},
             {"kind": "prayer", "text": " King of the Universe,"},
@@ -683,12 +685,12 @@
             {"kind": "prayer", "text": " and of all good things may He never deprive us.<sup class=\"footnote-marker\">17</sup>"},
             {"kind": "instruction", "text": "<i class=\"footnote\">Many people are granted the bounties of life but are unable to enjoy them. We first invoke God’s blessing for all the good things in life and then ask Him to grant us the privilege of enjoying them.—<i>Iyun Tefilloh.</i></i>"}
           ]},
-          {"ref": "65", "translates": ["91"], "text": "The Merciful One will reign over us forever and ever."},
-          {"ref": "66", "translates": ["91"], "text": "The Merciful One will be blessed in heaven and on earth."},
-          {"ref": "67", "translates": ["91"], "text": "The Merciful One will be praised for all generations, He will be glorified through us forever and for all eternity; and He will be honored through us for time everlasting."},
-          {"ref": "68", "translates": ["91"], "text": "May the Merciful One maintain us with honor."},
-          {"ref": "69", "translates": ["91"], "text": "The Merciful One will break the yoke (of oppression) from our necks and lead us upright to our land."},
-          {"ref": "70", "translates": ["91"], "text": "May the Merciful One send us abundant blessing to this house, and upon this table at which we have eaten."},
+          {"ref": "65", "translates": ["65"], "text": "The Merciful One will reign over us forever and ever."},
+          {"ref": "66", "translates": ["66"], "text": "The Merciful One will be blessed in heaven and on earth."},
+          {"ref": "67", "translates": ["67"], "text": "The Merciful One will be praised for all generations, He will be glorified through us forever and for all eternity; and He will be honored through us for time everlasting."},
+          {"ref": "68", "translates": ["68"], "text": "May the Merciful One maintain us with honor."},
+          {"ref": "69", "translates": ["69"], "text": "The Merciful One will break the yoke (of oppression) from our necks and lead us upright to our land."},
+          {"ref": "70", "translates": ["70"], "text": "May the Merciful One send us abundant blessing to this house, and upon this table at which we have eaten."},
           {"ref": "71", "translates": ["71"], "text": "The Merciful One will send us Elijah the prophet, who is remembered for good, who will announce to us good tidings, deliverances, and consolations."},
           {"ref": "72", "translates": ["73"], "text": "<i>When eating at your parents' table, say:</i>"},
           {"ref": "73", "translates": ["73"], "text": "May the Merciful One bless my father, my teacher, the master of this house, and my mother, my teacher, the mistress of this house; them, their household, their children and all that is theirs."},
@@ -768,7 +770,7 @@
             {"kind": "prayer", "text": " Adonoy will bless His people with peace.<sup class=\"footnote-marker\">29</sup>"},
             {"kind": "instruction", "text": "<i class=\"footnote\">Psalms 29:11</i>"}
           ]},
-          {"ref": "92", "translates": ["94", "96", "100", "102", "104", "106"], "text": "<i>The following blessings are said in the event you forgot to say רְצֵה or יַעֲלֶה וְיָבֹא and reminded yourself before starting the fourth blessing, הַטּוֹב וְהַמֵּטִיב.</i>"},
+          {"ref": "92", "translates": [], "text": "<i>The following blessings are said in the event you forgot to say רְצֵה or יַעֲלֶה וְיָבֹא and reminded yourself before starting the fourth blessing, הַטּוֹב וְהַמֵּטִיב.</i>"},
           {"ref": "93", "translates": ["94"], "text": "<i>If you forgot to say רְצֵה on Shabbos:</i>"},
           {"ref": "94", "translates": ["94"], "text": "Blessed are You, Adonoy our God, King of the Universe, Who gave Shabbosos for rest to His people Israel with love for a sign and a covenant. Blessed are You Adonoy, Sanctifier of Shabbos."},
           {"ref": "95", "translates": ["96"], "text": "<i>If you forgot to say יַעֲלֶה וְיָבֹא on Rosh Chodesh:</i>"},
@@ -778,9 +780,9 @@
           {"ref": "101", "translates": ["102"], "text": "<i>If a Yom Tov occurs on Shabbos and you forgot to say רְצֵה and יַעֲלֶה וְיָבֹא:</i>"},
           {"ref": "102", "translates": ["102"], "text": "Blessed are You, Adonoy our God, King of the Universe, Who gave Shabbosos for rest to His people Israel with love, for a sign and a covenant, and Yomim Tovim for happiness and joy, this day of (name the Yom Tov.) Blessed are You, Adonoy, Sanctifier of Shabbos, Israel, and the seasons."},
           {"ref": "103", "translates": [], "kind": "instruction", "forgot": true, "en": "If you forgot to say Ya'aleh VeYavo on Rosh Hashanah:", "text": "<i>If you forgot to say יַעֲלֶה וְיָבֹא on Rosh Hashanah:</i>"},
-          {"ref": "104", "translates": [], "kind": "prayer", "when": "roshHashana", "forgot": true, "text": "Blessed are You, Adonoy our God, King of the Universe, Who gave Festivals to His people Israel for remembrance."},
+          {"ref": "104", "translates": ["104"], "kind": "prayer", "when": "roshHashana", "forgot": true, "text": "Blessed are You, Adonoy our God, King of the Universe, Who gave Festivals to His people Israel for remembrance."},
           {"ref": "105", "translates": [], "kind": "instruction", "forgot": true, "en": "If Rosh Hashanah occurs on Shabbat and you forgot to say Retzei and Ya'aleh VeYavo:", "text": "<i>If Rosh Hashanah occurs on Shabbos and you forgot to say רְצֵה and יַעֲלֶה וְיָבֹא:</i>"},
-          {"ref": "106", "translates": [], "kind": "prayer", "when": "roshHashana && shabbat", "forgot": true, "text": "Blessed are You, Adonoy our God, King of the Universe, Who gave Shabbosos for rest to His people Israel, with love for a sign and a covenant, and Yomim Tovim to Israel, for remembrance. Blessed are You, Adonoy, Sanctifier of Shabbos, Israel, and the Day of Remembrance."}
+          {"ref": "106", "translates": ["106"], "kind": "prayer", "when": "roshHashana && shabbat", "forgot": true, "text": "Blessed are You, Adonoy our God, King of the Universe, Who gave Shabbosos for rest to His people Israel, with love for a sign and a covenant, and Yomim Tovim to Israel, for remembrance. Blessed are You, Adonoy, Sanctifier of Shabbos, Israel, and the Day of Remembrance."}
         ]
       }
     },
@@ -823,6 +825,26 @@
           {"ref": "16", "kind": "prayer", "text": "<b>יְראוּ</b> אֶת יְהֹוָה קְדוֹשָׁיו כִּי אֵין מַחְסוֹר לִירֵאָיו: כְּפִירִים רָשׁוּ וְרָעֵבוּ וְדוֹרְשֵׁי יְהֹוָה לֹא יַחְסְרוּ כָל טוֹב: הוֹדוּ לַיהֹוָה כִּי טוֹב כִּי לְעוֹלָם חַסְדּוֹ: פּוֹתֵחַ אֶת יָדֶךָ וּמַשְׂבִּיעַ לְכָל חַי רָצוֹן: בָּרוּךְ הַגֶּבֶר אֲשֶׁר יִבְטַח בַּיהֹוָה וְהָיָה יְהֹוָה מִבְטַחוֹ: נַעַר הָיִיתִי גַם זָקַנְתִּי וְלֹא רָאִיתִי צַדִּיק נֶעֱזָב וְזַרְעוֹ מְבַקֶּשׁ לָחֶם: יְהֹוָה עֹז לְעַמּוֹ יִתֵּן יְהֹוָה יְבָרֵךְ אֶת עַמּוֹ בַשָּׁלוֹם:"},
           {"ref": "17", "kind": "prayer", "text": "<small>עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:</small>"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "t3", "translates": ["3"], "comment": "Amud translation", "text": "May the Merciful One bless the father of the child and his mother, and may they merit to raise him, to educate him and to make him wise; from the eighth day onward may his blood be accepted, and may Hashem his God be with him. Amen."},
+          {"ref": "t4", "translates": ["4"], "comment": "Amud translation", "text": "May the Merciful One bless the master of the covenant of circumcision, who rejoiced to do righteousness in his [days of] joy; may He repay his deed and give him double reward, and raise him ever higher. Amen."},
+          {"ref": "t5", "translates": ["5"], "comment": "Amud translation", "text": "May the Merciful One bless the tender infant, circumcised on the eighth day; may his hands and heart be faithful to God, and may he merit to see the Divine Presence three times a year. Amen."},
+          {"ref": "t6", "translates": ["6"], "comment": "Amud translation", "text": "May the Merciful One bless the one who cut away the foreskin, uncovered it and drew the blood of circumcision: a man who is fearful and tender-hearted; his service is valid if he performs these three acts for it (another version: invalid if he does not perform these three). Amen."},
+          {"ref": "t7", "translates": ["7"], "comment": "Amud translation", "text": "May the Merciful One send us His Mashiach, who walks in integrity, in the merit of the bridegroom of the circumcisions of blood [the infant], to announce good tidings and consolations to one people scattered and dispersed among the nations. Amen."},
+          {"ref": "t8", "translates": ["8"], "comment": "Amud translation", "text": "May the Merciful One send us the righteous priest [Elijah] who was taken up in concealment, until his throne is established like the sun and the gem; he wrapped his face in his mantle and covered it: “My covenant was with him, life and peace.” Amen."},
+          {"ref": "t9", "translates": ["9"], "comment": "Amud translation", "text": "On Shabbat: May the Merciful One let us inherit the day that is entirely Shabbat and rest for eternal life."},
+          {"ref": "t10", "translates": ["10"], "comment": "Amud translation", "text": "On Rosh Chodesh: May the Merciful One renew this month for us for good and for blessing."},
+          {"ref": "t11", "translates": ["11"], "comment": "Amud translation", "text": "On Yom Tov: May the Merciful One let us inherit the day that is entirely good."},
+          {"ref": "t12", "translates": ["12"], "comment": "Amud translation", "text": "On the first two nights of Pesach: May the Merciful One let us inherit the day that is entirely good, the day that is entirely long, the day when the righteous sit with their crowns upon their heads and enjoy the radiance of the Divine Presence; and may our portion be with them."},
+          {"ref": "t13", "translates": ["13"], "comment": "Amud translation", "text": "On Rosh Hashanah: May the Merciful One renew this year for us for good and for blessing."},
+          {"ref": "t14", "translates": ["14"], "comment": "Amud translation", "text": "On Sukkot: May the Merciful One raise up for us the fallen booth of David."},
+          {"ref": "t15", "translates": ["15"], "comment": "Amud translation", "text": "May the Merciful One make us worthy of the days of Mashiach and of the life of the World to Come. (On weekdays say “magdil”; on a day with Musaf say “migdol”:) He gives great salvations to His king and shows kindness to His anointed, to David and his descendants forever. He Who makes peace in His heights, may He make peace for us and for all Israel, and say: Amen."},
+          {"ref": "t16", "translates": ["16"], "comment": "Amud translation", "text": "Fear Hashem, you His holy ones, for those who fear Him lack nothing. Young lions may be in want and hunger, but those who seek Hashem will lack no good thing. Give thanks to Hashem, for He is good, for His kindness is forever. You open Your hand and satisfy the desire of every living thing. Blessed is the man who trusts in Hashem, and Hashem will be his trust. I was young and have also grown old, yet I have not seen a righteous man forsaken, nor his children begging for bread. Hashem will give strength to His people; Hashem will bless His people with peace."},
+          {"ref": "t17", "translates": ["17"], "comment": "Amud translation", "text": "He Who makes peace in His heights, may He make peace for us and for all Israel, and say: Amen."}
+        ]
       }
     },
     {
@@ -838,6 +860,13 @@
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן:"},
           {"ref": "4", "kind": "instruction", "en": "On cooked dishes made from the five grains and on baked goods, one recites:", "text": "<small>על תבשיל מחמשת מיני דגן ועל מיני מאפה מברך:</small>"},
           {"ref": "5", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא מִינֵי מְזוֹנוֹת:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "t3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Hashem our God, King of the universe, Who creates the fruit of the vine."},
+          {"ref": "t5", "translates": ["5"], "comment": "Amud translation", "text": "Blessed are You, Hashem our God, King of the universe, Who creates various kinds of nourishment."}
         ]
       }
     }

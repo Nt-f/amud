@@ -78,6 +78,23 @@ class Segment {
   /// (`silent`, `undertone`, `aloud`), what one does, how many times.
   String? role;
   String? voice;
+
+  /// How the line is set, from the corpus: `start`, `center`, `end` or
+  /// `justify`; null leaves it to the reader's own typesetting.
+  String? align;
+
+  /// A title, from the corpus, shared by a run of lines the reader folds
+  /// into one row (the zimun, Al Naharot); [foldHe] is its Hebrew.
+  String? fold;
+  String? foldHe;
+
+  /// Id of a choice the reader makes here (see the app's choices); the
+  /// selector is drawn above this line.
+  String? select;
+
+  /// The graph node key the corpus gives this line (`kaddish.half`), when it
+  /// differs from its section's.
+  String? graphNode;
   List<String> gestures = const [];
   int? repeat;
 

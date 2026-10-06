@@ -78,33 +78,6 @@
       }
     },
     {
-      "path": "Weekday/Shacharit/Amidah/Holiness of God",
-      "title": "קדושת השם",
-      "node": "amidah.kedushat_hashem",
-      "service": "shacharit",
-      "he": {
-        "version": "The Metsudah siddur, 1981",
-        "segs": [
-          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>אַתָּה קָדוֹשׁ</b> וְשִׁמְךָ קָדוֹשׁ וּקְדוֹשִׁים בְּכָל־יוֹם יְהַלְ֒לֽוּךָ סֶּֽלָה."},
-          {"ref": "2", "kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "hakel", "voice": "silent", "text": "בָּרוּךְ אַתָּה יְהֹוָה הָאֵל הַקָּדוֹשׁ:"},
-          {"ref": "3", "parts": [
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "alt": "hakel", "en": "During the Ten Days of Repentance, conclude:", "text": "<small>בעשי\"ת מסיים:</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "hakel", "voice": "silent", "text": " בָּרוּךְ אַתָּה יְהֹוָה הַמֶּֽלֶךְ הַקָּדוֹשׁ:"}
-          ]},
-          {"ref": "4", "kind": "note", "forgot": true, "en": "If one mistakenly concluded \"HaEl hakadosh\": if he realizes within a moment of speech (about the time to say \"Shalom alecha rebbi\") and says \"HaMelech hakadosh\" he has fulfilled his obligation; otherwise he must return to the beginning of the Amidah, and likewise if he is unsure whether he said it. During the rest of the year, if he said \"HaMelech hakadosh\" he does not return.", "text": "<small>אם טעה וסיים האל הקדוש אם נזכר בתוך כדי דיבור ואמר המלך הקדוש יצא ואם לאו צריך לחזור לראש התפלה וה\"ה אם מסופק אם אמר צריך לחזור לראש. ובימות השנה אם אמר המלך הקדוש אינו חוזר.</small>"}
-        ]
-      },
-      "en": {
-        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
-        "segs": [
-          {"ref": "1", "translates": ["1"], "text": "You are holy and Your Name is holy and holy beings praise You every day, forever."},
-          {"ref": "2", "translates": ["2"], "text": "Blessed are You, Adonoy, the Almighty, the Holy One.<sup class=\"footnote-marker\">19</sup><i class=\"footnote\">This blessing completes the section of <i>Shemoneh Esrei</i> called <i>Kedushah</i> (Holiness) which emphasizes that God is indeed awesome.</i>"},
-          {"ref": "3", "translates": ["3"], "text": "<i>During the Ten Days of Penitence:</i> Blessed are You, Adonoy, the King, the Holy One."},
-          {"ref": "4", "translates": ["4"], "text": "<i>If you mistakenly said, “the Almighty” instead of “the King,” or if you are in doubt—if you realized your error after a lapse of time sufficient to utter a three word greeting (Shalom Aleichem Rebbe), or if you had already started the next blessing, you must say the Shmoneh Esrei from the beginning. If you became aware of your error before that, you should immediately say “the King the Holy One” and continue your prayers.</i>"}
-        ]
-      }
-    },
-    {
       "path": "Weekday/Shacharit/Amidah/Kedushah",
       "title": "קדושה",
       "node": "amidah.kedusha",
@@ -150,6 +123,33 @@
           {"ref": "12", "translates": ["12"], "text": "Adonoy will reign forever; Your God, Zion, throughout all generations! Praise God.<sup class=\"footnote-marker\">18</sup><i class=\"footnote\">Psalms 146:10.</i>"},
           {"ref": "13", "translates": ["13"], "text": "<i>The Chazzan says:</i>"},
           {"ref": "14", "translates": ["14"], "text": "From generation to generation we will declare Your greatness, and to all eternity, we will sanctify Your holiness, and Your praise, our God, will not depart from our mouth forever and ever; because You are the Almighty Who is King; Great, and Holy. Blessed are You, Adonoy, the Almighty, the Holy One.<sup class=\"footnote-marker\">19</sup><i class=\"footnote\">This blessing completes the section of <i>Shemoneh Esrei</i> called <i>Kedushah</i> (Holiness) which emphasizes that God is indeed awesome.</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Shacharit/Amidah/Holiness of God",
+      "title": "קדושת השם",
+      "node": "amidah.kedushat_hashem",
+      "service": "shacharit",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>אַתָּה קָדוֹשׁ</b> וְשִׁמְךָ קָדוֹשׁ וּקְדוֹשִׁים בְּכָל־יוֹם יְהַלְ֒לֽוּךָ סֶּֽלָה."},
+          {"ref": "2", "kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "hakel", "voice": "silent", "text": "בָּרוּךְ אַתָּה יְהֹוָה הָאֵל הַקָּדוֹשׁ:"},
+          {"ref": "3", "parts": [
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "alt": "hakel", "en": "During the Ten Days of Repentance, conclude:", "text": "<small>בעשי\"ת מסיים:</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "hakel", "voice": "silent", "text": " בָּרוּךְ אַתָּה יְהֹוָה הַמֶּֽלֶךְ הַקָּדוֹשׁ:"}
+          ]},
+          {"ref": "4", "kind": "note", "forgot": true, "en": "If one mistakenly concluded \"HaEl hakadosh\": if he realizes within a moment of speech (about the time to say \"Shalom alecha rebbi\") and says \"HaMelech hakadosh\" he has fulfilled his obligation; otherwise he must return to the beginning of the Amidah, and likewise if he is unsure whether he said it. During the rest of the year, if he said \"HaMelech hakadosh\" he does not return.", "text": "<small>אם טעה וסיים האל הקדוש אם נזכר בתוך כדי דיבור ואמר המלך הקדוש יצא ואם לאו צריך לחזור לראש התפלה וה\"ה אם מסופק אם אמר צריך לחזור לראש. ובימות השנה אם אמר המלך הקדוש אינו חוזר.</small>"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "You are holy and Your Name is holy and holy beings praise You every day, forever."},
+          {"ref": "2", "translates": ["2"], "text": "Blessed are You, Adonoy, the Almighty, the Holy One.<sup class=\"footnote-marker\">19</sup><i class=\"footnote\">This blessing completes the section of <i>Shemoneh Esrei</i> called <i>Kedushah</i> (Holiness) which emphasizes that God is indeed awesome.</i>"},
+          {"ref": "3", "translates": ["3"], "text": "<i>During the Ten Days of Penitence:</i> Blessed are You, Adonoy, the King, the Holy One."},
+          {"ref": "4", "translates": ["4"], "text": "<i>If you mistakenly said, “the Almighty” instead of “the King,” or if you are in doubt—if you realized your error after a lapse of time sufficient to utter a three word greeting (Shalom Aleichem Rebbe), or if you had already started the next blessing, you must say the Shmoneh Esrei from the beginning. If you became aware of your error before that, you should immediately say “the King the Holy One” and continue your prayers.</i>"}
         ]
       }
     },

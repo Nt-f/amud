@@ -141,6 +141,10 @@ class AppSettings {
   /// Fold the chazzan's repetition (Kedushah, Birkas Kohanim, Modim
   /// DeRabbanan) into a tappable row.
   final bool collapseChazarah;
+
+  /// The reader's answers to choices drawn in the text (id → option), e.g.
+  /// `table` → `own`.
+  final Map<String, String> choices;
   final bool showInstructions;
   final bool highlightToday;
 
@@ -218,6 +222,7 @@ class AppSettings {
     this.conciseNotes = true,
     this.collapseNotes = true,
     this.collapseChazarah = true,
+    this.choices = const {},
     this.showInstructions = true,
     this.highlightToday = true,
     this.typesetting = true,
@@ -270,6 +275,7 @@ class AppSettings {
     bool? conciseNotes,
     bool? collapseNotes,
     bool? collapseChazarah,
+    Map<String, String>? choices,
     bool? showInstructions,
     bool? highlightToday,
     bool? typesetting,
@@ -321,6 +327,7 @@ class AppSettings {
         conciseNotes: conciseNotes ?? this.conciseNotes,
         collapseNotes: collapseNotes ?? this.collapseNotes,
         collapseChazarah: collapseChazarah ?? this.collapseChazarah,
+        choices: choices ?? this.choices,
         showInstructions: showInstructions ?? this.showInstructions,
         highlightToday: highlightToday ?? this.highlightToday,
         typesetting: typesetting ?? this.typesetting,
@@ -377,6 +384,7 @@ class AppSettings {
         'conciseNotes': conciseNotes,
         'collapseNotes': collapseNotes,
         'collapseChazarah': collapseChazarah,
+        'choices': choices,
         'showInstructions': showInstructions,
         'highlightToday': highlightToday,
         'typesetting': typesetting,
@@ -472,6 +480,12 @@ class AppSettings {
       conciseNotes: pick('conciseNotes', d.conciseNotes),
       collapseNotes: pick('collapseNotes', d.collapseNotes),
       collapseChazarah: pick('collapseChazarah', d.collapseChazarah),
+      choices: orElse(
+          () => {
+                for (final e in ((j['choices'] as Map?) ?? const {}).entries)
+                  if (e.value is String) e.key as String: e.value as String,
+              },
+          const {}),
       showInstructions: pick('showInstructions', d.showInstructions),
       highlightToday: pick('highlightToday', d.highlightToday),
       typesetting: pick('typesetting', d.typesetting),

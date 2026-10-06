@@ -21,7 +21,7 @@
           {"ref": "5", "kind": "prayer", "text": "<b>יְהֹוָ֣ה</b> צְבָא֣וֹת עִמָּ֑נוּ מִשְׂגָּֽב־לָ֨נוּ אֱלֹהֵ֖י יַֽעֲקֹ֣ב סֶֽלָה׃ יְהֹוָ֥ה צְבָא֑וֹת אַֽשְׁרֵ֥י אָ֝דָ֗ם בֹּטֵ֥חַ בָּֽךְ׃ יְהֹוָ֥ה הוֹשִׁ֑יעָה הַ֝מֶּ֗לֶךְ יַעֲנֵ֥נוּ בְיוֹם־קׇרְאֵֽנוּ:"},
           {"ref": "6", "kind": "instruction", "en": "(Prayer Leader says H'atzi- Kaddish)", "gloss": "The chazzan recites Half Kaddish", "text": "<small>ואומר החזן חצי קדיש</small> "},
           {"ref": "7", "parts": [
-            {"kind": "instruction", "en": "Exalted & sanctified be His (G·d's) great Name. [cong. - Amen.]", "gloss": "Chazzan recites; congregation answers Amen", "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. <small>[אָמֵן]</small>"},
+            {"kind": "prayer", "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. <small>[אָמֵן]</small>"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " בְּעָלְמָא דִּי בְרָא,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " כִּרְעוּתֵה,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " וְיַמְלִיךְ מַלְכוּתֵה,"},
@@ -169,7 +169,7 @@
             {"kind": "prayer", "node": "amidah.avot", "text": " גּוֹמֵל חֲסָדִים טוֹבִים,"},
             {"kind": "prayer", "node": "amidah.avot", "text": " קוֹנֵה הַכֹּל,"},
             {"kind": "prayer", "node": "amidah.avot", "text": " וְזוֹכֵר חַסְדֵּי אָבוֹת,"},
-            {"kind": "instruction", "node": "amidah.avot", "en": "During the Ten Days of Repentance:", "text": " וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַֽעַן שְׁמוֹ בְּאַֽהֲבָה: "},
+            {"kind": "prayer", "node": "amidah.avot", "text": " וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַֽעַן שְׁמוֹ בְּאַֽהֲבָה: "},
             {"kind": "instruction", "node": "amidah.avot", "en": "During the Ten Days of Repentance:", "text": "<small><small>בעשרת ימי תשובה אומרים:</small>"},
             {"kind": "prayer", "node": "amidah.avot", "text": " זָכְרֵנוּ לְחַיִּים,"},
             {"kind": "prayer", "node": "amidah.avot", "text": " מֶלֶךְ חָפֵץ בַּחַיִּים,"},

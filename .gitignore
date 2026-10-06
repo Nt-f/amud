@@ -50,3 +50,6 @@ app.*.map.json
 # Handoff archives and the engine package's build output
 /staging/
 /packages/*/build/
+
+# The built site (tool/build_web.sh); deploy from a fresh build
+/web-dist/

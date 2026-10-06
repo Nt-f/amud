@@ -21,6 +21,11 @@ class CorpusPart {
   final String? alt;
   final String? role;
   final String? voice;
+  final String? align;
+  final String? fold;
+  final String? foldHe;
+  final String? select;
+  final String? node;
   final String? amidah;
   final bool minyan;
   final List<String> gestures;
@@ -33,6 +38,11 @@ class CorpusPart {
       this.alt,
       this.role,
       this.voice,
+      this.align,
+      this.fold,
+      this.foldHe,
+      this.select,
+      this.node,
       this.amidah,
       this.minyan = false,
       this.gestures = const [],
@@ -47,6 +57,11 @@ class CorpusPart {
         alt: j['alt'] as String?,
         role: j['role'] as String?,
         voice: j['voice'] as String?,
+        align: j['align'] as String?,
+        fold: j['fold'] as String?,
+        foldHe: j['foldHe'] as String?,
+        select: j['select'] as String?,
+        node: j['node'] as String?,
         amidah: j['amidah'] as String?,
         minyan: j['minyan'] == true,
         gestures: [for (final g in (j['gestures'] as List? ?? const [])) g as String],
@@ -325,6 +340,11 @@ List<Segment> corpusSegments(List<CorpusSegment> segs,
       ..chazarah = s.parts.any((p) => p.amidah == 'repetition')
       ..role = first.role
       ..voice = first.voice
+      ..align = first.align
+      ..fold = s.parts.first.fold
+      ..foldHe = s.parts.first.foldHe
+      ..select = s.parts.first.select
+      ..graphNode = first.node
       ..gestures = [for (final p in s.parts) ...p.gestures]
       ..repeat = first.repeat
       ..minyan = s.parts.every((p) => p.minyan || !p.prayer) && prayers.isNotEmpty && prayers.every((p) => p.minyan)

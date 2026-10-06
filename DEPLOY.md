@@ -1,6 +1,7 @@
 # Deploying amud.page (landing page and web app)
 
-`web-dist/` is the **precompiled** site:
+`web-dist/` is the **precompiled** site, made by `tool/build_web.sh` (not
+kept in git):
 
 - `/` is the static landing page, from `landing/` (`index.html`, `og.png`,
   `robots.txt`, `sitemap.xml`, and a `sw.js` that retires the service worker
@@ -92,7 +93,9 @@ to keep only public-domain and Creative Commons versions), then rebuild.
 
     tool/build_web.sh
 
-`web-dist/` is committed, so commit it along with the source changes.
+`web-dist/` is build output and isn't kept in git: build it before
+deploying. A release's site is also attached to its GitHub Release as
+`amud-web.zip`.
 
 ## Redeploying amud.page
 

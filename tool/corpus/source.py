@@ -16,6 +16,7 @@ ROLES = {'individual', 'chazzan', 'congregation', 'congregation_then_chazzan', '
          'together', 'responsive', 'kohanim', 'mourner', 'oleh', 'head_of_household'}
 VOICES = {'silent', 'undertone', 'aloud'}
 AMIDAH = {'silent', 'repetition'}
+ALIGNS = {'start', 'center', 'end', 'justify'}
 SERVICES = {'shacharit', 'mincha', 'maariv', 'musaf', 'none'}
 GESTURES = {'stand', 'sit', 'bow', 'bow_full', 'knees_bend', 'rise_on_toes', 'feet_together', 'three_steps_back',
             'three_steps_forward', 'cover_eyes', 'kiss_tzitzit', 'gather_tzitzit', 'touch_tefillin', 'head_down',
@@ -25,7 +26,7 @@ GESTURES = {'stand', 'sit', 'bow', 'bow_full', 'knees_bend', 'rise_on_toes', 'fe
 
 # Field order in the files: what a line is and when it is said first, the
 # text last. `comment` is for editors and never reaches the app.
-PART_FIELDS = ['kind', 'when', 'alt', 'node', 'role', 'voice', 'amidah', 'minyan', 'gestures', 'repeat',
+PART_FIELDS = ['kind', 'when', 'alt', 'node', 'role', 'voice', 'align', 'fold', 'foldHe', 'select', 'amidah', 'minyan', 'gestures', 'repeat',
                'forgot', 'en', 'he', 'gloss', 'cite', 'clean', 'comment', 'text']
 SEG_FIELDS = ['ref', 'translates', 'parts'] + PART_FIELDS
 LEAF_FIELDS = ['path', 'title', 'comment', 'node', 'when', 'service', 'he', 'en']
@@ -224,7 +225,9 @@ def _check_part(p, where, errs, known, english):
         e = check_condition(p['when'], known) if isinstance(p['when'], str) else 'must be a string'
         if e:
             errs.append(f'{where}: when {p["when"]!r}: {e}')
-    for f, allowed in (('role', ROLES), ('voice', VOICES), ('amidah', AMIDAH)):
+    if 'fold' in p and not p.get('foldHe'):
+        errs.append(f'{where}: fold {p["fold"]!r} needs foldHe, its Hebrew title')
+    for f, allowed in (('role', ROLES), ('voice', VOICES), ('align', ALIGNS), ('amidah', AMIDAH)):
         if f in p and p[f] not in allowed:
             errs.append(f'{where}: bad {f} {p[f]!r}')
     for g in p.get('gestures', []):

@@ -231,6 +231,18 @@ class SegmentItem extends RenderItem {
   /// How it is read (corpus only; see [Segment.role]).
   final String? role;
   final String? voice;
+
+  /// See [Segment.align].
+  final String? align;
+
+  /// See [Segment.fold].
+  final String? fold;
+  final String? foldHe;
+  final String? select;
+
+  /// The unit of the davening this line belongs to (`kaddish.half`), from
+  /// the corpus: the line's own, else its section's.
+  final String? graphNode;
   final List<String> gestures;
   final int? repeat;
   const SegmentItem(super.key, this.node, this.he, this.tr, this.kind, this.applicability, this.labelEn,
@@ -240,6 +252,11 @@ class SegmentItem extends RenderItem {
       this.chazarah = false,
       this.role,
       this.voice,
+      this.align,
+      this.fold,
+      this.foldHe,
+      this.select,
+      this.graphNode,
       this.gestures = const [],
       this.repeat});
 }
@@ -715,6 +732,8 @@ class SiddurResolver {
       if (h == null && t == null) return;
       var ap = rubric == null ? Applicability.always : _eval(rubric.condition, ctx);
       if (ap == Applicability.today && _ordinary(rubric!.expression, ctx.service)) ap = Applicability.always;
+      // A circumstance the reader answered is no news to them: no "today" label.
+      if (ap == Applicability.today && RegExp(r'\bif_').hasMatch(rubric!.expression)) ap = Applicability.always;
       if (sectionExcluded) ap = Applicability.notToday;
       final isExcluded = ap == Applicability.notToday;
       // Hide means hidden, alternatives included; only a section opened
@@ -739,6 +758,11 @@ class SiddurResolver {
         chazarah: chazarah || (!fromCorpus && h == null && !_birkatKohanimLeaf.hasMatch(leaf.en) && (t?.chazarah ?? false)),
         role: primary.role,
         voice: primary.voice,
+        align: primary.align,
+        fold: primary.fold,
+        foldHe: primary.foldHe,
+        select: primary.select,
+        graphNode: primary.graphNode ?? (fromCorpus ? corpus?.leaf(leaf.id)?.node : null),
         gestures: primary.gestures,
         repeat: primary.repeat,
       ));
