@@ -291,7 +291,7 @@ class SiddurResolver {
   })  : sectionRules = sectionRules ?? defaultSectionRules,
         callouts = callouts ?? defaultCallouts,
         contentRules = contentRules ?? defaultContentRules,
-        curatedNotes = curatedNotes ?? defaultCuratedNotes;
+        curatedNotes = curatedNotes ?? const [];
 
   final _analysisCache = <String, List<Segment>>{};
 
@@ -299,8 +299,9 @@ class SiddurResolver {
   final _noted = <int>{};
   var _hideMode = false;
 
-  /// Parses a per-book rules JSON (`{"sections": [...], "segments": [...]}`)
-  /// and returns a resolver with those rules taking precedence.
+  /// Parses a per-book rules JSON (`{"sections": [...], "segments": [...]}`,
+  /// and `notes` as in assets/rules/notes.json) and returns a resolver with
+  /// those rules taking precedence.
   SiddurResolver withOverrides(Map<String, Object?> json) => SiddurResolver(
         sectionRules: [
           for (final r in (json['sections'] as List? ?? const [])) SectionRule.fromJson(r as Map<String, Object?>),
@@ -316,7 +317,10 @@ class SiddurResolver {
         ],
         callouts: callouts,
         contentRules: contentRules,
-        curatedNotes: curatedNotes,
+        curatedNotes: [
+          ...curatedNotesFromJson({'notes': json['notes']}),
+          ...curatedNotes,
+        ],
         analyzer: analyzer,
         corpus: corpus,
       );
@@ -637,15 +641,16 @@ class SiddurResolver {
     final (trInfo, trRaw) = options.showTranslation || options.notesTranslation
         ? versions.pick(versions.translation, leaf.path)
         : (null, null);
-    // The corpus, when the selected Hebrew is the version it tagged.
+    // Amud's own text, when it's the version picked for this leaf.
     final cl = corpus?.leaf(leaf.id);
-    final fromCorpus = cl?.he != null && heInfo != null && heInfo.versionTitle.trim() == cl!.he!.version.trim();
+    final fromCorpus = cl?.he != null && heInfo != null && heInfo.isCorpus;
     final List<Segment> he;
     var tr = const <Segment>[];
     List<Segment?>? trByHe;
     if (fromCorpus) {
+      final cl = corpus!.leaf(leaf.id)!;
       he = _analysisCache.putIfAbsent('corpus|he|${leaf.id}', () => corpusSegments(cl.he!.segments, hebrew: true, labels: corpus!.labels));
-      if (cl.en != null && trInfo != null && trInfo.versionTitle.trim() == cl.en!.version.trim()) {
+      if (cl.en != null && trInfo != null && trInfo.isCorpus) {
         final en = _analysisCache.putIfAbsent('corpus|en|${leaf.id}', () => corpusSegments(cl.en!.segments, hebrew: false, labels: corpus!.labels));
         trByHe = alignedTranslation(cl.he!, cl.en!, en);
       } else if (trInfo != null) {

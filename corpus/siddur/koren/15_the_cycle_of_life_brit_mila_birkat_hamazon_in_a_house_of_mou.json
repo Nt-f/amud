@@ -1,0 +1,917 @@
+{
+  "book": "The Koren Shalem Siddur; Ashkenaz",
+  "chunk": "The Cycle of Life [Brit Mila .. Birkat HaMazon in a House of Mourning]",
+  "leaves": [
+    {
+      "path": "The Cycle of Life/Brit Mila",
+      "title": "סדר ברית מילה",
+      "node": "lifecycle.brit_mila",
+      "service": "none",
+      "he": {
+        "version": "Hebrew Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "2", "kind": "instruction", "en": "Welcome.", "text": "בָּרוּךְ הַבָּא."},
+          {"ref": "4", "kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "וַיְדַבֵּר יהוה אֶל־מֹשֶׁה לֵּאמֹר׃ פִּינְחָס בֶּן־אֶלְעָזָר בֶּן־אַהֲרֹן הַכֹּהֵן הֵשִׁיב אֶת־חֲמָתִי מֵעַל בְּנֵי־יִשְׂרָאֵל, בְּקַנְאוֹ אֶת־קִנְאָתִי בְּתוֹכָם, וְלֹא־כִלִּֽיתִי אֶת־בְּנֵי־יִשְׂרָאֵל בְּקִנְאָתִי׃ לָכֵן אֱמֹר, הִנְנִי נֹתֵן לוֹ אֶת־בְּרִיתִי שָׁלוֹם׃"},
+          {"ref": "6", "kind": "instruction", "en": "The mohel:", "text": "<i class=\"instruction\">המוהל:</i> אַשְׁרֵי תִּבְחַר וּתְקָרֵב, יִשְׁכֹּן חֲצֵרֶֽיךָ"},
+          {"ref": "7", "kind": "instruction", "en": "The congregation:", "text": "<i class=\"instruction\">הקהל:</i> נִשְׂבְּעָה בְּטוּב בֵּיתֶֽךָ, קְדֹשׁ הֵיכָלֶֽךָ׃"},
+          {"ref": "9", "kind": "prayer", "role": "individual", "voice": "silent", "en": "If I forget you, O Jerusalem...", "text": "אִם־אֶשְׁכָּחֵךְ יְרוּשָׁלִָֽם, תִּשְׁכַּח יְמִינִי׃ תִּדְבַּק לְשׁוֹנִי לְחִכִּי<br>אִם־לֹא אֶזְכְּרֵֽכִי, אִם־לֹא אַעֲלֶה אֶת־יְרוּשָׁלִַֽם עַל רֹאשׁ שִׂמְחָתִי׃"},
+          {"ref": "11", "kind": "prayer", "role": "individual", "voice": "aloud", "text": "שְׁמַע יִשְׂרָאֵל, יהוה אֱלֹהֵֽינוּ, יהוה אֶחָד׃"},
+          {"ref": "13", "kind": "prayer", "role": "chazzan_then_congregation", "voice": "aloud", "text": "יהוה מֶֽלֶךְ, יהוה מָלָךְ, יהוה יִמְלֹךְ לְעוֹלָם וָעֶד.<br>אָנָּא יהוה הוֹשִֽׁיעָה נָּא<br>אָנָּא יהוה הַצְלִיחָה נָא׃"},
+          {"ref": "15", "kind": "instruction", "en": "This is the seat of Elijah the prophet, may he be remembered for good.", "text": "זֶה הַכִּסֵּא שֶׁל אֵלִיָּֽהוּ הַנָּבִיא זָכוּר לַטּוֹב."},
+          {"ref": "17", "kind": "prayer", "role": "chazzan", "text": "לִישׁוּעָתְךָ קִוִּֽיתִי יהוה׃ שִׂבַּֽרְתִּי לִישׁוּעָתְךָ יהוה, וּמִצְוֹתֶֽיךָ עָשִֽׂיתִי׃ אֵלִיָּֽהוּ מַלְאַךְ הַבְּרִית, הִנֵּה שֶׁלְּךָ לְפָנֶֽיךָ, עֲמֹד עַל יְמִינִי וְסָמְכֵֽנִי. שִׂבַּֽרְתִּי לִישׁוּעָתְךָ יהוה׃ שָׂשׂ אָנֹכִי עַל־אִמְרָתֶֽךָ, כְּמוֹצֵא שָׁלָל רָב׃ שָׁלוֹם רָב לְאֹהֲבֵי תוֹרָתֶֽךָ, וְאֵין־לָֽמוֹ מִכְשׁוֹל׃ אַשְׁרֵי תִּבְחַר וּתְקָרֵב, יִשְׁכֹּן חֲצֵרֶֽיךָ"},
+          {"ref": "19", "kind": "prayer", "role": "congregation", "text": "נִשְׂבְּעָה בְּטוּב בֵּיתֶֽךָ, קְדֹשׁ הֵיכָלֶֽךָ׃"},
+          {"ref": "21", "kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם<br>אֲשֶׁר קִדְּשָֽׁנוּ בְּמִצְוֹתָיו וְצִוָּֽנוּ עַל הַמִּילָה."},
+          {"ref": "23", "kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָֽׁנוּ בְּמִצְוֹתָיו וְצִוָּֽנוּ לְהַכְנִיסוֹ בִּבְרִיתוֹ שֶׁל אַבְרָהָם אָבִֽינוּ."},
+          {"ref": "25", "kind": "prayer", "role": "individual", "voice": "aloud", "en": "Blessed are You... who has given us life...", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם<br>שֶׁהֶחֱיָֽנוּ וְקִיְּמָֽנוּ וְהִגִּיעָֽנוּ לַזְּמַן הַזֶּה."},
+          {"ref": "27", "kind": "prayer", "role": "congregation", "text": "אָמֵן. כְּשֵׁם שֶׁנִּכְנַס לַבְּרִית, כֵּן יִכָּנֵס לְתוֹרָה וּלְחֻפָּה וּלְמַעֲשִׂים טוֹבִים."},
+          {"ref": "29", "kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הַגָּֽפֶן."},
+          {"ref": "30", "kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, אֲשֶׁר קִדַּשׁ יְדִיד מִבֶּֽטֶן, וְחֹק בִּשְׁאֵרוֹ שָׂם, וְצֶאֱצָאָיו חָתַם בְּאוֹת בְּרִית קֹֽדֶשׁ. עַל כֵּן בִּשְׂכַר זֹאת, אֵל חַי חֶלְקֵֽנוּ צוּרֵֽנוּ צִוָּה לְהַצִּיל יְדִידוּת שְׁאֵרֵֽנוּ מִשַּֽׁחַת, לְמַֽעַן בְּרִיתוֹ אֲשֶׁר שָׂם בִּבְשָׂרֵֽנוּ. בָּרוּךְ אַתָּה יהוה, כּוֹרֵת הַבְּרִית."},
+          {"ref": "31", "kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ, קַיֵּם אֶת הַיֶּֽלֶד הַזֶּה לְאָבִיו וּלְאִמּוֹ, וְיִקָּרֵא שְׁמוֹ בְּיִשְׂרָאֵל (<i class=\"instruction\">פלוני</i> בֶּן <i class=\"instruction\">פלוני</i>). יִשְׂמַח הָאָב בְּיוֹצֵא חֲלָצָיו וְתָגֵל אִמּוֹ בִּפְרִי בִטְנָהּ, כַּכָּתוּב: יִשְׂמַח־אָבִֽיךָ וְאִמֶּֽךָ, וְתָגֵל יוֹלַדְתֶּֽךָ׃ וְנֶאֱמַר: וָאֶעֱבֹר עָלַֽיִךְ וָאֶרְאֵךְ מִתְבּוֹסֶֽסֶת בְּדָמָֽיִךְ, וָאֹֽמַר לָךְ בְּדָמַֽיִךְ חֲיִי, וָאֹֽמַר לָךְ בְּדָמַֽיִךְ חֲיִי׃"},
+          {"ref": "32", "kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "וְנֶאֱמַר: זָכַר לְעוֹלָם בְּרִיתוֹ, דָּבָר צִוָּה לְאֶֽלֶף דּוֹר׃ אֲשֶׁר כָּרַת אֶת־אַבְרָהָם, וּשְׁבוּעָתוֹ לְיִשְׂחָק׃ וַיַּעֲמִידֶֽהָ לְיַעֲקֹב לְחֹק, לְיִשְׂרָאֵל בְּרִית עוֹלָם׃ וְנֶאֱמַר: וַיָּֽמָל אַבְרָהָם אֶת־יִצְחָק בְּנוֹ בֶּן־שְׁמֹנַת יָמִים, כַּאֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים׃ הוֹדוּ לַיהוה כִּי־טוֹב, כִּי לְעוֹלָם חַסְדּוֹ׃"},
+          {"ref": "34", "kind": "prayer", "role": "congregation", "text": "הוֹדוּ לַיהוה כִּי־טוֹב, כִּי לְעוֹלָם חַסְדּוֹ׃"},
+          {"ref": "36", "kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "(<i class=\"instruction\">פלוני</i> בֶּן <i class=\"instruction\">פלוני</i>) זֶה הַקָּטֹן גָּדוֹל יִהְיֶה, כְּשֵׁם שֶׁנִּכְנַס לַבְּרִית, כֵּן יִכָּנֵס לְתוֹרָה וּלְחֻפָּה וּלְמַעֲשִׂים טוֹבִים."},
+          {"ref": "39", "kind": "heading", "en": "Birkat HaMazon at a Brit Mila", "text": "<b>ברכת המזון לברית מילה</b>"},
+          {"ref": "40", "kind": "prayer", "role": "chazzan_then_congregation", "text": "רַבּוֹתַי, נְבָרֵךְ.<br>יְהִי שֵׁם יהוה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם׃<br>יְהִי שֵׁם יהוה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם׃"},
+          {"ref": "41", "kind": "prayer", "role": "chazzan_then_congregation", "text": "נוֹדֶה לְשִׁמְךָ בְּתוֹךְ אֱמוּנַי, בְּרוּכִים אַתֶּם לַיהוה."},
+          {"ref": "42", "kind": "prayer", "role": "chazzan", "text": "בִּרְשׁוּת אֵל אָיֹם וְנוֹרָא<br>מִשְׂגָּב לְעִתּוֹת בַּצָּרָה<br>אֵל נֶאֱזָר בִּגְבוּרָה<br>אַדִּיר בַּמָּרוֹם יהוה."},
+          {"ref": "43", "kind": "prayer", "role": "congregation", "text": "נוֹדֶה לְשִׁמְךָ בְּתוֹךְ אֱמוּנַי, בְּרוּכִים אַתֶּם לַיהוה."},
+          {"ref": "44", "kind": "prayer", "role": "chazzan", "text": "בִּרְשׁוּת הַתּוֹרָה הַקְּדוֹשָׁה<br>טְהוֹרָה הִיא וְגַם פְּרוּשָׁה<br>צִוָּה לָֽנוּ מוֹרָשָׁה<br>מֹשֶׁה עֶֽבֶד יהוה."},
+          {"ref": "45", "kind": "prayer", "role": "congregation", "text": "נוֹדֶה לְשִׁמְךָ בְּתוֹךְ אֱמוּנַי, בְּרוּכִים אַתֶּם לַיהוה."},
+          {"ref": "46", "kind": "prayer", "role": "chazzan", "text": "בִּרְשׁוּת הַכֹּהֲנִים וְהַלְוִיִּם<br>אֶקְרָא לֵאלֹהֵי הָעִבְרִיִּים<br>אֲהוֹדֶֽנּוּ בְּכָל אִיִּים<br>אֲבָרְכָה אֶת יהוה."},
+          {"ref": "47", "kind": "prayer", "role": "congregation", "text": "נוֹדֶה לְשִׁמְךָ בְּתוֹךְ אֱמוּנַי, בְּרוּכִים אַתֶּם לַיהוה."},
+          {"ref": "48", "kind": "prayer", "role": "chazzan", "text": "בִּרְשׁוּת מָרָנָן וְרַבָּנָן וְרַבּוֹתַי<br>אֶפְתְּחָה בְּשִׁיר פִּי וּשְׂפָתַי<br>וְתֹאמַֽרְנָה עַצְמוֹתַי<br>בָּרוּךְ הַבָּא בְּשֵׁם יהוה."},
+          {"ref": "49", "kind": "prayer", "role": "congregation", "text": "נוֹדֶה לְשִׁמְךָ בְּתוֹךְ אֱמוּנַי, בְּרוּכִים אַתֶּם לַיהוה."},
+          {"ref": "50", "kind": "prayer", "role": "chazzan_then_congregation", "text": "בִּרְשׁוּת מָרָנָן וְרַבָּנָן וְרַבּוֹתַי<br>נְבָרֵךְ (אֱלֹהֵֽינוּ) שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ.<br>בָּרוּךְ (אֱלֹהֵֽינוּ) שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ.<br>בָּרוּךְ (אֱלֹהֵֽינוּ) שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ.<br>בָּרוּךְ הוּא וּבָרוּךְ שְׁמוֹ."},
+          {"ref": "53", "kind": "prayer", "role": "chazzan", "text": "הָרַחֲמָן הוּא יְבָרֵךְ אֲבִי הַיֶּֽלֶד וְאִמּוֹ<br>וְיִזְכּוּ לְגַדְּלוֹ וּלְחַנְּכוֹ וּלְחַכְּמוֹ<br>מִיּוֹם הַשְּׁמִינִי וָהָֽלְאָה יֵרָצֶה דָמוֹ<br>וִיהִי יהוה אֱלֹהָיו עִמּוֹ."},
+          {"ref": "55", "kind": "prayer", "role": "chazzan", "text": "הָרַחֲמָן הוּא יְבָרֵךְ בַּֽעַל בְּרִית הַמִּילָה<br>אֲשֶׁר שָׂשׂ לַעֲשׂוֹת צֶֽדֶק בְּגִילָה<br>וִישַׁלֵּם פָּעֳלוֹ וּמַשְׂכֻּרְתּוֹ כְּפוּלָה<br>וְיִתְּנֵֽהוּ לְמַֽעְלָה לְמָֽעְלָה."},
+          {"ref": "56", "kind": "prayer", "role": "chazzan", "text": "הָרַחֲמָן הוּא יְבָרֵךְ רַךְ הַנִּמּוֹל לִשְׁמוֹנָה<br>וְיִהְיוּ יָדָיו וְלִבּוֹ לָאֵל אֱמוּנָה<br>וְיִזְכֶּה לִרְאוֹת פְּנֵי הַשְּׁכִינָה<br>שָׁלֹשׁ פְּעָמִים בַּשָּׁנָה."},
+          {"ref": "58", "kind": "prayer", "role": "chazzan", "text": "הָרַחֲמָן הוּא יְבָרֵךְ הַמָּל בְּשַׂר הָעָרְלָה<br>וּפָרַע וּמָצַץ דְּמֵי הַמִּילָה<br>אִישׁ הַיָּרֵא וְרַךְ הַלֵּבָב עֲבוֹדָתוֹ פְּסוּלָה<br>אִם שְׁלָשׁ אֵֽלֶּה לֹא יַעֲשֶׂה לָהּ."},
+          {"ref": "59", "kind": "prayer", "role": "chazzan", "text": "הָרַחֲמָן הוּא יִשְׁלַח לָֽנוּ מְשִׁיחוֹ הוֹלֵךְ תָּמִים<br>בִּזְכוּת חֲתַן לַמּוּלוֹת דָּמִים<br>לְבַשֵּׂר בְּשׂוֹרוֹת טוֹבוֹת וְנִחוּמִים<br>לְעַם אֶחָד מְפֻזָּר וּמְפֹרָד בֵּין הָעַמִּים."},
+          {"ref": "60", "kind": "prayer", "role": "chazzan", "text": "הָרַחֲמָן הוּא יִשְׁלַח לָֽנוּ כֹּהֵן צֶֽדֶק אֲשֶׁר לֻקַּח לְעֵילֹם<br>עַד הוּכַן כִּסְאוֹ כַּשֶּֽׁמֶשׁ וְיַהֲלֹם<br>וַיָּֽלֶט פָּנָיו בְּאַדַּרְתּוֹ וַיִּגְלֹם<br>בְּרִיתִי הָיְתָה אִתּוֹ הַחַיִּים וְהַשָּׁלוֹם."}
+        ]
+      },
+      "en": {
+        "version": "English Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "translates": ["2"], "text": "<i class=\"instruction\">When the baby is brought in, all stand and say:</i>"},
+          {"ref": "2", "translates": ["2"], "text": "Blessed is he who comes."},
+          {"ref": "3", "translates": ["4"], "text": "<i class=\"instruction\">The mohel (in some congregations, all) say (in Israel omit):</i>"},
+          {"ref": "4", "translates": ["4"], "text": "וַיְדַבֵּר The <small>LORD</small> spoke to Moses, saying: Pinehas the son of Elazar, the son of Aaron the priest, turned back My rage from the children of Israel, when he was zealous for Me among them, and I did not annihilate the children of Israel in My own zeal. And so tell him, that I now give him My covenant for peace."},
+          {"ref": "5", "translates": ["6", "7", "9", "11", "13"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">The following verses, through “</i>"},
+            {"kind": "instruction", "text": "<small><i class=\"instruction\">LORD</i>"},
+            {"kind": "instruction", "text": "</small><i class=\"instruction\">, please, grant us success,” are only said in Israel.</i>"}
+          ]},
+          {"ref": "6", "translates": ["6"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Mohel:</i>"},
+            {"kind": "prayer", "text": " Happy are those You choose and bring near to dwell in Your courts."}
+          ]},
+          {"ref": "7", "translates": ["7"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">All:</i>"},
+            {"kind": "prayer", "text": " May we be sated with the goodness of Your House,"},
+            {"kind": "prayer", "text": " Your holy Temple."}
+          ]},
+          {"ref": "8", "translates": ["9"], "text": "<i class=\"instruction\">The father takes the baby in his hands and says quietly:</i>"},
+          {"ref": "9", "translates": ["9"], "text": "אִם אֶשְׁכָּחֵךְ If I forget you, O Jerusalem, may my right hand forget its skill. May my tongue cling to the roof of my mouth, if I do not remember you, if I do not set Jerusalem above my highest joy."},
+          {"ref": "10", "translates": ["11"], "text": "<i class=\"instruction\">The father says aloud, followed by the congregation:</i>"},
+          {"ref": "11", "translates": ["11"], "text": "Listen, Israel: the <small>LORD</small> is our God, the <small>LORD</small> is One."},
+          {"ref": "12", "translates": ["13"], "text": "<i class=\"instruction\">The Mohel, followed by the congregation, recites each of the following three phrases:</i>"},
+          {"ref": "13", "translates": ["13"], "text": "The <small>LORD</small> is King, the <small>LORD</small> was King, the <small>LORD</small> shall be King for ever and all time.<br><small><br>LORD</small>, please, save us.<br><small>LORD</small>, please, grant us success."},
+          {"ref": "14", "translates": ["15"], "text": "<i class=\"instruction\">The baby is placed on Eliyahu’s seat, and the Mohel says:</i>"},
+          {"ref": "15", "translates": ["15"], "text": "This is the throne of Elijah the prophet, may he be remembered for good."},
+          {"ref": "16", "translates": ["17"], "text": "<i class=\"instruction\">The Mohel continues:</i>"},
+          {"ref": "17", "translates": ["17"], "text": "לִישׁוּעָתְךָ For Your salvation I wait, O <small>LORD</small>. I await Your deliverance, <small>LORD</small>, and I observe Your commandments. Elijah, angel of the covenant, behold: yours is before you. Stand at my right hand and be close to me.<br>I await Your deliverance, <small>LORD</small>. I rejoice in Your word like one who finds much spoil. Those who love Your Torah have great peace, and there is no stumbling block before them. Happy are those You choose and bring near to dwell in Your courts."},
+          {"ref": "18", "translates": ["19"], "text": "<i class=\"instruction\">All respond:</i>"},
+          {"ref": "19", "translates": ["19"], "text": "May we be sated with the goodness of Your House, Your holy Temple."},
+          {"ref": "20", "translates": ["21"], "text": "<i class=\"instruction\">The baby is placed on the knees of the Sandak, and the Mohel says:</i>"},
+          {"ref": "21", "translates": ["21"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe, who has made us holy through His commandments,<br>and has commanded us concerning circumcision."},
+          {"ref": "22", "translates": ["23"], "text": "<i class=\"instruction\">The baby is placed on the knees of the Sandak, and the Mohel says:</i>"},
+          {"ref": "23", "translates": ["23"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe, who has made us holy through His commandments,<br>and has commanded us to bring him [our son] into the covenant of Abraham, our father."},
+          {"ref": "24", "translates": ["25"], "text": "<i class=\"instruction\">In Israel the father adds (some outside Israel add it as well):</i>"},
+          {"ref": "25", "translates": ["25"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe,<br>who has given us life, sustained us, and brought us to this time."},
+          {"ref": "26", "translates": ["27"], "text": "<i class=\"instruction\">All respond:</i>"},
+          {"ref": "27", "translates": ["27"], "text": "אָמֵן Amen. Just as he has entered into the covenant,<br>so may he enter into Torah, marriage and good deeds."},
+          {"ref": "28", "translates": ["29"], "text": "<i class=\"instruction\">After the circumcision has been completed, the Mohel (or another honoree) takes a cup of wine and says:</i>"},
+          {"ref": "29", "translates": ["29"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe, who creates the fruit of the vine."},
+          {"ref": "30", "translates": ["30"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe, who made the beloved one [Isaac] holy from the womb, marked the decree of circumcision in his flesh, and gave his descendants the seal and sign of the holy covenant. As a reward for this, the living God, our Portion, our Rock, did order deliverance from destruction for the beloved of our flesh, for the sake of His covenant that He set in our flesh. Blessed are You, <small>LORD</small>, who establishes the covenant."},
+          {"ref": "31", "translates": ["31"], "parts": [
+            {"kind": "prayer", "text": "אֱלֹהֵֽינוּ Our God and God of our fathers,"},
+            {"kind": "prayer", "text": " preserve this child to his father and mother,"},
+            {"kind": "prayer", "text": " and let his name be called in Israel ("},
+            {"kind": "instruction", "text": "<i>baby’s name</i>"},
+            {"kind": "prayer", "text": " son of "},
+            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "prayer", "text": "). May the father rejoice in the issue of his body,"},
+            {"kind": "prayer", "text": " and the mother be glad with the fruit of her womb,"},
+            {"kind": "prayer", "text": " as is written,"},
+            {"kind": "prayer", "text": " “May your father and mother rejoice,"},
+            {"kind": "prayer", "text": " and she who bore you be glad.” And it is said,"},
+            {"kind": "prayer", "text": " “Then I passed by you and saw you downtrodden in your blood,"},
+            {"kind": "prayer", "text": " and I said to you: In your blood,"},
+            {"kind": "prayer", "text": " live;"},
+            {"kind": "prayer", "text": " and I said to you: In your blood,"},
+            {"kind": "prayer", "text": " live.”"}
+          ]},
+          {"ref": "32", "translates": ["32"], "text": "וְנֶאֱמַר And it is said, “He remembered His covenant for ever; the word He ordained for a thousand generations; the covenant He made with Abraham and gave on oath to Isaac, confirming it as a statute for Jacob, an everlasting covenant for Israel.” And it is said, “And Abraham circumcised his son Isaac at the age of eight days, as God had commanded him.” Thank the <small>LORD</small> for He is good; His loving-kindness is for ever."},
+          {"ref": "33", "translates": ["34"], "text": "<i class=\"instruction\">All respond:</i>"},
+          {"ref": "34", "translates": ["34"], "text": "Thank the <small>LORD</small> for He is good; His loving-kindness is for ever."},
+          {"ref": "35", "translates": ["36"], "text": "<i class=\"instruction\">The Mohel (or honoree) continues:</i>"},
+          {"ref": "36", "translates": ["36"], "parts": [
+            {"kind": "prayer", "text": "May this child ("},
+            {"kind": "instruction", "text": "<i>baby’s name</i>"},
+            {"kind": "prayer", "text": " son of "},
+            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "prayer", "text": ") become great. Just as he has entered into the covenant,"},
+            {"kind": "prayer", "text": " so may he enter into Torah,"},
+            {"kind": "prayer", "text": " marriage and good deeds."}
+          ]},
+          {"ref": "37", "translates": [], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">The Sandak also drinks some of the wine; some drops are given to the baby.</i>"},
+            {"kind": "instruction", "text": "<br><i class=\"instruction\">The cup is then sent to the mother, who also drinks from it.</i>"}
+          ]},
+          {"ref": "38", "translates": [], "text": "<i class=\"instruction\">All say Aleinu on page 180, and Mourner’s Kaddish on page 182.</i>"},
+          {"ref": "39", "translates": ["39"], "text": "<small>BIRKAT HAMAZON AT A BRIT MILA</small>"},
+          {"ref": "40", "translates": ["40"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
+            {"kind": "prayer", "text": " Gentlemen,"},
+            {"kind": "prayer", "text": " let us say grace.<br>"},
+            {"kind": "instruction", "text": "<i class=\"instruction\">Others</i>"},
+            {"kind": "prayer", "text": " May the name of the <small>LORD</small> be blessed from now and for ever.<br>"},
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
+            {"kind": "prayer", "text": " May the name of the <small>LORD</small> be blessed from now and for ever."}
+          ]},
+          {"ref": "41", "translates": ["41"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader then others</i>"},
+            {"kind": "prayer", "text": " We give thanks to Your name among the faithful.<br>Blessed are you to the <small>LORD</small>."}
+          ]},
+          {"ref": "42", "translates": ["42"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
+            {"kind": "prayer", "text": " With permission of the Almighty,"},
+            {"kind": "prayer", "text": " awesome and revered,"},
+            {"kind": "prayer", "text": "<br>a refuge in times of trouble,"},
+            {"kind": "prayer", "text": "<br>Almighty,"},
+            {"kind": "prayer", "text": " girded with strength –<br>majestic on high,"},
+            {"kind": "prayer", "text": " the <small>LORD</small>."}
+          ]},
+          {"ref": "43", "translates": ["43"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Others</i>"},
+            {"kind": "prayer", "text": " We give thanks to Your name among the faithful.<br>Blessed are you to the <small>LORD</small>."}
+          ]},
+          {"ref": "44", "translates": ["44"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
+            {"kind": "prayer", "text": " With permission of the holy Torah,"},
+            {"kind": "prayer", "text": "<br>pure and clear,"},
+            {"kind": "prayer", "text": "<br>given to us as a heritage<br>by Moses the servant of the <small>LORD</small>."}
+          ]},
+          {"ref": "45", "translates": ["45"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Others</i>"},
+            {"kind": "prayer", "text": " We give thanks to Your name among the faithful.<br>Blessed are you to the <small>LORD</small>."}
+          ]},
+          {"ref": "46", "translates": ["46"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
+            {"kind": "prayer", "text": " With permission of the priests,"},
+            {"kind": "prayer", "text": " the Levites,"},
+            {"kind": "prayer", "text": "<br>I call upon the God of the Hebrews,"},
+            {"kind": "prayer", "text": "<br>declaring His glory to the furthest isles,"},
+            {"kind": "prayer", "text": "<br>and offering blessings to the <small>LORD</small>."}
+          ]},
+          {"ref": "47", "translates": ["47"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Others</i>"},
+            {"kind": "prayer", "text": " We give thanks to Your name among the faithful.<br>Blessed are you to the <small>LORD</small>."}
+          ]},
+          {"ref": "48", "translates": ["48"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
+            {"kind": "prayer", "text": " With the permission of the rabbis,"},
+            {"kind": "prayer", "text": " teachers and friends,"},
+            {"kind": "prayer", "text": "<br>I open my lips with song,"},
+            {"kind": "prayer", "text": "<br>saying from my innermost being:<br>“Blessed is he that comes in the name of the <small>LORD</small>.”"}
+          ]},
+          {"ref": "49", "translates": [], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Others</i>"},
+            {"kind": "prayer", "text": " We give thanks to Your name among the faithful.<br>Blessed are you to the <small>LORD</small>."}
+          ]},
+          {"ref": "50", "translates": [], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
+            {"kind": "prayer", "text": " With your permission,"},
+            {"kind": "prayer", "text": " my masters and teachers,"},
+            {"kind": "prayer", "text": " let us bless ("},
+            {"kind": "instruction", "text": "<i class=\"instruction\">in a minyan: </i>"},
+            {"kind": "prayer", "text": "our God,"},
+            {"kind": "prayer", "text": ") the One from whose food we have eaten.<br>"},
+            {"kind": "instruction", "text": "<i class=\"instruction\">Others</i>"},
+            {"kind": "prayer", "text": " Blessed be ("},
+            {"kind": "instruction", "text": "<i class=\"instruction\">in a minyan:</i>"},
+            {"kind": "prayer", "text": " our God,"},
+            {"kind": "prayer", "text": ") the One from whose food we have eaten,"},
+            {"kind": "prayer", "text": " and by whose goodness we live.<br>"},
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
+            {"kind": "prayer", "text": " Blessed be ("},
+            {"kind": "instruction", "text": "<i class=\"instruction\">in a minyan:</i>"},
+            {"kind": "prayer", "text": " our God,"},
+            {"kind": "prayer", "text": ") the One from whose food we have eaten,"},
+            {"kind": "prayer", "text": " and by whose goodness we live.<br>Blessed be He,"},
+            {"kind": "prayer", "text": " and blessed be His name."}
+          ]},
+          {"ref": "51", "translates": [], "text": "<i class=\"instruction\">Continue with Birkat HaMazon on page 978 until “in the eyes of God and man” on page 990. Then continue:</i>"},
+          {"ref": "52", "translates": [], "text": "<i class=\"instruction\">Someone other than the father says:</i>"},
+          {"ref": "53", "translates": [], "text": "הָרַחֲמָן May the Compassionate One bless the father and mother of this child.<br>May they be worthy to raise him, educate him, and train him in wisdom.<br>From this eighth day onward may his blood be accepted,<br>and may the <small>LORD</small> his God be with him always."},
+          {"ref": "54", "translates": [], "text": "<i class=\"instruction\">Someone other than the Sandak says:</i>"},
+          {"ref": "55", "translates": [], "text": "הָרַחֲמָן May the Compassionate One bless him [the Sandak]<br>who assisted in the covenant of circumcision<br>and rejoiced to do this pious deed.<br>May God doubly reward him for his deed,<br>exalting him ever higher."},
+          {"ref": "56", "translates": [], "text": "הָרַחֲמָן May the Compassionate One bless the tender child, circumcised on his eighth day.<br>May his heart and hands be firm with God,<br>and may he be worthy to witness the Divine Presence<br>three times a year."},
+          {"ref": "57", "translates": [], "text": "<i class=\"instruction\">Someone other than the Mohel says:</i>"},
+          {"ref": "58", "translates": [], "text": "הָרַחֲמָן May the Compassionate One bless him who performed the circumcision,<br>and fulfilled every part of the precept.<br>The service of the faint-hearted would not be acceptable<br>if he failed to perform<br>the three essentials of the precept."},
+          {"ref": "59", "translates": [], "text": "הָרַחֲמָן May the Compassionate One send us His anointed, blameless in life,<br>through the merit of this child<br>groomed by the blood of circumcision,<br>to proclaim good news and consolations<br>to the unique people scattered<br>and dispersed among the nations."},
+          {"ref": "60", "translates": [], "text": "הָרַחֲמָן May the Compassionate One send us the righteous priest,<br>who was taken into hiding,<br>until a throne, bright as the sun, radiant as a diamond,<br>is prepared for him;<br>the prophet who covered his face with his mantle<br>and wrapped himself in it [when God declared]:<br>My covenant is with him for life and peace."},
+          {"ref": "61", "translates": [], "text": "<i class=\"instruction\">Continue with “May the Compassionate One make us worthy of the Messianic Age” on page 990.</i>"},
+          {"ref": "62", "translates": [], "text": "<i class=\"instruction\">On Shabbat, Rosh Ḥodesh or Yom Tov, continue with the appropriate “May the Compassionate One” on page 990.</i>"}
+        ]
+      }
+    },
+    {
+      "path": "The Cycle of Life/Pidyon HaBen",
+      "title": "סדר פדיון הבן",
+      "node": "lifecycle.pidyon_haben",
+      "service": "none",
+      "he": {
+        "version": "Hebrew Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "2", "kind": "instruction", "en": "The father, presenting his child to the Kohen, declares:", "text": "זֶה בְּנִי בְכוֹרִי הוּא פֶּֽטֶר רֶֽחֶם לְאִמּוֹ<br>וְהַקָּדוֹשׁ בָּרוּךְ הוּא צִוָּה לִפְדּוֹתוֹ<br>שֶׁנֶּאֱמַר<br>וּפְדוּיָו מִבֶּן־חֹֽדֶשׁ תִּפְדֶּה, בְּעֶרְכְּךָ כֶּֽסֶף חֲמֵֽשֶׁת שְׁקָלִים בְּשֶֽׁקֶל הַקֹּֽדֶשׁ, עֶשְׂרִים גֵּרָה הוּא׃"},
+          {"ref": "3", "kind": "prayer", "role": "individual", "text": "וְנֶאֱמַר<br>קַדֶּשׁ־לִי כָל־בְּכוֹר פֶּֽטֶר כָּל־רֶֽחֶם בִּבְנֵי יִשְׂרָאֵל בָּאָדָם וּבַבְּהֵמָה, לִי הוּא׃"},
+          {"ref": "5", "kind": "instruction", "en": "The Kohen checks with the mother that this is her firstborn, and then asks if she has miscarried before this child. If her answer is no, he asks the father:", "text": "מַאי בָּעֵית טְפֵי<br>לִתֵּן לִי בִּנְךָ בְכוֹרְךָ שֶׁהוּא פֶּֽטֶר רֶֽחֶם לְאִמּוֹ<br>אוֹ בָּעֵית לִפְדּוֹתוֹ בְּעַד חָמֵשׁ סְלָעִים<br>כְּדִמְחַיַּבְתְּ מִדְּאוֹרַיְתָא."},
+          {"ref": "7", "kind": "instruction", "en": "The father replies:", "text": "חָפֵץ אֲנִי לִפְדּוֹת אֶת בְּנִי<br>וְהֵילָךְ דְּמֵי פִדְיוֹנוֹ כְּדִמְחַיַּֽבְנָא מִדְּאוֹרַיְתָא."},
+          {"ref": "9", "kind": "instruction", "en": "Holding the redemption money, the father says:", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם<br>אֲשֶׁר קִדְּשָֽׁנוּ בְּמִצְוֹתָיו וְצִוָּֽנוּ עַל פִּדְיוֹן הַבֵּן."},
+          {"ref": "10", "kind": "prayer", "role": "individual", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם<br>שֶׁהֶחֱיָֽנוּ וְקִיְּמָֽנוּ וְהִגִּיעָֽנוּ לַזְּמַן הַזֶּה."},
+          {"ref": "12", "kind": "instruction", "en": "The redemption money is given to the Kohen, who then returns the child to his father. The Kohen takes a cup of wine and says:", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הַגָּֽפֶן."},
+          {"ref": "14", "kind": "instruction", "en": "Placing his right hand on the head of the child, the Kohen blesses him as follows:", "text": "יְשִׂמְךָ אֱלֹהִים כְּאֶפְרַֽיִם וְכִמְנַשֶּׁה׃<br>יְבָרֶכְךָ יהוה וְיִשְׁמְרֶֽךָ׃<br>יָאֵר יהוה פָּנָיו אֵלֶֽיךָ וִיחֻנֶּֽךָּ׃<br>יִשָּׂא יהוה פָּנָיו אֵלֶֽיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃<br>יהוה שֹׁמְרֶֽךָ, יהוה צִלְּךָ עַל־יַד יְמִינֶֽךָ׃<br>יהוה יִשְׁמָרְךָ מִכָּל־רָע, יִשְׁמֹר אֶת־נַפְשֶֽׁךָ׃<br>כִּי אֹֽרֶךְ יָמִים וּשְׁנוֹת חַיִּים וְשָׁלוֹם יוֹסִֽיפוּ לָךְ׃"}
+        ]
+      },
+      "en": {
+        "version": "English Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "translates": ["2"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">A firstborn male child, must be redeemed on the 31st day of his birth – unless the father is a Kohen or Levi, or the mother is a daughter of a Kohen or a Levi. If the 31st day falls on Shabbat or Yom Tov, the ceremony is postponed to the following weekday.</i>"},
+            {"kind": "instruction", "text": "<br><i class=\"instruction\">The father, presenting his child to the Kohen, declares:</i>"}
+          ]},
+          {"ref": "2", "translates": ["2"], "text": "זֶה This is my firstborn son, the first issue of his mother’s womb.<br>The Holy One, blessed be He, has commanded us to redeem him,<br>as is said,<br>“Those who are to be redeemed, you must redeem from the age of one month, at the fixed price of five shekels of silver by the sacred standard, which is twenty gerahs to the shekel.”"},
+          {"ref": "3", "translates": ["3"], "text": "And it is also stated,<br>“Consecrate to Me every firstborn; the first of every womb among the people of Israel, whether of man or beast, belongs to Me.”"},
+          {"ref": "4", "translates": ["5"], "text": "<i class=\"instruction\">The Kohen checks with the mother that this is her firstborn, and then asks if she has miscarried before this child. If her answer is no, he asks the father:</i>"},
+          {"ref": "5", "translates": ["5"], "text": "מַאי Which do you prefer:<br>to give me your firstborn son,<br>the first birth of his mother,<br>or to redeem him for five selas<br>as you are bound to do according to the Torah?"},
+          {"ref": "6", "translates": ["7"], "text": "<i class=\"instruction\">The father replies:</i>"},
+          {"ref": "7", "translates": ["7"], "text": "חָפֵץ I wish to redeem my son.<br>I present you with the cost of his redemption<br>which I am bound to give according to the Torah."},
+          {"ref": "8", "translates": ["9"], "text": "<i class=\"instruction\">Holding the redemption money, the father says:</i>"},
+          {"ref": "9", "translates": ["9"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe, who has made us holy through His commandments,<br>and has commanded us concerning the redemption of a son."},
+          {"ref": "10", "translates": ["10"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe,<br>who has given us life, sustained us, and brought us to this time."},
+          {"ref": "11", "translates": ["12"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">The redemption money is given to the Kohen, who then returns the child to his father.</i>"},
+            {"kind": "instruction", "text": "<br><i class=\"instruction\">The Kohen takes a cup of wine and says:</i>"}
+          ]},
+          {"ref": "12", "translates": ["12"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe,<br>who creates the fruit of the vine."},
+          {"ref": "13", "translates": ["14"], "text": "<i class=\"instruction\">Placing his right hand on the head of the child, the Kohen blesses him as follows:</i>"},
+          {"ref": "14", "translates": ["14"], "text": "יְשִׂמְךָ May God make you like Ephraim and Manasseh.<br>May the <small>LORD</small> bless you and protect you.<br>May the <small>LORD</small> make His face shine on you and be gracious to you.<br>May the <small>LORD</small> turn His face toward you and grant you peace.<br>The <small>LORD</small> is your Guardian; the <small>LORD</small> is your protection at your right hand.<br>The <small>LORD</small> will guard you against all harm. He will guard your life.<br>For length of days, years of life, and peace<br>He will increase for you."}
+        ]
+      }
+    },
+    {
+      "path": "The Cycle of Life/Prayer after Childbirth",
+      "title": "סדר תפילה ליולדת",
+      "node": "lifecycle.childbirth",
+      "service": "none",
+      "he": {
+        "version": "Hebrew Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "2", "kind": "instruction", "en": "On entering the synagogue, say:", "text": "וַאֲנִי בְּרֹב חַסְדְּךָ אָבוֹא בֵיתֶֽךָ<br>אֶשְׁתַּחֲוֶה אֶל־הֵיכַל־קָדְשְׁךָ בְּיִרְאָתֶֽךָ׃"},
+          {"ref": "3", "kind": "prayer", "text": "אָהַֽבְתִּי, כִּי־יִשְׁמַע יהוה, אֶת־קוֹלִי תַּחֲנוּנָי׃<br>כִּי־הִטָּה אָזְנוֹ לִי, וּבְיָמַי אֶקְרָא׃<br>אֲפָפֽוּנִי חֶבְלֵי־מָֽוֶת, וּמְצָרֵי שְׁאוֹל מְצָאֽוּנִי, צָרָה וְיָגוֹן אֶמְצָא׃<br>וּבְשֵׁם־יהוה אֶקְרָא, אָנָּה יהוה מַלְּטָה נַפְשִׁי׃<br>חַנּוּן יהוה וְצַדִּיק, וֵאלֹהֵֽינוּ מְרַחֵם׃<br>שֹׁמֵר פְּתָאיִם יהוה, דַּלּוֹתִי וְלִי יְהוֹשִֽׁיעַ׃<br>שׁוּבִי נַפְשִׁי לִמְנוּחָֽיְכִי, כִּי־יהוה גָּמַל עָלָֽיְכִי׃<br>כִּי חִלַּֽצְתָּ נַפְשִׁי מִמָּֽוֶת, אֶת־עֵינִי מִן־דִּמְעָה, אֶת־רַגְלִי מִדֶּֽחִי׃<br>אֶתְהַלֵּךְ לִפְנֵי יהוה, בְּאַרְצוֹת הַחַיִּים׃<br>הֶאֱמַֽנְתִּי כִּי אֲדַבֵּר, אֲנִי עָנִֽיתִי מְאֹד׃<br>אֲנִי אָמַֽרְתִּי בְחָפְזִי, כָּל־הָאָדָם כֹּזֵב׃"},
+          {"ref": "4", "kind": "prayer", "text": "מָה־אָשִׁיב לַיהוה, כָּל־תַּגְמוּלֽוֹהִי עָלָי׃<br>לְךָ־אֶזְבַּח זֶֽבַח תּוֹדָה, וּבְשֵׁם יהוה אֶקְרָא׃<br>נְדָרַי לַיהוה אֲשַׁלֵּם, נֶגְדָה־נָּא לְכָל־עַמּוֹ׃<br>בְּחַצְרוֹת בֵּית יהוה, בְּתוֹכֵֽכִי יְרוּשָׁלִָֽם, הַלְלוּיָהּ׃"},
+          {"ref": "6", "kind": "prayer", "role": "head_of_household", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם<br>הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת, שֶׁגְּמָלַֽנִי כָּל טוֹב."},
+          {"ref": "8", "kind": "prayer", "role": "congregation", "text": "אָמֵן. מִי שֶׁגְּמָלֵךְ כָּל טוֹב, הוּא יִגְמְלֵךְ כָּל טוֹב, סֶֽלָה."},
+          {"ref": "9", "kind": "prayer", "role": "head_of_household", "text": "אָנָּא הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא, בְּרֹב חַסְדְּךָ אָבוֹא בֵיתֶֽךָ, לִזְבֹּֽחַ לְךָ זֶֽבַח תּוֹדָה עַל כָּל הַטּוֹבוֹת אֲשֶׁר גָּמַֽלְתָּ עָלָי. אֲפָפֽוּנִי חֲבָלִים וְצִירִים אֲחָזֽוּנִי,<br>בַּצַּר לִי קָרָֽאתִי אֵלֶֽיךָ, וְשָׁמַֽעְתָּ מֵהֵיכָלְךָ קוֹלִי וְהָיִֽיתָ בְּעוֹזְרָי, רִפֵּֽאתָ לְכָל תַּחֲלוּאַי, עִטַּרְתַּֽנִי חֶֽסֶד וְרַחֲמִים, עַד הֵֽנָּה עֲזָרֽוּנִי רַחֲמֶֽיךָ, אָנָּא אַל תִּטְּשֵֽׁנִי לָנֶֽצַח. הוֹאֵל אֱלֽוֹהַּ, וּבָרֵךְ אֶת אֲמָתֶֽךָ, חֲזְִּקֵֽנִי וְאַמְּצֵֽנִי, אוֹתִי וְאֶת בַּעְלִי, וּנְגַדֵּל אֶת"},
+          {"ref": "10", "kind": "prayer", "role": "head_of_household", "gloss": "For a boy", "text": "הַיֶּֽלֶד אֲשֶׁר יֻלַּד לָֽנוּ, לְיִרְאָתְךָ וּלְעָבְדְּךָ בֶּאֱמֶת, וְלָלֶֽכֶת אֹֽרַח מֵישָׁרִים. שְׁמֹר אֶת הַיֶּֽלֶד הָרַךְ בְּכָל דְּרָכָיו, חָנֵּֽהוּ דֵּעָה בִּינָה וְהַשְׂכֵּל, וְתֵן חֶלְקוֹ בְּתוֹרָתֶֽךָ, וִיקַדֵּשׁ אֶת שִׁמְךָ הַגָּדוֹל, וְהָיָה לָֽנוּ לְמֵשִׁיב נֶֽפֶשׁ בִּימֵי שֵׂיבָתֵֽנוּ. וַאֲנִי תְפִלָּתִי־לְךָ יהוה עֵת רָצוֹן, אֱלֹהִים בְּרָב־חַסְדֶּֽךָ, עֲנֵֽנִי בֶּאֱמֶת יִשְׁעֶֽךָ:"},
+          {"ref": "11", "kind": "prayer", "role": "head_of_household", "gloss": "For a girl", "text": "הַיַּלְדָּה אֲשֶׁר יֻלְּדָה לָֽנוּ, לְיִרְאָתְךָ וּלְעָבְדְּךָ בֶּאֱמֶת, וְלָלֶֽכֶת אֹֽרַח מֵישָׁרִים. שְׁמֹר אֶת הַיַּלְדָּה הָרַכָּה בְּכָל דְּרָכֶֽיהָ, חָנֶּֽהָ דֵּעָה בִּינָה וְהַשְׂכֵּל, וְתֵן חֶלְקָהּ בְּתוֹרָתֶֽךָ, וּתְקַדֵּשׁ אֶת שִׁמְךָ הַגָּדוֹל, וְהָיְתָה לָֽנוּ לִמְשִׁיבַת נֶֽפֶשׁ בִּימֵי שֵׂיבָתֵֽנוּ. וַאֲנִי תְפִלָּתִי־לְךָ יהוה עֵת רָצוֹן, אֱלֹהִים בְּרָב־חַסְדֶּֽךָ, עֲנֵֽנִי בֶּאֱמֶת יִשְׁעֶֽךָ:"},
+          {"ref": "13", "kind": "prayer", "role": "chazzan", "gloss": "Priestly blessing (if baby is brought to synagogue)", "text": "יְבָרֶכְךָ יהוה וְיִשְׁמְרֶֽךָ׃ יָאֵר יהוה פָּנָיו אֵלֶֽיךָ וִיחֻנֶּֽךָּ׃<br>יִשָּׂא יהוה פָּנָיו אֵלֶֽיךָ, וְיָשֵׂם לְךָ שָׁלוֹם׃"}
+        ]
+      },
+      "en": {
+        "version": "English Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "translates": ["2"], "text": "<i class=\"instruction\">On entering the synagogue, say:</i>"},
+          {"ref": "2", "translates": ["2"], "text": "וַאֲנִי As for me, by Your great love,<br>I will come into Your House.<br>I will bow down toward Your holy Temple in awe of You."},
+          {"ref": "3", "translates": ["3"], "text": "אָהַֽבְתִּי I love the <small>LORD</small>, for He hears my voice, my pleas.<br>He turns His ear to me whenever I call.<br>The bonds of death encompassed me,<br>the anguish of the grave came upon me,<br>I was overcome by trouble and sorrow.<br>Then I called on the name of the <small>LORD</small>: “<small>LORD</small>, I pray, save my life.”<br>Gracious is the <small>LORD</small>, and righteous; our God is full of compassion.<br>The <small>LORD</small> protects the simple hearted.<br>When I was brought low, He saved me.<br>My soul, be at peace once more, for the <small>LORD</small> has been good to you.<br>For You have rescued me from death,<br>my eyes from weeping, my feet from stumbling.<br>I shall walk in the presence of the <small>LORD</small> in the land of the living.<br>I had faith, even when I said, “I am greatly afflicted,”<br>even when I said rashly, “All men are liars.”"},
+          {"ref": "4", "translates": ["4"], "text": "מָה־אָשִׁיב How can I repay the <small>LORD</small> for all His goodness to me?<br>To You I shall bring a thanksgiving-offering<br>and call on the <small>LORD</small> by name.<br>I will fulfill my vows to the <small>LORD</small> in the presence of all His people,<br>in the courts of the House of the <small>LORD</small>,<br>in your midst, Jerusalem. Halleluya!"},
+          {"ref": "5", "translates": ["6"], "text": "<i class=\"instruction\">The mother says:</i>"},
+          {"ref": "6", "translates": ["6"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe,<br>who bestows good things on the unworthy, who has bestowed on me much good."},
+          {"ref": "7", "translates": ["8"], "text": "<i class=\"instruction\">All respond:</i>"},
+          {"ref": "8", "translates": ["8"], "text": "אָמֵן Amen. May He who bestowed much good on you, continue to bestow on you much good. Selah."},
+          {"ref": "9", "translates": ["9"], "text": "אָנָּא O great, mighty and revered God. By Your great love I now come into Your House, to offer You a thanksgiving-offering for all the good You have bestowed on me. Travail beset me, pains seized me. In my distress I cried to You, and from Your habitation You heard my voice and helped me. You healed all my sickness, and crowned me with kindness and compassion. Until now Your mercy has helped me. I pray to You, God, never forsake me. Bestow Your blessing upon Your handmaid. Strengthen and support me together with my husband, that we may raise"},
+          {"ref": "10", "translates": ["10"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">For a boy:</i>"},
+            {"kind": "prayer", "text": " הַיֶּֽלֶד the boy that has been born to us,"},
+            {"kind": "prayer", "text": " to revere You and serve You in truth,"},
+            {"kind": "prayer", "text": " and to walk in the path of righteousness. Protect our tender child in all his ways. Favor him with knowledge,"},
+            {"kind": "prayer", "text": " understanding and discernment,"},
+            {"kind": "prayer", "text": " and let his portion be in Your Torah,"},
+            {"kind": "prayer", "text": " so that he may sanctify Your great name,"},
+            {"kind": "prayer", "text": " and become a comfort to us as we grow old. As for me,"},
+            {"kind": "prayer", "text": " may my prayer come to You,"},
+            {"kind": "prayer", "text": " <small>LORD</small>,"},
+            {"kind": "prayer", "text": " at a time of favor. O God,"},
+            {"kind": "prayer", "text": " in Your great love,"},
+            {"kind": "prayer", "text": " answer me with Your faithful salvation."}
+          ]},
+          {"ref": "11", "translates": ["11"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">For a girl:</i>"},
+            {"kind": "prayer", "text": " הַיַּלְדָּה the girl that has been born to us,"},
+            {"kind": "prayer", "text": " to revere You and serve You in truth,"},
+            {"kind": "prayer", "text": " and to walk in the path of righteousness. Protect our tender child in all her ways. Favor her with knowledge,"},
+            {"kind": "prayer", "text": " understanding and discernment,"},
+            {"kind": "prayer", "text": " and let her portion be in Your Torah,"},
+            {"kind": "prayer", "text": " so that she may sanctify Your great name,"},
+            {"kind": "prayer", "text": " and become a comfort to us as we grow old. As for me,"},
+            {"kind": "prayer", "text": " may my prayer come to You,"},
+            {"kind": "prayer", "text": " <small>LORD</small>,"},
+            {"kind": "prayer", "text": " at a time of favor. O God,"},
+            {"kind": "prayer", "text": " in Your great love,"},
+            {"kind": "prayer", "text": " answer me with Your faithful salvation."}
+          ]},
+          {"ref": "12", "translates": ["13"], "text": "<i class=\"instruction\">If the baby is brought to the synagogue, the Rabbi says the following blessings over him/her:</i>"},
+          {"ref": "13", "translates": ["13"], "text": "יְבָרֶכְךָ May the <small>LORD</small> bless you and protect you.<br>May the <small>LORD</small> make His face shine on you and be gracious to you.<br>May the <small>LORD</small> turn His face toward you and grant you peace."}
+        ]
+      }
+    },
+    {
+      "path": "The Cycle of Life/Zeved HaBat",
+      "title": "סדר זבד הבת",
+      "node": "x.zeved_habat",
+      "service": "none",
+      "he": {
+        "version": "Hebrew Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "2", "kind": "prayer", "text": "יוֹנָתִי בְּחַגְוֵי הַסֶּֽלַע, בְּסֵֽתֶר הַמַּדְרֵגָה<br>הַרְאִֽינִי אֶת־מַרְאַֽיִךְ, הַשְׁמִיעִֽנִי אֶת־קוֹלֵךְ<br>כִּי־קוֹלֵךְ עָרֵב וּמַרְאֵיךְ נָאוֶה׃"},
+          {"ref": "4", "kind": "prayer", "when": "if_firstDaughter", "text": "אַחַת הִיא יוֹנָתִי תַמָּתִי<br>אַחַת הִיא לְאִמָּהּ, בָּרָה הִיא לְיוֹלַדְתָּהּ<br>רָאֽוּהָ בָנוֹת וַיְאַשְּׁרֽוּהָ, מְלָכוֹת וּפִילַגְשִׁים וַיְהַלְלֽוּהָ׃"},
+          {"ref": "6", "kind": "prayer", "text": "מִי שֶׁבֵּרַךְ אֲבוֹתֵֽינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב<br>מֹשֶׁה וְאַהֲרֹן דָּוִד וּשְׁלֹמֹה, שָׂרָה רִבְקָה רָחֵל וְלֵאָה<br>הוּא יְבָרֵךְ אֶת הָאִשָּׁה הַיּוֹלֶֽדֶת (<i class=\"instruction>פלונית</i> בַּת <i class=\"instruction>פלונית</i>)"},
+          {"ref": "7", "kind": "prayer", "text": "וְאֶת בִּתָּהּ (<i class=\"instruction>פלונית</i> בַּת <i class=\"instruction\">פלוני</i>) שֶׁנּוֹלְדָה לָהּ בְּמַזָּל טוֹב."},
+          {"ref": "8", "kind": "prayer", "text": "וְאֶת בִּתָּהּ שֶׁנּוֹלְדָה לָהּ בְּמַזָּל טוֹב<br>וְיִקָּרֵא שְׁמָהּ בְּיִשְׂרָאֵל (<i class=\"instruction>פלונית</i> בַּת <i class=\"instruction\">פלוני</i>)."},
+          {"ref": "9", "kind": "prayer", "text": "אָנָּא בָּרֵךְ אֶת אָבִֽיהָ וְאֶת אִמָּהּ<br>וְיִזְכּוּ לְגַדְּלָהּ לְתוֹרָה וּלְחֻפָּה וּלְמַעֲשִׂים טוֹבִים, וְנֹאמַר אָמֵן."},
+          {"ref": "11", "kind": "prayer", "text": "יְשִׂמֵךְ אֱלֹהִים כְּשָׂרָה רִבְקָה רָחֵל וְלֵאָה.<br>יְבָרֶכְךָ יהוה וְיִשְׁמְרֶֽךָ׃<br>יָאֵר יהוה פָּנָיו אֵלֶֽיךָ וִיחֻנֶּֽךָּ׃<br>יִשָּׂא יהוה פָּנָיו אֵלֶֽיךָ, וְיָשֵׂם לְךָ שָׁלוֹם׃"},
+          {"ref": "12", "kind": "prayer", "text": "וִיהִי רָצוֹן מִלִּפְנֵי אָבִֽינוּ שֶׁבַּשָּׁמַֽיִם, שֶׁיִּתֵּן בְּלִבֵּךְ אַהֲבָתוֹ וְיִרְאָתוֹ<br>וְתִהְיֶה יִרְאַת יהוה עַל פָּנַֽיִךְ כָּל יָמַֽיִךְ שֶׁלֹּא תֶחֱטָֽאִי<br>וִיהִי חֶשְׁקֵךְ בַּתּוֹרָה וּבַמִּצְוֹת.<br>עֵינַֽיִךְ לְנֹֽכַח יַבִּֽיטוּ, פִּיךְ יְדַבֵּר חָכְמוֹת וְלִבֵּךְ יֶהְגֶּה אֵימוֹת<br>יָדַֽיִךְ יַעַסְקוּ בְמִצְוֹת<br>וְרַגְלַֽיִךְ יָרֽוּצוּ לַעֲשׂוֹת רְצוֹן אָבִיךְ שֶׁבַּשָּׁמַֽיִם."},
+          {"ref": "14", "kind": "prayer", "text": "הָאֱלֹהִים אֲשֶׁר הִתְהַלְּכוּ אֲבֹתַי לְפָנָיו, אַבְרָהָם וְיִצְחָק<br>הָאֱלֹהִים הָרֹעֶה אֹתִי, מֵעוֹדִי עַד־הַיּוֹם הַזֶּה׃<br>הַמַּלְאָךְ הַגֹּאֵל אֹתִי מִכָּל־רָע, יְבָרֵךְ אֶת־הַנְּעָרִים<br>וְיִקָּרֵא בָהֶם שְׁמִי, וְשֵׁם אֲבֹתַי אַבְרָהָם וְיִצְחָק<br>וְיִדְגּוּ לָרֹב בְּקֶֽרֶב הָאָֽרֶץ׃"},
+          {"ref": "16", "kind": "prayer", "text": "אֲחֹתֵֽנוּ, אַתְּ הֲיִי לְאַלְפֵי רְבָבָה׃"}
+        ]
+      },
+      "en": {
+        "version": "English Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "translates": [], "kind": "instruction", "en": "The mother or father says:", "gloss": "This instruction is only in English", "text": "<i class=\"instruction\">The mother or father says:</i>"},
+          {"ref": "2", "translates": ["2"], "kind": "prayer", "text": "יוֹנָתִי My dove in the clefts of the rock,<br>in the hiding places of the mountain side,<br>show me your face, let me hear your voice;<br>for your voice is sweet, and your face is lovely."},
+          {"ref": "3", "translates": [], "kind": "instruction", "en": "If this is their first daughter, they add:", "gloss": "Conditional instruction only in English", "text": "<i class=\"instruction\">If this is their first daughter, they add:</i>"},
+          {"ref": "4", "translates": ["4"], "kind": "prayer", "when": "if_firstDaughter", "text": "אַחַת There is one alone, my dove, my perfect one,<br>her mother’s only child,<br>the favorite of the one who bore her.<br>Maidens see her and called her blessed;<br>queens and concubines praise her."},
+          {"ref": "5", "translates": [], "kind": "instruction", "en": "The Rabbi says:", "gloss": "This instruction is only in English", "text": "<i class=\"instruction\">The Rabbi says:</i>"},
+          {"ref": "6", "translates": ["6"], "parts": [
+            {"kind": "prayer", "text": "מִי שֶׁבֵּרַךְ He who blessed our ancestors,"},
+            {"kind": "prayer", "text": "<br>Abraham,"},
+            {"kind": "prayer", "text": " Isaac and Jacob,"},
+            {"kind": "prayer", "text": " Moses and Aaron,"},
+            {"kind": "prayer", "text": " David and Solomon,"},
+            {"kind": "prayer", "text": "<br>Sarah,"},
+            {"kind": "prayer", "text": " Rebecca,"},
+            {"kind": "prayer", "text": " Rachel and Leah –<br>may He bless ("},
+            {"kind": "prayer", "text": "<i>mother’s name</i>"},
+            {"kind": "prayer", "text": " daughter of "},
+            {"kind": "prayer", "text": "<i>her mother’s name</i>"},
+            {"kind": "prayer", "text": "),"},
+            {"kind": "prayer", "text": "<br>who has given birth."}
+          ]},
+          {"ref": "7", "translates": [], "parts": [
+            {"kind": "instruction", "en": "If the baby has already been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": "<i class=\"instruction\">If the baby has already been named in the synagogue:</i>"},
+            {"kind": "prayer", "when": "if_namedInSynagogue", "en": "If the baby has already been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": " and her newborn daughter,"},
+            {"kind": "instruction", "en": "If the baby has already been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": " ("},
+            {"kind": "instruction", "en": "If the baby has already been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": "<i>baby’s name</i>"},
+            {"kind": "instruction", "en": "If the baby has already been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": " daughter of "},
+            {"kind": "instruction", "en": "If the baby has already been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": "<i>father’s name</i>"},
+            {"kind": "instruction", "en": "If the baby has already been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": "),"},
+            {"kind": "instruction", "en": "If the baby has already been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": "<br>born in favor."}
+          ]},
+          {"ref": "8", "translates": [], "parts": [
+            {"kind": "instruction", "en": "If the baby has not been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": "<i class=\"instruction\">If the baby has not been named in the synagogue:</i>"},
+            {"kind": "prayer", "when": "!if_namedInSynagogue", "en": "If the baby has not been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": " and her newborn daughter,"},
+            {"kind": "instruction", "en": "If the baby has not been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": " born in favor,"},
+            {"kind": "instruction", "en": "If the baby has not been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": " whose name in Israel shall be called ("},
+            {"kind": "instruction", "en": "If the baby has not been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": "<i>baby’s name</i>"},
+            {"kind": "instruction", "en": "If the baby has not been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": " daughter of "},
+            {"kind": "instruction", "en": "If the baby has not been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": "<i>father’s name</i>"},
+            {"kind": "instruction", "en": "If the baby has not been named in the synagogue:", "gloss": "Conditional instruction only in English", "text": ")."}
+          ]},
+          {"ref": "9", "translates": ["9"], "kind": "prayer", "text": "Bless, we pray to You, her parents<br>that they may have the merit to raise her to the Torah,<br>to the marriage canopy and to good deeds; and let us say: Amen."},
+          {"ref": "10", "translates": [], "kind": "instruction", "en": "The parents bless the child:", "gloss": "This instruction is only in English", "text": "<i class=\"instruction\">The parents bless the child:</i>"},
+          {"ref": "11", "translates": ["11"], "kind": "prayer", "text": "יְשִׂמֵךְ May God make you like Sarah, Rebecca, Rachel and Leah.<br>May the <small>LORD</small> bless you and protect you.<br>May the <small>LORD</small> make His face shine on you and be gracious to you.<br>May the <small>LORD</small> turn His face toward you and grant you peace."},
+          {"ref": "12", "translates": ["12"], "kind": "prayer", "text": "וִיהִי רָצוֹן May it be the will of our Father in heaven, that He set in your heart the love and awe of Him all your days,<br>so that you do not come to sin.<br>May your desire be for the Torah and the commandments.<br>May your eyes look straight before you;<br>may your mouth speak wisdom<br>and your heart meditate in awe;<br>may your hands be occupied with the commandments and may your feet run to do the will of your Father in heaven."},
+          {"ref": "13", "translates": [], "kind": "instruction", "en": "If grandparents are present, they say the following blessing:", "gloss": "Conditional instruction only in English", "text": "<i class=\"instruction\">If grandparents are present, they say the following blessing:</i>"},
+          {"ref": "14", "translates": ["14"], "kind": "prayer", "when": "if_grandparentsPresent", "text": "הָאֱלֹהִים May God before whom my fathers<br>Abraham and Isaac walked –<br>God who has been my Shepherd all my life to this day,<br>the angel who has rescued me from all harm –<br>may He bless the children.<br>May they be called by my name<br>and the names of my fathers Abraham and Isaac,<br>and may they increase greatly on earth."},
+          {"ref": "15", "translates": [], "kind": "instruction", "en": "All say:", "gloss": "This instruction is only in English", "text": "<i class=\"instruction\">All say:</i>"},
+          {"ref": "16", "translates": ["16"], "kind": "prayer", "text": "Our sister, may you grow to become thousands of myriads."}
+        ]
+      }
+    },
+    {
+      "path": "The Cycle of Life/Marriage Service",
+      "title": "סדר קידושין ונישואין",
+      "node": "lifecycle.wedding",
+      "service": "none",
+      "he": {
+        "version": "Hebrew Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Blessings of Betrothal", "text": "<b>ברכות האירוסין</b>"},
+          {"ref": "3", "kind": "prayer", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הַגָּֽפֶן."},
+          {"ref": "4", "kind": "prayer", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָֽׁנוּ בְּמִצְוֹתָיו וְצִוָּֽנוּ עַל הָעֲרָיוֹת, וְאָסַר לָֽנוּ אֶת הָאֲרוּסוֹת, וְהִתִּיר לָֽנוּ אֶת הַנְּשׂוּאוֹת לָֽנוּ עַל יְדֵי חֻפָּה וְקִדּוּשִׁין. בָּרוּךְ אַתָּה יהוה, מְקַדֵּשׁ עַמּוֹ יִשְׂרָאֵל עַל יְדֵי חֻפָּה וְקִדּוּשִׁין."},
+          {"ref": "6", "kind": "prayer", "text": "הֲרֵי אַתְּ מְקֻדֶּֽשֶׁת לִי בְּטַבַּֽעַת זוֹ כְּדָת מֹשֶׁה וְיִשְׂרָאֵל."}
+        ]
+      },
+      "en": {
+        "version": "English Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<small>BLESSINGS OF BETROTHAL</small>"},
+          {"ref": "2", "translates": ["3"], "text": "<i class=\"instruction\">The Rabbi performing the ceremony takes a cup of wine and says:</i>"},
+          {"ref": "3", "translates": ["3"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe, who creates the fruit of the vine."},
+          {"ref": "4", "translates": ["4"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe, who has made us holy through His commandments,<br>and has commanded us concerning forbidden unions, forbidding us those who are betrothed, permitting us those who are wedded to us through the rite of the canopy and sacred covenant of marriage. Blessed are You, <small>LORD</small>, who sanctifies His people Israel by the rite of the canopy and sacred covenant of marriage."},
+          {"ref": "5", "translates": ["6"], "text": "<i class=\"instruction\">The bride and bridegroom both drink from the wine. The bridegroom takes the ring and, holding it ready to be placed on the forefinger of the bride’s right hand, says:</i>"},
+          {"ref": "6", "translates": ["6"], "text": "הֲרֵי Behold you are consecrated to me by this ring in accordance with the law of Moses and of Israel."},
+          {"ref": "7", "translates": [], "text": "<i class=\"instruction\">He then places the ring on the forefinger of the bride’s right hand. The Ketuba is read and the bridegroom hands it to the bride. A second cup of wine is taken, and over it, the Sheva Berakhot on the next page are said; the same person should preferably say the first two.</i>"}
+        ]
+      }
+    },
+    {
+      "path": "The Cycle of Life/Sheva Berakhot",
+      "title": "שבע ברכות",
+      "node": "birkat_hamazon.sheva_brachot",
+      "service": "none",
+      "he": {
+        "version": "Hebrew Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הַגָּֽפֶן."},
+          {"ref": "2", "kind": "prayer", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, שֶׁהַכֹּל בָּרָא לִכְבוֹדוֹ."},
+          {"ref": "3", "kind": "prayer", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, יוֹצֵר הָאָדָם."},
+          {"ref": "4", "kind": "prayer", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם<br>אֲשֶׁר יָצַר אֶת הָאָדָם בְּצַלְמוֹ, בְּצֶֽלֶם דְּמוּת תַּבְנִיתוֹ<br>וְהִתְקִין לוֹ מִמֶּֽנּוּ בִּנְיַן עֲדֵי עַד.<br>בָּרוּךְ אַתָּה יהוה, יוֹצֵר הָאָדָם."},
+          {"ref": "5", "kind": "prayer", "text": "שׂוֹשׂ תָּשִׂישׂ וְתָגֵל הָעֲקָרָה בְּקִבּוּץ בָּנֶֽיהָ לְתוֹכָהּ בְּשִׂמְחָה.<br>בָּרוּךְ אַתָּה יהוה, מְשַׂמֵּֽחַ צִיּוֹן בְּבָנֶֽיהָ."},
+          {"ref": "6", "kind": "prayer", "text": "שַׂמֵּֽחַ תְּשַׂמַּח רֵעִים הָאֲהוּבִים כְּשַׂמֵּחֲךָ יְצִירְךָ בְּגַן עֵֽדֶן מִקֶּֽדֶם.<br>בָּרוּךְ אַתָּה יהוה, מְשַׂמֵּֽחַ חָתָן וְכַלָּה."},
+          {"ref": "7", "kind": "prayer", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם<br>אֲשֶׁר בָּרָא שָׂשׂוֹן וְשִׂמְחָה, חָתָן וְכַלָּה<br>גִּילָה, רִנָּה, דִּיצָה וְחֶדְוָה, אַהֲבָה וְאַחֲוָה וְשָׁלוֹם וְרֵעוּת.<br>מְהֵרָה יהוה אֱלֹהֵֽינוּ<br>יִשָּׁמַע בְּעָרֵי יְהוּדָה וּבְחוּצוֹת יְרוּשָׁלַֽיִם<br>קוֹל שָׂשׂוֹן וְקוֹל שִׂמְחָה, קוֹל חָתָן וְקוֹל כַּלָּה<br>קוֹל מִצְהֲלוֹת חֲתָנִים מֵחֻפָּתָם וּנְעָרִים מִמִּשְׁתֵּה נְגִינָתָם.<br>בָּרוּךְ אַתָּה יהוה, מְשַׂמֵּֽחַ הֶחָתָן עִם הַכַּלָּה."},
+          {"ref": "9", "kind": "prayer", "text": "אִם־אֶשְׁכָּחֵךְ יְרוּשָׁלִָֽם, תִּשְׁכַּח יְמִינִי׃ תִּדְבַּק לְשׁוֹנִי לְחִכִּי אִם־לֹא אֶזְכְּרֵֽכִי ,<br>אִם־לֹא אַעֲלֶה אֶת־יְרוּשָׁלִַֽם עַל רֹאשׁ שִׂמְחָתִי׃"},
+          {"ref": "10", "kind": "heading", "en": "Zimun for the Sheva Berakhot meal", "text": "<b>זימון לסעודת שבע ברכות</b>"},
+          {"ref": "12", "kind": "instruction", "en": "Gentlemen, let us say grace.", "text": "רַבּוֹתַי, נְבָרֵךְ."},
+          {"ref": "13", "kind": "prayer", "role": "congregation", "text": "יְהִי שֵׁם יהוה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם׃"},
+          {"ref": "14", "kind": "prayer", "role": "head_of_household", "text": "יְהִי שֵׁם יהוה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם׃"},
+          {"ref": "15", "kind": "prayer", "text": "דְּוַי הָסֵר וְגַם חָרוֹן וְאָז אִלֵּם בְּשִׁיר יָרֹן.<br>נְחֵֽנוּ בְמַעְגְּלֵי צֶֽדֶק שְׁעֵה בִּרְכַּת בְּנֵי אַהֲרֹן."},
+          {"ref": "17", "kind": "instruction", "en": "With the permission of (my father and teacher / my mother and teacher / the Kohanim / our teacher the Rabbi / the master of this house / the mistress of this house) my masters and teachers, let us bless our God, in whose dwelling place is joy, from whose food we have eaten.", "text": "בִּרְשׁוּת (אָבִי מוֹרִי / אִמִּי מוֹרָתִי / כֹּהֲנִים / מוֹרֵֽנוּ הָרַב /<br>בַּֽעַל הַבַּֽיִת הַזֶּה / בַּעֲלַת הַבַּֽיִת הַזֶּה) מָרָנָן וְרַבָּנָן וְרַבּוֹתַי<br>נְבָרֵךְ אֱלֹהֵֽינוּ שֶׁהַשִּׂמְחָה בִמְעוֹנוֹ וְשֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ."},
+          {"ref": "18", "kind": "prayer", "role": "congregation", "text": "בָּרוּךְ אֱלֹהֵֽינוּ שֶׁהַשִּׂמְחָה בִמְעוֹנוֹ, שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ."},
+          {"ref": "19", "kind": "prayer", "role": "head_of_household", "text": "בָּרוּךְ אֱלֹהֵֽינוּ שֶׁהַשִּׂמְחָה בִמְעוֹנוֹ, שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ.<br>בָּרוּךְ הוּא וּבָרוּךְ שְׁמוֹ."}
+        ]
+      },
+      "en": {
+        "version": "English Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe,<br>who creates the fruit of the vine."},
+          {"ref": "2", "translates": ["2"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe, who has created all for His glory."},
+          {"ref": "3", "translates": ["3"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe, Creator of mankind."},
+          {"ref": "4", "translates": ["4"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe,<br>who made humanity in His image, the image of His likeness,<br>and out of His very self formed a building for eternity.<br>Blessed are You, <small>LORD</small>, Creator of mankind."},
+          {"ref": "5", "translates": ["5"], "text": "שׂוֹשׂ Bring great happiness and joy to one who was barren [Zion],<br>as her children return to her in joy.<br>Blessed are You, <small>LORD</small>, who gladdens Zion through her children."},
+          {"ref": "6", "translates": ["6"], "text": "שַׂמֵּֽחַ Bring great joy to these loving friends,<br>as You gave joy to Your creations in the Garden of Eden.<br>Blessed are You, <small>LORD</small>, who gives joy to the bridegroom and bride."},
+          {"ref": "7", "translates": ["7"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe,<br>who created joy and gladness, bridegroom and bride,<br>happiness and jubilation, cheer and delight,<br>love, fellowship, peace and friendship.<br>Soon, <small>LORD</small> our God, may there be heard in the cities of Judah,<br>and in the streets of Jerusalem, the sounds of joy and gladness,<br>the sounds of the bridegroom and bride,<br>the joyous sounds of bridegrooms from their wedding canopy and of young people at their feasts of song. Blessed are You, <small>LORD</small>,<br>who makes the bridegroom rejoice with the bride."},
+          {"ref": "8", "translates": [], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">The bride and bridegroom both drink from the wine.</i>"},
+            {"kind": "instruction", "text": "<br><i class=\"instruction\">The bridegroom breaks a glass in memory of the destruction of the Temple. Some say the following beforehand:</i>"}
+          ]},
+          {"ref": "9", "translates": ["9"], "text": "אִם־אֶשְׁכָּחֵךְ If I forget you, O Jerusalem, may my right hand forget its skill. May my tongue cling to the roof of my mouth if I do not remember you, if I do not set Jerusalem above my highest joy."},
+          {"ref": "10", "translates": ["10"], "text": "<small>ZIMMUN AFTER A WEDDING OR SHEVA BERAKHOT FEAST</small>"},
+          {"ref": "11", "translates": ["12"], "text": "<i class=\"instruction\">The leader takes a cup of wine in his hand and says:</i>"},
+          {"ref": "12", "translates": ["12"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
+            {"kind": "prayer", "text": " Gentlemen,"},
+            {"kind": "prayer", "text": " let us say grace."}
+          ]},
+          {"ref": "13", "translates": ["13"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Others</i>"},
+            {"kind": "prayer", "text": " May the name of the <small>LORD</small> be blessed from now and for ever."}
+          ]},
+          {"ref": "14", "translates": ["14"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
+            {"kind": "prayer", "text": "May the name of the <small>LORD</small> be blessed from now and for ever."}
+          ]},
+          {"ref": "15", "translates": ["15"], "text": "Banish grief and anger. Let even the mute celebrate in song.<br>Guide us in the paths of righteousness.<br>Hear the blessing of the children of Aaron."},
+          {"ref": "16", "translates": ["17"], "text": "<i class=\"instruction\">Add the appropriate words in parentheses (see page 976):</i>"},
+          {"ref": "17", "translates": ["17"], "text": "With your permission, (my father and teacher / my mother and teacher / the Kohanim present / our teacher the Rabbi / the master of this house / the mistress of this house) my masters and teachers,<br>let us bless our God, in whose dwelling place is joy, from whose food we have eaten."},
+          {"ref": "18", "translates": ["18"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Others</i>"},
+            {"kind": "prayer", "text": " Blessed be our God in whose dwelling place is joy,"},
+            {"kind": "prayer", "text": " from whose food we have eaten,"},
+            {"kind": "prayer", "text": " and by whose goodness we live."}
+          ]},
+          {"ref": "19", "translates": ["19"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
+            {"kind": "prayer", "text": " Blessed be our God in whose dwelling place is joy,"},
+            {"kind": "prayer", "text": " from whose food we have eaten,"},
+            {"kind": "prayer", "text": " and by whose goodness we live.<br>Blessed be He,"},
+            {"kind": "prayer", "text": " and blessed be His name."}
+          ]},
+          {"ref": "20", "translates": [], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Continue with Birkat HaMazon on page 978, at the end of which say the</i>"},
+            {"kind": "instruction", "text": "<br><i class=\"instruction\">Sheva Berakhot (on previous page) over a cup of wine, beginning with the second blessing,</i>"},
+            {"kind": "instruction", "text": "<br><i class=\"instruction\">“who has created all,” and ending with the first blessing, that over the wine.</i>"}
+          ]}
+        ]
+      }
+    },
+    {
+      "path": "The Cycle of Life/Prayer for Recovery from Illness",
+      "title": "תפילה לחולה",
+      "node": "personal_prayer",
+      "service": "none",
+      "he": {
+        "version": "Hebrew Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "מִזְמוֹר לְדָוִד, יהוה רֹעִי לֹא אֶחְסָר׃ בִּנְאוֹת דֶּֽשֶׁא יַרְבִּיצֵֽנִי, עַל־מֵי מְנֻחוֹת יְנַהֲלֵֽנִי׃ נַפְשִׁי יְשׁוֹבֵב, יַנְחֵֽנִי בְמַעְגְּלֵי־צֶֽדֶק לְמַֽעַן שְׁמוֹ׃ גַּם כִּי־אֵלֵךְ בְּגֵיא צַלְמָֽוֶת לֹא־אִירָא רָע, כִּי־אַתָּה עִמָּדִי, שִׁבְטְךָ וּמִשְׁעַנְתֶּֽךָ הֵֽמָּה יְנַחֲמֻֽנִי׃ תַּעֲרֹךְ לְפָנַי שֻׁלְחָן נֶֽגֶד צֹרְרָי, דִּשַּֽׁנְתָּ בַשֶּֽׁמֶן רֹאשִׁי, כּוֹסִי רְוָיָה׃ אַךְ טוֹב וָחֶֽסֶד יִרְדְּפֽוּנִי כָּל־יְמֵי חַיָּי, וְשַׁבְתִּי בְּבֵית־יהוה לְאֹֽרֶךְ יָמִים׃"},
+          {"ref": "2", "kind": "prayer", "text": "לְדָוִד, בָּרְכִי נַפְשִׁי אֶת־יהוה, וְכָל־קְרָבַי אֶת־שֵׁם קָדְשׁוֹ׃ בָּרְכִי נַפְשִׁי אֶת־יהוה, וְאַל־תִּשְׁכְּחִי כָּל־גְּמוּלָיו׃ הַסֹּלֵֽחַ לְכָל־עֲוֹנֵֽכִי, הָרֹפֵא לְכָל־תַּחֲלוּאָֽיְכִי׃ הַגּוֹאֵל מִשַּֽׁחַת חַיָּֽיְכִי, הַמְעַטְּרֵֽכִי חֶֽסֶד וְרַחֲמִים׃ הַמַּשְׂבִּֽיעַ בַּטּוֹב עֶדְיֵךְ, תִּתְחַדֵּשׁ כַּנֶּֽשֶׁר נְעוּרָֽיְכִי׃ עֹשֵׂה צְדָקוֹת יהוה, וּמִשְׁפָּטִים לְכָל־עֲשׁוּקִים׃ יוֹדִֽיעַ דְּרָכָיו לְמֹשֶׁה, לִבְנֵי יִשְׂרָאֵל עֲלִילוֹתָיו׃ רַחוּם וְחַנּוּן יהוה, אֶֽרֶךְ אַפַּֽיִם וְרַב־חָֽסֶד׃ לֹא־לָנֶֽצַח יָרִיב, וְלֹא לְעוֹלָם יִטּוֹר׃ לֹא כַחֲטָאֵֽינוּ עָֽשָׂה לָֽנוּ, וְלֹא כַעֲוֹנֹתֵֽינוּ גָּמַל עָלֵֽינוּ׃ כִּי כִגְבֹֽהַּ שָׁמַֽיִם עַל־הָאָֽרֶץ, גָּבַר חַסְדּוֹ עַל־יְרֵאָיו׃ כִּרְחֹק מִזְרָח מִמַּעֲרָב, הִרְחִיק מִמֶּֽנּוּ אֶת־פְּשָׁעֵֽינוּ׃ כְּרַחֵם אָב עַל־בָּנִים, רִחַם יהוה עַל־יְרֵאָיו׃ כִּי־הוּא יָדַע יִצְרֵֽנוּ, זָכוּר כִּי־עָפָר אֲנָֽחְנוּ׃ אֱנוֹשׁ כֶּחָצִיר יָמָיו, כְּצִיץ הַשָּׂדֶה כֵּן יָצִיץ׃ כִּי רֽוּחַ עָבְרָה־בּוֹ וְאֵינֶֽנּוּ, וְלֹא־יַכִּירֶֽנּוּ עוֹד מְקוֹמוֹ׃ וְחֶֽסֶד יהוה מֵעוֹלָם וְעַד־עוֹלָם עַל־יְרֵאָיו, וְצִדְקָתוֹ לִבְנֵי בָנִים׃ לְשֹׁמְרֵי בְרִיתוֹ, וּלְזֹכְרֵי פִקֻּדָיו לַעֲשׂוֹתָם׃ יהוה בַּשָּׁמַֽיִם הֵכִין כִּסְאוֹ, וּמַלְכוּתוֹ בַּכֹּל מָשָֽׁלָה׃ בָּרְכוּ יהוה מַלְאָכָיו, גִּבֹּֽרֵי כֹֽחַ עֹשֵׂי דְבָרוֹ, לִשְׁמֹֽעַ בְּקוֹל דְּבָרוֹ׃ בָּרְכוּ יהוה כָּל־צְבָאָיו, מְשָׁרְתָיו עֹשֵׂי רְצוֹנוֹ׃ בָּרְכוּ יהוה כָּל־מַעֲשָׂיו, בְּכָל־מְקֹמוֹת מֶמְשַׁלְתּוֹ, בָּרְכִי נַפְשִׁי אֶת־יהוה׃"},
+          {"ref": "3", "kind": "prayer", "text": "לַמְנַצֵּֽחַ לְדָוִד מִזְמוֹר, יהוה חֲקַרְתַּֽנִי וַתֵּדָע׃ אַתָּה יָדַֽעְתָּ שִׁבְתִּי וְקוּמִי, בַּֽנְתָּה לְרֵעִי מֵרָחוֹק׃ אָרְחִי וְרִבְעִי זֵרִֽיתָ, וְכָל־דְּרָכַי הִסְכַּֽנְתָּה׃ כִּי אֵין מִלָּה בִּלְשׁוֹנִי, הֵן יהוה יָדַֽעְתָּ כֻלָּהּ׃ אָחוֹר וָקֶֽדֶם צַרְתָּֽנִי, וַתָּֽשֶׁת עָלַי כַּפֶּֽכָה׃ פְּלִיאָה דַֽעַת מִמֶּֽנִּי, נִשְׂגְּבָה לֹא־אֽוּכַל לָהּ׃ אָנָה אֵלֵךְ מֵרוּחֶֽךָ, וְאָֽנָה מִפָּנֶֽיךָ אֶבְרָח׃ אִם־אֶסַּק שָׁמַֽיִם שָׁם אָֽתָּה, וְאַצִּֽיעָה שְּׁאוֹל הִנֶּֽךָּ׃ אֶשָּׂא כַנְפֵי־שָֽׁחַר, אֶשְׁכְּנָה בְּאַחֲרִית יָם׃ גַּם־שָׁם יָדְךָ תַנְחֵֽנִי, וְתֹאחֲזֵֽנִי יְמִינֶֽךָ׃ וָאֹמַר אַךְ־חֹֽשֶׁךְ יְשׁוּפֵֽנִי, וְלַֽיְלָה אוֹר בַּעֲדֵֽנִי׃ גַּם־חֹֽשֶׁךְ לֹא־יַחְשִׁיךְ מִמֶּֽךָּ, וְלַֽיְלָה כַּיּוֹם יָאִיר, כַּחֲשֵׁיכָה כָּאוֹרָה׃ כִּי־אַתָּה קָנִֽיתָ כִלְיֹתָי, תְּסֻכֵּֽנִי בְּבֶֽטֶן אִמִּי׃ אוֹדְךָ עַל כִּי נוֹרָאוֹת נִפְלֵֽיתִי, נִפְלָאִים מַעֲשֶֽׂיךָ, וְנַפְשִׁי יֹדַֽעַת מְאֹד׃ לֹא־נִכְחַד עָצְמִי מִמֶּֽךָּ, אֲשֶׁר־עֻשֵּֽׂיתִי בַסֵּֽתֶר, רֻקַּֽמְתִּי בְּתַחְתִּיּוֹת אָֽרֶץ׃ גָּלְמִי רָאוּ עֵינֶֽיךָ, וְעַל־סִפְרְךָ כֻּלָּם יִכָּתֵֽבוּ, יָמִים יֻצָּֽרוּ, וְלוֹ אֶחָד בָּהֶם׃ וְלִי מַה־יָּקְרוּ רֵעֶֽיךָ אֵל, מֶה עָצְמוּ רָאשֵׁיהֶם׃ אֶסְפְּרֵם מֵחוֹל יִרְבּוּן, הֱקִיצֹֽתִי וְעוֹדִי עִמָּךְ׃ אִם־תִּקְטֹל אֱלֽוֹהַּ רָשָׁע, וְאַנְשֵׁי דָמִים סֽוּרוּ מֶֽנִּי׃ אֲשֶׁר יֹמְרֽוּךָ לִמְזִמָּה, נָשׂוּא לַשָּׁוְא עָרֶֽיךָ׃ הֲלוֹא־מְשַׂנְאֶֽיךָ יהוה אֶשְׂנָא, וּבִתְקוֹמְמֶֽיךָ אֶתְקוֹטָט׃ תַּכְלִית שִׂנְאָה שְׂנֵאתִים, לְאֹיְבִים הָֽיוּ לִי׃ חָקְרֵֽנִי אֵל וְדַע לְבָבִי, בְּחָנֵֽנִי וְדַע שַׂרְעַפָּי׃ וּרְאֵה אִם־דֶּרֶךְ־עֹֽצֶב בִּי, וּנְחֵֽנִי בְּדֶֽרֶךְ עוֹלָם׃"},
+          {"ref": "4", "kind": "prayer", "text": "תְּפִלָּה לְעָנִי כִי־יַעֲטֹף, וְלִפְנֵי יהוה יִשְׁפֹּךְ שִׂיחוֹ׃ יהוה שִׁמְעָה תְפִלָּתִי, וְשַׁוְעָתִי אֵלֶֽיךָ תָבוֹא׃ אַל־תַּסְתֵּר פָּנֶֽיךָ מִמֶּֽנִּי בְּיוֹם צַר לִי, הַטֵּה־אֵלַי אָזְנֶֽךָ, בְּיוֹם אֶקְרָא מַהֵר עֲנֵֽנִי׃"},
+          {"ref": "5", "kind": "prayer", "text": "אָנָּא יהוה רוֹפֵא כָל בָּשָׂר, רַחֵם עָלַי, וּסְעָדֵֽנִי בְּחַסְדְּךָ הַגָּדוֹל עַל עֶֽרֶשׂ<br>דְּוָי, כִּי אֻמְלַל אָֽנִי. שְׁלַח לִי תְּרוּפָה וּתְעָלָה, בְּתוֹךְ שְׁאָר חוֹלֵי יִשְׂרָאֵל. רְפָא אֶת מַכְאוֹבִי, וְחַדֵּשׁ כַּנֶּֽשֶׁר נְעוּרָי. תֵּן בִּינָה לָרוֹפֵא, וְיִגְהֶה מִמֶּֽנִּי מְזוֹרִי, וַאֲרוּכָתִי מְהֵרָה תִצְמָח. שְׁמַע תְּפִלָּתִי, וְהוֹסֵף יָמִים עַל יָמַי, וַאֲכַלֶּה שְׁנוֹתַי בַּנְּעִימִים, לְמַֽעַן אוּכַל לַעֲבֹד אוֹתְךָ, וְלִשְׁמֹר פִּקּוּדֶֽיךָ בְּלֵב שָׁלֵם. הֲבִינֵֽנִי וְאֵדְעָה, כִּי לִשְׁלוֹמִי מַר לִי מָר. וְאַל אֶמְאַס אֶת מוּסָרְךָ, וּבְתוֹכַחְתְּךָ אַל אָקוּץ."},
+          {"ref": "6", "kind": "prayer", "text": "אֱלֽוֹהַּ סְלִיחוֹת, חַנּוּן וְרַחוּם אֶֽרֶךְ אַפַּֽיִם וְרַב חָֽסֶד, מוֹדֶה אֲנִי לְפָנֶֽיךָ בְּלֵב נִשְׁבָּר וְנִדְכֶּה כִּי חָטָֽאתִי, וְהָרַע בְּעֵינֶֽיךָ עָשִֽׂיתִי. הִנֵּה נִחַֽמְתִּי עַל רָעָתִי, וָאָשׁוּב בִּתְשׁוּבָה שְׁלֵמָה לְפָנֶֽיךָ. עָזְרֵֽנִי אֱלֹהֵי יִשְׁעִי, וְלֹא אָשׁוּב לְכִסְלָה, וְאֶתְהַלֵּךְ לְפָנֶֽיךָ בֶּאֱמֶת וּבְתָמִים. שַׂמֵּֽחַ נֶֽפֶשׁ עַבְדֶּֽךָ, כִּי־אֵלֶֽיךָ אֲדֹנָי, נַפְשִׁי אֶשָּׂא׃ רְפָאֵֽנִי יהוה וְאֵרָפֵא, הוֹשִׁיעֵֽנִי וְאִוָּשֵֽׁעָה, כִּי תְהִלָּתִי אָֽתָּה: אָמֵן וְאָמֵן."}
+        ]
+      },
+      "en": {
+        "version": "English Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "מִזְמוֹר לְדָוִד A psalm of David. The <small>LORD</small> is my Shepherd, I shall not want. He makes me lie down in green pastures. He leads me beside the still waters. He refreshes my soul. He guides me in the paths of righteousness for His name’s sake. Though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me. You set a table before me in the presence of my enemies; You anoint my head with oil; my cup is filled to overflowing. May goodness and kindness follow me all the days of my life, and may I live in the House of the <small>LORD</small> for evermore."},
+          {"ref": "2", "translates": ["2"], "text": "לְדָוִד By David. Bless the <small>LORD</small>, my soul; with all my being I bless His holy name. Bless the <small>LORD</small>, my soul, and forget none of His benefits. He forgives all your sins. He heals all your ills. He redeems your life from the pit. He crowns you with love and compassion. He satisfies your soul with good things, so that your youth is renewed like the eagle’s. The <small>LORD</small> is righteous in all He does; He brings justice to all the oppressed. He made known His ways to Moses, His deeds to the people of Israel. The <small>LORD</small> is compassionate and gracious, slow to anger, abounding in love. He will not always accuse or nurse His anger for ever. He has not treated us as our sins deserve, or repaid us according to our misdeeds. For as high as the heavens are above the earth, so great is His love for those who fear Him. As far as the east is from the west, so far has He removed our transgressions from us. As a father has compassion on his children, so the <small>LORD</small> has compassion on those who fear Him. For He knows how we are formed; He remembers that we are dust. As for man, his days are like grass; like a flower of the field he flourishes. For a wind passes over it and it is gone, and its place knows it no more. But the kindness of the <small>LORD</small> is for all eternity to those who fear Him; His righteousness is with their children’s children – with those who keep His covenant, and remember to obey His precepts. The <small>LORD</small> has established His throne in heaven, and His kingdom rules over all. Bless the <small>LORD</small>, you His angels, mighty in power, who do His bidding, who obey His word. Bless the <small>LORD</small>, all you His host, the ministers who do His will. Bless the <small>LORD</small>, all His works, everywhere in His dominion. Bless the <small>LORD</small>, my soul."},
+          {"ref": "3", "translates": ["3"], "text": "לַמְנַצֵּֽחַ For the conductor of music. A psalm of David. O <small>LORD</small>, You have examined me and You know me. You know when I sit and when I rise; You understand my thoughts from afar. You encompass my going out and lying down. You are familiar with all my ways. Before a word is on my tongue, You, <small>LORD</small>, know it all. You keep close guard behind and before me. You have laid Your hand upon me. Knowledge so wonderful is beyond me; so high, it is above my reach. Where can I escape from Your spirit? Where can I flee from Your presence? If I climb to heaven, You are there; if I make my bed in the underworld, You are there. If I rise on the wings of the dawn, if I settle on the far side of the sea, even there Your hand will guide me, Your right hand will hold me fast. Were I to say, “Surely the darkness will hide me, and light become night around me,” to You the darkness would not be dark; night is light as day; to You dark and light are one. For You created my innermost being; You knitted me together in my mother’s womb. I praise You because I am awesomely, wondrously made; wonderful are Your works; I know that full well. My frame was not hidden from You when I was formed in the secret place, woven in the depths of the earth. Your eyes saw my unformed body. All the days ordained for me were written in Your book before one of them came to be. How precious to me are Your thoughts, God, how vast in number they are. Were I to count them, they would outnumber the grains of the sand. I awake and I am still with You. God, if only You would slay the wicked – away from me, you bloodthirsty men. They speak of You with evil intent; Your adversaries misuse Your name. Do I not hate those who hate You, <small>LORD</small>, and loathe those who rise up against You? I have nothing but hatred for them; I count them my enemies. Search me, God, and know my heart; test me and know my innermost thoughts. See if there is grief in the way I follow, and lead me in the everlasting way."},
+          {"ref": "4", "translates": ["4"], "text": "תְּפִלָּה לְעָנִי A prayer of one who is afflicted, when he is faint, and pours out his anguish before the <small>LORD</small>. <small>LORD</small>, hear my prayer and let my cry come before You. Do not hide Your face from me in my day of distress. Turn Your ear toward me; answer me swiftly on the day I call."},
+          {"ref": "5", "translates": ["5"], "text": "אָנָּא Please, <small>LORD</small>, Healer of all flesh, have pity on me, and support me on my sick bed, in Your great love, for I am weak. Send relief and healing to me and to the others of Your children who are sick. Heal my pain and renew my youth as the eagle’s. Grant wisdom to the physician that he may cure my illness, so that my healing may spring up swiftly. Hear my prayer, prolong my life, and let me complete my years in happiness, so that I may be able to serve You and keep Your precepts with a perfect heart. Grant me the understanding to know that this bitter trial has come upon me for my welfare. Let me not reject Your discipline or spurn Your rebuke."},
+          {"ref": "6", "translates": ["6"], "text": "אֱלֽוֹהַּ סְלִיחוֹת God of forgiveness, gracious and compassionate, slow to anger, abounding in love, I acknowledge before You with a broken and contrite heart that I have sinned and done evil in Your sight. I hereby repent of my evil and turn to You in complete repentance. Help me, God of my salvation, that I may not turn to folly again, but instead walk before You in truth and integrity. Gladden Your servant’s heart, for to You, <small>LORD</small>, I lift up my soul. Heal me, <small>LORD</small>, and I will be healed, save me and I will be saved, for You are my glory. Amen and Amen!"}
+        ]
+      }
+    },
+    {
+      "path": "The Cycle of Life/Prayer after Recovery from Illness",
+      "title": "תפילה לעומד מחליו",
+      "node": "personal_prayer",
+      "service": "none",
+      "he": {
+        "version": "Hebrew Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "2", "kind": "prayer", "text": "אָנָּא הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא, בְּרֹב חַסְדְּךָ אָבוֹא לְפָנֶֽיךָ לְהוֹדוֹת לְךָ עַל כָּל הַטּוֹבוֹת אֲשֶׁר גָּמַֽלְתָּ עָלָי. מִן הַמֵּצַר קְרָאתִֽיךָ וַתַּעֲנֵֽנִי, מֵעֶֽרֶשׂ דְּוָי שִׁוַּֽעְתִּי אֵלֶֽיךָ, וַתִּשְׁמַע אֶת קוֹלִי תַּחֲנוּנָי. יַסֹּר יִסַּרְתַּֽנִי יָהּ, וְלַמָּֽוֶת לֹא נְתַתָּֽנִי. בְּאַהֲבָתְךָ וּבְחֶמְלָתְךָ הֶעֱלִֽיתָ מִן שְׁאוֹל נַפְשִׁי. כִּי רֶֽגַע בְּאַפְּךָ, חַיִּים בִּרְצוֹנְךָ, בָּעֶֽרֶב יָלִין בֶּֽכִי וְלַבֹּֽקֶר רִנָּה. חַי חַי הוּא יוֹדֶֽךָ, כָּמֽוֹנִי הַיּוֹם: וְנַפְשִׁי אֲשֶׁר פָּדִֽיתָ, תְּסַפֵּר נִפְלְאוֹתֶֽיךָ לִבְנֵי אָדָם. בָּרוּךְ אַתָּה, רוֹפֵא נֶאֱמָן לְכָל בָּשָׂר."},
+          {"ref": "3", "kind": "prayer", "text": "אֵל רַחוּם וְחַנּוּן, הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת, קָטֹֽנְתִּי מִכֹּל הַחֲסָדִים אֲשֶׁר עָשִֽׂיתָ עִמָּדִי עַד הֵֽנָּה. אָנָּא טַהֵר לְבָבִי, וְזַכֵּֽנִי לָלֶֽכֶת בְּדֶֽרֶךְ יְשָׁרִים לְפָנֶֽיךָ, וּמְשֹׁךְ עֶזְרְךָ לְעַבְדֶּֽךָ. חַזְּקֵֽנִי וְאַמְּצֵֽנִי מֵרִפְיוֹן, וּבְחִלּוּץ עֲצָמוֹת תְּבָרְכֵֽנִי. הַרְחֵק מֵעָלַי כָּל צָרָה וְתוּגָה, שָׁמְרֵֽנִי מִכָּל רָע, וּבַעֲצָתְךָ תַנְחֵֽנִי. וְזָרְחָה לִי שֶֽׁמֶשׁ צְדָקָה, וּמַרְפֵּא בִּכְנָפֶֽיהָ. יִהְיוּ לְרָצוֹן אִמְרֵי־פִי וְהֶגְיוֹן לִבִּי לְפָנֶֽיךָ, יהוה צוּרִי וְגֹאֲלִי׃ אָמֵן."}
+        ]
+      },
+      "en": {
+        "version": "English Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "translates": [], "kind": "instruction", "en": "Say Psalms 23 and 103 on page 1044. Then continue with:", "text": "<i class=\"instruction\">Say Psalms 23 and 103 on page 1044. Then continue with:</i>"},
+          {"ref": "2", "translates": ["2"], "text": "אָנָּא O great, mighty and awesome God: By Your great love I come before You to offer thanks for all the good You have bestowed on me. In my distress I called to You and You answered me; from my sick bed I cried to You, and You heard my voice and my pleas. You chastened me severely, <small>LORD</small>, but You did not hand me over to death. In Your love and compassion You lifted my soul from the grave. For Your anger is for a moment, Your favor for a lifetime. At night there may be weeping, but in the morning there is joy. The living, only the living, praise You as I do this day. My soul which You have redeemed shall tell of Your wonders to the children of men. Blessed are You, the faithful Healer of all flesh."},
+          {"ref": "3", "translates": ["3"], "text": "אֵל רַחוּם O God, compassionate and gracious, who grants favors to the undeserving: I am not worthy of all the kindness You have shown to me until now. Purify, please, my heart that I may be worthy to walk before You in the way of the upright. Extend Your help to Your servant. Grant me the strength and resolution to overcome my weakness, and bless me with physical health. Keep sorrow and grief far from me; protect me from all harm, and guide me with Your counsel. May the sun of righteousness shine for me, bringing healing in its wings. May the words of my mouth and the meditation of my heart find favor before You, O <small>LORD</small>, my Rock and my Redeemer. Amen."}
+        ]
+      }
+    },
+    {
+      "path": "The Cycle of Life/Confession before Death",
+      "title": "וידוי שכיב מרע",
+      "node": "lifecycle.vidui_deathbed",
+      "service": "none",
+      "he": {
+        "version": "Hebrew Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "2", "kind": "prayer", "role": "individual", "text": "מוֹדֶה אֲנִי לְפָנֶֽיךָ, יהוה אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, שֶׁרְפוּאָתִי וּמִיתָתִי בְּיָדֶֽךָ. יְהִי רָצוֹן מִלְּפָנֶֽיךָ, שֶׁתִּרְפָּאֵֽנִי רְפוּאָה שְׁלֵמָה, וְאִם אָמוּת, תְּהִי מִיתָתִי כַּפָּרָה עַל כָּל חֲטָאִים וַעֲוֹנוֹת וּפְשָׁעִים שֶׁחָטָֽאתִי וְשֶׁעָוִֽיתִי וְשֶׁפָּשַֽׁעְתִּי לְפָנֶֽיךָ. וְזַכֵּֽנִי לָעוֹלָם הַבָּא הַצָּפוּן לַצַּדִּיקִים. תּוֹדִיעֵֽנִי אֹֽרַח חַיִּים, שֹֽׂבַע שְׂמָחוֹת אֶת־פָּנֶֽיךָ, נְעִימוֹת בִּימִינְךָ נֶֽצַח׃"},
+          {"ref": "3", "kind": "prayer", "role": "individual", "text": "אֲבִי יְתוֹמִים וְדַיַּן אַלְמָנוֹת, הָגֵן בְּעַד קְרוֹבַי הַיְקָרִים, אֲשֶׁר נַפְשִׁי קְשׁוּרָה בְּנַפְשָׁם. בְּיָדְךָ אַפְקִיד רוּחִי, פָּדִֽיתָה אוֹתִי יהוה אֵל אֱמֶת׃ אָמֵן וְאָמֵן."},
+          {"ref": "5", "kind": "prayer", "role": "individual", "repeat": 3, "text": "יהוה מֶֽלֶךְ, יהוה מָלָךְ, יהוה יִמְלֹךְ לְעוֹלָם וָעֶד."},
+          {"ref": "7", "kind": "prayer", "role": "individual", "repeat": 3, "text": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד."},
+          {"ref": "9", "kind": "prayer", "role": "individual", "repeat": 7, "text": "יהוה הוּא הָאֱלֹהִים."},
+          {"ref": "11", "kind": "prayer", "role": "individual", "text": "<big><strong>שְׁמַע יִשְׂרָאֵל, יהוה אֱלֹהֵֽינוּ, יהוה אֶחָד׃</strong></big>"}
+        ]
+      },
+      "en": {
+        "version": "English Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "translates": [], "parts": [
+            {"kind": "instruction", "en": "The following confession is said by one near death. He or she should be told: 'Do not fear. Many confessed their sins, and then recovered. Everyone who does confess has reward in the World to Come' (Shabbat 32a).", "text": "<i class=\"instruction\">The following confession is said by one near death.</i>"},
+            {"kind": "instruction", "en": "The following confession is said by one near death. He or she should be told: 'Do not fear. Many confessed their sins, and then recovered. Everyone who does confess has reward in the World to Come' (Shabbat 32a).", "text": "<br><i class=\"instruction\">He or she should be told: “Do not fear. Many confessed their sins, and then recovered. Everyone who does confess has reward in the World to Come” (Shabbat 32a).</i>"}
+          ]},
+          {"ref": "2", "translates": ["2"], "kind": "prayer", "text": "מוֹדֶה אֲנִי I acknowledge before You, <small>LORD</small> my God and God of my ancestors, that my cure and my death are in Your hands. May it be Your will to send me a perfect healing. Yet if my death is fully determined by You, I accept it in love at Your hand. May my death be an atonement for all the sins, iniquities and transgressions I have committed before You. Grant me of the great happiness that is stored up for the righteous. Make known to me the path of life, in Your presence is fullness of joy; at Your right hand bliss for evermore."},
+          {"ref": "3", "translates": ["3"], "kind": "prayer", "text": "אֲבִי יְתוֹמִים Father of orphans and Justice of widows, protect my cherished family, whose souls are bound with mine. Into Your hand I entrust my spirit. May You redeem me, <small>LORD</small>, God of truth. Amen and Amen."},
+          {"ref": "4", "translates": [], "parts": [
+            {"kind": "instruction", "en": "When the end is approaching, the following should be said. Repeat three times:", "text": "<i class=\"instruction\">When the end is approaching, the following should be said.</i>"},
+            {"kind": "instruction", "en": "When the end is approaching, the following should be said. Repeat three times:", "text": "<br><i class=\"instruction\">Repeat three times:</i>"}
+          ]},
+          {"ref": "5", "translates": ["5"], "kind": "prayer", "text": "The <small>LORD</small> is King, the <small>LORD</small> was King,<br>and the <small>LORD</small> will be King for ever and ever."},
+          {"ref": "6", "translates": [], "kind": "instruction", "en": "Repeat three times:", "text": "<i class=\"instruction\">Repeat three times:</i>"},
+          {"ref": "7", "translates": ["7"], "kind": "prayer", "text": "Blessed be the name of His glorious kingdom for ever and all time."},
+          {"ref": "8", "translates": [], "kind": "instruction", "en": "Repeat seven times:", "text": "<i class=\"instruction\">Repeat seven times:</i>"},
+          {"ref": "9", "translates": ["9"], "kind": "prayer", "text": "The <small>LORD</small>, He is God."},
+          {"ref": "10", "translates": [], "kind": "instruction", "en": "Once:", "text": "<i class=\"instruction\">Once:</i>"},
+          {"ref": "11", "translates": ["11"], "kind": "prayer", "text": "<big><strong>Listen, Israel: the <small>LORD</small> is our God, the <small>LORD</small> is One.</strong></big>"}
+        ]
+      }
+    },
+    {
+      "path": "The Cycle of Life/Funeral Service",
+      "title": "לווית המת",
+      "node": "lifecycle.burial",
+      "service": "none",
+      "he": {
+        "version": "Hebrew Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "עֲקַבְיָא בֶּן מַהֲלַלְאֵל אוֹמֵר: הִסְתַּכֵּל בִּשְׁלֹשָׁה דְבָרִים, וְאֵין אַתָּה בָא לִידֵי עֲבֵרָה. דַּע מֵאַֽיִן בָּֽאתָ, וּלְאָן אַתָּה הוֹלֵךְ, וְלִפְנֵי מִי אַתָּה עָתִיד לִתֵּן דִּין וְחֶשְׁבּוֹן. מֵאַֽיִן בָּֽאתָ, מִטִּפָּה סְרוּחָה. וּלְאָן אַתָּה הוֹלֵךְ, לִמְקוֹם עָפָר, רִמָּה וְתוֹלֵעָה. וְלִפְנֵי מִי אַתָּה עָתִיד לִתֵּן דִּין וְחֶשְׁבּוֹן, לִפְנֵי מֶֽלֶךְ מַלְכֵי הַמְּלָכִים, הַקָּדוֹשׁ בָּרוּךְ הוּא."},
+          {"ref": "3", "kind": "prayer", "text": "יֹשֵׁב בְּסֵֽתֶר עֶלְיוֹן, בְּצֵל שַׁדַּי יִתְלוֹנָן׃ אֹמַר לַיהוה מַחְסִי וּמְצוּדָתִי, אֱלֹהַי אֶבְטַח־בּוֹ׃ כִּי הוּא יַצִּילְךָ מִפַּח יָקוּשׁ, מִדֶּֽבֶר הַוּוֹת׃ בְּאֶבְרָתוֹ יָֽסֶךְ לָךְ, וְתַֽחַת־כְּנָפָיו תֶּחְסֶה, צִנָּה וְסֹחֵרָה אֲמִתּוֹ׃ לֹא־תִירָא מִפַּֽחַד לָֽיְלָה, מֵחֵץ יָעוּף יוֹמָם׃ מִדֶּֽבֶר בָּאֹֽפֶל יַהֲלֹךְ, מִקֶּֽטֶב יָשׁוּד צָהֳרָֽיִם׃ יִפֹּל מִצִּדְּךָ אֶֽלֶף, וּרְבָבָה מִימִינֶֽךָ, אֵלֶֽיךָ לֹא יִגָּשׁ׃ רַק בְּעֵינֶֽיךָ תַבִּיט, וְשִׁלֻּמַת רְשָׁעִים תִּרְאֶה׃ כִּי־אַתָּה יהוה מַחְסִי, עֶלְיוֹן שַֽׂמְתָּ מְעוֹנֶֽךָ׃ לֹא־תְאֻנֶּה אֵלֶֽיךָ רָעָה, וְנֶֽגַע לֹא־יִקְרַב בְּאָהֳלֶֽךָ׃ כִּי מַלְאָכָיו יְצַוֶּה־לָּךְ, לִשְׁמָרְךָ בְּכָל־דְּרָכֶֽיךָ׃ עַל־כַּפַּֽיִם יִשָּׂאֽוּנְךָ, פֶּן־תִּגֹּף בָּאֶֽבֶן רַגְלֶֽךָ׃ עַל־שַֽׁחַל וָפֶֽתֶן תִּדְרֹךְ, תִּרְמֹס כְּפִיר וְתַנִּין׃ כִּי בִי חָשַׁק וַאֲפַלְּטֵֽהוּ, אֲשַׂגְּבֵֽהוּ כִּי־יָדַע שְׁמִי׃ יִקְרָאֵֽנִי וְאֶעֱנֵֽהוּ, עִמּוֹ אָנֹכִי בְצָרָה, אֲחַלְּצֵֽהוּ וַאֲכַבְּדֵֽהוּ׃ אֹֽרֶךְ יָמִים אַשְׂבִּיעֵֽהוּ, וְאַרְאֵֽהוּ בִּישׁוּעָתִי׃<br>אֹֽרֶךְ יָמִים אַשְׂבִּיעֵֽהוּ, וְאַרְאֵֽהוּ בִּישׁוּעָתִי׃"},
+          {"ref": "5", "kind": "heading", "en": "Tzadok HaDin (The Righteousness of the Judgment)", "text": "<b>צדוק הדין</b>"},
+          {"ref": "6", "kind": "prayer", "text": "הַצּוּר תָּמִים פָּעֳלוֹ, כִּי כָל־דְּרָכָיו מִשְׁפָּט<br>אֵל אֱמוּנָה וְאֵין עָֽוֶל, צַדִּיק וְיָשָׁר הוּא:"},
+          {"ref": "7", "kind": "prayer", "text": "הַצּוּר תָּמִים בְּכָל פֹּֽעַל, מִי יֹאמַר לוֹ מַה תִּפְעַל<br>הַשַּׁלִּיט בְּמַֽטָּה וּבְמַֽעַל. מֵמִית וּמְחַיֶּה, מוֹרִיד שְׁאוֹל וַיָּֽעַל:"},
+          {"ref": "8", "kind": "prayer", "text": "הַצּוּר תָּמִים בְּכָל מַעֲשֶׂה, מִי יֹאמַר לוֹ מַה תַּעֲשֶׂה<br>הָאוֹמֵר וְעוֹשֶׂה, חֶֽסֶד חִנָּם לָֽנוּ תַעֲשֶׂה<br>וּבִזְכוּת הַנֶּעֱקַד כְּשֶׂה, הַקְשִֽׁיבָה וַעֲשֵׂה."},
+          {"ref": "9", "kind": "prayer", "text": "צַדִּיק בְּכָל דְּרָכָיו הַצּוּר תָּמִים, אֶֽרֶךְ אַפַּֽיִם וּמָלֵא רַחֲמִים<br>חֲמָל נָא וְחוּס נָא עַל אָבוֹת וּבָנִים<br>כִּי לְךָ אָדוֹן הַסְּלִיחוֹת וְהָרַחֲמִים."},
+          {"ref": "10", "kind": "prayer", "text": "צַדִּיק אַתָּה יהוה לְהָמִית וּלְהַחֲיוֹת<br>אֲשֶׁר בְּיָדְךָ פִּקְדוֹן כָּל רוּחוֹת, חָלִֽילָה לְּךָ זִכְרוֹנֵֽנוּ לִמְחוֹת<br>וְיִהְיוּ נָא עֵינֶֽיךָ בְּרַחֲמִים עָלֵֽינוּ פְקוּחוֹת<br>כִּי לְךָ אָדוֹן הָרַחֲמִים וְהַסְּלִיחוֹת."},
+          {"ref": "11", "kind": "prayer", "text": "אָדָם אִם בֶּן שָׁנָה יִהְיֶה, אוֹ אֶֽלֶף שָׁנִים יִחְיֶה<br>מַה יִּתְרוֹן לּוֹ, כְּלֹא הָיָה יִהְיֶה<br>בָּרוּךְ דַּיַּן הָאֱמֶת, מֵמִית וּמְחַיֶּה."},
+          {"ref": "12", "kind": "prayer", "text": "בָּרוּךְ הוּא כִּי אֱמֶת דִּינוֹ, וּמְשׁוֹטֵט הַכֹּל בְּעֵינוֹ<br>וּמְשַׁלֵּם לְאָדָם חֶשְׁבּוֹנוֹ וְדִינוֹ, וְהַכֹּל לִשְׁמוֹ הוֹדָיָה יִתֵּֽנוּ."},
+          {"ref": "13", "kind": "prayer", "text": "יָדַֽעְנוּ יהוה כִּי צֶֽדֶק מִשְׁפָּטֶֽךָ, תִּצְדַּק בְּדָבְרֶֽךָ וְתִזְכֶּה בְשָׁפְטֶֽךָ<br>וְאֵין לְהַרְהֵר אַחַר מִדַּת שָׁפְטֶֽךָ. צַדִּיק אַתָּה יהוה, וְיָשָׁר מִשְׁפָּטֶֽיךָ:"},
+          {"ref": "14", "kind": "prayer", "text": "דַּיַּן אֱמֶת, שׁוֹפֵט צֶֽדֶק וֶאֱמֶת<br>בָּרוּךְ דַּיַּן הָאֱמֶת, שֶׁכָּל מִשְׁפָּטָיו צֶֽדֶק וֶאֱמֶת."},
+          {"ref": "15", "kind": "prayer", "text": "נֶֽפֶשׁ כָּל חַי בְּיָדֶֽךָ, צֶֽדֶק מָלְאָה יְמִינְךָ וְיָדֶֽךָ<br>רַחֵם עַל פְּלֵטַת צֹאן עֲבָדֶֽיךָ, וְתֹאמַר לַמַּלְאַךְ הֶֽרֶף יָדֶֽךָ."},
+          {"ref": "16", "kind": "prayer", "text": "גְּדֹל הָעֵצָה וְרַב הָעֲלִילִיָּה<br>אֲשֶׁר־עֵינֶֽיךָ פְקֻחוֹת עַל־כָּל־דַּרְכֵי בְּנֵי אָדָם<br>לָתֵת לְאִישׁ כִּדְרָכָיו, וְכִפְרִי מַעֲלָלָיו:"},
+          {"ref": "17", "kind": "prayer", "text": "לְהַגִּיד כִּי־יָשָׁר יהוה, צוּרִי וְלֹא־עַוְלָֽתָה בּוֹ:"},
+          {"ref": "18", "kind": "prayer", "text": "יהוה נָתַן וַיהוה לָקָח, יְהִי שֵׁם יהוה מְבֹרָךְ:"},
+          {"ref": "19", "kind": "prayer", "text": "וְהוּא רַחוּם, יְכַפֵּר עָוֹן וְלֹא־יַשְׁחִית<br>וְהִרְבָּה לְהָשִׁיב אַפּוֹ, וְלֹא־יָעִיר כָּל־חֲמָתוֹ:"},
+          {"ref": "21", "kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish", "text": "<i class=\"instruction\">אבל:</i> יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא (אָמֵן)<br>בְּעָלְמָא דְהוּא עָתִיד לְאִתְחַדָּתָא<br>וּלְאַחְיָאָה מֵתַיָּא, וּלְאַסָּקָא יָתְהוֹן לְחַיֵּי עָלְמָא<br>וּלְמִבְנֵא קַרְתָּא דִירוּשְׁלֵם, וּלְשַׁכְלָלָא הֵיכְלֵהּ בְּגַוַהּ<br>וּלְמֶעְקַר פָּלְחָנָא נֻכְרָאָה מֵאַרְעָא<br>וְלַאֲתָבָא פָּלְחָנָא דִשְׁמַיָּא לְאַתְרֵהּ<br>וְיַמְלִיךְ קֻדְשָׁא בְּרִיךְ הוּא בְּמַלְכוּתֵהּ וִיקָרֵהּ<br>בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְּכָל בֵּית יִשְׂרָאֵל<br>בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן. (אָמֵן)"},
+          {"ref": "22", "kind": "prayer", "role": "congregation", "en": "Congregation response", "text": "<i class=\"instruction\">קהל ואבל:</i> יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא."},
+          {"ref": "23", "kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish (conclusion)", "text": "<i class=\"instruction\">אבל:</i> יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר<br>וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל<br>שְׁמֵהּ דְּקֻדְשָׁא בְּרִיךְ הוּא (בְּרִיךְ הוּא)<br>לְעֵֽלָּא מִן כָּל בִּרְכָתָא<i class=\"instruction\"> בעשרת ימי תשובה:</i> לְעֵֽלָּא לְעֵֽלָּא מִכָּל בִּרְכָתָא/<br>וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא<br>דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן. (אָמֵן)"},
+          {"ref": "24", "kind": "prayer", "role": "mourner", "minyan": true, "en": "Kaddish d'Rabbanan", "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא<br>וְחַיִּים, עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל, וְאִמְרוּ אָמֵן. (אָמֵן)"},
+          {"ref": "26", "kind": "prayer", "role": "congregation", "en": "Congregation response", "text": "<i class=\"instruction\">קהל:</i> עֹשֶׂה שָׁלוֹם/<i class=\"instruction\">בעשרת ימי תשובה:</i> הַשָּׁלוֹם/ בִּמְרוֹמָיו<br>הוּא יַעֲשֶׂה שָׁלוֹם, עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל<br>וְאִמְרוּ אָמֵן. (אָמֵן)"},
+          {"ref": "28", "kind": "instruction", "en": "Comforting the mourners", "gloss": "Said to mourners after the funeral", "text": "הַמָּקוֹם יְנַחֵם אוֹתְךָ/אוֹתָךְ/אֶתְכֶם<br>בְּתוֹךְ שְׁאָר אֲבֵלֵי צִיּוֹן וִירוּשָׁלָֽיִם."},
+          {"ref": "30", "kind": "instruction", "en": "May you have no further grief", "gloss": "Optional conclusion", "text": "וְלֹא תוֹסִֽיפוּ לְדַאֲבָה עוֹד."},
+          {"ref": "32", "kind": "instruction", "en": "May they of the city grow like the grass of the earth", "gloss": "Custom to throw grass", "text": "וְיָצִֽיצוּ מֵעִיר כְּעֵֽשֶׂב הָאָֽרֶץ:"},
+          {"ref": "34", "kind": "instruction", "en": "Remember that we are dust", "gloss": "Alternative custom", "text": "זָכוּר כִּי־עָפָר אֲנָֽחְנוּ:"},
+          {"ref": "36", "kind": "instruction", "en": "After leaving the cemetery, wash hands and say:", "text": "בִּלַּע הַמָּֽוֶת לָנֶֽצַח, וּמָחָה אֲדֹנָי יֱהֹוִה דִּמְעָה מֵעַל כָּל־פָּנִים, וְחֶרְפַּת עַמּוֹ יָסִיר מֵעַל כָּל־הָאָֽרֶץ, כִּי יהוה דִּבֵּר:"}
+        ]
+      },
+      "en": {
+        "version": "English Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "kind": "commentary", "text": "עֲקַבְיָא Akavya ben Mahalalel said: Reflect on three things and you will avoid transgression: Know where you came from, where you are going, and before whom you will have to give an account and reckoning. “Where you came from” – from a putrid drop. “Where you are going” – to a place of dust, worms and maggots. “And before whom you will have to give an account and reckoning” – before the Supreme King of kings, the Holy One, blessed be He."},
+          {"ref": "2", "translates": ["3"], "kind": "instruction", "en": "While on the way to the grave, say:", "text": "<i class=\"instruction\">While on the way to the grave, say:</i>"},
+          {"ref": "3", "translates": ["3"], "kind": "commentary", "text": "יֹשֵׁב בְּסֵֽתֶר He who lives in the shelter of the Most High dwells in the shadow of the Almighty. I say of the <small>LORD</small>, my Refuge and Stronghold, my God in whom I trust, that He will save you from the fowler’s snare and the deadly pestilence. With His pinions He will cover you, and beneath His wings you will find shelter; His faithfulness is an encircling shield. You need not fear terror by night, nor the arrow that flies by day; not the pestilence that stalks in darkness, nor the plague that ravages at noon. A thousand may fall at your side, ten thousand at your right hand, but it will not come near you. You will only look with your eyes and see the punishment of the wicked. Because you [have said:] “The <small>LORD</small> is my Refuge,” taking the Most High as your shelter, no harm will befall you, no plague will come near your tent, for He will command His angels about you, to guard you in all your ways. They will lift you in their hands, lest your foot stumble on a stone. You will tread on lions and vipers, you will trample on young lions and snakes. [God says] “Because he loves Me, I will rescue him; I will protect him, because he acknowledges My name. When he calls on Me, I will answer him, I will be with him in distress, I will deliver him and bring him honor. With long life I will satisfy him, and show him My salvation. With long life I will satisfy him, and show him My salvation.”"},
+          {"ref": "4", "translates": ["5"], "parts": [
+            {"kind": "instruction", "en": "After the funeral, the following is said, except on days on which Taḥanun is omitted, or after nightfall. Some say the following before the funeral.", "text": "<i class=\"instruction\">After the funeral, the following is said, except on days on which Taḥanun</i>"},
+            {"kind": "instruction", "text": "<br><i class=\"instruction\">is omitted, or after nightfall. Some say the following before the funeral.</i>"}
+          ]},
+          {"ref": "5", "translates": ["5"], "kind": "heading", "en": "THE ACCEPTANCE OF JUDGMENT", "text": "<small>THE ACCEPTANCE OF JUDGMENT</small>"},
+          {"ref": "6", "translates": ["6"], "kind": "commentary", "text": "הַצּוּר The Rock, His work is perfect, for all His ways are just;<br>A faithful God who does no wrong, righteous and fair is He."},
+          {"ref": "7", "translates": ["7"], "kind": "commentary", "text": "The Rock, perfect in every deed:<br>Who can say to Him, “What have You done?”<br>He rules below and above. He brings death and gives life,<br>bringing down to the grave and raising up again."},
+          {"ref": "8", "translates": ["8"], "kind": "commentary", "text": "The Rock, perfect in every act:<br>Who can say to Him, “Why do You so act?”<br>You who speak and act: show us kindness we do not deserve,<br>and in the merit of the one who was bound like a lamb, hear us and act."},
+          {"ref": "9", "translates": ["9"], "kind": "commentary", "text": "Righteous in all His ways, the Rock who is perfect,<br>slow to anger and full of compassion,<br>please have pity and spare parents and children,<br>for Yours, <small>LORD</small>, are forgiveness and compassion."},
+          {"ref": "10", "translates": ["10"], "kind": "commentary", "text": "You are righteous, <small>LORD</small>, in bringing death and giving life.<br>In Your hand is the safekeeping of all spirits.<br>Far be it from You to erase our remembrance.<br>May Your eyes be open to us in compassion,<br>for Yours, <small>LORD</small>, are compassion and forgiveness."},
+          {"ref": "11", "translates": ["11"], "kind": "commentary", "text": "If one lives for a year or a thousand years,<br>what does it profit him? He shall be as if he had never been.<br>Blessed is the true Judge who brings death and gives life."},
+          {"ref": "12", "translates": ["12"], "kind": "commentary", "text": "Blessed is He for His judgment is true, and in His sight He surveys all.<br>He repays man in accord with his account and just desert,<br>and all must render acknowledgment to His name."},
+          {"ref": "13", "translates": ["13"], "kind": "commentary", "text": "We know, <small>LORD</small>, that Your judgment is just.<br>You are just when You speak and fair when You judge.<br>It is not for us to criticize Your manner of judgment.<br>You are righteous, <small>LORD</small>, and Your judgments are fair."},
+          {"ref": "14", "translates": ["14"], "kind": "commentary", "text": "True Judge, Judge of righteousness and truth:<br>Blessed is the true Judge for all His judgments are righteous and true."},
+          {"ref": "15", "translates": ["15"], "kind": "commentary", "text": "In Your hand is the soul of every living thing. Your right hand and power are full of righteousness.<br>Have compassion on the remnant of the flock of those who serve You,<br>and say to the angel [of death], “Stay your hand.”"},
+          {"ref": "16", "translates": ["16"], "kind": "commentary", "text": "Great in counsel and mighty in deed,<br>Your eyes are open to all the ways of men,<br>giving each according to his ways and the fruit of his deeds:"},
+          {"ref": "17", "translates": ["19"], "kind": "prayer", "en": "to proclaim that the LORD is upright; He is my Rock, in whom there is no wrong.", "text": "to proclaim that the <small>LORD </small>is upright; He is my Rock, in whom there is no wrong."},
+          {"ref": "18", "translates": ["18"], "kind": "prayer", "en": "The LORD has given and the LORD has taken away: blessed be the name of the LORD.", "text": "The <small>LORD </small>has given and the <small>LORD </small>has taken away: blessed be the name of the <small>LORD</small>."},
+          {"ref": "19", "translates": ["19"], "kind": "prayer", "en": "He is compassionate; He forgives iniquity and does not destroy. Repeatedly He suppresses His anger, not rousing His full wrath.", "text": "He is compassionate; He forgives iniquity and does not destroy. Repeatedly He suppresses His anger, not rousing His full wrath."},
+          {"ref": "20", "translates": ["21"], "kind": "instruction", "en": "The following Kaddish, said by the mourners, requires the presence of a minyan.", "text": "<i class=\"instruction\">The following Kaddish, said by the mourners, requires the presence of a minyan.</i>"},
+          {"ref": "21", "translates": ["21"], "parts": [
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish", "text": "<i class=\"instruction\">Mourner:</i>"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish", "text": " Magnified and sanctified may His great name be,"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish", "text": "<br>in the world that will in future be renewed,"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish", "text": "<br>reviving the dead and raising them up to eternal life.<br>He will rebuild the city of Jerusalem and in it reestablish His Temple.<br>He will remove alien worship from the earth and restore to its place the worship of Heaven.<br>Then the Holy One,"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish", "text": " blessed be He,"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish", "text": " will reign in His sovereignty and splendor.<br>May it be in your lifetime and in your days,"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish", "text": " and in the lifetime of all the house of Israel,"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish", "text": "<br>swiftly and soon – and say: Amen."}
+          ]},
+          {"ref": "22", "translates": ["22"], "parts": [
+            {"kind": "prayer", "role": "congregation", "en": "Congregation response", "text": "<i class=\"instruction\">All:</i>"},
+            {"kind": "prayer", "role": "congregation", "en": "Congregation response", "text": " May His great name be blessed for ever and all time."}
+          ]},
+          {"ref": "23", "translates": ["23"], "parts": [
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish (conclusion)", "text": "<i class=\"instruction\">Mourner:</i>"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish (conclusion)", "text": " Blessed and praised,"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish (conclusion)", "text": " glorified and exalted,"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish (conclusion)", "text": "<br>raised and honored,"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish (conclusion)", "text": " uplifted and lauded<br>be the name of the Holy One,"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish (conclusion)", "text": " blessed be He,"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish (conclusion)", "text": "<br>beyond any blessing,"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish (conclusion)", "text": " song,"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "en": "Mourner's Kaddish (conclusion)", "text": " praise and consolation<br>uttered in the world – and say: Amen."}
+          ]},
+          {"ref": "24", "translates": ["24"], "kind": "prayer", "role": "mourner", "minyan": true, "en": "Kaddish d'Rabbanan", "text": "May there be great peace from heaven,<br>and life for us and all Israel – and say: Amen."},
+          {"ref": "25", "translates": ["26"], "kind": "instruction", "en": "Bow, take three steps back, as if taking leave of the Divine Presence, then bow, first left, then right, then center, while saying:", "text": "<i class=\"instruction\">Bow, take three steps back, as if taking leave of the Divine Presence, then bow, first left, then right, then center, while saying:</i>"},
+          {"ref": "26", "translates": ["26"], "kind": "prayer", "role": "congregation", "en": "Congregation response", "text": "May He who makes peace in His high places,<br>make peace for us and all Israel – and say: Amen."},
+          {"ref": "27", "translates": ["28"], "kind": "instruction", "en": "After the funeral, those present form two rows, the mourners pass between them, and the following is said to them:", "text": "<i class=\"instruction\">After the funeral, those present form two rows, the mourners pass between them, and the following is said to them:</i>"},
+          {"ref": "28", "translates": ["28"], "kind": "instruction", "en": "May the Almighty comfort you among the other mourners of Zion and Jerusalem.", "text": "May the Almighty comfort you among the other mourners of Zion and Jerusalem."},
+          {"ref": "29", "translates": ["30"], "kind": "instruction", "en": "Some conclude with:", "text": "<i class=\"instruction\">Some conclude with:</i>"},
+          {"ref": "30", "translates": ["30"], "kind": "instruction", "en": "May you have no further grief", "text": "May you have no further grief."},
+          {"ref": "31", "translates": ["32"], "kind": "instruction", "en": "Some have the custom to pick blades of grass and throw them over their shoulders, saying:", "text": "<i class=\"instruction\">Some have the custom to pick blades of grass and throw them over their shoulders, saying:</i>"},
+          {"ref": "32", "translates": ["32"], "kind": "instruction", "en": "May they of the city grow like the grass of the earth", "text": "May they of the city grow like the grass of the earth."},
+          {"ref": "33", "translates": [], "kind": "instruction", "en": "Or:", "text": "<i class=\"instruction\">Or:</i>"},
+          {"ref": "34", "translates": [], "kind": "instruction", "en": "Remember that we are dust.", "text": "Remember that we are dust."},
+          {"ref": "35", "translates": [], "kind": "instruction", "en": "After leaving the cemetery, it is customary to wash one's hands and say:", "text": "<i class=\"instruction\">After leaving the cemetery, it is customary to wash one’s hands and say:</i>"},
+          {"ref": "36", "translates": [], "kind": "prayer", "en": "He will destroy death for ever, and the LORD God will wipe away the tears from all faces and remove the reproach of His people from the whole earth, for the LORD has spoken.", "text": "He will destroy death for ever, and the <small>LORD</small> God will wipe away the tears from all faces and remove the reproach of His people from the whole earth, for the <small>LORD</small> has spoken."}
+        ]
+      }
+    },
+    {
+      "path": "The Cycle of Life/Prayer in a House of Mourning",
+      "title": "תפילה בבית האבל",
+      "node": "lifecycle.house_of_mourning",
+      "service": "none",
+      "he": {
+        "version": "Hebrew Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "2", "kind": "prayer", "node": "tehillim", "text": "לַמְנַצֵּֽחַ לִבְנֵי־קֹֽרַח מִזְמוֹר׃ שִׁמְעוּ־זֹאת כָּל־הָעַמִּים, הַאֲזִֽינוּ כָּל־יֹֽשְׁבֵי חָֽלֶד׃ גַּם־בְּנֵי אָדָם, גַּם־בְּנֵי־אִישׁ, יַֽחַד עָשִׁיר וְאֶבְיוֹן׃ פִּי יְדַבֵּר חָכְמוֹת, וְהָגוּת לִבִּי תְבוּנוֹת׃ אַטֶּה לְמָשָׁל אָזְנִי, אֶפְתַּח בְּכִנּוֹר חִידָתִי׃ לָֽמָּה אִירָא בִּֽימֵי רָע, עֲוֹן עֲקֵבַי יְסֻבֵּֽנִי׃ הַבֹּטְחִים עַל־חֵילָם, וּבְרֹב עָשְׁרָם יִתְהַלָּֽלוּ׃ אָח לֹא־פָדֹה יִפְדֶּה אִישׁ, לֹא־יִתֵּן לֵאלֹהִים כָּפְרוֹ׃ וְיֵקַר פִּדְיוֹן נַפְשָׁם, וְחָדַל לְעוֹלָם׃ וִיחִי־עוֹד לָנֶֽצַח, לֹא יִרְאֶה הַשָּֽׁחַת׃ כִּי יִרְאֶה חֲכָמִים יָמֽוּתוּ, יַֽחַד כְּסִיל וָבַֽעַר יֹאבֵֽדוּ, וְעָזְבוּ לַאֲחֵרִים חֵילָם׃ קִרְבָּם בָּתֵּֽימוֹ לְעוֹלָם, מִשְׁכְּנֹתָם לְדוֹר וָדֹר, קָרְאוּ בִשְׁמוֹתָם עֲלֵי אֲדָמוֹת׃ וְאָדָם בִּיקָר בַּל־יָלִין, נִמְשַׁל כַּבְּהֵמוֹת נִדְמוּ׃ זֶה דַרְכָּם, כֵּֽסֶל לָֽמוֹ, וְאַחֲרֵיהֶם בְּפִיהֶם יִרְצוּ סֶֽלָה׃ כַּצֹּאן לִשְׁאוֹל שַֽׁתּוּ, מָֽוֶת יִרְעֵם, וַיִּרְדּוּ בָם יְשָׁרִים לַבֹּֽקֶר, וְצוּרָם לְבַלּוֹת שְׁאוֹל מִזְּבֻל לוֹ׃ אַךְ־אֱלֹהִים יִפְדֶּה נַפְשִׁי מִיַּד שְׁאוֹל, כִּי יִקָּחֵֽנִי סֶֽלָה׃ אַל־תִּירָא כִּי־יַעֲשִׁר אִישׁ, כִּי־יִרְבֶּה כְּבוֹד בֵּיתוֹ׃ כִּי לֹא בְמוֹתוֹ יִקַּח הַכֹּל, לֹא־יֵרֵד אַחֲרָיו כְּבוֹדוֹ׃ כִּי־נַפְשׁוֹ בְּחַיָּיו יְבָרֵךְ, וְיוֹדֻֽךָ כִּי־תֵיטִיב לָךְ׃ תָּבוֹא עַד־דּוֹר אֲבוֹתָיו, עַד־נֵֽצַח לֹא יִרְאוּ־אוֹר׃ אָדָם בִּיקָר וְלֹא יָבִין, נִמְשַׁל כַּבְּהֵמוֹת נִדְמוּ׃"},
+          {"ref": "4", "kind": "prayer", "node": "tehillim", "text": "מִכְתָּם לְדָוִד, שָׁמְרֵֽנִי אֵל כִּי־חָסִֽיתִי בָךְ׃ אָמַרְתְּ לַיהוה, אֲדֹנָי אָֽתָּה, טוֹבָתִי בַּל־עָלֶֽיךָ׃ לִקְדוֹשִׁים אֲשֶׁר־בָּאָֽרֶץ הֵֽמָּה, וְאַדִּירֵי כָּל־חֶפְצִי־בָם׃ יִרְבּוּ עַצְּבוֹתָם אַחֵר מָהָֽרוּ, בַּל־אַסִּיךְ נִסְכֵּיהֶם מִדָּם, וּבַל־אֶשָּׂא אֶת־שְׁמוֹתָם עַל־שְׂפָתָי׃ יהוה, מְנָת־חֶלְקִי וְכוֹסִי, אַתָּה תּוֹמִיךְ גּוֹרָלִי׃ חֲבָלִים נָפְלוּ־לִי בַּנְּעִמִים, אַף־נַחֲלָת שָׁפְרָה עָלָי׃ אֲבָרֵךְ אֶת־יהוה אֲשֶׁר יְעָצָֽנִי, אַף־לֵילוֹת יִסְּרֽוּנִי כִלְיוֹתָי׃ שִׁוִּֽיתִי יהוה לְנֶגְדִּי תָמִיד, כִּי מִימִינִי בַּל־אֶמּוֹט׃ לָכֵן שָׂמַח לִבִּי וַיָּֽגֶל כְּבוֹדִי, אַף־בְּשָׂרִי יִשְׁכֹּן לָבֶֽטַח׃ כִּי לֹא־תַעֲזֹב נַפְשִׁי לִשְׁאוֹל, לֹא־תִתֵּן חֲסִידְךָ לִרְאוֹת שָֽׁחַת׃ תּוֹדִיעֵֽנִי אֹֽרַח חַיִּים, שֹֽׂבַע שְׂמָחוֹת אֶת־פָּנֶֽיךָ, נְעִמוֹת בִּימִינְךָ נֶֽצַח׃"},
+          {"ref": "5", "kind": "heading", "en": "Memorial Prayer", "text": "<b>אזכרה</b>"},
+          {"ref": "6", "kind": "prayer", "text": "אָנָּא יהוה מֶֽלֶךְ מָלֵא רַחֲמִים, אֱלֹהֵי הָרוּחוֹת לְכָל בָּשָׂר, אֲשֶׁר בְּיָדְךָ נַפְשׁוֹת הַחַיִּים וְהַמֵּתִים, אָנָּא קַבֵּל בְּחַסְדְּךָ הַגָּדוֹל אֶת נִשְׁמַת"},
+          {"ref": "8", "parts": [
+            {"kind": "instruction", "en": "For a man, say:", "gloss": "Insert the name and father's name here", "text": "(<i class=\"instruction\">פלוני</i> בֶּן <i class=\"instruction\">פלוני</i>) "},
+            {"kind": "prayer", "when": "!if_deceasedFemale", "text": "אֲשֶׁר נֶאֱסַף אֶל עַמָּיו. חוּס וַחֲמֹל עָלָיו, סְלַח וּמְחַל לְכָל פְּשָׁעָיו. כִּי אָדָם אֵין צַדִּיק בָּאָֽרֶץ, אֲשֶׁר יַעֲשֶׂה־טּוֹב וְלֹא יֶחֱטָא: זְכֹר לוֹ צִדְקָתוֹ אֲשֶׁר עָשָׂה, וִיהִי שְׂכָרוֹ אִתּוֹ, וּפְעֻלָּתוֹ לְפָנָיו. אָנָּא הַסְתֵּר אֶת נִשְׁמָתוֹ בְּצֵל כְּנָפֶֽיךָ, הוֹדִיעֵֽהוּ אֹֽרַח חַיִּים, שֹֽׂבַע שְׂמָחוֹת אֶת פָּנֶֽיךָ, נְעִימוֹת בִּימִינְךָ נֶֽצַח, וְתַשְׁפִּֽיעַ לוֹ מֵרֹב טוּב הַצָּפוּן<br>לַצַּדִּיקִים."}
+          ]},
+          {"ref": "10", "parts": [
+            {"kind": "instruction", "en": "For a woman, say:", "gloss": "Insert the name and father's name here", "text": "(<i class=\"instruction>פלונית</i> בַּת <i class=\"instruction\">פלוני</i>) "},
+            {"kind": "prayer", "when": "if_deceasedFemale", "text": "אֲשֶׁר נֶאֶסְפָה אֶל עַמֶּֽיהָ. חוּס וַחֲמֹל עָלֶֽיהָ, סְלַח<br>וּמְחַל לְכָל פְּשָׁעֶֽיהָ. כִּי אָדָם אֵין צַדִּיק בָּאָֽרֶץ, אֲשֶׁר יַעֲשֶׂה־טּוֹב וְלֹא יֶחֱטָא: זְכֹר לָהּ צִדְקָתָהּ אֲשֶׁר עָשְׂתָה, וִיהִי שְׂכָרָהּ אִתָּהּ, וּפְעֻלָּתָהּ לְפָנֶֽיהָ. אָנָּא הַסְתֵּר אֶת נִשְׁמָתָהּ בְּצֵל כְּנָפֶֽיךָ, הוֹדִיעֶֽהָ אֹֽרַח חַיִּים, שֹֽׂבַע שְׂמָחוֹת אֶת פָּנֶֽיךָ, נְעִימוֹת בִּימִינְךָ נֶֽצַח, וְתַשְׁפִּֽיעַ לָהּ מֵרֹב טוּב הַצָּפוּן לַצַּדִּיקִים."}
+          ]},
+          {"ref": "12", "parts": [
+            {"kind": "instruction", "en": "For a boy, say:", "gloss": "Insert the name and father's name here", "text": "(<i class=\"instruction\">פלוני</i> בֶּן <i class=\"instruction\">פלוני</i>) "},
+            {"kind": "prayer", "when": "!if_deceasedFemale", "text": "אֲשֶׁר נֶאֱסַף אֶל עַמָּיו. זְכֹר לוֹ צִדְקָתוֹ אֲשֶׁר עָשָׂה, וִיהִי שְׂכָרוֹ אִתּוֹ, וּפְעֻלָּתוֹ לְפָנָיו. אָנָּא הַסְתֵּר אֶת נִשְׁמָתוֹ בְּצֵל כְּנָפֶֽיךָ, הוֹדִיעֵֽהוּ אֹֽרַח חַיִּים, שֹֽׂבַע שְׂמָחוֹת אֶת פָּנֶֽיךָ, נְעִימוֹת בִּימִינְךָ נֶֽצַח, וְתַשְׁפִּֽיעַ לוֹ מֵרֹב טוּב הַצָּפוּן לַצַּדִּיקִים."}
+          ]},
+          {"ref": "14", "parts": [
+            {"kind": "instruction", "en": "For a girl, say:", "gloss": "Insert the name and father's name here", "text": "(<i class=\"instruction>פלונית</i> בַּת <i class=\"instruction\">פלוני</i>) "},
+            {"kind": "prayer", "when": "if_deceasedFemale", "text": "אֲשֶׁר נֶאֶסְפָה אֶל עַמֶּֽיהָ. זְכוֹר לָהּ צִדְקָתָהּ אֲשֶׁר עָשְׂתָה, וִיהִי שְׂכָרָהּ אִתָּהּ, וּפְעֻלָּתָהּ לְפָנֶֽיהָ. אָנָּא הַסְתֵּר אֶת נִשְׁמָתָהּ בְּצֵל כְּנָפֶֽיךָ, הוֹדִיעֶֽהָ אֹֽרַח חַיִּים, שֹֽׂבַע שְׂמָחוֹת אֶת פָּנֶֽיךָ, נְעִימוֹת בִּימִינְךָ נֶֽצַח, וְתַשְׁפִּֽיעַ לָהּ מֵרֹב טוּב הַצָּפוּן לַצַּדִּיקִים."}
+          ]},
+          {"ref": "15", "kind": "prayer", "text": "כְּמוֹ שֶׁכָּתוּב: מָה רַב טוּבְךָ אֲשֶׁר־צָפַֽנְתָּ לִּירֵאֶֽיךָ, פָּעַֽלְתָּ לַחוֹסִים בָּךְ נֶֽגֶד בְּנֵי אָדָם׃"},
+          {"ref": "16", "kind": "prayer", "text": "אָנָּא יהוה, הָרוֹפֵא לִשְׁבוּרֵי לֵב וּמְחַבֵּשׁ לְעַצְּבוֹתָם, שַׁלֵּם נִחוּמִים לָאֲבֵלִים."},
+          {"ref": "18", "kind": "prayer", "when": "if_deceasedChild", "text": "וּתְהִי פְּטִירַת הַיֶּֽלֶד הַזֶּה קֵץ לְכָל צָרָה וְצוּקָה לְאָבִיו וּלְאִמּוֹ."},
+          {"ref": "20", "kind": "prayer", "when": "if_deceasedChild", "text": "וּתְהִי פְּטִירַת הַיַּלְדָּה הַזֹּאת קֵץ לְכָל צָרָה וְצוּקָה לְאָבִֽיהָ וּלְאִמָּהּ."},
+          {"ref": "22", "kind": "prayer", "text": "חַזְּקֵם וְאַמְּצֵם בְּיוֹם אֶבְלָם וִיגוֹנָם, וְזָכְרֵם (וּזְכֹר אֶת בְּנֵי בֵיתָם) לְחַיִּים טוֹבִים וַאֲרֻכִּים. תֵּן בְּלִבָּם יִרְאָתְךָ וְאַהֲבָתְךָ לְעָבְדְּךָ בְּלֵבָב שָׁלֵם, וּתְהִי אַחֲרִיתָם שָׁלוֹם, אָמֵן."},
+          {"ref": "23", "kind": "prayer", "text": "כְּאִישׁ אֲשֶׁר אִמּוֹ תְּנַחֲמֶֽנּוּ<br>כֵּן אָנֹכִי אֲנַחֶמְכֶם<br>וּבִירוּשָׁלִַֽם תְּנֻחָֽמוּ׃<br>לֹא־יָבוֹא עוֹד שִׁמְשֵׁךְ, וִירֵחֵךְ לֹא יֵאָסֵף<br>כִּי יהוה יִהְיֶה־לָּךְ לְאוֹר עוֹלָם<br>וְשָׁלְמוּ יְמֵי אֶבְלֵךְ׃<br>בִּלַּע הַמָּֽוֶת לָנֶֽצַח<br>וּמָחָה אֲדֹנָי יֱהֹוִה דִּמְעָה מֵעַל כָּל־פָּנִים<br>וְחֶרְפַּת עַמּוֹ יָסִיר מֵעַל כָּל־הָאָֽרֶץ<br>כִּי יהוה דִּבֵּר׃"},
+          {"ref": "24", "kind": "heading", "en": "Mourner's Kaddish", "text": "<b>קדיש יתום</b>"},
+          {"ref": "26", "kind": "prayer", "role": "mourner", "minyan": true, "text": "<i class=\"instruction\">אבל:</i> יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא (אָמֵן)<br>בְּעָלְמָא דְהוּא עָתִיד לְאִתְחַדָּתָא<br>וּלְאַחְיָאָה מֵתַיָּא, וּלְאַסָּקָא יָתְהוֹן לְחַיֵּי עָלְמָא<br>וּלְמִבְנֵא קַרְתָּא דִירוּשְׁלֵם, וּלְשַׁכְלָלָא הֵיכְלֵהּ בְּגַוַהּ<br>וּלְמֶעְקַר פָּלְחָנָא נֻכְרָאָה מֵאַרְעָא<br>וְלַאֲתָבָא פָּלְחָנָא דִשְׁמַיָּא לְאַתְרֵהּ<br>וְיַמְלִיךְ קֻדְשָׁא בְּרִיךְ הוּא בְּמַלְכוּתֵהּ וִיקָרֵהּ<br>בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְּכָל בֵּית יִשְׂרָאֵל<br>בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן. (אָמֵן)"},
+          {"ref": "27", "kind": "prayer", "role": "congregation", "text": "<i class=\"instruction\">קהל ואבל:</i> יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא."},
+          {"ref": "28", "kind": "prayer", "role": "mourner", "minyan": true, "text": "<i class=\"instruction\">אבל:</i> יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר<br>וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל<br>שְׁמֵהּ דְּקֻדְשָׁא בְּרִיךְ הוּא (בְּרִיךְ הוּא)<br>לְעֵֽלָּא מִן כָּל בִּרְכָתָא<i class=\"instruction\"> בעשרת ימי תשובה:</i> לְעֵֽלָּא לְעֵֽלָּא מִכָּל בִּרְכָתָא/<br>וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא<br>דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן. (אָמֵן)"},
+          {"ref": "29", "kind": "prayer", "role": "mourner", "minyan": true, "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא<br>וְחַיִּים, עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל<br>וְאִמְרוּ אָמֵן. (אָמֵן)"},
+          {"ref": "31", "kind": "prayer", "role": "congregation", "minyan": true, "gestures": ["bow_left_right_center"], "text": "<i class=\"instruction\">קהל:</i> עֹשֶׂה שָׁלוֹם/<i class=\"instruction\">בעשרת ימי תשובה:</i> הַשָּׁלוֹם/ בִּמְרוֹמָיו<br>הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל<br>וְאִמְרוּ אָמֵן. (אָמֵן)"}
+        ]
+      },
+      "en": {
+        "version": "English Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "translates": ["2"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">After the regular service, the following psalm is read in a house of mourning during</i>"},
+            {"kind": "instruction", "text": "<br><i class=\"instruction\">the shiva week. On those days on which Taḥanun is not said, Psalm 16 (below) is substituted.</i>"}
+          ]},
+          {"ref": "2", "translates": ["2"], "text": "לַמְנַצֵּֽחַ For the conductor of music. Of the sons of Koraḥ. A sacred song. Hear this, all you peoples. Listen, all inhabitants of the world, low and high, rich and poor alike. My mouth will speak words of wisdom; the utterance of my heart will give understanding. I listen with care to a parable; I expound my mystery to the music of the harp. Why should I fear when evil days come, when the wickedness of my foes surrounds me, trusting in their wealth, boasting of their great riches? No man can redeem his brother or pay God the price of his release, for the ransom of a life is costly; no payment is ever enough that would let him live for ever, never seeing the grave. For all can see that wise men die, that the foolish and senseless all perish and leave their wealth to others. They think their houses will remain for ever, their dwellings for all generations; they give their names to their estates. But man, despite his splendor, does not endure; he is like the beasts that perish. Such is the fate of the foolish and their followers who approve their words, Selah. Like sheep they are destined for the grave: death will be their shepherd. The upright will rule over them in the morning. Their forms will decay in the grave, far from their mansions. But God will redeem my life from the grave; He will surely take me to Himself, Selah. Do not be overawed when a man grows rich, when the glory of his house increases, for he will take nothing with him when he dies; his wealth will not descend with him. Though while he lived he counted himself blessed – men always praise you when you prosper – he will join the generation of his ancestors who will never again see the light. A man who, despite his splendor, lacks understanding, is like the beasts that perish."},
+          {"ref": "3", "translates": ["4"], "text": "<i class=\"instruction\">On those days on which Taḥanun is not said, substitute:</i>"},
+          {"ref": "4", "translates": ["4"], "text": "מִכְתָּם לְדָוִד A musical composition of David. Protect me, God, for in You I have found refuge. I have said to the <small>LORD</small>: You are my <small>LORD</small>: from You alone comes the good I enjoy. All my delight is in the holy ones, the mighty in the land. Those who run after other gods multiply their sorrows. I shall never offer them libations of blood, nor will their names pass my lips. The <small>LORD</small> is my allotted portion and my cup: You direct my fate. The lines have fallen for me in pleasant places; I am well content with my inheritance. I will bless the <small>LORD</small> who has guided me; at night my innermost being admonishes me. I have set the <small>LORD</small> before me at all times. He is at my right hand: I shall not be shaken. Therefore my heart is glad, my spirit rejoices, and my body rests secure. For You will not abandon me to the grave, nor let Your faithful one see the pit. You will teach me the path of life. In Your presence is fullness of joy; at Your right hand, bliss for evermore."},
+          {"ref": "5", "translates": ["5"], "text": "<small>MEMORIAL PRAYER</small>"},
+          {"ref": "6", "translates": ["6"], "text": "אָנָּא O <small>LORD</small> and King, full of compassion, God of the spirits of all flesh, in whose hand are the souls of the living and the dead, receive, we pray You, in Your great love the soul of"},
+          {"ref": "7", "translates": ["8"], "text": "<i class=\"instruction\">For a man, say:</i>"},
+          {"ref": "8", "translates": ["8"], "parts": [
+            {"kind": "prayer", "text": "("},
+            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "prayer", "text": " son of "},
+            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "prayer", "text": ") who has been gathered to his people. Have mercy on him,"},
+            {"kind": "prayer", "text": " pardon all his transgressions,"},
+            {"kind": "prayer", "text": " for there is no one so righteous on earth as to have done only good and never sinned. Remember the righteousness that he did,"},
+            {"kind": "prayer", "text": " and let his reward be with him,"},
+            {"kind": "prayer", "text": " his recompense before him. O shelter his soul in the shadow of Your wings. Make known to him the path of life. In Your presence is fullness of joy,"},
+            {"kind": "prayer", "text": " at Your right hand bliss for evermore. Bestow upon him the great goodness that is stored up for the righteous."}
+          ]},
+          {"ref": "9", "translates": ["10"], "text": "<i class=\"instruction\">For a woman, say:</i>"},
+          {"ref": "10", "translates": ["10"], "parts": [
+            {"kind": "prayer", "text": "("},
+            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "prayer", "text": " daughter of "},
+            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "prayer", "text": ") who has been gathered to her people. Have mercy on her,"},
+            {"kind": "prayer", "text": " pardon all her transgressions,"},
+            {"kind": "prayer", "text": " for there is no one so righteous on earth as to have done only good and never sinned. Remember the righteousness that she did,"},
+            {"kind": "prayer", "text": " and let her reward be with her,"},
+            {"kind": "prayer", "text": " her recompense before her. O shelter her soul in the shadow of Your wings. Make known to her the path of life. In Your presence is fullness of joy,"},
+            {"kind": "prayer", "text": " at Your right hand bliss for evermore. Bestow upon her the great goodness that is stored up for the righteous."}
+          ]},
+          {"ref": "11", "translates": ["12"], "text": "<i class=\"instruction\">For a boy, say:</i>"},
+          {"ref": "12", "translates": ["12"], "parts": [
+            {"kind": "prayer", "text": "("},
+            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "prayer", "text": " son of "},
+            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "prayer", "text": ") who has been gathered to his people. Remember the righteousness that he did,"},
+            {"kind": "prayer", "text": " and let his reward be with him,"},
+            {"kind": "prayer", "text": " his recompense before him. O shelter his soul in the shadow of Your wings. Make known to him the path of life. In Your presence is fullness of joy,"},
+            {"kind": "prayer", "text": " at Your right hand bliss for evermore. Bestow upon him the great goodness that is stored up for the righteous."}
+          ]},
+          {"ref": "13", "translates": ["14"], "text": "<i class=\"instruction\">For a girl, say:</i>"},
+          {"ref": "14", "translates": ["14"], "parts": [
+            {"kind": "prayer", "text": "("},
+            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "prayer", "text": " daughter of "},
+            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "prayer", "text": ") who has been gathered to her people. Remember the righteousness that she did,"},
+            {"kind": "prayer", "text": " and let her reward be with her,"},
+            {"kind": "prayer", "text": " her recompense before her. O shelter her soul in the shadow of Your wings. Make known to her the path of life. In Your presence is fullness of joy,"},
+            {"kind": "prayer", "text": " at Your right hand bliss for evermore. Bestow upon her the great goodness that is stored up for the righteous."}
+          ]},
+          {"ref": "15", "translates": ["15"], "text": "As it is written, “How great is Your goodness which You have stored up for those who revere You, which You bestow on those that trust in You before the children of men.”"},
+          {"ref": "16", "translates": ["16"], "text": "אָנָּא May the <small>LORD</small> who heals the brokenhearted and binds up their wounds, grant consolation to the mourners."},
+          {"ref": "17", "translates": ["18"], "text": "<i class=\"instruction\">For a young boy, add:</i>"},
+          {"ref": "18", "translates": ["18"], "text": "May the death of this boy mark the end of all anguish and sorrow for his parents."},
+          {"ref": "19", "translates": ["20"], "text": "<i class=\"instruction\">For a young girl, add:</i>"},
+          {"ref": "20", "translates": ["20"], "text": "May the death of this girl mark the end of all anguish and sorrow for her parents."},
+          {"ref": "21", "translates": ["22"], "text": "<i class=\"instruction\">If the mourners have children, add the words in parentheses:</i>"},
+          {"ref": "22", "translates": ["22"], "text": "חַזְּקֵם Strengthen and support them in the day of their sadness and grief; and remember them (and their children) for a long and good life. Put into their hearts love and reverence for You, so that they may serve You with a perfect heart; and let their end be peace. Amen."},
+          {"ref": "23", "translates": ["23"], "text": "כְּאִישׁ As a mother comforts her son,<br>so will I comfort you;<br>and in Jerusalem you shall find comfort.<br>Your sun shall no more set,<br>your moon shall no more withdraw itself,<br>for the <small>LORD</small> shall be your everlasting light,<br>and your days of mourning shall be ended.<br>He will destroy death for ever;<br>and the <small>LORD</small> God will wipe away the tears from all faces,<br>and remove the reproach of His people from the whole earth;<br>for the <small>LORD</small> has spoken it."},
+          {"ref": "24", "translates": ["24"], "text": "<small>MOURNER’S KADDISH</small>"},
+          {"ref": "25", "translates": ["26"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">The following prayer, said by mourners, requires the presence of a minyan.</i>"},
+            {"kind": "instruction", "text": "<br><i class=\"instruction\">A transliteration can be found on page 1334.</i>"}
+          ]},
+          {"ref": "26", "translates": ["26"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Mourner:</i>"},
+            {"kind": "prayer", "text": " יִתְגַּדַּל Magnified and sanctified<br>may His great name be,"},
+            {"kind": "prayer", "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br>in your lifetime and in your days,"},
+            {"kind": "prayer", "text": "<br>and in the lifetime of all the house of Israel,"},
+            {"kind": "prayer", "text": "<br>swiftly and soon – and say: Amen."}
+          ]},
+          {"ref": "27", "translates": ["27"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">All:</i>"},
+            {"kind": "prayer", "text": " May His great name be blessed<br>for ever and all time."}
+          ]},
+          {"ref": "28", "translates": ["28"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Mourner:</i>"},
+            {"kind": "prayer", "text": " Blessed and praised,"},
+            {"kind": "prayer", "text": "<br>glorified and exalted,"},
+            {"kind": "prayer", "text": "<br>raised and honored,"},
+            {"kind": "prayer", "text": "<br>uplifted and lauded<br>be the name of the Holy One,"},
+            {"kind": "prayer", "text": "<br>blessed be He,"},
+            {"kind": "prayer", "text": "<br>beyond any blessing,"},
+            {"kind": "prayer", "text": " song,"},
+            {"kind": "prayer", "text": " praise and consolation<br>uttered in the world – and say: Amen."}
+          ]},
+          {"ref": "29", "translates": ["29"], "text": "May there be great peace from heaven,<br>and life for us and all Israel – and say: Amen."},
+          {"ref": "30", "translates": ["31"], "text": "<i class=\"instruction\">Bow, take three steps back, as if taking leave of the Divine Presence, then bow, first left, then right, then center, while saying:</i>"},
+          {"ref": "31", "translates": ["31"], "text": "May He who makes peace in His high places,<br>make peace for us and all Israel – and say: Amen."}
+        ]
+      }
+    },
+    {
+      "path": "The Cycle of Life/Birkat HaMazon in a House of Mourning",
+      "title": "ברכת המזון בבית האבל",
+      "node": "birkat_hamazon.zimun",
+      "when": "houseOfMourning",
+      "service": "none",
+      "he": {
+        "version": "Hebrew Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "kind": "instruction", "en": "Gentlemen, let us say grace.", "gloss": "Zimun call in a house of mourning", "text": "רַבּוֹתַי, נְבָרֵךְ."},
+          {"ref": "2", "kind": "prayer", "role": "congregation", "text": "יְהִי שֵׁם יהוה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם׃"},
+          {"ref": "3", "kind": "instruction", "en": "With your permission, let us bless the One who comforts mourners from whose food we have eaten.", "text": "יְהִי שֵׁם יהוה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם׃<br>בִּרְשׁוּת רַבּוֹתַי, נְבָרֵךְ מְנַחֵם אֲבֵלִים שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ."},
+          {"ref": "4", "kind": "prayer", "role": "congregation", "text": "בָּרוּךְ מְנַחֵם אֲבֵלִים, שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ."},
+          {"ref": "6", "kind": "prayer", "role": "congregation", "gloss": "For those who did not eat", "text": "בָּרוּךְ מְנַחֵם אֲבֵלִים, וּמְבֹרָךְ שְׁמוֹ תָּמִיד לְעוֹלָם וָעֶד."},
+          {"ref": "7", "kind": "prayer", "role": "congregation", "text": "בָּרוּךְ מְנַחֵם אֲבֵלִים, שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ."},
+          {"ref": "8", "kind": "prayer", "role": "congregation", "text": "בָּרוּךְ הוּא וּבָרוּךְ שְׁמוֹ."},
+          {"ref": "10", "kind": "prayer", "role": "congregation", "text": "נַחֵם יהוה אֱלֹהֵֽינוּ אֶת אֲבֵלֵי יְרוּשָׁלַֽיִם, וְאֶת הָאֲבֵלִים הַמִּתְאַבְּלִים בָּאֵֽבֶל הַזֶּה. נַחֲמֵם מֵאֶבְלָם וְשַׂמְּחֵם מִיגוֹנָם, כָּאָמוּר: כְּאִישׁ אֲשֶׁר אִמּוֹ תְּנַחֲמֶֽנּוּ, כֵּן אָנֹכִי אֲנַחֶמְכֶם וּבִירוּשָׁלִַֽם תְּנֻחָֽמוּ׃ בָּרוּךְ אַתָּה יהוה, מְנַחֵם צִיּוֹן בְּבִנְיַן יְרוּשָׁלָֽיִם. אָמֵן."},
+          {"ref": "11", "kind": "prayer", "role": "congregation", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, הָאֵל אָבִֽינוּ מַלְכֵּֽנוּ אַדִּירֵֽנוּ בּוֹרְאֵֽנוּ גּוֹאֲלֵֽנוּ יוֹצְרֵֽנוּ קְדוֹשֵֽׁנוּ קְדוֹשׁ יַעֲקֹב, רוֹעֵֽנוּ רוֹעֵה יִשְׂרָאֵל, הַמֶּֽלֶךְ הַחַי, הַטּוֹב וְהַמֵּטִיב. אֵל אֱמֶת, דַּיַּן אֱמֶת, שׁוֹפֵט צֶֽדֶק, לוֹקֵֽחַ נְפָשׁוֹת בְּמִשְׁפָּט, וְשַׁלִּיט בְּעוֹלָמוֹ לַעֲשׂוֹת בּוֹ כִּרְצוֹנוֹ, כִּי כָל דְּרָכָיו מִשְׁפָּט, וַאֲנַֽחְנוּ עַמּוֹ וַעֲבָדָיו, וְעַל הַכֹּל אֲנַֽחְנוּ חַיָּבִים לְהוֹדוֹת לוֹ וּלְבָרְכוֹ. גּוֹדֵר פִּרְצוֹת יִשְׂרָאֵל, הוּא יִגְדֹּר אֶת הַפִּרְצָה הַזֹּאת מֵעָלֵֽינוּ לְחַיִּים וּלְשָׁלוֹם. הוּא יִגְמְלֵֽנוּ לָעַד חֵן וָחֶֽסֶד וְרַחֲמִים וְכָל טוֹב, וּמִכָּל טוּב לְעוֹלָם אַל יְחַסְּרֵֽנוּ."}
+        ]
+      },
+      "en": {
+        "version": "English Edition; Koren Publishers Jerusalem, 2017",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
+            {"kind": "prayer", "text": " Gentlemen,"},
+            {"kind": "prayer", "text": " let us say grace."}
+          ]},
+          {"ref": "2", "translates": ["2"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Others</i>"},
+            {"kind": "prayer", "text": " May the name of the <small>LORD</small> be blessed from now and for ever."}
+          ]},
+          {"ref": "3", "translates": ["3"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
+            {"kind": "prayer", "text": " May the name of the <small>LORD</small> be blessed from now and for ever.<br>With your permission,"},
+            {"kind": "prayer", "text": "<br>let us bless the One who comforts mourners<br>from whose food we have eaten."}
+          ]},
+          {"ref": "4", "translates": ["4"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Others</i>"},
+            {"kind": "prayer", "text": " Blessed be the One who comforts mourners,"},
+            {"kind": "prayer", "text": " from whose food we have eaten,"},
+            {"kind": "prayer", "text": " and by whose goodness we live."}
+          ]},
+          {"ref": "5", "translates": ["6"], "text": "<i class=\"instruction\">* People present who have not taken part in the meal say:</i>"},
+          {"ref": "6", "translates": ["6"], "text": "*Blessed be the One who comforts mourners, whose name is continually blessed for ever and all time."},
+          {"ref": "7", "translates": ["7"], "parts": [
+            {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
+            {"kind": "prayer", "text": " Blessed be the One who comforts mourners,"},
+            {"kind": "prayer", "text": "<br>from whose food we have eaten,"},
+            {"kind": "prayer", "text": " and by whose goodness we live."}
+          ]},
+          {"ref": "8", "translates": ["8"], "text": "Blessed be He, and blessed be His name."},
+          {"ref": "9", "translates": ["10"], "text": "<i class=\"instruction\">Continue with Birkat HaMazon on page 978 until “And may Jerusalem” on page 984. Then say:</i>"},
+          {"ref": "10", "translates": ["10"], "text": "נַחֵם Comfort, O <small>LORD</small> our God, the mourners of Jerusalem and those who mourn here. Grant them consolation in their mourning and gladness in their grief, as it is said, “As a mother comforts her son, so will I comfort you, and in Jerusalem you shall find comfort.” Blessed are You, <small>LORD</small>, who brings comfort to Zion through the rebuilding of Jerusalem. Amen."},
+          {"ref": "11", "translates": ["11"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe – God our Father, our King, our Sovereign, our Creator, our Redeemer, our Maker, our Holy One, the Holy One of Jacob. He is our Shepherd, Israel’s Sheperd, our living King who is good and does good, the true God, the true Judge, who judges righteously and takes back souls in judgment. He rules the world according to His will, for all His ways are just, and we are His people and His servants. For everything, we are duty bound to acknowledge and bless Him. May He who repairs the breaches in Israel, repair this breach in us and grant us life and peace. May He always bestow on us grace, kindness, compassion and all good things. Of all that is good, may He never let us lack."},
+          {"ref": "12", "translates": [], "text": "<i class=\"instruction\">Continue with “May the Compassionate One reign” on page 986.</i>"}
+        ]
+      }
+    }
+  ]
+}

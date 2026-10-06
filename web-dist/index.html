@@ -8,6 +8,7 @@
 <link rel="canonical" href="https://amud.page/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#172a5c">
+<meta name="color-scheme" content="light dark">
 <meta name="application-name" content="Amud">
 <meta name="apple-mobile-web-app-title" content="Amud">
 
@@ -42,9 +43,17 @@
   "image": "https://amud.page/og.png",
   "description": "A free, offline siddur app in Hebrew and English that shows each day's prayers as they're said, with zmanim, a Jewish calendar, Tehillim, daily learning and the Kitzur Shulchan Aruch.",
   "applicationCategory": "LifestyleApplication",
-  "operatingSystem": "Android, Windows, macOS, Linux, Web",
+  "operatingSystem": "Android, iOS, Windows, macOS, Linux, Web",
   "inLanguage": ["en", "he", "yi"],
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Amud",
+    "url": "https://amud.page/",
+    "email": "info@amud.page",
+    "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "info@amud.page", "availableLanguage": ["English", "Hebrew"] }
+  },
   "featureList": [
     "Siddur in Nusach Ashkenaz, Sefard, Edot HaMizrach and Chabad",
     "Hebrew and English side by side or interleaved",
@@ -53,6 +62,8 @@
     "Jewish calendar with holidays, parsha and candle lighting",
     "Tehillim by the month or week",
     "Kitzur Shulchan Aruch with the daily Kitzur Yomi",
+    "Search across every siddur, Tehillim, zmanim and Torah books, in Hebrew or any English spelling",
+    "Holiday prayers like Hoshanos, Selichos and Chanukah candles in one place",
     "Works offline"
   ]
 }
@@ -90,7 +101,17 @@
     {
       "@type": "Question",
       "name": "Is there an iPhone app?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Use the web app: open amud.page/app in Safari, tap Share, then Add to Home Screen. It installs like an app and works offline." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Use the web app: open amud.page/app in Safari, tap Share, then Add to Home Screen. It installs like an app and works offline. An unsigned .ipa is also published with each release for people who sideload apps." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Amud collect my data?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Amud shares anonymous usage statistics, such as which screens and prayers are used, to help decide what to improve. It never sends what you type, your name or your exact location, and it gets a new anonymous ID each time it starts. Turn it off under Settings, Advanced, Share anonymous usage." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I report a mistake or suggest a feature?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Email info@amud.page. Mention your nusach, the prayer and the date if it's about the text." }
     }
   ]
 }
@@ -107,71 +128,139 @@
 
 <style>
 :root {
+  color-scheme: light;
   --ink: #172a5c;
   --ink-2: #22397a;
   --paper: #f8f3ea;
-  --paper-2: #efe7d8;
   --fan: #a9c0ee;
   --fan-deep: #6f8cc0;
+  --bg: #f8f3ea;
+  --surface: #fffdf8;
+  --surface-2: #f6f1e6;
+  --heading: #172a5c;
   --accent: #3d5a99;
+  --link-hover: #172a5c;
   --text: #1c2233;
   --muted: #4a5468;
   --line: #ddd3c0;
+  --line-2: #eee6d6;
+  --status: #2f4d8f;
+  --skipped: #7d7566;
+  --skipped-he: #9a917f;
+  --icon-bg: #172a5c;
+  --icon-fg: #f8f3ea;
+  --band: #172a5c;
+  --band-2: #22397a;
+  --band-line: #3c5596;
+  --on-band: #f8f3ea;
+  --on-band-2: #d6def0;
+  --on-band-3: #aebbd8;
+  --shadow: rgba(23, 42, 92, .35);
   --display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --body: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --hebrew: 'Frank Ruhl Libre', 'Times New Roman', serif;
 }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0d1426;
+    --surface: #141d35;
+    --surface-2: #10182d;
+    --heading: #e9eefb;
+    --accent: #a9c0ee;
+    --link-hover: #ffffff;
+    --text: #e2e6f0;
+    --muted: #a6afc4;
+    --line: #26314f;
+    --line-2: #1e2842;
+    --status: #a9c0ee;
+    --skipped: #8a90a0;
+    --skipped-he: #646c80;
+    --icon-bg: #22397a;
+    --icon-fg: #d6def0;
+    --band: #142451;
+    --shadow: rgba(0, 0, 0, .55);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0d1426;
+  --surface: #141d35;
+  --surface-2: #10182d;
+  --heading: #e9eefb;
+  --accent: #a9c0ee;
+  --link-hover: #ffffff;
+  --text: #e2e6f0;
+  --muted: #a6afc4;
+  --line: #26314f;
+  --line-2: #1e2842;
+  --status: #a9c0ee;
+  --skipped: #8a90a0;
+  --skipped-he: #646c80;
+  --icon-bg: #22397a;
+  --icon-fg: #d6def0;
+  --band: #142451;
+  --shadow: rgba(0, 0, 0, .55);
+}
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--paper); color: var(--text); font: 400 17px/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 17px/1.6 var(--body); -webkit-font-smoothing: antialiased; }
 a { color: var(--accent); }
-a:hover { color: var(--ink); }
+a:hover { color: var(--link-hover); }
+a:focus-visible, summary:focus-visible, button:focus-visible { outline: 3px solid var(--fan-deep); outline-offset: 3px; border-radius: 6px; }
 img, svg { display: block; }
 .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
 .skip { position: absolute; left: -999px; }
-.skip:focus { left: 16px; top: 16px; background: #fff; padding: 8px 12px; z-index: 10; }
+.skip:focus { left: 16px; top: 16px; background: #fff; color: #172a5c; padding: 8px 12px; z-index: 10; }
 
 /* Header */
-header.top { background: var(--ink); color: var(--paper); }
+header.top { background: var(--band); color: var(--on-band); }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; }
-.brand { display: flex; align-items: center; gap: 10px; color: var(--paper); text-decoration: none; font: 600 26px/1 var(--display); letter-spacing: -0.5px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--on-band); text-decoration: none; font: 600 26px/1 var(--display); letter-spacing: -0.5px; }
 .brand:hover { color: #fff; }
+.nav-right { display: flex; align-items: center; gap: 28px; }
 .nav ul { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; font-weight: 500; font-size: 15px; }
-.nav ul a { color: #d6def0; text-decoration: none; }
+.nav ul a { color: var(--on-band-2); text-decoration: none; }
 .nav ul a:hover { color: #fff; }
-@media (max-width: 720px) { .nav ul { display: none; } }
+.nav-cta { display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: 999px; background: var(--paper); color: var(--ink); font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap; }
+.nav-cta:hover { background: #fff; color: var(--ink); }
+@media (max-width: 860px) { .nav ul { display: none; } }
 
 /* Hero */
-.hero { background: var(--ink); color: var(--paper); padding: 40px 0 96px; overflow: hidden; }
+.hero { background: var(--band); color: var(--on-band); padding: 40px 0 96px; overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; }
-@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } .hero-art { order: -1; max-width: 200px; } }
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } .hero-art { order: -1; max-width: 200px; } .hero { padding-bottom: 72px; } }
 .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--fan); }
-.eyebrow .he { font: 500 22px/1 var(--hebrew); letter-spacing: 0; text-transform: none; color: var(--paper); }
-h1 { font: 600 clamp(40px, 6.4vw, 76px)/1.02 var(--display); letter-spacing: -2px; margin: 16px 0 20px; }
+.eyebrow .he { font: 500 22px/1 var(--hebrew); letter-spacing: 0; text-transform: none; color: var(--on-band); }
+h1 { font: 600 clamp(40px, 6.4vw, 76px)/1.02 var(--display); letter-spacing: -2px; margin: 16px 0 20px; text-wrap: balance; }
 h1 em { font-style: normal; color: var(--fan); }
-.lede { font-size: clamp(18px, 2.1vw, 21px); color: #d6def0; max-width: 34em; margin: 0 0 32px; }
+.lede { font-size: clamp(18px, 2.1vw, 21px); color: var(--on-band-2); max-width: 34em; margin: 0 0 32px; }
 .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
 .btn { display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 999px; font: 600 16px/1 var(--body); text-decoration: none; border: 2px solid transparent; }
 .btn-primary { background: var(--paper); color: var(--ink); }
 .btn-primary:hover { background: #fff; color: var(--ink); }
-.btn-ghost { border-color: #5d73a8; color: var(--paper); }
-.btn-ghost:hover { border-color: var(--paper); color: #fff; }
+.btn-ghost { border-color: #5d73a8; color: var(--on-band); }
+.btn-ghost:hover { border-color: var(--on-band); color: #fff; }
 .btn svg { width: 20px; height: 20px; }
-.platforms { margin-top: 20px; font-size: 14px; color: #aebbd8; }
-.platforms a { color: #d6def0; }
+.platforms { margin-top: 20px; font-size: 14px; color: var(--on-band-3); }
+.platforms a { color: var(--on-band-2); }
+.trust { display: flex; flex-wrap: wrap; gap: 8px 20px; list-style: none; padding: 0; margin: 28px 0 0; font-size: 14px; color: var(--on-band-2); }
+.trust li { display: inline-flex; align-items: center; gap: 8px; }
+.trust svg { width: 16px; height: 16px; color: var(--fan); }
 .hero-art svg { width: 100%; height: auto; }
 
 /* Sections */
 section { padding: 88px 0; }
+@media (max-width: 600px) { section { padding: 64px 0; } }
 .kicker { font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
-h2 { font: 600 clamp(30px, 4vw, 46px)/1.1 var(--display); letter-spacing: -1px; margin: 0 0 16px; color: var(--ink); }
-h3 { font: 700 19px/1.3 var(--body); margin: 0 0 8px; color: var(--ink); }
+h2 { font: 600 clamp(30px, 4vw, 46px)/1.1 var(--display); letter-spacing: -1px; margin: 0 0 16px; color: var(--heading); text-wrap: balance; }
+h3 { font: 700 19px/1.3 var(--body); margin: 0 0 8px; color: var(--heading); }
 .intro { max-width: 40em; color: var(--muted); font-size: 18px; margin: 0 0 48px; }
 
 /* Day-aware demo */
 .today { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 @media (max-width: 900px) { .today { grid-template-columns: 1fr; } }
-.page { background: #fffdf8; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(23, 42, 92, .35); }
+.page { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; box-shadow: 0 30px 60px -30px var(--shadow); }
 .page-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 24px; background: var(--ink); color: var(--paper); }
 .page-head .title { display: flex; flex-direction: column; gap: 2px; }
 .page-head strong { font: 600 22px/1.1 var(--display); letter-spacing: -.3px; }
@@ -179,69 +268,86 @@ h3 { font: 700 19px/1.3 var(--body); margin: 0 0 8px; color: var(--ink); }
 .page-head .day { flex-shrink: 0; font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; background: var(--fan); color: var(--ink); }
 .rows { list-style: none; margin: 0; padding: 6px 0; }
 .row { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 20px; padding: 14px 24px; }
-.row + .row { border-top: 1px solid #eee6d6; }
-.row .name { font-weight: 600; font-size: 16px; color: var(--ink); line-height: 1.3; }
-.row .status { display: inline-flex; align-items: center; gap: 7px; margin-top: 4px; font-size: 13px; font-weight: 500; color: #2f4d8f; }
+.row + .row { border-top: 1px solid var(--line-2); }
+.row .name { font-weight: 600; font-size: 16px; color: var(--heading); line-height: 1.3; }
+.row .status { display: inline-flex; align-items: center; gap: 7px; margin-top: 4px; font-size: 13px; font-weight: 500; color: var(--status); }
 .row .status::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
 .row .he { font: 500 24px/1.2 var(--hebrew); color: var(--text); text-align: right; white-space: nowrap; }
-.row.skipped { background: #f6f1e6; }
-.row.skipped .name { color: #7d7566; }
-.row.skipped .status { color: #7d7566; }
-.row.skipped .he { color: #9a917f; text-decoration: line-through; text-decoration-thickness: 1.5px; }
+.row.skipped { background: var(--surface-2); }
+.row.skipped .name { color: var(--skipped); }
+.row.skipped .status { color: var(--skipped); }
+.row.skipped .he { color: var(--skipped-he); text-decoration: line-through; text-decoration-thickness: 1.5px; }
 .page-foot { margin: 0; padding: 14px 24px 18px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
 .checks { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 14px; }
 .checks li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; }
 .checks svg { width: 22px; height: 22px; color: var(--accent); margin-top: 3px; }
 
 /* Feature grid */
-.alt { background: #fffdf8; border-block: 1px solid var(--line); }
+.alt { background: var(--surface); border-block: 1px solid var(--line); }
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
-.card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
-.card .icon { width: 44px; height: 44px; border-radius: 12px; background: var(--ink); display: grid; place-items: center; margin-bottom: 16px; }
-.card .icon svg { width: 24px; height: 24px; color: var(--paper); }
+.card { background: var(--bg); border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
+.card .icon { width: 44px; height: 44px; border-radius: 12px; background: var(--icon-bg); display: grid; place-items: center; margin-bottom: 16px; }
+.card .icon svg { width: 24px; height: 24px; color: var(--icon-fg); }
 .card p { margin: 0; color: var(--muted); font-size: 16px; }
+.card .tag { display: inline-block; margin-left: 6px; padding: 2px 8px; border-radius: 999px; background: var(--fan); color: var(--ink); font-size: 11px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; vertical-align: 3px; }
 
 /* Nusach strip */
 .nusach { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
-.nusach > span { background: #fffdf8; border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; font-weight: 500; font-size: 15px; }
+.nusach > span { background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; font-weight: 500; font-size: 15px; }
 
 /* ArtScroll */
 .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 @media (max-width: 800px) { .compare { grid-template-columns: 1fr; } }
-.compare .card h3 { display: flex; align-items: center; gap: 10px; }
+.compare .card { background: var(--surface); }
 .note { font-size: 14px; color: var(--muted); margin-top: 20px; }
 
 /* Download */
-.download { background: var(--ink); color: var(--paper); border-radius: 28px; padding: 56px clamp(24px, 5vw, 64px); display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+.download { background: var(--band); color: var(--on-band); border-radius: 28px; padding: 56px clamp(24px, 5vw, 64px); display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
 @media (max-width: 800px) { .download { grid-template-columns: 1fr; } }
-.download h2 { color: var(--paper); }
-.download p { color: #d6def0; margin: 0; max-width: 34em; }
+.download h2 { color: var(--on-band); }
+.download p { color: var(--on-band-2); margin: 0; max-width: 34em; }
+.download p + p { margin-top: 12px; font-size: 15px; color: var(--on-band-3); }
+.download p a { color: var(--on-band-2); }
 .dl-list { display: grid; grid-template-columns: repeat(2, minmax(170px, 1fr)); gap: 10px; }
 @media (max-width: 480px) { .dl-list { grid-template-columns: 1fr; } }
-.dl-list a { display: flex; flex-direction: column; justify-content: center; min-height: 64px; padding: 10px 18px; border-radius: 14px; background: var(--ink-2); border: 1px solid #3c5596; color: var(--paper); text-decoration: none; }
+.dl-list a { display: flex; flex-direction: column; justify-content: center; min-height: 64px; padding: 10px 18px; border-radius: 14px; background: var(--band-2); border: 1px solid var(--band-line); color: var(--on-band); text-decoration: none; }
 .dl-list a:hover { border-color: var(--fan); color: #fff; }
 .dl-list b { font-size: 16px; }
-.dl-list small { color: #aebbd8; font-size: 13px; }
+.dl-list small { color: var(--on-band-3); font-size: 13px; }
 
 /* FAQ */
 .faq > * { max-width: 820px; }
 details { border-bottom: 1px solid var(--line); padding: 4px 0; }
-summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 60px; font: 600 19px/1.35 var(--body); color: var(--ink); }
+summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 60px; font: 600 19px/1.35 var(--body); color: var(--heading); }
 summary::-webkit-details-marker { display: none; }
 summary::after { content: '+'; font: 400 28px/1 var(--body); color: var(--accent); }
 details[open] summary::after { content: '−'; }
 details p { margin: 0 0 20px; color: var(--muted); max-width: 44em; }
 
+/* Contact */
+.contact { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 28px; padding: 48px clamp(24px, 5vw, 64px); }
+@media (max-width: 800px) { .contact { grid-template-columns: 1fr; } }
+.contact p { margin: 0; color: var(--muted); max-width: 36em; }
+.contact ul { margin: 16px 0 0; padding-left: 20px; color: var(--muted); }
+.contact-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.contact .btn-primary { background: var(--icon-bg); color: var(--icon-fg); }
+.contact .btn-primary:hover { background: var(--ink-2); color: #fff; }
+.email { display: flex; align-items: center; gap: 10px; font: 600 clamp(20px, 2.4vw, 26px)/1.2 var(--display); color: var(--heading); text-decoration: none; overflow-wrap: anywhere; }
+.copy { font: 500 14px/1 var(--body); color: var(--accent); background: none; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; cursor: pointer; min-height: 36px; }
+.copy:hover { border-color: var(--accent); }
+
 footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
 .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; border-top: 1px solid var(--line); padding-top: 28px; }
 .foot p { margin: 0 0 6px; max-width: 44em; }
+.foot b { color: var(--heading); }
 
 @media (prefers-reduced-motion: no-preference) {
   .hero-art .pages { transform-origin: 50% 55%; animation: settle 1.2s cubic-bezier(.2,.8,.3,1) both; }
   @keyframes settle { from { opacity: 0; transform: translateY(12px) scale(.96); } to { opacity: 1; transform: none; } }
 }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
@@ -253,14 +359,18 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
       <svg width="34" height="34" viewBox="16 20 168 168" aria-hidden="true"><use href="#mark"/></svg>
       amud
     </a>
-    <nav aria-label="Main">
-      <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#artscroll">Coming from ArtScroll?</a></li>
-        <li><a href="#download">Download</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ul>
-    </nav>
+    <div class="nav-right">
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#artscroll">Coming from ArtScroll?</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="nav-cta" href="/app/">Open the siddur</a>
+    </div>
   </div>
 </header>
 
@@ -291,6 +401,12 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
           <a class="btn btn-ghost" href="#download">Download the app</a>
         </div>
         <p class="platforms">Android · Windows · Mac · Linux · <a href="/app/">web</a>, and iPhone through the web app.</p>
+        <ul class="trust">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>No ads</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>No account</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Works offline, even on a plane</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Open source</li>
+        </ul>
       </div>
       <div class="hero-art">
         <svg class="pages" viewBox="16 20 168 168" role="img" aria-label="Amud logo: an open siddur resting on a pillar"><use href="#mark"/></svg>
@@ -323,7 +439,6 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
         </ul>
         <figcaption class="page-foot">Each addition appears in its place; Tachanun is folded away.</figcaption>
       </figure>
-      </div>
     </div>
   </section>
 
@@ -336,7 +451,12 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
         <div class="card">
           <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5C6.5 4 9.5 4 12 6c2.5-2 5.5-2 8-.5V19c-2.5-1.5-5.5-1.5-8 .5-2.5-2-5.5-2-8-.5z M12 6v13.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
           <h3>Siddur in every nusach</h3>
-          <p>Ashkenaz, Sefard, Edot HaMizrach and Chabad, in Hebrew with English side by side or interleaved. Choose from over 80 Hebrew fonts, with or without nikud and trop.</p>
+          <p>Ashkenaz, Sefard, Edot HaMizrach, Chabad and Koren, each with a choice of Hebrew versions and translations. Choose from over 80 Hebrew fonts, with or without nikud and trop.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15zM16 16l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>Search everything <span class="tag">New</span></h3>
+          <p>One search bar for prayers in every siddur, Tehillim by chapter, today's zmanim and Torah books. Hebrew ignores nikud, and English takes any spelling: "shacharis" finds Shacharit.</p>
         </div>
         <div class="card">
           <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M4.2 7.2l2.1 2.1M3 15h3m12 0h3m-3.3-5.7 2.1-2.1M7 15a5 5 0 0 1 10 0M2 19h20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
@@ -349,6 +469,11 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
           <p>A luach with Hebrew dates, holidays, the parsha, candle lighting, havdalah and the Omer. Israel and chutz la'aretz schedules both.</p>
         </div>
         <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c1.6 1.8 2 3 2 4a2 2 0 0 1-4 0c0-1 .4-2.2 2-4zM9 11h6v10H9zM5 21h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+          <h3>Holidays &amp; seasons</h3>
+          <p>Hoshanos, Lulav, Selichos, Chanukah candles, Hakafos and the other holiday prayers gathered in one place, your nusach first, with today's marked.</p>
+        </div>
+        <div class="card">
           <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h9l3 3v13H6zM9 10h6M9 14h6M9 18h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
           <h3>Torah learning</h3>
           <p>Download the Kitzur Shulchan Aruch in Hebrew and English once, then learn offline with today's Kitzur Yomi marked. Daf Yomi, Mishna Yomi and Rambam are listed daily.</p>
@@ -357,6 +482,11 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
           <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
           <h3>Tehillim</h3>
           <p>The day's portion by the month or the week, Shir shel Yom, and your place saved as you go.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M4 10h16M4 15h10M4 20h7M17 15l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Easy on the eyes</h3>
+          <p>Hebrew and English side by side, interleaved or alone. Swipe to the next section, double-tap for focus mode, and pick Ashkenazi spellings like Shabbos and Shacharis.</p>
         </div>
         <div class="card">
           <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7v6H4zM13 5h7v3h-7zM13 10h7v9h-7zM4 13h7v6H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
@@ -396,6 +526,7 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
         <div>
           <h2>Get Amud</h2>
           <p>Use it in your browser, or install it. The apps check for new versions and update themselves on Android. On iPhone and iPad, open the web app in Safari, tap Share, then Add to Home Screen.</p>
+          <p>Something not working on your device? Write to <a href="mailto:info@amud.page">info@amud.page</a>.</p>
         </div>
         <div class="dl-list">
           <a href="/app/"><b>Web app</b><small>Any browser · installable</small></a>
@@ -403,6 +534,7 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
           <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-windows.zip"><b>Windows</b><small>Zip · unzip and run</small></a>
           <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-macos.zip"><b>Mac</b><small>Zip · right-click → Open</small></a>
           <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-linux-x64.tar.gz"><b>Linux</b><small>x64 tarball</small></a>
+          <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-ios-unsigned.ipa"><b>iPhone</b><small>Unsigned .ipa · for sideloading</small></a>
           <a href="https://github.com/Nt-f/amud/releases/latest"><b>All releases</b><small>Notes and older versions</small></a>
         </div>
       </div>
@@ -435,8 +567,41 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
       </details>
       <details>
         <summary>Is there an iPhone app?</summary>
-        <p>Use the web app: open <a href="/app/">amud.page/app</a> in Safari, tap Share, then Add to Home Screen. It installs like an app and works offline.</p>
+        <p>Use the web app: open <a href="/app/">amud.page/app</a> in Safari, tap Share, then Add to Home Screen. It installs like an app and works offline. An unsigned <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-ios-unsigned.ipa">.ipa</a> is also published with each release for people who sideload apps.</p>
       </details>
+      <details>
+        <summary>Does Amud collect my data?</summary>
+        <p>Amud shares anonymous usage statistics, such as which screens and prayers are used, to help decide what to improve. It never sends what you type, your name or your exact location, and it gets a new anonymous ID each time it starts, so nothing is linked to you. Turn it off under Settings → Advanced → Share anonymous usage.</p>
+      </details>
+      <details>
+        <summary>How do I report a mistake or suggest a feature?</summary>
+        <p>Email <a href="mailto:info@amud.page">info@amud.page</a>. If it's about the text, mention your nusach, the prayer and the date.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:24px">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <p class="kicker">Contact</p>
+          <h2>Write to us</h2>
+          <p>Questions, corrections and ideas are all welcome. Write about:</p>
+          <ul>
+            <li>a mistake in the text, or an addition shown on the wrong day</li>
+            <li>a minhag or nusach you'd like Amud to follow</li>
+            <li>a feature you'd like, or something that doesn't work</li>
+          </ul>
+        </div>
+        <div class="contact-actions">
+          <a class="email" href="mailto:info@amud.page">info@amud.page</a>
+          <a class="btn btn-primary" href="mailto:info@amud.page?subject=Amud">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            Send an email
+          </a>
+          <button class="copy" type="button" data-copy="info@amud.page" hidden>Copy address</button>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -444,13 +609,28 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
 <footer>
   <div class="wrap foot">
     <div>
-      <p><b style="color:var(--ink)">Amud</b> · a free siddur app · <a href="/app/">Open the siddur</a></p>
+      <p><b>Amud</b> · a free siddur app · <a href="/app/">Open the siddur</a> · <a href="mailto:info@amud.page">info@amud.page</a> · <a href="/privacy/">Privacy policy</a></p>
       <p>Texts from <a href="https://www.sefaria.org">Sefaria</a> under each version's license. Calendar and zmanim from a port of <a href="https://www.hebcal.com">Hebcal</a>.</p>
+      <p>Amud is open source under the GPL-3.0. <a href="https://github.com/Nt-f/amud">Source code on GitHub</a>.</p>
     </div>
     <div>
       <p>ArtScroll is a trademark of Mesorah Publications, Ltd.<br>Amud isn't affiliated with ArtScroll or Mesorah.</p>
     </div>
   </div>
 </footer>
+<script>
+  // "Copy address" only shows where the clipboard API is available.
+  (function () {
+    var btn = document.querySelector('.copy');
+    if (!btn || !navigator.clipboard) return;
+    btn.hidden = false;
+    btn.addEventListener('click', function () {
+      navigator.clipboard.writeText(btn.dataset.copy).then(function () {
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.textContent = 'Copy address'; }, 2000);
+      }, function () {});
+    });
+  })();
+</script>
 </body>
 </html>

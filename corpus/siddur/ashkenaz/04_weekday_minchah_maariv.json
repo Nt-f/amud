@@ -1,0 +1,1200 @@
+{
+  "book": "Siddur Ashkenaz",
+  "chunk": "Weekday [Minchah .. Maariv]",
+  "leaves": [
+    {
+      "path": "Weekday/Minchah/Ashrei",
+      "title": "אשרי",
+      "node": "mincha.ashrei",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "<b>אַשְׁרֵי</b> יוֹשְׁ֒בֵי בֵיתֶֽךָ עוֹד יְהַלְלֽוּךָ סֶּֽלָה: אַשְׁרֵי הָעָם שֶׁכָּֽכָה לּוֹ אַשְׁרֵי הָעָם שֶׁיְהֹוָה אֱלֹהָיו: תְּהִלָּה לְדָוִד אֲרוֹמִמְךָ אֱלוֹהַי הַמֶּֽלֶךְ וַאֲבָרְ֒כָה שִׁמְךָ לְעוֹלָם וָעֶד: בְּכָל־יוֹם אֲבָרְ֒כֶֽךָּ וַאֲהַלְלָה שִׁמְךָ לְעוֹלָם וָעֶד: גָּדוֹל יְהֹוָה וּמְהֻלָּל מְאֹד וְלִגְדֻלָּתוֹ אֵין חֵֽקֶר: דּוֹר לְדוֹר יְשַׁבַּח מַעֲשֶׂיךָ וּגְבוּרֹתֶֽיךָ יַגִּֽידוּ: הֲדַר כְּבוֹד הוֹדֶֽךָ וְדִבְרֵי נִפְלְ֒אֹתֶֽיךָ אָשִֽׂיחָה: וֶעֱזוּז נוֹרְ֒אֹתֶֽיךָ יֹאמֵרוּ וּגְדֻלָּתְ֒ךָ אֲסַפְּ֒רֶֽנָּה: זֵֽכֶר רַב־טוּבְ֒ךָ יַבִּֽיעוּ וְצִדְקָתְ֒ךָ יְרַנֵּֽנוּ: חַנּוּן וְרַחוּם יְהֹוָה אֶֽרֶךְ אַפַּֽיִם וּגְדָל־חָֽסֶד: טוֹב־יְהֹוָה לַכֹּל וְרַחֲמָיו עַל־כָּל־מַעֲשָׂיו: יוֹדֽוּךָ יְהֹוָה כָּל־מַעֲשֶֽׂיךָ וַחֲסִידֶֽיךָ יְבָרְ֒כֽוּכָה: כְּבוֹד מַלְכוּתְ֒ךָ יֹאמֵרוּ וּגְבוּרָתְ֒ךָ יְדַבֵּֽרוּ: לְהוֹדִֽיעַ לִבְנֵי הָאָדָם גְּבוּרֹתָיו וּכְבוֹד הֲדַר מַלְכוּתוֹ: מַלְכוּתְ֒ךָ מַלְכוּת כָּל־עֹלָמִים וּמֶמְשַׁלְתְּ֒ךָ בְּכָל־דּוֹר וָדֹר: סוֹמֵךְ יְהֹוָה לְכָל־הַנֹּפְ֒לִים וְזוֹקֵף לְכָל־הַכְּ֒פוּפִים: עֵינֵי־כֹל אֵלֶֽיךָ יְשַׂבֵּֽרוּ וְאַתָּה נוֹתֵן־לָהֶם אֶת־אָכְלָם בְּעִתּוֹ: פּוֹתֵֽחַ אֶת־יָדֶֽךָ וּמַשְׂבִּֽיעַ לְכָל־חַי רָצוֹן: צַדִּיק יְהֹוָה בְּכָל־דְּרָכָיו וְחָסִיד בְּכָל־מַעֲשָׂיו: קָרוֹב יְהֹוָה לְכָל־קֹרְ֒אָיו לְכֹל אֲשֶׁר יִקְרָאֻֽהוּ בֶאֱמֶת: רְצוֹן־יְרֵאָיו יַעֲשֶׂה וְאֶת־שַׁוְעָתָם יִשְׁמַע וְיוֹשִׁיעֵם: שׁוֹמֵר יְהֹוָה אֶת־כָּל־אֹהֲבָיו וְאֵת כָּל־הָרְ֒שָׁעִים יַשְׁמִיד: תְּהִלַּת יְהֹוָה יְדַבֶּר פִּי וִיבָרֵךְ כָּל־בָּשָׂר שֵׁם קָדְשׁוֹ לְעוֹלָם וָעֶד: וַאֲנַֽחְנוּ נְבָרֵךְ יָהּ מֵעַתָּה וְעַד־עוֹלָם הַלְ֒לוּיָהּ:"},
+          {"ref": "2", "kind": "instruction", "node": "kaddish.half", "role": "chazzan", "minyan": true, "en": "The chazzan says Half Kaddish:", "text": "<small>ואומר החזן חצי קדיש:</small>"},
+          {"ref": "3", "parts": [
+            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא"},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (<b>אָמֵן</b>)"}
+          ]},
+          {"ref": "4", "parts": [
+            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ "},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
+          ]},
+          {"ref": "5", "kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>"},
+          {"ref": "6", "parts": [
+            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא "},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>בְּרִיךְ הוּא</b>"}
+          ]},
+          {"ref": "7", "parts": [
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "לְעֵֽלָּא מִן־כָּל־"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.half", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " (<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
+            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ "},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Fortunate are those who dwell in Your house;<sup class=\"footnote-marker\">1</sup><i class=\"footnote\">This verse referred to the Kohanim and the Levites who served (dwelt) in the Holy Temple (Your House); it is at all times applicable to scholars and devout men who study and pray in houses of worship and study.</i> may they continue to praise You, Selah.<sup class=\"footnote-marker\">2</sup><i class=\"footnote\">Psalms 84:5.</i> Fortunate is the people whose lot is thus; fortunate is the people for whom Adonoy is their God.<sup class=\"footnote-marker\">3</sup><i class=\"footnote\">Psalms 144:15.</i> A praise by David! I will exalt You, my God, the King, and bless Your Name forever and ever. Every day I will bless You<sup class=\"footnote-marker\">4</sup><i class=\"footnote\">According to Rav S.R. Hirsch, David here declares, “I will dedicate myself to serve You and to fulfill Your will in loyal obedience,” for in serving God, man causes His Name to be blessed.</i> and extol Your Name forever and ever. Adonoy is great and highly extolled, and His greatness is unfathomable. One generation to another will praise Your works, and Your mighty acts they will declare. The splendor of Your glorious majesty, and the words<sup class=\"footnote-marker\">5</sup><i class=\"footnote\">Not simply נפלאתיך—a report of Your wonders—but דברי נפלאתיך the “words”—the lessons that Your wonders teach.—<i>S.R. Hirsch</i></i> of Your wonders I will speak. Of Your awesome might, they<sup class=\"footnote-marker\">6</sup><i class=\"footnote\">People in general will speak of God’s wondrous might in punishing the wicked (Sodom, Egypt, etc.) while David will proclaim that God’s greatness is measured more by His kindliness than by His awesomeness.—<i>Siach Yitzchok</i></i> will speak, and Your greatness I will recount. Mention of Your bountifulness they will express, and in Your righteousness joyfully exult. Adonoy is gracious and merciful,<sup class=\"footnote-marker\">7</sup><i class=\"footnote\">He is gracious in bestowing reward and merciful in punishment.—<i>Siach Yitzchok</i></i> slow to anger and great in kindliness. Adonoy is good to all, His mercy encompasses all His works. All Your works will thank You, Adonoy, and Your pious ones will bless You.<sup class=\"footnote-marker\">8</sup><i class=\"footnote\">Your works, which are the cause of your being thanked by sensitive people; similarly, cause your pious ones to bless You.—based on <i>S.R. Hirsch.</i></i> Of the honor of Your kingship, they will speak, and Your might they will declare. To reveal to men His mighty acts, and the glorious splendor of His kingship. Your kingship is the kingship for all times, and Your dominion is in every generation. Adonoy supports all the fallen, and straightens all the bent. The eyes of all look expectantly to You, and You give them their food at its proper time. You open Your hand and satisfy the desire of every living being. Adonoy is just in all His ways and benevolent in all His deeds.<sup class=\"footnote-marker\">9</sup><i class=\"footnote\">The penalties for transgressions are just, but God is gracious in the actual punishment inflicted on the sinner.—<i>Siddur HaGra</i></i> Adonoy is near to all who call upon Him, to all who call upon Him in truth.<sup class=\"footnote-marker\">10</sup><i class=\"footnote\">He is near to all who call upon Him, but His nearness can be perceived <i>only</i> by those who call upon Him in truth, who truly mean to have God enter into their lives.—<i>S.R. Hirsch</i></i> The will of those who fear Him, He fulfills; He hears their cry and delivers them.<sup class=\"footnote-marker\">11</sup><i class=\"footnote\">While God <i>hears</i> all who cry unto Him in truth. He <i>answers</i> those who fear Him, who subject their desires to His will.—<i>Siach Yitzchok</i></i> Adonoy watches over all those who love Him, and will destroy all the wicked. Praise of Adonoy, my mouth will declare and all flesh will bless His holy Name forever and ever. And we will bless God from now forever. Praise God.<sup class=\"footnote-marker\">12</sup><i class=\"footnote\">Psalms 115:18. You should pause between עולם and הללויה. Similarly, in all the <i>Psalms,</i> the word הללויה is not connected to the preceding verse.</i>"},
+          {"ref": "2", "translates": ["2"], "text": "<i>The Half-Kaddish is recited by the Chazzan</i>"},
+          {"ref": "3", "translates": ["3"], "text": "Exalted and sanctified<sup class=\"footnote-marker\">1</sup><i class=\"footnote\">These opening words refer to the fulfillment of God’s prophecy, through Ezekiel (38:23) “And I will thus exalt Myself and sanctify Myself; and I will be known in the eyes of the many nations, and they will know that I am Adonoy.”—<i>Levush, Siddur HaGra</i>. One should be very careful to emphasize the letter gimel (ג) when saying the word “Yisgadal (יִתְגַּדַּל),” in order that it not be heard as “Yis<i>k</i>adal (יִתְקַּדַל),” from the word קְדָל which means neck.—<i>Mishnah Berurah 56:2</i></i> be His great Name"},
+          {"ref": "4", "translates": ["4"], "text": "in the world which He created according to His will and may He rule His kingdom.<sup class=\"footnote-marker\">2</sup><i class=\"footnote\">May His sovereignty be revealed.</i> In your lifetime and in your days, and in the lifetime of the entire House of Israel, speedily and in the near future<sup class=\"footnote-marker\">3</sup><i class=\"footnote\">We pray that the redemption will come speedily and that the process of the redemption itself will not be prolonged.—<i>Siddur HaGra</i></i>— and say Amein."},
+          {"ref": "5", "translates": ["5"], "text": "May His great Name be blessed forever and for all eternity."},
+          {"ref": "6", "translates": ["6"], "text": "Blessed and praised, glorified, and exalted and uplifted, honored and elevated and extolled<sup class=\"footnote-marker\">5</sup><i class=\"footnote\">The ten expressions of praise in the Kaddish refer to the ten utterances by which God created the world. (See Maseches Avos 5:1.)</i> be the Name of the Holy One, blessed is He;"},
+          {"ref": "7", "translates": ["7"], "text": "above (<i>Ten Days of Penitence:</i> far above) all the blessings and hymns,<sup class=\"footnote-marker\">6</sup><i class=\"footnote\">May God be praised and exalted far beyond all the blessings, hymns and praises that are uttered.—<i>Mishnah Berurah </i>in the name of the Vilna Gaon 56:14.</i> praises and consolations<sup class=\"footnote-marker\">7</sup><i class=\"footnote\">Consolations are uttered because God is in mourning over the destruction of the Holy Temple and the exile of His people.</i> which we utter in the world—and say Amein."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Patriarchs",
+      "title": "אבות",
+      "node": "amidah.avot",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "note", "node": "amidah.opening", "voice": "silent", "gestures": ["feet_together"], "en": "One who prays must direct his heart to the meaning of the words he says; if he cannot, he should at least think of things that humble the heart and direct it to his Father in heaven. He should keep his feet together as if they were one, take care to pray quietly, not signal with his eyes, lips or fingers, and not interrupt even for Kaddish or Kedushah.", "cite": "קיצור שו\"ע יח", "clean": "<small>המתפלל צריך שיכוין בליבו פירוש המילות שהוא מוציא בשפתיו. ואם אינו יכול לכוין פירוש המילות לכל הפחות צריך שיחשוב בשעת התפילה בדברים המכניעים את הלב ומכוונים את לבו לאביו שבשמים. יכוין רגליו זה אצל זה כאילו אינן אלא אחת. ויזהר להתפלל בלחש. ולא ירמוז בעיניו ולא יקרוץ בשפתיו ולא יראה באצבעותיו ואינו פוסק אפילו לקדיש וקדושה</small>", "text": "<small>המתפלל צריך שיכוין בליבו פירוש המילות שהוא מוציא בשפתיו. ואם אינו יכול לכוין פירוש המילות לכל הפחות צריך שיחשוב בשעת התפילה בדברים המכניעים את הלב ומכוונים את לבו לאביו שבשמים. יכוין רגליו זה אצל זה כאילו אינן אלא אחת. ויזהר להתפלל בלחש. ולא ירמוז בעיניו ולא יקרוץ בשפתיו ולא יראה באצבעותיו ואינו פוסק אפילו לקדיש וקדושה (קיצשו\"ע יח)</small>"},
+          {"ref": "2", "kind": "prayer", "node": "amidah.opening", "voice": "aloud", "gestures": ["stand", "feet_together"], "text": "כִּי שֵׁם יְהֹוָה אֶקְרָא הָבוּ גֹֽדֶל לֵאלֹהֵֽינוּ:"},
+          {"ref": "3", "kind": "prayer", "node": "amidah.opening", "voice": "silent", "gestures": ["stand", "feet_together"], "text": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶֽךָ:"},
+          {"ref": "4", "kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים וְקוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַֽעַן שְׁמוֹ בְּאַהֲבָה:"},
+          {"ref": "5", "parts": [
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "voice": "silent", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": "<small>בעשי\"ת:</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "voice": "silent", "text": " זָכְרֵֽנוּ לְחַיִּים מֶֽלֶךְ חָפֵץ בַּחַיִּים וְכָתְבֵֽנוּ בְּסֵֽפֶר הַחַיִּים לְמַעַנְךָ אֱלֹהִים חַיִּים:"}
+          ]},
+          {"ref": "6", "kind": "note", "voice": "silent", "forgot": true, "en": "If one forgot \"Zochreinu\" and remembered after already saying \"Baruch Atah\", he does not go back; but if he remembered before saying the Name, even after saying \"Baruch Atah\", he says \"Zochreinu\" etc. and then \"Melech ozer\" in order. One who mistakenly says \"Zochreinu\" during the rest of the year, if he remembers before saying \"Uchtaveinu\", stops and begins \"Melech ozer\"; but if he said \"Uchtaveinu\" he returns to the beginning of the Amidah.", "cite": "דה\"ח", "clean": "<small>אם לא אמר זכרנו ונזכר לאחר שכבר אמר בא\"י אינו חוזר אבל אם נזכר קודם שאמר השם אף שאמר ברוך אתה אומר זכרנו כו' מלך עוזר כסדר. הטועה ומזכיר זכרנו בשאר ימות השנה אם נזכר קודם שאמר וכתבנו פוסק ומתחיל מלך עוזר וגו' אבל אם אמר וכתבנו חוזר לראש התפלה.</small>", "text": "<small>אם לא אמר זכרנו ונזכר לאחר שכבר אמר בא\"י אינו חוזר אבל אם נזכר קודם שאמר השם אף שאמר ברוך אתה אומר זכרנו כו' מלך עוזר כסדר. הטועה ומזכיר זכרנו בשאר ימות השנה אם נזכר קודם שאמר וכתבנו פוסק ומתחיל מלך עוזר וגו' אבל אם אמר וכתבנו חוזר לראש התפלה. (דה\"ח)</small>"},
+          {"ref": "7", "kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "מֶֽלֶךְ עוֹזֵר וּמוֹשִֽׁיעַ וּמָגֵן: בָּרוּךְ אַתָּה יְהֹוָה מָגֵן אַבְרָהָם:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<i>Fundamentals of </i>Kuzari,<i> (Metsudah Publications, 1979) pages 269, 271, 273.<br>When reciting </i>Shemoneh Esrei,<i> you must adhere to these rules:<br>1. Before beginning the prayer, take three steps backwards and then return to your former position. Upon completing the prayer, take three steps backwards and return.<br>2. Keep your feet together.<br>3. Concentrate on the meaning of the words you are uttering. Remove all distracting thoughts and worries from your mind.<br>4. You may not interrupt </i>Shemoneh Esrei<i> by talking, not even by answering Amein. If you should hear </i>Kedushah, Kaddish,<i> or </i>Barechu<i> while saying the </i>Shemoneh Esrei,<i> you should remain silent and listen to the Chazzan’s words.<br>5. At the beginning and end of the first blessing, at the beginning and end of the blessing that begins: “We are thankful to You,” (page 133) and ends with “The Beneficent is Your Name,” (page 140) we half-kneel and bow in the following manner: At the word “Blessed,” bend your knees; at the word “You,” bend forward until the vertebrae of your spinal cord are loosened; at “Adonoy,” return to your upright position in keeping with the verse, “Adonoy straightens the bent” (Psalms 146:8).<br>6. Each individual recites </i>Shemoneh Esrei<i> in silence. Only the prayer leader, the </i>Chazzan,<i> ever recites it aloud, and then only after the entire congregation, himself included, has recited it silently.</i>"},
+          {"ref": "2", "translates": ["2"], "text": "When I proclaim Adonoy’s Name attribute greatness to our God."},
+          {"ref": "3", "translates": ["3"], "text": "My Master,<sup class=\"footnote-marker\">1</sup><i class=\"footnote\">When God’s name is spelled <i>Alef-Daled-Nun-Yud</i> it means “my Master”, i.e., it is a personal declaration of the person uttering it. When it is spelled <i>Yud-Hey-Vov-Hey,</i> it indicates God as the Creator of all.—<i>Avudraham</i></i> open my lips, and my mouth will declare Your praise.<sup class=\"footnote-marker\">2</sup><i class=\"footnote\">Psalms 51:17.</i>"},
+          {"ref": "4", "translates": ["4"], "text": "Blessed<sup class=\"footnote-marker\">3</sup><i class=\"footnote\">The first blessing of <i>Shemoneh Esrei</i> contains <i>eighteen</i> expressions of praise which parallel the <i>Eighteen</i> Benedictions.</i> are You, Adonoy, our God, and God of our fathers, God of Abraham, God of Isaac, and God of Jacob, the Almighty, the Great, the Powerful, the Awesome, most high Almighty, Who bestows beneficent kindness, Who possesses everything, Who remembers the piety of the Patriarchs, and Who brings a redeemer to their children’s children, for the sake of His Name, with love."},
+          {"ref": "5", "translates": ["5"], "text": "<i>(During the Ten Days of Penitence add:</i> Remember us for life King, Who desires life; and inscribe us in the Book of Life, for Your sake, Living God.)<sup class=\"footnote-marker\">4</sup><i class=\"footnote\">We ask God for life so that we can fulfill His purpose in creating us, i.e., to observe and fulfill His commandments.</i>"},
+          {"ref": "6", "translates": ["6"], "text": "<i>If you forgot to say this, and became aware of your omission before saying the blessing, you should recite it. If you have already said “Blessed are You Adonoy,” you must continue the prayers without saying “Remember.”</i>"},
+          {"ref": "7", "translates": ["7"], "text": "King, Helper, and Deliverer and Shield.<sup class=\"footnote-marker\">5</sup><i class=\"footnote\">God is a <i>helper</i> in all the fortunes of life by giving us the necessary energy and talents to succeed. He <i>delivers</i> us from both moral and physical suffering, and He <i>shields</i> us by keeping tragedy and evil influences from us.</i> Blessed are You, Adonoy, Shield of Abraham.<sup class=\"footnote-marker\">6</sup><i class=\"footnote\">These words complete the first blessing of <i>Shemoneh Esrei</i> called “Avos” (Patriarchs). And here too we bend our knees and bow when saying, “Blessed are You.” The major theme of this section is to praise God as “the Great”, as manifested in the Divine protection and providence He gave to the Patriarchs, of whom Abraham was the first.—<i>Vilna Gaon</i></i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Divine Might",
+      "title": "גבורות",
+      "node": "amidah.gevurot",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>אַתָּה גִבּוֹר</b> לְעוֹלָם אֲדֹנָי מְחַיֶּה מֵתִים אַתָּה רַב לְהוֹשִֽׁיעַ:"},
+          {"ref": "2", "kind": "instruction", "when": "moridHatal", "alt": "geshem", "voice": "silent", "en": "In summer:", "clean": "בקיץ:", "text": "<small>בקיץ:</small>"},
+          {"ref": "3", "kind": "prayer", "when": "moridHatal", "alt": "geshem", "voice": "silent", "text": "מוֹרִיד הַטָּל"},
+          {"ref": "4", "kind": "instruction", "when": "mashivHaruach", "alt": "geshem", "voice": "silent", "en": "In winter:", "clean": "בחורף:", "text": "<small>בחורף:</small> "},
+          {"ref": "5", "kind": "prayer", "when": "mashivHaruach", "alt": "geshem", "voice": "silent", "text": "מַשִּׁיב הָרֽוּחַ וּמוֹרִיד הַגֶּֽשֶׁם:"},
+          {"ref": "6", "kind": "note", "when": "mashivHaruach", "voice": "silent", "forgot": true, "en": "If one erred and did not say \"Mashiv haruach umorid hagashem\" in winter: if he remembers before saying the blessing \"Mechayei hameitim\" he says it where he remembered; if he did not remember until after finishing \"Mechayei hameitim\" he must return to the beginning of the Amidah. If he is in doubt whether he said it, then after thirty days it is presumed he prayed correctly, but within thirty days he must pray again.", "cite": "קיצור שו\"ע יט", "clean": "<small>טעה ולא אמר בחורף משיב הרוח ומוריד הגשם אם נזכר קודם שאמר הברכה מחיה המתים אומרו במקום שנזכר. אבל אם לא נזכר עד לאחר שסיים הברכה מחיה המתים צריך לחזור לראש התפלה. ואם נסתפק לו אם אמר משיב הרוח או לא אמר. אם הוא לאחר שלושים יום חזקתו שגם עתה התפלל כראוי. אבל בתוך שלושים יום צריך לחזור ולהתפלל</small>", "text": "<small>טעה ולא אמר בחורף משיב הרוח ומוריד הגשם אם נזכר קודם שאמר הברכה מחיה המתים אומרו במקום שנזכר. אבל אם לא נזכר עד לאחר שסיים הברכה מחיה המתים צריך לחזור לראש התפלה. ואם נסתפק לו אם אמר משיב הרוח או לא אמר. אם הוא לאחר שלושים יום חזקתו שגם עתה התפלל כראוי. אבל בתוך שלושים יום צריך לחזור ולהתפלל (קיצור שו\"ע יט)</small>"},
+          {"ref": "7", "kind": "prayer", "voice": "silent", "text": "מְכַלְכֵּל חַיִּים בְּחֶֽסֶד מְחַיֵּה מֵתִים בְּרַחֲמִים רַבִּים סוֹמֵךְ נוֹפְ֒לִים וְרוֹפֵא חוֹלִים וּמַתִּיר אֲסוּרִים וּמְקַיֵּם אֱמוּנָתוֹ לִישֵׁנֵי עָפָר, מִי כָמֽוֹךָ בַּֽעַל גְּבוּרוֹת וּמִי דּֽוֹמֶה לָּךְ מֶֽלֶךְ מֵמִית וּמְחַיֶּה וּמַצְמִֽיחַ יְשׁוּעָה:"},
+          {"ref": "8", "parts": [
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "voice": "silent", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": "<small>בעשי\"ת:</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "voice": "silent", "text": " מִי כָמֽוֹךָ אַב הָרַחֲמִים זוֹכֵר יְצוּרָיו לְחַיִּים בְּרַחֲמִים:"}
+          ]},
+          {"ref": "9", "kind": "note", "when": "aseretYemeiTeshuva", "voice": "silent", "forgot": true, "en": "If one forgot to say \"Mi chamocha\", the law is the same as for \"Zochreinu\".", "text": "<small>אם שכח לומר מי כמוך דינו כמו בזכרנו.</small>"},
+          {"ref": "10", "kind": "prayer", "voice": "silent", "text": "וְנֶאֱמָן אַתָּה לְהַחֲיוֹת מֵתִים: בָּרוּךְ אַתָּה יְהֹוָה מְחַיֵּה הַמֵּתִים:"},
+          {"ref": "11", "kind": "instruction", "node": "amidah.kedusha", "role": "chazzan", "voice": "silent", "amidah": "repetition", "minyan": true, "en": "When the chazzan repeats the Amidah, Kedushah is said here:", "text": "<small>בחזרת הש\"ץ אומרים כאן קדושה:</small>"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "You are mighty forever,<sup class=\"footnote-marker\">7</sup><i class=\"footnote\">God’s rule of the world is permanent and perpetual.—<i>Kuzari</i></i> my Master; You are the Resurrector of the dead<sup class=\"footnote-marker\">8</sup><i class=\"footnote\">This is the emphatic expression of our belief in the immortality of the soul.—<i>Kuzari</i></i> the Powerful One<sup class=\"footnote-marker\">9</sup><i class=\"footnote\">This passage begins the section of <i>Shemoneh Esrei</i> called “Gevuros” (Might) and its major theme is to praise God as “the Mighty One.” Who alone restores man to life, health, freedom, and well-being.—<i>Vilna Gaon</i></i> to deliver us."},
+          {"ref": "2", "translates": ["2"], "text": "<i>From the Musaf of the first day of Pesach until the Musaf of Shemini Atzeres one should say:</i>"},
+          {"ref": "3", "translates": ["3"], "text": "He causes the dew to descend."},
+          {"ref": "4", "translates": ["4"], "text": "<i>From the Musaf of </i>Shemini Atzeres<i> until the </i>Musaf<i> of the first day of Pesach you should say:</i>"},
+          {"ref": "5", "translates": ["5"], "text": "Causer of the wind to blow and of the rain to fall.<sup class=\"footnote-marker\">10</sup><i class=\"footnote\">God’s might is as much manifested in causing the rain as it is in reviving the dead. In fact the Talmud (Maseches Taanis 7a) declares in the name of Rabbi Avohu: “The day when rain falls is greater than the day of the resurrection of the dead.” Rabbi Yochanan said, (<i>Ibid,</i> 2a): “There are three ׳keys’ which God retains in His own hands and does not entrust to any emissary: the key to rain, the key to childbirth, and the key to the resurrection of the dead.”</i>"},
+          {"ref": "6", "translates": ["6"], "text": "<i>If you neglected to say this, and became aware of your omission before saying the blessing מְחַיֵּה הַמֵּתִים, “the Resurrector of the dead,” you must say it at that time. If you reminded yourself after saying וְנֶאֱמָן אַתָּה “You are faithful,” you must repeat it and then complete the blessing of מְחַיֵּה הַמֵּתִים. If you became aware of your omission after starting the blessing אַתָּה קָדוֹשׁ “You are holy,” even if you only said the word “You,” say the Shemoneh Esrei from the beginning. If during the first thirty days after </i>Shemini Atzeres<i> you are in doubt whether you said it, you must assume that you didnot say it. After thirty days, however, since you have become accustomed to saying it, you may assume that you recited the proper phrase and you need not repeat the Shemoneh Esrei.</i>"},
+          {"ref": "7", "translates": ["7"], "text": "Sustainer of the living with kindliness, Resurrector of the dead<sup class=\"footnote-marker\">11</sup><i class=\"footnote\">The most extraordinary manifestation of God’s might—to our perception—is when He restores the dead to life. <i>Avudraham</i> writes that the three following praises represent various examples of how God restores life to those who arc near death. When a person falls (either physically or morally) he is often near death; thus, when God supports the fallen he restores their lives. When a person is sick, he often faces death, so when God heals the sick He restores their lives. A person who is imprisoned—i.e., confined—is like dead; thus when God releases the imprisoned He restores their lives.</i> with great mercy, Supporter of the fallen, and Healer of the sick, and Releaser of the imprisoned, and Fulfiller of His faithfulness to those who sleep in the dust.<sup class=\"footnote-marker\">12</sup><i class=\"footnote\">Just as God shows His faithfulness to the living, so too will He keep faith with the dead who lie in the dust. Others say that “Those who sleep in the dust” refers to the Patriarchs; God will remember the oath He made to them and keep His promises to them.—<i>Avudraham</i></i> Who is like You, Master of mighty deeds, and who can be compared to You? King Who causes death and restores life, and causes deliverance to sprout forth.<sup class=\"footnote-marker\">13</sup><i class=\"footnote\">Deliverance will “grow” in stages rather than all at once.</i>"},
+          {"ref": "8", "translates": ["8"], "text": "<i>(During the Ten Days of Penitence add:</i> Who is like You merciful Father, Who remembers His creatures for life, in His mercy)"},
+          {"ref": "9", "translates": ["9"], "text": "<i>If you forgot to say this, the same law applies as above concerning “Remember us for life.”</i>"},
+          {"ref": "10", "translates": ["10"], "text": "And You are faithful<sup class=\"footnote-marker\">14</sup><i class=\"footnote\">How remarkable is the Jew’s conviction of God’s faithfulness. When the <i>Chazzan</i> says the blessing of “Resurrector of the dead,” the Jew responds, “Amein” even though he has not seen God restore the dead to life; when the <i>Chazzan</i> says the blessing “Redeemer of Israel,” he responds “Amein”, even though he has not yet been delivered; and when the <i>Chazzan</i> says the blessing “Builder of Jerusalem,” he responds “Amein” even though Jerusalem has not yet been rebuilt.—<i>Midrash Tanchuma</i></i> to restore the dead to life. Blessed are You, Adonoy, Resurrector of the dead."},
+          {"ref": "11", "translates": ["11"], "text": "<i>(When the Chazzan repeats the Shemoneh Esrei, the Kedushah is said here)</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Holiness of God",
+      "title": "קדושת השם",
+      "node": "amidah.kedushat_hashem",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>אַתָּה קָדוֹשׁ</b> וְשִׁמְךָ קָדוֹשׁ וּקְדוֹשִׁים בְּכָל־יוֹם יְהַלְ֒לֽוּךָ סֶּֽלָה."},
+          {"ref": "2", "kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kedosh", "voice": "silent", "text": "בָּרוּךְ אַתָּה יְהֹוָה הָאֵל הַקָּדוֹשׁ:"},
+          {"ref": "3", "parts": [
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "voice": "silent", "en": "During the Ten Days of Repentance, conclude:", "clean": "בעשי\"ת מסיים:", "text": "<small>בעשי\"ת מסיים:</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kedosh", "voice": "silent", "text": " בָּרוּךְ אַתָּה יְהֹוָה הַמֶּֽלֶךְ הַקָּדוֹשׁ:"}
+          ]},
+          {"ref": "4", "kind": "note", "when": "aseretYemeiTeshuva", "voice": "silent", "forgot": true, "en": "If one erred and concluded \"HaEl hakadosh\": if he remembered within the time of speaking and said \"HaMelech hakadosh\" he has fulfilled his obligation; otherwise he must return to the beginning of the Amidah. The same applies if he is in doubt whether he said it. During the rest of the year, if he said \"HaMelech hakadosh\" he does not go back.", "text": "<small>אם טעה וסיים האל הקדוש אם נזכר בתוך כדי דיבור ואמר המלך הקדוש יצא ואם לאו צריך לחזור לראש התפלה וה\"ה אם מסופק אם אמר צריך לחזור לראש. ובימות השנה אם אמר המלך הקדוש אינו חוזר.</small>"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "You are holy and Your Name is holy and holy beings praise You every day, forever."},
+          {"ref": "2", "translates": ["2"], "text": "Blessed are You, Adonoy, the Almighty, the Holy One.<sup class=\"footnote-marker\">19</sup><i class=\"footnote\">This blessing completes the section of <i>Shemoneh Esrei</i> called <i>Kedushah</i> (Holiness) which emphasizes that God is indeed awesome.</i>"},
+          {"ref": "3", "translates": ["3"], "text": "<i>During the Ten Days of Penitence:</i> Blessed are You, Adonoy, the King, the Holy One."},
+          {"ref": "4", "translates": ["4"], "text": "<i>If you mistakenly said, “the Almighty” instead of “the King,” or if you are in doubt—if you realized your error after a lapse of time sufficient to utter a three word greeting (Shalom Aleichem Rebbe), or if you had already started the next blessing, you must say the Shmoneh Esrei from the beginning. If you became aware of your error before that, you should immediately say “the King the Holy One” and continue your prayers.</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Keduasha",
+      "title": "קדושה",
+      "node": "amidah.kedusha",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "speaker", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "Congregation and chazzan:", "text": "<small>קהל וחזן:</small>"},
+          {"ref": "2", "kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["feet_together"], "text": "<b>נְקַדֵּשׁ</b> אֶת־שִׁמְךָ בָּעוֹלָם כְּשֵׁם שֶׁמַּקְדִּישִׁים אוֹתוֹ בִּשְׁמֵי מָרוֹם. כַּכָּתוּב עַל־יַד נְבִיאֶֽךָ וְקָרָא זֶה אֶל־זֶה וְאָמַר:"},
+          {"ref": "3", "kind": "speaker", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "Congregation and chazzan:", "text": "<small>קהל וחזן:</small>"},
+          {"ref": "4", "kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "<b>קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ יְהֹוָה צְבָאוֹת מְלֹא כָל הָאָֽרֶץ כְּבוֹדוֹ:</b>"},
+          {"ref": "5", "kind": "speaker", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "The chazzan:", "text": "<small>שליח ציבור:</small>"},
+          {"ref": "6", "kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "לְעֻמָּתָם בָּרוּךְ יֹאמֵֽרוּ:"},
+          {"ref": "7", "kind": "speaker", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "Congregation and chazzan:", "text": "<small>קהל וחזן:</small>"},
+          {"ref": "8", "kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "<b>בָּרוּךְ כְּבוֹד־יְהֹוָה מִמְּ֒קוֹמוֹ:</b>"},
+          {"ref": "9", "kind": "speaker", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "The chazzan:", "text": "<small>שליח ציבור:</small>"},
+          {"ref": "10", "kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "וּבְדִבְרֵי קָדְשְׁךָ כָּתוּב לֵאמֹר:"},
+          {"ref": "11", "kind": "speaker", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "Congregation and chazzan:", "text": "<small>קהל וחזן:</small>"},
+          {"ref": "12", "kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "<b>יִמְלֹךְ</b> יְהֹוָה לְעוֹלָם אֱלֹהַֽיִךְ צִיּוֹן לְדֹר וָדֹר הַלְ֒לוּיָהּ:"},
+          {"ref": "13", "kind": "speaker", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "The chazzan:", "text": "<small>שליח ציבור:</small>"},
+          {"ref": "14", "parts": [
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "<b>לְדוֹר</b> וָדוֹר נַגִּיד גָּדְלֶֽךָ וּלְנֵֽצַח נְצָחִים קְדֻשָּׁתְךָ נַקְדִּישׁ וְשִׁבְחֲךָ אֱלֹהֵֽינוּ מִפִּֽינוּ לֹא יָמוּשׁ לְעוֹלָם וָעֶד כִּי אֵל מֶֽלֶךְ גָּדוֹל וְקָדוֹשׁ אָֽתָּה:"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kedosh2", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": " בָּרוּךְ אַתָּה יְהֹוָה הָאֵל הַקָּדוֹשׁ: "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "During the Ten Days of Repentance, conclude:", "clean": "בעשי\"ת מסיים:", "text": "<small>בעשי\"ת מסיים:"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kedosh2", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": " בָּרוּךְ אַתָּה יְהֹוָה הַמֶּֽלֶךְ הַקָּדוֹשׁ:</small>"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<i>The Congregation says and the Chazzan repeats:</i>"},
+          {"ref": "2", "translates": ["2"], "text": "We will hallow Your Name in the world, as they hallow it in the heavens above, as is written by the hand of Your prophet,<sup class=\"footnote-marker\">16</sup><i class=\"footnote\">Isaiah 6:3.</i> And they called one to another, and said:"},
+          {"ref": "3", "translates": ["3"], "text": "<i>Congregation says and Chazzan repeats:</i>"},
+          {"ref": "4", "translates": ["4"], "text": "‘Holy, holy, holy, is Adonoy of Hosts, the fullness of all the earth is His glory.’”"},
+          {"ref": "5", "translates": ["5"], "text": "<i>The Chazzan says:</i>"},
+          {"ref": "6", "translates": ["6"], "text": "Those facing them say “Boruch...”"},
+          {"ref": "7", "translates": ["7"], "text": "<i>Congregation says and Chazzan repeats:</i>"},
+          {"ref": "8", "translates": ["8"], "text": "Blessed is the glory of Adonoy from its place<sup class=\"footnote-marker\">17</sup><i class=\"footnote\">Ezekiel 3:12.</i>"},
+          {"ref": "9", "translates": ["9"], "text": "<i>The Chazzan says:</i>"},
+          {"ref": "10", "translates": ["10"], "text": "And in Your Holy Words it is written:"},
+          {"ref": "11", "translates": ["11"], "text": "<i>Congregation says and Chazzan repeats:</i>"},
+          {"ref": "12", "translates": ["12"], "text": "Adonoy will reign forever; Your God, Zion, throughout all generations! Praise God.<sup class=\"footnote-marker\">18</sup><i class=\"footnote\">Psalms 146:10.</i>"},
+          {"ref": "13", "translates": ["13"], "text": "<i>The Chazzan says:</i>"},
+          {"ref": "14", "translates": ["14"], "text": "From generation to generation we will declare Your greatness, and to all eternity, we will sanctify Your holiness, and Your praise, our God, will not depart from our mouth forever and ever; because You are the Almighty Who is King; Great, and Holy. Blessed are You, Adonoy, the Almighty, the Holy One.<sup class=\"footnote-marker\">19</sup><i class=\"footnote\">This blessing completes the section of <i>Shemoneh Esrei</i> called <i>Kedushah</i> (Holiness) which emphasizes that God is indeed awesome.</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Knowledge",
+      "title": "דעת",
+      "node": "amidah.daat",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>אַתָּה חוֹנֵן</b> לְאָדָם דַּֽעַת וּמְלַמֵּד לֶאֱנוֹשׁ בִּינָה: חָנֵּֽנוּ מֵאִתְּ֒ךָ דֵּעָה בִּינָה וְהַשְׂכֵּל: בָּרוּךְ אַתָּה יְהֹוָה חוֹנֵן הַדָּֽעַת:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "You favor man with perception<sup class=\"footnote-marker\">20</sup><i class=\"footnote\">The blessing “You favor man with perception” begins the group of thirteen petitions which make up the “intermediate” section of <i>Shemoneh Esrei.</i> The first six petitions (blessings 4-9) are for our individual needs and well-being: understanding, repentance, forgiveness of sins, deliverance from trouble, from illness, and from want. Though these six petitions are of a personal nature, they voice the needs of all mankind. Note that the worshipper prays for his spiritual needs—knowledge, repentance, and forgiveness before he prays for his physical wants.</i> and teach mankind understanding. Grant us knowledge, understanding and intellect from You. Blessed are You, Adonoy, Grantor of perception."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Repentance",
+      "title": "תשובה",
+      "node": "amidah.teshuva",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>הֲשִׁיבֵֽנוּ</b> אָבִֽינוּ לְתוֹרָתֶֽךָ וְקָרְ֒בֵֽנוּ מַלְכֵּֽנוּ לַעֲבוֹדָתֶֽךָ וְהַחֲזִירֵֽנוּ בִּתְשׁוּבָה שְׁלֵמָה לְפָנֶֽיךָ: בָּרוּךְ אַתָּה יְהֹוָה הָרוֹצֶה בִּתְשׁוּבָה:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Cause us to return,<sup class=\"footnote-marker\">22</sup><i class=\"footnote\">The goal of wisdom is the realization of man’s true relationship to his Maker. Wisdom should be used for Torah study and Divine service.</i> our Father, to Your Torah and bring us near, our King, to Your service; and bring us back in whole-hearted repentance<sup class=\"footnote-marker\">23</sup><i class=\"footnote\">Since the Sages say, “Repent the day before you die” (Maseches Avos 2:10), and every day may be our last, we petition God daily for Divine guidance in repenting.</i> before You Blessed are You, Adonoy, Who desires penitence.<sup class=\"footnote-marker\">24</sup><i class=\"footnote\">Repentance in Judaism implies regret for past misconduct and firm resolve for correct conduct in the future. God holds out His hand to the erring sinner and leads him back to righteousness, as the Talmud (Maseches Yoma 38b) declares, הבא ליטהר מסיעין אותו. God desires penitence as it is written, “I do not desire the death of the wicked: but (rather) that the wicked return from his way and live” (Ezekiel 33:11).</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Forgiveness",
+      "title": "סליחה",
+      "node": "amidah.selicha",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>סְלַח לָֽנוּ</b> אָבִֽינוּ כִּי חָטָֽאנוּ מְחַל לָֽנוּ מַלְכֵּֽנוּ כִּי פָשָֽׁעְנוּ כִּי מוֹחֵל וְסוֹלֵֽחַ אָֽתָּה: בָּרוּךְ אַתָּה יְהֹוָה חַנּוּן הַמַּרְבֶּה לִסְלֽוֹחַ:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Pardon<sup class=\"footnote-marker\">25</sup><i class=\"footnote\">Sin can only be pardoned after repentance. Hence, the order of these two petitions. Even if a person was the worst of sinners, his supplication (after repentance) makes him fit to receive Divine mercy and helps him attain it—<i>R’ Yosef Albo</i></i> us, our Father, for we have sinned, forgive us, our King, for we have transgressed;<sup class=\"footnote-marker\">26</sup><i class=\"footnote\">Error, חטא, is the result of carelessness, ignorance, or weakness; sin, פשע, is a deliberate disregard of moral or religious duty.</i> for You forgive and pardon. Blessed are You, Adonoy, Gracious One, Who pardons abundantly.<sup class=\"footnote-marker\">27</sup><i class=\"footnote\">“Let the wicked forsake his way, and the man of iniquity, his thoughts. Let him return to Adonoy and He will have mercy upon him; and to our God for He abundantly pardons” (Isaiah 55:7).</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Redemption",
+      "title": "גאולה",
+      "node": "amidah.geula",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>רְאֵה</b> בְעָנְיֵֽנוּ וְרִיבָה רִיבֵֽנוּ וּגְאָלֵֽנוּ מְהֵרָה לְמַֽעַן שְׁמֶֽךָ כִּי גּוֹאֵל חָזָק אָֽתָּה: בָּרוּךְ אַתָּה יְהֹוָה גּוֹאֵל יִשְׂרָאֵל:"},
+          {"ref": "2", "kind": "instruction", "when": "fastDay", "node": "amidah.anenu", "role": "chazzan", "voice": "silent", "amidah": "repetition", "minyan": true, "en": "On a public fast day the chazzan says \"Aneinu\" here (in his repetition).", "clean": "בתענית ציבור אומר כאן הש\"ץ <b>עֲנֵֽנוּ</b>", "text": "<small>(בתענית ציבור אומר כאן הש\"ץ <b>עֲנֵֽנוּ</b>)</small>"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Look upon our affliction, and defend our cause: and redeem us speedily<sup class=\"footnote-marker\">28</sup><i class=\"footnote\">As an outgrowth of our penitence and our forgiveness we pray that we may be deemed worthy of Divine redemption.—<i>Kuzari</i></i> for the sake of Your Name; because You are a Mighty Redeemer. Blessed are You, Adonoy, Redeemer of Israel."},
+          {"ref": "2", "translates": ["2"], "text": "<i>(On Fast Days, the Chazzan says “Answer us” and concludes, “Blessed are ... Who responds at times of trouble.”)</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Healing",
+      "title": "רפואה",
+      "node": "amidah.refua",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>רְפָאֵֽנוּ</b> יְהֹוָה וְנֵרָפֵא הוֹשִׁיעֵֽנוּ וְנִוָּשֵֽׁעָה כִּי תְהִלָּתֵֽנוּ אָֽתָּה וְהַעֲלֵה רְפוּאָה שְׁלֵמָה לְכָל מַכּוֹתֵֽינוּ"},
+          {"ref": "2", "kind": "instruction", "when": "if_prayForSick", "voice": "silent", "en": "One who wishes to pray for a sick person says this supplication here:", "text": "<small>מי שרוצה להתפלל על החולה יאמר כאן תחנה זו:</small>"},
+          {"ref": "3", "kind": "prayer", "when": "if_prayForSick", "voice": "silent", "gloss": "Insert the name of the sick person and his or her mother where indicated.", "text": "<small>יְהִי רָצוֹן מִלְּ֒פָנֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ שֶׁתִּשְׁלַח מְהֵרָה רְפוּאָה שְׁלֵמָה מִן הַשָּׁמַֽיִם, רְפוּאַת הַנֶּֽפֶשׁ וּרְפוּאַת הַגּוּף, לַחוֹלֶה (פלוני/פלונית) בֶּן/בַּת (פלונית) בְּתוֹךְ שְׁאָר חוֹלֵי יִשְׂרָאֵל:</small>"},
+          {"ref": "4", "kind": "prayer", "voice": "silent", "text": "כִּי אֵל מֶֽלֶךְ רוֹפֵא נֶאֱמָן וְרַחֲמָן אָֽתָּה: בָּרוּךְ אַתָּה יְהֹוָה רוֹפֵא חוֹלֵי עַמּוֹ יִשְׂרָאֵל:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Heal us,<sup class=\"footnote-marker\">29</sup><i class=\"footnote\">After the petitions for our spiritual needs, we pray for earthly blessings—for health of body and soul, and for food to maintain our strength.—<i>Kuzari</i></i> Adonoy, and we will be healed, deliver us and we will be delivered; for You are our praise. Grant a complete healing to all our affliction"},
+          {"ref": "2", "translates": ["2"], "text": "<i>If you wish to pray for the recovery of a sick person, you may do so here.</i>"},
+          {"ref": "3", "translates": ["3"], "text": "<small>May it be Your will, Adonoy, our God, and the God of our fathers, that You send, quickly, a complete recovery from the heavens, healing for the soul, and healing for the body, for the ailing (<i>name</i>) son/daughter of (<i>mother’s name</i>) among the ailing of Israel.</small>"},
+          {"ref": "4", "translates": ["4"], "text": "because You are the Almighty, King, Who is a faithful and merciful Healer. Blessed are You, Adonoy, Healer of the sick of His people Israel."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Prosperity",
+      "title": "ברכת השנים",
+      "node": "amidah.shanim",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>בָּרֵךְ</b> עָלֵֽינוּ יְהֹוָה אֱלֹהֵֽינוּ אֶת־הַשָּׁנָה הַזֹּאת וְאֶת־כָּל־מִינֵי תְבוּאָתָהּ לְטוֹבָה, וְתֵן"},
+          {"ref": "2", "kind": "instruction", "when": "!talUmatar", "alt": "tal", "voice": "silent", "en": "In the summer months:", "clean": "בימות החמה:", "text": "<small>בימות החמה:</small> "},
+          {"ref": "3", "kind": "prayer", "when": "!talUmatar", "alt": "tal", "voice": "silent", "text": "בְּרָכָה"},
+          {"ref": "4", "kind": "instruction", "when": "talUmatar", "alt": "tal", "voice": "silent", "en": "In the rainy season:", "clean": "בימות הגשמים:", "text": "<small>בימות הגשמים:</small>"},
+          {"ref": "5", "kind": "prayer", "when": "talUmatar", "alt": "tal", "voice": "silent", "text": "טַל וּמָטָר לִבְרָכָה"},
+          {"ref": "6", "kind": "prayer", "voice": "silent", "text": "עַל פְּנֵי הָאֲדָמָה וְשַׂבְּ֒עֵֽנוּ מִטּוּבֶֽךָ וּבָרֵךְ שְׁנָתֵֽנוּ כַּשָּׁנִים הַטּוֹבוֹת: בָּרוּךְ אַתָּה יְהֹוָה מְבָרֵךְ הַשָּׁנִים:"},
+          {"ref": "7", "kind": "note", "when": "talUmatar", "voice": "silent", "forgot": true, "en": "If one forgot to say \"Tal umatar\" and remembered before beginning \"Teka\", he says it where he remembered. If he began \"Teka\", he says it in \"Shome'a tefilah\"; if he did not remember there, he says it between \"Shome'a tefilah\" and \"Retzei\". If he forgot there too: if he remembers before moving his feet, he returns to the blessing of the years and begins \"Barech aleinu\", and prays in order; if he moved his feet, he returns to the beginning of the Amidah.", "text": "<small>אם שכח לומר טַל וּמָטָר ונזכר קודם שהתחיל תְּקַע אומרו במקום שנזכר. התחיל לומר תְּקַע יאמרנה בשׁוֹמֵֽעַ תְּפִלָּה. ואם לא נזכר בש\"ת יאמרנה בין ש\"ת לרְצֵה. שכח גם שם אם נזכר קודם שעקר רגליו חוזר לברכת השנים ויתחיל בָּרֵךְ עָלֵֽינוּ ויתפלל כסדר. ואם עקר רגליו חוזר לראש התפלה.</small>"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Bless for us, Adonoy our God, this year and all the varieties of its produce for good; and bestow"},
+          {"ref": "2", "translates": ["2"], "text": "<i>From the first say of Pesach until the evening service [</i>Maariv<i>] on December 4, or, on a civil leap year, December 5, we say the following line.</i> "},
+          {"ref": "3", "translates": ["3"], "text": "blessing"},
+          {"ref": "4", "translates": ["4"], "text": "<i>From the evening service [</i>Maariv<i>] on December 4, or, on a civil leap year, December 5, until the First day of Pesach, we say the following line.</i> "},
+          {"ref": "5", "translates": ["5"], "text": "dew and rain for a blessing*"},
+          {"ref": "6", "translates": ["6"], "text": "upon the face of the earth; satisfy us from Your bounty<sup class=\"footnote-marker\">30</sup><i class=\"footnote\">According to the Gaon of Vilna, the petition here reads מטובה, “Satisfy us from <i>its</i> bounty”, referring to the bounty of Eretz Yisroel.</i> and bless our year, like the good years. Blessed are You, Adonoy, Blesser of the years."},
+          {"ref": "7", "translates": ["7"], "text": "<i>* If you forgot to say this and became aware of your omission before concluding the blessing, you may say it at that time and conclude the blessing. If you became aware of your omission after saying the blessing, continue the prayers, and before concluding the 16th blessing שׁוֹמֵעַ תְּפִילָּה, “Who heeds prayer,” say: וְתֵן טַל וּמָטָר לִבְרָכָה כִּי אַתָּה וגו’ “bestow dew and rain for blessing, for you heed etc.”. If you reminded yourself after concluding the blessing שׁוֹמֵעַ תְּפִילָּה, but before you started רְצֵה, “be pleased,” you may say: “bestow dew and rain,” וְתֵן טַל וּמָטָר and then continue with רְצֵה . If you remembered after that you must go back and say the 9th blessing, בָּרֵךְ עָלֵינוּ, and continue from there. But if you became aware of your omission after concluding the entire Shemoneh Esrei [and taking three steps backwards] you must repeat the entire Shemoneh Esrei.</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Gathering the Exiles",
+      "title": "קבוץ גליות",
+      "node": "amidah.kibbutz_galuyot",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>תְּקַע</b> בְּשׁוֹפָר גָּדוֹל לְחֵרוּתֵֽנוּ וְשָׂא נֵס לְקַבֵּץ גָּלֻיּוֹתֵֽינוּ וְקַבְּ֒צֵֽנוּ יַֽחַד מֵאַרְבַּע כַּנְפוֹת הָאָֽרֶץ: בָּרוּךְ אַתָּה יְהֹוָה מְקַבֵּץ נִדְחֵי עַמּוֹ יִשְׂרָאֵל:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Sound the great <i>shofar</i> for our liberty,<sup class=\"footnote-marker\">31</sup><i class=\"footnote\">The following six benedictions, beginning with this one, are prayers for the restoration of the spiritual-national life of the Jewish People. This tenth benediction is an impassioned prayer for the fulfillment of the prophecy, “And it will come to pass on that day, the great Shofar will be sounded; and those who were lost in the land of Assyria shall come and those who were dispersed in the land of Egypt; and they will worship Adonoy on the Holy Mountain at Jerusalem (Isaiah 27:13).—<i>Avudraham</i></i> and raise a banner to gather our exiles, and gather us together from the four corners of the earth. Blessed are You, Adonoy, Gatherer of the dispersed of His people Israel."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Justice",
+      "title": "משפט",
+      "node": "amidah.din",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>הָשִֽׁיבָה</b> שׁוֹפְ֒טֵֽינוּ כְּבָרִאשׁוֹנָה וְיוֹעֲצֵֽינוּ כְּבַתְּ֒חִלָּה וְהָסֵר מִמֶּֽנּוּ יָגוֹן וַאֲנָחָה וּמְלוֹךְ עָלֵֽינוּ אַתָּה יְהֹוָה לְבַדְּ֒ךָ בְּחֶֽסֶד וּבְרַחֲמִים וְצַדְּ֒קֵֽנוּ בַּמִשְׁפָּט:"},
+          {"ref": "2", "kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "melech", "voice": "silent", "text": "בָּרוּךְ אַתָּה יְהֹוָה מֶֽלֶךְ אֹהֵב צְדָקָה וּמִשְׁפָּט:"},
+          {"ref": "3", "parts": [
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "voice": "silent", "en": "During the Ten Days of Repentance conclude:", "clean": "בעשי\"ת יסיים:", "text": "<small>בעשי\"ת יסיים:</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "melech", "voice": "silent", "text": " הַמֶּֽלֶךְ הַמִּשְׁפָּט:"}
+          ]},
+          {"ref": "4", "kind": "note", "voice": "silent", "forgot": true, "en": "During the rest of the year, if one said \"HaMelech hamishpat\" he has fulfilled his obligation and need not repeat. During the Ten Days, if he mistakenly said \"Melech ohev tzedakah umishpat\" and remembers within the time of speaking, he says \"HaMelech hamishpat\"; if he remembers later, he does not say it and is not made to repeat.", "text": "<small>בכל השנה אם אמר המלך המשפט יצא וא\"צ לחזור. ובעשי\"ת אם טעה ואמר מלך אוהב צדקה ומשפט אם נזכר תוך כדי דבור אומר המלך המשפט. ואם לאחר כ\"ד לא יאמר ואין מחזירין אותו.</small>"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Restore our judges<sup class=\"footnote-marker\">32</sup><i class=\"footnote\">We pray for the restoration of God’s reign of justice, as the prophet said, “And I will restore your judges as in former times, and your advisors as the beginning; afterward you (Jerusalem) will be called the city of righteousness, faithful city” (Isaiah 1:26). This will be manifested with the restoration of the Sanhedrin and their system of halachic justice.</i> as before and our counselors as at first. Remove sorrow and sighing from us,<sup class=\"footnote-marker\">33</sup><i class=\"footnote\">Few evils are the source of deeper grief and suffering than the absence of justice. With the restoration of justice, our sorrow and sighing will change to joy and gladness.—<i>Avudraham</i></i> and reign over us You, Adonoy, alone with kindness and compassion; and make us righteous with justice,"},
+          {"ref": "2", "translates": ["2"], "text": "Blessed are You, Adonoy, King, Lover of righteousness and justice."},
+          {"ref": "3", "translates": ["3"], "text": "<i>During the Ten Days of Penitence:</i> Blessed are You, Adonoy, the King of Justice."},
+          {"ref": "4", "translates": ["4"], "text": "<i>If you mistakenly said, “King, Lover of righteousness and justice,” instead of “the King of Justice” and became aware of your mistake within the time it takes to utter the three word greeting (Sholom Aleichem Rebbe), you should immediately say “the King of Justice.” If you remembered after that interval, you may continue the Shemoneh Esrei since the word “King” was mentioned in the regular blessing.</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Against Enemies",
+      "title": "ברכת המינים",
+      "node": "amidah.minim",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>וְלַמַּלְשִׁינִים</b> אַל תְּהִי תִקְוָה וְכָל הָרִשְׁעָה כְּרֶֽגַע תֹּאבֵד וְכָל אֹיְבֶֽיךָ מְהֵרָה יִכָּרֵֽתוּ וְהַזֵּדִים מְהֵרָה תְעַקֵּר וּתְשַׁבֵּר וּתְמַגֵּר וְתַכְנִֽיעַ בִּמְהֵרָה בְיָמֵֽינוּ: בָּרוּךְ אַתָּה יְהֹוָה שׁוֹבֵר אֹיְ֒בִים וּמַכְנִֽיעַ זֵדִים:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Let there be no hope for informers <sup class=\"footnote-marker\">34</sup><i class=\"footnote\">This petition was added to the original Eighteen Benedictions. It was ordained by Rabban Gamliel and his <i>Bais Din</i> in Yavneh, according to the text of Shmuel HaKattan, its author (Maseches Berachos 28:b). It is directed against the early Christians who informed against Jews to the Roman authorities after the destruction of the Second Temple, causing them to be put to an excruciatingly painful death.</i> and may all wickedness<sup class=\"footnote-marker\">35</sup><i class=\"footnote\">Not the “<i>wicked</i>,” but “<i>wickedness</i>.” This particular prayer is based on the Talmudic interpretation of the verse, “Let sins be terminated on earth and the wicked will be no more” (Psalms 104:36).</i> instantly perish; may all the enemies of Your people<sup class=\"footnote-marker\">36</sup><i class=\"footnote\">The internal enemies of the Jews, against whom this prayer was originally directed, disappeared within a short time.</i> be swiftly cut off, and may You quickly uproot, crush, rout and subdue the insolent, speedily in our days. Blessed are You, Adonoy, Crusher of enemies. and Subduer of the insolent."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/The Righteous",
+      "title": "על הצדיקים",
+      "node": "amidah.tzaddikim",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>עַל־הַצַּדִּיקִים</b> וְעַל־הַחֲסִידִים וְעַל־זִקְנֵי עַמְּ֒ךָ בֵּית יִשְׂרָאֵל וְעַל פְּלֵיטַת סוֹפְ֒רֵיהֶם וְעַל גֵּרֵי הַצֶּֽדֶק וְעָלֵֽינוּ יֶהֱמוּ רַחֲמֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וְתֵן שָׂכָר טוֹב לְכָל הַבּוֹטְ֒חִים בְּשִׁמְךָ בֶּאֱמֶת וְשִׂים חֶלְקֵֽנוּ עִמָּהֶם לְעוֹלָם וְלֹא נֵבוֹשׁ כִּי בְךָ בָּטָֽחְנוּ: בָּרוּךְ אַתָּה יְהֹוָה מִשְׁעָן וּמִבְטָח לַצַּדִּיקִים:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "May Your mercy be aroused, Adonoy our God, upon the righteous,<sup class=\"footnote-marker\">37</sup><i class=\"footnote\">The prayer for the righteous follows the prayer against the wicked, following the same sequence of the Psalmist’s verse, “And all the pride of the wicked, I shall cut down; exalted will be the pride of the righteous” (75:11).—Talmud, <i>Maseches Megillah</i> 17b</i> upon the pious, upon the elders of Your people, Israel, upon the remnant of their scholars, upon the true proselytes and upon us. Grant bountiful reward to all who trust in Your Name in truth;<sup class=\"footnote-marker\">38</sup><i class=\"footnote\">As King David said, “Those <i>knowing </i>Your Name will <i>trust</i> in You” (Psalms 9:11). These men who perceive God’s ways with undistorted clarity are of the highest caliber. They see God’s hand guiding the world and they know with certainty that He directs all.—<i>Avudraham, Malbim</i></i> and place our lot among them, and may we never be put to shame,<sup class=\"footnote-marker\">39</sup><i class=\"footnote\">The worshiper begs to be saved from the inner catastrophe of feeling that his trust in God has been in vain.—<i>Pesher Dovor</i></i> for we have put our trust in You. Blessed are You, Adonoy, Support and Trust of the righteous."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Rebuilding Jerusalem",
+      "title": "בנין ירושלים",
+      "node": "amidah.yerushalayim",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>וְלִירוּשָׁלַֽיִם</b> עִירְ֒ךָ בְּרַחֲמִים תָּשׁוּב וְתִשְׁכּוֹן בְּתוֹכָהּ כַּאֲשֶׁר דִּבַּֽרְתָּ וּבְנֵה אוֹתָהּ בְּקָרוֹב בְּיָמֵֽינוּ בִּנְיַן עוֹלָם וְכִסֵּא דָוִד מְהֵרָה לְתוֹכָהּ תָּכִין:"},
+          {"ref": "2", "kind": "instruction", "when": "tishaBav", "node": "amidah.nachem", "voice": "silent", "en": "On Tisha B'Av at Mincha:", "clean": "במנחת תשעה באב:", "text": "<small>במנחת תשעה באב:</small>"},
+          {"ref": "3", "kind": "prayer", "when": "tishaBav", "node": "amidah.nachem", "voice": "silent", "text": "<small>נַחֵם יְהֹוָה אֱלֹהֵֽינוּ אֶת אֲבֵלֵי צִיּוֹן וְאֶת אֲבֵלֵי יְרוּשָׁלָֽיִם. וְאֶת הָעִיר הָאֲבֵלָה וְהַחֲרֵבָה וְהַבְּ֒זוּיָה וְהַשּוֹמֵמָה. הָאֲבֵלָה מִבְּ֒לִי בָנֶֽיהָ. וְהַחֲרֵבָה מִמְּ֒עוֹנוֹתֶֽיהָ. וְהַבְּ֒זוּיָה מִכְּ֒בוֹדָהּ. וְהַשוֹמֵמָה מֵאֵין יוֹשֵׁב. וְהִיא יוֹשֶֽׁבֶת וְרֹאשָׁהּ חָפוּי כְּאִשָּׁה עֲקָרָה שֶׁלֹּא יָלָֽדָה. וַיְבַלְּ֒עֽוּהָ לִיגְיוֹנוֹת. וְיִירָשֽׁוּהָ עוֹבְ֒דֵי פְסִילִים. וַיָטִּֽילוֹ אֶת עַמְּ֒ךָ יִשְׂרָאֵל לֶחָֽרֶב. וַיַּהַרְגוּ בְזָדוֹן חֲסִידֵי עֶלְיוֹן. עַל כֵּן צִיּוֹן בְּמַר תִבְכֶּה. וִירוּשָׁלַֽיִם תִּתֵּן קוֹלָהּ. לִבִּי לִבִּי עַל חַלְלֵיהֶם. מֵעַי מֵעַי עַל חַלְלֵיהֶם. כִּי אַתָּה יְהֹוָה בָּאֵשׁ הִצַּתָּהּ. וּבָאֵשׁ אַתָּה עָתִיד לִבְנוֹתָהּ. כָּאָמוּר וַאֲנִי אֶהְיֶה לָהּ נְאֻם יְהֹוָה חוֹמַת אֵשׁ סָבִיב וּלְכָבוֹד אֶהְיֶה בְּתוֹכָהּ: בָּרוּךְ אַתָּה יְהֹוָה מְנַחֵם צִיּוֹן וּבוֹנֵה יְרוּשָׁלָֽיִם:</small>"},
+          {"ref": "4", "kind": "prayer", "when": "!tishaBav", "alt": "boneh", "voice": "silent", "text": "בָּרוּךְ אַתָּה יְהֹוָה בּוֹנֵה יְרוּשָׁלָֽיִם:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "And return in mercy to Jerusalem,<sup class=\"footnote-marker\">40</sup><i class=\"footnote\">The “pride of the righteous will be exalted” in the restored city of Jerusalem. Hence in this blessing we plead for the reconstruction of Jerusalem, as it is stated, “Pray for the peace of Jerusalem; may they who love You have peace” (Psalms 122:6)<i>—Maseches Megillah</i> 17b</i> Your city, and dwell therein as You have spoken; and rebuild it soon, in our days, as an everlasting structure, and may You speedily establish the throne of David therein. "},
+          {"ref": "2", "translates": ["2"], "text": "<i>During Mincha services on the Ninth of Av, the following petition is added here:</i>"},
+          {"ref": "3", "translates": ["3"], "text": "Adonoy, our God, console the mourners of Zion<sup class=\"footnote-marker\">1</sup><i class=\"footnote\">“Zion” is the spiritual sanctuary, while “Jerusalem” is the Jewish commonwealth which was to flourish around Zion.—<i>S.R. Hirsch</i></i> and the mourners of Jerusalem and the city that is in mourning and in ruins, despised and desolate. Mourning because she is bereft of her children, ruined of her dwellings, despised in contrast to her former glory, desolate without inhabitants, she sits alone with her head covered like a barren woman who never gave birth. Legions<sup class=\"footnote-marker\">2</sup><i class=\"footnote\">The Roman forces were called “legions.”</i> have devoured her, idolaters have deprived her of her inheritance; they have put Your people Israel to the sword and have wantonly murdered the pious ones of the Most High. Therefore, Zion weeps bitterly, and Jerusalem raises her voice, “My heart, my heart [grieves] for their slain, my innards, my innards, [ache] for their slain. For you, Adonoy, set her afire, and with fire You will ultimately rebuild her, as it is said, “I will be to her, says Adonoy, a wall of fire around [her], and I shall be for glory in her midst.”<sup class=\"footnote-marker\">3</sup><i class=\"footnote\">Zecharyah 2:9.</i> Blessed are You, Adonoy, Consoler of Zion and Builder of Jerusalem."},
+          {"ref": "4", "translates": ["4"], "text": "Blessed are You, Adonoy, Builder of Jerusalem."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Kingdom of David",
+      "title": "מלכות בית דוד",
+      "node": "amidah.david",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>אֶת־צֶֽמַח</b> דָּוִד עַבְדְּ֒ךָ מְהֵרָה תַצְמִֽיחַ וְקַרְנוֹ תָּרוּם בִּישׁוּעָתֶֽךָ כִּי לִישׁוּעָתְ֒ךָ קִוִּֽינוּ כָּל הַיּוֹם: בָּרוּךְ אַתָּה יְהֹוָה מַצְמִֽיחַ קֶֽרֶן יְשׁוּעָה:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Speedily cause the sprout of David,<sup class=\"footnote-marker\">41</sup><i class=\"footnote\">The prayer for the Messiah, descendant of David, follows the prayer for Jerusalem, following the sequence of Hosea’s prophecy (3:5), “Afterward, the Children of Israel will return to Jerusalem and seek Adonoy their God, and David their King “—<i>Masechcas Megillah</i> 18a</i> Your servant,  to flourish and exalt his power with Your deliverance. We hope all day for Your deliverance. Blessed are You, Adonoy, Who causes the power of salvation to sprout."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Response to Prayer",
+      "title": "שומע תפילה",
+      "node": "amidah.shomea_tefilla",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>שְׁמַע קוֹלֵֽנוּ</b> יְהֹוָה אֱלֹהֵֽינוּ חוּס וְרַחֵם עָלֵֽינוּ וְקַבֵּל בְּרַחֲמִים וּבְרָצוֹן אֶת־תְּפִלָּתֵֽנוּ כִּי אֵל שׁוֹמֵֽעַ תְּפִלּוֹת וְתַחֲנוּנִים אָֽתָּה וּמִלְּפָנֶֽיךָ מַלְכֵּֽנוּ רֵיקָם אַל־תְּשִׁיבֵֽנוּ"},
+          {"ref": "2", "kind": "instruction", "when": "fastDay", "node": "amidah.anenu", "voice": "silent", "amidah": "silent", "en": "On a public fast day, \"Aneinu\" is said here in the silent prayer:", "text": "<small>בתענית ציבור אומרים כאן עננו בתפילת הלחש:</small>"},
+          {"ref": "3", "kind": "prayer", "when": "fastDay", "node": "amidah.anenu", "voice": "silent", "amidah": "silent", "text": "<small><b>עֲנֵֽנוּ</b> יְהֹוָה עֲנֵֽנוּ בְּיוֹם צוֹם תַּעֲנִיתֵֽנוּ. כִּי בְצָרָה גְדוֹלָה אֲנָֽחְנוּ. אַל־תֵּֽפֶן אֶל־רִשְׁעֵֽנוּ וְאַל־תַּסְתֵּר פָּנֶֽיךָ מִמֶּֽנּוּ וְאַל־תִּתְעַלַּם מִתְּ֒חִנָּתֵֽנוּ. הֱיֵה נָא קָרוֹב לְשַׁוְעָתֵֽנוּ. יְהִי־נָא חַסְדְּ֒ךָ לְנַחֲמֵֽנוּ. טֶֽרֶם נִקְרָא אֵלֶֽיךָ עֲנֵֽנוּ. כַּדָּבָר שֶׁנֶּאֱמַר וְהָיָה טֶֽרֶם יִקְרָֽאוּ וַאֲנִי אֶעֱנֶה. עוֹד הֵם מְדַבְּ֒רִים וַאֲנִי אֶשְׁמָע. כִּי אַתָּה יְהֹוָה הָעוֹנֶה בְּעֵת צָרָה. פּוֹדֶה וּמַצִּיל בְּכָל־עֵת צָרָה וְצוּקָה:</small>"},
+          {"ref": "4", "kind": "prayer", "voice": "silent", "text": "כִּי אַתָּה שׁוֹמֵֽעַ תְּפִלַּת עַמְּךָ יִשְׂרָאֵל בְּרַחֲמִים: בָּרוּךְ אַתָּה יְהֹוָה שׁוֹמֵֽעַ תְּפִלָּה:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Hear our voice, Adonoy, our God;<sup class=\"footnote-marker\">42</sup><i class=\"footnote\">The last of the intermediate benedictions petitions God to answer all our preceding prayers.</i> spare us and have compassion on us, and accept our prayers compassionately and willingly, for You are Almighty Who hears prayers and supplications; and do not turn us away empty-handed from Your Presence, our King,<sup class=\"footnote-marker\">43</sup><i class=\"footnote\">At this point, the worshiper may add any private petition, and ask God’s help for himself, for his household, or for his community.</i> for You hear the prayers of Your people, Israel, with compassion. Blessed are You, Adonoy, Who hears prayers."},
+          {"ref": "2", "translates": ["2"], "text": "<i>On Fast days during Mincha, the following petition is added here:</i>"},
+          {"ref": "3", "translates": ["3"], "text": "Answer us, Adonoy, answer us on the day of our fasting, for we are in great trouble. Do not regard our wickedness, do not conceal Your countenance from us, and do not be unmindful of our supplication. Please be near to our cry, let Your loving kindness console us. Even before we call unto You, answer us, as it is said: “And it shall come to pass that before they call I will answer;<sup class=\"footnote-marker\">8</sup><i class=\"footnote\">Isaiah 65:24.</i> while they are yet speaking, I will hear. For You, Adonoy, are the One Who answers in time of trouble, Who redeems and rescues in all times of trouble and distress."},
+          {"ref": "4", "translates": ["4"], "text": "for You hear the prayers of Your people, Israel, with compassion. Blessed are You, Adonoy, Who hears prayers."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Temple Service",
+      "title": "עבודה",
+      "node": "amidah.avoda",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>רְצֵה</b> יְהֹוָה אֱלֹהֵֽינוּ בְּעַמְּ֒ךָ יִשְׂרָאֵל וּבִתְפִלָּתָם וְהָשֵׁב אֶת הָעֲבוֹדָה לִדְבִיר בֵּיתֶֽךָ וְאִשֵּׁי יִשְׂרָאֵל וּתְפִלָּתָם בְּאַהֲבָה תְקַבֵּל בְּרָצוֹן וּתְהִי לְרָצוֹן תָּמִיד עֲבוֹדַת יִשְׂרָאֵל עַמֶּֽךָ:"},
+          {"ref": "2", "kind": "instruction", "when": "roshChodesh || cholHamoed", "node": "amidah.yaaleh_veyavo", "voice": "silent", "en": "On Rosh Chodesh and on Chol HaMoed, say this:", "clean": "בראש חדש ובחול המועד אומרים זה:", "text": "<small>בראש חדש ובחול המועד אומרים זה:</small>"},
+          {"ref": "3", "parts": [
+            {"kind": "prayer", "when": "roshChodesh || cholHamoed", "node": "amidah.yaaleh_veyavo", "voice": "silent", "text": "<b>אֱלֹהֵֽינוּ</b> וֵאלֹהֵי אֲבוֹתֵֽינוּ <b>יַעֲלֶה וְיָבֹא</b> וְיַגִּֽיעַ וְיֵרָאֶה וְיֵרָצֶה וְיִשָּׁמַע וְיִפָּקֵד וְיִזָּכֵר זִכְרוֹנֵֽנוּ וּפִקְדוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ. וְזִכְרוֹן מָשִֽׁיחַ בֶּן דָּוִד עַבְדֶּֽךָ. וְזִכְרוֹן יְרוּשָׁלַֽיִם עִיר קָדְשֶֽׁךָ. וְזִכְרוֹן כָּל עַמְּ֒ךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ. לִפְלֵיטָה לְטוֹבָה לְחֵן וּלְחֶֽסֶד וּלְרַחֲמִים לְחַיִּים וּלְשָׁלוֹם. בְּיוֹם "},
+            {"kind": "instruction", "when": "roshChodesh", "node": "amidah.yaaleh_veyavo", "en": "For Rosh Chodesh:", "clean": "לר\"ח:", "text": "<small>לר\"ח:</small>"},
+            {"kind": "prayer", "when": "roshChodesh", "alt": "yom", "node": "amidah.yaaleh_veyavo", "voice": "silent", "text": " רֹאשׁ הַחֹֽדֶשׁ הַזֶּה:"},
+            {"kind": "instruction", "when": "cholHamoedPesach", "node": "amidah.yaaleh_veyavo", "en": "For Pesach:", "clean": "לפסח:", "text": " <small>לפסח:</small>"},
+            {"kind": "prayer", "when": "cholHamoedPesach", "alt": "yom", "node": "amidah.yaaleh_veyavo", "voice": "silent", "text": " חַג הַמַּצּוֹת הַזֶּה:"},
+            {"kind": "instruction", "when": "cholHamoedSukkot", "node": "amidah.yaaleh_veyavo", "en": "For Sukkot:", "clean": "לסכות:", "text": " <small>לסכות:</small>"},
+            {"kind": "prayer", "when": "cholHamoedSukkot", "alt": "yom", "node": "amidah.yaaleh_veyavo", "voice": "silent", "text": " חַג הַסֻּכּוֹת הַזֶּה:"},
+            {"kind": "prayer", "when": "roshChodesh || cholHamoed", "node": "amidah.yaaleh_veyavo", "voice": "silent", "text": " זָכְרֵֽנוּ יְהֹוָה אֱלֹהֵֽינוּ בּוֹ לְטוֹבָה. וּפָקְדֵֽנוּ בוֹ לִבְרָכָה. וְהוֹשִׁיעֵֽנוּ בוֹ לְחַיִּים. וּבִדְבַר יְשׁוּעָה וְרַחֲמִים חוּס וְחָנֵּֽנוּ וְרַחֵם עָלֵֽינוּ וְהוֹשִׁיעֵֽנוּ. כִּי אֵלֶֽיךָ עֵינֵֽינוּ כִּי אֵל מֶֽלֶךְ חַנּוּן וְרַחוּם אָֽתָּה:"}
+          ]},
+          {"ref": "4", "kind": "note", "when": "roshChodesh || cholHamoed", "node": "amidah.yaaleh_veyavo", "voice": "silent", "forgot": true, "en": "If one forgot \"Ya'aleh veyavo\" and remembers before saying \"Yihyu leratzon\", he returns to \"Retzei\". Even if he remembers before beginning \"Modim\", once he has finished the blessing \"HaMachazir shechinato leTziyon\" he must begin \"Retzei\". But if he remembers before that blessing, he says it there and concludes \"Vetechezenah eineinu\". If he does not remember until after \"Yihyu leratzon\", he returns to the beginning of the Amidah.", "text": "<small>שכח ולא אמר יעלה ויבא אם נזכר קודם שאמר יהיו לרצון חוזר ומתחיל רצה. ואפלו אם נזכר קודם שהתחיל מודים כיון שסים ברכת המחזיר שכינתו לציון צריך להתחיל רצה. אך אם נזכר קודם ברכת המחזיר שכינתו לציון אומרו שם ומסים ותחזינה עינינו וכו'. ואם לא נזכר עד לאחר יהיו לרצון וגו' חוזר לראש התפלה.</small>"},
+          {"ref": "5", "kind": "prayer", "voice": "silent", "text": "<b>וְתֶחֱזֶֽינָה</b> עֵינֵֽינוּ בְּשׁוּבְ֒ךָ לְצִיּוֹן בְּרַחֲמִים: בָּרוּךְ אַתָּה יְהֹוָה הַמַּחֲזִיר שְׁכִינָתוֹ לְצִיּוֹן:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Be pleased,<sup class=\"footnote-marker\">44</sup><i class=\"footnote\">The three concluding benedictions are known as the benedictions of thanksgiving. They consist of prayers for the re-establishment of God’s service at Jerusalem; thanksgiving for God’s daily wonders in our behalf; and a prayer for peace and prosperity.</i> Adonoy, our God, with Your people, Israel, and their prayer;<sup class=\"footnote-marker\">45</sup><i class=\"footnote\">In the previous blessings the first person was used: “Heal us,” “Have mercy on us,” whereas here the third person is used: “Their prayer,” “Accept their prayer.” In order to achieve a level in which we will be a source of pleasure to God, we must possess greater merit than what we as individuals can claim. We therefore ask God to take pleasure in the entire people of Israel among whom there are pious and righteous individuals who possess great merit, and we ask Him to accept “their prayer” with love and satisfaction.—<i>Siach Yitzchok</i></i> and restore the service to the Holy of Holies in Your abode, and the fire-offerings<sup class=\"footnote-marker\">46</sup><i class=\"footnote\">The prayer “Be pleased” in a different form was recited by the <i>Kohanim</i> (priests) every day following the morning fire-offering.—<i>Maseches Berachos</i> 11b</i> of Israel; and accept their prayer, lovingly and willingly. And may You always find pleasure with the service of Your people, Israel."},
+          {"ref": "2", "translates": ["2"], "text": "<i>On regular weekdays continue, “And may our eyes”. On Rosh Chodesh and on Chol HaMoed, the following prayer is added:</i> "},
+          {"ref": "3", "translates": ["3"], "text": "Our God and God of our fathers, may there ascend, come, and reach, appear, be desired, and heard, counted and recalled our remembrance and reckoning; the remembrance of our fathers; the remembrance of the Messiah the son of David, Your servant; the remembrance of Jerusalem, city of Your Sanctuary and the remembrance of Your entire people, the House of Israel, before You for survival, for well-being, for favor, kindliness, compassion, for life and peace on this day of the: <i>Rosh Chodesh/Festival of Matzos/Festival of Sukkos</i>. Remember us Adonoy, our God, on this day for well-being; be mindful of us on this day for blessing, and deliver us for life. In accord with the promise of deliverance and compassion, spare us and favor us, have compassion on us and deliver us; for our eyes are directed to You, because You are the Almighty Who is King, Gracious, and Merciful."},
+          {"ref": "4", "translates": ["4"], "text": "<i>If you forgot to say this at Shacharis, (the Morning Service) or at Mincha (the Afternoon Service), but realized your omission before saying מוֹדִים, “We are thankful,” you should say it at that time and continue with מוֹדִים. If you became aware of your omission after saying “מוֹדִים” “We are thankful,” but before concluding the Shemoneh Esrei [and taking three steps backwards], start again from רְצֵה, “Be pleased.” If you had completed the Shemoneh Esrei and then remembered, you must repeat the entire Shemoneh Esrei from the beginning. If you are in doubt, follow the same procedure as above. If you had already said the Musaf prayer and recalled your omission, it is the opinion of some authorities, that the<i> Shemoneh Esrei</i> of </i>Shacharis<i> be repeated as a נְדָבָה, a free-will-offering of prayer, rather than an obligatory prayer.</i>"},
+          {"ref": "5", "translates": ["5"], "text": "And may our eyes behold<sup class=\"footnote-marker\">47</sup><i class=\"footnote\">We pray for the privilege of witnessing the visible revelation of the Divine Presence as it appeared to the prophets, to the pious, and to all who were delivered from Egypt.—<i>Kuzari</i></i> Your merciful return to Zion. Blessed are You, Adonoy, Who returns His Divine Presence to Zion."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Thanksgiving",
+      "title": "מודים",
+      "node": "amidah.modim",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "note", "voice": "silent", "gestures": ["bow_full"], "en": "When saying \"Modim\" one bows the head and body like a reed until all the vertebrae of the spine are loosened. He bows quickly, all at once, and rises slowly, head first and then the body, so that it is not like a burden on him.", "cite": "שו\"ע או\"ח קיג", "clean": "<small>כשאומר מודים כורע ראשו וגופו כאגמון עד שיתפקקו כל חוליות שבשדרה. וכשהוא כורע יכרע במהירות בפעם אחת וכשהוא זוקף זוקף בנחת ראשו תחלה ואחר כך גופו שלא תהא עליו כמשאוי</small>", "text": "<small>כשאומר מודים כורע ראשו וגופו כאגמון עד שיתפקקו כל חוליות שבשדרה. וכשהוא כורע יכרע במהירות בפעם אחת וכשהוא זוקף זוקף בנחת ראשו תחלה ואחר כך גופו שלא תהא עליו כמשאוי (שו\"ע או\"ח סי' קיג)</small>"},
+          {"ref": "2", "kind": "prayer", "voice": "silent", "gestures": ["bow_full"], "text": "<b>מוֹדִים</b> אֲנַֽחְנוּ לָךְ שָׁאַתָּה הוּא יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ לְעוֹלָם וָעֶד צוּר חַיֵּֽינוּ מָגֵן יִשְׁעֵֽנוּ אַתָּה הוּא לְדוֹר וָדוֹר נֽוֹדֶה לְּךָ וּנְסַפֵּר תְּהִלָּתֶֽךָ עַל־חַיֵּֽינוּ הַמְּ֒סוּרִים בְּיָדֶֽךָ וְעַל נִשְׁמוֹתֵֽינוּ הַפְּ֒קוּדוֹת לָךְ וְעַל נִסֶּֽיךָ שֶׁבְּכָל יוֹם עִמָּֽנוּ וְעַל נִפְלְ֒אוֹתֶֽיךָ וְטוֹבוֹתֶֽיךָ שֶׁבְּ֒כָל עֵת עֶֽרֶב וָבֹֽקֶר וְצָהֳרָֽיִם הַטּוֹב כִּי לֹא כָלוּ רַחֲמֶֽיךָ וְהַמְ֒רַחֵם כִּי לֹא תַֽמּוּ חֲסָדֶֽיךָ מֵעוֹלָם קִוִּֽינוּ לָךְ:"},
+          {"ref": "3", "kind": "note", "node": "amidah.modim_derabbanan", "voice": "silent", "amidah": "repetition", "minyan": true, "gestures": ["bow_full"], "en": "When the chazzan reaches \"Modim\" and bows, the whole congregation bows and says a short thanksgiving that likewise begins with \"Modim\". A servant does not thank his master through an agent; each person must accept the yoke of heaven with his own mouth.", "cite": "אבודרהם", "clean": "<small>כשיגיע שליח צבור למודים וכורע כל העם שוחין ואומרין הודאה קטנה המתחלת כמו כן במודים. שאין דרך העבד להודות לרבו ולומר לו אדוני אתה על ידי שליח אלא כל אדם צריך לקבל בפיו עול מלכות שמים ואם יקבל על ידי שליח אינה קבלה גמורה שיוכל להכחיש ולומר לא שלחתיו.</small>", "text": "<small>כשיגיע שליח צבור למודים וכורע כל העם שוחין ואומרין הודאה קטנה המתחלת כמו כן במודים. שאין דרך העבד להודות לרבו ולומר לו אדוני אתה על ידי שליח אלא כל אדם צריך לקבל בפיו עול מלכות שמים ואם יקבל על ידי שליח אינה קבלה גמורה שיוכל להכחיש ולומר לא שלחתיו. (אבודרהם)</small>"},
+          {"ref": "4", "kind": "prayer", "node": "amidah.modim_derabbanan", "role": "congregation", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["bow_full"], "text": "<small><b>מוֹדִים</b> אֲנַֽחְנוּ לָךְ שָׁאַתָּה הוּא יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ אֱלֹהֵי כָל בָּשָׂר יוֹצְ֒רֵֽנוּ יוֹצֵר בְּרֵאשִׁית בְּרָכוֹת וְהוֹדָאוֹת לְשִׁמְךָ הַגָּדוֹל וְהַקָּדוֹשׁ עַל שֶׁהֶחֱיִיתָֽנוּ וְקִיַּמְתָּֽנוּ כֵּן תְּחַיֵּֽינוּ וּתְקַיְּ֒מֵֽנוּ וְתֶאֱסוֹף גָּלֻיּוֹתֵֽינוּ לְחַצְרוֹת קָדְשֶֽׁךָ לִשְׁמוֹר חֻקֶּֽיךָ וְלַעֲשׂוֹת רְצוֹנֶֽךָ וּלְעָבְדְּ֒ךָ בְּלֵבָב שָׁלֵם עַל שֶׁאֲנַֽחְנוּ מוֹדִים לָךְ. בָּרוּךְ אֵל הַהוֹדָאוֹת:</small>"},
+          {"ref": "5", "kind": "note", "when": "chanukah || purim", "node": "amidah.al_hanissim", "voice": "silent", "forgot": true, "en": "On Chanukah and Purim \"Al hanissim\" is said. If one forgot it and remembered before saying the Name in \"HaTov shimcha\", even after saying \"Baruch Atah\" he returns and says \"Al hanissim\"; but if he already finished the blessing, or said \"Baruch Atah Hashem\", he does not return.", "cite": "דה\"ח תרפ\"ב ותרצ\"ג", "clean": "<small>בחנוכה ופורים אומרים על הנסים. שכח לומר על הנסים ונזכר קודם שאמר השם מברכת הטוב שמך אפילו אמר ברוך אתה חוזר ואומר על הנסים. אבל אם כבר סיים הברכה או שאמר ברוך א\"י אינו חוזר</small>", "text": "<small>בחנוכה ופורים אומרים על הנסים. שכח לומר על הנסים ונזכר קודם שאמר השם מברכת הטוב שמך אפילו אמר ברוך אתה חוזר ואומר על הנסים. אבל אם כבר סיים הברכה או שאמר ברוך א\"י אינו חוזר (דה\"ח תרפ\"ב ותרצ\"ג).</small>"},
+          {"ref": "6", "kind": "prayer", "when": "chanukah || purim", "node": "amidah.al_hanissim", "voice": "silent", "text": "<b>עַל הַנִּסִּים</b> וְעַל הַפֻּרְקָן וְעַל הַגְּ֒בוּרוֹת וְעַל הַתְּ֒שׁוּעוֹת וְעַל הַמִּלְחָמוֹת שֶׁעָשִֽׂיתָ לַאֲבוֹתֵֽינוּ בַּיָּמִים הָהֵם בִּזְּ֒מַן הַזֶּה:"},
+          {"ref": "7", "parts": [
+            {"kind": "instruction", "when": "chanukah", "alt": "nes", "node": "amidah.al_hanissim", "voice": "silent", "en": "On Chanukah:", "clean": "בחנוכה:", "text": "<small>בחנוכה:</small>"},
+            {"kind": "prayer", "when": "chanukah", "alt": "nes", "node": "amidah.al_hanissim", "voice": "silent", "text": " <b>בִּימֵי מַתִּתְיָֽהוּ</b> בֶּן יוֹחָנָן כֹּהֵן גָּדוֹל חַשְׁמוֹנָאִי וּבָנָיו כְּשֶׁעָמְ֒דָה מַלְכוּת יָוָן הָרְ֒שָׁעָה עַל־עַמְּ֒ךָ יִשְׂרָאֵל לְהַשְׁכִּיחָם תּוֹרָתֶֽךָ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנֶֽךָ, וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים עָמַֽדְתָּ לָהֶם בְּעֵת צָרָתָם רַֽבְתָּ אֶת־רִיבָם דַּֽנְתָּ אֶת־דִּינָם נָקַֽמְתָּ אֶת־נִקְמָתָם מָסַֽרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים וְרַבִּים בְּיַד מְעַטִּים וּטְמֵאִים בְּיַד טְהוֹרִים וּרְשָׁעִים בְּיַד צַדִּיקִים וְזֵדִים בְּיַד עוֹסְ֒קֵי תוֹרָתֶֽךָ וּלְךָ עָשִֽׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמֶֽךָ וּלְעַמְּ֒ךָ יִשְׂרָאֵל עָשִֽׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה וְאַחַר־כֵּן בָּֽאוּ בָנֶֽיךָ לִדְבִיר בֵּיתֶֽךָ וּפִנּוּ אֶת־הֵיכָלֶֽךָ וְטִהֲרוּ אֶת־מִקְדָּשֶֽׁךָ וְהִדְלִֽיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶֽׁךָ וְקָבְ֒עוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵֽלּוּ לְהוֹדוֹת וּלְהַלֵּל לְשִׁמְךָ הַגָּדוֹל:"}
+          ]},
+          {"ref": "8", "parts": [
+            {"kind": "instruction", "when": "purim", "alt": "nes", "node": "amidah.al_hanissim", "voice": "silent", "en": "On Purim:", "clean": "בפורים:", "text": "<small>בפורים:</small>"},
+            {"kind": "prayer", "when": "purim", "alt": "nes", "node": "amidah.al_hanissim", "voice": "silent", "text": " <b>בִּימֵי מָרְדְּ֒כַי וְאֶסְתֵּר</b> בְּשׁוּשַׁן הַבִּירָה כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע בִּקֵּשׁ לְהַשְׁמִיד לַהֲרוֹג וּלְאַבֵּד אֶת־כָּל־הַיְּ֒הוּדִים מִנַּֽעַר וְעַד־זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד בִּשְׁלוֹשָׁה עָשָׂר לְחֹֽדֶשׁ שְׁנֵים־עָשָׂר הוּא־חֹֽדֶשׁ אֲדָר וּשְׁלָלָם לָבוֹז: וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים הֵפַֽרְתָּ אֶת־עֲצָתוֹ וְקִלְקַֽלְתָּ אֶת־מַחֲשַׁבְתּוֹ וַהֲשֵׁבֽוֹתָ לּוֹ גְּמוּלוֹ בְּרֹאשׁוֹ וְתָלוּ אוֹתוֹ וְאֶת־בָּנָיו עַל־הָעֵץ (וְעָשִׂיתָ עמָּהֶם נֵס וָפֶלֶא וְנוֹדֶה לְשִׁמְךָ הָגָּדוֹל סֶלָה):"}
+          ]},
+          {"ref": "9", "kind": "prayer", "voice": "silent", "text": "<b>וְעַל־כֻּלָּם</b> יִתְבָּרַךְ וְיִתְרוֹמַם שִׁמְךָ מַלְכֵּֽנוּ תָּמִיד לְעוֹלָם וָעֶד:"},
+          {"ref": "10", "parts": [
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "voice": "silent", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": "<small>בעשי\"ת:</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "voice": "silent", "text": " וּכְתוֹב לְחַיִּים טוֹבִים כָּל בְּנֵי בְרִיתֶֽךָ:"}
+          ]},
+          {"ref": "11", "kind": "note", "when": "aseretYemeiTeshuva", "voice": "silent", "forgot": true, "en": "If one forgot to say \"Uchtov\" and remembered before saying the Name in \"HaTov shimcha\", he returns; if he did not remember until after saying the Name, he does not return, as explained above regarding \"Zochreinu\" and \"Mi chamocha\".", "cite": "דה\"ח סי' תקפ\"ב", "clean": "<small>אם שכח לומר וכתוב אם נזכר קודם שאמר השם מברכת הטוב חוזר ואם לא נזכר עד לאחר שאמר השם אינו חוזר כמו שנתבאר לעיל אצל זכרנו ומי כמוך.</small>", "text": "<small>אם שכח לומר וכתוב אם נזכר קודם שאמר השם מברכת הטוב חוזר ואם לא נזכר עד לאחר שאמר השם אינו חוזר כמו שנתבאר לעיל אצל זכרנו ומי כמוך. (דה\"ח סי' תקפ\"ב)</small>"},
+          {"ref": "12", "kind": "prayer", "voice": "silent", "text": "<b>וְכֹל הַחַיִּים</b> יוֹדֽוּךָ סֶּֽלָה וִיהַלְ֒לוּ אֶת־שִׁמְךָ בֶּאֱמֶת הָאֵל יְשׁוּעָתֵֽנוּ וְעֶזְרָתֵֽנוּ סֶֽלָה: בָּרוּךְ אַתָּה יְהֹוָה הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<i>At the words, </i>We are thankful,<i> bend forward; at </i>Adonoy<i> return to an upright position.</i>"},
+          {"ref": "2", "translates": ["2"], "text": "We are thankful to You<sup class=\"footnote-marker\">48</sup><i class=\"footnote\">Here you should bow in gratitude, as if standing before the Divine Presence, and say, “We are thankful to You.” The Jews always bowed when they perceived the Divine Presence..—<i>Kuzari</i></i> that You Adonoy are our God and the God of our fathers forever; Rock of our lives, You are the Shield of our deliverance  in every generation. We will give thanks to You and recount Your praise, for our lives which are committed into Your hand, and for our souls which are entrusted to You,<sup class=\"footnote-marker\">49</sup><i class=\"footnote\">Here we thank God for returning our souls each morning, after having “entrusted” them to Him all night.—<i>Eitz Yosef</i></i> and for Your miracles of every day with us, and for Your wonders and benefactions at all times— evening, morning and noon.<sup class=\"footnote-marker\">50</sup><i class=\"footnote\">This phrase concludes the earlier declaration, “We will give thanks to You and recount Your praise ... evening, morning, and noon .”—<i>Iyun Tefillalh</i></i> (You are) The Beneficent One— for Your compassion is never withheld; And (You are) the Merciful One— for Your kindliness never ceases; we have always placed our hope in You."},
+          {"ref": "3", "translates": ["3"], "text": "<i>(When the Chazzan repeats the </i>Shemoneh Esrei<i> and says, “Who returns His Divine Presence to Zion”, the congregation responds by saying “Amein” and then the following prayer.<sup class=\"footnote-marker\">51</sup><i class=\"footnote\">This prayer was ordained by Rav and his colleagues. It is an abstract of several prayers recited by various Rabbis [<i>=Rabanan</i>], and for this reason it is called </i>Modim D’Rabanan.<i></i>)</i>"},
+          {"ref": "4", "translates": ["4"], "text": "We are thankful to You, that You Adonoy are our God, and God of our fathers, God of all flesh, Our Creator, Creator of the Beginning. Blessings and thanksgivings to Your great and holy Name for keeping us alive, and sustaining us; so may You always keep us alive and sustain us, and gather our exiles to the Courtyards of Your Sanctuary to observe Your statutes, and to do Your will, and to serve You wholeheartedly, for we are thankful to You. Blessed is the Almighty to Whom all thanks are due."},
+          {"ref": "5", "translates": ["5"], "text": "<i>(On Chanukah and Purim the following prayer is added. If you omitted it, you need not repeat the Shemoneh Esrei. If, however, you became aware of your omission before concluding the blessing, you should say it at that time, and conclude by saying, “וְעַל כֻּלָּם, and for all the foregoing.”)</i>"},
+          {"ref": "6", "translates": ["6"], "text": "[We thank You] for the miracles, for the redemption, for the mighty deeds, for the deliverances and for the wars that You performed for our fathers in those days at this season."},
+          {"ref": "7", "translates": ["7"], "text": "<i>On Chanukah:</i> In the days of Matisyahu, son of Yochanan the High Priest, the Hasmonean and his sons, when the evil Greek kingdom rose up against Your people Israel to make them forget Your Torah<sup class=\"footnote-marker\">52</sup><i class=\"footnote\">This refers to rationally conceived laws. S.R. Hirsch comments: The Greeks knew that the key to the Jewish religion is the Torah. If Torah were forgotten, the decline of ritual observance would be inevitable and rapid. Thus, they concentrated first on causing Torah to be forgotten, knowing that the deterioration of religious observance would swiftly follow.</i> and to turn them away from the statutes of Your will— You, in Your abundant mercy, stood by them in their time of distress, You defended their cause, You judged their grievances, You avenged them. You delivered the mighty into the hands of the weak, many into the hands of the few, defiled people into the hands of the undefiled, the wicked into the hands of the righteous, and insolent [sinners] into the hands of diligent students of Your Torah. And You made Yourself a great and sanctified name in Your world. And for Your people, Israel, You performed a great deliverance and redemption unto this very day. Afterwards, Your sons entered the Holy of Holies of Your Abode, cleaned Your Temple, purified Your Sanctuary, and kindled lights in the Courtyards of Your Sanctuary, and designated these eight days of Chanukah to thank and praise Your great Name."},
+          {"ref": "8", "translates": ["8"], "text": "<i>On Purim:</i> In the days of Mordechai and Esther in Shushan the Capital [of Persia], when the evil Haman rose up against them, he sought to destroy, to kill, and to annihilate all the Jews, young and old, infants and women, in one day, the thirteenth day of the twelfth month, which is the month of Adar, and to plunder their wealth<sup class=\"footnote-marker\">53</sup><i class=\"footnote\">The usual procedure of those times was that all the wealth of executed people reverted to the monarch. In contrast to the norm, Haman decreed that Jewish possessions would be free for all to enjoy. He did this to provide added incentive to the populace who might have hesitated to kill Jews if they had nothing to gain.</i>— And You, in Your abundant mercy, annulled his counsel, frustrated his intention, and brought his evil plan upon his own head, and they hanged him and his sons upon the gallows. And You made a miracle and a wonder for them, and we are thankful to Your great name forever.  "},
+          {"ref": "9", "translates": ["9"], "text": "And for all the foregoing may Your Name, our King, constantly be blessed and extolled, forever and ever."},
+          {"ref": "10", "translates": ["10"], "text": "<i>During the Ten Days of Penitence, add:</i> Inscribe for a good life all the children of Your covenant."},
+          {"ref": "11", "translates": ["11"], "text": "<i>If you forget to say this, you need not go back and repeat it. If you became aware of the omission before concluding the blessing, you can say it at that time.</i>"},
+          {"ref": "12", "translates": ["12"], "text": "And all the living shall thank You forever and praise Your Name with sincerity — the Almighty, Who is our deliverance and our help forever. Blessed are You, Adonoy; Your Name is The Beneficent and You it is fitting to praise."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Birkat Kohanim",
+      "title": "ברכת כוהנים",
+      "node": "amidah.birkat_kohanim",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "instruction", "when": "publicFast && birkatKohanimChazzan", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "On a public fast day the chazzan says Birkat Kohanim here:", "clean": "בתענית ציבור אומר כאן הש\"ץ ברכת כהנים:", "text": "<small>בתענית ציבור אומר כאן הש\"ץ ברכת כהנים:</small>"},
+          {"ref": "2", "kind": "speaker", "when": "publicFast && birkatKohanimChazzan", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "The chazzan:", "text": "<small>שליח ציבור:</small>"},
+          {"ref": "3", "kind": "prayer", "when": "publicFast && birkatKohanimChazzan", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "<small>אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ בָּרְ֒כֵֽנוּ בַבְּ֒רָכָה הַמְּ֒שֻׁלֶּֽשֶׁת בַּתּוֹרָה הַכְּ֒תוּבָה עַל יְדֵי משֶׁה עַבְדֶּֽךָ, הָאֲמוּרָה מִפִּי אַהֲרֹן וּבָנָיו כֹּהֲנִים עַם קְדוֹשֶֽׁךָ כָּאָמוּר: יְבָרֶכְ֒ךָ יְהֹוָה וְיִשְׁמְ֒רֶֽךָ: יָאֵר יְהֹוָה פָּנָיו אֵלֶֽיךָ וִיחֻנֶּֽךָּ: יִשָּׂא יְהֹוָה פָּנָיו אֵלֶֽיךָ וְיָשֵׂם לְךָ שָׁלוֹם:</small>"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<i>Birkas Kohanim is said by the Chazzan on public fast-days:</i>"},
+          {"ref": "2", "translates": ["2"], "text": "<i>To be said by the Chazzan</i>"},
+          {"ref": "3", "translates": ["3"], "text": "<small>Our God, and God of our fathers, bless us with the threefold blessing of the Torah, written by the hand of Moses, Your servant, pronounced from the mouth of Aaron and his sons, the <i>kohanim,</i> Your holy people; as it is said: Adonoy bless you and guard you. Adonoy shine His countenance upon you and be gracious unto you. Adonoy turn His countenance toward you and grant you peace.</small><sup class=\"footnote-marker\">55</sup><i class=\"footnote\"><i>Rashi</i> paraphrases this blessing with the words יכבש כעסו, “May He withhold His anger.”</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Peace",
+      "title": "שים שלום",
+      "node": "amidah.shalom",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "when": "!fastDay", "alt": "shalom", "voice": "silent", "text": "<b>שָׁלוֹם רָב</b> עַל יִשְׂרָאֵל עַמְּ֒ךָ תָּשִׂים לְעוֹלָם כִּי אַתָּה הוּא מֶֽלֶךְ אָדוֹן לְכָל־הַשָּׁלוֹם וְטוֹב בְּעֵינֶֽיךָ לְבָרֵךְ אֶת־עַמְּ֒ךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶֽךָ."},
+          {"ref": "2", "parts": [
+            {"kind": "instruction", "when": "fastDay", "alt": "shalom", "en": "For a public fast day:", "clean": "לתענית ציבור:", "text": "<small>לתענית ציבור: "},
+            {"kind": "prayer", "when": "fastDay", "alt": "shalom", "voice": "silent", "text": "<b>שִׂים שָׁלוֹם</b> טוֹבָה וּבְרָכָה חֵן וָחֶֽסֶד וְרַחֲמִים עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּֽךָ. בָּרְ֒כֵֽנוּ אָבִֽינוּ כֻּלָּֽנוּ כְּאֶחָד בְּאוֹר פָּנֶֽיךָ. כִּי בְאוֹר פָּנֶֽיךָ נָתַֽתָּ לָּֽנוּ יְהֹוָה אֱלֹהֵֽינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶֽסֶד וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם. וְטוֹב בְּעֵינֶֽיךָ לְבָרֵךְ אֶת עַמְּ֒ךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶֽךָ:</small>"}
+          ]},
+          {"ref": "3", "parts": [
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "voice": "silent", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": "<small>בעשי\"ת:</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "voice": "silent", "text": " בְּסֵֽפֶר חַיִּים בְּרָכָה וְשָׁלוֹם וּפַרְנָסָה טוֹבָה נִזָּכֵר וְנִכָּתֵב לְפָנֶֽיךָ אֲנַֽחְנוּ וְכָל עַמְּ֒ךָ בֵּית יִשְׂרָאֵל לְחַיִּים טוֹבִים וּלְשָׁלוֹם:"}
+          ]},
+          {"ref": "4", "kind": "note", "when": "aseretYemeiTeshuva", "voice": "silent", "forgot": true, "en": "If one did not say \"Besefer chayim\", once he has finished the blessing, or said only \"Baruch Atah Hashem\", he does not go back. It seems proper to say \"Besefer\" immediately after finishing \"HaMevarech et amo Yisrael bashalom\", before \"Yihyu leratzon\", since the prayer is already complete.", "cite": "חיי אדם כלל כ\"ד סעי' כ\"ה", "clean": "<small>ואם לא אמר בְּסֵֽפֶר חַיִּים כיון שסיים הברכה או רק בא\"י אינו חוזר. ונ\"ל דבזה ראוי לומר בספר תיכף כשסיים המברך את עמו ישראל בשלום קודם יהיו לרצון כיון שכבר גמר התפלה. (דהא לר\"ת לעולם אומרים בסוף ברכה אפילו בדבר שאין מחזירין אלא דהחולקים סוברים כיון דא\"צ לחזור א\"כ הוי הפסק באמצע תפלה מה שאין כן כאן.)</small>", "text": "<small>ואם לא אמר בְּסֵֽפֶר חַיִּים כיון שסיים הברכה או רק בא\"י אינו חוזר. ונ\"ל דבזה ראוי לומר בספר תיכף כשסיים המברך את עמו ישראל בשלום קודם יהיו לרצון כיון שכבר גמר התפלה. (דהא לר\"ת לעולם אומרים בסוף ברכה אפילו בדבר שאין מחזירין אלא דהחולקים סוברים כיון דא\"צ לחזור א\"כ הוי הפסק באמצע תפלה מה שאין כן כאן.) (חיי אדם כלל כ\"ד סעי' כ\"ה)</small>"},
+          {"ref": "5", "kind": "prayer", "voice": "silent", "text": "בָּרוּךְ אַתָּה יְהֹוָה הַמְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Bestow abundant peace upon Israel, Your people, forever. For You are King, the Master of all peace. And may it be good in Your sight to bless us and to bless Your people Israel, at all times and at every moment with Your peace."},
+          {"ref": "2", "translates": ["2"], "text": "Grant peace,<sup class=\"footnote-marker\">56</sup><i class=\"footnote\">Since the <i>Birkat Kohanim</i> concludes with a blessing for peace, this concluding blessing is a restatement of the last benediction in the form of a congregational prayer.—<i>Pesher Dovor</i></i> goodness, and blessing, favor, kindness and compassion upon us and upon all Israel, Your people. Bless us, our Father, all of us as one with the light of Your countenance. For by the light of Your countenance You gave us Adonoy our God, a Torah of life and the love of kindliness,<sup class=\"footnote-marker\">57</sup><i class=\"footnote\">One of the most important <i>mitzvos</i> of the “Torah of Life” is the mitzvah of doing kindness. But it is incomplete unless there is a love of kindliness in the heart which precedes the act of kindliness.—<i>Pesher Dovor</i></i> righteousness, blessing, compassion, life and peace. And may it be good in Your sight to bless Your people, Israel, at all times and at every moment with Your peace."},
+          {"ref": "3", "translates": ["3"], "text": "<i>During the Ten Days of Penitence continue here:</i> May we be remembered and inscribed before You in the book of life, blessing, peace and abundant maintenance; we and all Your people, the House of Israel, for a good life and peace."},
+          {"ref": "4", "translates": ["4"], "text": "<i>If you forget to say this you need not go back and repeat it.</i>"},
+          {"ref": "5", "translates": ["5"], "text": "Blessed are You, Adonoy, Who blesses His people Israel with peace."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Amida/Concluding Passage",
+      "title": "אלוהי נצור",
+      "node": "amidah.elokai_netzor",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "node": "amidah.elokai_netzor", "voice": "silent", "text": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶֽיךָ יְהֹוָה צוּרִי וְגוֹאֲלִי:"},
+          {"ref": "2", "kind": "prayer", "voice": "silent", "text": "<b>אֱלֹהַי</b> נְצוֹר לְשׁוֹנִי מֵרָע וּשְׂפָתַי מִדַּבֵּר מִרְמָה. וְלִמְקַלְ֒לַי נַפְשִׁי תִדּוֹם וְנַפְשִׁי כֶּעָפָר לַכֹּל תִּהְיֶה. פְּתַח לִבִּי בְּתוֹרָתֶֽךָ וּבְמִצְוֹתֶֽיךָ תִּרְדֹּף נַפְשִׁי. וְכֹל הַחוֹשְׁ֒בִים עָלַי רָעָה מְהֵרָה הָפֵר עֲצָתָם וְקַלְקֵל מַחֲשַׁבְתָּם: עֲשֵׂה לְמַֽעַן שְׁמֶֽךָ עֲשֵׂה לְמַֽעַן יְמִינֶֽךָ עֲשֵׂה לְמַֽעַן קְדֻשָּׁתֶֽךָ עֲשֵׂה לְמַֽעַן תּוֹרָתֶֽךָ. לְמַֽעַן יֵחָלְ֒צוּן יְדִידֶֽיךָ הוֹשִֽׁיעָה יְמִינְ֒ךָ וַעֲנֵֽנִי: יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶֽיךָ יְהֹוָה צוּרִי וְגוֹאֲלִי:"},
+          {"ref": "3", "parts": [
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["three_steps_back", "bow_left_right_center"], "text": "עֹשֶׂה"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "amidah.oseh_shalom", "gestures": ["three_steps_back", "bow_left_right_center"], "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " (<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["three_steps_back", "bow_left_right_center"], "text": " הַשָּׁלוֹם)"},
+            {"kind": "prayer", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["three_steps_back", "bow_left_right_center"], "text": " שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}
+          ]},
+          {"ref": "4", "kind": "prayer", "node": "amidah.yehi_ratzon_mikdash", "voice": "silent", "text": "<b>יְהִי רָצוֹן</b> מִלְּ֒פָנֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ שֶׁיִּבָּנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵֽינוּ וְתֵן חֶלְקֵֽנוּ בְּתוֹרָתֶֽךָ: וְשָׁם נַעֲבָדְךָ בְּיִרְאָה כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיּוֹת: וְעָרְ֒בָה לַיהוָֹה מִנְחַת יְהוּדָה וִירוּשָׁלָֽםִ כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיּוֹת:"},
+          {"ref": "5", "kind": "note", "node": "kaddish.half", "voice": "silent", "en": "On days when Tachanun is omitted the chazzan says Half Kaddish.", "text": "<small>בימים שאין אומרים בהם תחנון יאמר הש\"ץ חצי קדיש.</small>"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "May the words of my mouth and the thoughts of my heart be acceptable before You, Adonoy, my Rock and my Redeemer."},
+          {"ref": "2", "translates": ["2"], "text": "My God, guard my tongue from evil<sup class=\"footnote-marker\">58</sup><i class=\"footnote\">This prayer was the personal meditation of Mar the son of Ravina, which he recited after he completed his prayers (Maseches Berachos 17a), and it is therefore expressed in the singular. The Jew prays that his mouth, his tongue, and his lips, which have just served as the instruments for his communion with God, will not forfeit any of their moral purity in his dealings with his fellow men<i>—Yaavetz</i></i> and my lips from speaking deceitfully. May my soul be unresponsive to those who curse me; and let my soul be like dust to all. Open my heart to Your Torah and let my soul pursue Your commandments.<sup class=\"footnote-marker\">59</sup><i class=\"footnote\">May I have an open, receptive and understanding mind and spirit in the study of Torah. When it comes to <i>mitzvos,</i> let my soul know no indifference, indolence, or passivity. Let me demonstrate zealous and vigorous endeavor in all things pertaining to Your <i>mitzvos</i>.—<i>Etz Yosef; S.R. Hirsch</i></i> And all who plan evil against me, quickly annul their counsel and frustrate their intention. Act for the sake of Your right hand. Act for the sake of Your holiness. Act for the sake of Your Torah. In order that Your loved ones be released, deliver [with] Your right hand and answer me. May the words of my mouth and the thoughts of my heart be acceptable before You Adonoy, my Rock and my Redeemer."},
+          {"ref": "3", "translates": ["3"], "text": "He Who makes peace in His high heavens may He make peace upon us and upon all Israel and say Amein."},
+          {"ref": "4", "translates": ["4"], "text": "May it be Your will, Adonoy, our God, and the God of our Fathers that the Holy Temple be rebuilt speedily in our days, and grant us our share in Your Torah. And there we will serve You reverently as in the days of old, and in earlier years. And let Adonoy be pleased with the offerings of Judah and Jerusalem as in the days of old and in earlier years."},
+          {"ref": "5", "translates": ["5"], "text": "<i>On days when </i>Tachanun<i> is omitted the chazzan continues with Half Kaddish. When </i>Tachanun<i> is omitted on these days, it is also omitted at the preceding Mincha (afternoon service). </i>Tachanun<i> is also omitted in the presence of a bridegroom, and in the house of a mourner during the week of mourning.</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Post Amidah/Vidui and 13 Middot",
+      "title": "וידוי וי\"ג המידות",
+      "node": "tachanun.vidui",
+      "service": "mincha"
+    },
+    {
+      "path": "Weekday/Minchah/Post Amidah/Avinu Malkenu",
+      "title": "אבינו מלכנו",
+      "node": "avinu_malkeinu",
+      "when": "avinuMalkeinu",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "parts": [
+            {"kind": "instruction", "en": "On public fast days and during the Ten Days of Repentance Avinu Malkeinu is said here.", "clean": "בתענית ציבור ובעשי\"ת אומרים כאן אבינו מלכנו.", "text": "<small>בתענית ציבור ובעשי\"ת אומרים כאן אבינו מלכנו."},
+            {"kind": "note", "en": "The merit of Avinu Malkeinu is described in the books. It was composed by Rabbi Akiva and instituted to parallel the middle blessings of the weekday Amidah. Because it contains a version of the eighteen, it is not said on Shabbat.", "text": " גודל מעלת אבינו מלכנו הובא בספרים. ויסדה רבי עקיבא. ונתקן כנגד ברכות אמצעיות דתפלת י\"ח דחול. ולפי שיש בו מעין י\"ח אין אומרים בשבת.</small>"}
+          ]},
+          {"ref": "2", "kind": "prayer", "role": "together", "gestures": ["ark_open"], "text": "<b>אָבִֽינוּ מַלְכֵּֽנוּ</b> חָטָֽאנוּ לְפָנֶֽיךָ:"},
+          {"ref": "3", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ אֵין לָֽנוּ מֶֽלֶךְ אֶלָּא אָֽתָּה:"},
+          {"ref": "4", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה עִמָּֽנוּ לְמַֽעַן שְׁמֶֽךָ:"},
+          {"ref": "5", "parts": [
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "alt": "year", "role": "together", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": "<small>בעשי\"ת:</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "year", "role": "together", "text": " אָבִֽינוּ מַלְכֵּֽנוּ חַדֵּשׁ עָלֵֽינוּ שָׁנָה טוֹבָה:"}
+          ]},
+          {"ref": "6", "parts": [
+            {"kind": "instruction", "when": "publicFast && !aseretYemeiTeshuva", "alt": "year", "role": "together", "en": "On a public fast day:", "clean": "בתענית ציבור:", "text": "<small>בתענית ציבור:</small>"},
+            {"kind": "prayer", "when": "publicFast && !aseretYemeiTeshuva", "alt": "year", "role": "together", "text": " אָבִֽינוּ מַלְכֵּֽנוּ בָּרֵךְ עָלֵֽינוּ שָׁנָה טוֹבָה:"}
+          ]},
+          {"ref": "7", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ בַּטֵּל מֵעָלֵֽינוּ כָּל גְּזֵרוֹת קָשׁוֹת:"},
+          {"ref": "8", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ בַּטֵּל מַחְשְׁ֒בוֹת שׂוֹנְ֒אֵֽינוּ:"},
+          {"ref": "9", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ הָפֵר עֲצַת אוֹיְ֒בֵֽינוּ:"},
+          {"ref": "10", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ כַּלֵּה כָּל צַר וּמַשְׂטִין מֵעָלֵֽינוּ:"},
+          {"ref": "11", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ סְתוֹם פִּיּוֹת מַשְׂטִינֵֽנוּ וּמְקַטְרְ֒גֵֽנוּ:"},
+          {"ref": "12", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ כַּלֵּה דֶּֽבֶר וְחֶֽרֶב וְרָעָב וּשְׁבִי וּמַשְׁחִית וְעָוֹן וּשְׁמַד מִבְּ֒נֵי בְרִיתֶֽךָ:"},
+          {"ref": "13", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ מְנַע מַגֵּפָה מִנַּחֲלָתֶֽךָ:"},
+          {"ref": "14", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ סְלַח וּמְחַל לְכָל עֲוֹנוֹתֵֽינוּ:"},
+          {"ref": "15", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ מְחֵה וְהַעֲבֵר פְּשָׁעֵֽינוּ וְחַטֹּאתֵֽינוּ מִנֶּֽגֶד עֵינֶֽיךָ:"},
+          {"ref": "16", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ מְחוֹק בְּרַחֲמֶֽיךָ הָרַבִּים כָּל שִׁטְרֵי חוֹבוֹתֵֽינוּ:"},
+          {"ref": "17", "kind": "prayer", "role": "chazzan_then_congregation", "voice": "aloud", "text": "אָבִֽינוּ מַלְכֵּֽנוּ הַחֲזִירֵֽנוּ בִּתְשׁוּבָה שְׁלֵמָה לְפָנֶֽיךָ:"},
+          {"ref": "18", "kind": "prayer", "role": "chazzan_then_congregation", "voice": "aloud", "text": "אָבִֽינוּ מַלְכֵּֽנוּ שְׁלַח רְפוּאָה שְׁלֵמָה לְחוֹלֵי עַמֶּֽךָ:"},
+          {"ref": "19", "kind": "prayer", "role": "chazzan_then_congregation", "voice": "aloud", "text": "אָבִֽינוּ מַלְכֵּֽנוּ קְרַע רֹֽעַ גְּזַר דִּינֵֽנוּ:"},
+          {"ref": "20", "kind": "prayer", "role": "chazzan_then_congregation", "voice": "aloud", "text": "אָבִֽינוּ מַלְכֵּֽנוּ זָכְרֵֽנוּ בְּזִכָּרוֹן טוֹב לְפָנֶֽיךָ:"},
+          {"ref": "21", "kind": "instruction", "when": "aseretYemeiTeshuva", "role": "chazzan_then_congregation", "voice": "aloud", "en": "During the Ten Days of Repentance, the following five are said:", "clean": "בעשרת ימי תשובה:", "text": "<small>בעשרת ימי תשובה:</small>"},
+          {"ref": "22", "kind": "prayer", "when": "aseretYemeiTeshuva", "role": "chazzan_then_congregation", "voice": "aloud", "text": "אָבִֽינוּ מַלְכֵּֽנוּ כָּתְבֵֽנוּ בְּסֵֽפֶר חַיִּים טוֹבִים:"},
+          {"ref": "23", "kind": "prayer", "when": "aseretYemeiTeshuva", "role": "chazzan_then_congregation", "voice": "aloud", "text": "אָבִֽינוּ מַלְכֵּֽנוּ כָּתְבֵֽנוּ בְּסֵֽפֶר גְּאֻלָּה וִישׁוּעָה:"},
+          {"ref": "24", "kind": "prayer", "when": "aseretYemeiTeshuva", "role": "chazzan_then_congregation", "voice": "aloud", "text": "אָבִֽינוּ מַלְכֵּֽנוּ כָּתְבֵֽנוּ בְּסֵֽפֶר פַּרְנָסָה וְכַלְכָּלָה:"},
+          {"ref": "25", "kind": "prayer", "when": "aseretYemeiTeshuva", "role": "chazzan_then_congregation", "voice": "aloud", "text": "אָבִֽינוּ מַלְכֵּֽנוּ כָּתְבֵֽנוּ בְּסֵֽפֶר זְכֻיּוֹת:"},
+          {"ref": "26", "kind": "prayer", "when": "aseretYemeiTeshuva", "role": "chazzan_then_congregation", "voice": "aloud", "text": "אָבִֽינוּ מַלְכֵּֽנוּ כָּתְבֵֽנוּ בְּסֵֽפֶר סְלִיחָה וּמְחִילָה:"},
+          {"ref": "27", "kind": "instruction", "when": "publicFast && !aseretYemeiTeshuva", "role": "chazzan_then_congregation", "voice": "aloud", "en": "On a public fast day, the following five are said:", "clean": "בתענית ציבור", "text": "<small>בתענית ציבור</small>"},
+          {"ref": "28", "kind": "prayer", "when": "publicFast && !aseretYemeiTeshuva", "role": "chazzan_then_congregation", "voice": "aloud", "text": "<b>אָבִֽינוּ מַלְכֵּֽנוּ זָכְרֵֽנוּ לְחַיִּים טוֹבִים:</b>"},
+          {"ref": "29", "kind": "prayer", "when": "publicFast && !aseretYemeiTeshuva", "role": "chazzan_then_congregation", "voice": "aloud", "text": "<b>אָבִֽינוּ מַלְכֵּֽנוּ זָכְרֵֽנוּ לִגְאֻלָּה וִישׁוּעָה:</b>"},
+          {"ref": "30", "kind": "prayer", "when": "publicFast && !aseretYemeiTeshuva", "role": "chazzan_then_congregation", "voice": "aloud", "text": "<b>אָבִֽינוּ מַלְכֵּֽנוּ זָכְרֵֽנוּ לְפַרְנָסָה וְכַלְכָּלָה:</b>"},
+          {"ref": "31", "kind": "prayer", "when": "publicFast && !aseretYemeiTeshuva", "role": "chazzan_then_congregation", "voice": "aloud", "text": "<b>אָבִֽינוּ מַלְכֵּֽנוּ זָכְרֵֽנוּ לִזְכֻיּוֹת:</b>"},
+          {"ref": "32", "kind": "prayer", "when": "publicFast && !aseretYemeiTeshuva", "role": "chazzan_then_congregation", "voice": "aloud", "text": "<b>אָבִֽינוּ מַלְכֵּֽנוּ זָכְרֵֽנוּ לִסְלִיחָה וּמְחִילָה:</b>"},
+          {"ref": "33", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ הַצְמַח לָֽנוּ יְשׁוּעָה בְּקָרוֹב:"},
+          {"ref": "34", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ הָרֵם קֶֽרֶן יִשְׂרָאֵל עַמֶּֽךָ:"},
+          {"ref": "35", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ הָרֵם קֶֽרֶן מְשִׁיחֶֽךָ:"},
+          {"ref": "36", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ מַלֵּא יָדֵֽינוּ מִבִּרְכוֹתֶֽיךָ:"},
+          {"ref": "37", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ מַלֵּא אֲסָמֵֽינוּ שָׂבָע:"},
+          {"ref": "38", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ שְׁמַע קוֹלֵֽנוּ חוּס וְרַחֵם עָלֵֽינוּ:"},
+          {"ref": "39", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ קַבֵּל בְּרַחֲמִים וּבְרָצוֹן אֶת תְּפִלָּתֵֽנוּ:"},
+          {"ref": "40", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ פְּתַח שַׁעֲרֵי שָׁמַֽיִם לִתְפִלָּתֵֽנוּ:"},
+          {"ref": "41", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ זָכוֹר כִּי עָפָר אֲנָֽחְנוּ:"},
+          {"ref": "42", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ נָא אַל תְּשִׁיבֵֽנוּ רֵיקָם מִלְּפָנֶֽיךָ:"},
+          {"ref": "43", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ תְּהֵא הַשָּׁעָה הַזֹּאת שְׁעַת רַחֲמִים וְעֵת רָצוֹן מִלְּפָנֶֽיךָ:"},
+          {"ref": "44", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ חֲמוֹל עָלֵֽינוּ וְעַל עוֹלָלֵֽינוּ וְטַפֵּֽנוּ:"},
+          {"ref": "45", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה לְמַֽעַן הֲרוּגִים עַל שֵׁם קָדְשֶֽׁךָ:"},
+          {"ref": "46", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה לְמַֽעַן טְבוּחִים עַל יִחוּדֶֽךָ:"},
+          {"ref": "47", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה לְמַֽעַן בָּאֵי בָאֵשׁ וּבַמַּֽיִם עַל קִדּוּשׁ שְׁמֶֽךָ:"},
+          {"ref": "48", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ נְקוֹם לְעֵינֵֽינוּ נִקְמַת דַּם־עֲבָדֶֽיךָ הַשָּׁפוּךְ:"},
+          {"ref": "49", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה לְמַעַנְךָ אִם לֺא לְמַעֲנֵֽנוּ:"},
+          {"ref": "50", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה לְמַעַנְךָ וְהוֹשִׁיעֵֽנוּ:"},
+          {"ref": "51", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה לְמַֽעַן רַחֲמֶֽיךָ הָרַבִּים:"},
+          {"ref": "52", "kind": "prayer", "role": "together", "text": "אָבִֽינוּ מַלְכֵּֽנוּ עֲשֵׂה לְמַֽעַן שִׁמְךָ הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא שֶׁנִּקְרָא עָלֵֽינוּ:"},
+          {"ref": "53", "kind": "prayer", "role": "together", "voice": "undertone", "gestures": ["ark_close"], "text": "אָבִֽינוּ מַלְכֵּֽנוּ חָנֵּֽנוּ וַעֲנֵֽנוּ כִּי אֵין בָּֽנוּ מַעֲשִׂים עֲשֵׂה עִמָּֽנוּ צְדָקָה וָחֶֽסֶד וְהוֹשִׁיעֵֽנוּ:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<i>During the Ten Days of Penitence, </i>Avinu Malkeinu<i> is recited here during </i>Shacharis<i>—the morning service, and </i>Mincha<i>—the afternoon service. It is also said by some congregations on public Fast Days. The number of petitions in this prayer varies with custom, but in our rite, </i>Avinu Malkeinu<i> consists of 44 petitions. Since many of them are similar to the petitions of </i>Shemoneh Esrei, Avinu Malkeinu<i> is never recited on Shabbos, when the petitions of </i>Shemoneh Esrei<i> are also omitted. This unique and moving prayer is recorded as having been recited by Rabbi Akiva. The Talmud (Maseches Taanis 25b) relates that Rabbi Eliezer once stepped down before the Ark and recited the 24 benedictions for fast days and his prayers were not answered. Rabbi Akiva stepped down after him and exclaimed, “Our Father, our King, we have no king except You. Our Father, our King, for Your sake have mercy on us,” and rain fell.</i>"},
+          {"ref": "2", "translates": ["2"], "text": "Our Father, our King!<sup class=\"footnote-marker\">1</sup><i class=\"footnote\">The Jewish People are referred to in Scripture as God’s slaves (Leviticus 25:42), and as His children (Deuteronomy 14:1). Thus we say to Him, “If we are Your children, we beseech You as our Father; if we are Your slaves, we implore You as our Master and King Contrary to the view that God, the Father, is so full of love for His children, that He permits the wanton breaking of His commandments to go unpunished, Judaism knows that God the King, must be feared and His laws must be obeyed. There are times when a father is unable to do what he would like for his children because of physical or financial limitations. On the other hand, a king has the power to do anything for his subjects if he should so desire. We cry out to God—You are our Father and You desire to help us—You are our King and You have the power to help us!</i> we have sinned before You."},
+          {"ref": "3", "translates": ["3"], "text": "Our Father our King! we have no King except You.<sup class=\"footnote-marker\">2</sup><i class=\"footnote\">Despite our physical banishment and spiritual estrangement—the result of our sins—we still have none other than God to guide our lives and to shape our destiny.</i>"},
+          {"ref": "4", "translates": ["4"], "text": "Our Father, our King! deal with us [kindly] for the sake of Your Name.<sup class=\"footnote-marker\">3</sup><i class=\"footnote\">See Ezekiel 36.</i>"},
+          {"ref": "5", "translates": ["5"], "text": "<i>During the Ten Days of Penitence, say:</i> Our Father, our King! renew for us a good year."},
+          {"ref": "6", "translates": ["6"], "text": "<i>On public fast-days, say:</i> Our Father, our King! bless us with a good year."},
+          {"ref": "7", "translates": ["7"], "text": "Our Father, our King! annul all harsh decrees concerning us."},
+          {"ref": "8", "translates": ["8"], "text": "Our Father, our King! annul the designs of those who hate us."},
+          {"ref": "9", "translates": ["9"], "text": "Our Father, our King! thwart the plans of our enemies."},
+          {"ref": "10", "translates": ["10"], "text": "Our Father, Our King! rid us of every oppressor and adversary."},
+          {"ref": "11", "translates": ["11"], "text": "Our Father, Our King! seal the mouths of our adversaries and accusers."},
+          {"ref": "12", "translates": ["12"], "text": "Our Father, Our King! remove pestilence, sword, famine, captivity, destruction, [the burden of] iniquity and religious persecution from the members of Your covenant."},
+          {"ref": "13", "translates": ["13"], "text": "Our Father, Our King! withhold the plague from Your inheritance."},
+          {"ref": "14", "translates": ["14"], "text": "Our Father, Our King! forgive and pardon all our iniquities."},
+          {"ref": "15", "translates": ["15"], "text": "Our Father, Our King! blot out and remove our transgressions and sins from before Your eyes."},
+          {"ref": "16", "translates": ["16"], "text": "Our Father, Our King! erase in Your abundant mercy all records of our liabilities.<sup class=\"footnote-marker\">4</sup><i class=\"footnote\">Having just asked that our sins be forgiven and that our transgressions be removed from before His eyes, what are we asking for now? Our earlier pleas were for forgiveness of those sins we committed ourselves. But there are sins for which we are held accountable even though we do not commit them ourselves. One possibility is, having watched while others sin, when we may have been able to prevent it. (Chazal say כל ישראל ערבין זה לזה. A guarantor is one who countersigns a debt note, undertaking to pay if the borrower defaults. Thus we ask God to erase all our notes of obligation whether as borrower or guarantor. In all instances, He is the Extender of credit.) Thus we beseech God to erase the records of our guilt in those instances.—<i>Siach Yitzchok</i></i>"},
+          {"ref": "17", "translates": ["17"], "text": "Our Father, Our King! bring us back in wholehearted<sup class=\"footnote-marker\">5</sup><i class=\"footnote\">Many repent out of their fear of God. Others repent out of their love for Him. We beseech God to bring us back in “wholehearted” repentance motivated by love, the most perfect form of penitence.—<i>Etz Yosef</i></i> repentance before You."},
+          {"ref": "18", "translates": ["18"], "text": "Our Father, Our King! send complete<sup class=\"footnote-marker\">6</sup><i class=\"footnote\">We beseech God to heal both the spiritually ill as well as the physically ill. We ask, therefore, for a “complete” healing for the sick among us.—<i>Etz Yosef</i></i> healing to the sick among Your people."},
+          {"ref": "19", "translates": ["19"], "text": "Our Father, Our King! tear up the evil [parts] of our sentence."},
+          {"ref": "20", "translates": ["20"], "text": "Our Father, Our King! remember us favorably before You."},
+          {"ref": "21", "translates": ["21"], "text": "<i>The following five prayers are said during the Ten Days of Penitence.</i>"},
+          {"ref": "22", "translates": ["22"], "text": "Our Father, Our King! inscribe us in the Book of the Good Life."},
+          {"ref": "23", "translates": ["23"], "text": "Our Father, Our King! inscribe us in the Book of Redemption and Deliverance."},
+          {"ref": "24", "translates": ["24"], "text": "Our Father, Our King! inscribe us in the Book of Maintenance and Sustenance."},
+          {"ref": "25", "translates": ["25"], "text": "Our Father, Our King! inscribe us in the Book of Merits."},
+          {"ref": "26", "translates": ["26"], "text": "Our Father, Our King! inscribe us in the Book of Pardon and Forgiveness."},
+          {"ref": "27", "translates": ["27"], "text": "<i>The following five prayers are said on public fast-days.</i>"},
+          {"ref": "28", "translates": ["28"], "text": "<b>Our Father, Our King! remember us for a good life.</b>"},
+          {"ref": "29", "translates": ["29"], "text": "<b>Our Father, Our King! remember us for redemption and deliverance.</b>"},
+          {"ref": "30", "translates": ["30"], "text": "<b>Our Father, Our King! remember us for maintenance and sustenance.</b>"},
+          {"ref": "31", "translates": ["31"], "text": "<b>Our Father, Our King! remember us for merit.</b>"},
+          {"ref": "32", "translates": ["32"], "text": "<b>Our Father, Our King! remember us for pardon and forgiveness.</b>"},
+          {"ref": "33", "translates": ["33"], "text": "Our Father, Our King! cause deliverance to spring forth for us soon."},
+          {"ref": "34", "translates": ["34"], "text": "Our Father, Our King! raise up the might of Your people Israel."},
+          {"ref": "35", "translates": ["35"], "text": "Our Father, Our King! raise up the might of Your anointed."},
+          {"ref": "36", "translates": ["36"], "text": "Our Father, Our King! fill our hands with Your blessings."},
+          {"ref": "37", "translates": ["37"], "text": "Our Father, Our King! fill our storehouses with abundance."},
+          {"ref": "38", "translates": ["38"], "text": "Our Father, Our King! hear our voice, spare us and have compassion upon us."},
+          {"ref": "39", "translates": ["39"], "text": "Our Father, Our King! accept our prayer with compassion and favor."},
+          {"ref": "40", "translates": ["40"], "text": "Our Father, Our King! open the gates of heaven to our prayer."},
+          {"ref": "41", "translates": ["41"], "text": "Our Father, Our King! remember, that we are dust."},
+          {"ref": "42", "translates": ["42"], "text": "Our Father, Our King! Please do not turn us away empty-handed from You."},
+          {"ref": "43", "translates": ["43"], "text": "Our Father, Our King! let this hour be an hour of compassion and a time of favor before You."},
+          {"ref": "44", "translates": ["44"], "text": "Our Father, Our King! have compassion upon us, and upon our children and infants."},
+          {"ref": "45", "translates": ["45"], "text": "Our Father, Our King! do it for the sake of those who were slain for Your holy Name."},
+          {"ref": "46", "translates": ["46"], "text": "Our Father, Our King! do it for the sake of those who were slaughtered for [proclaiming] Your Unity."},
+          {"ref": "47", "translates": ["47"], "text": "Our Father, Our King! do it for the sake of those who went through fire and water for the sanctification of Your Name."},
+          {"ref": "48", "translates": ["48"], "text": "Our Father, Our King! avenge before our eyes the spilled blood of Your servants."},
+          {"ref": "49", "translates": ["49"], "text": "Our Father, Our King! do it for Your sake if not for ours."},
+          {"ref": "50", "translates": ["50"], "text": "Our Father, Our King! do it for Your sake and deliver us."},
+          {"ref": "51", "translates": ["51"], "text": "Our Father, Our King! do it for the sake of Your great mercy."},
+          {"ref": "52", "translates": ["52"], "text": "Our Father, Our King! do it for the sake of Your great, mighty, and awesome Name which is proclaimed upon us."},
+          {"ref": "53", "translates": ["53"], "text": "Our Father, Our King! favor us and answer us for we have no accomplishments; deal with us charitably and kindly with us and deliver us."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Post Amidah/Tachanun/Nefilat Appayim",
+      "title": "נפילת אפים",
+      "node": "tachanun.nefilat_apayim",
+      "when": "tachanunMincha",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "gestures": ["head_down"], "text": "וַיֹּֽאמֶר דָּוִד אֶל־גָּד צַר־לִי מְאֹד נִפְּ֒לָה־נָּא בְיַד־יְהֹוָה כִּי־רַבִּים רַחֲמָיו וּבְיַד־אָדָם אַל־אֶפֹּֽלָה:"},
+          {"ref": "2", "kind": "prayer", "gestures": ["head_down"], "text": "<b>רַחוּם וְחַנּוּן</b> חָטָֽאתִי לְפָנֶֽיךָ יְהֹוָה מָלֵא רַחֲמִים רַחֵם עָלַי וְקַבֵּל תַּחֲנוּנָי: יְהֹוָה אַל־בְּאַפְּ֒ךָ תוֹכִיחֵֽנִי וְאַל־בַּחֲמָתְ֒ךָ תְיַסְּ֒רֵֽנִי: חָנֵּֽנִי יְהֹוָה כִּי אֻמְלַל אָֽנִי רְפָאֵֽנִי יְהֹוָה כִּי נִבְהֲלוּ עֲצָמָי: וְנַפְשִׁי נִבְהֲלָה מְאֹד וְאַתָּה יְהֹוָה עַד־מָתָי: שׁוּבָה יְהֹוָה חַלְּ֒צָה נַפְשִׁי הוֹשִׁיעֵֽנִי לְמַֽעַן חַסְדֶּֽךָ: כִּי אֵין בַּמָּֽוֶת זִכְרֶךָ בִּשְׁ֒אוֹל מִי־יוֹדֶה לָּךְ: יָגַֽעְתִּי־בְּאַנְחָתִי אַשְׂחֶה בְכָל־לַֽיְלָה מִטָּתִי בְּדִמְעָתִי עַרְשִׂי אַמְסֶה: עָשְׁ֒שָׁה מִכַּֽעַס עֵינִי עָתְ֒קָה בְּכָל־צוֹרְ֒רָי: סֽוּרוּ מִמֶּֽנִּי כָּל־פֹּֽעֲלֵי אָוֶן כִּי־שָׁמַע יְהֹוָה קוֹל בִּכְיִי: שָׁמַע יְהֹוָה תְּחִנָּתִי יְהֹוָה תְּפִלָּתִי יִקָּח: יֵבֽשׁוּ וְיִבָּהֲלוּ מְאֹד כָּל־אֹיְ֒בָי יָשֻֽׁבוּ יֵבֽשׁוּ רָֽגַע:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "David said to Gad, “I am in great distress. Let us fall into the hands of Adonoy, for His compassion is great; and let me not fall into the hands of men.”"},
+          {"ref": "2", "translates": ["2"], "text": "Merciful and Gracious One, I have sinned before You; Adonoy, full of mercy, have compassion upon me and accept my supplications: Adonoy, do not punish me in anger, do not chastise me in fury. Have mercy on me, Adonoy, for I languish; heal me, Adonoy, for my bones shake with terror. My whole being is stricken with terror, while You, Adonoy —O, how long! Adonoy, turn! Rescue me! Deliver me as befits Your faithfulness. For there is no praise of You among the dead; in Sheol, who can acclaim You? I am weary with groaning; every night I drench my bed, I melt my couch in tears. My eyes are wasted by vexation, worn out because of all my foes. Away from me, all you evildoers, for Adonoy heeds the sound of my weeping. Adonoy heeds my plea, Adonoy accepts my prayer. All my enemies will be frustrated and stricken with terror; they will turn back in an instant, frustrated."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Post Amidah/Tachanun/Shomer Yisrael",
+      "title": "שומר ישראל",
+      "node": "tachanun.shomer_yisrael",
+      "when": "tachanunMincha",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "<b>שׁוֹמֵר</b> יִשְׂרָאֵל שְׁמוֹר שְׁאֵרִית יִשְׂרָאֵל וְאַל יֹאבַד יִשְׂרָאֵל הָאֹמְ֒רִים שְׁמַע יִשְׂרָאֵל:"},
+          {"ref": "2", "kind": "prayer", "text": "<b>שׁוֹמֵר</b> גּוֹי אֶחָד שְׁמוֹר שְׁאֵרִית עַם אֶחָד וְאַל יֹאבַד גּוֹי אֶחָד הַמְיַחֲדִים שִׁמְךָ יְהֹוָה אֱלֺהֵֽינוּ יְהֹוָה אֶחָד:"},
+          {"ref": "3", "kind": "prayer", "text": "<b>שׁוֹמֵר</b> גּוֹי קָדוֹשׁ שְׁמוֹר שְׁאֵרִית עַם קָדוֹשׁ וְאַל יֹאבַד גּוֹי קָדוֹשׁ הַמְשַׁלְּ֒שִׁים בְּשָׁלשׁ קְדֻשּׁוֹת לְקָדוֹשׁ:"},
+          {"ref": "4", "kind": "prayer", "text": "<b>מִתְרַצֶּה</b> בְּרַחֲמִים וּמִתְפַּיֵּס בְּתַחֲנוּנִים הִתְרַצֶּה וְהִתְפַּיֵּס לְדוֹר עָנִי כִּי אֵין עוֹזֵר: אָבִֽינוּ מַלְכֵּֽנוּ חָנֵּֽנוּ וַעֲנֵֽנוּ כִּי אֵין בָּֽנוּ מַעֲשִׂים עֲשֵׂה עִמָּֽנוּ צְדָקָה וָחֶֽסֶד וְהוֹשִׁיעֵֽנוּ:"},
+          {"ref": "5", "kind": "prayer", "node": "tachanun.vaanachnu", "text": "<b>וַאֲנַֽחְנוּ</b> לֺא נֵדַע מַה נַּעֲשֶׂה כִּי עָלֶֽיךָ עֵינֵֽינוּ: זְכֹר רַחֲמֶֽיךָ יְהֹוָה וַחֲסָדֶֽיךָ כִּי מֵעוֹלָם הֵֽמָּה: יְהִי חַסְדְּךָ יְהֹוָה עָלֵֽינוּ כַּאֲשֶׁר יִחַֽלְנוּ לָךְ: אַל תִּזְכָּר לָֽנוּ עֲוֹנוֹת רִאשׁוֹנִים מַהֵר יְקַדְּמֽוּנוּ רַחֲמֶֽיךָ כִּי דַלּֽוֹנוּ מְאֹד: חָנֵּֽנוּ יְהֹוָה חָנֵּֽנוּ כִּי־רַב שָׂבַֽעְנוּ בוּז: בְּרֺֽגֶז רַחֵם תִּזְכּוֹר: כִּי הוּא יָדַע יִצְרֵֽנוּ זָכוּר כִּי עָפָר אֲנָֽחְנוּ: עָזְרֵֽנוּ אֱלֺהֵי יִשְׁעֵֽנוּ עַל־דְּבַר כְּבוֹד־שְׁמֶֽךָ וְהַצִּילֵֽנוּ וְכַפֵּר עַל־חַטֹּאתֵֽינוּ לְמַֽעַן שְׁמֶֽךָ:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Guardian of Israel, guard the remnant of Israel, and let not Israel perish, who say, “Hear Israel.”"},
+          {"ref": "2", "translates": ["2"], "text": "Guardian of the unique nation, guard the remnant of the unique people, and let not the unique nation perish, who proclaim the Oneness of Your Name, [saying:] Adonoy is our God, Adonoy is One."},
+          {"ref": "3", "translates": ["3"], "text": "Guardian of the holy nation, guard the remnant of the holy people and let not the holy nation perish who repeat the threefold sanctification to the Holy One."},
+          {"ref": "4", "translates": ["4"], "text": "You Who are appeased by pleas for mercy, and conciliated by supplications, be appeased and conciliated to an afflicted generation, for there is none else to help. Our Father, our King! be gracious to us and answer us for we have no [good] deeds, deal with us charitably and kindly and deliver us."},
+          {"ref": "5", "translates": ["5"], "text": "As for us, we know not what to do; but our eyes are upon You.<sup class=\"footnote-marker\">34</sup><i class=\"footnote\">II Chronicles 20:12. With this sentence. King Yehoshafat, concluded his prayer for Divine aid in his struggle against the hostile nations that were united against him. His prayer was answered. Each Jew in every generation must realize that he too has only one refuge for all time to come—God—to Whom we turn our eyes with trusting hope—<i>S.R. Hirsch</i></i> Remember Your mercies, Adonoy, and kindnesses for they are from the beginning of the world.<sup class=\"footnote-marker\">35</sup><i class=\"footnote\">Psalms 25:26.</i> Adonoy! may Your kindness be upon us, as we have waited for You.<sup class=\"footnote-marker\">36</sup><i class=\"footnote\">Psalms 33:22.</i> Remember not the sins of our ancestors;<sup class=\"footnote-marker\">37</sup><i class=\"footnote\">Others translate, “Remember not our [own] former iniquities.”</i> let Your mercy come swiftly toward us,<sup class=\"footnote-marker\">38</sup><i class=\"footnote\">Psalms 79:8.</i> for we have been brought very low. Be gracious to us, Adonoy, be gracious to us for we are saturated with humiliation.<sup class=\"footnote-marker\">39</sup><i class=\"footnote\">Psalms 123:3.</i> [Even] in anger remember to have compassion.<sup class=\"footnote-marker\">40</sup><i class=\"footnote\">Habakkuk 3:2.</i> For He knows of what we are made; He is mindful that we are but dust.<sup class=\"footnote-marker\">41</sup><i class=\"footnote\">Psalms 103:14.</i> Help us, God of our deliverance, for the sake of the glory of Your Name; save us and atone our sins,<sup class=\"footnote-marker\">42</sup><i class=\"footnote\">May we repent so that our sins will be atoned.</i> for the sake of Your Name.<sup class=\"footnote-marker\">43</sup><i class=\"footnote\">Psalms 79:9.</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Post Amidah/Kaddish Shalem",
+      "title": "קדיש שלם",
+      "node": "kaddish.shalem",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "parts": [
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא"},
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (<b>אָמֵן</b>)"}
+          ]},
+          {"ref": "2", "parts": [
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ "},
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
+          ]},
+          {"ref": "3", "kind": "prayer", "node": "kaddish.shalem", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>"},
+          {"ref": "4", "parts": [
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא "},
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>בְּרִיךְ הוּא</b>"}
+          ]},
+          {"ref": "5", "parts": [
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "לְעֵֽלָּא מִן־כָּל־"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " (<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ "},
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
+          ]},
+          {"ref": "6", "parts": [
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "תִּתְקַבֵּל צְלוֹתְ֒הוֹן וּבָעוּתְ֒הוֹן דְּכָל בֵּית יִשְׂרָאֵל קֳדָם אֲבוּהוֹן דִּי בִשְׁ֒מַיָּא וְאִמְרוּ"},
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן:"}
+          ]},
+          {"ref": "7", "parts": [
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יְהֵא שְׁלָמָֽא רַבָּֽא מִן־שְׁמַיָּֽא וְחַיִּים עָלֵֽינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ "},
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
+          ]},
+          {"ref": "8", "parts": [
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה שָׁלוֹם"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " (<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " הַשָּׁלוֹם)"},
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ "},
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Exalted and sanctified<sup class=\"footnote-marker\">1</sup><i class=\"footnote\">These opening words refer to the fulfillment of God’s prophecy, through Ezekiel (38:23) “And I will thus exalt Myself and sanctify Myself; and I will be known in the eyes of the many nations, and they will know that I am Adonoy.”—<i>Levush, Siddur HaGra</i>. One should be very careful to emphasize the letter gimel (ג) when saying the word “Yisgadal (יִתְגַּדַּל),” in order that it not be heard as “Yis<i>k</i>adal (יִתְקַּדַל),” from the word קְדָל which means neck.—<i>Mishnah Berurah 56:2</i></i> be His great Name"},
+          {"ref": "2", "translates": ["2"], "text": "in the world which He created according to His will and may He rule His kingdom.<sup class=\"footnote-marker\">2</sup><i class=\"footnote\">May His sovereignty be revealed.</i> In your lifetime and in your days, and in the lifetime of the entire House of Israel, speedily and in the near future<sup class=\"footnote-marker\">3</sup><i class=\"footnote\">We pray that the redemption will come speedily and that the process of the redemption itself will not be prolonged.—<i>Siddur HaGra</i></i>— and say Amein."},
+          {"ref": "3", "translates": ["3"], "text": "May His great Name be blessed forever and for all eternity."},
+          {"ref": "4", "translates": ["4"], "text": "Blessed and praised, glorified, and exalted and uplifted, honored and elevated and extolled<sup class=\"footnote-marker\">5</sup><i class=\"footnote\">The ten expressions of praise in the Kaddish refer to the ten utterances by which God created the world. (See Maseches Avos 5:1.)</i> be the Name of the Holy One, blessed is He;"},
+          {"ref": "5", "translates": ["5"], "text": "above (<i>Ten Days of Penitence:</i> far above) all the blessings and hymns,<sup class=\"footnote-marker\">6</sup><i class=\"footnote\">May God be praised and exalted far beyond all the blessings, hymns and praises that are uttered.—<i>Mishnah Berurah </i>in the name of the Vilna Gaon 56:14.</i> praises and consolations<sup class=\"footnote-marker\">7</sup><i class=\"footnote\">Consolations are uttered because God is in mourning over the destruction of the Holy Temple and the exile of His people.</i> which we utter in the world—and say Amein."},
+          {"ref": "6", "translates": ["6"], "text": "May there be acceptance of the prayers and supplications of the entire House of Israel before their Father in heaven. And say, Amein."},
+          {"ref": "7", "translates": ["7"], "text": "May there be abundant peace from heaven and life for us and for all Israel, —and say Amein."},
+          {"ref": "8", "translates": ["8"], "text": "He Who makes peace (<i>Ten Days of Penitence:</i> the peace) in His high heavens may He, make peace for us and for all Israel, and say, Amen."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Concluding Prayers/Alenu",
+      "title": "עלינו",
+      "node": "concl.aleinu",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "parts": [
+            {"kind": "prayer", "gestures": ["stand"], "text": "<b>עָלֵֽינוּ</b> לְשַׁבֵּֽחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֺּא עָשָֽׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֺא שָׂמָֽנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֺּא שָׂם חֶלְקֵֽנוּ כָּהֶם וְגוֹרָלֵֽנוּ כְּכָל הֲמוֹנָם: שֶׁהֵם מִשְׁתַּחֲוִים לָהֶֽבֶל וָרִיק וּמִתְפַּלְּ֒לִים אֶל אֵל לֹא יוֹשִֽׁיעַ, "},
+            {"kind": "prayer", "gestures": ["bow_full"], "text": "וַאֲנַֽחְנוּ כּוֹרְ֒עִים וּמִשְׁתַּחֲוִים וּמוֹדִים לִפְנֵי מֶֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא, "},
+            {"kind": "prayer", "text": "שֶׁהוּא נוֹטֶה שָׁמַֽיִם וְיוֹסֵד אָֽרֶץ, וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַֽיִם מִמַּֽעַל, וּשְׁ֒כִינַת עֻזּוֹ בְּגָבְ֒הֵי מְרוֹמִים, הוּא אֱלֺהֵֽינוּ אֵין עוֹד, אֱמֶת מַלְכֵּֽנוּ אֶֽפֶס זוּלָתוֹ כַּכָּתוּב בְּתוֹרָתוֹ וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל לְבָבֶֽךָ כִּי יְהֹוָה הוּא הָאֱלֺהִים בַּשָּׁמַֽיִם מִמַּֽעַל וְעַל הָאָֽרֶץ מִתָּֽחַת אֵין עוֹד:"}
+          ]},
+          {"ref": "2", "kind": "prayer", "text": "<b>עַל כֵּן</b> נְקַוֶּה לְךָ יְהֹוָה אֱלֺהֵֽינוּ לִרְאוֹת מְהֵרָה בְּתִפְאֶֽרֶת עֻזֶּֽךָ לְהַעֲבִיר גִּלּוּלִים מִן הָאָֽרֶץ וְהָאֱלִילִים כָּרוֹת יִכָּרֵתוּן לְתַקֵּן עוֹלָם בְּמַלְכוּת שַׁדַּי וְכָל בְּנֵי בָשָׂר יִקְרְאוּ בִשְׁ֒מֶֽךָ, לְהַפְנוֹת אֵלֶֽיךָ כָּל רִשְׁ֒עֵי אָֽרֶץ, יַכִּֽירוּ וְיֵדְ֒עוּ כָּל יוֹשְׁ֒בֵי תֵבֵל כִּי לְךָ תִכְרַע כָּל בֶּֽרֶךְ תִּשָּׁבַע כָּל לָשׁוֹן: לְפָנֶֽיךָ יְהֹוָה אֱלֺהֵֽינוּ יִכְרְעוּ וְיִפֹּֽלוּ, וְלִכְ֒בוֹד שִׁמְךָ יְקָר יִתֵּֽנוּ, וִיקַבְּ֒לוּ כֻלָּם אֶת עֹל מַלְכוּתֶֽךָ, וְתִמְלֺךְ עֲלֵיהֶם מְהֵרָה לְעוֹלָם וָעֶד, כִּי הַמַּלְכוּת שֶׁלְּ֒ךָ הִיא וּלְעֽוֹלְ֒מֵי עַד תִּמְלוֹךְ בְּכָבוֹד, כַּכָּתוּב בְּתוֹרָתֶֽךָ יְהֹוָה יִמְלֺךְ לְעֹלָם וָעֶד: וְנֶאֱמַר וְהָיָה יְהֹוָה לְמֶֽלֶךְ עַל כָּל הָאָֽרֶץ בַּיּוֹם הַהוּא יִהְיֶה יְהֹוָה אֶחָד וּשְׁמוֹ אֶחָד:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "It is our obligation to praise the Master of all, to ascribe greatness to the Creator of the [world in the] beginning: that He has not made us like the nations of the lands, and has not positioned us like the families of the earth; that He has not assigned our portion like theirs, nor our lot like that of all their multitudes. For they prostrate themselves to vanity and nothingness, and pray to a god that cannot deliver. But we bow, prostrate ourselves, and offer thanks before the Supreme King of Kings, the Holy One blessed is He, Who spreads the heavens, and establishes the earth, and the seat of His glory is in heaven above, and the abode of His invincible might is in the loftiest heights. He is our God, there is nothing else. Our King is true, all else is insignificant, as it is written in His Torah: And You shall know this day and take into Your heart that Adonoy is God in the heavens above and upon the earth below; there is nothing else.<sup class=\"footnote-marker\">1</sup><i class=\"footnote\">Deuteronomy 4:39.</i>"},
+          {"ref": "2", "translates": ["2"], "text": "We therefore put our hope in You, Adonoy our God, to soon behold the glory of Your might in banishing idolatry from the earth, and the false gods will be utterly exterminated to perfect the world as the kingdom of Shadai.<sup class=\"footnote-marker\">2</sup><i class=\"footnote\">See page 00, note 00.</i> And all mankind will invoke Your Name, to turn back to You, all the wicked of the earth. They will realize and know, all the inhabitants of the world, that to You, every knee must bend, every tongue must swear [allegiance to You]. Before You, Adonoy, our God, they will bow and prostrate themselves, and to the glory of Your Name give honor. And they will all accept [upon themselves] the yoke of Your kingdom, and You will reign over them, soon, forever and ever. For the kingdom is Yours, and to all eternity You will reign in glory, as it is written in Your Torah: Adonoy will reign forever and ever.<sup class=\"footnote-marker\">3</sup><i class=\"footnote\">Exodus 15:18.</i> And it is said: And Adonoy will be King over the whole earth; on that day Adonoy will be One and His Name One.<sup class=\"footnote-marker\">4</sup><i class=\"footnote\">Zecharyah 14:9.</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Minchah/Concluding Prayers/Mourner's Kaddish",
+      "title": "קדיש יתום",
+      "node": "kaddish.mourners",
+      "service": "mincha",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "parts": [
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא"},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (<b>אָמֵן</b>)"}
+          ]},
+          {"ref": "2", "parts": [
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ "},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
+          ]},
+          {"ref": "3", "kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>"},
+          {"ref": "4", "parts": [
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא "},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>בְּרִיךְ הוּא</b>"}
+          ]},
+          {"ref": "5", "parts": [
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "לְעֵֽלָּא מִן־כָּל־"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " (<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ "},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
+          ]},
+          {"ref": "6", "parts": [
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "יְהֵא שְׁלָמָֽא רַבָּֽא מִן־שְׁמַיָּֽא וְחַיִּים עָלֵֽינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ "},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
+          ]},
+          {"ref": "7", "parts": [
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה שָׁלוֹם"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " (<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " הַשָּׁלוֹם)"},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ "},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Exalted and sanctified<sup class=\"footnote-marker\">1</sup><i class=\"footnote\">These opening words refer to the fulfillment of God’s prophecy, through Ezekiel (38:23) “And I will thus exalt Myself and sanctify Myself; and I will be known in the eyes of the many nations, and they will know that I am Adonoy.”—<i>Levush, Siddur HaGra</i>. One should be very careful to emphasize the letter gimel (ג) when saying the word “Yisgadal (יִתְגַּדַּל),” in order that it not be heard as “Yis<i>k</i>adal (יִתְקַּדַל),” from the word קְדָל which means neck.—<i>Mishnah Berurah 56:2</i></i> be His great Name"},
+          {"ref": "2", "translates": ["2"], "text": "in the world which He created according to His will and may He rule His kingdom.<sup class=\"footnote-marker\">2</sup><i class=\"footnote\">May His sovereignty be revealed.</i> In your lifetime and in your days, and in the lifetime of the entire House of Israel, speedily and in the near future<sup class=\"footnote-marker\">3</sup><i class=\"footnote\">We pray that the redemption will come speedily and that the process of the redemption itself will not be prolonged.—<i>Siddur HaGra</i></i>— and say Amein."},
+          {"ref": "3", "translates": ["3"], "text": "May His great Name be blessed forever and for all eternity.<sup class=\"footnote-marker\">4</sup><i class=\"footnote\">This phrase, the heart of the Kaddish, is found almost verbatim in Daniel 2:20.</i>"},
+          {"ref": "4", "translates": ["4"], "text": "Blessed and praised, glorified, and exalted and uplifted, honored and elevated and extolled<sup class=\"footnote-marker\">5</sup><i class=\"footnote\">The ten expressions of praise in the Kaddish refer to the ten utterances by which God created the world. (See Maseches Avos 5:1.)</i> be the Name of the Holy One, blessed is He;"},
+          {"ref": "5", "translates": ["5"], "text": "above (<i>Ten Days of Penitence:</i> far above) all the blessings and hymns,<sup class=\"footnote-marker\">6</sup><i class=\"footnote\">May God be praised and exalted far beyond all the blessings, hymns and praises that are uttered.—<i>Mishnah Berurah </i>in the name of the Vilna Gaon 56:14.</i> praises and consolations<sup class=\"footnote-marker\">7</sup><i class=\"footnote\">Consolations are uttered because God is in mourning over the destruction of the Holy Temple and the exile of His people.</i> which we utter in the world—and say Amein."},
+          {"ref": "6", "translates": ["6"], "text": "May there be abundant peace from heaven and a good life for us and for all Israel, —and say Amein."},
+          {"ref": "7", "translates": ["7"], "text": "He Who makes peace (<i>Ten Days of Penitence:</i> the peace) in His high heavens may He, in His mercy, make peace for us and for all Israel, —and say Amein."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Maariv/Vehu Rachum",
+      "title": "והוא רחום",
+      "node": "maariv.vehu_rachum",
+      "service": "maariv",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "note", "en": "When night arrives one prays Maariv. It is not an obligation, since it was instituted only to correspond to the limbs and fats of the afternoon Tamid offering that were not consumed by day and continued to burn all night; nevertheless it is a mitzvah and should not be neglected. Rav Alfasi wrote that nowadays it has been established as an obligation and must not be neglected at all.", "cite": "טור או\"ח רל\"ה", "clean": "<small>כשיגיע הלילה יתפלל תפלת ערבית. ואינה חובה שלא נתקנה אלא כנגד איברים ופדרים של תמיד של בין הערבים שלא נתעכלו ביום שקרבין והולכין כל הלילה. ומ\"מ מצוה איכא ואין לבטלה. ורב אלפס כתב דהאידנא קבעוה חובה ואין לבטלה כלל</small>", "text": "<small>כשיגיע הלילה יתפלל תפלת ערבית. ואינה חובה שלא נתקנה אלא כנגד איברים ופדרים של תמיד של בין הערבים שלא נתעכלו ביום שקרבין והולכין כל הלילה. ומ\"מ מצוה איכא ואין לבטלה. ורב אלפס כתב דהאידנא קבעוה חובה ואין לבטלה כלל (טור או\"ח רל\"ה)</small>"},
+          {"ref": "2", "kind": "prayer", "when": "!motzaeiShabbat && !motzaeiYomTov", "gestures": ["stand"], "text": "<b>וְהוּא רַחוּם</b> יְכַפֵּר עָוֹן וְלֹא־יַשְׁחִית וְהִרְבָּה לְהָשִׁיב אַפּוֹ וְלֹא־יָעִיר כָּל־חֲמָתוֹ: יְהֹוָה הוֹשִׁיעָה הַמֶּֽלֶךְ יַעֲנֵֽנוּ בְיוֹם־קָרְאֵֽנוּ:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<i>Unlike the morning </i>Shacharis<i> and afternoon </i>Mincha<i> services which correspond to the two daily communal sacrifices (</i>Tamid<i>), offered in the Temple, one in the morning and one in the afternoon, the evening </i>Maariv<i> service has no counterpart in the Temple service, since sacrifices were never brought at night in the Temple. The </i>Maariv<i> service was instituted to correspond to the Temple ritual of keeping on the altar the unconsumed parts of sacrifices that had been offered earlier in the day. These parts were kept on the altar at night so that they could be completely consumed by its fire. This ritual was applicable only if there actually were uncon- sumed parts of offerings. Although the </i>Maariv<i> service was instituted to correspond to this ritual, and may therefore seem to be non-obligatory (see </i>Maseches Berachos<i> 27b), Rabbeinu Yitzchak Alfasi and all the other codifiers have ruled that </i>Maariv<i> has been accepted and hallowed by custom, and is therefore an obligatory service. The </i>Shema<i> is preceded by two blessings and followed by two other blessings.</i>"},
+          {"ref": "2", "translates": ["2"], "text": "And He, the Merciful One, atones iniquity; and does not destroy. He frequently withdraws His anger and does not arouse all His rage.<sup class=\"footnote-marker\">1</sup><i class=\"footnote\">Psalms 78:38. This verse consists of thirteen Hebrew words. It recalls the “thirteen attributes of Divine mercy” (Exodus 34:67). In the evening when man pauses from the rush of his daily activities, he is conscious of having sinned during the day, and thus begins his prayer with this appeal for Divine mercy.—<i>Machzor Vitry</i><br>Midrash Tanchuma (<i>Pinchos</i> 13) notes that the morning sacrifice (תמיד של שחר) atoned for sins committed during the night, while the afternoon sacrifice (תמיד של בין הערבים) atoned for sins committed during the day. Since the evening service does not represent Temple sacrifice, it became customary to recite this verse because it mentions that God “atones iniquity.”—<i>Avudraham</i></i> Adonoy, deliver [us!] The King will answer us on the day we call.<sup class=\"footnote-marker\">2</sup><i class=\"footnote\">Psalms 20:10.</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Maariv/Barchu",
+      "title": "ברכו",
+      "node": "barchu",
+      "service": "maariv",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "speaker", "role": "chazzan", "minyan": true, "en": "The chazzan says:", "text": "<small>ואומר שליח צבור:</small>"},
+          {"ref": "2", "kind": "prayer", "role": "chazzan", "minyan": true, "gestures": ["bow"], "text": "<b>בָּרְ֒כוּ אֶת יְהֹוָה הַמְ֒בֹרָךְ:</b>"},
+          {"ref": "3", "kind": "speaker", "role": "congregation_then_chazzan", "minyan": true, "en": "The congregation answers:", "text": "<small>ועונין הקהל:</small>"},
+          {"ref": "4", "kind": "prayer", "role": "congregation_then_chazzan", "minyan": true, "gestures": ["bow"], "text": "<b>בָּרוּךְ</b> יְהֹוָה הַמְ֒בֹרָךְ לְעוֹלָם וָעֶד:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<i>The </i>Chazzan<i> says:</i>"},
+          {"ref": "2", "translates": ["2"], "text": "Bless Adonoy Who is blessed."},
+          {"ref": "3", "translates": ["3"], "text": "<i>The congregation responds and the Chazzan repeats:</i>"},
+          {"ref": "4", "translates": ["4"], "text": "Blessed is Adonoy, Who is blessed forever and ever."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Maariv/Blessings of the Shema/First Blessing before Shema",
+      "title": "המעריב ערבים",
+      "node": "shema.hamaariv_aravim",
+      "service": "maariv",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר בִּדְבָרוֹ מַעֲרִיב עֲרָבִים בְּחָכְמָה פּוֹתֵֽחַ שְׁעָרִים וּבִתְבוּנָה מְשַׁנֶּה עִתִּים וּמַחֲלִיף אֶת־הַזְּ֒מַנִּים וּמְסַדֵּר אֶת־הַכּוֹכָבִים בְּמִשְׁמְ֒רוֹתֵיהֶם בָּרָקִֽיעַ כִּרְצוֹנוֹ: בּוֹרֵא יוֹם וָלָֽיְלָה גּוֹלֵל אוֹר מִפְּ֒נֵי חֽשֶׁךְ וְחֽשֶׁךְ מִפְּ֒נֵי אוֹר וּמַעֲבִיר יוֹם וּמֵבִיא לָֽיְלָה וּמַבְדִּיל בֵּין יוֹם וּבֵין לָֽיְלָה יְהֹוָה צְבָאוֹת שְׁמוֹ: אֵל חַי וְקַיָּם תָּמִיד יִמְלֹךְ עָלֵֽינוּ לְעוֹלָם וָעֶד: בָּרוּךְ אַתָּה יְהֹוָה הַמַּעֲרִיב עֲרָבִים:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Blessed are You, Adonoy, our God, King of the Universe, With His word He brings on evenings, with wisdom He opens the gates<sup class=\"footnote-marker\">3</sup><i class=\"footnote\">These are the gates of sunrise and sunset through which God, in His infinite wisdom, has divided life on earth into two complementary halves.—<i>Rabbi S.R. Hirsch</i></i> (of heaven); and with understanding changes<sup class=\"footnote-marker\">4</sup><i class=\"footnote\">He alternates the three daily periods—evening, morning, and afternoon.—<i>Avudraham</i></i> the times and alternates the seasons, and arranges the stars in their watches,<sup class=\"footnote-marker\">5</sup><i class=\"footnote\">The stars appear as watchmen appointed by God to stand guard over the sleeping world below. He also appointed them their places in definite orbits, according to His will, and for purposes known to Him alone.—<i>S.R. Hirsch</i></i> in the sky, according to His will. He creates day and night, He rolls the light away from before darkness, and darkness from before light; He causes day to pass and brings night, and separates between day and night; Adonoy of Hosts<sup class=\"footnote-marker\">6</sup><i class=\"footnote\">His Name, ה’ צבאות, means “He Who takes all the infinite variety of hosts and creatures and unites them to act and interact as parts of one unified Universe.”—<i>S.R. Hirsch</i></i> is His Name. The Almighty, [Who is] living and enduring will always reign over us forever and ever. Blessed are You, Adonoy, Who brings on evening."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Maariv/Blessings of the Shema/Second Blessing before Shema",
+      "title": "אהבת עולם",
+      "node": "shema.ahavat_olam",
+      "service": "maariv",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "<b>אַהֲבַת</b> עוֹלָם בֵּית יִשְׂרָאֵל עַמְּ֒ךָ אָהָֽבְתָּ תּוֹרָה וּמִצְוֹת חֻקִּים וּמִשְׁפָּטִים אוֹתָֽנוּ לִמַּֽדְתָּ: עַל כֵּן יְהֹוָה אֱלֹהֵֽינוּ בְּשָׁכְבֵֽנוּ וּבְקוּמֵֽנוּ נָשִֽׂיחַ בְּחֻקֶּֽיךָ וְנִשְׂמַח בְּדִבְרֵי תוֹרָתֶֽךָ וּבְמִצְוֹתֶֽיךָ לְעוֹלָם וָעֶד: כִּי הֵם חַיֵּֽינוּ וְאֹֽרֶךְ יָמֵֽינוּ וּבָהֶם נֶהְגֶּה יוֹמָם וָלָֽיְלָה: וְאַהֲבָתְ֒ךָ אַל תָּסִיר מִמֶּֽנּוּ לְעוֹלָמִים: בָּרוּךְ אַתָּה יְהֹוָה אוֹהֵב עַמּוֹ יִשְׂרָאֵל:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "[With] An everlasting love<sup class=\"footnote-marker\">7</sup><i class=\"footnote\">This prayer is an abbreviated form of the אהבה רבה prayer in the morning service. It thanks God for the sacred gift of Divine Revelation that He granted Israel. It declares that Torah alone is the eternal heritage of the Jewish people and that all other goods and gifts of life are transitory.—<i>S.R. Hirsch</i></i> You loved the House of Israel, Your people. You taught us Torah and commandments, statutes and laws. Therefore, Adonoy, our God, when we lie down and when we rise, we will discuss Your statutes, and rejoice in the words of Your Torah and in Your commandments forever. For they are our life and they lengthen our days, and on them we will meditate day and night. [May] Your love never be removed from us. Blessed are You, Adonoy, Who loves His people Israel."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Maariv/Blessings of the Shema/Shema",
+      "title": "שמע",
+      "node": "shema.shema",
+      "service": "maariv",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "instruction", "when": "!minyan", "en": "An individual (praying without a minyan) says:", "clean": "יחיד אומר", "text": "<small>יחיד אומר</small>"},
+          {"ref": "2", "kind": "prayer", "when": "!minyan", "text": "אֵל מֶֽלֶךְ נֶאֱמָן:"},
+          {"ref": "3", "kind": "prayer", "gestures": ["cover_eyes"], "text": "<b>שְׁמַ<big>ע</big> יִשְׂרָאֵל יְהֹוָה אֱלֹהֵֽינוּ יְהֹוָה אֶחָ<big>ד</big>:</b>"},
+          {"ref": "4", "parts": [
+            {"kind": "note", "en": "One should pause briefly between \"Echad\" and \"Baruch\", since the essential acceptance of the yoke of heaven is the first verse.", "text": "<small>יש להפסיק מעט בין אחד לברוך כי עיקר קבול עול מלכות שמים היא פסוק ראשון. "},
+            {"kind": "instruction", "voice": "undertone", "en": "And say quietly:", "clean": "ויאמר בלחש:", "text": "ויאמר בלחש:</small>"}
+          ]},
+          {"ref": "5", "kind": "prayer", "voice": "undertone", "text": "<small>בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד:</small>"},
+          {"ref": "6", "kind": "prayer", "node": "shema.shema", "text": "<b>וְאָהַבְתָּ</b> אֵת יְהֹוָה אֱלֹהֶֽיךָ בְּכָל֯־לְ֯בָבְ֒ךָ וּבְכָל־נַפְשְׁ֒ךָ וּבְכָל־מְאֹדֶֽךָ: וְהָיוּ הַדְּ֒בָרִים הָאֵֽלֶּה אֲשֶׁר֯ אָ֯נֹכִי מְצַוְּ֒ךָ הַיּוֹם עַל֯־לְ֯בָבֶֽךָ: וְשִׁנַּנְתָּם לְבָנֶֽיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּ֒ךָ בְּבֵיתֶֽךָ וּבְלֶכְתְּ֒ךָ בַדֶּֽרֶךְ וּבְשָׁכְבְּ֒ךָ וּבְקוּמֶֽךָ: וּקְשַׁרְתָּם לְאוֹת עַל֯־יָ֯דֶֽךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶֽיךָ: וּכְתַבְתָּם עַל־מְזֻזוֹת בֵּיתֶֽךָ וּבִשְׁעָרֶֽיךָ:"},
+          {"ref": "7", "kind": "prayer", "node": "shema.vehaya", "text": "<b>וְהָיָה</b> אִם־שָׁמֹֽעַ תִּשְׁמְעוּ אֶל־מִצְוֹתַי אֲשֶׁר֯ אָ֯נֹכִי מְצַוֶּה אֶתְ֒כֶם הַיּוֹם לְאַהֲבָה אֶת־יְהֹוָה אֱלֹהֵיכֶם וּלְעָבְ֒דוֹ בְּכָל־לְבַבְכֶם וּבְכָל־נַפְשְׁכֶם: וְנָתַתִּי מְטַר֯־אַ֯רְצְכֶם בְּעִתּוֹ יוֹרֶה וּמַלְקוֹשׁ וְאָסַפְתָּ דְגָנֶֽךָ וְתִירשְׁךָ וְיִצְהָרֶֽךָ: וְנָתַתִּי עֵֽשֶׂב֯ בְּ֯שָׂדְ֒ךָ לִבְ֒הֶמְתֶּֽךָ וְאָכַלְתָּ וְשָׂבָֽעְתָּ: הִשָּׁמְ֒רוּ לָכֶם פֶּן֯־יִ֯פְתֶּה לְבַבְכֶם וְסַרְתֶּם וַעֲבַדְתֶּם אֱלֹהִים֯ אֲ֯חֵרִים וְהִשְׁתַּחֲוִיתֶם לָהֶם: וְחָרָה אַף־יְהֹוָה בָּכֶם וְעָצַר֯ אֶ֯ת־הַשָּׁמַֽיִם וְלֹא֯־יִ֯הְיֶה מָטָר וְהָאֲדָמָה לֹא תִתֵּן אֶת֯־יְ֯בוּלָהּ וַאֲבַדְתֶּם֯ מְ֯הֵרָה מֵעַל הָאָֽרֶץ הַטֹּבָה אֲשֶׁר֯ יְ֯הֹוָה נֹתֵן לָכֶם: וְשַׂמְתֶּם֯ אֶ֯ת־דְּבָרַי֯ אֵֽ֯לֶּה עַל֯־לְ֯בַבְכֶם וְעַל־נַפְשְׁ֒כֶם וּקְשַׁרְתֶּם֯ אֹ֯תָם לְאוֹת עַל֯־יֶ֯דְ֒כֶם וְהָיוּ לְטוֹטָפֹת בֵּין עֵינֵיכֶם: וְלִמַּדְתֶּם֯ אֹ֯תָם אֶת־בְּנֵיכֶם לְדַבֵּר בָּם בְּשִׁבְתְּךָ בְּבֵיתֶֽךָ וּבְלֶכְתְּ֒ךָ בַדֶּֽרֶךְ וּבְשָׁכְבְּ֒ךָ וּבְקוּמֶֽךָ: וּכְתַבְתָּם עַל־מְזוּזוֹת בֵּיתֶֽךָ וּבִשְׁ֒עָרֶֽיךָ: לְמַֽעַן֯ יִ֯רְבּוּ יְמֵיכֶם וִימֵי בְנֵיכֶם עַל הָאֲדָמָה אֲשֶׁר נִשְׁבַּע יְהֹוָה לַאֲבֹתֵיכֶם לָתֵת לָהֶם כִּימֵי הַשָּׁמַֽיִם עַל־הָאָֽרֶץ:"},
+          {"ref": "8", "kind": "prayer", "node": "shema.vayomer", "text": "<b>וַֽיֹּאמֶר֯</b> יְהֹוָה֯ אֶ֯ל־משֶׁה לֵּאמֹר: דַּבֵּר֯ אֶ֯ל־בְּנֵי יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵהֶם וְעָשׂוּ לָהֶם צִיצִת עַל־כַּנְפֵי בִגְ֒דֵיהֶם לְדֹרֹתָם וְנָתְ֒נוּ עַל־צִיצִת הַכָּנָף֯ פְּ֯תִיל תְּכֵֽלֶת: וְהָיָה לָכֶם לְצִיצִת וּרְאִיתֶם֯ אֹ֯תוֹ וּזְכַרְתֶּם֯ אֶ֯ת־כָּל־מִצְוֹת֯ יְ֯הֹוָה וַעֲשִׂיתֶם֯ אֹ֯תָם וְלֹא תָתֽוּרוּ אַחֲרֵי לְבַבְכֶם וְאַחֲרֵי עֵינֵיכֶם אֲשֶׁר֯־אַ֯תֶּם זֹנִים֯ אַ֯חֲרֵיהֶם: לְמַֽעַן תִּזְכְּרוּ וַעֲשִׂיתֶם֯ אֶ֯ת־כָּל־מִצְוֹתָי וִהְיִיתֶם קְדשִׁים לֵאלֹהֵיכֶם: אֲנִי יְהֹוָה אֱלֹהֵיכֶם֯ אֲ֯שֶׁר הוֹצֵֽאתִי אֶתְ֒כֶם֯ מֵ֯אֶֽרֶץ מִצְרַֽיִם לִהְיוֹת לָכֶם לֵאלֹהִים֯ אֲ֯נִי יְהֹוָה אֱלֹהֵיכֶם֯:"},
+          {"ref": "9", "kind": "note", "node": "shema.vayomer", "en": "One must join \"Elokeichem\" to \"Emet\".", "text": "<small>יש לצרף <b>אֱלֹהֵיכֶם</b> ל<b>אֱמֶת</b></small>"},
+          {"ref": "10", "kind": "prayer", "node": "shema.vayomer", "text": "אֱ֯מֶת"},
+          {"ref": "11", "kind": "speaker", "node": "shema.vayomer", "role": "chazzan", "minyan": true, "en": "The chazzan:", "text": "<small>שליח ציבור:</small>"},
+          {"ref": "12", "kind": "prayer", "node": "shema.vayomer", "role": "chazzan", "minyan": true, "gloss": "The chazzan repeats these words aloud only when there is a minyan; an individual says \"El melech ne'eman\" instead.", "text": "יְהֹוָה אֱלֹהֵיכֶם֯ אֱ֯מֶת:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<i>The following three words should be said when praying without a minyan:</i>"},
+          {"ref": "2", "translates": ["2"], "text": "(Almighty, faithful King)"},
+          {"ref": "3", "translates": ["3"], "text": "<b>Hear, Israel: Adonoy is our God, Adonoy is One.</b>"},
+          {"ref": "4", "translates": ["4"], "text": "<i>The following three lines are to be said silently:</i>"},
+          {"ref": "5", "translates": ["5"], "text": "Blessed [is His] Name, Whose glorious kingdom is forever and ever."},
+          {"ref": "6", "translates": ["6"], "text": "And you shall love Adonoy your God with all your heart and with all your soul and with all your possessions. And these words which I command you today, shall be upon your heart. And you shall teach them sharply to your children. And you shall discuss them when you sit in your house, and when you travel on the road, and when you lie down and when you rise. And you shall bind them for a sign upon your hand, and they shall be for <i>totafos</i> between your eyes. And you shall write them upon the doorposts of your house and upon your gateways."},
+          {"ref": "7", "translates": ["7"], "text": "And it will be— if you vigilantly obey My commandments which I command you this day, to love Adonoy your God, and serve Him with your entire hearts and with your entire souls— that I will give rain for your land in its proper time, the early (autumn) rain and the late (spring) rain; and you will harvest your grain and your wine and your oil. And I will put grass in your fields for your cattle, and you will eat and be satisfied. Beware lest your hearts be swayed and you turn astray, and you worship alien gods and bow to them. And Adonoy’s fury will blaze among you, and He will close off the heavens and there will be no rain and the earth will not yield its produce; and you will perish swiftly from the good land which Adonoy gives you. Place these words of Mine upon your hearts and upon your souls,— and bind them for a sign upon your hands, and they shall be for <i>totafos</i> between your eyes. And you shall teach them to your sons, to speak them when you sit in your house, and when you travel on the road, and when you lie down and when you rise. And you shall write them upon the doorposts of your house and upon your gateways. In order that your days be prolonged, and the days of your children, upon the land which Adonoy swore to your fathers to give them [for as long] as the heavens are above the earth."},
+          {"ref": "8", "translates": ["8"], "text": "And Adonoy spoke to Moses saying: Speak to the children of Israel, and tell them to make for themselves fringes on the corners of their garments throughout their generations; and they will place with the fringes of each corner a thread of blue. And it will be to you for fringes, and you will look upon it and you will remember all the commandments of Adonoy, and you will perform them; and you will not turn aside after your hearts and after your eyes which cause you to go astray. In order that you will remember and perform all My commandments; and you will be holy unto your God. I am Adonoy, your God, Who brought you out of the land of Egypt to be your God: I am Adonoy, your God—"},
+          {"ref": "9", "translates": ["9"], "text": "<i>You must be careful to connect the last words of Shema, ה’ אֱלֹקֵיכֶם (Adonoy, your God), with the word אֶמֶת (is true) without pause or interruption so that these three words form one sentence, meaning “Adonoy your God is true” (Maseches Berachos 13a).</i>"},
+          {"ref": "10", "translates": ["10"], "text": "—is true—"},
+          {"ref": "11", "translates": ["11"], "text": "<i>The chazan repeats:</i>"},
+          {"ref": "12", "translates": ["12"], "text": "Adonoy, your God, is true."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Maariv/Blessings of the Shema/First Blessing after Shema",
+      "title": "אמת ואמונה",
+      "node": "shema.emet_veemuna",
+      "service": "maariv",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "note", "en": "\"Emet ve'emunah\" does not begin with \"Baruch\", since it is joined to the Shema and so there is no interruption.", "cite": "טור או\"ח רלו", "clean": "<small>אמת ואמונה אינה פותחת בברוך דהויא סמוכה לחבירתה דק\"ש לא הוי הפסק</small>", "text": "<small>אמת ואמונה אינה פותחת בברוך דהויא סמוכה לחבירתה דק\"ש לא הוי הפסק (טור או\"ח רלו)</small>"},
+          {"ref": "2", "kind": "prayer", "text": "<b>וֶאֱמוּנָה</b> כָּל־זֹאת וְקַיָּם עָלֵֽינוּ כִּי הוּא יְהֹוָה אֱלֹהֵֽינוּ וְאֵין זוּלָתוֹ וַאֲנַֽחְנוּ יִשְׂרָאֵל עַמּוֹ: הַפּוֹדֵֽנוּ מִיַּד מְלָכִים מַלְכֵּֽנוּ הַגּוֹאֲלֵֽנוּ מִכַּף כָּל־הֶעָרִיצִים: הָאֵל הַנִּפְרָע לָֽנוּ מִצָּרֵֽינוּ וְהַמְשַׁלֵּם גְּמוּל לְכָל אֹיְ֒בֵי נַפְשֵֽׁנוּ: הָעֹשֶׂה גְדוֹלוֹת עַד־אֵין חֵֽקֶר וְנִפְלָאוֹת עַד־אֵין מִסְפָּר: הַשָּׂם נַפְשֵֽׁנוּ בַּחַיִּים וְלֹא־נָתַן לַמּוֹט רַגְלֵֽנוּ הַמַּדְרִיכֵֽנוּ עַל בָּמוֹת אֹיְ֒בֵֽינוּ וַיָּֽרֶם קַרְנֵֽנוּ עַל כָּל־שׂוֹנְ֒אֵֽינוּ: הָעֹֽשֶׂה לָּֽנוּ נִסִּים וּנְקָמָה בְּפַרְעֹה אוֹתוֹת וּמוֹפְ֒תִים בְּאַדְמַת בְּנֵי חָם: הַמַּכֶּה בְעֶבְרָתוֹ כָּל בְּכוֹרֵי מִצְרָֽיִם וַיּוֹצֵא אֶת־עַמּוֹ יִשְׂרָאֵל מִתּוֹכָם לְחֵרוּת עוֹלָם: הַמַּעֲבִיר בָּנָיו בֵּין גִּזְרֵי יַם סוּף אֶת־רוֹדְ֒פֵיהֶם וְאֶת־שׂוֹנְ֒אֵיהֶם בִּתְהוֹמוֹת טִבַּע: וְרָאוּ בָנָיו גְּבוּרָתוֹ שִׁבְּ֒חוּ וְהוֹדוּ לִשְׁמוֹ: וּמַלְכוּתוֹ בְרָצוֹן קִבְּ֒לוּ עֲלֵיהֶם משֶׁה וּבְנֵי יִשְׂרָאֵל לְךָ עָנוּ שִׁירָה בְּשִׂמְחָה רַבָּה וְאָמְ֒רוּ כֻלָּם:"},
+          {"ref": "3", "kind": "prayer", "text": "<b>מִי כָמֹֽכָה</b> בָּאֵלִם יְהֹוָה מִי כָּמֹֽכָה נֶאְדָּר בַּקֹּֽדֶשׁ נוֹרָא תְהִלֹּת עֹֽשֵׂה פֶֽלֶא: מַלְכוּתְךָ רָאוּ בָנֶֽיךָ בּוֹקֵֽעַ יָם לִפְנֵי משֶׁה זֶה אֵלִי עָנוּ וְאָמְ֒רוּ:"},
+          {"ref": "4", "kind": "prayer", "text": "<b>יְהֹוָה</b> יִמְלֹךְ לְעֹלָם וָעֶד: וְנֶאֱמַר כִּי־פָדָה יְהֹוָה אֶת יַעֲקֹב וּגְאָלוֹ מִיַּד חָזָק מִמֶּֽנּוּ. בָּרוּךְ אַתָּה יְהֹוָה גָּאַל יִשְׂרָאֵל:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<i>This is the first of the two berachos that follow the Shema.</i>"},
+          {"ref": "2", "translates": ["2"], "text": "—and faithful is all this,<sup class=\"footnote-marker\">1</sup><i class=\"footnote\">All that we have affirmed in the Shema. is true and trustworthy.—<i>Etz Yosef</i></i> and it is permanently established with us that he is Adonoy, our God, and there is nothing besides Him, and that we, Israel, are His people. [He] Who liberated us from the hand of kings,<sup class=\"footnote-marker\">2</sup><i class=\"footnote\">He redeemed us from Pharaoh, and saved us from Sichon and Og in the days of Moses and from the thirty-one kings in the days of Joshua.—<i>Etz Yosef</i></i> [is] our King, Who redeemed us from the grasp of all the tyrants.<sup class=\"footnote-marker\">3</sup><i class=\"footnote\">“Tyrants” include Amalek and others who wanted to destroy us.—<i>Etz Yosef</i></i> [He is] the Almighty Who exacts payment [punishment] from our oppressors,<sup class=\"footnote-marker\">4</sup><i class=\"footnote\">The <i>Malbim</i> says that “oppressors” (צרינו) refers to those who actively persecute us whereas “enemies” (אויבינו) refers to those who would rejoice over our misfortune without necessarily contributing to our downfall in an outright manner.</i> and brings retribution on all those who are enemies of our soul. He does great things<sup class=\"footnote-marker\">5</sup><i class=\"footnote\">“Great things” refers to the way God rules according to the laws of nature and “wonders” refers to those things that are classified as miracles.—<i>Siach Yitzchak</i></i> beyond comprehension, miracles and wonders without number. He sustains our soul in life<sup class=\"footnote-marker\">6</sup><i class=\"footnote\">Not only does God sustain our souls in exile, but He also sustains our physical well-being.—<i>Siach Yitzchak</i></i> and does not allow our feet to slip. He makes us tread upon the high places of our enemies, and exalts our strength over all who hate us. He performed miracles for us and vengeance upon Pharaoh, signs and wonders in the land of the Hamites. He slew in His wrath, all the firstborn of Egypt, and brought out His people, Israel, from their midst to everlasting<sup class=\"footnote-marker\">7</sup><i class=\"footnote\">The redemption from Egypt is the source for all later redemptions; it is the source from which our final and total salvation will spring. We became free, never again to taste the bitterness of spiritual or physical bondage.—<i>Sfas Emes</i></i> freedom. He led His children through the divided parts of the Sea of Reeds, their pursuers and their enemies He drowned in its depths. And His children saw His mighty power— they praised and gave thanks to His Name, His sovereignty they willingly accepted; Moses and the children of Israel sang unto You with great joy, and they all said:"},
+          {"ref": "3", "translates": ["3"], "text": "“Who is like You among the mighty, Adonoy! Who is like You? [You are] adorned in holiness, awesome in praise, performing wonders”<sup class=\"footnote-marker\">8</sup><i class=\"footnote\">Exodus 15:11.</i> Your children beheld Your sovereignty when You divided the sea before Moses. “This is my God,”<sup class=\"footnote-marker\">9</sup><i class=\"footnote\">Exodus 15:2.</i> they exclaimed, and declared,"},
+          {"ref": "4", "translates": ["4"], "text": "“Adonoy will reign forever and ever.”<sup class=\"footnote-marker\">10</sup><i class=\"footnote\">Exodus 15:18.</i> And it is said, “For Adonoy has liberated Jacob and redeemed him from a hand, mightier than his.”<sup class=\"footnote-marker\">11</sup><i class=\"footnote\">Jeremiah 31:10.</i> Blessed are You, Adonoy Who has redeemed Israel."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Maariv/Blessings of the Shema/Second Blessing after Shema",
+      "title": "השכיבנו",
+      "node": "shema.hashkiveinu",
+      "service": "maariv",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "note", "en": "One says \"Hashkiveinu\" and concludes \"Shomer amo Yisrael la'ad\", because the night needs protection from harmful forces. Although the halachah follows Rabbi Yochanan that one must connect the evening redemption blessing to the Amidah, \"Hashkiveinu\" is not an interruption, since the Rabbis instituted it as an extension of the redemption.", "cite": "טור או\"ח רלו", "clean": "<small>אומר השכיבנו וחותם שומר את עמו ישראל לעד מפני שלילה צריכה שימור מן המזיקין. ואע\"ג דקי\"ל כרבי יוחנן דאמר שצריך לסמוך אף גאולה של ערבית לתפלת ערבית השכיבנו לא הוי הפסק דכיון דתקינו ליה רבנן כגאולה אריכתא</small>", "text": "<small>אומר השכיבנו וחותם שומר את עמו ישראל לעד מפני שלילה צריכה שימור מן המזיקין. ואע\"ג דקי\"ל כרבי יוחנן דאמר שצריך לסמוך אף גאולה של ערבית לתפלת ערבית השכיבנו לא הוי הפסק דכיון דתקינו ליה רבנן כגאולה אריכתא (טור או\"ח רלו)</small>"},
+          {"ref": "2", "kind": "prayer", "text": "<b>הַשְׁכִּיבֵֽנוּ</b> יְהֹוָה אֱלֹהֵֽינוּ לְשָׁלוֹם וְהַעֲמִידֵֽנוּ מַלְכֵּֽנוּ לְחַיִּים וּפְרוֹשׂ עָלֵֽינוּ סֻכַּת שְׁלוֹמֶֽךָ וְתַקְּ֒נֵֽנוּ בְּעֵצָה טוֹבָה מִלְּ֒פָנֶֽיךָ וְהוֹשִׁיעֵֽנוּ לְמַֽעַן שְׁמֶֽךָ וְהָגֵן בַּעֲדֵֽנוּ וְהָסֵר מֵעָלֵֽינוּ אוֹיֵב דֶּֽבֶר וְחֶֽרֶב וְרָעָב וְיָגוֹן וְהָסֵר שָׂטָן מִלְּ֒פָנֵֽינוּ וּמֵאַחֲרֵֽינוּ וּבְצֵל כְּנָפֶֽיךָ תַּסְתִּירֵֽנוּ כִּי אֵל שׁוֹמְ֒רֵֽנוּ וּמַצִּילֵֽנוּ אָֽתָּה כִּי אֵל מֶֽלֶךְ חַנּוּן וְרַחוּם אָֽתָּה וּשְׁמוֹר צֵאתֵֽנוּ וּבוֹאֵֽנוּ לְחַיִּים וּלְשָׁלוֹם מֵעַתָּה וְעַד עוֹלָם: בָּרוּךְ אַתָּה יְהֹוָה שׁוֹמֵר עַמּוֹ יִשְׂרָאֵל לָעַד:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<i>This is the second of the benedictions that follow the Sh’ma.</i>"},
+          {"ref": "2", "translates": ["2"], "text": "Adonoy our God; make us lie down in peace, our King, raise us again to life<sup class=\"footnote-marker\">12</sup><i class=\"footnote\">Undisturbed peace, and strength for a new day of vigorous living, are the gifts that night brings and for which we pray to God.—<i>S.R. Hirsch</i></i> Spread over us the shelter of Your peace, and direct us to better ourselves through Your good counsel;<sup class=\"footnote-marker\">13</sup><i class=\"footnote\">We particularly ask of Him at night to bless us with wise counsel. Daytime is the time for achievement, but the rest that comes with nightfall is made to allow man to compose his thoughts. By virtue of the complete relaxation It affords, sleep endows the mind and spirit with renewed vigor. We pray therefore for Divine aid so that our nightly rest will help us take wise counsel and affirm worthy resolution for future days.—<i>Avudraham</i> and <i>Siach Yitzchak</i></i> and deliver us for Your Name’s sake. Shield us, and remove from us<sup class=\"footnote-marker\">14</sup><i class=\"footnote\">Shield us from trouble before it comes, and remove it from us if it has already come.—<i>Siach Yitzchak</i></i> enemies, pestilence, sword, famine and sorrow. Remove the adversary<sup class=\"footnote-marker\">15</sup><i class=\"footnote\">The Hebrew word שטן (Satan) used in the Prayer Book refers to the Evil Impulse, the lower passions which are a hindrance to man’s pursuit of the nobler aims in life. It is against the dominance of this impulse that the Jew prays. The “adversary,” therefore, is any person, spirit, or Evil Impulse that seduces us to do wrong.—<i>Dover Sholom</i> and others</i> from before us and from behind us, and shelter us in the shadow of Your wings. For, Almighty, You are our Protector and Rescuer, For, Almighty You are a gracious and merciful King. Guard our going out and our coming in for life and peace for now forever. Blessed are You, Adonoy, Who guards His people Israel forever."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Maariv/Blessings of the Shema/Third Blessing after Shema",
+      "title": "ברוך ה׳ לעולם (outside of Israel)",
+      "node": "shema.baruch_hashem_leolam_maariv",
+      "service": "maariv",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "note", "when": "diaspora", "en": "The custom of interrupting with the verses \"Baruch Hashem le'olam\" and Kaddish dates from when synagogues were in the fields and people feared staying until after nightfall. The verses were instituted with eighteen mentions of the Name, parallel to the eighteen blessings of the Maariv Amidah, and one is released by Kaddish. Although Maariv is now prayed in synagogues, the custom was not abolished, but one should not interrupt with other matters. Some great authorities were accustomed not to say them.", "cite": "טור או\"ח רלו", "clean": "<small>מה שנוהגין להפסיק בפסוקים ויראו עינינו וקדיש לפי שבימים ראשונים היו בתי כנסיות שלהם בשדות והיו יראים להתאחר שם עד זמן תפלת ערבית ותיקנו לומר פסוקים אלו שיש בהם י\"ח אזכרות כנגד י\"ח ברכות שיש בתפלת ערבית ונפטרין בקדיש ועתה שחזרו להתפלל ערבית בבתי כנסיות לא נתבטל מנהג הראשון ומ\"מ אין להפסיק בדברים אחרים ויש מן הגדולים שנהגו שלא לאמרם</small>", "text": "<small>מה שנוהגין להפסיק בפסוקים ויראו עינינו וקדיש לפי שבימים ראשונים היו בתי כנסיות שלהם בשדות והיו יראים להתאחר שם עד זמן תפלת ערבית ותיקנו לומר פסוקים אלו שיש בהם י\"ח אזכרות כנגד י\"ח ברכות שיש בתפלת ערבית ונפטרין בקדיש ועתה שחזרו להתפלל ערבית בבתי כנסיות לא נתבטל מנהג הראשון ומ\"מ אין להפסיק בדברים אחרים ויש מן הגדולים שנהגו שלא לאמרם (טור או\"ח רלו)</small>"},
+          {"ref": "2", "kind": "prayer", "when": "diaspora", "text": "<b>בָּרוּךְ</b> יְהֹוָה לְעוֹלָם אָמֵן וְאָמֵן: בָּרוּךְ יְהֹוָה מִצִּיּוֹן שֹׁכֵן יְרוּשָׁלָֽםִ הַלְ֒לוּיָהּ: בָּרוּךְ יְהֹוָה אֱלֹהִים אֱלֹהֵי יִשְׂרָאֵל עֹשֵׂה נִפְלָאוֹת לְבַדּוֹ: וּבָרוּךְ שֵׁם כְּבוֹדוֹ לְעוֹלָם וְיִמָּלֵא כְבוֹדוֹ אֶת־כָּל־הָאָֽרֶץ אָמֵן וְאָמֵן: יְהִי כְבוֹד יְהֹוָה לְעוֹלָם יִשְׂמַח יְהֹוָה בְּמַעֲשָׂיו: יְהִי שֵׁם יְהֹוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם: כִּי לֹא יִטּשׁ יְהֹוָה אֶת־עַמּוֹ בַּעֲבוּר שְׁמוֹ הַגָּדוֹל כִּי הוֹאִיל יְהֹוָה לַעֲשׂוֹת אֶתְכֶם לוֹ לְעָם: וַיַּרְא כָּל־הָעָם וַיִּפְּ֒לוּ עַל פְּנֵיהֶם וַיֹּאמְ֒רוּ יְהֹוָה הוּא הָאֱלֹהִים יְהֹוָה הוּא הָאֱלֹהִים: וְהָיָה יְהֹוָה לְמֶֽלֶךְ עַל כָּל־הָאָֽרֶץ בַּיּוֹם הַהוּא יִהְיֶה יְהֹוָה אֶחָד וּשְׁמוֹ אֶחָד: יְהִי־חַסְדְּ֒ךָ יְהֹוָה עָלֵֽינוּ כַּאֲשֶׁר יִחַֽלְנוּ לָךְ: הוֹשִׁיעֵֽנוּ יְהֹוָה אֱלֹהֵֽינוּ וְקַבְּ֒צֵֽנוּ מִן־הַגּוֹיִם לְהוֹדוֹת לְשֵׁם קָדְשֶֽׁךָ לְהִשְׁתַּבֵּֽחַ בִּתְהִלָּתֶֽךָ: כָּל־גּוֹיִם אֲשֶׁר עָשִֽׂיתָ יָבֹֽאוּ וְיִשְׁתַּחֲווּ לְפָנֶֽיךָ אֲדֹנָי וִיכַבְּ֒דוּ לִשְׁמֶֽךָ: כִּי־גָדוֹל אַתָּה וְעֹשֵׂה נִפְלָאוֹת אַתָּה אֱלֹהִים לְבַדֶּֽךָ: וַאֲנַֽחְנוּ עַמְּ֒ךָ וְצֹאן מַרְעִיתֶֽךָ נוֹדֶה לְּךָ לְעוֹלָם לְדוֹר וָדוֹר נְסַפֵּר תְּהִלָּתֶֽךָ: בָּרוּךְ יְהֹוָה בַּיּוֹם בָּרוּךְ יְהֹוָה בַּלָּֽיְלָה בָּרוּךְ יְהֹוָה בְּשָׁכְבֵֽנוּ בָּרוּךְ יְהֹוָה בְּקוּמֵֽנוּ: כִּי בְיָדְ֒ךָ נַפְשׁוֹת הַחַיִּים וְהַמֵּתִים אֲשֶׁר בְּיָדוֹ נֶֽפֶשׁ כָּל־חָי וְרֽוּחַ כָּל־בְּשַׂר־אִישׁ: בְּיָדְ֒ךָ אַפְקִיד רוּחִי פָּדִֽיתָה אוֹתִי יְהֹוָה אֵל אֱמֶת: אֱלֹהֵֽינוּ שֶׁבַּשָּׁמַֽיִם יַחֵד שִׁמְךָ וְקַיֵּם מַלְכוּתְ֒ךָ תָּמִיד וּמְלֹךְ עָלֵֽינוּ לְעוֹלָם וָעֶד:"},
+          {"ref": "3", "kind": "prayer", "when": "diaspora", "node": "shema.yiru_eineinu", "text": "<b>יִרְאוּ</b> עֵינֵֽינוּ וְיִשְׂמַח לִבֵּֽנוּ וְתָגֵל נַפְשֵֽׁנוּ בִּישׁוּעָתְ֒ךָ בֶּאֱמֶת בֶּאֱמֹר לְצִיּוֹן מָלַךְ אֱלֹהָֽיִךְ: יְהֹוָה מֶֽלֶךְ יְהֹוָה מָלָךְ יְהֹוָה יִמְלֹךְ לְעוֹלָם וָעֶד: כִּי הַמַּלְכוּת שֶׁלְּ֒ךָ הִיא וּלְעֽוֹלְ֒מֵי עַד תִּמְלֹךְ בְּכָבוֹד כִּי אֵין לָֽנוּ מֶֽלֶךְ אֶלָּא אָֽתָּה: בָּרוּךְ אַתָּה יְהֹוָה הַמֶּֽלֶךְ בִּכְבוֹדוֹ תָּמִיד יִמְלוֹךְ עָלֵֽינוּ לְעוֹלָם וָעֶד וְעַל כָּל מַעֲשָׂיו:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<i>The following prayer was originally a compilation of eighteen verses instituted during the Gaonic era as a substitute for the </i>Shemoneh Esrei.<i> According to Avudraham, the </i>Shemoneh Esrei<i> was omitted because of decrees issued against the Jews that banned them from participating in the Evening Service. These eighteen verses, adopted in place of the </i>Shemoneh Esrei,<i> have remained a part of the </i>Maariv<i> service. Some Halachic commentaries maintain that these verses should not be included in </i>Maariv,<i> because they constitute an interruption between the final blessing after Shema and the </i>Shemoneh Esrei.<i></i>"},
+          {"ref": "2", "translates": ["2"], "text": "Blessed is Adonoy forever, Amein and Amein!<sup class=\"footnote-marker\">16</sup><i class=\"footnote\">Psalms 89:53.</i> Blessed is Adonoy from Zion Who dwells in Jerusalem, Praise God.<sup class=\"footnote-marker\">17</sup><i class=\"footnote\">Psalms 135:21.</i> Blessed is Adonoy, God, God of Israel Who alone performs wonders.<sup class=\"footnote-marker\">18</sup><i class=\"footnote\">Psalms 72:18.</i> Blessed is the Name of His glory forever and may His glory fill the whole earth; Amein and Amein!<sup class=\"footnote-marker\">19</sup><i class=\"footnote\">Psalms 72:19.</i> The Glory of Adonoy will endure forever; Adonoy will rejoice in His works.<sup class=\"footnote-marker\">20</sup><i class=\"footnote\">Psalms 104:31.</i> The Name of Adonoy will be blessed from now forever.<sup class=\"footnote-marker\">21</sup><i class=\"footnote\">Psalms 113:2.</i> For Adonoy will not cast off His people, for the sake of His great Name, because Adonoy has determined to make you His people.<sup class=\"footnote-marker\">22</sup><i class=\"footnote\">I Samuel 12:22.</i> And all the people saw it and they fell on their faces, and proclaimed, “Adonoy, He is God!<sup class=\"footnote-marker\">23</sup><i class=\"footnote\">I Kings 18:39. This verse describes the reaction of the people when they saw the miracle performed by God on behalf of Elijah on Mount Carmel when he disproved and ridiculed the false prophets of Baal.</i> Adonoy, He is God!” And Adonoy will be King over the whole earth; on that day Adonoy will be One and His Name One.<sup class=\"footnote-marker\">24</sup><i class=\"footnote\">Zecharyah 14:9.</i> Adonoy, may Your kindness be upon us as we have hoped for You.<sup class=\"footnote-marker\">25</sup><i class=\"footnote\">Psalms 33:22.</i> Deliver us, Adonoy, our God, gather us from the nations to give thanks to Your Holy Name, to be extolled in Your praise.<sup class=\"footnote-marker\">26</sup><i class=\"footnote\">I Chronicles 16:35.</i> All the nations which You have made will come and bow down before You, my Master, and they will give honor to Your Name.<sup class=\"footnote-marker\">27</sup><i class=\"footnote\">Psalms 86:9.</i> For You are great and do wondrous things, You alone are God.<sup class=\"footnote-marker\">28</sup><i class=\"footnote\">Psalms 86:10.</i> And we, Your people, the sheep of Your pasture, will give thanks to You forever, from generation to generation we will recount Your praise.<sup class=\"footnote-marker\">29</sup><i class=\"footnote\">Psalms 79:13.</i> Blessed is Adonoy by day, Blessed is Adonoy by night, Blessed is Adonoy when we lie down, Blessed is Adonoy when we rise. For in Your hand are the souls of the living and the dead: [as it is written]: for in His hand is the soul of every living thing, and the spirit of every human being.<sup class=\"footnote-marker\">30</sup><i class=\"footnote\">Job 12:10.</i> In Your hand, I commit my spirit; You have liberated me Adonoy, Almighty of truth.<sup class=\"footnote-marker\">31</sup><i class=\"footnote\">Psalms 31:6.</i> Our God in heaven, reveal the unity of Your Name, preserve Your kingdom always and reign over us forever and ever."},
+          {"ref": "3", "translates": ["3"], "text": "May our eyes behold, our heart rejoice, and our soul exalt in Your true deliverance, when it will be said to Zion: “Your God has begun His reign.” “Adonoy is King, Adonoy was King Adonoy will reign for ever and ever” For the kingdom is Yours and to all eternity, You will reign in glory; for we have no king except You. Blessed are You, the King in His glory, will always reign over us forever and ever, and over all His creation."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday/Maariv/Blessings of the Shema/Half Kaddish",
+      "title": "חצי קדיש",
+      "node": "kaddish.half",
+      "service": "maariv",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "instruction", "role": "chazzan", "minyan": true, "en": "The chazzan says Half Kaddish:", "clean": "ואומר שליח צבור חצי קדיש:", "text": "<small>ואומר שליח צבור חצי קדיש:</small>"},
+          {"ref": "2", "parts": [
+            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא"},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (<b>אָמֵן</b>)"}
+          ]},
+          {"ref": "3", "parts": [
+            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ "},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
+          ]},
+          {"ref": "4", "kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>"},
+          {"ref": "5", "parts": [
+            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא "},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>בְּרִיךְ הוּא</b>"}
+          ]},
+          {"ref": "6", "parts": [
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "לְעֵֽלָּא מִן־כָּל־"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.half", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " (<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
+            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ "},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<i>The Chazzan recites the following half-Kaddish</i>"},
+          {"ref": "2", "translates": ["2"], "text": "Exalted and sanctified<sup class=\"footnote-marker\">1</sup><i class=\"footnote\">These opening words refer to the fulfillment of God’s prophecy, through Ezekiel (38:23) “And I will thus exalt Myself and sanctify Myself; and I will be known in the eyes of the many nations, and they will know that I am Adonoy.”—<i>Levush, Siddur HaGra</i>. One should be very careful to emphasize the letter gimel (ג) when saying the word “Yisgadal (יִתְגַּדַּל),” in order that it not be heard as “Yis<i>k</i>adal (יִתְקַּדַל),” from the word קְדָל which means neck.—<i>Mishnah Berurah 56:2</i></i> be His great Name"},
+          {"ref": "3", "translates": ["3"], "text": "in the world which He created according to His will and may He rule His kingdom.<sup class=\"footnote-marker\">2</sup><i class=\"footnote\">May His sovereignty be revealed.</i> In your lifetime and in your days, and in the lifetime of the entire House of Israel, speedily and in the near future<sup class=\"footnote-marker\">3</sup><i class=\"footnote\">We pray that the redemption will come speedily and that the process of the redemption itself will not be prolonged.—<i>Siddur HaGra</i></i>— and say Amein."},
+          {"ref": "4", "translates": ["4"], "text": "May His great Name be blessed forever and for all eternity."},
+          {"ref": "5", "translates": ["5"], "text": "Blessed and praised, glorified, and exalted and uplifted, honored and elevated and extolled<sup class=\"footnote-marker\">5</sup><i class=\"footnote\">The ten expressions of praise in the Kaddish refer to the ten utterances by which God created the world. (See Maseches Avos 5:1.)</i> be the Name of the Holy One, blessed is He;"},
+          {"ref": "6", "translates": ["6"], "text": "above (<i>Ten Days of Penitence:</i> far above) all the blessings and hymns,<sup class=\"footnote-marker\">6</sup><i class=\"footnote\">May God be praised and exalted far beyond all the blessings, hymns and praises that are uttered.—<i>Mishnah Berurah </i>in the name of the Vilna Gaon 56:14.</i> praises and consolations<sup class=\"footnote-marker\">7</sup><i class=\"footnote\">Consolations are uttered because God is in mourning over the destruction of the Holy Temple and the exile of His people.</i> which we utter in the world—and say Amein."}
+        ]
+      }
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:siddur_engine/siddur_engine.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/l10n.dart';
 import '../../core/adaptive.dart';
@@ -395,13 +396,15 @@ class SettingsScreen extends ConsumerWidget {
           ),
         ]),
         AdaptiveSection(header: context.tr('About'), children: [
-          if (updatesSupported)
+          if (updatesSupported || playUpdates)
             AdaptiveNavTile(
               icon: Icons.system_update_outlined,
               title: context.tr('App updates'),
               subtitle: update.pending != null
                   ? context.tr('Version {v} is available', {'v': update.pending!.version})
-                  : update.currentVersion.isEmpty
+                  : update.playPending
+                      ? context.tr('A new version is available')
+                      : update.currentVersion.isEmpty
                       ? null
                       : context.tr('Version {v}', {'v': update.currentVersion}),
               onTap: () => context.push('/update'),
@@ -418,6 +421,11 @@ class SettingsScreen extends ConsumerWidget {
                   'Tehillim: Miqra according to the Masorah (CC-BY-SA) and JPS 1917 (public domain), via Sefaria. '
                   'Fonts: SIL Open Font License; Culmus fonts under GPL-2.0 with the font exception.',
             ),
+          ),
+          AdaptiveNavTile(
+            icon: Icons.privacy_tip_outlined,
+            title: context.tr('Privacy policy'),
+            onTap: () => launchUrl(Uri.parse('https://amud.page/privacy/'), mode: LaunchMode.externalApplication),
           ),
         ]),
         ]),

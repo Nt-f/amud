@@ -1,0 +1,969 @@
+{
+  "book": "Siddur Edot HaMizrach",
+  "chunk": "Weekday Shacharit [Amida .. Alenu]",
+  "leaves": [
+    {
+      "path": "Weekday Shacharit/Amida",
+      "title": "עמידה",
+      "comment": "Condition reviewed: was \"Ten Days\" and node Avinu Malkeinu",
+      "node": "avinu_malkeinu",
+      "service": "shacharit",
+      "he": {
+        "version": "Shaliehsaboo Edition",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Amida of Shah'rit / Morning Prayer of Regular Weekday", "text": "<big><b>עמידה לשחרית של יום חול</b></big>"},
+          {"ref": "2", "kind": "prayer", "node": "amidah.opening", "text": "<b>אֲ֭דֹנָי</b> שְׂפָתַ֣י תִּפְתָּ֑ח וּ֝פִ֗י יַגִּ֥יד תְּהִלָּתֶֽךָ׃"},
+          {"ref": "3", "parts": [
+            {"kind": "prayer", "node": "amidah.avot", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " אֱלֹהֵֽינוּ וֵֽאלֹהֵי אֲבוֹתֵֽינוּ,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " אֱלֹהֵי אַבְרָהָם,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " אֱלֹהֵי יִצְחָק,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " וֵֽאלֹהֵי יַעֲקֹב. הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " אֵל עֶלְיוֹן,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " גּוֹמֵל חֲסָדִים טוֹבִים,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " קוֹנֵה הַכֹּל,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " וְזוֹכֵר חַסְדֵּי אָבוֹת,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַֽעַן שְׁמוֹ בְּאַֽהֲבָה: "},
+            {"kind": "instruction", "node": "amidah.avot", "en": "During the Ten Days of Repentance:", "gloss": "Said only in the silent Amidah", "text": "<small><small>בעשרת ימי תשובה אומרים:</small>"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " זָכְרֵנוּ לְחַיִּים,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " מֶלֶךְ חָפֵץ בַּחַיִּים,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " כָּתְבֵנוּ בְּסֵפֶר חַיִּים,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " לְמַעַנָךְ אֱלֹהִים חַיִּים.</small> מֶֽלֶךְ עוֹזֵר וּמוֹשִֽׁיעַ וּמָגֵן: בָּרוּךְ אַתָּה יַהַוַהַ,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " מָגֵן אַבְרָהָם:"}
+          ]},
+          {"ref": "4", "kind": "prayer", "node": "amidah.gevurot", "text": "<b>אַתָּה</b> גִבּוֹר לְעוֹלָם אֲדֹנָי, מְחַיֶּה מֵתִים אַתָּה, רַב לְהוֹשִֽׁיעַ."},
+          {"ref": "5", "parts": [
+            {"kind": "instruction", "en": "In summer:", "gloss": "Diaspora custom: omit in summer", "text": "<small>בקיץ:</small>"},
+            {"kind": "prayer", "when": "!mashivHaruach", "alt": "geshem", "text": " מוֹרִיד הַטָּל. "},
+            {"kind": "instruction", "en": "In winter:", "gloss": "Diaspora custom: omit in winter", "text": "<small>בחורף:</small>"},
+            {"kind": "prayer", "when": "mashivHaruach", "alt": "geshem", "text": " מַשִּׁיב הָרֽוּחַ וּמוֹרִיד הַגֶּֽשֶׁם. "}
+          ]},
+          {"ref": "6", "parts": [
+            {"kind": "prayer", "node": "amidah.gevurot", "text": "מְכַלְכֵּל חַיִּים בְּחֶֽסֶד,"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " מְחַיֵּה מֵתִים בְּרַֽחֲמִים רַבִּים,"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " סוֹמֵךְ נֽוֹפְלִים,"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " וְרוֹפֵא חוֹלִים,"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " וּמַתִּיר אֲסוּרִים,"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " וּמְקַיֵּם אֱמֽוּנָתוֹ לִֽישֵׁנֵי עָפָר. מִי כָמֽוֹךָ בַּֽעַל גְּבוּרוֹת,"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " וּמִי דֽוֹמֶה לָךְ,"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " מֶֽלֶךְ מֵמִית וּמְחַיֶּה וּמַצְמִֽיחַ יְשׁוּעָה. "},
+            {"kind": "instruction", "node": "amidah.gevurot", "en": "During the Ten Days of Repentance:", "gloss": "Said only in the silent Amidah", "text": "<small><small>בעשרת ימי תשובה אומרים:</small>"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " מִי כָמוֹךָ אָב הָרַחֲמָן,"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " זוֹכֵר יְצוּרָיו בְּרַחֲמִים לְחַיִּים.</small> וְנֶֽאֱמָן אַתָּה לְהַֽחֲיוֹת מֵתִים: בָּרוּךְ אַתָּה יֵהֵוֵהֵ,"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " מְחַיֵּה הַמֵּתִים:"}
+          ]},
+          {"ref": "7", "kind": "instruction", "en": "Kedushah", "gloss": "Said only in the chazzan's repetition", "text": "<small>קדושה</small>"},
+          {"ref": "8", "kind": "instruction", "en": "We say in the chazzan's repetition", "text": "<small>בחזרת הש\"ץ אומרים</small>"},
+          {"ref": "9", "kind": "prayer", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "gloss": "Said only in the chazzan's repetition", "text": "<small><b>נַקְדִּישָׁךְ וְנַעֲרִיצָךְ</b>, כְּנֹֽעַם שִֽׂיחַ סוֹד שַׂרְפֵי קֹֽדֶשׁ, הַמְשַׁלְּשִׁים לְךָ קְדֻשָּׁה, וְכֵן כָּתוּב עַל יַד נְבִיאָךְ: וְקָרָ֨א זֶ֤ה אֶל־זֶה֙ וְאָמַ֔ר <b>קָד֧וֹשׁ ׀ קָד֛וֹשׁ קָד֖וֹשׁ יְהֹוָ֣ה צְבָא֑וֹת מְלֹ֥א כָל־הָאָ֖רֶץ כְּבוֹדֽוֹ׃</b> לְעֻמָּתָם מְשַׁבְּחִים וְאוֹמְרִים: <b>בָּר֥וּךְ כְּבוֹד־יְהֹוָ֖ה מִמְּקוֹמֽוֹ׃</b> וּבְדִבְרֵי קָדְשָׁךְ כָּתוּב לֵאמֹר: <b>יִמְלֹ֤ךְ יְהֹוָ֨ה ׀ לְעוֹלָ֗ם אֱלֹהַ֣יִךְ צִ֭יּוֹן לְדֹ֥ר וָדֹ֗ר הַֽלְלוּיָֽהּ:</b> </small>"},
+          {"ref": "10", "parts": [
+            {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": "<b>אַתָּה</b> קָדוֹשׁ וְשִׁמְךָ קָדוֹשׁ,"},
+            {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " וּקְדוֹשִׁים בְּכָל־יוֹם יְהַֽלְלֽוּךָ סֶּֽלָה: בָּרוּךְ אַתָּה יֹהֵוָהֵ,"},
+            {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " הָאֵל הַקָּדוֹשׁ: "},
+            {"kind": "instruction", "node": "amidah.kedushat_hashem", "en": "During the Ten Days of Repentance:", "gloss": "Said only in the silent Amidah", "text": "<small><small>בעשרת ימי תשובה אומרים:</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.kedushat_hashem", "text": " הַמֶּלֶךְ הַקָּדוֹשׁ:</small>"}
+          ]},
+          {"ref": "11", "kind": "prayer", "node": "amidah.daat", "text": "<b>אַתָּה</b> חוֹנֵן לְאָדָם דַּֽעַת וּמְלַמֵּד לֶאֱנוֹשׁ בִּינָה. וְחָנֵּֽנוּ מֵאִתְּךָ חָכְמָה בִּינָה וָדָֽעַת: בָּרוּךְ אַתָּה יַהַוַהַ, חוֹנֵן הַדָּֽעַת:"},
+          {"ref": "12", "kind": "prayer", "node": "amidah.teshuva", "text": "<b>הֲשִׁיבֵֽנוּ</b> אָבִֽינוּ לְתֽוֹרָתֶֽךָ, וְקָֽרְבֵֽנוּ מַלְכֵּֽנוּ לַֽעֲבֽוֹדָתֶֽךָ, וְהַֽחֲזִירֵֽנוּ בִּתְשׁוּבָה שְׁלֵמָה לְפָנֶֽיךָ: בָּרוּךְ אַתָּה יֵהֵוֵהֵ, הָרוֹצֶה בִּתְשׁוּבָה:"},
+          {"ref": "13", "kind": "prayer", "node": "amidah.selicha", "text": "<b>סְלַח</b> לָֽנוּ אָבִֽינוּ כִּי חָטָֽאנוּ, מְחוֹל לָֽנוּ מַלְכֵּֽנוּ כִּי פָשָֽׁעְנוּ, כִּי אֵל טוֹב וְסַלָּח אָֽתָּה: בָּרוּךְ אַתָּה יֶהֶוֶהֶ, חַנּוּן הַמַּרְבֶּה לִסְלֹחַ:"},
+          {"ref": "14", "kind": "prayer", "node": "amidah.geula", "text": "<b>רְאֵה</b> נָא בְעָנְיֵֽנוּ, וְרִיבָֽה רִיבֵֽנוּ, וּמַהֵר לְגָאֳלֵֽנוּ גְאוּלָּה שְׁלֵמָה לְמַֽעַן שְׁמֶֽךָ, כִּי אֵל גּוֹאֵל חָזָק אָֽתָּה: בָּרוּךְ אַתָּה יְהְוְהְ, גּוֹאֵל יִשְׂרָאֵל:"},
+          {"ref": "15", "kind": "instruction", "en": "On a public fast day, the Chazzan says in the repetition:", "gloss": "Said only in the chazzan's repetition on a public fast day", "text": "<small>בתענית ציבור השליח ציבור אומר בחזרה</small>"},
+          {"ref": "16", "kind": "prayer", "node": "amidah.anenu", "amidah": "repetition", "minyan": true, "gloss": "Said only in the chazzan's repetition on a public fast day", "text": "<small><b>עֲנֵֽנוּ</b> אָבִינוּ עֲנֵֽנוּ בְּיוֹם צוֹם הַתַּֽעֲנִית הַזֶּה, כִּי בְצָרָה גְדוֹלָה אֲנָֽחְנוּ. אַל־תֵּֽפֶן לְרִשְׁעֵֽנוּ, וְאַל־תִּתְעַלָּם מַלְכֵּֽנוּ מִבַּקָּשָׁתֵֽנוּ. הֱיֵה נָא קָרוֹב לְשַׁוְעָתֵֽנוּ, טֶֽרֶם נִקְרָא אֵלֶֽיךָ אַתָּה תַעֲנֶה, נְדַבֵּר וְאַתָּה תִשְׁמַע, כַּדָּבָר שֶׁנֶּאֱמַר: וְהָיָ֥ה טֶֽרֶם־יִקְרָ֖אוּ וַאֲנִ֣י אֶעֱנֶ֑ה ע֛וֹד הֵ֥ם מְדַבְּרִ֖ים וַאֲנִ֥י אֶשְׁמָֽע: כִּי אַתָּה יְהֹוָה פּוֹדֶה וּמַצִּיל, וְעוֹנֶה וּמְרַחֵם בְּכָל־עֵת צָרָה וְצוּקָה:</small>"},
+          {"ref": "17", "kind": "prayer", "node": "amidah.shomea_tefilla", "text": "<small>בָּרוּךְ אַתָּה יְהֹוָה הָעוֹנֶה לְעַמּוֹ יִשְׂרָאֵל בְּעֵת צָרָה:</small>"},
+          {"ref": "18", "kind": "prayer", "node": "amidah.refua", "text": "<b>רְפָאֵֽנוּ</b> יְהֹוָה וְנֵֽרָפֵא, הֽוֹשִׁיעֵֽנוּ וְנִוָּשֵֽׁעָה, כִּי תְהִלָּתֵֽנוּ אָֽתָּה, וְהַֽעֲלֵה אֲרוּכָה וּמַרְפֵּא לְכָל־תַּֽחֲלוּאֵֽינוּ וּלְכָל־מַכְאוֹבֵֽינוּ וּלְכָל־מַכּוֹתֵֽינוּ. כִּי אֵל רוֹפֵא רַחְמָן וְנֶֽאֱמָן אָֽתָּה: בָּרוּךְ אַתָּה יֹהֹוֹהֹ, רוֹפֵא חוֹלֵי עַמּוֹ יִשְׂרָאֵל:"},
+          {"ref": "19", "kind": "instruction", "en": "In summer:", "gloss": "Said when not saying Tal Umatar", "text": "<small>בקיץ:</small>"},
+          {"ref": "20", "kind": "prayer", "node": "amidah.shanim", "gloss": "Summer version of the blessing for the years", "text": "<b>בָּֽרְכֵֽנוּ</b> יְהֹוָה אֱלֹהֵֽינוּ בְּכָל־מַֽעֲשֵׂי יָדֵֽינוּ, וּבָרֵךְ שְׁנָתֵֽנוּ בְּטַֽלְלֵי רָצוֹן בְּרָכָה וּנְדָבָה, וּתְהִי אַֽחֲרִיתָהּ חַיִּים וְשָׂבָע וְשָׁלוֹם כַּשָּׁנִים הַטּוֹבוֹת לִבְרָכָה, כִּי אֵל טוֹב וּמֵטִיב אַתָּה וּמְבָרֵךְ הַשָּׁנִים: בָּרוּךְ אַתָּה יִהִוִהִ, מְבָרֵךְ הַשָּׁנִים:"},
+          {"ref": "21", "kind": "instruction", "en": "In winter:", "gloss": "Said when saying Tal Umatar", "text": "<small>בחורף:</small> "},
+          {"ref": "22", "kind": "prayer", "node": "amidah.shanim", "gloss": "Winter version of the blessing for the years", "text": "<b>בָּרֵךְ עָלֵֽינוּ</b> יְהֹוָה אֱלֹהֵֽינוּ אֶת־הַשָּׁנָה הַזֹּאת וְאֶת־כָּל־מִינֵי תְּבוּאָתָהּ לְטוֹבָה, וְתֵן טַל וּמָטָר לִבְרָכָה עַל כָּל־פְּנֵי הָאֲדָמָה, וְרַוֵּה פְּנֵי תֵבֵל וְשַׂבַּע אֶת־הָעוֹלָם כֻּלּוֹ מִטּוּבָךְ, וּמַלֵּא יָדֵֽינוּ מִבִּרְכוֹתֶֽיךָ וּמֵעֹֽשֶׁר מַתְּנוֹת יָדֶֽיךָ. שָׁמְרָה וְהַצִּֽילָה שָׁנָה זוֹ מִכָּל־דָּבָר רָע, וּמִכָּל־מִינֵי מַשְׁחִית וּמִכָּל־מִינֵי פֻרְעָנוּת, וַעֲשֵׂה לָהּ תִּקְוָה טוֹבָה וְאַחֲרִית שָׁלוֹם. חוּס וְרַחֵם עָלֶֽיהָ וְעַל כָּל־תְּבוּאָתָהּ וּפֵירוֹתֶיהָ, וּבָֽרְכָֽהּ בְּגִשְׁמֵי רָצוֹן בְּרָכָה וּנְדָבָה, וּתְהִי אַחֲרִיתָהּ חַיִּים וְשָׂבָע וְשָׁלוֹם. כַּשָּׁנִים הַטּוֹבוֹת לִבְרָכָה, כִּי אֵל טוֹב וּמֵטִיב אַתָּה וּמְבָרֵךְ הַשָּׁנִים. בָּרוּךְ אַתָּה יִהִוִהִ, מְבָרֵךְ הַשָּׁנִים:"},
+          {"ref": "23", "kind": "prayer", "node": "amidah.kibbutz_galuyot", "text": "<b>תְּקַע</b> בְּשׁוֹפָר גָּדוֹל לְחֵֽרוּתֵֽנוּ, וְשָׂא נֵס לְקַבֵּץ גָּֽלֻיּוֹתֵֽינוּ, וְקַבְּצֵֽנוּ יַֽחַד מֵאַרְבַּע כַּנְפוֹת הָאָֽרֶץ לְאַרְצֵֽנוּ: בָּרוּךְ אַתָּה יֻהֻוֻהֻ, מְקַבֵּץ נִדְחֵי עַמּוֹ יִשְׂרָאֵל:"},
+          {"ref": "24", "parts": [
+            {"kind": "prayer", "node": "amidah.din", "text": "<b>הָשִֽׁיבָה</b> שֽׁוֹפְטֵֽינוּ כְּבָרִֽאשׁוֹנָה,"},
+            {"kind": "prayer", "node": "amidah.din", "text": " וְיֽוֹעֲצֵֽינוּ כְּבַתְּחִלָּה,"},
+            {"kind": "prayer", "node": "amidah.din", "text": " וְהָסֵר מִמֶּֽנּוּ יָגוֹן וַֽאֲנָחָה. וּמְלוֹךְ עָלֵֽינוּ מְהֵרָה אַתָּה יְהֹוָה לְבַדְּךָ,"},
+            {"kind": "prayer", "node": "amidah.din", "text": " בְּחֶֽסֶד וּבְרַֽחֲמִים,"},
+            {"kind": "prayer", "node": "amidah.din", "text": " בְּצֶֽדֶק וּבְמִשְׁפָּט: בָּרוּךְ אַתָּה יוּהוּווּהוּ,"},
+            {"kind": "prayer", "node": "amidah.din", "text": " מֶֽלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט: "},
+            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Alternative ending for the blessing", "text": "<small><small>בעשרת ימי תשובה אומרים:</small>"},
+            {"kind": "prayer", "node": "amidah.din", "gloss": "Alternative ending for the blessing", "text": " הַמֶּלֶךְ הַמִּשְׁפָּט:</small> "}
+          ]},
+          {"ref": "25", "kind": "prayer", "node": "amidah.minim", "text": "<b>לַמִּינִים</b> וְלַמַּלְשִׁינִים אַל־תְּהִי תִקְוָה, וְכָל־הַזֵּדִים כְּרֶֽגַע יֹאבֵֽדוּ, וְכָל־אֽוֹיְבֶֽיךָ וְכָל־שֽׂוֹנְאֶֽיךָ מְהֵרָה יִכָּרֵֽתוּ, וּמַלְכוּת הָֽרִשְׁעָה מְהֵרָה תְעַקֵּר וּתְשַׁבֵּר וּתְכַלֵּם וְתַכְנִיעֵם בִּמְהֵרָה בְיָמֵֽינוּ: בָּרוּךְ אַתָּה יָהָוָהָ, שׁוֹבֵר אוֹיְבִים וּמַכְנִֽיעַ מִינִים:"},
+          {"ref": "26", "kind": "prayer", "node": "amidah.tzaddikim", "text": "<b>עַל</b> הַצַּדִּיקִים וְעַל הַֽחֲסִידִים, וְעַל שְׁאֵרִית עַמְּךָ בֵּית יִשְׂרָאֵל, וְעַל פְּלֵיטַת בֵּית סֽוֹפְרֵיהֶם, וְעַל גֵּרֵי הַצֶּֽדֶק וְעָלֵֽינוּ, יֶֽהֱמוּ נָא רַֽחֲמֶֽיךָ, יְהֹוָה אֱלֹהֵֽינוּ, וְתֵן שָׂכָר טוֹב לְכָל־הַבּֽוֹטְחִים בְּשִׁמְךָ בֶּֽאֱמֶת, וְשִׂים חֶלְקֵֽנוּ עִמָּהֶם. וּלְעוֹלָם לֹא נֵבוֹשׁ כִּי בְךָ בָטָֽחְנוּ, וְעַל חַסְדְּךָ הַגָּדוֹל בֶּֽאֱמֶת נִשְׁעָֽנְנוּ: בָּרוּךְ אַתָּה יוּהוּווּהוּ, מִשְׁעָן וּמִבְטָח לַצַּדִּיקִים:"},
+          {"ref": "27", "kind": "prayer", "node": "amidah.yerushalayim", "text": "<b>תִּשְׁכּוֹן</b> בְּתוֹךְ יְרוּשָׁלַֽיִם עִֽירְךָ כַּאֲשֶׁר דִּבַּֽרְתָּ, וְכִסֵּא דָוִד עַבְדְּךָ מְהֵרָה בְּתוֹכָהּ תָּכִין, וּבְנֵה אוֹתָהּ בִּנְיַן עוֹלָם בִּמְהֵרָה בְיָמֵֽינוּ: בָּרוּךְ אַתָּה יֻהֻוֻהֻ, בּוֹנֵה יְרוּשָׁלָיִם: "},
+          {"ref": "28", "kind": "prayer", "node": "amidah.david", "text": "<b>אֶת</b> צֶֽמַח דָּוִד עַבְדְּךָ מְהֵרָה תַצְמִֽיחַ, וְקַרְנוֹ תָּרוּם בִּישֽׁוּעָתֶֽךָ, כִּי לִֽישׁוּעָֽתְךָ קִוִּֽינוּ כָּל־הַיּוֹם: בָּרוּךְ אַתָּה יִהִוִהִ, מַצְמִֽיחַ קֶֽרֶן יְשׁוּעָה:"},
+          {"ref": "29", "kind": "prayer", "node": "amidah.shomea_tefilla", "text": "<b>שְׁמַע</b> קוֹלֵֽנוּ, יְהֹוָה אֱלֹהֵֽינוּ, אָב הָרַֽחֲמָן, רַחֵם עָלֵֽינוּ, וְקַבֵּל בְּרַֽחֲמִים וּבְרָצוֹן אֶת־תְּפִלָּתֵֽנוּ, כִּי אֵל שׁוֹמֵֽעַ תְּפִלּוֹת וְתַֽחֲנוּנִים אָֽתָּה. וּמִלְּפָנֶֽיךָ מַלְכֵּֽנוּ, רֵיקָם אַל־תְּשִׁיבֵֽנוּ, חָנֵּֽנוּ וַֽעֲנֵֽנוּ וּשְׁמַע תְּפִלָּתֵֽנוּ. "},
+          {"ref": "30", "kind": "instruction", "en": "On a public fast day, the individual says Aneinu here; the chazzan who forgot to say it between Geulah and Refua says it here without the closing blessing.", "gloss": "Rule for forgetting Aneinu", "text": "<small><small>בתענית אומר היחיד עננו, וכן שליח ציבור ששכח לומר בין גואל לרופא יאמר כאן עננו בלי חתימה<br><b>עֲנֵנוּ</b> אָבִינוּ עֲנֵנוּ בְּיוֹם צוֹם הַתַּֽעֲנִית הַזֶּה כִּי בְצָרָה גְדוֹלָה אֲנָֽחְנוּ. אַל־תֵּֽפֶן לְרִשְׁעֵֽנוּ, וְאַל־תִּתְעַלָּם מַלְכֵּֽנוּ מִבַּקָּשָׁתֵֽנוּ. הֱיֵה נָא קָרוֹב לְשַׁוְעָתֵֽנוּ. טֶֽרֶם נִקְרָא אֵלֶֽיךָ אַתָּה תַֽעֲנֶה, נְדַבֵּר וְאַתָּה תִשְׁמַע, כַּדָּבָר שֶׁנֶּאֱמַר: וְהָיָ֥ה טֶֽרֶם־יִקְרָ֖אוּ וַאֲנִ֣י אֶעֱנֶ֑ה ע֛וֹד הֵ֥ם מְדַבְּרִ֖ים וַאֲנִ֥י אֶשְׁמָֽע: כִּי אַתָּה יְהֹוָה פּוֹדֶה וּמַצִּיל וְעוֹנֶה וּמְרַחֵם בְּכָל־עֵת צָרָה וְצוּקָה.</small></small>"},
+          {"ref": "31", "parts": [
+            {"kind": "instruction", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts (Tammuz, Av, Tevet)", "text": "<small><small>נוסח עננו בג׳ צומות (סנסן ליעיר ג:ט)</small>"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": "<br><b>עֲנֵֽנוּ</b> אָבִֽינוּ עֲנֵֽנוּ בְּיוֹם צוֹם הַתַּֽעֲנִית הַזֶּה כִּי בְצָרָה גְדוֹלָה אֲנָֽחְנוּ,"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": " עַל כָּל־אֲשֶׁר חָטָֽאנוּ עָוִֽינוּ פָּשַֽׁעְנוּ אֲנַֽחְנוּ וַאֲבוֹתֵֽינוּ,"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": " וְעַל יְדֵי זֶה חָֽרְבָֽה עִירֵֽנוּ וְשָׁמֵם מִקְדָּשֵֽׁנוּ,"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": " אוֹי וַאֲבוֹי לָנוּ כִּי עֲוֹנֹתֵֽינוּ הִטּוּ אֵֽלֶּה וּפְשָׁעֵֽינוּ הֶאֱרִיכוּ קִצֵּֽנוּ,"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": " אֵין לָֽנוּ פֶּה לְהָשִׁיב וְלֹא מֵֽצַח לְהָרִים רֹאשׁ,"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": " וּכְמוֹ צַֽעַר בְּנַפְשֵֽׁנוּ עַל חֻרְבַּן בֵּית הַמִּקְדָּשׁ וּבִטּוּל תּוֹרָה וַעֲבוֹדָה זֶה כַּמָּה מֵאוֹת שָׁנִים וְזֶה צַֽעַ״ר הַשָּׁמָֽיִם,"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": " אֲהָהּ עָלֵֽינוּ. לָכֵן עַתָּה שַֽׁבְנוּ אֵלֶֽיךָ בְּבֹֽשֶׁת וְחֶרְפָּה וּכְלִמָּה וּבְדֶֽמַע לֵב נְבַקְשָׁה מֵאֱלֹהֵֽינוּ מְרַחֵם,"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": " אָֽנָּֽא יְהֹוָה,"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": " יְהִי רָצוֹן מִלְּפָנֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ,"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": " שֶׁיְּהֵא מִעוּט חֶלְבֵּֽנוּ וְדָמֵֽינוּ הַמִּתְמָעֵט בְּתַעֲנִיתֵֽנוּ הַיּוֹם כַּחֵֽלֶב מֻנָּח עַל גַּבֵּי הַמִּזְבֵּֽחַ,"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": " שֶׁתְּכַפֵּר בּוֹ כָּל־חַטֹּאתֵֽינוּ עֲוֹנֹתֵֽינוּ וּפְשָׁעֵֽינוּ. הָאֵר פָּנֶֽיךָ עַל מִקְדָּֽשְׁךָֽ הַשָּׁמֵם לְמַֽעַן אֲדֹנָי,"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": " וּבָא לְצִיּוֹן גּוֹאֵל. אַל־תֵּֽפֶן לְרִשְׁעֵֽנוּ,"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": " וְאַל־תִּתְעַלָּם מַלְכֵּֽנוּ מִבַּקָּשָׁתֵֽנוּ. הֱיֵה נָא קָרוֹב לְשַׁוְעָתֵֽנוּ. טֶֽרֶם נִקְרָא אֵלֶֽיךָ אַתָּה תַֽעֲנֶה,"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": " נְדַבֵּר וְאַתָּה תִשְׁמַע,"},
+            {"kind": "prayer", "node": "amidah.anenu", "en": "Answer us, our Father...", "gloss": "Extended Aneinu for the three fasts", "text": " כַּדָּבָר שֶׁנֶּאֱמַר: וְהָיָ֥ה טֶֽרֶם־יִקְרָ֖אוּ וַאֲנִ֣י אֶעֱנֶ֑ה ע֛וֹד הֵ֥ם מְדַבְּרִ֖ים וַאֲנִ֥י אֶשְׁמָֽע: כִּי אַתָּה יְהֹוָה פּוֹדֶה וּמַצִּיל וְעוֹנֶה וּמְרַחֵם בְּכָל־עֵת צָרָה וְצוּקָה.</small>"}
+          ]},
+          {"ref": "32", "kind": "prayer", "node": "amidah.shomea_tefilla", "text": "כִּי אַתָּה שׁוֹמֵעַ תְּפִלַּת כָּל־פֶּה: בָּרוּךְ אַתָּה יֹהְוָה, שׁוֹמֵֽעַ תְּפִלָּה:"},
+          {"ref": "33", "kind": "prayer", "node": "amidah.avoda", "text": "<b>רְצֵה</b> יְהֹוָה אֱלֹהֵֽינוּ בְּעַמְּךָ יִשְׂרָאֵל וְלִתְפִלָּתָם שְׁעֵה, וְהָשֵׁב הָֽעֲבוֹדָה לִדְבִיר בֵּיתֶֽךָ, וְאִשֵּׁי יִשְׂרָאֵל וּתְפִלָּתָם, מְהֵרָה בְּאַֽהֲבָה תְקַבֵּל בְּרָצוֹן, וּתְהִי לְרָצוֹן תָּמִיד עֲבוֹדַת יִשְׂרָאֵל עַמֶּֽךָ: "},
+          {"ref": "34", "kind": "instruction", "en": "On Rosh Chodesh and Chol HaMoed, say:", "gloss": "Ya'aleh VeYavo insertion", "text": "<small>בראש חודש ובחול המועד אומרים:</small>"},
+          {"ref": "35", "kind": "prayer", "node": "amidah.yaaleh_veyavo", "text": "<small>אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ, יַעֲלֶה וְיָבֹא, וְיַגִּֽיעַ וְיֵרָאֶה, וְיֵרָצֶה וְיִשָּׁמַע, וְיִפָּקֵד וְיִזָּכֵר, זִכְרוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ, זִכְרוֹן יְרוּשָׁלַֽיִם עִירָךְ, וְזִכְרוֹן מָשִֽׁיחַ בֶּן־דָּוִד עַבְדָּךְ, וְזִכְרוֹן כָּל־עַמְּךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ, לִפְלֵיטָה, לְטוֹבָה, לְחֵן, לְחֶֽסֶד וּלְרַחֲמִים, לְחַיִּים טוֹבִים וּלְשָׁלוֹם, בְּיוֹם</small> "},
+          {"ref": "36", "parts": [
+            {"kind": "instruction", "en": "On Rosh Chodesh:", "gloss": "Specific date for Rosh Chodesh", "text": "<small><small>בראש חדש:</small>"},
+            {"kind": "prayer", "when": "roshChodesh", "en": "On Rosh Chodesh:", "gloss": "Specific date for Rosh Chodesh", "text": " רֹאשׁ חֹֽדֶשׁ הַזֶּה,</small>"}
+          ]},
+          {"ref": "37", "parts": [
+            {"kind": "instruction", "en": "On Chol HaMoed Pesach:", "gloss": "Specific date for Pesach", "text": "<small><small>בחוה\"מ פסח:</small>"},
+            {"kind": "prayer", "when": "cholHamoedPesach", "en": "On Chol HaMoed Pesach:", "gloss": "Specific date for Pesach", "text": " חַג הַמַּצּוֹת הַזֶּה,"},
+            {"kind": "prayer", "when": "cholHamoedPesach", "en": "On Chol HaMoed Pesach:", "gloss": "Specific date for Pesach", "text": " בְּיוֹם מִקְרָא קֹֽדֶשׁ הַזֶּה,</small>"}
+          ]},
+          {"ref": "38", "parts": [
+            {"kind": "instruction", "en": "On Chol HaMoed Sukkot:", "gloss": "Specific date for Sukkot", "text": "<small><small>בחוה\"מ סוכות:</small>"},
+            {"kind": "prayer", "when": "cholHamoedSukkot", "en": "On Chol HaMoed Sukkot:", "gloss": "Specific date for Sukkot", "text": " חַג הַסֻּכּוֹת הַזֶּה,"},
+            {"kind": "prayer", "when": "cholHamoedSukkot", "en": "On Chol HaMoed Sukkot:", "gloss": "Specific date for Sukkot", "text": " בְּיוֹם מִקְרָא קֹֽדֶשׁ הַזֶּה,</small>"}
+          ]},
+          {"ref": "39", "kind": "prayer", "node": "amidah.yaaleh_veyavo", "text": "<small>לְרַחֵם בּוֹ עָלֵֽינוּ וּלְהוֹשִׁיעֵֽנוּ. זָכְרֵֽנוּ יְהֹוָה אֱלֹהֵֽינוּ בּוֹ לְטוֹבָה, וּפָקְדֵֽנוּ בוֹ לִבְרָכָה, וְהוֹשִׁיעֵֽנוּ בוֹ לְחַיִּים טוֹבִים, בִּדְבַר יְשׁוּעָה וְרַחֲמִים. חוּס וְחָנֵּֽנוּ, וַחֲמוֹל וְרַחֵם עָלֵֽינוּ, וְהוֹשִׁיעֵֽנוּ כִּי אֵלֶֽיךָ עֵינֵֽינוּ, כִּי אֵל מֶֽלֶךְ חַנּוּן וְרַחוּם אָֽתָּה:</small> "},
+          {"ref": "40", "kind": "prayer", "node": "amidah.yaaleh_veyavo", "text": "<b>וְאַתָּה</b> בְּרַֽחֲמֶֽיךָ הָרַבִּים, תַּחְפֹּץ בָּֽנוּ וְתִרְצֵֽנוּ, וְתֶֽחֱזֶֽינָה עֵינֵֽינוּ בְּשֽׁוּבְךָ לְצִיּוֹן בְּרַֽחֲמִים: בָּרוּךְ אַתָּה יִהִוִהִ, הַמַּֽחֲזִיר שְׁכִֽינָתוֹ לְצִיּוֹן:"},
+          {"ref": "41", "kind": "instruction", "en": "In the blessing of 'Modim', bow at 'Modim' and rise at the Name.", "gloss": "Gesture instruction for Modim", "text": "<small>בברכת \"מודים\" יכרע ב\"מודים\" ויזקוף בשם <small>(בא\"ח בשלח הכ\"א)</small></small>"},
+          {"ref": "42", "kind": "prayer", "node": "amidah.modim", "gestures": ["bow", "rise_on_toes"], "text": "<b>מוֹדִים</b> אֲנַֽחְנוּ לָךְ, שֶׁאַתָּה הוּא יְהֹוָה אֱלֹהֵֽינוּ וֵֽאלֹהֵי אֲבוֹתֵֽינוּ לְעוֹלָם וָעֶד, צוּרֵֽנוּ צוּר חַיֵּֽינוּ וּמָגֵן יִשְׁעֵֽנוּ אַתָּה הוּא, לְדוֹר וָדוֹר נוֹדֶה לְךָ וּנְסַפֵּר תְּהִלָּתֶֽךָ, עַל חַיֵּֽינוּ הַמְּסוּרִים בְּיָדֶֽךָ, וְעַל נִשְׁמוֹתֵֽינוּ הַפְּקוּדוֹת לָךְ, וְעַל נִסֶּֽיךָ שֶׁבְּכָל־יוֹם עִמָּֽנוּ, וְעַל נִפְלְאוֹתֶֽיךָ וְטֽוֹבוֹתֶֽיךָ שֶׁבְּכָל־עֵת, עֶֽרֶב וָבֹֽקֶר וְצָֽהֳרָֽיִם. הַטּוֹב, כִּי לֹא כָלוּ רַחֲמֶֽיךָ, הַמְּרַחֵם, כִּי לֹא תַֽמּוּ חֲסָדֶֽיךָ, כִּי מֵֽעוֹלָם קִוִּֽינוּ לָךְ: "},
+          {"ref": "43", "kind": "instruction", "en": "Modim d'Rabbanan", "gloss": "Congregational response in repetition", "text": "<small><b>מודים דרבנן</b></small>"},
+          {"ref": "44", "kind": "instruction", "en": "In the Chazzan's repetition, when the Chazzan says 'Modim', the congregation says:", "gloss": "Instruction for Modim d'Rabbanan", "text": "<small>בחזרת הש\"ץ כשהחזן אומר מודים, הקהל אומרים:</small>"},
+          {"ref": "45", "kind": "prayer", "node": "amidah.modim_derabbanan", "role": "congregation", "amidah": "repetition", "minyan": true, "text": "<small>מוֹדִים אֲנַחְנוּ לָךְ, שֶׁאַתָּה הוּא יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, אֱלֹהֵי כָל בָּשָׁר, יוֹצְרֵנוּ יוֹצֵר בְּרֵאשִׁית. בְּרָכוֹת וְהוֹדָאוֹת לְשִׁמְךָ הַגָּדוֹל וְהַקָּדוֹשׁ, עַל שֶׁהֶחֱיִיתָנוּ וְקִיַּמְתָּנוּ. כֵּן תְּחַיֵּנוּ וּתְחָנֵּנוּ וְתֶאֱסוֹף גָּלֻיּוֹתֵינוּ לְחַצְרוֹת קָדְשֶׁךָ, לִשְׁמֹר חֻקֶּיךָ וְלַעֲשׂוֹת רְצוֹנְךָ וּלְעָבְדְךָ בְלֵבָב שָׁלֵם, עַל שֶׁאֲנַחְנוּ מוֹדִים לָךְ, בָּרוּךְ אֵל הַהוֹדָאוֹת.</small>"},
+          {"ref": "46", "kind": "instruction", "en": "On Chanukah and Purim, say:", "gloss": "Al HaNissim insertion", "text": "<small>בחנוכה ופורים אומרים:</small>"},
+          {"ref": "47", "kind": "prayer", "node": "amidah.al_hanissim", "role": "congregation", "amidah": "repetition", "minyan": true, "text": "<small><b>עַל הַנִּסִּים</b> וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַנִּפְלָאוֹת וְעַל הַנֶּחָמוֹת שֶׁעָשִֽׂיתָ לַאֲבוֹתֵֽינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה:</small>"},
+          {"ref": "48", "parts": [
+            {"kind": "instruction", "en": "On Chanukah:", "gloss": "Specific text for Chanukah", "text": "<small><small>בחנוכה אומרים:</small>"},
+            {"kind": "prayer", "when": "chanukah", "node": "amidah.al_hanissim", "role": "congregation", "amidah": "repetition", "minyan": true, "en": "On Chanukah:", "gloss": "Specific text for Chanukah", "text": " <b>בִּימֵי מַתִּתְיָה</b> בֶן־יוֹחָנָן כֹּהֵן גָּדוֹל. חַשְׁמוֹנָאִי וּבָנָיו כְּשֶׁעָֽמְדָֽה מַלְכוּת יָוָן הָרְשָׁעָה עַל עַמְּךָ יִשְׂרָאֵל. לְשַׁכְּחָם תּוֹרָתָךְ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנָךְ. וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים עָמַֽדְתָּ לָהֶם בְּעֵת צָרָתָם. רַֽבְתָּ אֶת רִיבָם. דַּֽנְתָּ אֶת דִּינָם. נָקַֽמְתָּ אֶת נִקְמָתָם. מָסַֽרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים. וְרַבִּים בְּיַד מְעַטִּים. וּרְשָׁעִים בְּיַד צַדִּיקִים. וּטְמֵאִים בְּיַד טְהוֹרִים. וְזֵדִים בְּיַד עֽוֹסְקֵֽי תוֹרָתֶֽךָ. לְךָ עָשִֽׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמָךְ. וּלְעַמְּךָ יִשְׂרָאֵל עָשִֽׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה. וְאַחַר כָּךְ בָּֽאוּ בָנֶֽיךָ לִדְבִיר בֵּיתֶֽךָ. וּפִנּוּ אֶת־הֵיכָלֶֽךָ. וְטִהֲרוּ אֶת־מִקְדָּשֶֽׁךָ. וְהִדְלִֽיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶֽׁךָ. וְקָֽבְעֽוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵֽלּוּ בְּהַלֵּל וּבְהוֹדָאָה. וְעָשִֽׂיתָ עִמָּהֶם נִסִּים וְנִפְלָאוֹת וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל סֶֽלָה:</small>"}
+          ]},
+          {"ref": "49", "parts": [
+            {"kind": "instruction", "en": "On Purim:", "gloss": "Said only on Purim", "text": "<small><small>בפורים אומרים</small>"},
+            {"kind": "prayer", "when": "purim", "text": " <b>בִּימֵי מָרְדְּכַי</b> וְאֶסְתֵּר בְּשׁוּשַׁן הַבִּירָה. כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע. בִּקֵּשׁ לְהַשְׁמִיד לַהֲרֹג וּלְאַבֵּד אֶת־כָּל־הַיְּהוּדִים מִנַּֽעַר וְעַד זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד. בִּשְׁלֹשָׁה עָשָׂר לְחֹֽדֶשׁ שְׁנֵים עָשָׂר. הוּא חֹֽדֶשׁ אֲדָר. וּשְׁלָלָם לָבוֹז. וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים הֵפַֽרְתָּ אֶת־עֲצָתוֹ וְקִלְקַֽלְתָּ אֶת־מַחֲשַׁבְתּוֹ. וַהֲשֵׁבֽוֹתָ לּוֹ גְּמוּלוֹ בְרֹאשׁוֹ. וְתָלוּ אוֹתוֹ וְאֶת־בָּנָיו עַל הָעֵץ. וְעָשִֽׂיתָ עִמָּהֶם נֵס וָפֶֽלֶא וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל סֶֽלָה:</small>"}
+          ]},
+          {"ref": "50", "parts": [
+            {"kind": "prayer", "text": "<b>וְעַל</b> כֻּלָּם יִתְבָּרַךְ,"},
+            {"kind": "prayer", "text": " וְיִתְרוֹמָם,"},
+            {"kind": "prayer", "text": " וְיִתְנַשֵּׂא,"},
+            {"kind": "prayer", "text": " תָּמִיד,"},
+            {"kind": "prayer", "text": " שִׁמְךָ מַלְכֵּֽנוּ,"},
+            {"kind": "prayer", "text": " לְעוֹלָם וָעֶד. וְכָל־הַחַיִּים יוֹדֽוּךָ סֶּֽלָה: "},
+            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small><small>בעשרת ימי תשובה אומרים:</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " וּכְתֹב לְחַיִּים טוֹבִים כָּל בְּנֵי בְרִיתֶךָ.</small> וִֽיהַֽלְלוּ וִֽיבָֽרְכוּ אֶת־שִׁמְךָ הַגָּדוֹל בֶּֽאֱמֶת לְעוֹלָם כִּי טוֹב,"},
+            {"kind": "prayer", "text": " הָאֵל יְשֽׁוּעָתֵֽנוּ וְעֶזְרָתֵֽנוּ סֶֽלָה,"},
+            {"kind": "prayer", "text": " הָאֵל הַטּוֹב:  בָּרוּךְ אַתָּה יֻהֻוֻהֻ,"},
+            {"kind": "prayer", "text": " הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת:"}
+          ]},
+          {"ref": "51", "kind": "heading", "en": "Priestly Blessing", "gloss": "Heading for the Birkat Kohanim section", "text": "ברכת כהנים "},
+          {"ref": "52", "parts": [
+            {"kind": "instruction", "en": "When the kohen lifts his feet to raise his hands, say (BA\"CH Tetzaveh 12):", "text": "<small><small>כשעוקר הכהן רגליו לישא כפיו יאמר (בא\"ח תצוה י\"ב)</small>"},
+            {"kind": "prayer", "role": "individual", "voice": "silent", "text": "</small><br><small>לְשֵׁם יִחוּד קֻדְשָׁא בְּרִיךְ הוּא וּשְׁכִינְתֵּיהּ. בִּדְחִֽילוּ וּרְחִֽימוּ. וּרְחִֽימוּ וּדְחִֽילוּ. לְיַחֲדָא שֵׁם יוֹ\"ד קֵ\"א בְּוָא\"ו קֵ\"א בְּיִחוּדָא שְׁלִים. בְּשֵׁם כָּל־יִשְׂרָאֵל הִנֵּה אָנֹכִי מוּכָן וּמְזוּמָן לְקַיֵּם מִצְוַת עֲשֵׂה לְבָרֵךְ אֶת יִשְׂרָאֵל בִּרְכַּת כֹּהַנִים בִּנְשִׂיאוּת כַּפַּיִם,"},
+            {"kind": "prayer", "role": "individual", "voice": "silent", "text": " לַעֲשׂוֹת נַֽחַת רֽוּחַ לְיֽוֹצְרֵֽנוּ וּלְהַמְשִׁיךְ שֶׁפַע וּבְרָכָה לְכָל־הָעוֹלָמוֹת וְלַעֲשׂוֹת רְצוֹן בּֽוֹרְאֵֽנוּ. וִיהִ֤י ׀ נֹ֤עַם אֲדֹנָ֥י אֱלֹהֵ֗ינוּ עָ֫לֵ֥ינוּ וּמַעֲשֵׂ֣ה יָ֭דֵינוּ כּוֹנְנָ֥ה עָלֵ֑ינוּ וּֽמַעֲשֵׂ֥ה יָ֝דֵ֗ינוּ כּוֹנְנֵֽהוּ: </small>"}
+          ]},
+          {"ref": "53", "parts": [
+            {"kind": "instruction", "en": "When the kohanim stand on the platform after answering 'Modim d'Rabbanan', say:", "text": "<small><small>וכשעומדים הכהנים על הדוכן לאחר שענו \"מודים דרבנן\", אומרים</small>"},
+            {"kind": "prayer", "role": "individual", "voice": "silent", "text": "</small><br><small>יְהִי רָצוֹן מִלְּפָנֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ שֶׁתִּהְיֶה בְּרָכָה זוֹ שֶׁצִּּוִיתָֽנוּ לְבָרֵךְ אֶת־עַמְּךָ יִשְׂרָאֵל בְּרָכָה שְׁלֵמָה וְלֹא יִהְיֶה בָהּ מִכְשׁוֹל וְעָוֹן מֵעַתָּה וְעַד עוֹלָם:</small>"}
+          ]},
+          {"ref": "54", "parts": [
+            {"kind": "instruction", "en": "In the chazzan's repetition, say the Priestly Blessing. If there is more than one kohen, the chazzan calls them: 'Kohanim: The kohanim bless:'", "text": "<small>בחזרת הש\"ץ אומרים ברכת כהנים, אם יש יותר מכהן אחד קורא להם החזן: כֹּהֲנִים: הכהנים מברכים:</small>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "<br><small>בָּרוּךְ אַתָּה יְהֹוָה,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " אֱלֹהֵֽינוּ מֶֽלֶךְ הָֽעוֹלָם,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " אֲשֶׁר קִדְּשָֽׁנוּ בִּקְדֻשָּׁתוֹ שֶׁל־אַֽהֲרֹן,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " וְצִוָּֽנוּ לְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בְּאַֽהֲבָה: <small>הקהל עונים</small>"},
+            {"kind": "instruction", "en": "Congregation answers:", "gloss": "Response to the blessing", "text": " אָמֵן:</small>"}
+          ]},
+          {"ref": "55", "kind": "instruction", "en": "And the chazzan and the kohanim say word for word:", "text": "<small>ואומר החזן והכהנים אחריו מילה במילה:</small>"},
+          {"ref": "56", "parts": [
+            {"kind": "prayer", "role": "chazzan_then_congregation", "voice": "aloud", "text": "<small>יְבָרֶכְךָ֥ יְהֹוָ֖ה וְיִשְׁמְרֶֽךָ׃ <small>ועונים</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " אָמֵן:</small>"}
+          ]},
+          {"ref": "57", "parts": [
+            {"kind": "prayer", "role": "chazzan_then_congregation", "voice": "aloud", "text": " <small>יָאֵ֨ר יְהֹוָ֧ה ׀ פָּנָ֛יו אֵלֶ֖יךָ וִֽיחֻנֶּֽךָּ׃ <small>ועונים</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " אָמֵן:</small>"}
+          ]},
+          {"ref": "58", "parts": [
+            {"kind": "prayer", "role": "chazzan_then_congregation", "voice": "aloud", "text": " <small>יִשָּׂ֨א יְהֹוָ֤ה ׀ פָּנָיו֙ אֵלֶ֔יךָ וְיָשֵׂ֥ם לְךָ֖ שָׁלֽוֹם׃ <small>ועונים</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " אָמֵן:</small>"}
+          ]},
+          {"ref": "59", "kind": "instruction", "en": "If there are no kohanim, the chazzan says:", "text": "<small><small>אם אין כהנים אומר החזן:</small></small>"},
+          {"ref": "60", "kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<small><b>אֱלֹהֵינוּ</b> וֵאלֹהֵי אֲבוֹתֵינוּ, בָּרְכֵנוּ בַּבְּרָכָה הַמְשֻׁלֶּשֶת בַּתּוֹרָה הַכְּתוּבָה עַל יְדֵי מֹשֶׁה עַבְדֶּֽךָ, הָאֲמוּרָה מִפִּי אַהֲרֹן וּבָנָיו הַכֹּהֲנִים עַם קְדוֹשֶׁיךָ כָּאָמוּר:</small>"},
+          {"ref": "61", "parts": [
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "<small>יְבָרֶכְךָ֥ יְהֹוָ֖ה וְיִשְׁמְרֶֽךָ׃ <small>ועונים</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " כֵּן יְהִי רָצוֹן:</small>"}
+          ]},
+          {"ref": "62", "parts": [
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " <small>יָאֵ֨ר יְהֹוָ֧ה ׀ פָּנָ֛יו אֵלֶ֖יךָ וִֽיחֻנֶּֽךָּ׃ <small>ועונים</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " כֵּן יְהִי רָצוֹן:</small>"}
+          ]},
+          {"ref": "63", "parts": [
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " <small>יִשָּׂ֨א יְהֹוָ֤ה ׀ פָּנָיו֙ אֵלֶ֔יךָ וְיָשֵׂ֥ם לְךָ֖ שָׁלֽוֹם׃ <small>ועונים</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " כֵּן יְהִי רָצוֹן: וְשָׂמ֥וּ אֶת־שְׁמִ֖י עַל־בְּנֵ֣י יִשְׂרָאֵ֑ל וַאֲנִ֖י אֲבָרְכֵֽם:</small>"}
+          ]},
+          {"ref": "64", "kind": "instruction", "en": "When the prayer leader begins 'Sim Shalom' the kohanim turn their faces towards the sanctuary and say:", "text": "<small>כשמתחיל שליח ציבור \"שים שלום\" מחזירין כהנים פניהם כלפי ההיכל ואומרים:</small>"},
+          {"ref": "65", "kind": "prayer", "text": "<small>רִבּוֹן הָעוֹלָמִים עָשִֽׂינוּ מַה־שֶּׁגָּזַֽרְתָּ עָלֵֽינוּ, עַשֵׂה אַתָּה מַה־שֶּׁהִבְטָחְתָּֽנוּ. הַשְׁקִ֩יפָה֩ מִמְּע֨וֹן קׇדְשְׁךָ֜ מִן־הַשָּׁמַ֗יִם וּבָרֵ֤ךְ אֶֽת־עַמְּךָ֙ אֶת־יִשְׂרָאֵ֔ל:</small>"},
+          {"ref": "66", "parts": [
+            {"kind": "prayer", "text": "<b>שִׂים</b> שָׁלוֹם טוֹבָה וּבְרָכָה,"},
+            {"kind": "prayer", "text": " חַיִּים חֵן וָחֶֽסֶד וְרַֽחֲמִים,"},
+            {"kind": "prayer", "text": " עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּֽךָ. וּבָֽרְכֵֽנוּ אָבִֽינוּ כֻּלָּֽנוּ כְּאֶחָד בְּאוֹר פָּנֶֽיךָ,"},
+            {"kind": "prayer", "text": " כִּי בְאוֹר פָּנֶֽיךָ נָתַֽתָּ לָּֽנוּ יְהֹוָה אֱלֹהֵֽינוּ תּוֹרָה וְחַיִּים,"},
+            {"kind": "prayer", "text": " אַֽהֲבָה וָחֶֽסֶד,"},
+            {"kind": "prayer", "text": " צְדָקָה וְרַֽחֲמִים,"},
+            {"kind": "prayer", "text": " בְּרָכָה וְשָׁלוֹם. וְטוֹב בְּעֵינֶֽיךָ לְבָֽרְכֵֽנוּ וּלְבָרֵךְ אֶת־כָּל־עַמְּךָ יִשְׂרָאֵל,"},
+            {"kind": "prayer", "text": " בְּרֹב עֹז וְשָׁלוֹם: "},
+            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "text": "<small><small>בעשרת ימי תשובה אומרים:</small>"},
+            {"kind": "prayer", "text": " וּבְסֵפֶר חַיִּים,"},
+            {"kind": "prayer", "text": " בְּרָכָה וְשָׁלוֹם,"},
+            {"kind": "prayer", "text": " וּפַרְנָסָה טוֹבָה וִישׁוּעָה וְנֶחָמָה,"},
+            {"kind": "prayer", "text": " וּגְזֵרוֹת טוֹבוֹת,"},
+            {"kind": "prayer", "text": " נִזָּכֵר וְנִכָּתֵב לְפָנֶיךָ,"},
+            {"kind": "prayer", "text": " אֲנַחְנוּ וְכָל עַמְּךָ בֵּית יִשְׂרָאֵל,"},
+            {"kind": "prayer", "text": " לְחַיִּים טוֹבִים וּלְשָׁלוֹם.</small> בָּרוּךְ אַתָּה יוּהוּווּהוּ,"},
+            {"kind": "prayer", "text": " הַמְּבָרֵךְ אֶת עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם. אָמֵן: "}
+          ]},
+          {"ref": "67", "kind": "prayer", "text": "<b>יִֽהְי֥וּ</b> לְרָצ֨וֹן ׀ אִמְרֵי־פִ֡י וְהֶגְי֣וֹן לִבִּ֣י לְפָנֶ֑יךָ יְ֝הֹוָ֗ה צוּרִ֥י וְגֹאֲלִֽי׃"},
+          {"ref": "68", "parts": [
+            {"kind": "prayer", "text": "<b>אֱלֹהַי</b>,"},
+            {"kind": "prayer", "text": " נְצֹר לְשׁוֹנִי מֵרָע וְשִׂפְתוֹתַי מִדַּבֵּר מִרְמָה,"},
+            {"kind": "prayer", "text": " וְלִמְקַלְלַי נַפְשִׁי תִדֹּם,"},
+            {"kind": "prayer", "text": " וְנַפְשִׁי כֶּֽעָפָר לַכֹּל תִּֽהְיֶה,"},
+            {"kind": "prayer", "text": " פְּתַח לִבִּי בְּתוֹרָתֶֽךָ,"},
+            {"kind": "prayer", "text": " וְאַחֲרֵי מִצְוֹתֶֽיךָ תִּרְדֹּף נַפְשִׁי. וְכָל־הַקָּמִים עָלַי לְרָעָה,"},
+            {"kind": "prayer", "text": " מְהֵרָה הָפֵר עֲצָתָם וְקַלְקֵל מַחְשְׁבוֹתָם. "},
+            {"kind": "prayer", "text": "<small>יִֽהְי֗וּ כְּמֹ֥ץ לִפְנֵי־ר֑וּחַ וּמַלְאַ֖ךְ יְהֹוָ֣ה דּוֹחֶֽה. קַבֵּל רִנַּת עַמֶּךָ. שַׂגְּבֵנוּ טַהֲרֵנוּ נוֹרָא.</small>"},
+            {"kind": "prayer", "text": " עֲשֵׂה לְמַֽעַן שְׁמָךְ,"},
+            {"kind": "prayer", "text": " עֲשֵׂה לְמַֽעַן יְמִינָךְ,"},
+            {"kind": "prayer", "text": " עֲשֵׂה לְמַֽעַן תּֽוֹרָתָךְ,"},
+            {"kind": "prayer", "text": " עֲשֵׂה לְמַֽעַן קְדֻשָּׁתָךְ. "}
+          ]},
+          {"ref": "69", "parts": [
+            {"kind": "instruction", "en": "A remedy: say the verse that begins and ends with the same letter as the name you are invoking.", "text": "<small>סגולה לומר פסוק המתחיל וגומר באות שמתחיל וגומר שמו</small>"},
+            {"kind": "prayer", "text": " לְ֭מַעַן יֵחָלְצ֣וּן יְדִידֶ֑יךָ הוֹשִׁ֖יעָה יְמִֽינְךָ֣ וַעֲנֵֽנִי:"}
+          ]},
+          {"ref": "70", "parts": [
+            {"kind": "instruction", "en": "Some say the prayer of Rav from Berakhot 16b, as written by the Chida in his siddur:", "gloss": "Optional addition from the Chida", "text": "<b>יִֽהְי֥וּ</b> לְרָצ֨וֹן ׀ אִמְרֵי־פִ֡י וְהֶגְי֣וֹן לִבִּ֣י לְפָנֶ֑יךָ יְ֝הֹוָ֗ה צוּרִ֥י וְגֹאֲלִֽי׃ <br><br>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "text": "<small>יש אומרים תפילת רב מגמרה ברכות ט\"ז ע\"ב שכתב החיד\"א ז\"ל בסידורו<br>יְהִי רָצוֹן מִלְּפָנֶיךָ,"},
+            {"kind": "prayer", "text": " יְהֹוָה אֱלהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ,"},
+            {"kind": "prayer", "text": " שֶׁתִתֶּן לָֽנוּ חַיִּים אֲרוּכִים,"},
+            {"kind": "prayer", "text": " חַיִּים שֶׁל שָׁלוֹם,"},
+            {"kind": "prayer", "text": " חַיִּים שֶׁל טוֹבָה,"},
+            {"kind": "prayer", "text": " חַיִּים שֶׁל בְּרָכָה,"},
+            {"kind": "prayer", "text": " חַיִּים שֶׁל פַּרְנָסָה,"},
+            {"kind": "prayer", "text": " חַיִּים שֶׁל חִלּוּץ עֲצָמוֹת,"},
+            {"kind": "prayer", "text": " חַיִּים שֶׁיֵשׁ בָּהֶם יִרְאַת חֵטְא,"},
+            {"kind": "prayer", "text": " חַיִּים שֶׁאֵין בָּהֶם בּוּשָׁה וּכְלִמָּה,"},
+            {"kind": "prayer", "text": " חַיִּים שֶׁל עֹֽשֶׁר וְכָבוֹד,"},
+            {"kind": "prayer", "text": " חַיִּים שֶׁתְּהֵא בָֽנוּ אַהֲבַת תּוֹרָה וְיִרְאַת שָׁמַֽיִם,"},
+            {"kind": "prayer", "text": " חַיִּים שֶׁתְּמַּלֵא אֶת־כָל־מִשְׁאֲלוֹת לִבֵּֽנוּ לְטוֹבָה:</small>"}
+          ]},
+          {"ref": "71", "parts": [
+            {"kind": "prayer", "text": "<b>עֹשֶׂה</b> שָׁלוֹם "},
+            {"kind": "instruction", "en": "During the Ten Days of Repentance, say:", "text": "<small><small>בעשרת ימי תשובה אומר:</small>"},
+            {"kind": "prayer", "text": " הַשָּׁלוֹם</small> בִּמְרוֹמָיו,"},
+            {"kind": "prayer", "text": " הוּא בְּרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ,"},
+            {"kind": "prayer", "text": " וְעַל כָּל־עַמּוֹ יִשְׂרָאֵל,"},
+            {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן:"}
+          ]},
+          {"ref": "72", "kind": "prayer", "text": "<small>יְהִי רָצוֹן מִלְּפָנֶֽיךָ, יְהֹוָה אֱלֹהֵֽינוּ וֵֽאלֹהֵי אֲבוֹתֵֽינוּ, שֶׁתִּבְנֶה בֵּית הַמִּקְדָשׁ בִּמְהֵרָה בְיָמֵֽינוּ, וְתֵן חֶלְקֵֽנוּ בְתוֹרָתָךְ לַעֲשׂוֹת חֻקֵּי רְצוֹנָךְ וּלְעָבְדָךְ בְּלֵבָב שָׁלֵם:</small>"},
+          {"ref": "73", "kind": "instruction", "text": "<small>בראש חודש אומרים כאן הלל</small> "},
+          {"ref": "74", "kind": "instruction", "text": "<small>בעשרת ימי תשובה אומרים:</small>"},
+          {"ref": "75", "kind": "prayer", "text": "<small><b>אָבִינוּ מַלְכֵּנוּ</b> חָטָאנוּ לְפָנֶיךָ רַחֵם עָלֵינוּ:</small>"},
+          {"ref": "76", "kind": "prayer", "text": "<small>אָבִינוּ מַלְכֵּנוּ אֵין לָנוּ מֶלֶךְ אֶלָּא אָתָּה:</small>"},
+          {"ref": "77", "kind": "prayer", "text": "<small>אָבִינוּ מַלְכֵּנוּ עֲשֵׂה עִמָּנוּ לְמַעַן שְׁמֶךָ:</small>"},
+          {"ref": "78", "kind": "prayer", "text": "<small>אָבִינוּ מַלְכֵּנוּ חַדֵּשׁ עָלֵינוּ שָׁנָה טוֹבָה:</small>"},
+          {"ref": "79", "kind": "prayer", "text": "<small>אָבִינוּ מַלְכֵּנוּ בַּטֵּל מֵעָלֵינוּ כָּל־גְּזֵרוֹת קָשׁוֹת וְרָעוֹת:</small>"},
+          {"ref": "80", "kind": "prayer", "text": "<small>אָבִינוּ מַלְכֵּנוּ בַּטֵּל מַחְשְׁבוֹת שֹׂנְאֵינוּ:</small>"},
+          {"ref": "81", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ הָפֵר עֲצַת אוֹיְבֵינוּ:</small>"},
+          {"ref": "82", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ כַּלֵּה כָּל צַר וּמַשְׂטִין מֵעָלֵינוּ:</small>"},
+          {"ref": "83", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ כַּלֵּה דֶבֶר וְחֶרֶב וְרָעָה וְרָעָב וּשְׁבִי וּבִזָּה וּמַשְׁחִית וּמַגֵּפָה וְיֵצֶר הָרָע וְחוֹלָאִים רָעִים מִבְּנֵי בְרִיתֶךָ:</small>"},
+          {"ref": "84", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ שְׁלַח רְפוּאָה שְׁלֵמָה לְכָל חוֹלֵי עַמֶּךָ:</small>"},
+          {"ref": "85", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ מְנַע מַגֵּפָה מִנַּחֲלָתֶךָ:</small>"},
+          {"ref": "86", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ זָכוּר כִּי עָפָר אֲנָחְנוּ:</small>"},
+          {"ref": "87", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ מְחוֹל וּסְלַח לְכָל עֲוֹנוֹתֵינוּ:</small>"},
+          {"ref": "88", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ קְרַע רוֹעַ גְּזַר דִּינֵנוּ: <small>(יכוין בשם קר\"ע שט\"ן)</small></small>"},
+          {"ref": "89", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ מְחוֹק בְּרַחֲמֶיךָ הָרַבִּים כָּל שִׁטְרֵי חוֹבוֹתֵינוּ:</small>"},
+          {"ref": "90", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ מְחֵה וְהַעֲבֵר פְּשָׁעֵינוּ מִנֶּגֶד עֵינֶיךָ:</small>"},
+          {"ref": "91", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ כָּתְבֵנוּ בְּסֵפֶר חַיִּים טוֹבִים:</small>"},
+          {"ref": "92", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ כָּתְבֵנוּ בְּסֵפֶר צַדִּיקִים וַחֲסִידִים:</small>"},
+          {"ref": "93", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ כָּתְבֵנוּ בְּסֵפֶר יְשָׁרִים וּתְמִימִים:</small>"},
+          {"ref": "94", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ כָּתְבֵנוּ בְּסֵפֶר פַּרְנָסָה וְכַלְכָּלָה טוֹבָה:</small>"},
+          {"ref": "95", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ כָּתְבֵנוּ בְּסֵפֶר מְחִילָה וּסְלִיחָה וְכַפָּרָה:</small>"},
+          {"ref": "96", "kind": "prayer", "role": "together", "text": "<small>אָבִינוּ מַלְכֵּנוּ כָּתְבֵנוּ בְּסֵפֶר גְּאֻלָּה וִישׁוּעָה:</small>"},
+          {"ref": "97", "kind": "instruction", "en": "Our Father, Our King, remember us for a good remembrance before You:", "gloss": "Avinu Malkeinu line", "text": "<small>אָבִינוּ מַלְכֵּנוּ זָכְרֵנוּ בְּזִכְרוֹן טוֹב מִלְּפָנֶיךָ:</small>"},
+          {"ref": "98", "kind": "instruction", "en": "Our Father, Our King, cause salvation to sprout for us soon:", "gloss": "Avinu Malkeinu line", "text": "<small>אָבִינוּ מַלְכֵּנוּ הַצְמַח לָנוּ יְשׁוּעָה בְּקָרוֹב:</small>"},
+          {"ref": "99", "kind": "instruction", "en": "Our Father, Our King, raise the horn of Israel, Your people:", "gloss": "Avinu Malkeinu line", "text": "<small>אָבִינוּ מַלְכֵּנוּ הָרֵם קֶרֶן יִשְׂרָאֵל עַמֶּךָ:</small>"},
+          {"ref": "100", "kind": "instruction", "en": "Our Father, Our King, and raise the horn of Your Messiah:", "gloss": "Avinu Malkeinu line", "text": "<small>אָבִינוּ מַלְכֵּנוּ וְהָרֵם קֶרֶן מְשִׁיחֶךָ:</small>"},
+          {"ref": "101", "kind": "instruction", "en": "Our Father, Our King, grant us grace and answer us:", "gloss": "Avinu Malkeinu line", "text": "<small>אָבִינוּ מַלְכֵּנוּ חָנֵּנוּ וַעֲנֵנוּ:</small>"},
+          {"ref": "102", "kind": "instruction", "en": "Our Father, Our King, return us in complete repentance before You:", "gloss": "Avinu Malkeinu line", "text": "<small>אָבִינוּ מַלְכֵּנוּ הַחֲזִירֵנוּ בִּתְשׁוּבָה שְׁלֵמָה לְפָנֶיךָ:</small>"},
+          {"ref": "103", "kind": "instruction", "en": "Our Father, Our King, hear our voice, have pity and mercy on us:", "gloss": "Avinu Malkeinu line", "text": "<small>אָבִינוּ מַלְכֵּנוּ שְׁמַע קוֹלֵנוּ חוּס וְרַחֵם עָלֵינוּ:</small>"},
+          {"ref": "104", "kind": "instruction", "en": "Our Father, Our King, do it for Your sake if not for ours:", "gloss": "Avinu Malkeinu line", "text": "<small>אָבִינוּ מַלְכֵּנוּ עֲשֵׂה לְמַעֲנָךְ אִם לֹא לְמַעֲנֵנוּ:</small>"},
+          {"ref": "105", "kind": "instruction", "en": "Our Father, Our King, receive our prayer with mercy and favor:", "gloss": "Avinu Malkeinu line", "text": "<small>אָבִינוּ מַלְכֵּנוּ קַבֵּל בְּרַחֲמִים וּבְרָצוֹן אֶת תְּפִלָּתֵנוּ:</small>"},
+          {"ref": "106", "kind": "instruction", "en": "Our Father, Our King, do not send us away empty from before You:", "gloss": "Avinu Malkeinu line", "text": "<small>אָבִינוּ מַלְכֵּנוּ אַל תְּשִׁיבֵנוּ רֵיקָם מִלְּפָנֶיךָ:</small>"},
+          {"ref": "107", "kind": "instruction", "en": "On days when Tachanun is not said, we say:", "gloss": "Instruction for the following verse", "text": "<small>בימים שאין בהם תחנון אומרים</small> "},
+          {"ref": "108", "parts": [
+            {"kind": "prayer", "role": "congregation_then_chazzan", "gloss": "Psalm 113:9, said after Avinu Malkeinu when Tachanun is omitted", "text": "<b>יְהִ֤י</b> שֵׁ֣ם יְהֹוָ֣ה מְבֹרָ֑ךְ מֵ֝עַתָּ֗ה וְעַד־עוֹלָֽם׃ מִמִּזְרַח־שֶׁ֥מֶשׁ עַד־מְבוֹא֑וֹ מְ֝הֻלָּ֗ל שֵׁ֣ם יְהֹוָֽה׃ רָ֖ם עַל־כׇּל־גּוֹיִ֥ם ׀ יְהֹוָ֑ה עַ֖ל הַשָּׁמַ֣יִם כְּבוֹדֽוֹ׃ יְהֹוָ֥ה אֲדֹנֵ֑ינוּ מָה־אַדִּ֥יר שִׁ֝מְךָ֗ בְּכׇל־הָאָֽרֶץ׃<br><br>"},
+            {"kind": "instruction", "en": "And then the chazzan says Half Kaddish", "text": "<small>ואחר כך אומר הש''צ חצי קדיש</small>"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Sefaria Community Translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Amida of Shah'rit / Morning Prayer of Regular Weekday"},
+          {"ref": "2", "translates": ["2"], "text": "My L·rd, open my lips, &amp; my mouth will speak Your praises."},
+          {"ref": "3", "translates": ["3"], "text": "Blessed are You L·rd, our G·d, &amp; G·d of our fathers, G·d of Avraham, G·d of Yitshak &amp; G·d of Yaacov. The great, the mighty &amp; the awesome G·d. Exalted G·d. Who bestows good kindness. He possesses everything &amp; recalls the kindness of the patriarchs. And brings the redeemer to their children's children, for His Name's sake, with love. King, helper, savior &amp; a shield, blessed are You L·rd, Shield of Avraham."},
+          {"ref": "4", "translates": ["4"], "text": "You are mighty forever, my L·rd, You revive the dead - Greatly capable of saving."},
+          {"ref": "5", "translates": ["5"], "text": "(summer) who causes the dew to fall (winter) who causes the winds to blow &amp; the rain to fall."},
+          {"ref": "6", "translates": ["6"], "text": "You sustain the living with loving-kindness. You revive the dead with great compassion. You support the fallen &amp; heal the ill. And You release those bound. And You fulfill Your faithfulness to those who sleep in the ground. Who is like You, Master of [all] powers, King, Who causes death &amp; gives life &amp; causes salvation to sprout. &amp; You are trustworthy to revive the dead. Blessed are You L·rd, Who revives the dead."},
+          {"ref": "7", "translates": ["7"], "text": "Kedousha (said in repetition of Amida in quorum of 10 men – in prayer alone skip to “You are Holy”)"},
+          {"ref": "9", "translates": ["9"], "text": "We will sanctify You &amp; revere You, like the pleasant conversation, of the assembly of the holy Serafim (angels) that recite holiness thrice before You. And as it is written by Your prophet: And one calls to the other &amp; says : Holy, Holy, Holy is the L·rd of hosts; the entire world is filled with His glory. Those facing them, give praise &amp; say: Blessed is the honor of the L·rd from His place. And in Your holy words it is written, stating: The L·rd will reign forever, your G·d, oh zion, for every generation, Halleluy·ah. (Praise G·d!)"},
+          {"ref": "10", "translates": ["10"], "text": "You are Holy, &amp; Your Name is holy, &amp; Your holy ones will praise You every day, forever. Blessed are You L·rd the Holy G·d. (10 days of repentance – the Holy King)"},
+          {"ref": "11", "translates": ["11"], "text": "You graciously bestow knowledge to man, &amp; teach mortals understanding, graciously bestow upon us from Yourself wisdom, understanding &amp; knowledge. Blessed are You L·rd, Who graciously bestows knowledge."},
+          {"ref": "12", "translates": ["12"], "text": "Return us, our Father, to Your Torah &amp; approach us, our King, to Your service, &amp; bring us back to complete repentance before You. Blessed are You L·rd, Who desires repentance."},
+          {"ref": "13", "translates": ["13"], "text": "Pardon us, our Father, for we transgressed. Forgive us, our King for we sinned. For You are a good &amp; forgiving G·d. Blessed are You L·rd, gracious One, Who abundantly pardons."},
+          {"ref": "14", "translates": ["14"], "text": "Behold, please, our affliction &amp; fight our battle, &amp; speedily redeem us, [with] a complete redemption, for Your Name. For You G·d, are a mighty Redeemer, Blessed are You L·rd, Redeemer of Yisrael."},
+          {"ref": "18", "translates": ["15"], "text": "Heal us, L·rd, &amp; we will be healed. Save us &amp; we will be saved, for You are our Praise. And bring a cure &amp; healing for all of our ailments, &amp; all our pains, &amp; all our wounds for, G·d You are a compassionate &amp; faithful healer. Blessed are You L·rd, Who heals the ill of His people, Yisrael."},
+          {"ref": "19", "translates": ["16"], "text": "[In Summer]"},
+          {"ref": "20", "translates": [], "text": "Bless us, L·rd, our G·d, in all the works of our hands &amp; bless our years with dews of favor, blessing &amp; benevolence, &amp; let its end be with life, &amp; satiety &amp; peace, like the best years of blessing, for You are a good &amp; benevolent G·d &amp; You bless the years. Blessed are You L·rd, Who blesses the years."},
+          {"ref": "21", "translates": ["21"], "text": "[In Winter]"},
+          {"ref": "22", "translates": ["22"], "text": "Bless for us, L·rd, our G·d, this year, &amp; all types of its produce for good, &amp; provide dew &amp; rain for blessing on the entire face of the land &amp; quench the face of the earth, &amp; satiate the entire world with Your good, &amp; fill our hands from Your blessings &amp; the wealth of the gifts of Your hands. Protect &amp; save this year from any bad thing, &amp; any kind of destruction, &amp; any kind of retribution, &amp; make for it good hope, &amp; an ending of peace. Have compassion &amp; mercy upon it &amp; upon all of its produce &amp; fruits, &amp; bless it with rains of goodwill, blessing &amp; benevolence, &amp; let its end be with life, &amp; satiety &amp; peace, like the good years of blessing, for You are a good &amp; benevolent G·d &amp; You bless the years. Blessed are You L·rd, Who blesses the years."},
+          {"ref": "23", "translates": ["23"], "text": "Sound a great Shofar (rams horn for Mashiah'), for our freedom, &amp; raise a flag to gather our exiles, &amp; assemble us together quickly from the four corners of the earth to our land (of Israel). Blessed are You, that assembles the displaced of His people, Israel."},
+          {"ref": "24", "translates": ["24"], "text": "Restore our Judges (of the Sanhedrin) as at first, &amp; our advisers as in the beginning, &amp; remove from us sorrow &amp; groan, &amp; rule upon us speedily, You alone L·rd, with lovingkindness &amp; compassion, with righteousness &amp; justice Blessed are You, L·rd, King Who loves righteousness &amp; justice. [In 10 Days of Repentance Say instead: The King, The Judge]"},
+          {"ref": "25", "translates": ["25"], "text": "For the informers &amp; the heretics, let there be no hope. And all the wicked, let them perish in an instant, And all Your enemies &amp; all Your haters, may they quickly be terminated, &amp; as for a wicked government, may You uproot &amp; smash &amp; terminate &amp; subdue them speedily in our days. Blessed are You, L·rd, Who smashes the enemies &amp; subdues wicked. (the Heretics)"},
+          {"ref": "26", "translates": ["26"], "text": "Upon the righteous &amp; the pious, &amp; all the remnant of Your people, the House of Israel, &amp; on their elders, &amp; on the remnant of the academies of [Torah] sages, &amp; upon the righteous converts &amp; upon us, awaken, please, Your mercy L·rd, our G·d, &amp; give us good reward, to all that have true faith in Your Name, &amp; place our lot with them, &amp; upon Your great mercy, we truly rely. Blessed are You, L·rd, a support &amp; an assurance, for the righteous."},
+          {"ref": "27", "translates": ["27"], "text": "Dwell within Jerusalem Your city, as You spoke about, &amp; the throne of David, Your servant, speedily prepare it within it, &amp; build it an eternal structure speedily in our days. Blessed are You, L·rd, Who builds Jerusalem."},
+          {"ref": "28", "translates": ["28"], "text": "The offspring of [the Kingship of] David, Your servant, may you speedily cause to blossom, &amp; raise his horn (i.e., Power) with Your salvation, for Your salvation, for we hope for &amp; look forward to all day. Blessed are You, L·rd, Who causes the horn of salvation to sprout."},
+          {"ref": "29", "translates": ["29"], "text": "Hear our voice L·rd our G·d, merciful Father, have pity &amp; mercy upon us, &amp; accept with mercy &amp; favor our prayers, for You are G·d, Who hears prayers &amp; supplications. And from before You, our King, do not send us back empty [handed], grace us [with benevolence], &amp; respond to us &amp; hear our prayers,..."},
+          {"ref": "32", "translates": ["32"], "text": "... for You hear the prayer of each mouth. *** Blessed are You, our G·d, Who hears prayer."},
+          {"ref": "33", "translates": ["33"], "text": "Find favor, L·rd, our G·d, in Your people Israel, &amp; to their prayers turn, &amp; restore the [divine offering] service to the inner Sanctuary of Your house, &amp; the fires [of the offerings] of Israel &amp; their prayers speedily lovingly accept with favor, &amp; let You continually have satisfaction from the service of Your people Israel."},
+          {"ref": "34", "translates": ["34"], "text": "(Rosh Hodesh, Intermed. days Passover &amp; Sukot say)"},
+          {"ref": "35", "translates": ["35"], "text": "Our G·d, &amp; G·d of Our forefathers, may it rise, &amp; come, arrive, appear, find favor, &amp; be heard, &amp; be considered, &amp; be remembered &amp; our remembrance, &amp; the remembrance of our Patriarchs, &amp; the remembrance of Jerusalem, Your city, &amp; the remembrance of the Messiah, the son of David, Your servant, &amp; the remembrance of your entire People, the house of Israel before You – for deliverance, for good, for grace, for kindness, &amp; mercy, for a good life, on this day of "},
+          {"ref": "36", "translates": ["36"], "text": "(on Rosh Hodesh) the head of the month"},
+          {"ref": "37", "translates": [], "text": "(on Passover) the Holiday of Matzot"},
+          {"ref": "38", "translates": [], "text": "(on Sukkot) Holiday of Sukkot. On this day of Holy Convocation, "},
+          {"ref": "39", "translates": ["39"], "text": "to have mercy on it (this day) upon us &amp; to save us. Remember L·rd, our G·d, on it for good, &amp; consider us on it with blessing, &amp; deliver us on it for good life, With a pronouncement of deliverance &amp; mercy. Take pity &amp; be gracious to us, &amp; have mercy &amp; be compassionate with us &amp; save us for upon You are our eyes turned, For You are G·d, King, gracious &amp; compassionate."},
+          {"ref": "40", "translates": ["40"], "text": "And You, with Your great compassion, desire us &amp; let us be dear, &amp; may our eyes see Your return to Zion with compassion. Bless You, L·rd, Who returns His Divine Presence to Zion."},
+          {"ref": "41", "translates": ["41"], "text": "[Upon Saying \"Modim\" / \"We are Grateful\" One Bows]"},
+          {"ref": "42", "translates": ["42"], "text": "We are grateful to You, that You are He Who is the L·rd, our G·d, &amp; G·d of our fathers forever, &amp; our Rock, the Rock of our lives &amp; You are He Who is a Shield of salvation. For each &amp; every generation, we will thank You &amp; will relate Your praise, upon our lives that are placed in Your Hands, &amp; upon our souls, that are entrusted in Your hands (when we sleep), &amp; upon Your miracles that all day are with us, &amp; all Your wonders &amp; goodness at all times, at night, &amp; morning &amp; afternoon. The Good [One], for Your mercy never ends, The Merciful [One are You], for Your loving-kindness never ceases, forever we have hope in You."},
+          {"ref": "46", "translates": ["43", "44", "45"], "text": "*(Al HaNissim) (on Purim &amp; Hanuka an extra prayer  is added here)"},
+          {"ref": "50", "translates": ["50"], "text": "Upon all of these, You are Blessed, You are Exalted &amp; Uplifted (in our mouths) always, Your Name, our King, forever &amp; ever &amp; all the living will praise You evermore. And they will praise, &amp; they will bless Your Great Name truely, constantly, for It is good, the G·d of our Salvation &amp; our Assistance, the Good G·d. Blessed are You L·rd, the Good, Your Name &amp; You are befitting to give thanks."},
+          {"ref": "53", "translates": ["52"], "parts": [
+            {"kind": "prayer", "text": "[When the priests stand on the platform after they recited the responsive "},
+            {"kind": "instruction", "text": "<i>Modim</i>"},
+            {"kind": "prayer", "text": ","},
+            {"kind": "prayer", "text": " they say:]<br>May it be Your Will before You,"},
+            {"kind": "prayer", "text": " Lord,"},
+            {"kind": "prayer", "text": " our God and God of our fathers,"},
+            {"kind": "prayer", "text": " that this blessing that You have commanded us to bless Your people Israel be a complete blessing and that there not be within it any obstacle or iniquity from now and forever. "}
+          ]},
+          {"ref": "54", "translates": ["52"], "text": "[During the prayer leader’s repetition, they now say the priestly blessing. If there is more than one priest, one of the congregants calls out:] Priests! [The priests recite the blessing:]<br>Blessed are You, Lord, our God, King of the universe, who has sanctified us with the holiness of Aaron and commanded us to bless His people Israel with love. [Cong. answers, Amen!] "},
+          {"ref": "55", "translates": ["52"], "text": "[The prayer leader says the following one word at a time, with the priests repeating each word after him:]"},
+          {"ref": "56", "translates": ["52"], "text": "May the Lord bless you and protect you. [Cong. answers, Amen!]"},
+          {"ref": "57", "translates": ["52"], "text": "May the Lord shine His countenance upon you and give you grace.  [Cong. answers, Amen!]"},
+          {"ref": "58", "translates": ["52"], "text": "May the Lord lift His countenance upon you and give you peace. [Cong. answers, Amen!]"},
+          {"ref": "59", "translates": ["52"], "text": "[If there are no priests, the prayer leader says:]"},
+          {"ref": "60", "translates": ["52"], "text": "Our God and God of our fathers, bless us with the threefold blessing of the Torah, written by the hand of Moses Your servant, spoken by the mouth of Aaron and his sons, the priests, Your holy people – as it is said:"},
+          {"ref": "61", "translates": ["52"], "text": "May the Lord bless you and protect you. [Cong. answers, Thus may it Be His Will!]"},
+          {"ref": "62", "translates": ["52"], "text": "May the Lord shine His countenance upon you and give you grace. [Cong. answers, Thus may it Be His Will!]"},
+          {"ref": "63", "translates": ["63"], "text": "May the Lord lift His countenance upon you and give you peace. [Cong. answers, Thus may it Be His Will!]"},
+          {"ref": "64", "translates": ["64"], "parts": [
+            {"kind": "prayer", "text": "[When the prayer leader begins "},
+            {"kind": "instruction", "text": "<i>Sim Shalom</i>"},
+            {"kind": "prayer", "text": ","},
+            {"kind": "prayer", "text": " the priests turn their faces towards the sanctuary and say:]"}
+          ]},
+          {"ref": "65", "translates": ["65"], "parts": [
+            {"kind": "prayer", "text": "Master of the worlds,"},
+            {"kind": "prayer", "text": " we have done what You have decreed upon us. You [should then] do that which you have promised: "},
+            {"kind": "instruction", "text": "<i>Look down from Your holy abode, from heaven, and bless Your people Israel</i>"},
+            {"kind": "prayer", "text": " (Deuteronomy 26:15)."}
+          ]},
+          {"ref": "66", "translates": ["66"], "text": "Establish peace, good, &amp; blessing, life, grace &amp; kindness, &amp; compassion upon us &amp; upon all Israel, Your Nation, &amp; bless us our Father all of us together with the light of Your countenance, For with the light of Your countenance, You gave us, L·rd, our G·d, Torah &amp; Life, Love &amp; Kindness, Righteousness &amp; Compassion, Blessing &amp; Peace, &amp; it is Good in Your eyes to bless us, &amp; to bless all Your people Israel, with great force &amp; peace. Blessed are You L·rd, Who Blesses His people of Israel with Peace. Amen."},
+          {"ref": "67", "translates": ["67"], "text": "May they find favor, the words of my mouth &amp; the thoughts of my heart, before You, L·rd, my Rock &amp; my Redeemer."},
+          {"ref": "68", "translates": ["68"], "text": "My G·d! Guard my tongue from Bad, &amp; my lips from [speaking] deceit. And those that curse me, let my soul be silent. And let my soul be like the dust to all. Open my heart to Your Torah, &amp; after Your Mitzvot (commandments) let my soul pursue, &amp; all that rise against me for bad, quickly nullify their counsel &amp; ruin their thoughts. Do [it] for the sake of Your Name, do [it] for the sake of Your right (mercy), do [it] for the sake of Your Torah, do [it] for the sake of Your Holiness. For the sake of refraining Your beloved (Israel, from sufferance), Your right (mercy) Deliver [us], &amp; answer us. "},
+          {"ref": "70", "translates": [], "text": "May they find favor [from You] - the saying of my mouth &amp; the reflections of my heart  before You, my L·rd, my Rock &amp; my Redeemer."},
+          {"ref": "71", "translates": [], "text": "He Who makes peace from the heights, may He with His compassion, make peace upon us &amp; all His people Israel, &amp; [Let us] say, Amen. "},
+          {"ref": "72", "translates": [], "text": "May it be Your will before You, L·rd, Our G-d and G-d of our fathers – that You build the Holy Temple speedily in our days. And give us our share in Your Torah – to do the laws of Your will and to serve You with a perfect heart."},
+          {"ref": "73", "translates": [], "text": "[On Rosh Hodesh / Head of Month - One Says Hallel Here]"},
+          {"ref": "74", "translates": [], "text": "Avinu Malkenu – / Our Father Our King - said 10 days of repentance"},
+          {"ref": "75", "translates": [], "text": "Our Father, Our King – we sinned before You, have mercy upon us"},
+          {"ref": "76", "translates": [], "text": "Our Father, Our King We have no king, other than You"},
+          {"ref": "77", "translates": [], "text": "Our Father, Our King do it [have mercy] for us for Your Name"},
+          {"ref": "78", "translates": [], "text": "Our Father, Our King, Renew for us a Good Year"},
+          {"ref": "79", "translates": [], "text": "Our Father, Our King nullify from us all All Evil &amp; Hard Decrees"},
+          {"ref": "80", "translates": ["80"], "text": "Our Father, Our King Nullify the thoughts of those who hate us"},
+          {"ref": "81", "translates": ["81"], "text": "Our Father, Our King, overturn the counsel of our enemies"},
+          {"ref": "82", "translates": ["82"], "text": "Our Father, Our King – extinguish all pain &amp; accusations against us"},
+          {"ref": "83", "translates": ["83"], "text": "Our Father, Our King – remove pestilence, and the sword and bad and hunger and captivity and plunder and the destroyer and plague and evil inclination and bad illness from the people of your covenant"},
+          {"ref": "84", "translates": ["84"], "text": "Our Father, Our King, send a complete healing to all the ill of your people"},
+          {"ref": "85", "translates": [], "text": "Our Father, Our King, prevent a plagues from your heritage"},
+          {"ref": "86", "translates": [], "text": "Our Father, Our King, remember that we are [only] dust"},
+          {"ref": "87", "translates": [], "text": "Our Father, Our King, forgive and pardon all our transgressions"},
+          {"ref": "88", "translates": [], "text": "Our Father, Our King, tear up all of our bad judgements"},
+          {"ref": "89", "translates": [], "text": "Our Father, Our King with your great mercy erase all our contracts of debt"},
+          {"ref": "90", "translates": [], "text": "Our Father, Our King erase and remove our sins before your Eyes"},
+          {"ref": "91", "translates": [], "text": "Our Father, Our King, inscribe us in the book of good life"},
+          {"ref": "92", "translates": [], "text": "Our Father, Our King, inscribe us in the book of the righteous and pious"},
+          {"ref": "93", "translates": [], "text": "Our Father, Our King, inscribe us in the book of the straight and simple"},
+          {"ref": "94", "translates": [], "text": "Our Father, Our King, inscribe us in the book of good income &amp; sustenance"},
+          {"ref": "95", "translates": [], "text": "Our Father, Our King, inscribe us in the book of forgiveness, pardon &amp; atonement "},
+          {"ref": "96", "translates": ["96"], "text": "Our Father, Our King inscribe us in the book of redemption &amp; salvation"},
+          {"ref": "97", "translates": ["97"], "text": "Our Father, Our King remember us with a good remembrance before You"},
+          {"ref": "98", "translates": ["98"], "text": "Our Father, Our King let the salvation sprout speedily"},
+          {"ref": "99", "translates": ["99"], "text": "Our Father, Our King, raise the horn of Yisrael, Your people"},
+          {"ref": "100", "translates": ["100"], "text": "Our Father, Our King, and raise the horn of Your Messiah"},
+          {"ref": "101", "translates": [], "text": "Our Father, Our King, have grace upon us and answer us"},
+          {"ref": "102", "translates": [], "text": "Our Father, Our King, return us to complete repentance before You"},
+          {"ref": "103", "translates": [], "text": "Our Father, Our King, listen to our voice [of prayer] &amp; have pity &amp; be merciful upon us"},
+          {"ref": "104", "translates": [], "text": "Our Father, Our King, do it for Your sake if not for our own sake"},
+          {"ref": "105", "translates": [], "text": "Our Father, Our King, accept with mercy and goodwill our prayers"},
+          {"ref": "106", "translates": [], "text": "Our Father, Our King, do not return us empty-[handed] before You"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday Shacharit/Vidui",
+      "title": "וידוי",
+      "node": "tachanun.vidui",
+      "when": "tachanunShacharit",
+      "service": "shacharit",
+      "he": {
+        "version": "Shaliehsaboo Edition",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Vidui (Confession)", "text": "<big><b>וידוי</b></big>"},
+          {"ref": "2", "kind": "prayer", "text": "<b>אָנָּא</b> יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ. תָּבֹא לְפָנֶיךָ תְּפִלָּתֵנוּ. וְאַל־תִּתְעַלַּם מַלְכֵּנוּ מִתְּחִנָּתֵנוּ. שֶׁאֵין אֲנַחְנוּ עַזֵּי פָנִים וּקְשֵׁי עֹרֶף לוֹמַר לְפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ צַדִּיקִים אֲנַחְנוּ וְלֹא חָטָאנוּ. אֲבָל חָטָאנוּ. עָוִינוּ. פָּשַׁעְנוּ. אֲנַחְנוּ וַאֲבוֹתֵינוּ וְאַנְשֵׁי בֵיתֵנוּ: <b>אָ</b>שַׁמְנוּ. <b>בָּ</b>גַדְנוּ. <b>גָּ</b>זַלְנוּ. <b>דִּ</b>בַּרְנוּ דֹפִי וְלָשׁוֹן הָרָע. <b>הֶ</b>עֱוִינוּ. <b>וְ</b>הִרְשַׁעְנוּ. <b>זַ</b>דְנוּ. <b>חָ</b>מַסְנוּ. <b>טָ</b>פַלְנוּ שֶׁקֶר וּמִרְמָה. <b>יָ</b>עַצְנוּ עֵצוֹת רָעוֹת. <b>כִּ</b>זַּבְנוּ. כָּעַסְנוּ. <b>לַ</b>צְנוּ. <b>מָ</b>רַדְנוּ. מָרִינוּ דְבָרֶיךָ. <b>נִ</b>אַצְנוּ. נִאַפְנוּ. <b>סָ</b>רַרְנוּ. <b>עָ</b>וִינוּ. <b>פָּ</b>שַׁעְנוּ. פָּגַמְנוּ. <b>צָ</b>רַרְנוּ. צִעַרְנוּ אָב וָאֵם. <b>קִ</b>שִּׁינוּ עֹרֶף. <b>רָ</b>שַׁעְנוּ. <b>שִׁ</b>חַתְנוּ. <b>תִּ</b>עַבְנוּ. תָּעִינוּ וְתִעֲתַעְנוּ. וְסַרְנוּ מִמִּצְוֹתֶיךָ וּמִמִּשְׁפָּטֶיךָ הַטּוֹבִים וְלֹא שָׁוָה לָנוּ. וְאַתָּה צַדִּיק עַל־כָּל־הַבָּא עָלֵינוּ. כִּי אֱמֶת עָשִׂיתָ. וַאֲנַחְנוּ הִרְשָׁעְנוּ: "},
+          {"ref": "3", "kind": "prayer", "text": "<b>אֵל</b> אֶרֶךְ אַפַּיִם אַתָּה וּבַעַל הָרַחֲמִים. גְּדֻלַּת רַחֲמֶיךָ וַחֲסָדֶיךָ הוֹדַעְתָּ לֶעָנָו מִקֶּדֶם. וְכֵן כָּתוּב בְּתוֹרָתָךְ. וַיֵּ֤רֶד יְהֹוָה֙ בֶּֽעָנָ֔ן וַיִּתְיַצֵּ֥ב עִמּ֖וֹ שָׁ֑ם וַיִּקְרָ֥א בְשֵׁ֖ם יְהֹוָֽה: וְשָׁם נֶאֱמַר:  "},
+          {"ref": "4", "kind": "prayer", "text": "<b>וַיַּעֲבֹ֨ר</b> יְהֹוָ֥ה ׀ עַל־פָּנָיו֮ וַיִּקְרָא֒ יְהֹוָ֣ה ׀ יְהֹוָ֔ה אֵ֥ל רַח֖וּם וְחַנּ֑וּן אֶ֥רֶךְ אַפַּ֖יִם וְרַב־חֶ֥סֶד וֶאֱמֶֽת׃ נֹצֵ֥ר‏ חֶ֙סֶד֙ לָאֲלָפִ֔ים נֹשֵׂ֥א עָוֺ֛ן וָפֶ֖שַׁע וְחַטָּאָ֑ה וְנַקֵּה֙:  "},
+          {"ref": "5", "kind": "prayer", "text": "<b>רַחוּם וְחַנּוּן</b> חָטָאנוּ לְפָנֶיךָ רַחֵם עָלֵינוּ וְהושִׁיעֵנוּ: "},
+          {"ref": "6", "kind": "instruction", "en": "Sit and say:", "text": "<small>ישב ויאמר</small> "},
+          {"ref": "7", "parts": [
+            {"kind": "prayer", "text": "<b>לְדָוִ֡ד</b> "},
+            {"kind": "instruction", "en": "(Psalm 25)", "text": "<small>(תהלים כה)</small>"},
+            {"kind": "prayer", "text": " אֵלֶ֥יךָ יְ֝הֹוָ֗ה נַפְשִׁ֥י אֶשָּֽׂא׃ אֱֽלֹהַ֗י בְּךָ֣ בָ֭טַחְתִּי אַל־אֵב֑וֹשָׁה אַל־יַעַלְצ֖וּ אוֹיְבַ֣י לִֽי׃ גַּ֣ם כָּל־קֹ֭וֶיךָ לֹ֣א יֵבֹ֑שׁוּ יֵ֝בֹ֗שׁוּ הַבּוֹגְדִ֥ים רֵיקָֽם׃ דְּרָכֶ֣יךָ יְ֭הֹוָה הוֹדִיעֵ֑נִי אֹ֖רְחוֹתֶ֣יךָ לַמְּדֵֽנִי׃ הַדְרִ֘יכֵ֤נִי בַאֲמִתֶּ֨ךָ ׀ וְֽלַמְּדֵ֗נִי כִּֽי־אַ֭תָּה אֱלֹהֵ֣י יִשְׁעִ֑י אוֹתְךָ֥ קִ֝וִּ֗יתִי כׇּל־הַיּֽוֹם׃ זְכֹר־רַחֲמֶ֣יךָ יְ֭הֹוָה וַחֲסָדֶ֑יךָ כִּ֖י מֵעוֹלָ֣ם הֵֽמָּה׃ חַטֹּ֤אות נְעוּרַ֨י ׀ וּפְשָׁעַ֗י אַל־תִּ֫זְכֹּ֥ר כְּחַסְדְּךָ֥ זְכׇר־לִי־אַ֑תָּה לְמַ֖עַן טוּבְךָ֣ יְהֹוָֽה׃ טוֹב־וְיָשָׁ֥ר יְהֹוָ֑ה עַל־כֵּ֤ן יוֹרֶ֖ה חַטָּאִ֣ים בַּדָּֽרֶךְ׃ יַדְרֵ֣ךְ עֲ֭נָוִים בַּמִּשְׁפָּ֑ט וִילַמֵּ֖ד עֲנָוִ֣ים דַּרְכּֽוֹ׃ כׇּל־אׇרְח֣וֹת יְ֭הֹוָה חֶ֣סֶד וֶאֱמֶ֑ת לְנֹצְרֵ֥י בְ֝רִית֗וֹ וְעֵדֹתָֽיו׃ לְמַֽעַן־שִׁמְךָ֥ יְהֹוָ֑ה וְֽסָלַחְתָּ֥ לַ֝עֲוֺנִ֗י כִּ֣י רַב־הֽוּא׃ מִי־זֶ֣ה הָ֭אִישׁ יְרֵ֣א יְהֹוָ֑ה י֝וֹרֶ֗נּוּ בְּדֶ֣רֶךְ יִבְחָֽר׃ נַ֭פְשׁוֹ בְּט֣וֹב תָּלִ֑ין וְ֝זַרְע֗וֹ יִ֣ירַשׁ אָֽרֶץ׃ ס֣וֹד יְ֭הֹוָה לִירֵאָ֑יו וּ֝בְרִית֗וֹ לְהוֹדִיעָֽם׃ עֵינַ֣י תָּ֭מִיד אֶל־יְהֹוָ֑ה כִּ֤י הֽוּא־יוֹצִ֖יא מֵרֶ֣שֶׁת רַגְלָֽי׃ פְּנֵה־אֵלַ֥י וְחׇנֵּ֑נִי כִּֽי־יָחִ֖יד וְעָנִ֣י אָֽנִי׃ צָר֣וֹת לְבָבִ֣י הִרְחִ֑יבוּ מִ֝מְּצוּקוֹתַ֗י הוֹצִיאֵֽנִי׃ רְאֵ֣ה עׇ֭נְיִי וַעֲמָלִ֑י וְ֝שָׂ֗א לְכׇל־חַטֹּאותָֽי׃ רְאֵֽה־אֹיְבַ֥י כִּי־רָ֑בּוּ וְשִׂנְאַ֖ת חָמָ֣ס שְׂנֵאֽוּנִי׃ שׇׁמְרָ֣ה נַ֭פְשִׁי וְהַצִּילֵ֑נִי אַל־אֵ֝ב֗וֹשׁ כִּֽי־חָסִ֥יתִי בָֽךְ׃ תֹּם־וָיֹ֥שֶׁר יִצְּר֑וּנִי כִּ֝֗י קִוִּיתִֽיךָ׃ פְּדֵ֣ה אֱ֭לֹהִים אֶת־יִשְׂרָאֵ֑ל מִ֝כֹּ֗ל צָרוֹתָֽיו׃ <br>וְ֭הוּא יִפְדֶּ֣ה אֶת־יִשְׂרָאֵ֑ל מִ֝כֹּ֗ל עֲוֺנֹתָֽיו׃"}
+          ]},
+          {"ref": "8", "kind": "prayer", "text": "<b>יְהֹוָה</b> אֱלֹהֵי יִשְׂרָאֵל שׁוּב מֵחֲרוֹן אַפֶּךָ. וְהִנָּחֵם עַל הָרָעָה לְעַמֶּךָ: "},
+          {"ref": "9", "kind": "prayer", "role": "together", "text": "<b>אָבִינוּ מַלְכֵּנוּ</b>, אָבִינוּ אָתָּה. אָבִינוּ מַלְכֵּנוּ אֵין לָנוּ מֶלֶךְ אֶלָּא אָתָּה. אָבִינוּ מַלְכֵּנוּ רַחֵם עָלֵינוּ: אָבִינוּ מַלְכֵּנוּ חָנֵּנוּ וַעֲנֵנוּ כִּי אֵין בָּנוּ מַעֲשִׂים. עֲשֵׂה עִמָּנוּ צְדָקָה וָחֶסֶד לְמַעַן שִׁמְךָ הַגָּדוֹל וְהוֹשִׁיעֵנוּ: וַאֲנַ֗חְנוּ לֹ֤א נֵדַע֙ מַֽה־נַּעֲשֶׂ֔ה כִּ֥י עָלֶ֖יךָ עֵינֵֽינוּ׃  "},
+          {"ref": "10", "kind": "prayer", "text": "זְכֹר־רַחֲמֶ֣יךָ יְ֭הֹוָה וַחֲסָדֶ֑יךָ כִּ֖י מֵעוֹלָ֣ם הֵֽמָּה: יְהִי־חַסְדְּךָ֣ יְהֹוָ֣ה עָלֵ֑ינוּ כַּ֝אֲשֶׁ֗ר יִחַ֥לְנוּ לָֽךְ׃ אַֽל־תִּזְכׇּר־לָנוּ֮ עֲוֺנֹ֢ת רִאשֹׁ֫נִ֥ים מַ֭הֵר יְקַדְּמ֣וּנוּ רַחֲמֶ֑יךָ כִּ֖י דַלּ֣וֹנוּ מְאֹֽד׃ עֶ֭זְרֵנוּ בְּשֵׁ֣ם יְהֹוָ֑ה עֹ֝שֵׂ֗ה שָׁמַ֥יִם וָאָֽרֶץ׃ חׇנֵּ֣נוּ יְהֹוָ֣ה חׇנֵּ֑נוּ כִּי־רַ֗֝ב שָׂבַ֥עְנוּ בֽוּז׃ בְּרֹגֶז רַחֵם תִּזְכּוֹר. בְּרֹגֶז אַהֲבָה תִּזְכּוֹר. בְּרֹגֶז עֲקֵדָה תִּזְכּוֹר. בְּרֹגֶז תְּמִימוּת תִּזְכּוֹר: יְהֹוָ֥ה הוֹשִׁ֑יעָה הַ֝מֶּ֗לֶךְ יַעֲנֵ֥נוּ בְיוֹם־קׇרְאֵֽנוּ׃ כִּי־ה֭וּא יָדַ֣ע יִצְרֵ֑נוּ זָ֝כ֗וּר כִּי־עָפָ֥ר אֲנָֽחְנוּ׃ עׇזְרֵ֤נוּ ׀ אֱלֹ֘הֵ֤י יִשְׁעֵ֗נוּ עַֽל־דְּבַ֥ר כְּבֽוֹד־שְׁמֶ֑ךָ וְהַצִּילֵ֥נוּ וְכַפֵּ֥ר עַל־חַ֝טֹּאתֵ֗ינוּ לְמַ֣עַן שְׁמֶֽךָ׃"},
+          {"ref": "11", "kind": "instruction", "en": "On public fast days, additional supplications found in \"Fasts and Mourning\" are said here.", "text": "<small>בתעניות ציבור אומרים כאן תחנונים נוספים שנמצאים ב\"תעניות ואבילות\"</small> "},
+          {"ref": "12", "kind": "instruction", "en": "On Mondays and Thursdays, this Kaddish is not said; continue with Al Malch.", "text": "<small>בימים שני וחמישי אין אומרים את הקדיש הזה וממשיכים באל מלך</small>"},
+          {"ref": "13", "parts": [
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. <small>[אָמֵן]</small>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " בְּעָלְמָא דִּי בְרָא,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " כִּרְעוּתֵה,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " וְיַמְלִיךְ מַלְכוּתֵה,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " וְיַצְמַח פֻּרְקָנֵה,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " וִיקָרֵב מְשִׁיחֵהּ. "},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב,"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן. "},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " יְהֵא שְׁמֵיהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ. וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " בְּרִיךְ הוּא. "},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " לְעֵלָּא מִן כָּל בִּרְכָתָא שִׁירָתָא,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " דַּאֲמִירָן בְּעָלְמָא,"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן. "},
+            {"kind": "prayer", "text": "<small>[אָמֵן]</small></small>"}
+          ]},
+          {"ref": "14", "kind": "instruction", "en": "On Mondays and Thursdays, add:", "text": "<small>בימי שני וחמישי מוסיפים:</small>  "},
+          {"ref": "15", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>אֶל</b> מֶלֶךְ יוֹשֵׁב עַל כִּסֵּא רַחֲמִים וּמִתְנַהֵג בַּחֲסִידוּת, מוֹחֵל עֲוֹנוֹת עַמּוֹ, מַעֲבִיר רִאשׁוֹן רִאשׁוֹן. מַרְבֶּה מְחִילָה לַחַטָּאִים, וּסְלִיחָה לַפּוֹשְׁעִים, עוֹשֶׂה צְדָקוֹת עִם כָּל בָּשָׂר וְרוּחַ, לֹא כְרָעָתָם לָהֶם גּוֹמֵל, אֶל, הוֹרֵתָנוּ לוֹמַר מִדּוֹת שְׁלֹשׁ עֶשְׂרֵה, זְכוֹר לָנוּ הַיּוֹם בְּרִית שְׁלֹשׁ עֶשְׂרֵה כְּמוֹ שֶׁהוֹדַעְתָּ לֶעָנָו מִקֶּדֶם, וְכֵן כָּתוּב בְּתוֹרָתָךְ וַיֵּ֤רֶד יְהֹוָה֙ בֶּֽעָנָ֔ן וַיִּתְיַצֵּ֥ב עִמּ֖וֹ שָׁ֑ם וַיִּקְרָ֥א בְשֵׁ֖ם יְהֹוָֽה: וְשָׁם נֶאֱמַר:  "},
+          {"ref": "16", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>וַיַּעֲבֹ֨ר</b> יְהֹוָ֥ה ׀ עַל־פָּנָיו֮ וַיִּקְרָא֒ יְהֹוָ֣ה ׀ יְהֹוָ֔ה אֵ֥ל רַח֖וּם וְחַנּ֑וּן אֶ֥רֶךְ אַפַּ֖יִם וְרַב־חֶ֥סֶד וֶאֱמֶֽת׃ נֹצֵ֥ר‏ חֶ֙סֶד֙ לָאֲלָפִ֔ים נֹשֵׂ֥א עָוֺ֛ן וָפֶ֖שַׁע וְחַטָּאָ֑ה וְנַקֵּה֙:"},
+          {"ref": "17", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>אַנְשֵׁי</b> אֱמוּנָה אָבָדוּ, בָּאִים בְּכֹחַ מַעֲשֵׂיהֶם: גִּבּוֹרִים לַעֲמֹד בַּפֶּרֶץ, דּוֹחִים אֶת הַגְּזֵרוֹת: הָיוּ לָנוּ לְחוֹמָה, וּלְמַחְסֶה בְּיוֹם זָעַם: זוֹעֲכִים אַף בְּלַחֲשָׁם, חֵמָה עָצְרוּ בְּשַׁוְעָם: טֶרֶם קְרָאוּךָ עֲנִיתָם, יוֹדְעִים לַעֲתֹר וּלְרַצּוֹת: כְּאָב רִחַמְתָּ לְמַעֲנָם, לֹא הֱשִׁיבוֹתָ פְנֵיהֶם רֵיקָם: מֵרֹב עֲוֹנֵינוּ אֲבַדְנוּם, נֶאֶסְפוּ מֶנּוּ בַּחֲטָאֵינוּ: סָעוּ הֵמָּה לִמְנוּחוֹת, עָזְבוּ אוֹתָנוּ לַאֲנָחוֹת: פַּסּוּ גוֹדְרֵי גָדֵר, צֻמְּתוּ מְשִׁיבֵי חֵמָה: קָמִים בַּפֶּרֶץ אַיִן, רְאוּיִים לרַצּוֹתְךָ אָפֵסוּ: שׁוֹטַטְנוּ בְּאַרְבַּע פִּנּוֹת, תְּרוּפָה לֹא מָצָאנוּ: שַׁבְנוּ אֵלֶיךָ בּבֹשֶׁת פָּנֵינוּ, לְשַׁחֲרָךְ אֵל בְּעֵת צָרוֹתֵינוּ: "},
+          {"ref": "18", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>אֶל</b> מֶלֶךְ יוֹשֵׁב עַל כִּסֵּא רַחֲמִים וּמִתְנַהֵג בַּחֲסִידוּת, מוֹחֵל עֲוֹנוֹת עַמּוֹ, מַעֲבִיר רִאשׁוֹן רִאשׁוֹן. מַרְבֶּה מְחִילָה לַחַטָּאִים, וּסְלִיחָה לַפּוֹשְׁעִים, עוֹשֶׂה צְדָקוֹת עִם כָּל בָּשָׂר וְרוּחַ, לֹא כְרָעָתָם לָהֶם גּוֹמֵל, אֶל, הוֹרֵתָנוּ לוֹמַר מִדּוֹת שְׁלֹשׁ עֶשְׂרֵה, זְכוֹר לָנוּ הַיּוֹם בְּרִית שְׁלֹשׁ עֶשְׂרֵה כְּמוֹ שֶׁהוֹדַעְתָּ לֶעָנָו מִקֶּדֶם, וְכֵן כָּתוּב בְּתוֹרָתָךְ וַיֵּ֤רֶד יְהֹוָה֙ בֶּֽעָנָ֔ן וַיִּתְיַצֵּ֥ב עִמּ֖וֹ שָׁ֑ם וַיִּקְרָ֥א בְשֵׁ֖ם יְהֹוָֽה: וְשָׁם נֶאֱמַר:  "},
+          {"ref": "19", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>וַיַּעֲבֹ֨ר</b> יְהֹוָ֥ה ׀ עַל־פָּנָיו֮ וַיִּקְרָא֒ יְהֹוָ֣ה ׀ יְהֹוָ֔ה אֵ֥ל רַח֖וּם וְחַנּ֑וּן אֶ֥רֶךְ אַפַּ֖יִם וְרַב־חֶ֥סֶד וֶאֱמֶֽת׃ נֹצֵ֥ר‏ חֶ֙סֶד֙ לָאֲלָפִ֔ים נֹשֵׂ֥א עָוֺ֛ן וָפֶ֖שַׁע וְחַטָּאָ֑ה וְנַקֵּה֙: "},
+          {"ref": "20", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>תָּמַהְנוּ</b> מֵרָעוֹת. תָּשַׁשׁ כֹּחֵנוּ מִצָּרוֹת. שַׁחְנוּ עַד לִמְאֹד, שָׁפַלְנוּ עַד עָפָר. רַחוּם כָּךְ הִיא מִדָּתֵנוּ, קְשֵׁי עֹרֶף וּמַמְרִים אֲנָחְנוּ. צָעַקְנוּ בְּפִינוּ חָטָאנוּ, פְּתַלְתּוֹל וְעִקֵּשׁ לִבֵּנוּ. עֶלְיוֹן, רַחֲמֶיךָ מֵעוֹלָם, סְלִיחָה עִמְּךָ הִיא. נִחָם עַל הָרָעָה, מַטֵּה כְּלַפֵּי חֶסֶד. לֹא תִתְעַלַּם בְּעִתּוֹת כָּאֵל, כִּי בְּצָרָה גְדוֹלָה אֲנָחְנוּ. יִוָּדַע לְעֵינֵי הַכֹּל, טוּבְךָ וְחַסְדְּךָ עִמָּנוּ. חֲתֹם פֶּה-שָׂטָן, וְאַל יַשְׂטִין עָלֵינוּ, זְעֹם בּוֹ וְיִדֹּם. וְיַעֲמֹד מֵלִיץ טוֹב לְצַדְּקֵנוּ, הוּא יַגִּיד יָשְׁרֵנוּ. דְּרָכֶיךָ רַחוּם וְחַנּוּן גִּלִּיתָ לְנֶאֱמַן בָּיִת. בְּבַקְשׁוֹ אָז מִלְּפָנֶיךָ, אֱמוּנָתְךָ הוֹדַעְתָּ לּוֹ:"},
+          {"ref": "21", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>אֶל מֶלֶךְ</b> יוֹשֵׁב עַל כִּסֵּא רַחֲמִים וּמִתְנַהֵג בַּחֲסִידוּת, מוֹחֵל עֲוֹנוֹת עַמּוֹ, מַעֲבִיר רִאשׁוֹן רִאשׁוֹן. מַרְבֶּה מְחִילָה לַחַטָּאִים, וּסְלִיחָה לַפּוֹשְׁעִים, עוֹשֶׂה צְדָקוֹת עִם כָּל בָּשָׂר וְרוּחַ, לֹא כְרָעָתָם לָהֶם גּוֹמֵל, אֶל, הוֹרֵתָנוּ לוֹמַר מִדּוֹת שְׁלֹשׁ עֶשְׂרֵה, זְכוֹר לָנוּ הַיּוֹם בְּרִית שְׁלֹשׁ עֶשְׂרֵה כְּמוֹ שֶׁהוֹדַעְתָּ לֶעָנָו מִקֶּדֶם, וְכֵן כָּתוּב בְּתוֹרָתָךְ וַיֵּ֤רֶד יְהֹוָה֙ בֶּֽעָנָ֔ן וַיִּתְיַצֵּ֥ב עִמּ֖וֹ שָׁ֑ם וַיִּקְרָ֥א בְשֵׁ֖ם יְהֹוָֽה: וְשָׁם נֶאֱמַר:  "},
+          {"ref": "22", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>וַיַּעֲבֹ֨ר</b> יְהֹוָ֥ה ׀ עַל־פָּנָיו֮ וַיִּקְרָא֒ יְהֹוָ֣ה ׀ יְהֹוָ֔ה אֵ֥ל רַח֖וּם וְחַנּ֑וּן אֶ֥רֶךְ אַפַּ֖יִם וְרַב־חֶ֥סֶד וֶאֱמֶֽת׃ נֹצֵ֥ר‏ חֶ֙סֶד֙ לָאֲלָפִ֔ים נֹשֵׂ֥א עָוֺ֛ן וָפֶ֖שַׁע וְחַטָּאָ֑ה וְנַקֵּה֙: "},
+          {"ref": "23", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>אֱלֹהֵינוּ</b> וֵאלֹהֵי אֲבוֹתֵינוּ. אַל תַּעַשׂ עִמָּנוּ כָּלָה, תֹּאחֵז יָדְךָ בַּמִּשְׁפָּט. בְּבֹא תוֹכֵחָה נֶגְדֶּךָ, שְׁמֵנוּ מִסִּפְרְךָ אַל תֶּמַח. גִּשְׁתְּךָ לַחֲקֹר מוּסָר, רַחֲמֶיךָ יקַדְּמוּ רָגְזֶךָ. דַּלּוּת מַעֲשִׂים בְּשׁוּרֶךָ, קָרֵב צֶדֶק מֵאֵלֶיךָ. הוֹרֵנוּ, בְּזַעֲקֵנוּ לָךְ, צַו יְשׁוּעָתֵנוּ בְּמַפְגִּיעַ. וְתָשִׁיב שְׁבוּת אָהֳלֵי תָם, פְּתָחָיו רְאֵה כִּי שָׁמֵמוּ. זְכֹר נָאַמְתָּ, עֵדוּת לֹא תִשָּׁכַח מִפִּי זַרְעוֹ. חוֹתַם תְּעוּדָה תַּתִּיר, סוֹדְךָ שִׂים בְּלִמּוּדֶיךָ. טַבּוּר אַגַּן הַסַּהַר, נָא אַל יֶחְסַר הַמָּזֶג. יָהּ, דַּע אֶת יִשְׂרָאֵל אֲשֶׁר יְדָעוּךָ, מַגֵּר אֶת הַגּוֹיִם אֲשֶׁר לֹא יְדָעוּךָ. כִּי תָשִׁיב לְבִצָּרוֹן, לְכוּדִים אֲסִירֵי הַתִּקְוָה. "},
+          {"ref": "24", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>מַה</b> נֹּאמַר לְפָנֶיךָ יוֹשֵׁב מָרוֹם, וּמַה נְּסַפֵּר לְפָנֶיךָ שׁוֹכֵן שְׁחָקִים, הֲלֹא הַנִּסְתָּרוֹת וְהַנִּגְלוֹת אַתָּה יוֹדֵעַ, אַתָּה יוֹדֵעַ רָזֵי עוֹלָם, וְתַעֲלוּמוֹת סִתְרֵי כָּל חָי, אַתָּה חוֹפֵשׂ כָּל חַדְרֵי בָטֶן, רֹאֶה כְלָיוֹת וָלֵב. אֵין דָּבָר נֶעְלָם מִמָּךָּ, וְאֵין נִסְתָּר מִנֶּגֶד עֵינֶיךָ: "},
+          {"ref": "25", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>יְהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, שֶׁתִּמְחֹל לָנוּ אֶת-כָּל-חַטֹּאתֵינוּ, וּתְכַפֵּר לָנוּ אֶת-כָּל-עֲוֹנוֹתֵינוּ, וְתִמְחֹל וְתִסְלַח לְכָל פְּשָׁעֵינוּ, וְסָלַחְתָּ֛ לַעֲוֺנֵ֥נוּ וּלְחַטָּאתֵ֖נוּ וּנְחַלְתָּֽנוּ:  "},
+          {"ref": "26", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>סְלַח</b> לָנוּ אָבִינוּ כִּי חָטָאנוּ, מְחֹל לָנוּ מַלְכֵּנוּ כִּי פָשָׁעְנוּ: כִּֽי־אַתָּ֣ה אֲ֭דֹנָי ט֣וֹב וְסַלָּ֑ח וְרַב־חֶ֗֝סֶד לְכׇל־קֹֽרְאֶֽיךָ׃ לְמַֽעַן־שִׁמְךָ֥ יְהֹוָ֑ה וְֽסָלַחְתָּ֥ לַ֝עֲוֺנִ֗י כִּ֣י רַב־הֽוּא׃ לְמַעַן־שִׁמְךָ֣ יְהֹוָ֣ה תְּחַיֵּ֑נִי בְּצִדְקָתְךָ֓ ׀ תּוֹצִ֖יא מִצָּרָ֣ה נַפְשִֽׁי׃ יְהֹוָ֣ה צְבָא֣וֹת עִמָּ֑נוּ מִשְׂגָּֽב־לָ֨נוּ אֱלֹהֵ֖י יַֽעֲקֹ֣ב סֶֽלָה׃ יְהֹוָ֥ה צְבָא֑וֹת אַֽשְׁרֵ֥י אָ֝דָ֗ם בֹּטֵ֥חַ בָּֽךְ׃ יְהֹוָ֥ה הוֹשִׁ֑יעָה הַ֝מֶּ֗לֶךְ יַעֲנֵ֥נוּ בְיוֹם־קׇרְאֵֽנוּ: הֲשִׁיבֵ֨נוּ יְהֹוָ֤ה ׀ אֵלֶ֙יךָ֙ ונשוב [וְֽנָשׁ֔וּבָה] חַדֵּ֥שׁ יָמֵ֖ינוּ כְּקֶֽדֶם׃"},
+          {"ref": "27", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>וְה֤וּא</b> רַח֨וּם ׀ יְכַפֵּ֥ר עָוֺן֮ וְֽלֹא־יַֽ֫שְׁחִ֥ית וְ֭הִרְבָּה לְהָשִׁ֣יב אַפּ֑וֹ וְלֹא־יָ֝עִ֗יר כׇּל־חֲמָתֽוֹ׃  אַתָּ֤ה יְהֹוָ֗ה לֹֽא־תִכְלָ֣א רַחֲמֶ֣יךָ מִמֶּ֑נִּי חַסְדְּךָ֥ וַ֝אֲמִתְּךָ֗ תָּמִ֥יד יִצְּרֽוּנִי׃ הוֹשִׁיעֵ֨נוּ ׀ יְהֹ֘וָ֤ה אֱלֹהֵ֗ינוּ וְקַבְּצֵנוּ֮ מִֽן־הַגּ֫וֹיִ֥ם לְ֭הֹדוֹת לְשֵׁ֣ם קׇדְשֶׁ֑ךָ לְ֝הִשְׁתַּבֵּ֗חַ בִּתְהִלָּתֶֽךָ: אִם־עֲוֺנ֥וֹת תִּשְׁמׇר־יָ֑הּ אֲ֝דֹנָ֗י מִ֣י יַעֲמֹֽד׃ כִּֽי־עִמְּךָ֥ הַסְּלִיחָ֑ה לְ֝מַ֗עַן תִּוָּרֵֽא׃ לֹ֣א כַ֭חֲטָאֵינוּ עָ֣שָׂה לָ֑נוּ וְלֹ֥א כַ֝עֲוֺנֹתֵ֗ינוּ גָּמַ֥ל עָלֵֽינוּ׃ אִם־עֲוֺנֵ֙ינוּ֙ עָ֣נוּ בָ֔נוּ יְהֹוָ֕ה עֲשֵׂ֖ה לְמַ֣עַן שְׁמֶ֑ךָ׃ זְכֹר־רַחֲמֶ֣יךָ יְ֭הֹוָה וַחֲסָדֶ֑יךָ כִּ֖י מֵעוֹלָ֣ם הֵֽמָּה׃ יַֽעַנְךָ֣ יְ֭הֹוָה בְּי֣וֹם צָרָ֑ה יְ֝שַׂגֶּבְךָ֗ שֵׁ֤ם ׀ אֱלֹהֵ֬י יַעֲקֹֽב׃ יְהֹוָ֥ה הוֹשִׁ֑יעָה הַ֝מֶּ֗לֶךְ יַעֲנֵ֥נוּ בְיוֹם־קׇרְאֵֽנוּ: אָבִינוּ מַלְכֵּנוּ, חָנֵּנוּ וַעֲנֵנוּ כִּי אֵין בָּנוּ מַעֲשִׂים. עֲשֵׂה עִמָּנוּ צְדָקָה כְּרֹב רַחֲמֶיךָ, וְהוֹשִׁיעֵנוּ לְמַעַן שְׁמֶךָ: "},
+          {"ref": "28", "parts": [
+            {"kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>וְעַתָּ֣ה ׀</b> "},
+            {"kind": "instruction", "en": "(Daniel 9:15)", "text": "<small>(דניאל ט טו)</small>"},
+            {"kind": "prayer", "role": "chazzan_then_congregation", "text": " אֲדֹנָ֣י אֱלֹהֵ֗ינוּ אֲשֶׁר֩ הוֹצֵ֨אתָ אֶֽת־עַמְּךָ֜ מֵאֶ֤רֶץ מִצְרַ֙יִם֙ בְּיָ֣ד חֲזָקָ֔ה וַתַּֽעַשׂ־לְךָ֥ שֵׁ֖ם כַּיּ֣וֹם הַזֶּ֑ה חָטָ֖אנוּ רָשָֽׁעְנוּ׃ אֲדֹנָ֗י כְּכׇל־צִדְקֹתֶ֙ךָ֙ יָֽשׇׁב־נָ֤א אַפְּךָ֙ וַחֲמָ֣תְךָ֔ מֵעִֽירְךָ֥ יְרוּשָׁלַ֖‍ִם הַר־קׇדְשֶׁ֑ךָ כִּ֤י בַחֲטָאֵ֙ינוּ֙ וּבַעֲוֺנ֣וֹת אֲבֹתֵ֔ינוּ יְרוּשָׁלַ֧‍ִם וְעַמְּךָ֛ לְחֶרְפָּ֖ה לְכָל־סְבִיבֹתֵֽינוּ׃ וְעַתָּ֣ה ׀ שְׁמַ֣ע אֱלֹהֵ֗ינוּ אֶל־תְּפִלַּ֤ת עַבְדְּךָ֙ וְאֶל־תַּ֣חֲנוּנָ֔יו וְהָאֵ֣ר פָּנֶ֔יךָ עַל־מִקְדָּשְׁךָ֖ הַשָּׁמֵ֑ם לְמַ֖עַן אֲדֹנָֽי׃ הַטֵּ֨ה אֱלֹהַ֥י ׀ אׇזְנְךָ֮ וּֽשְׁמָע֒ פקחה [פְּקַ֣ח] עֵינֶ֗יךָ וּרְאֵה֙ שֹֽׁמְמֹתֵ֔ינוּ וְהָעִ֕יר אֲשֶׁר־נִקְרָ֥א שִׁמְךָ֖ עָלֶ֑יהָ כִּ֣י ׀ לֹ֣א עַל־צִדְקֹתֵ֗ינוּ אֲנַ֨חְנוּ מַפִּילִ֤ים תַּחֲנוּנֵ֙ינוּ֙ לְפָנֶ֔יךָ כִּ֖י עַל־רַחֲמֶ֥יךָ הָרַבִּֽים׃ אֲדֹנָ֤י ׀ שְׁמָ֙עָה֙ אֲדֹנָ֣י ׀ סְלָ֔חָה אֲדֹנָ֛י הַֽקְשִׁ֥יבָה וַעֲשֵׂ֖ה אַל־תְּאַחַ֑ר לְמַֽעַנְךָ֣ אֱלֹהַ֔י כִּֽי־שִׁמְךָ֣ נִקְרָ֔א עַל־עִירְךָ֖ וְעַל־עַמֶּֽךָ׃  "}
+          ]},
+          {"ref": "29", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>אָבִינוּ</b> אָב הָרַחֲמָן, הַרְאֵנוּ אוֹת לְטוֹבָה וְקַבֵּץ נְפוּצוֹתֵינוּ מֵאַרְבַּע כַּנְפוֹת הָאָרֶץ. יַכִּירוּ וְיֵדְעוּ כָּל הַגּוֹיִם כִּי אַתָּה יְהֹוָה אָבִינוּ אָתָּה. אֲנַחְנוּ הַחֹמֶר וְאַתָּה יֹצְרֵנוּ וּמַעֲשֵׂה יָדְךָ כֻּלָּנוּ:  "},
+          {"ref": "30", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>אָבִינוּ</b> מַלְכֵּנוּ, צוּרֵנוּ וְגוֹאֲלֵנוּ, ח֧וּסָה יְהֹוָ֣ה עַל־עַמֶּ֗ךָ וְאַל־תִּתֵּ֨ן נַחֲלָתְךָ֤ לְחֶרְפָּה֙ לִמְשׇׁל־בָּ֣ם גּוֹיִ֔ם לָ֚מָּה יֹאמְר֣וּ בָעַמִּ֔ים אַיֵּ֖ה אֱלֹהֵיהֶֽם׃ יָדַעְנוּ יְהֹוָה כִּי חָטָאנוּ. וְאֵין מִי יַעֲמוֹד בַּעֲדֵנוּ אֶלָּא שִׁמְךָ הַגָּדוֹל יַעֲמוֹד לָנוּ בְּעֵת צָרָה. וּכְרַחֵם אָב עַל בָּנִים רַחֵם עָלֵינוּ. חֲמֹל עַל עַמָּךְ וְרַחֵם עַל נַחֲלָתָךְ. חוּסָה נָּא כְּרֹב רַחֲמֶיךָ חָנֵּנוּ מַלְכֵּנוּ וַעֲנֵנוּ. לְךָ יְהֹוָה הַצְּדָקָה עוֹשֵׂה נִפְלָאוֹת בְּכָל עֵת וָעֵת. הַבֵּט נָא וְהוֹשִׁיעָה נָּא צֹאן מַרְעִיתֶךָ. אַל יִמְשָׁל בָּנוּ קֶצֶף כִּי לְךָ יְהֹוָה הַיְשׁוּעָה בְּךָ תוֹחַלְתֵּנוּ. אֱלוֹהַּ סְלִיחוֹת אָנָּא סְלַח נָא. כִּי אֵל טוֹב וְסַלָּח אָתָּה:  "},
+          {"ref": "31", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>אָנָּא</b> מֶלֶךְ רַחוּם וְחַנּוּן, זְכוֹר וְהַבֵּט לִבְרִית בֵּין הַבְּתָרִים. וְתֵרָאֶה לְפָנֶיךָ עֲקֵדַת יָחִיד. וּלְמַעַן יִשְׂרָאֵל אָבִינוּ. אַל תַּעַזְבֵנוּ אָבִינוּ. וְאַל תִּטְּשֵׁנוּ מַלְכֵּנוּ וְאַל תִּשְׁכָּחֵנוּ יוֹצְרֵנוּ. וְאַל תַּעַשׂ עִמָּנוּ כָלָה בְּגָלוּתֵינוּ. כִּי אֵל מֶלֶךְ חַנּוּן וְרַחוּם אָתָּה:  "},
+          {"ref": "32", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>אֵין כָּמוֹךָ</b> חַנּוּן וְרַחוּם אֱלֹהֵינוּ. אֵין כָּמוֹךָ אֵל אֶרֶךְ אַפַּיִם וְרַב חֶסֶד וֶאֱמֶת. הושִׁיעֵנוּ וְרַחֲמֵנוּ מֵרַעַשׁ וּמֵרֹגֶז הַצִּילֵנוּ: זְכֹר֙ לַעֲבָדֶ֔יךָ לְאַבְרָהָ֥ם לְיִצְחָ֖ק וּֽלְיַעֲקֹ֑ב אַל־תֵּ֗פֶן אֶל־קְשִׁי֙ הָעָ֣ם הַזֶּ֔ה וְאֶל־רִשְׁע֖וֹ וְאֶל־חַטָּאתֽוֹ׃ שׁ֚וּב מֵחֲר֣וֹן אַפֶּ֔ךָ וְהִנָּחֵ֥ם עַל־הָרָעָ֖ה לְעַמֶּֽךָ׃ וְהָסֵר מִמֶּנּוּ מַכַּת הַמָּוֶת כִּי רַחוּם אָתָּה. כִּי כֵן דַּרְכְּךָ לַעֲשׂוֹת חֶסֶד חִנָּם בְּכָל דּוֹר וָדוֹר: אָנָּ֣א יְ֭הֹוָה הוֹשִׁ֘יעָ֥ה נָּ֑א אָנָּ֥א יְ֝הֹוָ֗ה הַצְלִ֘יחָ֥ה נָֽא׃ אָנָּא יְהֹוָה עֲנֵנוּ בְיוֹם קָרְאֵנוּ: לְךָ יְהֹוָה קִוִּינוּ. לְךָ יְהֹוָה חִכִּינוּ. לְךָ יְהֹוָה נְיַחֵל אַל תֶּחֱשֶׁה וּתְעַנֵּנוּ. כִּי נָאֲמוּ גוֹיִם אָבְדָה תִקְוָתָם. כָּל בֶּרֶךְ לְךָ תִכְרַע וְכָל קוֹמָה לְפָנֶיךָ תִשְׁתַּחֲוֶה:  "},
+          {"ref": "33", "kind": "prayer", "role": "chazzan_then_congregation", "text": "<b>הַפּוֹתֵחַ</b> יָד בִּתְשׁוּבָה לְקַבֵּל פּוֹשְׁעִים וְחַטָּאִים. נִבְהֲלָה נַפְשֵׁנוּ מֵרוֹב עִצְּבוֹנֵנוּ. אַל תִּשְׁכָּחֵנוּ נֶצַח קוּמָה וְהוֹשִׁיעֵנוּ. אַל תִּשְׁפּוֹךְ חֲרוֹנְךָ עָלֵינוּ כִּי עַמְּךָ אֲנַחְנוּ בְּנֵי בְרִיתֶךָ. אֵל הַבִּיטָה. דַּל כְּבוֹדֵנוּ בַגּוֹיִם וְשִׁקְּצוּנוּ כְּטֻמְאַת הַנִּדָּה. עַד מָתַי עֻזְּךָ בַּשְּׁבִי וְתִפְאַרְתְּךָ בְּיַד צָר. הֵמָּה יִרְאוּ וְיֵבשׁוּ וְיֵחַתּוּ מִגְּבוּרָתָם. עוֹרְרָה גְבוּרָתְךָ וְהוֹשִׁיעֵנוּ לְמַעַן שְׁמֶךָ. אַל יִמְעֲטוּ לְפָנֶיךָ תְּלָאוֹתֵינוּ מַהֵר יְקַדְּמוּנוּ רַחֲמֶיךָ בְּעֵת צָרוֹתֵנוּ. לֹא לְמַעֲנֵנוּ אֶלָּא לְמַעֲנָךְ פְּעֹל וְאַל תַּשְׁחֵת אֶת זֵכֶר שְׁאֵרִיתֵנוּ. כִּי לְךָ מְיַחֲלוֹת עֵינֵינוּ כִּי אֵל מֶלֶךְ חַנּוּן וְרַחוּם אָתָּה. וּזְכוֹר עֵדוּתֵינוּ בְּכָל יוֹם תָּמִיד אוֹמְרִים פַּעֲמַיִם בְּאַהֲבָה: שְׁמַ֖ע יִשְׂרָאֵ֑ל יְהֹוָ֥ה אֱלֹהֵ֖ינוּ יְהֹוָ֥ה ׀ אֶחָֽד׃"},
+          {"ref": "34", "parts": [
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. <small>[אָמֵן]</small>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " בְּעָלְמָא דִּי בְרָא,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " כִּרְעוּתֵה,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " וְיַמְלִיךְ מַלְכוּתֵה,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " וְיַצְמַח פֻּרְקָנֵה,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " וִיקָרֵב מְשִׁיחֵהּ. "},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב,"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן. "},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " יְהֵא שְׁמֵיהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ. וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " בְּרִיךְ הוּא. "},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " לְעֵלָּא מִן כָּל בִּרְכָתָא שִׁירָתָא,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " דַּאֲמִירָן בְּעָלְמָא,"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן. "},
+            {"kind": "prayer", "text": "<small>[אָמֵן]</small></small>"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Sefaria Community Translation",
+        "segs": [
+          {"ref": "2", "translates": ["2"], "text": "Please L·rd, Our G·d and G·d of Our Fathers – Let Our Prayer come before You &amp; do not conceal Yourself, Our King, from our supplications. For we are not brazen faced &amp; stiff necked to say before You, L·rd, our G-d &amp; G-d of our Fathers – we are righteous and we have not sinned. Rather we have sinned, we have been crooked and transgressed – we and our fathers and the people of our household. We were guilty. We Rebelled. We Stole. We spoke slander and evil speech. We caused iniquity, We caused evil. We did intentional bad. We did violence. We accused falsely and deceitfully. We provided bad advice. We spoke falsity. We became angry. We mocked. We rebelled. We rebelled against your word. We provoked. We committed adultery. We left the path. We transgressed deliberately. We damaged. We caused pain. We caused pain to our father and mother. We were stiff necked. We were evil. We destroyed. We did despicable things. We made people err. We left Your Commandments and Your good laws &amp; they were not worthy of us. And You are righteous on everything that happens to us – for You did truth and we acted wickedly."},
+          {"ref": "3", "translates": ["3"], "text": "G·d, long to anger You are and a Master of mercy. The Greatness of Your mercifulness and kindness recall today for Your beloved seed, like You told the humble one [Moshe / Moses] from old. And also it is written in Your Torah: “And the L·rd descended in a cloud &amp; stood with him [Moshe/ Moses] there [in the tent of meeting]. And he called out with name – L·rd – and there it is said:..."},
+          {"ref": "4", "translates": ["4"], "text": "And the L·rd passed by before him [Moshe] and he called: L·rd, L·rd – 1) G·d 2) Merciful &amp; 3) Gracious, 4) Long 5) to anger and 6) Great in Kindness 7) and Truth. 8) His Kindness is faithful 9) for thousands [of generations] 10) He bears iniquity, 11) and sin 12) and transgression 13) and absolves [those who repent]."},
+          {"ref": "5", "translates": ["5"], "text": "Merciful &amp; Gracious One, We sinned before you – have mercy upon us and save us."},
+          {"ref": "6", "translates": ["6"], "text": "(say while seated)"},
+          {"ref": "7", "translates": ["7"], "text": "[A Psalm] by David – To You L·rd do I lift my soul. My G·d I have faith in You – Don't let me be embarrassed or let my enemies exult. Also all who have faith – let them not be embarrassed, let the enemies be embarrassed for naught. Let me understand me your ways L·rd and teach me your paths. Guide me in your truth and teach [it to] me – for You are the G·d of my salvation – in You I have faith all day.  Remember Your mercy – L·rd – and Your kindness – for they are eternal. The sins of my youth and transgressions do not recall because of your kindness You remember me because of Your goodness. Good &amp; justare You L·rd – therefor You show sinners the [proper] path. You guide the humble with justice and You teach the humble his way. All the paths of the L·rd are kindness &amp; truth to those faithful to His covenant &amp; testimonies. For the sake of Your name L·rd – forgive my transgressions – for they are many. Who is this man that fears the L·rd – You lead him on the select path. His soul depends on good and his seed will inherit the land. The foundation of the L·rd is for those who fear Him and His covenant is for those that accept them. My eyes are constantly towards the L·rd – for he brings me out of the net on my feet. Turn to me and have grace upon me for I am unique and needy [person]. The sufferings of my heart have widened – from their pains You took me out. Observe my poverty and effort &amp; remove all my sins. Observe my enemies, for they have increased. And with a violent hate did they despise me. Guard my soul and save me don't make me embarrassed for I place my trust in You. Simple and just You formed me – thus I put my trust in You. Redeem G·d Yisrael from all who cause them pain. And He will redeem Yisrael from all its sins:"},
+          {"ref": "8", "translates": ["8"], "text": "L·rd, G·d of Yisrael – return from Your wrathful anger. And have mercy on the evil to to your people. "},
+          {"ref": "9", "translates": ["9"], "text": "Our Father, Our King – You are our Father. Our Father, Our King We have no king, other than You.  Our Father, Our King have mercy on us.  Our Father, Our King – be Gracious and answer us – for we have no [valiant] deeds. Do righteousness and kindness with us – for the sake of Your great Name – and save us. And we – don't know what to do – for our eyes are upon You [to help us]."},
+          {"ref": "10", "translates": ["10"], "text": "Recall Your mercy L·rd and Your kindness, for they are eternal. May your kindness L·rd be upon us – when we plead to You. Do not recall about us  - our first sins – quickly let your mercy precede it – for we were very lowly. Help us in the Name of the L·rd. For we  were subject greatly to degradation. In Your wrath, recall Your mercy. In Your wrath, recall Your love. L·rd save [us]! [You are] the King that answers on the day we call. For You knew our inclinations – remember that we are [only] dust. Help us – G·d of our salvation – for the matter of Your Name's honor. And save us and give atonement on our sins for the sake of Your Name.\n"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday Shacharit/Torah Reading",
+      "title": "קריאת התורה",
+      "node": "torah.aliyah_blessings",
+      "when": "torahReading",
+      "service": "shacharit",
+      "he": {
+        "version": "Shaliehsaboo Edition",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Torah Scroll", "text": "<big><b>ספר תורה</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "Before taking out the Torah scroll on a day with Tachanun, say:", "text": "<small>לפני הוצאת ספר תורה ביום שיש בו תחנון אומרים:</small> "},
+          {"ref": "3", "kind": "prayer", "role": "congregation_then_chazzan", "text": "<b>אֶל</b> אֶרֶךְ אַפַּיִם וְרַב חֶסֶד וֶאֱמֶת, אֶל בְּאַפְּךָ תוֹכִיחֵנוּ, חוּסָה יְהֹוָה עַל יִשְׂרָאֵל עַמֶּךָ, וְהוֹשִׁיעֵנוּ מִכָּל רָע, חָטָאנוּ לְךָ, אָדוֹן סְלַח נָא, כְּרֹב רַחֲמֶיךָ אֶל:"},
+          {"ref": "4", "kind": "prayer", "role": "congregation_then_chazzan", "text": "<b>אֶל</b> אֶרֶךְ אַפַּיִם וּמַלֵּא רַחֲמִים, אֶל תַּסְתֵּר פָּנֶיךָ מִמֶּנּוּ, חוּסָה יְהֹוָה עַל שְׁאֵרִית יִשְׂרָאֵל עַמֶּךָ, וְהַצִּילֵנוּ מִכָּל רָע, חָטָאנוּ לְךָ, אֲדוֹן סְלַח נָא, כְּרֹב רַחֲמֶיךָ אֶל:  "},
+          {"ref": "5", "kind": "instruction", "en": "On a day without Tachanun, say:", "text": "<small>ביום שאין בו תחנון אומרים:</small> "},
+          {"ref": "6", "kind": "prayer", "role": "congregation_then_chazzan", "text": "<b>יְהִ֨י</b> יְהֹוָ֤ה אֱלֹהֵ֙ינוּ֙ עִמָּ֔נוּ כַּאֲשֶׁ֥ר הָיָ֖ה עִם־אֲבֹתֵ֑ינוּ אַל־יַעַזְבֵ֖נוּ וְאַֽל־יִטְּשֵֽׁנוּ׃ הוֹשִׁ֤יעָה ׀ אֶת־עַמֶּ֗ךָ וּבָרֵ֥ךְ אֶת־נַחֲלָתֶ֑ךָ וּֽרְעֵ֥ם וְ֝נַשְּׂאֵ֗ם עַד־הָעוֹלָֽם׃ בַּֽ֭עֲבוּר דָּוִ֣ד עַבְדֶּ֑ךָ אַל־תָּ֝שֵׁ֗ב פְּנֵ֣י מְשִׁיחֶֽךָ׃"},
+          {"ref": "7", "parts": [
+            {"kind": "instruction", "en": "When taking out the Torah scroll, say:", "text": "<small>שמוציאים ספר תורה אומרים</small>"},
+            {"kind": "prayer", "role": "congregation_then_chazzan", "text": "<br><b>בָּרוּךְ</b> הַמָּקוֹם שֶׁנָּתַן תּוֹרָה לְעַמּוֹ יִשְׂרָאֵל,"},
+            {"kind": "prayer", "role": "congregation_then_chazzan", "text": " בָּרוּךְ הוּא: אַשְׁרֵ֣י הָ֭עָם שֶׁכָּ֣כָה לּ֑וֹ אַֽשְׁרֵ֥י הָ֝עָ֗ם שֱׁיְהֹוָ֥ה אֱלֹהָֽיו׃ גַּדְּל֣וּ לַיהֹוָ֣ה אִתִּ֑י וּנְרוֹמְמָ֖ה שְׁמ֣וֹ יַחְדָּֽו׃ רוֹמְמ֡וּ יְהֹ֘וָ֤ה אֱלֹהֵ֗ינוּ וְֽ֭הִשְׁתַּחֲווּ לַהֲדֹ֥ם רַגְלָ֗יו קָד֥וֹשׁ הֽוּא׃ רוֹמְמ֡וּ יְהֹ֘וָ֤ה אֱלֹהֵ֗ינוּ וְֽ֭הִשְׁתַּחֲווּ לְהַ֣ר קׇדְשׁ֑וֹ כִּי־קָ֝ד֗וֹשׁ יְהֹוָ֥ה אֱלֹהֵֽינוּ׃ אֵין־קָד֥וֹשׁ כַּיהֹוָ֖ה כִּ֣י אֵ֣ין בִּלְתֶּ֑ךָ וְאֵ֥ין צ֖וּר כֵּאלֹהֵֽינוּ׃ כִּ֤י מִ֣י אֱ֭לוֹהַּ מִבַּלְעֲדֵ֣י יְהֹוָ֑ה וּמִ֥י צ֝֗וּר זוּלָתִ֥י אֱלֹהֵֽינוּ׃ תּוֹרָ֥ה צִוָּה־לָ֖נוּ מֹשֶׁ֑ה מוֹרָשָׁ֖ה קְהִלַּ֥ת יַעֲקֹֽב׃ עֵץ־חַיִּ֣ים הִ֭יא לַמַּחֲזִיקִ֣ים בָּ֑הּ וְֽתֹמְכֶ֥יהָ מְאֻשָּֽׁר׃ דְּרָכֶ֥יהָ דַרְכֵי־נֹ֑עַם וְֽכׇל־נְתִ֖יבוֹתֶ֣יהָ שָׁלֽוֹם׃ שָׁל֣וֹם רָ֭ב לְאֹהֲבֵ֣י תוֹרָתֶ֑ךָ וְאֵֽין־לָ֥מוֹ מִכְשֽׁוֹל׃ יְֽהֹוָ֗ה עֹ֭ז לְעַמּ֣וֹ יִתֵּ֑ן יְהֹוָ֓ה ׀ יְבָרֵ֖ךְ אֶת־עַמּ֣וֹ בַשָּׁלֽוֹם׃ "}
+          ]},
+          {"ref": "8", "kind": "instruction", "en": "When reaching the bimah, the scroll is raised and the text shown to the congregation, and they say:", "text": "<small>כשמגיע לדוכן, מגביה את ספר התורה ומראה הכתב לקהל ואומרים</small> "},
+          {"ref": "9", "kind": "prayer", "role": "congregation_then_chazzan", "gestures": ["hold_torah"], "text": "<b>וְזֹ֖את </b> הַתּוֹרָ֑ה אֲשֶׁר־שָׂ֣ם מֹשֶׁ֔ה לִפְנֵ֖י בְּנֵ֥י יִשְׂרָאֵֽל׃ תּוֹרָ֥ה צִוָּה־לָ֖נוּ מֹשֶׁ֑ה מוֹרָשָׁ֖ה קְהִלַּ֥ת יַעֲקֹֽב׃ הָאֵל֮ תָּמִ֢ים דַּ֫רְכּ֥וֹ אִמְרַֽת־יְהֹוָ֥ה צְרוּפָ֑ה מָגֵ֥ן ה֝֗וּא לְכֹ֤ל ׀ הַחֹסִ֬ים בּֽוֹ׃"},
+          {"ref": "10", "kind": "instruction", "en": "And the person called up says:", "text": "<small>ואומר העולה: הַשֵּׁם עִמָּכֶם:</small> "},
+          {"ref": "11", "kind": "instruction", "en": "And the congregation answers:", "text": "<small>ועונים הקהל: יְבָרֶכְךָ הַשֵּׁם:</small> "},
+          {"ref": "12", "parts": [
+            {"kind": "instruction", "en": "And the person called up says:", "text": "<small>ואומר העולה:</small>"},
+            {"kind": "prayer", "role": "oleh", "text": " בָּרְכוּ אֶת יְהֹוָה הַמְּבֹרָךְ: "}
+          ]},
+          {"ref": "13", "parts": [
+            {"kind": "instruction", "en": "And the congregation answers:", "text": "<small>ועונים הקהל:</small>"},
+            {"kind": "prayer", "role": "congregation", "text": " בָּרוּךְ יְהֹוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד: "}
+          ]},
+          {"ref": "14", "parts": [
+            {"kind": "instruction", "en": "And the person called up repeats:", "text": "<small>וחוזר העולה:</small>"},
+            {"kind": "prayer", "role": "oleh", "text": " בָּרוּךְ יְהֹוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד: "}
+          ]},
+          {"ref": "15", "kind": "instruction", "en": "And the person called up blesses before the reading", "text": "<small>ומברך העולה לפני הקריאה</small>  "},
+          {"ref": "16", "parts": [
+            {"kind": "prayer", "role": "oleh", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה,"},
+            {"kind": "prayer", "role": "oleh", "text": " אֱלֹהֵינוּ  מֶלֶךְ הָעוֹלָם,"},
+            {"kind": "prayer", "role": "oleh", "text": " אֲשֶׁר בָּחַר בָּנוּ מִכָּל הָעַמִּים וְנָתַן לָנוּ אֶת תּוֹרָתוֹ. בָּרוּךְ אַתָּה יְהֹוָה,"},
+            {"kind": "prayer", "role": "oleh", "text": " נוֹתֵן הַתּוֹרָה: "},
+            {"kind": "instruction", "en": "[Amen]", "text": "<small>[אמן]</small> "}
+          ]},
+          {"ref": "17", "kind": "instruction", "en": "After the reading, the one called up blesses", "text": "<small>אחר הקריאה מברך העולה</small> "},
+          {"ref": "18", "parts": [
+            {"kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה,"},
+            {"kind": "prayer", "text": " אֱלֹהֵינוּ  מֶלֶךְ הָעוֹלָם,"},
+            {"kind": "prayer", "text": " אֲשֶׁר נָתַן לָנוּ אֶת תּוֹרָתוֹ תּוֹרַת אֱמֶת,"},
+            {"kind": "prayer", "text": " וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ. בָּרוּךְ אַתָּה יְהֹוָה,"},
+            {"kind": "prayer", "text": " נוֹתֵן הַתּוֹרָה: "},
+            {"kind": "instruction", "en": "[Amen]", "text": "<small>[אמן]</small> "}
+          ]},
+          {"ref": "19", "kind": "note", "en": "Birkat HaGomel is found in the Shabbat Torah reading order", "gloss": "Not said on weekdays", "text": "ברכת הגומל נמצא בסדר קריאת התורה של שבת"},
+          {"ref": "20", "kind": "instruction", "en": "The last one called up says Half Kaddish", "text": "<small>העולה האחרון אומר חצי קדיש</small>"},
+          {"ref": "21", "kind": "prayer", "role": "oleh", "voice": "aloud", "minyan": true, "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. [אָמֵן] בְּעָלְמָא דִּי בְרָא, כִּרְעוּתֵה, וְיַמְלִיךְ מַלְכוּתֵה, וְיַצְמַח פֻּרְקָנֵה, וִיקָרֵב מְשִׁיחֵהּ. [אָמֵן] בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן. [אָמֵן] יְהֵא שְׁמֵיהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ. וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא, בְּרִיךְ הוּא. [אָמֵן] לְעֵלָּא מִן כָּל בִּרְכָתָא שִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא, דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן. [אָמֵן]</small>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday Shacharit/Ashrei",
+      "title": "אשרי",
+      "node": "pz.ashrei",
+      "when": "true",
+      "service": "shacharit",
+      "he": {
+        "version": "Shaliehsaboo Edition",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "<big><b>אשרי יושבי ביתך</b></big>"},
+          {"ref": "2", "kind": "prayer", "text": "<b>יְהִי־חַסְדְּךָ֣</b> יְהֹוָ֣ה עָלֵ֑ינוּ כַּ֝אֲשֶׁ֗ר יִחַ֥לְנוּ לָֽךְ׃"},
+          {"ref": "3", "kind": "prayer", "text": "<b>אַ֭שְׁרֵי</b> יוֹשְׁבֵ֣י בֵיתֶ֑ךָ ע֝֗וֹד יְֽהַלְל֥וּךָ סֶּֽלָה: אַשְׁרֵ֣י הָ֭עָם שֶׁכָּ֣כָה לּ֑וֹ אַֽשְׁרֵ֥י הָ֝עָ֗ם שֱׁיְהֹוָ֥ה אֱלֹהָֽיו:  "},
+          {"ref": "4", "parts": [
+            {"kind": "prayer", "text": "<b>תְּהִלָּ֗ה לְדָ֫וִ֥ד</b> "},
+            {"kind": "instruction", "en": "(Psalms 145:1-2)", "text": "<small>(תהילים קמ״ה:א׳-ב׳)</small>"},
+            {"kind": "prayer", "text": " אֲרוֹמִמְךָ֣ אֱלוֹהַ֣י הַמֶּ֑לֶךְ וַאֲבָרְכָ֥ה שִׁ֝מְךָ֗ לְעוֹלָ֥ם וָעֶֽד׃ בְּכָל־י֥וֹם אֲבָֽרְכֶ֑ךָּ וַאֲהַֽלְלָ֥ה שִׁ֝מְךָ֗ לְעוֹלָ֥ם וָעֶֽד׃ גָּ֘ד֤וֹל יְהֹוָ֣ה וּמְהֻלָּ֣ל מְאֹ֑ד וְ֝לִגְדֻלָּת֗וֹ אֵ֣ין חֵֽקֶר׃ דּ֣וֹר לְ֭דוֹר יְשַׁבַּ֣ח מַעֲשֶׂ֑יךָ וּגְב֖וּרֹתֶ֣יךָ יַגִּֽידוּ׃ הֲ֭דַר כְּב֣וֹד הוֹדֶ֑ךָ וְדִבְרֵ֖י נִפְלְאֹתֶ֣יךָ אָשִֽׂיחָה׃ וֶעֱז֣וּז נֽוֹרְאֹתֶ֣יךָ יֹאמֵ֑רוּ וגדלותיך [וּגְדֻלָּתְךָ֥] אֲסַפְּרֶֽנָּה׃ זֵ֣כֶר רַב־טוּבְךָ֣ יַבִּ֑יעוּ וְצִדְקָתְךָ֥ יְרַנֵּֽנוּ׃ חַנּ֣וּן וְרַח֣וּם יְהֹוָ֑ה אֶ֥רֶךְ אַ֝פַּ֗יִם וּגְדׇל־חָֽסֶד׃ טוֹב־יְהֹוָ֥ה לַכֹּ֑ל וְ֝רַחֲמָ֗יו עַל־כׇּל־מַעֲשָֽׂיו׃ יוֹד֣וּךָ יְ֭הֹוָה כׇּל־מַעֲשֶׂ֑יךָ וַ֝חֲסִידֶ֗יךָ יְבָרְכֽוּכָה׃ כְּב֣וֹד מַלְכוּתְךָ֣ יֹאמֵ֑רוּ וּגְבוּרָתְךָ֥ יְדַבֵּֽרוּ׃ לְהוֹדִ֤יעַ  ׀ לִבְנֵ֣י הָ֭אָדָם גְּבוּרֹתָ֑יו וּ֝כְב֗וֹד הֲדַ֣ר מַלְכוּתֽוֹ׃ מַֽלְכוּתְךָ֗ מַלְכ֥וּת כׇּל־עֹלָמִ֑ים וּ֝מֶֽמְשַׁלְתְּךָ֗ בְּכׇל־דּ֥וֹר וָדֹֽר׃ סוֹמֵ֣ךְ יְ֭הֹוָה לְכׇל־הַנֹּפְלִ֑ים וְ֝זוֹקֵ֗ף לְכׇל־הַכְּפוּפִֽים׃ עֵֽינֵי־כֹ֭ל אֵלֶ֣יךָ יְשַׂבֵּ֑רוּ וְאַתָּ֤ה נֽוֹתֵן־לָהֶ֖ם אֶת־אׇכְלָ֣ם בְּעִתּֽוֹ׃ פּוֹתֵ֥חַ אֶת־יָדֶ֑ךָ וּמַשְׂבִּ֖יעַ לְכׇל־חַ֣י רָצֽוֹן׃ צַדִּ֣יק יְ֭הֹוָה בְּכׇל־דְּרָכָ֑יו וְ֝חָסִ֗יד בְּכׇל־מַעֲשָֽׂיו׃ קָר֣וֹב יְ֭הֹוָה לְכׇל־קֹרְאָ֑יו לְכֹ֤ל אֲשֶׁ֖ר יִקְרָאֻ֣הוּ בֶֽאֱמֶֽת׃ רְצוֹן־יְרֵאָ֥יו יַעֲשֶׂ֑ה וְֽאֶת־שַׁוְעָתָ֥ם יִ֝שְׁמַ֗ע וְיוֹשִׁיעֵֽם׃ שׁוֹמֵ֣ר יְ֭הֹוָה אֶת־כׇּל־אֹהֲבָ֑יו וְאֵ֖ת כׇּל־הָרְשָׁעִ֣ים יַשְׁמִֽיד׃ תְּהִלַּ֥ת יְהֹוָ֗ה יְֽדַבֶּ֫ר פִּ֥י וִיבָרֵ֣ךְ כׇּל־בָּ֭שָׂר שֵׁ֥ם קׇדְשׁ֗וֹ לְעוֹלָ֥ם וָעֶֽד׃ וַאֲנַ֤חְנוּ ׀ נְבָ֘רֵ֤ךְ יָ֗הּ מֵעַתָּ֥ה וְעַד־עוֹלָ֗ם הַֽלְלוּיָֽהּ׃ "}
+          ]},
+          {"ref": "5", "kind": "instruction", "en": "On days when Tachanun is not said, skip to LaMenatze'ach", "gloss": "Skip Ashrei's main body (Ps 145) on Shabbat/Yom Tov", "text": "<small>ביום שאין אומרים בו תחנון מדלגים למנצח</small> "},
+          {"ref": "6", "parts": [
+            {"kind": "prayer", "text": "<b>לַמְנַצֵּ֗חַ</b> "},
+            {"kind": "instruction", "en": "(Psalms 20:1-3)", "text": "<small>(תהילים כ׳:א׳-ג׳)</small>"},
+            {"kind": "prayer", "text": " מִזְמ֥וֹר לְדָוִֽד׃ יַֽעַנְךָ֣ יְ֭הֹוָה בְּי֣וֹם צָרָ֑ה יְ֝שַׂגֶּבְךָ֗ שֵׁ֤ם ׀ אֱלֹהֵ֬י יַעֲקֹֽב׃ יִשְׁלַֽח־עֶזְרְךָ֥ מִקֹּ֑דֶשׁ וּ֝מִצִּיּ֗וֹן יִסְעָדֶֽךָּ׃ יִזְכֹּ֥ר כׇּל־מִנְחֹתֶ֑ךָ וְעוֹלָתְךָ֖ יְדַשְּׁנֶ֣ה סֶֽלָה׃ יִֽתֶּן־לְךָ֥ כִלְבָבֶ֑ךָ וְֽכׇל־עֲצָתְךָ֥ יְמַלֵּֽא׃ נְרַנְּנָ֤ה ׀ בִּ֘ישׁ֤וּעָתֶ֗ךָ וּבְשֵֽׁם־אֱלֹהֵ֥ינוּ נִדְגֹּ֑ל יְמַלֵּ֥א יְ֝הֹוָ֗ה כׇּל־מִשְׁאֲלוֹתֶֽיךָ׃ עַתָּ֤ה יָדַ֗עְתִּי כִּ֤י הוֹשִׁ֥יעַ ׀ יְהֹוָ֗ה מְשִׁ֫יח֥וֹ יַ֭עֲנֵהוּ מִשְּׁמֵ֣י קׇדְשׁ֑וֹ בִּ֝גְבֻר֗וֹת יֵ֣שַׁע יְמִינֽוֹ׃ אֵ֣לֶּה בָ֭רֶכֶב וְאֵ֣לֶּה בַסּוּסִ֑ים וַאֲנַ֓חְנוּ ׀ בְּשֵׁם־יְהֹוָ֖ה אֱלֹהֵ֣ינוּ נַזְכִּֽיר׃ הֵ֭מָּה כָּרְע֣וּ וְנָפָ֑לוּ וַאֲנַ֥חְנוּ קַּ֝֗מְנוּ וַנִּתְעוֹדָֽד׃ יְהֹוָ֥ה הוֹשִׁ֑יעָה הַ֝מֶּ֗לֶךְ יַעֲנֵ֥נוּ בְיוֹם־קׇרְאֵֽנוּ׃"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Sefaria Community Translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Ashrei Yoshvei Beitekha / Happy are those that dwell in Your house"},
+          {"ref": "3", "translates": ["3"], "text": "Happy are those that dwell in Your house, they will yet praise You forever. Happy is the people for whom this is so, happy is the people that the L·rd is their G·d."},
+          {"ref": "4", "translates": ["4"], "text": "A praise of David, I will exalt You my G·d, the King, &amp; I will bless Your Name forever &amp; ever. Every day I will bless you, &amp; I will laud Your Name forever &amp; ever. Great is the L·rd &amp; He is greatly lauded, &amp; His Greatness is unfathomable. Generation to generation will praise Your deeds, &amp; Your mighty acts they will relate. The splendorous glory of Your Majesty &amp; Your wondrous acts I shall discuss.  And the might of Your awesome acts they will speak &amp; Your greatness, I will relate. A recollection of Your great goodness they will express &amp; Your righteousness they will sing. Gracious &amp; Merciful is the L·rd, Slow-to anger &amp; Great in kindness. The L·rd is good to all &amp; His Mercies are on all His works. All Your works shall thank You, L·rd, &amp; Your pious ones shall bless You. Of the glory of Your Kingdom they will relate, &amp; Your Might they shall speak. To inform human beings of Your Mighty acts &amp; of the glorious Majesty of His Kingdom. Your Kingship is Kingship of all worlds &amp; Your dominion is for all generations. The L·rd supports all those who fall, &amp; He straightens all who are bent over. The eyes of all are [looking] upon You for hope, &amp; You provide them their food in the proper time. * You open Your hand, &amp; You satisfy all the living's wants. Righteous is the L·rd in all His ways, &amp; Pious in all His deeds. The L·rd is close to all who call Him, to all that call upon Him with sincerity. The will of those that fear Him He will do, &amp; their cries He will hear &amp; save them. The L·rd protects all who love Him, &amp; all of the wicked He will destroy. Praise of the L·rd will my mouth speak, &amp; all flesh shall bless His holy Name for ever &amp; ever.  And we will bless G·d from now to eternity. [Let us all] Praise G·d!  "}
+        ]
+      }
+    },
+    {
+      "path": "Weekday Shacharit/Uva LeSion",
+      "title": "ובא לציון",
+      "node": "concl.uva_letzion",
+      "when": "true",
+      "service": "shacharit",
+      "he": {
+        "version": "Shaliehsaboo Edition",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "role": "congregation", "text": "<big><b>ובא לציון גואל </b></big>"},
+          {"ref": "2", "kind": "prayer", "role": "congregation", "text": "<b>וּבָ֤א</b> לְצִיּוֹן֙ גּוֹאֵ֔ל וּלְשָׁבֵ֥י פֶ֖שַׁע בְּיַֽעֲקֹ֑ב נְאֻ֖ם יְהֹוָֽה׃ וַאֲנִ֗י זֹ֣את בְּרִיתִ֤י אוֹתָם֙ אָמַ֣ר יְהֹוָ֔ה רוּחִי֙ אֲשֶׁ֣ר עָלֶ֔יךָ וּדְבָרַ֖י אֲשֶׁר־שַׂ֣מְתִּי בְּפִ֑יךָ לֹֽא־יָמ֡וּשׁוּ מִפִּ֩יךָ֩ וּמִפִּ֨י זַרְעֲךָ֜ וּמִפִּ֨י זֶ֤רַע זַרְעֲךָ֙ אָמַ֣ר יְהֹוָ֔ה מֵעַתָּ֖ה וְעַד־עוֹלָֽם׃ וְאַתָּ֥ה קָד֑וֹשׁ י֝וֹשֵׁ֗ב תְּהִלּ֥וֹת יִשְׂרָאֵֽל׃ וְקָרָ֨א זֶ֤ה אֶל־זֶה֙ וְאָמַ֔ר קָד֧וֹשׁ ׀ קָד֛וֹשׁ קָד֖וֹשׁ יְהֹוָ֣ה צְבָא֑וֹת מְלֹ֥א כׇל־הָאָ֖רֶץ כְּבוֹדֽוֹ׃ וּמְקַבְּלִין דֵּין מִן דֵּין וְאָֽמְרִין: קַדִּישׁ בִּשְׁמֵי מְרוֹמָא עִלָּאָה בֵּית שְׁכִינְתֵּהּ, קַדִּישׁ עַל אַרְעָא עוֹבַד גְּבוּרְתֵּהּ, קַדִּישׁ לְעָלַם וּלְעָֽלְמֵי עָֽלְמַיָּא. יְהֹוָה צְבָאוֹת מַלְיָא כָל-אַרְעָא זִיו יְקָרֵהּ: וַתִּשָּׂאֵ֣נִי ר֔וּחַ וָאֶשְׁמַ֣ע אַחֲרַ֔י ק֖וֹל רַ֣עַשׁ גָּד֑וֹל בָּר֥וּךְ כְּבוֹד־יְהֹוָ֖ה מִמְּקוֹמֽוֹ׃ וּנְטָלַֽתְנִי רוּחָא, וּשְׁמָעִית בַּתְרַי קַל זִֽיעַ שַׂגִּיא דִּמְשַׁבְּחִין וְאָֽמְרִין: בְּרִיךְ יְקָרָא דַֽיהֹוָה מֵֽאֲתַר בֵּית שְׁכִינְתֵּהּ: יְהֹוָ֥ה ׀ יִמְלֹ֖ךְ לְעֹלָ֥ם וָעֶֽד׃ יְהֹוָה מַלְכוּתֵיהּ קָאִים לְעָלַם וּלְעָֽלְמֵי עָֽלְמַיָּא: יְהֹוָ֗ה אֱ֠לֹהֵ֠י אַבְרָהָ֞ם יִצְחָ֤ק וְיִשְׂרָאֵל֙ אֲבֹתֵ֔ינוּ שׇׁמְרָה־זֹּ֣את לְעוֹלָ֔ם לְיֵ֥צֶר מַחְשְׁב֖וֹת לְבַ֣ב עַמֶּ֑ךָ וְהָכֵ֥ן לְבָבָ֖ם אֵלֶֽיךָ׃ וְה֤וּא רַח֨וּם ׀ יְכַפֵּ֥ר עָוֺן֮ וְֽלֹא־יַֽ֫שְׁחִ֥ית וְ֭הִרְבָּה לְהָשִׁ֣יב אַפּ֑וֹ וְלֹא־יָ֝עִ֗יר כׇּל־חֲמָתֽוֹ׃ כִּֽי־אַתָּ֣ה אֲ֭דֹנָי ט֣וֹב וְסַלָּ֑ח וְרַב־חֶ֗֝סֶד לְכׇל־קֹֽרְאֶֽיךָ׃ צִדְקָתְךָ֣ צֶ֣דֶק לְעוֹלָ֑ם וְֽתוֹרָתְךָ֥ אֱמֶֽת׃ תִּתֵּ֤ן אֱמֶת֙ לְיַֽעֲקֹ֔ב חֶ֖סֶד לְאַבְרָהָ֑ם אֲשֶׁר־נִשְׁבַּ֥עְתָּ לַאֲבֹתֵ֖ינוּ מִ֥ימֵי קֶֽדֶם׃ בָּ֤ר֣וּךְ אֲדֹנָי֮ י֤וֹם ׀ י֥֫וֹם יַעֲמָס־לָ֗נוּ הָ֘אֵ֤ל יְֽשׁוּעָתֵ֬נוּ סֶֽלָה׃ יְהֹוָ֣ה צְבָא֣וֹת עִמָּ֑נוּ מִשְׂגָּֽב־לָ֨נוּ אֱלֹהֵ֖י יַֽעֲקֹ֣ב סֶֽלָה׃ יְהֹוָ֥ה צְבָא֑וֹת אַֽשְׁרֵ֥י אָ֝דָ֗ם בֹּטֵ֥חַ בָּֽךְ׃ יְהֹוָ֥ה הוֹשִׁ֑יעָה הַ֝מֶּ֗לֶךְ יַעֲנֵ֥נוּ בְיוֹם־קׇרְאֵֽנוּ: "},
+          {"ref": "3", "kind": "prayer", "role": "congregation", "text": "<b>בָּרוּךְ</b> אֱלֹהֵֽינוּ שֶׁבְּרָאָֽנוּ לִכְבוֹדוֹ, וְהִבְדִּילָֽנוּ מִן הַתּוֹעִים, וְנָֽתַן לָֽנוּ תּוֹרַת אֱמֶת, וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵֽנוּ. הוּא יִפְתַּח לִבֵּֽנוּ בְּתֽוֹרָתוֹ, וְיָשִׂים בְּלִבֵּֽנוּ אַֽהֲבָתוֹ וְיִרְאָתוֹ לַֽעֲשׂוֹת רְצוֹנוֹ, וּלְעָבְדוֹ בְּלֵבָב שָׁלֵם. לֹא נִיגַע לָרִיק, וְלֹא נֵלֵד לַבֶּֽהָלָה. יְהִי רָצוֹן מִלְּפָנֶֽיךָ, יְהֹוָה אֱלֹהֵֽינוּ וֵֽאלֹהֵי אֲבוֹתֵֽינוּ, שֶׁנִּשְׁמוֹר חֻקֶּֽיךָ וּמִצְוֹתֶֽיךָ בָּעוֹלָם הַזֶּה, וְנִזְכֶּה, וְנִחְיֶה, וְנִירַשׁ טוֹבָה וּבְרָכָה לְחַיֵּי הָעוֹלָם הַבָּא: לְמַ֤עַן ׀ יְזַמֶּרְךָ֣ כָ֭בוֹד וְלֹ֣א יִדֹּ֑ם יְהֹוָ֥ה אֱ֝לֹהַ֗י לְעוֹלָ֥ם אוֹדֶֽךָּ׃ יְהֹוָ֥ה חָפֵ֖ץ לְמַ֣עַן צִדְק֑וֹ יַגְדִּ֥יל תּוֹרָ֖ה וְיַאְדִּֽיר: וְיִבְטְח֣וּ בְ֭ךָ יוֹדְעֵ֣י שְׁמֶ֑ךָ כִּ֤י לֹֽא־עָזַ֖בְתָּ דֹרְשֶׁ֣יךָ יְהֹוָֽה: יְהֹוָ֥ה אֲדֹנֵ֑ינוּ מָה־אַדִּ֥יר שִׁ֝מְךָ֗ בְּכׇל־הָאָֽרֶץ׃ חִ֭זְקוּ וְיַאֲמֵ֣ץ לְבַבְכֶ֑ם כׇּל־הַ֝מְיַחֲלִ֗ים לַֽיהֹוָֽה:"},
+          {"ref": "4", "kind": "instruction", "en": "The chazzan says Kaddish Titkabal", "text": "<small>ואומר החזן קדיש תתקבל</small> "},
+          {"ref": "5", "parts": [
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. <small>[אָמֵן]</small>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בְּעָלְמָא דִּי בְרָא,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " כִּרְעוּתֵה,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " וְיַמְלִיךְ מַלְכוּתֵה,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " וְיַצְמַח פֻּרְקָנֵה,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " וִיקָרֵב מְשִׁיחֵהּ. "},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב,"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " וְאִמְרוּ אָמֵן. "},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " יְהֵא שְׁמֵיהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ. וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בְּרִיךְ הוּא. "},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " לְעֵלָּא מִן כָּל בִּרְכָתָא שִׁירָתָא,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " דַּאֲמִירָן בְּעָלְמָא,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " וְאִמְרוּ אָמֵן. "},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<small>[אָמֵן]</small></small>"}
+          ]},
+          {"ref": "6", "kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<small><b>תִּתְקַבַּל</b> צְלוֹתָֽנָא וּבָֽעוּתָֽנָא, עִם צְלֽוֹתְהוֹן וּבָעֽוּתְהוֹן דְּכָל-בֵּית יִשְׂרָאֵל, קֳדָם אֲבוּנָא דְּבִשְׁמַיָּא וְאַרְעָא, וְאִמְרוּ אָמֵן. <small>[אָמֵן]</small></small>  "},
+          {"ref": "7", "kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<small><b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא. חַיִּים וְשָׂבָע וִישׁוּעָה וְנֶחָמָה. וְשֵׁיזָבָא וּרְפוּאָה וּגְאוּלָה וּסְלִיחָה וְכַפָּרָה וְרֶוַח וְהַצָּלָה לָנוּ וּלְכָל עַמּוֹ יִשְׂרָאֵל. וְאִמְרוּ אָמֵן. <small>[אָמֵן]</small></small>  "},
+          {"ref": "8", "kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "gestures": ["three_steps_back"], "text": "<small>יפסע שלש פסיעות לאחור<br><b>עוֹשֶׂה</b> שָׁלוֹם בִּמְרוֹמָיו. הוּא בְּרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל עַמּוֹ יִשְׂרָאֵל. וְאִמְרוּ אָמֵן. <small>[אָמֵן]</small></small>   "},
+          {"ref": "9", "kind": "instruction", "en": "And they return the Torah scroll to its place and say Yehalelu", "text": "<small>ומחזירין את ספר התורה למקומו ואומרים יהללו</small> "},
+          {"ref": "10", "kind": "prayer", "role": "congregation", "text": "<small><b>יְהַלְל֤וּ</b> ׀ אֶת־שֵׁ֬ם יְהֹוָ֗ה כִּֽי־נִשְׂגָּ֣ב שְׁמ֣וֹ לְבַדּ֑וֹ ה֝וֹד֗וֹ עַל־אֶ֥רֶץ וְשָׁמָֽיִם׃ וַיָּ֤רֶם קֶ֨רֶן ׀ לְעַמּ֡וֹ תְּהִלָּ֤ה לְֽכׇל־חֲסִידָ֗יו לִבְנֵ֣י יִ֭שְׂרָאֵל עַ֥ם קְרֹב֗וֹ הַֽלְלוּיָֽהּ׃ יְהֹוָה הוּא הָאֱלֹהִים, יְהֹוָה֙ ה֣וּא הָֽאֱלֹהִ֔ים בַּשָּׁמַ֣יִם מִמַּ֔עַל וְעַל־הָאָ֖רֶץ מִתָּ֑חַת אֵ֖ין עֽוֹד: אֵין־כָּמ֖וֹךָ בָאֱלֹהִ֥ים ׀ אֲדֹנָ֗י וְאֵ֣ין כְּֽמַעֲשֶֽׂיךָ׃ הֲשִׁיבֵ֨נוּ יְהֹוָ֤ה ׀ אֵלֶ֙יךָ֙ ונשוב [וְֽנָשׁ֔וּבָה] חַדֵּ֥שׁ יָמֵ֖ינוּ כְּקֶֽדֶם׃</small> "}
+        ]
+      }
+    },
+    {
+      "path": "Weekday Shacharit/Beit Yaakov",
+      "title": "בית יעקב",
+      "node": "pz.shir_hamaalot_mimaamakim",
+      "service": "shacharit",
+      "he": {
+        "version": "Shaliehsaboo Edition",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Beit Yaakov", "text": "<big><b>בית יעקב </b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "On days when Tachanun is not said, this prayer is not recited.", "gloss": "Refers to Psalm 36 (Tefillah LeDavid)", "cite": "תהלים פו", "text": "<small>בימים שאין אומרים תחנון אין אומרים תפלה לדוד</small> "},
+          {"ref": "3", "parts": [
+            {"kind": "heading", "en": "Prayer", "text": "<b>תְּפִלָּ֗ה</b> "},
+            {"kind": "instruction", "en": "(Psalm 36)", "text": "<small>(תהלים פו)</small>"},
+            {"kind": "prayer", "text": " לְדָ֫וִ֥ד הַטֵּֽה־יְהֹוָ֣ה אׇזְנְךָ֣ עֲנֵ֑נִי כִּֽי־עָנִ֖י וְאֶבְי֣וֹן אָֽנִי׃ שָׁ֥מְרָ֣ה נַפְשִׁי֮ כִּֽי־חָסִ֢יד אָ֥נִי הוֹשַׁ֣ע עַ֭בְדְּךָ אַתָּ֣ה אֱלֹהַ֑י הַבּוֹטֵ֥חַ אֵלֶֽיךָ׃ חׇנֵּ֥נִי אֲדֹנָ֑י כִּ֥י אֵלֶ֥יךָ אֶ֝קְרָ֗א כׇּל־הַיּֽוֹם׃ שַׂ֭מֵּחַ נֶ֣פֶשׁ עַבְדֶּ֑ךָ כִּ֥י אֵלֶ֥יךָ אֲ֝דֹנָ֗י נַפְשִׁ֥י אֶשָּֽׂא׃ כִּֽי־אַתָּ֣ה אֲ֭דֹנָי ט֣וֹב וְסַלָּ֑ח וְרַב־חֶ֗֝סֶד לְכׇל־קֹֽרְאֶֽיךָ׃ הַאֲזִ֣ינָה יְ֭הֹוָה תְּפִלָּתִ֑י וְ֝הַקְשִׁ֗יבָה בְּק֣וֹל תַּחֲנוּנוֹתָֽי׃ בְּי֣וֹם צָ֭רָתִ֥י אֶקְרָאֶ֗ךָּ כִּ֣י תַעֲנֵֽנִי׃ אֵין־כָּמ֖וֹךָ בָאֱלֹהִ֥ים ׀ אֲדֹנָ֗י וְאֵ֣ין כְּֽמַעֲשֶֽׂיךָ׃ כׇּל־גּוֹיִ֤ם ׀ אֲשֶׁ֥ר עָשִׂ֗יתָ יָב֤וֹאוּ ׀ וְיִשְׁתַּֽחֲו֣וּ לְפָנֶ֣יךָ אֲדֹנָ֑י וִ֖יכַבְּד֣וּ לִשְׁמֶֽךָ׃ כִּֽי־גָד֣וֹל אַ֭תָּה וְעֹשֵׂ֣ה נִפְלָא֑וֹת אַתָּ֖ה אֱלֹהִ֣ים לְבַדֶּֽךָ׃ ה֘וֹרֵ֤נִי יְהֹוָ֨ה ׀ דַּרְכֶּ֗ךָ אֲהַלֵּ֥ךְ בַּאֲמִתֶּ֑ךָ יַחֵ֥ד לְ֝בָבִ֗י לְיִרְאָ֥ה שְׁמֶֽךָ׃ אוֹדְךָ֤ ׀ אֲדֹנָ֣י אֱ֭לֹהַי בְּכׇל־לְבָבִ֑י וַאֲכַבְּדָ֖ה שִׁמְךָ֣ לְעוֹלָֽם׃ כִּֽי־חַ֭סְדְּךָ גָּד֣וֹל עָלָ֑י וְהִצַּ֥לְתָּ נַ֝פְשִׁ֗י מִשְּׁא֥וֹל תַּחְתִּיָּֽה׃ אֱלֹהִ֤ים ׀ זֵ֘דִ֤ים קָֽמוּ־עָלַ֗י וַעֲדַ֣ת עָ֭רִיצִים בִּקְשׁ֣וּ נַפְשִׁ֑י וְלֹ֖א שָׂמ֣וּךָ לְנֶגְדָּֽם׃ וְאַתָּ֣ה אֲ֭דֹנָי אֵל־רַח֣וּם וְחַנּ֑וּן אֶ֥רֶךְ אַ֝פַּ֗יִם וְרַב־חֶ֥סֶד וֶאֱמֶֽת׃ פְּנֵ֥ה אֵלַ֗י וְחָ֫נֵּ֥נִי תְּנָֽה־עֻזְּךָ֥ לְעַבְדֶּ֑ךָ וְ֝הוֹשִׁ֗יעָה לְבֶן־אֲמָתֶֽךָ׃ עֲשֵֽׂה־עִמִּ֥י א֗וֹת לְט֫וֹבָ֥ה וְיִרְא֣וּ שֹׂנְאַ֣י וְיֵבֹ֑שׁוּ כִּֽי־אַתָּ֥ה יְ֝הֹוָ֗ה עֲזַרְתַּ֥נִי וְנִחַמְתָּֽנִי׃ "}
+          ]},
+          {"ref": "4", "kind": "prayer", "text": "<b>בֵּ֖ית</b> יַעֲקֹ֑ב לְכ֥וּ וְנֵלְכָ֖ה בְּא֥וֹר יְהֹוָֽה׃ כִּ֚י כׇּל־הָ֣עַמִּ֔ים יֵלְכ֕וּ אִ֖ישׁ בְּשֵׁ֣ם אֱלֹהָ֑יו וַאֲנַ֗חְנוּ נֵלֵ֛ךְ בְּשֵׁם־יְהֹוָ֥ה אֱלֹהֵ֖ינוּ לְעוֹלָ֥ם וָעֶֽד׃ יְהִ֨י יְהֹוָ֤ה אֱלֹהֵ֙ינוּ֙ עִמָּ֔נוּ כַּאֲשֶׁ֥ר הָיָ֖ה עִם־אֲבֹתֵ֑ינוּ אַל־יַעַזְבֵ֖נוּ וְאַֽל־יִטְּשֵֽׁנוּ׃ לְהַטּ֥וֹת לְבָבֵ֖נוּ אֵלָ֑יו לָלֶ֣כֶת בְּכׇל־דְּרָכָ֗יו וְלִשְׁמֹ֨ר מִצְוֺתָ֤יו וְחֻקָּיו֙ וּמִשְׁפָּטָ֔יו אֲשֶׁ֥ר צִוָּ֖ה אֶת־אֲבֹתֵֽינוּ׃ וְיִֽהְי֨וּ דְבָרַ֜י אֵ֗לֶּה אֲשֶׁ֤ר הִתְחַנַּ֙נְתִּי֙ לִפְנֵ֣י יְהֹוָ֔ה קְרֹבִ֛ים אֶל־יְהֹוָ֥ה אֱלֹהֵ֖ינוּ יוֹמָ֣ם וָלָ֑יְלָה לַעֲשׂ֣וֹת ׀ מִשְׁפַּ֣ט עַבְדּ֗וֹ וּמִשְׁפַּ֛ט עַמּ֥וֹ יִשְׂרָאֵ֖ל דְּבַר־י֥וֹם בְּיוֹמֽוֹ׃ לְמַ֗עַן דַּ֚עַת כׇּל־עַמֵּ֣י הָאָ֔רֶץ כִּ֥י יְהֹוָ֖ה ה֣וּא הָאֱלֹהִ֑ים אֵ֖ין עֽוֹד׃"},
+          {"ref": "5", "parts": [
+            {"kind": "heading", "en": "Song", "text": "<b>שִׁ֥יר</b> "},
+            {"kind": "instruction", "en": "(Psalms 124:1-2)", "text": "<small>(תהילים קכ״ד:א׳-ב׳)</small>"},
+            {"kind": "prayer", "text": " הַֽמַּעֲל֗וֹת לְדָ֫וִ֥ד לוּלֵ֣י יְ֭הֹוָה שֶׁהָ֣יָה לָ֑נוּ יֹאמַר־נָ֗֝א יִשְׂרָאֵֽל׃ לוּלֵ֣י יְ֭הֹוָה שֶׁהָ֣יָה לָ֑נוּ בְּק֖וּם עָלֵ֣ינוּ אָדָֽם׃ אֲ֭זַי חַיִּ֣ים בְּלָע֑וּנוּ בַּחֲר֖וֹת אַפָּ֣ם בָּֽנוּ׃ אֲ֭זַי הַמַּ֣יִם שְׁטָפ֑וּנוּ נַ֗֝חְלָה עָבַ֥ר עַל־נַפְשֵֽׁנוּ׃ אֲ֭זַי עָבַ֣ר עַל־נַפְשֵׁ֑נוּ הַ֝מַּ֗יִם הַזֵּידוֹנִֽים׃ בָּר֥וּךְ יְהֹוָ֑ה שֶׁלֹּ֥א נְתָנָ֥נוּ טֶ֗֝רֶף לְשִׁנֵּיהֶֽם׃ נַפְשֵׁ֗נוּ כְּצִפּ֥וֹר נִמְלְטָה֮ מִפַּ֢ח י֫וֹקְשִׁ֥ים הַפַּ֥ח נִשְׁבָּ֗ר וַאֲנַ֥חְנוּ נִמְלָֽטְנוּ׃ עֶ֭זְרֵנוּ בְּשֵׁ֣ם יְהֹוָ֑ה עֹ֝שֵׂ֗ה שָׁמַ֥יִם וָאָֽרֶץ׃"}
+          ]}
+        ]
+      }
+    },
+    {
+      "path": "Weekday Shacharit/Song of the Day",
+      "title": "שיר של יום",
+      "node": "concl.shir_shel_yom",
+      "when": "true",
+      "service": "shacharit",
+      "he": {
+        "version": "Shaliehsaboo Edition",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Psalm of the Day", "text": "<big><b>שיר של יום</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "On each day, recite the psalm appropriate for that day.", "text": "<small>בכל יום אומר המזמור השיך לאותו יום</small> "},
+          {"ref": "3", "parts": [
+            {"kind": "instruction", "en": "Psalm for the first day of the week", "gloss": "Sunday", "text": "<small>מזמור ליום ראשון</small>"},
+            {"kind": "prayer", "text": " הַיּוֹם יוֹם אֶחָד בְּשַׁבַּת קוֹדֶשׁ,"},
+            {"kind": "prayer", "text": " הַשִּׁיר שֶׁהָיוּ הַלְוִיִּם אוֹמְרִים עַל הַדּוּכָן: "}
+          ]},
+          {"ref": "4", "parts": [
+            {"kind": "prayer", "text": "<b>לְדָוִ֗ד</b> "},
+            {"kind": "instruction", "en": "(Psalms 24:1-2)", "text": "<small>(תהילים כ״ד:א׳-ב׳)</small>"},
+            {"kind": "prayer", "text": " מִ֫זְמ֥וֹר לַֽ֭יהֹוָה הָאָ֣רֶץ וּמְלוֹאָ֑הּ תֵּ֝בֵ֗ל וְיֹ֣שְׁבֵי בָֽהּ׃ כִּי־ה֭וּא עַל־יַמִּ֣ים יְסָדָ֑הּ וְעַל־נְ֝הָר֗וֹת יְכוֹנְנֶֽהָ׃ מִֽי־יַעֲלֶ֥ה בְהַר־יְהֹוָ֑ה וּמִי־יָ֝קוּם בִּמְק֥וֹם קׇדְשֽׁוֹ׃ נְקִ֥י כַפַּ֗יִם וּֽבַר־לֵ֫בָ֥ב אֲשֶׁ֤ר ׀ לֹא־נָשָׂ֣א לַשָּׁ֣וְא נַפְשִׁ֑י וְלֹ֖א נִשְׁבַּ֣ע לְמִרְמָֽה׃ יִשָּׂ֣א בְ֭רָכָה מֵאֵ֣ת יְהֹוָ֑ה וּ֝צְדָקָ֗ה מֵאֱלֹהֵ֥י יִשְׁעֽוֹ׃ זֶ֭ה דּ֣וֹר דֹּרְשָׁ֑ו מְבַקְשֵׁ֨י פָנֶ֖יךָ יַעֲקֹ֣ב סֶֽלָה׃ שְׂא֤וּ שְׁעָרִ֨ים ׀ רָֽאשֵׁיכֶ֗ם וְֽ֭הִנָּשְׂאוּ פִּתְחֵ֣י עוֹלָ֑ם וְ֝יָב֗וֹא מֶ֣לֶךְ הַכָּבֽוֹד׃ מִ֥י זֶה֮ מֶ֤לֶךְ הַכָּ֫ב֥וֹד יְ֭הֹוָה עִזּ֣וּז וְגִבּ֑וֹר יְ֝הֹוָ֗ה גִּבּ֥וֹר מִלְחָמָֽה׃ שְׂא֤וּ שְׁעָרִ֨ים ׀ רָֽאשֵׁיכֶ֗ם וּ֭שְׂאוּ פִּתְחֵ֣י עוֹלָ֑ם וְ֝יָבֹ֗א מֶ֣לֶךְ הַכָּבֽוֹד׃ מִ֤י ה֣וּא זֶה֮ מֶ֤לֶךְ הַכָּ֫ב֥וֹד יְהֹוָ֥ה צְבָא֑וֹת ה֤וּא מֶ֖לֶךְ הַכָּב֣וֹד סֶֽלָה׃ "},
+            {"kind": "instruction", "en": "And continue with Hoshi'enu", "text": "<small>וממשיך הושיענו</small> "}
+          ]},
+          {"ref": "5", "parts": [
+            {"kind": "instruction", "en": "Psalm for the second day of the week", "gloss": "Monday", "text": "<small>מזמור ליום שני</small>"},
+            {"kind": "prayer", "text": " הַיּוֹם יוֹם שֵׁנִי בְּשַׁבַּת קוֹדֶשׁ,"},
+            {"kind": "prayer", "text": " הַשִּׁיר שֶׁהָיוּ הַלְוִיִּם אוֹמְרִים עַל הַדּוּכָן:"}
+          ]},
+          {"ref": "6", "parts": [
+            {"kind": "prayer", "text": "<b>שִׁ֥יר</b> "},
+            {"kind": "instruction", "en": "(Psalms 48:1-3)", "text": "<small>(תהילים מ״ח:א׳-ג׳)</small>"},
+            {"kind": "prayer", "text": " מִ֝זְמ֗וֹר לִבְנֵי־קֹֽרַח׃ גָּ֘ד֤וֹל יְהֹוָ֣ה וּמְהֻלָּ֣ל מְאֹ֑ד בְּעִ֥יר אֱ֝לֹהֵ֗ינוּ הַר־קׇדְשֽׁוֹ׃ יְפֵ֥ה נוֹף֮ מְשׂ֢וֹשׂ כׇּל־הָ֫אָ֥רֶץ הַר־צִ֭יּוֹן יַרְכְּתֵ֣י צָפ֑וֹן קִ֝רְיַ֗ת מֶ֣לֶךְ רָֽב׃ אֱלֹהִ֥ים בְּאַרְמְנוֹתֶ֗יהָ נוֹדַ֥ע לְמִשְׂגָּֽב׃ כִּֽי־הִנֵּ֣ה הַ֭מְּלָכִים נ֥וֹעֲד֑וּ עָבְר֥וּ יַחְדָּֽו׃ הֵ֣מָּה רָ֭אוּ כֵּ֣ן תָּמָ֑הוּ נִבְהֲל֥וּ נֶחְפָּֽזוּ׃ רְ֭עָדָה אֲחָזָ֣תַם שָׁ֑ם חִ֗֝יל כַּיּוֹלֵדָֽה׃ בְּר֥וּחַ קָדִ֑ים תְּ֝שַׁבֵּ֗ר אֳנִיּ֥וֹת תַּרְשִֽׁישׁ׃ כַּאֲשֶׁ֤ר שָׁמַ֨עְנוּ ׀ כֵּ֤ן רָאִ֗ינוּ בְּעִיר־יְהֹוָ֣ה צְ֭בָאוֹת בְּעִ֣יר אֱלֹהֵ֑ינוּ אֱלֹ֘הִ֤ים יְכוֹנְנֶ֖הָ עַד־עוֹלָ֣ם סֶֽלָה׃ דִּמִּ֣ינוּ אֱלֹהִ֣ים חַסְדֶּ֑ךָ בְּ֝קֶ֗רֶב הֵיכָלֶֽךָ׃ כְּשִׁמְךָ֤ אֱלֹהִ֗ים כֵּ֣ן תְּ֭הִלָּתְךָ עַל־קַצְוֵי־אֶ֑רֶץ צֶ֗֝דֶק מָלְאָ֥ה יְמִינֶֽךָ׃ יִשְׂמַ֤ח ׀ הַר־צִיּ֗וֹן תָּ֭גֵלְנָה בְּנ֣וֹת יְהוּדָ֑ה לְ֝מַ֗עַן מִשְׁפָּטֶֽיךָ׃ סֹ֣בּוּ צִ֭יּוֹן וְהַקִּיפ֑וּהָ סִ֝פְר֗וּ מִגְדָּלֶֽיהָ׃ שִׁ֤יתוּ לִבְּכֶ֨ם ׀ לְֽחֵילָ֗ה פַּסְּג֥וּ אַרְמְנוֹתֶ֑יהָ לְמַ֥עַן תְּ֝סַפְּר֗וּ לְד֣וֹר אַֽחֲרֽוֹן׃ כִּ֤י זֶ֨ה ׀ אֱלֹהִ֣ים אֱ֭לֹהֵינוּ עוֹלָ֣ם וָעֶ֑ד ה֖וּא יְנַהֲגֵ֣נוּ עַל־מֽוּת׃ "},
+            {"kind": "instruction", "en": "And continue with Hoshi'enu", "text": "<small>וממשיך הושיענו</small> "}
+          ]},
+          {"ref": "7", "parts": [
+            {"kind": "instruction", "en": "Psalm for the third day of the week", "gloss": "Tuesday", "text": "<small>מזמור ליום שלישי</small>"},
+            {"kind": "prayer", "text": " הַיּוֹם יוֹם שְׁלִישִׁי בְּשַׁבַּת קוֹדֶשׁ,"},
+            {"kind": "prayer", "text": " הַשִּׁיר שֶׁהָיוּ הַלְוִיִּם אוֹמְרִים עַל הַדּוּכָן: "}
+          ]},
+          {"ref": "8", "parts": [
+            {"kind": "prayer", "text": "<b>מִזְמ֗וֹר</b> "},
+            {"kind": "instruction", "en": "(Psalms 82:1-2)", "text": "<small>(תהילים פ״ב:א׳-ב׳)</small>"},
+            {"kind": "prayer", "text": " לְאָ֫סָ֥ף אֱֽלֹהִ֗ים נִצָּ֥ב בַּעֲדַת־אֵ֑ל בְּקֶ֖רֶב אֱלֹהִ֣ים יִשְׁפֹּֽט׃ עַד־מָתַ֥י תִּשְׁפְּטוּ־עָ֑וֶל וּפְנֵ֥י רְ֝שָׁעִ֗ים תִּשְׂאוּ־סֶֽלָה׃ שִׁפְטוּ־דַ֥ל וְיָת֑וֹם עָנִ֖י וָרָ֣שׁ הַצְדִּֽיקוּ׃ פַּלְּטוּ־דַ֥ל וְאֶבְי֑וֹן מִיַּ֖ד רְשָׁעִ֣ים הַצִּֽילוּ׃ לֹ֤א יָדְע֨וּ ׀ וְלֹ֥א יָבִ֗ינוּ בַּחֲשֵׁכָ֥ה יִתְהַלָּ֑כוּ יִ֝מּ֗וֹטוּ כׇּל־מ֥וֹסְדֵי אָֽרֶץ׃ אֲֽנִי־אָ֭מַרְתִּי אֱלֹהִ֣ים אַתֶּ֑ם וּבְנֵ֖י עֶלְי֣וֹן כֻּלְּכֶֽם׃ אָ֭כֵן כְּאָדָ֣ם תְּמוּת֑וּן וּכְאַחַ֖ד הַשָּׂרִ֣ים תִּפֹּֽלוּ׃ קוּמָ֣ה אֱ֭לֹהִים שׇׁפְטָ֣ה הָאָ֑רֶץ כִּֽי־אַתָּ֥ה תִ֝נְחַ֗ל בְּכׇל־הַגּוֹיִֽם׃ "},
+            {"kind": "instruction", "en": "And continue with Hoshi'enu", "text": "<small>וממשיך הושיענו</small> "}
+          ]},
+          {"ref": "9", "parts": [
+            {"kind": "instruction", "en": "Psalm for the fourth day of the week", "gloss": "Wednesday", "text": "<small>מזמור ליום רביעי</small>"},
+            {"kind": "prayer", "text": " הַיּוֹם יוֹם רְבִיעִי בְּשַׁבַּת קוֹדֶשׁ,"},
+            {"kind": "prayer", "text": " הַשִּׁיר שֶׁהָיוּ הַלְוִיִּם אוֹמְרִים עַל הַדּוּכָן:"}
+          ]},
+          {"ref": "10", "parts": [
+            {"kind": "prayer", "text": "<b>אֵל־נְקָמ֥וֹת</b> "},
+            {"kind": "instruction", "en": "(Psalms 94:1-3)", "text": "<small>(תהילים צ״ד:א׳-ג׳)</small>"},
+            {"kind": "prayer", "text": " יְהֹוָ֑ה אֵ֖ל נְקָמ֣וֹת הוֹפִֽיעַ׃ הִ֭נָּשֵׂא שֹׁפֵ֣ט הָאָ֑רֶץ הָשֵׁ֥ב גְּ֝מ֗וּל עַל־גֵּאִֽים׃ עַד־מָתַ֖י רְשָׁעִ֥ים ׀ יְהֹוָ֑ה עַד־מָ֝תַ֗י רְשָׁעִ֥ים יַעֲלֹֽזוּ׃ יַבִּ֣יעוּ יְדַבְּר֣וּ עָתָ֑ק יִ֝תְאַמְּר֗וּ כׇּל־פֹּ֥עֲלֵי אָֽוֶן׃ עַמְּךָ֣ יְהֹוָ֣ה יְדַכְּא֑וּ וְֽנַחֲלָתְךָ֥ יְעַנּֽוּ׃ אַלְמָנָ֣ה וְגֵ֣ר יַהֲרֹ֑גוּ וִ֖יתוֹמִ֣ים יְרַצֵּֽחוּ׃ וַ֭יֹּ֣אמְרוּ לֹ֣א יִרְאֶה־יָּ֑הּ וְלֹא־יָ֝בִ֗ין אֱלֹהֵ֥י יַעֲקֹֽב׃ בִּ֭ינוּ בֹּעֲרִ֣ים בָּעָ֑ם וּ֝כְסִילִ֗ים מָתַ֥י תַּשְׂכִּֽילוּ׃ הֲנֹ֣טַֽע אֹ֭זֶן הֲלֹ֣א יִשְׁמָ֑ע אִֽם־יֹ֥צֵֽר עַ֗֝יִן הֲלֹ֣א יַבִּֽיט׃ הֲיֹסֵ֣ר גּ֭וֹיִם הֲלֹ֣א יוֹכִ֑יחַ הַֽמְלַמֵּ֖ד אָדָ֣ם דָּֽעַת׃ יְֽהֹוָ֗ה יֹ֭דֵעַ מַחְשְׁב֣וֹת אָדָ֑ם כִּי־הֵ֥מָּה הָֽבֶל׃ אַשְׁרֵ֤י ׀ הַגֶּ֣בֶר אֲשֶׁר־תְּיַסְּרֶ֣נּוּ יָּ֑הּ וּֽמִתּוֹרָתְךָ֥ תְלַמְּדֶֽנּוּ׃ לְהַשְׁקִ֣יט ל֭וֹ מִ֣ימֵי רָ֑ע עַ֤ד יִכָּרֶ֖ה לָרָשָׁ֣ע שָֽׁחַת׃ כִּ֤י ׀ לֹא־יִטֹּ֣שׁ יְהֹוָ֣ה עַמּ֑וֹ וְ֝נַחֲלָת֗וֹ לֹ֣א יַעֲזֹֽב׃ כִּֽי־עַד־צֶ֭דֶק יָשׁ֣וּב מִשְׁפָּ֑ט וְ֝אַחֲרָ֗יו כׇּל־יִשְׁרֵי־לֵֽב׃ מִֽי־יָק֣וּם לִ֭י עִם־מְרֵעִ֑ים מִי־יִתְיַצֵּ֥ב לִ֗֝י עִם־פֹּ֥עֲלֵי אָֽוֶן׃ לוּלֵ֣י יְ֭הֹוָה עֶזְרָ֣תָה לִּ֑י כִּמְעַ֓ט ׀ שָׁכְנָ֖ה דוּמָ֣ה נַפְשִֽׁי׃ אִם־אָ֭מַרְתִּי מָ֣טָה רַגְלִ֑י חַסְדְּךָ֥ יְ֝הֹוָ֗ה יִסְעָדֵֽנִי׃ בְּרֹ֣ב שַׂרְעַפַּ֣י בְּקִרְבִּ֑י תַּ֝נְחוּמֶ֗יךָ יְֽשַׁעַשְׁע֥וּ נַפְשִֽׁי׃ הַֽ֭יְחׇבְרְךָ כִּסֵּ֣א הַוּ֑וֹת יֹצֵ֖ר עָמָ֣ל עֲלֵי־חֹֽק׃ יָ֭גוֹדּוּ עַל־נֶ֣פֶשׁ צַדִּ֑יק וְדָ֖ם נָקִ֣י יַרְשִֽׁיעוּ׃ וַיְהִ֬י יְהֹוָ֣ה לִ֣י לְמִשְׂגָּ֑ב וֵ֝אלֹהַ֗י לְצ֣וּר מַחְסִֽי׃ וַיָּ֤שֶׁב עֲלֵיהֶ֨ם ׀ אֶת־אוֹנָ֗ם וּבְרָעָתָ֥ם יַצְמִיתֵ֑ם יַ֝צְמִיתֵ֗ם יְהֹוָ֥ה אֱלֹהֵֽינוּ׃ "},
+            {"kind": "instruction", "en": "And continue with Hoshi'enu", "text": "<small>וממשיך הושיענו</small> "}
+          ]},
+          {"ref": "11", "parts": [
+            {"kind": "instruction", "en": "Psalm for the fifth day of the week", "gloss": "Thursday", "text": "<small>מזמור ליום חמישי</small>"},
+            {"kind": "prayer", "text": " הַיּוֹם יוֹם חֲמִישִׁי בְּשַׁבַּת קוֹדֶשׁ,"},
+            {"kind": "prayer", "text": " הַשִּׁיר שֶׁהָיוּ הַלְוִיִּם אוֹמְרִים עַל הַדּוּכָן: "}
+          ]},
+          {"ref": "12", "parts": [
+            {"kind": "prayer", "text": "<b>לַמְנַצֵּ֬חַ</b> ׀ "},
+            {"kind": "instruction", "en": "(Psalms 81:1-3)", "text": "<small>(תהילים פ״א:א׳-ג׳)</small>"},
+            {"kind": "prayer", "text": " עַֽל־הַגִּתִּ֬ית לְאָסָֽף׃ הַ֭רְנִינוּ לֵאלֹהִ֣ים עוּזֵּ֑נוּ הָ֝רִ֗יעוּ לֵאלֹהֵ֥י יַעֲקֹֽב׃ שְֽׂאוּ־זִ֭מְרָה וּתְנוּ־תֹ֑ף כִּנּ֖וֹר נָעִ֣ים עִם־נָֽבֶל׃ תִּקְע֣וּ בַחֹ֣דֶשׁ שׁוֹפָ֑ר בַּ֝כֵּ֗סֶה לְי֣וֹם חַגֵּֽנוּ׃ כִּ֤י חֹ֣ק לְיִשְׂרָאֵ֣ל ה֑וּא מִ֝שְׁפָּ֗ט לֵאלֹהֵ֥י יַעֲקֹֽב׃ עֵ֤דוּת ׀ בִּיה֘וֹסֵ֤ף שָׂמ֗וֹ בְּ֭צֵאתוֹ עַל־אֶ֣רֶץ מִצְרָ֑יִם שְׂפַ֖ת לֹא־יָדַ֣עְתִּי אֶשְׁמָֽע׃ הֲסִיר֣וֹתִי מִסֵּ֣בֶל שִׁכְמ֑וֹ כַּ֝פָּ֗יו מִדּ֥וּד תַּעֲבֹֽרְנָה׃ בַּצָּרָ֥ה קָרָ֗אתָ וָאֲחַ֫לְּצֶ֥ךָּ אֶ֭עֶנְךָ בְּסֵ֣תֶר רַ֑עַם אֶבְחׇנְךָ֨ עַל־מֵ֖י מְרִיבָ֣ה סֶֽלָה׃ שְׁמַ֣ע עַ֭מִּי וְאָעִ֣ידָה בָּ֑ךְ יִ֝שְׂרָאֵ֗ל אִם־תִּֽשְׁמַֽע־לִֽי׃ לֹא־יִהְיֶ֣ה בְ֭ךָ אֵ֣ל זָ֑ר וְלֹ֥א תִ֝שְׁתַּחֲוֶ֗ה לְאֵ֣ל נֵכָֽר׃ אָֽנֹכִ֨י ׀ יְהֹ֘וָ֤ה אֱלֹהֶ֗יךָ הַֽ֭מַּעַלְךָ מֵאֶ֣רֶץ מִצְרָ֑יִם הַרְחֶב־פִּ֗֝יךָ וַאֲמַלְאֵֽהוּ׃ וְלֹֽא־שָׁמַ֣ע עַמִּ֣י לְקוֹלִ֑י וְ֝יִשְׂרָאֵ֗ל לֹא־אָ֥בָה לִֽי׃ וָ֭אֲשַׁלְּחֵהוּ בִּשְׁרִיר֣וּת לִבָּ֑ם יֵ֝לְכ֗וּ בְּֽמוֹעֲצ֖וֹתֵיהֶֽם׃ ל֗וּ עַ֭מִּי שֹׁמֵ֣עַֽ לִ֑י יִ֝שְׂרָאֵ֗ל בִּדְרָכַ֥י יְהַלֵּֽכוּ׃ כִּ֭מְעַט אוֹיְבֵיהֶ֣ם אַכְנִ֑יעַ וְעַ֥ל צָ֝רֵיהֶ֗ם אָשִׁ֥יב יָדִֽי׃ מְשַׂנְאֵ֣י יְ֭הֹוָה יְכַחֲשׁוּ־ל֑וֹ וִיהִ֖י עִתָּ֣ם לְעוֹלָֽם׃ וַֽ֭יַּאֲכִילֵהוּ מֵחֵ֣לֶב חִטָּ֑ה וּ֝מִצּ֗וּר דְּבַ֣שׁ אַשְׂבִּיעֶֽךָ׃ "},
+            {"kind": "instruction", "en": "And continue with Hoshi'enu", "text": "<small>וממשיך הושיענו</small> "}
+          ]},
+          {"ref": "13", "parts": [
+            {"kind": "instruction", "en": "Psalm for the sixth day of the week", "gloss": "Friday", "text": "<small>מזמור ליום ששי</small>"},
+            {"kind": "prayer", "text": " הַיּוֹם יוֹם הַשִּׁשִּׁי בְּשַׁבַּת קוֹדֶשׁ,"},
+            {"kind": "prayer", "text": " הַשִּׁיר שֶׁהָיוּ הַלְוִיִּם אוֹמְרִים עַל הַדּוּכָן:"}
+          ]},
+          {"ref": "14", "parts": [
+            {"kind": "instruction", "en": "(Psalms 93:1-2)", "text": "<small>(תהילים צ״ג:א׳-ב׳)</small>"},
+            {"kind": "prayer", "text": " יְהֹוָ֣ה מָלָךְ֮ גֵּא֢וּת לָ֫בֵ֥שׁ לָבֵ֣שׁ יְ֭הֹוָה עֹ֣ז הִתְאַזָּ֑ר אַף־תִּכּ֥וֹן תֵּ֝בֵ֗ל בַּל־תִּמּֽוֹט׃ נָכ֣וֹן כִּסְאֲךָ֣ מֵאָ֑ז מֵעוֹלָ֣ם אָֽתָּה׃ נָשְׂא֤וּ נְהָר֨וֹת ׀  יְֽהֹוָ֗ה נָשְׂא֣וּ נְהָר֣וֹת קוֹלָ֑ם יִשְׂא֖וּ נְהָר֣וֹת דׇּכְיָֽם׃ מִקֹּל֨וֹת ׀  מַ֤יִם רַבִּ֗ים אַדִּירִ֣ים מִשְׁבְּרֵי־יָ֑ם אַדִּ֖יר בַּמָּר֣וֹם יְהֹוָֽה׃ עֵֽדֹתֶ֨יךָ ׀ נֶאֶמְנ֬וּ מְאֹ֗ד לְבֵיתְךָ֥ נַאֲוָה־קֹ֑דֶשׁ יְ֝הֹוָ֗ה לְאֹ֣רֶךְ יָמִֽים׃ <br><br><b>הוֹשִׁיעֵ֨נוּ</b> ׀ יְהֹ֘וָ֤ה אֱלֹהֵ֗ינוּ וְקַבְּצֵנוּ֮ מִֽן־הַגּ֫וֹיִ֥ם לְ֭הֹדוֹת לְשֵׁ֣ם קׇדְשֶׁ֑ךָ לְ֝הִשְׁתַּבֵּ֗חַ בִּתְהִלָּתֶֽךָ: בָּ֤רֽוּךְ יְהֹוָ֨ה אֱלֹהֵ֪י יִשְׂרָאֵ֡ל מִן־הָ֤עוֹלָ֨ם ׀ וְעַ֬ד הָעוֹלָ֗ם וְאָמַ֖ר כׇּל־הָעָ֥ם אָמֵ֗ן הַֽלְלוּיָֽהּ: בָּ֘ר֤וּךְ יְהֹוָ֨ה ׀ מִצִּיּ֗וֹן שֹׁ֘כֵ֤ן יְֽרוּשָׁלִָ֗ם הַֽלְלוּיָֽהּ: בָּר֤וּךְ ׀ יְהֹוָ֣ה אֱ֭לֹהִים אֱלֹהֵ֣י יִשְׂרָאֵ֑ל עֹשֵׂ֖ה נִפְלָא֣וֹת לְבַדּֽוֹ׃ וּבָר֤וּךְ ׀ שֵׁ֥ם כְּבוֹד֗וֹ לְע֫וֹלָ֥ם וְיִמָּלֵ֣א כְ֭בוֹדוֹ אֶת־כֹּ֥ל הָאָ֗רֶץ אָ֘מֵ֥ן ׀ וְאָמֵֽן:"}
+          ]},
+          {"ref": "15", "kind": "instruction", "en": "On Tzom Gedaliah and Asara B'Tevet recite", "gloss": "Public fast days", "text": "<small>בצום גדליה ובעשרה בטבת אומרים</small> "},
+          {"ref": "16", "kind": "prayer", "text": "<small>שִׁ֖יר (תהילים פ״ג:א׳-ג׳) מִזְמ֣וֹר לְאָסָֽף׃ אֱלֹהִ֥ים אַל־דֳּמִי־לָ֑ךְ אַל־תֶּחֱרַ֖שׁ וְאַל־תִּשְׁקֹ֣ט אֵֽל׃ כִּֽי־הִנֵּ֣ה א֭וֹיְבֶיךָ יֶהֱמָי֑וּן וּ֝מְשַׂנְאֶ֗יךָ נָ֣שְׂאוּ רֹֽאשׁ׃ עַֽל־עַ֭מְּךָ יַעֲרִ֣ימוּ ס֑וֹד וְ֝יִתְיָעֲצ֗וּ עַל־צְפוּנֶֽיךָ׃ אָמְר֗וּ לְ֭כוּ וְנַכְחִידֵ֣ם מִגּ֑וֹי וְלֹֽא־יִזָּכֵ֖ר שֵֽׁם־יִשְׂרָאֵ֣ל עֽוֹד׃ כִּ֤י נוֹעֲצ֣וּ לֵ֣ב יַחְדָּ֑ו עָ֝לֶ֗יךָ בְּרִ֣ית יִכְרֹֽתוּ׃ אׇהֳלֵ֣י אֱ֭דוֹם וְיִשְׁמְעֵאלִ֗ים מוֹאָ֥ב וְהַגְרִֽים׃ גְּבָ֣ל וְ֭עַמּוֹן וַעֲמָלֵ֑ק פְּ֝לֶ֗שֶׁת עִם־יֹ֥שְׁבֵי צֽוֹר׃ גַּם־אַ֭שּׁוּר נִלְוָ֣ה עִמָּ֑ם הָ֤יֽוּ זְר֖וֹעַ לִבְנֵי־ל֣וֹט סֶֽלָה׃ עֲשֵֽׂה־לָהֶ֥ם כְּמִדְיָ֑ן כְּֽסִיסְרָ֥א כְ֝יָבִ֗ין בְּנַ֣חַל קִישֽׁוֹן׃ נִשְׁמְד֥וּ בְֽעֵין־דֹּ֑אר הָ֥יוּ דֹּ֗֝מֶן לָאֲדָמָֽה׃ שִׁיתֵ֣מוֹ נְ֭דִיבֵימוֹ כְּעֹרֵ֣ב וְכִזְאֵ֑ב וּֽכְזֶ֥בַח וּ֝כְצַלְמֻנָּ֗ע כׇּל־נְסִיכֵֽימוֹ׃ אֲשֶׁ֣ר אָ֭מְרוּ נִ֣ירְשָׁה לָּ֑נוּ אֵ֗֝ת נְא֣וֹת אֱלֹהִֽים׃ אֱֽלֹהַ֗י שִׁיתֵ֥מוֹ כַגַּלְגַּ֑ל כְּ֝קַ֗שׁ לִפְנֵי־רֽוּחַ׃ כְּאֵ֥שׁ תִּבְעַר־יָ֑עַר וּ֝כְלֶהָבָ֗ה תְּלַהֵ֥ט הָרִֽים׃ כֵּ֭ן תִּרְדְּפֵ֣ם בְּסַעֲרֶ֑ךָ וּבְסוּפָתְךָ֥ תְבַהֲלֵֽם׃ מַלֵּ֣א פְנֵיהֶ֣ם קָל֑וֹן וִיבַקְשׁ֖וּ שִׁמְךָ֣ יְהֹוָֽה׃ יֵבֹ֖שׁוּ וְיִבָּהֲל֥וּ עֲדֵי־עַ֗ד וְֽיַחְפְּר֥וּ וְיֹאבֵֽדוּ׃ וְֽיֵדְע֗וּ כִּֽי־אַתָּ֬ה שִׁמְךָ֣ יְהֹוָ֣ה לְבַדֶּ֑ךָ עֶ֝לְי֗וֹן עַל־כׇּל־הָאָֽרֶץ׃</small> "},
+          {"ref": "17", "kind": "instruction", "en": "On the day after Yom Kippur recite", "text": "<small>למחרת יום הכיפורים אומרים</small> "},
+          {"ref": "18", "kind": "prayer", "text": "<small>לַמְנַצֵּ֬חַ ׀ (תהילים פ״ה:א׳-ג׳) לִבְנֵי־קֹ֬רַח מִזְמֽוֹר׃ רָצִ֣יתָ יְהֹוָ֣ה אַרְצֶ֑ךָ שַׁ֝֗בְתָּ שבות [שְׁבִ֣ית] יַעֲקֹֽב׃ נָ֭שָׂאתָ עֲוֺ֣ן עַמֶּ֑ךָ כִּסִּ֖יתָ כׇל־חַטָּאתָ֣ם סֶֽלָה׃ אָסַ֥פְתָּ כׇל־עֶבְרָתֶ֑ךָ הֱ֝שִׁיב֗וֹתָ מֵחֲר֥וֹן אַפֶּֽךָ׃ שׁ֭וּבֵנוּ אֱלֹהֵ֣י יִשְׁעֵ֑נוּ וְהָפֵ֖ר כַּעַסְךָ֣ עִמָּֽנוּ׃ הַלְעוֹלָ֥ם תֶּאֱנַף־בָּ֑נוּ תִּמְשֹׁ֥ךְ אַ֝פְּךָ֗ לְדֹ֣ר וָדֹֽר׃ הֲֽלֹא־אַ֭תָּה תָּשׁ֣וּב תְּחַיֵּ֑נוּ וְ֝עַמְּךָ֗ יִשְׂמְחוּ־בָֽךְ׃ הַרְאֵ֣נוּ יְהֹוָ֣ה חַסְדֶּ֑ךָ וְ֝יֶשְׁעֲךָ֗ תִּתֶּן־לָֽנוּ׃ אֶשְׁמְעָ֗ה מַה־יְדַבֵּר֮ הָאֵ֢ל ׀ יְהֹ֫וָ֥ה כִּ֤י ׀ יְדַבֵּ֬ר שָׁל֗וֹם אֶל־עַמּ֥וֹ וְאֶל־חֲסִידָ֑יו וְאַל־יָשׁ֥וּבוּ לְכִסְלָֽה׃ אַ֤ךְ קָר֣וֹב לִירֵאָ֣יו יִשְׁע֑וֹ לִשְׁכֹּ֖ן כָּב֣וֹד בְּאַרְצֵֽנוּ׃ חֶסֶד־וֶאֱמֶ֥ת נִפְגָּ֑שׁוּ צֶ֖דֶק וְשָׁל֣וֹם נָשָֽׁקוּ׃ אֱ֭מֶת מֵאֶ֣רֶץ תִּצְמָ֑ח וְ֝צֶ֗דֶק מִשָּׁמַ֥יִם נִשְׁקָֽף׃ גַּם־יְ֭הֹוָה יִתֵּ֣ן הַטּ֑וֹב וְ֝אַרְצֵ֗נוּ תִּתֵּ֥ן יְבוּלָֽהּ׃ צֶ֭דֶק לְפָנָ֣יו יְהַלֵּ֑ךְ וְיָשֵׂ֖ם לְדֶ֣רֶךְ פְּעָמָֽיו׃</small> "},
+          {"ref": "19", "kind": "instruction", "en": "On Hanukkah recite", "text": "<small>בחנוכה אומרים</small> "},
+          {"ref": "20", "kind": "prayer", "text": "<small>מִזְמ֡וֹר (תהילים ל׳:א׳-ב׳) שִׁיר־חֲנֻכַּ֖ת הַבַּ֣יִת לְדָוִֽד׃ אֲרוֹמִמְךָ֣ יְ֭הֹוָה כִּ֣י דִלִּיתָ֑נִי וְלֹֽא־שִׂמַּ֖חְתָּ אֹיְבַ֣י לִֽי׃ יְהֹוָ֥ה אֱלֹהָ֑י שִׁוַּ֥עְתִּי אֵ֝לֶ֗יךָ וַתִּרְפָּאֵֽנִי׃ יְֽהֹוָ֗ה הֶעֱלִ֣יתָ מִן־שְׁא֣וֹל נַפְשִׁ֑י חִ֝יִּיתַ֗נִי מיורדי [מִיׇּֽרְדִי]־בֽוֹר׃ זַמְּר֣וּ לַיהֹוָ֣ה חֲסִידָ֑יו וְ֝הוֹד֗וּ לְזֵ֣כֶר קׇדְשֽׁוֹ׃ כִּ֤י רֶ֨גַע ׀ בְּאַפּוֹ֮ חַיִּ֢ים בִּרְצ֫וֹנ֥וֹ בָּ֭עֶרֶב יָלִ֥ין בֶּ֗כִי וְלַבֹּ֥קֶר רִנָּֽה׃ וַ֭אֲנִי אָמַ֣רְתִּי בְשַׁלְוִ֑י בַּל־אֶמּ֥וֹט לְעוֹלָֽם׃ יְֽהֹוָ֗ה בִּרְצוֹנְךָ֮ הֶעֱמַ֢דְתָּה לְֽהַרְרִ֫י עֹ֥ז הִסְתַּ֥רְתָּ פָנֶ֗יךָ הָיִ֥יתִי נִבְהָֽל׃ אֵלֶ֣יךָ יְהֹוָ֣ה אֶקְרָ֑א וְאֶל־אֲ֝דֹנָ֗י אֶתְחַנָּֽן׃ מַה־בֶּ֥צַע בְּדָמִי֮ בְּרִדְתִּ֢י אֶ֫ל שָׁ֥חַת הֲיוֹדְךָ֥ עָפָ֑ר הֲיַגִּ֥יד אֲמִתֶּֽךָ׃ שְׁמַע־יְהֹוָ֥ה וְחׇנֵּ֑נִי יְ֝הֹוָ֗ה הֱֽיֵה־עֹזֵ֥ר לִֽי׃ הָפַ֣כְתָּ מִסְפְּדִי֮ לְמָח֢וֹל לִ֥י פִּתַּ֥חְתָּ שַׂקִּ֑י וַֽתְּאַזְּרֵ֥נִי שִׂמְחָֽה׃ לְמַ֤עַן ׀ יְזַמֶּרְךָ֣ כָ֭בוֹד וְלֹ֣א יִדֹּ֑ם יְהֹוָ֥ה אֱ֝לֹהַ֗י לְעוֹלָ֥ם אוֹדֶֽךָּ׃</small> "},
+          {"ref": "21", "kind": "instruction", "en": "On Ta'anit Esther and Purim recite", "text": "<small>בתענית אסתר ובפורים אומרים</small> "},
+          {"ref": "22", "kind": "prayer", "text": "<small>לַ֭מְנַצֵּחַ (תהילים כ״ב:א׳-ב׳) עַל־אַיֶּ֥לֶת הַשַּׁ֗חַר מִזְמ֥וֹר לְדָוִֽד׃ אֵלִ֣י אֵ֭לִי לָמָ֣ה עֲזַבְתָּ֑נִי רָח֥וֹק מִֽ֝ישׁוּעָתִ֗י דִּבְרֵ֥י שַׁאֲגָתִֽי׃ אֱֽלֹהַ֗י אֶקְרָ֣א י֭וֹמָם וְלֹ֣א תַעֲנֶ֑ה וְ֝לַ֗יְלָה וְֽלֹא־דֻֽמִיָּ֥ה לִֽי׃ וְאַתָּ֥ה קָד֑וֹשׁ י֝וֹשֵׁ֗ב תְּהִלּ֥וֹת יִשְׂרָאֵֽל׃ בְּ֭ךָ בָּטְח֣וּ אֲבֹתֵ֑ינוּ בָּ֝טְח֗וּ וַֽתְּפַלְּטֵֽמוֹ׃ אֵלֶ֣יךָ זָעֲק֣וּ וְנִמְלָ֑טוּ בְּךָ֖ בָטְח֣וּ וְלֹא־בֽוֹשׁוּ׃ וְאָנֹכִ֣י תוֹלַ֣עַת וְלֹא־אִ֑ישׁ חֶרְפַּ֥ת אָ֝דָ֗ם וּבְז֥וּי עָֽם׃ כׇּל־רֹ֭אַי יַלְעִ֣גוּ לִ֑י יַפְטִ֥ירוּ בְ֝שָׂפָ֗ה יָנִ֥יעוּ רֹֽאשׁ׃ גֹּ֣ל אֶל־יְהֹוָ֣ה יְפַלְּטֵ֑הוּ יַ֝צִּילֵ֗הוּ כִּ֘י חָ֥פֵֽץ בּֽוֹ׃ כִּֽי־אַתָּ֣ה גֹחִ֣י מִבָּ֑טֶן מַ֝בְטִיחִ֗י עַל־שְׁדֵ֥י אִמִּֽי׃ עָ֭לֶיךָ הׇשְׁלַ֣כְתִּי מֵרָ֑חֶם מִבֶּ֥טֶן אִ֝מִּ֗י אֵ֣לִי אָֽתָּה׃ אַל־תִּרְחַ֣ק מִ֭מֶּנִּי כִּי־צָרָ֣ה קְרוֹבָ֑ה כִּי־אֵ֥ין עוֹזֵֽר׃ סְ֭בָבוּנִי פָּרִ֣ים רַבִּ֑ים אַבִּירֵ֖י בָשָׁ֣ן כִּתְּרֽוּנִי׃ פָּצ֣וּ עָלַ֣י פִּיהֶ֑ם אַ֝רְיֵ֗ה טֹרֵ֥ף וְשֹׁאֵֽג׃ כַּמַּ֥יִם נִשְׁפַּכְתִּי֮ וְהִתְפָּֽרְד֗וּ כׇּֽל־עַצְמ֫וֹתָ֥י הָיָ֣ה לִ֭בִּי כַּדּוֹנָ֑ג נָ֝מֵ֗ס בְּת֣וֹךְ מֵעָֽי׃ יָ֘בֵ֤שׁ כַּחֶ֨רֶשׂ ׀ כֹּחִ֗י וּ֭לְשׁוֹנִי מֻדְבָּ֣ק מַלְקוֹחָ֑י וְֽלַעֲפַר־מָ֥וֶת תִּשְׁפְּתֵֽנִי׃ כִּ֥י סְבָב֗וּנִי כְּלָ֫בִ֥ים עֲדַ֣ת מְ֭רֵעִים הִקִּיפ֑וּנִי כָּ֝אֲרִ֗י יָדַ֥י וְרַגְלָֽי׃ אֲסַפֵּ֥ר כׇּל־עַצְמוֹתָ֑י הֵ֥מָּה יַ֝בִּ֗יטוּ יִרְאוּ־בִֽי׃ יְחַלְּק֣וּ בְגָדַ֣י לָהֶ֑ם וְעַל־לְ֝בוּשִׁ֗י יַפִּ֥ילוּ גוֹרָֽל׃ וְאַתָּ֣ה יְ֭הֹוָה אַל־תִּרְחָ֑ק אֱ֝יָלוּתִ֗י לְעֶזְרָ֥תִי חֽוּשָׁה׃ הַצִּ֣ילָה מֵחֶ֣רֶב נַפְשִׁ֑י מִיַּד־כֶּ֝֗לֶב יְחִידָתִֽי׃ ה֭וֹשִׁיעֵנִי מִפִּ֣י אַרְיֵ֑ה וּמִקַּרְנֵ֖י רֵמִ֣ים עֲנִיתָֽנִי׃ אֲסַפְּרָ֣ה שִׁמְךָ֣ לְאֶחָ֑י בְּת֖וֹךְ קָהָ֣ל אֲהַלְלֶֽךָּ׃ יִרְאֵ֤י יְהֹוָ֨ה ׀ הַֽלְל֗וּהוּ כׇּל־זֶ֣רַע יַעֲקֹ֣ב כַּבְּד֑וּהוּ וְג֥וּרוּ מִ֝מֶּ֗נּוּ כׇּל־זֶ֥רַע יִשְׂרָאֵֽל׃ כִּ֤י לֹֽא־בָזָ֨ה וְלֹ֪א שִׁקַּ֡ץ עֱנ֬וּת עָנִ֗י וְלֹא־הִסְתִּ֣יר פָּנָ֣יו מִמֶּ֑נּוּ וּֽבְשַׁוְּע֖וֹ אֵלָ֣יו שָׁמֵֽעַ׃ מֵ֥אִתְּךָ֗ תְּֽהִלָּ֫תִ֥י בְּקָהָ֥ל רָ֑ב נְדָרַ֥י אֲ֝שַׁלֵּ֗ם נֶ֣גֶד יְרֵאָֽיו׃ יֹאכְל֬וּ עֲנָוִ֨ים ׀ וְיִשְׂבָּ֗עוּ יְהַֽלְל֣וּ יְ֭הֹוָה דֹּ֣רְשָׁ֑יו יְחִ֖י לְבַבְכֶ֣ם לָעַֽד׃ יִזְכְּר֤וּ ׀ וְיָשֻׁ֣בוּ אֶל־יְ֭הֹוָה כׇּל־אַפְסֵי־אָ֑רֶץ וְיִֽשְׁתַּחֲו֥וּ לְ֝פָנֶ֗יךָ כׇּֽל־מִשְׁפְּח֥וֹת גּוֹיִֽם׃ כִּ֣י לַ֭יהֹוָה הַמְּלוּכָ֑ה וּ֝מֹשֵׁ֗ל בַּגּוֹיִֽם׃ אָכְל֬וּ וַיִּֽשְׁתַּחֲו֨וּ ׀ כׇּֽל־דִּשְׁנֵי־אֶ֗רֶץ לְפָנָ֣יו יִ֭כְרְעוּ כׇּל־יוֹרְדֵ֣י עָפָ֑ר וְ֝נַפְשׁ֗וֹ לֹ֣א חִיָּֽה׃ זֶ֥רַע יַֽעַבְדֶ֑נּוּ יְסֻפַּ֖ר לַֽאדֹנָ֣י לַדּֽוֹר׃ יָ֭בֹאוּ וְיַגִּ֣ידוּ צִדְקָת֑וֹ לְעַ֥ם נ֝וֹלָ֗ד כִּ֣י עָשָֽׂה׃</small> "},
+          {"ref": "23", "kind": "instruction", "en": "On 17 Tammuz recite", "text": "<small>בשבעה עשר בתמוז אומרים</small> "},
+          {"ref": "24", "kind": "prayer", "text": "<small>מִזְמ֗וֹר (תהילים ע״ט:א׳) לְאָ֫סָ֥ף אֱֽלֹהִ֡ים בָּ֤אוּ גוֹיִ֨ם ׀ בְּֽנַחֲלָתֶ֗ךָ טִ֭מְּאוּ אֶת־הֵיכַ֣ל קׇדְשֶׁ֑ךָ שָׂ֖מוּ אֶת־יְרֽוּשָׁלַ֣‍ִם לְעִיִּֽים׃ נָתְנ֡וּ אֶת־נִבְלַ֬ת עֲבָדֶ֗יךָ מַ֭אֲכָל לְע֣וֹף הַשָּׁמָ֑יִם בְּשַׂ֥ר חֲ֝סִידֶ֗יךָ לְחַיְתוֹ־אָֽרֶץ׃ שָׁפְכ֬וּ דָמָ֨ם ׀ כַּמַּ֗יִם סְֽבִ֘יב֤וֹת יְֽרוּשָׁלָ֗‍ִם וְאֵ֣ין קוֹבֵֽר׃ הָיִ֣ינוּ חֶ֭רְפָּה לִשְׁכֵנֵ֑ינוּ לַ֥עַג וָ֝קֶ֗לֶס לִסְבִיבוֹתֵֽינוּ׃ עַד־מָ֣ה יְ֭הֹוָה תֶּאֱנַ֣ף לָנֶ֑צַח תִּבְעַ֥ר כְּמוֹ־אֵ֗֝שׁ קִנְאָתֶֽךָ׃ שְׁפֹ֤ךְ חֲמָתְךָ֗ אֶֽל־הַגּוֹיִם֮ אֲשֶׁ֢ר לֹא־יְדָ֫ע֥וּךָ וְעַ֥ל מַמְלָכ֑וֹת אֲשֶׁ֥ר בְּ֝שִׁמְךָ֗ לֹ֣א קָרָֽאוּ׃ כִּ֭י אָכַ֣ל אֶֽת־יַעֲקֹ֑ב וְֽאֶת־נָוֵ֥הוּ הֵשַֽׁמּוּ׃ אַֽל־תִּזְכׇּר־לָנוּ֮ עֲוֺנֹ֢ת רִאשֹׁ֫נִ֥ים מַ֭הֵר יְקַדְּמ֣וּנוּ רַחֲמֶ֑יךָ כִּ֖י דַלּ֣וֹנוּ מְאֹֽד׃ עׇזְרֵ֤נוּ ׀ אֱלֹ֘הֵ֤י יִשְׁעֵ֗נוּ עַֽל־דְּבַ֥ר כְּבֽוֹד־שְׁמֶ֑ךָ וְהַצִּילֵ֥נוּ וְכַפֵּ֥ר עַל־חַ֝טֹּאתֵ֗ינוּ לְמַ֣עַן שְׁמֶֽךָ׃ לָ֤מָּה ׀ יֹאמְר֣וּ הַגּוֹיִם֮ אַיֵּ֢ה אֱֽלֹהֵ֫יהֶ֥ם יִוָּדַ֣ע בַּגֹּיִ֣ים לְעֵינֵ֑ינוּ נִ֝קְמַ֗ת דַּֽם־עֲבָדֶ֥יךָ הַשָּׁפֽוּךְ׃ תָּ֤ב֣וֹא לְפָנֶיךָ֮ אֶנְקַ֢ת אָ֫סִ֥יר כְּגֹ֥דֶל זְרוֹעֲךָ֑ ה֝וֹתֵ֗ר בְּנֵ֣י תְמוּתָֽה׃ וְהָ֘שֵׁ֤ב לִשְׁכֵנֵ֣ינוּ שִׁ֭בְעָתַיִם אֶל־חֵיקָ֑ם חֶרְפָּ֘תָ֤ם אֲשֶׁ֖ר חֵרְפ֣וּךָ אֲדֹנָֽי׃ וַאֲנַ֤חְנוּ עַמְּךָ֨ ׀ וְצֹ֥אן מַרְעִיתֶךָ֮ נ֤וֹדֶ֥ה לְּךָ֗ לְע֫וֹלָ֥ם לְד֥וֹר וָדֹ֑ר נְ֝סַפֵּ֗ר תְּהִלָּתֶֽךָ׃</small> "},
+          {"ref": "25", "kind": "instruction", "en": "In a house of mourning recite", "text": "<small>בבית האבל אומרים</small> "},
+          {"ref": "26", "kind": "prayer", "text": "<small>לַמְנַצֵּ֬חַ ׀ (תהילים מ״ט:א׳-ג׳) לִבְנֵי־קֹ֬רַח מִזְמֽוֹר׃ שִׁמְעוּ־זֹ֭את כׇּל־הָעַמִּ֑ים הַ֝אֲזִ֗ינוּ כׇּל־יֹ֥שְׁבֵי חָֽלֶד׃ גַּם־בְּנֵ֣י אָ֭דָם גַּם־בְּנֵי־אִ֑ישׁ יַ֗֝חַד עָשִׁ֥יר וְאֶבְיֽוֹן׃ פִּ֭י יְדַבֵּ֣ר חׇכְמ֑וֹת וְהָג֖וּת לִבִּ֣י תְבוּנֽוֹת׃ אַטֶּ֣ה לְמָשָׁ֣ל אׇזְנִ֑י אֶפְתַּ֥ח בְּ֝כִנּ֗וֹר חִידָתִֽי׃ לָ֣מָּה אִ֭ירָא בִּ֣ימֵי רָ֑ע עֲוֺ֖ן עֲקֵבַ֣י יְסוּבֵּֽנִי׃ הַבֹּטְחִ֥ים עַל־חֵילָ֑ם וּבְרֹ֥ב עׇ֝שְׁרָ֗ם יִתְהַלָּֽלוּ׃ אָ֗ח לֹא־פָדֹ֣ה יִפְדֶּ֣ה אִ֑ישׁ לֹא־יִתֵּ֖ן לֵאלֹהִ֣ים כׇּפְרֽוֹ׃ וְ֭יֵקַר פִּדְי֥וֹן נַפְשָׁ֗ם וְחָדַ֥ל לְעוֹלָֽם׃ וִיחִי־ע֥וֹד לָנֶ֑צַח לֹ֖א יִרְאֶ֣ה הַשָּֽׁחַת׃ כִּ֤י יִרְאֶ֨ה ׀  חֲכָ֘מִ֤ים יָמ֗וּתוּ יַ֤חַד כְּסִ֣יל וָבַ֣עַר יֹאבֵ֑דוּ וְעָזְב֖וּ לַאֲחֵרִ֣ים חֵילָֽם׃ קִרְבָּ֤ם בָּתֵּ֨ימוֹ ׀ לְֽעוֹלָ֗ם מִ֭שְׁכְּנֹתָם לְד֣וֹר וָדֹ֑ר קָרְא֥וּ בִ֝שְׁמוֹתָ֗ם עֲלֵ֣י אֲדָמֽוֹת׃ וְאָדָ֣ם בִּ֭יקָר בַּל־יָלִ֑ין נִמְשַׁ֖ל כַּבְּהֵמ֣וֹת נִדְמֽוּ׃ זֶ֣ה דַ֭רְכָּם כֵּ֣סֶל לָ֑מוֹ וְאַחֲרֵיהֶ֓ם ׀ בְּפִיהֶ֖ם יִרְצ֣וּ סֶֽלָה׃ כַּצֹּ֤אן ׀ לִ֥שְׁא֣וֹל שַׁתּוּ֮ מָ֤וֶת יִ֫רְעֵ֥ם וַיִּרְדּ֘וּ בָ֤ם יְשָׁרִ֨ים ׀ לַבֹּ֗קֶר וצירם [וְ֭צוּרָם] לְבַלּ֥וֹת שְׁא֗וֹל מִזְּבֻ֥ל לֽוֹ׃ אַךְ־אֱלֹהִ֗ים יִפְדֶּ֣ה נַ֭פְשִׁי מִֽיַּד־שְׁא֑וֹל כִּ֖י יִקָּחֵ֣נִי סֶֽלָה׃ אַל־תִּ֭ירָא כִּֽי־יַעֲשִׁ֣ר אִ֑ישׁ כִּי־יִ֝רְבֶּ֗ה כְּב֣וֹד בֵּיתֽוֹ׃ כִּ֤י לֹ֣א בְ֭מוֹתוֹ יִקַּ֣ח הַכֹּ֑ל לֹֽא־יֵרֵ֖ד אַחֲרָ֣יו כְּבוֹדֽוֹ׃ כִּֽי־נַ֭פְשׁוֹ בְּחַיָּ֣יו יְבָרֵ֑ךְ וְ֝יוֹדֻ֗ךָ כִּי־תֵיטִ֥יב לָֽךְ׃ תָּ֭בוֹא עַד־דּ֣וֹר אֲבוֹתָ֑יו עַד־נֵ֗֝צַח לֹ֣א יִרְאוּ־אֽוֹר׃ אָדָ֣ם בִּ֭יקָר וְלֹ֣א יָבִ֑ין נִמְשַׁ֖ל כַּבְּהֵמ֣וֹת נִדְמֽוּ׃</small>"},
+          {"ref": "27", "parts": [
+            {"kind": "instruction", "en": "Some add", "text": "<small><small>ויש שמוסיפים</small>"},
+            {"kind": "prayer", "text": "<br>וּתְשׁוּעַ֣ת צַ֭דִּיקִים מֵיְהֹוָ֑ה מָ֝עוּזָּ֗ם בְּעֵ֣ת צָרָֽה׃ וַ֥יַּעְזְרֵ֥ם יְהֹוָ֗ה וַֽיְפַ֫לְּטֵ֥ם יְפַלְּטֵ֣ם מֵ֭רְשָׁעִים וְיוֹשִׁיעֵ֑ם כִּי־חָ֥סוּ בֽוֹ׃</small> "}
+          ]},
+          {"ref": "28", "kind": "instruction", "en": "And say Kaddish 'Yehe Shelama'", "text": "<small>ואומרים קדיש \"יהא שלמא\"</small> "},
+          {"ref": "29", "parts": [
+            {"kind": "prayer", "node": "kaddish.shalem", "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. <small>[אָמֵן]</small>"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": " בְּעָלְמָא דִּי בְרָא,"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": " כִּרְעוּתֵה,"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": " וְיַמְלִיךְ מַלְכוּתֵה,"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": " וְיַצְמַח פֻּרְקָנֵה,"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": " וִיקָרֵב מְשִׁיחֵהּ. "},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": " בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב,"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": " וְאִמְרוּ אָמֵן. "},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": " יְהֵא שְׁמֵיהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ. וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": " בְּרִיךְ הוּא. "},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": " לְעֵלָּא מִן כָּל בִּרְכָתָא שִׁירָתָא,"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": " דַּאֲמִירָן בְּעָלְמָא,"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": " וְאִמְרוּ אָמֵן. "},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": "<small>[אָמֵן]</small></small>"}
+          ]},
+          {"ref": "30", "parts": [
+            {"kind": "prayer", "node": "kaddish.shalem", "text": "<small><b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא. חַיִּים וְשָׂבָע וִישׁוּעָה וְנֶחָמָה. וְשֵׁיזָבָא וּרְפוּאָה וּגְאוּלָה וּסְלִיחָה וְכַפָּרָה וְרֶוַח וְהַצָּלָה לָנוּ וּלְכָל עַמּוֹ יִשְׂרָאֵל. וְאִמְרוּ אָמֵן. <small>[אָמֵן]</small>"},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": "<br><b>עוֹשֶׂה</b> שָׁלוֹם בִּמְרוֹמָיו. הוּא בְּרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל עַמּוֹ יִשְׂרָאֵל. וְאִמְרוּ אָמֵן. "},
+            {"kind": "prayer", "node": "kaddish.shalem", "text": "<small>[אָמֵן]</small></small>   "}
+          ]}
+        ]
+      }
+    },
+    {
+      "path": "Weekday Shacharit/Kaveh",
+      "title": "קוה",
+      "node": "concl.pitum_haketoret",
+      "when": "true",
+      "service": "shacharit",
+      "he": {
+        "version": "Shaliehsaboo Edition",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Kaveh El HaShem", "text": "<big><b>קוה</b></big>"},
+          {"ref": "2", "kind": "prayer", "text": "<b>קַוֵּ֗ה</b> אֶל־יְהֹ֫וָ֥ה חֲ֭זַק וְיַאֲמֵ֣ץ לִבֶּ֑ךָ וְ֝קַוֵּ֗ה אֶל־יְהֹוָֽה: אֵין־קָד֥וֹשׁ כַּיהֹוָ֖ה כִּ֣י אֵ֣ין בִּלְתֶּ֑ךָ וְאֵ֥ין צ֖וּר כֵּאלֹהֵֽינוּ׃ כִּ֤י מִ֣י אֱ֭לוֹהַּ מִבַּלְעֲדֵ֣י יְהֹוָ֑ה וּמִ֥י צ֝֗וּר זוּלָתִ֥י אֱלֹהֵֽינוּ׃"},
+          {"ref": "3", "kind": "prayer", "text": "<b>אֵין</b> כֵּאלֹהֵֽינוּ, אֵין כַּאדוֹנֵֽנוּ, אֵין כְּמַלְכֵּֽנוּ, אֵין כְּמוֹשִׁיעֵֽנוּ: מִי כֵּאלֹהֵֽינוּ, מִי כַּאדוֹנֵֽנוּ, מִי כְּמַלְכֵּֽנוּ, מִי כְּמוֹשִׁיעֵֽנוּ: נוֹדֶה לֵאלֹהֵֽינוּ, נוֹדֶה לַאדוֹנֵֽנוּ, נוֹדֶה לְמַלְכֵּֽנוּ, נוֹדֶה לְמוֹשִׁיעֵֽנוּ: בָּרוּךְ אֱלֹהֵֽינוּ, בָּרוּךְ אֲדוֹנֵֽנוּ, בָּרוּךְ מַלְכֵּֽנוּ, בָּרוּךְ מוֹשִׁיעֵֽנוּ: אַתָּה הוּא אֱלֹהֵֽינוּ, אַתָּה הוּא אֲדוֹנֵֽנוּ, אַתָּה הוּא מַלְכֵּֽנוּ, אַתָּה הוּא מוֹשִׁיעֵֽנוּ: אַתָּה תוֹשִׁיעֵֽנוּ, אַתָּ֣ה תָ֭קוּם תְּרַחֵ֣ם צִיּ֑וֹן כִּי־עֵ֥ת לְ֝חֶֽנְנָ֗הּ כִּי־בָ֥א מוֹעֵֽד: "},
+          {"ref": "4", "kind": "heading", "en": "Pitum HaKetoret", "text": "<big><b>פטום הקטורת</b></big>"},
+          {"ref": "5", "kind": "prayer", "text": "<b>אַתָּה</b> הוּא יְהֹוָה אֱלֹהֵֽינוּ, שֶׁהִקְטִֽירוּ אֲבוֹתֵֽינוּ לְפָנֶֽיךָ אֶת קְטֹֽרֶת הַסַּמִּים, בִּזְמַן שֶׁבֵּית הַמִּקְדָשׁ קַיָּם, כַּאֲשֶׁר צִוִּֽיתָ אוֹתָם עַל־יַד מֹשֶׁה נְבִיאָךְ, כַּכָּתוּב בְּתֽוֹרָתָךְ:"},
+          {"ref": "6", "kind": "prayer", "text": "<b>וַיֹּ֩אמֶר֩</b> יְהֹוָ֨ה אֶל־מֹשֶׁ֜ה קַח־לְךָ֣ סַמִּ֗ים נָטָ֤ף ׀ וּשְׁחֵ֙לֶת֙ וְחֶלְבְּנָ֔ה סַמִּ֖ים וּלְבֹנָ֣ה זַכָּ֑ה בַּ֥ד בְּבַ֖ד יִהְיֶֽה׃ וְעָשִׂ֤יתָ אֹתָהּ֙ קְטֹ֔רֶת רֹ֖קַח מַעֲשֵׂ֣ה רוֹקֵ֑חַ מְמֻלָּ֖ח טָה֥וֹר קֹֽדֶשׁ׃ וְשָֽׁחַקְתָּ֣ מִמֶּ֘נָּה֮ הָדֵק֒ וְנָתַתָּ֨ה מִמֶּ֜נָּה לִפְנֵ֤י הָעֵדֻת֙ בְּאֹ֣הֶל מוֹעֵ֔ד אֲשֶׁ֛ר אִוָּעֵ֥ד לְךָ֖ שָׁ֑מָּה קֹ֥דֶשׁ קׇֽדָשִׁ֖ים תִּהְיֶ֥ה לָכֶֽם׃ וְנֶאֱמַר: וְהִקְטִ֥יר עָלָ֛יו אַהֲרֹ֖ן קְטֹ֣רֶת סַמִּ֑ים בַּבֹּ֣קֶר בַּבֹּ֗קֶר בְּהֵיטִיב֛וֹ אֶת־הַנֵּרֹ֖ת יַקְטִירֶֽנָּה: וּבְהַעֲלֹ֨ת אַהֲרֹ֧ן אֶת־הַנֵּרֹ֛ת בֵּ֥ין הָעַרְבַּ֖יִם יַקְטִירֶ֑נָּה קְטֹ֧רֶת תָּמִ֛יד לִפְנֵ֥י יְהֹוָ֖ה לְדֹרֹתֵיכֶֽם: "},
+          {"ref": "7", "kind": "prayer", "text": "<b>תָּנוּ</b> רַבָּנָן: פִּטּוּם הַקְּטֹֽרֶת כֵּיצַד? שְׁלֹשׁ מֵאוֹת וְשִׁשִּׁים וּשְׁמוֹנָה מָנִים הָיוּ בָהּ. שְׁלֹשׁ מֵאוֹת וְשִׁשִּׁים וַֽחֲמִשָּׁה כְּמִנְיַן יְמוֹת הַחַמָּה, מָנֶה בְּכָל־יוֹם, מַֽחֲצִיתוֹ בַּבֹּֽקֶר וּמַֽחֲצִיתוֹ בָּעֶרֶב. וּשְׁלֹשָׁה מָנִים יְתֵרִים, שֶׁמֵּהֶם מַכְנִיס כֹּהֵן גָּדוֹל, וְנוֹטֵל מֵהֶם מְלֹא חָפְנָיו בְּיוֹם הַכִּפּוּרִים, וּמַֽחֲזִירָן לְמַכְתֶּֽשֶׁת בְּעֶֽרֶב יוֹם הַכִּפּוּרִים, כְּדֵי לְקַיֵּם מִצְוַת דַקָּה מִן הַדַּקָּה. וְאַחַד־עָשָׂר סַמָּנִים הָיוּ בָהּ, וְאֵֽלּוּ הֵן: "},
+          {"ref": "8", "parts": [
+            {"kind": "instruction", "en": "1", "text": "<small>א</small>"},
+            {"kind": "prayer", "text": " הַצֳּרִי "},
+            {"kind": "instruction", "en": "2", "text": "<small>ב</small>"},
+            {"kind": "prayer", "text": " וְהַצִּפֹּֽרֶן "},
+            {"kind": "instruction", "en": "3", "text": "<small>ג</small>"},
+            {"kind": "prayer", "text": " וְהַחֶלְבְּנָה "},
+            {"kind": "instruction", "en": "4", "text": "<small>ד</small>"},
+            {"kind": "prayer", "text": " וְהַלְּבוֹנָה,"},
+            {"kind": "prayer", "text": " מִשְׁקַל שִׁבְעִים שִׁבְעִים מָנֶה. "},
+            {"kind": "instruction", "en": "5", "text": "<small>ה</small>"},
+            {"kind": "prayer", "text": " מוֹר, "},
+            {"kind": "instruction", "en": "6", "text": "<small>ו</small>"},
+            {"kind": "prayer", "text": " וּקְצִיעָה "},
+            {"kind": "instruction", "en": "7", "text": "<small>ז</small>"},
+            {"kind": "prayer", "text": " וְשִׁבֹּֽלֶת נֵרְדְּ "},
+            {"kind": "instruction", "en": "8", "text": "<small>ח</small>"},
+            {"kind": "prayer", "text": " וְכַרְכֹּם,"},
+            {"kind": "prayer", "text": " מִשְׁקַל שִׁשָּׁה עָשָׂר שִׁשָּׁה עָשָׂר מָנֶה. "},
+            {"kind": "instruction", "en": "9", "text": "<small>ט</small>"},
+            {"kind": "prayer", "text": " קֹשְׁטְ שְׁנֵים עָשָׂר, "},
+            {"kind": "instruction", "en": "10", "text": "<small>י</small>"},
+            {"kind": "prayer", "text": " קִלּוּפָה שְׁלֹשָׁה, "},
+            {"kind": "instruction", "en": "11", "text": "<small>יא</small>"},
+            {"kind": "prayer", "text": " קִנָּמוֹן תִּשְׁעָה,"},
+            {"kind": "prayer", "text": " בּוֹרִית־כַּרְשִׁינָה תִּשְׁעָה קַבִּין. יֵין קַפְרִיסִין סְאִין תְּלָת וְקַבִּין תְּלָתָא. וְאִם לֹא מָצָא יֵין קַפְרִיסִין,"},
+            {"kind": "prayer", "text": " מֵבִיא חֲמַר חִיוָר עַתִּיק. מֶֽלַח סְדוֹמִית,"},
+            {"kind": "prayer", "text": " רֽוֹבַע. מַעֲלֶה עָשָׁן,"},
+            {"kind": "prayer", "text": " כָּל־שֶׁהוּא. רִבִּי נָתָן הַבַּבְלִי אוֹמֵר: אַף כִּפַּת הַיַּרְדֵּן כָּל־שֶׁהִיא,"},
+            {"kind": "prayer", "text": " אִם נָתַן בָּהּ דְּבַשׁ פְּסָלָהּ,"},
+            {"kind": "prayer", "text": " וְאִם חִסֵּר אַחַת מִכָּל־סַמְמָנֶֽיהָ,"},
+            {"kind": "prayer", "text": " חַיָּיב מִיתָה:"}
+          ]},
+          {"ref": "9", "kind": "prayer", "text": "<b>רַבָּן</b> שִׁמְעוֹן בֶּן־גַּמְלִיאֵל אוֹמֵר: הַצֳּרִי אֵינוֹ אֶלָּא שְׁרָף, הַנּוֹטֵף מֵֽעֲצֵי הַקְּטָף. בֹּרִית כַּרְשִׁינָה, לְמָה הִיא בָֽאָה? כְּדֵי לְשַׁפּוֹת בָּהּ אֶת־הַצִּפֹּֽרֶן, כְּדֵי שֶׁתְּהֵא נָאָה. יֵין קַפְרִיסִין, לְמָה הוּא בָא? כְּדֵי לִשְׁרוֹת בּוֹ אֶת־הַצִּפֹּֽרֶן כְּדֵי שֶׁתְּהֵא עַזָּה. וַהֲלֹא מֵי רַגְלַֽיִם יָפִין לָהּ? אֶלָּא שֶׁאֵין מַכְנִיסִין מֵי רַגְלַֽיִם בַּמִּקְדָּשׁ, מִפְּנֵי הַכָּבוֹד:"},
+          {"ref": "10", "kind": "prayer", "text": "<b>תַּנְיָא</b> רִבִּי נָתָן אוֹמֵר: כְּשֶׁהוּא שׁוֹחֵק, אוֹמֵר: הָדֵק הֵיטֵב, הֵיטֵב הָדֵק. מִפְּנֵי שֶׁהַקּוֹל יָפֶה לַבְּשָׂמִים. פִּטְּמָהּ לַֽחֲצָאִין, כְּשֵׁרָה. לְשָׁלִישׁ וּלְרָבִֽיעַ, לֹא שָׁמַֽעְנוּ. אָמַר רִבִּי יְהוּדָה: זֶה הַכְּלָל, אִם כְּמִדָּתָהּ, כְּשֵׁרָה לַֽחֲצָאִין. וְאִם חִסֵּר אַחַת מִכָּל־סַמְמָנֶֽיהָ, חַיָּיב מִיתָה:"},
+          {"ref": "11", "kind": "prayer", "text": "<b>תָּנֵי</b> בַר־קַפָּרָא: אַחַת לְשִׁשִּׁים אוֹ לְשִׁבְעִים שָׁנָה, הָֽיְתָה בָֽאָה שֶׁל שִׁירַֽיִם לַֽחֲצָאִין. וְעוֹד תָּנֵי בַר־קַפָּרָא: אִלּוּ הָיָה נוֹתֵן בָּהּ קָרְטוֹב שֶׁל דְּבַשׁ, אֵין אָדָם יָכוֹל לַֽעֲמֹד מִפְּנֵי רֵיחָהּ. וְלָֽמָּה אֵין מְעָֽרְבִין בָּהּ דְּבַשׁ? מִפְּנֵי שֶׁהַתּוֹרָה אָֽמְרָה: כִּ֤י כָל־שְׂאֹר֙ וְכָל־דְּבַ֔שׁ לֹֽא־תַקְטִ֧ירוּ מִמֶּ֛נּוּ אִשֶּׁ֖ה לַֽיהֹוָֽה: יְהֹוָ֣ה צְבָא֣וֹת עִמָּ֑נוּ מִשְׂגָּֽב־לָ֨נוּ אֱלֹהֵ֖י יַֽעֲקֹ֣ב סֶֽלָה׃ יְהֹוָ֥ה צְבָא֑וֹת אַֽשְׁרֵ֥י אָ֝דָ֗ם בֹּטֵ֥חַ בָּֽךְ׃ יְהֹוָ֥ה הוֹשִׁ֑יעָה הַ֝מֶּ֗לֶךְ יַעֲנֵ֥נוּ בְיוֹם־קׇרְאֵֽנוּ: וְעָֽרְבָה֙ לַֽיהֹוָ֔ה מִנְחַ֥ת יְהוּדָ֖ה וִירֽוּשָׁלָ֑‍ִם כִּימֵ֣י עוֹלָ֔ם וּכְשָׁנִ֖ים קַדְמֹנִיֹּֽת: "},
+          {"ref": "12", "kind": "prayer", "text": "<b>תָּנָא</b> דְבֵי אֵלִיָּהוּ, כָּל־הַשּׁוֹנֶה הֲלָכוֹת בְּכָל־יוֹם, מֻבְטָח לוֹ שֶׁהוּא בֶן־הָעוֹלָם הַבָּא, שֶׁנֶּאֱמַר הֲלִיכ֥וֹת עוֹלָ֖ם לֽוֹ׃ אַל־תִּקְרֵי הֲלִיכוֹת, אֶלָּא הֲלָכוֹת. אָמַר רִבִּי אֶלְעָזָר אָמַר רִבִּי חֲנִינָא תַּלְמִידֵי חֲכָמִים מַרְבִּים שָׁלוֹם בָּעוֹלָם, שֶׁנֶּאֱמַר וְכׇל־בָּנַ֖יִךְ לִמּוּדֵ֣י יְהֹוָ֑ה וְרַ֖ב שְׁל֥וֹם בָּנָֽיִךְ׃ אַל־תִּקְרֵי בָנָֽיִךְ אֶלָּא בוֹנָֽיִךְ: יְהִי־שָׁל֥וֹם בְּחֵילֵ֑ךְ שַׁ֝לְוָ֗ה בְּאַרְמְנוֹתָֽיִךְ׃ לְ֭מַעַן אַחַ֣י וְרֵעָ֑י אֲדַבְּרָה־נָּ֖א שָׁל֣וֹם בָּֽךְ׃ לְ֭מַעַן בֵּית־יְהֹוָ֣ה אֱלֹהֵ֑ינוּ אֲבַקְשָׁ֖ה ט֣וֹב לָֽךְ׃ וּרְאֵֽה־בָנִ֥ים לְבָנֶ֑יךָ שָׁ֝ל֗וֹם עַל־יִשְׂרָאֵֽל׃ שָׁל֣וֹם רָ֭ב לְאֹהֲבֵ֣י תוֹרָתֶ֑ךָ וְאֵֽין־לָ֥מוֹ מִכְשֽׁוֹל׃ יְֽהֹוָ֗ה עֹ֭ז לְעַמּ֣וֹ יִתֵּ֑ן יְהֹוָ֓ה ׀ יְבָרֵ֖ךְ אֶת־עַמּ֣וֹ בַשָּׁלֽוֹם׃"},
+          {"ref": "13", "kind": "instruction", "en": "And say Kaddish 'Al Yisrael'", "text": "<small>ואומרים קדיש \"על ישראל\"</small>"},
+          {"ref": "14", "parts": [
+            {"kind": "prayer", "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. <small>[אָמֵן]</small>"},
+            {"kind": "prayer", "text": " בְּעָלְמָא דִּי בְרָא,"},
+            {"kind": "prayer", "text": " כִּרְעוּתֵה,"},
+            {"kind": "prayer", "text": " וְיַמְלִיךְ מַלְכוּתֵה,"},
+            {"kind": "prayer", "text": " וְיַצְמַח פֻּרְקָנֵה,"},
+            {"kind": "prayer", "text": " וִיקָרֵב מְשִׁיחֵהּ. "},
+            {"kind": "prayer", "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "text": " בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,"},
+            {"kind": "prayer", "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב,"},
+            {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן. "},
+            {"kind": "prayer", "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "text": " יְהֵא שְׁמֵיהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ. וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
+            {"kind": "prayer", "text": " בְּרִיךְ הוּא. "},
+            {"kind": "prayer", "text": "<small>[אָמֵן]</small>"},
+            {"kind": "prayer", "text": " לְעֵלָּא מִן כָּל בִּרְכָתָא שִׁירָתָא,"},
+            {"kind": "prayer", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
+            {"kind": "prayer", "text": " דַּאֲמִירָן בְּעָלְמָא,"},
+            {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן. "},
+            {"kind": "prayer", "text": "<small>[אָמֵן]</small></small>"}
+          ]},
+          {"ref": "15", "kind": "prayer", "text": "<small><b>עַל</b> יִשְׂרָאֵל וְעַל רַבָּנָן. וְעַל תַּלְמִידֵיהוֹן וְעַל כָּל תַּלְמִידֵי תַלְמִידֵיהוֹן. דְּעָסְקִין בְּאוֹרַיְתָא קַדִּשְׁתָּא. דִּי בְאַתְרָא הָדֵין וְדִי בְכָל אֲתַר וַאֲתַר. יְהֵא לָנָא וּלְהוֹן וּלְכוֹן חִנָּא וְחִסְדָּא וְרַחֲמֵי. מִן קֳדָם מָארֵי שְׁמַיָּא וְאַרְעָא וְאִמְרוּ אָמֵן. <small>[אָמֵן]</small></small>"},
+          {"ref": "16", "parts": [
+            {"kind": "prayer", "text": "<small><b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא. חַיִּים וְשָׂבָע וִישׁוּעָה וְנֶחָמָה. וְשֵׁיזָבָא וּרְפוּאָה וּגְאוּלָה וּסְלִיחָה וְכַפָּרָה וְרֶוַח וְהַצָּלָה לָנוּ וּלְכָל עַמּוֹ יִשְׂרָאֵל. וְאִמְרוּ אָמֵן. <small>[אָמֵן]</small>"},
+            {"kind": "prayer", "text": "<br><br><b>עוֹשֶׂה</b> שָׁלוֹם בִּמְרוֹמָיו. הוּא בְּרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל־עַמּוֹ יִשְׂרָאֵל. וְאִמְרוּ אָמֵן. "},
+            {"kind": "prayer", "text": "<small>[אָמֵן]</small></small>"}
+          ]},
+          {"ref": "17", "parts": [
+            {"kind": "instruction", "en": "The chazzan says:", "text": "<small>ואומר החזן:</small>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " (רַבָּנָן) בָּרְכוּ אֶת יְהֹוָה הַמְּבֹרָךְ:"}
+          ]},
+          {"ref": "18", "parts": [
+            {"kind": "instruction", "en": "And the congregation answers:", "text": "<small>ועונים הקהל:</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " בָּרוּךְ יְהֹוָה הַמְּבֹרָךְ לְעוֹלָם וָעֵד:"}
+          ]},
+          {"ref": "19", "parts": [
+            {"kind": "instruction", "en": "The chazzan says:", "text": "<small>ואומר החזן:</small>"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " בָּרוּךְ יְהֹוָה הַמְּבֹרָךְ לְעוֹלָם וָעֵד:"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Sefaria Community Translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "[]"},
+          {"ref": "2", "translates": ["2"], "text": "[]"},
+          {"ref": "3", "translates": ["3"], "text": "[]"},
+          {"ref": "4", "translates": ["4"], "text": "Incense Offering"},
+          {"ref": "5", "translates": ["5"], "text": "You are the L·rd, Our G·d, that our Forefathers burned before You the incense spices at the time that the Holy Temple stood – like You commanded them through Moshe, Your Prophet, like it is written in your Torah."},
+          {"ref": "6", "translates": ["6"], "text": "And the L·rd said to Moshe – Take for yourself spices- balsam sap / Nataf / &amp; onycha / Sh-h'elet  &amp; galbanum / H'elbona, spices &amp; pure frankincense / Levona  – each shall be of equal weight. And you shall prepare it (the spices) as incense – a compound, the work of a spice mixer, blended (or salted) pure &amp; holy. And you shall grind from it very well, and you shall take from it, before the [tent of] testimony – in the Tent of Meeting  - that I shall meet with you there – holy, holy it shall be for you. And it says – and Aharon shall offer as incense, the incense spices each &amp; every morning when he cleans the lamps he shall offer it. And when Aharon Ascends, he shall offer the incense – a regular incense offering before the L·rd – throughout your generations."},
+          {"ref": "7", "translates": ["7"], "text": "Our Rabbis Taught, The compound of the Incense, how was it done? Three-hundred &amp; Sixty-eight Maneh (a measure) was in it – 365 [maneh] – like the count of the days of the solar year. One Maneh daily – half in the morning and half in the evening and the three extra maneh – where those of which the Chief Kohen entered [the holy of holies] and took from them a full palm-full on the Yom Kippur – he would return them to the grinder on the eve of Yom Kippur, in order to accomplish the mitzvah – in the finest of finest [way] and 11 spices were in it – and these are they:"},
+          {"ref": "8", "translates": ["8"], "text": "1) Balsam, 2) onycha, 3) &amp; galbanum 4) frankincense – the weight of 70 maneh each. 5) myrrh, 6) cassia &amp; 7) spikenard &amp; 8) saffron – [each] a weight of 16, 16 maneh. 9) costus – 12 maneh 10) aromatic bark – three [maneh] 11) cinnamon – 9 (maneh) [Added also were] Lye of Carsina – 9 Kavs (a measure), Wine of Cypres – 3 Seahs and 3 kavs- and if one did not find wine of Cypres – he brings old wine. Salt of Sodom – a quarter [of a kav.] An ascension of smoke – a small amount. Rabbi Nathan, the Babylonian, says – even the resin of the Jordan – a bit. If he put in it honey it is invalid and if he omitted one from all of its spices, he is liable for death [penalty]."},
+          {"ref": "9", "translates": ["9"], "text": "Rabban Shimeon Son of Gamliel says : The Tzorit is sap, that flows from the Balsam tree. The Lye of Karsina, what does it come [to do]? – in order to rub the onycha in order for it to be beautiful. The wine of Cyprus, why is it brought? in order to soak in it the Onycha, in order for it to be sharp. But is not urine – better [to make it sharp] – rather we do not bring in urine into the Sanctuary out of respect."},
+          {"ref": "10", "translates": ["10"], "text": "We learned in [a Baraita] Rabbi Nathan Says -  When he chops – he says “Hadek Heitev, Hetitev Hadek / Chop Well, Well Chop” because the voice is good for spices. The incense compound divided in half is Kosher. For a third or a-quarter we did not hear [the law]. Rabbi Yehuda said “This is the general rule – if it is in the same proportion – it is Kosher for half, &amp; if it lacks one from all of the spices – he is liable for the death penalty. "},
+          {"ref": "11", "translates": ["11"], "text": "Bar Kapara taught once every sixty or seventy years there were remains [of the spices] of half. And Bar Kapparah also taught , if one was to add a Kartov [a measure] of honey a person would not be able to stand because of the fragrance. And why do we not mix in it honey? Because the Torah says  “For any leaven or any honey, do not offer incense from it – as a fire offering. L·rd of hosts, is with us. He is our refuge for us the G·d of Yaakov / Jacob forever. L·rd of hosts, happy is the man that has faith in You. L·rd save, the King will answer us on the day we call. And pleasant to the L·rd is the offering of Yehudah / Judah and Yerusalayim / Jerusalem – like the days of old. "},
+          {"ref": "13", "translates": [], "text": "Please [G·d] with the power of the greatness of Your right hand, free the captive [Israel from its Exile]."},
+          {"ref": "14", "translates": [], "text": "Accept the singing [prayer] of Your people. Strengthen us &amp; purify us, Awesome One. "},
+          {"ref": "15", "translates": [], "text": "Please, Mighty One, those that seek Your unity - like the pupil of the eyes - guard them. "},
+          {"ref": "16", "translates": [], "text": "Bless them &amp; purify them. The mercy of Your righteousness always bestow upon them. "},
+          {"ref": "17", "translates": [], "text": "Mighty &amp; Holy One with the abundance of your good, lead Your congregation. "},
+          {"ref": "18", "translates": [], "text": "Single Exalted One, turn to Your people - those that remind of Your Holiness . "},
+          {"ref": "19", "translates": [], "text": "Accept our pleading &amp; hear our wailing - [You] Who knows the hidden. "},
+          {"ref": "20", "translates": [], "text": "(And Say Silently) ..."},
+          {"ref": "21", "translates": [], "text": "Blessed be the Name of His glorious kingdom forever more. "},
+          {"ref": "36", "translates": ["14"], "text": "Exalted &amp; sanctified be His (G·d's) great Name.  [cong. Amen.] In this world that He created according to His will. May His Kingdom reign, &amp; may he cause His redemption to sprout &amp; may He hasten His Messiah. [cong. Amen.] In your lifetime &amp; in your days, &amp; in the lifetime of the whole house of Israel, speedily &amp; soon; &amp; say ye, Amen. [cong. Amen - Yehe Shmeh Raba ...] [May] His great Name be blessed forever &amp; throughout eternity. Blessed, lauded, glorified, exalted, extolled &amp; honored, uplifted &amp; supremely exalted, the Name of the Holy One, Blessed be He. [cong. Amen.] Beyond all blessings, songs, praises &amp; consolations of this  world to express; &amp; say ye, Amen [cong. Amen.]"},
+          {"ref": "37", "translates": ["15"], "text": "Upon Israel, &amp; upon our rabbis, &amp; upon their disciples &amp; the pupils of their disciples, who engage in [study of] the holy Torah, in this place &amp; every single place, may we &amp; you, find grace &amp; kindness &amp; mercy from before the Master of heaven &amp; earth; &amp; say ye, Amen. [cong. Amen.]"},
+          {"ref": "38", "translates": ["16"], "text": "May peace be abundant from heaven, with life &amp; contentment, &amp; salvation &amp; solace, &amp; deliverance &amp; healing, &amp; redemption, &amp; forgiveness &amp; atonement &amp; plenty &amp; salvation, for us &amp; all His people Israel; &amp; say ye, Amen. (cong.) Amen. May He Who creates peace in His high places, may He with His mercy, make peace upon us &amp; all His people Israel, &amp; say ye, Amen. [cong. Amen]\n"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday Shacharit/Alenu",
+      "title": "עלינו",
+      "node": "concl.aleinu",
+      "when": "true",
+      "service": "shacharit",
+      "he": {
+        "version": "Shaliehsaboo Edition",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Aleinu Leshabeach", "text": "<big><b>עלינו לשבח</b></big>"},
+          {"ref": "2", "kind": "prayer", "text": "<b>עָלֵֽינוּ</b> לְשַׁבֵּֽחַ לַֽאֲדוֹן הַכֹּל, לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית, שֶׁלֹּא עָשָֽׂנוּ כְּגוֹיֵי הָֽאֲרָצוֹת, וְלֹא שָׂמָֽנוּ כְּמִשְׁפְּחוֹת הָֽאֲדָמָה, שֶׁלֹּא שָׂם חֶלְקֵֽנוּ כָּהֶם וְגוֹרָלֵֽנוּ כְּכָל־הֲמוֹנָם, שֶׁהֵם מִשְׁתַּֽחֲוִים לָהֶֽבֶל וָרִיק, וּמִתְפַּלְּלִים אֶל־אֵל לֹֽא יוֹשִׁיעַ. וַֽאֲנַֽחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶֽלֶךְ מַלְכֵי הַֽמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא, שֶׁהוּא נוֹטֶה שָׁמַֽיִם וְיוֹסֵד אָֽרֶץ, וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַֽיִם מִמַּֽעַל, וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים. הוּא אֱלֹהֵֽינוּ, וְאֵין עוֹד אַחֵר, אֱמֶת מַלְכֵּֽנוּ וְאֶֽפֶס זוּלָתוֹ. כַּכָּתוּב בַּתּוֹרָה. וְיָדַעְתָּ֣ הַיּ֗וֹם וַהֲשֵׁבֹתָ֮ אֶל־לְבָבֶךָ֒ כִּ֤י יְהֹוָה֙ ה֣וּא הָֽאֱלֹהִ֔ים בַּשָּׁמַ֣יִם מִמַּ֔עַל וְעַל־הָאָ֖רֶץ מִתָּ֑חַת אֵ֖ין עֽוֹד: "},
+          {"ref": "3", "kind": "prayer", "text": "<b>עַל</b> כֵּן נְקַוֶּה לָךְ, יְהֹוָה אֱלֹהֵֽינוּ, לִרְאוֹת מְהֵרָה בְּתִפְאֶֽרֶת עֻזָּךְ, לְהַֽעֲבִיר גִּלּוּלִים מִן הָאָֽרֶץ, וְהָֽאֱלִילִים כָּרוֹת יִכָּֽרֵתוּן, לְתַקֵּן עוֹלָם בְּמַלְכוּת שַׁדַּי, וְכָל־בְּנֵי בָשָׂר יִקְרְאוּ בִשְׁמֶֽךָ, לְהַפְנוֹת אֵלֶֽיךָ כָּל־רִשְׁעֵי אָֽרֶץ. יַכִּֽירוּ וְיֵֽדְעוּ כָּל־יֽוֹשְׁבֵי תֵבֵֽל, כִּי לְךָ תִכְרַע כָּל־בֶּֽרֶךְ, תִּשָּׁבַע כָּל־לָשׁוֹן. לְפָנֶֽיךָ, יְהֹוָה אֱלֹהֵֽינוּ יִכְרְעוּ וְיִפֹּֽלוּ, וְלִכְבוֹד שִׁמְךָ יְקָר יִתֵּֽנוּ, וִיקַבְּלוּ כֻלָּם אֶת־עֹל מַלְכוּתֶֽךָ, וְתִמְלוֹךְ עֲלֵיהֶם מְהֵרָה לְעוֹלָם וָעֶד. כִּי הַמַּלְכוּת שֶׁלְּךָ הִיא, וּלְעֽוֹלְמֵי עַד תִּמְלוֹךְ בְּכָבוֹד. כַּכָּתוּב בְּתוֹרָתָךְ: יְהֹוָ֥ה ׀ יִמְלֹ֖ךְ לְעֹלָ֥ם וָעֶֽד׃ וְנֶאֱמַר. וְהָיָ֧ה יְהֹוָ֛ה לְמֶ֖לֶךְ עַל־כָּל־הָאָ֑רֶץ בַּיּ֣וֹם הַה֗וּא יִהְיֶ֧ה יְהֹוָ֛ה אֶחָ֖ד וּשְׁמ֥וֹ אֶחָֽד׃ "},
+          {"ref": "4", "kind": "prayer", "when": "!shabbat && !yomTov", "text": "<small>וּבְתוֹרָתְךָ יְהֹוָה אֱלֹהֵינוּ כָּתוּב לֵּאמֹר. שְׁמַ֖ע יִשְׂרָאֵ֑ל יְהֹוָ֥ה אֱלֹהֵ֖ינוּ יְהֹוָ֥ה ׀ אֶחָֽד׃</small>"},
+          {"ref": "5", "kind": "prayer", "when": "!shabbat && !yomTov", "text": "וַיֹּאמֶר֩ אִם־שָׁמ֨וֹעַ תִּשְׁמַ֜ע לְק֣וֹל ׀ יְהֹוָ֣ה אֱלֹהֶ֗יךָ וְהַיָּשָׁ֤ר בְּעֵינָיו֙ תַּעֲשֶׂ֔ה וְהַֽאֲזַנְתָּ֙ לְמִצְוֺתָ֔יו וְשָׁמַרְתָּ֖ כָּל־חֻקָּ֑יו כָּֽל־הַמַּֽחֲלָ֞ה אֲשֶׁר־שַׂ֤מְתִּי בְמִצְרַ֙יִם֙ לֹא־אָשִׂ֣ים עָלֶ֔יךָ כִּ֛י אֲנִ֥י יְהֹוָ֖ה רֹפְאֶֽךָ׃ עֵץ־חַיִּ֣ים הִ֭יא לַמַּחֲזִיקִ֣ים בָּ֑הּ וְֽתֹמְכֶ֥יהָ מְאֻשָּֽׁר׃ דְּרָכֶ֥יהָ דַרְכֵי־נֹ֑עַם וְֽכָל־נְתִ֖יבוֹתֶ֣יהָ שָׁלֽוֹם׃ מִגְדַּל־עֹ֭ז שֵׁ֣ם יְהֹוָ֑ה בּֽוֹ־יָר֖וּץ צַדִּ֣יק וְנִשְׂגָּֽב׃ כִּי־בִ֭י יִרְבּ֣וּ יָמֶ֑יךָ וְיוֹסִ֥יפוּ לְּ֝ךָ֗ שְׁנ֣וֹת חַיִּֽים׃"},
+          {"ref": "6", "parts": [
+            {"kind": "prayer", "when": "shabbat || yomTov", "text": "לְדָוִ֨ד ׀ "},
+            {"kind": "instruction", "en": "(Psalms 27:1-2)", "gloss": "Psalm citation", "text": "<small>(תהילים כ״ז:א׳-ב׳)</small>"},
+            {"kind": "prayer", "when": "shabbat || yomTov", "text": " יְהֹוָ֤ה ׀ אוֹרִ֣י וְ֭יִשְׁעִי מִמִּ֣י אִירָ֑א יְהֹוָ֥ה מָֽעוֹז־חַ֝יַּ֗י מִמִּ֥י אֶפְחָֽד׃ בִּקְרֹ֤ב עָלַ֨י ׀ מְרֵעִים֮ לֶאֱכֹ֪ל אֶת־בְּשָׂ֫רִ֥י צָרַ֣י וְאֹיְבַ֣י לִ֑י הֵ֖מָּה כָשְׁל֣וּ וְנָפָֽלוּ׃ אִם־תַּחֲנֶ֬ה עָלַ֨י ׀ מַחֲנֶה֮ לֹֽא־יִירָ֪א לִ֫בִּ֥י אִם־תָּק֣וּם עָ֭לַי מִלְחָמָ֑ה בְּ֝זֹ֗את אֲנִ֣י בוֹטֵֽחַ׃ אַחַ֤ת ׀ שָׁאַ֣לְתִּי מֵֽאֵת־יְהֹוָה֮ אוֹתָ֪הּ אֲבַ֫קֵּ֥שׁ שִׁבְתִּ֣י בְּבֵית־יְ֭הֹוָה כָּל־יְמֵ֣י חַיַּ֑י לַחֲז֥וֹת בְּנֹֽעַם־יְ֝הֹוָ֗ה וּלְבַקֵּ֥ר בְּהֵיכָלֽוֹ׃ כִּ֤י יִצְפְּנֵ֨נִי ׀ בְּסֻכֹּה֮ בְּי֪וֹם רָ֫עָ֥ה יַ֭סְתִּרֵנִי בְּסֵ֣תֶר אָהֳל֑וֹ בְּ֝צ֗וּר יְרוֹמְמֵֽנִי׃ וְעַתָּ֨ה יָר֪וּם רֹאשִׁ֡י עַ֤ל אֹֽיְבַ֬י סְֽבִיבוֹתַ֗י וְאֶזְבְּחָ֣ה בְ֭אָהֳלוֹ זִבְחֵ֣י תְרוּעָ֑ה אָשִׁ֥ירָה וַ֝אֲזַמְּרָ֗ה לַיהֹוָֽה׃ שְׁמַע־יְהֹוָ֖ה קוֹלִ֥י אֶקְרָ֗א וְחָנֵּ֥נִי וַעֲנֵֽנִי׃ לְךָ֤ ׀ אָמַ֣ר לִ֭בִּי בַּקְּשׁ֣וּ פָנָ֑י אֶת־פָּנֶ֖יךָ יְהֹוָ֣ה אֲבַקֵּֽשׁ׃ אַל־תַּסְתֵּ֬ר פָּנֶ֨יךָ ׀ מִמֶּנִּי֮ אַֽל־תַּט־בְּאַ֗ף עַ֫בְדֶּ֥ךָ עֶזְרָתִ֥י הָיִ֑יתָ אַֽל־תִּטְּשֵׁ֥נִי וְאַל־תַּֽ֝עַזְבֵ֗נִי אֱלֹהֵ֥י יִשְׁעִֽי׃ כִּי־אָבִ֣י וְאִמִּ֣י עֲזָב֑וּנִי וַֽיהֹוָ֣ה יַֽאַסְפֵֽנִי׃ ה֤וֹרֵ֥נִי יְהֹוָ֗ה דַּ֫רְכֶּ֥ךָ וּ֭נְחֵנִי בְּאֹ֣רַח מִישׁ֑וֹר לְ֝מַ֗עַן שׁוֹרְרָֽי׃ אַֽל־תִּ֭תְּנֵנִי בְּנֶ֣פֶשׁ צָרָ֑י כִּ֥י קָֽמוּ־בִ֥י עֵֽדֵי־שֶׁ֝֗קֶר וִיפֵ֥חַ חָמָֽס׃ לוּלֵ֗א הֶ֭אֱמַנְתִּי לִרְא֥וֹת בְּֽטוּב־יְהֹוָ֗ה בְּאֶ֣רֶץ חַיִּֽים׃ קַוֵּ֗ה אֶל־יְהֹ֫וָ֥ה חֲ֭זַק וְיַאֲמֵ֣ץ לִבֶּ֑ךָ וְ֝קַוֵּ֗ה אֶל־יְהֹוָֽה׃ "}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Sefaria Community Translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Aleinu Leshabeah'"},
+          {"ref": "2", "translates": ["2"], "text": "It is [incumbent] upon us to praise the L·rd of all. To bestow Greatness to the Molder of creation, for He did not make us as the nations of the lands, &amp; he did not establish us like the families of the earth, for He did not assign our portion as theirs, &amp; our lot like all the multitudes - for they bow to vanity &amp; emptiness &amp; pray to a god that saves not. And we bow before the King, the King of all Kings, the Holy One, Blessed be He, Who spreads out the heavens &amp; creates the foundation of the earth. And the seat of His precious abode is in Heaven above &amp; the divine presence of his power, is in the highest heights. He is our G·d, &amp; there is no other. Our G·d is true, &amp; no other is beside Him. Like it is written in the Torah - \"And you shall know today, &amp; you shall take it to heart, that it is the L·rd (Hash·m), Who is G·d in the heavens above &amp; upon the earth below. There is no other.”"},
+          {"ref": "3", "translates": ["3", "4", "5", "6"], "text": "Therefor, we will hope to You L·rd, our G·d to see speedily the glory of Your Might - to remove abominable idolatry from the earth &amp; the false gods be utterly terminated, to repair the world with the Kingship of the Al·mighty. And all living flesh will call in Your Name to turn back to You all the wicked of the earth. They will recognize &amp; will know, all the inhabitants of the earth, that to You that every knee shall bow down, &amp; every tongue. Before you they will kneel &amp; bow down &amp; give honor to Your glorious name &amp; they will all accept the yolk of Your Kingship. And Reign upon them speedily forever &amp; ever. For the Kingship, it is Yours. And forevermore reign in glory. Like it is written in your Torah, “The L·rd will reign forever &amp; ever.” And it is said “and it will be the L·rd will Be King upon all of the earth. On that day the L·rd will be One (ie, only He will be worshiped) &amp; His name One.” And in Your Torah, L·rd, Our G·d, it is written saying “Hear Oh Israel, the L·rd is our G·d the L·rd is One.”"}
+        ]
+      }
+    }
+  ]
+}

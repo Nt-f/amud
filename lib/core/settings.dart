@@ -95,6 +95,10 @@ enum ZmanimOpinion { gra, mga, baalHatanya }
 /// bar shows all but the Shiurim tab.
 const allNavTabIds = {'home', 'siddur', 'zmanim', 'torah', 'shiurim', 'settings'};
 
+/// Marks a version list saved before Amud's own text existed (see
+/// AppSettings.fromJson). Never shown; saving the list drops it.
+const preCorpusVersions = '#before-amud';
+
 class AppSettings {
   final SavedLocation location;
   final bool useElevation;
@@ -344,7 +348,7 @@ class AppSettings {
       );
 
   /// Bumped when defaults change in a way existing installs should adopt.
-  static const schemaVersion = 2;
+  static const schemaVersion = 3;
 
   Map<String, Object?> toJson() => {
         'v': schemaVersion,
@@ -405,6 +409,20 @@ class AppSettings {
     // and notes (they were never shown a choice).
     if (((j['v'] as num?) ?? 1) < 2) {
       j = {...j}..removeWhere((k, _) => const {'ashkenaziSpelling', 'hebrewFont', 'showNotes', 'exactAlarms'}.contains(k));
+    }
+    // Version choices saved before v3 predate Amud's own text (the version
+    // "Amud"); they're marked, and Amud takes the place of the Sefaria
+    // version it was made from (see versionOrderProvider).
+    if (((j['v'] as num?) ?? 1) < 3) {
+      j = {...j};
+      for (final k in const ['hebrewVersions', 'translationVersions']) {
+        final m = j[k];
+        if (m is Map) {
+          j[k] = {
+            for (final e in m.entries) e.key: e.value is List ? [preCorpusVersions, ...e.value as List] : e.value,
+          };
+        }
+      }
     }
     T pick<T>(String k, T fallback) => j[k] is T ? j[k] as T : fallback;
     E byName<E extends Enum>(List<E> values, String k, E fallback) {

@@ -37,8 +37,10 @@ List<(ParshaReading, HDate)> parshiyotOfYear(int year, bool il) {
   ];
 }
 
-/// A verse with its Targum Onkelos and translation ('' where missing).
-typedef MikraVerse = ({Verse at, String he, String targum, String en});
+/// A verse with its Targum Onkelos and translation ('' where missing), and
+/// [para] the paragraph mark after it: 'פ' (an open paragraph), 'ס' (a
+/// closed one), or '' where the paragraph goes on.
+typedef MikraVerse = ({Verse at, String he, String targum, String en, String para});
 
 /// Downloaded text: a book of the Torah, or one parsha of it.
 typedef MikraText = ({String name, List<MikraVerse> verses, String enCredit});
@@ -54,18 +56,43 @@ Map<String, Object?>? _version(List<int> body, String lang) {
   return (j['versions'] as List).cast<Map<String, Object?>>().where((v) => v['language'] == lang).firstOrNull;
 }
 
+/// Sefaria's text with its entities as characters: the thin space beside
+/// a paseq stays thin, and runs of spaces become one.
+@visibleForTesting
+String cleanSefaria(String t) => t
+    .replaceAll('&thinsp;', '\u2009')
+    .replaceAll('&nbsp;', ' ')
+    .replaceAll('&quot;', '"')
+    .replaceAll('&#39;', "'")
+    .replaceAll('&amp;', '&')
+    .replaceAll(RegExp(r' {2,}'), ' ')
+    .trim();
+
+final _paraMark = RegExp(r'\{([פס])\}');
+
 /// The verses in [lang] of a Sefaria text response for a range starting at
 /// [begin]: a list of verses within one chapter, or a list of chapters
 /// across several.
 @visibleForTesting
-List<(Verse, String)> sefariaVerses(List<int> body, Verse begin, {String lang = 'he'}) {
+List<(Verse, String)> sefariaVerses(List<int> body, Verse begin, {String lang = 'he'}) => [
+      for (final (v, t) in _rawVerses(body, begin, lang))
+        // Paragraph marks ({פ}, {ס}) are kept apart (see [sefariaParagraphs]).
+        (v, cleanSefaria(t.replaceAll(_paraMark, ' '))),
+    ];
+
+/// The verses a paragraph ends after, with its mark: 'פ' or 'ס'.
+@visibleForTesting
+Map<Verse, String> sefariaParagraphs(List<int> body, Verse begin) => {
+      for (final (v, t) in _rawVerses(body, begin, 'he'))
+        if (_paraMark.allMatches(t).lastOrNull case final m?) v: m[1]!,
+    };
+
+List<(Verse, String)> _rawVerses(List<int> body, Verse begin, String lang) {
   final text = _version(body, lang)?['text'];
   final chapters = text is List && text.isNotEmpty && text.first is List ? text : [text is List ? text : const []];
   return [
     for (var c = 0; c < chapters.length; c++)
-      for (final (v, t) in (chapters[c] as List).indexed)
-        // Paragraph marks ({פ}, {ס}) are left out; the verses are shown apart.
-        ((chapter: begin.chapter + c, verse: (c == 0 ? begin.verse : 1) + v), '$t'.replaceAll(RegExp(r'\s*\{[פס]\}\s*'), ' ').trim()),
+      for (final (v, t) in (chapters[c] as List).indexed) ((chapter: begin.chapter + c, verse: (c == 0 ? begin.verse : 1) + v), '$t'),
   ];
 }
 
@@ -75,6 +102,7 @@ List<(Verse, String)> sefariaVerses(List<int> body, Verse begin, {String lang = 
 List<int> packShnayimMikra(({String name, Verse begin, List<int> mikra, List<int> targum}) input) {
   final targum = {for (final (v, t) in sefariaVerses(input.targum, input.begin)) v: t};
   final en = {for (final (v, t) in sefariaVerses(input.mikra, input.begin, lang: 'en')) v: t};
+  final paras = sefariaParagraphs(input.mikra, input.begin);
   final enVersion = _version(input.mikra, 'en');
   final title = '${enVersion?['versionTitle'] ?? ''}'.trim();
   final license = '${enVersion?['license'] ?? ''}'.trim();
@@ -82,7 +110,7 @@ List<int> packShnayimMikra(({String name, Verse begin, List<int> mikra, List<int
     'name': input.name,
     'enCredit': license.isEmpty || license == 'unknown' ? title : '$title ($license)',
     'verses': [
-      for (final (v, t) in sefariaVerses(input.mikra, input.begin)) [v.chapter, v.verse, t, targum[v] ?? '', en[v] ?? ''],
+      for (final (v, t) in sefariaVerses(input.mikra, input.begin)) [v.chapter, v.verse, t, targum[v] ?? '', en[v] ?? '', paras[v] ?? ''],
     ],
   })));
 }
@@ -95,7 +123,14 @@ MikraText unpackShnayimMikra(List<int> bytes) {
     enCredit: '${j['enCredit'] ?? ''}',
     verses: [
       for (final v in (j['verses'] as List).cast<List>())
-        (at: (chapter: v[0] as int, verse: v[1] as int), he: v[2] as String, targum: v[3] as String, en: v.length > 4 ? v[4] as String : ''),
+        // Books kept before paragraphs were (and entities cleaned) still read.
+        (
+          at: (chapter: v[0] as int, verse: v[1] as int),
+          he: cleanSefaria(v[2] as String),
+          targum: cleanSefaria(v[3] as String),
+          en: v.length > 4 ? cleanSefaria(v[4] as String) : '',
+          para: v.length > 5 ? v[5] as String : '',
+        ),
     ],
   );
 }
@@ -122,6 +157,29 @@ abstract class _FiveBooks extends Notifier<ChumashState> {
   /// Called once [book] is stored.
   void stored(int book);
 
+  /// The version of what [fetch] packs. A book kept in an older one is
+  /// still read, but downloaded again when there's a connection.
+  int get format => 1;
+  String _formatKey(int book) => '${key(book)}:format';
+
+  /// [book] is kept, in the current [format].
+  bool isCurrent(int book) =>
+      format == 1 || (ref.read(storageProvider).readBlob(_formatKey(book))?.firstOrNull ?? 1) == format;
+
+  /// Called once the books are removed.
+  void removed();
+
+  /// Deletes every book kept, to free the room.
+  Future<void> remove() async {
+    final storage = ref.read(storageProvider);
+    for (var b = 1; b <= 5; b++) {
+      await storage.deleteBlob(key(b));
+      await storage.deleteBlob(_formatKey(b));
+    }
+    state = (have: const {}, bytes: 0, busy: false, failed: false);
+    removed();
+  }
+
   @override
   ChumashState build() {
     final storage = ref.watch(storageProvider);
@@ -129,7 +187,7 @@ abstract class _FiveBooks extends Notifier<ChumashState> {
     final have = <int>{};
     for (var b = 1; b <= 5; b++) {
       if (storage.readBlob(key(b)) case final blob?) {
-        have.add(b);
+        if (isCurrent(b)) have.add(b);
         bytes += blob.length;
       }
     }
@@ -159,9 +217,11 @@ abstract class _FiveBooks extends Notifier<ChumashState> {
       for (final b in [first, for (var b = 1; b <= 5; b++) if (b != first) b]) {
         if (state.have.contains(b)) continue;
         final packed = await fetch(b, get);
+        final old = storage.readBlob(key(b))?.length ?? 0;
         await storage.writeBlob(key(b), packed);
+        if (format > 1) await storage.writeBlob(_formatKey(b), [format]);
         stored(b);
-        state = (have: {...state.have, b}, bytes: state.bytes + packed.length, busy: true, failed: false);
+        state = (have: {...state.have, b}, bytes: state.bytes - old + packed.length, busy: true, failed: false);
       }
       state = (have: state.have, bytes: state.bytes, busy: false, failed: false);
       analytics.event(event, {'status': 'done', 'kb': state.bytes ~/ 1024});
@@ -194,6 +254,13 @@ class ChumashDownload extends _FiveBooks {
 
   @override
   void stored(int book) => ref.invalidate(chumashBookProvider(book));
+
+  /// 2: with paragraph marks, and Sefaria's entities cleaned.
+  @override
+  int get format => 2;
+
+  @override
+  void removed() => ref.invalidate(chumashBookProvider);
 }
 
 final chumashDownloadProvider = NotifierProvider<ChumashDownload, ChumashState>(ChumashDownload.new);
@@ -201,10 +268,16 @@ final chumashDownloadProvider = NotifierProvider<ChumashDownload, ChumashState>(
 /// One book (1 = Bereshit), downloading the Chumash first if needed.
 /// Invalidate the family to retry after a failed download.
 final chumashBookProvider = FutureProvider.family<MikraText, int>((ref, book) async {
+  final download = ref.read(chumashDownloadProvider.notifier);
   var blob = ref.read(storageProvider).readBlob(_bookKey(book));
-  if (blob == null) {
-    await ref.read(chumashDownloadProvider.notifier).downloadAll(first: book);
-    blob = ref.read(storageProvider).readBlob(_bookKey(book));
+  if (blob == null || !download.isCurrent(book)) {
+    try {
+      await download.downloadAll(first: book);
+    } catch (_) {
+      // Offline with a book kept in an older format: read that one.
+      if (blob == null) rethrow;
+    }
+    blob = ref.read(storageProvider).readBlob(_bookKey(book)) ?? blob;
     if (blob == null) throw StateError('${_books[book - 1]} was not downloaded');
   }
   return compute(unpackShnayimMikra, blob);
@@ -349,6 +422,9 @@ class RashiDownload extends _FiveBooks {
   void stored(int book) {
     if (ref.exists(rashiBookProvider(book)) && ref.read(rashiBookProvider(book)).hasError) ref.invalidate(rashiBookProvider(book));
   }
+
+  @override
+  void removed() => ref.invalidate(rashiBookProvider);
 }
 
 final rashiDownloadProvider = NotifierProvider<RashiDownload, ChumashState>(RashiDownload.new);
@@ -379,6 +455,11 @@ enum MikraPart {
   bool get inEnglish => this == MikraPart.english || this == MikraPart.rashiEnglish;
 }
 
+/// How much is read before it's read again: a verse at a time, a
+/// paragraph (as the Torah's open and closed paragraphs mark them), or the
+/// whole aliyah, then the whole aliyah again, then its Targum.
+enum MikraMode { verse, paragraph, aliyah }
+
 /// How Shnayim Mikra is shown. Its text style follows the siddur's until
 /// [ownStyle] is turned on; then it has its own, starting from the
 /// siddur's, and changing either leaves the other alone.
@@ -401,6 +482,9 @@ class ShnayimMikraSettings {
 
   /// The parts of each verse, in the order shown: every part, once.
   final List<MikraPart> order;
+
+  /// How much is read before the next part: see [MikraMode].
+  final MikraMode mode;
   final bool ownStyle;
 
   /// The own style; null where it hasn't been set (the siddur's is used).
@@ -410,7 +494,6 @@ class ShnayimMikraSettings {
   final double? textScale;
   final bool? showTeamim;
   final bool? showNikud;
-  final bool? highlightToday;
 
   const ShnayimMikraSettings({
     this.repeatVerse = true,
@@ -421,6 +504,7 @@ class ShnayimMikraSettings {
     this.rashiEnglish = false,
     this.showEnglish = true,
     this.order = MikraPart.values,
+    this.mode = MikraMode.verse,
     this.ownStyle = false,
     this.layout,
     this.hebrewFont,
@@ -428,7 +512,6 @@ class ShnayimMikraSettings {
     this.textScale,
     this.showTeamim,
     this.showNikud,
-    this.highlightToday,
   });
 
   ShnayimMikraSettings copyWith({
@@ -440,6 +523,7 @@ class ShnayimMikraSettings {
     bool? rashiEnglish,
     bool? showEnglish,
     List<MikraPart>? order,
+    MikraMode? mode,
     bool? ownStyle,
     TextLayout? layout,
     String? hebrewFont,
@@ -447,7 +531,6 @@ class ShnayimMikraSettings {
     double? textScale,
     bool? showTeamim,
     bool? showNikud,
-    bool? highlightToday,
   }) =>
       ShnayimMikraSettings(
         repeatVerse: repeatVerse ?? this.repeatVerse,
@@ -458,6 +541,7 @@ class ShnayimMikraSettings {
         rashiEnglish: rashiEnglish ?? this.rashiEnglish,
         showEnglish: showEnglish ?? this.showEnglish,
         order: order ?? this.order,
+        mode: mode ?? this.mode,
         ownStyle: ownStyle ?? this.ownStyle,
         layout: layout ?? this.layout,
         hebrewFont: hebrewFont ?? this.hebrewFont,
@@ -465,7 +549,6 @@ class ShnayimMikraSettings {
         textScale: textScale ?? this.textScale,
         showTeamim: showTeamim ?? this.showTeamim,
         showNikud: showNikud ?? this.showNikud,
-        highlightToday: highlightToday ?? this.highlightToday,
       );
 
   /// Whether [part] is turned on (English parts also need a layout with
@@ -501,7 +584,6 @@ class ShnayimMikraSettings {
         textScale: textScale ?? s.textScale,
         showTeamim: showTeamim ?? s.showTeamim,
         showNikud: showNikud ?? s.showNikud,
-        highlightToday: highlightToday ?? s.highlightToday,
       );
 
   /// The style to read with: the siddur's, or the own one.
@@ -513,7 +595,6 @@ class ShnayimMikraSettings {
           textScale: textScale ?? s.textScale,
           showTeamim: showTeamim ?? s.showTeamim,
           showNikud: showNikud ?? s.showNikud,
-          highlightToday: highlightToday ?? s.highlightToday,
         )
       : (
           layout: s.layout,
@@ -522,7 +603,6 @@ class ShnayimMikraSettings {
           textScale: s.textScale,
           showTeamim: s.showTeamim,
           showNikud: s.showNikud,
-          highlightToday: s.highlightToday,
         );
 
   Map<String, Object?> toJson() => {
@@ -534,6 +614,7 @@ class ShnayimMikraSettings {
         'rashiEnglish': rashiEnglish,
         'showEnglish': showEnglish,
         'order': [for (final p in order) p.name],
+        'mode': mode.name,
         'ownStyle': ownStyle,
         'layout': layout?.name,
         'hebrewFont': hebrewFont,
@@ -541,7 +622,6 @@ class ShnayimMikraSettings {
         'textScale': textScale,
         'showTeamim': showTeamim,
         'showNikud': showNikud,
-        'highlightToday': highlightToday,
       };
 
   factory ShnayimMikraSettings.fromJson(Map<String, Object?> j) {
@@ -555,6 +635,7 @@ class ShnayimMikraSettings {
       rashiEnglish: flag('rashiEnglish') ?? false,
       showEnglish: flag('showEnglish') ?? true,
       order: _order(j['order']),
+      mode: MikraMode.values.asNameMap()[j['mode']] ?? MikraMode.verse,
       ownStyle: flag('ownStyle') ?? false,
       layout: TextLayout.values.asNameMap()[j['layout']],
       hebrewFont: j['hebrewFont'] is String ? j['hebrewFont'] as String : null,
@@ -562,7 +643,6 @@ class ShnayimMikraSettings {
       textScale: j['textScale'] is num ? (j['textScale'] as num).toDouble() : null,
       showTeamim: flag('showTeamim'),
       showNikud: flag('showNikud'),
-      highlightToday: flag('highlightToday'),
     );
   }
 }
@@ -589,7 +669,6 @@ typedef MikraStyle = ({
   double textScale,
   bool showTeamim,
   bool showNikud,
-  bool highlightToday,
 });
 
 /// The text style Shnayim Mikra reads with.

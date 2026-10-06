@@ -282,54 +282,18 @@ class CuratedNote {
   CuratedNote(String anchor, this.when, {String? within, required this.en, required this.he})
       : anchor = RegExp(anchor),
         within = within == null ? null : RegExp(within, caseSensitive: false);
+
+  factory CuratedNote.fromJson(Map<String, Object?> j) {
+    final within = j['within'] as String?;
+    return CuratedNote(j['anchor'] as String, j['when'] as String,
+        within: within == null ? null : curatedNoteScopes[within] ?? within, en: j['en'] as String, he: j['he'] as String);
+  }
 }
 
-const _first30Winter = '((hMonth == 7 && hDay >= 22) || (hMonth == 8 && hDay <= 21))';
-const _first30Summer = '((hMonth == 1 && hDay >= 15) || (hMonth == 2 && hDay <= 15))';
-// Israel starts 7 Cheshvan; the diaspora on December 4/5, which falls in
-// Kislev — so roughly the first month either way.
-const _first30TalUmatar = '((il && ((hMonth == 8 && hDay >= 7) || (hMonth == 9 && hDay <= 7))) || (diaspora && ((hMonth == 9 && hDay >= 5) || (hMonth == 10 && hDay <= 29))))';
+/// Named sections for a note's `within` in assets/rules/notes.json.
+const curatedNoteScopes = {'amidah': _amidah, 'mazon': _mazon};
 
-final List<CuratedNote> defaultCuratedNotes = [
-  // Amidah
-  CuratedNote('משיב הרוח', 'mashivHaruach && $_first30Winter', within: _amidah,
-      en: 'Mashiv HaRuach from Musaf of Shmini Atzeres. Said Morid HaTal instead? Continue. Said neither and already ended the blessing? Start the Amidah again.',
-      he: 'אומרים "משיב הרוח" ממוסף שמיני עצרת. אמר "מוריד הטל" — אינו חוזר. לא אמר כלום וסיים הברכה — חוזר לראש התפילה.'),
-  CuratedNote('משיב הרוח', '!mashivHaruach && $_first30Summer', within: _amidah,
-      en: 'No more Mashiv HaRuach (since Musaf of the first day of Pesach). Said it by mistake? Go back to Atah Gibor — or, if you already ended the blessing, start the Amidah again.',
-      he: 'אין אומרים "משיב הרוח" ממוסף יום א׳ של פסח. אמר בטעות — חוזר ל"אתה גבור", ואם סיים הברכה — לראש התפילה.'),
-  CuratedNote('האל הקדוש', 'aseretYemeiTeshuva', within: _amidah,
-      en: 'End with HaMelech HaKadosh. Said HaEl HaKadosh and didn’t correct it right away? Start the Amidah again.',
-      he: 'חותמים "המלך הקדוש". טעה ולא תיקן תוך כדי דיבור — חוזר לראש התפילה.'),
-  CuratedNote('זכרנו לחיים', 'aseretYemeiTeshuva', within: _amidah,
-      en: 'Add Zochreinu, Mi Chamocha, U’chsov and B’sefer Chaim. Forgot one? Add it if you haven’t said Hashem’s name at the end of that blessing; otherwise just continue.',
-      he: 'מוסיפים זכרנו, מי כמוך, וכתוב ובספר חיים. שכח — אם לא אמר את השם בחתימת הברכה חוזר ואומר, ואם אמר — ממשיך.'),
-  CuratedNote('ותן טל ומטר', 'talUmatar && $_first30TalUmatar', within: _amidah,
-      en: 'V’sein tal u’matar now. Forgot it? Add it in Shema Koleinu; past that, go back to Bareich Aleinu; finished the Amidah — repeat it.',
-      he: 'אומרים "ותן טל ומטר". שכח — אומרו ב"שמע קולנו"; עבר — חוזר ל"ברך עלינו"; סיים התפילה — חוזר לראשה.'),
-  CuratedNote('או?הב צדקה ומשפט', 'aseretYemeiTeshuva && weekday', within: _amidah,
-      en: 'End with HaMelech HaMishpat. Said the usual ending and didn’t correct it right away? Continue — you don’t repeat.',
-      he: 'חותמים "המלך המשפט". טעה ולא תיקן תוך כדי דיבור — אינו חוזר (רמ"א).'),
-  CuratedNote('יעלה ויבו?א', '(roshChodesh || cholHamoed) && !(maariv && roshChodesh && !cholHamoed)', within: _amidah,
-      en: 'Add Ya’aleh VeYavo. Forgot it? Before Modim — say it there. After that — go back to Retzei, or repeat the Amidah if you already finished.',
-      he: 'מוסיפים יעלה ויבוא. שכח — אם נזכר קודם "מודים" אומרו שם; אחר כך — חוזר ל"רצה"; סיים התפילה — חוזר לראשה.'),
-  CuratedNote('יעלה ויבו?א', 'maariv && roshChodesh && !cholHamoed', within: _amidah,
-      en: 'Add Ya’aleh VeYavo. Forgot it at Maariv of Rosh Chodesh? Don’t go back.',
-      he: 'מוסיפים יעלה ויבוא. שכח בערבית של ראש חודש — אינו חוזר.'),
-  CuratedNote('^ו?על הנסים', 'chanukah || purim', within: _amidah,
-      en: 'Add Al HaNissim. Forgot it? If you haven’t said Hashem’s name at the end of the blessing, go back to it; otherwise continue — don’t repeat the Amidah.',
-      he: 'מוסיפים על הנסים. שכח — אם לא אמר את השם בחתימה חוזר, ואם אמר — אינו חוזר.'),
-  CuratedNote('^עננו', 'fastDay && mincha', within: _amidah,
-      en: 'Say Aneinu only if you are fasting. Forgot it? Don’t go back.',
-      he: 'אומרים עננו רק מי שמתענה. שכח — אינו חוזר.'),
-  CuratedNote('^נחם', 'tishaBav && mincha', within: _amidah,
-      en: 'Add Nachem at Mincha of Tisha B’Av. Forgot it? Say it in Shema Koleinu, or skip it — don’t repeat the Amidah.',
-      he: 'מוסיפים נחם במנחה. שכח — אומרו ב"שמע קולנו", ואם לא — אינו חוזר.'),
-  // Birkat HaMazon
-  CuratedNote('יעלה ויבו?א', 'roshChodesh || cholHamoed', within: _mazon,
-      en: 'Add Ya’aleh VeYavo. Forgot it? Don’t repeat Birkat HaMazon.',
-      he: 'מוסיפים יעלה ויבוא. שכח — אינו חוזר.'),
-  CuratedNote('^ו?על הנסים', 'chanukah || purim', within: _mazon,
-      en: 'Add Al HaNissim. Forgot it? Don’t go back — add the “HaRachaman… nissim” line among the HaRachamans.',
-      he: 'מוסיפים על הנסים. שכח — אינו חוזר, ואומר "הרחמן הוא יעשה לנו נסים" בין ההרחמנים.'),
-];
+/// The notes in assets/rules/notes.json (`{"notes": [...]}`).
+List<CuratedNote> curatedNotesFromJson(Map<String, Object?> json) => [
+      for (final n in (json['notes'] as List? ?? const [])) CuratedNote.fromJson((n as Map).cast<String, Object?>()),
+    ];

@@ -130,6 +130,8 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                       ),
                     ],
                   ),
+                  // Opened from the Torah tab, so it doesn't add a tab to the bar.
+                  GoRoute(path: 'shiurim', builder: (c, s) => const ShiurimScreen()),
                   GoRoute(
                     path: ':category',
                     builder: (c, s) => TorahCategoryScreen(category: s.pathParameters['category']!),

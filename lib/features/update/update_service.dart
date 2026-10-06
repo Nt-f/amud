@@ -2,9 +2,12 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart' show appFlavor;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
+import 'package:in_app_update/in_app_update.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/providers.dart';
 import '../alerts/alerts.dart';
@@ -31,14 +34,24 @@ class UpdateInfo {
       {required this.version, required this.notes, required this.pageUrl, this.downloadUrl, this.downloadSize, this.sha256});
 }
 
+/// The Google Play build (`--flavor play`). Play delivers its updates and
+/// doesn't allow an app to install its own, so it has no updater.
+bool get isPlayBuild => appFlavor == 'play';
+
+/// Whether Google Play is asked for updates (the Play build on Android),
+/// which then installs them with its own update screen.
+bool get playUpdates => isPlayBuild && !kIsWeb && defaultTargetPlatform == TargetPlatform.android;
+
 /// Whether updates download and install inside the app (Android). Elsewhere
 /// the download opens in the browser.
-bool get installsInApp => !kIsWeb && defaultTargetPlatform == TargetPlatform.android;
+bool get installsInApp => updatesSupported && defaultTargetPlatform == TargetPlatform.android;
 
 /// Whether this platform installs from a downloaded release file. The web
-/// app updates itself through its service worker instead.
+/// app updates itself through its service worker, and the Play build
+/// through Play.
 bool get updatesSupported =>
-    !kIsWeb && (defaultTargetPlatform == TargetPlatform.android || defaultTargetPlatform == TargetPlatform.windows ||
+    !kIsWeb && !isPlayBuild &&
+    (defaultTargetPlatform == TargetPlatform.android || defaultTargetPlatform == TargetPlatform.windows ||
         defaultTargetPlatform == TargetPlatform.linux);
 
 /// The release file for this platform, by name.
@@ -99,6 +112,9 @@ class UpdateState {
   final String? savedNotesVersion;
   final String? savedNotes;
 
+  /// Play build: the version code of an update Google Play has for us.
+  final int? playVersionCode;
+
   const UpdateState({
     this.currentVersion = '',
     this.available,
@@ -114,10 +130,14 @@ class UpdateState {
     this.installedNotes,
     this.savedNotesVersion,
     this.savedNotes,
+    this.playVersionCode,
   });
 
   /// An update the user hasn't dismissed.
   UpdateInfo? get pending => available != null && available!.version != skipped ? available : null;
+
+  /// Play has an update the user hasn't dismissed.
+  bool get playPending => playVersionCode != null && skipped != 'play:$playVersionCode';
 
   /// The app was updated and the user hasn't looked at what changed yet.
   bool get justUpdated =>
@@ -138,6 +158,7 @@ class UpdateState {
     String? Function()? installedNotes,
     String? savedNotesVersion,
     String? savedNotes,
+    int? Function()? playVersionCode,
   }) =>
       UpdateState(
         currentVersion: currentVersion ?? this.currentVersion,
@@ -154,6 +175,7 @@ class UpdateState {
         installedNotes: installedNotes != null ? installedNotes() : this.installedNotes,
         savedNotesVersion: savedNotesVersion ?? this.savedNotesVersion,
         savedNotes: savedNotes ?? this.savedNotes,
+        playVersionCode: playVersionCode != null ? playVersionCode() : this.playVersionCode,
       );
 }
 
@@ -199,7 +221,7 @@ class UpdateNotifier extends Notifier<UpdateState> {
   /// Background check at startup: at most once a day, and a notification
   /// the first time a new version is seen.
   Future<void> autoCheck() async {
-    if (!updatesSupported) return;
+    if (!updatesSupported && !playUpdates) return;
     await _loadVersion();
     if (state.seenVersion == null && state.currentVersion.isNotEmpty) {
       // First run: nothing to announce.
@@ -214,6 +236,11 @@ class UpdateNotifier extends Notifier<UpdateState> {
     if (state.justUpdated && installsInApp) {
       // The APK that was just installed is no longer needed.
       unawaited(ApkInstaller.clear().catchError((_) {}));
+    }
+    if (playUpdates) {
+      // Play notifies about updates itself; this only drives the banner.
+      await checkPlay();
+      return;
     }
     if (!state.autoCheck) return;
     final last = state.lastCheck;
@@ -239,6 +266,35 @@ class UpdateNotifier extends Notifier<UpdateState> {
         debugPrint('update notification failed: $e');
       }
     }
+  }
+
+  /// Play build: asks Google Play whether there's a newer version.
+  Future<void> checkPlay() async {
+    if (!playUpdates) return;
+    try {
+      final info = await InAppUpdate.checkForUpdate();
+      final available = info.updateAvailability == UpdateAvailability.updateAvailable ||
+          info.updateAvailability == UpdateAvailability.developerTriggeredUpdateInProgress;
+      state = state.copyWith(playVersionCode: () => available ? (info.availableVersionCode ?? 0) : null);
+      if (available) analytics.event('update_found', {'version': '${info.availableVersionCode}', 'current': state.currentVersion, 'store': 'play'});
+    } catch (e) {
+      // Not installed from Play (a sideloaded Play build), or Play is unavailable.
+      debugPrint('Play update check failed: $e');
+    }
+  }
+
+  /// Play build: Play's own full-screen update, or the store page if it
+  /// can't be shown.
+  Future<void> updateFromPlay() async {
+    analytics.event('update_download', {'version': '${state.playVersionCode}', 'status': 'start', 'store': 'play'});
+    try {
+      final r = await InAppUpdate.performImmediateUpdate();
+      if (r == AppUpdateResult.success) return;
+      if (r == AppUpdateResult.userDeniedUpdate) return;
+    } catch (e) {
+      debugPrint('Play update failed: $e');
+    }
+    await launchUrl(Uri.parse('https://play.google.com/store/apps/details?id=page.amud'), mode: LaunchMode.externalApplication);
   }
 
   /// The user has seen (or dismissed) what's new in this version.
@@ -322,8 +378,10 @@ class UpdateNotifier extends Notifier<UpdateState> {
   }
 
   /// Asks GitHub for the latest release. Returns the update, if newer.
+  /// Not in the Play build, which is updated only through Play.
   Future<UpdateInfo?> check() async {
     await _loadVersion();
+    if (isPlayBuild) return null;
     state = state.copyWith(checking: true, error: () => null);
     try {
       final res = await http.get(

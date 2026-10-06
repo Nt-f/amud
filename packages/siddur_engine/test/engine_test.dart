@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:hebcal/hebcal.dart';
@@ -138,7 +139,9 @@ void main() {
       expect(items.whereType<ExcludedGroupItem>(), isEmpty);
     });
 
-    List<RenderItem> maariv(HDate hd, {bool concise = false}) => SiddurResolver().resolve(
+    // The app's short notes, as the app loads them.
+    final notes = jsonDecode(File('../../assets/rules/notes.json').readAsStringSync()) as Map<String, Object?>;
+    List<RenderItem> maariv(HDate hd, {bool concise = false}) => SiddurResolver().withOverrides(notes).resolve(
         root.find('Weekday/Maariv/Amidah')!, sel, (s) => DayContext(hd, il: false, service: s),
         options: ResolveOptions(excluded: ExcludedDisplay.hide, showNotes: true, conciseNotes: concise));
     String plain(SegmentItem s) => stripHtml(s.he!.segment.html);

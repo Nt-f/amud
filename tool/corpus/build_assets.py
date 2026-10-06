@@ -1,40 +1,33 @@
 #!/usr/bin/env python3
-"""Builds the app's corpus assets from corpus/raw + corpus/tagged: one
-gzip JSON per nusach whose chunks are all tagged and valid.
+"""Builds the app's corpus assets from Amud's siddur text, corpus/siddur
+(see corpus/SCHEMA.md): one gzip JSON per nusach. Stops at the first
+siddur with errors; warnings are printed and don't stop the build.
 
-    python3 tool/corpus/build_assets.py            # every complete nusach
+    python3 tool/corpus/build_assets.py            # every siddur
     python3 tool/corpus/build_assets.py ashkenaz   # just these
 
 assets/corpus/<nusach>.json.gz:
-  {"book": title, "nusach": slug,
+  {"book": title, "heTitle", "nusach": slug,
+   "index": the table of contents, as Sefaria's schema ({"enTitle", "heTitle", "nodes"}),
+   "editions": {"he"/"en": {"license", "segments", "sources": [{"version", "license", "source"?}]}},
+   "labels": {if_…: label}, "inserts": [...], "services": {...},
    "leaves": {path: {"node", "when"?, "service"?,
                      "he": {"version", "segs": [[ref, [part, ...]], ...]},
                      "en": {"version", "segs": [[ref, [he ref, ...], [part, ...]], ...]}}}}
 
-A part is the annotation with its text under "text"; an unsplit segment is
-one part holding the whole original html.
+A part holds its fields and its text under "text"; a segment that isn't
+split is one part. Editors' comments are left out.
 """
-import glob
 import gzip
 import json
 import os
-import re
 import sys
 
-import reconcile
-import validate
+import source
 
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-CORPUS = os.path.join(ROOT, 'corpus')
+ROOT = source.ROOT
+CORPUS = source.CORPUS
 OUT = os.path.join(ROOT, 'assets', 'corpus')
-
-
-def parts_of(nusach, ann, html, leaf_node):
-    if 'parts' in ann:
-        return [reconcile.part(nusach, p, leaf_node) for p in ann['parts']]
-    part = {k: v for k, v in ann.items() if k != 'he'}
-    part['text'] = html
-    return [reconcile.part(nusach, part, leaf_node)]
 
 
 def graph_inserts(nusach, paths):
@@ -115,42 +108,80 @@ def service_sections(spec, paths):
     return [k for k in kids if k not in spec.get('except', [])]
 
 
+def _part(p):
+    return {k: v for k, v in p.items() if k != 'comment'}
+
+
+def index(book, leaves):
+    """The table of contents, in the order of the leaves: each section where
+    its first leaf is. English titles are the parts of the paths."""
+    root = {'enTitle': book['title'], 'heTitle': book['heTitle'], 'nodes': []}
+    nodes = {'': root}
+    for path, leaf in leaves.items():
+        parts = path.split('/')
+        for i in range(1, len(parts) + 1):
+            pid = '/'.join(parts[:i])
+            if pid in nodes:
+                continue
+            en = parts[i - 1]
+            he = leaf.get('_title') if i == len(parts) else book['sections'].get(pid)
+            node = {'enTitle': en, 'heTitle': he or en}
+            if i < len(parts):
+                node['nodes'] = []
+            nodes['/'.join(parts[:i - 1])]['nodes'].append(node)
+            nodes[pid] = node
+    return root
+
+
+def editions(book, leaves):
+    out = {}
+    for lang in ('he', 'en'):
+        used = []
+        for leaf in leaves.values():
+            v = (leaf.get(lang) or {}).get('version')
+            if v is not None and v not in used:
+                used.append(v)
+        if not used:
+            continue
+        sources = [{'version': v, **book['sources'][lang][v]} for v in used]
+        out[lang] = {'license': source.combined_license([x['license'] for x in sources]),
+                     'segments': sum(len(l[lang]['segs']) for l in leaves.values() if lang in l),
+                     'sources': sources}
+    return out
+
+
 def build(nusach):
-    raws = sorted(glob.glob(os.path.join(CORPUS, 'raw', nusach, '*.json')))
-    leaves, book = {}, None
-    for raw_path in raws:
-        tagged_path = raw_path.replace(os.sep + 'raw' + os.sep, os.sep + 'tagged' + os.sep)
-        if not os.path.exists(tagged_path):
-            raise SystemExit(f'{nusach}: {os.path.basename(raw_path)} is not tagged yet')
-        errors = validate.validate(tagged_path)
-        if errors:
-            raise SystemExit(f'{tagged_path}: {errors[:3]}')
-        raw = json.load(open(raw_path))
-        ann = json.load(open(tagged_path))
-        book = raw['book']
-        for leaf in raw['leaves']:
-            path = leaf['path']
-            out = reconcile.leaf(nusach, path, ann['leaves'][path])
+    book, chunks, errs, warns = source.load(nusach)
+    for w in warns:
+        print(f'warning: {w}')
+    if errs:
+        for e in errs[:40]:
+            print(e)
+        raise SystemExit(f'{nusach}: {len(errs)} problem(s); nothing built')
+    leaves = {}
+    for _, doc in chunks:
+        for leaf in doc['leaves']:
+            out = {k: leaf[k] for k in ('node', 'when', 'service') if k in leaf}
+            if 'title' in leaf:
+                out['_title'] = leaf['title']
             for lang in ('he', 'en'):
-                src = leaf.get(lang)
-                if not src:
+                t = leaf.get(lang)
+                if not t:
                     continue
                 segs = []
-                for s in src['segments']:
-                    ref = s['id'][len(f'{lang}:{path}:'):]
-                    a = ann[lang].get(s['id'], {})
-                    parts = parts_of(nusach, a, s['html'], out.get('node'))
-                    if lang == 'he':
-                        segs.append([ref, parts])
-                    else:
-                        he = [h[len(f'he:{path}:'):] for h in a.get('he', []) if h.startswith(f'he:{path}:')]
-                        segs.append([ref, he, parts])
-                out[lang] = {'version': src['version'], 'segs': segs}
-            leaves[path] = out
+                for s in t['segs']:
+                    ps = [_part(p) for p in source.parts(s)]
+                    segs.append([s['ref'], ps] if lang == 'he' else [s['ref'], s.get('translates', []), ps])
+                out[lang] = {'version': t['version'], 'segs': segs}
+            leaves[leaf['path']] = out
     os.makedirs(OUT, exist_ok=True)
     target = os.path.join(OUT, f'{nusach}.json.gz')
     inserts, services = graph_inserts(nusach, list(leaves))
-    data = json.dumps({'book': book, 'nusach': nusach, 'labels': reconcile.labels(), 'inserts': inserts,
+    toc = index(book, leaves)
+    for leaf in leaves.values():
+        leaf.pop('_title', None)
+    data = json.dumps({'book': book['title'], 'heTitle': book['heTitle'], 'nusach': nusach, 'index': toc,
+                       'editions': editions(book, leaves), 'labels': source.labels(), 'inserts': inserts,
                        'services': services,
                        'leaves': leaves},
                       ensure_ascii=False,
@@ -161,13 +192,7 @@ def build(nusach):
 
 
 def main(argv):
-    nusachim = argv or sorted(os.path.basename(d) for d in glob.glob(os.path.join(CORPUS, 'raw', '*'))
-                              if os.path.isdir(d))
-    for n in nusachim:
-        if not argv and any(not os.path.exists(p.replace('/raw/', '/tagged/'))
-                            for p in glob.glob(os.path.join(CORPUS, 'raw', n, '*.json'))):
-            print(f'{n}: incomplete, skipped')
-            continue
+    for n in argv or source.nusachim():
         build(n)
 
 

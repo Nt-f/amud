@@ -10,7 +10,9 @@ import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
 import '../js_cards/js_card.dart';
+import '../torah/shnayim_mikra.dart';
 import '../torah/torah_library.dart';
+import '../torah/torah_settings.dart';
 import '../voice/offline_voice.dart';
 import '../voice/voice_model.dart';
 
@@ -93,6 +95,13 @@ class _OfflineScreenState extends ConsumerState<OfflineScreen> {
     final library = ref.read(torahLibraryProvider.notifier);
     final settings = ref.watch(settingsProvider);
     final userFonts = ref.watch(fontsProvider);
+    final torah = ref.watch(torahSettingsProvider);
+    final mikra = ref.watch(shnayimMikraSettingsProvider);
+    // The fonts any reader is set to: they stay, so its text doesn't change.
+    final inUse = {
+      settings.hebrewFont, settings.latinFont, torah.hebrewFont, torah.latinFont,
+      if (mikra.ownStyle) ...[mikra.hebrewFont, mikra.latinFont],
+    };
     final theme = Theme.of(context);
     final heUi = context.uiLanguage != UiLanguage.en;
 
@@ -106,7 +115,9 @@ class _OfflineScreenState extends ConsumerState<OfflineScreen> {
     ];
     final cards = [for (final k in storage.jsonKeys) if (k.startsWith(savedCardPrefix)) k];
     final cardBytes = cards.fold<int>(0, (n, k) => n + (storage.readJson(k, (j) => utf8.encode(jsonEncode(j)).length) ?? 0));
-    final total = works.fold<int>(0, (n, w) => n + stored(w)) + _voiceBytes + fonts.fold<int>(0, (n, f) => n + f.bytes) + cardBytes;
+    final chumash = ref.watch(chumashDownloadProvider);
+    final rashi = ref.watch(rashiDownloadProvider);
+    final total = works.fold<int>(0, (n, w) => n + stored(w)) + chumash.bytes + rashi.bytes + _voiceBytes + fonts.fold<int>(0, (n, f) => n + f.bytes) + cardBytes;
 
     return Scaffold(
       appBar: AppBar(title: Text(context.tr('Offline & storage'))),
@@ -148,6 +159,23 @@ class _OfflineScreenState extends ConsumerState<OfflineScreen> {
                 Downloading() => const SizedBox.square(dimension: 20, child: CircularProgressIndicator(strokeWidth: 2)),
                 _ => IconButton(tooltip: context.tr('Download'), icon: const Icon(Icons.download), onPressed: () => library.download(w)),
               },
+            ),
+          _FiveBooksTile(
+            title: context.tr('Shnayim Mikra'),
+            detail: context.tr('All five books, with Onkelos and English.'),
+            state: chumash,
+            download: () => ref.read(chumashDownloadProvider.notifier).downloadAll(),
+            remove: () => ref.read(chumashDownloadProvider.notifier).remove(),
+            confirm: _confirm,
+          ),
+          if (rashi.bytes > 0 || ref.watch(shnayimMikraSettingsProvider.select((x) => x.needsRashi)))
+            _FiveBooksTile(
+              title: context.tr('Rashi'),
+              detail: context.tr('Rashi on all five books, in Hebrew and English.'),
+              state: rashi,
+              download: () => ref.read(rashiDownloadProvider.notifier).downloadAll(),
+              remove: () => ref.read(rashiDownloadProvider.notifier).remove(),
+              confirm: _confirm,
             ),
           if (missing.isNotEmpty && !downloading)
             Padding(
@@ -198,10 +226,10 @@ class _OfflineScreenState extends ConsumerState<OfflineScreen> {
                 title: Text(fontLabel(f.family, userFonts)),
                 subtitle: Text([
                   formatBytes(f.bytes),
-                  if (settings.hebrewFont == f.family || settings.latinFont == f.family) context.tr('In use'),
+                  if (inUse.contains(f.family)) context.tr('In use'),
                 ].join(' · ')),
                 // A font that's in use stays, so the text doesn't change.
-                trailing: settings.hebrewFont == f.family || settings.latinFont == f.family
+                trailing: inUse.contains(f.family)
                     ? null
                     : IconButton(
                         tooltip: context.tr('Remove'),
@@ -235,6 +263,50 @@ class _OfflineScreenState extends ConsumerState<OfflineScreen> {
             ),
           ]),
       ]),
+    );
+  }
+}
+
+/// A text kept as five books (Shnayim Mikra's Chumash, Rashi): what's in,
+/// with a button to download the rest or remove it.
+class _FiveBooksTile extends StatelessWidget {
+  final String title;
+  final String detail;
+  final ChumashState state;
+  final Future<void> Function() download;
+  final Future<void> Function() remove;
+  final Future<bool> Function(String title, String size) confirm;
+  const _FiveBooksTile(
+      {required this.title, required this.detail, required this.state, required this.download, required this.remove, required this.confirm});
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final all = state.have.length == 5;
+    return ListTile(
+      leading: Icon(all ? Icons.offline_pin : Icons.auto_stories_outlined, color: all ? theme.colorScheme.primary : null),
+      title: Text(title),
+      subtitle: Text(state.busy
+          ? context.tr('Downloading… {n} of 5 books', {'n': state.have.length})
+          : state.failed
+              ? context.tr('Download failed. Check your connection and try again.')
+              : state.bytes > 0
+                  ? '${context.tr('Downloaded · {size}', {'size': formatBytes(state.bytes)})}${all ? '' : ' · ${context.tr('{n} of 5 books', {'n': state.have.length})}'}'
+                  : '$detail ${context.tr('Downloads from Sefaria once, then works offline.')}'),
+      trailing: state.busy
+          ? const SizedBox.square(dimension: 20, child: CircularProgressIndicator(strokeWidth: 2))
+          : Row(mainAxisSize: MainAxisSize.min, children: [
+              if (!all)
+                IconButton(tooltip: context.tr('Download'), icon: const Icon(Icons.download), onPressed: () => download().catchError((_) {})),
+              if (state.bytes > 0)
+                IconButton(
+                  tooltip: context.tr('Remove'),
+                  icon: const Icon(Icons.delete_outline),
+                  onPressed: () async {
+                    if (await confirm(title, formatBytes(state.bytes))) await remove();
+                  },
+                ),
+            ]),
     );
   }
 }

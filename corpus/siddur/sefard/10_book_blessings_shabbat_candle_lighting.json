@@ -1,0 +1,824 @@
+{
+  "book": "Siddur Sefard",
+  "chunk": "book [Blessings .. Shabbat Candle Lighting]",
+  "leaves": [
+    {
+      "path": "Blessings/Me'ein Shalosh",
+      "title": "ברכה אחרונה מעין שלוש",
+      "node": "brachot.me_ein_shalosh",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Final Blessing", "text": "<big><b>ברכה אחרונה</b></big>"},
+          {"ref": "2", "kind": "heading", "en": "Final Blessing, Me'ein Shalosh", "text": "<big><b>ברכה אחרונה מעין שלוש</b></big>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם:"},
+          {"ref": "4", "parts": [
+            {"kind": "instruction", "en": "On wine:", "text": "<small>על היין:</small>"},
+            {"kind": "prayer", "text": " עַל הַגֶּפֶן וְעַל פְּרִי הַגֶּפֶן:"}
+          ]},
+          {"ref": "5", "parts": [
+            {"kind": "instruction", "en": "On fruits of the Seven Species:", "text": "<small>על פירות משבעת המינים:</small>"},
+            {"kind": "prayer", "text": " עַל הָעֵץ וְעַל פְּרִי הָעֵץ:"}
+          ]},
+          {"ref": "6", "parts": [
+            {"kind": "instruction", "en": "On grain products:", "text": "<small>על מזונות:</small>"},
+            {"kind": "prayer", "text": " עַל הַמִחְיָה וְעַל הַכַּלְכָּלָה:"}
+          ]},
+          {"ref": "7", "parts": [
+            {"kind": "instruction", "en": "On grain products and wine together:", "text": "<small>על מזונות ויין ביחד:</small>"},
+            {"kind": "prayer", "text": " עַל הַמִּחְיָה וְעַל הַכַּלְכָּלָה וְעַל הַגֶּפֶן וְעַל פְּרִי הַגֶּפֶן:"}
+          ]},
+          {"ref": "8", "parts": [
+            {"kind": "prayer", "text": "<b>וְעַל תְּנוּבַת הַשָּׂדֶה</b> וְעַל אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה שֶׁרָצִיתָ וְהִנְחַלְתָּ לַאֲבוֹתֵינוּ לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבּוֹעַ מִטּוּבָהּ,"},
+            {"kind": "prayer", "text": " רַחֵם "},
+            {"kind": "instruction", "en": "(Optional)", "text": "<small>(נָא)</small>"},
+            {"kind": "prayer", "text": " יְהֹוָה אֱלֹהֵינוּ עַל יִשְׂרָאֵל עַמֶּךָ וְעַל יְרוּשָׁלַיִם עִירֶךָ וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶךָ וְעַל מִזְבְּחֶךָ וְעַל הֵיכָלֶךָ,"},
+            {"kind": "prayer", "text": " וּבְנֵה יְרוּשָׁלַיִם עִיר הַקֹּדֶשׁ בִּמְהֵרָה בְּיָמֵינוּ וְהַעֲלֵנוּ לְתוֹכָהּ וְשַׂמְּחֵנוּ בְּבִנְיָנָהּ וְנֹאכַל מִפִּרְיָּהּ וְנִשְׂבַּע מִטּוּבָהּ וּנְבָרֶכְךָ עָלֶיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה:"}
+          ]},
+          {"ref": "9", "parts": [
+            {"kind": "instruction", "en": "(On Shabbat:)", "gloss": "Said on Shabbat", "text": "<small><small>(בשבת:)</small>"},
+            {"kind": "prayer", "when": "shabbat", "text": "</small> <b>וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַּׁבָּת הַזֶּה:</b>"}
+          ]},
+          {"ref": "10", "parts": [
+            {"kind": "instruction", "en": "(On Rosh Chodesh:)", "gloss": "Said on Rosh Chodesh", "text": "<small><small>(בר\"ח:)</small>"},
+            {"kind": "prayer", "when": "roshChodesh", "text": "</small> <b>וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם רֹאשׁ הַחֹדֶשׁ הַזֶּה:</b>"}
+          ]},
+          {"ref": "11", "parts": [
+            {"kind": "instruction", "en": "(On Rosh Hashanah:)", "gloss": "Said on Rosh Hashanah", "text": "<small><small>(בר\"ה:)</small>"},
+            {"kind": "prayer", "when": "roshHashana", "text": "</small> <b>וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם הַזִּכָּרוֹן הַזֶּה:</b>"}
+          ]},
+          {"ref": "12", "parts": [
+            {"kind": "instruction", "en": "(On Yom Tov:)", "gloss": "Said on Yom Tov", "text": "<small><small>(ביו\"ט:)</small>"},
+            {"kind": "prayer", "when": "yomTov", "text": "</small> <b>וְשַׂמְחֵנוּ בְּיוֹם חַג "},
+            {"kind": "instruction", "en": "(Name of the holiday)", "text": "<small> <small>(פלוני)</small>"},
+            {"kind": "prayer", "when": "yomTov", "text": " </small> הַזֶּה:</b>"}
+          ]},
+          {"ref": "13", "kind": "prayer", "text": "<b>כִּי אַתָּה</b> יְהֹוָה טוֹב וּמֵטִיב לַכֹּל וְנוֹדֶה לְךָ עַל הָאָרֶץ וְעַל:"},
+          {"ref": "14", "parts": [
+            {"kind": "instruction", "en": "(On wine:)", "gloss": "Said on wine", "text": "<small><small>(על היין:)</small>"},
+            {"kind": "prayer", "when": "!il", "text": "</small> פְּרִי הַגָּפֶן: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל פְּרִי הַגָּפֶן: "},
+            {"kind": "instruction", "en": "(In Israel:)", "gloss": "Said in Israel", "text": "<small>( <small>בא\"י</small>"},
+            {"kind": "prayer", "when": "il", "text": " וְעַל פְּרִי גַפְנָהּ)</small>:"}
+          ]},
+          {"ref": "15", "parts": [
+            {"kind": "instruction", "en": "(On fruits:)", "gloss": "Said on fruits", "text": "<small><small>(על הפירות:)</small>"},
+            {"kind": "prayer", "when": "!il", "text": "</small> הַפֵּרוֹת: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל הַפֵּרוֹת: "},
+            {"kind": "instruction", "en": "(In Israel:)", "gloss": "Said in Israel", "text": "<small>( <small>בא\"י</small>"},
+            {"kind": "prayer", "when": "il", "text": " וְעַל פֵּרוֹתֶיהָ)</small>:"}
+          ]},
+          {"ref": "16", "parts": [
+            {"kind": "instruction", "en": "(On grain products:)", "gloss": "Said on grain products", "text": "<small><small>(על מזונות:)</small>"},
+            {"kind": "prayer", "text": "</small> הַמִחְיָה: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל הַמִחְיָה וְעַל הַכַּלְכָּלָה:"}
+          ]},
+          {"ref": "17", "parts": [
+            {"kind": "instruction", "en": "(For grains and wine together:)", "gloss": "Said when eating grain products and drinking wine", "text": "<small><small>(על מזונות ויין ביחד:)</small>"},
+            {"kind": "prayer", "when": "!il", "text": "</small> הַמִּחְיָה וְעַל פְּרִי הַגָּפֶן: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל הַמִחְיָה וְעַל הַכַּלְכָּלָה וְעַל פְּרִי הַגָּפֶן: "},
+            {"kind": "instruction", "en": "(In Israel:)", "gloss": "Israel custom", "text": "<small>( <small>בא\"י</small>"},
+            {"kind": "prayer", "text": " וְעַל פְּרִי גַפְנָהּ)</small>: "}
+          ]}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Ha'etz",
+      "title": "בורא פרי העץ",
+      "node": "brachot.hanehenin",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Creator of the fruit of the tree", "text": "<big><b>בורא פרי העץ</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "On any fruit of the tree, one recites:", "text": "<small>על כל פרי העץ מברך:</small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הָעֵץ:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Ha'adamah",
+      "title": "בורא פרי האדמה",
+      "node": "brachot.hanehenin",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Borei Pri Ha'adamah", "text": "<big><b>בורא פרי האדמה</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "On fruit of the ground, one blesses:", "text": "<small>על פרי האדמה מברך:</small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הָאֲדָמָה:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Shehakol",
+      "title": "ברכת שהכל",
+      "node": "brachot.me_ein_shalosh",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Blessing of Shehakol", "text": "<big><b>ברכת שהכל</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "On meat and fish, dairy, eggs, cheese, spices, mushrooms, and the like. Also on all beverages except wine, one says:", "text": "<small>על בשר ודגים. חלב וביצה וגבינה. כמהין ופטריות וכדומה. גם על המשקים חוץ מיין אומר:</small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהַכֹּל נִהְיָה בִּדְבָרוֹ:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Borei Nefashot",
+      "title": "בורא נפשות",
+      "node": "brachot.borei_nefashot",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Borei Nefashot", "text": "<big><b>בורא נפשות</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "On fruits of the tree (except the seven species), fruits of the ground, vegetables, all drinks, and things that do not grow from the ground, one recites after eating them this:", "text": "<small>על פירות האילן חוץ מז' מינים ופירות האדמה וירקות ועל כל המשקין ועל דבר שאין גידולו מן הארץ מברכין אחר אכילתן זה:</small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא נְפָשׁוֹת רַבּוֹת וְחֶסְרוֹנָן עַל כָּל מַה שֶׁבָּרָאתָ לְהַחֲיוֹת בָּהֶם נֶפֶשׁ כָּל חָי. בָּרוּךְ חֵי הָעוֹלָמִים:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Shehecheyanu",
+      "title": "ברכת שהחיינו",
+      "node": "brachot.hanehenin",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Blessing of Shehecheyanu", "text": "<big><b>ברכת שהחיינו</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "One who puts on a new garment, or eats a new fruit that grows at a set time of year and renews each year, says:", "text": "<small>הלובש מלבוש חדש וכן האוכל פרי חדש הגדל בזמן קבוע בשנה ומתחדש משנה לשנה מברך:</small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְמַן הַזֶּה:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Fragrant Spices",
+      "title": "ריח בשמים",
+      "node": "brachot.hanehenin",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Fragrant Spices", "text": "<big><b>ריח בשמים</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "On the scent of spices one says:", "text": "<small>על ריח בשמים מברך:</small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא מִינֵי בְשָׂמִים:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Fragrant Herbs",
+      "title": "ריח טוב שבעשבים",
+      "node": "brachot.hanehenin",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Fragrant Herbs", "text": "<big><b>ריח טוב שבעשבים</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "On the fragrance of herbs, one recites:", "text": "<small>על ריח טוב שבעשבים מברך:</small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא עִשְׂבֵּי בְשָׂמִים:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Fragrant Shrubs",
+      "title": "ריח טוב שבעצים",
+      "node": "brachot.reiyah",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Fragrant Shrubs", "text": "<big><b>ריח טוב שבעצים</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "On the fragrance of trees and shrubs, one recites:", "text": "<small>על ריח טוב שבעצים ושיחים מברך:</small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא עֲצֵי בְשָׂמִים:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Fragrant Fruit",
+      "title": "ריח טוב שבפירות",
+      "node": "brachot.hanehenin",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Blessing on a fragrant fruit", "text": "<big><b>ריח טוב שבפירות</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "On a fragrant fruit, one recites:", "text": "<small>על ריח טוב שבפירות מברך:</small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַנּוֹתֵן רֵיחַ טוֹב בַּפֵּירוֹת:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Fragrant Oils",
+      "title": "שמן אפרסמון",
+      "node": "brachot.hanehenin",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Fragrant Oils", "text": "<big><b>שמן אפרסמון</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "On fragrant oil, one recites:", "text": "<small>על שמן אפרסמון מברך:</small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא שֶׁמֶן עָרֵב:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Lightning & Thunder",
+      "title": "ברכת ברקים ורעמים",
+      "node": "brachot.reiyah",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Blessing for Lightning and Thunder", "text": "<big><b>בִּרְכַּת ברקים ורעמים</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "On lightning one says:", "text": "<small>על הברקים מברך:</small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, עוֹשֶׂה מַעֲשֶׂה בְּרֵאשִׁית:"},
+          {"ref": "4", "kind": "instruction", "en": "On thunder one says:", "text": "<small>על הרעמים מברך:</small>"},
+          {"ref": "5", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁכֹּחוֹ וּגְבוּרָתוֹ מָלֵא עוֹלָם:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Seeing Rainbow",
+      "title": "ברכת הקשת",
+      "node": "brachot.reiyah",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Blessing over a rainbow", "text": "<big><b>בִּרְכַּת הקשת</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "One who sees a rainbow should recite this blessing:", "text": "<small>הרואה קשת צריך לברך ברכה זו:</small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, זוֹכֵר הַבְּרִית נֶאֱמָן בִּבְרִיתוֹ וְקַיָּם בְּמַאֲמָרוֹ:"}
+        ]
+      },
+      "en": {
+        "version": "Sefaria Community Translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<b>Blessing over a rainbow</b>"},
+          {"ref": "2", "translates": ["2"], "text": "One who sees a rainbow should recite this blessing:"},
+          {"ref": "3", "translates": ["3"], "text": "Blessed are You, Lord our God, King of the universe, who remembers the covenant, is faithful with [God's] covenant, and is steady with [God's] word."}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Seeing Ocean",
+      "title": "הים הגדול",
+      "node": "brachot.reiyah",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "The Great Sea", "text": "<big><b>הים הגדול</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "One who sees the Great Sea recites:", "text": "<small>הרואה את הים הגדול מברך:</small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, עֹשֶׂה אֶת הַיָּם הַגָּדוֹל:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Blossoming Fruit Tree",
+      "title": "ברכת האילנות",
+      "node": "brachot.reiyah",
+      "when": "true",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Blessing over Blossoming Fruit Trees", "text": "<big><b>בִּרְכַּת הָאִילָנוֹת</b></big>"},
+          {"ref": "2", "parts": [
+            {"kind": "instruction", "en": "One who sees fruit trees (at least two) blossoming in the month of Nissan blesses once a year:", "text": "<small>הרואה אילני מאכל <small>(לפחות שני אילנות)</small>"},
+            {"kind": "instruction", "en": "One who sees fruit trees (at least two) blossoming in the month of Nissan blesses once a year:", "text": " בפריחתם בימי ניסן מברך פעם אחת בשנה:</small>"}
+          ]},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁלֹּא חִסֵּר בְּעוֹלָמוֹ כְּלוּם, וּבָרָא בוֹ בְּרִיוֹת טוֹבוֹת וְאִילָנוֹת טוֹבוֹת, לֵהָנוֹת בָּהֶם בְּנֵי אָדָם:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Various Blessings of Praise",
+      "title": "ברכות שונות",
+      "node": "brachot.reiyah",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Various Blessings", "text": "<big><b>ברכות שונות</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "One who sees a great sage of Israel says:", "text": "<small>הרואה חכם גדול מישראל אומר:</small>"},
+          {"ref": "3", "kind": "prayer", "text": " <b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁחָלַק מֵחָכְמָתוֹ לִירֵיאָיו:"},
+          {"ref": "4", "kind": "instruction", "en": "One who sees a great sage of the nations says:", "text": "<small>הרואה חכם גדול מאומות העולם אומר:</small>"},
+          {"ref": "5", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁנָתַן מֵחָכְמָתוֹ לְבָשָׂר וָדָם:"},
+          {"ref": "6", "kind": "instruction", "en": "One who sees a king of Israel says:", "text": "<small>הרואה מלך מישראל אומר:</small>"},
+          {"ref": "7", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁחָלַק מִכְּבוֹדוֹ לִירֵיאָיו:"},
+          {"ref": "8", "kind": "instruction", "en": "One who sees a king of the nations says:", "text": "<small>הרואה מלך מאומות העולם אומר:</small>"},
+          {"ref": "9", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁנָתַן מִכְּבוֹדוֹ לְבָשָׂר וָדָם:"},
+          {"ref": "10", "kind": "instruction", "en": "One who sees synagogues in ruins blesses Dayan HaEmet, and when rebuilt blesses:", "text": "<small>הרואה בתי כנסיות בחורבנן מברך דיין האמת, ובישובן מברך:</small>"},
+          {"ref": "11", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, מַצִיב גְּבוּל אַלְמָנָה:"},
+          {"ref": "12", "kind": "instruction", "en": "One who sees a place where miracles were performed for Israel, such as the crossing of the Jordan and the walls of Jericho, says:", "text": "<small>הרואה מקום שנעשו בו ניסים לישראל, כגון מעברות הירדן וחומות יריחו אומר:</small>"},
+          {"ref": "13", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁעָשָׂה נִיסִּים לַאֲבוֹתֵינוּ בַּמָּקוֹם הַזֶּה:"},
+          {"ref": "14", "kind": "instruction", "en": "One who sees a place where a miracle was performed for him, or for his teacher, or for his ancestors, or for our ancestors in general, blesses:", "text": "<small>הרואה מקום שנעשה בו נס לו, או לרבו, או לאבותיו, או לאבותינו בכלל, מברך:</small>"},
+          {"ref": "15", "parts": [
+            {"kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם,"},
+            {"kind": "prayer", "text": " שֶׁעָשָׂה לִי "},
+            {"kind": "instruction", "en": "(for his teacher,", "text": "<small>(לְרַבִּי,"},
+            {"kind": "instruction", "en": "for my ancestors,", "text": " לַאֲבוֹתַי,"},
+            {"kind": "instruction", "en": "for our ancestors)", "text": " לַאֲבוֹתֵינוּ)</small>"},
+            {"kind": "prayer", "text": " נֵס בַּמָּקוֹם הַזֶּה:"}
+          ]},
+          {"ref": "16", "kind": "instruction", "en": "One who sees a strange creature, such as a dwarf, a black person, and the like, says:", "text": "<small>כשרואין בריה משונה, כגון גמד, וכושי וכדומה אומר:</small>"},
+          {"ref": "17", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, מְשַׁנֶּה הַבְּרִיּוֹת:"},
+          {"ref": "18", "kind": "instruction", "en": "One who sees a friend dear to him after 30 days blesses Shehecheyanu, and after 12 months blesses:", "text": "<small>הרואה חבירו החביב לו אחר ל' יום מברך שהחיינו, ואחר י\"ב חודש מברך:</small>"},
+          {"ref": "19", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, מְחַיֶה הַמֵּתִים:"},
+          {"ref": "20", "kind": "instruction", "en": "One who sees beautiful trees and creatures blesses:", "text": "<small>הרואה אילנות טובים ובריות נאות, מברך:</small>"},
+          {"ref": "21", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁכָּכָה לוֹ בְּעוֹלָמוֹ:"},
+          {"ref": "22", "kind": "instruction", "en": "One who has not seen the graves of Israel for 30 days blesses upon seeing them:", "text": "<small>מי שלא ראה קברי ישראל שלשים יום יברך בראייתם:</small>"},
+          {"ref": "23", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר יָצַר אֶתְכֶם בְּדִּין, וְזָן וְכִלְכֵּל אֶתְכֶם בְּדִּין, וְהֵמִית אֶתְכֶם בְּדִּין, וְיוֹדֵעַ מִסְפַּר כֻּלְּכֶם בְּדִין, וְעָתִיד לְהַחֲזִיר וּלְהַחֲיוֹתכֶם בַּדִּין. בָּרוּךְ אַתָּה יְהֹוָה מְחַיֵּה הַמֵּתִים:"},
+          {"ref": "24", "kind": "instruction", "en": "The first time it rains heavily in the Land of Israel, and in the Diaspora after a cessation of rains that caused distress to the world, one blesses:", "text": "<small>בפעם הראשונה שיורדים גשמים הרבה בארץ ישראל, ובחו\"ל לאחר עצירת גשמים שהיה העולם בצער מברך:</small>"},
+          {"ref": "25", "kind": "prayer", "text": "<b>מוֹדִים</b> אֲנַחְנוּ לָךְ יְהֹוָה אֱלֹהֵינוּ על כל טפה וטפה שהורדת לנו וְאִלּוּ פִינוּ מָלֵא שִׁירָה כַּיָּם. וּלְשׁוֹנֵנוּ רִנָּה כַּהֲמוֹן גַּלָּיו. וְשִׂפְתוֹתֵינוּ שֶׁבַח כְּמֶרְחֲבֵי רָקִיעַ. וְעֵינֵינוּ מְאִירוֹת כַּשֶּׁמֶשׁ וְכַיָּרֵחַ. וְיָדֵינוּ פְרוּשׂוֹת כְּנִשְׁרֵי שָׁמָיִם. וְרַגְלֵינוּ קַלּוֹת כָּאַיָּלוֹת. אֵין אֲנַחְנוּ מַסְפִּיקִים לְהוֹדוֹת לְךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ. וּלְבָרֵךְ אֶת שִׁמְךָ מַלְכֵּנוּ. עַל אַחַת מֵאָלֶף אֶלֶף אַלְפֵי אֲלָפִים וְרִבֵּי רְבָבוֹת פְּעָמִים. הַטּוֹבוֹת נִסִּים וְנִפְלָאוֹת שֶׁעָשִׂיתָ עִם אֲבוֹתֵינוּ וְעִמָּנוּ: מִלְּפָנִים מִמִּצְרַיִם גְּאַלְתָּנוּ יְהֹוָה אֱלֹהֵינוּ. וּמִבֵּית עֲבָדִים פְּדִיתָנוּ. בְּרָעָב זַנְתָּנוּ. וּבְשָׂבָע כִּלְכַּלְתָּנוּ. מֵחֶרֶב הִצַּלְתָּנוּ. וּמִדֶּבֶר מִלַּטְתָּנוּ. וּמֵחֳלָיִם רָעִים וְרַבִּים וְנֶאֱמָנִים דִּלִּיתָנוּ: עַד הֵנָּה עֲזָרוּנוּ רַחֲמֶיךָ. וְלֹא עֲזָבוּנוּ חֲסָדֶיךָ יְהֹוָה אֱלֹהֵינוּ. וְאַל תִּטְּשֵׁנוּ יְהֹוָה אֱלֹהֵינוּ לָנֶצַח: עַל כֵּן אֵבָרִים שֶׁפִּלַּגְתָּ בָּנוּ. וְרוּחַ וּנְשָׁמָה שֶׁנָּפַחְתָּ בְּאַפֵּינוּ. וְלָשׁוֹן אֲשֶׁר שַׂמְתָּ בְּפִינוּ. הֵן הֵם. יוֹדוּ וִיבָרְכוּ וִישַׁבְּחוּ וִיפָאֲרוּ וִישׁוֹרְרוּ וִירוֹמְמוּ וְיַעֲרִיצוּ וְיַקְדִּישׁוּ וְיַמְלִיכוּ אֶת שִׁמְךָ מַלְכֵּנוּ. בָּרוּךְ אַתָּה יְהֹוָה אֵל רוֹב הַהוֹדָאוֹת:"},
+          {"ref": "26", "parts": [
+            {"kind": "instruction", "en": "In Eretz Yisrael, if the years are as corrected, one blesses without Name and Kingship (see MB 221:1 and BaH there):", "text": "<small>ובא\"י אם השנים כתיקונן יברך בלא שם ומלכות <small>(עי' מ\"ב סי' רכא סק\"א ובבה\"ל שם)</small>"},
+            {"kind": "prayer", "text": ":</small>"}
+          ]},
+          {"ref": "27", "kind": "instruction", "en": "For the redemption of the firstborn of a donkey, one blesses:", "text": "<small>על פדיון פטר חמור יברך:</small>"},
+          {"ref": "28", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו, וְצִוָּנוּ עַל פִּדְיוֹן פֶּטֶר חֲמוֹר:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Immersing Utensils",
+      "title": "ברכת טבילת כלים",
+      "node": "brachot.mitzvot",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Blessing for Immersing Utensils", "text": "<big><b>בִּרְכַּת טְבִילַת כְּלִים</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "When immersing new utensils, one recites:", "text": "<small>כשטובל כלים חדשים מברך:</small>"},
+          {"ref": "3", "parts": [
+            {"kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, "},
+            {"kind": "prayer", "text": "אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל טְבִילַת כֶּלִי: <small>("},
+            {"kind": "instruction", "en": "(If there are many, say: utensils:)", "text": "כשהם הרבה אומר: <b>כֵּלִים:</b>)</small>"}
+          ]}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Mezuzah",
+      "title": "ברכת המזוזה",
+      "node": "brachot.mitzvot",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Blessing for the Mezuzah", "text": "<big><b>בִּרְכַּת הַמְזוּזָה</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "One who affixes a mezuzah says:", "text": "<small>הקובע מזוזה מברך:</small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לִקְבֹּעַ מְזוּזָה:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Separating Challah",
+      "title": "סדר הפרשת חלה",
+      "node": "lifecycle.pidyon_haben",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Order for Separating Challah", "text": "<big><b>סֵדֶר הַפְרָשַׁת חַלָּה</b></big>"},
+          {"ref": "2", "kind": "note", "en": "In our times, since challah is forbidden to kohanim due to impurity, it is not given to them but burned. Only a minimal amount is separated without a specific measure.", "text": "<small>א. בזמנינו שהחלה אסורה באכילה לכהנים מפני הטומאה, לֹא נותנים אוֹתה לכהנים אלא שורפים אוֹתה. ומפרישים רק כל שהוא מבלי כל שיעור.</small>"},
+          {"ref": "3", "kind": "note", "en": "The separated challah must be burned; it is forbidden to throw it in the trash or treat its sanctity with disrespect. Only after burning may it be discarded, as the mitzvah has been fulfilled. If burning is impossible, wrap it twice in paper and place it in the trash.", "text": "ב. את החלה שמפרישים צריך לשרוף, ואסור לזורקה לאשפה ולזלזל בקדושתה. ורק לאחר ששרפה אוֹתה מותר לזורקה לאשפה, כיון שכבר נעשה מצוותה, ואין בזה משום זלזול. ואם אין אפשרות לשורפה, תכרוך את החלה פעמיים בנייר ותכניסה לפח הזבל."},
+          {"ref": "4", "kind": "note", "en": "It is preferable to wait to separate challah until after the dough is fully kneaded into a single mass. If one did not separate from the dough and baked it, one separates from the bread after baking.", "text": "ג. טוב להמתין מלהפריש חלה עד לאחר גמר הלישה - כשתֵעשה העיסה גוש אחד. ואם לֹא הפרישה מן העיסה ואפתה - מפרישה מן הפת לאחר האפיה."},
+          {"ref": "5", "kind": "note", "en": "There is an obligation to separate challah only from dough intended for baking. Dough made for boiling or frying requires separation without a blessing, unless one intends to bake some of it, in which case a blessing is recited.", "text": "ד. אין חיוב הפרשת חלה אלא מעיסה העומדת לאפיה. אבל העושה עיסה כדי לבשלה אוֹ לטגנה, מפרישה ממנה חלה בלי ברכה, ורק אם רוצה לאפות קצת ממנה - מפרישה ממנה חלה בברכה."},
+          {"ref": "6", "parts": [
+            {"kind": "note", "en": "The measure for separating challah with a blessing is 1560 grams of flour.", "text": "ה. שעור הפרשת חלה בברכה הוא כשיש בקמח שיעור של 1560 גר',"},
+            {"kind": "note", "en": "As a pious measure, it is good to separate challah without a blessing from approximately 1.5 kg.", "text": " וממדת חסידות טוב להפריש חלה בלי ברכה משיעור קילו וחצי לערך "},
+            {"kind": "note", "en": "(Chazon Ish, Responsa, p. 1018)", "text": "<small>(שו\"ת חזו\"ע עמ' תקיח)</small>"},
+            {"kind": "note", "en": "According to the Chazon Ish, the measure is 2250 grams.", "text": ". ולשיטת החזו\"א השעור הוא 2250 גר'."}
+          ]},
+          {"ref": "7", "kind": "instruction", "en": "Before separating, recite the blessing:", "text": "<small>קודם ההפרשה מברכת:</small>"},
+          {"ref": "8", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו, וְצִוָּנוּ לְהַפְרִישׁ חַלָּה מִן הָעִיסָה:"},
+          {"ref": "9", "kind": "instruction", "en": "Then take a piece of any size, hold it in the right hand, and say:", "text": "<small>ואחר כך לוקחת חתיכה כל שהיא ומרימה ביד ימין ואומרת:</small>"},
+          {"ref": "10", "kind": "prayer", "text": "<b>הֲרֵי</b> זוֹ חַלָּה:"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Separating Terumot & Maasrot",
+      "title": "סדר הפרשת תרומות ומעשרות",
+      "node": "front_matter",
+      "when": "true",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Order of Separating Terumot and Ma'asrot", "text": "<big><b>סֵדֶר הַפְרָשַׁת תְּרוּמוֹת וּמַעַשְׂרוֹת</b></big>"},
+          {"ref": "2", "kind": "note", "en": "All produce grown in the Land of Israel owned by a Jew is obligated in terumot and ma'asrot. Produce whose status is unknown is treated as demai and requires separation without a blessing. If it is certain that terumot and ma'asrot were not separated, one separates with a blessing: recite the blessing first, then the formula.", "text": "<small><small>כל גידולי קרקע הגדלים בארץ יִשְׂרָאֵל בבעלות יהודי, חייבים בתרומות ומעשרות. וכל גידול קרקע שאינו ידוע אם הופרשו ממנו תרומות ומעשרות אוֹ לֹא, הרי הוּא בחזקת דמאי, וחייב להפריש ממנו תרומות ומעשרות בלי ברכה. ואם ודאי שלא הופרשו ממנו תרומות ומעשרות מפריש בברכה, דהיינו שלפני שיפריש יברך את הברכה ואחר כך יאמר את נוסח ההפרשה:</small></small>"},
+          {"ref": "3", "kind": "heading", "en": "Order of Separating Terumot and Ma'asrot according to the rulings of the Chazon Ish zt\"l", "text": "<small><b>סדר הפרשת תרומות ומעשרות עפ\"י פסקי החזון איש זצ\"ל</b></small>"},
+          {"ref": "4", "kind": "instruction", "en": "Take more than one-hundredth of the fruit, separate it from the rest, and say:", "text": "<small><small>נוטל מן הפרות יותר מאחד ממאה ומבדילו מן השאר ואומר:</small></small>"},
+          {"ref": "5", "kind": "instruction", "en": "If the fruit is definitely untithed (tevel), say before the formula:", "text": "<small><small>אם הפירות טבל ודאי יאמר לפני הנוסח:</small></small>"},
+          {"ref": "6", "kind": "prayer", "text": "<small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַפְרִישׁ תְּרוּמוֹת וּמַעְשְׂרוֹת.</small>"},
+          {"ref": "7", "kind": "prayer", "text": "<small><b>יוֹתֵר</b> מֵאֶחָד מִמֵּאָה שֶׁיֵּשׁ כַּאן הֲרֵי הוּא תְּרוּמָה גְּדוֹלָה בְּצַד צְפוֹנוֹ [כָּל מִין עַל מִינוֹ], אוֹתוֹ אֶחָד מִמֵּאָה שֶׁיֵּשׁ כַּאן וְעוֹד תִּשְׁעָה חֲלָקִים כְּמוֹתוֹ בְּצַד צְפוֹנוֹ שֶׁל הַפֵּירוֹת [כָּל מִין עַל מִינוֹ] הֲרֵי הוּא מַעֲשֵׂר רִאשׁוֹן. אוֹתוֹ אֶחָד מִמֵּאָה שֶׁעֲשִׂיתִיו מַעֲשֵׂר רִאשׁוֹן עָשׂוּי תְּרוּמַת מַעֲשֵׂר [כָּל מִין עַל מִינוֹ] וּמַעֲשֵׂר שֵׁנִי בְּצַד דְּרוֹמוֹ [כָּל מִין עַל מִינוֹ] [וְאִם צָרִיךְ מַעֲשֵׂר עָנִי יְהֵא מַעֲשֵׂר עָנִי בְּצַד דְּרוֹמוֹ.] </small>"},
+          {"ref": "8", "kind": "instruction", "en": "If the fruit is definitely untithed (tevel), say before the formula:", "text": "<small><small>אם הפירות טבל ודאי יאמר לפני הנוסח:</small></small>"},
+          {"ref": "9", "kind": "prayer", "text": "<small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל פִּדְיוֹן מַעֲשֵׂר שֵׁנִי.</small>"},
+          {"ref": "10", "kind": "instruction", "en": "If the fruit is definitely fourth-year produce (netei reva'i) and untithed, say:", "text": "<small><small>אם הפירות ודאי נטע רבעי וטבל יאמר:</small></small>"},
+          {"ref": "11", "kind": "prayer", "text": "<small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְשָׁנוּ בְּמִצְוֹתָיו, וְצִוָּנוּ עַל פִּדְיוֹן נֶטַע רְבָעִי.</small>"},
+          {"ref": "12", "kind": "prayer", "text": "<small>וּמְחוּלָל הוּא וְחוּמְשׁוֹ עַל שְׁתֵּי פְרוּטוּת שֶׁבִּרְשׁוּתִי לְחִילּוּל מַעֲשֵׂר שֵׁנִי וֶנֶטַע רְבָעִי. </small>"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Traveler's Prayer",
+      "title": "תפלת הדרך",
+      "node": "tefillat_haderech",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Traveler's Prayer", "text": "<big><b>תְּפִלַת הַדֶּרֶךְ</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "One who goes on a journey, even for less than a parsah, must recite the Traveler's Prayer. If the journey is less than a parsah, it is recited without the concluding blessing; however, if there is danger, even for less than a parsah, it is recited with the conclusion. It should be recited immediately upon leaving the city limits. If forgotten, it may be recited as long as one has not yet reached within a parsah of the destination city or the city where one intends to sleep; from that point onward, it is recited without the conclusion. It should be attached to another blessing so that it is adjacent to a blessing. Therefore, when leaving in the morning before the Amidah, one should recite the Morning Blessings on the road and attach the Traveler's Prayer to the blessing over the Torah. During the day, one may eat a fruit and attach it to the blessing over the fruit, or after washing hands, attach it to Asher Yatzar.", "text": "<small>היוצא לדרך אפילו רק עד פרסה צריך להתפלל תפלת הדרך, אבל אם הוא צריך ללכת פחות מפרסה מתפלל בלא חתימה, אבל אם הוא מקום סכנה אפילו בפחות מפרסה צריך להתפלל בחתימה: תיכף כשיוצא מעיבורה של עיר צריך להתפלל תפילה זו ואם שכח מתפלל כל זמן שהוא בדרך ובלבד שלא הגיע עדיין תוך פרסה הסמוכה לעירו או לעיר שרוצה ללון בה דמשם ואילך יאמר אותה בלא חתימה: יש להסמיך תפלת הדרך לברכה אחרת כדי שתהא ברכה הסמוכה לחברתה לכן כשיוצא בדרך בשחרית קודם התפילה כגון שהוא נחוץ י\"ל ברכות השחר על הדרך ולהסמיך תפלת הדרך לברכת השחר וביום יאכל איזה פרי ויסמכנה לברכת הפרי או כשמטיל מים יסמיך אותה לברכת אשר יצר:</small>"},
+          {"ref": "3", "parts": [
+            {"kind": "prayer", "text": "<b>יְהִי</b> רָצוֹן מִלְפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ,"},
+            {"kind": "prayer", "text": " שֶׁתּוֹלִיכֵנוּ לְשָׁלוֹם וְתַצְעִידֵנוּ לְשָׁלוֹם וְתַדְרִיכֵנוּ לְשָׁלוֹם,"},
+            {"kind": "prayer", "text": " וְתִסְמְכֵנִי לְשָׁלוֹם,"},
+            {"kind": "prayer", "text": " וְתַגִּיעֵנוּ לִמְחוֹז חֶפְצֵנוּ לְחַיִּים לְשִׂמְחָה וּלְשָׁלוֹם, "},
+            {"kind": "instruction", "en": "If one intends to return immediately, say:", "text": "<small>[אם דעתו לחזור מיד אומר:</small>"},
+            {"kind": "prayer", "when": "if_returnImmediately", "text": " וְתַחְזִירֵנִי לְשָׁלוֹם] וְתַצִּילֵנוּ מִכַּף כָּל אוֹיֵב וְאוֹרֵב וְלִסְטִים וְחַיּוֹת רָעוֹת בַּדֶּרֶךְ,"},
+            {"kind": "prayer", "text": " וּמִכָּל מִינֵי פֻרְעָנִיּוֹת הַמִּתְרַגְּשׁוֹת וּבָאוֹת לָעוֹלָם וְתִשְׁלַח בְּרָכָה וְהַצְלָחָה בְּכָל מַעֲשֵׂה יָדֵינוּ,"},
+            {"kind": "prayer", "text": " וְתִתְּנֵנוּ לְחֵן וּלְחֶסֶד וּלְרַחֲמִים בְּעֵינֶיךָ וּבְעֵינֵי כָל רֹאֵינוּ,"},
+            {"kind": "prayer", "text": " וְתִגְמְלֵינוּ חֲסָדִים טוֹבִים וְתִשְׁמַע קוֹל תַּחֲנוּנֵינוּ,"},
+            {"kind": "prayer", "text": " כִּי אֵל שֹׁמֵעַ תְּפִלָּה וְתַחֲנוּן אָתָּה: בָּרוּךְ אַתָּה יְהֹוָה,"},
+            {"kind": "prayer", "text": " שׁוֹמֵעַ תְּפִלָה:"}
+          ]},
+          {"ref": "4", "kind": "instruction", "en": "And say three times:", "text": "<small>ואומר ג\"פ:</small> "},
+          {"ref": "5", "kind": "prayer", "text": "<b>וְיַעֲקֹב</b> הָלַךְ לְדַרְכּוֹ וַיִּפְגְּעוּ בוֹ מַלְאֲכֵי אֱלֹהִים: וַיֹּאמֶר יַעֲקֹב כַּאֲשֶׁר רָאָם, מַחֲנֵה אֱלֹהִים זֶה, וַיִּקְרָא שֵׁם הַמָּקוֹם הַהוּא מַחֲנָיִם:"},
+          {"ref": "6", "parts": [
+            {"kind": "instruction", "en": "(Say 30 times:)", "text": "<small><small>(ויאמר ל' פעמים:)</small>"},
+            {"kind": "prayer", "repeat": 30, "text": "</small> <b>לִישׁוּעָתְךָ</b> קִוִּיתִי יְהֹוָה,"},
+            {"kind": "prayer", "repeat": 30, "text": " קִוִּיתִי יְהֹוָה לִישׁוּעָתְךָ,"},
+            {"kind": "prayer", "repeat": 30, "text": " יְהֹוָה לִישׁוּעָתְךָ קִוִּיתִי:"}
+          ]},
+          {"ref": "7", "parts": [
+            {"kind": "instruction", "en": "(Say 6 times:)", "text": "<small><small>(ויאמר ו' פעמים:)</small>"},
+            {"kind": "prayer", "repeat": 6, "text": "</small> <b>וִיהִי</b> נוֹעַם אֲדֹנָי אֱלֹהֵינוּ עָלֵינוּ,"},
+            {"kind": "prayer", "repeat": 6, "text": " וּמַעֲשֵׂה יָדֵינוּ כּוֹנְנָה עָלֵינוּ,"},
+            {"kind": "prayer", "repeat": 6, "text": " וּמַעֲשֵׂה יָדֵינוּ כּוֹנְנֵהוּ:"}
+          ]},
+          {"ref": "8", "parts": [
+            {"kind": "instruction", "en": "(Say 10 times:)", "text": "<small><small>(ויאמר י' פעמים:)</small>"},
+            {"kind": "prayer", "repeat": 10, "text": "</small> <b>יְבָרֶכְךָ</b> יְהֹוָה וְיִשְׁמְרֶךָ: יָאֵר יְהֹוָה פָּנָיו אֵלֶיךָ,"},
+            {"kind": "prayer", "repeat": 10, "text": " וִיחֻנֶּךָּ: יִשָּׂא יְהֹוָה פָּנָיו אֵלֶיךָ,"},
+            {"kind": "prayer", "repeat": 10, "text": " וְיָשֵׂם לְךָ שָׁלוֹם:"}
+          ]},
+          {"ref": "9", "parts": [
+            {"kind": "instruction", "en": "(Say 5 times:)", "text": "<small><small>(ויאמר ה' פעמים:)</small>"},
+            {"kind": "prayer", "repeat": 5, "text": "</small> <b>הַמַּלְאָךְ</b> הַגּוֹאֵל אוֹתִי מִכָּל רָע,"},
+            {"kind": "prayer", "repeat": 5, "text": " יְבָרֵךְ אֶת הַנְּעָרִים,"},
+            {"kind": "prayer", "repeat": 5, "text": " וְיִקָּרֵא בָהֶם שְׁמִי וְשֵׁם אֲבוֹתַי,"},
+            {"kind": "prayer", "repeat": 5, "text": " אַבְרָהָם וְיִצְחָק,"},
+            {"kind": "prayer", "repeat": 5, "text": " וְיִדְגּוּ לָרוֹב בְּקֶרֶב הָאָרֶץ:"}
+          ]},
+          {"ref": "10", "kind": "instruction", "en": "Sign of 15", "text": "<b>סימן לוי\"ה</b>"},
+          {"ref": "11", "parts": [
+            {"kind": "instruction", "en": "(Say 3 times:)", "text": "<small><small>(ויאמר ג\"פ:)</small>"},
+            {"kind": "prayer", "repeat": 3, "text": "</small> <b>וַיִסָּעוּ</b> וַיְהִי חִתַּת אֱלֹהִים עַל הֶעָרִים אֲשֶׁר סְבִיבוֹתֵיהֶם וְלֹא רָדְפוּ אַחֲרֵי בְּנֵי יַעֲקֹב:"}
+          ]},
+          {"ref": "12", "parts": [
+            {"kind": "instruction", "en": "(Say 3 times:)", "text": "<small><small>(ויאמר ג' פעמים:)</small>"},
+            {"kind": "prayer", "repeat": 3, "text": "</small> <b>הַמַּלְאָךְ</b> הַגּוֹאֵל אוֹתִי מִכָּל רָע,"},
+            {"kind": "prayer", "repeat": 3, "text": " יְבָרֵךְ אֶת הַנְּעָרִים,"},
+            {"kind": "prayer", "repeat": 3, "text": " וְיִקָּרֵא בָהֶם שְׁמִי וְשֵׁם אֲבוֹתַי,"},
+            {"kind": "prayer", "repeat": 3, "text": " אַבְרָהָם וְיִצְחָק,"},
+            {"kind": "prayer", "repeat": 3, "text": " וְיִדְגּוּ לָרוֹב בְּקֶרֶב הָאָרֶץ:"}
+          ]},
+          {"ref": "13", "parts": [
+            {"kind": "instruction", "en": "(Say 3 times:)", "text": "<small>(<small>ויאמר ג' פעמים:)</small>"},
+            {"kind": "prayer", "repeat": 3, "text": "</small> <b>לִישׁוּעָתְךָ</b> קִוִּיתִי יְהֹוָה,"},
+            {"kind": "prayer", "repeat": 3, "text": " קִוִּיתִי יְהֹוָה לִישׁוּעָתְךָ,"},
+            {"kind": "prayer", "repeat": 3, "text": " יְהֹוָה לִישׁוּעָתְךָ קִוִּיתִי:"}
+          ]},
+          {"ref": "14", "parts": [
+            {"kind": "instruction", "en": "(Say 3 times:)", "text": "<small><small>(ויאמר ג\"פ:)</small>"},
+            {"kind": "prayer", "repeat": 3, "text": "</small> <b>הִנֵּה</b> אָנֹכִי שֹׁלֵחַ מַלְאָךְ לְפָנֶיךָ לִשְׁמָרְךָ בַּדָּרֶךְ וְלַהֲבִיאֲךָ אֶל הַמָּקוֹם אֲשֶׁר הֲכִינֹתִי:"}
+          ]},
+          {"ref": "15", "parts": [
+            {"kind": "instruction", "en": "(Say 3 times:)", "text": "<small><small>(ויאמר ג' פעמים:)</small>"},
+            {"kind": "prayer", "repeat": 3, "text": "</small> <b>יְבָרֶכְךָ</b> יְהֹוָה וְיִשְׁמְרֶךָ: יָאֵר יְהֹוָה פָּנָיו אֵלֶיךָ,"},
+            {"kind": "prayer", "repeat": 3, "text": " וִיחֻנֶּךָּ: יִשָּׂא יְהֹוָה פָּנָיו אֵלֶיךָ,"},
+            {"kind": "prayer", "repeat": 3, "text": " וְיָשֵׂם לְךָ שָׁלוֹם:"}
+          ]},
+          {"ref": "16", "parts": [
+            {"kind": "instruction", "en": "(Say 7 times:)", "text": "<small><small>(ויאמר ז' פעמים:)</small>"},
+            {"kind": "prayer", "repeat": 7, "text": "</small> <b>וִיהִי</b> נוֹעַם אֲדֹנָי אֱלֹהֵינוּ עָלֵינוּ,"},
+            {"kind": "prayer", "repeat": 7, "text": " וּמַעֲשֵׂה יָדֵינוּ כּוֹנְנָה עָלֵינוּ,"},
+            {"kind": "prayer", "repeat": 7, "text": " וּמַעֲשֵׂה יָדֵינוּ כּוֹנְנֵהוּ:"}
+          ]},
+          {"ref": "17", "kind": "instruction", "en": "One should intend on the verse with 20 letters, 12 words, 10 letters, 3 letters, and the final letter 'Yud-Heh', which is a special name for protection.", "text": "<small>ויכוין בפסוק כ\"י מלאכי\"ו יצו\"ה ל\"ך ס\"ת \"יוהך\" והוא שם מסוגל לשמירה:</small>"},
+          {"ref": "18", "parts": [
+            {"kind": "instruction", "en": "(And say:)", "text": "<small><small>(ואומר:)</small>"},
+            {"kind": "prayer", "text": "</small> <b>אַתָּה</b> סֵתֶר לִי מִצַּר תִּצְּרֵנִי רָנֵּי פַלֵּט תְּסוֹבְבֵנִי סֶלָה: בִּטְחוּ בַיהֹוָה עֲדֵי עַד כִּי בְּיָהּ יְהֹוָה צוּר עוֹלָמִים: יְהֹוָה עֹז לְעַמּוֹ יִתֵּן. יְהֹוָה יְבָרֵךְ אֶת עַמּוֹ בַשָּׁלוֹם: יְהֹוָה צְבָאוֹת עִמָּנוּ. מִשְׂגָּב לָנוּ אֱלֹהֵי יַעֲקֹב סֶלָה: יְהֹוָה צְבָאוֹת אַשְׁרֵי אָדָם בֹּטֵחַ בָּךְ."}
+          ]},
+          {"ref": "19", "parts": [
+            {"kind": "instruction", "en": "(Say 3 times:)", "text": "<small><small>(ויאמר ג\"פ:)</small>"},
+            {"kind": "prayer", "repeat": 3, "text": "</small> <b>יְהֹוָה</b> הוֹשִׁיעָה הַמֶּלֶךְ <b>יַ</b>עֲנֵנוּ <b>בְ</b>יוֹם <b>קָ</b>רְאֵנוּ: "},
+            {"kind": "instruction", "en": "(Intend the acrostic 'Yud-Beit-Kuf')", "text": "<small>(ויכוין בר\"ת \"יב\"ק\")</small>"},
+            {"kind": "prayer", "text": ":"}
+          ]},
+          {"ref": "20", "kind": "prayer", "text": "<b>שִׁיר לַמַּעֲלוֹת,</b> אֶשָּׂא עֵינַי אֶל הֶהָרִים, מֵאַיִן יָבֹא עֶזְרִי: עֶזְרִי מֵעִם יְהֹוָה עֹשֵׂה שָׁמַיִם וָאָרֶץ: אַל יִתֵּן לַמּוֹט רַגְלֶךָ. אַל יָנוּם שֹׁמְרֶךָ: הִנֵּה לֹא יָנוּם וְלֹא יִישָׁן, שׁוֹמֵר יִשְׂרָאֵל: יְהֹוָה שֹׁמְרֶךָ. יְהֹוָה צִלְּךָ עַל יַד יְמִינֶךָ: יוֹמָם הַשֶּׁמֶשׁ לֹא יַכֶּכָּה. וְיָרֵחַ בַּלָּיְלָה: יְהֹוָה יִשְׁמָרְךָ מִכָּל רָע, יִשְׁמֹר אֶת נַפְשֶׁךָ: יְהֹוָה יִשְׁמָר צֵאתְךָ וּבוֹאֶךָ, מֵעַתָּה וְעַד עוֹלָם:"},
+          {"ref": "21", "parts": [
+            {"kind": "instruction", "en": "(And say:)", "text": "<small><small>(ואומר:)</small>"},
+            {"kind": "prayer", "text": "</small> <b>מִגְדַּל</b> עֹז שֵׁם יְהֹוָה בּוֹ יָרוּץ צַדִּיק וְנִשְׂגָּב: בְּשֵׁם יְהֹוָה אֱלֹהֵי יִשְׂרָאֵל. מִימִינִי מִיכָאֵל. וּמִשְּׂמֹאלִי גַבְרִיאֵל,"},
+            {"kind": "prayer", "text": " וּמִלְּפָנַי אוֹרִיאֵל,"},
+            {"kind": "prayer", "text": " וּמֵאֲחוֹרַי רְפָאֵל,"},
+            {"kind": "prayer", "text": " וְעַל רֹאשִׁי שְׁכִינַת אֵל:"}
+          ]},
+          {"ref": "22", "kind": "instruction", "en": "(And go on his way in peace:)", "text": "<small><small>(וילך לדרכו לשלום:)</small></small>"},
+          {"ref": "23", "kind": "instruction", "en": "One who enters a city should say this before entering:", "text": "<small>הנכנס לכרך יאמר זה קודם שנכנס:</small>"},
+          {"ref": "24", "kind": "prayer", "text": "<b>יְהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, שֶׁתַּכְנִיסֵנִי לִכְּרַךְ זֶה לְשָׁלוֹם:"},
+          {"ref": "25", "kind": "instruction", "en": "One who entered in peace should say:", "text": "<small>נכנס בשלום יאמר:</small>"},
+          {"ref": "26", "kind": "prayer", "text": "<b>מוֹדֶה</b> אֲנִי לְפָנֶיךָ יְהֹוָה אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, שֶׁהִכְנַסְתַּנִי לִכְּרַךְ זֶה לְשָׁלוֹם:"},
+          {"ref": "27", "kind": "instruction", "en": "One who wishes to leave the city should say:", "text": "<small>בקש לצאת מהכרך יאמר:</small>"},
+          {"ref": "28", "kind": "prayer", "text": "<b>יְהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, שֶׁתּוֹצִיאֵנִי מִכְּרַךְ זֶה לְשָׁלוֹם:"},
+          {"ref": "29", "kind": "instruction", "en": "One who left in peace should say:", "text": "<small>יצא משם בשלום יאמר:</small>"},
+          {"ref": "30", "kind": "prayer", "text": "<b>מוֹדֶה</b> אֲנִי לְפָנֶיךָ יְהֹוָה אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, שֶׁהוֹצֵאתָנִי מִכְּרַךְ זֶה לְשָׁלוֹם, וּכְשֵׁם שֶׁהוֹצֵאתָנִי לְשָׁלוֹם, כֵּן תּוֹלִיכֵנִי לְשָׁלוֹם, וְתִסְמְכֵנִי לְשָׁלוֹם, וְתַצְעִידֵנוּ לְשָׁלוֹם, וְתַצִּילֵנוּ מִכַּף כָּל אוֹיֵב וְאוֹרֵב וְלִסְטִים וְחַיּוֹת רָעוֹת בַּדֶּרֶךְ, וּמִכָּל מִינֵי פֻרְעָנִיּוֹת הַמִּתְרַגְּשׁוֹת וּבָאוֹת לָעוֹלָם וְתִשְׁלַח בְּרָכָה וְהַצְלָחָה בְּכָל מַעֲשֹה יָדֵינוּ, וְתִתְּנֵנוּ לְחֵן וּלְחֶסֶד וּלְרַחֲמִים בְּעֵינֶיךָ וּבְעֵינֵי כָל רֹאֵינוּ, וְתִגְמְלֵינוּ חֲסָדִים טוֹבִים וְתִשְׁמַע קוֹל תְּפִלָּתֵנוּ. כִּי אַתָּה שׁוֹמֵעַ תְּפִלַּת כָּל פֶּה: בָּרוּךְ אַתָּה יְהֹוָה, שׁוֹמֵעַ תְּפִלָה:"},
+          {"ref": "31", "kind": "heading", "en": "Prayer for those crossing seas and rivers by the Ramban:", "text": "<small><b>תפילה לעוברי ימים ונהרות מהרמב\"ן זצ\"ל:</b></small>"},
+          {"ref": "32", "parts": [
+            {"kind": "prayer", "text": "<b>יְהִי</b> רָצוֹן מִלְפָנֶיךָ יְהֹוָה אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי,"},
+            {"kind": "prayer", "text": " אַבְרָהָם יִצְחָק וְיַעֲקֹב,"},
+            {"kind": "prayer", "text": " הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא הַמֻּכְתָּר בְכֶתֶר הָאֱמוּנָה,"},
+            {"kind": "prayer", "text": " שֶׁתַּעֲשֶׂה לְמַעַן קְדֻשַּׁת שְׁלֹשׁ עֶשְׂרֵה מִדּוֹתֶיךָ שֶׁל רַחֲמִים,"},
+            {"kind": "prayer", "text": " וּלְמַעַן קְדֻשַּׁת שַׁעֲרֵי הָרַחֲמִים,"},
+            {"kind": "prayer", "text": " וּלְמַעַן זְכוּת יְשֵנֵי חֶבְרוֹן אַבְרָהָם יִצְחָק וְיַעֲקֹב אֲהוּבֶיךָ וּתְמִימֶיךָ,"},
+            {"kind": "prayer", "text": " וּלְמַעַן זְכוּת עֲקֵדָתוֹ שֶׁל יִצְחָק יְחִידֶךָ שֶׁנֶּעֱקַד עַל גַּב הַמִּזְבֵּחַ וְהָיָה עוֹלָה תְמִימָה קְדוֹשָׁה וּטְהוֹרָה. וּלְמַעַן זְכוּתָם וּקְדֻשָּׁתָם וּנְבוּאָתָם שֶׁל שְׁמוּאֵל הַנָּבִיא וְשֶׁל אֵלִיָּהוּ הַנָּבִיא וְשֶׁל אֱלִישָׁע הַנָּבִיא נְבִיאֶיךָ נְבִיאֵי אֶמֶת,"},
+            {"kind": "prayer", "text": " וּלְּמַעַן זְכוּת כָּל הַצַּדִּיקִים וְהַחֲסִידִים שֶׁהָיוּ בְּכָל דּוֹר מְגִנִּים עַל יִשְׂרָאֵל,"},
+            {"kind": "prayer", "text": " תַּעֲמִיד הַיָּם "},
+            {"kind": "prayer", "when": "if_crossingRiver", "text": "<small>(הַנָּהָר)</small>"},
+            {"kind": "prayer", "text": " מִזַּעְפּוֹ,"},
+            {"kind": "prayer", "text": " וְיֶחֱשׁוּ גַלָּיו,"},
+            {"kind": "prayer", "text": " וְתַעֲשֶׂה רְצוֹן לִבֵּנוּ וְתוֹלִיכֵנוּ מְהֵרָה אֶל מְחוֹז חֶפְצֵנוּ לְטוֹבָה,"},
+            {"kind": "prayer", "text": " כַּאֲשֶׁר בְּיָדְךָ לַעֲשׂוֹת,"},
+            {"kind": "prayer", "text": " וְתִשְׁמַע תְּפִלָּתֵנוּ וְתַאֲזִין תְּחִנָּתֵנוּ וַעֲנֵנוּ בְּשָׁעָה הַזֹּאת שֶׁאָנוּ מִתְפַּלְּלִים וּמִתְחַנְּנִים לְפָנֶיךָ,"},
+            {"kind": "prayer", "text": " וְתוֹלִיכֵנוּ בְּנַחַת רוּחַ טוֹב כְּפִי הַצֹּרֶךְ,"},
+            {"kind": "prayer", "text": " וְתִשְׁמְרֵנוּ מֵהֲמוֹן גַּלִּים וּמִשְּׁאוֹן מִשְׁבְּרֵי יָם,"},
+            {"kind": "prayer", "text": " מֵרוּחַ סֹעָה מִסַּעַר וּמִצַּעַר וּמִבִּלְבּוּל עִתִּים וּמֵחִלּוּף זְמַנִּים וּמֵהַבְּרִיּוֹת הָרָעוֹת הַגְּדֵלוֹת בַּיָּם וּבַיַּבָּשָׁה,"},
+            {"kind": "prayer", "text": " וּמִכָּל צָרָה וּמִכָּל הֶפְסֵד. וְאַל יְעַכְּבֵנוּ לֹא מַשְֹׁטִין וְלֹא מֵצַּר וְלֹא מַזִּיק וְלֹא מְבַלְבֵּל וְלֹא מַפְחִיד וְלֹא מְאַיֵּם. וְתוֹצִיא רוּחַ טוֹב מֵאוֹצְרוֹתֶיךָ לְהַנְהִיג הַסְּפִינָה,"},
+            {"kind": "prayer", "text": " וְחַזֵּק כָּל תּוֹפְשֵׂי מָשׁוֹט וּמַנְהִיגֶיהָ וּמַלָּחֶיהָ וְחוֹבְלֶיהָ וְאָמָנֶיהָ שֶׁיִּנְהֲגוּ אוֹתָהּ כָּרָאוּי,"},
+            {"kind": "prayer", "text": " בְּלֹא עַצְלוּת וּבְלֹא חִשּׁוּל וּבְלֹא תִשּׁוּת כֹּחַ,"},
+            {"kind": "prayer", "text": " וְהַגִּיעֵנוּ אֶל מְחוֹז חֶפְצֵנוּ בְּלִי שׁוּם הֶזֵּק וּבְלִי שׁוּם צַעַר וּבְלִי שׁוּם פַּחַד,"},
+            {"kind": "prayer", "text": " כִּי אַתָּה מוֹשֵׁל בְּגֵאוּת הַיָּם בְּשׂוֹא גַלָּיו אַתָּה תְשַׁבְּחֵם. הָקֵם סְעָרָה לִדְמָמָה וְיֶחֱשׁוּ גַלָּיו. שָׁמְרָה נַפְשִׁי וְהַצִּילֵנִי,"},
+            {"kind": "prayer", "text": " אַל אֵבוֹשׁ כִּי חָסִיתִי בָךְ. וַאֲנַחְנוּ נְבָרֵךְ יָהּ מֵעַתָּה וְעַד עוֹלָם,"},
+            {"kind": "prayer", "text": " הַלְלוּיָהּ: "}
+          ]},
+          {"ref": "33", "kind": "instruction", "en": "And continue with 'Yehi Ratzon' as in the order of the Traveler's Prayer.", "text": "<small>וממשיך יהי רצון כ\"סדר תפילת הדרך\":</small>"}
+        ]
+      }
+    },
+    {
+      "path": "Blessings/Air Traveler's Prayer",
+      "title": "תפילת הדרך לטסים באוירון",
+      "node": "tefillat_haderech",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "heading", "en": "Prayer for the Journey for Air Travelers", "text": "<big><b>תפילת הדרך לטסים באוירון</b></big>"},
+          {"ref": "2", "kind": "instruction", "en": "On an airplane, add this prayer:", "text": "<small><b>באוירון מוסיפים תפילה זו:</b></small>"},
+          {"ref": "3", "kind": "prayer", "text": "<b>וְיְהִי</b> רָצוֹן מִלְפָנֶיךָ שֶׁתִּשְׁמְרֵנוּ מֵרוּחַ סוֹעָה וְסַעַר וּמִצַּעַר. וְתוֹצִיא רוּחַ טוֹב מֵאוֹצְרוֹתֶיךָ לְהַנְהִיג אֶת סְפִינַת הָאֲוִיר, וְחַזֵּק כָּל מַנְהִיגֶיהָ שֶׁיִּנְהֲגוּ אוֹתָהּ כָּרָאוּי וְהַגִּיעֵנוּ אֶל מְחוֹז חֶפְצֵנוּ לְחַיִּים וּלְשָׁלוֹם בְּלִי שׁוּם פַּחַד. שָׁמְרָה נַפְשִׁי וְהַצִּילֵנִי, אַל אֵבוֹשׁ כִּי חָסִיתִי בָּךְ, וַאֲנַחְנוּ נְבָרֵךְ יָהּ מֵעַתָּה וְעַד עוֹלָם הַלְלוּיָהּ:"},
+          {"ref": "4", "kind": "instruction", "en": "Afterwards, say 'And Jacob went on his way' through 'The dwelling of God' as above:", "text": "<small>ואחר כך יאמר <b>ויעקב הלך לדרכו</b> עד <b>שכינת אל</b> כדלעיל:</small>"}
+        ]
+      }
+    },
+    {
+      "path": "Eruv Tavshilin",
+      "title": "סדר ערוב תבשילין",
+      "node": "yomtov.eruv_tavshilin",
+      "service": "none",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "3", "kind": "prayer", "role": "head_of_household", "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר קִדְּ֒שָֽׁנוּ בְּמִצְוֹתָיו וְצִוָּֽנוּ עַל מִצְוַת עֵירוּב:"},
+          {"ref": "4", "kind": "prayer", "role": "head_of_household", "text": "בְּדֵין עֵרוּבָא. יְהֵא שָׁרָא לָנָא. לַאֲפוּיֵי וּלְבַשׁוּלֵי וּלְאַטְמוּנֵי וּלְאַדְלוּקֵי שְׁרָגָא וּלְתַקָנָא וּלְמֶעְבַּד כָּל צָרְכָנָא. מִיוֹמָא טָבָא לְשַׁבַּתָּא. לָנָא וּלְכָל יִשְׂרָאֵל הַדָּרִים בָּעִיר הַזֹּאת:"},
+          {"ref": "8", "kind": "prayer", "role": "head_of_household", "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר קִדְּ֒שָֽׁנוּ בְּמִצְוֹתָיו וְצִוָּֽנוּ עַל מִצְוַת עֵירוּב:"},
+          {"ref": "9", "kind": "prayer", "role": "head_of_household", "text": "בַּהֲדֵין עֵירוּבָא יְהֵא שָׁרָא לָנָא לֵילֵךְ מִמָקוֹם זֶה אַלְפַּיִם אַמָּה לְכָל רוּחַ:"},
+          {"ref": "14", "kind": "prayer", "role": "head_of_household", "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר קִדְּ֒שָֽׁנוּ בְּמִצְוֹתָיו וְצִוָּֽנוּ עַל מִצְוַת עֵירוּב:"},
+          {"ref": "15", "kind": "prayer", "role": "head_of_household", "text": "בַּהֲדֵין עֵירוּבָא יְהֵא שָׁרָא לָנָא לְאַפּוּקֵי וּלְעַיוּלֵי. מִבָּתִּים לֶחָצֵר. וּמֵחָצֵר לְבָתִּים. וּמִבַּיִת לְבַיִת. לָֽנוּ וּלְכָל יִשְׂרָאֵל. הַדָּרִים בֶּחָצֵר הַזֶּה:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "2", "translates": [], "kind": "instruction", "en": "When Yom Tov occurs on Thursday and Friday, an eiruv tavshilin must be prepared on the preceding Wednesday. The head of the family should take bread or matzoh and an item of cooked food such as meat or fish, put them on a plate and say the following berachah:", "gloss": "Preparation for Eruv Tavshilin", "text": "<small>When Yom Tov occurs on Thursday and Friday, an eiruv tavshilin must be prepared on the preceding Wednesday. The head of the family should take bread or matzoh and an item of cooked food such as meat or fish, put them on a plate and say the following berachah:</small>"},
+          {"ref": "3", "translates": ["3"], "parts": [
+            {"kind": "instruction", "en": "Blessed are You, Adonoy, our God, King of the Universe Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": "Blessed are You,"},
+            {"kind": "instruction", "en": "Blessed are You, Adonoy, our God, King of the Universe Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": " Adonoy,"},
+            {"kind": "instruction", "en": "Blessed are You, Adonoy, our God, King of the Universe Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": " our God,"},
+            {"kind": "instruction", "en": "Blessed are You, Adonoy, our God, King of the Universe Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": " King of the Universe Who sanctified us with His commandments and commanded us concerning the mitzvah of "},
+            {"kind": "instruction", "en": "Blessed are You, Adonoy, our God, King of the Universe Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": "<i>eiruv.</i>"}
+          ]},
+          {"ref": "4", "translates": ["4"], "parts": [
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to bake, cook, keep dishes warm, to kindle a light (from an existing flame), and to prepare and do all our necessities on the Festival for the needs of Shabbos, for us and for all Jews who live in this city. The food of the eiruv should be eaten at one of the Shabbos meals.", "text": "By means of this "},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to bake, cook, keep dishes warm, to kindle a light (from an existing flame), and to prepare and do all our necessities on the Festival for the needs of Shabbos, for us and for all Jews who live in this city. The food of the eiruv should be eaten at one of the Shabbos meals.", "text": "<i>eiruv</i>"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to bake, cook, keep dishes warm, to kindle a light (from an existing flame), and to prepare and do all our necessities on the Festival for the needs of Shabbos, for us and for all Jews who live in this city. The food of the eiruv should be eaten at one of the Shabbos meals.", "text": " it will be permissible for us to bake,"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to bake, cook, keep dishes warm, to kindle a light (from an existing flame), and to prepare and do all our necessities on the Festival for the needs of Shabbos, for us and for all Jews who live in this city. The food of the eiruv should be eaten at one of the Shabbos meals.", "text": " cook,"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to bake, cook, keep dishes warm, to kindle a light (from an existing flame), and to prepare and do all our necessities on the Festival for the needs of Shabbos, for us and for all Jews who live in this city. The food of the eiruv should be eaten at one of the Shabbos meals.", "text": " keep dishes warm,"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to bake, cook, keep dishes warm, to kindle a light (from an existing flame), and to prepare and do all our necessities on the Festival for the needs of Shabbos, for us and for all Jews who live in this city. The food of the eiruv should be eaten at one of the Shabbos meals.", "text": "<sup class=\"footnote-marker\">1</sup>"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to bake, cook, keep dishes warm, to kindle a light (from an existing flame), and to prepare and do all our necessities on the Festival for the needs of Shabbos, for us and for all Jews who live in this city. The food of the eiruv should be eaten at one of the Shabbos meals.", "text": "<i class=\"footnote\">﻿“Keeping dishes warm” means that we are permitted to place cooked foods on a covered stove in order to preserve their heat. An example of this is the traditional Cholent. Kindling of light refers to the transferral of fire from an existing fire.</i>"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to bake, cook, keep dishes warm, to kindle a light (from an existing flame), and to prepare and do all our necessities on the Festival for the needs of Shabbos, for us and for all Jews who live in this city. The food of the eiruv should be eaten at one of the Shabbos meals.", "text": " to kindle a light (from an existing flame),"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to bake, cook, keep dishes warm, to kindle a light (from an existing flame), and to prepare and do all our necessities on the Festival for the needs of Shabbos, for us and for all Jews who live in this city. The food of the eiruv should be eaten at one of the Shabbos meals.", "text": " and to prepare and do all our necessities on the Festival for the needs of Shabbos,"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to bake, cook, keep dishes warm, to kindle a light (from an existing flame), and to prepare and do all our necessities on the Festival for the needs of Shabbos, for us and for all Jews who live in this city. The food of the eiruv should be eaten at one of the Shabbos meals.", "text": " for us and for all Jews<sup class=\"footnote-marker\">2</sup>"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to bake, cook, keep dishes warm, to kindle a light (from an existing flame), and to prepare and do all our necessities on the Festival for the needs of Shabbos, for us and for all Jews who live in this city. The food of the eiruv should be eaten at one of the Shabbos meals.", "text": "<i class=\"footnote\">The Rav of the community usually includes the community in his eiruv. This can be done however by anyone. It is done by handing over the cooked food to another person through whom he grants a share of the food (of the eiruv) to the entire community. This person raises the eiruv a tefach (handsbreadth) and returns it to the one making the eiruv.</i>"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to bake, cook, keep dishes warm, to kindle a light (from an existing flame), and to prepare and do all our necessities on the Festival for the needs of Shabbos, for us and for all Jews who live in this city. The food of the eiruv should be eaten at one of the Shabbos meals.", "text": " who live in this city.<br><br><small>The food of the eiruv should be eaten at one of the Shabbos meals.</small>"}
+          ]},
+          {"ref": "6", "translates": ["8", "9"], "parts": [
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for me to walk from this place two thousand amos in each direction. You may place one eiruv for many Shabbosos, but you should put it in a safe place, so that it will not be lost or spoiled.", "text": "By means of this "},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for me to walk from this place two thousand amos in each direction. You may place one eiruv for many Shabbosos, but you should put it in a safe place, so that it will not be lost or spoiled.", "text": "<i>eiruv</i>"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for me to walk from this place two thousand amos in each direction. You may place one eiruv for many Shabbosos, but you should put it in a safe place, so that it will not be lost or spoiled.", "text": " it will be permissible for me to walk from this place two thousand "},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for me to walk from this place two thousand amos in each direction. You may place one eiruv for many Shabbosos, but you should put it in a safe place, so that it will not be lost or spoiled.", "text": "<i>amos</i>"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for me to walk from this place two thousand amos in each direction. You may place one eiruv for many Shabbosos, but you should put it in a safe place, so that it will not be lost or spoiled.", "text": " in each direction.”<br><small><small>You may place one "},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for me to walk from this place two thousand amos in each direction. You may place one eiruv for many Shabbosos, but you should put it in a safe place, so that it will not be lost or spoiled.", "text": "<i>eiruv</i>"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for me to walk from this place two thousand amos in each direction. You may place one eiruv for many Shabbosos, but you should put it in a safe place, so that it will not be lost or spoiled.", "text": " for many Shabbosos,"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for me to walk from this place two thousand amos in each direction. You may place one eiruv for many Shabbosos, but you should put it in a safe place, so that it will not be lost or spoiled.", "text": " but you should put it in a safe place,"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for me to walk from this place two thousand amos in each direction. You may place one eiruv for many Shabbosos, but you should put it in a safe place, so that it will not be lost or spoiled.", "text": " so that it will not be lost or spoiled.</small></small>"}
+          ]},
+          {"ref": "7", "translates": [], "parts": [
+            {"kind": "instruction", "en": "On Shabbos and Yom Tov, you are forbidden to go more than 2,000 amos from the place you were at the onset of Shabbos. If you need to walk farther than the Shabbos techum or boundary, you must place an eiruvei techumin (a boundary eiruv) before Shabbos or Yom Tov.", "text": "<small>On Shabbos and Yom Tov,"},
+            {"kind": "instruction", "en": "On Shabbos and Yom Tov, you are forbidden to go more than 2,000 amos from the place you were at the onset of Shabbos. If you need to walk farther than the Shabbos techum or boundary, you must place an eiruvei techumin (a boundary eiruv) before Shabbos or Yom Tov.", "text": " you are forbidden to go more than 2,"},
+            {"kind": "instruction", "en": "On Shabbos and Yom Tov, you are forbidden to go more than 2,000 amos from the place you were at the onset of Shabbos. If you need to walk farther than the Shabbos techum or boundary, you must place an eiruvei techumin (a boundary eiruv) before Shabbos or Yom Tov.", "text": "000 "},
+            {"kind": "instruction", "en": "On Shabbos and Yom Tov, you are forbidden to go more than 2,000 amos from the place you were at the onset of Shabbos. If you need to walk farther than the Shabbos techum or boundary, you must place an eiruvei techumin (a boundary eiruv) before Shabbos or Yom Tov.", "text": "<i>amos</i>"},
+            {"kind": "instruction", "en": "On Shabbos and Yom Tov, you are forbidden to go more than 2,000 amos from the place you were at the onset of Shabbos. If you need to walk farther than the Shabbos techum or boundary, you must place an eiruvei techumin (a boundary eiruv) before Shabbos or Yom Tov.", "text": " from the place you were at the onset of Shabbos. If you need to walk farther than the Shabbos "},
+            {"kind": "instruction", "en": "On Shabbos and Yom Tov, you are forbidden to go more than 2,000 amos from the place you were at the onset of Shabbos. If you need to walk farther than the Shabbos techum or boundary, you must place an eiruvei techumin (a boundary eiruv) before Shabbos or Yom Tov.", "text": "<i>techum</i>"},
+            {"kind": "instruction", "en": "On Shabbos and Yom Tov, you are forbidden to go more than 2,000 amos from the place you were at the onset of Shabbos. If you need to walk farther than the Shabbos techum or boundary, you must place an eiruvei techumin (a boundary eiruv) before Shabbos or Yom Tov.", "text": " or boundary,"},
+            {"kind": "instruction", "en": "On Shabbos and Yom Tov, you are forbidden to go more than 2,000 amos from the place you were at the onset of Shabbos. If you need to walk farther than the Shabbos techum or boundary, you must place an eiruvei techumin (a boundary eiruv) before Shabbos or Yom Tov.", "text": " you must place an "},
+            {"kind": "instruction", "en": "On Shabbos and Yom Tov, you are forbidden to go more than 2,000 amos from the place you were at the onset of Shabbos. If you need to walk farther than the Shabbos techum or boundary, you must place an eiruvei techumin (a boundary eiruv) before Shabbos or Yom Tov.", "text": "<i>eiruvei techumin</i>"},
+            {"kind": "instruction", "en": "On Shabbos and Yom Tov, you are forbidden to go more than 2,000 amos from the place you were at the onset of Shabbos. If you need to walk farther than the Shabbos techum or boundary, you must place an eiruvei techumin (a boundary eiruv) before Shabbos or Yom Tov.", "text": " (a boundary "},
+            {"kind": "instruction", "en": "On Shabbos and Yom Tov, you are forbidden to go more than 2,000 amos from the place you were at the onset of Shabbos. If you need to walk farther than the Shabbos techum or boundary, you must place an eiruvei techumin (a boundary eiruv) before Shabbos or Yom Tov.", "text": "<i>eiruv</i>"},
+            {"kind": "instruction", "en": "On Shabbos and Yom Tov, you are forbidden to go more than 2,000 amos from the place you were at the onset of Shabbos. If you need to walk farther than the Shabbos techum or boundary, you must place an eiruvei techumin (a boundary eiruv) before Shabbos or Yom Tov.", "text": ") before Shabbos or Yom Tov.</small>"}
+          ]},
+          {"ref": "8", "translates": ["14"], "parts": [
+            {"kind": "instruction", "en": "Blessed are You, Adonoy our God, King of the Universe, Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": "Blessed are You,"},
+            {"kind": "instruction", "en": "Blessed are You, Adonoy our God, King of the Universe, Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": " Adonoy our God,"},
+            {"kind": "instruction", "en": "Blessed are You, Adonoy our God, King of the Universe, Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": " King of the Universe,"},
+            {"kind": "instruction", "en": "Blessed are You, Adonoy our God, King of the Universe, Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": " Who sanctified us with His commandments and commanded us concerning the mitzvah of "},
+            {"kind": "instruction", "en": "Blessed are You, Adonoy our God, King of the Universe, Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": "<i>eiruv.</i>"}
+          ]},
+          {"ref": "9", "translates": ["15"], "parts": [
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for me to walk from this place two thousand amos in each direction.", "text": "“By means of this "},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for me to walk from this place two thousand amos in each direction.", "text": "<i>eiruv</i>"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for me to walk from this place two thousand amos in each direction.", "text": " it will be permissible for me to walk from this place two thousand "},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for me to walk from this place two thousand amos in each direction.", "text": "<i>amos</i>"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for me to walk from this place two thousand amos in each direction.", "text": " in each direction.”"}
+          ]},
+          {"ref": "10", "translates": [], "parts": [
+            {"kind": "instruction", "en": "Two or more Jews who share a courtyard or hall, each of them living in his own apartment, are forbidden on Shabbos to carry from their apartment into the courtyard or hall, or from the courtyard or hall into their apartment. It is therefore considered a mitzvah for them to make an eiruvei chatzeiros.", "text": "<small>Two or more Jews who share a courtyard or hall,"},
+            {"kind": "instruction", "en": "Two or more Jews who share a courtyard or hall, each of them living in his own apartment, are forbidden on Shabbos to carry from their apartment into the courtyard or hall, or from the courtyard or hall into their apartment. It is therefore considered a mitzvah for them to make an eiruvei chatzeiros.", "text": " each of them living in his own apartment,"},
+            {"kind": "instruction", "en": "Two or more Jews who share a courtyard or hall, each of them living in his own apartment, are forbidden on Shabbos to carry from their apartment into the courtyard or hall, or from the courtyard or hall into their apartment. It is therefore considered a mitzvah for them to make an eiruvei chatzeiros.", "text": " are forbidden on Shabbos to carry from their apartment into the courtyard or hall,"},
+            {"kind": "instruction", "en": "Two or more Jews who share a courtyard or hall, each of them living in his own apartment, are forbidden on Shabbos to carry from their apartment into the courtyard or hall, or from the courtyard or hall into their apartment. It is therefore considered a mitzvah for them to make an eiruvei chatzeiros.", "text": " or from the courtyard or hall into their apartment. It is therefore considered a mitzvah for them to make an "},
+            {"kind": "instruction", "en": "Two or more Jews who share a courtyard or hall, each of them living in his own apartment, are forbidden on Shabbos to carry from their apartment into the courtyard or hall, or from the courtyard or hall into their apartment. It is therefore considered a mitzvah for them to make an eiruvei chatzeiros.", "text": "<i>eiruvei chatzeiros.</i></small>"}
+          ]},
+          {"ref": "11", "translates": [], "kind": "instruction", "en": "The procedure is as follows. Erev Shabbos, one of the tenants takes a whole loaf of bread and confers a share of it to all tenants of the courtyard by handing it to another tenant and saying in whatever language he understands: Take this loaf of bread and acquire it on behalf of all the Jews who live in this courtyard.", "text": "<small>The procedure is as follows. Erev Shabbos, one of the tenants takes a whole loaf of bread and confers a share of it to all tenants of the courtyard by handing it to another tenant and saying in whatever language he understands:</small><br><br>“Take this loaf of bread and acquire it on behalf of all the Jews who live in this courtyard.”"},
+          {"ref": "12", "translates": [], "parts": [
+            {"kind": "instruction", "en": "This person then takes the loaf and raises it one tefach. The one who is making the eiruv takes it from him and recites the following berachah:", "text": "<small>This person then takes the loaf and raises it one "},
+            {"kind": "instruction", "en": "This person then takes the loaf and raises it one tefach. The one who is making the eiruv takes it from him and recites the following berachah:", "text": "<i>tefach.</i>"},
+            {"kind": "instruction", "en": "This person then takes the loaf and raises it one tefach. The one who is making the eiruv takes it from him and recites the following berachah:", "text": " The one who is making the "},
+            {"kind": "instruction", "en": "This person then takes the loaf and raises it one tefach. The one who is making the eiruv takes it from him and recites the following berachah:", "text": "<i>eiruv</i>"},
+            {"kind": "instruction", "en": "This person then takes the loaf and raises it one tefach. The one who is making the eiruv takes it from him and recites the following berachah:", "text": " takes it from him and recites the following berachah:</small>"}
+          ]},
+          {"ref": "14", "translates": ["14"], "parts": [
+            {"kind": "instruction", "en": "Blessed are You, Adonoy our God, King of the Universe, Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": "Blessed are You,"},
+            {"kind": "instruction", "en": "Blessed are You, Adonoy our God, King of the Universe, Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": " Adonoy our God,"},
+            {"kind": "instruction", "en": "Blessed are You, Adonoy our God, King of the Universe, Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": " King of the Universe,"},
+            {"kind": "instruction", "en": "Blessed are You, Adonoy our God, King of the Universe, Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": " Who sanctified us with His commandments and commanded us concerning the mitzvah of "},
+            {"kind": "instruction", "en": "Blessed are You, Adonoy our God, King of the Universe, Who sanctified us with His commandments and commanded us concerning the mitzvah of eiruv.", "text": "<i>eiruv.</i>"}
+          ]},
+          {"ref": "15", "translates": ["15"], "parts": [
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to take out and to bring in from the houses into the courtyard and from the courtyard into the houses and from one house into another, for all the Jews who live in the houses of the courtyard.", "text": "“By means of this "},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to take out and to bring in from the houses into the courtyard and from the courtyard into the houses and from one house into another, for all the Jews who live in the houses of the courtyard.", "text": "<i>eiruv</i>"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to take out and to bring in from the houses into the courtyard and from the courtyard into the houses and from one house into another, for all the Jews who live in the houses of the courtyard.", "text": " it will be permissible for us to take out and to bring in from the houses into the courtyard and from the courtyard into the houses and from one house into another,"},
+            {"kind": "instruction", "en": "By means of this eiruv it will be permissible for us to take out and to bring in from the houses into the courtyard and from the courtyard into the houses and from one house into another, for all the Jews who live in the houses of the courtyard.", "text": " for all the Jews who live in the houses of the courtyard.”"}
+          ]}
+        ]
+      }
+    },
+    {
+      "path": "Shabbat Candle Lighting",
+      "title": "סדר הדלקת נרות שבת",
+      "node": "shabbat.candle_lighting",
+      "service": "none",
+      "he": {
+        "version": "Torat Emet 357",
+        "segs": [
+          {"ref": "1", "kind": "instruction", "en": "One must light in every room used on Shabbat and Yom Tov. However, the primary obligation is in the room where the meal is eaten. The blessing on this candle exempts all other candles in the house.", "text": "<small>צריכים להדליק בכל חדר וחדר שהולך שם בשבת ויו\"ט. אבל עיקר מצות הדלקת הנרות הוא בחדר שאוכלים שם הסעודה. ועל נר זה מברכין ופוטרין בזה את כל הנרות שבכל החדרים:</small>"},
+          {"ref": "2", "kind": "instruction", "en": "For Shabbat:", "gloss": "Said when lighting candles for Shabbat only", "text": "<small>לשבת:</small>"},
+          {"ref": "3", "kind": "prayer", "role": "individual", "voice": "aloud", "gestures": ["cover_eyes"], "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת:"},
+          {"ref": "4", "kind": "instruction", "en": "For Yom Tov:", "gloss": "Said when lighting candles for Yom Tov only", "text": "<small>ליום טוב:</small>"},
+          {"ref": "5", "kind": "prayer", "role": "individual", "voice": "aloud", "gestures": ["cover_eyes"], "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל יוֹם טוֹב:"},
+          {"ref": "6", "kind": "instruction", "en": "For Yom Tov that falls on Shabbat:", "gloss": "Said when lighting candles for Yom Tov that coincides with Shabbat", "text": "<small>ליום טוב שחל בשבת:</small>"},
+          {"ref": "7", "kind": "prayer", "role": "individual", "voice": "aloud", "gestures": ["cover_eyes"], "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת וְשֶׁל יוֹם טוֹב:"},
+          {"ref": "8", "kind": "instruction", "en": "For Yom Kippur:", "gloss": "Said when lighting candles for Yom Kippur only", "text": "<small>ליום הכפורים:</small>"},
+          {"ref": "9", "kind": "prayer", "role": "individual", "voice": "aloud", "gestures": ["cover_eyes"], "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל יוֹם הַכִּפּוּרִים:"},
+          {"ref": "10", "kind": "instruction", "en": "For Yom Kippur that falls on Shabbat:", "gloss": "Said when lighting candles for Yom Kippur that coincides with Shabbat", "text": "<small>ליום הכפורים שחל בשבת:</small>"},
+          {"ref": "11", "kind": "prayer", "role": "individual", "voice": "aloud", "gestures": ["cover_eyes"], "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת וְשֶׁל יוֹם הַכִּפּוּרִים:"},
+          {"ref": "12", "parts": [
+            {"kind": "instruction", "en": "For Yom Tov (except the 7th and 8th of Pesach):", "gloss": "Said when lighting candles for Yom Tov, excluding the last two days of Pesach", "text": "<small>ליו\"ט <small>(חוץ מז' וח' של פסח)</small>"},
+            {"kind": "instruction", "en": "For Yom Tov (except the 7th and 8th of Pesach):", "gloss": "Said when lighting candles for Yom Tov, excluding the last two days of Pesach", "text": ":</small>"}
+          ]},
+          {"ref": "13", "kind": "prayer", "role": "individual", "voice": "aloud", "gestures": ["cover_eyes"], "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה:"},
+          {"ref": "14", "kind": "prayer", "role": "individual", "voice": "aloud", "text": "<b>יְהִי רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ שֶׁיִּבָּנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ. וְתֵן חֶלְקֵנוּ בְּתוֹרָתֶךָ: וְשָׁם נַעֲבָדְךָ בְּיִרְאָה כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיּוֹת: וְעָרְבָה לַיהֹוָה מִנְחַת יְהוּדָה וִירוּשָׁלָיִם כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיּוֹת:</b>"},
+          {"ref": "15", "kind": "instruction", "en": "Prayer before lighting Shabbat and Yom Tov candles:", "text": "<small>תְּפִלָּה לִפְנֵי הַדְלָקַת נֵר שַׁבָּת וְיוֹם טוֹב:</small>"},
+          {"ref": "16", "parts": [
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": "<small><b>אֲנִי</b><small> <small>(פב\"פ)</small>"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " </small>מְנַדֶּרֶת אֶת הַמַּטְבֵּעוֹת הַלָּלוּ לְקֻפַּת רַבִּי מֵאִיר בַּעַל הַנֵּס. לִכְבוֹד אֲבוֹתֵינוּ הַקְּדוֹשִׁים אַבְרָהָם יִצְחָק וְיַעֲקֹב וְאִמּוֹתֵינוּ שָׂרָה רִבְקָה רָחֵל וְלֵאָה. וּלְנִשְׁמַת רַבִּי מֵאִיר בַּעַל הַנֵּס. זְכוּתָם תַּעֲמֹד לָנוּ וּלְכָל יִשְׂרָאֵל שֶׁתִּתְקַבֵּל תְּפִלָּתִי לִפְנֵי הַשֵּׁם יִתְבָּרַךְ אֱלָקָא דְמֵאִיר עֲנֵנִי וּתְבָרֵךְ אוֹתִי. אֶת בַּעֲלִי וְאֶת בָּנַי וּבְנוֹתַי. בִּבְרִיאוּת וְחִזּוּק הַגּוּף בַּתּוֹרָה וּבְיִרְאַת שָׁמַיִם. וְתַשְׁפִּיעַ עָלֵינוּ שֶׁפַע בְּרָכָה חַיִּים טוֹבִים וְשָׁלוֹם וּפַרְנָסָה טוֹבָה וְהַצְלָחָה וַאֲרִיכַת יָמִים וְשָׁנִים וְתִשְׁמְרֵנוּ מִכָּל מִינֵי מַחֲלוֹת וּמִקְרִים רָעִים רח\"ל. וּשְׁלַח רְפוּאָה שְׁלֵמָה לְכָל חוֹלֵי עַמְּךָ יִשְׂרָאֵל"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": "<small> <small>(וּבִפְרָט לַחוֹלֶה פּב\"ב)</small>"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " </small>וְנִזְכֶּה לִיְשׁוּעוֹת וְלִרְאוֹת בְּנֶחָמַת צִיּוֹן וִירוּשָׁלַיִם וּבְבִנְיַן בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ אָמֵן:</small>"}
+          ]},
+          {"ref": "17", "kind": "prayer", "role": "individual", "voice": "aloud", "text": "<small><b>יִהְיוּ</b> לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ. יְהֹוָה צוּרִי וְגוֹאֲלִי. וַאֲנִי תְפִלָּתִי לְךָ יְהֹוָה עֵת רָצוֹן אֱלֹהִים בְּרָב חַסְדֶּךָ עֲנֵנִי בֶאֱמֶת יִשְׁעֶךָ:</small><small></small>"},
+          {"ref": "18", "kind": "instruction", "en": "Prayer for candle lighting (Yiddish):", "text": "<small>תְּפִלָּה פַאר לִיכְט בֶּענְטְשִׁין:</small>"},
+          {"ref": "19", "parts": [
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": "<small><b>אִיךְ</b><small> <small>(פב\"פ)</small>"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " </small>בִּין מְנַדֵּר דִי מַטְבֵּעוֹת פַאר קֻפַּת רַבִּי מֵאִיר בַּעַל הַנֵּס אוּן פוּן וֶועגְען דֶעם כָּבוֹד פוּן אוּנְזֶערֶע הַיְילִיגֶע עֶלְטֶערִין אַבְרָהָם יִצְחָק וְיַעֲקֹב שָׂרָה רִבְקָה רָחֵל וְלֵאָה. אוּן פוּן וֶועגְען נִשְׁמַת רַבִּי מֵאִיר בַּעַל הַנֵּס. זֵייעֶר זְכוּת זָאל אוּנְז בַּיי שְׁטֵיין אַז מַיין תְּפִלָּה זָאל אָנְגֶענוּמֶען וֶוערְען פַאר הַשֵּׁם יִתְבָּרַךְ. אֱלָקָא דְמֵאִיר עֲנֵנִי. זָאלְסְט בֶּעְנְטְשֶׁען מִיר מִיט מַיין מַאן אוּן מַיְינֶע קִינְדֶער מִיט גֶעזוּנְד אוּן קְרַאפְט אוּן תּוֹרָה וְיִרְאַת שָׁמַיִם מִיט שֶׁפַע בְּרָכָה חַיִּים טוֹבִים וְשָׁלוֹם וּפַרְנָסָה טוֹבָה וְהַצְלָחָה וַאֲרִיכַת יָמִים וְשָׁנִים. אוּן אָפְּהִיטְען אוּנְז פוּן אַלֶּע קְרַאנְקְהַיְיטְען. אוּן מִקְרִים רָעִים רח\"ל. שִׁיק אַ רְפוּאָה שְׁלֵמָה פַאר אַלֶּע אִידִישֶּׁע קְרַאנְקֶע בְּתוֹךְ שְׁאָר חוֹלֵי יִשְׂרָאֵל"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": "<small> <small>(אוּן בִּפְרַט לפּב\"פ)</small>"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " </small>אוּן מִיר זָאלְען זוֹכֶה זַיין צוּ דֶער לֶעבְּען יְשׁוּעוֹת וְנֶחָמוֹת. אַז דָאס בֵּית הַמִּקְדָשׁ זָאל גֶעבּוֹיט וֶוערְען בִּמְהֵרָה בְיָמֵינוּ אָמֵן:</small>"}
+          ]},
+          {"ref": "20", "kind": "prayer", "role": "individual", "voice": "aloud", "text": "<small><b>יִהְיוּ</b> לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ. יְהֹוָה צוּרִי וְגוֹאֲלִי. וַאֲנִי תְפִלָּתִי לְךָ יְהֹוָה עֵת רָצוֹן אֱלֹהִים בְּרָב חַסְדְּךָ עֲנֵנִי בֶאֱמֶת יִשְׁעֶךָ:</small><small></small>"},
+          {"ref": "21", "kind": "instruction", "en": "Prayer for a woman after lighting the candles:", "text": "<small>תפילה לאשה אחר הדלקת הנרות:</small>"},
+          {"ref": "22", "parts": [
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": "<small><b>יְהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי. שֶׁתְּחוֹנֵן אוֹתִי <small>(וְאֶת אִישִׁי וְאֶת בָּנַי וְאֶת אָבִי וְאֶת אִמִּי)</small>"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְאֶת כָּל קְרוֹבַי. וְתִתֶּן לָנוּ וּלְכָל יִשְׂרָאֵל חַיִּים טוֹבִים וַאֲרֻכִּים. וְתִזְכְּרֵנוּ בְזִכְרוֹן טוֹבָה וּבְרָכָה. וְתִפְקְדֵנוּ בִּפְקֻדַּת יְשׁוּעָה וְרַחֲמִים וּתְבָרְכֵנוּ בְּרָכוֹת גְּדוֹלוֹת. וְתַשְׁלִים בָּתֵּינוּ. וְתַשְׁכֵּן שְׁכִינָתְךָ בֵּינֵינוּ. וְזַכֵּנִי לְגַדֵּל בָּנִים וּבְנֵי בָנִים חֲכָמִים וּנְבוֹנִים. אוֹהֲבֵי יְהֹוָה. יִרְאֵי אֱלֹהִים. אַנְשֵׁי אֱמֶת. זֶרַע קֹדֶשׁ בַּיְהֹוָה. דְּבֵקִים וּמְאִירִים אֶת הָעוֹלָם בַּתּוֹרָה וּבְמַעֲשִׂים טוֹבִים וּבְכָל מְלֶאכֶת עֲבוֹדַת הַבּוֹרֵא. אָנָּא שְׁמַע אֶת תְּחִנָּתִי בָּעֵת הַזֹּאת. בִּזְכוּת שָׂרָה וְרִבְקָה וְרָחֵל וְלֵאָה אִמּוֹתֵינוּ. וְהָאֵר נֵרֵנוּ שֶׁלֹּא יִכְבֶּה לְעוֹלָם וָעֶד וְהָאֵר פָּנֶיךָ וְנִוָּשֵׁעָה. אָמֵן:</small>"}
+          ]},
+          {"ref": "23", "kind": "instruction", "en": "Prayer of parents for their children", "text": "<small> <b>תפלת אבות על הבנים</b> </small>"},
+          {"ref": "24", "kind": "instruction", "en": "From the book Beit Tefillah, with slight modifications for a mother praying for her children", "text": "<small>מתוך ספר בית תפילה, בשנויים קלים עבור אם על בניה</small>"},
+          {"ref": "25", "kind": "instruction", "en": "It is good for a woman to say this prayer at a time of favor, such as when lighting Shabbat candles, after separating challah, and when visiting the graves of the righteous. It is especially good to separate money for charity beforehand, and then say:", "text": "<small><small>טוב לאשה לאמר תפלה זו בשעת רצון כגון בהדלקת נרות שבת, אחרי הפרשת חלה, וכן בביקור בקברות צדיקים וכד', ומה טוב שתפריש לפני כן כסף לצדקה ואז תאמר:</small></small>"},
+          {"ref": "26", "parts": [
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": "<small><b>אָנָּא,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": "</b> הָאֵל אָב הָרַחֲמָן,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " יְהִי רָצוֹן שֶׁבִּזְכוּת הַדְלָקַת הַנֵּר,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " <small>(הַפְרָשַׁת הַחַלָּה,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " הַצְּדָקָה אוֹ בִּזְכוּת הַצַּדִּיק)</small>"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " זַכֵּנִי שֶׁיִּתְקַיֵּם זַרְעִי וּלְהוֹלִיד עוֹד בָּנִים וּבָנוֹת,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " זֶרַע שֶׁל קַיָּמָא,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " זֶרַע קֹדֶשׁ לַעֲבוֹדָתְךָ וּלְיִרְאָתֶךָ,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְיִהְיוּ בָּנַי וְכָל יוֹצְאֵי חֲלָצַי וְכָל צֶאֱצָאֵי עַמְךָ יִשְׂרָאֵל תַּלְמִידֵי חֲכָמִים,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " שְׁלֵמִים בְּמִדּוֹת וְדֵעוֹת וּבְכָל מִינֵי שְׁלֵמוּת,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " בַּיְשָׁנִים,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " רַחֲמָנִים,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " גּוֹמְלֵי חֲסָדִים,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְיִהְיֶה לָהֶם לְשׁוֹן לִמּוּדִים וְדַעַת נְכוֹנָה וּמְיֻשֶׁבֶת,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְיִהְיוּ זְהִירִים וּזְרִיזִים בְּמִצְוֹת,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְלֹא יִכְעֲסוּ וְלֹא יַכְעִיסוּךָ,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְלֹא יֶחֱטְאוּ לָךְ וְלֹא לִבְרִיּוֹתֶיךָ,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְיִמְצְאוּ חֵן וְשֵׂכֶל טוֹב בְּעֵינֶיךָ וּבְעֵינֵי בְּרִיּוֹתֶיךָ כָּל יְמֵיהֶם לַעֲבוֹדָתֶךָ,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְיִהְיוּ בָּנֵינוּ עוֹסְקִים בַּתּוֹרָה לִשְׁמָהּ,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " מְלֵאִים יִרְאַת יְהֹוָה וּדְבֵקִים בָּךְ תָּדִיר,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " מַאֲמִינִים בְּלֵב שָׁלֵם בְּכָל הַתּוֹרָה וְדִבְרֵי קַבָּלָה וְדִבְרֵי סוֹפְרִים וּמְקַיְּמִים אוֹתָם,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְיִהְיֶה לָהֶם רֹחַב לֵבָב וְשֵׂכֶל טוֹב לְהָבִין,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וּזְכִירָה טוֹבָה וְחוּשִׂים בְּרִיאִים לַעֲבוֹדָתֶךָ,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְאַהֲבָה וָחֵשֶׁק וְרָצוֹן בְּתוֹרַת יְהֹוָה וּבָה יֶהְגּוּ יוֹמָם וָלָיְלָה,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְלֹא יֵצֵא עֲלֵיהֶם שֵׁם רָע וְדִבָּה רָעָה לְעוֹלָם,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְיִהְיוּ אֲהוּבִים לְמַעְלָה וְנֶחְמָדִים לְמַטָה,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " כָּל רוֹאֵיהֶם יַכִּירוּם כִּי הֵם זֶרַע בֵּרֵךְ יְהֹוָה,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְיִהְיוּ בָּנֵינוּ כִּשְׁתִילֵי זֵיתִים סָבִיב לְשֻׁלְחָנֵנוּ,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְתַאֲרִיךְ שְׁנוֹתַי וּשְׁנוֹת בַּעֲלִי בַּטּוֹב וּבַנְּעִימִים,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְנִזְכֶּה לְגַדֵּל בָּנֵינוּ עַל הַתּוֹרָה וְעַל הָעֲבוֹדָה,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְנִשְׂמַח בְּיוֹצְאֵי חֲלָצֵינוּ בִּרְאוֹתֵנוּ אוֹתָם עוֹשִׂים רְצוֹנָם כִּרְצוֹנָךְ,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " וְתַצִּיל אֶת זַרְעֵנוּ מֵעַיִן הָרָע וּמִיֵּצֵר הָרָע וּמֵחֳלָאִים רָעִים וּמִמִּקְרִים רָעִים וּמֵעֲנִיּוּת וּמִכָּל הָרָעוֹת הַמִּתְרַגְשׁוֹת לָבוֹא בָּעוֹלָם וִיקֻיָּם בָּנוּ מִקְרָא שֶׁכָּתוּב \"אֲשֶׁר בָּנֵינוּ כִּנְטִעִים מְגֻדָּלִים בִּנְעוּרֵיהֶם,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " בְּנוֹתֵינוּ כְזָוִיֹּת מְחֻטָּבוֹת תַּבְנִית הֵיכָל,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " מְזָוֵינוּ מְלֵאִים מְפִיקִים מִזַּן אֶל זָן,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " צֹאנֵנוּ מַאֲלִיפוֹת מְרֻבָּבוֹת בְחוּצוֹתֵינוּ,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " אַלּוּפֵינוּ מְסֻבָּלִים,"},
+            {"kind": "prayer", "role": "individual", "voice": "aloud", "text": " אֵין פֶּרֶץ וְאֵין יוֹצֵאת וְאֵין צְוָחָה בִּרְחֹבֹתֵינוּ\".</small>"}
+          ]},
+          {"ref": "27", "kind": "prayer", "role": "individual", "voice": "aloud", "text": "<small><b>וְלֹא</b> יָמוּשׁ סֵפֶר הַתּוֹרָה מִפִּינוּ וּמִפִּי זַרְעֵנוּ וְזֶרַע זַרְעֵנוּ עַד עוֹלָם, וְיִהְיוּ בָּנֵינוּ מוֹרֵי הוֹרָאוֹת יְשָׁרוֹת בְּיִשְׂרָאֵל וְכָל מַעֲשֵׂיהֶם יִהְיוּ לְשֵׁם שָׁמַיִם, וְיִהְיוּ עֲנָוִים וְסַבְלָנִים, שְׂבֵעִים רָצוֹן וּמְלֵאִים בִּרְכַת יְהֹוָה, לֹא יֵבוֹשׁוּ בָּעוֹלָם הַזֶּה וְלֹא יִכָּלְמוּ לָעוֹלָם הַבָּא.</small>"},
+          {"ref": "28", "kind": "prayer", "role": "individual", "voice": "aloud", "text": "<small><b>אֵל</b> מָלֵא רַחֲמִים זַכֵּנוּ לָנוּ וּלְזַרְעֵנוּ שֶׁנּוֹלִיד בָּנִים וּבָנוֹת וְאַל יָמוּת שׁוּם זַרְעֵנוּ בְּחַיֵּינוּ, וְנִקַּח נָשִׁים לְבָנֵינוּ וְלֹא יָמוּתוּ נְשֵׁיהֶם בְּקֹצֶר שָׁנִים, וְנִזְכֶּה לְהַשִּׂיא אֶת בְּנוֹתֵינוּ לַאֲנָשִׁים מְהֻגָּנִים תַּלְמִידֵי חֲכָמִים וְצַדִּיקִים, וְיַאֲרִיכוּ שְׁנוֹתֵיהֶן עִם בַּעֲלֵיהֶן.</small>"},
+          {"ref": "29", "kind": "prayer", "role": "individual", "voice": "aloud", "text": "<small><b>וִיהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ שֶׁתְּזַוֵּג לְכָל אֶחָד מִבָּנַי אֶת בַּת זוּגוֹ וּלְכָל אַחַת מִבְּנוֹתַי אֶת בֵּן זוּגָהּ הַמְּיֻחָד לְכָל אֶחָד, וְלֹא יִדָּחוּ לִפְנֵי אֲחֵרִים חַס וְשָׁלוֹם, וְיִהְיֶה זִוּוּגָם עוֹלֶה יָפֶה, וְהַשְׁכֵּן בֵּין אִישׁ לְאִשְׁתּוּ אַהֲבָה וְאַחְוָה שָׁלוֹם וְרֵעוּת, וְיִהְיוּ מְבֹרָכִים בְּכָל הַבְּרָכוֹת וּמֻצְלָחִים בְּבֶנֵי חַיֵּי וּמְזוֹנֵי, וּבְכָל מִינֵי הַצְלָחוֹת לַעֲבוֹדָתֶךָ, וְיִשְׁמְרוּ אֶת אוֹת בְּרִית קֹדֶשׂ בִּקְדֻשָּׁה וּבְטָהֳרָה וְלֹא תֵצֵא תַּקָּלָה מִתַּחַת יְדֵיהֶם וְלֹא שׁוּם דָּבָר שֶׁאֵינוֹ מְתֻקָּן וְלֹא תִּתְגַּלְגֵּל חוֹבָה עַל יְדֵיהֶם וְלֹא יִצְטָרְכוּ לַבְּרִיּוֹת, וְנִזְכֶּה לִרְאוֹת בְּשִׂמְחָתָם, וְלֹא יִהְיֶה בָּהֶם עָקָר וַעֲקָרָה וּמְשַׁכֵּלָה, וְלֹא יֵעָזְבוּ בְּיָד אֲחֵרִים חַס וְשָׁלוֹם, וְיִהְיוּ שׁוֹמְעִים בְּקוֹל אֲבִיהֶם וְאִמָּם וְרַּבָּנֵיהֶם, וְאָח קָטָן יִשְׁמַע לַגָּדוֹל, וְיִהְיֶה טוֹב וְנָעִים שֶׁבֶת אֲחִים גַּם יָחַד בְּאַהֲבָה רַבָּה, וּנְשֵׁיהֶם תִּהְיֶינָה נִשְׁמָעוֹת לָהֶם וְעוֹזְרוֹת אוֹתָם לַעֲבוֹדָתֶךָ.</small>"},
+          {"ref": "30", "kind": "prayer", "role": "individual", "voice": "aloud", "text": "<small><b>וְלֹא</b> יֶאֱרַע לָהֶם שׁוּם דָּבָר הַמַּטְרִיד וּמוֹנֵעַ מֵעֲבוֹדָתֶךָ וְיִהְיוּ הַכֹּל מְאַמְּצִים אֶת כֹּחָם לַעֲבוֹדָתְךָ וּלְיִרְאָתֶךָ, וּבְנוֹתֵינוּ תִּהְיֶינָה יָפוֹת, נָאוֹת בְּמַעֲשֵׂיהֶן, צְנוּעוֹת וּזְרִיזוֹת, וְלֹא עַצְלָנִיּוֹת, וְלֹא דַּבְּרָנִיּוֹת, וְיִהְיֶה בּוּרְיָן יָפֶה לְשָׁרֵת וְלַעְזוֹר לְבַעֲלֵיהֶן לַעֲבוֹדָתֶךָ, וְתִּהְיֶינָה צִדְקָנִיּוֹת, חֲסִידוֹת, סַבְלָנִיּוֹת, מְעֻטָּרוֹת בְּמִדּוֹת טוֹבוֹת, וְתִהְיֶינָה שְׁלֵמוֹת בְּלִי שׁוּם מוּם, וְתִמְצֶאנָה חֵן וְשֵׂכֶל טוֹב בְּעֵינֵי בַּעֲלֵיהֶן, וּבָרֵךְ מַעֲשֵׂה יְדֵי בַּעֲלִי כְּדֵי שֶׁנִּזְכֶּה לְהַרְבּוֹת לָהֶן מֹהַר וּמַתָּן וּמֵהֶן יֵצְאוּ פֵּרוֹת טוֹבִים זוֹכִים וּמְזַכִּים לְכָל יִשְׂרָאֵל, וּתְזַכֵּנוּ לָנוּ וּלְזַרְעֵנוּ לִשְׁכּוֹן כָּבוֹד בְּאַרְצֵנוּ הַקְּדֹשָׁה וְתֶחֱזֶינָה עֵינֵינוּ בְּשׁוּבְךָ לְצִיּוֹן בְּרַחֲמִים.</small>"},
+          {"ref": "31", "kind": "prayer", "role": "individual", "voice": "aloud", "text": "<small><b>יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהֹוָה צוּרִי וְגוֹאֲלִי:</b></small>"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": [], "parts": [
+            {"kind": "prayer", "text": "<small>The "},
+            {"kind": "instruction", "text": "<i>berachah</i>"},
+            {"kind": "prayer", "text": " for all mitzvos must be recited before doing the mitzvah. This rule,"},
+            {"kind": "prayer", "text": " however,"},
+            {"kind": "prayer", "text": " does not apply to the lighting of the Shabbos candles. By lighting the candles,"},
+            {"kind": "prayer", "text": " the woman thereby ushers in the Shabbos. Since the recitation of the "},
+            {"kind": "instruction", "text": "<i>berachah </i>"},
+            {"kind": "prayer", "text": " is considered to be the beginning of the act of candle lighting,"},
+            {"kind": "prayer", "text": " she has thereby ushered in the Shabbos and may no longer light the candles. Therefore,"},
+            {"kind": "prayer", "text": " she should first light the candles,"},
+            {"kind": "prayer", "text": " and in order that the "},
+            {"kind": "instruction", "text": "<i>berachah</i>"},
+            {"kind": "prayer", "text": " precede the actual mitzvah,"},
+            {"kind": "prayer", "text": " she should cover her face with her hands in order not to see the candles,"},
+            {"kind": "prayer", "text": " then recite the "},
+            {"kind": "instruction", "text": "<i>berachah</i>"},
+            {"kind": "prayer", "text": ","},
+            {"kind": "prayer", "text": " remove her hands and look at the candles. In this manner,"},
+            {"kind": "prayer", "text": " it is as if she has recited the "},
+            {"kind": "instruction", "text": "<i>berachah</i>"},
+            {"kind": "prayer", "text": " before lighting the candles.</small><br><small>It is customary for the husband to prepare the candles and wicks before Shabbos.</small>"}
+          ]},
+          {"ref": "3", "translates": ["3"], "text": "Blessed are You, Adonoy our God, King of the Universe, Who sanctified us with His commandments and commanded us to kindle the Shabbos light."},
+          {"ref": "5", "translates": ["5"], "text": "Blessed are You, Adonoy our God, King of the Universe, Who sanctified us with His commandments and commanded us to kindle the Yom Tov light."},
+          {"ref": "7", "translates": ["7"], "text": "Blessed are You, Adonoy our God, King of the Universe, Who sanctified us with His commandments and commanded us to kindle the Shabbos light and Yom Tov light."}
+        ]
+      }
+    }
+  ]
+}

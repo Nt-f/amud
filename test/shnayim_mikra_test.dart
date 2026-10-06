@@ -5,8 +5,8 @@ import 'package:amud/core/providers.dart';
 import 'package:amud/core/settings.dart';
 import 'package:amud/core/storage.dart';
 import 'package:amud/core/theme.dart';
+import 'package:archive/archive.dart';
 import 'package:amud/features/torah/shnayim_mikra.dart';
-import 'package:amud/features/home/card_registry.dart';
 import 'package:amud/features/torah/shnayim_mikra_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -14,6 +14,13 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hebcal/hebcal.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
+
+/// The fonts set anywhere in a paragraph's spans.
+Set<String> families(InlineSpan span) => {
+      ?span.style?.fontFamily,
+      if (span is TextSpan)
+        for (final c in span.children ?? const <InlineSpan>[]) ...families(c),
+    };
 
 void main() {
   setUpAll(initHebcal);
@@ -280,6 +287,7 @@ void main() {
     await tester.runAsync(() async {
       c = await container();
       // Bereshit as downloaded, here only from Noach's first verse.
+      await c.read(storageProvider).writeBlob('shnayim-mikra:1:format', [2]);
       await c.read(storageProvider).writeBlob('shnayim-mikra:1', packShnayimMikra((
         name: 'Genesis',
         begin: (chapter: 6, verse: 9),
@@ -334,7 +342,7 @@ void main() {
     await tester.pump();
     final rashi = find.textContaining('הוֹאִיל וְהִזְכִּירוֹ סִפֵּר בְּשִׁבְחוֹ', findRichText: true);
     expect(rashi, findsOneWidget);
-    expect(tester.widget<RichText>(rashi).text.style?.fontFamily, 'NotoRashiHebrew');
+    expect(families(tester.widget<RichText>(rashi).text), contains('NotoRashiHebrew'));
     // His nikud, on its own switch.
     c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(rashiNikud: false));
     await tester.pump();
@@ -344,7 +352,7 @@ void main() {
     await tester.pump();
     c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(rashiScript: false));
     await tester.pump();
-    expect(tester.widget<RichText>(rashi).text.style?.fontFamily, isNot('NotoRashiHebrew'));
+    expect(families(tester.widget<RichText>(rashi).text), isNot(contains('NotoRashiHebrew')));
     c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(rashiScript: true));
     await tester.pump();
     // His English, when it's turned on and the layout shows English.
@@ -432,6 +440,7 @@ void main() {
     late ProviderContainer c;
     await tester.runAsync(() async {
       c = await container();
+      await c.read(storageProvider).writeBlob('shnayim-mikra:1:format', [2]);
       await c.read(storageProvider).writeBlob('shnayim-mikra:1', packShnayimMikra((
         name: 'Genesis',
         begin: (chapter: 6, verse: 9),
@@ -483,25 +492,75 @@ void main() {
     c.dispose();
   });
 
-  testWidgets("the Home card checks off today's aliyah", (tester) async {
+  testWidgets("the date card's line checks off today's aliyah", (tester) async {
     late ProviderContainer c;
     await tester.runAsync(() async => c = await container());
-    final registry = CardRegistry();
-    registerShnayimMikraCard(registry);
-    final type = registry['shnayimMikra']!;
     await tester.pumpWidget(UncontrolledProviderScope(
       container: c,
       child: MaterialApp(
         theme: buildTheme(c.read(settingsProvider), Brightness.light),
-        home: Scaffold(body: Consumer(builder: (context, ref, _) => type.build(context, ref, const CardConfig(id: 'x', type: 'shnayimMikra')))),
+        home: const Scaffold(body: ShnayimMikraLine()),
       ),
     ));
-    expect(find.text('Shnayim Mikra'), findsOneWidget);
-    expect(find.textContaining('0 of 7 this week'), findsOneWidget);
+    expect(find.textContaining('Shnayim Mikra'), findsOneWidget);
+    int count() => c.read(shnayimMikraProgressProvider).values.expand((x) => x).length;
+    final before = count();
     await tester.tap(find.byIcon(Icons.check_circle_outline));
     await tester.pump();
-    expect(find.textContaining('1 of 7 this week'), findsOneWidget);
+    expect(find.byIcon(Icons.check_circle), findsOneWidget);
+    expect(count(), before + 1);
     await tester.pumpWidget(const SizedBox());
     c.dispose();
+  });
+
+  test("Sefaria's entities become characters, and paragraph marks are kept apart", () {
+    final b = body([
+      ['וַיְהִי&nbsp;בֹקֶר', 'שִׁנְאָ֣ב&thinsp;׀ מֶ֣לֶךְ&nbsp;{פ}&nbsp;&nbsp;', 'ג {ס}'],
+    ]);
+    expect(sefariaVerses(b, (chapter: 1, verse: 1)), [
+      ((chapter: 1, verse: 1), 'וַיְהִי בֹקֶר'),
+      ((chapter: 1, verse: 2), 'שִׁנְאָ֣ב\u2009׀ מֶ֣לֶךְ'),
+      ((chapter: 1, verse: 3), 'ג'),
+    ]);
+    expect(sefariaParagraphs(b, (chapter: 1, verse: 1)), {(chapter: 1, verse: 2): 'פ', (chapter: 1, verse: 3): 'ס'});
+    final packed = unpackShnayimMikra(packShnayimMikra((name: 'Genesis', begin: (chapter: 1, verse: 1), mikra: b, targum: body([]))));
+    expect([for (final v in packed.verses) v.para], ['', 'פ', 'ס']);
+  });
+
+  test('a book kept before paragraphs still reads, without entities', () {
+    final old = GZipEncoder().encodeBytes(utf8.encode(jsonEncode({
+      'name': 'Genesis',
+      'enCredit': '',
+      'verses': [
+        [1, 1, 'א&nbsp;ב', 'ת', 'In the beginning'],
+      ],
+    })));
+    final v = unpackShnayimMikra(old).verses.single;
+    expect(v.he, 'א ב');
+    expect(v.para, '');
+  });
+
+  test('read by verse, by paragraph, or the whole aliyah', () {
+    MikraVerse v(int n, [String para = '']) => (at: (chapter: 1, verse: n), he: '$n', targum: '', en: '', para: para);
+    final verses = [v(1), v(2, 'פ'), v(3), v(4, 'ס'), v(5)];
+    List<List<int>> units(MikraMode m) => [for (final u in mikraUnits(verses, m)) [for (final x in u) x.at.verse]];
+    expect(units(MikraMode.verse), [[1], [2], [3], [4], [5]]);
+    expect(units(MikraMode.paragraph), [[1, 2], [3, 4], [5]]);
+    expect(units(MikraMode.aliyah), [[1, 2, 3, 4, 5]]);
+    // Without paragraph marks (a book kept before them), a verse at a time.
+    expect(mikraUnits([v(1), v(2)], MikraMode.paragraph).length, 2);
+  });
+
+  test('the keri is read, the ketiv set small beside it', () {
+    final spans = mikraSpans('הָאָ֖רֶץ (הוצא) [הַיְצֵ֣א] אִתָּ֑ךְ', const TextStyle(fontSize: 1));
+    expect([for (final s in spans) (s as TextSpan).text], ['הָאָ֖רֶץ ', 'הוצא', ' ', 'הַיְצֵ֣א', ' אִתָּ֑ךְ']);
+    expect((spans[1] as TextSpan).style?.fontSize, 1);
+    expect((spans[3] as TextSpan).style, isNull);
+  });
+
+  test('the mode is saved', () {
+    final s = ShnayimMikraSettings.fromJson(const ShnayimMikraSettings(mode: MikraMode.aliyah).toJson());
+    expect(s.mode, MikraMode.aliyah);
+    expect(ShnayimMikraSettings.fromJson(const {}).mode, MikraMode.verse);
   });
 }

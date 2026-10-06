@@ -1,0 +1,702 @@
+{
+  "book": "Siddur Ashkenaz",
+  "chunk": "Festivals/Shalosh Regalim [Amida for Maariv, Shacharit, Mincha .. Mussaf]",
+  "leaves": [
+    {
+      "path": "Festivals/Shalosh Regalim/Amida for Maariv, Shacharit, Mincha/Avot",
+      "title": "אבות",
+      "node": "amidah.avot",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "parts": [
+            {"kind": "instruction", "when": "mincha", "node": "amidah.opening", "en": "At Mincha:", "clean": "למנחה:", "text": "למנחה - "},
+            {"kind": "prayer", "when": "mincha", "node": "amidah.opening", "voice": "silent", "text": "כִּי שֵׁם ה' אֶקְרָא הָבוּ גדֶל לֵאלהֵינוּ: "}
+          ]},
+          {"ref": "2", "kind": "prayer", "when": "!maariv", "node": "amidah.opening", "voice": "silent", "gestures": ["stand", "feet_together"], "text": "אֲדנָי שפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ: "},
+          {"ref": "3", "kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "בָּרוּךְ אַתָּה ה' אֱלהֵינוּ וֵאלהֵי אֲבותֵינוּ. אֱלהֵי אַבְרָהָם. אֱלהֵי יִצְחָק. וֵאלהֵי יַעֲקב. הָאֵל הַגָּדול הַגִּבּור וְהַנּורָא אֵל עֶלְיון. גּומֵל חֲסָדִים טובִים. וְקונֵה הַכּל. וְזוכֵר חַסְדֵי אָבות. וּמֵבִיא גואֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמו בְּאַהֲבָה: "},
+          {"ref": "4", "kind": "prayer", "voice": "silent", "text": "מֶלֶךְ עוזֵר וּמושִׁיעַ וּמָגֵן: "},
+          {"ref": "5", "kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "בָּרוּךְ אַתָּה ה'. מָגֵן אַבְרָהָם:"}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Amida for Maariv, Shacharit, Mincha/Gevurot",
+      "title": "גבורות",
+      "node": "amidah.gevurot",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "אַתָּה גִבּור לְעולָם אֲדנָי מְחַיֵּה מֵתִים אַתָּה רַב לְהושִׁיעַ: "},
+          {"ref": "2", "parts": [
+            {"kind": "instruction", "when": "mashivHaruach", "alt": "geshem", "en": "In winter:", "clean": "בחורף:", "text": "בחורף - "},
+            {"kind": "prayer", "when": "mashivHaruach", "alt": "geshem", "voice": "silent", "text": "מַשִׁיב הָרוּחַ וּמורִיד הַגֶּשֶׁם: "}
+          ]},
+          {"ref": "3", "parts": [
+            {"kind": "instruction", "when": "moridHatal", "alt": "geshem", "en": "In summer:", "clean": "בקיץ:", "text": "בקיץ - "},
+            {"kind": "prayer", "when": "moridHatal", "alt": "geshem", "voice": "silent", "text": "מורִיד הַטָּל: "}
+          ]},
+          {"ref": "5", "kind": "prayer", "voice": "silent", "text": "מְכַלְכֵּל חַיִּים בְּחֶסֶד. מְחַיֵּה מֵתִים בְּרַחֲמִים רַבִּים. סומֵךְ נופְלִים וְרופֵא חולִים וּמַתִּיר אֲסוּרִים. וּמְקַיֵּם אֱמוּנָתו לִישֵׁנֵי עָפָר. מִי כָמוךָ בַּעַל גְּבוּרות וּמִי דומֶה לָךְ. מֶלֶךְ מֵמִית וּמְחַיֵּה וּמַצְמִיחַ יְשׁוּעָה: "},
+          {"ref": "6", "kind": "prayer", "voice": "silent", "text": "וְנֶאֱמָן אַתָּה לְהַחֲיות מֵתִים: "},
+          {"ref": "7", "kind": "prayer", "voice": "silent", "text": "בָּרוּךְ אַתָּה ה' מְחַיֶּה הַמֵּתִים:"}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Amida for Maariv, Shacharit, Mincha/Kedusha",
+      "title": "קדושה",
+      "node": "amidah.kedusha",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "instruction", "when": "!maariv", "amidah": "repetition", "minyan": true, "en": "In the chazzan's repetition, Kedushah is said here:", "clean": "בחזרת הש\"ץ אומרים כאן קדושה:", "text": "בחזרת הש\"ץ אומרים כאן קדושה: "},
+          {"ref": "2", "kind": "instruction", "when": "shacharit", "amidah": "repetition", "minyan": true, "en": "At Shacharit:", "clean": "לשחרית:", "text": "לשחרית: "},
+          {"ref": "3", "kind": "prayer", "when": "shacharit", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "נְקַדֵּשׁ אֶת שִׁמְךָ בָּעולָם. כְּשֵׁם שֶׁמַּקְדִּישִׁים אותו בִּשְׁמֵי מָרום. כַּכָּתוּב עַל יַד נְבִיאֶךָ וְקָרָא זֶה אֶל זֶה וְאָמַר: "},
+          {"ref": "4", "parts": [
+            {"kind": "speaker", "when": "shacharit", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "shacharit", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "קָדושׁ קָדושׁ קָדושׁ ה' צְבָאות מְלא כָל הָאָרֶץ כְּבודו: "}
+          ]},
+          {"ref": "5", "parts": [
+            {"kind": "speaker", "when": "shacharit", "role": "chazzan", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "clean": "חזן:", "text": "חזן - "},
+            {"kind": "prayer", "when": "shacharit", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "אָז בְּקול רַעַשׁ גָּדול אַדִּיר וְחָזָק מַשְׁמִיעִים קול מִתְנַשּאִים לְעֻמַּת שרָפִים לְעֻמָּתָם בָּרוּךְ יאמֵרוּ: "}
+          ]},
+          {"ref": "6", "parts": [
+            {"kind": "speaker", "when": "shacharit", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "shacharit", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "בָּרוּךְ כְּבוד ה' מִמְּקומו: "}
+          ]},
+          {"ref": "7", "parts": [
+            {"kind": "speaker", "when": "shacharit", "role": "chazzan", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "clean": "חזן:", "text": "חזן - "},
+            {"kind": "prayer", "when": "shacharit", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "מִמְּקומְךָ מַלְכֵּנוּ תופִיעַ וְתִמְלוךְ עָלֵינוּ כִּי מְחַכִּים אֲנַחְנוּ לָךְ. מָתַי תִּמְלךְ בְּצִיּון בְּקָרוב בְּיָמֵינוּ לְעולָם וָעֶד תִּשְׁכּון. תִּתְגַּדַּל וְתִתְקַדַּשׁ בְּתוךְ יְרוּשָׁלַיִם עִירְךָ לְדור וָדור וּלְנֵצַח נְצָחִים. וְעֵינֵינוּ תִרְאֶינָה מַלְכוּתֶךָ כַּדָּבָר הָאָמוּר בְּשִׁירֵי עֻזֶּךָ עַל יְדֵי דָּוִד מְשִׁיחַ צִדְקֶךָ: "}
+          ]},
+          {"ref": "8", "parts": [
+            {"kind": "speaker", "when": "shacharit", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "shacharit", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "יִמְלךְ ה' לְעולָם אֱלהַיִךְ צִיּון לְדר וָדר הַלְלוּיָהּ: "}
+          ]},
+          {"ref": "10", "kind": "instruction", "when": "mincha", "amidah": "repetition", "minyan": true, "en": "At Mincha:", "clean": "למנחה:", "text": "למנחה: "},
+          {"ref": "11", "kind": "prayer", "when": "mincha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "נְקַדֵּשׁ אֶת שִׁמְךָ בָּעולָם. כְּשֵׁם שֶׁמַּקְדִּישִׁים אותו בִּשְׁמֵי מָרום. כַּכָּתוּב עַל יַד נְבִיאֶךָ וְקָרָא זֶה אֶל זֶה וְאָמַר: "},
+          {"ref": "12", "parts": [
+            {"kind": "speaker", "when": "mincha", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "mincha", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "קָדושׁ קָדושׁ קָדושׁ ה' צְבָאות מְלא כָל הָאָרֶץ כְּבודו: "}
+          ]},
+          {"ref": "13", "parts": [
+            {"kind": "speaker", "when": "mincha", "role": "chazzan", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "clean": "חזן:", "text": "חזן - "},
+            {"kind": "prayer", "when": "mincha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "לְעֻמָּתָם בָּרוּךְ יאמֵרוּ: "}
+          ]},
+          {"ref": "14", "parts": [
+            {"kind": "speaker", "when": "mincha", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "mincha", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "בָּרוּךְ כְּבוד ה' מִמְּקומו: "}
+          ]},
+          {"ref": "15", "parts": [
+            {"kind": "speaker", "when": "mincha", "role": "chazzan", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "clean": "חזן:", "text": "חזן - "},
+            {"kind": "prayer", "when": "mincha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "וּבְדִבְרֵי קָדְשְׁךָ כָּתוּב לֵאמר: "}
+          ]},
+          {"ref": "16", "parts": [
+            {"kind": "speaker", "when": "mincha", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "mincha", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "יִמְלךְ ה' לְעולָם אֱלהַיִךְ צִיּון לְדור וָדור הַלְלוּיָהּ: "}
+          ]},
+          {"ref": "18", "kind": "prayer", "node": "amidah.kedushat_hashem", "voice": "silent", "amidah": "silent", "text": "אַתָּה קָדושׁ וְשִׁמְךָ קָדושׁ. וּקְדושִׁים בְּכָל יום יְהַלְלוּךָ סֶּלָה: "},
+          {"ref": "19", "kind": "prayer", "node": "amidah.kedushat_hashem", "voice": "silent", "amidah": "silent", "text": "בָּרוּךְ אַתָּה ה' הָאֵל הַקָּדושׁ:"}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Amida for Maariv, Shacharit, Mincha/Sanctity of the Day",
+      "title": "קדושת היום",
+      "node": "amidah.yomtov.atta_vechartanu",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "אַתָּה בְחַרְתָּנוּ מִכָּל הָעַמִּים אָהַבְתָּ אותָנוּ וְרָצִיתָ בָּנוּ וְרומַמְתָּנוּ מִכָּל הַלְּשׁונות וְקִדַּשְׁתָּנוּ בְּמִצְותֶיךָ וְקֵרַבְתָּנוּ מַלְכֵּנוּ לַעֲבודָתֶךָ וְשִׁמְךָ הַגָּדול וְהַקָּדושׁ עָלֵינוּ קָרָאתָ: "},
+          {"ref": "3", "kind": "instruction", "when": "maariv && motzaeiShabbat", "node": "amidah.yomtov.vatodienu", "en": "When Yom Tov falls on Motzei Shabbat, say Vatodienu:", "clean": "כשחל יו\"ט במוצאי שבת אומרים ותודיענו:", "text": "כשחל יו\"ט במוצאי שבת אומרים ותודיענו: "},
+          {"ref": "4", "kind": "prayer", "when": "maariv && motzaeiShabbat", "node": "amidah.yomtov.vatodienu", "voice": "silent", "text": "וַתּודִיעֵנוּ ה' אֱלהֵינוּ אֶת מִשְׁפְּטֵי צִדְקֶךָ וַתְּלַמְּדֵנוּ לַעֲשות בָּהֶם חֻקֵּי רְצונֶךָ וַתִּתֶּן לָנוּ ה' אֱלהֵינוּ מִשְׁפָּטִים יְשָׁרִים וְתורות אֱמֶת חֻקִּים וּמִצְות טובִים וַתַּנְחִילֵנוּ זְמַנֵּי ששון וּמועֲדֵי קודֶשׁ וְחַגֵּי נְדָבָה. וַתּורִישֵׁנוּ קְדֻשַּׁת שַׁבָּת וּכְבוד מועֵד וַחֲגִיגַת הָרֶגֶל וַתַּבְדֵּל ה' אֱלהֵינוּ בֵּין קודֶשׁ לְחול בֵּין אור לְחשֶׁךְ בֵּין יִשרָאֵל לָעַמִּים בֵּין יום הַשְּׁבִיעִי לְשֵׁשֶׁת יְמֵי הַמַּעֲשה בֵּין קְדֻשַּׁת שַׁבָּת לִקְדֻשַּׁת יום טוב הִבְדַּלְתָּ וְאֶת יום הַשְּׁבִיעִי מִשֵׁשֶׁת יְמֵי הַמַעֲשה קִדַּשְׁתָּ הִבְדַּלְתָּ וְקִדַּשְׁתָּ אֶת עַמְּךָ יִשרָאֵל בִּקְדֻשָּׁתֶךָ: "},
+          {"ref": "6", "parts": [
+            {"kind": "prayer", "voice": "silent", "text": "וַתִּתֶּן לָנוּ ה' אֱלהֵינוּ בְּאַהֲבָה "},
+            {"kind": "instruction", "when": "shabbat", "en": "On Shabbat:", "clean": "לשבת:", "text": "<em><small>לשבת "},
+            {"kind": "prayer", "when": "shabbat", "voice": "silent", "text": "שַׁבָּתות לִמְנוּחָה וּ</small></em>"},
+            {"kind": "prayer", "voice": "silent", "text": " מועֲדִים לְשמְחָה חַגִּים וּזְמַנִּים לְששון אֶת יום: "}
+          ]},
+          {"ref": "7", "parts": [
+            {"kind": "instruction", "when": "shabbat", "en": "On Shabbat:", "clean": "לשבת:", "text": "<em><small>לשבת "},
+            {"kind": "prayer", "when": "shabbat", "voice": "silent", "text": "הַשַׁבָּת הַזֶּה וְאֶת יום</small></em>"},
+            {"kind": "prayer", "voice": "silent", "text": ": "}
+          ]},
+          {"ref": "8", "parts": [
+            {"kind": "instruction", "when": "pesach", "en": "On Pesach:", "clean": "לפסח:", "text": "לפסח - "},
+            {"kind": "prayer", "when": "pesach", "voice": "silent", "text": "חַג הַמַּצּות הַזֶּה זְמַן חֵרוּתֵנוּ: "}
+          ]},
+          {"ref": "9", "parts": [
+            {"kind": "instruction", "when": "shavuot", "en": "On Shavuot:", "clean": "לשבועות:", "text": "לשבועות - "},
+            {"kind": "prayer", "when": "shavuot", "voice": "silent", "text": "חַג הַשָׁבוּעות הַזֶּה זְמַן מַתַּן תּורָתֵינוּ: "}
+          ]},
+          {"ref": "10", "parts": [
+            {"kind": "instruction", "when": "sukkot", "en": "On Sukkot:", "clean": "סוכות:", "text": "סוכות - "},
+            {"kind": "prayer", "when": "sukkot", "voice": "silent", "text": "חַג הַסֻּכּות הַזֶּה זְמַן שמְחָתֵנוּ: "}
+          ]},
+          {"ref": "11", "parts": [
+            {"kind": "instruction", "when": "shminiAtzeret || simchatTorah", "en": "On Shemini Atzeret and Simchat Torah:", "clean": "לשמ\"ע ולש\"ת:", "text": "לשמ\"ע ולש\"ת - "},
+            {"kind": "prayer", "when": "shminiAtzeret || simchatTorah", "voice": "silent", "text": "הַשְׁמִינִי חַג הָעֲצֶרֶת הַזֶּה זְמַן שמְחָתֵנוּ: "}
+          ]},
+          {"ref": "12", "parts": [
+            {"kind": "instruction", "when": "shabbat", "en": "On Shabbat:", "clean": "לשבת:", "text": "<em><small>לשבת "},
+            {"kind": "prayer", "when": "shabbat", "voice": "silent", "text": "בְּאַהֲבָה</small></em>"},
+            {"kind": "prayer", "voice": "silent", "text": " מִקְרָא קדֶשׁ זֵכֶר לִיצִיאַת מִצְרָיִם: "}
+          ]},
+          {"ref": "14", "kind": "prayer", "node": "amidah.yaaleh_veyavo", "voice": "silent", "text": "אֱלהֵינוּ וֵאלהֵי אֲבותֵינוּ יַעֲלֶה וְיָבוא וְיַגִּיעַ וְיֵרָאֶה וְיֵרָצֶה וְיִשָּׁמַע וְיִפָּקֵד וְיִזָּכֵר זִכְרונֵנוּ וּפִקְדונֵנוּ וְזִכְרון אֲבותֵינוּ וְזִכְרון מָשִׁיחַ בֶּן דָּוִד עַבְדֶּךָ. וְזִכְרון יְרוּשָׁלַיִם עִיר קָדְשֶׁךָ וְזִכְרון כָּל עַמְּךָ בֵּית יִשרָאֵל לְפָנֶיךָ לִפְלֵיטָה לְטובָה לְחֵן וּלְחֶסֶד וּלְרַחֲמִים לְחַיִּים וּלְשָׁלום בְּיום: "},
+          {"ref": "15", "parts": [
+            {"kind": "instruction", "when": "pesach", "node": "amidah.yaaleh_veyavo", "en": "On Pesach:", "clean": "לפסח:", "text": "לפסח - "},
+            {"kind": "prayer", "when": "pesach", "node": "amidah.yaaleh_veyavo", "voice": "silent", "text": "חַג הַמַּצּות הַזֶּה זְמַן חֵרוּתֵנוּ: "}
+          ]},
+          {"ref": "16", "parts": [
+            {"kind": "instruction", "when": "shavuot", "node": "amidah.yaaleh_veyavo", "en": "On Shavuot:", "clean": "לשבועות:", "text": "לשבועות - "},
+            {"kind": "prayer", "when": "shavuot", "node": "amidah.yaaleh_veyavo", "voice": "silent", "text": "חַג הַשָׁבוּעות הַזֶּה זְמַן מַתַּן תּורָתֵינוּ: "}
+          ]},
+          {"ref": "17", "parts": [
+            {"kind": "instruction", "when": "sukkot", "node": "amidah.yaaleh_veyavo", "en": "On Sukkot:", "clean": "סוכות:", "text": "סוכות - "},
+            {"kind": "prayer", "when": "sukkot", "node": "amidah.yaaleh_veyavo", "voice": "silent", "text": "חַג הַסֻּכּות הַזֶּה זְמַן שמְחָתֵנוּ: "}
+          ]},
+          {"ref": "18", "parts": [
+            {"kind": "instruction", "when": "shminiAtzeret || simchatTorah", "node": "amidah.yaaleh_veyavo", "en": "On Shemini Atzeret and Simchat Torah:", "clean": "לשמ\"ע ולש\"ת:", "text": "לשמ\"ע ולש\"ת - "},
+            {"kind": "prayer", "when": "shminiAtzeret || simchatTorah", "node": "amidah.yaaleh_veyavo", "voice": "silent", "text": "הַשְׁמִינִי חַג הָעֲצֶרֶת הַזֶּה זְמַן שמְחָתֵנוּ: "}
+          ]},
+          {"ref": "19", "kind": "prayer", "node": "amidah.yaaleh_veyavo", "voice": "silent", "text": "זָכְרֵנוּ ה' אֱלהֵינוּ בּו לְטובָה. וּפָקְדֵנוּ בּו לִבְרָכָה. וְהושִׁיעֵנוּ בּו לְחַיִּים. וּבִדְבַר יְשׁוּעָה וְרַחֲמִים חוּס וְחָנֵּנוּ וְרַחֵם עָלֵינוּ וְהושִׁיעֵנוּ כִּי אֵלֶיךָ עֵינֵינוּ כִּי אֵל מֶלֶךְ חַנּוּן וְרַחוּם אָתָּה: "},
+          {"ref": "21", "kind": "prayer", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": "וְהַשּיאֵנוּ ה' אֱלהֵינוּ אֶת בִּרְכַּת מועֲדֶיךָ. לְחַיִּים וּלְשָׁלום. לְשמְחָה וּלְששון. כַּאֲשֶׁר רָצִיתָ וְאָמַרְתָּ לְבָרְכֵנוּ: "},
+          {"ref": "22", "parts": [
+            {"kind": "instruction", "when": "shabbat", "node": "amidah.yomtov.vehasieinu", "en": "On Shabbat:", "clean": "לשבת:", "text": "<em><small>לשבת "},
+            {"kind": "prayer", "when": "shabbat", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": "אֱלהֵינוּ וֵאלהֵי אֲבותֵינוּ רְצֵה בִּמְנוּחָתֵנוּ</small></em>"},
+            {"kind": "prayer", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": ": "}
+          ]},
+          {"ref": "23", "parts": [
+            {"kind": "prayer", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": "קַדְּשֵׁנוּ בְּמִצְותֶיךָ וְתֵן חֶלְקֵנוּ בְּתורָתֶךָ שבְּעֵנוּ מִטּוּבֶךָ וְשמְּחֵנוּ בִּישׁוּעָתֶךָ. וְטַהֵר לִבֵּנוּ לְעָבְדְּךָ בֶּאֱמֶת. וְהַנְחִילֵנוּ ה' אֱלהֵינוּ. "},
+            {"kind": "instruction", "when": "shabbat", "node": "amidah.yomtov.vehasieinu", "en": "On Shabbat:", "clean": "לשבת:", "text": "<em><small>לשבת "},
+            {"kind": "prayer", "when": "shabbat", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": "בְּאַהֲבָה וּבְרָצון</small></em>"},
+            {"kind": "prayer", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": " בְּשמְחָה וּבְששון. "},
+            {"kind": "instruction", "when": "shabbat", "node": "amidah.yomtov.vehasieinu", "en": "On Shabbat:", "clean": "לשבת:", "text": "<em><small>לשבת "},
+            {"kind": "prayer", "when": "shabbat", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": "שַׁבָּת וּ</small></em>"},
+            {"kind": "prayer", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": " מועֲדֵי קָדְשֶׁךָ וְיִשמְחוּ בְּךָ יִשרָאֵל מְקַדְּשֵׁי שְׁמֶךָ: "}
+          ]},
+          {"ref": "24", "parts": [
+            {"kind": "prayer", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": "בָּרוּךְ אַתָּה ה' מְקַדֵּשׁ "},
+            {"kind": "instruction", "when": "shabbat", "node": "amidah.yomtov.vehasieinu", "en": "On Shabbat:", "clean": "לשבת:", "text": "<em><small>לשבת "},
+            {"kind": "prayer", "when": "shabbat", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": "הַשַּׁבָּת וְ</small></em>"},
+            {"kind": "prayer", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": " יִשרָאֵל וְהַזְמַנִּים:"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Sefaria Community Translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "You have chosen us from all the Nations. You loved us and Desired us. You raised us from among all Languages and sanctified us with your mitzvot. You brought us closer to you our King. To serve your great and holy Name you called us."}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Amida for Maariv, Shacharit, Mincha/Avodah",
+      "title": "עבודה",
+      "node": "amidah.avoda",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "רְצֵה ה' אֱלהֵינוּ בְּעַמְּךָ יִשרָאֵל וְבִתְפִלָּתָם שְׁעֵה. וְהָשֵׁב אֶת הָעֲבודָה לִדְבִיר בֵּיתֶךָ. וְאִשֵּׁי יִשרָאֵל וּתְפִלָּתָם. מְהֵרָה בְּאַהֲבָה תְקַבֵּל בְּרָצון. וּתְהִי לְרָצון תָּמִיד עֲבודַת יִשרָאֵל עַמֶּךָ: "},
+          {"ref": "2", "kind": "prayer", "voice": "silent", "text": "וְתֶחֱזֶינָה עֵינֵינוּ בְּשׁוּבְךָ לְצִיּון בְּרַחֲמִים: "},
+          {"ref": "3", "kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "בָּרוּךְ אַתָּה ה'. הַמַּחֲזִיר שְׁכִינָתו לְצִיּון:"}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Amida for Maariv, Shacharit, Mincha/Modim",
+      "title": "מודים",
+      "node": "amidah.modim",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "gestures": ["bow_full"], "text": "מודִים אֲנַחְנוּ לָךְ. שָׁאַתָּה הוּא ה' אֱלהֵינוּ וֵאלהֵי אֲבותֵינוּ לְעולָם וָעֶד. צוּר חַיֵּינוּ. מָגֵן יִשְׁעֵנוּ אַתָּה הוּא לְדור וָדור נודֶה לְּךָ וּנְסַפֵּר תְּהִלָּתֶךָ עַל חַיֵּינוּ הַמְּסוּרִים בְּיָדֶךָ. וְעַל נִשְׁמותֵינוּ הַפְּקוּדות לָךְ. וְעַל נִסֶּיךָ שֶׁבְּכָל יום עִמָּנוּ. וְעַל נִפְלְאותֶיךָ וְטובותֶיךָ שֶׁבְּכָל עֵת. עֶרֶב וָבקֶר וְצָהֳרָיִם. הַטּוב כִּי לא כָלוּ רַחֲמֶיךָ. וְהַמְרַחֵם כִּי לא תַמּוּ חֲסָדֶיךָ. כִּי מֵעולָם קִוִּינוּ לָךְ: "},
+          {"ref": "3", "kind": "heading", "node": "amidah.modim_derabbanan", "role": "congregation", "amidah": "repetition", "en": "Modim d'Rabbanan", "text": "מודים דרבנן: "},
+          {"ref": "4", "kind": "prayer", "node": "amidah.modim_derabbanan", "role": "congregation", "voice": "undertone", "amidah": "repetition", "text": "מודִים אֲנַחְנוּ לָךְ. שָׁאַתָּה הוּא ה' אֱלהֵינוּ וֵאלהֵי אֲבותֵינוּ. אֱלהֵי כָל בָּשר. יוצְרֵנוּ יוצֵר בְּרֵאשִׁית. בְּרָכות וְהודָאות לְשִׁמְךָ הַגָּדול וְהַקָּדושׁ. עַל שֶׁהֶחֱיִיתָנוּ וְקִיַּמְתָּנוּ. כֵּן תְּחַיֵּנוּ וּתְקַיְּמֵנוּ. וְתֶאֱסוף גָּלֻיּותֵינוּ לְחַצְרות קָדְשֶׁךָ. לִשְׁמור חֻקֶּיךָ. וְלַעֲשות רְצונֶךָ. וּלְעָבְדְךָ בְּלֵבָב שָׁלֵם. עַל שֶׁאֲנַחְנוּ מודִים לָךְ. בָּרוּךְ אֵל הַהודָאות: "},
+          {"ref": "6", "kind": "prayer", "voice": "silent", "text": "וְעַל כֻּלָּם יִתְבָּרֵךְ וְיִתְרומֵם וְיִתְנַשּא שִׁמְךָ מַלְכֵּנוּ תָּמִיד לְעולָם וָעֶד: "},
+          {"ref": "7", "kind": "prayer", "voice": "silent", "text": "וְכל הַחַיִּים יודוּךָ סֶּלָה. וִיהַלְלוּ וִיבָרְכוּ אֶת שִׁמְךָ בֶּאֱמֶת. הָאֵל יְשׁוּעָתֵנוּ וְעֶזְרָתֵנוּ סֶלָה: "},
+          {"ref": "8", "kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "בָּרוּךְ אַתָּה ה'. הַטּוב שִׁמְךָ וּלְךָ נָאֶה לְהודות:"}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Amida for Maariv, Shacharit, Mincha/Birkat Kohanim",
+      "title": "ברכת כהנים",
+      "node": "amidah.birkat_kohanim",
+      "when": "birkatKohanimChazzan",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "heading", "amidah": "repetition", "minyan": true, "en": "Birkat Kohanim", "text": "ברכת כהנים: "},
+          {"ref": "2", "kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, בָּרְכֵנוּ בַבְּרָכָה הַמְשֻׁלֶּשֶׁת בַּתּוֹרָה הַכְּתוּבָה עַל יְדֵי מֹשֶׁה עַבְדֶּךָ, הָאֲמוּרָה מִפִּי אַהֲרֹן וּבָנָיו כֹּהֲנִים עַם קְדשֶׁךָ, כָּאָמוּר:"},
+          {"ref": "3", "kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "יְבָרֶכְךָ ה' וְיִשְׁמְרֶךָ: "},
+          {"ref": "4", "kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "יָאֵר ה' פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ: "},
+          {"ref": "5", "kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "יִשָּׂא ה' פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם:"},
+          {"ref": "6", "parts": [
+            {"kind": "speaker", "when": "true", "role": "congregation", "amidah": "repetition", "en": "Congregation:", "clean": "הקהל:", "text": "הקהל: "},
+            {"kind": "prayer", "when": "true", "role": "congregation", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "אַדִּיר בַּמָּרוֹם שׁוֹכֵן בִּגְבוּרָה, אַתָּה שָׁלוֹם וְשִׁמְךָ שָׁלוֹם. יְהִי רָצוֹן שֶׁתָּשִׂים עָלֵינוּ וְעַל כָּל עַמְךָ בֵּית יִשְׂרָאֵל, חַיִּים וּבְרָכָה לְמִשְׁמֶרֶת שָׁלוֹם:"}
+          ]}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Amida for Maariv, Shacharit, Mincha/Peace",
+      "title": "ברכה לשלום",
+      "node": "amidah.shalom",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "when": "shacharit", "voice": "silent", "text": "שים שָׁלום טובָה וּבְרָכָה. חַיִּים חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ וְעַל כָּל יִשרָאֵל עַמֶּךָ. בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד בְּאור פָּנֶיךָ. כִּי בְאור פָּנֶיךָ נָתַתָּ לָּנוּ ה' אֱלהֵינוּ תּורַת חַיִּים וְאַהֲבַת חֶסֶד. וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלום. וְטוב בְּעֵינֶיךָ לְבָרֵךְ אֶת עַמְּךָ יִשרָאֵל בְּכָל עֵת וּבְכָל שָׁעָה בִּשְׁלומֶךָ: "},
+          {"ref": "2", "kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "בָּרוּךְ אַתָּה ה'. הַמְבָרֵךְ אֶת עַמּו יִשרָאֵל בַּשָּׁלום:"}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Amida for Maariv, Shacharit, Mincha/Concluding Prayer",
+      "title": "סיום עמידה",
+      "node": "amidah.elokai_netzor",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "יִהְיוּ לְרָצון אִמְרֵי פִי וְהֶגְיון לִבִּי לְפָנֶיךָ. ה' צוּרִי וְגואֲלִי: "},
+          {"ref": "2", "kind": "prayer", "voice": "silent", "text": "אֱלהַי. נְצר לְשׁונִי מֵרָע וּשפָתַי מִדַּבֵּר מִרְמָה. וְלִמְקַלְלַי נַפְשִׁי תִדּם. וְנַפְשִׁי כֶּעָפָר לַכּל תִּהְיֶה. פְּתַח לִבִּי בְּתורָתֶךָ. וּבְמִצְותֶיךָ תִּרְדּף נַפְשִׁי. וְכָל הַחושְׁבִים עָלַי רָעָה. מְהֵרָה הָפֵר עֲצָתָם וְקַלְקֵל מַחֲשַׁבְתָּם: "},
+          {"ref": "3", "kind": "prayer", "voice": "silent", "text": "עֲשה לְמַעַן שְׁמֶךָ. עֲשה לְמַעַן יְמִינֶךָ. עֲשה לְמַעַן קְדֻשָּׁתֶךָ. עֲשה לְמַעַן תּורָתֶךָ. לְמַעַן יֵחָלְצוּן יְדִידֶיךָ הושִׁיעָה יְמִינְךָ וַעֲנֵנִי: "},
+          {"ref": "4", "kind": "prayer", "voice": "silent", "text": "יִהְיוּ לְרָצון אִמְרֵי פִי וְהֶגְיון לִבִּי לְפָנֶיךָ. ה' צוּרִי וְגואֲלִי: "},
+          {"ref": "5", "kind": "prayer", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["three_steps_back", "bow_left_right_center"], "text": "עשה שָׁלום בִּמְרומָיו. הוּא יַעֲשה שָׁלום עָלֵינוּ וְעַל כָּל יִשרָאֵל. וְאִמְרוּ אָמֵן: "},
+          {"ref": "6", "kind": "prayer", "node": "amidah.yehi_ratzon_mikdash", "voice": "silent", "text": "יְהִי רָצון מִלְּפָנֶיךָ ה' אֱלהֵינוּ וֵאלהֵי אֲבותֵינוּ. שֶׁיִּבָּנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ. וְתֵן חֶלְקֵנוּ בְּתורָתֶךָ: "},
+          {"ref": "7", "kind": "prayer", "node": "amidah.yehi_ratzon_mikdash", "voice": "silent", "text": "וְשָׁם נַעֲבָדְךָ בְּיִרְאָה כִּימֵי עולָם וּכְשָׁנִים קַדְמונִיות: "},
+          {"ref": "8", "kind": "prayer", "node": "amidah.yehi_ratzon_mikdash", "voice": "silent", "text": "וְעָרְבָה לה' מִנְחַת יְהוּדָה וִירוּשָׁלָיִם. כִּימֵי עולָם וּכְשָׁנִים קַדְמונִיות:"}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Mussaf/Avot",
+      "title": "אבות",
+      "node": "amidah.avot",
+      "service": "musaf",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "node": "amidah.opening", "voice": "silent", "text": "כִּי שֵׁם ה' אֶקְרָא הָבוּ גדֶל לֵאלהֵינוּ: "},
+          {"ref": "2", "kind": "prayer", "node": "amidah.opening", "voice": "silent", "gestures": ["stand", "feet_together"], "text": "אֲדנָי שפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ: "},
+          {"ref": "4", "kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "בָּרוּךְ אַתָּה ה' אֱלהֵינוּ וֵאלהֵי אֲבותֵינוּ. אֱלהֵי אַבְרָהָם. אֱלהֵי יִצְחָק. וֵאלהֵי יַעֲקב. הָאֵל הַגָּדול הַגִּבּור וְהַנּורָא אֵל עֶלְיון. גּומֵל חֲסָדִים טובִים. וְקונֵה הַכּל. וְזוכֵר חַסְדֵי אָבות. וּמֵבִיא גואֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמו בְּאַהֲבָה: "},
+          {"ref": "5", "kind": "prayer", "voice": "silent", "text": "מֶלֶךְ עוזֵר וּמושִׁיעַ וּמָגֵן: "},
+          {"ref": "6", "kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "בָּרוּךְ אַתָּה ה'. מָגֵן אַבְרָהָם:"}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Mussaf/Gevurot",
+      "title": "גבורות",
+      "node": "amidah.gevurot",
+      "service": "musaf",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "אַתָּה גִבּור לְעולָם אֲדנָי מְחַיֶּה מֵתִים אַתָּה רַב לְהושִׁיעַ: "},
+          {"ref": "2", "parts": [
+            {"kind": "instruction", "when": "mashivHaruach", "alt": "geshem", "en": "In winter:", "clean": "בחורף::", "text": "בחורף: "},
+            {"kind": "prayer", "when": "mashivHaruach", "alt": "geshem", "voice": "silent", "text": "מַשִׁיב הָרוּחַ וּמורִיד הַגֶּשֶׁם: "}
+          ]},
+          {"ref": "3", "parts": [
+            {"kind": "instruction", "when": "moridHatal", "alt": "geshem", "en": "In summer:", "clean": "בקיץ::", "text": "בקיץ: "},
+            {"kind": "prayer", "when": "moridHatal", "alt": "geshem", "voice": "silent", "text": "מורִיד הַטָּל: "}
+          ]},
+          {"ref": "4", "kind": "prayer", "voice": "silent", "text": "מְכַלְכֵּל חַיִּים בְּחֶסֶד. מְחַיֶּה מֵתִים בְּרַחֲמִים רַבִּים. סומֵךְ נופְלִים וְרופֵא חולִים וּמַתִּיר אֲסוּרִים. וּמְקַיֵּם אֱמוּנָתו לִישֵׁנֵי עָפָר. מִי כָמוךָ בַּעַל גְּבוּרות וּמִי דומֶה לָךְ. מֶלֶךְ מֵמִית וּמְחַיֶּה וּמַצְמִיחַ יְשׁוּעָה: "},
+          {"ref": "5", "kind": "prayer", "voice": "silent", "text": "וְנֶאֱמָן אַתָּה לְהַחֲיות מֵתִים: "},
+          {"ref": "6", "kind": "prayer", "voice": "silent", "text": "בָּרוּךְ אַתָּה ה' מְחַיֶּה הַמֵּתִים:"}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Mussaf/Kedusha",
+      "title": "קדושה",
+      "node": "amidah.musaf.kedusha",
+      "service": "musaf",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "instruction", "when": "yomTov || hoshanaRaba", "amidah": "repetition", "minyan": true, "en": "For Yom Tov and Hoshana Raba:", "clean": "ליו\"ט ולהושע\"ר:", "text": "ליו\"ט ולהושע\"ר: "},
+          {"ref": "2", "kind": "prayer", "when": "yomTov || hoshanaRaba", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "נַעֲרִיצְךָ וְנַקְדִישְׁךָ כְּסוד שיחַ שרְפֵי קדֶשׁ הַמַּקְדִּישִׁים שִׁמְךָ בַּקּדֶשׁ כַּכָּתוּב עַל יַד נְבִיאֶךָ. וְקָרָא זֶה אֶל זֶה וְאָמַר: "},
+          {"ref": "3", "parts": [
+            {"kind": "speaker", "when": "yomTov || hoshanaRaba", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "yomTov || hoshanaRaba", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "קָדושׁ קָדושׁ קָדושׁ ה' צְבָאות מְלא כָל הָאָרֶץ כְּבודו: "}
+          ]},
+          {"ref": "4", "parts": [
+            {"kind": "speaker", "when": "yomTov || hoshanaRaba", "role": "chazzan", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "clean": "חזן:", "text": "חזן - "},
+            {"kind": "prayer", "when": "yomTov || hoshanaRaba", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "כְּבודו מָלֵא עולָם. מְשָׁרְתָיו שׁואֲלִים זֶה לָזֶה אַיֵּה מְקום כְּבודו. לְעֻמָּתָם בָּרוּךְ יאמֵרוּ: "}
+          ]},
+          {"ref": "5", "parts": [
+            {"kind": "speaker", "when": "yomTov || hoshanaRaba", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "yomTov || hoshanaRaba", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "בָּרוּךְ כְּבוד ה' מִמְּקומו: "}
+          ]},
+          {"ref": "6", "parts": [
+            {"kind": "speaker", "when": "yomTov || hoshanaRaba", "role": "chazzan", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "clean": "חזן:", "text": "חזן - "},
+            {"kind": "prayer", "when": "yomTov || hoshanaRaba", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "מִמְּקומו הוּא יִפֶן בְּרַחֲמִים וְיָחון עַם הַמְיַחֲדִים שְׁמו עֶרֶב וָבוקֶר בְּכָל יום תָּמִיד. פַּעֲמַיִם בְּאַהֲבָה שְׁמַע אומְרִים: "}
+          ]},
+          {"ref": "7", "parts": [
+            {"kind": "speaker", "when": "yomTov || hoshanaRaba", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "yomTov || hoshanaRaba", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "שְׁמַע יִשרָאֵל ה' אֱלהֵינוּ ה' אֶחָד: "}
+          ]},
+          {"ref": "8", "parts": [
+            {"kind": "speaker", "when": "yomTov || hoshanaRaba", "role": "chazzan", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "clean": "חזן:", "text": "חזן - "},
+            {"kind": "prayer", "when": "yomTov || hoshanaRaba", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "הוּא אֱלהֵינוּ הוּא אָבִינוּ. הוּא מַלְכֵּנוּ הוּא מושִׁיעֵנוּ. וְהוּא יַשְׁמִיעֵנוּ בְּרַחֲמָיו שֵׁנִית לְעֵינֵי כָּל חָי. לִהְיות לָכֶם לֵאלהִים: "}
+          ]},
+          {"ref": "9", "parts": [
+            {"kind": "speaker", "when": "yomTov || hoshanaRaba", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "yomTov || hoshanaRaba", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "אֲנִי ה' אֱלהֵיכֶם: "}
+          ]},
+          {"ref": "10", "kind": "prayer", "when": "yomTov || hoshanaRaba", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "אֲנִי ה' אֱלהֵיכֶם: "},
+          {"ref": "12", "kind": "instruction", "when": "cholHamoed && !hoshanaRaba", "amidah": "repetition", "minyan": true, "en": "For Chol HaMoed:", "clean": "לחוה\"מ:", "text": "לחוה\"מ: "},
+          {"ref": "13", "kind": "prayer", "when": "cholHamoed && !hoshanaRaba", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "נְקַדֵּשׁ אֶת שִׁמְךָ בָּעולָם. כְּשֵׁם שֶׁמַּקְדִּישִׁים אותו בִּשְׁמֵי מָרום. כַּכָּתוּב עַל יַד נְבִיאֶךָ וְקָרָא זֶה אֶל זֶה וְאָמַר: "},
+          {"ref": "14", "parts": [
+            {"kind": "speaker", "when": "cholHamoed && !hoshanaRaba", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "cholHamoed && !hoshanaRaba", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "קָדושׁ קָדושׁ קָדושׁ ה' צְבָאות מְלא כָל הָאָרֶץ כְּבודו: "}
+          ]},
+          {"ref": "15", "parts": [
+            {"kind": "speaker", "when": "cholHamoed && !hoshanaRaba", "role": "chazzan", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "clean": "חזן:", "text": "חזן - "},
+            {"kind": "prayer", "when": "cholHamoed && !hoshanaRaba", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "לְעֻמָּתָם בָּרוּךְ יאמֵרוּ: "}
+          ]},
+          {"ref": "16", "parts": [
+            {"kind": "speaker", "when": "cholHamoed && !hoshanaRaba", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "cholHamoed && !hoshanaRaba", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "בָּרוּךְ כְּבוד ה' מִמְּקומו: "}
+          ]},
+          {"ref": "17", "parts": [
+            {"kind": "speaker", "when": "cholHamoed && !hoshanaRaba", "role": "chazzan", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "clean": "חזן:", "text": "חזן - "},
+            {"kind": "prayer", "when": "cholHamoed && !hoshanaRaba", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "וּבְדִבְרֵי קָדְשְׁךָ כָּתוּב לֵאמר: "}
+          ]},
+          {"ref": "18", "parts": [
+            {"kind": "speaker", "when": "cholHamoed && !hoshanaRaba", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "cholHamoed && !hoshanaRaba", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "יִמְלךְ ה' לְעולָם אֱלהַיִךְ צִיּון לְדור וָדור הַלְלוּיָהּ: "}
+          ]},
+          {"ref": "19", "kind": "instruction", "when": "cholHamoed && !hoshanaRaba && !shabbat", "amidah": "repetition", "minyan": true, "en": "On Shabbat Chol HaMoed, skip this section:", "clean": "בשבת חול המועד מדלגים קטע זה:", "text": "בשבת חול המועד מדלגים קטע זה: "},
+          {"ref": "20", "parts": [
+            {"kind": "speaker", "when": "cholHamoed && !hoshanaRaba && !shabbat", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "cholHamoed && !hoshanaRaba && !shabbat", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "אַדִּיר אַדִּירֵנוּ ה' אֲדנֵינוּ מָה אַדִּיר שִׁמְךָ בְּכָל הָאָרֶץ. וְהָיָה ה' לְמֶלֶךְ עַל כָּל הָאָרֶץ. בַּיּום הַהוּא יִהְיֶה ה' אֶחָד וּשְמו אֶחָד: "}
+          ]},
+          {"ref": "21", "parts": [
+            {"kind": "speaker", "when": "cholHamoed && !hoshanaRaba && !shabbat", "role": "chazzan", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "clean": "חזן:", "text": "חזן - "},
+            {"kind": "prayer", "when": "cholHamoed && !hoshanaRaba && !shabbat", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "וּבְדִבְרֵי קָדְשְׁךָ כָּתוּב לֵאמר: "}
+          ]},
+          {"ref": "22", "parts": [
+            {"kind": "speaker", "when": "cholHamoed && !hoshanaRaba && !shabbat", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "en": "Congregation, then chazzan:", "clean": "קו\"ח:", "text": "קו\"ח - "},
+            {"kind": "prayer", "when": "cholHamoed && !hoshanaRaba && !shabbat", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["rise_on_toes"], "text": "יִמְלךְ ה' לְעולָם אֱלהַיִךְ צִיּון לְדר וָדר הַלְלוָּיהּ: "}
+          ]},
+          {"ref": "23", "parts": [
+            {"kind": "speaker", "role": "chazzan", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "clean": "חזן:", "text": "חזן - "},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "לְדור וָדור נַגִּיד גָּדְלֶךָ. וּלְנֵצַח נְצָחִים קְדֻשָּׁתְךָ נַקְדִּישׁ. וְשִׁבְחֲךָ אֱלהֵינוּ מִפִּינוּ לא יָמוּשׁ לְעולָם וָעֶד. כִּי אֵל מֶלֶךְ גָּדול וְקָדושׁ אָתָּה: "}
+          ]},
+          {"ref": "24", "parts": [
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "בָּרוּךְ אַתָּה ה'. הָאֵל הַקָּדושׁ: "},
+            {"kind": "instruction", "node": "amidah.yomtov.atta_vechartanu", "role": "chazzan", "amidah": "repetition", "en": "[The chazzan continues: 'You have chosen us']", "text": "[הש\"ץ ממשיך: אתה בחרתנו]"}
+          ]}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Mussaf/Sanctity of the Name",
+      "title": "קדושת השם",
+      "node": "amidah.kedushat_hashem",
+      "service": "musaf",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "amidah": "silent", "text": "אַתָּה קָדושׁ וְשִׁמְךָ קָדושׁ. וּקְדושִׁים בְּכָל יום יְהַלְלוּךָ סֶּלָה: "},
+          {"ref": "2", "kind": "prayer", "voice": "silent", "amidah": "silent", "text": "כִּי אֵל מֶלֶךְ גָּדול וְקָדושׁ אָתָּה: "},
+          {"ref": "3", "kind": "prayer", "voice": "silent", "amidah": "silent", "text": "בָּרוּךְ אַתָּה ה' הָאֵל הַקָּדושׁ:"}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Mussaf/Sanctity of the Day",
+      "title": "קדושת היום",
+      "node": "amidah.yomtov.atta_vechartanu",
+      "service": "musaf",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "node": "amidah.yomtov.atta_vechartanu", "voice": "silent", "text": "אַתָּה בְּחַרְתָּנוּ מִכָּל הָעַמִּים אָהַבְתָּ אוֹתָנוּ וְרָצִיתָ בָּנוּ וְרוֹמַמְתָּנוּ מִכָּל הַלְּשׁוֹנוֹת וְקִדַּשְׁתָּנוּ בְּמִצְוֹתֶיךָ וְקֵרַבְתָּנוּ מַלְכֵּנוּ לַעֲבוֹדָתֶךָ וְשִׁמְךָ הַגָּדוֹל וְהַקָּדוֹשׁ עָלֵינוּ קָרָאתָ:"},
+          {"ref": "2", "parts": [
+            {"kind": "prayer", "node": "amidah.yomtov.atta_vechartanu", "voice": "silent", "text": "וַתִּתֶּן לָנוּ ה' אֱלהֵינוּ בְּאַהֲבָה "},
+            {"kind": "instruction", "when": "shabbat", "node": "amidah.yomtov.atta_vechartanu", "en": "On Shabbat:", "clean": "לשבת:", "text": "<em><small>לשבת: "},
+            {"kind": "prayer", "when": "shabbat", "node": "amidah.yomtov.atta_vechartanu", "voice": "silent", "text": "שַׁבָּתות לִמְנוּחָה וּ</small></em>"},
+            {"kind": "prayer", "node": "amidah.yomtov.atta_vechartanu", "voice": "silent", "text": " מועֲדִים לְשמְחָה חַגִּים וּזְמַנִּים לְששון אֶת יום: "}
+          ]},
+          {"ref": "3", "parts": [
+            {"kind": "instruction", "when": "shabbat", "node": "amidah.yomtov.atta_vechartanu", "en": "On Shabbat:", "clean": "לשבת:", "text": "<em><small>לשבת - "},
+            {"kind": "prayer", "when": "shabbat", "node": "amidah.yomtov.atta_vechartanu", "voice": "silent", "text": "הַשַׁבָּת הַזֶּה וְאֶת יום</small></em>"},
+            {"kind": "prayer", "node": "amidah.yomtov.atta_vechartanu", "voice": "silent", "text": ": "}
+          ]},
+          {"ref": "4", "parts": [
+            {"kind": "instruction", "when": "pesach", "node": "amidah.yomtov.atta_vechartanu", "en": "On Pesach:", "clean": "לפסח:", "text": "לפסח - "},
+            {"kind": "prayer", "when": "pesach", "node": "amidah.yomtov.atta_vechartanu", "voice": "silent", "text": "חַג הַמַּצּות הַזֶּה זְמַן חֵרוּתֵנוּ: "}
+          ]},
+          {"ref": "5", "parts": [
+            {"kind": "instruction", "when": "shavuot", "node": "amidah.yomtov.atta_vechartanu", "en": "On Shavuot:", "clean": "לשבועות:", "text": "לשבועות - "},
+            {"kind": "prayer", "when": "shavuot", "node": "amidah.yomtov.atta_vechartanu", "voice": "silent", "text": "חַג הַשָׁבוּעות הַזֶּה זְמַן מַתַּן תּורָתֵינוּ: "}
+          ]},
+          {"ref": "6", "parts": [
+            {"kind": "instruction", "when": "sukkot", "node": "amidah.yomtov.atta_vechartanu", "en": "On Sukkot:", "clean": "סוכות:", "text": "סוכות - "},
+            {"kind": "prayer", "when": "sukkot", "node": "amidah.yomtov.atta_vechartanu", "voice": "silent", "text": "חַג הַסֻּכּות הַזֶּה זְמַן שמְחָתֵנוּ: "}
+          ]},
+          {"ref": "7", "parts": [
+            {"kind": "instruction", "when": "shminiAtzeret || simchatTorah", "node": "amidah.yomtov.atta_vechartanu", "en": "On Shemini Atzeret and Simchat Torah:", "clean": "לשמ\"ע ולש\"ת:", "text": "לשמ\"ע ולש\"ת - "},
+            {"kind": "prayer", "when": "shminiAtzeret || simchatTorah", "node": "amidah.yomtov.atta_vechartanu", "voice": "silent", "text": "הַשְׁמִינִי חַג הָעֲצֶרֶת הַזֶּה זְמַן שמְחָתֵנוּ: "}
+          ]},
+          {"ref": "8", "parts": [
+            {"kind": "instruction", "when": "shabbat", "node": "amidah.yomtov.atta_vechartanu", "en": "On Shabbat:", "clean": "לשבת:", "text": "<em><small>לשבת "},
+            {"kind": "prayer", "when": "shabbat", "node": "amidah.yomtov.atta_vechartanu", "voice": "silent", "text": "בְּאַהֲבָה</small></em>"},
+            {"kind": "prayer", "node": "amidah.yomtov.atta_vechartanu", "voice": "silent", "text": " מִקְרָא קדֶשׁ זֵכֶר לִיצִיאַת מִצְרָיִם: "}
+          ]},
+          {"ref": "10", "kind": "prayer", "node": "amidah.musaf.umipnei_chataeinu", "voice": "silent", "text": "וּמִפְּנֵי חֲטָאֵינוּ גָּלִינוּ מֵאַרְצֵנוּ. וְנִתְרַחַקְנוּ מֵעַל אַדְמָתֵנוּ. וְאֵין אֲנַחְנוּ יְכוֹלִים לַעֲלוֹת וְלֵרָאוֹת וּלְהִשְׁתַּחֲוֹת לְפָנֶיךָ. וְלַעֲשׂוֹת חוֹבוֹתֵינוּ בְּבֵית בְּחִירָתֶךָ. בַּבַּיִת הַגָּדוֹל וְהַקָּדוֹשׁ שֶׁנִּקְרָא שִׁמְךָ עָלָיו. מִפְּנֵי הַיָּד שֶׁנִּשְׁתַּלְּחָה בְּמִקְדָּשֶׁךָ:"},
+          {"ref": "11", "kind": "prayer", "node": "amidah.musaf.umipnei_chataeinu", "voice": "silent", "text": "יְהִי רָצוֹן מִלְּפָנֶיךָ ה' אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ. מֶלֶךְ רַחֲמָן. שֶׁתָּשׁוּב וּתְרַחֵם עָלֵינוּ וְעַל מִקְדָּשְׁךָ בְּרַחֲמֶיךָ הָרַבִּים. וְתִבְנֵהוּ מְהֵרָה וּתְגַדֵּל כְּבוֹדוֹ:"},
+          {"ref": "12", "kind": "prayer", "node": "amidah.musaf.umipnei_chataeinu", "voice": "silent", "text": "אָבִינוּ מַלְכֵּנוּ. גַּלֵּה כְּבוֹד מַלְכוּתְךָ עָלֵינוּ מְהֵרָה. וְהוֹפַע וְהִנָּשֵׂא עָלֵינוּ לְעֵינֵי כָּל חַי. וְקָרֵב פְּזוּרֵינוּ מִבֵּין הַגּוֹיִם. וּנְפוּצוֹתֵינוּ כַּנֵּס מִיַּרְכְּתֵי אָרֶץ. וַהֲבִיאֵנוּ לְצִיּוֹן עִירְךָ בְּרִנָּה. וְלִירוּשָׁלַיִם בֵּית מִקְדָּשְׁךָ בְּשִׂמְחַת עוֹלָם. וְשָׁם נַעֲשֶׂה לְפָנֶיךָ אֶת קָרְבְּנוֹת חוֹבוֹתֵינוּ תְּמִידִים כְּסִדְרָם וּמוּסָפִים כְּהִלְכָתָם:"},
+          {"ref": "13", "parts": [
+            {"kind": "prayer", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וְאֶת מוּסַף "},
+            {"kind": "instruction", "when": "shabbat", "node": "amidah.musaf.korbanot", "en": "On Shabbat:", "clean": "לשבת:", "text": "<em><small>לשבת "},
+            {"kind": "prayer", "when": "shabbat", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וְאֶת מוּסְפֵי יום הַשַּׁבָּת הַזֶּה וְ</small></em>"},
+            {"kind": "prayer", "node": "amidah.musaf.korbanot", "voice": "silent", "text": " יום: "}
+          ]},
+          {"ref": "14", "parts": [
+            {"kind": "instruction", "when": "pesach", "node": "amidah.musaf.korbanot", "en": "On Pesach:", "clean": "לפסח:", "text": "לפסח - "},
+            {"kind": "prayer", "when": "pesach", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "חַג הַמַּצּות הַזֶּה: "}
+          ]},
+          {"ref": "15", "parts": [
+            {"kind": "instruction", "when": "shavuot", "node": "amidah.musaf.korbanot", "en": "On Shavuot:", "clean": "לשבועות:", "text": "לשבועות - "},
+            {"kind": "prayer", "when": "shavuot", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "חַג הַשָׁבוּעות הַזֶּה: "}
+          ]},
+          {"ref": "16", "parts": [
+            {"kind": "instruction", "when": "sukkot", "node": "amidah.musaf.korbanot", "en": "On Sukkot:", "clean": "סוכות:", "text": "סוכות - "},
+            {"kind": "prayer", "when": "sukkot", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "חַג הַסֻּכּות הַזֶּה: "}
+          ]},
+          {"ref": "17", "parts": [
+            {"kind": "instruction", "when": "shminiAtzeret || simchatTorah", "node": "amidah.musaf.korbanot", "en": "On Shemini Atzeret and Simchat Torah:", "clean": "לשמ\"ע ולש\"ת:", "text": "לשמ\"ע ולש\"ת - "},
+            {"kind": "prayer", "when": "shminiAtzeret || simchatTorah", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "הַשְׁמִינִי חַג הָעֲצֶרֶת הַזֶּה: "}
+          ]},
+          {"ref": "18", "kind": "prayer", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "נַעֲשֶׂה וְנַקְרִיב לְפָנֶיךָ בְּאַהֲבָה כְּמִצְוַת רְצוֹנֶךָ. כְּמוֹ שֶׁכָּתַבְתָּ עָלֵינוּ בְּתוֹרָתֶךָ עַל יְדֵי מֹשֶׁה עַבְדֶּךָ. מִפִּי כְּבוֹדֶךָ כָּאָמוּר:"},
+          {"ref": "19", "parts": [
+            {"kind": "instruction", "when": "shabbat", "node": "amidah.musaf.korbanot", "en": "On Shabbat:", "clean": "לשבת:", "text": "לשבת "},
+            {"kind": "prayer", "when": "shabbat", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וּבְיום הַשַּׁבָּת. שְׁנֵי כְבָשים בְּנֵי שָׁנָה תְּמִימִים. וּשְׁנֵי עֶשרנִים סלֶת מִנְחָה בְּלוּלָה בַשֶּׁמֶן וְנִסְכּו: "}
+          ]},
+          {"ref": "20", "kind": "prayer", "when": "shabbat", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "עלַת שַׁבַּת בְּשַׁבַּתּו. עַל עלַת הַתָּמִיד וְנִסְכָּהּ: "},
+          {"ref": "22", "kind": "instruction", "when": "pesachFirstDays", "node": "amidah.musaf.korbanot", "en": "On the first day(s) of Pesach:", "clean": "ליום א' וב' דפסח:", "text": "ליום א' וב' דפסח: "},
+          {"ref": "23", "kind": "prayer", "when": "pesachFirstDays", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וּבַחדֶשׁ הָרִאשׁון בְּאַרְבָּעָה עָשר יום לַחדֶשׁ. פֶּסַח לה': "},
+          {"ref": "24", "kind": "prayer", "when": "pesachFirstDays", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וּבַחֲמִשָּׁה עָשר יום לַחדֶשׁ הַזֶּה חָג. שִׁבְעַת יָמִים מַצּות יֵאָכֵל: "},
+          {"ref": "25", "kind": "prayer", "when": "pesachFirstDays", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "בַּיּום הָרִאשׁון מִקְרָא קדֶשׁ. כָּל מְלֶאכֶת עֲבדָה לא תַעֲשוּ: "},
+          {"ref": "26", "kind": "prayer", "when": "pesachFirstDays", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וְהִקְרַבְתֶּם אִשֶּׁה עלָה לה'. פָּרִים בְּנֵי בָקָר שְׁנַיִם. וְאַיִל אֶחָד. וְשִׁבְעָה כְבָשים בְּנֵי שָׁנָה. תְּמִימִם יִהְיוּ לָכֶם: "},
+          {"ref": "27", "kind": "instruction", "when": "pesachFirstDays", "node": "amidah.musaf.korbanot", "en": "And their meal-offerings (continue 'u-minchatam' below):", "clean": "ומנחתם:", "text": "ומנחתם: "},
+          {"ref": "28", "kind": "instruction", "when": "shavuot", "node": "amidah.musaf.korbanot", "en": "On Shavuot:", "clean": "לשבועות:", "text": "לשבועות: "},
+          {"ref": "29", "kind": "prayer", "when": "shavuot", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וּבְיום הַבִּכּוּרִים. בְּהַקְרִיבְכֶם מִנְחָה חֲדָשָׁה לה' בְּשָׁבֻעותֵיכֶם מִקְרָא קדֶשׁ יִהְיֶה לָכֶם. כָּל מְלֶאכֶת עֲבדָה לא תַעֲשוּ: "},
+          {"ref": "30", "kind": "prayer", "when": "shavuot", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וְהִקְרַבְתֶּם עלָה לְרֵיחַ נִיחחַ לה'. פָּרִים בְּנֵי בָקָר שְׁנַיִם. אַיִל אֶחָד. שִׁבְעָה כְבָשים בְּנֵי שָׁנָה: "},
+          {"ref": "31", "kind": "instruction", "when": "shavuot", "node": "amidah.musaf.korbanot", "en": "And their meal-offerings (continue 'u-minchatam' below):", "clean": "ומנחתם:", "text": "ומנחתם: "},
+          {"ref": "32", "kind": "instruction", "when": "sukkot && yomTov", "node": "amidah.musaf.korbanot", "en": "On the first day(s) of Sukkot:", "clean": "ליום א' וב' דסכות:", "text": "ליום א' וב' דסכות: "},
+          {"ref": "33", "kind": "prayer", "when": "sukkot && yomTov", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וּבַחֲמִשָּׁה עָשר יום לַחדֶשׁ הַשְּׁבִיעִי. מִקְרָא קדֶשׁ יִהְיֶה לָכֶם כָּל מְלֶאכֶת עֲבדָה לא תַעֲשוּ. וְחַגּתֶם חַג לה' שִׁבְעַת יָמִים: "},
+          {"ref": "34", "kind": "prayer", "when": "sukkot && yomTov", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וְהִקְרַבְתֶּם עלָה אִשֵּׁה רֵיחַ נִיחחַ לה'. פָּרִים בְּנֵי בָקָר שְׁלשָׁה עָשר. אֵילִם שְׁנָיִם. כְּבָשים בְּנֵי שָׁנָה אַרְבָּעָה עָשר. תְּמִימִם יִהְיוּ: "},
+          {"ref": "35", "kind": "instruction", "when": "sukkot && yomTov", "node": "amidah.musaf.korbanot", "en": "And their meal-offerings (continue 'u-minchatam' below):", "clean": "ומנחתם:", "text": "ומנחתם: "},
+          {"ref": "36", "parts": [
+            {"kind": "prayer", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וּמִנְחָתָם וְנִסְכֵּיהֶם כִּמְדֻבָּר. שְׁלשָׁה עֶשרנִים לַפָּר. וּשְׁנֵי עֶשרנִים לָאָיִל. וְעִשּרון לַכֶּבֶש. וְיַיִן כְּנִסְכּו. "},
+            {"kind": "prayer", "when": "!shavuot", "alt": "seir", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וְשעִיר לְכַפֵּר. "},
+            {"kind": "instruction", "when": "shavuot", "node": "amidah.musaf.korbanot", "en": "On Shavuot:", "text": "<em><small>בשבועות"},
+            {"kind": "prayer", "when": "shavuot", "alt": "seir", "node": "amidah.musaf.korbanot", "voice": "silent", "text": " וּשְׁנֵי שעִירִים לְכַפֵּר</small></em>"},
+            {"kind": "prayer", "node": "amidah.musaf.korbanot", "voice": "silent", "text": " וּשְׁנֵי תְמִידִים כְּהִלְכָתָם: "}
+          ]},
+          {"ref": "37", "kind": "instruction", "node": "amidah.musaf.korbanot", "en": "Continue: 'Our God and God of our fathers' ...", "clean": "או\"א וכו':", "text": "או\"א וכו': "},
+          {"ref": "38", "kind": "instruction", "when": "cholHamoedPesach || pesachLastDays", "node": "amidah.musaf.korbanot", "en": "On Chol HaMoed Pesach and the last two days of Pesach, say this:", "clean": "בחול המועד פסח ובשני ימים אחרונים של פסח אומרים זה:", "text": "בחול המועד פסח ובשני ימים אחרונים של פסח אומרים זה: "},
+          {"ref": "39", "kind": "prayer", "when": "cholHamoedPesach || pesachLastDays", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וְהִקְרַבְתֶּם אִשֶּׁה עלָה לה'. פָּרִים בְּנֵי בָקָר שְׁנַיִם. וְאַיִל אֶחָד. וְשִׁבְעָה כְבָשים בְּנֵי שָׁנָה. תְּמִימִם יִהְיוּ לָכֶם: "},
+          {"ref": "40", "kind": "instruction", "when": "cholHamoedPesach || pesachLastDays", "node": "amidah.musaf.korbanot", "en": "And their meal-offerings (continue 'u-minchatam' above):", "clean": "ומנחתם:", "text": "ומנחתם: "},
+          {"ref": "41", "kind": "note", "when": "diaspora && cholHamoedSukkot", "node": "amidah.musaf.korbanot", "en": "In the diaspora one also says the doubtful day (safek d'yoma): on the first day of Chol HaMoed say \"and on the second day and on the third day\", on the second day of Chol HaMoed \"and on the third day and on the fourth day\", and so on.", "clean": "בחו\"ל אומרים גם ספיקא דיומא. דהיינו ביום ראשון דחוה\"מ אומרים \"וביום השני וביום השלישי\". וביום ב' דחוה\"מ אומרים \"וביום השלישי וביום הרביעי\" וכדומה.", "text": "בחו\"ל אומרים גם ספיקא דיומא. דהיינו ביום ראשון דחוה\"מ אומרים \"וביום השני וביום השלישי\". וביום ב' דחוה\"מ אומרים \"וביום השלישי וביום הרביעי\" וכדומה."},
+          {"ref": "42", "kind": "instruction", "when": "(il && hMonth == 7 && hDay == 16) || (diaspora && cholHamoedSukkot && hDay in [16, 17])", "node": "amidah.musaf.korbanot", "en": "On the first day of Chol HaMoed Sukkot (in Israel):", "clean": "ביום ראשון דחוה\"מ סוכות באר\"י:", "text": "ביום ראשון דחוה\"מ סוכות באר\"י: "},
+          {"ref": "43", "kind": "prayer", "when": "(il && hMonth == 7 && hDay == 16) || (diaspora && cholHamoedSukkot && hDay in [16, 17])", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וּבַיּום הַשֵּׁנִי. פָּרִים בְּנֵי בָקָר שְׁנֵים עָשר. אֵילִם שְׁנָיִם. כְּבָשים בְּנֵי שָׁנָה אַרְבָּעָה עָשר. תְּמִימִם: "},
+          {"ref": "44", "kind": "instruction", "when": "(il && hMonth == 7 && hDay == 16) || (diaspora && cholHamoedSukkot && hDay in [16, 17])", "node": "amidah.musaf.korbanot", "en": "And their meal-offerings (continue 'u-minchatam'):", "clean": "ומנחתם:", "text": "ומנחתם: "},
+          {"ref": "45", "kind": "instruction", "when": "(il && hMonth == 7 && hDay == 17) || (diaspora && cholHamoedSukkot && hDay in [17, 18])", "node": "amidah.musaf.korbanot", "en": "On the second day of Chol HaMoed Sukkot (in Israel):", "clean": "ביום שני דחוה\"מ סוכות באר\"י:", "text": "ביום שני דחוה\"מ סוכות באר\"י: "},
+          {"ref": "46", "kind": "prayer", "when": "(il && hMonth == 7 && hDay == 17) || (diaspora && cholHamoedSukkot && hDay in [17, 18])", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וּבַיּום הַשְּׁלִישִׁי. פָּרִים עַשְׁתֵּי עָשר. אֵילִם שְׁנָיִם. כְּבָשים בְּנֵי שָׁנָה אַרְבָּעָה עָשר. תְּמִימִם: "},
+          {"ref": "47", "kind": "instruction", "when": "(il && hMonth == 7 && hDay == 17) || (diaspora && cholHamoedSukkot && hDay in [17, 18])", "node": "amidah.musaf.korbanot", "en": "And their meal-offerings (continue 'u-minchatam'):", "clean": "ומנחתם:", "text": "ומנחתם: "},
+          {"ref": "48", "kind": "instruction", "when": "(il && hMonth == 7 && hDay == 18) || (diaspora && cholHamoedSukkot && hDay in [18, 19])", "node": "amidah.musaf.korbanot", "en": "On the third day of Chol HaMoed Sukkot (in Israel):", "clean": "ביום שלישי דחוה\"מ סוכות באר\"י:", "text": "ביום שלישי דחוה\"מ סוכות באר\"י: "},
+          {"ref": "49", "kind": "prayer", "when": "(il && hMonth == 7 && hDay == 18) || (diaspora && cholHamoedSukkot && hDay in [18, 19])", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וּבַיּום הָרְבִיעִי. פָּרִים עֲשרָה. אֵילִים שְׁנָיִם. כְּבָשים בְּנֵי שָׁנָה אַרְבָּעָה עָשר. תְּמִימִם: "},
+          {"ref": "50", "kind": "instruction", "when": "(il && hMonth == 7 && hDay == 18) || (diaspora && cholHamoedSukkot && hDay in [18, 19])", "node": "amidah.musaf.korbanot", "en": "And their meal-offerings (continue 'u-minchatam'):", "clean": "ומנחתם:", "text": "ומנחתם: "},
+          {"ref": "51", "kind": "instruction", "when": "(il && hMonth == 7 && hDay == 19) || (diaspora && cholHamoedSukkot && hDay in [19, 20])", "node": "amidah.musaf.korbanot", "en": "On the fourth day of Chol HaMoed Sukkot (in Israel):", "clean": "ביום רביעי דחוה\"מ סוכות באר\"י:", "text": "ביום רביעי דחוה\"מ סוכות באר\"י: "},
+          {"ref": "52", "kind": "prayer", "when": "(il && hMonth == 7 && hDay == 19) || (diaspora && cholHamoedSukkot && hDay in [19, 20])", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וּבַיּום הַחֲמִישִׁי פָּרִים תִּשְׁעָה. אֵילִם שְׁנָיִם. כְּבָשים בְּנֵי שָׁנָה אַרְבָּעָה עָשר. תְּמִימִם: "},
+          {"ref": "53", "kind": "instruction", "when": "(il && hMonth == 7 && hDay == 19) || (diaspora && cholHamoedSukkot && hDay in [19, 20])", "node": "amidah.musaf.korbanot", "en": "And their meal-offerings (continue 'u-minchatam'):", "clean": "ומנחתם:", "text": "ומנחתם: "},
+          {"ref": "54", "kind": "instruction", "when": "(il && hMonth == 7 && hDay == 20) || (diaspora && cholHamoedSukkot && hDay in [20, 21])", "node": "amidah.musaf.korbanot", "en": "On the fifth day of Chol HaMoed Sukkot (in Israel):", "clean": "ביום חמישי דחוה\"מ סוכות באר\"י:", "text": "ביום חמישי דחוה\"מ סוכות באר\"י: "},
+          {"ref": "55", "kind": "prayer", "when": "(il && hMonth == 7 && hDay == 20) || (diaspora && cholHamoedSukkot && hDay in [20, 21])", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וּבַיּום הַשִּׁשִּׁי. פָּרִים שְׁמנָה. אֵילִם שְׁנָיִם. כְּבָשים בְּנֵי שָׁנָה אַרְבָּעָה עָשר. תְּמִימִם: "},
+          {"ref": "56", "kind": "instruction", "when": "(il && hMonth == 7 && hDay == 20) || (diaspora && cholHamoedSukkot && hDay in [20, 21])", "node": "amidah.musaf.korbanot", "en": "And their meal-offerings (continue 'u-minchatam'):", "clean": "ומנחתם:", "text": "ומנחתם: "},
+          {"ref": "57", "kind": "instruction", "when": "(il && hMonth == 7 && hDay == 21) || (diaspora && cholHamoedSukkot && hDay in [21, 22])", "node": "amidah.musaf.korbanot", "en": "On Hoshana Raba:", "clean": "להושענא רבה:", "text": "להושענא רבה: "},
+          {"ref": "58", "kind": "prayer", "when": "(il && hMonth == 7 && hDay == 21) || (diaspora && cholHamoedSukkot && hDay in [21, 22])", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וּבַיּום הַשְּׁבִיעִי. פָּרִים שִׁבְעָה. אֵילִם שְׁנָיִם. כְּבָשים בְּנֵי שָׁנָה אַרְבָּעָה עָשר. תְּמִימִם: "},
+          {"ref": "59", "kind": "instruction", "when": "(il && hMonth == 7 && hDay == 21) || (diaspora && cholHamoedSukkot && hDay in [21, 22])", "node": "amidah.musaf.korbanot", "en": "And their meal-offerings (continue 'u-minchatam'):", "clean": "ומנחתם:", "text": "ומנחתם: "},
+          {"ref": "60", "kind": "instruction", "when": "shminiAtzeret || simchatTorah", "node": "amidah.musaf.korbanot", "en": "On Shemini Atzeret and Simchat Torah:", "clean": "לשמיני עצרת ולשמחת תורה:", "text": "לשמיני עצרת ולשמחת תורה: "},
+          {"ref": "61", "kind": "prayer", "when": "shminiAtzeret || simchatTorah", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "בַּיּום הַשְּׁמִינִי. עֲצֶרֶת תִּהְיֶה לָכֶם כָּל מְלֶאכֶת עֲבדָה לא תַעֲשוּ: "},
+          {"ref": "62", "kind": "prayer", "when": "shminiAtzeret || simchatTorah", "node": "amidah.musaf.korbanot", "voice": "silent", "text": "וְהִקְרַבְתֶּם עלָה אִשֵּׁה רֵיחַ נִיחחַ לה'. פַּר אֶחָד. אַיִל אֶחָד. כְּבָשים בְּנֵי שָׁנָה שִׁבְעָה. תְּמִימִם: "},
+          {"ref": "63", "kind": "instruction", "when": "shminiAtzeret || simchatTorah", "node": "amidah.musaf.korbanot", "en": "And their meal-offerings (continue 'u-minchatam'):", "clean": "ומנחתם:", "text": "ומנחתם: "},
+          {"ref": "65", "parts": [
+            {"kind": "instruction", "when": "shabbat", "node": "amidah.shabbat.yismechu", "en": "On Shabbat:", "clean": "לשבת:", "text": "לשבת: "},
+            {"kind": "prayer", "when": "shabbat", "node": "amidah.shabbat.yismechu", "voice": "silent", "text": "יִשמְחוּ בְּמַלְכוּתְךָ שׁומְרֵי שַׁבָּת וְקורְאֵי עונֶג עַם מְקַדְּשֵׁי שְׁבִיעִי. כֻּלָּם יִשבְּעוּ וְיִתְעַנְּגוּ מִטּוּבֶךָ. וּבַשְּׁבִיעִי רָצִיתָ בּו וְקִדַּשְׁתּו חֶמְדַת יָמִים אותו קָרָאתָ. זֵכֶר לְמַעֲשה בְרֵאשִׁית: "}
+          ]},
+          {"ref": "67", "parts": [
+            {"kind": "prayer", "node": "x.amidah.musaf.melech_rachaman", "voice": "silent", "text": "אֱלהֵינוּ וֵאלהֵי אֲבותֵינוּ. "},
+            {"kind": "instruction", "when": "shabbat", "node": "x.amidah.musaf.melech_rachaman", "en": "On Shabbat:", "clean": "לשבת:", "text": "<em><small>לשבת "},
+            {"kind": "prayer", "when": "shabbat", "node": "x.amidah.musaf.melech_rachaman", "voice": "silent", "text": "רְצֵה בִמְנוּחָתֵנוּ</small></em>"},
+            {"kind": "prayer", "node": "x.amidah.musaf.melech_rachaman", "voice": "silent", "text": " מֶלֶךְ רַחֲמָן רַחֵם עָלֵינוּ. טוב וּמֵטִיב הִדָּרֶשׁ לָנוּ. שׁוּבָה אֵלֵינוּ בַּהֲמון רַחֲמֶיךָ. בִּגְלַל אָבות שֶׁעָשוּ רְצונֶךָ. בְּנֵה בֵיתְךָ כְּבַתְּחִלָּה וְכונֵן מִקְדָּשְׁךָ עַל מְכונו. וְהַרְאֵנוּ בְּבִנְיָנו וְשמְּחֵנוּ בְּתִקּוּנו. וְהָשֵׁב כּהֲנִים לַעֲבודָתָם וּלְוִיִּם לְשִׁירָם וּלְזִמְרָם. וְהָשֵׁב יִשרָאֵל לִנְוֵיהֶם. וְשָׁם נַעֲלֶה וְנֵרָאֶה וְנִשְׁתַּחֲוֶה לְפָנֶיךָ בְּשָׁלשׁ פַּעֲמֵי רְגָלֵינוּ כַּכָּתוּב בְּתורָתֶךָ. שָׁלשׁ פְּעָמִים בַּשָּׁנָה יֵרָאֶה כָל זְכוּרְךָ אֶת פְּנֵי ה' אֱלהֶיךָ בַּמָּקום אֲשֶׁר יִבְחָר. בְּחַג הַמַּצּות. וּבְחַג הַשָּׁבֻעות. וּבְחַג הַסֻּכּות. וְלא יֵרָאֶה אֶת פְּנֵי ה' רֵיקָם. אִישׁ כְּמַתְּנַת יָדו כְּבִרְכַּת ה' אֱלהֶיךָ אֲשֶׁר נָתַן לָךְ: "}
+          ]},
+          {"ref": "68", "parts": [
+            {"kind": "prayer", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": "וְהַשּיאֵנוּ ה' אֱלהֵינוּ אֶת בִּרְכַּת מועֲדֶיךָ. לְחַיִּים וּלְשָׁלום לְשמְחָה וּלְששון. כַּאֲשֶׁר רָצִיתָ וְאָמַרְתָּ לְבָרְכֵנוּ. "},
+            {"kind": "instruction", "when": "shabbat", "node": "amidah.yomtov.vehasieinu", "en": "On Shabbat:", "clean": "לשבת:", "text": "<em><small>לשבת "},
+            {"kind": "prayer", "when": "shabbat", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": "אֱלהֵינוּ וֵאלהֵי אֲבותֵינוּ רְצֵה נָא בִמְנוּחָתֵנוּ</small></em>"},
+            {"kind": "prayer", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": " קַדְּשֵׁנוּ בְּמִצְותֶיךָ. וְתֵן חֶלְקֵנוּ בְּתורָתֶךָ. שבְּעֵנוּ מִטּוּבֶךָ וְשמְּחֵנוּ בִּישׁוּעָתֶךָ. וְטַהֵר לִבֵּנוּ לְעָבְדְּךָ בֶּאֱמֶת. וְהַנְחִילֵנוּ ה' אֱלהֵינוּ "},
+            {"kind": "instruction", "when": "shabbat", "node": "amidah.yomtov.vehasieinu", "en": "On Shabbat:", "clean": "לשבת:", "text": "<em><small>לשבת "},
+            {"kind": "prayer", "when": "shabbat", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": "בְּאַהֲבָה וּבְרָצון</small></em>"},
+            {"kind": "prayer", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": " בְּשמְחָה וּבְששון "},
+            {"kind": "prayer", "when": "shabbat", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": "<em><small>שַׁבָּת וּ</small></em>"},
+            {"kind": "prayer", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": " מועֲדֵי קָדְשֶׁךָ. וְיִשמְחוּ בְךָ יִשרָאֵל מְקַדְּשֵׁי שְׁמֶךָ: "}
+          ]},
+          {"ref": "69", "parts": [
+            {"kind": "prayer", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "gestures": ["bow"], "text": "בָּרוּךְ אַתָּה ה' מְקַדֵּשׁ "},
+            {"kind": "prayer", "when": "shabbat", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": "<em><small>הַשַּׁבָּת וְ</small></em>"},
+            {"kind": "prayer", "node": "amidah.yomtov.vehasieinu", "voice": "silent", "text": " יִשרָאֵל וְהַזְּמַנִּים:"}
+          ]}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Mussaf/Avodah",
+      "title": "עבודה",
+      "node": "amidah.avoda",
+      "service": "musaf",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "רְצֵה ה' אֱלהֵינוּ בְּעַמְּךָ יִשרָאֵל וְבִתְפִלָּתָם שְׁעֵה. וְהָשֵׁב אֶת הָעֲבודָה לִדְבִיר בֵּיתֶךָ. וְאִשֵּׁי יִשרָאֵל וּתְפִלָּתָם. בְּאַהֲבָה תְקַבֵּל בְּרָצון. וּתְהִי לְרָצון תָּמִיד עֲבודַת יִשרָאֵל עַמֶּךָ: "},
+          {"ref": "2", "kind": "instruction", "role": "chazzan", "amidah": "repetition", "en": "In the chazzan's repetition, say \"Ve-sa'arev\" here:", "clean": "בחזרת הש\"ץ אומרים כאן ותערב:", "text": "בחזרת הש\"ץ אומרים כאן ותערב: "},
+          {"ref": "3", "kind": "prayer", "voice": "silent", "text": "וְתֶחֱזֶינָה עֵינֵינוּ בְּשׁוּבְךָ לְצִיּון בְּרַחֲמִים: "},
+          {"ref": "4", "kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "בָּרוּךְ אַתָּה ה'. הַמַּחֲזִיר שְׁכִינָתו לְצִיּון:"}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Mussaf/Modim",
+      "title": "מודים",
+      "node": "amidah.modim",
+      "service": "musaf",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "gestures": ["bow_full"], "text": "מודִים אֲנַחְנוּ לָךְ. שָׁאַתָּה הוּא ה' אֱלהֵינוּ וֵאלהֵי אֲבותֵינוּ לְעולָם וָעֶד. צוּר חַיֵּינוּ. מָגֵן יִשְׁעֵנוּ אַתָּה הוּא לְדור וָדור נודֶה לְּךָ וּנְסַפֵּר תְּהִלָּתֶךָ עַל חַיֵּינוּ הַמְּסוּרִים בְּיָדֶךָ. וְעַל נִשְׁמותֵינוּ הַפְּקוּדות לָךְ. וְעַל נִסֶּיךָ שֶׁבְּכָל יום עִמָּנוּ. וְעַל נִפְלְאותֶיךָ וְטובותֶיךָ שֶׁבְּכָל עֵת. עֶרֶב וָבקֶר וְצָהֳרָיִם: "},
+          {"ref": "2", "kind": "prayer", "voice": "silent", "text": "הַטּוב כִּי לא כָלוּ רַחֲמֶיךָ. וְהַמְרַחֵם כִּי לא תַמּוּ חֲסָדֶיךָ. כִּי מֵעולָם קִוִּינוּ לָךְ: "},
+          {"ref": "4", "kind": "heading", "node": "amidah.modim_derabbanan", "role": "congregation", "amidah": "repetition", "en": "Modim d'Rabbanan", "text": "מודים דרבנן: "},
+          {"ref": "5", "kind": "prayer", "node": "amidah.modim_derabbanan", "role": "congregation", "voice": "undertone", "amidah": "repetition", "text": "מודִים אֲנַחְנוּ לָךְ. שָׁאַתָּה הוּא ה' אֱלהֵינוּ וֵאלהֵי אֲבותֵינוּ. אֱלהֵי כָל בָּשר. יוצְרֵנוּ יוצֵר בְּרֵאשִׁית. בְּרָכות וְהודָאות לְשִׁמְךָ הַגָּדול וְהַקָּדושׁ. עַל שֶׁהֶחֱיִיתָנוּ וְקִיַּמְתָּנוּ. כֵּן תְּחַיֵּנוּ וּתְקַיְּמֵנוּ. וְתֶאֱסוף גָּלֻיּותֵינוּ לְחַצְרות קָדְשֶׁךָ. לִשְׁמור חֻקֶּיךָ. וְלַעֲשות רְצונֶךָ. וּלְעָבְדְךָ בְּלֵבָב שָׁלֵם. עַל שֶׁאָנוּ מודִים לָךְ. בָּרוּךְ אֵל הַהודָאות: "},
+          {"ref": "7", "kind": "prayer", "voice": "silent", "text": "וְעַל כֻּלָּם יִתְבָּרֵךְ וְיִתְרומַם וְיִתְנַשּא שִׁמְךָ מַלְכֵּנוּ תָּמִיד לְעולָם וָעֶד: "},
+          {"ref": "8", "kind": "prayer", "voice": "silent", "text": "וְכל הַחַיִּים יודוּךָ סֶּלָה. וִיהַלְלוּ אֶת שִׁמְךָ בֶּאֱמֶת, לְעולָם כִּי טוב. הָאֵל יְשׁוּעָתֵנוּ וְעֶזְרָתֵנוּ סֶלָה: "},
+          {"ref": "9", "kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "בָּרוּךְ אַתָּה ה'. הַטּוב שִׁמְךָ וּלְךָ נָאֶה לְהודות:"}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Mussaf/Birkat Kohanim",
+      "title": "ברכת כוהנים",
+      "node": "amidah.birkat_kohanim_kohanim",
+      "service": "musaf",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "2", "parts": [
+            {"kind": "prayer", "when": "kohanim", "voice": "undertone", "amidah": "repetition", "text": "יְהִי רָצון מִלְּפָנֶיךָ ה' אֱלהֵינוּ וֵאלהֵי אֲבותֵינוּ. שֶׁתְּהֵא הַבְּרָכָה הַזּאת "},
+            {"kind": "instruction", "when": "kohanim", "role": "kohanim", "amidah": "repetition", "en": "Kohanim:", "clean": "לכהנים:", "text": "<em><small>לכהנים:"},
+            {"kind": "prayer", "when": "kohanim", "role": "kohanim", "voice": "undertone", "amidah": "repetition", "text": " שֶׁצִּוִּיתָנו "},
+            {"kind": "instruction", "when": "kohanim", "role": "congregation", "amidah": "repetition", "en": "Congregation:", "clean": "לקהל:", "text": "<br> לקהל:"},
+            {"kind": "prayer", "when": "kohanim", "role": "congregation", "voice": "undertone", "amidah": "repetition", "text": " שֶׁצִּוִּיתָ</small></em>"},
+            {"kind": "prayer", "when": "kohanim", "voice": "undertone", "amidah": "repetition", "text": " לְבָרֵךָ אֶת עַמְּךָ יִשרָאֵל. בְּרָכָה שְׁלֵמָה. וְלא יִהְיֶה בָּהּ שׁוּם מִכְשׁול וְעָון. מֵעַתָּה וְעַד עולָם: "}
+          ]},
+          {"ref": "4", "parts": [
+            {"kind": "prayer", "node": "amidah.avoda", "role": "chazzan", "amidah": "repetition", "text": "וְתֵעָרֵב עָלֶיךָ "},
+            {"kind": "note", "node": "amidah.avoda", "amidah": "repetition", "en": "[Other versions: 'before You']", "clean": "[נ\"א: לפניך]", "text": "<small>[נ\"א: לפניך]</small>"},
+            {"kind": "prayer", "node": "amidah.avoda", "role": "chazzan", "amidah": "repetition", "text": " עֲתִירָתֵנוּ כְּעוֹלָה וּכְקָרְבָּן. אָנָּא רַחוּם, בְּרַחֲמֶיךָ הָרַבִּים הָשֵׁב שְׁכִינָתְךָ לְצִיּוֹן (עִירֶךָ) וְסֵדֶר הַעֲבוֹדָה לִירוּשָׁלָיִם."}
+          ]},
+          {"ref": "6", "parts": [
+            {"kind": "instruction", "when": "false", "node": "amidah.avoda", "amidah": "repetition", "en": "In most US communities:", "clean": "ברוב קהילות ארה״ב:", "text": "<small>ברוב קהילות ארה״ב:</small>"},
+            {"kind": "prayer", "when": "false", "node": "amidah.avoda", "role": "chazzan", "amidah": "repetition", "text": " וְתֶחֱזֶינָה עֵינֵינוּ בְּשׁוּבְךָ לְצִיּוֹן בְּרַחֲמִים. וְשָׁם נַעֲבָדְךָ בְּיִרְאָה כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיּוֹת. בָּרוּך אַתָּה ה׳ שֶׁאוֹתְךָ לְבַדְּךָ בְּיִרְאָה נַעֲבֹד. "}
+          ]},
+          {"ref": "7", "parts": [
+            {"kind": "instruction", "when": "false", "node": "amidah.avoda", "amidah": "repetition", "en": "Nusach HaGra and the custom of Israel:", "clean": "נוסח הגר״א ומנהג ארץ ישראל:", "text": "<small>נוסח הגר״א ומנהג ארץ ישראל:</small>"},
+            {"kind": "prayer", "when": "false", "node": "amidah.avoda", "role": "chazzan", "amidah": "repetition", "text": " וְשָׁם נַעֲבָדְךָ בְּיִרְאָה כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיּוֹת. וְתֶחֱזֶינָה עֵינֵינוּ בְּשׁוּבְךָ לְצִיּוֹן בְּרַחֲמִים. בָּרוּךְ אַתָּה ה׳ הַמַּחֲזִיר שְׁכִינָתוֹ לְצִיּוֹן."}
+          ]},
+          {"ref": "8", "parts": [
+            {"kind": "instruction", "when": "kohanim", "node": "amidah.modim", "amidah": "repetition", "en": "Modim etc., up to 'lehodot'.", "text": "מודים וכו׳ עד להודות. "},
+            {"kind": "instruction", "when": "kohanim && true", "node": "amidah.birkat_kohanim_kohanim", "role": "kohanim", "amidah": "repetition", "en": "Some have the custom that the kohanim say quietly:", "clean": "ויש נוהגין שהכהנים אומרים בלחש:", "text": "<small>ויש נוהגין שהכהנים אומרים בלחש: </small>"},
+            {"kind": "prayer", "when": "kohanim && true", "role": "kohanim", "voice": "undertone", "amidah": "repetition", "text": "יְהִי רָצוֹן מִלְּפָנֶיךָ ה׳ אֱלהֵינוּ וֵאלהֵי אֲבוֹתֵינוּ. שֶׁתְּהֵא הַבְּרָכָה הַזֹּאת שֶׁצִּוִּיתָנוּ (נ״א שֶׁצִּוִּיתָ) לְבָרֵךָ אֶת עַמְּךָ יִשְׂרָאֵל. בְּרָכָה שְׁלֵמָה. וְלא יִהְיֶה בָּהּ שׁוּם מִכְשׁוֹל וְעָוֹן. מֵעַתָּה וְעַד עוֹלָם:"}
+          ]},
+          {"ref": "9", "parts": [
+            {"kind": "speaker", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "chazzan", "amidah": "repetition", "en": "Chazzan, quietly:", "clean": "החזן בלחש:", "text": "<small>החזן בלחש:</small>"},
+            {"kind": "prayer", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "chazzan", "voice": "undertone", "amidah": "repetition", "minyan": true, "text": " אֱלֹהֵינוּ וֵאלֹהֵי אֲבותֵינוּ. בָּרְכֵנוּ בַבְּרָכָה הַמְּשֻׁלֶּשֶׁת בַּתּוֹרָה הַכְּתוּבָה עַל יְדֵי משֶׁה עַבְדֶּךָ. הָאֲמוּרָה מִפִּי אַהֲרֹן וּבָנָיו—"}
+          ]},
+          {"ref": "10", "parts": [
+            {"kind": "speaker", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "chazzan", "amidah": "repetition", "en": "Chazzan, aloud:", "clean": "החזן בקול רם:", "text": "<small>החזן בקול רם:</small>"},
+            {"kind": "prayer", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": " כֹּהֲנִים—"}
+          ]},
+          {"ref": "11", "parts": [
+            {"kind": "speaker", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "congregation", "amidah": "repetition", "en": "Congregation answers:", "clean": "הקהל עונה:", "text": "<small>הקהל עונה:</small>"},
+            {"kind": "prayer", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "congregation", "voice": "aloud", "amidah": "repetition", "text": " עַם קְדושֶׁךָ, כָּאָמוּר:"}
+          ]},
+          {"ref": "12", "parts": [
+            {"kind": "speaker", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "kohanim", "amidah": "repetition", "en": "The kohanim:", "clean": "הכהנים:", "text": "<small>הכהנים:</small>"},
+            {"kind": "prayer", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "kohanim", "voice": "aloud", "amidah": "repetition", "gestures": ["raise_hands"], "text": " בָּרוּךְ אַתָּה ה׳ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם. אֲשֶׁר קִדְּשָׁנוּ בִּקְדֻשָּׁתוֹ שֶׁל אַהֲרן. וְצִוָּנוּ לְבָרֵךָ אֶת עַמּוֹ יִשְׂרָאֵל בְּאַהֲבָה:"}
+          ]},
+          {"ref": "13", "kind": "note", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "amidah": "repetition", "en": "The chazzan calls out the words to the kohanim one at a time. A widespread custom is that the kohanim sing a melody before finishing each verse, while the congregation quietly says the Hatavat Chalom prayer (and says \"ve-tishmereni, ve-tachaneni, ve-tirtzeni\" matching \"ve-yishmerecha, vi-chuneka, shalom\"). Some say another prayer before ending with \"shalom\". No supplications on Shabbat.", "clean": "החזן מקריא לכהנים מלה במלה. ומנהג נפוץ בכל ישראל שהכהנים מזמרים לפני שמסיימין כל פסוק והקהל אומר בלחש את תפילת הטבת חלום ואומ' ותשמרני ותחנני ותרצני כנגד וישמרך ויחנך שלום. ויש נוהגין לומר תפילה אחרת לפני שמסיימין בשלום ואין לומר תחינות ביום שבת.", "text": "<small>החזן מקריא לכהנים מלה במלה. ומנהג נפוץ בכל ישראל שהכהנים מזמרים לפני שמסיימין כל פסוק והקהל אומר בלחש את תפילת הטבת חלום ואומ' ותשמרני ותחנני ותרצני כנגד וישמרך ויחנך שלום. ויש נוהגין לומר תפילה אחרת לפני שמסיימין בשלום ואין לומר תחינות ביום שבת.</small>"},
+          {"ref": "14", "parts": [
+            {"kind": "prayer", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "kohanim", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["raise_hands"], "text": "יְבָרֶכְךָ ה׳ וְיִשְׁמְרֶךָ: "},
+            {"kind": "speaker", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "congregation", "amidah": "repetition", "en": "Congregation:", "clean": "הקהל:", "text": "(<small>הקהל:</small>"},
+            {"kind": "prayer", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "congregation", "voice": "aloud", "amidah": "repetition", "text": " אָמֵן:)"}
+          ]},
+          {"ref": "15", "parts": [
+            {"kind": "prayer", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "kohanim", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["raise_hands"], "text": "יָאֵר ה׳ פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ: "},
+            {"kind": "speaker", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "congregation", "amidah": "repetition", "en": "Congregation:", "clean": "הקהל:", "text": "(<small>הקהל:</small>"},
+            {"kind": "prayer", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "congregation", "voice": "aloud", "amidah": "repetition", "text": " אָמֵן:)"}
+          ]},
+          {"ref": "16", "parts": [
+            {"kind": "prayer", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "kohanim", "voice": "aloud", "amidah": "repetition", "minyan": true, "gestures": ["raise_hands"], "text": "יִשָּׂא ה׳ פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם: "},
+            {"kind": "speaker", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "congregation", "amidah": "repetition", "en": "Congregation:", "clean": "הקהל:", "text": "(<small>הקהל:</small>"},
+            {"kind": "prayer", "when": "kohanim", "node": "amidah.birkat_kohanim_kohanim", "role": "congregation", "voice": "aloud", "amidah": "repetition", "text": " אָמֵן:)"}
+          ]},
+          {"ref": "17", "kind": "instruction", "when": "kohanim", "node": "amidah.shalom", "role": "chazzan", "amidah": "repetition", "en": "The chazzan continues immediately: Sim Shalom, etc.", "clean": "החזן ממשיך מיד: שים שלום וכו׳", "text": "<small>החזן ממשיך מיד:</small> שים שלום וכו׳ "},
+          {"ref": "18", "parts": [
+            {"kind": "instruction", "when": "kohanim && true", "node": "amidah.birkat_kohanim_kohanim", "role": "congregation", "amidah": "repetition", "en": "Some have the custom that the congregation says:", "clean": "יש נוהגין שהקהל אומר:", "text": "<small>יש נוהגין שהקהל אומר: </small>"},
+            {"kind": "prayer", "when": "kohanim && true", "node": "amidah.birkat_kohanim_kohanim", "role": "congregation", "voice": "aloud", "amidah": "repetition", "text": "אַדִּיר בַּמָּרוֹם שׁוֹכֵן בִּגְבוּרָה אַתָּה שָׁלוֹם וְשִׁמְךָ שָׁלוֹם יְהִי רָצוֹן שֶׁתָּשִׂים עָלֵינוּ וְעַל כָּל עַמְּךָ בֵּית יִשְׂרָאֵל. חַיִּים וּבְרָכָה לְמִשְׁמֶרֶת שָׁלוֹם:"}
+          ]},
+          {"ref": "19", "parts": [
+            {"kind": "instruction", "when": "kohanim && true", "node": "amidah.birkat_kohanim_kohanim", "role": "kohanim", "amidah": "repetition", "en": "Some additionally say, the kohanim:", "clean": "ועוד שהכהנים אומרים:", "text": "<small>ועוד שהכהנים אומרים: </small>"},
+            {"kind": "prayer", "when": "kohanim && true", "node": "amidah.birkat_kohanim_kohanim", "role": "kohanim", "voice": "undertone", "amidah": "repetition", "text": "רִבּוֹנוֹ שֶׁל עוֹלָם. עָשִׂינוּ מַה שֶׁגָּזַרְתָּ עָלֵינוּ. אַף אַתָּה עֲשֵׂה עִמָּנוּ כְּמוֹ שֶׁהִבְטַחְתָּנוּ. הַשְׁקִיפָה מִמְּעוֹן קָדְשְׁךָ מִן הַשָּׁמַיִם. וּבָרֵךָ אֶת עַמְּךָ אֶת יִשְׂרָאֵל. וְאֵת הָאֲדָמָה אֲשֶׁר נָתַתָּה לָנוּ. כַּאֲשֶׁר נִשְׁבַּעְתָּ לַאֲבֹתֵינוּ. אֶרֶץ זָבַת חָלָב וּדְבָשׁ. "}
+          ]}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Mussaf/Peace",
+      "title": "ברכת שלום",
+      "node": "amidah.shalom",
+      "service": "musaf",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "שים שָׁלום טובָה וּבְרָכָה. חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ וְעַל כָּל יִשרָאֵל עַמֶּךָ. בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד יַחַד בְּאור פָּנֶיךָ. כִּי בְאור פָּנֶיךָ נָתַתָּ לָּנוּ ה' אֱלהֵינוּ תּורַת חַיִּים וְאַהֲבַת חֶסֶד. וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלום. וְטוב בְּעֵינֶיךָ לְבָרֵךְ אֶת כָּל עַמְּךָ יִשרָאֵל בְּכָל עֵת וּבְכָל שָׁעָה בִּשְׁלומֶךָ: "},
+          {"ref": "2", "kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "בָּרוּךְ אַתָּה ה'. הַמְבָרֵךְ אֶת עַמּו יִשרָאֵל בַּשָּׁלום: "},
+          {"ref": "3", "kind": "prayer", "node": "amidah.elokai_netzor", "voice": "silent", "text": "יִהְיוּ לְרָצון אִמְרֵי פִי וְהֶגְיון לִבִּי לְפָנֶיךָ. ה' צוּרִי וְגואֲלִי:"}
+        ]
+      }
+    },
+    {
+      "path": "Festivals/Shalosh Regalim/Mussaf/Concluding Prayer",
+      "title": "סיום עמידה",
+      "node": "amidah.elokai_netzor",
+      "service": "musaf",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "אֱלהַי. נְצר לְשׁונִי מֵרָע וּשפָתַי מִדַּבֵּר מִרְמָה. וְלִמְקַלְלַי נַפְשִׁי תִדּם. וְנַפְשִׁי כֶּעָפָר לַכּל תִּהְיֶה. פְּתַח לִבִּי בְּתורָתֶךָ. וּבְמִצְותֶיךָ תִּרְדּף נַפְשִׁי. וְכָל הַחושְׁבִים עָלַי רָעָה. מְהֵרָה הָפֵר עֲצָתָם וְקַלְקֵל מַחֲשַׁבְתָּם: "},
+          {"ref": "2", "kind": "prayer", "voice": "silent", "text": "עֲשה לְמַעַן שְׁמֶךָ. עֲשה לְמַעַן יְמִינֶךָ. עֲשה לְמַעַן קְדֻשָּׁתֶךָ. עֲשה לְמַעַן תּורָתֶךָ. לְמַעַן יֵחָלְצוּן יְדִידֶיךָ הושִׁיעָה יְמִינְךָ וַעֲנֵנִי: "},
+          {"ref": "3", "kind": "prayer", "node": "amidah.elokai_netzor", "voice": "silent", "text": "יִהְיוּ לְרָצון אִמְרֵי פִי וְהֶגְיון לִבִּי לְפָנֶיךָ. ה' צוּרִי וְגואֲלִי: "},
+          {"ref": "4", "kind": "prayer", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["three_steps_back", "bow_left_right_center"], "text": "עשה שָׁלום בִּמְרומָיו. הוּא יַעֲשה שָׁלום עָלֵינוּ וְעַל כָּל יִשרָאֵל. וְאִמְרוּ אָמֵן: "},
+          {"ref": "5", "kind": "prayer", "node": "amidah.yehi_ratzon_mikdash", "voice": "silent", "text": "יְהִי רָצון מִלְּפָנֶיךָ ה' אֱלהֵינוּ וֵאלהֵי אֲבותֵינוּ. שֶׁיִּבָּנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ. וְתֵן חֶלְקֵנוּ בְּתורָתֶךָ: "},
+          {"ref": "6", "kind": "prayer", "node": "amidah.yehi_ratzon_mikdash", "voice": "silent", "text": "וְשָׁם נַעֲבָדְךָ בְּיִרְאָה כִּימֵי עולָם וּכְשָׁנִים קַדְמונִיות: "},
+          {"ref": "7", "kind": "prayer", "node": "amidah.yehi_ratzon_mikdash", "voice": "silent", "text": "וְעָרְבָה לה' מִנְחַת יְהוּדָה וִירוּשָׁלָיִם. כִּימֵי עולָם וּכְשָׁנִים קַדְמונִיות:"}
+        ]
+      }
+    }
+  ]
+}

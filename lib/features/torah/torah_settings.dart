@@ -23,33 +23,28 @@ class TorahSettings {
   final String? latinFont;
   final double textScale;
   final bool showNikud;
-
-  /// Settle on a verse when scrolling stops (see VerseSnap).
-  final bool snapToVerse;
   const TorahSettings({
     this.language = TorahTextLanguage.auto,
     this.hebrewFont = 'FrankRuehlCLM',
     this.latinFont,
     this.textScale = 1,
     this.showNikud = true,
-    this.snapToVerse = true,
   });
 
   TorahTextLanguage resolvedLanguage(UiLanguage ui) =>
       language != TorahTextLanguage.auto ? language : (ui == UiLanguage.en ? TorahTextLanguage.both : TorahTextLanguage.hebrew);
 
-  TorahSettings copyWith({TorahTextLanguage? language, String? hebrewFont, String? Function()? latinFont, double? textScale, bool? showNikud, bool? snapToVerse}) =>
+  TorahSettings copyWith({TorahTextLanguage? language, String? hebrewFont, String? Function()? latinFont, double? textScale, bool? showNikud}) =>
       TorahSettings(
         language: language ?? this.language,
         hebrewFont: hebrewFont ?? this.hebrewFont,
         latinFont: latinFont != null ? latinFont() : this.latinFont,
         textScale: textScale ?? this.textScale,
         showNikud: showNikud ?? this.showNikud,
-        snapToVerse: snapToVerse ?? this.snapToVerse,
       );
 
   Map<String, Object?> toJson() =>
-      {'language': language.name, 'hebrewFont': hebrewFont, 'latinFont': latinFont, 'textScale': textScale, 'showNikud': showNikud, 'snapToVerse': snapToVerse};
+      {'language': language.name, 'hebrewFont': hebrewFont, 'latinFont': latinFont, 'textScale': textScale, 'showNikud': showNikud};
 
   factory TorahSettings.fromJson(Map<String, Object?> j) {
     const d = TorahSettings();
@@ -59,7 +54,6 @@ class TorahSettings {
       latinFont: j['latinFont'] is String ? j['latinFont'] as String : null,
       textScale: j['textScale'] is num ? (j['textScale'] as num).toDouble() : d.textScale,
       showNikud: j['showNikud'] is bool ? j['showNikud'] as bool : d.showNikud,
-      snapToVerse: j['snapToVerse'] is bool ? j['snapToVerse'] as bool : d.snapToVerse,
     );
   }
 }
@@ -170,13 +164,6 @@ class _TorahTextSettings extends ConsumerWidget {
             title: Text(context.tr('Show nikud (vowels)')),
             value: s.showNikud,
             onChanged: (v) => n.update((x) => x.copyWith(showNikud: v)),
-          ),
-          SwitchListTile.adaptive(
-            contentPadding: EdgeInsets.zero,
-            title: Text(context.tr('Snap to each verse')),
-            subtitle: Text(context.tr('When you stop scrolling near the end of a verse, the next one moves to the top.')),
-            value: s.snapToVerse,
-            onChanged: (v) => n.update((x) => x.copyWith(snapToVerse: v)),
           ),
           SheetLabel(context.tr('English font')),
           Wrap(spacing: 6, runSpacing: 6, children: [

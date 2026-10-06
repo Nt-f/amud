@@ -18,7 +18,6 @@ import '../search/search_sources.dart';
 import 'shnayim_mikra_screen.dart';
 import 'torah_library.dart';
 import 'torah_settings.dart';
-import 'verse_snap.dart';
 
 String _name(BuildContext context, String en, String he) => context.uiLanguage == UiLanguage.en ? context.term(en) : he;
 
@@ -54,7 +53,7 @@ class TorahScreen extends ConsumerWidget {
             title: Text(context.tr('Shiurim')),
             subtitle: Text(context.tr("Kezayis, revi'is, amah and every other measure, by each posek")),
             trailing: const Icon(Icons.chevron_right),
-            onTap: () => context.go('/shiurim'),
+            onTap: () => context.push('/torah/shiurim'),
           ),
         ),
         for (final c in torahCategories)
@@ -370,7 +369,7 @@ class TorahReaderScreen extends ConsumerStatefulWidget {
 }
 
 class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with FocusModeReader {
-  /// One per se'if, for scrolling to today's portion and [VerseSnap].
+  /// One per se'if, for scrolling to today's portion.
   final _keys = <GlobalKey>[];
   bool _scrolled = false;
 
@@ -455,9 +454,6 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
               child: PageSwipe(
               onNext: swipeTo(widget.siman + 1, 'next'),
               onPrevious: swipeTo(widget.siman - 1, 'previous'),
-              child: VerseSnap(
-              verses: _keys.sublist(0, count),
-              enabled: s.snapToVerse,
               child: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: ts.gutter(MediaQuery.sizeOf(context).width, min: 16)).copyWith(top: 8, bottom: 24),
         child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
@@ -524,7 +520,6 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
                 style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.outline)),
           ],
         ]),
-              ),
               ),
               ),
             ),

@@ -6,8 +6,13 @@
 library;
 
 import 'analyzer.dart';
+import 'model.dart';
 import 'rubrics.dart';
 import 'rules.dart';
+
+/// The title of Amud's own text in a book's version lists, in both
+/// languages (it is listed first, before the Sefaria versions).
+const corpusVersionTitle = 'Amud';
 
 class CorpusPart {
   final String text;
@@ -106,9 +111,45 @@ class CorpusService {
       );
 }
 
+/// A Sefaria version a corpus text began as, credited in the app.
+class CorpusSource {
+  final String version;
+  final String license;
+  final String? source;
+  const CorpusSource(this.version, this.license, this.source);
+}
+
+/// One language of the corpus as a whole: its license (the most restrictive
+/// of its sources) and size.
+class CorpusEdition {
+  final String license;
+  final int segments;
+  final List<CorpusSource> sources;
+  const CorpusEdition(this.license, this.segments, this.sources);
+
+  factory CorpusEdition.fromJson(Map<String, Object?> j) => CorpusEdition(
+        j['license'] as String,
+        (j['segments'] as num).toInt(),
+        [
+          for (final s in j['sources'] as List)
+            CorpusSource((s as Map)['version'] as String, s['license'] as String, s['source'] as String?),
+        ],
+      );
+}
+
 class Corpus {
   final String book;
+  final String heTitle;
+
+  /// The siddur's slug (`ashkenaz`).
+  final String nusach;
   final Map<String, CorpusLeaf> leaves;
+
+  /// The table of contents, in Sefaria's schema form; see [index].
+  final Map<String, Object?>? _index;
+
+  /// Each language's edition, by `he`/`en`.
+  final Map<String, CorpusEdition> editions;
 
   /// What each personal circumstance (`if_…`) means, for its label: "For a
   /// man", "Three or more ate together". The engine can't know these, so
@@ -123,7 +164,35 @@ class Corpus {
   /// The services the graph lays out for this siddur, by graph name
   /// (`shacharit.weekday`, `mincha.weekday`, `maariv.weekday`).
   final Map<String, CorpusService> services;
-  const Corpus(this.book, this.leaves, [this.labels = const {}, this.inserts = const [], this.services = const {}]);
+  const Corpus(this.book, this.leaves,
+      [this.labels = const {},
+      this.inserts = const [],
+      this.services = const {},
+      this.heTitle = '',
+      this.nusach = '',
+      this._index,
+      this.editions = const {}]);
+
+  /// The book's table of contents, built from the corpus (null for a
+  /// corpus without one, which then uses Sefaria's).
+  SchemaNode? get index => _index == null ? null : SchemaNode.parse(_index.cast<String, dynamic>());
+
+  /// The corpus as a version in a book's list, for [language] `he` or `en`.
+  VersionInfo? versionInfo(String language) {
+    final e = editions[language];
+    if (e == null) return null;
+    return VersionInfo(
+      language: language,
+      actualLanguage: language,
+      versionTitle: corpusVersionTitle,
+      versionTitleInHebrew: 'עמוד',
+      license: e.license,
+      isPrimary: true,
+      direction: language == 'he' ? 'rtl' : 'ltr',
+      segments: e.segments,
+      file: 'corpus:$nusach:$language',
+    );
+  }
 
   factory Corpus.fromJson(Map<String, Object?> j) {
     List<CorpusPart> parts(Object? l) =>
@@ -145,15 +214,46 @@ class Corpus {
       leaves[e.key as String] = CorpusLeaf(e.key as String, l['node'] as String, when == 'true' ? null : when,
           l['service'] as String?, text(l['he'], false), text(l['en'], true));
     }
-    return Corpus(j['book'] as String, leaves, ((j['labels'] as Map?) ?? const {}).cast<String, String>(), [
-      for (final r in (j['inserts'] as List? ?? const [])) InsertRule.fromJson((r as Map).cast<String, Object?>()),
-    ], {
-      for (final e in ((j['services'] as Map?) ?? const {}).entries)
-        e.key as String: CorpusService.fromJson((e.value as Map).cast<String, Object?>()),
-    });
+    return Corpus(
+      j['book'] as String,
+      leaves,
+      ((j['labels'] as Map?) ?? const {}).cast<String, String>(),
+      [
+        for (final r in (j['inserts'] as List? ?? const [])) InsertRule.fromJson((r as Map).cast<String, Object?>()),
+      ],
+      {
+        for (final e in ((j['services'] as Map?) ?? const {}).entries)
+          e.key as String: CorpusService.fromJson((e.value as Map).cast<String, Object?>()),
+      },
+      (j['heTitle'] as String?) ?? j['book'] as String,
+      (j['nusach'] as String?) ?? '',
+      (j['index'] as Map?)?.cast<String, Object?>(),
+      {
+        for (final e in ((j['editions'] as Map?) ?? const {}).entries)
+          e.key as String: CorpusEdition.fromJson((e.value as Map).cast<String, Object?>()),
+      },
+    );
   }
 
   CorpusLeaf? leaf(String path) => leaves[path];
+}
+
+/// The corpus in one language as a [TextVersion], so it can be listed and
+/// picked like any version: a leaf's segments are the corpus's.
+class CorpusTextVersion extends TextVersion {
+  final Corpus corpus;
+  final bool hebrew;
+  CorpusTextVersion(this.corpus, VersionInfo info)
+      : hebrew = info.language == 'he',
+        super(info, null);
+
+  @override
+  List<(String, String)>? segmentsAt(List<String> path) {
+    final leaf = corpus.leaf(path.join('/'));
+    final t = hebrew ? leaf?.he : leaf?.en;
+    if (t == null || t.segments.isEmpty) return null;
+    return [for (final s in t.segments) (s.ref, s.html)];
+  }
 }
 
 const _kinds = {

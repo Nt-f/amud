@@ -33,7 +33,7 @@ class _UpdateScreenState extends ConsumerState<UpdateScreen> {
     // Opening the page (e.g. from the notification) refreshes the check.
     Future.microtask(() {
       final n = ref.read(updateProvider.notifier);
-      n.check();
+      isPlayBuild ? n.checkPlay() : n.check();
       n.loadInstalledNotes();
       n.markSeen();
     });
@@ -45,6 +45,7 @@ class _UpdateScreenState extends ConsumerState<UpdateScreen> {
     final n = ref.read(updateProvider.notifier);
     final theme = Theme.of(context);
     final info = u.available;
+    if (isPlayBuild) return _playScreen(context, u, n);
     return Scaffold(
       appBar: AppBar(title: Text(context.tr('App updates'))),
       body: ListView(padding: const EdgeInsets.all(16), children: [
@@ -131,9 +132,53 @@ class _UpdateScreenState extends ConsumerState<UpdateScreen> {
       ]),
     );
   }
+
+  /// The Play build: Play installs updates, so only the installed version,
+  /// Play's update if it has one, and what's new.
+  Widget _playScreen(BuildContext context, UpdateState u, UpdateNotifier n) {
+    final theme = Theme.of(context);
+    return Scaffold(
+      appBar: AppBar(title: Text(context.tr('App updates'))),
+      body: ListView(padding: const EdgeInsets.all(16), children: [
+        Card(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Row(children: [
+                Icon(u.playVersionCode == null ? Icons.verified_outlined : Icons.system_update,
+                    color: theme.colorScheme.primary, size: 28),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    context.tr(u.playVersionCode == null ? 'Siddur is up to date' : 'A new version is available'),
+                    style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ]),
+              const SizedBox(height: 8),
+              Text(context.tr('Installed: {v}', {'v': u.currentVersion.isEmpty ? '—' : u.currentVersion}), style: theme.textTheme.bodySmall),
+              if (u.playVersionCode != null) ...[
+                const SizedBox(height: 16),
+                FilledButton.icon(
+                  onPressed: n.updateFromPlay,
+                  icon: const Icon(Icons.system_update),
+                  label: Text(context.tr('Update now')),
+                ),
+              ],
+            ]),
+          ),
+        ),
+        if ((u.installedNotes ?? '').isNotEmpty) ...[
+          SheetLabel(context.tr("What's new in {v}", {'v': u.currentVersion})),
+          Card(child: Padding(padding: const EdgeInsets.all(16), child: ReleaseNotes(u.installedNotes!))),
+        ],
+      ]),
+    );
+  }
 }
 
-/// A slim banner on the home screen while an update is waiting.
+/// A slim banner on the home screen while an update is waiting: a GitHub
+/// release, or on the Play build an update Play has.
 class UpdateBanner extends ConsumerWidget {
   const UpdateBanner({super.key});
 
@@ -141,12 +186,15 @@ class UpdateBanner extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final info = ref.watch(updateProvider.select((u) => u.pending));
     final updated = ref.watch(updateProvider.select((u) => u.justUpdated ? u.currentVersion : null));
-    if (info == null && updated == null) return const SizedBox.shrink();
+    final play = ref.watch(updateProvider.select((u) => u.playPending ? u.playVersionCode : null));
+    if (info == null && updated == null && play == null) return const SizedBox.shrink();
+    final n = ref.read(updateProvider.notifier);
     final theme = Theme.of(context);
+    void open() => play != null ? n.updateFromPlay() : context.push('/update');
     return Material(
       color: theme.colorScheme.primaryContainer,
       child: InkWell(
-        onTap: () => context.push('/update'),
+        onTap: open,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(16, 8, 4, 8),
           child: Row(children: [
@@ -154,18 +202,22 @@ class UpdateBanner extends ConsumerWidget {
             const SizedBox(width: 12),
             Expanded(
               child: Text(
-                  info != null
-                      ? context.tr('Version {v} is available', {'v': info.version})
-                      : context.tr('Updated to {v}', {'v': updated!}),
+                  play != null
+                      ? context.tr('A new version is available')
+                      : info != null
+                          ? context.tr('Version {v} is available', {'v': info.version})
+                          : context.tr('Updated to {v}', {'v': updated!}),
                   style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onPrimaryContainer, fontWeight: FontWeight.w600)),
             ),
-            TextButton(onPressed: () => context.push('/update'), child: Text(context.tr(info != null ? 'Update' : "What's new"))),
+            TextButton(onPressed: open, child: Text(context.tr(play != null || info != null ? 'Update' : "What's new"))),
             IconButton(
-              tooltip: context.tr(info != null ? 'Skip this version' : 'Dismiss'),
+              tooltip: context.tr(play != null || info != null ? 'Skip this version' : 'Dismiss'),
               icon: const Icon(Icons.close, size: 18),
-              onPressed: () => info != null
-                  ? ref.read(updateProvider.notifier).skip(info.version)
-                  : ref.read(updateProvider.notifier).markSeen(),
+              onPressed: () => play != null
+                  ? n.skip('play:$play')
+                  : info != null
+                      ? n.skip(info.version)
+                      : n.markSeen(),
             ),
           ]),
         ),
