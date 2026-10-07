@@ -10,9 +10,9 @@ class _FileSource implements TextSource {
   Future<List<int>> readBytes(String file) => File('../../$file').readAsBytes();
 }
 
-/// Every tagged siddur (assets/corpus): the corpus covers the book, was
-/// tagged on the Hebrew the app shows by default, and resolves a whole
-/// year without anything left undetermined.
+/// Every one of Amud's own siddurim (assets/corpus): its table of contents
+/// and text are the corpus's, and it resolves a whole year without anything
+/// left undetermined.
 const books = {
   'Siddur Ashkenaz': 'ashkenaz',
   'Weekday Siddur Chabad': 'chabad',
@@ -35,46 +35,49 @@ void main() {
       setUpAll(() async {
         final lib = SiddurLibrary(_FileSource(), gzip.decode);
         final book = (await lib.manifest()).book(title)!;
-        root = await lib.index(book);
         corpus = Corpus.fromJson(
             jsonDecode(utf8.decode(gzip.decode(File('../../assets/corpus/$slug.json.gz').readAsBytesSync())))
                 as Map<String, Object?>);
+        root = corpus.index!;
         final bookRules = (rules[title] as Map<String, dynamic>?) ?? const {};
         resolver = SiddurResolver().withOverrides(bookRules).withCorpus(corpus);
-        // The app's default order: rules.json's defaultVersions, then the
-        // manifest's (see versionOrderProvider).
+        // The app's default order: Amud's text, rules.json's
+        // defaultVersions, then the manifest's (see versionOrderProvider).
         final defaults = ((bookRules['defaultVersions'] as Map?)?.cast<String, List>()) ?? const {};
-        Future<List<TextVersion>> load(String lang) {
+        Future<List<TextVersion>> load(String lang) async {
           final titles = <String>{
             for (final t in defaults[lang] ?? const []) t as String,
             for (final v in book.byLanguage(lang))
               if (lang == 'he' || v.languageTag == null) v.versionTitle,
           };
-          return Future.wait([
-            for (final t in titles)
-              if (book.byLanguage(lang).any((v) => v.versionTitle == t))
-                lib.version(book.byLanguage(lang).firstWhere((v) => v.versionTitle == t)),
-          ]);
+          return [
+            CorpusTextVersion(corpus, corpus.versionInfo(lang)!),
+            ...await Future.wait([
+              for (final t in titles)
+                if (book.byLanguage(lang).any((v) => v.versionTitle == t))
+                  lib.version(book.byLanguage(lang).firstWhere((v) => v.versionTitle == t)),
+            ]),
+          ];
         }
 
         versions = VersionSelection(await load('he'), await load('en'));
       });
 
-      test('the corpus covers the book, on the default Hebrew', () {
+      test("every section is the corpus's, in Amud's text", () {
         final missing = <String>[];
         final otherVersion = <String>[];
         for (final l in root.leaves) {
-          final (info, _) = versions.pick(versions.hebrew, l.path);
-          if (info == null) continue;
           final c = corpus.leaf(l.id);
           if (c == null) {
             missing.add(l.id);
-          } else if (c.he != null && c.he!.version.trim() != info.versionTitle.trim()) {
-            otherVersion.add('${l.id}: ${c.he!.version} vs ${info.versionTitle}');
+            continue;
           }
+          final (info, _) = versions.pick(versions.hebrew, l.path);
+          if (c.he != null && !(info?.isCorpus ?? false)) otherVersion.add('${l.id}: ${info?.versionTitle}');
         }
         expect(missing, isEmpty, reason: missing.take(10).join('\n'));
         expect(otherVersion, isEmpty, reason: otherVersion.take(10).join('\n'));
+        expect(root.leaves.length, corpus.leaves.length);
       });
 
       List<SegmentItem> said(String section, HDate day, {Minhagim m = const Minhagim()}) => [
@@ -86,7 +89,7 @@ void main() {
       final plain = HDate(13, Months.cheshvan, 5786); // a Tuesday
       final roshChodesh = HDate(1, Months.kislev, 5786);
 
-      // Leaf conditions found wrong in review (tool/corpus/reconcile.py).
+      // Leaf conditions found wrong in review (their comments in corpus/siddur).
       if (slug == 'edot_hamizrach') {
         test('the weekday Amidah is said on an ordinary day', () {
           expect(said('Weekday Shacharit/Amida', plain).where((i) => i.kind == SegmentKind.prayer), isNotEmpty);

@@ -15,6 +15,7 @@ import '../../core/theme.dart';
 import '../../core/typeset/typeset.dart';
 import '../home/today.dart';
 import '../search/search_sources.dart';
+import 'shnayim_mikra_screen.dart';
 import '../tehillim/tehillim_screen.dart';
 import 'torah_library.dart';
 import 'torah_settings.dart';
@@ -45,8 +46,18 @@ class TorahScreen extends ConsumerWidget {
             ])
           : ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
         DownloadPanel(works: all, label: context.tr('Download everything')),
+        const ShnayimMikraTile(),
         const TehillimCard(),
         const SizedBox(height: 8),
+        Card(
+          child: ListTile(
+            leading: Icon(Icons.straighten, color: Theme.of(context).colorScheme.primary),
+            title: Text(context.tr('Shiurim')),
+            subtitle: Text(context.tr("Kezayis, revi'is, amah and every other measure, by each posek")),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => context.push('/torah/shiurim'),
+          ),
+        ),
         for (final c in torahCategories)
           _WorkTile(
             icon: c.icon,
@@ -360,13 +371,15 @@ class TorahReaderScreen extends ConsumerStatefulWidget {
 }
 
 class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with FocusModeReader {
-  final _firstKey = GlobalKey();
+  /// One per se'if, for scrolling to today's portion.
+  final _keys = <GlobalKey>[];
   bool _scrolled = false;
 
   void _scrollToHighlight() {
-    if (_scrolled || widget.from == null) return;
+    final from = widget.from;
+    if (_scrolled || from == null || from > _keys.length) return;
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      final ctx = _firstKey.currentContext;
+      final ctx = _keys[from - 1].currentContext;
       if (ctx == null) return;
       _scrolled = true;
       Scrollable.ensureVisible(ctx, alignment: 0.05, duration: const Duration(milliseconds: 300));
@@ -401,6 +414,9 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
     bool hasEn(int n) => n <= en.length && en[n - 1].trim().isNotEmpty;
     final from = widget.from;
     final to = widget.to ?? count;
+    while (_keys.length < count) {
+      _keys.add(GlobalKey());
+    }
     _scrollToHighlight();
     readingText({
       'work': w.id,
@@ -445,7 +461,7 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
         child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           for (var n = 1; n <= count; n++)
             Container(
-              key: n == from ? _firstKey : null,
+              key: _keys[n - 1],
               margin: const EdgeInsets.only(bottom: 10),
               padding: const EdgeInsets.all(10),
               decoration: from != null && n >= from && n <= to

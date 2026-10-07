@@ -458,33 +458,30 @@ class TehillimCard extends ConsumerWidget {
     final read = ref.watch(tehillimProgressProvider.select((x) => x.read.length));
     final hebFont = ref.watch(settingsProvider.select((s) => s.hebrewFont));
     final theme = Theme.of(context);
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(4, 4, 4, 0),
-      child: Card(
-        clipBehavior: Clip.antiAlias,
-        child: InkWell(
-          onTap: () => context.go('/torah/tehillim'),
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Row(children: [
-              Text('תהלים', style: TextStyle(fontFamily: hebFont, fontSize: 30, fontWeight: FontWeight.w700, color: theme.colorScheme.primary)),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(context.tr('Tehillim'), style: theme.textTheme.titleMedium),
-                  Text(
-                    '${context.tr('Today')}: ${today.rangeLabel} · ${context.tr('{n} of 150 chapters read this cycle', {'n': read})}',
-                    style: theme.textTheme.bodySmall,
-                  ),
-                ]),
-              ),
-              IconButton.filledTonal(
-                tooltip: context.tr("Read today's Tehillim"),
-                icon: const Icon(Icons.menu_book),
-                onPressed: () => context.push(tehillimReadPath(today)),
-              ),
-            ]),
-          ),
+    return Card(
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: () => context.go('/torah/tehillim'),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(children: [
+            Text('תהלים', style: TextStyle(fontFamily: hebFont, fontSize: 30, fontWeight: FontWeight.w700, color: theme.colorScheme.primary)),
+            const SizedBox(width: 16),
+            Expanded(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text(context.tr('Tehillim'), style: theme.textTheme.titleMedium),
+                Text(
+                  '${context.tr('Today')}: ${today.rangeLabel} · ${context.tr('{n} of 150 chapters read this cycle', {'n': read})}',
+                  style: theme.textTheme.bodySmall,
+                ),
+              ]),
+            ),
+            IconButton.filledTonal(
+              tooltip: context.tr("Read today's Tehillim"),
+              icon: const Icon(Icons.menu_book),
+              onPressed: () => context.push(tehillimReadPath(today)),
+            ),
+          ]),
         ),
       ),
     );

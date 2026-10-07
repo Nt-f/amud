@@ -110,17 +110,42 @@ jobs:
       - run: flutter pub get
       # Phones only: skipping x86_64 (emulators, a few Chromebooks) saves
       # one of the three AOT compiles and ~20 MB of APK.
-      - run: flutter build apk --release --target-platform android-arm,android-arm64 --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }}
+      # The "github" flavor updates itself from these releases; "play" is
+      # the Google Play bundle (no updater), uploaded to Play by hand.
+      - run: flutter build apk --release --flavor github --target-platform android-arm,android-arm64 --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }}
         env:
           SIDDUR_KEYSTORE_PASSWORD: ${{ secrets.SIDDUR_KEYSTORE_PASSWORD }}
           SIDDUR_KEY_ALIAS: ${{ secrets.SIDDUR_KEY_ALIAS }}
           SIDDUR_KEY_PASSWORD: ${{ secrets.SIDDUR_KEY_PASSWORD }}
-      - run: mv build/app/outputs/flutter-apk/app-release.apk amud-android.apk
+      - run: mv build/app/outputs/flutter-apk/app-github-release.apk amud-android.apk
       - uses: actions/upload-artifact@v4
         with:
           name: amud-android
           path: amud-android.apk
 
+      - name: Play bundle
+        if: env.SIDDUR_KEYSTORE_FILE != ''
+        run: |
+          flutter build appbundle --release --flavor play --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }}
+          mv build/app/outputs/bundle/playRelease/app-play-release.aab amud-play.aab
+        env:
+          SIDDUR_KEYSTORE_PASSWORD: ${{ secrets.SIDDUR_KEYSTORE_PASSWORD }}
+          SIDDUR_KEY_ALIAS: ${{ secrets.SIDDUR_KEY_ALIAS }}
+          SIDDUR_KEY_PASSWORD: ${{ secrets.SIDDUR_KEY_PASSWORD }}
+      - if: env.SIDDUR_KEYSTORE_FILE != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: amud-play
+          path: amud-play.aab
+
+      # A flavored build only assembles the app module, so the watch app
+      # is built on its own.
+      - run: ./gradlew :wear:assembleRelease
+        working-directory: android
+        env:
+          SIDDUR_KEYSTORE_PASSWORD: ${{ secrets.SIDDUR_KEYSTORE_PASSWORD }}
+          SIDDUR_KEY_ALIAS: ${{ secrets.SIDDUR_KEY_ALIAS }}
+          SIDDUR_KEY_PASSWORD: ${{ secrets.SIDDUR_KEY_PASSWORD }}
       - run: cp build/wear/outputs/apk/release/wear-release.apk amud-wear-os.apk
       - uses: actions/upload-artifact@v4
         with:

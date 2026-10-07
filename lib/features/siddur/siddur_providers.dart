@@ -4,16 +4,27 @@ import 'package:siddur_engine/siddur_engine.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
 
+/// A book from the manifest. For Amud's own siddurim (assets/corpus) its
+/// text, in each language, comes first as the version "Amud", before the
+/// Sefaria versions it can be swapped for.
 final bookProvider = FutureProvider.family<BookInfo, String>((ref, title) async {
   final m = await ref.watch(manifestProvider.future);
   final b = m.book(title);
   if (b == null) throw StateError('Unknown book $title');
-  return b;
+  final corpus = await ref.watch(corpusProvider(b.title).future);
+  if (corpus == null) return b;
+  return BookInfo(b.title, corpus.heTitle, b.slug, b.indexFile, [
+    for (final lang in const ['he', 'en']) ?corpus.versionInfo(lang),
+    ...b.versions,
+  ]);
 });
 
+/// A book's table of contents: the corpus's for Amud's own siddurim,
+/// otherwise Sefaria's.
 final bookIndexProvider = FutureProvider.family<SchemaNode, String>((ref, title) async {
   final book = await ref.watch(bookProvider(title).future);
-  return ref.watch(libraryProvider).index(book);
+  final corpus = await ref.watch(corpusProvider(book.title).future);
+  return corpus?.index ?? await ref.watch(libraryProvider).index(book);
 });
 
 /// Versions available to the user for a book/language, honoring the
@@ -29,13 +40,24 @@ List<VersionInfo> availableVersions(BookInfo book, String lang, AppSettings s) =
 /// untagged English only.
 Future<List<String>> _effectiveOrder(Ref ref, BookInfo book, String lang) async {
   final s = ref.watch(settingsProvider);
-  final user = (lang == 'he' ? s.hebrewVersions : s.translationVersions)[book.title];
+  var user = (lang == 'he' ? s.hebrewVersions : s.translationVersions)[book.title];
   final avail = availableVersions(book, lang, s);
   final titles = avail.map((v) => v.versionTitle).toSet();
-  if (user != null && user.isNotEmpty) return user.where(titles.contains).toList();
+  if (user != null && user.contains(preCorpusVersions)) {
+    // Chosen before Amud's own text: it goes where the first version it
+    // was made from is, so a different version chosen first stays first.
+    user = [...user]..remove(preCorpusVersions);
+    final corpus = await ref.watch(corpusProvider(book.title).future);
+    final sources = {for (final x in corpus?.editions[lang]?.sources ?? const <CorpusSource>[]) x.version.trim()};
+    final i = user.indexWhere((t) => sources.contains(t.trim()));
+    if (i >= 0 && !user.contains(corpusVersionTitle)) user.insert(i, corpusVersionTitle);
+  }
+  final chosen = user?.where(titles.contains).toList() ?? const [];
+  if (chosen.isNotEmpty) return chosen;
   final rules = await ref.watch(rulesProvider.future);
   final defaults = ((rules[book.title] as Map?)?['defaultVersions'] as Map?)?[lang] as List?;
   final order = <String>[
+    if (titles.contains(corpusVersionTitle)) corpusVersionTitle,
     ...?defaults?.cast<String>().where(titles.contains),
     for (final v in avail)
       if (lang == 'he' || v.languageTag == null) v.versionTitle,
@@ -54,13 +76,18 @@ final versionSelectionProvider = FutureProvider.family<VersionSelection, String>
   final lib = ref.watch(libraryProvider);
   final heOrder = await ref.watch(versionOrderProvider((title, 'he')).future);
   final enOrder = await ref.watch(versionOrderProvider((title, 'en')).future);
-  VersionInfo byTitle(String lang, String t) => book.byLanguage(lang).firstWhere((v) => v.versionTitle == t);
-  var he = await Future.wait([for (final t in heOrder) lib.version(byTitle('he', t))]);
+  final corpus = await ref.watch(corpusProvider(book.title).future);
+  Future<TextVersion> load(String lang, String t) {
+    final v = book.byLanguage(lang).firstWhere((v) => v.versionTitle == t);
+    return v.isCorpus ? Future.value(CorpusTextVersion(corpus!, v)) : lib.version(v);
+  }
+
+  var he = await Future.wait([for (final t in heOrder) load('he', t)]);
   if (ref.watch(settingsProvider.select((s) => s.preferTrop))) {
     bool trop(TextVersion v) => v.info.versionTitle.toLowerCase().contains('cantillation');
     he = [...he.where(trop), ...he.where((v) => !trop(v))];
   }
-  final en = await Future.wait([for (final t in enOrder) lib.version(byTitle('en', t))]);
+  final en = await Future.wait([for (final t in enOrder) load('en', t)]);
   return VersionSelection(he, en);
 });
 

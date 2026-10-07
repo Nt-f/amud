@@ -330,8 +330,12 @@ class _ZmanRow extends StatelessWidget {
   }
 }
 
-/// Sky-colored card with the sun's path from sunrise to sunset.
-class _SunArcCard extends StatelessWidget {
+/// The day's sky: its colors follow the sun from alot through netz,
+/// midday, shkiah and tzeit; by day the sun crosses its arc between netz
+/// and shkiah, by night the moon (in its phase) crosses the sky between
+/// them, under twinkling stars. It moves gently unless the device asks
+/// for less motion.
+class _SunArcCard extends StatefulWidget {
   final Zmanim z;
   final Location loc;
   final DateTime? now;
@@ -339,57 +343,80 @@ class _SunArcCard extends StatelessWidget {
   const _SunArcCard({required this.z, required this.loc, required this.now, required this.hour12});
 
   @override
+  State<_SunArcCard> createState() => _SunArcCardState();
+}
+
+class _SunArcCardState extends State<_SunArcCard> with SingleTickerProviderStateMixin {
+  // A slow loop for the twinkle, the drifting clouds and the shooting star.
+  late final _clock = AnimationController(vsync: this, duration: const Duration(seconds: 24));
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (MediaQuery.disableAnimationsOf(context)) {
+      _clock.stop();
+    } else if (!_clock.isAnimating) {
+      _clock.repeat();
+    }
+  }
+
+  @override
+  void dispose() {
+    _clock.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final z = widget.z;
+    final now = widget.now;
     final rise = z.sunrise();
     final set = z.sunset();
     final alot = z.alotHaShachar();
     final tzeit = z.tzeit();
     final theme = Theme.of(context);
-    double? progress;
-    if (now != null && rise != null && set != null) {
-      progress = (now!.millisecondsSinceEpoch - rise.millisecondsSinceEpoch) /
-          (set.millisecondsSinceEpoch - rise.millisecondsSinceEpoch);
-    }
+    final sky = _Sky.at(now ?? (rise != null && set != null ? rise.add(set.difference(rise) ~/ 2) : null), alot: alot, rise: rise, set: set, tzeit: tzeit);
     final dayLen = rise != null && set != null ? set.difference(rise) : null;
-    final night = progress != null && (progress < 0 || progress > 1);
-    final gradient = night
-        ? const [Color(0xFF0B1437), Color(0xFF28306B)]
-        : const [Color(0xFF7EC8F2), Color(0xFFFFE3A3)];
+    String t(DateTime? d) => formatTime(d, widget.loc, hour12: widget.hour12);
     return Card(
       clipBehavior: Clip.antiAlias,
-      child: Container(
-        decoration: BoxDecoration(gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: gradient)),
-        padding: const EdgeInsets.fromLTRB(16, 16, 16, 12),
-        child: Column(children: [
-          SizedBox(
-            height: 130,
+      child: Stack(children: [
+        Positioned.fill(
+          child: RepaintBoundary(
             child: CustomPaint(
-              painter: _ArcPainter(progress: progress, night: night),
-              size: const Size.fromHeight(130),
+              painter: _SkyPainter(sky: sky, moonPhase: now == null ? null : _moonPhase(now), clock: _clock, motion: !MediaQuery.disableAnimationsOf(context)),
             ),
           ),
-          const SizedBox(height: 8),
-          DefaultTextStyle(
-            style: theme.textTheme.bodySmall!.copyWith(color: night ? Colors.white : Colors.black87),
-            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-              _cap(context.term('Alot'), formatTime(alot, loc, hour12: hour12)),
-              _cap('Netz', formatTime(rise, loc, hour12: hour12)),
-              _cap('Shkiah', formatTime(set, loc, hour12: hour12)),
-              _cap(context.term('Tzeit'), formatTime(tzeit, loc, hour12: hour12)),
-            ]),
-          ),
-          if (dayLen != null)
-            Padding(
-              padding: const EdgeInsets.only(top: 8),
-              child: Text(
-                'Day ${dayLen.inHours}h ${dayLen.inMinutes % 60}m · shaah zmanit ${(dayLen.inSeconds / 12 / 60).toStringAsFixed(1)} min',
-                style: theme.textTheme.bodySmall?.copyWith(color: night ? Colors.white70 : Colors.black54),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 16, 16, 12),
+          child: Column(children: [
+            const SizedBox(height: 138),
+            DefaultTextStyle(
+              style: theme.textTheme.bodySmall!.copyWith(color: Colors.white, shadows: _legible),
+              child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                _cap(context.term('Alot'), t(alot)),
+                _cap('Netz', t(rise)),
+                _cap('Shkiah', t(set)),
+                _cap(context.term('Tzeit'), t(tzeit)),
+              ]),
+            ),
+            if (dayLen != null)
+              Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: Text(
+                  'Day ${dayLen.inHours}h ${dayLen.inMinutes % 60}m · shaah zmanit ${(dayLen.inSeconds / 12 / 60).toStringAsFixed(1)} min',
+                  style: theme.textTheme.bodySmall?.copyWith(color: Colors.white70, shadows: _legible),
+                ),
               ),
-            ),
-        ]),
-      ),
+          ]),
+        ),
+      ]),
     );
   }
+
+  /// A soft shadow under the times, so they read on the land.
+  static const _legible = [Shadow(color: Color(0x73000000), blurRadius: 6)];
 
   // Shrinks rather than overflowing on narrow phones and with large text.
   Widget _cap(String a, String b) => Flexible(
@@ -400,46 +427,253 @@ class _SunArcCard extends StatelessWidget {
       );
 }
 
-class _ArcPainter extends CustomPainter {
-  final double? progress;
-  final bool night;
-  _ArcPainter({required this.progress, required this.night});
+/// The moon's age as a fraction of its month: 0 new, 0.5 full. From the
+/// mean synodic month and a known new moon; close enough to draw it.
+double _moonPhase(DateTime t) {
+  const synodic = 29.530588853;
+  final days = t.toUtc().difference(DateTime.utc(2000, 1, 6, 18, 14)).inMinutes / 1440;
+  return (days / synodic) % 1;
+}
+
+/// Where the sky is at a moment: its colors, and where the sun or moon is
+/// on its arc (0 at the eastern horizon, 1 at the western).
+class _Sky {
+  final Color top;
+  final Color bottom;
+
+  /// A glow along the horizon at dawn and dusk.
+  final Color glow;
+
+  /// The sun's place on its arc, by day; null at night.
+  final double? sun;
+
+  /// The moon's place across the night; null by day.
+  final double? moon;
+
+  /// How dark it is: 0 by day, 1 at night, for the stars and the text.
+  final double night;
+  const _Sky(this.top, this.bottom, this.glow, {this.sun, this.moon, required this.night});
+
+  bool get dark => night > 0.45;
+
+  static const _night = (Color(0xFF050A24), Color(0xFF16204A));
+  static const _dawn = (Color(0xFF283271), Color(0xFFE79A86));
+  static const _sunrise = (Color(0xFF5C8FD8), Color(0xFFFFCB8E));
+  static const _day = (Color(0xFF3F97E3), Color(0xFFBFE4FF));
+  static const _golden = (Color(0xFF5E86CC), Color(0xFFFFC77D));
+  static const _sunset = (Color(0xFF3A3A86), Color(0xFFFF8358));
+  static const _dusk = (Color(0xFF151A48), Color(0xFF5B3C7E));
+
+  factory _Sky.at(DateTime? now, {DateTime? alot, DateTime? rise, DateTime? set, DateTime? tzeit}) {
+    if (now == null || rise == null || set == null) return _Sky(_day.$1, _day.$2, Colors.transparent, night: 0);
+    final a = alot ?? rise.subtract(const Duration(minutes: 72));
+    final tz = tzeit ?? set.add(const Duration(minutes: 40));
+    final hour = const Duration(hours: 1);
+    // Key moments and their colors; the sky blends between neighbours.
+    final stops = <(DateTime, (Color, Color), Color, double)>[
+      (a.subtract(hour), _night, Colors.transparent, 1),
+      (a, _night, const Color(0x00E79A86), 1),
+      (rise.subtract(const Duration(minutes: 20)), _dawn, const Color(0x66FF9A7A), 0.6),
+      (rise, _sunrise, const Color(0x55FFB36B), 0.15),
+      (rise.add(hour), _day, Colors.transparent, 0),
+      (set.subtract(hour), _day, Colors.transparent, 0),
+      (set.subtract(const Duration(minutes: 25)), _golden, const Color(0x44FFB45C), 0.05),
+      (set, _sunset, const Color(0x77FF6E4A), 0.3),
+      (tz, _dusk, const Color(0x337A4AA0), 0.8),
+      (tz.add(hour), _night, Colors.transparent, 1),
+    ];
+    var colors = _night;
+    var glow = Colors.transparent;
+    var night = 1.0;
+    for (var i = 0; i < stops.length - 1; i++) {
+      final (t0, c0, g0, n0) = stops[i];
+      final (t1, c1, g1, n1) = stops[i + 1];
+      if (!now.isBefore(t0) && now.isBefore(t1)) {
+        final f = now.difference(t0).inSeconds / t1.difference(t0).inSeconds;
+        colors = (Color.lerp(c0.$1, c1.$1, f)!, Color.lerp(c0.$2, c1.$2, f)!);
+        glow = Color.lerp(g0, g1, f)!;
+        night = n0 + (n1 - n0) * f;
+        break;
+      }
+    }
+    final day = set.difference(rise).inSeconds;
+    final sun = now.difference(rise).inSeconds / day;
+    double? moon;
+    if (sun < 0 || sun > 1) {
+      // Across the night, from shkiah to the next netz (a day on).
+      final dusk = sun > 1 ? set : set.subtract(const Duration(days: 1));
+      final dawn = sun > 1 ? rise.add(const Duration(days: 1)) : rise;
+      moon = now.difference(dusk).inSeconds / dawn.difference(dusk).inSeconds;
+    }
+    return _Sky(colors.$1, colors.$2, glow, sun: sun >= -0.06 && sun <= 1.06 ? sun : null, moon: moon, night: night);
+  }
+}
+
+class _SkyPainter extends CustomPainter {
+  final _Sky sky;
+  final double? moonPhase;
+  final Animation<double> clock;
+  final bool motion;
+  _SkyPainter({required this.sky, required this.moonPhase, required this.clock, required this.motion}) : super(repaint: clock);
+
+  // The same stars every night: placed once from a fixed seed.
+  static final _stars = () {
+    final r = math.Random(5779);
+    return [for (var i = 0; i < 70; i++) (r.nextDouble(), r.nextDouble() * 0.78, 0.5 + r.nextDouble() * 1.1, r.nextDouble() * math.pi * 2)];
+  }();
 
   @override
   void paint(Canvas canvas, Size size) {
-    final w = size.width;
-    final h = size.height;
-    final center = Offset(w / 2, h - 8);
-    final r = math.min(w / 2 - 16, h - 16);
-    final horizon = Paint()
-      ..color = (night ? Colors.white : Colors.black).withValues(alpha: 0.35)
-      ..strokeWidth = 1.5;
-    canvas.drawLine(Offset(8, center.dy), Offset(w - 8, center.dy), horizon);
-    final arc = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 2
-      ..color = (night ? Colors.white : Colors.orange.shade800).withValues(alpha: 0.6);
-    canvas.drawArc(Rect.fromCircle(center: center, radius: r), math.pi, math.pi, false, arc);
-    if (progress != null) {
-      final p = progress!.clamp(-0.08, 1.08);
+    final w = size.width, h = size.height;
+    final t = motion ? clock.value : 0.0;
+    final rect = Offset.zero & size;
+    canvas.drawRect(rect, Paint()..shader = LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [sky.top, sky.bottom]).createShader(rect));
+
+    // The arc, its horizon at the foot of the drawing.
+    final horizonY = 146.0;
+    final center = Offset(w / 2, horizonY);
+    final r = math.min(w / 2 - 28, horizonY - 26);
+    Offset on(double p, {double lift = 1}) {
       final angle = math.pi + p * math.pi;
-      final pos = Offset(center.dx + r * math.cos(angle), center.dy + r * math.sin(angle));
-      if (!night) {
-        canvas.drawCircle(pos, 16, Paint()..color = Colors.yellow.withValues(alpha: 0.35));
-        canvas.drawCircle(pos, 10, Paint()..color = Colors.orange);
-      } else {
-        canvas.drawCircle(Offset(w - 36, 24), 10, Paint()..color = Colors.white.withValues(alpha: 0.9));
-        canvas.drawCircle(Offset(w - 31, 21), 9, Paint()..color = const Color(0xFF1A2255));
-        final star = Paint()..color = Colors.white70;
-        for (final o in const [Offset(0.2, 0.2), Offset(0.35, 0.45), Offset(0.6, 0.15), Offset(0.12, 0.6), Offset(0.8, 0.5)]) {
-          canvas.drawCircle(Offset(o.dx * w, o.dy * h), 1.5, star);
-        }
+      return Offset(center.dx + r * math.cos(angle), center.dy + r * lift * math.sin(angle));
+    }
+
+    // Glow along the horizon at dawn and dusk, on the side the sun is.
+    if (sky.glow.a > 0) {
+      // Dawn in the east (the left, where the arc starts), dusk in the west.
+      final east = sky.sun != null ? sky.sun! < 0.5 : (sky.moon ?? 0) > 0.5;
+      final at = Offset(east ? w * 0.18 : w * 0.82, horizonY);
+      canvas.drawCircle(at, w * 0.7,
+          Paint()..shader = RadialGradient(colors: [sky.glow, sky.glow.withValues(alpha: 0)]).createShader(Rect.fromCircle(center: at, radius: w * 0.7)));
+    }
+
+    // Stars, fading in with the dark, each twinkling at its own pace.
+    if (sky.night > 0.05) {
+      for (final (i, (x, y, s, ph)) in _stars.indexed) {
+        final twinkle = 0.55 + 0.45 * math.sin(t * math.pi * 2 * (2 + i % 5) + ph);
+        final a = (sky.night * twinkle).clamp(0.0, 1.0);
+        final p = Offset(x * w, y * h);
+        canvas.drawCircle(p, s, Paint()..color = Colors.white.withValues(alpha: a * 0.9));
+        if (s > 1.4) canvas.drawCircle(p, s * 3, Paint()..color = Colors.white.withValues(alpha: a * 0.08));
+      }
+      // Now and then a shooting star, once around the loop.
+      final st = (t * 3) % 1;
+      if (sky.night > 0.7 && st < 0.12) {
+        final f = st / 0.12;
+        final start = Offset(w * 0.25, h * 0.12);
+        final head = start + Offset(w * 0.32 * f, h * 0.18 * f);
+        final tail = head - Offset(w * 0.08, h * 0.045);
+        canvas.drawLine(
+            tail,
+            head,
+            Paint()
+              ..strokeWidth = 1.6
+              ..strokeCap = StrokeCap.round
+              ..shader = LinearGradient(colors: [Colors.white.withValues(alpha: 0), Colors.white.withValues(alpha: (1 - f) * 0.9)])
+                  .createShader(Rect.fromPoints(tail, head)));
       }
     }
+
+    // Clouds drifting by day.
+    if (sky.night < 0.6) {
+      final a = (1 - sky.night / 0.6) * 0.55;
+      for (final (i, (y, s, speed)) in const [(0.18, 1.0, 1), (0.36, 0.75, 2), (0.1, 0.6, 1)].indexed) {
+        final x = ((i * 0.37 + t * speed) % 1.3 - 0.15) * w;
+        _cloud(canvas, Offset(x, y * h), 18 * s, Colors.white.withValues(alpha: a));
+      }
+    }
+
+    // The path: dashed by night, a soft line by day.
+    final path = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.5
+      ..color = (sky.dark ? Colors.white : const Color(0xFFB35A00)).withValues(alpha: sky.dark ? 0.25 : 0.45);
+    canvas.drawArc(Rect.fromCircle(center: center, radius: r), math.pi, math.pi, false, path);
+
+
+    // The sun by day, with a slow-turning glow; the moon by night.
+    if (sky.sun case final p?) {
+      final pos = on(p.clamp(-0.06, 1.06));
+      final low = 1 - math.sin(math.pi * p.clamp(0.0, 1.0)); // 1 at the horizon
+      final core = Color.lerp(const Color(0xFFFFE27A), const Color(0xFFFF8A3D), low)!;
+      canvas.drawCircle(pos, 34, Paint()..shader = RadialGradient(colors: [core.withValues(alpha: 0.45), core.withValues(alpha: 0)]).createShader(Rect.fromCircle(center: pos, radius: 34)));
+      final rays = Paint()
+        ..color = core.withValues(alpha: 0.35)
+        ..strokeWidth = 2
+        ..strokeCap = StrokeCap.round;
+      for (var i = 0; i < 12; i++) {
+        final a = t * math.pi * 2 / 3 + i * math.pi / 6;
+        canvas.drawLine(pos + Offset(math.cos(a), math.sin(a)) * 15, pos + Offset(math.cos(a), math.sin(a)) * (i.isEven ? 23 : 20), rays);
+      }
+      canvas.drawCircle(pos, 11, Paint()..color = core);
+    } else if (sky.moon case final m?) {
+      final pos = on(m.clamp(0.0, 1.0), lift: 0.92);
+      canvas.drawCircle(pos, 30, Paint()..shader = RadialGradient(colors: [const Color(0x55DDE6FF), const Color(0x00DDE6FF)]).createShader(Rect.fromCircle(center: pos, radius: 30)));
+      _moon(canvas, pos, 11, moonPhase ?? 0.5);
+    }
+
+    // The land, in front of the sun and moon so they rise and set behind
+    // it: hills in two layers, tinted by the sky and dark enough under the
+    // times to read them in white.
+    final land = Color.lerp(const Color(0xFF1E3A34), const Color(0xFF060A1C), sky.night)!;
+    _hills(canvas, size, horizonY - 4, Color.lerp(sky.bottom, land, 0.55)!, 0.0, 9);
+    _hills(canvas, size, horizonY + 4, Color.lerp(sky.bottom, land, 0.82)!, 1.7, 7);
+  }
+
+  /// The moon at [phase]: the dark disc faint, the lit part bright, the
+  /// terminator an ellipse (waxing lit on the right, waning on the left).
+  void _moon(Canvas canvas, Offset c, double r, double phase) {
+    canvas.drawCircle(c, r, Paint()..color = const Color(0xFF2A3360));
+    final waxing = phase < 0.5;
+    final side = waxing ? 1.0 : -1.0;
+    // The terminator's reach toward the lit edge: all of it when new, none
+    // at the quarters, across to the far edge when full.
+    final k = r * math.cos(2 * math.pi * phase);
+    final lit = Path();
+    const n = 32;
+    for (var i = 0; i <= n; i++) {
+      final a = -math.pi / 2 + math.pi * i / n;
+      final p = c + Offset(side * r * math.cos(a), r * math.sin(a));
+      i == 0 ? lit.moveTo(p.dx, p.dy) : lit.lineTo(p.dx, p.dy);
+    }
+    for (var i = n; i >= 0; i--) {
+      final a = -math.pi / 2 + math.pi * i / n;
+      lit.lineTo(c.dx + side * k * math.cos(a), c.dy + r * math.sin(a));
+    }
+    lit.close();
+    canvas.drawPath(lit, Paint()..color = const Color(0xFFF4F1E1));
+    // A couple of maria, faint, for texture.
+    canvas.save();
+    canvas.clipPath(lit);
+    final mare = Paint()..color = const Color(0x22000000);
+    canvas.drawCircle(c + Offset(-r * 0.3, -r * 0.25), r * 0.28, mare);
+    canvas.drawCircle(c + Offset(r * 0.25, r * 0.3), r * 0.2, mare);
+    canvas.restore();
+  }
+
+  void _cloud(Canvas canvas, Offset at, double s, Color color) {
+    final p = Paint()..color = color;
+    canvas.drawCircle(at, s, p);
+    canvas.drawCircle(at + Offset(s * 0.9, s * 0.25), s * 0.8, p);
+    canvas.drawCircle(at + Offset(-s * 0.9, s * 0.3), s * 0.7, p);
+    canvas.drawRRect(RRect.fromRectAndRadius(Rect.fromLTWH(at.dx - s * 1.5, at.dy, s * 3.1, s * 0.85), Radius.circular(s * 0.4)), p);
+  }
+
+  void _hills(Canvas canvas, Size size, double y, Color color, double shift, double height) {
+    final path = Path()..moveTo(0, size.height);
+    for (var x = 0.0; x <= size.width; x += 6) {
+      final f = x / size.width * math.pi * 2;
+      path.lineTo(x, y - height * (0.5 + 0.3 * math.sin(f * 1.3 + shift) + 0.2 * math.sin(f * 3.1 + shift * 2)));
+    }
+    path
+      ..lineTo(size.width, y - height * 0.5)
+      ..lineTo(size.width, size.height)
+      ..close();
+    canvas.drawPath(path, Paint()..color = color);
   }
 
   @override
-  bool shouldRepaint(_ArcPainter old) => old.progress != progress || old.night != night;
+  bool shouldRepaint(_SkyPainter old) => old.sky.top != sky.top || old.sky.sun != sky.sun || old.sky.moon != sky.moon || old.moonPhase != moonPhase || old.motion != motion;
 }
 
 /// Candle lighting, havdalah, fasts, chametz and molad for the date.

@@ -1,0 +1,13 @@
+<!-- Google Play build: Play delivers updates, and its policy forbids an app
+     installing its own updates, so the in-app updater's permission and the
+     FileProvider it hands APKs to the installer through are removed. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" tools:node="remove"/>
+    <application>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.updates"
+            tools:node="remove"/>
+    </application>
+</manifest>

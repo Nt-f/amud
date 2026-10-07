@@ -26,7 +26,7 @@
        while the app loads. */
     #splash { position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column; align-items: center;
       justify-content: center; gap: 20px; background: #172a5c; transition: opacity .4s ease; }
-    #splash.done { opacity: 0; }
+    #splash.done { opacity: 0; pointer-events: none; }
     #splash .word { font: 600 56px Fraunces, Georgia, serif; letter-spacing: -1.5px; color: #f8f3ea;
       animation: amud-rise .6s 1.75s ease-out both; }
     #splash .throw { transform-box: fill-box; transform-origin: center; animation: amud-throw .95s cubic-bezier(.18,1.35,.4,1) both; }
@@ -100,16 +100,29 @@
     }
     // The app's first frame can come before the intro has finished (from
     // the cache it takes about a second), so the splash stays up, over the
-    // app, until the wordmark has risen, then fades out.
-    window.addEventListener('flutter-first-frame', function () {
-      var s = document.getElementById('splash'); if (!s) return;
-      var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var wait = Math.max(0, (still ? 1200 : 2600) - (performance.now() - splashStart));
-      setTimeout(function () {
+    // app, until the wordmark has risen, then fades out. A tap anywhere
+    // skips the rest of the intro: the splash fades as soon as the app is
+    // ready (straight away if it already is).
+    (function () {
+      var ready = false, skipped = false, hiding = false;
+      function hide() {
+        var s = document.getElementById('splash');
+        if (!s || hiding) return;
+        hiding = true;
         s.classList.add('done');
         setTimeout(function () { s.remove(); }, 450);
-      }, wait);
-    });
+      }
+      document.getElementById('splash').addEventListener('pointerdown', function () {
+        skipped = true;
+        if (ready) hide();
+      });
+      window.addEventListener('flutter-first-frame', function () {
+        ready = true;
+        if (skipped) return hide();
+        var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        setTimeout(hide, Math.max(0, (still ? 1200 : 2600) - (performance.now() - splashStart)));
+      });
+    })();
   </script>
   <script src="integrations.js"></script>
   <script src="flutter_bootstrap.js" async></script>

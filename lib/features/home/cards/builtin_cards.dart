@@ -22,6 +22,7 @@ import '../../siddur/day_guide_screen.dart';
 import '../../zmanim/zman_catalog.dart';
 import '../card_registry.dart';
 import '../today.dart';
+import '../../torah/shnayim_mikra_screen.dart';
 import 'card_frame.dart';
 
 void registerBuiltInCards(CardRegistry r) {
@@ -178,7 +179,6 @@ class _HebrewDateCard extends ConsumerWidget {
             {'parsha': p.name, 'date': formatPlainDate(p.shabbat.plainDate(), weekday: false, year: false)});
     final holidays = getHolidaysOnDate(hd, s.location.il).where((e) => !e.hasFlag(Flags.yomKippurKatan) && !e.hasFlag(Flags.behab));
     return CardFrame(
-      onTap: () => context.push('/calendar'),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         SplitRow(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -202,6 +202,8 @@ class _HebrewDateCard extends ConsumerWidget {
           const SizedBox(width: 6),
           Expanded(child: Text(parsha, style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600))),
         ]),
+        const SizedBox(height: 4),
+        const ShnayimMikraLine(),
         if (holidays.isNotEmpty) ...[
           const SizedBox(height: 8),
           Wrap(spacing: 6, runSpacing: 6, children: [

@@ -43,4 +43,14 @@ void main() {
     expect(storage.readJson('thing', (j) => throw const FormatException()), isNull);
     expect(storage.readJson('thing.unreadable', (j) => j), {'a': 1});
   });
+
+  test("version lists saved before Amud's own text are marked, once", () {
+    final old = AppSettings.fromJson({
+      'v': 2,
+      'hebrewVersions': {'Siddur Ashkenaz': ['Daat Siddur Ashkenaz']},
+    });
+    expect(old.hebrewVersions['Siddur Ashkenaz'], [preCorpusVersions, 'Daat Siddur Ashkenaz']);
+    final again = AppSettings.fromJson(old.toJson());
+    expect(again.hebrewVersions['Siddur Ashkenaz'], [preCorpusVersions, 'Daat Siddur Ashkenaz']);
+  });
 }

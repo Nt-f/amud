@@ -21,4 +21,18 @@ void main() {
     await run(800);
     expect(find.text('amud'), findsNothing);
   });
+
+  testWidgets('a tap skips the animation', (tester) async {
+    LaunchAnimation.resetForTest();
+    await tester.pumpWidget(MaterialApp(builder: (context, child) => LaunchAnimation(child: child!), home: const Text('app')));
+    await tester.pump(const Duration(milliseconds: 300));
+    await tester.pump(const Duration(milliseconds: 500));
+    expect(find.text('amud'), findsOneWidget);
+    await tester.tapAt(const Offset(10, 10));
+    // Just the fade, not the rest of the 3.1 s animation.
+    for (var t = 0; t < 500; t += 50) {
+      await tester.pump(const Duration(milliseconds: 50));
+    }
+    expect(find.text('amud'), findsNothing);
+  });
 }

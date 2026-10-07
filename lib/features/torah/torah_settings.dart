@@ -79,7 +79,7 @@ class TorahSettingsNotifier extends Notifier<TorahSettings> {
 final torahSettingsProvider = NotifierProvider<TorahSettingsNotifier, TorahSettings>(TorahSettingsNotifier.new);
 
 /// Bundled fonts with Latin letters, for the English text.
-const _latinFonts = [
+const latinFontChoices = [
   (null, 'Default'),
   ('FrankRuhlLibre', 'Frank Ruhl Libre'),
   ('DavidLibre', 'David Libre'),
@@ -167,7 +167,7 @@ class _TorahTextSettings extends ConsumerWidget {
           ),
           SheetLabel(context.tr('English font')),
           Wrap(spacing: 6, runSpacing: 6, children: [
-            for (final (family, label) in _latinFonts)
+            for (final (family, label) in latinFontChoices)
               ChoiceChip(
                 label: Text(family == null ? context.tr(label) : label, style: TextStyle(fontFamily: family)),
                 selected: s.latinFont == family,

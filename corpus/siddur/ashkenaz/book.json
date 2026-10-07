@@ -1,0 +1,111 @@
+{
+  "title": "Siddur Ashkenaz",
+  "heTitle": "סידור אשכנז",
+  "sources": {
+    "he": {
+      "The Metsudah siddur, 1981": {
+        "license": "CC-BY",
+        "source": "https://www.nli.org.il/he/books/NNL_ALEPH002211687"
+      },
+      "Daat Siddur Ashkenaz": {
+        "license": "Public Domain",
+        "source": "http://www.daat.ac.il/daat/sidurim/tohen3.htm"
+      }
+    },
+    "en": {
+      "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981": {
+        "license": "CC-BY",
+        "source": "https://www.nli.org.il/he/books/NNL_ALEPH002211687"
+      },
+      "Sefaria Community Translation": {
+        "license": "CC0",
+        "source": "https://www.sefaria.org"
+      },
+      "The Standard Prayer Book, tr. by Simeon Singer, [1915]": {
+        "license": "Public Domain",
+        "source": "http://sacred-texts.com/jud/spb/spb41.htm"
+      },
+      "Amud translation": {
+        "license": "CC0"
+      }
+    }
+  },
+  "sections": {
+    "Weekday": "ימי חול",
+    "Weekday/Shacharit": "תפילת שחרית",
+    "Weekday/Shacharit/Preparatory Prayers": "הכנה לתפילה",
+    "Weekday/Shacharit/Preparatory Prayers/Korbanot": "קרבנות",
+    "Weekday/Shacharit/Pesukei Dezimra": "פסוקי דזמרה",
+    "Weekday/Shacharit/Blessings of the Shema": "ברכות קריאת שמע",
+    "Weekday/Shacharit/Amidah": "עמידה",
+    "Weekday/Shacharit/Post Amidah": "אחר העמידה",
+    "Weekday/Shacharit/Post Amidah/Tachanun": "תחנון",
+    "Weekday/Shacharit/Torah Reading": "קריאת התורה",
+    "Weekday/Shacharit/Torah Reading/Removing the Torah from Ark": "הוצאת ספר תורה",
+    "Weekday/Shacharit/Torah Reading/Reading from Sefer": "קריאת התורה",
+    "Weekday/Shacharit/Torah Reading/Returning Sefer to Aron": "הכנסת ספר תורה",
+    "Weekday/Shacharit/Concluding Prayers": "סיום תפילה",
+    "Weekday/Shacharit/Concluding Prayers/Korbanot (Israel)": "קרבנות",
+    "Weekday/Shacharit/Post Service": "תפילות נוספות",
+    "Weekday/Minchah": "תפילת מנחה",
+    "Weekday/Minchah/Amida": "עמידה",
+    "Weekday/Minchah/Post Amidah": "אחר העמידה",
+    "Weekday/Minchah/Post Amidah/Tachanun": "תחנון",
+    "Weekday/Minchah/Concluding Prayers": "סיום תפילה",
+    "Weekday/Maariv": "מעריב",
+    "Weekday/Maariv/Blessings of the Shema": "ברכות קריאת שמע",
+    "Weekday/Maariv/Amidah": "עמידה",
+    "Weekday/Maariv/Additions for Motza'ei Shabbat": "תוספות למוצאי שבת",
+    "Shabbat": "שבת",
+    "Shabbat/Kabbalat Shabbat": "קבלת שבת",
+    "Shabbat/Maariv": "מעריב",
+    "Shabbat/Maariv/Blessings of the Shema": "קריאת שמע וברכותיה",
+    "Shabbat/Maariv/Amidah": "עמידה",
+    "Shabbat/Shabbat Evening": "ליל שבת",
+    "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening": "זמירות לליל שבת",
+    "Shabbat/Shacharit": "שחרית",
+    "Shabbat/Shacharit/Preparatory Prayers": "הכנה לתפילה",
+    "Shabbat/Shacharit/Preparatory Prayers/Korbanot": "קרבנות",
+    "Shabbat/Shacharit/Pesukei Dezimra": "פסוקי דזמרה",
+    "Shabbat/Shacharit/Blessings of the Shema": "ברכות קריאת שמע",
+    "Shabbat/Shacharit/Amidah": "עמידה",
+    "Shabbat/Shacharit/Torah Reading": "קריאת התורה",
+    "Shabbat/Shacharit/Torah Reading/Removing the Torah from the Ark": "הוצאת ספר תורה",
+    "Shabbat/Shacharit/Torah Reading/Reading from Sefer": "קריאת התורה",
+    "Shabbat/Shacharit/Torah Reading/Reading from Sefer/Mi Sheberach": "מי שברך",
+    "Shabbat/Shacharit/Torah Reading/Reading from Sefer/Mi Sheberach/For Birth": "ליולדות",
+    "Shabbat/Shacharit/Communal Prayers": "תפילות לציבור",
+    "Shabbat/Musaf LeShabbat": "מוסף לשבת",
+    "Shabbat/Musaf LeShabbat/Amidah": "עמידה",
+    "Shabbat/Musaf LeShabbat/Amidah/Sanctity of the Day": "קדושת היום",
+    "Shabbat/Daytime Meal": "סעודת היום",
+    "Shabbat/Daytime Meal/Zemirot for Second Meal": "זמירות לסעודת היום",
+    "Shabbat/Minchah": "מנחה",
+    "Shabbat/Minchah/Torah Reading": "קריאת התורה",
+    "Shabbat/Minchah/Torah Reading/Removing the Torah from Ark": "הוצאת ספר תורה",
+    "Shabbat/Minchah/Torah Reading/Reading from Sefer": "קריאת התורה",
+    "Shabbat/Minchah/Torah Reading/Returning Sefer to Aron": "הכנסת התורה",
+    "Shabbat/Minchah/Amidah": "עמידה",
+    "Shabbat/Minchah/Amidah/Thanksgiving": "מודים",
+    "Shabbat/Third Meal": "סעודת שלישית",
+    "Festivals": "חגים",
+    "Festivals/Rosh Chodesh": "ראש חודש",
+    "Festivals/Rosh Chodesh/Hallel": "הלל",
+    "Festivals/Rosh Chodesh/Musaf Amidah for Rosh Chodesh": "מוסף עמידה לראש חודש",
+    "Festivals/Rosh Chodesh/Musaf Amidah for Rosh Chodesh/Kedushah": "קדושה",
+    "Festivals/Shalosh Regalim": "תפילות לשלוש רגלים",
+    "Festivals/Shalosh Regalim/Amida for Maariv, Shacharit, Mincha": "עמידה לערבית, שחרית, מנחה",
+    "Festivals/Shalosh Regalim/Mussaf": "מוסף",
+    "Festivals/Sukkot": "סוכות",
+    "Festivals/Sukkot/Prayers in the Sukkah": "תפילות בסוכה",
+    "Festivals/Sukkot/Hosha'anot": "הושענות",
+    "Festivals/Chanukah": "חנוכה",
+    "Festivals/Chanukah/Service for Lighting Chanukah Candles": "סדר הדלקת נרות חנוכה",
+    "Festivals/Selichot": "סליחות",
+    "Berachot": "ברכות",
+    "Berachot/Birkat Hanehenin": "ברכת הנהנין",
+    "Berachot/Birkat Hanehenin/Eating": "אכילה",
+    "Berachot/Birkat Hanehenin/Eating/Brachot Achronot": "ברכות אחרונות",
+    "Kaddish": "קדיש"
+  }
+}

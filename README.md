@@ -66,6 +66,11 @@ PWA). iOS builds are released unsigned, for sideloading.
   for offline learning. Halacha has the Kitzur Shulchan Aruch, with today's
   Kitzur Yomi highlighted; Chumash, Gemara and the other categories are still
   in progress.
+- **Shiurim:** kezayis, revi'is, amah, techum Shabbos and the other common
+  shiurim by each posek (Rav Chaim Na'eh by default, with Rav Moshe Feinstein,
+  the Chazon Ish and others beside him), a converter between every Gemara
+  unit and metric or imperial, and the source of every figure. Offline; open
+  it from the Torah tab, or add it to the navigation bar.
 - **Tehillim:** the day's portion by month or by week, Shir shel Yom, and your progress saved.
 - **Reminders:** notifications before any zman, such as candle lighting or
   the latest Shema.
@@ -79,7 +84,9 @@ PWA). iOS builds are released unsigned, for sideloading.
 Requires Flutter 3.41 (the version CI uses is in `.github/workflows/build.yml`).
 
     flutter pub get
-    flutter run                 # or: flutter run -d chrome
+    flutter run -d linux        # or: -d chrome; Android needs a flavor:
+    flutter run --flavor github # the GitHub APK, which updates itself
+    flutter run --flavor play   # the Google Play build (no updater)
     flutter analyze
     flutter test
 
@@ -91,7 +98,8 @@ Layout:
 | `lib/features/` | one folder per screen or area: `home` (dashboard and card registry), `siddur`, `torah` (downloadable texts), `zmanim`, `calendar`, `tehillim`, `alerts`, `setup` (first-run walkthrough, "What's new" and the launch animation), `update`, and others |
 | `packages/hebcal/` | Dart port of Hebcal: dates, holidays, zmanim, learning schedules |
 | `packages/siddur_engine/` | parses Sefaria siddurim and applies the day's rules |
-| `assets/sefaria/` | bundled texts, from `dart run tool/sefaria_sync.dart` |
+| `corpus/siddur/` | Amud's own text of its five main siddurim, edited by hand (`corpus/SCHEMA.md`), built into `assets/corpus/` by `tool/corpus/build_assets.py` |
+| `assets/sefaria/` | other bundled texts and alternative versions, from `dart run tool/sefaria_sync.dart` |
 | `assets/rules/rules.json` | which sections and inserts are said on which days |
 | `assets/brand/` | the Amud logo as SVG |
 | `landing/` | the static landing page at amud.page's root (the app is under `/app/`) |

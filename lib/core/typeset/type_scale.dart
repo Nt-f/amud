@@ -55,6 +55,15 @@ enum ParagraphRole {
 /// How a paragraph sits in its column.
 enum ParagraphAlign { justify, start, end, center }
 
+/// An alignment the text itself asks for (the corpus's `align`), or null.
+ParagraphAlign? explicitAlign(String? name) => switch (name) {
+      'start' => ParagraphAlign.start,
+      'end' => ParagraphAlign.end,
+      'center' => ParagraphAlign.center,
+      'justify' => ParagraphAlign.justify,
+      _ => null,
+    };
+
 /// The reader's type: a size, leading, space and alignment for each
 /// [ParagraphRole], derived from one body size so the page keeps a single
 /// rhythm at any text scale.

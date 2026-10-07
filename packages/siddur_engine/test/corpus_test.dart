@@ -26,19 +26,23 @@ void main() {
     initHebcal();
     final lib = SiddurLibrary(_FileSource(), _gunzip);
     final book = (await lib.manifest()).book('Siddur Ashkenaz')!;
-    root = await lib.index(book);
     final rules = jsonDecode(File('../../assets/rules/rules.json').readAsStringSync()) as Map<String, dynamic>;
     final bookRules = rules['Siddur Ashkenaz'] as Map<String, dynamic>;
     corpus = Corpus.fromJson(
         jsonDecode(utf8.decode(gzip.decode(File('../../assets/corpus/ashkenaz.json.gz').readAsBytesSync())))
             as Map<String, Object?>);
+    root = corpus.index!;
     resolver = SiddurResolver().withOverrides(bookRules).withCorpus(corpus);
     final defaults = (bookRules['defaultVersions'] as Map).cast<String, List>();
-    Future<List<TextVersion>> load(String lang) => Future.wait([
-          for (final t in defaults[lang]!)
-            if (book.byLanguage(lang).any((v) => v.versionTitle == t))
-              lib.version(book.byLanguage(lang).firstWhere((v) => v.versionTitle == t)),
-        ]);
+    // Amud's text first, as in the app, then the default Sefaria versions.
+    Future<List<TextVersion>> load(String lang) async => [
+          CorpusTextVersion(corpus, corpus.versionInfo(lang)!),
+          ...await Future.wait([
+            for (final t in defaults[lang]!)
+              if (book.byLanguage(lang).any((v) => v.versionTitle == t))
+                lib.version(book.byLanguage(lang).firstWhere((v) => v.versionTitle == t)),
+          ]),
+        ];
     versions = VersionSelection(await load('he'), await load('en'));
   });
 

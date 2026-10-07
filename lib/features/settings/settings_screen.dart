@@ -6,6 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:siddur_engine/siddur_engine.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/l10n.dart';
 import '../../core/adaptive.dart';
@@ -392,6 +393,14 @@ class SettingsScreen extends ConsumerWidget {
             onChanged: (v) async { if (v && !await ref.read(notificationBackendProvider).requestPermission()) return; set((x) => x.copyWith(hachamaReminder: v)); }),
           AdaptiveNavTile(icon: Icons.menu_book_outlined, title: context.tr('Daily learning'), onTap: () => context.push('/learning')),
         ]),
+        section('offline', Icons.offline_pin_outlined, 'Offline', [
+          AdaptiveNavTile(
+            icon: Icons.offline_pin_outlined,
+            title: context.tr('Offline & storage'),
+            subtitle: context.tr('What works without a connection, downloads, and the room they take'),
+            onTap: () => context.push('/settings/offline'),
+          ),
+        ]),
         section('advanced', Icons.tune, 'Advanced', [
           AdaptiveSwitchTile(
             title: context.tr('Share anonymous usage'),
@@ -407,13 +416,15 @@ class SettingsScreen extends ConsumerWidget {
           ),
         ]),
         section('about', Icons.info_outline, 'About', [
-          if (updatesSupported)
+          if (updatesSupported || playUpdates)
             AdaptiveNavTile(
               icon: Icons.system_update_outlined,
               title: context.tr('App updates'),
               subtitle: update.pending != null
                   ? context.tr('Version {v} is available', {'v': update.pending!.version})
-                  : update.currentVersion.isEmpty
+                  : update.playPending
+                      ? context.tr('A new version is available')
+                      : update.currentVersion.isEmpty
                       ? null
                       : context.tr('Version {v}', {'v': update.currentVersion}),
               onTap: () => context.push('/update'),
@@ -430,6 +441,11 @@ class SettingsScreen extends ConsumerWidget {
                   'Tehillim: Miqra according to the Masorah (CC-BY-SA) and JPS 1917 (public domain), via Sefaria. '
                   'Fonts: SIL Open Font License; Culmus fonts under GPL-2.0 with the font exception.',
             ),
+          ),
+          AdaptiveNavTile(
+            icon: Icons.privacy_tip_outlined,
+            title: context.tr('Privacy policy'),
+            onTap: () => launchUrl(Uri.parse('https://amud.page/privacy/'), mode: LaunchMode.externalApplication),
           ),
         ]),
         ]),
@@ -550,7 +566,7 @@ class _CustomRulesScreenState extends ConsumerState<CustomRulesScreen> {
 }
 
 /// The ids of the Settings sections, for opening or closing them all.
-const _sections = ['location', 'zmanim', 'siddur', 'notes', 'customs', 'appearance', 'navigation', 'reading', 'notifications', 'advanced', 'about'];
+const _sections = ['location', 'zmanim', 'siddur', 'notes', 'customs', 'appearance', 'navigation', 'reading', 'notifications', 'offline', 'advanced', 'about'];
 
 String _layoutLabel(TextLayout l) => switch (l) {
       TextLayout.hebrewOnly => 'Hebrew only',

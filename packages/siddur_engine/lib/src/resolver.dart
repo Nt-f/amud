@@ -231,6 +231,18 @@ class SegmentItem extends RenderItem {
   /// How it is read (corpus only; see [Segment.role]).
   final String? role;
   final String? voice;
+
+  /// See [Segment.align].
+  final String? align;
+
+  /// See [Segment.fold].
+  final String? fold;
+  final String? foldHe;
+  final String? select;
+
+  /// The unit of the davening this line belongs to (`kaddish.half`), from
+  /// the corpus: the line's own, else its section's.
+  final String? graphNode;
   final List<String> gestures;
   final int? repeat;
   const SegmentItem(super.key, this.node, this.he, this.tr, this.kind, this.applicability, this.labelEn,
@@ -240,6 +252,11 @@ class SegmentItem extends RenderItem {
       this.chazarah = false,
       this.role,
       this.voice,
+      this.align,
+      this.fold,
+      this.foldHe,
+      this.select,
+      this.graphNode,
       this.gestures = const [],
       this.repeat});
 }
@@ -291,7 +308,7 @@ class SiddurResolver {
   })  : sectionRules = sectionRules ?? defaultSectionRules,
         callouts = callouts ?? defaultCallouts,
         contentRules = contentRules ?? defaultContentRules,
-        curatedNotes = curatedNotes ?? defaultCuratedNotes;
+        curatedNotes = curatedNotes ?? const [];
 
   final _analysisCache = <String, List<Segment>>{};
 
@@ -299,8 +316,9 @@ class SiddurResolver {
   final _noted = <int>{};
   var _hideMode = false;
 
-  /// Parses a per-book rules JSON (`{"sections": [...], "segments": [...]}`)
-  /// and returns a resolver with those rules taking precedence.
+  /// Parses a per-book rules JSON (`{"sections": [...], "segments": [...]}`,
+  /// and `notes` as in assets/rules/notes.json) and returns a resolver with
+  /// those rules taking precedence.
   SiddurResolver withOverrides(Map<String, Object?> json) => SiddurResolver(
         sectionRules: [
           for (final r in (json['sections'] as List? ?? const [])) SectionRule.fromJson(r as Map<String, Object?>),
@@ -316,7 +334,10 @@ class SiddurResolver {
         ],
         callouts: callouts,
         contentRules: contentRules,
-        curatedNotes: curatedNotes,
+        curatedNotes: [
+          ...curatedNotesFromJson({'notes': json['notes']}),
+          ...curatedNotes,
+        ],
         analyzer: analyzer,
         corpus: corpus,
       );
@@ -637,15 +658,16 @@ class SiddurResolver {
     final (trInfo, trRaw) = options.showTranslation || options.notesTranslation
         ? versions.pick(versions.translation, leaf.path)
         : (null, null);
-    // The corpus, when the selected Hebrew is the version it tagged.
+    // Amud's own text, when it's the version picked for this leaf.
     final cl = corpus?.leaf(leaf.id);
-    final fromCorpus = cl?.he != null && heInfo != null && heInfo.versionTitle.trim() == cl!.he!.version.trim();
+    final fromCorpus = cl?.he != null && heInfo != null && heInfo.isCorpus;
     final List<Segment> he;
     var tr = const <Segment>[];
     List<Segment?>? trByHe;
     if (fromCorpus) {
+      final cl = corpus!.leaf(leaf.id)!;
       he = _analysisCache.putIfAbsent('corpus|he|${leaf.id}', () => corpusSegments(cl.he!.segments, hebrew: true, labels: corpus!.labels));
-      if (cl.en != null && trInfo != null && trInfo.versionTitle.trim() == cl.en!.version.trim()) {
+      if (cl.en != null && trInfo != null && trInfo.isCorpus) {
         final en = _analysisCache.putIfAbsent('corpus|en|${leaf.id}', () => corpusSegments(cl.en!.segments, hebrew: false, labels: corpus!.labels));
         trByHe = alignedTranslation(cl.he!, cl.en!, en);
       } else if (trInfo != null) {
@@ -710,6 +732,8 @@ class SiddurResolver {
       if (h == null && t == null) return;
       var ap = rubric == null ? Applicability.always : _eval(rubric.condition, ctx);
       if (ap == Applicability.today && _ordinary(rubric!.expression, ctx.service)) ap = Applicability.always;
+      // A circumstance the reader answered is no news to them: no "today" label.
+      if (ap == Applicability.today && RegExp(r'\bif_').hasMatch(rubric!.expression)) ap = Applicability.always;
       if (sectionExcluded) ap = Applicability.notToday;
       final isExcluded = ap == Applicability.notToday;
       // Hide means hidden, alternatives included; only a section opened
@@ -734,6 +758,11 @@ class SiddurResolver {
         chazarah: chazarah || (!fromCorpus && h == null && !_birkatKohanimLeaf.hasMatch(leaf.en) && (t?.chazarah ?? false)),
         role: primary.role,
         voice: primary.voice,
+        align: primary.align,
+        fold: primary.fold,
+        foldHe: primary.foldHe,
+        select: primary.select,
+        graphNode: primary.graphNode ?? (fromCorpus ? corpus?.leaf(leaf.id)?.node : null),
         gestures: primary.gestures,
         repeat: primary.repeat,
       ));

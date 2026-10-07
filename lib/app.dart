@@ -20,9 +20,11 @@ import 'features/calendar/calendar_screen.dart';
 import 'features/home/home_screen.dart';
 import 'features/learning/learning_screen.dart';
 import 'features/settings/font_gallery_screen.dart';
+import 'features/settings/offline_screen.dart';
 import 'features/settings/location_screen.dart';
 import 'features/settings/nav_tabs_screen.dart';
 import 'features/settings/settings_screen.dart';
+import 'features/shiurim/shiurim_screen.dart';
 import 'features/setup/launch_animation.dart';
 import 'features/setup/setup_screen.dart';
 import 'features/update/update_screen.dart';
@@ -34,6 +36,7 @@ import 'features/siddur/versions_screen.dart';
 import 'features/tehillim/tehillim_data.dart';
 import 'features/tehillim/tehillim_reader.dart';
 import 'features/tehillim/tehillim_screen.dart';
+import 'features/torah/shnayim_mikra_screen.dart';
 import 'features/torah/torah_screen.dart';
 import 'features/zmanim/zmanim_screen.dart';
 
@@ -122,6 +125,22 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                     ],
                   ),
                   GoRoute(
+                    path: 'shnayim-mikra',
+                    builder: (c, s) => ShnayimMikraScreen(
+                      key: ValueKey(s.uri.toString()),
+                      parsha: s.uri.queryParameters['parsha'],
+                      year: int.tryParse(s.uri.queryParameters['year'] ?? ''),
+                    ),
+                    routes: [
+                      GoRoute(
+                        path: 'progress',
+                        builder: (c, s) => ShnayimMikraProgressScreen(year: int.tryParse(s.uri.queryParameters['year'] ?? '')),
+                      ),
+                    ],
+                  ),
+                  // Opened from the Torah tab, so it doesn't add a tab to the bar.
+                  GoRoute(path: 'shiurim', builder: (c, s) => const ShiurimScreen()),
+                  GoRoute(
                     path: ':category',
                     builder: (c, s) => TorahCategoryScreen(category: s.pathParameters['category']!),
                     routes: [
@@ -150,6 +169,7 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                 ],
               ),
             ]),
+            StatefulShellBranch(routes: [GoRoute(path: '/shiurim', builder: (c, s) => const ShiurimScreen())]),
             StatefulShellBranch(routes: [
               GoRoute(
                 path: '/settings',
@@ -157,6 +177,7 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                 routes: [
                   GoRoute(path: 'location', parentNavigatorKey: _rootKey, builder: (c, s) => const LocationScreen()),
                   GoRoute(path: 'fonts', parentNavigatorKey: _rootKey, builder: (c, s) => const FontGalleryScreen()),
+                  GoRoute(path: 'offline', parentNavigatorKey: _rootKey, builder: (c, s) => const OfflineScreen()),
                   GoRoute(path: 'integrations', parentNavigatorKey: _rootKey, builder: (c, s) => const IntegrationsScreen()),
                   GoRoute(path: 'cards', parentNavigatorKey: _rootKey, builder: (c, s) => const CardGalleryScreen()),
                   GoRoute(path: 'rules', parentNavigatorKey: _rootKey, builder: (c, s) => const CustomRulesScreen()),
@@ -208,7 +229,7 @@ class SiddurApp extends ConsumerWidget {
 }
 
 /// The first screen of each tab, in [navTabs] order.
-const _tabRoots = {'/', '/siddur', '/zmanim', '/torah', '/settings'};
+const _tabRoots = {'/', '/siddur', '/zmanim', '/torah', '/shiurim', '/settings'};
 
 /// Native navigation chrome: Cupertino tab bar on iOS/macOS, Material 3
 /// navigation bar on phones, navigation rail on wide screens (tablet/web).

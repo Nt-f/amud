@@ -12,8 +12,8 @@ void main() {
       'navLabels': false,
       'expandedSettings': ['zmanim', 3],
     });
-    // Settings is added back; an id from a newer version is kept for it.
-    expect(s.navTabs, ['calendar', 'home', 'someday-feature', 'settings']);
+    // Settings is added back; an id this version doesn't know is dropped.
+    expect(s.navTabs, ['calendar', 'home', 'settings']);
     expect(s.navLabels, isFalse);
     expect(s.expandedSettings, ['zmanim']);
   });
@@ -22,6 +22,8 @@ void main() {
     expect(NavItem.of('torah')?.branch, 3);
     expect(NavItem.of('tehillim')?.route, '/torah/tehillim');
     expect(NavItem.of('someday-feature'), isNull);
+    // Settings keeps the ids it knows; they're the bar's shortcuts.
+    expect({for (final t in navShortcuts) t.$1}, navShortcutIds);
   });
 
   testWidgets('a folded section shows only its header, and opens on a tap', (tester) async {

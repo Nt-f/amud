@@ -9,7 +9,7 @@ const _fanDeep = Color(0xFF6F8CC0);
 
 /// Plays the Amud launch animation over [child] once per app start: the
 /// podium lines fly in, the pages fan open and the wordmark rises, then it
-/// fades into the app. It always plays in full and can't be tapped away.
+/// fades into the app. A tap anywhere skips straight to the fade.
 /// With reduced motion the finished logo shows, still, for 1.2 seconds.
 /// On the web the page's own copy of the animation already played while the
 /// app loaded, so it's skipped there.
@@ -18,6 +18,10 @@ class LaunchAnimation extends StatefulWidget {
   const LaunchAnimation({super.key, required this.child});
 
   static bool _played = false;
+
+  /// Lets a test play it again in the same run.
+  @visibleForTesting
+  static void resetForTest() => _played = false;
 
   @override
   State<LaunchAnimation> createState() => _LaunchAnimationState();
@@ -50,7 +54,7 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
     if (_show) {
       WidgetsBinding.instance.addPostFrameCallback((_) async {
         await Future<void>.delayed(const Duration(milliseconds: 250));
-        if (!mounted) return;
+        if (!mounted || _finishing) return;
         if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
           _c.value = 1;
           await Future<void>.delayed(_stillLength);
@@ -62,8 +66,12 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
     }
   }
 
+  bool _finishing = false;
+
   Future<void> _finish() async {
-    if (!mounted || !_show) return;
+    if (!mounted || !_show || _finishing) return;
+    _finishing = true;
+    _c.stop();
     await _fade.forward();
     if (mounted) setState(() => _show = false);
   }
@@ -83,40 +91,45 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
       Positioned.fill(
         child: FadeTransition(
           opacity: ReverseAnimation(_fade),
-          // Nothing reaches the app until the animation is done.
-          child: AbsorbPointer(
-            child: ColoredBox(
-              color: amudInk,
-              child: Semantics(
-                label: 'Amud',
-                child: AnimatedBuilder(
-                  animation: _c,
-                  builder: (context, _) {
-                    final still = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
-                    final t = still ? _length.inMilliseconds / 1000 : _c.value * _length.inMilliseconds / 1000;
-                    final word = _segment(t, 1.75, .6, Curves.easeOut);
-                    return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                      CustomPaint(size: const Size.square(240), painter: _MarkPainter(t)),
-                      const SizedBox(height: 20),
-                      Opacity(
-                        opacity: word,
-                        child: Transform.translate(
-                          offset: Offset(0, 10 * (1 - word)),
-                          child: const Text('amud',
-                              textDirection: TextDirection.ltr,
-                              style: TextStyle(
-                                fontFamily: 'Fraunces',
-                                fontFamilyFallback: ['Georgia', 'serif'],
-                                fontWeight: FontWeight.w600,
-                                fontSize: 56,
-                                letterSpacing: -1.5,
-                                color: _paper,
-                                decoration: TextDecoration.none,
-                              )),
+          // Nothing reaches the app until the animation is done; a tap
+          // only skips it.
+          child: GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTap: _finish,
+            child: AbsorbPointer(
+              child: ColoredBox(
+                color: amudInk,
+                child: Semantics(
+                  label: 'Amud',
+                  child: AnimatedBuilder(
+                    animation: _c,
+                    builder: (context, _) {
+                      final still = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+                      final t = still ? _length.inMilliseconds / 1000 : _c.value * _length.inMilliseconds / 1000;
+                      final word = _segment(t, 1.75, .6, Curves.easeOut);
+                      return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                        CustomPaint(size: const Size.square(240), painter: _MarkPainter(t)),
+                        const SizedBox(height: 20),
+                        Opacity(
+                          opacity: word,
+                          child: Transform.translate(
+                            offset: Offset(0, 10 * (1 - word)),
+                            child: const Text('amud',
+                                textDirection: TextDirection.ltr,
+                                style: TextStyle(
+                                  fontFamily: 'Fraunces',
+                                  fontFamilyFallback: ['Georgia', 'serif'],
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 56,
+                                  letterSpacing: -1.5,
+                                  color: _paper,
+                                  decoration: TextDecoration.none,
+                                )),
+                          ),
                         ),
-                      ),
-                    ]);
-                  },
+                      ]);
+                    },
+                  ),
                 ),
               ),
             ),

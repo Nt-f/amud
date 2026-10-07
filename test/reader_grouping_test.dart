@@ -64,6 +64,10 @@ void main() {
     expect(isUnitNode(root.find('Pesach Haggadah/Kadesh')!), isTrue);
     expect(isUnitNode(root.find('Holidays/Yom Tov Eve Kiddush')!), isTrue);
     expect(isUnitNode(root.find('Kiddush Levanah')!), isFalse);
+    expect(kaddishUnit('kaddish.half')?.$1, 'Half Kaddish');
+    expect(kaddishUnit('kaddish.unknown')?.$1, 'Kaddish');
+    expect(kaddishUnit('mincha.ashrei'), isNull);
+    expect(kaddishUnit(null), isNull);
   });
 
   test('notification ids are stable per alert and day', () {

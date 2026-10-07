@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amud Corpus Editor</title>
+<link rel="stylesheet" href="/static/editor.css">
+</head>
+<body>
+<header id="top">
+  <strong class="brand">Amud <span>corpus</span></strong>
+  <select id="nusach" title="Siddur"></select>
+  <span class="sep"></span>
+  <button id="btnUndo" title="Undo (Ctrl+Z)">↶</button>
+  <button id="btnRedo" title="Redo (Ctrl+Shift+Z)">↷</button>
+  <button id="btnSave" title="Save this file (Ctrl+S)">Save</button>
+  <button id="btnSaveAll" title="Save every changed file (Ctrl+Shift+S)">Save all <b id="dirtyCount"></b></button>
+  <button id="btnDiff" title="git diff of this file">Diff</button>
+  <span class="sep"></span>
+  <button id="btnFind" title="Find and replace (Ctrl+Shift+F)">Find</button>
+  <button id="btnGoto" title="Go to leaf (Ctrl+P)">Go to…</button>
+  <button id="btnRun" title="fmt, validate, build, tests">Build ▾</button>
+  <span class="grow"></span>
+  <span id="status"></span>
+  <button id="btnPreview" title="Toggle the live preview (Ctrl+\)">Preview</button>
+  <button id="btnTheme" title="Light / dark">◐</button>
+  <button id="btnHelp" title="Shortcuts">?</button>
+</header>
+<div id="banner" hidden></div>
+<main id="main">
+  <aside id="left">
+    <nav class="tabs" id="leftTabs">
+      <button data-tab="tree" class="on">Book</button>
+      <button data-tab="find">Find</button>
+      <button data-tab="problems">Problems <b id="probCount"></b></button>
+      <button data-tab="agent">Agent <b id="propCount"></b></button>
+      <button data-tab="ref">Reference</button>
+    </nav>
+    <section id="paneTree" class="pane"></section>
+    <section id="paneFind" class="pane" hidden></section>
+    <section id="paneProblems" class="pane" hidden></section>
+    <section id="paneAgent" class="pane" hidden></section>
+    <section id="paneRef" class="pane" hidden></section>
+  </aside>
+  <div class="gutter" id="gutterL"></div>
+  <section id="center">
+    <nav class="tabs" id="centerTabs">
+      <button data-tab="visual" class="on">Visual</button>
+      <button data-tab="raw">Raw leaf</button>
+      <button data-tab="file">Raw file</button>
+      <button data-tab="book">Book info</button>
+      <span class="grow"></span>
+      <span id="leafCrumb"></span>
+    </nav>
+    <div id="visual" class="pane"></div>
+    <div id="raw" class="pane" hidden></div>
+    <div id="file" class="pane" hidden></div>
+    <div id="bookInfo" class="pane" hidden></div>
+  </section>
+  <div class="gutter" id="gutterR"></div>
+  <aside id="right">
+    <nav class="tabs" id="rightTabs">
+      <button data-tab="preview" class="on">Text preview</button>
+      <button data-tab="app">Real app <span id="appDot" class="dot"></span></button>
+    </nav>
+    <div id="previewWrap">
+      <div id="previewBar"></div>
+      <div id="preview"></div>
+    </div>
+    <div id="appPane" hidden></div>
+  </aside>
+</main>
+<div id="modal" hidden></div>
+<div id="toasts"></div>
+<script>window.TOKEN = "__TOKEN__";</script>
+<script src="/static/core.js"></script>
+<script src="/static/cond.js"></script>
+<script src="/static/preview.js"></script>
+<script src="/static/find.js"></script>
+<script src="/static/visual.js"></script>
+<script src="/static/app.js"></script>
+<script src="/static/agent_ui.js"></script>
+<script src="/static/editor.js"></script>
+</body>
+</html>

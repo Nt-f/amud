@@ -91,6 +91,18 @@ enum AppThemeMode {
 /// Which zmanim methodology to show by default.
 enum ZmanimOpinion { gra, mga, baalHatanya }
 
+/// Every tab the navigation bar can show (see NavTabsScreen); the default
+/// bar shows all but the Shiurim tab.
+const allNavTabIds = {'home', 'siddur', 'zmanim', 'torah', 'shiurim', 'settings'};
+
+/// Every shortcut the navigation bar can show beside its tabs (see
+/// navShortcuts in nav_tabs_screen.dart).
+const navShortcutIds = {'calendar', 'tehillim', 'learning', 'alerts', 'personal-dates'};
+
+/// Marks a version list saved before Amud's own text existed (see
+/// AppSettings.fromJson). Never shown; saving the list drops it.
+const preCorpusVersions = '#before-amud';
+
 class AppSettings {
   final SavedLocation location;
   final bool useElevation;
@@ -133,6 +145,10 @@ class AppSettings {
   /// Fold the chazzan's repetition (Kedushah, Birkas Kohanim, Modim
   /// DeRabbanan) into a tappable row.
   final bool collapseChazarah;
+
+  /// The reader's answers to choices drawn in the text (id → option), e.g.
+  /// `table` → `own`.
+  final Map<String, String> choices;
   final bool showInstructions;
   final bool highlightToday;
 
@@ -217,6 +233,7 @@ class AppSettings {
     this.conciseNotes = true,
     this.collapseNotes = true,
     this.collapseChazarah = true,
+    this.choices = const {},
     this.showInstructions = true,
     this.highlightToday = true,
     this.typesetting = true,
@@ -271,6 +288,7 @@ class AppSettings {
     bool? conciseNotes,
     bool? collapseNotes,
     bool? collapseChazarah,
+    Map<String, String>? choices,
     bool? showInstructions,
     bool? highlightToday,
     bool? typesetting,
@@ -324,6 +342,7 @@ class AppSettings {
         conciseNotes: conciseNotes ?? this.conciseNotes,
         collapseNotes: collapseNotes ?? this.collapseNotes,
         collapseChazarah: collapseChazarah ?? this.collapseChazarah,
+        choices: choices ?? this.choices,
         showInstructions: showInstructions ?? this.showInstructions,
         highlightToday: highlightToday ?? this.highlightToday,
         typesetting: typesetting ?? this.typesetting,
@@ -353,7 +372,7 @@ class AppSettings {
       );
 
   /// Bumped when defaults change in a way existing installs should adopt.
-  static const schemaVersion = 2;
+  static const schemaVersion = 3;
 
   Map<String, Object?> toJson() => {
         'v': schemaVersion,
@@ -382,6 +401,7 @@ class AppSettings {
         'conciseNotes': conciseNotes,
         'collapseNotes': collapseNotes,
         'collapseChazarah': collapseChazarah,
+        'choices': choices,
         'showInstructions': showInstructions,
         'highlightToday': highlightToday,
         'typesetting': typesetting,
@@ -416,6 +436,20 @@ class AppSettings {
     // and notes (they were never shown a choice).
     if (((j['v'] as num?) ?? 1) < 2) {
       j = {...j}..removeWhere((k, _) => const {'ashkenaziSpelling', 'hebrewFont', 'showNotes', 'exactAlarms'}.contains(k));
+    }
+    // Version choices saved before v3 predate Amud's own text (the version
+    // "Amud"); they're marked, and Amud takes the place of the Sefaria
+    // version it was made from (see versionOrderProvider).
+    if (((j['v'] as num?) ?? 1) < 3) {
+      j = {...j};
+      for (final k in const ['hebrewVersions', 'translationVersions']) {
+        final m = j[k];
+        if (m is Map) {
+          j[k] = {
+            for (final e in m.entries) e.key: e.value is List ? [preCorpusVersions, ...e.value as List] : e.value,
+          };
+        }
+      }
     }
     T pick<T>(String k, T fallback) => j[k] is T ? j[k] as T : fallback;
     E byName<E extends Enum>(List<E> values, String k, E fallback) {
@@ -465,6 +499,12 @@ class AppSettings {
       conciseNotes: pick('conciseNotes', d.conciseNotes),
       collapseNotes: pick('collapseNotes', d.collapseNotes),
       collapseChazarah: pick('collapseChazarah', d.collapseChazarah),
+      choices: orElse(
+          () => {
+                for (final e in ((j['choices'] as Map?) ?? const {}).entries)
+                  if (e.value is String) e.key as String: e.value as String,
+              },
+          const {}),
       showInstructions: pick('showInstructions', d.showInstructions),
       highlightToday: pick('highlightToday', d.highlightToday),
       typesetting: pick('typesetting', d.typesetting),
@@ -490,8 +530,7 @@ class AppSettings {
       levanaReminder: pick('levanaReminder', d.levanaReminder),
       hachamaReminder: pick('hachamaReminder', d.hachamaReminder),
       navTabs: orElse(() {
-        // Ids the bar doesn't know (from a newer version) are skipped there.
-        final tabs = {for (final v in j['navTabs'] as List) if (v is String) v};
+        final tabs = {for (final v in j['navTabs'] as List) if (v is String && (allNavTabIds.contains(v) || navShortcutIds.contains(v))) v};
         final list = tabs.contains('settings') ? tabs.toList() : [...tabs, 'settings'];
         // The bar needs two items at least.
         return list.length >= 2 ? list : d.navTabs;

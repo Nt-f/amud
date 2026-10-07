@@ -1,0 +1,613 @@
+{
+  "book": "Siddur Ashkenaz",
+  "chunk": "Shabbat/Shabbat Evening [Blessing the Children .. Zemirot for Shabbat Evening]",
+  "leaves": [
+    {
+      "path": "Shabbat/Shabbat Evening/Blessing the Children",
+      "title": "ברכת הבנים",
+      "node": "shabbat.blessing_children",
+      "service": "none",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "instruction", "en": "It is the custom of Israel to bless the children on Friday nights when returning from the synagogue.", "text": "<small>מנהג ישראל לברך את הילדים בלילי שבת כשבאים מבית הכנסת:</small>"},
+          {"ref": "2", "parts": [
+            {"kind": "instruction", "en": "For a boy:", "text": "<small>לבן</small>"},
+            {"kind": "prayer", "text": " יְשִׂימְךָ אֱלֹהִים כְּאֶפְרַיִם וְכִמְנַשֶּׁה: יְבָרֶכְךָ יְהֹוָה וְיִשְׁמְרֶךָ: יָאֵר יְהֹוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָ: יִשָּׁא יְהֹוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם:"}
+          ]},
+          {"ref": "3", "parts": [
+            {"kind": "instruction", "en": "For a girl:", "text": "<small>לבת</small>"},
+            {"kind": "prayer", "text": " יְשִׂימֵךְ אֱלֹהִים כְּשָׂרָה רִבְקָה רָחֵל וְלֵאָה. יְבָרֶכְךָ יְהֹוָה וְיִשְׁמְרֶךָ: יָאֵר יְהֹוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָ: יִשָּׁא יְהֹוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם:"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "kind": "commentary", "text": "<small>It has become a widely accepted custom for parents to bless their children on the eve of Shabbos. The placing of both hands upon the child's head when giving the blessing, symbolizes that the blessing is bestowed with fullness of spirit and heart.</small>"},
+          {"ref": "2", "translates": ["2"], "text": "<small>For a boy:</small> May God make you like Ephraim and Menashe. May Adonoy bless you and guard you. May Adonoy shine His countenance upon you and be gracious unto you. May Adonoy turn His countenance toward you and grant you peace."},
+          {"ref": "3", "translates": ["3"], "text": "<small>For a girl:</small> May God make you like Sorah, Rivkah, Rochel and Leah. May Adonoy bless you and guard you. May Adonoy shine His countenance upon you and be gracious unto you. May Adonoy turn His countenance toward you and grant you peace."}
+        ]
+      }
+    },
+    {
+      "path": "Shabbat/Shabbat Evening/Shalom Aleichem",
+      "title": "שלום עליכם",
+      "node": "shabbat.shalom_aleichem",
+      "service": "none",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "instruction", "en": "On returning home from the synagogue, say this:", "clean": "כשבא מבית הכנסת לביתו יאמר זה:", "text": "<small>כשבא מבית הכנסת לביתו יאמר זה:</small>"},
+          {"ref": "2", "parts": [
+            {"kind": "prayer", "repeat": 3, "text": "שָׁלוֹם עֲלֵיכֶם מַלְאֲכֵי הַשָּׁרֵת מַלְאֲכֵי עֶלְיוֹן מִמֶּֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא: "},
+            {"kind": "instruction", "repeat": 3, "en": "Three times", "text": "<small>ג\"פ</small>"}
+          ]},
+          {"ref": "3", "parts": [
+            {"kind": "prayer", "repeat": 3, "text": "בּוֹאֲכֶם לְשָׁלוֹם מַלְאֲכֵי הַשָּׁלוֹם מַלְאֲכֵי עֶלְיוֹן מִמֶּֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא: "},
+            {"kind": "instruction", "repeat": 3, "en": "Three times", "text": "<small>ג\"פ</small>"}
+          ]},
+          {"ref": "4", "parts": [
+            {"kind": "prayer", "repeat": 3, "text": "בָּרְכוּנִי לְשָׁלוֹם מַלְאֲכֵי הַשָּׁלוֹם מַלְאֲכֵי עֶלְיוֹן מִמֶּֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא: "},
+            {"kind": "instruction", "repeat": 3, "en": "Three times", "text": "<small>ג\"פ</small>"}
+          ]},
+          {"ref": "5", "parts": [
+            {"kind": "prayer", "repeat": 3, "text": "צֵאתְכֶם לְשָׁלוֹם מַלְאֲכֵי הַשָּׁלוֹם מַלְאֲכֵי עֶלְיוֹן מִמֶּֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא: "},
+            {"kind": "instruction", "repeat": 3, "en": "Three times", "text": "<small>ג\"פ</small>"}
+          ]},
+          {"ref": "6", "kind": "prayer", "text": "כִּי מַלְאָכָיו יְצַוֶּה־לָּךְ לִשְׁמָרְךָ בְּכָל־דְּרָכֶֽיךָ: יְהֹוָה יִשְׁמָר־צֵאתְ֒ךָ וּבוֹאֶךָ. מֵעַתָּה וְעַד־עוֹלָם:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "kind": "commentary", "text": "<small>Rabbi Yose son of Rabbi Yehudah said: “Two angels accompany a man on the eve of Shabbos from the synagogue to his home, one good angel and one evil angel.” When the person arrives home to find the lights burning, the table set, and the bed made, the good angel exclaims, “May it be God's will that it be so next Shabbos.” But if not so, if the the house is dark and in disorder, the evil angel exclaims, “May it be God's will that it be so next Shabbos.” The good angel is compelled to answer Amein.—<i>Maseches Shabbos</i> 119b<br>The custom of singing <i>Sholom Aleichem</i>, peace upon you, upon returning from the synagogue is based on the above Talmudic teaching. Since every Jew is accompanied home by these two angels, it is fitting that he welcome them into his home. Obviously, one should prepare for Shabbos in such manner to evoke the angels' best wishes.</small>"},
+          {"ref": "2", "translates": ["2"], "text": "Peace upon you, angels of God's service, angels of the Most High, from the King of kings-of-kings,<sup class=\"footnote-marker\">1</sup><i class=\"footnote\">Kings of yore, who ruled over other nations were known as ‘kings of kings.’ God is King even of the kings’ kings.</i> the Holy One, blessed is He."},
+          {"ref": "3", "translates": ["3"], "text": "Come in peace, angels of peace, angels of the Most High, from the King of kings-of-kings the Holy One, blessed is He."},
+          {"ref": "4", "translates": ["4"], "text": "Bless me with peace, angels of peace, angels of the Most High from the King of kings-of-kings the Holy One, blessed is He."},
+          {"ref": "5", "translates": ["5"], "text": "Go in peace, angels of peace, angels of the Most High from the King of kings-of-kings the Holy One, blessed is He."},
+          {"ref": "6", "translates": ["6"], "text": "For His angels He will command in your behalf, to guard you in all your ways.<sup class=\"footnote-marker\">2</sup><i class=\"footnote\">Psalms 91:11.</i> Adonoy will guard your going and coming from now, forever.<sup class=\"footnote-marker\">3</sup><i class=\"footnote\">Psalms 121:8.</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Shabbat/Shabbat Evening/Kiddush",
+      "title": "קידוש",
+      "node": "shabbat.kiddush_night",
+      "service": "none",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "instruction", "voice": "undertone", "en": "Quietly:", "text": "<small>בלחש:</small>"},
+          {"ref": "2", "kind": "prayer", "role": "head_of_household", "voice": "undertone", "text": "וַיְהִי עֶֽרֶב וַיְהִי בֹֽקֶר"},
+          {"ref": "3", "kind": "instruction", "voice": "aloud", "en": "Aloud:", "text": "<small>בקול:</small>"},
+          {"ref": "4", "kind": "prayer", "role": "head_of_household", "voice": "aloud", "text": "יוֹם הַשִּׁשִּׁי: וַיְכֻלּוּ הַשָּׁמַֽיִם וְהָאָֽרֶץ וְכָל־צְבָאָם: וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה. וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה: וַיְבָֽרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ. כִּי בוֹ שָׁבַת מִכָּל מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת:"},
+          {"ref": "5", "kind": "prayer", "role": "head_of_household", "text": "סַבְרִי מָרָנָן וְרַבּוֹתַי:"},
+          {"ref": "6", "kind": "prayer", "role": "head_of_household", "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּֽפֶן:"},
+          {"ref": "7", "kind": "prayer", "role": "head_of_household", "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָֽׁנוּ בְּמִצְוֹתָיו וְרָֽצָה בָֽנוּ, וְשַׁבַּת קָדְשׁוֹ בְּאַהֲבָה וּבְרָצוֹן הִנְחִילָֽנוּ, זִכָּרוֹן לְמַעֲשֵׂה בְרֵאשִׁית. (כִּי הוּא יוֹם) תְּחִלָּה לְמִקְרָאֵי קֹֽדֶשׁ, זֵֽכֶר לִיצִיאַת מִצְרָֽיִם. (כִּי בָֽנוּ בָחַֽרְתָּ וְאוֹתָֽנוּ קִדַּֽשְׁתָּ מִכָּל הָעַמִּים) וְשַׁבַּת קָדְשְׁךָ בְּאַהֲבָה וּבְרָצוֹן הִנְחַלְתָּֽנוּ. בָּרוּךְ אַתָּה יְהוָה, מְקַדֵּשׁ הַשַּׁבָּת:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "<i>Recite quietly:</i>"},
+          {"ref": "2", "translates": ["2"], "text": "And evening came, then morning came: "},
+          {"ref": "3", "translates": ["3"], "text": "<i>Recite aloud:</i>"},
+          {"ref": "4", "translates": ["4"], "text": "the sixth day. The heavens and the earth were completed and [so were] all their hosts. And God completed, by the seventh day, His work which He had done; and He abstained on the seventh day from all His work which He had done. And God blessed the seventh day and sanctified it, for on it He abstained from all His work which God had created to do."},
+          {"ref": "5", "translates": ["5"], "text": "Attention! our masters and our teachers:"},
+          {"ref": "6", "translates": ["6"], "text": "Blessed are You, Adonoy our God, King of the Universe, Creator of the fruit of the vine."},
+          {"ref": "7", "translates": ["7"], "text": "Blessed are You, Adonoy our God, King of the Universe, Who sanctified us with His commandments and was pleased with us. And His holy Sabbath, with love and pleasure,<sup class=\"footnote-marker\">22</sup><i class=\"footnote\">Our appointment to be the preservers of the Shabbos is not a stern command; it is actually a sign of God’s love and favor.—S.R. Hirsch</i> He gave us for a heritage, a commemoration of the work of creation. (For this day is) the first<sup class=\"footnote-marker\">23</sup><i class=\"footnote\">The Shabbos is listed first in Leviticus 23, where all the sacred festivals of the Jewish calendar are described.</i> of the days of holy convocations commemorating the exodus from Egypt. (For us have You chosen and us have You sanctified from among all the peoples.) And Your holy Sabbath with love and pleasure You gave us for a heritage. Blessed are You, Adonoy, Sanctifier of the Sabbath."}
+        ]
+      }
+    },
+    {
+      "path": "Shabbat/Shabbat Evening/Ribon Kol HaOlamim",
+      "title": "ריבון כל העולמים",
+      "node": "x.shabbat.ribon_kol_haolamim",
+      "service": "none",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "note", "en": "Say this prayer every Friday night after the Amidah, before leaving the synagogue.", "clean": "תפילה זו יאמר בכל ליל שבת אחר תפלתו קודם צאתו מבית הכנסת:", "text": "<small>תפילה זו יאמר בכל ליל שבת אחר תפלתו קודם צאתו מבית הכנסת:</small>"},
+          {"ref": "2", "kind": "prayer", "text": "רִבּוֹן כָּל־הָעוֹלָמִים. אֲדוֹן כָּל־הַנְּ֒שָׁמוֹת. אֲדוֹן הַשָּׁלוֹם. מֶֽלֶךְ אַבִּיר. מֶֽלֶךְ בָּרוּךְ. מֶֽלֶךְ גָּדוֹל. מֶֽלֶךְ דּוֹבֵר שָׁלוֹם. מֶֽלֶךְ הָדוּר. מֶֽלֶךְ וָתִיק. מֶֽלֶךְ זָךְ. מֶֽלֶךְ חֵי הָעוֹלָמִים. מֶֽלֶךְ טוֹב וּמֵטִיב. מֶֽלֶךְ יָחִיד וּמְיוּחָד. מֶֽלֶךְ כַּבִּיר. מֶֽלֶךְ לוֹבֵשׁ רַחֲמִים. מֶֽלֶךְ מַלְכֵי הַמְּ֒לָכִים. מֶֽלֶךְ נִשְׂגָּב. מֶֽלֶךְ סוֹמֵךְ נוֹפְ֒לִים. מֶֽלֶךְ עֹשֶׂה מַעֲשֵׂה בְרֵאשִׁית. מֶֽלֶךְ פּוֹדֶה וּמַצִּיל. מֶֽלֶךְ צַח וְאָדוֹם. מֶֽלֶךְ קָדוֹשׁ. מֶֽלֶךְ רָם וְנִשָּׁא. מֶֽלֶךְ שׁוֹמֵֽעַ תְּפִלָּה. מֶֽלֶךְ תָּמִים דַּרְכּוֹ."},
+          {"ref": "3", "kind": "prayer", "text": "מוֹדֶה אֲנִי לְפָנֶֽיךָ. יְהֹוָה אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי. עַל כָּל־הַחֶֽסֶד אֲשֶׁר עָשִֽׂיתָ עִמָּדִי. וַאֲשֶׁר אַתָּה עָתִיד לַעֲשׂוֹת עִמִּי. וְעִם כָּל בְּנֵי בֵיתִי. וְעִם כָּל־בְּרִיּוֹתֶֽיךָ בְּנֵי בְרִיתִי. וּבְרוּכִים הֵם מַלְאָכֶֽיךָ הַקְּ֒דוֹשִׁים וְהַטְּ֒הוֹרִים. שֶׁעוֹשִׂים רְצוֹנֶֽךָ: אֲדוֹן הַשָּׁלוֹם. מֶֽלֶךְ שֶׁהַשָּׁלוֹם שֶׁלּוֹ. בָּרְכֵנִי בַּשָּׁלוֹם. וְתִפְקֹד אוֹתִי וְאֶת־כָּל־בְּנֵי בֵיתִי וְכָל־עַמְּ֒ךָ בֵּית יִשְׂרָאֵל. לְחַיִּים טוֹבִים וּלְשָׁלוֹם:"},
+          {"ref": "4", "kind": "prayer", "text": "מֶֽלֶךְ עֶלְיוֹן עַל־כָּל־צְבָא מָרוֹם. יוֹצְ֒רֵֽנוּ יוֹצֵר בְּרֵאשִׁית. אֲחַלֶּה פָנֶֽיךָ הַמְּ֒אִירִים. שֶׁתְּ֒זַכֶּה אוֹתִי וְאֶת כָּל־בְּנֵי בֵיתִי. לִמְצֹא חֵן וְשֵֽׂכֶל טוֹב. בְּעֵינֶֽיךָ וּבְעֵינֵי כָל בְּנֵי אָדָם וְחַוָּה. וּבְעֵינֵי כָל־רוֹאֵֽינוּ לַעֲבוֹדָתֶֽךָ. וְזַכֵּֽנִי לְקַבֵּל שַׁבָּתוֹת מִתּוֹךְ רֹב שִׂמְחָה. וּמִתּוֹךְ עֽשֶׁר וְכָבוֹד. וּמִתּוֹךְ מִעוּט עֲוֹנוֹת. וְהָסֵר מִמֶּֽנִּי וּמִכָּל־עַמְּ֒ךָ בֵּית יִשְׂרָאֵל. כָּל־מִינֵי חֹֽלִי. וְכָל־מִינֵי מַדְוֶה. וְכָל־מִינֵי דַלּוּת וַעֲנִיּוּת וְאֶבְיוֹנוּת. וְתֵן בָּֽנוּ יֵֽצֶר טוֹב לְעָבְדְּ֒ךָ בֶּאֱמֶת וּבְיִרְאָה וּבְאַהֲבָה. וְנִהְיֶה מְכֻבָּדִים בְּעֵינֶֽיךָ וּבְעֵינֵי כָל־ רוֹאֵֽינוּ. כִּי אַתָּה הוּא מֶֽלֶךְ הַכָּבוֹד. כִּי לְךָ נָאֶה כִּי לְךָ יָאֶה:"},
+          {"ref": "5", "kind": "prayer", "text": "אָֽנָּא מֶֽלֶךְ מַלְכֵי הַמְּ֒לָכִים. צַוֵּה לְמַלְאָכֶֽיךָ מַלְאֲכֵי הַשָּׁרֵת. מְשָׁרְתֵי עֶלְיוֹן. שֶׁיִּפְקְ֒דוּנִי בְּרַחֲמִים. וִיבָרְכֽוּנִי בְּבוֹאָם לְבֵיתִי בְּיוֹם קָדְשֵֽׁנוּ. כִּי הִדְלַֽקְתִּי נֵרוֹתַי וְהִצַּֽעְתִּי מִטָּתִי וְהֶחֱלַֽפְתִּי שִׂמְלוֹתַי לִכְבוֹד יוֹם הַשַּׁבָּת. וּבָֽאתִי לְבֵיתְ֒ךָ לְהַפִּיל תְּחִנָּתִי לְפָנֶֽיךָ שֶׁתַּעֲבִיר אַנְחָתִי. וָאָעִיד אֲשֶׁר בָּרָֽאתָ בְּשִׁשָּׁה יָמִים כָּל הַיְּ֒צוּר. וָאֶשְׁנֶּה וָאֲשַׁלֵּשׁ עוֹד לְהָעִיד עַל כּוֹסִי בְּתוֹךְ שִׂמְחָתִי כַּאֲשֶׁר צִוִּיתַנִי לְזָכְרוֹ וּלְהִתְעַנֵּג בְּיֶֽתֶר נִשְׁמָתִי אֲשֶׁר נָתַֽתָּ בִּי. בּוֹ אֶשְׁבּוֹת. כַּאֲשֶׁר צִוִּיתַנִי לְשָׁרְתֶֽךָ. וְכֵן אַגִּיד גְּדֻלָּתְ֒ךָ בְּרִנָּה. וְשִׁוִּיתִי יְהֹוָה לִקְרָאתִי. שֶׁתְּ֒רַחֲמֵֽנִי עוֹד בְּגָלוּתִי לְגָאֳלֵֽנִי. וּלְעוֹרֵר לִבִּי לְאַהֲבָתֶֽךָ: וְאָז אֶשְׁמֹר לְפִקּוּדֶֽיךָ וְחֻקֶּֽיךָ בְּלִי עֶֽצֶב. וְאֶתְפַּלֵּל כַּדָּת וְכָרָאוּי וְכַנָּכוֹן:"},
+          {"ref": "6", "kind": "prayer", "text": "מַלְאֲכֵי הַשָּׁלוֹם. בּוֹאֲכֶם לְשָׁלוֹם. בָּרְכוּנִי לְשָׁלוֹם. וְאִמְרוּ בָּרוּךְ לְשֻׁלְחָנִי הֶעָרוּךְ. וְצֵאתְ֒כֶם לְשָׁלוֹם. מֵעַתָּה וְעַד עוֹלָם אָמֵן סֶֽלָה:"}
+        ]
+      }
+    },
+    {
+      "path": "Shabbat/Shabbat Evening/Eshet Chayil",
+      "title": "אשת חיל",
+      "node": "shabbat.eshet_chayil",
+      "service": "none",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "אֵֽשֶׁת־חַֽיִל מִי יִמְצָא וְרָחֹק מִפְּ֒נִינִים מִכְרָהּ:"},
+          {"ref": "2", "kind": "prayer", "text": "בָּֽטַח בָּהּ לֵב בַּעְלָהּ וְשָׁלָל לֹא יֶחְסָר:"},
+          {"ref": "3", "kind": "prayer", "text": "גְּמָלַֽתְהוּ טוֹב וְלֹא־רָע כֹּל יְמֵי חַיֶּֽיהָ:"},
+          {"ref": "4", "kind": "prayer", "text": "דָּרְ֒שָׁה צֶֽמֶר וּפִשְׁתִּים וַתַּֽעַשׂ בְּחֵֽפֶץ כַּפֶּֽיהָ:"},
+          {"ref": "5", "kind": "prayer", "text": "הָיְ֒תָה כָּאֳנִיּוֹת סוֹחֵר מִמֶּרְחָק תָּבִיא לַחְמָהּ:"},
+          {"ref": "6", "kind": "prayer", "text": "וַתָּֽקָם בְּעוֹד לַֽיְלָה וַתִּתֵּן טֶֽרֶף לְבֵיתָהּ וְחֹק לְנַעֲרֹתֶֽיהָ:"},
+          {"ref": "7", "kind": "prayer", "text": "זָמְ֒מָה שָׂדֶה וַתִּקָּחֵֽהוּ מִפְּ֒רִי כַפֶּֽיהָ נָֽטְ֒עָה כָּֽרֶם:"},
+          {"ref": "8", "kind": "prayer", "text": "חָגְ֒רָה בְּעוֹז מָתְנֶֽיהָ וַתְּ֒אַמֵּץ זְרוֹעֹתֶֽיהָ:"},
+          {"ref": "9", "kind": "prayer", "text": "טָעֲמָה כִּי־טוֹב סַחְרָהּ לֹא־יִכְבֶּה בַּלַּֽיְלָה נֵרָהּ:"},
+          {"ref": "10", "kind": "prayer", "text": "יָדֶֽיהָ שִׁלְּ֒חָה בַכִּישׁוֹר וְכַפֶּֽיהָ תָּֽמְ֒כוּ פָֽלֶךְ:"},
+          {"ref": "11", "kind": "prayer", "text": "כַּפָּהּ פָּרְ֒שָׂה לֶעָנִי וְיָדֶֽיהָ שִׁלְּ֒חָה לָאֶבְיוֹן:"},
+          {"ref": "12", "kind": "prayer", "text": "לֹא־תִירָא לְבֵיתָהּ מִשָּֽׁלֶג כִּי כָל־בֵּיתָהּ לָבֻשׁ שָׁנִים:"},
+          {"ref": "13", "kind": "prayer", "text": "מַרְבַדִּים עָֽשְׂ֒תָה־לָּהּ שֵׁשׁ וְאַרְגָּמָן לְבוּשָׁהּ:"},
+          {"ref": "14", "kind": "prayer", "text": "נוֹדָע בַּשְּׁ֒עָרִים בַּעְלָהּ בְּשִׁבְתּוֹ עִם־זִקְנֵי־אָֽרֶץ:"},
+          {"ref": "15", "kind": "prayer", "text": "סָדִין עָשְׂ֒תָה וַתִּמְכֹּר וַחֲגוֹר נָתְ֒נָה לַכְּנַעֲנִי:"},
+          {"ref": "16", "kind": "prayer", "text": "עוֹז־וְהָדָר לְבוּשָׁהּ וַתִּשְׂחַק לְיוֹם אַחֲרוֹן:"},
+          {"ref": "17", "kind": "prayer", "text": "פִּֽיהָ פָּתְ֒חָה בְחָכְמָה וְתוֹרַת־חֶֽסֶד עַל־לְשׁוֹנָהּ:"},
+          {"ref": "18", "kind": "prayer", "text": "צוֹפִיָּה הֲלִיכוֹת בֵּיתָהּ וְלֶֽחֶם עַצְלוּת לֹא תֹאכֵל:"},
+          {"ref": "19", "kind": "prayer", "text": "קָֽמוּ בָנֶֽיהָ וַיְאַשְּׁ֒רֽוּהָ בַּעְלָהּ וַיְהַלְ֒לָהּ:"},
+          {"ref": "20", "kind": "prayer", "text": "רַבּוֹת בָּנוֹת עָֽשׂוּ חָֽיִל וְאַתְּ עָלִית עַל־כֻּלָּֽנָה:"},
+          {"ref": "21", "kind": "prayer", "text": "שֶֽׁקֶר הַחֵן וְהֶֽבֶל הַיֹּֽפִי אִשָּׁה יִרְאַת־יְהֹוָה הִיא תִתְהַלָּל:"},
+          {"ref": "22", "kind": "prayer", "text": "תְּנוּ־לָהּ מִפְּ֒רִי יָדֶֽיהָ וִיהַלְ֒לֽוּהָ בַשְּׁ֒עָרִים מַעֲשֶֽׂיהָ:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Whoever finds a valorous wife— far greater than that of pearls is her value."},
+          {"ref": "2", "translates": ["2"], "text": "The heart of her husband trusts in her, and he lacks no gain.<sup class=\"footnote-marker\">4</sup><i class=\"footnote\">The literal meaning of  שָׁלָל is “booty” which implies an unexpected gain to which one had no prior claim. Thus in our verse, although her husband had complete trust in her, her deeds actually surpassed his expectations.— S.R.Hirsch </i> "},
+          {"ref": "3", "translates": ["3"], "text": "She repays him good and not evil all the days of her life.<sup class=\"footnote-marker\">5</sup><i class=\"footnote\">A person can do much good to another and still cause him moments of pain or shame by his conduct. The true woman of valor, to whom this hymn is dedicated, gives her husband nothing but happiness, never a moment of grief all the days of her life.—S.R. Hirsch</i> "},
+          {"ref": "4", "translates": ["4"], "text": "She seeks wool and linen, and works them willingly with her hands."},
+          {"ref": "5", "translates": ["5"], "text": "She is like the merchant ships; from afar, she brings her food.<sup class=\"footnote-marker\">6</sup><i class=\"footnote\">These verses are a tribute to the woman of valor who is willing to do far more than she is required to do. Although her husband is obligated to support her, she does not hesitate to do everything in order to provide for her family.—Metsudas Dovid</i>"},
+          {"ref": "6", "translates": ["6"], "text": "She rises while it is still night and gives food to her household, and tasks to her maids."},
+          {"ref": "7", "translates": ["7"], "text": "She considers a field and buys it; from the fruit of her hand, she plants a vineyard."},
+          {"ref": "8", "translates": ["8"], "text": "She girds herself with might and strengthens her arms.<sup class=\"footnote-marker\">7</sup><i class=\"footnote\">She is not strong by nature; she “makes herself” strong. Her zeal and sense of duty give her strength and might.—S.R. Hirsch</i>"},
+          {"ref": "9", "translates": ["9"], "text": "She senses that her business is good, [so] her lamp is not extinguished at night."},
+          {"ref": "10", "translates": ["10"], "text": "She puts her hand to the spindle, and her palms support the distaff.<sup class=\"footnote-marker\">8</sup><i class=\"footnote\">This verse is connected with what follows. No time is wasted in idleness. Her other work being finished, she spends her leisure in spinning and making garments for the poor and for the members of her household.</i>"},
+          {"ref": "11", "translates": ["11"], "text": "Her palm she spreads out to the poor and her hands she extends to the needy.<sup class=\"footnote-marker\">9</sup><i class=\"footnote\">An אֶביוֹן, a needy person, is in more desperate need than an עָנִי, a poor person. The woman of valor recognizes that. To the poor man, therefore, she opens her palms, permitting him to take what he wishes. But regarding the needy man, she takes the initiative by extending her hands to provide his needs.— Metsudas Dovid </i>"},
+          {"ref": "12", "translates": ["12"], "text": "She has no fear for her household because of snow, for her entire household is clothed with scarlet [wool]."},
+          {"ref": "13", "translates": ["13"], "text": "Bedspreads, she makes herself fine linen and purple [wool] are her clothing.<sup class=\"footnote-marker\">10</sup><i class=\"footnote\">She was attired in the costliest garments, as befits a distinguished woman.</i> "},
+          {"ref": "14", "translates": ["14"], "text": "Well-known at the gates<sup class=\"footnote-marker\">11</sup><i class=\"footnote\">Oriental cities had deep gateways shaded from the sun. There the elders sat as a court to adjudicate disputes and discuss important communal affairs.</i> is her husband as he sits among the elders of the land."},
+          {"ref": "15", "translates": ["15"], "text": "Garments she makes and sells them, and belts,<sup class=\"footnote-marker\">12</sup><i class=\"footnote\">Like סָדִין a linen garment, חֲגוֹר , girdle, the noun is the collective singular. Sashes or belts were commonly worn around the waist.</i> she provides for the merchants."},
+          {"ref": "16", "translates": ["16"], "text": "Strength and splendor are her clothing,<sup class=\"footnote-marker\">13</sup><i class=\"footnote\">These characteristics are borne by her as one wears clothes. See Psalms 104:1, “With beauty and splendor are You clothed.”</i> and smilingly [she awaits her] last day.<sup class=\"footnote-marker\">14</sup><i class=\"footnote\">God shows the righteous, just before their death, the share they have earned in the World to Come. Thus the woman of valor will be joyous on her last day, because then she will know the fullness of the reward she has earned through her virtuous conduct.—Exodus Rabbah 52:3</i>"},
+          {"ref": "17", "translates": ["17"], "text": "Her mouth she opens with wisdom, and the teaching of kindness<sup class=\"footnote-marker\">15</sup><i class=\"footnote\">She teaches others to do kind deeds.—Metsudas Dovid</i> is on her tongue."},
+          {"ref": "18", "translates": ["18"], "text": "She anticipates the ways of her household, and the bread of idleness, she does not eat."},
+          {"ref": "19", "translates": ["19"], "text": "Her children rise and make her fortunate;<sup class=\"footnote-marker\">17</sup><i class=\"footnote\">She will feel fortunate and happy with the evidence of their appreciation and love. There is no more eloquent testimony to her virtue.</i> her husband—and he praises her:"},
+          {"ref": "20", "translates": ["20"], "text": "Many daughters have attained valor but you surpassed them all."},
+          {"ref": "21", "translates": ["21"], "text": "Favor is deceptive and beauty is vain; a God-fearing woman—she should be praised."},
+          {"ref": "22", "translates": ["22"], "text": "Give her the fruit of her hand, and let her deeds praise her in the gates.<sup class=\"footnote-marker\">18</sup><i class=\"footnote\"> Although her activities are confined to the home, due recognition will be given her even outside her immediate family. She will be eternally praised as a valiant example for the entire community.—S.R. Hirsch</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Kol Mekadesh",
+      "title": "כל מקדש",
+      "node": "x.zemirot.kol_mekadesh",
+      "service": "none",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "כָּל מְקַדֵּשׁ שְׁבִיעִי כָּרָאוּי לוֹ"},
+          {"ref": "2", "kind": "prayer", "text": "כָּל שׁוֹמֵר שַׁבָּת כַּדָּת מֵחַלְלוֹ"},
+          {"ref": "3", "kind": "prayer", "text": "שְׂכָרוֹ הַרְבֵּה מְאֹד עַל פִּי פָעֳלוֹ"},
+          {"ref": "4", "kind": "prayer", "text": "אִישׁ עַל מַחֲנֵֽהוּ וְאִישׁ עַל דִגְלוֹ׃"},
+          {"ref": "5", "kind": "prayer", "text": "אוֹהֲבֵי יְהֹוָה הַמְחַכִּים לְבִנְיַן אֲרִיאֵל"},
+          {"ref": "6", "kind": "prayer", "text": "בְּיוֹם הַשַּׁבָּת שִֽׂישׂוּ וְשִׂמְחוּ כִּמְקַבְּלֵי מַתַּן נַחֲלִיאֵל"},
+          {"ref": "7", "kind": "prayer", "text": "גַּם שְׂאוּ יְדֵיכֶם קֹֽדֶשׁ וְאִמְרוּ לָאֵל"},
+          {"ref": "8", "kind": "prayer", "text": "בָּרוּךְ יְהֹוָה אֲשֶׁר נָתַן מְנוּחָה לְעַמּוֹ יִשְׂרָאֵל׃"},
+          {"ref": "9", "kind": "prayer", "text": "דּוֹרְשֵׁי יְהֹוָה זֶֽרַע אַבְרָהָם אוֹהֲבוֹ"},
+          {"ref": "10", "kind": "prayer", "text": "הַמְאַחֲרִים לָצֵאת מִן הַשַּׁבָּת וּמְמַהֲרִים לָבֹא"},
+          {"ref": "11", "kind": "prayer", "text": "וּשְׂמֵחִים לְשָׁמְרוֹ וּלְעָרֵב עֵרוּבוֹ"},
+          {"ref": "12", "kind": "prayer", "text": "זֶה הַיּוֹם עָשָׂה יְהֹוָה נָגִֽילָה וְנִשְׂמְחָה בוֹ׃"},
+          {"ref": "13", "kind": "prayer", "text": "זִכְרוּ תּוֹרַת משֶׁה בְּמִצְוַת שַׁבָּת גְּרוּסָה"},
+          {"ref": "14", "kind": "prayer", "text": "חֲרוּתָה לַיּוֹם הַשְּׁבִיעִי כְּכַלָּה בֵּין רֵעוֹתֶֽיהָ מְשֻׁבָּצָה"},
+          {"ref": "15", "kind": "prayer", "text": "טְהוֹרִים יִירָשֽׁוּהָ וִיקַדְּשֽׁוּהָ בְּמַאֲמַר כָּל אֲשֶׁר עָשָׂה"},
+          {"ref": "16", "kind": "prayer", "text": "וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃"},
+          {"ref": "17", "kind": "prayer", "text": "יוֹם קָדוֹשׁ הוּא מִבֹּאוֹ וְעַד צֵאתוֹ"},
+          {"ref": "18", "kind": "prayer", "text": "כָּל זֶֽרַע יַעֲקֹב יְכַבְּדֽוּהוּ כִּדְבַר הַמֶּֽלֶךְ וְדָתוֹ"},
+          {"ref": "19", "kind": "prayer", "text": "לָנֽוּחַ בּוֹ וְלִשְׂמֹֽחַ בְּתַעֲנוּג אָכוֹל וְשָׁתוֹ"},
+          {"ref": "20", "kind": "prayer", "text": "כָּל עֲדַת יִשְׂרָאֵל יַעֲשׂוּ אוֹתוֹ׃"},
+          {"ref": "21", "kind": "prayer", "text": "מְשֹׁךְ חַסְדְּךָ לְיוֹדְעֶֽיךָ אֵל קַנֹּא וְנוֹקֵם"},
+          {"ref": "22", "kind": "prayer", "text": "נוֹטְרֵי יוֹם הַשְּׁבִיעִי זָכוֹר וְשָׁמוֹר לְהָקֵם"},
+          {"ref": "23", "kind": "prayer", "text": "שַׂמְּחֵם בְּבִנְיַן שָׁלֵם בְּאוֹר פָּנֶֽיךָ תַּבְהִיקֵם"},
+          {"ref": "24", "kind": "prayer", "text": "יִרְוְיֻן מִדֶּֽשֶׁן בֵּיתֶֽךָ וְנַֽחַל עֲדָנֶֽיךָ תַשְׁקֵם׃"},
+          {"ref": "25", "kind": "prayer", "text": "עֲזֹר לַשּׁוֹבְתִים בַּשְּׁבִיעִי בֶּחָרִישׁ וּבַקָּצִיר עוֹלָמִים"},
+          {"ref": "26", "kind": "prayer", "text": "פּוֹסְעִים בּוֹ פְּסִיעָה קְטַנָּה סוֹעֲדִים בּוֹ לְבָרֵךְ שָׁלשׁ פְּעָמִים"},
+          {"ref": "27", "kind": "prayer", "text": "צִדְקָתָם תַּצְהִיר כְּאוֹר שִׁבְעַת הַיָּמִים"},
+          {"ref": "28", "kind": "prayer", "text": "יְהֹוָה אֱלֹהֵי יִשְׂרָאֵל הָֽבָה תָמִים׃"},
+          {"ref": "29", "kind": "prayer", "text": "יְהֹוָה אֱלֹהֵי יִשְׂרָאֵל תְּשׁוּעַת עוֹלָמִים:"},
+          {"ref": "30", "kind": "prayer", "text": "[קַדְּשֵׁם בְּמִצְוֹתֶיךָ וְטַהֲרֵם כְּעֶצֶם הַשָּׁמַיִם לָטֹהַר"},
+          {"ref": "31", "kind": "prayer", "text": "רוּחֲךָ תְּנִיחֶנּוּ כַּבְּהֵמָה בַּבִּקְעָה תֵרֵד מִן הָהָר"},
+          {"ref": "32", "kind": "prayer", "text": "שִׁבְטֵיהֶם תְּשַׁכְנֵם בְּנַחֲלַת הַסַּהַר"},
+          {"ref": "33", "kind": "prayer", "text": "כִּנְחָלִים נִטָּיוּ כְּגַנֹּת עֲלֵי נָהָר:]"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Whoever sanctifies the seventh day as befits it,"},
+          {"ref": "2", "translates": ["2"], "text": "Whoever preserves the Sabbath properly so as not to desecrate it—"},
+          {"ref": "3", "translates": ["3"], "text": "his reward is very great, commensurate with his actions;"},
+          {"ref": "4", "translates": ["4"], "text": "each man in his camp, each man with his banner.<sup class=\"footnote-marker\">24</sup><i class=\"footnote\">Numbers 1:52.</i>"},
+          {"ref": "5", "translates": ["5"], "text": "Lovers of Adonoy, who yearn for the building of the Temple—"},
+          {"ref": "6", "translates": ["6"], "text": "on the Sabbath day be happy and rejoice, as if receiving the gift of God's inheritance."},
+          {"ref": "7", "translates": ["7"], "text": "Also raise your hands in holiness and say to the Almighty:"},
+          {"ref": "8", "translates": ["8"], "text": "“Blessed is Adonoy Who granted rest to His people Israel.”<sup class=\"footnote-marker\">25</sup><i class=\"footnote\">1 Kings 8:56</i>"},
+          {"ref": "9", "translates": ["9"], "text": "Seekers of Adonoy, seed of Avrohom, His beloved,"},
+          {"ref": "10", "translates": ["10"], "text": "who delay departing from the Sabbath and rush to welcome it;"},
+          {"ref": "11", "translates": ["11"], "text": "who rejoice in preserving it and to place its eiruv<sup class=\"footnote-marker\">26</sup><i class=\"footnote\">An eiruv is the food which must be placed before the Shabbos in order to enable one to carry from one private domain into another. Without an eiruv the Sages forbade this carrying. An eiruv is also used to enable a person to walk beyond the 2,000-cubit Shabbos boundary.</i>"},
+          {"ref": "12", "translates": ["12"], "text": "“This is the day Adonoy has made let us exult and rejoice in it.”<sup class=\"footnote-marker\">27</sup><i class=\"footnote\">Psalms 118:24.</i>"},
+          {"ref": "13", "translates": ["13"], "text": "Remember the Torah of Moses, which states the Sabbath commandment<sup class=\"footnote-marker\">28</sup><i class=\"footnote\">Perfect observance of the Torah’s command to keep the Shabbos is impossible without the expositions of the Talmud, commentaries, and codes.—Etz Yosef</i>"},
+          {"ref": "14", "translates": ["14"], "text": "engraved for the seventh day like a bride adorned amid her friends.<sup class=\"footnote-marker\">29</sup><i class=\"footnote\">The commandment of the Shabbos was engraved on the two tablets God gave Moses. As the fourth of the Ten Statements, it is surrounded by its sister-mitzvos.</i>"},
+          {"ref": "15", "translates": ["15"], "text": "Pure ones inherit it and sanctify it with the words, “All that He had made”<sup class=\"footnote-marker\">30</sup><i class=\"footnote\">Genesis 1:31.</i> —"},
+          {"ref": "16", "translates": ["16"], "text": "“And God completed <i>by</i> the seventh day, His work that He had done.”<sup class=\"footnote-marker\">31</sup><i class=\"footnote\">Genesis 2:2.</i>"},
+          {"ref": "17", "translates": ["17"], "text": "It is a holy day, from arrival till departure;"},
+          {"ref": "18", "translates": ["18"], "text": "all the seed of Jacob honor it according to the King's word and decree—"},
+          {"ref": "19", "translates": ["19"], "text": "to rest on it and to rejoice with the pleasure of food and drink—"},
+          {"ref": "20", "translates": ["20"], "text": "“The entire congregation of Israel will do it.”<sup class=\"footnote-marker\">32</sup><i class=\"footnote\">Exodus 12:47.</i>"},
+          {"ref": "21", "translates": ["21"], "text": "Extend Your kindness to those who know You, Almighty, jealous and vengeful."},
+          {"ref": "22", "translates": ["22"], "text": "Those who keep the seventh day, “Recall” and “Preserve,”<sup class=\"footnote-marker\">33</sup><i class=\"footnote\">There are two Scriptural versions of the Ten Commandments. The commandment of the Shabbos in Exodus 20 begins with the word זָכוֹר , recall, and in Deuteronomy 5 it begins with the word שָׁמוֹר , preserve.—Etz Yosef </i> to fulfill,"},
+          {"ref": "23", "translates": ["23"], "text": "grant them joy with rebuilt Jerusalem;<sup class=\"footnote-marker\">34</sup><i class=\"footnote\">The proper observance of the Shabbos brings the ultimate redemption and the rebuilding of Jerusalem.—Siach Yitzchak</i> and with the light of Your countenance, make them radiant."},
+          {"ref": "24", "translates": ["24"], "text": "“Let them be sated from the abundance of Your House, and from the stream of Your delights give them drink.”<sup class=\"footnote-marker\">35</sup><i class=\"footnote\">Psalms 36:9.</i>"},
+          {"ref": "25", "translates": ["25"], "text": "Help those who abstain on the seventh day—from plowing and harvesting, [may You help them] always."},
+          {"ref": "26", "translates": ["26"], "text": "Those who walk on it with short strides and feast on it [eating three meals] in order to bless [You] three times—"},
+          {"ref": "27", "translates": ["27"], "text": "may their righteousness shine like the light of the seven days.<sup class=\"footnote-marker\">36</sup><i class=\"footnote\">When God created the world, He created a brilliant light that lasted only during the seven days of creation. God preserved it for the righteous to enjoy in the World to Come.—Etz Yosef</i>"},
+          {"ref": "28", "translates": ["28"], "text": "“Adonoy, God of Israel, [grant] perfect love"},
+          {"ref": "29", "translates": ["29"], "text": "Adonoy, God of Israel [grant] eternal deliverance.”"}
+        ]
+      }
+    },
+    {
+      "path": "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Menucha VeSimcha",
+      "title": "מנוחה ושמחה",
+      "node": "x.zemirot.menucha_vesimcha",
+      "service": "none",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "מְנוּחָה וְשִׂמְחָה אוֹר לַיְּהוּדִים"},
+          {"ref": "2", "kind": "prayer", "text": "יוֹם שַׁבָּתוֹן יוֹם מַחֲמַדִּים"},
+          {"ref": "3", "kind": "prayer", "text": "שׁוֹמְרָיו וְזוֹכְרָיו הֵֽמָּה מְעִידִים"},
+          {"ref": "4", "kind": "prayer", "text": "כִּי לְשִׁשָּׁה כֹּל בְּרוּאִים וְעוֹמְדִים׃"},
+          {"ref": "5", "kind": "prayer", "text": "שְׁמֵי שָׁמַֽיִם אֶֽרֶץ וְיַמִּים"},
+          {"ref": "6", "kind": "prayer", "text": "כָּל צְבָא מָרוֹם גְבוֹהִים וְרָמִים"},
+          {"ref": "7", "kind": "prayer", "text": "תַּנִּין וְאָדָם וְחַיַּת רְאֵמִים"},
+          {"ref": "8", "kind": "prayer", "text": "כִּי בְּיָהּ יְהֹוָה צוּר עוֹלָמִים׃"},
+          {"ref": "9", "kind": "prayer", "text": "הוּא אֲשֶׁר דִּבֶּר לְעַם סְגֻלָּתוֹ"},
+          {"ref": "10", "kind": "prayer", "text": "שָׁמוֹר לְקַדְּשׁוֹ מִבֹּאוֹ וְעַד צֵאתוֹ"},
+          {"ref": "11", "kind": "prayer", "text": "שַׁבָּת קֹֽדֶשׁ יוֹם חֶמְדָּתוֹ"},
+          {"ref": "12", "kind": "prayer", "text": "כִּי בוֹ שָׁבַת אֵל מִכָּל מְלַאכְתּוֹ׃"},
+          {"ref": "13", "kind": "prayer", "text": "בְּמִצְוַת שַׁבָּת אֵל יַחֲלִיצָךְ"},
+          {"ref": "14", "kind": "prayer", "text": "קוּם קְרָא אֵלָיו יָחִישׁ לְאַמְּצָךְ"},
+          {"ref": "15", "kind": "prayer", "text": "נִשְׁמַת כָּל חַי וְגַם נַעֲרִיצָךְ"},
+          {"ref": "16", "kind": "prayer", "text": "אֱכֹל בְּשִׂמְחָה כִּי כְבָר רָצָךְ׃"},
+          {"ref": "17", "kind": "prayer", "text": "בְּמִשְׁנֶה לֶֽחֶם וְקִדּוּשׁ רַבָּה"},
+          {"ref": "18", "kind": "prayer", "text": "בְּרוֹב מַטְעַמִּים וְרֽוּחַ נְדִיבָה"},
+          {"ref": "19", "kind": "prayer", "text": "יִזְכּוּ לְרַב טוּב הַמִּתְעַנְּגִים בָּהּ"},
+          {"ref": "20", "kind": "prayer", "text": "בְּבִיאַת גּוֹאֵל לְחַיֵּי הָעוֹלָם הַבָּא׃"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "Rest and joy, a light for the Jews.<sup class=\"footnote-marker\">37</sup><i class=\"footnote\">The joy that radiates from a Jewish face on Shabbos is brighter than on any other day.—Siach Yitzchok</i>"},
+          {"ref": "2", "translates": ["2"], "text": "It is a day of rest, a day of delights;"},
+          {"ref": "3", "translates": ["3"], "text": "its preservers and its recallers—<sup class=\"footnote-marker\">38</sup><i class=\"footnote\">See note 10 to כָּל מְקַדֵּשׁ .</i> they bear witness"},
+          {"ref": "4", "translates": ["4"], "text": "that in six [days], all was created: and it still exists."},
+          {"ref": "5", "translates": ["5"], "text": "Heavens above the skies, earth, and seas,"},
+          {"ref": "6", "translates": ["6"], "text": "all the hosts of heaven high and exalted;"},
+          {"ref": "7", "translates": ["7"], "text": "sea monsters, and man, and mighty beasts—"},
+          {"ref": "8", "translates": ["8"], "text": "for with the letters <i>yud</i> and <i>hey</i> Adonoy, created worlds.<sup class=\"footnote-marker\">39</sup><i class=\"footnote\">Isaiah 26:4; See Rashi to Genesis 2:4.</i>"},
+          {"ref": "9", "translates": ["9"], "text": "He is the One Who told His treasured people—"},
+          {"ref": "10", "translates": ["10"], "text": "Be careful to sanctify it from arrival till departure—"},
+          {"ref": "11", "translates": ["11"], "text": "the holy Sabbath, day of His delight,"},
+          {"ref": "12", "translates": ["12"], "text": "for on it the Almighty abstained from all His work.<sup class=\"footnote-marker\">40</sup><i class=\"footnote\">Genesis 2:2.</i>"},
+          {"ref": "13", "translates": ["13"], "text": "Through the command of the Sabbath the Almighty will strengthen you."},
+          {"ref": "14", "translates": ["14"], "text": "Arise, call out to Him—He will hasten to strengthen you—"},
+          {"ref": "15", "translates": ["15"], "text": "[Recite] “Soul of all living,”<sup class=\"footnote-marker\">41</sup><i class=\"footnote\">See page 000.</i> and also “We proclaim Your might.”<sup class=\"footnote-marker\">42</sup><i class=\"footnote\">See page 000.</i>"},
+          {"ref": "16", "translates": ["16"], "text": "Eat with joy, for He has already accepted you favorably.<sup class=\"footnote-marker\">43</sup><i class=\"footnote\">Koheleth 9:7.</i>"},
+          {"ref": "17", "translates": ["17"], "text": "With double loaves and a great Kiddush,"},
+          {"ref": "18", "translates": ["18"], "text": "with abundant delicacies and generous spirit,"},
+          {"ref": "19", "translates": ["19"], "text": "they will merit much good—those who delight in it"},
+          {"ref": "20", "translates": ["20"], "text": "—with the coming of the Redeemer in the life in the World-to-Come."}
+        ]
+      }
+    },
+    {
+      "path": "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Ma Yedidut",
+      "title": "מה ידידות",
+      "node": "x.zemirot.ma_yedidut",
+      "service": "none",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "מַה יְּדִידוּת מְנוּחָתֵךְ. אַתְּ שַׁבָּת הַמַּלְכָּה."},
+          {"ref": "2", "kind": "prayer", "text": "בְּכֵן נָרוּץ לִקְרָאתֵךְ. בּֽוֹאִי כַלָּה נְסוּכָה."},
+          {"ref": "3", "kind": "prayer", "text": "לְבוּשׁ בִּגְדֵי חֲמוּדוֹת. לְהַדְלִיק נֵר בִּבְרָכָה."},
+          {"ref": "4", "kind": "prayer", "text": "וַתֵּֽכֶל כָּל הָעֲבוֹדוֹת. לֹא תַעֲשׂוּ מְלָאכָה:"},
+          {"ref": "5", "kind": "prayer", "text": "<b>לְהִתְעַנֵּג בְּתַעֲנוּגִים. בַּרְבּוּרִים וּשְׂלָיו וְדָגִים:</b>"},
+          {"ref": "6", "kind": "prayer", "text": "מֵעֶֽרֶב מַזְמִינִים. כָּל מִינֵי מַטְעַמִּים."},
+          {"ref": "7", "kind": "prayer", "text": "מִבְּ֒עוֹד יוֹם מוּכָנִים. תַּרְנְ֒גוֹלִים מְפֻטָּמִים."},
+          {"ref": "8", "kind": "prayer", "text": "וְלַעֲרוֹךְ כַּמָּה מִינִים. שְׁתוֹת יֵינוֹת מְבֻשָּׁמִים."},
+          {"ref": "9", "parts": [
+            {"kind": "prayer", "text": "וְתַפְנוּקֵי מַעֲדַנִּים. בְּכָל שָׁלשׁ פְּעָמִים. "},
+            {"kind": "instruction", "en": "Repeat the refrain: \"Lehit'anneg…\"", "text": "<small>להתענג:</small>"}
+          ]},
+          {"ref": "10", "kind": "prayer", "text": "נַחֲלַת יַעֲקֹב יִירָשׁ. בְּלִי מְצָרִים נַחֲלָה."},
+          {"ref": "11", "kind": "prayer", "text": "וִיכַבְּ֒דֽוּהוּ עָשִׁיר וָרָשׁ. וְתִזְכּוּ לִגְאֻלָּה."},
+          {"ref": "12", "kind": "prayer", "text": "יוֹם שַׁבָּת אִם תִּשְׁמֽוֹרוּ. וִהְיִֽיתֶם לִי סְגֻלָּה."},
+          {"ref": "13", "parts": [
+            {"kind": "prayer", "text": "שֵֽׁשֶׁת יָמִים תַּעֲבֽוֹדוּ. וּבַשְּׁ֒בִיעִי נָגִֽילָה. "},
+            {"kind": "instruction", "en": "Repeat the refrain: \"Lehit'anneg…\"", "text": "<small>להתענג:</small>"}
+          ]},
+          {"ref": "14", "kind": "prayer", "text": "חֲפָצֶֽיךָ בּוֹ אֲסוּרִים. וְגַם לַחֲשֹׁב חֶשְׁבּוֹנוֹת."},
+          {"ref": "15", "kind": "prayer", "text": "הִרְהוּרִים מֻתָּרִים. וּלְשַׁדֵךְ הַבָּנוֹת."},
+          {"ref": "16", "kind": "prayer", "text": "וְתִינוֹק לְלַמְּ֒דוֹ סֵֽפֶר. לַמְ֒נַצֵּֽחַ בִּנְגִינוֹת."},
+          {"ref": "17", "parts": [
+            {"kind": "prayer", "text": "וְלַהֲגוֹת בְּאִמְרֵי שֶֽׁפֶר. בְּכָל פִּנּוֹת וּמַחֲנוֹת. "},
+            {"kind": "instruction", "en": "Repeat the refrain: \"Lehit'anneg…\"", "text": "<small>להתענג:</small>"}
+          ]},
+          {"ref": "18", "kind": "prayer", "text": "הִלוּכָךְ תְּהֵא בְנַֽחַת. עֹנֶג קְרָא לַשַׁבָּת."},
+          {"ref": "19", "kind": "prayer", "text": "וְהַשֵּׁנָה מְשֻׁבַּֽחַת. כְּדַת נֶֽפֶשׁ מְשִׁיבַת."},
+          {"ref": "20", "kind": "prayer", "text": "בְּכֵן נַפְשִׁי לְךָ עָרְ֒גָה. וְלָנֽוּחַ בְּחִבַּת."},
+          {"ref": "21", "parts": [
+            {"kind": "prayer", "text": "כַּשּׁוֹשַׁנִּים סוּגָה. בּוֹ יָנֽוּחוּ בֵּן וּבַת. "},
+            {"kind": "instruction", "en": "Repeat the refrain: \"Lehit'anneg…\"", "text": "<small>להתענג:</small>"}
+          ]},
+          {"ref": "22", "kind": "prayer", "text": "מֵעֵין עוֹלָם הַבָּא. יוֹם שַׁבָּת מְנוּחָה."},
+          {"ref": "23", "kind": "prayer", "text": "כָּל הַמִּתְעַנְּ֒גִים בָּהּ. יִזְכּוּ לְרֹב שִׂמְחָה."},
+          {"ref": "24", "kind": "prayer", "text": "מֵחֶבְלֵי מָשִֽׁיחַ. יֻצָּֽלוּ לִרְוָחָה."},
+          {"ref": "25", "parts": [
+            {"kind": "prayer", "text": "פְּדוּתֵֽנוּ תַצְמִֽיחַ. וְנָס יָגוֹן וַאֲנָחָה. "},
+            {"kind": "instruction", "en": "Repeat the refrain: \"Lehit'anneg…\"", "text": "<small>להתענג:</small>"}
+          ]}
+        ]
+      }
+    },
+    {
+      "path": "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yom zeh L'yisrael",
+      "title": "יום זה לישראל",
+      "node": "x.zemirot.yom_zeh_leyisrael",
+      "service": "none",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "יוֹם זֶה לְיִשְׂרָאֵל אוֹרָה וְשִׂמְחָה, שַׁבָּת מְנוּחָה."},
+          {"ref": "2", "kind": "prayer", "text": "צִוִּיתָ פִּקּוּדִים בְּמַעֲמַד סִינַי"},
+          {"ref": "3", "kind": "prayer", "text": "שַׁבָּת וּמוֹעֲדִים לִשְׁמֹר בְּכָל שָׁנַי"},
+          {"ref": "4", "kind": "prayer", "text": "לַעֲרוֹךְ לְפָנַי מַשְׂאֵת וַאֲרוּחָה, שַׁבָּת מְנוּחָה."},
+          {"ref": "5", "kind": "prayer", "text": "חֶמְדַּת הַלְּבָבוֹת לְאֻמָּה שְׁבוּרָה"},
+          {"ref": "6", "kind": "prayer", "text": "לִנְפָשׁוֹת נִכְאָבוֹת נְשָׁמָה יְתֵרָה"},
+          {"ref": "7", "kind": "prayer", "text": "לְנֶפֶשׁ מְצֵרָה יָסִיר אֲנָחָה, שַׁבָּת מְנוּחָה."},
+          {"ref": "8", "kind": "prayer", "text": "קִדַּשְׁתָּ בֵּרַכְתָּ אוֹתוֹ מִכָּל יָמִים"},
+          {"ref": "9", "kind": "prayer", "text": "בְּשֵׁשֶׁת כִּלִּיתָ מְלֶאכֶת עוֹלָמִים"},
+          {"ref": "10", "kind": "prayer", "text": "בּוֹ מָצְאוּ עֲגוּמִים הַשְׁקֵט וּבִטְחָה, שַׁבָּת מְנוּחָה."},
+          {"ref": "11", "kind": "prayer", "text": "לְאִסּוּר מְלָאכָה צִוִּיתָנוּ נוֹרָא"},
+          {"ref": "12", "kind": "prayer", "text": "אֶזְכֶּה הוֹד מְלוּכָה אִם שַׁבָּת אֶשְׁמוֹרָה"},
+          {"ref": "13", "kind": "prayer", "text": "אַקְרִיב שַׁי לַמּוֹרָא מִנְחָה מֶרְקָחָה, שַׁבָּת מְנוּחָה."},
+          {"ref": "14", "kind": "prayer", "text": "וְשִׁיר אֶעֱרָךְ לָךְ בְּנִגּוּן וּנְעִימָה"},
+          {"ref": "15", "kind": "prayer", "text": "מוּל תִּפְאֶרֶת גָּדְלָךְ נַפְשִׁי לְךָ כָּמַהּ"},
+          {"ref": "16", "kind": "prayer", "text": "לִסְגֻלָּה תְּמִימָה קַיֵּם הַבְטָחָה, שַׁבָּת מְנוּחָה."},
+          {"ref": "17", "kind": "prayer", "text": "רְצֵה תְּפִלָּתִי כְּמוֹ קָרְבַּן נַחְשׁוֹן"},
+          {"ref": "18", "kind": "prayer", "text": "וְיוֹם מְנוּחָתִי בְּרִנָּה וּבְשָׂשׂוֹן"},
+          {"ref": "19", "kind": "prayer", "text": "חָבִיב כְּבַת אִישׁוֹן בְּרֹב הַצְלָחָה, שַׁבָּת מְנוּחָה."},
+          {"ref": "20", "kind": "prayer", "text": "יִשְׁעֲךָ קִוִּינוּ יָהּ אַדִּיר אַדִּירִים"},
+          {"ref": "21", "kind": "prayer", "text": "בֶּן דָּוִד מַלְכֵּנוּ שְׁלַח נָא לָעִבְרִים"},
+          {"ref": "22", "kind": "prayer", "text": "וְיִקְרָא לִדְרוֹרִים רֶוַח וַהֲנָחָה, שַׁבָּת מְנוּחָה."},
+          {"ref": "23", "kind": "prayer", "text": "אָנָּא עֶלְיוֹן נוֹרָא הַבִּיטָה עָנְיֵנוּ"},
+          {"ref": "24", "kind": "prayer", "text": "פְּדֵנוּ בִּמְהֵרָה חָנֵּנוּ וַעֲנֵנוּ"},
+          {"ref": "25", "kind": "prayer", "text": "שַׂמַּח נַפְשֵׁנוּ בְּאוֹר וְשִׂמְחָה, שַׁבָּת מְנוּחָה."},
+          {"ref": "26", "kind": "prayer", "text": "חַדֵּשׁ מִקְדָּשֵׁנוּ זָכְרָה נֶחֱרֶבֶת"},
+          {"ref": "27", "kind": "prayer", "text": "טוּבְךָ מוֹשִׁיעֵנוּ תְּנָה לַנֶּעֱצֶבֶת"},
+          {"ref": "28", "kind": "prayer", "text": "בְּשַׁבָּת יוֹשֶׁבֶת בִּזְמִיר וּשְׁבָחָה, שַׁבָּת מְנוּחָה."},
+          {"ref": "29", "kind": "prayer", "text": "זְכוֹר קָדוֹשׁ לָנוּ בִּזְכוּת יִקְרַת הַיּוֹם"},
+          {"ref": "30", "kind": "prayer", "text": "שְׁמוֹר נָא אוֹתָנוּ בְּיוֹם זֶה וּבְכָל יוֹם"},
+          {"ref": "31", "kind": "prayer", "text": "דּוֹדִי צַח וְאָיוֹם תָּבִיא רְוָחָה, שַׁבָּת מְנוּחָה."},
+          {"ref": "32", "kind": "prayer", "text": "קוֹל רִנָּה וִישׁוּעָה לְיִשְׂרָאֵל הַשְׁמִיעָה"},
+          {"ref": "33", "kind": "prayer", "text": "בְּבֹא חֶזְיוֹן תְּשׁוּעָה צוּר מַצְמִיחַ יְשׁוּעָה"},
+          {"ref": "34", "kind": "prayer", "text": "אוֹר שִׁמְשִׁי הוֹפִיעָה תָּמִיד הַזְרִיחָה, שַׁבָּת מְנוּחָה."}
+        ]
+      }
+    },
+    {
+      "path": "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Yah Ribon",
+      "title": "יה ריבון",
+      "node": "x.zemirot.yah_ribon",
+      "service": "none",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "יָהּ רִבּוֹן עָלַם וְעָלְמַיָּא."},
+          {"ref": "2", "kind": "prayer", "text": "אַנְתְּ הוּא מַלְכָּא מֶֽלֶךְ מַלְכַיָּא."},
+          {"ref": "3", "kind": "prayer", "text": "עוֹבַד גְבוּרְתֵּךְ וְתִמְהַיָּא."},
+          {"ref": "4", "kind": "prayer", "text": "שְׁפַר קֳדָמָךְ לְהַחֲוָיָא:"},
+          {"ref": "5", "kind": "prayer", "text": "<small>יָהּ רִבּוֹן עָלַם וְעָלְמַיָּא. אַנְתְּ הוּא מַלְכָּא מֶֽלֶךְ מַלְכַיָּא:</small>"},
+          {"ref": "6", "kind": "prayer", "text": "שְׁבָחִין אֲסַדֵּר צַפְרָא וְרַמְשָׁא."},
+          {"ref": "7", "kind": "prayer", "text": "לָךְ אֱלָהָא קַדִּישָׁא. דִּי בְרָא כָּל נַפְשָׁא."},
+          {"ref": "8", "kind": "prayer", "text": "עִירִין קַדִּישִׁין וּבְנֵי אֱנָשָׁא."},
+          {"ref": "9", "kind": "prayer", "text": "חֵיוַת בְּרָא וְעוֹפֵי שְׁמַיָּא."},
+          {"ref": "10", "kind": "prayer", "text": "<small>יָהּ רִבּוֹן עָלַם וְעָלְמַיָּא. אַנְתְּ הוּא מַלְכָּא מֶֽלֶךְ מַלְכַיָּא:</small>"},
+          {"ref": "11", "kind": "prayer", "text": "רַבְרְ֒בִין עוֹבְ֒דֵךְ וְתַקִּיפִין."},
+          {"ref": "12", "kind": "prayer", "text": "מָכִיךְ רָמַיָּא וְזַקִּיף כְּפִיפִין."},
+          {"ref": "13", "kind": "prayer", "text": "לוּ יִחְיֶה גְבַר שְׁנִין אַלְפִין."},
+          {"ref": "14", "kind": "prayer", "text": "לָא יֵעוֹל גְּבוּרְתֵּךְ בְּחוּשְׁבָּנַיָּא."},
+          {"ref": "15", "kind": "prayer", "text": "<small>יָהּ רִבּוֹן עָלַם וְעָלְמַיָּא. אַנְתְּ הוּא מַלְכָּא מֶֽלֶךְ מַלְכַיָּא:</small>"},
+          {"ref": "16", "kind": "prayer", "text": "אֱלָהָא דִּי לֵהּ יְקָר וּרְבוּתָא."},
+          {"ref": "17", "kind": "prayer", "text": "פְּרוֹק יַת עָנָךְ מִפּוּם אַרְיְוָתָא."},
+          {"ref": "18", "kind": "prayer", "text": "וְאַפֵּק יַת עַמָּךְ מִגּוֹ גָלוּתָא."},
+          {"ref": "19", "kind": "prayer", "text": "עַמֵּךְ דִּי בְחַרְתְּ מִכָּל אֻמַּיָּא."},
+          {"ref": "20", "kind": "prayer", "text": "<small>יָהּ רִבּוֹן עָלַם וְעָלְמַיָּא. אַנְתְּ הוּא מַלְכָּא מֶֽלֶךְ מַלְכַיָּא:</small>"},
+          {"ref": "21", "kind": "prayer", "text": "לְמִקְדָּשֵׁךְ תּוּב וּלְקֹֽדֶשׁ קֻדְשִׁין."},
+          {"ref": "22", "kind": "prayer", "text": "אֲתַר דִּי בֵיהּ יֶחֱדוּן רוּחִין וְנַפְשִׁין."},
+          {"ref": "23", "kind": "prayer", "text": "וִיזַמְּ֒רוּן לָךְ שִׁירִין וְרַחֲשִׁין."},
+          {"ref": "24", "kind": "prayer", "text": "בִּירוּשְׁ֒לֵם קַרְתָּא דְשׁוּפְרַיָּא."},
+          {"ref": "25", "kind": "prayer", "text": "<small>יָהּ רִבּוֹן עָלַם וְעָלְמַיָּא. אַנְתְּ הוּא מַלְכָּא מֶֽלֶךְ מַלְכַיָּא:</small>"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "God, Master of all worlds,"},
+          {"ref": "2", "translates": ["2"], "text": "You are the King—the King of kings."},
+          {"ref": "3", "translates": ["3"], "text": "The work of Your might and Your wondrous deeds,"},
+          {"ref": "4", "translates": ["4"], "text": "it is fitting to declare before You. <small>refrain.</small>"},
+          {"ref": "5", "translates": ["5"], "text": "<small>God, Master of all worlds, You are the King—the King of kings.</small>"},
+          {"ref": "6", "translates": ["6"], "text": "Praises I will present morning and night"},
+          {"ref": "7", "translates": ["7"], "text": "to You, holy God Who created all life—"},
+          {"ref": "8", "translates": ["8"], "text": "holy angels and humans,"},
+          {"ref": "9", "translates": ["9"], "text": "beasts of the field and birds of the sky."},
+          {"ref": "10", "translates": ["10"], "text": "<small>God, Master of all worlds, You are the King—the King of kings.</small>"},
+          {"ref": "11", "translates": ["11"], "text": "Great are Your works and mighty—"},
+          {"ref": "12", "translates": ["12"], "text": "You humble the haughty and straighten the bent;"},
+          {"ref": "13", "translates": ["13"], "text": "were man to live a thousand years,"},
+          {"ref": "14", "translates": ["14"], "text": "he could not recount Your might."},
+          {"ref": "15", "translates": ["15"], "text": "<small>God, Master of all worlds, You are the King—the King of kings.</small>"},
+          {"ref": "16", "translates": ["16"], "text": "Almighty, to Whom belongs honor and greatness,"},
+          {"ref": "17", "translates": ["17"], "text": "redeem Your sheep from the mouths of lions,"},
+          {"ref": "18", "translates": ["18"], "text": "And bring Your people out of exile,"},
+          {"ref": "19", "translates": ["19"], "text": "Your people, whom You chose from all peoples."},
+          {"ref": "20", "translates": ["20"], "text": "<small>God, Master of all worlds, You are the King—the King of kings.</small>"},
+          {"ref": "21", "translates": ["21"], "text": "To Your Holy Temple return and to the Holy of Holies,"},
+          {"ref": "22", "translates": ["22"], "text": "the place where they will rejoice—spirits and souls;"},
+          {"ref": "23", "translates": ["23"], "text": "and they will sing to You songs and praises"},
+          {"ref": "24", "translates": ["24"], "text": "in Jerusalem, city of beauty."},
+          {"ref": "25", "translates": ["25"], "text": "<small>God, Master of all worlds, You are the King—the King of kings.</small>"}
+        ]
+      }
+    },
+    {
+      "path": "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzamah Nafshi",
+      "title": "צמאה נפשי",
+      "node": "x.zemirot.tzamah_nafshi",
+      "service": "none",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "צָמְאָה נַפְשִׁי לֵאלֹהִים לְאֵל חָי"},
+          {"ref": "2", "kind": "prayer", "text": "לִבִּי וּבְשָׂרִי יְרַנְּנוּ לְאֵל חָי"},
+          {"ref": "3", "kind": "prayer", "text": "אֵל חַי בְּרָאָנִי וְאָמַר חַי אָנִי"},
+          {"ref": "4", "kind": "prayer", "text": "כִּי לֹא יִרְאַנִי הָאָדָם וָחָי"},
+          {"ref": "5", "kind": "prayer", "text": "בָּרָא כֹּל בְּחָכְמָה בְּעֵצָה וּבִמְזִמָּה"},
+          {"ref": "6", "kind": "prayer", "text": "וְנֶעֶלְמָה מֵעֵינֵי כָל חָי"},
+          {"ref": "7", "kind": "prayer", "text": "רָם עַל כֹּל כְּבוֹדוֹ כָּל פֶּה יְחַו הוֹדוֹ"},
+          {"ref": "8", "kind": "prayer", "text": "בָּרוּךְ אֲשֶׁר בְּיָדוֹ נֶפֶשׁ כָּל חָי"},
+          {"ref": "9", "kind": "prayer", "text": "הִבְדִּיל נִינֵי תָם חֻקִּים לְהוֹרוֹתָם"},
+          {"ref": "10", "kind": "prayer", "text": "אֲשֶׁר יַעֲשֶׂה אוֹתָם הָאָדָם וָחָי"},
+          {"ref": "11", "kind": "prayer", "text": "מִי זֶה יִצְטַדַּק נִמְשַׁל כְּאָבָק דָּק"},
+          {"ref": "12", "kind": "prayer", "text": "אֶמֶת כִּי לֹא יִצְדַּק לְפָנֶיךָ כָּל חָי"},
+          {"ref": "13", "kind": "prayer", "text": "בְּלֵב יֵצֶר חָשׁוּב כִּדְמוּת חֲמַת עַכְשׁוּב"},
+          {"ref": "14", "kind": "prayer", "text": "וְאֵיכָכָה יָשׁוּב הַבָּשָׂר הַחָי"},
+          {"ref": "15", "kind": "prayer", "text": "נְסוֹגִים אִם אָבוּ מִדַרְכָּם שָׁבוּ"},
+          {"ref": "16", "kind": "prayer", "text": "טֶרֶם יִשְׁכָּבוּ בֵּית מוֹעֵד לְכָל חָי"},
+          {"ref": "17", "kind": "prayer", "text": "עַל כֹּל חֲסָדֶיךָ תְּחַדֵּשׁ עֵדֶיךָ"},
+          {"ref": "18", "kind": "prayer", "text": "פּוֹתֵחַ אֶת יָדֶךָ וּמַשְׂבִּיעַ לְכָל חָי"},
+          {"ref": "19", "kind": "prayer", "text": "זְכוֹר אַהֲבַת קְדוּמִים וְהַחֲיֵה נִרְדָּמִים"},
+          {"ref": "20", "kind": "prayer", "text": "וְקָרֵב הַיָּמִים אֲשֶׁר בֶּן יִשַׁי חָי"},
+          {"ref": "21", "kind": "prayer", "text": "רְאֵה לִגְבֶרֶת אֱמֶת שִׁפְחָה נוֹאֶמֶת"},
+          {"ref": "22", "kind": "prayer", "text": "לֹא כִי בְנֵךְ הַמֵּת וּבְנִי הֶחָי"},
+          {"ref": "23", "kind": "prayer", "text": "הֲלֹא חֶלְקְך מֵרֹאשׁ חָלָק דָּמוֹ דְרֹשׁ"},
+          {"ref": "24", "kind": "prayer", "text": "וּשְׁפֹךְ אַף עַל רֹאשׁ הַשָּׂעִיר הַחָי"},
+          {"ref": "25", "kind": "prayer", "text": "אוּלַי עֵת בָּאָה לְהָשִׁיב נְשׂוּא חֲטָאָה"},
+          {"ref": "26", "kind": "prayer", "text": "אֶל בֵּיתְךָ וְרָאָה אֹתוֹ וָחָי"},
+          {"ref": "27", "kind": "prayer", "text": "אֶפְרֹשׂ לְךָ כַּפִּי וְאֶקּוֹד עַל אַפִּי"},
+          {"ref": "28", "kind": "prayer", "text": "בְּעֵת אֶפְתַּח אֶת פִּי בְּנִשְׁמַת כָּל חָי"}
+        ]
+      },
+      "en": {
+        "version": "Sefaria Community Translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "My body thirsts"},
+          {"ref": "2", "translates": ["1"], "text": "for Elohim, for the Living God;"},
+          {"ref": "3", "translates": ["2"], "text": "my mind and flesh"},
+          {"ref": "4", "translates": ["2"], "text": "sing out His praises."},
+          {"ref": "6", "translates": ["3"], "text": "The one Who made me "},
+          {"ref": "7", "translates": ["3"], "text": "Said, “As I live!”"},
+          {"ref": "8", "translates": ["4"], "text": "“For no man"},
+          {"ref": "9", "translates": ["4"], "text": "May see me and live.”"},
+          {"ref": "11", "translates": ["5"], "text": "He made all with Wisdom"},
+          {"ref": "12", "translates": ["5"], "text": "With discerning counsel."},
+          {"ref": "13", "translates": ["6"], "text": "How hidden is He"},
+          {"ref": "14", "translates": ["6"], "text": "From the eyes of all life!"},
+          {"ref": "16", "translates": ["7"], "text": "High above all His host;"},
+          {"ref": "17", "translates": ["7"], "text": "They all announce his might."},
+          {"ref": "18", "translates": ["8"], "text": "Blessed be He who has in hand"},
+          {"ref": "19", "translates": ["8"], "text": "The soul of every living thing."},
+          {"ref": "21", "translates": ["9"], "text": "He selected Jacob’s family"},
+          {"ref": "22", "translates": ["9"], "text": "To teach them the Laws"},
+          {"ref": "23", "translates": ["10"], "text": "Which, if a man follow them,"},
+          {"ref": "24", "translates": ["10"], "text": "He will live."},
+          {"ref": "26", "translates": ["11"], "text": "Who could justify themselves?"},
+          {"ref": "27", "translates": ["11"], "text": "All are like dust."},
+          {"ref": "28", "translates": ["12"], "text": "Truly, none is worthy"},
+          {"ref": "29", "translates": ["12"], "text": "Before You."},
+          {"ref": "48", "translates": ["19"], "text": "Recall the ancients’ love"},
+          {"ref": "49", "translates": ["19"], "text": "Return the dead to life"},
+          {"ref": "50", "translates": ["20"], "text": "And bring near the time"},
+          {"ref": "51", "translates": ["20"], "text": "When the son of Jesse lives!"},
+          {"ref": "53", "translates": ["21"], "text": "Hark! This woman has the truth"},
+          {"ref": "54", "translates": ["21"], "text": "The reliable servant"},
+          {"ref": "55", "translates": ["22"], "text": "“No, for her son has died"},
+          {"ref": "56", "translates": ["22"], "text": "And mine lives.\""}
+        ]
+      }
+    },
+    {
+      "path": "Shabbat/Shabbat Evening/Zemirot for Shabbat Evening/Tzur Mishelo",
+      "title": "צור משלו",
+      "node": "x.zemirot.tzur_mishelo",
+      "service": "none",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "1", "kind": "prayer", "text": "צוּר מִשֶּׁלּוֹ אָכַֽלְנוּ בָּרְכוּ אֱמוּנַי"},
+          {"ref": "2", "kind": "prayer", "text": "שָׂבַֽעְנוּ וְהוֹתַֽרְנוּ כִּדְבַר יְהֹוָה׃"},
+          {"ref": "3", "kind": "prayer", "text": "הַזָּן אֶת עוֹלָמוֹ רוֹעֵֽנוּ אָבִֽינוּ"},
+          {"ref": "4", "kind": "prayer", "text": "אָכַֽלְנוּ אֶת לַחְמוֹ וְיֵינוֹ שָׁתִֽינוּ"},
+          {"ref": "5", "kind": "prayer", "text": "עַל כֵּן נוֹדֶה לִשְׁמוֹ וּנְהַלְּלוֹ בְּפִֽינוּ"},
+          {"ref": "6", "kind": "prayer", "text": "אָמַֽרְנוּ וְעָנִֽינוּ אֵין קָדוֹשׁ כַּיהֹוָה׃"},
+          {"ref": "7", "kind": "prayer", "text": "<small>צוּר מִשֶּׁלּוֹ אָכַֽלְנוּ בָּרְכוּ אֱמוּנַי שָׂבַֽעְנוּ וְהוֹתַֽרְנוּ כִּדְבַר יְהֹוָה׃</small>"},
+          {"ref": "8", "kind": "prayer", "text": "בְּשִׁיר וְקוֹל תּוֹדָה נְבָרֵךְ לֵאלֹהֵֽינוּ"},
+          {"ref": "9", "kind": "prayer", "text": "עַל אֶֽרֶץ חֶמְדָּה טוֹבָה שֶׁהִנְחִיל לַאֲבוֹתֵֽינוּ"},
+          {"ref": "10", "kind": "prayer", "text": "מָזוֹן וְצֵדָה הִשְׂבִּֽיעַ לְנַפְשֵֽׁנוּ"},
+          {"ref": "11", "kind": "prayer", "text": "חַסְדּוֹ גָּבַר עָלֵֽינוּ וֶאֱמֶת יְהֹוָה׃"},
+          {"ref": "12", "kind": "prayer", "text": "<small>צוּר מִשֶּׁלּוֹ אָכַֽלְנוּ בָּרְכוּ אֱמוּנַי שָׂבַֽעְנוּ וְהוֹתַֽרְנוּ כִּדְבַר יְהֹוָה׃</small>"},
+          {"ref": "13", "kind": "prayer", "text": "רַחֵם בְּחַסְדֶּֽךָ עַל עַמְּךָ צוּרֵֽנוּ"},
+          {"ref": "14", "kind": "prayer", "text": "עַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶֽךָ זְבוּל בֵּית תִּפְאַרְתֵּֽנוּ"},
+          {"ref": "15", "kind": "prayer", "text": "בֶּן־דָּוִד עַבְדֶּֽךָ יָבֹא וְיִגְאָלֵֽנוּ"},
+          {"ref": "16", "kind": "prayer", "text": "רֽוּחַ אַפֵּֽינוּ מְשִֽׁיחַ יְהֹוָה׃"},
+          {"ref": "17", "kind": "prayer", "text": "<small>צוּר מִשֶּׁלּוֹ אָכַֽלְנוּ בָּרְכוּ אֱמוּנַי שָׂבַֽעְנוּ וְהוֹתַֽרְנוּ כִּדְבַר יְהֹוָה׃</small>"},
+          {"ref": "18", "kind": "prayer", "text": "יִבָּנֶה הַמִּקְדָּשׁ עִיר צִיּוֹן תְּמַלֵּא"},
+          {"ref": "19", "kind": "prayer", "text": "וְשָׁם נָשִׁיר שִׁיר חָדָשׁ וּבִרְנָנָה נַעֲלֶה"},
+          {"ref": "20", "kind": "prayer", "text": "הָרַחֲמָן הַנִּקְדָּשׁ יִתְבָּרַךְ וְיִתְעַלֶּה"},
+          {"ref": "21", "kind": "prayer", "text": "עַל כּוֹס יַֽיִן מָלֵא כְּבִרְכַּת יְהֹוָה׃"},
+          {"ref": "22", "kind": "prayer", "text": "<small>צוּר מִשֶּׁלּוֹ אָכַֽלְנוּ בָּרְכוּ אֱמוּנַי שָׂבַֽעְנוּ וְהוֹתַֽרְנוּ כִּדְבַר יְהֹוָה׃</small>"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "text": "The Rock—from His [store] we have eaten—Bless Him my faithful ones.<sup class=\"footnote-marker\">44</sup><i class=\"footnote\">This verse corresponds to the phrase רַבּוֹתַי נְבָרֵךְ (See page 000) inviting the table companions to join together in saying Birchas Hamazon.</i>"},
+          {"ref": "2", "translates": ["2"], "text": "We have satisfied ourselves and we have left over [some food], according to the word of Adonoy.<sup class=\"footnote-marker\">45</sup><i class=\"footnote\">This phrase refers to 2 Kings 4:43, “For thus said Adonoy, ‘They shall eat, and shall leave thereof.’”</i>"},
+          {"ref": "3", "translates": ["3"], "text": "He nourishes His world,<sup class=\"footnote-marker\">46</sup><i class=\"footnote\">The first stanza of this poem is based on the first blessing of Birchas Hamazon (See page 000).</i> our Shepherd our Father."},
+          {"ref": "4", "translates": ["4"], "text": "We have eaten His bread and His wine we drank."},
+          {"ref": "5", "translates": ["5"], "text": "Therefore, we give thanks to His Name, and praise Him with our mouths—"},
+          {"ref": "6", "translates": ["6"], "text": "saying and chanting: There is nothing so holy as Adonoy."},
+          {"ref": "7", "translates": ["7"], "text": "<small>The Rock—from His [store] we have eaten—Bless [Him] my faithful ones. We have satisfied ourselves and we have left over [some food] according to the word of Adonoy.</small>"},
+          {"ref": "8", "translates": ["8"], "text": "With song and sound of thanksgiving we will bless our God,"},
+          {"ref": "9", "translates": ["9"], "text": "for the land so desirably good<sup class=\"footnote-marker\">47</sup><i class=\"footnote\">The second stanza relates to the second blessing of Birchas Hamazon (See page 000).</i> that He parceled out as a heritage to our fathers."},
+          {"ref": "10", "translates": ["10"], "text": "[With] food and sustenance He satisfied our souls;"},
+          {"ref": "11", "translates": ["11"], "text": "His kindliness<sup class=\"footnote-marker\">48</sup><i class=\"footnote\">The third stanza parallels the third blessing of Birchas Hamazon (See page 000.) Because these three stanzas so closely resemble the blessing of Bircchas Hamazon, some authorities warn against reciting this poem after the meal for one may thus technically fulfill his obligation to recite Birchas Hamazon. According to them, one should recite or sing the song only in mid- meal.</i> overwhelmed us and Adonoy is truth."},
+          {"ref": "12", "translates": ["12"], "text": "<small>The Rock—from His [store] we have eaten—Bless [Him] my faithful ones. We have satisfied ourselves and we have left over [some food] according to the word of Adonoy.</small>"},
+          {"ref": "13", "translates": ["13"], "text": "Be compassionate with Your kindliness upon Your people; our Rock,"},
+          {"ref": "14", "translates": ["14"], "text": "upon Zion, the dwelling-place of Your Glory, the Abode, home of our splendors."},
+          {"ref": "15", "translates": ["15"], "text": "May the son of David, Your servant, come and redeem us"},
+          {"ref": "16", "translates": ["16"], "text": "the breath of our life—the anointed of Adonoy."},
+          {"ref": "17", "translates": ["17"], "text": "<small>The Rock—from His [store] we have eaten—Bless [Him] my faithful ones. We have satisfied ourselves and we have left over [some food] according to the word of Adonoy.</small>"},
+          {"ref": "18", "translates": ["18"], "text": "May the Temple be rebuilt,<sup class=\"footnote-marker\">49</sup><i class=\"footnote\">The final stanza relates to the grace when recited over a full cup of wine.</i> the city of Zion filled,"},
+          {"ref": "19", "translates": ["19"], "text": "and there we will sing a new song, and with joyous singing we will come up.<sup class=\"footnote-marker\">50</sup><i class=\"footnote\">We will come up to Jerusalem with joyous singing. Jerusalem is an elevated city and the Temple is at the highest point of Jerusalem. Thus Jews always say “We are going up to Jerusalem.”</i>"},
+          {"ref": "20", "translates": ["20"], "text": "The Merciful One, the Sanctified One, blessed and exalted,"},
+          {"ref": "21", "translates": ["21"], "text": "over a full cup of wine, the bounty of Adonoy."},
+          {"ref": "22", "translates": ["22"], "text": "<small>The Rock—from His [store] we have eaten—Bless [Him] my faithful ones. We have satisfied ourselves and we have left over [some food] according to the word of Adonoy.</small>"}
+        ]
+      }
+    }
+  ]
+}

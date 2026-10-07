@@ -46,3 +46,10 @@ app.*.map.json
 
 # Converter checkpoints and raw model responses (tool/corpus/convert.py)
 /corpus/work/
+
+# Handoff archives and the engine package's build output
+/staging/
+/packages/*/build/
+
+# The built site (tool/build_web.sh); deploy from a fresh build
+/web-dist/

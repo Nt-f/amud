@@ -1,10 +1,13 @@
 import 'dart:convert';
 
+import 'package:crypto/crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 
+import '../../core/providers.dart';
 import '../../core/settings.dart';
+import '../../core/storage.dart';
 import '../home/card_registry.dart';
 import '../home/cards/card_frame.dart';
 import '../home/today.dart';
@@ -53,6 +56,35 @@ String _contextJson(WidgetRef ref) {
 /// be waiting on the network) is still going.
 final _lastJsResult = <String, JsCardResult>{};
 
+/// Storage keys of the cards' saved results.
+const savedCardPrefix = 'jsCardLast:';
+
+/// A card's last result that had all its data, kept so the card still shows
+/// it offline or after a restart, with when it was made.
+typedef SavedCardResult = ({Object? value, DateTime at});
+
+String _scriptHash(String script) => sha1.convert(utf8.encode(script)).toString();
+
+/// The saved result of card [cardId], if it was made by [script].
+@visibleForTesting
+SavedCardResult? readSavedCard(Storage storage, String cardId, String script) =>
+    storage.readJson<SavedCardResult?>('$savedCardPrefix$cardId', (j) {
+      final m = (j as Map).cast<String, Object?>();
+      if (m['script'] != _scriptHash(script)) return null;
+      return (value: m['value'], at: DateTime.parse(m['at'] as String));
+    });
+
+/// Saves [value] as card [cardId]'s result: when it changes, and otherwise
+/// every ten minutes, so "last updated" stays close without writing every
+/// minute.
+@visibleForTesting
+Future<void> saveCard(Storage storage, String cardId, String script, Object? value, {DateTime? now}) async {
+  now ??= DateTime.now();
+  final saved = readSavedCard(storage, cardId, script);
+  if (saved != null && jsonEncode(saved.value) == jsonEncode(value) && now.difference(saved.at) < const Duration(minutes: 10)) return;
+  await storage.writeJson('$savedCardPrefix$cardId', {'script': _scriptHash(script), 'at': now.toIso8601String(), 'value': value});
+}
+
 class JsCard extends ConsumerWidget {
   final CardConfig cfg;
   const JsCard(this.cfg, {super.key});
@@ -62,18 +94,42 @@ class JsCard extends ConsumerWidget {
     final script = cfg.setting<String>('script', sampleJsCard);
     final result = ref.watch(_jsResultProvider((script, _contextJson(ref))));
     final last = _lastJsResult['${cfg.id}|$script'];
-    Widget show(JsCardResult r) =>
-        r.ok ? DeclarativeCard(spec: r.value, fallbackTitle: cfg.setting<String>('title', 'Custom card')) : _error(context, r.error!);
+    final storage = ref.read(storageProvider);
+    final saved = readSavedCard(storage, cfg.id, script);
+    final title = cfg.setting<String>('title', 'Custom card');
+    Widget show(JsCardResult r) => r.ok ? DeclarativeCard(spec: r.value, fallbackTitle: title) : _error(context, r.error!);
+    // What it showed when it last had its data, and since when.
+    Widget? showSaved() => saved == null
+        ? null
+        : DeclarativeCard(
+            spec: saved.value,
+            fallbackTitle: title,
+            note: context.tr('Not updated since {time}', {'time': _when(context, saved.at)}),
+          );
     return result.when(
-      loading: () => last != null
-          ? show(last)
-          : CardFrame(title: cfg.setting<String>('title', 'Custom card'), icon: Icons.code, child: const LinearProgressIndicator()),
-      error: (e, _) => _error(context, '$e'),
+      loading: () =>
+          (last != null ? show(last) : null) ??
+          showSaved() ??
+          CardFrame(title: title, icon: Icons.code, child: const LinearProgressIndicator()),
+      error: (e, _) => showSaved() ?? _error(context, '$e'),
       data: (r) {
-        _lastJsResult['${cfg.id}|$script'] = r;
-        return show(r);
+        if (r.ok && !r.fetchFailed) {
+          _lastJsResult['${cfg.id}|$script'] = r;
+          saveCard(storage, cfg.id, script, r.value);
+          return show(r);
+        }
+        // Offline, or the script failed: what it last showed, if anything.
+        return showSaved() ?? show(r);
       },
     );
+  }
+
+  /// "14:05" today, or the date and time before that.
+  static String _when(BuildContext context, DateTime at) {
+    final l = MaterialLocalizations.of(context);
+    final now = DateTime.now();
+    final time = l.formatTimeOfDay(TimeOfDay.fromDateTime(at), alwaysUse24HourFormat: MediaQuery.alwaysUse24HourFormatOf(context));
+    return DateUtils.isSameDay(at, now) ? time : '${l.formatShortMonthDay(at)} $time';
   }
 
   Widget _error(BuildContext context, String e) => CardFrame(
@@ -111,7 +167,10 @@ const _colors = <String, Color>{
 class DeclarativeCard extends ConsumerWidget {
   final Object? spec;
   final String fallbackTitle;
-  const DeclarativeCard({super.key, required this.spec, required this.fallbackTitle});
+
+  /// A small line under the card, such as when it was last updated.
+  final String? note;
+  const DeclarativeCard({super.key, required this.spec, required this.fallbackTitle, this.note});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -122,6 +181,15 @@ class DeclarativeCard extends ConsumerWidget {
       icon: _icons[s['icon']] ?? Icons.code,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         for (final c in (s['children'] as List?) ?? const []) _node(context, c, hebFont),
+        if (note != null)
+          Padding(
+            padding: const EdgeInsets.only(top: 6),
+            child: Row(children: [
+              Icon(Icons.cloud_off, size: 14, color: Theme.of(context).colorScheme.outline),
+              const SizedBox(width: 4),
+              Expanded(child: Text(note!, style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.outline))),
+            ]),
+          ),
       ]),
     );
   }

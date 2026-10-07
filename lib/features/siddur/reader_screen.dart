@@ -28,6 +28,7 @@ import 'reader_grouping.dart';
 import 'reader_typography.dart';
 import 'reading_marks.dart';
 import 'prayer_catalog.dart';
+import 'reader_choices.dart';
 import 'reader_jump.dart';
 import '../integrations/prayer_links.dart';
 import '../integrations/hachama_reader.dart';
@@ -52,7 +53,8 @@ final _resolvedProvider = FutureProvider.family<List<RenderItem>, _ReaderKey>((r
   return resolver.resolve(
     node,
     versions,
-    (svc) => ctxs.putIfAbsent(svc, () => DayContext.forService(daytime, svc, il: s.location.il, minhagim: s.minhagim)),
+    (svc) => ctxs.putIfAbsent(
+        svc, () => DayContext.forService(daytime, svc, il: s.location.il, minhagim: s.minhagim).withChoices(choiceAnswers(s.choices))),
     options: ResolveOptions(
       excluded: s.excludedDisplay,
       showNotes: s.showNotes,
@@ -86,6 +88,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
 
   /// Chazarah groups / notes the user toggled away from their default.
   final _toggledChazarah = <String>{};
+  final _toggledFolds = <String>{};
   final _toggledNotes = <String>{};
 
   final _selection = GlobalKey<SelectionAreaState>();
@@ -343,7 +346,11 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
               child: PageSwipe(
                 onNext: turnTo(around?.next, 'next'),
                 onPrevious: turnTo(around?.prev, 'previous'),
+                // Keep the text (and the place in it) while a changed setting or
+                // choice re-resolves it.
                 child: items.when(
+                  skipLoadingOnReload: true,
+                  skipLoadingOnRefresh: true,
                   loading: adaptiveProgress,
                   error: (e, st) => Center(child: Padding(padding: const EdgeInsets.all(24), child: Text('$e'))),
                   data: (_) => _listView(context, built!.rows, node),
@@ -441,7 +448,8 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
       while (n < flat.length && rubric(flat[n])) {
         n++;
       }
-      if (n < flat.length && flat[n].kind == SegmentKind.prayer && ts.align(paragraphRole(flat[n], opening: false)) == ParagraphAlign.center) {
+      if (n < flat.length && flat[n].kind == SegmentKind.prayer &&
+          (explicitAlign(flat[n].align) ?? ts.align(paragraphRole(flat[n], opening: false))) == ParagraphAlign.center) {
         _openers.add('center:${flat[k].key}');
       }
     }
@@ -477,16 +485,53 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         continue;
       }
       // Kiddush / Kadesh: one card rather than a run of separate rows.
-      final unit = _unitLeafOf(it);
+      final unit = _unitOf(it);
       if (unit != null) {
         final segs = <SegmentItem>[];
-        while (i < list.length && _unitLeafOf(list[i]) == unit) {
+        while (i < list.length && _unitOf(list[i])?.key == unit.key) {
           final x = list[i];
           if (x is SegmentItem) segs.add(x);
           if (x is ExcludedGroupItem) segs.addAll(x.items);
           i++;
         }
-        rows.add((c) => _UnitCard(node: unit, items: segs, layout: layout, openers: _openers));
+        rows.add((c) => _UnitCard(unit: unit, items: segs, layout: layout, openers: _openers));
+        continue;
+      }
+      if (it is SegmentItem && readerChoices[it.select] != null) {
+        final choice = readerChoices[it.select]!;
+        final picked = s.choices[choice.id] ?? choice.defaultKey;
+        rows.add((c) => _ChoiceRow(
+            choice: choice,
+            picked: picked,
+            onPick: (k) => ref.read(settingsProvider.notifier).update((x) => x.copyWith(choices: {...x.choices, choice.id: k}))));
+        i++;
+        continue;
+      }
+      // Lines the corpus folds into one titled row (the zimun, Al Naharot).
+      final fold = _foldOf(it);
+      if (fold != null) {
+        final group = <RenderItem>[];
+        while (i < list.length && _foldOf(list[i]) == fold) {
+          group.add(list[i]);
+          i++;
+        }
+        final key = 'fold:${group.first.key}';
+        final open = _toggledFolds.contains(key);
+        final first = group.first;
+        final he = first is SegmentItem ? first.foldHe : (first as ExcludedGroupItem).items.first.foldHe;
+        rows.add((c) => _FoldHeader(
+              title: context.prayerTitle(s, fold, he ?? fold),
+              open: open,
+              gap: s.typesetting ? TypeScale.of(s).controlGap : 6,
+              onTap: () => setState(() => open ? _toggledFolds.remove(key) : _toggledFolds.add(key)),
+            ));
+        if (open) {
+          for (final g in group) {
+            for (final w in _rowsFor(context, g, layout)) {
+              rows.add((c) => _ChazarahBody(child: w(c)));
+            }
+          }
+        }
         continue;
       }
       if (groupChazarah && _isChazarah(it)) {
@@ -504,10 +549,17 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
                   (g is HeadingItem ? g.node : (g as CollapsedSectionItem).node).he),
         ];
         if (titles.isEmpty && group.any((g) => g is SegmentItem && isChazarahSegment(g))) titles.add(context.tr('Modim DeRabbanan'));
-        // Birkas Kohanim printed inside the Amidah, or not said today.
-        if (titles.isEmpty &&
-            group.any((g) => g is SegmentItem && g.chazarah || g is ExcludedGroupItem && g.items.any((i) => i.chazarah))) {
-          titles.add(context.prayerTitle(s, 'Birkat Kohanim', 'ברכת כהנים'));
+        // Kedushah, or Birkas Kohanim, printed inside the Amidah (or not said today).
+        if (titles.isEmpty) {
+          final inGroup = [
+            for (final g in group)
+              if (g is SegmentItem) g else if (g is ExcludedGroupItem) ...g.items
+          ].where((x) => x.chazarah);
+          if (inGroup.any(_mentionsKedushah)) {
+            titles.add(context.prayerTitle(s, 'Kedushah', 'קדושה'));
+          } else if (inGroup.any((x) => RegExp(r'kohanim|priestly', caseSensitive: false).hasMatch(x.node.en))) {
+            titles.add(context.prayerTitle(s, 'Birkat Kohanim', 'ברכת כהנים'));
+          }
         }
         rows.add((c) => _ChazarahHeader(
               title: titles.toSet().join(' · '),
@@ -594,14 +646,31 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     return [for (var j = start; j <= last; j++) list[j] as SegmentItem];
   }
 
-  static SchemaNode? _unitLeafOf(RenderItem it) {
-    final n = switch (it) {
-      SegmentItem s => s.node,
-      ExcludedGroupItem g => g.items.first.node,
+  /// A run of lines shown as one card: Kiddush / Kadesh, or a Kaddish
+  /// wherever it is printed (by the lines' graph node, not their section).
+  static _Unit? _unitOf(RenderItem it) {
+    final seg = switch (it) {
+      SegmentItem s => s,
+      ExcludedGroupItem g => g.items.first,
       _ => null,
     };
-    return n != null && isUnitNode(n) ? n : null;
+    if (seg == null) return null;
+    final k = kaddishUnit(seg.graphNode);
+    if (k != null) return _Unit('kaddish:${seg.graphNode}', k.$1, k.$2, true);
+    return isUnitNode(seg.node) ? _Unit('leaf:${seg.node.id}', seg.node.en, seg.node.he, false) : null;
   }
+
+  /// A repetition line that is, or announces, the Kedushah.
+  static bool _mentionsKedushah(SegmentItem x) =>
+      RegExp(r'kedush|keduash', caseSensitive: false).hasMatch(x.node.en) ||
+      RegExp(r'kedush|keduash', caseSensitive: false).hasMatch(stripHtml(x.tr?.segment.html ?? '')) ||
+      (x.he?.segment.html ?? '').contains('קדושה');
+
+  static String? _foldOf(RenderItem it) => switch (it) {
+        SegmentItem s => s.fold,
+        ExcludedGroupItem g => g.items.map((i) => i.fold).toSet().length == 1 ? g.items.first.fold : null,
+        _ => null,
+      };
 
   static bool _isChazarah(RenderItem it) => switch (it) {
         HeadingItem h => h.level > 0 && isChazarahNode(h.node),
@@ -1054,6 +1123,13 @@ class _SegmentView extends ConsumerWidget {
       // the line, like Hallel's "מה אשיב").
       final paragraphs = <(String?, List<InlineSpan>, bool)>[(roles.isEmpty ? item.role : roles.first, [?lead], false)];
       var inOptions = false;
+      // A whole line said by the congregation is marked like the "Amen"s
+      // inside a chazzan's line: far side, "Cong.", not a label above it.
+      if (item.kind == SegmentKind.prayer && isResponse(item.role) && !excluded) {
+        paragraphs.first.$2.add(TextSpan(
+            text: '\u2068${readingRoleShort(context, item.role)}\u2069 ',
+            style: base.copyWith(fontSize: (base.fontSize ?? 16) * 0.55, color: colors.marker, fontWeight: FontWeight.w600)));
+      }
       for (final (i, r) in runs.indexed) {
         if (i > 0 && roles[i] != roles[i - 1]) {
           paragraphs.add((roles[i], [], false));
@@ -1116,9 +1192,11 @@ class _SegmentView extends ConsumerWidget {
         var spans = p.$2;
         // A section's first words, set large as in a printed siddur.
         if (first && rtl && role == ParagraphRole.opening) spans = enlargeOpening(spans, ts.openingWord, lineHeight: base.height ?? 1.65);
-        final align = centered && ts.print
+        final align = explicitAlign(item.align) != null
+            ? explicitAlign(item.align)!
+            : centered && ts.print
             ? ParagraphAlign.center
-            : isResponse(p.$1) && p.$1 != item.role
+            : isResponse(p.$1)
                 ? ParagraphAlign.end
                 : (rightAligned && !rtl ? ParagraphAlign.end : ts.align(role));
         final w = TypesetParagraph(text: TextSpan(children: spans), textDirection: dir, em: base.fontSize ?? 16, align: align, balance: ts.print);
@@ -1179,7 +1257,7 @@ class _SegmentView extends ConsumerWidget {
     if (heW == null && trW == null) return const SizedBox.shrink();
 
     final reading = item.kind == SegmentKind.prayer && !excluded
-        ? readingLabels(context, item, withRole: roleStart, undertone: isUndertone(item))
+        ? readingLabels(context, item, withRole: roleStart && !isResponse(item.role), undertone: isUndertone(item))
         : const <String>[];
     final content = reading.isEmpty
         ? body
@@ -1246,6 +1324,65 @@ class _ChazarahHeader extends StatelessWidget {
           TextSpan(text: label, style: const TextStyle(fontWeight: FontWeight.w700)),
           if (title.isNotEmpty) TextSpan(text: ' · $title'),
         ])),
+        trailing: Text(context.tr(open ? 'Hide' : 'Show')),
+      ),
+    );
+  }
+}
+
+/// A selector the corpus asks for (`select`): whose table one ate at.
+class _ChoiceRow extends StatelessWidget {
+  final ReaderChoice choice;
+  final String picked;
+  final ValueChanged<String> onPick;
+  const _ChoiceRow({required this.choice, required this.picked, required this.onPick});
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Column(children: [
+        if (choice.title != null)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 4),
+            child: Text(context.tr(choice.title!), style: theme.textTheme.labelMedium?.copyWith(color: theme.colorScheme.outline)),
+          ),
+        Wrap(
+          alignment: WrapAlignment.center,
+          spacing: 8,
+          runSpacing: 4,
+          children: [
+            for (final o in choice.options)
+              ChoiceChip(label: Text(context.tr(o.$2)), selected: picked == o.$1, onSelected: (_) => onPick(o.$1)),
+          ],
+        ),
+      ]),
+    );
+  }
+}
+
+/// The tappable row a corpus fold (zimun, Al Naharot) collapses into.
+class _FoldHeader extends StatelessWidget {
+  final String title;
+  final bool open;
+  final VoidCallback onTap;
+  final double gap;
+  const _FoldHeader({required this.title, required this.open, required this.onTap, this.gap = 6});
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = SiddurColors.of(context);
+    return Opacity(
+      opacity: open ? 1 : 0.8,
+      child: ReaderControl(
+        icon: Icons.unfold_more,
+        tone: colors.chazarah,
+        open: open,
+        attachedBelow: open,
+        gap: gap,
+        onTap: onTap,
+        title: Text(title, style: const TextStyle(fontWeight: FontWeight.w700)),
         trailing: Text(context.tr(open ? 'Hide' : 'Show')),
       ),
     );
@@ -1326,12 +1463,21 @@ class _NoteRow extends ConsumerWidget {
 
 /// Kiddush / Kadesh as a single card: the blessings in order, with the
 /// parts said only on some nights labelled inline rather than folded away.
+/// What a card is for: its key, titles and whether it is a Kaddish.
+class _Unit {
+  final String key;
+  final String en;
+  final String he;
+  final bool kaddish;
+  const _Unit(this.key, this.en, this.he, this.kaddish);
+}
+
 class _UnitCard extends ConsumerWidget {
-  final SchemaNode node;
+  final _Unit unit;
   final List<SegmentItem> items;
   final TextLayout layout;
   final Set<String> openers;
-  const _UnitCard({required this.node, required this.items, required this.layout, required this.openers});
+  const _UnitCard({required this.unit, required this.items, required this.layout, required this.openers});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -1343,30 +1489,47 @@ class _UnitCard extends ConsumerWidget {
       start++;
     }
     final body = items.sublist(start);
+    final accent = theme.colorScheme.primary;
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 8),
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+      margin: const EdgeInsets.symmetric(vertical: 10),
+      clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: theme.colorScheme.surfaceContainerLow,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: theme.colorScheme.outlineVariant),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: accent.withValues(alpha: 0.35)),
+        boxShadow: [BoxShadow(color: accent.withValues(alpha: 0.10), blurRadius: 14, offset: const Offset(0, 4))],
       ),
       child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-        Row(children: [
-          Icon(Icons.wine_bar_outlined, size: 18, color: theme.colorScheme.primary),
-          const SizedBox(width: 8),
-          Expanded(
-            child: PrayerTitleText(node.en, node.he,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                hebrewAtEnd: true,
-                enStyle: theme.textTheme.titleSmall?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.w700),
-                heStyle: TextStyle(fontSize: 18, color: theme.colorScheme.primary, fontWeight: FontWeight.w700)),
+        Container(
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(colors: [accent.withValues(alpha: 0.16), accent.withValues(alpha: 0.05)]),
+            border: Border(bottom: BorderSide(color: accent.withValues(alpha: 0.25))),
           ),
-        ]),
-        const Divider(height: 16),
-        for (var i = 0; i < body.length; i++)
-          if (!isRedundantRubric(body[i], i + 1 < body.length ? body[i + 1] : null, s))
-            _SegmentView(item: body[i], layout: layout, compact: true, opening: openers.contains(body[i].key), roleStart: openers.contains('role:${body[i].key}'), centered: openers.contains('center:${body[i].key}')),
+          child: Row(children: [
+            Container(
+              padding: const EdgeInsets.all(7),
+              decoration: BoxDecoration(shape: BoxShape.circle, color: accent.withValues(alpha: 0.15)),
+              child: Icon(unit.kaddish ? Icons.groups_outlined : Icons.wine_bar_outlined, size: 20, color: accent),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: PrayerTitleText(unit.en, unit.he,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  hebrewAtEnd: true,
+                  enStyle: theme.textTheme.titleMedium?.copyWith(color: accent, fontWeight: FontWeight.w700),
+                  heStyle: TextStyle(fontSize: 20, color: accent, fontWeight: FontWeight.w700)),
+            ),
+          ]),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 10, 16, 14),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            for (var i = 0; i < body.length; i++)
+              if (!isRedundantRubric(body[i], i + 1 < body.length ? body[i + 1] : null, s))
+                _SegmentView(item: body[i], layout: layout, compact: true, opening: openers.contains(body[i].key), roleStart: openers.contains('role:${body[i].key}'), centered: openers.contains('center:${body[i].key}')),
+          ]),
+        ),
       ]),
     );
   }

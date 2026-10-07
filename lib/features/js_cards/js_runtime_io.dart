@@ -30,7 +30,9 @@ class _IsolateJsRuntime implements JsCardRuntime {
         final r = await fetcher.fetch(m);
         toScript?.send(jsonEncode(r));
       } else if (m['type'] == 'done' && !done.isCompleted) {
-        done.complete(m['ok'] == true ? JsCardResult(m['value']) : JsCardResult(null, '${m['error']}'));
+        done.complete(m['ok'] == true
+            ? JsCardResult(m['value'], null, fetcher.failed)
+            : JsCardResult(null, '${m['error']}', fetcher.failed));
       }
     });
     final isolate = await Isolate.spawn(_run, (port.sendPort, wrapScript(script, contextJson)), errorsAreFatal: true);

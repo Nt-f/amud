@@ -35,6 +35,12 @@ final rulesProvider = FutureProvider<Map<String, dynamic>>((ref) async {
   return jsonDecode(raw) as Map<String, dynamic>;
 });
 
+/// The app's short notes (concise notes), from assets/rules/notes.json.
+final curatedNotesProvider = FutureProvider<Map<String, dynamic>>((ref) async {
+  final raw = await rootBundle.loadString('assets/rules/notes.json');
+  return jsonDecode(raw) as Map<String, dynamic>;
+});
+
 /// User-authored custom section rules (Settings → Advanced).
 class CustomRulesNotifier extends Notifier<List<Map<String, Object?>>> {
   @override
@@ -76,8 +82,13 @@ final resolverProvider = FutureProvider.family<SiddurResolver, String>((ref, boo
   final rules = await ref.watch(rulesProvider.future);
   final custom = ref.watch(customRulesProvider);
   final corpus = await ref.watch(corpusProvider(bookTitle).future);
+  final notes = await ref.watch(curatedNotesProvider.future);
   final bookRules = (rules[bookTitle] as Map<String, dynamic>?) ?? const {};
-  return SiddurResolver().withOverrides(bookRules).withOverrides({'sections': custom}).withCorpus(corpus);
+  return SiddurResolver()
+      .withOverrides(notes)
+      .withOverrides(bookRules)
+      .withOverrides({'sections': custom})
+      .withCorpus(corpus);
 });
 
 /// Ticks every 30 seconds (and immediately) so countdowns stay fresh.

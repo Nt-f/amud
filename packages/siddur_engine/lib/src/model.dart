@@ -90,6 +90,9 @@ class VersionInfo {
 
   bool get rtl => direction == 'rtl';
 
+  /// Amud's own text (see corpus.dart), not a Sefaria version.
+  bool get isCorpus => file.startsWith('corpus:');
+
   /// A redistributable license (public domain / Creative Commons).
   bool get openLicense => const {
         'public domain',
