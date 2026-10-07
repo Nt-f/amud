@@ -34,9 +34,26 @@ class SettingsScreen extends ConsumerWidget {
     void minhag(Minhagim Function(Minhagim) f) => n.update((x) => x.copyWith(minhagim: f(x.minhagim)));
 
     final query = SearchQuery(ref.watch(pageSearchProvider('settings')));
+    // Sections fold to their headers; which are open is remembered.
+    AdaptiveSection section(String id, IconData icon, String header, List<Widget> children) => AdaptiveSection(
+          header: context.tr(header),
+          icon: icon,
+          expanded: s.expandedSettings.contains(id),
+          onExpandedChanged: (v) => set((x) => x.copyWith(
+              expandedSettings: v ? [...x.expandedSettings, id] : [for (final e in x.expandedSettings) if (e != id) e])),
+          children: children,
+        );
+    final allOpen = _sections.every(s.expandedSettings.contains);
     return Scaffold(
       appBar: AppBar(
         title: Text(context.tr('Settings')),
+        actions: [
+          IconButton(
+            tooltip: context.tr(allOpen ? 'Collapse all' : 'Expand all'),
+            icon: Icon(allOpen ? Icons.unfold_less : Icons.unfold_more),
+            onPressed: () => set((x) => x.copyWith(expandedSettings: allOpen ? const [] : _sections)),
+          ),
+        ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(PageSearchBar.height),
           child: PageSearchBar(page: 'settings', hint: context.tr('Search settings')),
@@ -45,7 +62,7 @@ class SettingsScreen extends ConsumerWidget {
       body: ListFilter(
         query: query,
         child: ListView(padding: const EdgeInsets.only(bottom: 32), children: [
-        AdaptiveSection(header: context.tr('Location'), children: [
+        section('location', Icons.place_outlined, 'Location', [
           AdaptiveNavTile(
             icon: Icons.place_outlined,
             title: s.location.name,
@@ -68,7 +85,7 @@ class SettingsScreen extends ConsumerWidget {
                     il: v))),
           ),
         ]),
-        AdaptiveSection(header: context.tr('Zmanim'), children: [
+        section('zmanim', Icons.wb_twilight_outlined, 'Zmanim', [
           AdaptiveNavTile(
             icon: Icons.rule,
             title: context.tr('Default opinion'),
@@ -129,7 +146,7 @@ class SettingsScreen extends ConsumerWidget {
             },
           ),
         ]),
-        AdaptiveSection(header: context.tr('Siddur'), children: [
+        section('siddur', Icons.menu_book_outlined, 'Siddur', [
           AdaptiveNavTile(
             icon: Icons.menu_book,
             title: context.tr('Default siddur'),
@@ -165,16 +182,6 @@ class SettingsScreen extends ConsumerWidget {
             },
           ),
           AdaptiveNavTile(
-            icon: Icons.sticky_note_2_outlined,
-            title: context.tr('Instructions & notes language'),
-            subtitle: context.tr(_notesLabel(s.notesLanguage)),
-            onTap: () async {
-              final v = await showAdaptivePicker(context,
-                  title: context.tr('Instructions & notes'), selected: s.notesLanguage, options: [for (final l in NotesLanguage.values) (l, context.tr(_notesLabel(l)))]);
-              if (v != null) set((x) => x.copyWith(notesLanguage: v));
-            },
-          ),
-          AdaptiveNavTile(
             icon: Icons.title,
             title: context.tr('Prayer title language'),
             subtitle: context.tr(titleLanguageLabel(s.titleLanguage)),
@@ -198,6 +205,23 @@ class SettingsScreen extends ConsumerWidget {
               if (v != null) set((x) => x.copyWith(excludedDisplay: v));
             },
           ),
+          AdaptiveSwitchTile(
+              title: context.tr('Collapse Chazarat HaShatz'),
+              subtitle: context.tr("Kedusha, Birkat Kohanim and Modim DeRabbanan fold into a row"),
+              value: s.collapseChazarah,
+              onChanged: (v) => set((x) => x.copyWith(collapseChazarah: v))),
+        ]),
+        section('notes', Icons.sticky_note_2_outlined, 'Halachic notes', [
+          AdaptiveNavTile(
+            icon: Icons.sticky_note_2_outlined,
+            title: context.tr('Instructions & notes language'),
+            subtitle: context.tr(_notesLabel(s.notesLanguage)),
+            onTap: () async {
+              final v = await showAdaptivePicker(context,
+                  title: context.tr('Instructions & notes'), selected: s.notesLanguage, options: [for (final l in NotesLanguage.values) (l, context.tr(_notesLabel(l)))]);
+              if (v != null) set((x) => x.copyWith(notesLanguage: v));
+            },
+          ),
           AdaptiveSwitchTile(title: context.tr('Show halachic notes'), value: s.showNotes, onChanged: (v) => set((x) => x.copyWith(showNotes: v))),
           if (s.showNotes)
             AdaptiveSwitchTile(
@@ -211,13 +235,8 @@ class SettingsScreen extends ConsumerWidget {
                 subtitle: context.tr('Show a one-line note; tap to read it'),
                 value: s.collapseNotes,
                 onChanged: (v) => set((x) => x.copyWith(collapseNotes: v))),
-          AdaptiveSwitchTile(
-              title: context.tr('Collapse Chazarat HaShatz'),
-              subtitle: context.tr("Kedusha, Birkat Kohanim and Modim DeRabbanan fold into a row"),
-              value: s.collapseChazarah,
-              onChanged: (v) => set((x) => x.copyWith(collapseChazarah: v))),
         ]),
-        AdaptiveSection(header: context.tr('Customs (minhagim)'), children: [
+        section('customs', Icons.groups_outlined, 'Customs (minhagim)', [
           AdaptiveSwitchTile(title: context.tr('Praying with a minyan'), value: s.minhagim.withMinyan, onChanged: (v) => minhag((m) => m.copyWith(withMinyan: v))),
           AdaptiveSwitchTile(
               title: context.tr('LeDavid through Shmini Atzeret'),
@@ -241,7 +260,7 @@ class SettingsScreen extends ConsumerWidget {
               onChanged: (v) => minhag((m) => m.copyWith(tefillinCholHamoed: v))),
           AdaptiveSwitchTile(title: context.tr('Mourner (aveil)'), value: s.minhagim.mourner, onChanged: (v) => minhag((m) => m.copyWith(mourner: v))),
         ]),
-        AdaptiveSection(header: context.tr('Appearance'), children: [
+        section('appearance', Icons.palette_outlined, 'Appearance', [
           AdaptiveNavTile(
             icon: Icons.language,
             title: context.tr('Interface language'),
@@ -310,14 +329,18 @@ class SettingsScreen extends ConsumerWidget {
             subtitle: '${fontLabel(s.hebrewFont, fonts)} · ${context.tr('{n} fonts to preview', {'n': fontCatalog.length + fonts.length})}',
             onTap: () => context.push('/settings/fonts'),
           ),
+        ]),
+        section('navigation', Icons.view_week_outlined, 'Home & navigation', [
           AdaptiveNavTile(
             icon: Icons.view_week_outlined,
             title: context.tr('Navigation bar'),
-            subtitle: [for (final id in s.navTabs) context.tr(navTabs.firstWhere((t) => t.$1 == id).$5)].join(' · '),
+            subtitle: [for (final id in s.navTabs) ?NavItem.of(id)?.label].map(context.tr).join(' · '),
             onTap: () => context.push('/settings/tabs'),
           ),
+          AdaptiveNavTile(icon: Icons.widgets_outlined, title: context.tr('Card gallery'), onTap: () => context.push('/settings/cards')),
+          AdaptiveNavTile(icon: Icons.link, title: context.tr('Widgets, shortcuts & voice'), onTap: () => context.push('/settings/integrations')),
         ]),
-        AdaptiveSection(header: context.tr('Reading & device'), children: [
+        section('reading', Icons.chrome_reader_mode_outlined, 'Reading & device', [
           AdaptiveSwitchTile(title: context.tr('Keep screen on while reading'), value: s.keepReaderAwake,
             onChanged: (v) => set((x) => x.copyWith(keepReaderAwake: v))),
           AdaptiveSwitchTile(title: context.tr('Full-screen reader'), subtitle: context.tr('Hide the phone status and navigation bars while reading'), value: s.fullscreenReader,
@@ -352,7 +375,7 @@ class SettingsScreen extends ConsumerWidget {
           AdaptiveSwitchTile(title: context.tr('Omer reminder badge'), value: s.omerBadge,
             onChanged: (v) => set((x) => x.copyWith(omerBadge: v))),
         ]),
-        AdaptiveSection(header: context.tr('Notifications & learning'), children: [
+        section('notifications', Icons.notifications_outlined, 'Notifications & learning', [
           AdaptiveNavTile(icon: Icons.notifications_active_outlined, title: context.tr('Zman alerts'), onTap: () => context.push('/alerts')),
           AdaptiveSwitchTile(
             title: context.tr('Exact alarms (Android)'),
@@ -370,7 +393,7 @@ class SettingsScreen extends ConsumerWidget {
             onChanged: (v) async { if (v && !await ref.read(notificationBackendProvider).requestPermission()) return; set((x) => x.copyWith(hachamaReminder: v)); }),
           AdaptiveNavTile(icon: Icons.menu_book_outlined, title: context.tr('Daily learning'), onTap: () => context.push('/learning')),
         ]),
-        AdaptiveSection(header: context.tr('Offline'), children: [
+        section('offline', Icons.offline_pin_outlined, 'Offline', [
           AdaptiveNavTile(
             icon: Icons.offline_pin_outlined,
             title: context.tr('Offline & storage'),
@@ -378,10 +401,7 @@ class SettingsScreen extends ConsumerWidget {
             onTap: () => context.push('/settings/offline'),
           ),
         ]),
-        AdaptiveSection(header: context.tr('Advanced'), children: [
-          AdaptiveNavTile(icon: Icons.widgets_outlined, title: context.tr('Card gallery'), onTap: () => context.push('/settings/cards')),
-          AdaptiveNavTile(icon: Icons.link, title: context.tr('Widgets, shortcuts & voice'), onTap: () => context.push('/settings/integrations')),
-
+        section('advanced', Icons.tune, 'Advanced', [
           AdaptiveSwitchTile(
             title: context.tr('Share anonymous usage'),
             subtitle: context.tr('Which screens, features and prayers or texts are opened, to improve Amud. Nothing you type, no names, no exact location.'),
@@ -395,7 +415,7 @@ class SettingsScreen extends ConsumerWidget {
             onTap: () => context.push('/settings/rules'),
           ),
         ]),
-        AdaptiveSection(header: context.tr('About'), children: [
+        section('about', Icons.info_outline, 'About', [
           if (updatesSupported || playUpdates)
             AdaptiveNavTile(
               icon: Icons.system_update_outlined,
@@ -544,6 +564,9 @@ class _CustomRulesScreenState extends ConsumerState<CustomRulesScreen> {
     );
   }
 }
+
+/// The ids of the Settings sections, for opening or closing them all.
+const _sections = ['location', 'zmanim', 'siddur', 'notes', 'customs', 'appearance', 'navigation', 'reading', 'notifications', 'offline', 'advanced', 'about'];
 
 String _layoutLabel(TextLayout l) => switch (l) {
       TextLayout.hebrewOnly => 'Hebrew only',

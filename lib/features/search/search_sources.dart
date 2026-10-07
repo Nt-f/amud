@@ -153,20 +153,7 @@ List<(String, List<SearchHit>)> siddurResults(BuildContext context, WidgetRef re
       open: (_) => ref.read(searchAllSiddurimProvider.notifier).state = !all,
     ));
   }
-  final chapter = tehillimChapter(q.raw);
   return [
-    if (chapter != null)
-      (
-        context.tr('Tehillim'),
-        [
-          SearchHit(
-            icon: Icons.auto_stories_outlined,
-            title: '${context.tr('Tehillim')} $chapter',
-            subtitle: 'תהלים ${gematriya(chapter)}',
-            open: (c) => c.go(tehillimReadPath(Portion('Tehillim $chapter', 'תהלים ${gematriya(chapter)}', [Passage(chapter)]))),
-          ),
-        ]
-      ),
     (context.tr('In {book}', {'book': context.prayerTitle(s, defaultBook ?? '', defaultBook ?? '')}), mine.take(40).toList()),
     (context.tr('Other siddurim'), [...others.where((h) => h.score < 1 << 30).take(all ? 60 : 20), ...others.where((h) => h.score >= 1 << 30)]),
   ];
@@ -209,6 +196,17 @@ List<(String, List<SearchHit>)> torahResults(BuildContext context, WidgetRef ref
   final books = <SearchHit>[];
   final simanim = <SearchHit>[];
   final text = <SearchHit>[];
+  final chapter = only == null ? tehillimChapter(q.raw) : null;
+  if (only == null) {
+    if (q.score(['Tehillim', 'תהלים', 'Psalms']) case final score?) {
+      books.add(SearchHit(
+        icon: Icons.auto_stories_outlined,
+        title: heUi ? 'תהלים' : context.tr('Tehillim'),
+        score: score,
+        open: (ctx) => ctx.go('/torah/tehillim'),
+      ));
+    }
+  }
   for (final c in torahCategories) {
     for (final w in c.works) {
       if (only != null && w.id != only) continue;
@@ -263,6 +261,18 @@ List<(String, List<SearchHit>)> torahResults(BuildContext context, WidgetRef ref
     }
   }
   return [
+    if (chapter != null)
+      (
+        context.tr('Tehillim'),
+        [
+          SearchHit(
+            icon: Icons.auto_stories_outlined,
+            title: '${context.tr('Tehillim')} $chapter',
+            subtitle: 'תהלים ${gematriya(chapter)}',
+            open: (c) => c.go(tehillimReadPath(Portion('Tehillim $chapter', 'תהלים ${gematriya(chapter)}', [Passage(chapter)]))),
+          ),
+        ]
+      ),
     if (only == null) (context.tr('Books'), books),
     (context.tr('Simanim'), simanim.take(40).toList()),
     (context.tr('In the text'), text),
@@ -297,7 +307,7 @@ List<SearchHit> zmanimResults(BuildContext context, WidgetRef ref, SearchQuery q
 /// The app's own screens, with words to find them by.
 const _pages = [
   ('Holidays & Seasons', 'חגים ועונות', Icons.event_note, '/siddur/seasons', ['hoshanot', 'selichot', 'chanukah', 'lulav', 'hakafot']),
-  ('Tehillim', 'תהלים', Icons.auto_stories_outlined, '/siddur/tehillim', ['psalms']),
+  ('Tehillim', 'תהלים', Icons.auto_stories_outlined, '/torah/tehillim', ['psalms']),
   ('Daily learning', 'לימוד יומי', Icons.school_outlined, '/learning', ['daf yomi', 'mishna', 'rambam']),
   ('Calendar', 'לוח שנה', Icons.calendar_month, '/calendar', ['luach', 'holidays', 'dates']),
   ('Zman alerts', 'התראות זמנים', Icons.notifications_active_outlined, '/alerts', ['reminders', 'notifications']),

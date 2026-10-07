@@ -11,9 +11,6 @@ import '../../core/search.dart';
 import '../../core/settings.dart';
 import '../../core/theme.dart';
 import '../../core/titles.dart';
-import '../tehillim/tehillim_data.dart';
-import '../tehillim/tehillim_progress.dart';
-import '../tehillim/tehillim_reader.dart';
 import '../search/search_sources.dart';
 import 'prayer_catalog.dart';
 import 'reader_screen.dart';
@@ -77,7 +74,6 @@ class LibraryScreen extends ConsumerWidget {
             : ListView(padding: const EdgeInsets.only(bottom: 32), children: [
           if (defaultBook.hasValue) _TodayServices(book: defaultBook.value!),
           const _SeasonsCard(),
-          const _TehillimCard(),
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 16, 20, 8),
             child: Text(context.tr('Siddurim'), style: theme.textTheme.titleMedium),
@@ -432,49 +428,6 @@ class _SeasonsCard extends ConsumerWidget {
                 ]),
               ),
               Icon(Icons.chevron_right, color: theme.colorScheme.outline),
-            ]),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _TehillimCard extends ConsumerWidget {
-  const _TehillimCard();
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final hd = ref.watch(readerDaytimeDateProvider);
-    final today = monthlyPortion(hd);
-    final read = ref.watch(tehillimProgressProvider.select((x) => x.read.length));
-    final hebFont = ref.watch(settingsProvider.select((s) => s.hebrewFont));
-    final theme = Theme.of(context);
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
-      child: Card(
-        clipBehavior: Clip.antiAlias,
-        child: InkWell(
-          onTap: () => context.push('/siddur/tehillim'),
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Row(children: [
-              Text('תהלים', style: TextStyle(fontFamily: hebFont, fontSize: 30, fontWeight: FontWeight.w700, color: theme.colorScheme.primary)),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(context.tr('Tehillim'), style: theme.textTheme.titleMedium),
-                  Text(
-                    '${context.tr('Today')}: ${today.rangeLabel} · ${context.tr('{n} of 150 chapters read this cycle', {'n': read})}',
-                    style: theme.textTheme.bodySmall,
-                  ),
-                ]),
-              ),
-              IconButton.filledTonal(
-                tooltip: context.tr("Read today's Tehillim"),
-                icon: const Icon(Icons.menu_book),
-                onPressed: () => context.push(tehillimReadPath(today)),
-              ),
             ]),
           ),
         ),
