@@ -1,7 +1,7 @@
 name: amud
 description: "Offline, interactive siddur with Sefaria texts, a full Hebcal port, zmanim, notifications and a customizable home screen."
 publish_to: 'none'
-version: 0.9.0+1
+version: 0.9.0+2
 
 environment:
   sdk: ^3.11.0

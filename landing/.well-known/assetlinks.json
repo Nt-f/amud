@@ -1,0 +1,16 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "page.amud",
+      "sha256_cert_fingerprints": [
+        "90:49:EF:4B:1B:75:ED:B9:8B:4E:AE:A5:25:C9:CC:77:14:38:94:5C:42:7D:AC:7E:63:22:33:74:52:5B:47:BA",
+        "76:FD:03:46:35:CE:C3:E9:DE:A1:09:71:CF:D3:29:65:D0:FD:99:A0:F1:F6:7F:58:73:4F:8B:F0:58:B0:59:36",
+        "16:83:D6:6A:7D:03:BB:3F:B1:65:64:E6:60:34:70:C3:5E:15:15:5A:DB:B0:69:2C:C6:61:F9:AA:6D:4C:91:8B"
+      ]
+    }
+  }
+]
