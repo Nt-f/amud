@@ -120,9 +120,10 @@
           {"ref": "20", "kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵה, וְיַצְמַח פֻּרְקָנֵה, וִיקָרֵב מְשִׁיחֵהּ. בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן."},
           {"ref": "21", "parts": [
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא. יִתְבָּרַךְ.</b> וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " בְּרִיךְ הוּא. לְעֵלָּא ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small> בעשי\"ת</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " בְּרִיךְ הוּא. לְעֵלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small> בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (וּלְעֵלָּא מִכָּל)"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " דַּאֲמִירָן בְּעָלְמָא,"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " וְאִמְרוּ אָמֵן: "}
@@ -353,25 +354,26 @@
           {"ref": "1", "kind": "prayer", "role": "individual", "voice": "silent", "text": "<small>אֲדֹנָי, שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ:</small> "},
           {"ref": "2", "kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, אֱלֹהֵי אַבְרָהָם, אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב. הָאֵל הַגָּדוֹל, הַגִּבּוֹר וְהַנּוֹרָא, אֵל עֶלְיוֹן, גּוֹמֵל חֲסָדִים טוֹבִים, וְקוֹנֵה הַכֹּל, וְזוֹכֵר חַסְדֵי אָבוֹת, וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ, בְּאַהֲבָה.  "},
           {"ref": "3", "parts": [
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "text": "<small>בשבת שובה:</small>"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Remember us for life,", "text": " <b><small>זָכְרֵנוּ לְחַיִּים,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "King Who desires life,", "text": " מֶלֶךְ חָפֵץ בַּחַיִּים,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Inscribe us in the Book of Life,", "text": " כָּתְבֵנוּ בְּסֵפֶר חַיִּים,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "For Your sake, Living God.", "text": " לְמַעַנְךָ אֱלֹהִים חַיִּים.</small></b>  "}
+            {"kind": "instruction", "when": "shabbatShuva", "en": "On Shabbat Shuva:", "text": "<small>בשבת שובה:</small>"},
+            {"kind": "prayer", "when": "shabbatShuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Remember us for life,", "text": " <b><small>זָכְרֵנוּ לְחַיִּים,"},
+            {"kind": "prayer", "when": "shabbatShuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "King Who desires life,", "text": " מֶלֶךְ חָפֵץ בַּחַיִּים,"},
+            {"kind": "prayer", "when": "shabbatShuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Inscribe us in the Book of Life,", "text": " כָּתְבֵנוּ בְּסֵפֶר חַיִּים,"},
+            {"kind": "prayer", "when": "shabbatShuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "For Your sake, Living God.", "text": " לְמַעַנְךָ אֱלֹהִים חַיִּים."},
+            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "For Your sake, Living God.", "text": "</small></b>  "}
           ]},
           {"ref": "4", "kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "text": "<b>מֶלֶךְ</b> עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן, בָּרוּךְ אַתָּה יְהֹוָה, מָגֵן אַבְרָהָם: "},
           {"ref": "5", "kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "text": "<b>אַתָּה</b> גִּבּוֹר לְעוֹלָם, אֲדֹנָי. מְחַיֵּה מֵתִים אַתָּה, רַב לְהוֹשִׁיעַ.  "},
           {"ref": "6", "parts": [
-            {"kind": "instruction", "en": "In summer:", "text": "<small>בקיץ:</small>"},
-            {"kind": "prayer", "alt": "geshem", "role": "individual", "voice": "silent", "amidah": "silent", "en": "He causes the dew to descend.", "text": " מוֹרִיד הַטָּל. "},
-            {"kind": "instruction", "en": "In winter:", "text": "<small>בחורף:</small>"},
-            {"kind": "prayer", "alt": "geshem", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Causer of the wind to blow and of the rain to fall.", "text": " מַשִּׁיב הָרוּחַ וּמוֹרִיד הַגֶּשֶׁם."}
+            {"kind": "instruction", "when": "!mashivHaruach", "en": "In summer:", "text": "<small>בקיץ:</small>"},
+            {"kind": "prayer", "when": "!mashivHaruach", "alt": "geshem", "role": "individual", "voice": "silent", "amidah": "silent", "en": "He causes the dew to descend.", "text": " מוֹרִיד הַטָּל. "},
+            {"kind": "instruction", "when": "mashivHaruach", "en": "In winter:", "text": "<small>בחורף:</small>"},
+            {"kind": "prayer", "when": "mashivHaruach", "alt": "geshem", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Causer of the wind to blow and of the rain to fall.", "text": " מַשִּׁיב הָרוּחַ וּמוֹרִיד הַגֶּשֶׁם."}
           ]},
           {"ref": "7", "kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "text": "<b>מְכַלְכֵּל</b> חַיִּים בְּחֶסֶד, מְחַיֵּה מֵתִים בְּרַחֲמִים רַבִּים, סוֹמֵךְ נוֹפְלִים, וְרוֹפֵא חוֹלִים, וּמַתִּיר אֲסוּרִים, וּמְקַיֵּם אֱמוּנָתוֹ לִישֵׁנֵי עָפָר. מִי כָמוֹךָ בַּעַל גְּבוּרוֹת, וּמִי דוֹמֶה לָּךְ, מֶלֶךְ מֵמִית וּמְחַיֶּה וּמַצְמִיחַ יְשׁוּעָה.  "},
           {"ref": "8", "parts": [
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "text": "<small>בשבת שובה:</small>"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Who is like You, merciful Father,", "text": " <b><small>מִי כָמוֹךָ אָב הָרַחֲמָן,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Who remembers His creatures for life.", "text": " זוֹכֵר יְצוּרָיו בְּרַחֲמִים לְחַיִּים </small></b>  "}
+            {"kind": "instruction", "when": "shabbatShuva", "en": "On Shabbat Shuva:", "text": "<small>בשבת שובה:</small>"},
+            {"kind": "prayer", "when": "shabbatShuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Who is like You, merciful Father,", "text": " <b><small>מִי כָמוֹךָ אָב הָרַחֲמָן,"},
+            {"kind": "prayer", "when": "shabbatShuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Who remembers His creatures for life.", "text": " זוֹכֵר יְצוּרָיו בְּרַחֲמִים לְחַיִּים </small></b>  "}
           ]},
           {"ref": "9", "kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "text": "<b>וְנֶאֱמָן</b> אַתָּה לְהַחֲיוֹת מֵתִים. בָּרוּךְ אַתָּה יְהֹוָה, מְחַיֵּה הַמֵּתִים: "},
           {"ref": "10", "parts": [
@@ -379,8 +381,9 @@
             {"kind": "prayer", "text": " וְשִׁמְךָ קָדוֹשׁ,"},
             {"kind": "prayer", "text": " וּקְדוֹשִׁים בְּכָל יוֹם יְהַלְלוּךָ סֶּלָה. כִּי אֵל מֶלֶךְ גָדוֹל וְקָדוֹשׁ אָתָּה. בָּרוּךְ אַתָּה יְהֹוָה,"},
             {"kind": "prayer", "text": " הָאֵל "},
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "text": "<small> <small>(בשבת שובה:</small>"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "the King,", "text": " <b><small>הַמֶּלֶךְ)</small>"},
+            {"kind": "instruction", "when": "shabbatShuva", "en": "On Shabbat Shuva:", "text": "<small> <small>בשבת שובה:</small>"},
+            {"kind": "prayer", "when": "shabbatShuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "the King,", "text": " <b><small>(הַמֶּלֶךְ)"},
+            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "the King,", "text": "</small>"},
             {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "text": " </b></small> הַקָּדוֹשׁ:  "}
           ]},
           {"ref": "11", "kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "You have sanctified the seventh day", "text": "<b>אַתָּה קִדַּשְׁתָּ</b> אֶת יוֹם הַשְּׁבִיעִי לִשְׁמֶךָ, תַּכְלִית מַעֲשֵׂה שָׁמַיִם וָאָרֶץ, וּבֵרַכְתּוֹ מִכָּל הַיָּמִים, וְקִדַּשְׁתּוֹ מִכָּל הַזְּמַנִּים, וְכֵן כָּתוּב בְּתוֹרָתֶךָ: "},
@@ -421,8 +424,9 @@
           ]},
           {"ref": "28", "kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "text": "<b>וְעַל</b> כֻּלָּם יִתְבָּרַךְ וְיִתְרוֹמַם וְיִתְנַשֵּׂא שִׁמְךָ מַלְכֵּנוּ תָמִיד לְעוֹלָם וָעֶד."},
           {"ref": "29", "parts": [
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "text": "<small>בעשרת ימי תשובה:</small>"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Inscribe for a good life all the children of Your covenant.", "text": " <b><small>וּכְתֹב לְחַיִּים טוֹבִים כָּל בְּנֵי בְרִיתֶךָ.</small></b>"}
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>בעשרת ימי תשובה:</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Inscribe for a good life all the children of Your covenant.", "text": " <b><small>וּכְתֹב לְחַיִּים טוֹבִים כָּל בְּנֵי בְרִיתֶךָ."},
+            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Inscribe for a good life all the children of Your covenant.", "text": "</small></b>"}
           ]},
           {"ref": "30", "kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "text": "<b>וְכֹל</b> הַחַיִּים יוֹדוּךָ סֶּלָה: וִיהַלְלוּ וִיבָרְכוּ אֶת שִׁמְךָ הַגָּדוֹל, בֶּאֱמֶת, לְעוֹלָם כִּי טוֹב, הָאֵל יְשׁוּעָתֵנוּ וְעֶזְרָתֵנוּ סֶלָה, הָאֵל הַטּוֹב. בָּרוּךְ אַתָּה יְהֹוָה, הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת: "},
           {"ref": "31", "parts": [
@@ -444,14 +448,15 @@
             {"kind": "prayer", "text": " בְּרֹב עֹז וְשָׁלוֹם. "}
           ]},
           {"ref": "32", "parts": [
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "text": "<small>בעשרת ימי תשובה:</small>"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "In the Book of Life,", "text": " <b><small>בְּסֵפֶר חַיִּים,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Blessing and peace,", "text": " בְּרָכָה וְשָׁלוֹם,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "And abundant maintenance, good decrees,", "text": " וּפַרְנָסָה טוֹבָה וּגְזֵרוֹת טוֹבוֹת,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Salvations and consolations,", "text": " יְשׁוּעוֹת וְנֶחָמוֹת,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "May we be remembered and inscribed before You,", "text": " נִזָּכֵר וְנִכָּתֵב לְפָנֶיךָ,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "We and all Your people, the House of Israel,", "text": " אֲנַחְנוּ וְכָל עַמְּךָ בֵּית יִשְׂרָאֵל,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "For a good life and peace.", "text": " לְחַיִּים טוֹבִים וּלְשָׁלוֹם.</small></b>  "}
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>בעשרת ימי תשובה:</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "In the Book of Life,", "text": " <b><small>בְּסֵפֶר חַיִּים,"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Blessing and peace,", "text": " בְּרָכָה וְשָׁלוֹם,"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "And abundant maintenance, good decrees,", "text": " וּפַרְנָסָה טוֹבָה וּגְזֵרוֹת טוֹבוֹת,"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Salvations and consolations,", "text": " יְשׁוּעוֹת וְנֶחָמוֹת,"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "May we be remembered and inscribed before You,", "text": " נִזָּכֵר וְנִכָּתֵב לְפָנֶיךָ,"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "We and all Your people, the House of Israel,", "text": " אֲנַחְנוּ וְכָל עַמְּךָ בֵּית יִשְׂרָאֵל,"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "For a good life and peace.", "text": " לְחַיִּים טוֹבִים וּלְשָׁלוֹם."},
+            {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "For a good life and peace.", "text": "</small></b>  "}
           ]},
           {"ref": "33", "kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, הַמְּבָרֵךְ אֶת עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם: "},
           {"ref": "34", "kind": "prayer", "role": "individual", "voice": "silent", "text": "<b>יִהְיוּ לְרָצוֹן</b> אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהֹוָה צוּרִי וְגֹאֲלִי:"},
@@ -594,27 +599,27 @@
             {"kind": "prayer", "text": " וִיקָרֵב מְשִׁיחֵהּ. בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,"},
             {"kind": "prayer", "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן. <b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ.</b> וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": " בְּרִיךְ הוּא. לְעֵלָּא ("},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": " בְּרִיךְ הוּא. לְעֵלָּא "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "text": " וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "text": " (וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
             {"kind": "prayer", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
             {"kind": "prayer", "text": " דַּאֲמִירָן בְּעָלְמָא,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן: "}
           ]},
           {"ref": "8", "kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>תִּתְקַבֵּל</b> צְלוֹתְהוֹן וּבָעוּתְהוֹן דְכָל בֵּית יִשְׂרָאֵל קֳדָם אֲבוּהוֹן דִּי בִשְׁמַיָּא, וְאִמְרוּ אָמֵן:  "},
           {"ref": "9", "parts": [
-            {"kind": "prayer", "text": "<b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים טוֹבִים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: <b>עֹשֶׂה</b> שָׁלוֹם  ("},
+            {"kind": "prayer", "text": "<b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים טוֹבִים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: <b>עֹשֶׂה</b> שָׁלוֹם  "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " <b>הַשָּׁלוֹם</b>)  בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:  "}
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " <b>(הַשָּׁלוֹם</b>)  בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:  "}
           ]},
           {"ref": "10", "kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "text": "<b>מִזְמוֹר לְדָוִד</b> יְהֹוָה רֹעִי לֹא אֶחְסָר: בִּנְאוֹת דֶּשֶׁא יַרְבִּיצֵנִי עַל מֵי מְנֻחוֹת יְנַהֲלֵנִי: נַפְשִׁי יְשׁוֹבֵב יַנְחֵנִי בְמַעְגְּלֵי צֶדֶק לְמַעַן שְׁמוֹ: גַּם כִּי אֵלֵךְ בְּגֵיא צַלְמָוֶת לֹא אִירָא רָע כִּי אַתָּה עִמָּדִי, שִׁבְטְךָ וּמִשְׁעַנְתֶּךָ הֵמָּה יְנַחֲמֻנִי: תַּעֲרֹךְ לְפָנַי שֻׁלְחָן נֶגֶד צֹרְרָי, דִּשַּׁנְתָּ בַשֶּׁמֶן רֹאשִׁי כּוֹסִי רְוָיָה: אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי כָּל יְמֵי חַיָּי, וְשַׁבְתִּי בְּבֵית יְהֹוָה לְאֹרֶךְ יָמִים: "},
           {"ref": "11", "kind": "instruction", "en": "Half Kaddish:", "text": "<b><small>חצי קדיש:</small></b>"},
           {"ref": "12", "kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵה, וְיַצְמַח פֻּרְקָנֵה, וִיקָרֵב מְשִׁיחֵהּ. בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן."},
           {"ref": "13", "parts": [
             {"kind": "prayer", "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא. יִתְבָּרַךְ.</b> וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
-            {"kind": "prayer", "text": " בְּרִיךְ הוּא. לְעֵלָּא ("},
+            {"kind": "prayer", "text": " בְּרִיךְ הוּא. לְעֵלָּא "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " (וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
             {"kind": "prayer", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
             {"kind": "prayer", "text": " דַּאֲמִירָן בְּעָלְמָא,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן: "}

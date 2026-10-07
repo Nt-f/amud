@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 
 import '../../core/providers.dart';
+import 'book_kind.dart';
 import 'siddur_providers.dart';
 
 /// A prayer the app knows by name, found in whichever bundled siddur has
@@ -123,6 +124,17 @@ const extraItems = <CatalogItem>[
         r'various blessings$']),
   CatalogItem('bedtime', 'Bedtime Shema', 'קריאת שמע על המיטה',
       [r"keri.at shema al hamita$", r'bedtime shema$', r'prayer before retiring at night$', r'shema before sleep at night$']),
+  CatalogItem('modehAni', 'Modeh Ani', 'מודה אני', [r'(^|/)modeh ani$', r'(^|/)modeh$']),
+  CatalogItem('netilat', 'Netilat Yadayim', 'נטילת ידים', [r'(^|/)netilat yadayim$', r'washing (?:the )?hands$']),
+  CatalogItem('asherYatzar', 'Asher Yatzar', 'אשר יצר', [r'(^|/)asher yatzar$']),
+  CatalogItem('torahBlessings', 'Torah Blessings', 'ברכות התורה', [r'(^|/)torah blessings$', r'birkot ha.?torah$']),
+  CatalogItem('tallit', 'Tallit', 'טלית', [r'(^|/)tallit$']),
+  CatalogItem('tefillin', 'Tefillin', 'תפילין', [r'(^|/)tefillin$']),
+  CatalogItem('adonOlam', 'Adon Olam', 'אדון עולם', [r'(^|/)adon olam$']),
+  CatalogItem('yigdal', 'Yigdal', 'יגדל', [r'(^|/)yigdal$']),
+  CatalogItem('aleinu', 'Aleinu', 'עלינו', [r'(^|/)aleinu$', r'(^|/)alenu$']),
+  CatalogItem('refuah', 'Mi Sheberach for the sick', 'מי שברך לחולה', [r'mi sheberach/for sickness', r'for the sick$', r'prayer for the sick']),
+  CatalogItem('blessChildren', 'Blessing the Children', 'ברכת הבנים', [r'blessing the children$', r'birkat ha.?banim$']),
   CatalogItem('derech', 'Tefillat HaDerech', 'תפילת הדרך', [r'tefillat ha.?derech$', r"traveler.?s prayer$"]),
 ];
 
@@ -165,15 +177,19 @@ Nusach nusachOf(String book) {
   return Nusach.other;
 }
 
-/// Books to look in: [first], then the same nusach, then the rest.
-/// Commentaries (Rabbi Sacks on Siddur) aren't siddurim to pray from.
+/// Books to look in: [first], then the same nusach, then the rest; Shabbat
+/// siddurim last in each. Commentaries aren't siddurim to pray from.
 List<String> bookSearchOrder(Manifest m, String first) {
-  final books = [for (final b in m.books) if (!b.title.toLowerCase().contains(' on ')) b.title];
+  final books = [for (final b in m.books) if (bookKind(b.title) != BookKind.commentary) b.title];
   final n = nusachOf(first);
+  List<String> weekdayFirst(Iterable<String> l) => [
+        for (final b in l) if (bookKind(b) != BookKind.shabbat) b,
+        for (final b in l) if (bookKind(b) == BookKind.shabbat) b,
+      ];
   return [
     if (books.contains(first)) first,
-    for (final b in books) if (b != first && nusachOf(b) == n) b,
-    for (final b in books) if (b != first && nusachOf(b) != n) b,
+    ...weekdayFirst([for (final b in books) if (b != first && nusachOf(b) == n) b]),
+    ...weekdayFirst([for (final b in books) if (b != first && nusachOf(b) != n) b]),
   ];
 }
 

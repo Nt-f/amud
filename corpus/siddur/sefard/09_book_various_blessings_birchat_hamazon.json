@@ -359,11 +359,11 @@
           {"ref": "76", "kind": "prayer", "node": "birkat_hamazon", "text": "אוֹתָֽנוּ וְאֶת־כָּל־אֲשֶׁר לָֽנוּ, כְּמוֹ שֶׁנִּתְבָּרְ֒כוּ אֲבוֹתֵֽינוּ, אַבְרָהָם יִצְחָק וְיַעֲקֹב: בַּכֹּל, מִכֹּל, כֹּל, כֵּן יְבָרֵךְ אוֹתָֽנוּ כֻּלָּֽנוּ יַֽחַד, בִּבְרָכָה שְׁלֵמָה, וְנֹאמַר אָמֵן:"},
           {"ref": "78", "kind": "prayer", "when": "if_guest", "text": "<b>הָרַחֲמָן</b> הוּא יְבָרֵךְ אֶת בַּֽעַל הַבַּֽיִת הַזֶּה, וְאֶת אִשְׁתּוֹ בַּעֲלַת הַבַּֽיִת הַזֶּה, אוֹתָם וְאֶת בֵּיתָם וְאֶת זַרְעָם וְאֶת כָּל אֲשֶׁר לָהֶם. יְהִי רָצוֹן שֶׁלֺּא יֵבוֹשׁ בַּֽעַל הַבַּֽיִת בָּעוֹלָם הַזֶּה וְלֺא יִכָּלֵם לָעוֹלָם הַבָּא וְיִצְלַח מְאֹד בְּכָל־נְכָסָיו וְיִהְיוּ נְכָסָיו וּנְכָסֵֽינוּ מֻצְלָחִים וּקְרוֹבִים לָעִיר וְאַל־יִשְׁלֺט שָׂטָן לֺא בְמַעֲשֵׂי יָדָיו וְלֺא בְמַעֲשֵׂי יָדֵֽינוּ וְאַל יִזְדַּקֵּר לֺא לְפָנָיו וְלֺא לְפָנֵֽינוּ שׁוּם דְּבַר הִרְהוּר חֵטְא וַעֲבֵרָה וְעָוֹן מֵעַתָּה וְעַד עוֹלָם:"},
           {"ref": "79", "kind": "prayer", "when": "if_guest", "text": "<b>בַּמָּרוֹם</b> יְלַמְּ֒דוּ עֲלֵיהֶם וְעָלֵֽינוּ זְכוּת שֶׁתְּ֒הֵא לְמִשְׁמֶֽרֶת שָׁלוֹם, וְנִשָּׂא בְרָכָה מֵאֵת יְהֹוָה וּצְדָקָה מֵאֱלֺהֵי יִשְׁעֵֽנוּ, וְנִמְצָא חֵן וְשֵֽׂכֶל טוֹב בְּעֵינֵי אֱלֺהִים וְאָדָם:"},
-          {"ref": "80", "kind": "instruction", "en": "On Shabbat say:", "text": "<small>בשבת אומר:</small>"},
+          {"ref": "80", "kind": "instruction", "when": "shabbat", "en": "On Shabbat say:", "text": "<small>בשבת אומר:</small>"},
           {"ref": "81", "kind": "prayer", "when": "shabbat", "text": "<b>הָרַחֲמָן</b> הוּא יַנְחִילֵֽנוּ יוֹם שֶׁכֻּלּוֹ שַׁבָּת וּמְנוּחָה לְחַיֵּי הָעוֹלָמִים:"},
-          {"ref": "82", "kind": "instruction", "en": "On Rosh Chodesh:", "text": "<small>בראש חודש:</small>"},
+          {"ref": "82", "kind": "instruction", "when": "roshChodesh", "en": "On Rosh Chodesh:", "text": "<small>בראש חודש:</small>"},
           {"ref": "83", "kind": "prayer", "when": "roshChodesh", "text": "<b>הָרַחֲמָן</b> הוּא יְחַדֵּשׁ עָלֵֽינוּ אֶת הַחֹֽדֶשׁ הַזֶּה לְטוֹבָה וְלִבְרָכָה:"},
-          {"ref": "84", "kind": "instruction", "en": "On Yom Tov say:", "text": "<small>ביו\"ט אומר:</small>"},
+          {"ref": "84", "kind": "instruction", "when": "yomTov", "en": "On Yom Tov say:", "text": "<small>ביו\"ט אומר:</small>"},
           {"ref": "85", "kind": "prayer", "when": "yomTov", "text": "<b>הָרַחֲמָן</b> הוּא יַנְחִילֵֽנוּ יוֹם שֶׁכֻּלּוֹ טוֹב:"},
           {"ref": "86", "kind": "instruction", "en": "On Rosh Hashanah:", "text": "<small>בראש השנה:</small>"},
           {"ref": "87", "kind": "prayer", "when": "roshHashana", "text": "<b>הָרַחֲמָן</b> הוּא יְחַדֵּשׁ עָלֵֽינוּ אֶת הַשָּׁנָה הַזֹּאת לְטוֹבָה וְלִבְרָכָה:"},
@@ -371,9 +371,9 @@
           {"ref": "89", "kind": "prayer", "when": "sukkot", "text": "<b>הָרַחֲמָן</b> הוּא יָקִים לָֽנוּ אֶת־סֻכַּת דָּוִד הַנּוֹפָֽלֶת:"},
           {"ref": "90", "parts": [
             {"kind": "prayer", "text": "<b>הָרַחֲמָן</b> הוּא יְזַכֵּֽנוּ לִימוֹת הַמָּשִֽׁיחַ וּלְחַיֵּי הָעוֹלָם הַבָּא,"},
-            {"kind": "prayer", "when": "!shabbat && !yomTov", "alt": "magdil", "text": " מַגְדִּיל יְשׁוּעוֹת מַלְכּוֹ ("},
-            {"kind": "instruction", "en": "On Shabbat and Yom Tov say:", "text": "<small>בשבת וביו\"ט אומר:</small>"},
-            {"kind": "prayer", "when": "shabbat || yomTov", "alt": "magdil", "text": " מִגְדּוֹל יְשׁוּעוֹת מַלְכּוֹ),"},
+            {"kind": "prayer", "when": "!shabbat && !yomTov", "alt": "magdil", "text": " מַגְדִּיל יְשׁוּעוֹת מַלְכּוֹ "},
+            {"kind": "instruction", "when": "shabbat || yomTov", "en": "On Shabbat and Yom Tov say:", "text": "<small>בשבת וביו\"ט אומר:</small>"},
+            {"kind": "prayer", "when": "shabbat || yomTov", "alt": "magdil", "text": " מִגְדּוֹל יְשׁוּעוֹת מַלְכּוֹ,"},
             {"kind": "prayer", "text": " וְעֹֽשֶׂה חֶֽסֶד לִמְשִׁיחוֹ לְדָוִד וּלְזַרְעוֹ עַד עוֹלָם: עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו,"},
             {"kind": "prayer", "text": " הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן:"}
@@ -817,7 +817,7 @@
           {"ref": "14", "kind": "prayer", "when": "sukkot", "en": "On Sukkot:", "gloss": "Said on Sukkot", "text": "בסוכות: <b>הָרַחֲמָן</b> הוּא יָקִים לָנוּ אֶת סֻכַּת דָּוִד הַנּוֹפָלֶת:"},
           {"ref": "15", "parts": [
             {"kind": "prayer", "text": "<b>הָרַחֲמָן</b> הוּא יְזַכֵּנוּ לִימוֹת הַמָשִׁיחַ וּלְחַיֵּי הָעוֹלָם הַבָּא: "},
-            {"kind": "instruction", "en": "On a weekday:", "text": "<small>בחול:</small>"},
+            {"kind": "instruction", "when": "!shabbat && !yomTov", "en": "On a weekday:", "text": "<small>בחול:</small>"},
             {"kind": "prayer", "when": "!shabbat && !yomTov", "alt": "magdil", "text": " <b>מַגְדִּיל</b> "},
             {"kind": "instruction", "en": "(On a day with Musaf, say:", "text": "<small> <small>(ביום שיש בו מוסף אומר: <b>מִגְדּוֹל</b>)</small>"},
             {"kind": "prayer", "when": "shabbat || yomTov", "alt": "magdil", "text": " </small> יְשׁוּעוֹת מַלְכּוֹ וְעֹשֶׂה חֶסֶד לִמְשִׁיחוֹ לְדָוִד וּלְזַרְעוֹ עַד עוֹלָם: עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}

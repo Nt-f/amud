@@ -56,10 +56,11 @@ const _hallel = [
   'אלי אתה ואודך',
 ];
 
-/// A verse said before a prayer rather than as its opening (the Amidah's
-/// "אדני שפתי תפתח", said with feet together): it takes no large word,
-/// and the line after it opens the section instead.
-const _preambles = ['אדני שפתי תפתח'];
+/// A line said before a prayer or after it rather than as its opening (the
+/// Amidah's "כי שם ה׳ אקרא" and "אדני שפתי תפתח", said with feet together;
+/// "יהי רצון שיבנה בית המקדש" after it): it takes no large or bold word, and
+/// the line after it opens the section instead.
+const _preambles = ['כי שם ה אקרא', 'אדני שפתי תפתח', 'יהי רצון מלפניך ה אלהינו ואלהי אבותינו שיבנה בית המקדש'];
 const _responses = ['אמן יהא שמה רבא', 'יהא שמה רבא'];
 
 /// A blessing's closing line said on its own ("ברוך אתה ה׳ מגן אברהם").

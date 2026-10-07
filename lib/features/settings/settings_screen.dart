@@ -381,6 +381,12 @@ class SettingsScreen extends ConsumerWidget {
         AdaptiveSection(header: context.tr('Advanced'), children: [
           AdaptiveNavTile(icon: Icons.widgets_outlined, title: context.tr('Card gallery'), onTap: () => context.push('/settings/cards')),
           AdaptiveNavTile(icon: Icons.link, title: context.tr('Widgets, shortcuts & voice'), onTap: () => context.push('/settings/integrations')),
+          AdaptiveNavTile(
+            icon: Icons.sync,
+            title: context.tr('Sync between devices'),
+            subtitle: context.tr('Keep settings the same on all your devices, end-to-end encrypted'),
+            onTap: () => context.push('/settings/sync'),
+          ),
 
           AdaptiveSwitchTile(
             title: context.tr('Share anonymous usage'),

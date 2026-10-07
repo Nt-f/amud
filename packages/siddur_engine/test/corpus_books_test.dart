@@ -97,6 +97,27 @@ void main() {
         });
       }
       if (slug == 'sefard') {
+        test('Maariv Amidah: each blessing\'s closing is said once, the Ten Days\' in its place', () {
+          String said_(HDate d) => [
+                for (final i in said('Weekday Maariv/Amidah', d))
+                  if (i.kind == SegmentKind.prayer) ...[for (final r in i.he?.runs ?? const <ResolvedRun>[]) if (!r.marker) r.html],
+              ].join(' ').replaceAll(RegExp(r'[^א-ת ]'), '');
+          int count(String text, String word) => word.allMatches(text).length;
+          final plainDay = said_(plain);
+          final tenDays = said_(HDate(5, Months.tishrei, 5786));
+          expect(count(plainDay, 'האל הקדוש'), 1);
+          expect(count(plainDay, 'המלך הקדוש'), 0);
+          expect(count(plainDay, 'בספר חיים'), 0);
+          expect(count(tenDays, 'האל הקדוש'), 0);
+          expect(count(tenDays, 'המלך הקדוש'), 1);
+          expect(count(tenDays, 'בספר חיים'), 1);
+        });
+        test('the prayer for a sick person is offered, not said every day', () {
+          final sick = said('Weekday Shacharit/Amidah', plain).where((i) =>
+              i.he != null && i.he!.runs.any((r) => r.html.replaceAll(RegExp(r'[^א-ת ]'), '').contains('שתשלח מהרה רפואה')));
+          expect(sick, isNotEmpty);
+          expect(sick.every((i) => i.applicability != Applicability.always && i.labelEn != null), isTrue);
+        });
         test('Tachanun on a Tachanun day, not on Rosh Chodesh', () {
           bool tachanun(HDate d) => said('Weekday Shacharit', d).any((i) => i.node.id == 'Weekday Shacharit/Tachanun');
           expect(tachanun(plain), isTrue);
@@ -121,6 +142,45 @@ void main() {
       final cholHamoedSukkot = HDate(18, Months.tishrei, 5786);
       final fast = HDate(10, Months.tevet, 5786);
 
+      if (slug == 'ashkenaz') {
+        test('a blessing\'s closing line is not set apart from its body', () {
+          String bare(SegmentItem i) => [for (final r in i.he!.runs) if (!r.marker) r.html].join().replaceAll(RegExp(r'[^א-ת]'), '');
+          final tenDays = HDate(5, Months.tishrei, 5786);
+          for (final (section, closing) in [
+            ('Justice', 'ברוךאתהיהוהמלךאהבצדקהומשפט'),
+            ('Holiness of God', 'ברוךאתהיהוההאלהקדוש'),
+            ('Rebuilding Jerusalem', 'ברוךאתהיהוהבונהירושלים'),
+            ('Peace', 'ברוךאתהיהוההמברךאתעמוישראלבשלום'),
+          ]) {
+            final items = said('Weekday/Minchah/Amida/$section', plain).where((i) => i.kind == SegmentKind.prayer).toList();
+            expect(items, hasLength(1), reason: section);
+            expect(bare(items.single), endsWith(closing), reason: section);
+            expect(items.single.tr?.runs.map((r) => r.html).join(), contains('Blessed are You'), reason: section);
+          }
+          final justice = said('Weekday/Minchah/Amida/Justice', tenDays).where((i) => i.kind == SegmentKind.prayer).toList();
+          expect(justice, hasLength(1));
+          expect(bare(justice.single), endsWith('ברוךאתהיהוההמלךהמשפט'));
+        });
+        test('Mashiv HaRuach and the seasonal Ve\'ten are highlighted for 30 days after they begin, not after', () {
+          String bare(SegmentItem i) => (i.he?.segment.html ?? '').replaceAll(RegExp(r'[^א-ת]'), '');
+          bool highlighted(HDate day, String section, String word) =>
+              said(section, day).any((i) => i.applicability == Applicability.today && bare(i) == word);
+          bool shown(HDate day, String section, String word) => said(section, day).any((i) => bare(i) == word);
+          const mashiv = 'משיבהרוחומורידהגשם'; // "Mashiv haruach umorid hagashem"
+          const divine = 'Weekday/Minchah/Amida/Divine Might';
+          final shevat = HDate(10, Months.shvat, 5786);
+          // 13 Cheshvan is 21 days after Shmini Atzeret; 10 Shevat is long after.
+          expect(shown(plain, divine, mashiv), isTrue);
+          expect(highlighted(plain, divine, mashiv), isTrue);
+          expect(shown(shevat, divine, mashiv), isTrue);
+          expect(highlighted(shevat, divine, mashiv), isFalse);
+          // "Ve'ten bracha" is highlighted for 30 days after Pesach.
+          const prosperity = 'Weekday/Minchah/Amida/Prosperity';
+          expect(highlighted(HDate(5, Months.iyyar, 5786), prosperity, 'ברכה'), isTrue);
+          expect(shown(HDate(5, Months.sivan, 5786), prosperity, 'ברכה'), isTrue);
+          expect(highlighted(HDate(5, Months.sivan, 5786), prosperity, 'ברכה'), isFalse);
+        });
+      }
       if (slug == 'ashkenaz') {
         test('service graph: Rosh Chodesh Shacharit in order', () {
           final items = service('Weekday/Shacharit', roshChodesh);

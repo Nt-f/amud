@@ -70,6 +70,13 @@ class SavedLocation {
 
 enum TextLayout { sideBySide, interleaved, hebrewOnly, translationOnly }
 
+/// The siddur reader's page style for bilingual text. [facing] sets the
+/// English on the left and the Hebrew on the right of a hairline, line by
+/// line, as the Metsudah linear siddur prints it; [below] sets a run of
+/// Hebrew lines above a rule and their English beneath it, runs apart by a
+/// divider.
+enum LinearStyle { off, facing, below }
+
 /// Languages for instructions and notes, chosen separately from the prayer
 /// text layout.
 enum NotesLanguage { bilingual, english, hebrew }
@@ -114,6 +121,7 @@ class AppSettings {
   final Map<String, List<String>> hebrewVersions;
   final Map<String, List<String>> translationVersions;
   final TextLayout layout;
+  final LinearStyle linearStyle;
   final NotesLanguage notesLanguage;
   final TitleLanguage titleLanguage;
   final UiLanguage uiLanguage;
@@ -207,6 +215,7 @@ class AppSettings {
     this.hebrewVersions = const {},
     this.translationVersions = const {},
     this.layout = TextLayout.hebrewOnly,
+    this.linearStyle = LinearStyle.off,
     this.notesLanguage = NotesLanguage.english,
     this.titleLanguage = TitleLanguage.auto,
     this.uiLanguage = UiLanguage.en,
@@ -260,6 +269,7 @@ class AppSettings {
     Map<String, List<String>>? hebrewVersions,
     Map<String, List<String>>? translationVersions,
     TextLayout? layout,
+    LinearStyle? linearStyle,
     NotesLanguage? notesLanguage,
     TitleLanguage? titleLanguage,
     UiLanguage? uiLanguage,
@@ -312,6 +322,7 @@ class AppSettings {
         hebrewVersions: hebrewVersions ?? this.hebrewVersions,
         translationVersions: translationVersions ?? this.translationVersions,
         layout: layout ?? this.layout,
+        linearStyle: linearStyle ?? this.linearStyle,
         notesLanguage: notesLanguage ?? this.notesLanguage,
         titleLanguage: titleLanguage ?? this.titleLanguage,
         uiLanguage: uiLanguage ?? this.uiLanguage,
@@ -369,6 +380,7 @@ class AppSettings {
         'hebrewVersions': hebrewVersions,
         'translationVersions': translationVersions,
         'layout': layout.name,
+        'linearStyle': linearStyle.name,
         'notesLanguage': notesLanguage.name,
         'titleLanguage': titleLanguage.name,
         'uiLanguage': uiLanguage.name,
@@ -465,6 +477,7 @@ class AppSettings {
       hebrewVersions: lists('hebrewVersions'),
       translationVersions: lists('translationVersions'),
       layout: byName(TextLayout.values, 'layout', d.layout),
+      linearStyle: byName(LinearStyle.values, 'linearStyle', d.linearStyle),
       notesLanguage: byName(NotesLanguage.values, 'notesLanguage', d.notesLanguage),
       titleLanguage: byName(TitleLanguage.values, 'titleLanguage', d.titleLanguage),
       uiLanguage: byName(UiLanguage.values, 'uiLanguage', d.uiLanguage),

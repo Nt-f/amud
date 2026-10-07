@@ -338,7 +338,7 @@
           {"ref": "8", "kind": "instruction", "en": "Then stand and say:", "text": "<small>ואחר כך יעמוד ויאמר:</small>"},
           {"ref": "9", "kind": "prayer", "text": "<b>כִּי</b> כָּל הָעַמִּים יֵלְכוּ אִישׁ בְּשֵׁם אֱלֹהָיו וַאֲנַחְנוּ נֵלֵךְ בְּשֵׁם יְהֹוָה אֱלֹהֵינוּ לְעוֹלָם וָעֶד: עֶזְרִי מֵעִם יְהֹוָה עֹשֵׂה שָׁמַיִם וָאָרֶץ: יְהֹוָה יִמְלֹךְ לְעוֹלָם וָעֶד:"},
           {"ref": "10", "kind": "instruction", "en": "Then go to the door backwards or sideways, bow to the Ark and say:", "text": "<small>ואחר כך ילך אל הפתח לאחוריו או יצדד, וישתחוה אל ארון הקודש ויאמר:</small>"},
-          {"ref": "11", "kind": "prayer", "gestures": ["bow"], "text": "<b>יְהֹוָה</b> נְחֵנִי בְצִדְקָתֶךָ לְמַעַן שׁוֹרְרָי הַיְשַׁר לְפָנַי דַּרְכֶּךָ:"},
+          {"ref": "11", "kind": "prayer", "text": "<b>יְהֹוָה</b> נְחֵנִי בְצִדְקָתֶךָ לְמַעַן שׁוֹרְרָי הַיְשַׁר לְפָנַי דַּרְכֶּךָ:"},
           {"ref": "12", "kind": "instruction", "en": "Then, as you walk, say these three verses:", "text": "<small>ואחר כך כשהולך יאמר שלשה פסוקים אלו:</small>"},
           {"ref": "13", "kind": "prayer", "text": "<b>גָּד</b> גְּדוּד יְגוּדֶנּוּ וְהוּא יָגֻד עָקֵב: וַיְהִי דָוִד לְכָל דְּרָכָיו מַשְׂכִּיל וַיְהֹוָה עִמּוֹ: וְנֹחַ מָצָא חֵן בְּעֵינֵי יְהֹוָה:"},
           {"ref": "14", "kind": "instruction", "en": "If one intends to go that day to engage in business, say these verses:", "text": "<small>אם בדעתו לילך באותו יום לעסוק במשא ומתן יאמר אלו הפסוקים:</small>"},
@@ -810,9 +810,10 @@
           {"ref": "26", "kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "en": "May His great Name be blessed forever and for all eternity.", "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>:"},
           {"ref": "27", "kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "en": "Blessed and praised, glorified...", "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל  שְׁמֵהּ דְקוּדְשָׁא, בְּרִיךְ הוּא"},
           {"ref": "28", "parts": [
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "en": "above", "text": "לְעֵֽלָּא ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Add 'far above'", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "en": "far above all the blessings and hymns...", "gloss": "Said only during Aseret Yemei Teshuva", "text": " וּלְעֵֽלָּא מִכָּל)  מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "en": "above", "text": "לְעֵֽלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Add 'far above'", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "chazzan", "voice": "aloud", "minyan": true, "en": "far above all the blessings and hymns...", "gloss": "Said only during Aseret Yemei Teshuva", "text": " (וּלְעֵֽלָּא מִכָּל)"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "en": "far above all the blessings and hymns...", "gloss": "Said only during Aseret Yemei Teshuva", "text": "  מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "en": "praises and consolations which we utter in the world—and say Amein.", "text": "  תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
             {"kind": "prayer", "text": "  דַּאֲמִירָן בְּעָלְ֒מָא,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן:"}

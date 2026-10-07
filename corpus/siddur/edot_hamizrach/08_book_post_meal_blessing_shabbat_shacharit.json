@@ -62,12 +62,12 @@
             {"kind": "prayer", "node": "birkat_hamazon", "role": "individual", "text": " הַזָּן אֶת־הַכֹּל:"}
           ]},
           {"ref": "17", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>נוֹדֶה</b> לְךָ יְהֹוָה אֱלֹהֵֽינוּ עַל שֶׁהִנְחַֽלְתָּ לַאֲבוֹתֵֽינוּ, אֶֽרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה בְּרִית וְתוֹרָה חַיִּים וּמָזוֹן, עַל שֶׁהוֹצֵאתָֽנוּ מֵאֶֽרֶץ מִצְרַֽיִם, וּפְדִיתָֽנוּ מִבֵּית עֲבָדִים, וְעַל בְּרִֽיתְךָֽ שֶׁחָתַֽמְתָּ בִּבְשָׂרֵֽנוּ, וְעַל תּוֹרָֽתְךָֽ שֶׁלִּמַּדְתָּֽנוּ, וְעַל חֻקֵּי רְצוֹנָךְ שֶׁהוֹדַעְתָּֽנוּ, וְעַל חַיִּים וּמָזוֹן שֶׁאַתָּה זָן וּמְפַרְנֵס אוֹתָֽנוּ:"},
-          {"ref": "18", "kind": "instruction", "en": "On Hanukkah and Purim say:", "text": "<small>בחנוכה ופורים אומרים</small> "},
-          {"ref": "19", "kind": "prayer", "node": "birkat_hamazon", "text": " <small><b>עַל</b> הַנִּסִּים וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַנִּפְלָאוֹת וְעַל הַנֶּחָמוֹת שֶׁעָשִֽׂיתָ לַאֲבוֹתֵֽינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה:</small> "},
+          {"ref": "18", "kind": "instruction", "when": "chanukah || purim", "en": "On Hanukkah and Purim say:", "text": "<small>בחנוכה ופורים אומרים</small> "},
+          {"ref": "19", "kind": "prayer", "when": "chanukah || purim", "node": "birkat_hamazon", "text": " <small><b>עַל</b> הַנִּסִּים וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַנִּפְלָאוֹת וְעַל הַנֶּחָמוֹת שֶׁעָשִֽׂיתָ לַאֲבוֹתֵֽינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה:</small> "},
           {"ref": "20", "parts": [
-            {"kind": "instruction", "en": "On Hanukkah say:", "text": "<small>בחנוכה אומרים</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "<small><b>בִּימֵי מַתִּתְיָה</b> בֶן־יוֹחָנָן כֹּהֵן גָּדוֹל חַשְׁמוֹנָאִי וּבָנָיו, כְּשֶׁעָֽמְדָֽה מַלְכוּת יָוָן הָרְשָׁעָה עַל עַמְּךָ יִשְׂרָאֵל, "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "לְשַׁכְּחָם תּוֹרָתָךְ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנָךְ, וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים עָמַֽדְתָּ לָהֶם בְּעֵת צָרָתָם, רַֽבְתָּ אֶת רִיבָם, דַּֽנְתָּ אֶת דִּינָם, נָקַֽמְתָּ אֶת נִקְמָתָם, מָסַֽרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים, "},
+            {"kind": "instruction", "when": "chanukah", "en": "On Hanukkah say:", "text": "<small>בחנוכה אומרים</small> "},
+            {"kind": "prayer", "when": "chanukah", "node": "birkat_hamazon", "text": "<small><b>בִּימֵי מַתִּתְיָה</b> בֶן־יוֹחָנָן כֹּהֵן גָּדוֹל חַשְׁמוֹנָאִי וּבָנָיו, כְּשֶׁעָֽמְדָֽה מַלְכוּת יָוָן הָרְשָׁעָה עַל עַמְּךָ יִשְׂרָאֵל, "},
+            {"kind": "prayer", "when": "chanukah", "node": "birkat_hamazon", "text": "לְשַׁכְּחָם תּוֹרָתָךְ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנָךְ, וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים עָמַֽדְתָּ לָהֶם בְּעֵת צָרָתָם, רַֽבְתָּ אֶת רִיבָם, דַּֽנְתָּ אֶת דִּינָם, נָקַֽמְתָּ אֶת נִקְמָתָם, מָסַֽרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים, "},
             {"kind": "prayer", "node": "birkat_hamazon", "text": "וְרַבִּים בְּיַד מְעַטִּים, וּרְשָׁעִים בְּיַד צַדִּיקִים, וּטְמֵאִים בְּיַד טְהוֹרִים, וְזֵדִים בְּיַד עֽוֹסְקֵֽי תוֹרָתֶֽךָ. לְךָ עָשִֽׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמָךְ, "},
             {"kind": "prayer", "node": "birkat_hamazon", "text": "וּלְעַמְּךָ יִשְׂרָאֵל עָשִֽׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה. וְאַחַר כָּךְ בָּֽאוּ בָנֶֽיךָ לִדְבִיר בֵּיתֶֽךָ, וּפִנּוּ אֶת־הֵיכָלֶֽךָ, "},
             {"kind": "prayer", "node": "birkat_hamazon", "text": "וְטִהֲרוּ אֶת־מִקְדָּשֶֽׁךָ, וְהִדְלִֽיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶֽׁךָ. "},
@@ -75,8 +75,8 @@
             {"kind": "prayer", "node": "birkat_hamazon", "text": "וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל סֶֽלָה:</small> "}
           ]},
           {"ref": "21", "parts": [
-            {"kind": "instruction", "en": "On Purim say:", "text": "<small>בפורים אומרים "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "<b>בִּימֵי מָרְדְּכַי</b> וְאֶסְתֵּר בְּשׁוּשַׁן הַבִּירָה, כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע, בִּקֵּשׁ לְהַשְׁמִיד לַהֲרֹג וּלְאַבֵּד אֶת־כָּל־הַיְּהוּדִים מִנַּֽעַר וְעַד זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד, בִּשְׁלֹשָׁה עָשָׂר לְחֹֽדֶשׁ שְׁנֵים עָשָׂר, הוּא חֹֽדֶשׁ אֲדָר, וּשְׁלָלָם לָבוֹז. וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים הֵפַֽרְתָּ אֶת־עֲצָתוֹ, וְקִלְקַֽלְתָּ אֶת־מַחֲשַׁבְתּוֹ, וַהֲשֵׁבֽוֹתָ לּוֹ גְּמוּלוֹ בְרֹאשׁוֹ. וְתָלוּ אוֹתוֹ וְאֶת־בָּנָיו עַל הָעֵץ. וְעָשִֽׂיתָ עִמָּהֶם נֵס וָפֶֽלֶא וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל סֶֽלָה:</small>  "}
+            {"kind": "instruction", "when": "purim", "en": "On Purim say:", "text": "<small>בפורים אומרים "},
+            {"kind": "prayer", "when": "purim", "node": "birkat_hamazon", "text": "<b>בִּימֵי מָרְדְּכַי</b> וְאֶסְתֵּר בְּשׁוּשַׁן הַבִּירָה, כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע, בִּקֵּשׁ לְהַשְׁמִיד לַהֲרֹג וּלְאַבֵּד אֶת־כָּל־הַיְּהוּדִים מִנַּֽעַר וְעַד זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד, בִּשְׁלֹשָׁה עָשָׂר לְחֹֽדֶשׁ שְׁנֵים עָשָׂר, הוּא חֹֽדֶשׁ אֲדָר, וּשְׁלָלָם לָבוֹז. וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים הֵפַֽרְתָּ אֶת־עֲצָתוֹ, וְקִלְקַֽלְתָּ אֶת־מַחֲשַׁבְתּוֹ, וַהֲשֵׁבֽוֹתָ לּוֹ גְּמוּלוֹ בְרֹאשׁוֹ. וְתָלוּ אוֹתוֹ וְאֶת־בָּנָיו עַל הָעֵץ. וְעָשִֽׂיתָ עִמָּהֶם נֵס וָפֶֽלֶא וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל סֶֽלָה:</small>  "}
           ]},
           {"ref": "22", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>עַל</b> הַכֹּל יְהֹוָה אֱלֹהֵֽינוּ אֲנַֽחְנוּ מוֹדִים לָךְ, וּמְבָֽרְכִֽים אֶת־שְׁמָךְ. כָּאָמוּר, וְאָֽכַלְתָּ֖ וְשָׂבָ֑עְתָּ וּבֵֽרַכְתָּ֙ אֶת־יְהֹוָ֣ה אֱלֹהֶ֔יךָ עַל־הָאָ֥רֶץ הַטֹּבָ֖ה אֲשֶׁ֥ר נָֽתַן־לָֽךְ. בָּרוּךְ אַתָּה יְהֹוָה, עַל הָאָֽרֶץ וְעַל הַמָּזוֹן:"},
           {"ref": "23", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>רַחֵם</b> יְהֹוָה אֱלֹהֵֽינוּ עָלֵֽינוּ וְעַל יִשְׂרָאֵל עַמָּךְ, וְעַל יְרוּשָׁלַֽיִם עִירָךְ, וְעַל הַר צִיּוֹן מִשְׁכַּן כְּבוֹדָךְ, וְעַל הֵיכָלָךְ, וְעַל מְעוֹנָךְ, וְעַל דְּבִירָךְ, וְעַל הַבַּֽיִת הַגָּדוֹל וְהַקָּדוֹשׁ שֶׁנִּקְרָא שִׁמְךָ עָלָיו. אָבִֽינוּ, רְעֵֽנוּ, זוּנֵֽנוּ, פַּרְנְסֵֽנוּ, כַּלְכְּלֵֽנוּ, הַרְוִיחֵֽנוּ הַרְוַח־לָֽנוּ מְהֵרָה מִכָּל־צָרוֹתֵֽינוּ. וְנָא, אַל תַּצְרִיכֵֽנוּ יְהֹוָה אֱלֹהֵֽינוּ, לִידֵי מַתְּנוֹת בָּשָׂר וָדָם וְלֹא לִידֵי הַלְוָאָתָם, אֶלָּא לְיָֽדְךָֽ הַמְּלֵאָה וְהָרְחָבָה, הָעֲשִׁירָה וְהַפְּתוּחָה, יְהִי רָצוֹן שֶׁלֹּא נֵבוֹשׁ בָּעוֹלָם הַזֶּה, וְלֹא נִכָּלֵם לָעוֹלָם הַבָּא, וּמַלְכוּת בֵּית דָּוִד מְשִׁיחָךְ תַּחֲזִירֶֽנָּה לִמְקוֹמָהּ בִּמְהֵרָה בְיָמֵֽינוּ:"},
@@ -129,16 +129,16 @@
             {"kind": "prayer", "node": "birkat_hamazon", "text": "בְּאַהֲבָה לְאוֹת וְלִבְרִית </small> "}
           ]},
           {"ref": "39", "parts": [
-            {"kind": "instruction", "en": "For Rosh Chodesh:", "text": "<small><small>לראש חודש</small> ("},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "וְ)רָאשֵׁי חֳדָשִׁים לְעַמּוֹ יִשְׂרָאֵל לְזִּכָּרוֹן: ע\"כ בחול</small> "}
+            {"kind": "instruction", "en": "For Rosh Chodesh:", "text": "<small><small>לראש חודש</small> "},
+            {"kind": "prayer", "node": "birkat_hamazon", "text": "(וְ)רָאשֵׁי חֳדָשִׁים לְעַמּוֹ יִשְׂרָאֵל לְזִּכָּרוֹן: ע\"כ בחול</small> "}
           ]},
           {"ref": "40", "parts": [
-            {"kind": "instruction", "en": "For Rosh Hashanah:", "text": "<small><small>לראש השנה</small> ("},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "וְ)יָמִים טוֹבִים לְיִשְׂרָאֵל אֶת יוֹם הַזִּכָּרוֹן הַזֶּה</small> "}
+            {"kind": "instruction", "en": "For Rosh Hashanah:", "text": "<small><small>לראש השנה</small> "},
+            {"kind": "prayer", "node": "birkat_hamazon", "text": "(וְ)יָמִים טוֹבִים לְיִשְׂרָאֵל אֶת יוֹם הַזִּכָּרוֹן הַזֶּה</small> "}
           ]},
           {"ref": "41", "parts": [
-            {"kind": "instruction", "en": "For the three Pilgrimage Festivals:", "text": "<small><small>לשלש רגלים</small> ("},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "וְ)יָמִים טוֹבִים לְשָׂשׂוֹן וּלְשִׂמְחָה, "},
+            {"kind": "instruction", "en": "For the three Pilgrimage Festivals:", "text": "<small><small>לשלש רגלים</small> "},
+            {"kind": "prayer", "node": "birkat_hamazon", "text": "(וְ)יָמִים טוֹבִים לְשָׂשׂוֹן וּלְשִׂמְחָה, "},
             {"kind": "prayer", "node": "birkat_hamazon", "text": "אֶת יוֹם (חַג הַמַּצּוֹת הַזֶּה) (חַג הַשָּׁבוּעוֹת הַזֶּה) (חַג הַסֻּכּוֹת הַזֶּה) (שְׁמִינִי חַג עֲצֶֽרֶת הַזֶּה)</small> "},
             {"kind": "prayer", "node": "birkat_hamazon", "text": "<br><br><small>בָּרוּךְ (אַתָּה יְהֹוָה,) "},
             {"kind": "prayer", "node": "birkat_hamazon", "text": "מְקַדֵּשׁ (הַשַּׁבָּת) (וְ) (יִשְׂרָאֵל וְרָאשֵׁי חֳדָשִׁים) (יִשְׂרָאֵל וְיוֹם הַזִּכָּרוֹן) (יִשְׂרָאֵל וְהַזְּמַנִּים):</small>"}
@@ -231,7 +231,7 @@
           {"ref": "14", "translates": ["14"], "text": "The leader responds:"},
           {"ref": "t15", "translates": ["15"], "comment": "Amud translation", "text": "Blessed is (with ten or more: our God) the One of Whose food we have eaten and by Whose goodness we live."},
           {"ref": "16", "translates": ["16"], "text": "Blessed are You, L·rd, our G·d, King of the universe. The G·d, Who feeds us &amp; the entire world, with His Goodness, with Grace, with Kindness, with Abundance, &amp; with great Mercy. He Provides bread to all flesh – because forever is His kindness. (Psalms 136, 25) And with His great goodness, we continually never lack. And May You never let us lack food continually forever &amp; ever. For He is G·d, Who feeds &amp; provides livelihood to everyone. And His table is set for all. For He prepares sustenance &amp; food for all His creations that He created with His mercy &amp; great kindness. As it says “You Open Your Hand, &amp; You Satiate all the Living with its wants.” (Psalms 145, 16). Blessed are You, L·rd, our G·d, King of the universe Who feeds all."},
-          {"ref": "17", "translates": ["17"], "text": "We thank You, L·rd, our G·d, that You bequeathed to our Forefathers a desirable, good &amp; spacious land, a Covenant &amp; Torah, life &amp; food. And that You took us out from the land of Egypt &amp; that You redeemed us from the house of bondage. And upon the Your Covenant that you stamped upon our flesh. And for Your Torah that You taught us. And upon the laws of Your Will – that You taught us. And upon life, &amp; food that you feed &amp; sustain us. "},
+          {"ref": "17", "translates": ["17"], "text": "We thank You, L·rd our G·d, for giving our ancestors a desirable, good, and spacious land; for bringing us out of Egypt and redeeming us from slavery; for the covenant You sealed in our flesh; for the Torah You taught us; for the statutes of Your will that You made known to us; and for the life and sustenance You provide for us."},
           {"ref": "18", "translates": ["18"], "text": "(On Hanukah &amp; Purim Al HaNissim is recited)..."},
           {"ref": "19", "translates": ["19"], "text": "Upon the miracles and upon the redemption and upon the mighty acts and for salvation and for the wonders and for the comfort that you did for our fathers  in those days at this period."},
           {"ref": "20", "translates": ["20"], "text": "On Hanukkah continue: In the days of Matitya son of Yohanan, The high priest, The Hashmonay and his sons when the Wicked Greek empire arose Against your people Israel  To make them forget your Torah, and to remove them from the ordinances of your will and you with your great mercy you stood at the time of their suffering , you battle their battles, you judged their laws, you took vengeance upon their vengeance, you gave up over the mighty into the hands of the weak, and the masses in the hands of the few, and the impure Into the hands of the pure, and the wicked into the hands of the righteous, and the intentional sinners into the hands of those that are engaged in your Torah. To you you made your holy and great name In your world and for your people Israel you made a great salvation and deliverance as you do This day. And the afterwords your children came to the inner chambers of your house cleared your sanctuary and purify it your holy Temple and lit candles In your holy courtyard. And they fixed these eight days of Hanukkah – With complete praise and thanks, and you did for them miracles and wonders and we will thank Your great name, Forever."},
@@ -256,7 +256,6 @@
           {"ref": "t40", "translates": ["40"], "comment": "Amud translation", "text": "(and) festivals to Israel, this day of remembrance."},
           {"ref": "t41", "translates": ["41"], "comment": "Amud translation", "text": "(and) festivals for joy and gladness, this day of (the Festival of Matzot) (the Festival of Shavuot) (the Festival of Sukkot) (Shemini Atzeret). Blessed are You, (Hashem,) Who sanctifies (the Shabbat and) Israel and (Rosh Chodesh) (the Day of Remembrance) (the festivals)."},
           {"ref": "42", "translates": ["42"], "text": "Blessed are You, L·rd, our G·d, King of the universe, G·d, our Father, our King, our Glorious One, our Creator, our Redeemer, our Holiness. The Holiness of Jacob, our Shepherd, Shephard of Yisrael. The Good King that does good to all. Every single day He does Good, He causes good, &amp; will do good to us. He bestowed, bestows &amp; will bestow forever grace, &amp; kindness &amp; mercy &amp; bounty &amp; salvation &amp; all good. "},
-          {"ref": "43", "translates": ["43"], "text": "The Merciful One, He will Be Praised upon His Throne of GloryThe Merciful One, He will in Heaven &amp; upon the Earth. The Merciful One, He will Be Praised by us each &amp; every generation. The Merciful One, He will raise the horn of His people The Merciful One, He will Be Glorified by us Eternally Forever The Merciful One, He will will give us sustenance with honor &amp; not denigration; with permission &amp; not prohibitions; with tranquility  &amp; not with suffering The Merciful One, He will provide peace among usThe Merciful One, He will send blessing &amp; abundance &amp; success in all our handiwork. The Merciful One, He will provide success in our paths.  The Merciful One, He will break the yoke of the exile, speedily, from our necks  The Merciful One, He will guide us speedily to independence in our land The Merciful One, He will heal us – a complete healing – healing of the soul &amp; healing of the body The Merciful One, He will open for us His Hand of plenty. The Merciful One, He will bless each &amp; every one of us with his Great Name – as were blessed our forefathers  - Avraham, Yitzhak &amp; Yaakov – with all, from all of all. Thus may You bless us together – with a complete blessing. And thus, may it be Your Will. And let us say Amen. The Merciful One, He will spread upon us the Shelter of His peace. "},
           {"ref": "44", "translates": ["44"], "text": "* (Shabbat)"},
           {"ref": "45", "translates": ["45"], "text": "The Merciful One, He will bequeath to us a world that is complete rest and serenity for eternity"},
           {"ref": "46", "translates": ["46"], "text": "* (Rosh Hodesh) ..."},
@@ -266,13 +265,7 @@
           {"ref": "50", "translates": ["50"], "text": "* (Sukkot) ..."},
           {"ref": "51", "translates": ["51"], "text": "The Merciful One, He will give us the merit to sit in the Sukkah of the skin of Leviathan. The Merciful One, He will bestow upon us plentyof holiness and purity- from the seven lofty and holy guests – may there merit protect and shield us. The Merciful One, He will establish for us the Sukkah of David, that is fallen."},
           {"ref": "52", "translates": ["52"], "text": "* (Holidays) ..."},
-          {"ref": "53", "translates": ["52"], "text": "The Merciful One, He will allow us to arrive at other holidays – that come to greet us with peace."},
           {"ref": "54", "translates": ["52"], "text": "* (Yom Tov) ..."},
-          {"ref": "55", "translates": ["52"], "text": " The Merciful One, He will bequeath upon us a day that is completely good. ..."},
-          {"ref": "56", "translates": ["52"], "text": "The Merciful One, He will plant His Torah &amp; His love into our hearts. And his awe should be on our faces – without any sin. And all our deeds should be for the sake of heaven...."},
-          {"ref": "57", "translates": ["52"], "text": "A guest says: The Merciful One, He will bless this table that we ate upon and set it with all the delicacies in the world, may it be like the table of Abraham our father (may he rest in peace), every hungry person shall eat from it and every thirsty person shall drink from it, and it shall not lack any good, for all eternity, amen. The Merciful one, He will bless the master of this house and the host of this meal, him and his children and his wife and all he owns, with children who will live and assets that will multiply, Bless, Hashem, his substance, And favor his undertakings. and may his possessions and our possessions be successful and near the city. May thoughts of sin and transgression not appear before him and before us. Happy shall he be and glad all his days, with wealth and honor, from here to eternity. He shall not suffer shame in this world, nor humiliation in the World-to-Come. amen, so be itThe Merciful One, He will give us life &amp; merit &amp; approach us to the days of the Messiah &amp; the building of the Holy Temple &amp; life of the World to Come. "},
-          {"ref": "58", "translates": ["52"], "text": "At a Seduat Chatan: The merciful one, bless the groom and bridge, with male children for his blessed service: "},
-          {"ref": "59", "translates": ["52"], "text": "He makes great (On Shabbat &amp; Holidays days when Musaf (additional prayer service) is said, say instead: He is a tower of) Salvation of His Kingship. And does kindness to his anointed one – to [King] David &amp; his descendants forever. Young lions became needy and starved But, those that seek, the L·rd, did not lack any good. (Psalms 34:11) I was a youth &amp; I also became older, &amp; I did not see a Righteous person abandoned &amp; his children seeking bread. (Psalms 37:25) All day He is graceful &amp; lends &amp; his children are held blessed. (Psalms 37, 26) That that we ate, may it be to satiate. And that which we drank, may it be for healing. And that that we left over, may it be for blessing. As it is written: As it is written: “and he  gave it [the food] before them and when they had eaten, they had some left over as [according to] the word of the L·rd. (II Kings 4:44 ) Blessed are you to the L·rd – Who makes the Heaven and Earth. Blessed is the man that will place trust in the L·rd. And the L·rd is his trust. (Jeremiah 17:7 ) The L·rd gives strength to His People. The L·rd will bless his people with peace. (Psalms 29:11) May He Who creates peace in His high places, may He with His mercy, make peace upon us &amp; all His people Israel, &amp; say ye, Amen."},
           {"ref": "t53", "translates": ["53"], "comment": "Amud translation", "text": "May the Merciful One bring us to other festivals that are coming toward us in peace."},
           {"ref": "t55", "translates": ["55"], "comment": "Amud translation", "text": "May the Merciful One let us inherit the day that is entirely good."},
           {"ref": "t56", "translates": ["56"], "comment": "Amud translation", "text": "May the Merciful One implant His Torah and love of Him in our hearts, and may reverence for Him be upon our faces, that we not sin; and may all our deeds be for the sake of Heaven."},
@@ -297,7 +290,7 @@
           {"ref": "1", "kind": "heading", "en": "Blessing of Me'ein Shalosh", "text": "<big><b>ברכת מעין שלוש</b></big>"},
           {"ref": "2", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם"},
           {"ref": "3", "parts": [
-            {"kind": "instruction", "en": "If one ate bread/grains:", "text": "<small>אם אכל מזונות יאמר</small>"},
+            {"kind": "instruction", "en": "If one ate grain foods:", "text": "<small>אם אכל מזונות יאמר</small>"},
             {"kind": "prayer", "text": " עַל הַמִּחְיָה וְעַל הַכַּלְכָּלָה "}
           ]},
           {"ref": "4", "parts": [
@@ -310,7 +303,7 @@
           ]},
           {"ref": "6", "kind": "prayer", "text": "וְעַל תְּנוּבַת הַשָּׂדֶה, וְעַל אֶֽרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה, שֶׁרָצִֽיתָ וְהִנְחַֽלְתָּ לַאֲבוֹתֵֽינוּ, לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבֹּֽעַ מִטּוּבָהּ. רַחֵם יְהֹוָה אֱלֹהֵֽינוּ עָלֵֽינוּ וְעַל יִשְׂרָאֵל עַמָּךְ, וְעַל יְרוּשָׁלַֽיִם עִירָךְ, וְעַל הַר צִיּוֹן מִשְׁכַּן כְּבוֹדָךְ, וְעַל מִזְבָּחָךְ וְעַל הֵיכָלָךְ. וּבְנֵה יְרוּשָׁלַֽיִם עִיר הַקֹּֽדֶשׁ בִּמְהֵרָה בְיָמֵֽינוּ, וְהַעֲלֵֽנוּ לְתוֹכָהּ, וְשַׂמְּחֵֽנוּ בְּבִנְיָנָהּ, וּנְבָֽרְכָֽךְ עָלֶֽיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה:"},
           {"ref": "7", "parts": [
-            {"kind": "instruction", "en": "On Shabbat:", "text": "<small><small>בשבת</small>"},
+            {"kind": "instruction", "when": "shabbat", "en": "On Shabbat:", "text": "<small><small>בשבת</small>"},
             {"kind": "prayer", "when": "shabbat", "text": " וּרְצֵה וְהַחֲלִיצֵֽנוּ בְּיוֹם הַשַּׁבָּת הַזֶּה.</small> "}
           ]},
           {"ref": "8", "parts": [
@@ -325,7 +318,7 @@
             {"kind": "instruction", "en": "On Pesach:", "text": "<small><small>בפסח</small>"},
             {"kind": "prayer", "when": "pesach", "text": " וְשַׂמְּחֵֽנוּ בְּיוֹם חַג הַמַּצּוֹת הַזֶּה,"},
             {"kind": "prayer", "when": "pesach", "text": " בְּיוֹם "},
-            {"kind": "instruction", "en": "On Yom Tov:", "text": "<small><small>ביום טוב:</small>"},
+            {"kind": "instruction", "when": "pesach && yomTov", "en": "On Yom Tov:", "text": "<small><small>ביום טוב:</small>"},
             {"kind": "prayer", "when": "pesach && yomTov", "text": " טוֹב</small> מִקְרָא קֹדֶשׁ הַזֶּה.</small> "}
           ]},
           {"ref": "11", "parts": [
@@ -336,7 +329,7 @@
             {"kind": "instruction", "en": "On Sukkot:", "text": "<small><small>בסוכות</small>"},
             {"kind": "prayer", "when": "sukkot", "text": " וְשַׂמְּחֵֽנוּ בְּיוֹם הַסֻּכּוֹת הַזֶּה,"},
             {"kind": "prayer", "when": "sukkot", "text": " בְּיוֹם "},
-            {"kind": "instruction", "en": "On Yom Tov:", "text": "<small><small>ביום טוב:</small>"},
+            {"kind": "instruction", "when": "sukkot && yomTov", "en": "On Yom Tov:", "text": "<small><small>ביום טוב:</small>"},
             {"kind": "prayer", "when": "sukkot && yomTov", "text": " טוֹב</small> מִקְרָא קֹֽדֶשׁ הַזֶּה.</small> "}
           ]},
           {"ref": "13", "parts": [
@@ -703,7 +696,7 @@
             {"kind": "prayer", "text": " מֶֽלֶךְ אֵל חַי הָעוֹלָמִים,"},
             {"kind": "prayer", "text": " אָמֵן: "}
           ]},
-          {"ref": "31", "kind": "instruction", "en": "On Shabbat Shuva, say:", "text": "<small>בשבת תשובה אומרים</small>"},
+          {"ref": "31", "kind": "instruction", "when": "shabbatShuva", "en": "On Shabbat Shuva, say:", "text": "<small>בשבת תשובה אומרים</small>"},
           {"ref": "32", "kind": "prayer", "when": "shabbatShuva", "text": "<b>שִׁ֥יר</b> (תהילים ק״ל) הַֽמַּעֲל֑וֹת מִמַּעֲמַקִּ֖ים קְרָאתִ֣יךָ יְהֹוָֽה׃ אֲדֹנָי֮ שִׁמְעָ֢ה בְק֫וֹלִ֥י תִּהְיֶ֣ינָה אׇ֭זְנֶיךָ קַשֻּׁב֑וֹת לְ֝ק֗וֹל תַּחֲנוּנָֽי׃ אִם־עֲוֺנ֥וֹת תִּשְׁמׇר־יָ֑הּ אֲ֝דֹנָ֗י מִ֣י יַעֲמֹֽד׃ כִּֽי־עִמְּךָ֥ הַסְּלִיחָ֑ה לְ֝מַ֗עַן תִּוָּרֵֽא׃ קִוִּ֣יתִי יְ֭הֹוָה קִוְּתָ֣ה נַפְשִׁ֑י וְֽלִדְבָר֥וֹ הוֹחָֽלְתִּי׃ נַפְשִׁ֥י לַאדֹנָ֑י מִשֹּׁמְרִ֥ים לַ֝בֹּ֗קֶר שֹׁמְרִ֥ים לַבֹּֽקֶר׃ יַחֵ֥ל יִשְׂרָאֵ֗ל אֶל־יְהֹ֫וָ֥ה כִּֽי־עִם־יְהֹוָ֥ה הַחֶ֑סֶד וְהַרְבֵּ֖ה עִמּ֣וֹ פְדֽוּת׃ וְ֭הוּא יִפְדֶּ֣ה אֶת־יִשְׂרָאֵ֑ל מִ֝כֹּ֗ל עֲוֺנֹתָֽיו׃ "},
           {"ref": "33", "kind": "instruction", "en": "The chazzan says Half Kaddish", "text": "ואומר החזן חצי קדיש"},
           {"ref": "34", "parts": [

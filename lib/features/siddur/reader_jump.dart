@@ -21,7 +21,7 @@ const keyPoints = [
   ('Kiddush Levana', 'קידוש לבנה', r'kiddush levan|blessing of the (?:new )?moon|birkat ha.?levana'),
   ('Kiddush', 'קידוש', r'kiddush'),
   ('Havdalah', 'הבדלה', r'havdal'),
-  ('Sefirat HaOmer', 'ספירת העומר', r'omer'),
+  ('Sefirat HaOmer', 'ספירת העומר', r'sefir[ao][ts]? ha.?omer|counting (?:of )?the omer|^omer'),
 ];
 
 /// The key point a section title is, if any.

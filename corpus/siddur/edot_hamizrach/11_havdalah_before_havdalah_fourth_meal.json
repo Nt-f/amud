@@ -170,7 +170,7 @@
           {"ref": "16", "kind": "instruction", "en": "Drink a revi'it and bless over the vine.", "text": "<small>שותה רביעית ומברך על הגפן</small>"},
           {"ref": "17", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, עַל הַגֶּֽפֶן וְעַל פְּרִי הַגֶּֽפֶן וְעַל תְּנוּבַת הַשָּׂדֶה, וְעַל אֶֽרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה, שֶׁרָצִֽיתָ וְהִנְחַֽלְתָּ לַאֲבוֹתֵֽינוּ, לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבֹּעַ מִטּוּבָהּ. רַחֵם יְהֹוָה אֱלֹהֵֽינוּ עָלֵֽינוּ, וְעַל יִשְׂרָאֵל עַמָּךְ, וְעַל יְרוּשָׁלַֽיִם עִירָךְ, וְעַל הַר צִיּוֹן מִשְׁכַּן כְּבוֹדָךְ, וְעַל מִזְבָּחָךְ וְעַל הֵיכָלָךְ. וּבְנֵה יְרוּשָׁלַֽיִם עִיר הַקֹּֽדֶשׁ, בִּמְהֵרָה בְיָמֵֽינוּ, וְהַעֲלֵֽנוּ לְתוֹכָהּ, וְשַׂמְּחֵֽנוּ בְּבִנְיָנָהּ, וּנְבָֽרְכָֽךְ עָלֶֽיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה."},
           {"ref": "18", "parts": [
-            {"kind": "instruction", "en": "On Rosh Chodesh", "text": "<small><small>בראש חודש</small>"},
+            {"kind": "instruction", "when": "roshChodesh", "en": "On Rosh Chodesh", "text": "<small><small>בראש חודש</small>"},
             {"kind": "prayer", "when": "roshChodesh", "text": " וְזָכְרֵֽנוּ לְטוֹבָה בְּיוֹם רֹאשׁ חֹֽדֶשׁ הַזֶּה.</small>"}
           ]},
           {"ref": "19", "parts": [
@@ -201,12 +201,14 @@
           {"ref": "6", "translates": ["6"], "text": "Please L·rd Save Now. Please L·rd Save Now."},
           {"ref": "7", "translates": ["7"], "text": "Please L·rd Give Success Now. Please L·rd Give Success Now."},
           {"ref": "8", "translates": ["8"], "text": "Give us success &amp; make prosper our matters &amp; our [Torah] learning &amp; send blessing, abundance &amp; success to all our undertakings. As it is written “He shall receive a blessing from the L·rd &amp; benevolence from the G·d of his Salvation.” “To the Jews there was light &amp; joy, happiness, &amp; honor.” And as it is written “And David was prosperous in all his matters &amp; G·d was with him.” Thus should be with us always."},
-          {"ref": "9", "translates": ["9"], "text": " Hearken, our masters / To Life"},
+          {"ref": "9", "translates": ["9"], "text": "With your permission, our teachers and masters. / To life!"},
           {"ref": "10", "translates": ["10"], "text": "Blessed are You, L·rd, Our G·d, King of the Universe, Who creates fruit of the vine."},
-          {"ref": "12", "translates": ["12"], "text": "Blessed are You, L·rd, Our G·d, King of the Universe, Who types (plants) (trees) of [pleasant] aromas.           (Smell the Pleasant Spice) "},
+          {"ref": "12", "translates": ["12"], "text": "Blessed are You, L·rd our G·d, King of the universe, who creates fragrant trees (or herbs or other kinds of fragrance, as appropriate). (Smell the fragrant spices.)"},
           {"ref": "14", "translates": ["14"], "text": "Blessed are You, L·rd, our G·d, King of the universe, Who creates lights of fire   (See light on nails)"},
-          {"ref": "15", "translates": ["15"], "text": "Blessed are You, L·rd, Our G·d, King of the Universe, Who distinguishes between the Holy &amp; the mundane, &amp; between light &amp; dark, &amp; between Yisrael &amp; the Nations, &amp; between Seventh Day &amp; the Six Workdays. Blessed are You, L·rd, Our G·d, King of the Universe, Who distinguishes between the Holy &amp; the mundane.   ..."},
-          {"ref": "16", "translates": ["16", "17", "21"], "text": "(Drink wine or juice.)"}
+          {"ref": "15", "translates": ["15"], "text": "Blessed are You, L·rd our G·d, King of the universe, who distinguishes between sacred and ordinary, between light and darkness, between Israel and the nations, and between the seventh day and the six days of work. Blessed are You, L·rd, who distinguishes between sacred and ordinary."},
+          {"ref": "16", "translates": ["16"], "text": "Drink a revi’it of wine and recite Al HaGefen."},
+          {"ref": "17", "translates": ["17"], "text": "Blessed are You, L·rd our G·d, King of the universe, for the vine and its fruit, for the produce of the field, and for the desirable, good, and spacious land that You desired and gave as an inheritance to our ancestors, so they might eat of its fruit and be satisfied with its goodness. Have mercy, L·rd our G·d, on us, on Israel Your people, on Jerusalem Your city, on Mount Zion, the dwelling place of Your glory, and on Your altar and Your sanctuary. Rebuild Jerusalem, the holy city, speedily in our days; bring us there, gladden us in its rebuilding, and let us bless You there in holiness and purity."},
+          {"ref": "21", "translates": ["21"], "text": "For You are good and do good to all, and we thank You for the land and for the fruit of the vine. Blessed are You, L·rd, for the land and for the fruit of the vine (in the Land of Israel: for its vine)."}
         ]
       }
     },
@@ -461,7 +463,7 @@
     {
       "path": "Havdalah/Fourth Meal",
       "title": "סעודה רביעית",
-      "node": "shabbat.seudah_shlishit",
+      "node": "shabbat.melaveh_malkah",
       "service": "none",
       "he": {
         "version": "Shaliehsaboo Edition",

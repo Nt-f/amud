@@ -62,6 +62,27 @@ void main() {
       expect(DayContext(sa, il: false, service: Service.shacharit)['mashivHaruach'], isFalse);
       expect(DayContext(sa, il: false, service: Service.musaf)['mashivHaruach'], isTrue);
     });
+    test('the first 30 days after each seasonal switch', () {
+      DayContext at(HDate d, {bool il = false, Service s = Service.mincha}) => DayContext(d, il: il, service: s);
+      // Mashiv HaRuach: Musaf of Shmini Atzeret (22 Tishrei) through 30 days.
+      expect(at(HDate(22, Months.tishrei, 5786))['freshMashivHaruach'], isTrue);
+      expect(at(HDate(21, Months.cheshvan, 5786))['freshMashivHaruach'], isTrue); // day 29 after
+      expect(at(HDate(22, Months.cheshvan, 5786))['freshMashivHaruach'], isFalse);
+      expect(DayContext(HDate(22, Months.tishrei, 5786), il: false)['freshMashivHaruach'], isFalse); // Shacharit
+      // Ve'ten tal umatar: from Dec 5 in the diaspora, 7 Cheshvan in Israel.
+      expect(at(_greg(2025, 12, 5))['freshTalUmatar'], isTrue);
+      expect(at(_greg(2026, 1, 3))['freshTalUmatar'], isTrue);
+      expect(at(_greg(2026, 1, 5))['freshTalUmatar'], isFalse);
+      expect(at(HDate(13, Months.cheshvan, 5786))['freshTalUmatar'], isFalse);
+      expect(at(HDate(10, Months.cheshvan, 5786), il: true)['freshTalUmatar'], isTrue);
+      // Ve'ten bracha and Morid HaTal: from Pesach.
+      expect(at(HDate(15, Months.nisan, 5786), il: true)['freshBracha'], isTrue);
+      expect(at(HDate(15, Months.nisan, 5786), il: true)['freshMoridHatal'], isTrue);
+      expect(at(HDate(5, Months.iyyar, 5786))['freshBracha'], isTrue);
+      expect(at(HDate(5, Months.iyyar, 5786))['freshMoridHatal'], isFalse); // not said in the diaspora
+      expect(at(HDate(20, Months.sivan, 5786))['freshBracha'], isFalse);
+      expect(at(HDate(13, Months.cheshvan, 5786))['freshBracha'], isFalse);
+    });
     test("Tal u'matar: diaspora from the evening of Dec 4 (5 before leap year)", () {
       // 2025: begins Maariv Dec 4, so daytime Dec 5 is the first full day.
       expect(DayContext.forService(_greg(2025, 12, 4), Service.maariv, il: false)['talUmatar'], isTrue);

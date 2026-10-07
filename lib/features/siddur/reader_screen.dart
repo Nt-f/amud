@@ -24,6 +24,8 @@ import '../../core/split_row.dart';
 import '../../core/theme.dart';
 import '../../core/titles.dart';
 import '../../core/typeset/typeset.dart';
+import 'book_kind.dart';
+import 'linear_reader.dart';
 import 'reader_grouping.dart';
 import 'reader_typography.dart';
 import 'reading_marks.dart';
@@ -47,7 +49,7 @@ final _resolvedProvider = FutureProvider.family<List<RenderItem>, _ReaderKey>((r
   final node = root.find(k.node) ?? root;
   final versions = await ref.watch(versionSelectionProvider(k.book).future);
   final resolver = await ref.watch(resolverProvider(k.book).future);
-  final s = ref.watch(settingsProvider);
+  final s = readerSettings(ref.watch(settingsProvider), k.book);
   final daytime = HDate.fromAbs(k.dateAbs);
   final ctxs = <Service, DayContext>{};
   return resolver.resolve(
@@ -92,6 +94,9 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
   final _toggledNotes = <String>{};
 
   final _selection = GlobalKey<SelectionAreaState>();
+
+  /// The linear page style in use (see [linearPageStyle]).
+  LinearStyle _linear = LinearStyle.off;
 
   /// Text is selected: sideways drags move its handles, so swiping
   /// doesn't turn the page.
@@ -249,7 +254,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     final items = ref.watch(_resolvedProvider(key));
     final rootAsync = ref.watch(bookIndexProvider(widget.book));
     final node = rootAsync.valueOrNull?.find(widget.nodeId);
-    final s = ref.watch(settingsProvider);
+    final s = readerSettings(ref.watch(settingsProvider), widget.book);
     final theme = Theme.of(context);
 
     final bar = AppBar(
@@ -373,10 +378,11 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
   Widget _listView(BuildContext context, List<Widget Function(BuildContext)> rows, SchemaNode? node) {
     final width = MediaQuery.sizeOf(context).width;
     final wide = width > 700;
-    final s = ref.watch(settingsProvider);
+    final s = readerSettings(ref.watch(settingsProvider), widget.book);
     // Printed pages keep a readable measure: on a wide window the column
     // stays centered rather than running the lines out to the edges.
-    final side = TypeScale.of(s).gutter(width, min: wide ? 48 : 16, sideBySide: wide && s.layout == TextLayout.sideBySide);
+    final columns = s.layout == TextLayout.sideBySide || linearPageStyle(s, wide: wide) == LinearStyle.facing;
+    final side = TypeScale.of(s).gutter(width, min: wide ? 48 : 16, sideBySide: wide && columns);
     return SelectionArea(
       key: _selection,
       onSelectionChanged: _selectionChanged,
@@ -399,9 +405,10 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
   /// The list's rows, and the key points among its headings (see
   /// [keyPoints]) with the row each starts at.
   ({List<Widget Function(BuildContext)> rows, List<JumpPoint> jumps}) _rows(BuildContext context, List<RenderItem> list, SchemaNode? node) {
-    final s = ref.watch(settingsProvider);
+    final s = readerSettings(ref.watch(settingsProvider), widget.book);
     final wide = MediaQuery.sizeOf(context).width > 700;
-    final layout = s.layout == TextLayout.sideBySide && !wide ? TextLayout.interleaved : s.layout;
+    _linear = linearPageStyle(s, wide: wide);
+    final layout = _linear != LinearStyle.off || (s.layout == TextLayout.sideBySide && !wide) ? TextLayout.interleaved : s.layout;
     final rows = <Widget Function(BuildContext)>[];
     final jumps = <JumpPoint>[];
     final seen = <String>{};
@@ -591,6 +598,24 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
       };
       final point = title == null ? null : keyPointFor(title);
       if (point != null && seen.add(point.$1)) jumps.add(JumpPoint(point.$1, point.$2, row: rows.length));
+      // The linear page sets a run of lines with their English under a rule.
+      if (_linear == LinearStyle.below && it is SegmentItem) {
+        final run = linearRun(list, i, also: (x) => !_isChazarah(x) && _unitOf(x) == null && _foldOf(x) == null && !_repeatsKedushah(x));
+        if (run.isNotEmpty) {
+          i += run.length;
+          rows.add((c) => LinearBlock(
+                lines: run,
+                hebrew: (x) => _SegmentView(item: x.onlyHebrew(), layout: TextLayout.hebrewOnly, opening: _openers.contains(x.key), roleStart: _openers.contains('role:${x.key}'), centered: _openers.contains('center:${x.key}')),
+                english: (x) => _SegmentView(item: x.onlyTranslation(), layout: TextLayout.translationOnly, opening: false),
+              ));
+          // A divider where another run of the section follows.
+          final after = i < list.length ? list[i] : null;
+          if (after is SegmentItem && after.node == run.first.node && linearLine(after)) {
+            rows.add((c) => LinearDivider(height: s.typesetting ? TypeScale.of(s).line * 0.9 : 24));
+          }
+          continue;
+        }
+      }
       rows.addAll(_rowsFor(context, it, layout));
       i++;
     }
@@ -603,11 +628,11 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     final s = ref.read(settingsProvider);
     switch (it) {
       case ExcludedGroupItem g when _expandedGroups.contains(g.key):
-        return [for (final si in g.items) (c) => _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), centered: _openers.contains('center:${si.key}'))];
+        return [for (final si in g.items) (c) => _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), centered: _openers.contains('center:${si.key}'), linear: _linear)];
       case SegmentItem si when si.kind == SegmentKind.note && s.collapseNotes:
         final open = _toggledNotes.contains(si.key);
         void toggle() => setState(() => open ? _toggledNotes.remove(si.key) : _toggledNotes.add(si.key));
-        return [(c) => _NoteRow(item: si, open: open, onTap: toggle, child: open ? _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), centered: _openers.contains('center:${si.key}')) : null)];
+        return [(c) => _NoteRow(item: si, open: open, onTap: toggle, child: open ? _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), centered: _openers.contains('center:${si.key}'), linear: _linear) : null)];
       default:
         return [(c) => _item(c, it, layout)];
     }
@@ -659,6 +684,8 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     if (k != null) return _Unit('kaddish:${seg.graphNode}', k.$1, k.$2, true);
     return isUnitNode(seg.node) ? _Unit('leaf:${seg.node.id}', seg.node.en, seg.node.he, false) : null;
   }
+
+  static bool _repeatsKedushah(SegmentItem x) => x.chazarah && _mentionsKedushah(x);
 
   /// A repetition line that is, or announces, the Kedushah.
   static bool _mentionsKedushah(SegmentItem x) =>
@@ -785,7 +812,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
           ]),
         );
       case SegmentItem si:
-        return _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), centered: _openers.contains('center:${si.key}'));
+        return _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), centered: _openers.contains('center:${si.key}'), linear: _linear);
     }
   }
 }
@@ -1040,9 +1067,13 @@ class _SegmentView extends ConsumerWidget {
   /// Centered with the lines around it: a rubric introducing a centered
   /// line (Barchu's "the chazzan says"), or the middle of a responsive run.
   final bool centered;
+
+  /// The linear page's columns, when set (see [LinearColumns]).
+  final LinearStyle linear;
   const _SegmentView(
       {required this.item,
       required this.layout,
+      this.linear = LinearStyle.off,
       this.compact = false,
       this.opening = false,
       this.roleStart = false,
@@ -1127,7 +1158,7 @@ class _SegmentView extends ConsumerWidget {
       // inside a chazzan's line: far side, "Cong.", not a label above it.
       if (item.kind == SegmentKind.prayer && isResponse(item.role) && !excluded) {
         paragraphs.first.$2.add(TextSpan(
-            text: '\u2068${readingRoleShort(context, item.role)}\u2069 ',
+            text: '\u2068${readingRoleShort(context, s, item.role)}\u2069 ',
             style: base.copyWith(fontSize: (base.fontSize ?? 16) * 0.55, color: colors.marker, fontWeight: FontWeight.w600)));
       }
       for (final (i, r) in runs.indexed) {
@@ -1137,7 +1168,7 @@ class _SegmentView extends ConsumerWidget {
           if (roles[i] != item.role && roles[i] != null) {
             paragraphs.last.$2.add(TextSpan(
                 // Isolated, so "Cong." keeps its full stop inside Hebrew text.
-                text: '\u2068${readingRoleShort(context, roles[i])}\u2069 ',
+                text: '\u2068${readingRoleShort(context, s, roles[i])}\u2069 ',
                 style: base.copyWith(fontSize: (base.fontSize ?? 16) * 0.55, color: colors.marker, fontWeight: FontWeight.w600)));
           }
         }
@@ -1241,7 +1272,9 @@ class _SegmentView extends ConsumerWidget {
     }
     final heW = he == null ? null : text(he, heBase, he.segment.hebrew, lead: lead);
     final trW = tr == null ? null : text(tr, enBase, tr.segment.hebrew, lead: he == null ? lead : null);
-    if (layout == TextLayout.sideBySide && heW != null && trW != null) {
+    if (linear == LinearStyle.facing && heW != null && trW != null) {
+      body = LinearColumns(english: trW, hebrew: heW);
+    } else if (layout == TextLayout.sideBySide && heW != null && trW != null) {
       body = Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Expanded(child: trW),
         const SizedBox(width: 24),
@@ -1257,7 +1290,7 @@ class _SegmentView extends ConsumerWidget {
     if (heW == null && trW == null) return const SizedBox.shrink();
 
     final reading = item.kind == SegmentKind.prayer && !excluded
-        ? readingLabels(context, item, withRole: roleStart && !isResponse(item.role), undertone: isUndertone(item))
+        ? readingLabels(context, s, item, withRole: roleStart && !isResponse(item.role), undertone: isUndertone(item))
         : const <String>[];
     final content = reading.isEmpty
         ? body
@@ -1266,7 +1299,7 @@ class _SegmentView extends ConsumerWidget {
                 // Over a centered line, the label is centered too.
                 textAlign: centered && ts.print || ts.align(role) == ParagraphAlign.center ? TextAlign.center : null,
                 style: theme.textTheme.labelSmall?.copyWith(color: colors.marker, fontWeight: FontWeight.w600),
-                textDirection: item.he != null && context.uiLanguage != UiLanguage.en ? TextDirection.rtl : null),
+                textDirection: (item.he != null && context.uiLanguage != UiLanguage.en) || (!s.showEnglishNotes && s.showHebrewNotes) ? TextDirection.rtl : null),
             const SizedBox(height: 2),
             body,
           ]);

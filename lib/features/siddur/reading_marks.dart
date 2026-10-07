@@ -2,58 +2,76 @@ import 'package:flutter/widgets.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 
 import '../../core/l10n.dart';
+import '../../core/settings.dart';
 
+// How a prayer is read (who says it, what one does), as English and Hebrew
+// like any instruction: shown in the language(s) chosen for instructions and
+// notes (see [conditionLabel]).
 const _roles = {
-  'chazzan': 'Chazzan',
-  'congregation': 'Cong.',
-  'congregation_then_chazzan': 'Cong., then chazzan',
-  'chazzan_then_congregation': 'Chazzan, then cong.',
-  'together': 'Together with the chazzan',
-  'responsive': 'Responsively',
-  'kohanim': 'Kohanim',
-  'mourner': 'Mourner',
-  'oleh': 'The one called up',
-  'head_of_household': 'Head of household',
+  'chazzan': ('Chazzan', 'שליח ציבור'),
+  'congregation': ('Cong.', 'קהל'),
+  'congregation_then_chazzan': ('Cong., then chazzan', 'קהל, ואחריו שליח הציבור'),
+  'chazzan_then_congregation': ('Chazzan, then cong.', 'שליח הציבור, ואחריו הקהל'),
+  'together': ('Together with the chazzan', 'יחד עם שליח הציבור'),
+  'responsive': ('Responsively', 'בקריאה לסירוגין'),
+  'kohanim': ('Kohanim', 'כהנים'),
+  'mourner': ('Mourner', 'אבל'),
+  'oleh': ('The one called up', 'העולה לתורה'),
+  'head_of_household': ('Head of household', 'בעל הבית'),
 };
 
 const _gestures = {
-  'stand': 'Stand',
-  'sit': 'Sit',
-  'bow': 'Bow',
-  'bow_full': 'Bow fully',
-  'knees_bend': 'Bend the knees',
-  'rise_on_toes': 'Rise on toes',
-  'feet_together': 'Feet together',
-  'three_steps_back': 'Three steps back',
-  'three_steps_forward': 'Three steps forward',
-  'cover_eyes': 'Cover the eyes',
-  'kiss_tzitzit': 'Kiss the tzitzit',
-  'gather_tzitzit': 'Gather the tzitzit',
-  'touch_tefillin': 'Touch the tefillin',
-  'head_down': 'Head down',
-  'face_ark': 'Face the ark',
-  'ark_open': 'Ark opened',
-  'ark_close': 'Ark closed',
-  'hold_torah': 'Hold the Torah',
-  'shake_lulav': 'Shake the lulav',
-  'hold_cup': 'Hold the cup',
-  'look_at_candles': 'Look at the candles',
-  'look_at_fingernails': 'Look at the fingernails',
-  'strike_chest': 'Strike the chest',
-  'look_at_moon': 'Look at the moon',
-  'raise_hands': 'Raise the hands',
-  'turn_west': 'Turn to the west',
-  'bow_left_right_center': 'Bow left, right, center',
+  'stand': ('Stand', 'עומדים'),
+  'sit': ('Sit', 'יושבים'),
+  'bow_full': ('Bow fully', 'כורעים'),
+  'knees_bend': ('Bend the knees', 'כורעים ברכיים'),
+  'rise_on_toes': ('Rise on toes', 'עולים על קצות האצבעות'),
+  'feet_together': ('Feet together', 'רגליים צמודות'),
+  'three_steps_back': ('Three steps back', 'שלוש פסיעות לאחור'),
+  'three_steps_forward': ('Three steps forward', 'שלוש פסיעות לפנים'),
+  'cover_eyes': ('Cover the eyes', 'מכסים את העיניים'),
+  'kiss_tzitzit': ('Kiss the tzitzit', 'מנשקים את הציצית'),
+  'gather_tzitzit': ('Gather the tzitzit', 'אוספים את הציציות'),
+  'touch_tefillin': ('Touch the tefillin', 'נוגעים בתפילין'),
+  'head_down': ('Head down', 'מרכינים ראש'),
+  'face_ark': ('Face the ark', 'פונים לארון הקודש'),
+  'ark_open': ('Ark opened', 'ארון הקודש פתוח'),
+  'ark_close': ('Ark closed', 'ארון הקודש סגור'),
+  'hold_torah': ('Hold the Torah', 'אוחזים את ספר התורה'),
+  'shake_lulav': ('Shake the lulav', 'מנענעים את הלולב'),
+  'hold_cup': ('Hold the cup', 'אוחזים את הכוס'),
+  'look_at_candles': ('Look at the candles', 'מביטים בנרות'),
+  'look_at_fingernails': ('Look at the fingernails', 'מביטים בצפורניים'),
+  'strike_chest': ('Strike the chest', 'מכים על החזה'),
+  'look_at_moon': ('Look at the moon', 'מביטים בלבנה'),
+  'raise_hands': ('Raise the hands', 'נושאים כפיים'),
+  'turn_west': ('Turn to the west', 'פונים מערבה'),
+  'bow_left_right_center': ('Bow left, right, center', 'משתחווים שמאלה, ימינה ואמצע'),
 };
 
+/// A gesture's label in the instruction languages; null for one the reader
+/// doesn't label (a plain bow, which every blessing would repeat).
+String? gestureLabel(AppSettings s, String gesture) {
+  final l = _gestures[gesture];
+  return l == null ? null : _instruction(s, l);
+}
+
+const _undertone = ('In an undertone', 'בלחש');
+
+/// [en] and [he] as the instruction languages say, like [conditionLabel].
+String _instruction(AppSettings s, (String, String) label) {
+  final parts = [if (s.showEnglishNotes) label.$1, if (s.showHebrewNotes) label.$2];
+  return parts.join(' · ');
+}
+
 /// Who says it ("Congregation, then chazzan"); empty for one's own prayer.
-String readingRole(BuildContext context, String? role) {
+String readingRole(BuildContext context, AppSettings s, String? role) {
   final l = _roles[role];
-  return l == null ? '' : context.tr(l);
+  return l == null ? '' : _instruction(s, l);
 }
 
 /// The same, as a short mark inside a line ("Cong.").
-String readingRoleShort(BuildContext context, String? role) => readingRole(context, role);
+String readingRoleShort(BuildContext context, AppSettings s, String? role) => readingRole(context, s, role);
 
 /// The congregation's responses: set on the far side of the line.
 bool isResponse(String? role) => role == 'congregation';
@@ -115,10 +133,10 @@ String verseNumbers(String html) {
 ///
 /// [undertone] marks lines known to be said quietly that the corpus
 /// doesn't tag (Baruch shem outside the morning Shema).
-List<String> readingLabels(BuildContext context, SegmentItem item, {required bool withRole, bool undertone = false}) => [
-      if (withRole && _roles[item.role] != null) readingRole(context, item.role),
-      if (item.voice == 'undertone' || undertone) context.tr('In an undertone'),
-      for (final g in item.gestures)
-        if (_gestures[g] != null) context.tr(_gestures[g]!),
+List<String> readingLabels(BuildContext context, AppSettings s, SegmentItem item, {required bool withRole, bool undertone = false}) => [
+      if (withRole && _roles[item.role] != null) readingRole(context, s, item.role),
+      if (item.voice == 'undertone' || undertone) _instruction(s, _undertone),
+      for (final g in item.gestures.toSet())
+        if (_gestures[g] != null) _instruction(s, _gestures[g]!),
       if (item.repeat != null) context.tr('×{n}', {'n': item.repeat}),
     ];

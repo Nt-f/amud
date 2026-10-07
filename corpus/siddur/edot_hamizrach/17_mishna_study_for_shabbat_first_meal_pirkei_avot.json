@@ -26,8 +26,8 @@
     {
       "path": "Mishna Study for Shabbat/Second Meal",
       "title": "משניות שבת לסעודה שניה",
-      "node": "shabbat.pirkei_avot",
-      "service": "shacharit",
+      "node": "study.torah",
+      "service": "none",
       "he": {
         "version": "Shaliehsaboo Edition",
         "segs": [
@@ -47,7 +47,7 @@
       "path": "Mishna Study for Shabbat/Third Meal",
       "title": "משניות שבת לסעודה שלישית",
       "node": "study.torah",
-      "service": "shacharit",
+      "service": "none",
       "he": {
         "version": "Shaliehsaboo Edition",
         "segs": [
@@ -67,7 +67,7 @@
       "path": "Mishna Study for Shabbat/Pirkei Avot",
       "title": "פרקי אבות",
       "node": "shabbat.pirkei_avot",
-      "service": "shacharit",
+      "service": "none",
       "he": {
         "version": "Shaliehsaboo Edition",
         "segs": [

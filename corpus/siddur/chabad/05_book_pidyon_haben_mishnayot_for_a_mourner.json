@@ -147,10 +147,10 @@
           {"ref": "31", "kind": "prayer", "role": "mourner", "voice": "aloud", "text": "<b>עַל</b> יִשְׂרָאֵֽל וְעַל רַבָּנָֽן. וְעַל תַּלְמִידֵיהוֹן וְעַל כָּל־תַּלְמִידֵֽי תַלְמִידֵיהוֹן. וְעַל כָּל־מָאן דְּעָסְקִין בְּאוֹרַיְתָא. דִּי־בְאַתְרָא הָדֵין וְדִי בְכָל־אֲתַר וַאֲתַר יְהֵא לְהוֹן וּלְכוֹן שְׁלָמָא רַבָּֽא חִנָּא וְחִסְדָּא וְרַחֲמִין וְחַיִּין־אֲרִיכִין וּמְזוֹנָא־רְוִיחָא וּפֻרְקָנָא מִן קֳדָם אֲבוּהוֹן דְבִשְׁמַיָּֽא וְאִמְרוּ אָמֵן: "},
           {"ref": "32", "kind": "prayer", "role": "mourner", "voice": "aloud", "text": "<b>יְהֵא</b> שְׁלָמָא רַבָּֽא מִן־שְׁמַיָּֽא וְחַיִּֽים טוֹבִֽים עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵֽל וְאִמְרֽוּ אָמֵֽן: "},
           {"ref": "33", "parts": [
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "gestures": ["bow_left_right_center"], "text": "<b>עֹשֶֽׂה</b> שָׁלֽוֹם ("},
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "<b>עֹשֶֽׂה</b> שָׁלֽוֹם "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "alt": "oseh", "en": "During the Ten Days of Repentance:", "text": "<small>בעשי״ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "role": "mourner", "voice": "aloud", "text": " הַשָּׁלֽוֹם)"},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "gestures": ["bow_left_right_center"], "text": " בִּמְרוֹמָֽיו הוּא יַעֲשֶֽׂה שָׁלֽוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵֽל וְאִמְרֽוּ אָמֵֽן:"}
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "role": "mourner", "voice": "aloud", "text": " (הַשָּׁלֽוֹם)"},
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": " בִּמְרוֹמָֽיו הוּא יַעֲשֶֽׂה שָׁלֽוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵֽל וְאִמְרֽוּ אָמֵֽן:"}
           ]},
           {"ref": "34", "parts": [
             {"kind": "instruction", "when": "if_deceasedMale", "alt": "elmalei", "node": "x.mourner.el_malei", "en": "For a man:", "text": "<small>לזכר</small>"},

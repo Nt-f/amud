@@ -389,9 +389,9 @@
           {"ref": "5", "kind": "prayer", "node": "amidah.avot", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, אֱלֹהֵי אַבְרָהָם, אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב. הָאֵל הַגָּדוֹל, הַגִּבּוֹר וְהַנּוֹרָא, אֵל עֶלְיוֹן, גּוֹמֵל חֲסָדִים טוֹבִים, וְקוֹנֵה הַכֹּל, וְזוֹכֵר חַסְדֵי אָבוֹת, וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ, בְּאַהֲבָה. מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן, בָּרוּךְ אַתָּה יְהֹוָה, מָגֵן אַבְרָהָם:"},
           {"ref": "6", "kind": "prayer", "node": "amidah.gevurot", "text": "<b>אַתָּה</b> גִּבּוֹר לְעוֹלָם, אֲדֹנָי. מְחַיֵּה מֵתִים אַתָּה, רַב לְהוֹשִׁיעַ. "},
           {"ref": "7", "parts": [
-            {"kind": "instruction", "en": "In summer:", "text": "<small>בקיץ:</small>"},
+            {"kind": "instruction", "when": "!mashivHaruach", "en": "In summer:", "text": "<small>בקיץ:</small>"},
             {"kind": "prayer", "when": "!mashivHaruach", "alt": "geshem", "text": " מוֹרִיד הַטָּל. "},
-            {"kind": "instruction", "en": "In winter:", "text": "<small>בחורף:</small>"},
+            {"kind": "instruction", "when": "mashivHaruach", "en": "In winter:", "text": "<small>בחורף:</small>"},
             {"kind": "prayer", "when": "mashivHaruach", "alt": "geshem", "text": " מַשִּׁיב הָרוּחַ וּמוֹרִיד הַגֶּשֶׁם."}
           ]},
           {"ref": "8", "kind": "prayer", "node": "amidah.gevurot", "text": "<b>מְכַלְכֵּל</b> חַיִּים בְּחֶסֶד, מְחַיֵּה מֵתִים בְּרַחֲמִים רַבִּים, סוֹמֵךְ נוֹפְלִים, וְרוֹפֵא חוֹלִים, וּמַתִּיר אֲסוּרִים, וּמְקַיֵּם אֱמוּנָתוֹ לִישֵׁנֵי עָפָר. מִי כָמוֹךָ בַּעַל גְּבוּרוֹת, וּמִי דוֹמֶה לָּךְ, מֶלֶךְ מֵמִית וּמְחַיֶּה וּמַצְמִיחַ יְשׁוּעָה. וְנֶאֱמָן אַתָּה לְהַחֲיוֹת מֵתִים. בָּרוּךְ אַתָּה יְהֹוָה, מְחַיֵּה הַמֵּתִים:"},
@@ -565,8 +565,8 @@
           {"ref": "10", "parts": [
             {"kind": "prayer", "text": "<small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל עָם וְרוֹמְמָנוּ מִכָּל לָשׁוֹן וְקִדְּשָׁנוּ בְּמִצְוֹתָיו. וַתִּתֶּן לָנוּ יְהֹוָה אֱלֹהֵינוּ בְּאַהֲבָה <small>(<b><small>לשבת</small>"},
             {"kind": "prayer", "text": "</b> שַׁבָּתוֹת לִמְנוּחָה וּ)</small>מוֹעֲדִים לְשִׂמְחָה. חַגִּים וּזְמַנִּים לְשָׂשׂוֹן. אֶת יוֹם "},
-            {"kind": "instruction", "en": "(On Shabbat:)", "gloss": "Insert 'Shabbat' text when Yom Tov is on Shabbat", "text": "<small>(<b><small>לשבת</small>"},
-            {"kind": "prayer", "text": "</b> הַשַּׁבָּת הַזֶּה וְאֶת יוֹם)</small>:</small>"}
+            {"kind": "instruction", "en": "(On Shabbat:)", "gloss": "Insert 'Shabbat' text when Yom Tov is on Shabbat", "text": "<small><b><small>לשבת</small>"},
+            {"kind": "prayer", "text": "</b>( הַשַּׁבָּת הַזֶּה וְאֶת יוֹם)</small>:</small>"}
           ]},
           {"ref": "11", "parts": [
             {"kind": "instruction", "en": "For Passover:", "text": "<small><small>לפסח:</small>"},

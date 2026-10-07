@@ -40,7 +40,7 @@
       "en": {
         "version": "Sefaria Community Translation",
         "segs": [
-          {"ref": "1", "translates": ["1"], "text": "Hannukah"},
+          {"ref": "1", "translates": ["1"], "text": "Hanukkah"},
           {"ref": "2", "translates": ["2"], "text": "The order for lighting Hanukkah candles"},
           {"ref": "3", "translates": ["3"], "text": "For the sake of the unification of the Holy One, Blessed be He, and His Shechinah, with awe and love, and love and awe, to unify the Name Y-H with V-H in perfect unity, in the name of all Israel, we are now coming to fulfill the mitzvah of lighting the Hanukkah candles as our Rabbis, of blessed memory, ordained for us, with all the mitzvot included in it, to rectify its root in the highest place, to bring contentment to our Creator and to do the will of our Maker. And let the pleasantness of the Lord our God be upon us, and establish the work of our hands for us; yes, establish the work of our hands."},
           {"ref": "4", "translates": ["4"], "text": "Blessed are You, Lord our God, King of the universe, who has sanctified us with His commandments, and commanded us to kindle the Hanukkah light."},
@@ -250,7 +250,7 @@
     {
       "path": "Purim/Purim Day",
       "title": "סדר יום פורים",
-      "node": "purim.megillah",
+      "node": "x.purim_day",
       "service": "none",
       "he": {
         "version": "Shaliehsaboo Edition",

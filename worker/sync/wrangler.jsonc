@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "amud-sync",
+  "main": "src/index.ts",
+  "routes": [{ "pattern": "worker.amud.page", "custom_domain": true }],
+  "compatibility_date": "2026-01-01",
+  "durable_objects": {
+    "bindings": [{ "name": "MAILBOX", "class_name": "Mailbox" },
+      { "name": "REPORTS", "class_name": "Reports" }]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["Mailbox"] },
+    { "tag": "v2", "new_sqlite_classes": ["Reports"] }
+  ]
+}

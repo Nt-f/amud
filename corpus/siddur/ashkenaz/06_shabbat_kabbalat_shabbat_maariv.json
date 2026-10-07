@@ -267,8 +267,8 @@
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא "},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "minyan": true, "text": "<b>בְּרִיךְ הוּא</b>"},
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא מִן־כָּל־ "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "(<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " (לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "minyan": true, "text": "<b>אָמֵן</b>:"},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " עַל יִשְׂרָאֵל וְעַל רַבָּנָן וְעַל תַלְמִידֵיהוֹן וְעַל כָּל תַּלְמִידֵי תַלְמִידֵיהוֹן. וְעַל כָּל מָאן דְּעָסְ֒קִין בְּאוֹרַיְתָא. דִּי בְאַתְרָא הָדֵין וְדִי בְכָל אֲתַר וַאֲתַר. יְהֵא לְהוֹן וּלְכוֹן שְׁלָמָא רַבָּא חִנָּא וְחִסְדָּא וְרַחֲמִין וְחַיִּין אֲרִיכִין וּמְזוֹנָא רְוִיחֵי וּפוּרְקָנָא מִן קֳדָם אֲבוּהוֹן דְבִשְׁמַיָּא (וְאַרְעָא) וְאִמְרוּ "},
@@ -277,8 +277,8 @@
             {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "minyan": true, "text": "<b>אָמֵן</b>:"},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " "},
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה שָׁלוֹם "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "(<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " הַשָּׁלוֹם)"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " (הַשָּׁלוֹם)"},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]}
@@ -326,8 +326,8 @@
           ]},
           {"ref": "5", "parts": [
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.derabbanan", "role": "mourner", "voice": "aloud", "minyan": true, "text": "לְעֵֽלָּא מִן־כָּל־ "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.derabbanan", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "(<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.derabbanan", "role": "mourner", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.derabbanan", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.derabbanan", "role": "mourner", "voice": "aloud", "minyan": true, "text": " (לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
             {"kind": "prayer", "node": "kaddish.derabbanan", "role": "mourner", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.derabbanan", "role": "congregation", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]},
@@ -342,8 +342,8 @@
           {"ref": "8", "parts": [
             {"kind": "prayer", "node": "kaddish.derabbanan", "role": "mourner", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה "},
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.derabbanan", "role": "mourner", "voice": "aloud", "minyan": true, "text": "שָׁלוֹם "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.derabbanan", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "(<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.derabbanan", "role": "mourner", "voice": "aloud", "minyan": true, "text": " הַשָּׁלוֹם)"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.derabbanan", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.derabbanan", "role": "mourner", "voice": "aloud", "minyan": true, "text": " (הַשָּׁלוֹם)"},
             {"kind": "prayer", "node": "kaddish.derabbanan", "role": "mourner", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.derabbanan", "role": "congregation", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]}
@@ -373,11 +373,11 @@
         "segs": [
           {"ref": "1", "parts": [
             {"kind": "speaker", "role": "chazzan", "en": "Chazzan:", "clean": "חזן:", "text": "<small>חזן:</small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "gestures": ["bow"], "text": " <b>בָּרְ֒כוּ אֶת יְהֹוָה הַמְ֒בֹרָךְ:</b>"}
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " <b>בָּרְ֒כוּ אֶת יְהֹוָה הַמְ֒בֹרָךְ:</b>"}
           ]},
           {"ref": "2", "parts": [
             {"kind": "speaker", "role": "congregation_then_chazzan", "en": "Congregation, then chazzan:", "clean": "קהל וחזן:", "text": "<small>קהל וחזן:</small>"},
-            {"kind": "prayer", "role": "congregation_then_chazzan", "minyan": true, "gestures": ["bow"], "text": " <b>בָּרוּךְ</b> יְהֹוָה הַמְ֒בֹרָךְ לְעוֹלָם וָעֶד:"}
+            {"kind": "prayer", "role": "congregation_then_chazzan", "minyan": true, "text": " <b>בָּרוּךְ</b> יְהֹוָה הַמְ֒בֹרָךְ לְעוֹלָם וָעֶד:"}
           ]}
         ]
       },
@@ -567,8 +567,8 @@
             {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא "},
             {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "minyan": true, "text": "<b>בְּרִיךְ הוּא</b>"},
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא מִן־כָּל־ "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.half", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "(<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.half", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " (לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
             {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]}
@@ -590,14 +590,14 @@
         "version": "The Metsudah siddur, 1981",
         "segs": [
           {"ref": "1", "kind": "prayer", "node": "amidah.opening", "voice": "silent", "text": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶֽךָ:"},
-          {"ref": "2", "kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים וְקוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַֽעַן שְׁמוֹ בְּאַהֲבָה:"},
+          {"ref": "2", "kind": "prayer", "voice": "silent", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים וְקוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַֽעַן שְׁמוֹ בְּאַהֲבָה:"},
           {"ref": "3", "parts": [
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": "<small>בעשי\"ת:</small>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "voice": "silent", "text": " זָכְרֵֽנוּ לְחַיִּים מֶֽלֶךְ חָפֵץ בַּחַיִּים וְכָתְבֵֽנוּ בְּסֵֽפֶר הַחַיִּים לְמַעַנְךָ אֱלֹהִים חַיִּים:"}
           ]},
           {"ref": "4", "parts": [
             {"kind": "prayer", "voice": "silent", "text": "מֶֽלֶךְ עוֹזֵר וּמוֹשִֽׁיעַ וּמָגֵן: "},
-            {"kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "בָּרוּךְ אַתָּה יְהֹוָה מָגֵן אַבְרָהָם:"}
+            {"kind": "prayer", "voice": "silent", "text": "בָּרוּךְ אַתָּה יְהֹוָה מָגֵן אַבְרָהָם:"}
           ]}
         ]
       },
@@ -736,7 +736,7 @@
       "he": {
         "version": "The Metsudah siddur, 1981",
         "segs": [
-          {"ref": "1", "kind": "prayer", "voice": "silent", "gestures": ["bow_full"], "text": "<b>מוֹדִים</b> אֲנַֽחְנוּ לָךְ שָׁאַתָּה הוּא יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ לְעוֹלָם וָעֶד צוּר חַיֵּֽינוּ מָגֵן יִשְׁעֵֽנוּ אַתָּה הוּא לְדוֹר וָדוֹר נֽוֹדֶה לְּךָ וּנְסַפֵּר תְּהִלָּתֶֽךָ עַל־חַיֵּֽינוּ הַמְּסוּרִים בְּיָדֶֽךָ וְעַל נִשְׁמוֹתֵֽינוּ הַפְּקוּדוֹת לָךְ וְעַל נִסֶּֽיךָ שֶׁבְּכָל יוֹם עִמָּֽנוּ וְעַל נִפְלְאוֹתֶֽיךָ וְטוֹבוֹתֶֽיךָ שֶׁבְּכָל עֵת עֶֽרֶב וָבֹֽקֶר וְצָהֳרָֽיִם הַטּוֹב כִּי לֹא כָלוּ רַחֲמֶֽיךָ וְהַמְרַחֵם כִּי לֹא תַֽמּוּ חֲסָדֶֽיךָ מֵעוֹלָם קִוִּֽינוּ לָךְ:"},
+          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>מוֹדִים</b> אֲנַֽחְנוּ לָךְ שָׁאַתָּה הוּא יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ לְעוֹלָם וָעֶד צוּר חַיֵּֽינוּ מָגֵן יִשְׁעֵֽנוּ אַתָּה הוּא לְדוֹר וָדוֹר נֽוֹדֶה לְּךָ וּנְסַפֵּר תְּהִלָּתֶֽךָ עַל־חַיֵּֽינוּ הַמְּסוּרִים בְּיָדֶֽךָ וְעַל נִשְׁמוֹתֵֽינוּ הַפְּקוּדוֹת לָךְ וְעַל נִסֶּֽיךָ שֶׁבְּכָל יוֹם עִמָּֽנוּ וְעַל נִפְלְאוֹתֶֽיךָ וְטוֹבוֹתֶֽיךָ שֶׁבְּכָל עֵת עֶֽרֶב וָבֹֽקֶר וְצָהֳרָֽיִם הַטּוֹב כִּי לֹא כָלוּ רַחֲמֶֽיךָ וְהַמְרַחֵם כִּי לֹא תַֽמּוּ חֲסָדֶֽיךָ מֵעוֹלָם קִוִּֽינוּ לָךְ:"},
           {"ref": "2", "parts": [
             {"kind": "instruction", "when": "chanukah || purim", "node": "amidah.al_hanissim", "en": "On Chanukah and Purim, say here \"Al HaNissim\".", "clean": "בחנוכה ופורים אומרים כאן ועל הנסים", "text": "<small>בחנוכה ופורים אומרים כאן ועל הנסים"},
             {"kind": "prayer", "when": "chanukah || purim", "node": "amidah.al_hanissim", "voice": "silent", "text": "<br><b>עַל הַנִּסִּים</b> וְעַל הַפֻּרְקָן וְעַל הַגְּ֒בוּרוֹת וְעַל הַתְּ֒שׁוּעוֹת וְעַל הַמִּלְחָמוֹת שֶׁעָשִֽׂיתָ לַאֲבוֹתֵֽינוּ בַּיָּמִים הָהֵם בִּזְּ֒מַן הַזֶּה:</small>"}
@@ -795,9 +795,9 @@
           {"ref": "2", "parts": [
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance continue here:", "clean": "בעשי\"ת:", "text": "<small>בעשי\"ת:</small>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "voice": "silent", "text": " בְּסֵֽפֶר חַיִּים בְּרָכָה וְשָׁלוֹם וּפַרְנָסָה טוֹבָה נִזָּכֵר וְנִכָּתֵב לְפָנֶֽיךָ אֲנַֽחְנוּ וְכָל עַמְּךָ בֵּית יִשְׂרָאֵל לְחַיִּים טוֹבִים וּלְשָׁלוֹם: "},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "shalom_chatima", "voice": "silent", "gestures": ["bow"], "text": "(בָּרוּךְ אַתָּה יְהֹוָה עֹשֶׂה הַשָּׁלוֹם:)"}
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "shalom_chatima", "voice": "silent", "text": "(בָּרוּךְ אַתָּה יְהֹוָה עֹשֶׂה הַשָּׁלוֹם:)"}
           ]},
-          {"ref": "3", "kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "shalom_chatima", "voice": "silent", "gestures": ["bow"], "text": "בָּרוּךְ אַתָּה יְהֹוָה הַמְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם:"}
+          {"ref": "3", "kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "shalom_chatima", "voice": "silent", "text": "בָּרוּךְ אַתָּה יְהֹוָה הַמְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם:"}
         ]
       },
       "en": {
@@ -823,13 +823,13 @@
           {"ref": "1", "kind": "prayer", "voice": "silent", "text": "יִהְיוּ לְרָצוֹן אִמְ֒רֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶֽיךָ יְהֹוָה צוּרִי וְגוֹאֲלִי:"},
           {"ref": "2", "kind": "prayer", "voice": "silent", "text": "<b>אֱלֹהַי</b> נְצוֹר לְשׁוֹנִי מֵרָע וּשְׂפָתַי מִדַּבֵּר מִרְמָה. וְלִמְקַלְלַי נַפְשִׁי תִדּוֹם וְנַפְשִׁי כֶּעָפָר לַכֹּל תִּהְיֶה. פְּתַח לִבִּי בְּתוֹרָתֶֽךָ וּבְמִצְוֹתֶֽיךָ תִּרְדֹּף נַפְשִׁי. וְכֹל הַחוֹשְׁבִים עָלַי רָעָה מְהֵרָה הָפֵר עֲצָתָם וְקַלְקֵל מַחֲשַׁבְתָּם: עֲשֵׂה לְמַֽעַן שְׁמֶֽךָ עֲשֵׂה לְמַֽעַן יְמִינֶֽךָ עֲשֵׂה לְמַֽעַן קְדֻשָּׁתֶֽךָ עֲשֵׂה לְמַֽעַן תּוֹרָתֶֽךָ. לְמַֽעַן יֵחָלְצוּן יְדִידֶֽיךָ הוֹשִֽׁיעָה יְמִינְךָ וַעֲנֵֽנִי: יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶֽיךָ יְהֹוָה צוּרִי וְגוֹאֲלִי:"},
           {"ref": "3", "parts": [
-            {"kind": "prayer", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["bow_left_right_center"], "text": "עֹשֶׂה "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "amidah.oseh_shalom", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "(<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh_shalom", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["bow_left_right_center"], "text": " הַשָּׁלוֹם)"},
-            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh_shalom", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["bow_left_right_center"], "text": " שָׁלוֹם"},
-            {"kind": "prayer", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["bow_left_right_center"], "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}
+            {"kind": "prayer", "node": "amidah.oseh_shalom", "voice": "silent", "text": "עֹשֶׂה "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "amidah.oseh_shalom", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh_shalom", "node": "amidah.oseh_shalom", "voice": "silent", "text": " (הַשָּׁלוֹם)"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh_shalom", "node": "amidah.oseh_shalom", "voice": "silent", "text": " שָׁלוֹם"},
+            {"kind": "prayer", "node": "amidah.oseh_shalom", "voice": "silent", "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}
           ]},
-          {"ref": "4", "kind": "prayer", "node": "amidah.yehi_ratzon_mikdash", "voice": "silent", "text": "<b>יְהִי רָצוֹן</b> מִלְּ֒פָנֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ שֶׁיִּבָּנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵֽינוּ וְתֵן חֶלְקֵֽנוּ בְּתוֹרָתֶֽךָ: וְשָׁם נַעֲבָדְ֒ךָ בְּיִרְאָה כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיּוֹת: וְעָרְ֒בָה לַיהוָֹה מִנְחַת יְהוּדָה וִירוּשָׁלָֽםִ כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיּוֹת:"}
+          {"ref": "4", "kind": "prayer", "node": "amidah.yehi_ratzon_mikdash", "voice": "silent", "text": "יְהִי רָצוֹן מִלְּ֒פָנֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ שֶׁיִּבָּנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵֽינוּ וְתֵן חֶלְקֵֽנוּ בְּתוֹרָתֶֽךָ: וְשָׁם נַעֲבָדְ֒ךָ בְּיִרְאָה כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיּוֹת: וְעָרְ֒בָה לַיהוָֹה מִנְחַת יְהוּדָה וִירוּשָׁלָֽםִ כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיּוֹת:"}
         ]
       },
       "en": {
@@ -916,8 +916,8 @@
           ]},
           {"ref": "5", "parts": [
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "לְעֵֽלָּא מִן־כָּל־ "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "(<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " (לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
             {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.shalem", "role": "congregation", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]},
@@ -932,8 +932,8 @@
           {"ref": "8", "parts": [
             {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה "},
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "שָׁלוֹם "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "(<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " הַשָּׁלוֹם)"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " (הַשָּׁלוֹם)"},
             {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.shalem", "role": "congregation", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]}
@@ -1011,7 +1011,7 @@
         "segs": [
           {"ref": "1", "parts": [
             {"kind": "prayer", "text": "<b>עָלֵֽינוּ</b> לְשַׁבֵּֽחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֺּא עָשָֽׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֺא שָׂמָֽנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֺּא שָׂם חֶלְקֵֽנוּ כָּהֶם וְגוֹרָלֵֽנוּ כְּכָל הֲמוֹנָם: שֶׁהֵם מִשְׁתַּחֲוִים לָהֶֽבֶל וָרִיק וּמִתְפַּלְּ֒לִים אֶל אֵל לֹא יוֹשִֽׁיעַ, "},
-            {"kind": "prayer", "gestures": ["bow_full"], "text": "וַאֲנַֽחְנוּ כּוֹרְ֒עִים וּמִשְׁתַּחֲוִים וּמוֹדִים לִפְנֵי מֶֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא, "},
+            {"kind": "prayer", "text": "וַאֲנַֽחְנוּ כּוֹרְ֒עִים וּמִשְׁתַּחֲוִים וּמוֹדִים לִפְנֵי מֶֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא, "},
             {"kind": "prayer", "text": "שֶׁהוּא נוֹטֶה שָׁמַֽיִם וְיוֹסֵד אָֽרֶץ, וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַֽיִם מִמַּֽעַל, וּשְׁ֒כִינַת עֻזּוֹ בְּגָבְ֒הֵי מְרוֹמִים, הוּא אֱלֺהֵֽינוּ אֵין עוֹד, אֱמֶת מַלְכֵּֽנוּ אֶֽפֶס זוּלָתוֹ כַּכָּתוּב בְּתוֹרָתוֹ וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל לְבָבֶֽךָ כִּי יְהֹוָה הוּא הָאֱלֺהִים בַּשָּׁמַֽיִם מִמַּֽעַל וְעַל הָאָֽרֶץ מִתָּֽחַת אֵין עוֹד:"}
           ]},
           {"ref": "2", "kind": "prayer", "text": "<b>עַל כֵּן</b> נְקַוֶּה לְךָ יְהֹוָה אֱלֺהֵֽינוּ לִרְאוֹת מְהֵרָה בְּתִפְאֶֽרֶת עֻזֶּֽךָ לְהַעֲבִיר גִּלּוּלִים מִן הָאָֽרֶץ וְהָאֱלִילִים כָּרוֹת יִכָּרֵתוּן לְתַקֵּן עוֹלָם בְּמַלְכוּת שַׁדַּי וְכָל בְּנֵי בָשָׂר יִקְרְאוּ בִשְׁ֒מֶֽךָ, לְהַפְנוֹת אֵלֶֽיךָ כָּל רִשְׁ֒עֵי אָֽרֶץ, יַכִּֽירוּ וְיֵדְ֒עוּ כָּל יוֹשְׁ֒בֵי תֵבֵל כִּי לְךָ תִכְרַע כָּל בֶּֽרֶךְ תִּשָּׁבַע כָּל לָשׁוֹן: לְפָנֶֽיךָ יְהֹוָה אֱלֺהֵֽינוּ יִכְרְעוּ וְיִפֹּֽלוּ, וְלִכְ֒בוֹד שִׁמְךָ יְקָר יִתֵּֽנוּ, וִיקַבְּ֒לוּ כֻלָּם אֶת עֹל מַלְכוּתֶֽךָ, וְתִמְלֺךְ עֲלֵיהֶם מְהֵרָה לְעוֹלָם וָעֶד, כִּי הַמַּלְכוּת שֶׁלְּ֒ךָ הִיא וּלְעֽוֹלְ֒מֵי עַד תִּמְלוֹךְ בְּכָבוֹד, כַּכָּתוּב בְּתוֹרָתֶֽךָ יְהֹוָה יִמְלֺךְ לְעֹלָם וָעֶד: וְנֶאֱמַר וְהָיָה יְהֹוָה לְמֶֽלֶךְ עַל כָּל הָאָֽרֶץ בַּיּוֹם הַהוּא יִהְיֶה יְהֹוָה אֶחָד וּשְׁמוֹ אֶחָד:"}
@@ -1048,8 +1048,8 @@
           ]},
           {"ref": "5", "parts": [
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "לְעֵֽלָּא מִן־כָּל־ "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "(<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " (לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]},
@@ -1060,8 +1060,8 @@
           {"ref": "7", "parts": [
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה "},
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "שָׁלוֹם "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "(<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " הַשָּׁלוֹם)"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " (הַשָּׁלוֹם)"},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]}
@@ -1106,8 +1106,8 @@
           ]},
           {"ref": "7", "parts": [
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "לְעֵֽלָּא מִן־כָּל־ "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "(<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " (לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]},
@@ -1118,8 +1118,8 @@
           {"ref": "9", "parts": [
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה "},
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "שָׁלוֹם "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "(<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " הַשָּׁלוֹם)"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "(בעשי\"ת", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kd_alt", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " (הַשָּׁלוֹם)"},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]}

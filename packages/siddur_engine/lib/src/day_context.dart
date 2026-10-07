@@ -214,6 +214,10 @@ class DayContext {
     'mashivHaruach': 'Say Mashiv HaRuach (winter)',
     'moridHatal': 'Say Morid HaTal (summer, Sefard/Israel)',
     'talUmatar': 'Say V\'ten tal u\'matar',
+    'freshMashivHaruach': 'Mashiv HaRuach, in the first 30 days after it begins',
+    'freshMoridHatal': 'Morid HaTal, in the first 30 days after it begins',
+    'freshTalUmatar': 'V\'ten tal u\'matar, in the first 30 days after it begins',
+    'freshBracha': 'V\'ten bracha, in the first 30 days after it begins',
     'omer': 'During Sefirat HaOmer (day count > 0)',
     'omerDay': 'Omer day 1-49 for this Hebrew date (0 if none)',
     'hallel': 'Hallel said (half or whole)',
@@ -398,6 +402,14 @@ class _Builder {
     // Ashkenaz in the diaspora says nothing in its place.
     set('moridHatal', !winter && (il || m.sefardi));
     set('talUmatar', _talUmatar(month, day, year));
+    // The first 30 days after each switch, when the old wording is easy to
+    // fall back on (Mashiv HaRuach from Shmini Atzeret, Morid HaTal and
+    // "ve'ten bracha" from Pesach, "ve'ten tal umatar" from its start).
+    bool within30(int start) => abs - start >= 0 && abs - start < 30;
+    set('freshMashivHaruach', winter && within30(HDate(22, Months.tishrei, year).abs()));
+    set('freshMoridHatal', !winter && (il || m.sefardi) && within30(HDate(15, Months.nisan, year).abs()));
+    set('freshTalUmatar', _talUmatar(month, day, year) && within30(_talUmatarStart(year)));
+    set('freshBracha', !_talUmatar(month, day, year) && within30(HDate(15, Months.nisan, year).abs()));
 
     final omerDay = _omerDay();
     set('omerDay', omerDay);
@@ -506,13 +518,18 @@ class _Builder {
     if (il) {
       return month > Months.cheshvan || (month == Months.cheshvan && day >= 7);
     }
+    return hd.abs() >= _talUmatarStart(year);
+  }
+
+  /// The first daytime (absolute day) of Hebrew [year] with V'ten tal u'matar.
+  int _talUmatarStart(int year) {
+    if (il) return HDate(7, Months.cheshvan, year).abs();
     // Diaspora: begins at Maariv of the 60th day after tekufat Tishrei
     // (Dec 4 evening, Dec 5 before a Gregorian leap year, in 1900–2099).
     final gy = year - 3761;
     final diff = (gy ~/ 100) - (gy ~/ 400) - 2; // Julian/Gregorian gap
     final leapAdj = isGregLeapYear(gy + 1) ? 1 : 0;
     final eveningDay = 4 + (diff - 13) + leapAdj;
-    final startDaytime = HDate.fromAbs(gregYmdToAbs(gy, 12, eveningDay) + 1);
-    return hd.abs() >= startDaytime.abs();
+    return gregYmdToAbs(gy, 12, eveningDay) + 1;
   }
 }

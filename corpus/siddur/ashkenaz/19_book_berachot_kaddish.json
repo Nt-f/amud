@@ -26,29 +26,29 @@
           {"ref": "12", "kind": "instruction", "fold": "Zimun", "foldHe": "זימון", "en": "Leader continues:", "text": "<small>וממשיך:</small>"},
           {"ref": "13", "parts": [
             {"kind": "prayer", "node": "birkat_hamazon.zimun", "role": "head_of_household", "fold": "Zimun", "foldHe": "זימון", "text": "<b>בִּרְשׁוּת</b> מָרָנָן וְרַבָּנָן וְרַבּוֹתַי נְבָרֵךְ"},
-            {"kind": "instruction", "when": "if_zimunTen", "en": "With ten:", "text": " (<small>בעשרה</small>"},
-            {"kind": "prayer", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": " אֱלֺהֵֽינוּ)"},
+            {"kind": "instruction", "when": "if_zimunTen", "en": "With ten:", "text": " <small>בעשרה</small>"},
+            {"kind": "prayer", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": " (אֱלֺהֵֽינוּ)"},
             {"kind": "prayer", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": " שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ:"}
           ]},
           {"ref": "14", "kind": "instruction", "fold": "Zimun", "foldHe": "זימון", "en": "Others:", "text": "<small>המסובים עונים:</small>"},
           {"ref": "15", "parts": [
             {"kind": "prayer", "node": "birkat_hamazon.zimun", "role": "congregation", "fold": "Zimun", "foldHe": "זימון", "text": "<b>בָּרוּךְ</b>"},
-            {"kind": "instruction", "when": "if_zimunTen", "en": "With ten:", "text": " (<small>בעשרה</small>"},
-            {"kind": "prayer", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "role": "congregation", "text": " אֱלֺהֵֽינוּ)"},
+            {"kind": "instruction", "when": "if_zimunTen", "en": "With ten:", "text": " <small>בעשרה</small>"},
+            {"kind": "prayer", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "role": "congregation", "text": " (אֱלֺהֵֽינוּ)"},
             {"kind": "prayer", "node": "birkat_hamazon.zimun", "role": "congregation", "text": " שֶֽׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ:"}
           ]},
           {"ref": "16", "kind": "instruction", "fold": "Zimun", "foldHe": "זימון", "en": "One who did not eat:", "text": "<small>מי שלא אכל עונה:</small>"},
           {"ref": "17", "parts": [
             {"kind": "prayer", "node": "birkat_hamazon.zimun", "role": "individual", "fold": "Zimun", "foldHe": "זימון", "text": "<b>בָּרוּךְ</b>"},
-            {"kind": "instruction", "when": "if_zimunTen", "en": "With ten or more:", "text": " <small>(בעשרה או יותר"},
-            {"kind": "prayer", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "role": "individual", "text": " <b>אֱלֹהֵינוּ</b>)</small>"},
+            {"kind": "instruction", "when": "if_zimunTen", "en": "With ten or more:", "text": " <small>בעשרה או יותר"},
+            {"kind": "prayer", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "role": "individual", "text": " <b>(אֱלֹהֵינוּ</b>)</small>"},
             {"kind": "prayer", "node": "birkat_hamazon.zimun", "role": "individual", "text": " וּמְבוֹרָךְ שְׁמוֹ תָּמִיד לְעוֹלָם וָעֶד:"}
           ]},
           {"ref": "18", "kind": "instruction", "fold": "Zimun", "foldHe": "זימון", "en": "Leader repeats:", "text": "<small>וחוזר המזמן:</small>"},
           {"ref": "19", "parts": [
             {"kind": "prayer", "node": "birkat_hamazon.zimun", "role": "head_of_household", "fold": "Zimun", "foldHe": "זימון", "text": "<b>בָּרוּךְ</b>"},
-            {"kind": "instruction", "when": "if_zimunTen", "en": "With ten:", "text": " (<small>בעשרה</small>"},
-            {"kind": "prayer", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": " אֱלֺהֵֽינוּ)"},
+            {"kind": "instruction", "when": "if_zimunTen", "en": "With ten:", "text": " <small>בעשרה</small>"},
+            {"kind": "prayer", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": " (אֱלֺהֵֽינוּ)"},
             {"kind": "prayer", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": " שֶֽׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ:"}
           ]},
           {"ref": "20", "parts": [
@@ -133,9 +133,9 @@
           {"ref": "74", "kind": "prayer", "when": "sukkot", "text": "<b>הָרַחֲמָן</b> הוּא יָקִים לָֽנוּ אֶת־סֻכַּת דָּוִד הַנּוֹפָֽלֶת:"},
           {"ref": "75", "parts": [
             {"kind": "prayer", "text": "<b>הָרַחֲמָן</b> הוּא יְזַכֵּֽנוּ לִימוֹת הַמָּשִֽׁיחַ וּלְחַיֵּי הָעוֹלָם הַבָּא,"},
-            {"kind": "prayer", "when": "!shabbat && !yomTov", "alt": "birkat_hamazon.magdil", "text": " מַגְדִּיל יְשׁוּעוֹת מַלְכּוֹ ("},
+            {"kind": "prayer", "when": "!shabbat && !yomTov", "alt": "birkat_hamazon.magdil", "text": " מַגְדִּיל יְשׁוּעוֹת מַלְכּוֹ "},
             {"kind": "instruction", "when": "shabbat||yomTov", "en": "On Shabbat and Yom Tov say:", "text": "<small>בשבת וביו\"ט אומר:</small>"},
-            {"kind": "prayer", "when": "shabbat||yomTov", "alt": "birkat_hamazon.magdil", "text": " מִגְדּוֹל יְשׁוּעוֹת מַלְכּוֹ),"},
+            {"kind": "prayer", "when": "shabbat||yomTov", "alt": "birkat_hamazon.magdil", "text": " מִגְדּוֹל יְשׁוּעוֹת מַלְכּוֹ,"},
             {"kind": "prayer", "text": " וְעֹֽשֶׂה חֶֽסֶד לִמְשִׁיחוֹ לְדָוִד וּלְזַרְעוֹ עַד עוֹלָם: עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו,"},
             {"kind": "prayer", "text": " הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן:"}
@@ -359,13 +359,13 @@
             {"kind": "prayer", "text": " וְעַל מִזְבְּחֶךָ,"},
             {"kind": "prayer", "text": " וְעַל הֵיכָלֶךָ. וּבְנֵה יְרוּשָׁלַיִם עִיר הַקּדֶשׁ בִּמְהֵרָה בְיָמֵינוּ. וְהַעֲלֵנוּ לְתוֹכָהּ וְשַׂמְּחֵנוּ בְּבִנְיָנָהּ,"},
             {"kind": "prayer", "text": " וְנֹאכַל מִפִּרְיָּהּ וְנִשְׂבַּע מִטּוּבָהּ וּנְבָרֶכְךָ עָלֶיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה.<br> "},
-            {"kind": "instruction", "en": "On Shabbat:", "text": "<small>בשבת:</small>"},
+            {"kind": "instruction", "when": "shabbat", "en": "On Shabbat:", "text": "<small>בשבת:</small>"},
             {"kind": "prayer", "when": "shabbat", "text": " וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַׁבָּת הַזֶּה.<br>  "},
-            {"kind": "instruction", "en": "On Rosh Chodesh:", "text": "<small>בר\"ח:</small>"},
+            {"kind": "instruction", "when": "roshChodesh", "en": "On Rosh Chodesh:", "text": "<small>בר\"ח:</small>"},
             {"kind": "prayer", "when": "roshChodesh", "text": " וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם רֹאשׁ הַחֹדֶשׁ הַזֶּה.<br>  "},
             {"kind": "instruction", "en": "On Rosh Hashanah:", "text": "<small>בר\"ה:</small>"},
             {"kind": "prayer", "when": "roshHashana", "text": " וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם הַזִּכָּרוֹן הַזֶּה.<br>  "},
-            {"kind": "instruction", "en": "On Yom Tov and Chol HaMoed:", "text": "<small>ביום טוב ובחוה\"מ:</small>"},
+            {"kind": "instruction", "when": "yomTov || cholHamoed", "en": "On Yom Tov and Chol HaMoed:", "text": "<small>ביום טוב ובחוה\"מ:</small>"},
             {"kind": "prayer", "when": "yomTov || cholHamoed", "text": " וְשַׂמְּחֵנוּ בְיוֹם<br>  "},
             {"kind": "instruction", "en": "On Pesach:", "text": "<small>בפסח:</small>"},
             {"kind": "prayer", "when": "pesach", "text": " חַג הַמַּצּוֹת הַזֶּה,<br>  "},
@@ -678,7 +678,7 @@
           ]},
           {"ref": "5", "parts": [
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "לְעֵלָּא מִן כָּל בִּרְכָתָא <em>"},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Add 'Le'elaa Le'elaa'", "text": "<small>בעשי”ת: לְעֵלָּא לְעֵלָּא מִכָּל</small>"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Add 'Le'elaa Le'elaa'", "text": "<small>בעשי”ת: לְעֵלָּא לְעֵלָּא מִכָּל</small>"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "en": "...and praises and consolations that are said in the world. And say Amen:", "gloss": "Includes the added phrase during Aseret Yemei Teshuva", "text": "</em> וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן: [<em>"},
             {"kind": "instruction", "en": "Congregation:", "text": "<small>קהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "</em> אמן]"}
@@ -690,7 +690,7 @@
           ]},
           {"ref": "7", "parts": [
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "עוֹשה שָׁלוֹם <em>"},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Say 'HaShalom'", "text": "<small>בעשי”ת: הַשָּׁלום</small>"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Say 'HaShalom'", "text": "<small>בעשי”ת: הַשָּׁלום</small>"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "en": "...in the heights, He shall make peace upon us and upon all Israel. And say Amen:", "gloss": "Includes 'HaShalom' during Aseret Yemei Teshuva", "text": "</em> בִּמְרומָיו הוּא יַעֲשה שָׁלום עָלֵינוּ וְעַל כָּל יִשרָאֵל וְאִמְרוּ אָמֵן: [<em>"},
             {"kind": "instruction", "en": "Congregation:", "text": "<small>קהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "</em> אמן]"}
@@ -738,7 +738,7 @@
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": "אמן</small>"},
             {"kind": "instruction", "en": "Congregation:", "text": "<br><small><em>קהל: </em>"},
             {"kind": "prayer", "role": "congregation", "voice": "undertone", "minyan": true, "text": "עֶזְרִי מֵעִם יְהוָה עשֵׂה שָׁמַיִם וָאָרֶץ: </small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "gestures": ["three_steps_back", "bow_left_right_center"], "text": "<br>עוֹשֶׂה "},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "gestures": ["three_steps_back"], "text": "<br>עוֹשֶׂה "},
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "שָׁלוֹם "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small><em>בעשרת ימי תשובה: </em>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "השלום</small>"},
@@ -780,51 +780,51 @@
         "segs": [
           {"ref": "1", "parts": [
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. "},
-            {"kind": "instruction", "en": "Congregation:", "text": "(<small>הקהל:</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן.)"}
+            {"kind": "instruction", "en": "Congregation:", "text": "<small>הקהל:</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (אָמֵן.)"}
           ]},
           {"ref": "2", "parts": [
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "בְּעָלְמָא דִּי הוּא עָתִיד לְאִתְחַדְתָּא, וּלְאַחֲיָאה מֵתַיָּא, וּלְאַסָּקָא יַתְּהוֹן לְחַיֵּי עָלְמָא, וּלְמִבְנָא קַרְתָּא דִּי יְרוּשְלֵם, וּלְשַׁכְלְלָא הֵיכָלֵהּ בְּגַוָּהּ, וּלְמֶעֱקַר פּוּלְחָנָא נוּכְרָאָה מִן אַרְעָה, וּלְאָתָבָא פּוּלְחָנָא דִּי שְׁמַיָּא לְאַתְרֵהּ, וְיַמְלִיך קוּדְשָׁא בְּרִיךְ הוּא בּמַלְכוּתֵהּ וִיקָרֵהּ, וְיַצְמַח פֻּרְקָנֵהּ, וִיקָרֵב מְשִׁיחֵהּ. "},
-            {"kind": "instruction", "en": "Congregation:", "text": "(<small>הקהל:</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן.)"}
+            {"kind": "instruction", "en": "Congregation:", "text": "<small>הקהל:</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (אָמֵן.)"}
           ]},
           {"ref": "3", "kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן. "},
           {"ref": "4", "parts": [
-            {"kind": "instruction", "en": "Congregation:", "text": "(<small>הקהל:</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן. יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא.)"}
+            {"kind": "instruction", "en": "Congregation:", "text": "<small>הקהל:</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (אָמֵן. יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא.)"}
           ]},
           {"ref": "5", "parts": [
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא. יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא, בְּרִיךְ הוּא. "},
             {"kind": "instruction", "en": "Congregation:", "text": "הקהל:"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן "},
-            {"kind": "instruction", "en": "(or:", "text": "<small>(או: "},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": "בְּרִיךְ הוּא)"},
+            {"kind": "instruction", "en": "(or:", "text": "<small>או: "},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": "(בְּרִיךְ הוּא)"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": "</small>. "}
           ]},
           {"ref": "6", "parts": [
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leeila", "role": "mourner", "voice": "aloud", "minyan": true, "text": "לְעֵלָּא מִן כָּל בִּרְכָתָא "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>(בעשרת ימי תשובה:"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leeila", "role": "mourner", "voice": "aloud", "minyan": true, "text": " לְעֵלָּא וּלְעֵלָּא מִכָּל בִּרְכָתָא"},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": ")</small> וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא, דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן. "},
-            {"kind": "instruction", "en": "Congregation:", "text": "(<small>הקהל:</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן.)"}
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>בעשרת ימי תשובה:"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leeila", "role": "mourner", "voice": "aloud", "minyan": true, "text": " (לְעֵלָּא וּלְעֵלָּא מִכָּל בִּרְכָתָא)"},
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "</small> וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא, דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן. "},
+            {"kind": "instruction", "en": "Congregation:", "text": "<small>הקהל:</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (אָמֵן.)"}
           ]},
           {"ref": "7", "parts": [
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא, וְחַיִּים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל, וְאִמְרוּ אָמֵן. "},
-            {"kind": "instruction", "en": "Congregation:", "text": "(<small>הקהל:</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן.) "}
+            {"kind": "instruction", "en": "Congregation:", "text": "<small>הקהל:</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (אָמֵן.) "}
           ]},
           {"ref": "8", "parts": [
             {"kind": "instruction", "gestures": ["three_steps_back"], "en": "Take three steps back.", "text": "<small>(פוסעים שלוש פסיעות לאחור)</small>"},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "gestures": ["bow_left_right_center"], "text": " עוֹשֶׂה שָׁלוֹם "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>(בעשרת ימי תשובה: "},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "mourner", "voice": "aloud", "minyan": true, "text": "הַשָּׁלוֹם)"},
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": " עוֹשֶׂה שָׁלוֹם "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>בעשרת ימי תשובה: "},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "mourner", "voice": "aloud", "minyan": true, "text": "(הַשָּׁלוֹם)"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "</small> בִּמְרוֹמָיו, הוּא "},
-            {"kind": "instruction", "when": "false", "en": "In the Edot HaMizrach rite add:", "text": "<small>(לפי נוסח עדות המזרח מוסיפים: "},
-            {"kind": "prayer", "when": "false", "role": "mourner", "voice": "aloud", "minyan": true, "text": "בְּרַחֲמָיו)"},
+            {"kind": "instruction", "when": "false", "en": "In the Edot HaMizrach rite add:", "text": "<small>לפי נוסח עדות המזרח מוסיפים: "},
+            {"kind": "prayer", "when": "false", "role": "mourner", "voice": "aloud", "minyan": true, "text": "(בְּרַחֲמָיו)"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "</small> יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל, וְאִמְרוּ אָמֵן. "},
-            {"kind": "instruction", "en": "Congregation:", "text": "(<small>הקהל:</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן.)"}
+            {"kind": "instruction", "en": "Congregation:", "text": "<small>הקהל:</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (אָמֵן.)"}
           ]}
         ]
       }
@@ -855,14 +855,14 @@
           {"ref": "2", "kind": "prayer", "text": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא. "},
           {"ref": "3", "parts": [
             {"kind": "prayer", "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדַּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא בְרִיךְ הוּא. לְעֵלָּא <em>"},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Added in Aseret Yemei Teshuva", "text": "<small>בעשי\"ת לְעֵלָּא לְעֵלָּא מִכָּל</small>"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Added in Aseret Yemei Teshuva", "text": "<small>בעשי\"ת לְעֵלָּא לְעֵלָּא מִכָּל</small>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": "</em> מִן כָּל בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן: "}
           ]},
           {"ref": "4", "kind": "prayer", "text": "עַל יִשְׂרָאֵל וְעַל רַבָּנָן וְעַל תַּלְמִידֵיהוֹן וְעַל כָּל תַּלְמִידֵי תַלְמִידֵיהוֹן, וְעַל כָּל מַאן דְּעָסְקִין בְּאוֹרַיְתָא, דִּי בְּאַתְרָא קַדִּישָׁא הָדֵין וְדִי בְּכָל אֲתַר וַאֲתַר, יְהֵא לְהוֹן וּלְכוֹן שְׁלָמָא רַבָּא, חִנָּא וְחִסְדָּא וְרַחֲמִין, וְחַיִּין אֲרִיכִין וּמְזוֹנֵי רְוִיחֵי, וּפוּרְקָנָא, מִן קֳדָם אֲבוּהוֹן דְּבִשְׁמַיָּא וְאַרְעָא, וְאִמְרוּ אָמֵן: "},
           {"ref": "5", "kind": "prayer", "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים טוֹבִים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל, וְאִמְרוּ אָמֵן: "},
           {"ref": "6", "parts": [
             {"kind": "prayer", "text": "עוֹשֶׂה שָׁלוֹם <em>"},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Added in Aseret Yemei Teshuva", "text": "<small>בעשי\"ת הַשָּׁלוֹם</small>"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Added in Aseret Yemei Teshuva", "text": "<small>בעשי\"ת הַשָּׁלוֹם</small>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": "</em> בִּמְרוֹמָיו,"},
             {"kind": "prayer", "text": " הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן:"}

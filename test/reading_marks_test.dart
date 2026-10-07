@@ -1,41 +1,28 @@
+import 'dart:io';
+
+import 'package:amud/core/settings.dart';
 import 'package:amud/features/siddur/reading_marks.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  test('verse numbers in Hallel are marked, words are not', () {
-    const psalm = 'א הַלְלוּ יָהּ הַלְלוּ עַבְדֵי יְהוָה הַלְלוּ אֶת שֵׁם יְהוָה. ב יְהִי שֵׁם יְהוָה מְבֹרָךְ';
-    final out = verseNumbers(psalm);
-    expect(out, startsWith('<sup class="verse">א</sup> הַלְלוּ'));
-    expect(out, contains('. <sup class="verse">ב</sup> יְהִי'));
-    expect('<sup'.allMatches(out).length, 2);
-  });
-
-  test('ordinary prayer text is untouched', () {
-    const text = 'בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם. אֲשֶׁר קִדְּשָׁנוּ';
-    expect(verseNumbers(text), text);
-  });
-
-  test('a verse number run into its verse is marked and spaced', () {
-    expect(verseNumbers('יא אֲנִי כֹּזֵב. יבמָה אָשִׁיב'), 'יא אֲנִי כֹּזֵב. <sup class="verse">יב</sup> מָה אָשִׁיב'.replaceFirst('יא', '<sup class="verse">יא</sup>'));
-    // A pointed word after a full stop is left alone.
-    expect(verseNumbers('כֹּזֵב. מָה אָשִׁיב'), 'כֹּזֵב. מָה אָשִׁיב');
-    // Without the verse before it, it is just a word.
-    expect(verseNumbers('כֹּזֵב. יבמָה אָשִׁיב'), 'כֹּזֵב. יבמָה אָשִׁיב');
-  });
-
-  test('a word whose first letter has no vowel of its own is not a verse number', () {
-    // Ashrei: ט, י and ס begin their verses; each is a letter of the word.
-    for (final w in ['טוֹב יְהוָה לַכֹּל', 'יוֹדוּךָ יְהוָה כָּל', 'סוֹמֵךְ יְהוָה לְכָל', 'קוֹל יְהוָה', 'כּוֹס יְשׁוּעוֹת']) {
-      final text = 'וּגְדָל חָסֶד. $w';
-      expect(verseNumbers(text), text, reason: w);
+  test('every gesture the corpus allows is labelled in English and Hebrew, except the plain bow', () {
+    final source = File('tool/corpus/source.py').readAsStringSync();
+    final block = RegExp(r'GESTURES = \{([^}]*)\}').firstMatch(source)!.group(1)!;
+    final ids = RegExp(r"'(\w+)'").allMatches(block).map((m) => m.group(1)!).toSet();
+    const bilingual = AppSettings(notesLanguage: NotesLanguage.bilingual);
+    const hebrew = AppSettings(notesLanguage: NotesLanguage.hebrew);
+    for (final g in ids.where((g) => g != 'bow')) {
+      final both = gestureLabel(bilingual, g);
+      expect(both, isNotNull, reason: g);
+      expect(both, contains(' · '), reason: g);
+      expect(RegExp(r'[א-ת]').hasMatch(gestureLabel(hebrew, g)!), isTrue, reason: g);
+      expect(RegExp(r'[A-Za-z]').hasMatch(gestureLabel(hebrew, g)!), isFalse, reason: g);
     }
-    // Unvowelled first letters, as this corpus often prints them.
-    for (final w in ['סומֵךְ ה לְכָל', 'נוטֶה שָׁמַיִם', 'עלַת תָּמִיד', 'שעִירֵי רָאשֵׁי']) {
-      final text = 'וּגְדָל חָסֶד. $w';
-      expect(verseNumbers(text), text, reason: w);
-    }
-    // Glued numerals chain: 12, then 13, each the verse after the last.
-    final chain = verseNumbers('יא אֲנִי כֹּזֵב. יבמָה אָשִׁיב. יגכּוֹס יְשׁוּעוֹת');
-    expect('<sup'.allMatches(chain).length, 3);
+    expect(gestureLabel(bilingual, 'bow'), isNull);
+  });
+
+  test('gesture labels follow the instruction language', () {
+    expect(gestureLabel(const AppSettings(), 'three_steps_back'), 'Three steps back');
+    expect(gestureLabel(const AppSettings(notesLanguage: NotesLanguage.hebrew), 'three_steps_back'), 'שלוש פסיעות לאחור');
   });
 }

@@ -12,7 +12,7 @@
         "segs": [
           {"ref": "1", "kind": "heading", "en": "Pesach Haggadah", "text": "<small><big><b>הגדה של פסח</b></big></small>"},
           {"ref": "2", "kind": "heading", "en": "Kiddush", "text": "<small><big><b>קַדֵשׁ</b></big></small>"},
-          {"ref": "3", "kind": "instruction", "en": "On Shabbat, begin with:", "gloss": "Start the Kiddush with the Shabbat verses", "text": "<small><small><small>בְּשַׁבָּת מַתְחִילִין </small></small></small>"},
+          {"ref": "3", "kind": "instruction", "when": "shabbat", "en": "On Shabbat, begin with:", "gloss": "Start the Kiddush with the Shabbat verses", "text": "<small><small><small>בְּשַׁבָּת מַתְחִילִין </small></small></small>"},
           {"ref": "4", "kind": "prayer", "when": "shabbat", "text": "<small><small><b>וַיְהִי</b> עֶרֶב וַיְהִי בֹקֶר:</small></small>"},
           {"ref": "5", "kind": "prayer", "when": "shabbat", "text": "<small><small><b>יוֹם הַשִּׁשִּׁי.</b> וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל צְבָאַָם. וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיוֹם הַשְּׁבִיעִי מִכָּל מְלַאכְתּוֹ אֲשֶׁר עָשָׂה. וַיְבָרֶךְ אֱלֹהִים אֶת יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל מְלַאכְתּוֹ אֲשֶׁר בָּרָא אֱלֹהִים לַעֲשׂוֹת.</small></small>"},
           {"ref": "6", "kind": "instruction", "en": "On a weekday, begin with:", "gloss": "Start the Kiddush with the invitation to the guests", "text": "<small><small>בַּחוֹל מַתְחִילִין:</small></small>"},
@@ -40,7 +40,7 @@
             {"kind": "prayer", "text": "<small> <small>(בשבת: <b>הַשַׁבָּת וְ</b>)</small>"},
             {"kind": "prayer", "text": " </small>יִשְׂרָאֵל וְהַזְּמַנִּים:</small>"}
           ]},
-          {"ref": "10", "kind": "instruction", "en": "On Motzaei Shabbat, add:", "gloss": "Add the blessing over fire and the Havdalah blessing", "text": "<small><small><small>בְּמוֹצָאֵי שַׁבָּת מוֹסִיפִין:</small></small></small>"},
+          {"ref": "10", "kind": "instruction", "when": "motzaeiShabbat", "en": "On Motzaei Shabbat, add:", "gloss": "Add the blessing over fire and the Havdalah blessing", "text": "<small><small><small>בְּמוֹצָאֵי שַׁבָּת מוֹסִיפִין:</small></small></small>"},
           {"ref": "11", "kind": "prayer", "when": "motzaeiShabbat", "text": "<small><small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא מְאוֹרֵי הָאֵשׁ.</small></small>"},
           {"ref": "12", "kind": "prayer", "when": "motzaeiShabbat", "text": "<small><small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמַבְדִיל בֵּין קֹדֶשׁ לְחֹל, בֵּין אוֹר לְחשֶׁךְ, בֵּין יִשְׂרָאֵל לָעַמִּים, בֵּין יוֹם הַשְּׁבִיעִי לְשֵׁשֶׁת יְמֵי הַמַּעֲשֶׂה. בֵּין קְדֻשַּׁת שַׁבָּת לִקְדֻשַּׁת יוֹם טוֹב הִבְדַּלְתָּ, וְאֶת יוֹם הַשְּׁבִיעִי מִשֵּׁשֶׁת יְמֵי הַמַּעֲשֶׂה קִדַּשְׁתָּ. הִבְדַּלְתָּ וְקִדַּשְׁתָּ אֶת עַמְּךָ יִשְׂרָאֵל בִּקְדֻשָּׁתֶךָ. <b>בָּרוּךְ</b> אַתָּה יְהֹוָה הַמַּבְדִיל בֵּין קֹדֶשׁ לְקֹדֶשׁ.</small></small>"},
           {"ref": "13", "kind": "prayer", "text": "<small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶה. </small>"},
@@ -337,8 +337,8 @@
             {"kind": "prayer", "role": "congregation", "text": "<b>אֱלֹהֵינוּ</b>)</small> </small> וּמְבוֹרָךְ שְׁמוֹ תָּמִיד לְעוֹלָם וָעֶד:</small>"}
           ]},
           {"ref": "15", "parts": [
-            {"kind": "instruction", "en": "An individual does not say:", "text": "<small><small>( <small>יחיד אינו אומר:</small>"},
-            {"kind": "prayer", "role": "individual", "text": " <b>בָּרוּךְ הוּא וּבָרוּךְ שְׁמוֹ</b>)</small></small>"}
+            {"kind": "instruction", "en": "An individual does not say:", "text": "<small><small> <small>יחיד אינו אומר:</small>"},
+            {"kind": "prayer", "role": "individual", "text": " <b>(בָּרוּךְ הוּא וּבָרוּךְ שְׁמוֹ</b>)</small></small>"}
           ]},
           {"ref": "16", "kind": "prayer", "role": "individual", "text": "<small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם. הַזָּן אֶת הָעוֹלָם כֻּלּוֹ. בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים. הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר. כִּי לְעוֹלָם חַסְדּוֹ: וּבְטוּבוֹ הַגָּדוֹל תָּמִיד לֹא חָסַר לָנוּ וְאַל יֶחְסַר לָנוּ מָזוֹן לְעוֹלָם וָעֶד. בַּעֲבוּר שְׁמוֹ הַגָּדוֹל. כִּי הוּא אֵל זָן וּמְפַרְנֵס לַכֹּל וּמֵטִיב לַכֹּל וּמֵכִין מָזוֹן לְכָל בְּרִיּוֹתָיו אֲשֶׁר בָּרָא. כָּאָמוּר פּוֹתֵחַ אֶת יָדֶךָ וּמַשְׂבִּיעַ לְכָל חַי רָצוֹן: בָּרוּךְ אַתָּה יְהֹוָה הַזָּן אֶת הַכֹּל:</small>"},
           {"ref": "17", "kind": "prayer", "role": "individual", "text": "<small><b>נוֹדֶה</b> לְּךָ יְהֹוָה אֱלֹהֵינוּ. עַל שֶׁהִנְחַלְתָּ לַאֲבוֹתֵינוּ אֶרֶץ חֶמְדָה טוֹבָה וּרְחָבָה. וְעַל שֶׁהוֹצֵאתָנוּ יְהֹוָה אֱלֹהֵינוּ מֵאֶרֶץ מִצְרַיִם. וּפְדִיתָנוּ מִבֵּית עֲבָדִים. וְעַל בְּרִיתְךָ שֶׁחָתַמְתָּ בִּבְשָׂרֵנוּ. וְעַל תּוֹרָתְךָ שֶׁלִּמַּדְתָּנוּ. וְעַל חֻקֶּיךָ שֶׁהוֹדַעְתָּנוּ. וְעַל חַיִּים חֵן וָחֶסֶד שֶׁחוֹנַנְתָּנוּ. וְעַל אֲכִילַת מָזוֹן שָׁאַתָּה זָן וּמְפַרְנֵס אוֹתָנוּ תָּמִיד. בְּכָל יוֹם וּבְכָל עֵת וּבְכָל שָׁעָה: </small>"},
@@ -368,8 +368,8 @@
             {"kind": "prayer", "role": "individual", "text": " בַּעַל הַבַּיִת הַזֶּה וְאֶת "},
             {"kind": "prayer", "role": "individual", "text": "<small>(אִמִּי מוֹרָתִי)</small>"},
             {"kind": "prayer", "role": "individual", "text": " בַּעֲלַת הַבַּיִת הַזֶּה. אוֹתָם וְאֶת בֵּיתָם וְאֶת זַרְעָם וְאֶת כָּל אֲשֶׁר לָהֶם. "},
-            {"kind": "instruction", "en": "(If sitting at one's own table, say:", "text": "<small>( <small><b>ואם סמוך על שלחן עצמו יאמר:</b></small>"},
-            {"kind": "prayer", "role": "individual", "text": " הָרַחֲמָן הוּא יְבָרֵךְ אוֹתִי וְאֶת אִשְׁתִּי וְאֶת זַרְעִי וְאֶת כָּל אֲשֶׁר לִי)</small>,"},
+            {"kind": "instruction", "en": "(If sitting at one's own table, say:", "text": "<small> <small><b>ואם סמוך על שלחן עצמו יאמר:</b></small>"},
+            {"kind": "prayer", "role": "individual", "text": " (הָרַחֲמָן הוּא יְבָרֵךְ אוֹתִי וְאֶת אִשְׁתִּי וְאֶת זַרְעִי וְאֶת כָּל אֲשֶׁר לִי)</small>,"},
             {"kind": "prayer", "role": "individual", "text": " אוֹתָנוּ וְאֶת כָּל אֲשֶׁר לָנוּ. כְּמוֹ שֶׁנִּתְבָּרְכוּ אֲבוֹתֵינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב,"},
             {"kind": "prayer", "role": "individual", "text": " בַּכּל. מִכֹּל. כֹּל. כֵּן יְבָרֵךְ אוֹתָנוּ כֻּלָּנוּ יַחַד בִּבְרָכָה שְׁלֵמָה. וְנאמַר אָמֵן:</small>"}
           ]},

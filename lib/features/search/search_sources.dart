@@ -297,7 +297,7 @@ List<SearchHit> zmanimResults(BuildContext context, WidgetRef ref, SearchQuery q
 /// The app's own screens, with words to find them by.
 const _pages = [
   ('Holidays & Seasons', 'חגים ועונות', Icons.event_note, '/siddur/seasons', ['hoshanot', 'selichot', 'chanukah', 'lulav', 'hakafot']),
-  ('Tehillim', 'תהלים', Icons.auto_stories_outlined, '/siddur/tehillim', ['psalms']),
+  ('Tehillim', 'תהלים', Icons.auto_stories_outlined, '/torah/tehillim', ['psalms']),
   ('Daily learning', 'לימוד יומי', Icons.school_outlined, '/learning', ['daf yomi', 'mishna', 'rambam']),
   ('Calendar', 'לוח שנה', Icons.calendar_month, '/calendar', ['luach', 'holidays', 'dates']),
   ('Zman alerts', 'התראות זמנים', Icons.notifications_active_outlined, '/alerts', ['reminders', 'notifications']),

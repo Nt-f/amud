@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:hive_ce_flutter/hive_ce_flutter.dart';
@@ -21,10 +22,12 @@ class Storage {
     return Storage._(kv, blobs);
   }
 
-  /// Opens the boxes in [dir] (tests, where there's no app directory).
-  static Future<Storage> openAt(String dir) async {
+  /// Opens the boxes in [dir] (tests, where there's no app directory). Hive
+  /// boxes are global by name, so a test needing two separate storages gives
+  /// each its own [name].
+  static Future<Storage> openAt(String dir, {String name = ''}) async {
     Hive.init(dir);
-    return Storage._(await Hive.openBox<String>('kv'), await Hive.openBox<List<int>>('blobs'));
+    return Storage._(await Hive.openBox<String>('kv$name'), await Hive.openBox<List<int>>('blobs$name'));
   }
 
   T? readJson<T>(String key, T Function(Object? json) decode) {
@@ -40,8 +43,22 @@ class Storage {
     }
   }
 
-  Future<void> writeJson(String key, Object? value) => _kv.put(key, jsonEncode(value));
-  Future<void> deleteJson(String key) => _kv.delete(key);
+  final _changes = StreamController<String>.broadcast(sync: true);
+
+  /// The key of every JSON value written or deleted (sync watches this).
+  Stream<String> get changes => _changes.stream;
+
+  Future<void> writeJson(String key, Object? value) {
+    final done = _kv.put(key, jsonEncode(value));
+    _changes.add(key);
+    return done;
+  }
+
+  Future<void> deleteJson(String key) {
+    final done = _kv.delete(key);
+    _changes.add(key);
+    return done;
+  }
 
   /// The keys saved, for listing what's kept on the device.
   Iterable<String> get jsonKeys => _kv.keys.cast<String>();

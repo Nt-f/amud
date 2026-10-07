@@ -37,11 +37,11 @@
             {"kind": "prayer", "text": " וּבְנֵה יְרוּשָׁלַיִם עִיר הַקֹּדֶשׁ בִּמְהֵרָה בְּיָמֵינוּ וְהַעֲלֵנוּ לְתוֹכָהּ וְשַׂמְּחֵנוּ בְּבִנְיָנָהּ וְנֹאכַל מִפִּרְיָּהּ וְנִשְׂבַּע מִטּוּבָהּ וּנְבָרֶכְךָ עָלֶיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה:"}
           ]},
           {"ref": "9", "parts": [
-            {"kind": "instruction", "en": "(On Shabbat:)", "gloss": "Said on Shabbat", "text": "<small><small>(בשבת:)</small>"},
+            {"kind": "instruction", "when": "shabbat", "en": "(On Shabbat:)", "gloss": "Said on Shabbat", "text": "<small><small>(בשבת:)</small>"},
             {"kind": "prayer", "when": "shabbat", "text": "</small> <b>וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַּׁבָּת הַזֶּה:</b>"}
           ]},
           {"ref": "10", "parts": [
-            {"kind": "instruction", "en": "(On Rosh Chodesh:)", "gloss": "Said on Rosh Chodesh", "text": "<small><small>(בר\"ח:)</small>"},
+            {"kind": "instruction", "when": "roshChodesh", "en": "(On Rosh Chodesh:)", "gloss": "Said on Rosh Chodesh", "text": "<small><small>(בר\"ח:)</small>"},
             {"kind": "prayer", "when": "roshChodesh", "text": "</small> <b>וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם רֹאשׁ הַחֹדֶשׁ הַזֶּה:</b>"}
           ]},
           {"ref": "11", "parts": [
@@ -49,7 +49,7 @@
             {"kind": "prayer", "when": "roshHashana", "text": "</small> <b>וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם הַזִּכָּרוֹן הַזֶּה:</b>"}
           ]},
           {"ref": "12", "parts": [
-            {"kind": "instruction", "en": "(On Yom Tov:)", "gloss": "Said on Yom Tov", "text": "<small><small>(ביו\"ט:)</small>"},
+            {"kind": "instruction", "when": "yomTov", "en": "(On Yom Tov:)", "gloss": "Said on Yom Tov", "text": "<small><small>(ביו\"ט:)</small>"},
             {"kind": "prayer", "when": "yomTov", "text": "</small> <b>וְשַׂמְחֵנוּ בְּיוֹם חַג "},
             {"kind": "instruction", "en": "(Name of the holiday)", "text": "<small> <small>(פלוני)</small>"},
             {"kind": "prayer", "when": "yomTov", "text": " </small> הַזֶּה:</b>"}
@@ -58,14 +58,14 @@
           {"ref": "14", "parts": [
             {"kind": "instruction", "en": "(On wine:)", "gloss": "Said on wine", "text": "<small><small>(על היין:)</small>"},
             {"kind": "prayer", "when": "!il", "text": "</small> פְּרִי הַגָּפֶן: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל פְּרִי הַגָּפֶן: "},
-            {"kind": "instruction", "en": "(In Israel:)", "gloss": "Said in Israel", "text": "<small>( <small>בא\"י</small>"},
-            {"kind": "prayer", "when": "il", "text": " וְעַל פְּרִי גַפְנָהּ)</small>:"}
+            {"kind": "instruction", "en": "(In Israel:)", "gloss": "Said in Israel", "text": "<small> <small>בא\"י</small>"},
+            {"kind": "prayer", "when": "il", "text": " (וְעַל פְּרִי גַפְנָהּ)</small>:"}
           ]},
           {"ref": "15", "parts": [
             {"kind": "instruction", "en": "(On fruits:)", "gloss": "Said on fruits", "text": "<small><small>(על הפירות:)</small>"},
             {"kind": "prayer", "when": "!il", "text": "</small> הַפֵּרוֹת: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל הַפֵּרוֹת: "},
-            {"kind": "instruction", "en": "(In Israel:)", "gloss": "Said in Israel", "text": "<small>( <small>בא\"י</small>"},
-            {"kind": "prayer", "when": "il", "text": " וְעַל פֵּרוֹתֶיהָ)</small>:"}
+            {"kind": "instruction", "en": "(In Israel:)", "gloss": "Said in Israel", "text": "<small> <small>בא\"י</small>"},
+            {"kind": "prayer", "when": "il", "text": " (וְעַל פֵּרוֹתֶיהָ)</small>:"}
           ]},
           {"ref": "16", "parts": [
             {"kind": "instruction", "en": "(On grain products:)", "gloss": "Said on grain products", "text": "<small><small>(על מזונות:)</small>"},
@@ -74,8 +74,8 @@
           {"ref": "17", "parts": [
             {"kind": "instruction", "en": "(For grains and wine together:)", "gloss": "Said when eating grain products and drinking wine", "text": "<small><small>(על מזונות ויין ביחד:)</small>"},
             {"kind": "prayer", "when": "!il", "text": "</small> הַמִּחְיָה וְעַל פְּרִי הַגָּפֶן: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל הַמִחְיָה וְעַל הַכַּלְכָּלָה וְעַל פְּרִי הַגָּפֶן: "},
-            {"kind": "instruction", "en": "(In Israel:)", "gloss": "Israel custom", "text": "<small>( <small>בא\"י</small>"},
-            {"kind": "prayer", "text": " וְעַל פְּרִי גַפְנָהּ)</small>: "}
+            {"kind": "instruction", "en": "(In Israel:)", "gloss": "Israel custom", "text": "<small> <small>בא\"י</small>"},
+            {"kind": "prayer", "text": " (וְעַל פְּרִי גַפְנָהּ)</small>: "}
           ]}
         ]
       }

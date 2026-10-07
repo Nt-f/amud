@@ -14,6 +14,7 @@ import 'core/fonts.dart';
 import 'core/providers.dart';
 import 'core/settings.dart';
 import 'core/storage.dart';
+import 'core/sync/sync_service.dart';
 import 'features/alerts/alerts.dart';
 import 'features/alerts/notification_backend.dart';
 import 'features/home/card_registry.dart';
@@ -62,6 +63,10 @@ Future<void> main(List<String> args) async {
 
   // Plan notifications after first frame (never blocks startup).
   Future<void>.delayed(const Duration(seconds: 1), () => container.read(alertSchedulerProvider).reschedule());
+  // Cross-device sync (opt-in): reading the provider starts watching for
+  // changes; the first sync waits for the app to settle.
+  container.read(syncProvider);
+  Future<void>.delayed(const Duration(seconds: 3), () => container.read(syncProvider.notifier).syncNow());
   // Look for a new release in the background (daily; Android/desktop).
   Future<void>.delayed(const Duration(seconds: 5), () => container.read(updateProvider.notifier).autoCheck());
 }
@@ -103,6 +108,7 @@ class _LifecycleState extends ConsumerState<_Lifecycle> with WidgetsBindingObser
       analytics.checkIn();
       ref.invalidate(nowProvider);
       ref.read(alertSchedulerProvider).reschedule();
+      ref.read(syncProvider.notifier).syncNow();
       // Back from the "Install unknown apps" setting during an update.
       ref.read(updateProvider.notifier).resumed();
     }

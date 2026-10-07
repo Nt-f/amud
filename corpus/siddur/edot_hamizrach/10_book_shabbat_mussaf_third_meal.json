@@ -5,7 +5,7 @@
     {
       "path": "Shabbat Mussaf/Amida",
       "title": "עמידה",
-      "node": "amidah.oseh_shalom",
+      "node": "x.amidah",
       "service": "musaf",
       "he": {
         "version": "Shaliehsaboo Edition",
@@ -36,43 +36,45 @@
           ]},
           {"ref": "5", "kind": "prayer", "text": "<b>אֲ֭דֹנָי</b> שְׂפָתַ֣י תִּפְתָּ֑ח וּ֝פִ֗י יַגִּ֥יד תְּהִלָּתֶֽךָ׃"},
           {"ref": "6", "parts": [
-            {"kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה,"},
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "text": " אֱלֹהֵֽינוּ וֵֽאלֹהֵי אֲבוֹתֵֽינוּ,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " אֱלֹהֵי אַבְרָהָם,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " אֱלֹהֵי יִצְחָק,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " וֵֽאלֹהֵי יַעֲקֹב. הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא,"},
-            {"kind": "prayer", "text": " אֵל עֶלְיוֹן,"},
-            {"kind": "prayer", "text": " גּוֹמֵל חֲסָדִים טוֹבִים,"},
-            {"kind": "prayer", "text": " קוֹנֵה הַכֹּל,"},
-            {"kind": "prayer", "text": " וְזוֹכֵר חַסְדֵּי אָבוֹת,"},
-            {"kind": "prayer", "text": " וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַֽעַן שְׁמוֹ בְּאַֽהֲבָה: "},
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "text": "<small><small>בשבת תשובה אומרים:</small>"},
-            {"kind": "prayer", "text": " זָכְרֵנוּ לְחַיִּים,"},
-            {"kind": "prayer", "text": " מֶלֶךְ חָפֵץ בַּחַיִּים,"},
-            {"kind": "prayer", "text": " כָּתְבֵנוּ בְּסֵפֶר חַיִּים,"},
-            {"kind": "prayer", "text": " לְמַעַנָךְ אֱלֹהִים חַיִּים.</small> מֶֽלֶךְ עוֹזֵר וּמוֹשִֽׁיעַ וּמָגֵן: בָּרוּךְ אַתָּה יַהַוַהַ,"},
-            {"kind": "prayer", "text": " מָגֵן אַבְרָהָם:"}
+            {"kind": "prayer", "node": "amidah.avot", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה,"},
+            {"kind": "instruction", "node": "amidah.avot", "en": "On Shabbat Shuva:", "text": " אֱלֹהֵֽינוּ וֵֽאלֹהֵי אֲבוֹתֵֽינוּ,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.avot", "text": " אֱלֹהֵי אַבְרָהָם,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.avot", "text": " אֱלֹהֵי יִצְחָק,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.avot", "text": " וֵֽאלֹהֵי יַעֲקֹב. הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " אֵל עֶלְיוֹן,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " גּוֹמֵל חֲסָדִים טוֹבִים,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " קוֹנֵה הַכֹּל,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " וְזוֹכֵר חַסְדֵּי אָבוֹת,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַֽעַן שְׁמוֹ בְּאַֽהֲבָה: "},
+            {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.avot", "en": "On Shabbat Shuva:", "text": "<small><small>בשבת תשובה אומרים:</small>"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.avot", "text": " זָכְרֵנוּ לְחַיִּים,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.avot", "text": " מֶלֶךְ חָפֵץ בַּחַיִּים,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.avot", "text": " כָּתְבֵנוּ בְּסֵפֶר חַיִּים,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.avot", "text": " לְמַעַנָךְ אֱלֹהִים חַיִּים."},
+            {"kind": "prayer", "node": "amidah.avot", "text": "</small> מֶֽלֶךְ עוֹזֵר וּמוֹשִֽׁיעַ וּמָגֵן: בָּרוּךְ אַתָּה יַהַוַהַ,"},
+            {"kind": "prayer", "node": "amidah.avot", "text": " מָגֵן אַבְרָהָם:"}
           ]},
-          {"ref": "7", "kind": "prayer", "text": "<b>אַתָּה</b> גִבּוֹר לְעוֹלָם אֲדֹנָי, מְחַיֶּה מֵתִים אַתָּה, רַב לְהוֹשִֽׁיעַ.  "},
+          {"ref": "7", "kind": "prayer", "node": "amidah.gevurot", "text": "<b>אַתָּה</b> גִבּוֹר לְעוֹלָם אֲדֹנָי, מְחַיֶּה מֵתִים אַתָּה, רַב לְהוֹשִֽׁיעַ.  "},
           {"ref": "8", "parts": [
-            {"kind": "instruction", "en": "In summer:", "text": "<small>בקיץ:</small>"},
+            {"kind": "instruction", "when": "!mashivHaruach", "en": "In summer:", "text": "<small>בקיץ:</small>"},
             {"kind": "prayer", "when": "!mashivHaruach", "alt": "geshem", "text": " מוֹרִיד הַטָּל. "},
-            {"kind": "instruction", "en": "In winter:", "text": "<small>בחורף:</small>"},
+            {"kind": "instruction", "when": "mashivHaruach", "en": "In winter:", "text": "<small>בחורף:</small>"},
             {"kind": "prayer", "when": "mashivHaruach", "alt": "geshem", "text": " מַשִּׁיב הָרֽוּחַ וּמוֹרִיד הַגֶּֽשֶׁם. "}
           ]},
           {"ref": "9", "parts": [
-            {"kind": "prayer", "text": "מְכַלְכֵּל חַיִּים בְּחֶֽסֶד,"},
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "text": " מְחַיֵּה מֵתִים בְּרַֽחֲמִים רַבִּים,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " סוֹמֵךְ נֽוֹפְלִים,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " וְרוֹפֵא חוֹלִים,"},
-            {"kind": "prayer", "text": " וּמַתִּיר אֲסוּרִים,"},
-            {"kind": "prayer", "text": " וּמְקַיֵּם אֱמֽוּנָתוֹ לִֽישֵׁנֵי עָפָר. מִי כָמֽוֹךָ בַּֽעַל גְּבוּרוֹת,"},
-            {"kind": "prayer", "text": " וּמִי דֽוֹמֶה לָךְ,"},
-            {"kind": "prayer", "text": " מֶֽלֶךְ מֵמִית וּמְחַיֶּה וּמַצְמִֽיחַ יְשׁוּעָה. "},
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "text": "<small><small>בשבת תשובה אומרים:</small>"},
-            {"kind": "prayer", "text": " מִי כָמוֹךָ אָב הָרַחֲמָן,"},
-            {"kind": "prayer", "text": " זוֹכֵר יְצוּרָיו בְּרַחֲמִים לְחַיִּים.</small> וְנֶֽאֱמָן אַתָּה לְהַֽחֲיוֹת מֵתִים: בָּרוּךְ אַתָּה יֵהֵוֵהֵ,"},
-            {"kind": "prayer", "text": " מְחַיֵּה הַמֵּתִים:"}
+            {"kind": "prayer", "node": "amidah.gevurot", "text": "מְכַלְכֵּל חַיִּים בְּחֶֽסֶד,"},
+            {"kind": "instruction", "node": "amidah.gevurot", "en": "On Shabbat Shuva:", "text": " מְחַיֵּה מֵתִים בְּרַֽחֲמִים רַבִּים,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.gevurot", "text": " סוֹמֵךְ נֽוֹפְלִים,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.gevurot", "text": " וְרוֹפֵא חוֹלִים,"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " וּמַתִּיר אֲסוּרִים,"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " וּמְקַיֵּם אֱמֽוּנָתוֹ לִֽישֵׁנֵי עָפָר. מִי כָמֽוֹךָ בַּֽעַל גְּבוּרוֹת,"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " וּמִי דֽוֹמֶה לָךְ,"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " מֶֽלֶךְ מֵמִית וּמְחַיֶּה וּמַצְמִֽיחַ יְשׁוּעָה. "},
+            {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.gevurot", "en": "On Shabbat Shuva:", "text": "<small><small>בשבת תשובה אומרים:</small>"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.gevurot", "text": " מִי כָמוֹךָ אָב הָרַחֲמָן,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.gevurot", "text": " זוֹכֵר יְצוּרָיו בְּרַחֲמִים לְחַיִּים."},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": "</small> וְנֶֽאֱמָן אַתָּה לְהַֽחֲיוֹת מֵתִים: בָּרוּךְ אַתָּה יֵהֵוֵהֵ,"},
+            {"kind": "prayer", "node": "amidah.gevurot", "text": " מְחַיֵּה הַמֵּתִים:"}
           ]},
           {"ref": "10", "kind": "instruction", "en": "In the chazzan's repetition:", "text": "<small>בחזרת הש\"ץ אומרים:</small>"},
           {"ref": "11", "parts": [
@@ -98,8 +100,9 @@
             {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": "<b>אַתָּה</b> קָדוֹשׁ וְשִׁמְךָ קָדוֹשׁ,"},
             {"kind": "instruction", "en": "On Shabbat Shuva:", "text": " וּקְדוֹשִׁים בְּכָל־יוֹם יְהַֽלְלֽוּךָ סֶּֽלָה: בָּרוּךְ אַתָּה יֹהֵוָהֵ,"},
             {"kind": "prayer", "when": "shabbatShuva", "text": " הָאֵל הַקָּדוֹשׁ: "},
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "text": "<small><small>בשבת תשובה אומרים:</small>"},
-            {"kind": "prayer", "text": " הַמֶּלֶךְ הַקָּדוֹשׁ:</small>  "}
+            {"kind": "instruction", "when": "shabbatShuva", "en": "On Shabbat Shuva:", "text": "<small><small>בשבת תשובה אומרים:</small>"},
+            {"kind": "prayer", "when": "shabbatShuva", "text": " הַמֶּלֶךְ הַקָּדוֹשׁ:"},
+            {"kind": "prayer", "text": "</small>  "}
           ]},
           {"ref": "13", "kind": "instruction", "en": "On Shabbat say:", "text": "<small>בשבת יאמר</small>"},
           {"ref": "14", "kind": "prayer", "node": "amidah.musaf.tikanta_shabbat", "text": "<b>תִּכַּנְתָּ</b> שַׁבָּת, רָצִיתָ קָרְבּנוֹתֶיהָ, צִוִּיתָ פֵירוּשֶׁיהָ עִם סִדּוּרֵי נְסָכֶיהָ, מְעַנְּגֶיהָ לְעוֹלָם כָּבוֹד יִנְחָלוּ, טוֹעֲמֶיהָ חַיִּים זָכוּ, וְגַם הָאוֹהֲבִים דְבָרֶיהָ גְּדֻלָּה בָחָרוּ. אָז מִסִּינַי נִצְטַוּוּ צִוּוּיֵי פְעָלֶיהָ כָּרָאוּי:"},
@@ -140,29 +143,29 @@
             {"kind": "instruction", "when": "shabbat && roshChodesh", "node": "amidah.musaf.shabbat_rosh_chodesh", "en": "On Rosh Chodesh, say:", "gloss": "Instruction for the Rosh Chodesh addition in the blessing", "text": "<small><small>בראש חודש אומרים</small>"},
             {"kind": "prayer", "when": "shabbat && roshChodesh", "node": "amidah.musaf.shabbat_rosh_chodesh", "text": " וְיִשְׂרָאֵל וְרָאשֵׁי חֳדָשִׁים:</small>"}
           ]},
-          {"ref": "25", "kind": "prayer", "when": "shabbat && roshChodesh", "node": "amidah.oseh_shalom", "text": "<b>רְצֵה</b> יְהֹוָה אֱלֹהֵֽינוּ בְּעַמְּךָ יִשְׂרָאֵל וְלִתְפִלָּתָם שְׁעֵה, וְהָשֵׁב הָֽעֲבוֹדָה לִדְבִיר בֵּיתֶֽךָ, וְאִשֵּׁי יִשְׂרָאֵל וּתְפִלָּתָם, מְהֵרָה בְּאַֽהֲבָה תְקַבֵּל בְּרָצוֹן, וּתְהִי לְרָצוֹן תָּמִיד עֲבוֹדַת יִשְׂרָאֵל עַמֶּֽךָ: וְאַתָּה בְּרַֽחֲמֶֽיךָ הָרַבִּים, תַּחְפֹּץ בָּֽנוּ וְתִרְצֵֽנוּ, וְתֶֽחֱזֶֽינָה עֵינֵֽינוּ בְּשֽׁוּבְךָ לְצִיּוֹן בְּרַֽחֲמִים: בָּרוּךְ אַתָּה יִהִוִהִ, הַמַּֽחֲזִיר שְׁכִֽינָתוֹ לְצִיּוֹן:"},
-          {"ref": "26", "kind": "instruction", "en": "In the blessing of 'Modim', bow at 'Modim' and rise at the Name.", "cite": "BA\"H Shlach 21", "text": "<small>בברכת \"מודים\" יכרע ב\"מודים\" ויזקוף בשם <small>(בא\"ח בשלח הכ\"א)</small></small>"},
+          {"ref": "25", "kind": "prayer", "when": "shabbat && roshChodesh", "node": "amidah.avoda", "text": "<b>רְצֵה</b> יְהֹוָה אֱלֹהֵֽינוּ בְּעַמְּךָ יִשְׂרָאֵל וְלִתְפִלָּתָם שְׁעֵה, וְהָשֵׁב הָֽעֲבוֹדָה לִדְבִיר בֵּיתֶֽךָ, וְאִשֵּׁי יִשְׂרָאֵל וּתְפִלָּתָם, מְהֵרָה בְּאַֽהֲבָה תְקַבֵּל בְּרָצוֹן, וּתְהִי לְרָצוֹן תָּמִיד עֲבוֹדַת יִשְׂרָאֵל עַמֶּֽךָ: וְאַתָּה בְּרַֽחֲמֶֽיךָ הָרַבִּים, תַּחְפֹּץ בָּֽנוּ וְתִרְצֵֽנוּ, וְתֶֽחֱזֶֽינָה עֵינֵֽינוּ בְּשֽׁוּבְךָ לְצִיּוֹן בְּרַֽחֲמִים: בָּרוּךְ אַתָּה יִהִוִהִ, הַמַּֽחֲזִיר שְׁכִֽינָתוֹ לְצִיּוֹן:"},
+          {"ref": "26", "kind": "instruction", "node": "amidah.modim", "en": "In the blessing of 'Modim', bow at 'Modim' and rise at the Name.", "cite": "BA\"H Shlach 21", "text": "<small>בברכת \"מודים\" יכרע ב\"מודים\" ויזקוף בשם <small>(בא\"ח בשלח הכ\"א)</small></small>"},
           {"ref": "27", "kind": "prayer", "node": "amidah.modim", "text": "<b>מוֹדִים</b> אֲנַֽחְנוּ לָךְ, שֶׁאַתָּה הוּא יְהֹוָה אֱלֹהֵֽינוּ וֵֽאלֹהֵי אֲבוֹתֵֽינוּ לְעוֹלָם וָעֶד, צוּרֵֽנוּ צוּר חַיֵּֽינוּ וּמָגֵן יִשְׁעֵֽנוּ אַתָּה הוּא, לְדוֹר וָדוֹר נוֹדֶה לְךָ וּנְסַפֵּר תְּהִלָּתֶֽךָ, עַל חַיֵּֽינוּ הַמְּסוּרִים בְּיָדֶֽךָ, וְעַל נִשְׁמוֹתֵֽינוּ הַפְּקוּדוֹת לָךְ, וְעַל נִסֶּֽיךָ שֶׁבְּכָל־יוֹם עִמָּֽנוּ, וְעַל נִפְלְאוֹתֶֽיךָ וְטֽוֹבוֹתֶֽיךָ שֶׁבְּכָל־עֵת, עֶֽרֶב וָבֹֽקֶר וְצָֽהֳרָֽיִם. הַטּוֹב, כִּי לֹא כָלוּ רַחֲמֶֽיךָ, הַמְּרַחֵם, כִּי לֹא תַֽמּוּ חֲסָדֶֽיךָ, כִּי מֵֽעוֹלָם קִוִּֽינוּ לָךְ: "},
           {"ref": "28", "parts": [
-            {"kind": "instruction", "en": "Modim d'Rabbanan", "text": "<small><b>מודים דרבנן</b></small>"},
-            {"kind": "instruction", "en": "In the chazzan's repetition, when the chazzan says Modim, the congregation says:", "gloss": "Congregational response during the repetition", "text": "<br><small>בחזרת הש\"ץ כשהחזן אומר מודים, הקהל אומרים:</small>"},
-            {"kind": "prayer", "text": "<br><small>מוֹדִים אֲנַחְנוּ לָךְ,"},
-            {"kind": "prayer", "text": " שָׁאַתָּה הוּא יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ,"},
-            {"kind": "prayer", "text": " אֱלֹהֵי כָל בָּשָׁר,"},
-            {"kind": "prayer", "text": " יוֹצְרֵנוּ יוֹצֵר בְּרֵאשִׁית. בְּרָכוֹת וְהוֹדָאוֹת לְשִׁמְךָ הַגָּדוֹל וְהַקָּדוֹשׁ,"},
-            {"kind": "prayer", "text": " עַל שֶׁהֶחֱיִיתָנוּ וְקִיַּמְתָּנוּ. כֵּן תְּחַיֵּנוּ וּתְחָנֵּנוּ וְתֶאֱסוֹף גָּלֻיּוֹתֵינוּ לְחַצְרוֹת קָדְשֶׁךָ,"},
-            {"kind": "prayer", "text": " לִשְׁמֹר חֻקֶּיךָ וְלַעֲשׂוֹת רְצוֹנְךָ וּלְעָבְדְךָ בְלֵבָב שָׁלֵם,"},
-            {"kind": "prayer", "text": " עַל שֶׁאֲנַחְנוּ מוֹדִים לָךְ,"},
-            {"kind": "prayer", "text": " בָּרוּךְ אֵל הַהוֹדָאוֹת.</small>"}
+            {"kind": "instruction", "node": "amidah.modim_derabbanan", "en": "Modim d'Rabbanan", "text": "<small><b>מודים דרבנן</b></small>"},
+            {"kind": "instruction", "node": "amidah.modim_derabbanan", "en": "In the chazzan's repetition, when the chazzan says Modim, the congregation says:", "gloss": "Congregational response during the repetition", "text": "<br><small>בחזרת הש\"ץ כשהחזן אומר מודים, הקהל אומרים:</small>"},
+            {"kind": "prayer", "node": "amidah.modim_derabbanan", "text": "<br><small>מוֹדִים אֲנַחְנוּ לָךְ,"},
+            {"kind": "prayer", "node": "amidah.modim_derabbanan", "text": " שָׁאַתָּה הוּא יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ,"},
+            {"kind": "prayer", "node": "amidah.modim_derabbanan", "text": " אֱלֹהֵי כָל בָּשָׁר,"},
+            {"kind": "prayer", "node": "amidah.modim_derabbanan", "text": " יוֹצְרֵנוּ יוֹצֵר בְּרֵאשִׁית. בְּרָכוֹת וְהוֹדָאוֹת לְשִׁמְךָ הַגָּדוֹל וְהַקָּדוֹשׁ,"},
+            {"kind": "prayer", "node": "amidah.modim_derabbanan", "text": " עַל שֶׁהֶחֱיִיתָנוּ וְקִיַּמְתָּנוּ. כֵּן תְּחַיֵּנוּ וּתְחָנֵּנוּ וְתֶאֱסוֹף גָּלֻיּוֹתֵינוּ לְחַצְרוֹת קָדְשֶׁךָ,"},
+            {"kind": "prayer", "node": "amidah.modim_derabbanan", "text": " לִשְׁמֹר חֻקֶּיךָ וְלַעֲשׂוֹת רְצוֹנְךָ וּלְעָבְדְךָ בְלֵבָב שָׁלֵם,"},
+            {"kind": "prayer", "node": "amidah.modim_derabbanan", "text": " עַל שֶׁאֲנַחְנוּ מוֹדִים לָךְ,"},
+            {"kind": "prayer", "node": "amidah.modim_derabbanan", "text": " בָּרוּךְ אֵל הַהוֹדָאוֹת.</small>"}
           ]},
-          {"ref": "29", "kind": "instruction", "en": "On Chanukah and Purim, say:", "gloss": "Instruction for Al HaNissim in Musaf", "text": "<small>בחנוכה ופורים אומרים:</small>"},
+          {"ref": "29", "kind": "instruction", "when": "chanukah || purim", "en": "On Chanukah and Purim, say:", "gloss": "Instruction for Al HaNissim in Musaf", "text": "<small>בחנוכה ופורים אומרים:</small>"},
           {"ref": "30", "kind": "prayer", "when": "chanukah || purim", "node": "amidah.al_hanissim", "text": "<small><b>עַל הַנִּסִּים</b> וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַנִּפְלָאוֹת וְעַל הַנֶּחָמוֹת שֶׁעָשִֽׂיתָ לַאֲבוֹתֵֽינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה:</small>"},
           {"ref": "31", "parts": [
-            {"kind": "instruction", "en": "On Chanukah:", "text": "<small><small>בחנוכה אומרים:</small>"},
+            {"kind": "instruction", "when": "chanukah", "en": "On Chanukah:", "text": "<small><small>בחנוכה אומרים:</small>"},
             {"kind": "prayer", "when": "chanukah", "node": "amidah.al_hanissim", "text": " <b>בִּימֵי מַתִּתְיָה</b> בֶן־יוֹחָנָן כֹּהֵן גָּדוֹל. חַשְׁמוֹנָאִי וּבָנָיו כְּשֶׁעָֽמְדָֽה מַלְכוּת יָוָן הָרְשָׁעָה עַל עַמְּךָ יִשְׂרָאֵל. לְשַׁכְּחָם תּוֹרָתָךְ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנָךְ. וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים עָמַֽדְתָּ לָהֶם בְּעֵת צָרָתָם. רַֽבְתָּ אֶת רִיבָם. דַּֽנְתָּ אֶת דִּינָם. נָקַֽמְתָּ אֶת נִקְמָתָם. מָסַֽרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים. וְרַבִּים בְּיַד מְעַטִּים. וּרְשָׁעִים בְּיַד צַדִּיקִים. וּטְמֵאִים בְּיַד טְהוֹרִים. וְזֵדִים בְּיַד עֽוֹסְקֵֽי תוֹרָתֶֽךָ. לְךָ עָשִֽׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמָךְ. וּלְעַמְּךָ יִשְׂרָאֵל עָשִֽׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה. וְאַחַר כָּךְ בָּֽאוּ בָנֶֽיךָ לִדְבִיר בֵּיתֶֽךָ. וּפִנּוּ אֶת־הֵיכָלֶֽךָ. וְטִהֲרוּ אֶת־מִקְדָּשֶֽׁךָ. וְהִדְלִֽיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶֽׁךָ. וְקָֽבְעֽוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵֽלּוּ בְּהַלֵּל וּבְהוֹדָאָה. וְעָשִֽׂיתָ עִמָּהֶם נִסִּים וְנִפְלָאוֹת וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל סֶֽלָה:</small>"}
           ]},
           {"ref": "32", "parts": [
-            {"kind": "instruction", "en": "On Purim:", "text": "<small><small>בפורים אומרים</small>"},
+            {"kind": "instruction", "when": "purim", "en": "On Purim:", "text": "<small><small>בפורים אומרים</small>"},
             {"kind": "prayer", "when": "purim", "node": "amidah.al_hanissim", "text": " <b>בִּימֵי מָרְדְּכַי</b> וְאֶסְתֵּר בְּשׁוּשַׁן הַבִּירָה. כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע. בִּקֵּשׁ לְהַשְׁמִיד לַהֲרֹג וּלְאַבֵּד אֶת־כָּל־הַיְּהוּדִים מִנַּֽעַר וְעַד זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד. בִּשְׁלֹשָׁה עָשָׂר לְחֹֽדֶשׁ שְׁנֵים עָשָׂר. הוּא חֹֽדֶשׁ אֲדָר. וּשְׁלָלָם לָבוֹז. וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים הֵפַֽרְתָּ אֶת־עֲצָתוֹ וְקִלְקַֽלְתָּ אֶת־מַחֲשַׁבְתּוֹ. וַהֲשֵׁבֽוֹתָ לּוֹ גְּמוּלוֹ בְרֹאשׁוֹ. וְתָלוּ אוֹתוֹ וְאֶת־בָּנָיו עַל הָעֵץ. וְעָשִֽׂיתָ עִמָּהֶם נֵס וָפֶֽלֶא וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל סֶֽלָה:</small>"}
           ]},
           {"ref": "33", "parts": [
@@ -172,117 +175,117 @@
             {"kind": "prayer", "text": " תָּמִיד,"},
             {"kind": "prayer", "text": " שִׁמְךָ מַלְכֵּֽנוּ,"},
             {"kind": "prayer", "text": " לְעוֹלָם וָעֶד. וְכָל־הַחַיִּים יוֹדֽוּךָ סֶּֽלָה: "},
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "gloss": "Said only on Shabbat Shuva", "text": "<small><small>בשבת תשובה אומרים:</small>"},
+            {"kind": "instruction", "when": "shabbatShuva", "en": "On Shabbat Shuva:", "gloss": "Said only on Shabbat Shuva", "text": "<small><small>בשבת תשובה אומרים:</small>"},
             {"kind": "prayer", "when": "shabbatShuva", "text": " וּכְתֹב לְחַיִּים טוֹבִים כָּל בְּנֵי בְרִיתֶךָ.</small> וִֽיהַֽלְלוּ וִֽיבָֽרְכוּ אֶת־שִׁמְךָ הַגָּדוֹל בֶּֽאֱמֶת לְעוֹלָם כִּי טוֹב,"},
             {"kind": "prayer", "text": " הָאֵל יְשֽׁוּעָתֵֽנוּ וְעֶזְרָתֵֽנוּ סֶֽלָה,"},
             {"kind": "prayer", "text": " הָאֵל הַטּוֹב: בָּרוּךְ אַתָּה יֻהֻוֻהֻ,"},
             {"kind": "prayer", "text": " הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת:"}
           ]},
-          {"ref": "34", "kind": "instruction", "en": "Priestly Blessing", "gloss": "Birkat Kohanim follows", "text": "ברכת כהנים "},
+          {"ref": "34", "kind": "instruction", "node": "amidah.birkat_kohanim", "en": "Priestly Blessing", "gloss": "Birkat Kohanim follows", "text": "ברכת כהנים "},
           {"ref": "35", "parts": [
-            {"kind": "instruction", "en": "When the kohen lifts his feet to raise his hands, say (BA\"CH Tetzaveh 12):", "cite": "בא\"ח תצוה י\"ב", "text": "<small><small>כשעוקר הכהן רגליו לישא כפיו יאמר (בא\"ח תצוה י\"ב)</small>"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "text": "</small><br><small>לְשֵׁם יִחוּד קֻדְשָׁא בְּרִיךְ הוּא וּשְׁכִינְתֵּיהּ. בִּדְחִֽילוּ וּרְחִֽימוּ. וּרְחִֽימוּ וּדְחִֽילוּ. לְיַחֲדָא שֵׁם יוֹ\"ד קֵ\"א בְּוָא\"ו קֵ\"א בְּיִחוּדָא שְׁלִים. בְּשֵׁם כָּל־יִשְׂרָאֵל הִנֵּה אָנֹכִי מוּכָן וּמְזוּמָן לְקַיֵּם מִצְוַת עֲשֵׂה לְבָרֵךְ אֶת יִשְׂרָאֵל בִּרְכַּת כֹּהַנִים בִּנְשִׂיאוּת כַּפַּיִם,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "text": " לַעֲשׂוֹת נַֽחַת רֽוּחַ לְיֽוֹצְרֵֽנוּ וּלְהַמְשִׁיךְ שֶׁפַע וּבְרָכָה לְכָל־הָעוֹלָמוֹת וְלַעֲשׂוֹת רְצוֹן בּֽוֹרְאֵֽנוּ. וִיהִ֤י ׀ נֹ֤עַם אֲדֹנָ֥י אֱלֹהֵ֗ינוּ עָ֫לֵ֥ינוּ וּמַעֲשֵׂ֣ה יָ֭דֵינוּ כּוֹנְנָ֥ה עָלֵ֑ינוּ וּֽמַעֲשֵׂ֥ה יָ֝דֵ֗ינוּ כּוֹנְנֵֽהוּ: </small>"}
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "en": "When the kohen lifts his feet to raise his hands, say (BA\"CH Tetzaveh 12):", "cite": "בא\"ח תצוה י\"ב", "text": "<small><small>כשעוקר הכהן רגליו לישא כפיו יאמר (בא\"ח תצוה י\"ב)</small>"},
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "individual", "voice": "silent", "text": "</small><br><small>לְשֵׁם יִחוּד קֻדְשָׁא בְּרִיךְ הוּא וּשְׁכִינְתֵּיהּ. בִּדְחִֽילוּ וּרְחִֽימוּ. וּרְחִֽימוּ וּדְחִֽילוּ. לְיַחֲדָא שֵׁם יוֹ\"ד קֵ\"א בְּוָא\"ו קֵ\"א בְּיִחוּדָא שְׁלִים. בְּשֵׁם כָּל־יִשְׂרָאֵל הִנֵּה אָנֹכִי מוּכָן וּמְזוּמָן לְקַיֵּם מִצְוַת עֲשֵׂה לְבָרֵךְ אֶת יִשְׂרָאֵל בִּרְכַּת כֹּהַנִים בִּנְשִׂיאוּת כַּפַּיִם,"},
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "individual", "voice": "silent", "text": " לַעֲשׂוֹת נַֽחַת רֽוּחַ לְיֽוֹצְרֵֽנוּ וּלְהַמְשִׁיךְ שֶׁפַע וּבְרָכָה לְכָל־הָעוֹלָמוֹת וְלַעֲשׂוֹת רְצוֹן בּֽוֹרְאֵֽנוּ. וִיהִ֤י ׀ נֹ֤עַם אֲדֹנָ֥י אֱלֹהֵ֗ינוּ עָ֫לֵ֥ינוּ וּמַעֲשֵׂ֣ה יָ֭דֵינוּ כּוֹנְנָ֥ה עָלֵ֑ינוּ וּֽמַעֲשֵׂ֥ה יָ֝דֵ֗ינוּ כּוֹנְנֵֽהוּ: </small>"}
           ]},
           {"ref": "36", "parts": [
-            {"kind": "instruction", "en": "When the kohanim stand on the platform after answering 'Modim d'Rabbanan', say:", "text": "<small><small>וכשעומדים הכהנים על הדוכן לאחר שענו \"מודים דרבנן\", אומרים</small>"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "text": "</small><br><small>יְהִי רָצוֹן מִלְּפָנֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ שֶׁתִּהְיֶה בְּרָכָה זוֹ שֶׁצִּּוִיתָֽנוּ לְבָרֵךְ אֶת־עַמְּךָ יִשְׂרָאֵל בְּרָכָה שְׁלֵמָה וְלֹא יִהְיֶה בָהּ מִכְשׁוֹל וְעָוֹן מֵעַתָּה וְעַד עוֹלָם:</small>"}
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "en": "When the kohanim stand on the platform after answering 'Modim d'Rabbanan', say:", "text": "<small><small>וכשעומדים הכהנים על הדוכן לאחר שענו \"מודים דרבנן\", אומרים</small>"},
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "individual", "voice": "silent", "text": "</small><br><small>יְהִי רָצוֹן מִלְּפָנֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ שֶׁתִּהְיֶה בְּרָכָה זוֹ שֶׁצִּּוִיתָֽנוּ לְבָרֵךְ אֶת־עַמְּךָ יִשְׂרָאֵל בְּרָכָה שְׁלֵמָה וְלֹא יִהְיֶה בָהּ מִכְשׁוֹל וְעָוֹן מֵעַתָּה וְעַד עוֹלָם:</small>"}
           ]},
           {"ref": "37", "parts": [
-            {"kind": "instruction", "en": "In the chazzan's repetition, say the Priestly Blessing. If there is more than one kohen, the chazzan calls them: 'Kohanim: The kohanim bless:'", "gloss": "Chazzan calls kohanim to the platform", "text": "<small>בחזרת הש\"ץ אומרים ברכת כהנים, אם יש יותר מכהן אחד קורא להם החזן: כֹּהֲנִים: הכהנים מברכים:</small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "<br><small>בָּרוּךְ אַתָּה יְהֹוָה,"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " אֱלֹהֵֽינוּ מֶֽלֶךְ הָֽעוֹלָם,"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " אֲשֶׁר קִדְּשָֽׁנוּ בִּקְדֻשָּׁתוֹ שֶׁל־אַֽהֲרֹן,"},
-            {"kind": "instruction", "en": "The congregation answers:", "text": " וְצִוָּֽנוּ לְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בְּאַֽהֲבָה: <small>הקהל עונים</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " אָמֵן:</small>"}
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "en": "In the chazzan's repetition, say the Priestly Blessing. If there is more than one kohen, the chazzan calls them: 'Kohanim: The kohanim bless:'", "gloss": "Chazzan calls kohanim to the platform", "text": "<small>בחזרת הש\"ץ אומרים ברכת כהנים, אם יש יותר מכהן אחד קורא להם החזן: כֹּהֲנִים: הכהנים מברכים:</small>"},
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "voice": "aloud", "text": "<br><small>בָּרוּךְ אַתָּה יְהֹוָה,"},
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "voice": "aloud", "text": " אֱלֹהֵֽינוּ מֶֽלֶךְ הָֽעוֹלָם,"},
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "voice": "aloud", "text": " אֲשֶׁר קִדְּשָֽׁנוּ בִּקְדֻשָּׁתוֹ שֶׁל־אַֽהֲרֹן,"},
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "en": "The congregation answers:", "text": " וְצִוָּֽנוּ לְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בְּאַֽהֲבָה: <small>הקהל עונים</small>"},
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "congregation", "voice": "aloud", "text": " אָמֵן:</small>"}
           ]},
-          {"ref": "38", "kind": "instruction", "en": "And the chazzan and the kohanim say word for word:", "text": "<small>ואומר החזן והכהנים אחריו מילה במילה:</small>"},
+          {"ref": "38", "kind": "instruction", "node": "amidah.birkat_kohanim", "en": "And the chazzan and the kohanim say word for word:", "text": "<small>ואומר החזן והכהנים אחריו מילה במילה:</small>"},
           {"ref": "39", "parts": [
-            {"kind": "prayer", "role": "kohanim", "voice": "aloud", "text": "<small>יְבָרֶכְךָ֥ יְהֹוָ֖ה וְיִשְׁמְרֶֽךָ׃ <small>ועונים</small>"},
-            {"kind": "instruction", "en": "And they answer:", "text": " אָמֵן:</small>"}
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "kohanim", "voice": "aloud", "text": "<small>יְבָרֶכְךָ֥ יְהֹוָ֖ה וְיִשְׁמְרֶֽךָ׃ <small>ועונים</small>"},
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "en": "And they answer:", "text": " אָמֵן:</small>"}
           ]},
           {"ref": "40", "parts": [
-            {"kind": "prayer", "role": "kohanim", "voice": "aloud", "text": " <small>יָאֵ֨ר יְהֹוָ֧ה ׀ פָּנָ֛יו אֵלֶ֖יךָ וִֽיחֻנֶּֽךָּ׃ <small>ועונים</small>"},
-            {"kind": "instruction", "en": "And they answer:", "text": " אָמֵן:</small>"}
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "kohanim", "voice": "aloud", "text": " <small>יָאֵ֨ר יְהֹוָ֧ה ׀ פָּנָ֛יו אֵלֶ֖יךָ וִֽיחֻנֶּֽךָּ׃ <small>ועונים</small>"},
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "en": "And they answer:", "text": " אָמֵן:</small>"}
           ]},
           {"ref": "41", "parts": [
-            {"kind": "prayer", "role": "kohanim", "voice": "aloud", "text": " <small>יִשָּׂ֨א יְהֹוָ֤ה ׀ פָּנָיו֙ אֵלֶ֔יךָ וְיָשֵׂ֥ם לְךָ֖ שָׁלֽוֹם׃ <small>ועונים</small>"},
-            {"kind": "instruction", "en": "And they answer:", "text": " אָמֵן:</small>"}
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "kohanim", "voice": "aloud", "text": " <small>יִשָּׂ֨א יְהֹוָ֤ה ׀ פָּנָיו֙ אֵלֶ֔יךָ וְיָשֵׂ֥ם לְךָ֖ שָׁלֽוֹם׃ <small>ועונים</small>"},
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "en": "And they answer:", "text": " אָמֵן:</small>"}
           ]},
           {"ref": "42", "parts": [
-            {"kind": "instruction", "en": "When the chazzan begins 'Shem Shalom', they turn their faces toward the Ark.", "text": "<small>וכשמתחיל שליח ציבור \"שים שלום\" אז מחזירין פניהם כלפי ההיכל,"},
-            {"kind": "instruction", "en": "They do not turn their faces before that.", "text": " ולא יחזירו פניהם קודם,"},
-            {"kind": "prayer", "role": "kohanim", "voice": "aloud", "gestures": ["face_ark"], "text": " ואז הכהנים אומרים<br>רִבּוֹן הָעוֹלָמִים עָשִֽׂינוּ מַה־שֶּׁגָּזַֽרְתָּ עָלֵֽינוּ,"},
-            {"kind": "prayer", "role": "kohanim", "voice": "aloud", "gestures": ["face_ark"], "text": " עַשֵׂה אַתָּה מַה־שֶּׁהִבְטָחְתָּֽנוּ. הַשְׁקִ֩יפָה֩ מִמְּע֨וֹן קׇדְשְׁךָ֜ מִן־הַשָּׁמַ֗יִם וּבָרֵ֤ךְ אֶֽת־עַמְּךָ֙ אֶת־יִשְׂרָאֵ֔ל:</small><small></small>"}
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "en": "When the chazzan begins 'Shem Shalom', they turn their faces toward the Ark.", "text": "<small>וכשמתחיל שליח ציבור \"שים שלום\" אז מחזירין פניהם כלפי ההיכל,"},
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "en": "They do not turn their faces before that.", "text": " ולא יחזירו פניהם קודם,"},
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "kohanim", "voice": "aloud", "gestures": ["face_ark"], "text": " ואז הכהנים אומרים<br>רִבּוֹן הָעוֹלָמִים עָשִֽׂינוּ מַה־שֶּׁגָּזַֽרְתָּ עָלֵֽינוּ,"},
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "kohanim", "voice": "aloud", "gestures": ["face_ark"], "text": " עַשֵׂה אַתָּה מַה־שֶּׁהִבְטָחְתָּֽנוּ. הַשְׁקִ֩יפָה֩ מִמְּע֨וֹן קׇדְשְׁךָ֜ מִן־הַשָּׁמַ֗יִם וּבָרֵ֤ךְ אֶֽת־עַמְּךָ֙ אֶת־יִשְׂרָאֵ֔ל:</small><small></small>"}
           ]},
           {"ref": "43", "parts": [
-            {"kind": "instruction", "en": "If there are no kohanim, the chazzan says:", "text": "<small>אם אין כהנים אומר החזן:</small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "gloss": "Said by chazzan when no kohanim are present", "text": "<br><b>אֱלֹהֵינוּ</b> וֵאלֹהֵי אֲבוֹתֵינוּ,"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " בָּרְכֵנוּ בַּבְּרָכָה הַמְשֻׁלֶּשֶת בַּתּוֹרָה הַכְּתוּבָה עַל יְדֵי מֹשֶׁה עַבְדֶּֽךָ,"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " הָאֲמוּרָה מִפִּי אַהֲרֹן וּבָנָיו הַכֹּהֲנִים עַם קְדוֹשֶׁיךָ כָּאָמוּר:"}
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "en": "If there are no kohanim, the chazzan says:", "text": "<small>אם אין כהנים אומר החזן:</small>"},
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "voice": "aloud", "gloss": "Said by chazzan when no kohanim are present", "text": "<br><b>אֱלֹהֵינוּ</b> וֵאלֹהֵי אֲבוֹתֵינוּ,"},
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "voice": "aloud", "text": " בָּרְכֵנוּ בַּבְּרָכָה הַמְשֻׁלֶּשֶת בַּתּוֹרָה הַכְּתוּבָה עַל יְדֵי מֹשֶׁה עַבְדֶּֽךָ,"},
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "voice": "aloud", "text": " הָאֲמוּרָה מִפִּי אַהֲרֹן וּבָנָיו הַכֹּהֲנִים עַם קְדוֹשֶׁיךָ כָּאָמוּר:"}
           ]},
           {"ref": "44", "parts": [
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "<small>יְבָרֶכְךָ֥ יְהֹוָ֖ה וְיִשְׁמְרֶֽךָ׃ <small>ועונים</small>"},
-            {"kind": "instruction", "en": "And they answer:", "text": " כֵּן יְהִי רָצוֹן:</small>"}
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "voice": "aloud", "text": "<small>יְבָרֶכְךָ֥ יְהֹוָ֖ה וְיִשְׁמְרֶֽךָ׃ <small>ועונים</small>"},
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "en": "And they answer:", "text": " כֵּן יְהִי רָצוֹן:</small>"}
           ]},
           {"ref": "45", "parts": [
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " <small>יָאֵ֨ר יְהֹוָ֧ה ׀ פָּנָ֛יו אֵלֶ֖יךָ וִֽיחֻנֶּֽךָּ׃ <small>ועונים</small>"},
-            {"kind": "instruction", "en": "And they answer:", "text": " כֵּן יְהִי רָצוֹן:</small>"}
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "voice": "aloud", "text": " <small>יָאֵ֨ר יְהֹוָ֧ה ׀ פָּנָ֛יו אֵלֶ֖יךָ וִֽיחֻנֶּֽךָּ׃ <small>ועונים</small>"},
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "en": "And they answer:", "text": " כֵּן יְהִי רָצוֹן:</small>"}
           ]},
           {"ref": "46", "parts": [
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " <small>יִשָּׂ֨א יְהֹוָ֤ה ׀ פָּנָיו֙ אֵלֶ֔יךָ וְיָשֵׂ֥ם לְךָ֖ שָׁלֽוֹם׃ <small>ועונים</small>"},
-            {"kind": "instruction", "en": "And they answer:", "text": " כֵּן יְהִי רָצוֹן: וְשָׂמ֥וּ אֶת־שְׁמִ֖י עַל־בְּנֵ֣י יִשְׂרָאֵ֑ל וַאֲנִ֖י אֲבָרְכֵֽם:</small>"}
+            {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "voice": "aloud", "text": " <small>יִשָּׂ֨א יְהֹוָ֤ה ׀ פָּנָיו֙ אֵלֶ֔יךָ וְיָשֵׂ֥ם לְךָ֖ שָׁלֽוֹם׃ <small>ועונים</small>"},
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "en": "And they answer:", "text": " כֵּן יְהִי רָצוֹן: וְשָׂמ֥וּ אֶת־שְׁמִ֖י עַל־בְּנֵ֣י יִשְׂרָאֵ֑ל וַאֲנִ֖י אֲבָרְכֵֽם:</small>"}
           ]},
           {"ref": "47", "parts": [
-            {"kind": "prayer", "text": "<b>שִׂים</b> שָׁלוֹם טוֹבָה וּבְרָכָה,"},
-            {"kind": "prayer", "text": " חַיִּים חֵן וָחֶֽסֶד וְרַֽחֲמִים,"},
-            {"kind": "prayer", "text": " עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּֽךָ. וּבָֽרְכֵֽנוּ אָבִֽינוּ כֻּלָּֽנוּ כְּאֶחָד בְּאוֹר פָּנֶֽיךָ,"},
-            {"kind": "prayer", "text": " כִּי בְאוֹר פָּנֶֽיךָ נָתַֽתָּ לָּֽנוּ יְהֹוָה אֱלֹהֵֽינוּ תּוֹרָה וְחַיִּים,"},
-            {"kind": "prayer", "text": " אַֽהֲבָה וָחֶֽסֶד,"},
-            {"kind": "prayer", "text": " צְדָקָה וְרַֽחֲמִים,"},
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "gloss": "Said only on Shabbat Shuva", "text": " בְּרָכָה וְשָׁלוֹם. וְטוֹב בְּעֵינֶֽיךָ לְבָֽרְכֵֽנוּ וּלְבָרֵךְ אֶת־כָּל־עַמְּךָ יִשְׂרָאֵל,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " בְּרֹב עֹז וְשָׁלוֹם: "},
-            {"kind": "instruction", "when": "shabbatShuva", "en": "On Shabbat Shuva:", "text": "<small><small>בשבת תשובה אומרים:</small>"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " וּבְסֵפֶר חַיִּים,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " בְּרָכָה וְשָׁלוֹם,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " וּפַרְנָסָה טוֹבָה וִישׁוּעָה וְנֶחָמָה,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " וּגְזֵרוֹת טוֹבוֹת,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " נִזָּכֵר וְנִכָּתֵב לְפָנֶיךָ,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " אֲנַחְנוּ וְכָל עַמְּךָ בֵּית יִשְׂרָאֵל,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " לְחַיִּים טוֹבִים וּלְשָׁלוֹם.</small> בָּרוּךְ אַתָּה יוּהוּווּהוּ,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " הַמְּבָרֵךְ אֶת עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם. אָמֵן: "}
+            {"kind": "prayer", "node": "amidah.shalom", "text": "<b>שִׂים</b> שָׁלוֹם טוֹבָה וּבְרָכָה,"},
+            {"kind": "prayer", "node": "amidah.shalom", "text": " חַיִּים חֵן וָחֶֽסֶד וְרַֽחֲמִים,"},
+            {"kind": "prayer", "node": "amidah.shalom", "text": " עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּֽךָ. וּבָֽרְכֵֽנוּ אָבִֽינוּ כֻּלָּֽנוּ כְּאֶחָד בְּאוֹר פָּנֶֽיךָ,"},
+            {"kind": "prayer", "node": "amidah.shalom", "text": " כִּי בְאוֹר פָּנֶֽיךָ נָתַֽתָּ לָּֽנוּ יְהֹוָה אֱלֹהֵֽינוּ תּוֹרָה וְחַיִּים,"},
+            {"kind": "prayer", "node": "amidah.shalom", "text": " אַֽהֲבָה וָחֶֽסֶד,"},
+            {"kind": "prayer", "node": "amidah.shalom", "text": " צְדָקָה וְרַֽחֲמִים,"},
+            {"kind": "instruction", "node": "amidah.shalom", "en": "On Shabbat Shuva:", "gloss": "Said only on Shabbat Shuva", "text": " בְּרָכָה וְשָׁלוֹם. וְטוֹב בְּעֵינֶֽיךָ לְבָֽרְכֵֽנוּ וּלְבָרֵךְ אֶת־כָּל־עַמְּךָ יִשְׂרָאֵל,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.shalom", "text": " בְּרֹב עֹז וְשָׁלוֹם: "},
+            {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.shalom", "en": "On Shabbat Shuva:", "text": "<small><small>בשבת תשובה אומרים:</small>"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.shalom", "text": " וּבְסֵפֶר חַיִּים,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.shalom", "text": " בְּרָכָה וְשָׁלוֹם,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.shalom", "text": " וּפַרְנָסָה טוֹבָה וִישׁוּעָה וְנֶחָמָה,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.shalom", "text": " וּגְזֵרוֹת טוֹבוֹת,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.shalom", "text": " נִזָּכֵר וְנִכָּתֵב לְפָנֶיךָ,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.shalom", "text": " אֲנַחְנוּ וְכָל עַמְּךָ בֵּית יִשְׂרָאֵל,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.shalom", "text": " לְחַיִּים טוֹבִים וּלְשָׁלוֹם.</small> בָּרוּךְ אַתָּה יוּהוּווּהוּ,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.shalom", "text": " הַמְּבָרֵךְ אֶת עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם. אָמֵן: "}
           ]},
-          {"ref": "48", "kind": "prayer", "text": "<b>יִֽהְי֥וּ</b> לְרָצ֨וֹן ׀ אִמְרֵי־פִ֡י וְהֶגְי֣וֹן לִבִּ֣י לְפָנֶ֑יךָ יְ֝הֹוָ֗ה צוּרִ֥י וְגֹאֲלִֽי׃  "},
+          {"ref": "48", "kind": "prayer", "node": "amidah.oseh_shalom", "text": "<b>יִֽהְי֥וּ</b> לְרָצ֨וֹן ׀ אִמְרֵי־פִ֡י וְהֶגְי֣וֹן לִבִּ֣י לְפָנֶ֑יךָ יְ֝הֹוָ֗ה צוּרִ֥י וְגֹאֲלִֽי׃  "},
           {"ref": "49", "parts": [
-            {"kind": "prayer", "role": "individual", "voice": "silent", "text": "<b>אֱלֹהַי</b>,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "text": " נְצֹר לְשׁוֹנִי מֵרָע וְשִׂפְתוֹתַי מִדַּבֵּר מִרְמָה,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "text": " וְלִמְקַלְלַי נַפְשִׁי תִדֹּם,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "text": " וְנַפְשִׁי כֶּֽעָפָר לַכֹּל תִּֽהְיֶה,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "text": " פְּתַח לִבִּי בְּתוֹרָתֶֽךָ,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "text": " וְאַחֲרֵי מִצְוֹתֶֽיךָ תִּרְדֹּף נַפְשִׁי. וְכָל־הַקָּמִים עָלַי לְרָעָה,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "text": " מְהֵרָה הָפֵר עֲצָתָם וְקַלְקֵל מַחְשְׁבוֹתָם. "},
-            {"kind": "prayer", "when": "shabbatShuva", "role": "individual", "voice": "silent", "text": "<small>יִֽהְי֗וּ כְּמֹ֥ץ לִפְנֵי־ר֑וּחַ וּמַלְאַ֖ךְ יְהֹוָ֣ה דּוֹחֶֽה. קַבֵּל רִנַּת עַמֶּךָ. שַׂגְּבֵנוּ טַהֲרֵנוּ נוֹרָא.</small>"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "text": " עֲשֵׂה לְמַֽעַן שְׁמָךְ,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "text": " עֲשֵׂה לְמַֽעַן יְמִינָךְ,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "text": " עֲשֵׂה לְמַֽעַן תּֽוֹרָתָךְ,"},
-            {"kind": "prayer", "role": "individual", "voice": "silent", "text": " עֲשֵׂה לְמַֽעַן קְדֻשָּׁתָךְ. "}
+            {"kind": "prayer", "node": "amidah.elokai_netzor", "role": "individual", "voice": "silent", "text": "<b>אֱלֹהַי</b>,"},
+            {"kind": "prayer", "node": "amidah.elokai_netzor", "role": "individual", "voice": "silent", "text": " נְצֹר לְשׁוֹנִי מֵרָע וְשִׂפְתוֹתַי מִדַּבֵּר מִרְמָה,"},
+            {"kind": "prayer", "node": "amidah.elokai_netzor", "role": "individual", "voice": "silent", "text": " וְלִמְקַלְלַי נַפְשִׁי תִדֹּם,"},
+            {"kind": "prayer", "node": "amidah.elokai_netzor", "role": "individual", "voice": "silent", "text": " וְנַפְשִׁי כֶּֽעָפָר לַכֹּל תִּֽהְיֶה,"},
+            {"kind": "prayer", "node": "amidah.elokai_netzor", "role": "individual", "voice": "silent", "text": " פְּתַח לִבִּי בְּתוֹרָתֶֽךָ,"},
+            {"kind": "prayer", "node": "amidah.elokai_netzor", "role": "individual", "voice": "silent", "text": " וְאַחֲרֵי מִצְוֹתֶֽיךָ תִּרְדֹּף נַפְשִׁי. וְכָל־הַקָּמִים עָלַי לְרָעָה,"},
+            {"kind": "prayer", "node": "amidah.elokai_netzor", "role": "individual", "voice": "silent", "text": " מְהֵרָה הָפֵר עֲצָתָם וְקַלְקֵל מַחְשְׁבוֹתָם. "},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.elokai_netzor", "role": "individual", "voice": "silent", "text": "<small>יִֽהְי֗וּ כְּמֹ֥ץ לִפְנֵי־ר֑וּחַ וּמַלְאַ֖ךְ יְהֹוָ֣ה דּוֹחֶֽה. קַבֵּל רִנַּת עַמֶּךָ. שַׂגְּבֵנוּ טַהֲרֵנוּ נוֹרָא.</small>"},
+            {"kind": "prayer", "node": "amidah.elokai_netzor", "role": "individual", "voice": "silent", "text": " עֲשֵׂה לְמַֽעַן שְׁמָךְ,"},
+            {"kind": "prayer", "node": "amidah.elokai_netzor", "role": "individual", "voice": "silent", "text": " עֲשֵׂה לְמַֽעַן יְמִינָךְ,"},
+            {"kind": "prayer", "node": "amidah.elokai_netzor", "role": "individual", "voice": "silent", "text": " עֲשֵׂה לְמַֽעַן תּֽוֹרָתָךְ,"},
+            {"kind": "prayer", "node": "amidah.elokai_netzor", "role": "individual", "voice": "silent", "text": " עֲשֵׂה לְמַֽעַן קְדֻשָּׁתָךְ. "}
           ]},
           {"ref": "50", "parts": [
-            {"kind": "instruction", "en": "A remedy: say the verse that begins and ends with the same letter as the name you are invoking.", "text": "<small>סגולה לומר פסוק המתחיל וגומר באות שמתחיל וגומר שמו</small>"},
-            {"kind": "prayer", "text": " לְ֭מַעַן יֵחָלְצ֣וּן יְדִידֶ֑יךָ הוֹשִׁ֖יעָה יְמִֽינְךָ֣ וַעֲנֵֽנִי:"}
+            {"kind": "instruction", "node": "amidah.elokai_netzor", "en": "A remedy: say the verse that begins and ends with the same letter as the name you are invoking.", "text": "<small>סגולה לומר פסוק המתחיל וגומר באות שמתחיל וגומר שמו</small>"},
+            {"kind": "prayer", "node": "amidah.elokai_netzor", "text": " לְ֭מַעַן יֵחָלְצ֣וּן יְדִידֶ֑יךָ הוֹשִׁ֖יעָה יְמִֽינְךָ֣ וַעֲנֵֽנִי:"}
           ]},
-          {"ref": "51", "kind": "prayer", "role": "individual", "voice": "silent", "text": "<b>יִֽהְי֥וּ</b> לְרָצ֨וֹן ׀ אִמְרֵי־פִ֡י וְהֶגְי֣וֹן לִבִּ֣י לְפָנֶ֑יךָ יְ֝הֹוָ֗ה צוּרִ֥י וְגֹאֲלִֽי׃  "},
+          {"ref": "51", "kind": "prayer", "node": "amidah.oseh_shalom", "role": "individual", "voice": "silent", "text": "<b>יִֽהְי֥וּ</b> לְרָצ֨וֹן ׀ אִמְרֵי־פִ֡י וְהֶגְי֣וֹן לִבִּ֣י לְפָנֶ֑יךָ יְ֝הֹוָ֗ה צוּרִ֥י וְגֹאֲלִֽי׃  "},
           {"ref": "52", "parts": [
-            {"kind": "prayer", "text": "<b>עֹשֶׂה</b> שָׁלוֹם "},
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "gloss": "Said only on Shabbat Shuva", "text": "<small><small>בשבת תשובה אומרים:</small>"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " הַשָּׁלוֹם</small> בִּמְרוֹמָיו,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " הוּא בְּרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " וְעַל כָּל־עַמּוֹ יִשְׂרָאֵל,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " וְאִמְרוּ אָמֵן:"}
+            {"kind": "prayer", "node": "amidah.oseh_shalom", "text": "<b>עֹשֶׂה</b> שָׁלוֹם "},
+            {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.oseh_shalom", "en": "On Shabbat Shuva:", "gloss": "Said only on Shabbat Shuva", "text": "<small><small>בשבת תשובה אומרים:</small>"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.oseh_shalom", "text": " הַשָּׁלוֹם</small> בִּמְרוֹמָיו,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.oseh_shalom", "text": " הוּא בְּרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.oseh_shalom", "text": " וְעַל כָּל־עַמּוֹ יִשְׂרָאֵל,"},
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.oseh_shalom", "text": " וְאִמְרוּ אָמֵן:"}
           ]},
-          {"ref": "53", "kind": "prayer", "role": "individual", "voice": "silent", "text": "<small><b>יְהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, שֶׁתִּבְנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְּיָמֵינוּ, וְתֵן חֶלְקֵנוּ בְּתוֹרָתָךְ, לַעֲשׂוֹת חֻקֵּי רְצוֹנָךְ וּלְעָבְדָךְ בְּלֵבָב שָׁלֵם: </small> "},
+          {"ref": "53", "kind": "prayer", "node": "amidah.yehi_ratzon_mikdash", "role": "individual", "voice": "silent", "text": "<small><b>יְהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, שֶׁתִּבְנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְּיָמֵינוּ, וְתֵן חֶלְקֵנוּ בְּתוֹרָתָךְ, לַעֲשׂוֹת חֻקֵּי רְצוֹנָךְ וּלְעָבְדָךְ בְּלֵבָב שָׁלֵם: </small> "},
           {"ref": "54", "kind": "instruction", "en": "After the chazzan's repetition:", "gloss": "Said after the chazzan finishes the Amidah repetition", "text": "<small>אחרי חזרת הש''צ אומרים</small>"},
-          {"ref": "55", "kind": "prayer", "role": "congregation", "voice": "aloud", "text": "<b>יְהִ֤י</b> שֵׁ֣ם יְהֹוָ֣ה מְבֹרָ֑ךְ מֵ֝עַתָּ֗ה וְעַד־עוֹלָֽם׃ מִמִּזְרַח־שֶׁ֥מֶשׁ עַד־מְבוֹא֑וֹ מְ֝הֻלָּ֗ל שֵׁ֣ם יְהֹוָֽה׃ רָ֖ם עַל־כׇּל־גּוֹיִ֥ם ׀ יְהֹוָ֑ה עַ֖ל הַשָּׁמַ֣יִם כְּבוֹדֽוֹ׃ יְהֹוָ֥ה אֲדֹנֵ֑ינוּ מָה־אַדִּ֥יר שִׁ֝מְךָ֗ בְּכׇל־הָאָֽרֶץ׃"},
+          {"ref": "55", "kind": "prayer", "node": "concl.ein_kelokeinu", "role": "congregation", "voice": "aloud", "text": "<b>יְהִ֤י</b> שֵׁ֣ם יְהֹוָ֣ה מְבֹרָ֑ךְ מֵ֝עַתָּ֗ה וְעַד־עוֹלָֽם׃ מִמִּזְרַח־שֶׁ֥מֶשׁ עַד־מְבוֹא֑וֹ מְ֝הֻלָּ֗ל שֵׁ֣ם יְהֹוָֽה׃ רָ֖ם עַל־כׇּל־גּוֹיִ֥ם ׀ יְהֹוָ֑ה עַ֖ל הַשָּׁמַ֣יִם כְּבוֹדֽוֹ׃ יְהֹוָ֥ה אֲדֹנֵ֑ינוּ מָה־אַדִּ֥יר שִׁ֝מְךָ֗ בְּכׇל־הָאָֽרֶץ׃"},
           {"ref": "56", "kind": "instruction", "en": "The chazzan says Kaddish Titkabal:", "gloss": "Introduces the full Kaddish", "text": "<small>ואומר החזן קדיש תתקבל</small>"},
           {"ref": "57", "parts": [
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. <small>[אָמֵן]</small>"},
@@ -410,7 +413,7 @@
     {
       "path": "Shabbat Mussaf/Alenu",
       "title": "עלינו",
-      "node": "kabbalat_shabbat.mizmor_shir",
+      "node": "concl.aleinu",
       "service": "musaf",
       "he": {
         "version": "Shaliehsaboo Edition",
@@ -663,7 +666,7 @@
             {"kind": "prayer", "node": "amidah.avot", "text": " קוֹנֵה הַכֹּל,"},
             {"kind": "prayer", "node": "amidah.avot", "text": " וְזוֹכֵר חַסְדֵּי אָבוֹת,"},
             {"kind": "prayer", "node": "amidah.avot", "text": " וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַֽעַן שְׁמוֹ בְּאַֽהֲבָה: "},
-            {"kind": "instruction", "node": "amidah.avot", "en": "On Shabbat Shuva:", "gloss": "Shabbat between Rosh Hashana and Yom Kippur", "text": "<small><small>בשבת תשובה אומרים:</small>"},
+            {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.avot", "en": "On Shabbat Shuva:", "gloss": "Shabbat between Rosh Hashana and Yom Kippur", "text": "<small><small>בשבת תשובה אומרים:</small>"},
             {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.avot", "text": " זָכְרֵנוּ לְחַיִּים,"},
             {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.avot", "text": " מֶלֶךְ חָפֵץ בַּחַיִּים,"},
             {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.avot", "text": " כָּתְבֵנוּ בְּסֵפֶר חַיִּים,"},
@@ -672,9 +675,9 @@
           ]},
           {"ref": "4", "kind": "prayer", "node": "amidah.gevurot", "text": "<b>אַתָּה</b> גִבּוֹר לְעוֹלָם אֲדֹנָי, מְחַיֶּה מֵתִים אַתָּה, רַב לְהוֹשִֽׁיעַ.  "},
           {"ref": "5", "parts": [
-            {"kind": "instruction", "en": "In summer:", "gloss": "Said in summer (outside Israel)", "text": "<small>בקיץ:</small>"},
+            {"kind": "instruction", "when": "!mashivHaruach", "en": "In summer:", "gloss": "Said in summer (outside Israel)", "text": "<small>בקיץ:</small>"},
             {"kind": "prayer", "when": "!mashivHaruach", "alt": "geshem", "text": " מוֹרִיד הַטָּל. "},
-            {"kind": "instruction", "en": "In winter:", "gloss": "Said in winter", "text": "<small>בחורף:</small>"},
+            {"kind": "instruction", "when": "mashivHaruach", "en": "In winter:", "gloss": "Said in winter", "text": "<small>בחורף:</small>"},
             {"kind": "prayer", "when": "mashivHaruach", "alt": "geshem", "text": " מַשִּׁיב הָרֽוּחַ וּמוֹרִיד הַגֶּֽשֶׁם. "}
           ]},
           {"ref": "6", "parts": [
@@ -686,7 +689,7 @@
             {"kind": "prayer", "text": " וּמְקַיֵּם אֱמֽוּנָתוֹ לִֽישֵׁנֵי עָפָר. מִי כָמֽוֹךָ בַּֽעַל גְּבוּרוֹת,"},
             {"kind": "prayer", "text": " וּמִי דֽוֹמֶה לָךְ,"},
             {"kind": "prayer", "text": " מֶֽלֶךְ מֵמִית וּמְחַיֶּה וּמַצְמִֽיחַ יְשׁוּעָה. "},
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "gloss": "Shabbat between Rosh Hashana and Yom Kippur", "text": "<small><small>בשבת תשובה אומרים:</small>"},
+            {"kind": "instruction", "when": "shabbatShuva", "en": "On Shabbat Shuva:", "gloss": "Shabbat between Rosh Hashana and Yom Kippur", "text": "<small><small>בשבת תשובה אומרים:</small>"},
             {"kind": "prayer", "when": "shabbatShuva", "text": " מִי כָמוֹךָ אָב הָרַחֲמָן,"},
             {"kind": "prayer", "when": "shabbatShuva", "text": " זוֹכֵר יְצוּרָיו בְּרַחֲמִים לְחַיִּים.</small> וְנֶֽאֱמָן אַתָּה לְהַֽחֲיוֹת מֵתִים: בָּרוּךְ אַתָּה יֵהֵוֵהֵ,"},
             {"kind": "prayer", "when": "shabbatShuva", "text": " מְחַיֵּה הַמֵּתִים:"}
@@ -697,25 +700,25 @@
             {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": "<b>אַתָּה</b> קָדוֹשׁ וְשִׁמְךָ קָדוֹשׁ,"},
             {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " וּקְדוֹשִׁים בְּכָל־יוֹם יְהַֽלְלֽוּךָ סֶּֽלָה: בָּרוּךְ אַתָּה יֹהֵוָהֵ,"},
             {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " הָאֵל הַקָּדוֹשׁ: "},
-            {"kind": "instruction", "node": "amidah.kedushat_hashem", "en": "On Shabbat Shuva:", "gloss": "Shabbat between Rosh Hashana and Yom Kippur", "text": "<small><small>בשבת תשובה אומרים:</small>"},
+            {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.kedushat_hashem", "en": "On Shabbat Shuva:", "gloss": "Shabbat between Rosh Hashana and Yom Kippur", "text": "<small><small>בשבת תשובה אומרים:</small>"},
             {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.kedushat_hashem", "text": " הַמֶּלֶךְ הַקָּדוֹשׁ:</small>  "}
           ]},
           {"ref": "10", "kind": "prayer", "node": "amidah.shabbat.retzei_vimnuchateinu", "text": "<b>אַתָּה</b> אֶחָד וְשִׁמְךָ אֶחָד, וּמִי כְעַמְּךָ כְּיִשְׂרָאֵל גוֹי אֶחָד בָּאָרֶץ. תִּפְאֶרֶת גְּדֻלָּה, וַעֲטֶרֶת יְשׁוּעָה, יוֹם מְנוּחָה וּקְדֻשָּׁה לְעַמְּךָ נָתַתָּ. אַבְרָהָם יָגֵל, יִצְחָק יְרַנֵּן, יַעֲקֹב וּבָנָיו יָנוּחוּ בוֹ. מְנוּחַת אַהֲבָה וּנְדָבָה, מְנוּחַת אֱמֶת וֶאֱמוּנָה, מְנוּחַת שָׁלוֹם הַשְׁקֵט וָבֶטַח, מְנוּחָה שְׁלֵמָה שֶׁאַתָּה הוּא רוֹצֶה בָהּ. יַכִּירוּ בָנֶיךָ וְיֵדְעוּ כִּי מֵאִתְּךָ הִיא מְנוּחָתָם, וְעַל מְנוּחָתָם יַקְדִּישׁוּ אֶת שְׁמֶךָ: "},
           {"ref": "11", "kind": "prayer", "node": "amidah.shabbat.retzei_vimnuchateinu", "text": "<b>אֱלֹהֵינוּ</b> וֵאלֹהֵי אֲבוֹתֵינוּ, רְצֵה נָא בִּמְנוּחָתֵנוּ, קַדְּשֵׁנוּ בְּמִצְוֹתֶיךָ, שִׂים חֶלְקֵנוּ בְּתוֹרָתָךְ, שַׂבְּעֵנוּ מִטּוּבָךְ, שַׂמֵּחַ נַפְשֵׁנוּ בִּישׁוּעָתָךְ, וְטַהֵר לִבֵּנוּ לְעָבְדְּךָ בֶּאֱמֶת, וְהַנְחִילֵנוּ יְהֹוָה אֱלֹהֵינוּ בְּאַהֲבָה וּבְרָצוֹן שַׁבְּתוֹת קָדְשֶׁךָ, וְיָנוּחוּ בָם כָּל יִשְׂרָאֵל מְקַדְּשֵׁי שְׁמֶךָ. בָּרוּךְ אַתָּה יְהֹוָה, מְקַדֵּשׁ הַשַּׁבָּת:"},
           {"ref": "12", "kind": "prayer", "node": "amidah.avoda", "text": "<b>רְצֵה</b> יְהֹוָה אֱלֹהֵֽינוּ בְּעַמְּךָ יִשְׂרָאֵל וְלִתְפִלָּתָם שְׁעֵה, וְהָשֵׁב הָֽעֲבוֹדָה לִדְבִיר בֵּיתֶֽךָ, וְאִשֵּׁי יִשְׂרָאֵל וּתְפִלָּתָם, מְהֵרָה בְּאַֽהֲבָה תְקַבֵּל בְּרָצוֹן, וּתְהִי לְרָצוֹן תָּמִיד עֲבוֹדַת יִשְׂרָאֵל עַמֶּֽךָ: "},
-          {"ref": "13", "kind": "instruction", "en": "On Rosh Chodesh and Chol HaMoed, say:", "gloss": "Ya'aleh VeYavo insertion", "text": "<small>בראש חודש ובחול המועד אומרים:</small>"},
-          {"ref": "14", "kind": "prayer", "node": "amidah.yaaleh_veyavo", "role": "chazzan", "voice": "aloud", "text": "<small>אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ, יַעֲלֶה וְיָבֹא, וְיַגִּֽיעַ וְיֵרָאֶה, וְיֵרָצֶה וְיִשָּׁמַע, וְיִפָּקֵד וְיִזָּכֵר, זִכְרוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ, זִכְרוֹן יְרוּשָׁלַֽיִם עִירָךְ, וְזִכְרוֹן מָשִֽׁיחַ בֶּן־דָּוִד עַבְדָּךְ, וְזִכְרוֹן כָּל־עַמְּךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ, לִפְלֵיטָה, לְטוֹבָה, לְחֵן, לְחֶֽסֶד וּלְרַחֲמִים, לְחַיִּים טוֹבִים וּלְשָׁלוֹם, בְּיוֹם</small> "},
+          {"ref": "13", "kind": "instruction", "when": "roshChodesh || cholHamoed", "en": "On Rosh Chodesh and Chol HaMoed, say:", "gloss": "Ya'aleh VeYavo insertion", "text": "<small>בראש חודש ובחול המועד אומרים:</small>"},
+          {"ref": "14", "kind": "prayer", "when": "roshChodesh || cholHamoed", "node": "amidah.yaaleh_veyavo", "role": "chazzan", "voice": "aloud", "text": "<small>אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ, יַעֲלֶה וְיָבֹא, וְיַגִּֽיעַ וְיֵרָאֶה, וְיֵרָצֶה וְיִשָּׁמַע, וְיִפָּקֵד וְיִזָּכֵר, זִכְרוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ, זִכְרוֹן יְרוּשָׁלַֽיִם עִירָךְ, וְזִכְרוֹן מָשִֽׁיחַ בֶּן־דָּוִד עַבְדָּךְ, וְזִכְרוֹן כָּל־עַמְּךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ, לִפְלֵיטָה, לְטוֹבָה, לְחֵן, לְחֶֽסֶד וּלְרַחֲמִים, לְחַיִּים טוֹבִים וּלְשָׁלוֹם, בְּיוֹם</small> "},
           {"ref": "15", "parts": [
             {"kind": "instruction", "en": "On Rosh Chodesh:", "gloss": "Specific insertion for Rosh Chodesh", "text": "<small><small>בראש חדש:</small>"},
             {"kind": "prayer", "when": "roshChodesh", "alt": "yaaleh_veyavo", "text": " רֹאשׁ חֹֽדֶשׁ הַזֶּה,</small>"}
           ]},
           {"ref": "16", "parts": [
-            {"kind": "instruction", "en": "On Chol HaMoed Pesach:", "gloss": "Specific insertion for Chol HaMoed Pesach", "text": "<small><small>בחוה\"מ פסח:</small>"},
+            {"kind": "instruction", "when": "cholHamoedPesach", "en": "On Chol HaMoed Pesach:", "gloss": "Specific insertion for Chol HaMoed Pesach", "text": "<small><small>בחוה\"מ פסח:</small>"},
             {"kind": "prayer", "when": "cholHamoedPesach", "alt": "yaaleh_veyavo", "text": " חַג הַמַּצּוֹת הַזֶּה,"},
             {"kind": "prayer", "when": "cholHamoedPesach", "alt": "yaaleh_veyavo", "text": " בְּיוֹם מִקְרָא קֹֽדֶשׁ הַזֶּה,</small>"}
           ]},
           {"ref": "17", "parts": [
-            {"kind": "instruction", "en": "On Chol HaMoed Sukkot:", "gloss": "Specific insertion for Chol HaMoed Sukkot", "text": "<small><small>בחוה\"מ סוכות:</small>"},
+            {"kind": "instruction", "when": "cholHamoedSukkot", "en": "On Chol HaMoed Sukkot:", "gloss": "Specific insertion for Chol HaMoed Sukkot", "text": "<small><small>בחוה\"מ סוכות:</small>"},
             {"kind": "prayer", "when": "cholHamoedSukkot", "alt": "yaaleh_veyavo", "text": " חַג הַסֻּכּוֹת הַזֶּה,"},
             {"kind": "prayer", "when": "cholHamoedSukkot", "alt": "yaaleh_veyavo", "text": " בְּיוֹם מִקְרָא קֹֽדֶשׁ הַזֶּה,</small>"}
           ]},
@@ -735,14 +738,14 @@
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " עַל שֶׁאֲנַחְנוּ מוֹדִים לָךְ,"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " בָּרוּךְ אֵל הַהוֹדָאוֹת.</small>"}
           ]},
-          {"ref": "23", "kind": "instruction", "en": "On Chanukah and Purim, say:", "gloss": "Al HaNissim insertion", "text": "<small>בחנוכה ופורים אומרים:</small>"},
-          {"ref": "24", "kind": "prayer", "node": "amidah.al_hanissim", "role": "chazzan", "voice": "aloud", "text": "<small><b>עַל הַנִּסִּים</b> וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַנִּפְלָאוֹת וְעַל הַנֶּחָמוֹת שֶׁעָשִֽׂיתָ לַאֲבוֹתֵֽינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה:</small>"},
+          {"ref": "23", "kind": "instruction", "when": "chanukah || purim", "en": "On Chanukah and Purim, say:", "gloss": "Al HaNissim insertion", "text": "<small>בחנוכה ופורים אומרים:</small>"},
+          {"ref": "24", "kind": "prayer", "when": "chanukah || purim", "node": "amidah.al_hanissim", "role": "chazzan", "voice": "aloud", "text": "<small><b>עַל הַנִּסִּים</b> וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַנִּפְלָאוֹת וְעַל הַנֶּחָמוֹת שֶׁעָשִֽׂיתָ לַאֲבוֹתֵֽינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה:</small>"},
           {"ref": "25", "parts": [
-            {"kind": "instruction", "en": "On Chanukah:", "gloss": "Specific insertion for Chanukah", "text": "<small><small>בחנוכה אומרים:</small>"},
+            {"kind": "instruction", "when": "chanukah", "en": "On Chanukah:", "gloss": "Specific insertion for Chanukah", "text": "<small><small>בחנוכה אומרים:</small>"},
             {"kind": "prayer", "when": "chanukah", "alt": "alhanissim", "text": " <b>בִּימֵי מַתִּתְיָה</b> בֶן־יוֹחָנָן כֹּהֵן גָּדוֹל. חַשְׁמוֹנָאִי וּבָנָיו כְּשֶׁעָֽמְדָֽה מַלְכוּת יָוָן הָרְשָׁעָה עַל עַמְּךָ יִשְׂרָאֵל. לְשַׁכְּחָם תּוֹרָתָךְ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנָךְ. וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים עָמַֽדְתָּ לָהֶם בְּעֵת צָרָתָם. רַֽבְתָּ אֶת רִיבָם. דַּֽנְתָּ אֶת דִּינָם. נָקַֽמְתָּ אֶת נִקְמָתָם. מָסַֽרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים. וְרַבִּים בְּיַד מְעַטִּים. וּרְשָׁעִים בְּיַד צַדִּיקִים. וּטְמֵאִים בְּיַד טְהוֹרִים. וְזֵדִים בְּיַד עֽוֹסְקֵֽי תוֹרָתֶֽךָ. לְךָ עָשִֽׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמָךְ. וּלְעַמְּךָ יִשְׂרָאֵל עָשִֽׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה. וְאַחַר כָּךְ בָּֽאוּ בָנֶֽיךָ לִדְבִיר בֵּיתֶֽךָ. וּפִנּוּ אֶת־הֵיכָלֶֽךָ. וְטִהֲרוּ אֶת־מִקְדָּשֶֽׁךָ. וְהִדְלִֽיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶֽׁךָ. וְקָֽבְעֽוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵֽלּוּ בְּהַלֵּל וּבְהוֹדָאָה. וְעָשִֽׂיתָ עִמָּהֶם נִסִּים וְנִפְלָאוֹת וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל סֶֽלָה:</small>"}
           ]},
           {"ref": "26", "parts": [
-            {"kind": "instruction", "en": "On Purim:", "gloss": "Specific insertion for Purim", "text": "<small><small>בפורים אומרים</small>"},
+            {"kind": "instruction", "when": "purim", "en": "On Purim:", "gloss": "Specific insertion for Purim", "text": "<small><small>בפורים אומרים</small>"},
             {"kind": "prayer", "when": "purim", "alt": "alhanissim", "text": " <b>בִּימֵי מָרְדְּכַי</b> וְאֶסְתֵּר בְּשׁוּשַׁן הַבִּירָה. כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע. בִּקֵּשׁ לְהַשְׁמִיד לַהֲרֹג וּלְאַבֵּד אֶת־כָּל־הַיְּהוּדִים מִנַּֽעַר וְעַד זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד. בִּשְׁלֹשָׁה עָשָׂר לְחֹֽדֶשׁ שְׁנֵים עָשָׂר. הוּא חֹֽדֶשׁ אֲדָר. וּשְׁלָלָם לָבוֹז. וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים הֵפַֽרְתָּ אֶת־עֲצָתוֹ וְקִלְקַֽלְתָּ אֶת־מַחֲשַׁבְתּוֹ. וַהֲשֵׁבֽוֹתָ לּוֹ גְּמוּלוֹ בְרֹאשׁוֹ. וְתָלוּ אוֹתוֹ וְאֶת־בָּנָיו עַל הָעֵץ. וְעָשִֽׂיתָ עִמָּהֶם נֵס וָפֶֽלֶא וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל סֶֽלָה:</small>"}
           ]},
           {"ref": "27", "parts": [
@@ -752,7 +755,7 @@
             {"kind": "prayer", "node": "amidah.modim", "text": " תָּמִיד,"},
             {"kind": "prayer", "node": "amidah.modim", "text": " שִׁמְךָ מַלְכֵּֽנוּ,"},
             {"kind": "prayer", "node": "amidah.modim", "text": " לְעוֹלָם וָעֶד. וְכָל־הַחַיִּים יוֹדֽוּךָ סֶּֽלָה: "},
-            {"kind": "instruction", "node": "amidah.modim", "en": "On Shabbat Shuva:", "gloss": "Shabbat between Rosh Hashana and Yom Kippur", "text": "<small><small>בשבת תשובה אומרים:</small>"},
+            {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.modim", "en": "On Shabbat Shuva:", "gloss": "Shabbat between Rosh Hashana and Yom Kippur", "text": "<small><small>בשבת תשובה אומרים:</small>"},
             {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.modim", "text": " וּכְתֹב לְחַיִּים טוֹבִים כָּל בְּנֵי בְרִיתֶךָ.</small> וִֽיהַֽלְלוּ וִֽיבָֽרְכוּ אֶת־שִׁמְךָ הַגָּדוֹל בֶּֽאֱמֶת לְעוֹלָם כִּי טוֹב,"},
             {"kind": "prayer", "node": "amidah.modim", "text": " הָאֵל יְשֽׁוּעָתֵֽנוּ וְעֶזְרָתֵֽנוּ סֶֽלָה,"},
             {"kind": "prayer", "node": "amidah.modim", "text": " הָאֵל הַטּוֹב: בָּרוּךְ אַתָּה יֻהֻוֻהֻ,"},
@@ -767,7 +770,7 @@
             {"kind": "prayer", "node": "amidah.shalom", "text": " צְדָקָה וְרַֽחֲמִים,"},
             {"kind": "prayer", "node": "amidah.shalom", "text": " בְּרָכָה וְשָׁלוֹם. וְטוֹב בְּעֵינֶֽיךָ לְבָֽרְכֵֽנוּ וּלְבָרֵךְ אֶת־כָּל־עַמְּךָ יִשְׂרָאֵל,"},
             {"kind": "prayer", "node": "amidah.shalom", "text": " בְּרֹב עֹז וְשָׁלוֹם: "},
-            {"kind": "instruction", "node": "amidah.shalom", "en": "On Shabbat Shuva:", "gloss": "Shabbat between Rosh Hashana and Yom Kippur", "text": "<small><small>בשבת תשובה אומרים:</small>"},
+            {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.shalom", "en": "On Shabbat Shuva:", "gloss": "Shabbat between Rosh Hashana and Yom Kippur", "text": "<small><small>בשבת תשובה אומרים:</small>"},
             {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.shalom", "text": " וּבְסֵפֶר חַיִּים,"},
             {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.shalom", "text": " בְּרָכָה וְשָׁלוֹם,"},
             {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.shalom", "text": " וּפַרְנָסָה טוֹבָה וִישׁוּעָה וְנֶחָמָה,"},
@@ -796,7 +799,7 @@
           {"ref": "32", "kind": "prayer", "node": "amidah.elokai_netzor", "text": "<b>יִֽהְי֥וּ</b> לְרָצ֨וֹן ׀ אִמְרֵי־פִ֡י וְהֶגְי֣וֹן לִבִּ֣י לְפָנֶ֑יךָ יְ֝הֹוָ֗ה צוּרִ֥י וְגֹאֲלִֽי׃  "},
           {"ref": "33", "parts": [
             {"kind": "prayer", "node": "amidah.oseh_shalom", "text": "<b>עֹשֶׂה</b> שָׁלוֹם "},
-            {"kind": "instruction", "node": "amidah.oseh_shalom", "en": "On Shabbat Shuva:", "gloss": "Shabbat between Rosh Hashana and Yom Kippur", "text": "<small><small>בשבת תשובה אומרים:</small>"},
+            {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.oseh_shalom", "en": "On Shabbat Shuva:", "gloss": "Shabbat between Rosh Hashana and Yom Kippur", "text": "<small><small>בשבת תשובה אומרים:</small>"},
             {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.oseh_shalom", "text": " הַשָּׁלוֹם</small> בִּמְרוֹמָיו,"},
             {"kind": "prayer", "node": "amidah.oseh_shalom", "text": " הוּא בְּרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ,"},
             {"kind": "prayer", "node": "amidah.oseh_shalom", "text": " וְעַל כָּל־עַמּוֹ יִשְׂרָאֵל,"},

@@ -11,10 +11,8 @@ import '../../core/search.dart';
 import '../../core/settings.dart';
 import '../../core/theme.dart';
 import '../../core/titles.dart';
-import '../tehillim/tehillim_data.dart';
-import '../tehillim/tehillim_progress.dart';
-import '../tehillim/tehillim_reader.dart';
 import '../search/search_sources.dart';
+import 'book_kind.dart';
 import 'prayer_catalog.dart';
 import 'reader_screen.dart';
 import 'siddur_providers.dart';
@@ -76,13 +74,10 @@ class LibraryScreen extends ConsumerWidget {
               ])
             : ListView(padding: const EdgeInsets.only(bottom: 32), children: [
           if (defaultBook.hasValue) _TodayServices(book: defaultBook.value!),
+          const _QuickPrayers(),
           const _SeasonsCard(),
-          const _TehillimCard(),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 16, 20, 8),
-            child: Text(context.tr('Siddurim'), style: theme.textTheme.titleMedium),
-          ),
-          for (final b in m.books) _BookTile(book: b, isDefault: b.title == defaultBook.value),
+          _SiddurimDrawer(books: m.books, defaultBook: defaultBook.value),
+          _CommentarySection(books: [for (final b in m.books) if (bookKind(b.title) == BookKind.commentary) b]),
           Padding(
             padding: const EdgeInsets.all(20),
             child: Text(
@@ -273,10 +268,158 @@ class _ShortcutRow extends ConsumerWidget {
   }
 }
 
+/// The nusachim to pray from, folded into one card that shows the default;
+/// Shabbat siddurim sit at the bottom, smaller, since they're only found
+/// after the others (see [bookSearchOrder]).
+class _SiddurimDrawer extends ConsumerWidget {
+  final List<BookInfo> books;
+  final String? defaultBook;
+  const _SiddurimDrawer({required this.books, required this.defaultBook});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(settingsProvider);
+    final theme = Theme.of(context);
+    final nusachim = [for (final b in books) if (bookKind(b.title) == BookKind.nusach) b];
+    final shabbat = [for (final b in books) if (bookKind(b.title) == BookKind.shabbat) b];
+    final current = books.where((b) => b.title == defaultBook).firstOrNull;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        child: ExpansionTile(
+          key: const PageStorageKey('siddur-drawer'),
+          shape: const Border(),
+          collapsedShape: const Border(),
+          leading: Icon(Icons.auto_stories_outlined, color: theme.colorScheme.primary),
+          title: Text(context.tr('Siddurim'), style: theme.textTheme.titleMedium),
+          subtitle: current == null
+              ? null
+              : Text(context.prayerTitle(s, current.title, current.heTitle),
+                  style: theme.textTheme.bodySmall?.copyWith(fontFamily: context.prayerTitleIsHebrew(s) ? s.hebrewFont : null)),
+          children: [
+            for (final b in nusachim) _BookTile(book: b, isDefault: b.title == defaultBook),
+            if (shabbat.isNotEmpty) ...[
+              const Divider(height: 1),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 10, 16, 0),
+                child: Align(
+                  alignment: AlignmentDirectional.centerStart,
+                  child: Text(context.tr('Shabbat siddurim'), style: theme.textTheme.labelMedium?.copyWith(color: theme.colorScheme.outline)),
+                ),
+              ),
+              for (final b in shabbat) _BookTile(book: b, isDefault: b.title == defaultBook, minor: true),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// English commentary on the siddur, apart from the siddurim themselves.
+class _CommentarySection extends ConsumerWidget {
+  final List<BookInfo> books;
+  const _CommentarySection({required this.books});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    if (books.isEmpty) return const SizedBox.shrink();
+    final s = ref.watch(settingsProvider);
+    final theme = Theme.of(context);
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        child: Column(children: [
+          for (final b in books)
+            ListTile(
+              leading: Icon(Icons.chrome_reader_mode_outlined, color: theme.colorScheme.primary),
+              title: Text(context.prayerTitle(s, b.title, b.heTitle),
+                  style: context.prayerTitleIsHebrew(s) ? TextStyle(fontFamily: s.hebrewFont) : null),
+              subtitle: Text(context.tr('Commentary · opens in English')),
+              trailing: Icon(Icons.chevron_right, color: theme.colorScheme.outline),
+              onTap: () => context.push('/siddur/book/${Uri.encodeComponent(b.title)}'),
+            ),
+        ]),
+      ),
+    );
+  }
+}
+
+/// Short prayers for through the day, each opening straight in the reader.
+class _QuickPrayers extends ConsumerWidget {
+  const _QuickPrayers();
+
+  static const _groups = [
+    ('Morning', [('modehAni', Icons.wb_sunny_outlined), ('netilat', Icons.water_drop_outlined), ('asherYatzar', Icons.accessibility_new),
+      ('torahBlessings', Icons.menu_book_outlined), ('tallit', Icons.checkroom_outlined), ('tefillin', Icons.sports_martial_arts)]),
+    ('Blessings', [('birkat', Icons.restaurant), ('brachot', Icons.local_dining_outlined), ('meeinShalosh', Icons.bakery_dining),
+      ('derech', Icons.directions_walk), ('refuah', Icons.healing_outlined), ('blessChildren', Icons.child_care)]),
+    ('Closing & night', [('bedtime', Icons.bedtime_outlined), ('aleinu', Icons.flag_outlined), ('adonOlam', Icons.music_note_outlined),
+      ('yigdal', Icons.music_note_outlined)]),
+  ];
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 14, 16, 12),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            Text(context.tr('Quick prayers'), style: theme.textTheme.titleMedium),
+            for (final (label, items) in _groups) ...[
+              Padding(
+                padding: const EdgeInsets.only(top: 10, bottom: 4),
+                child: Text(context.tr(label), style: theme.textTheme.labelMedium?.copyWith(color: theme.colorScheme.outline)),
+              ),
+              Wrap(spacing: 8, runSpacing: 0, children: [for (final (key, icon) in items) _QuickChip(prayerKey: key, icon: icon)]),
+            ],
+          ]),
+        ),
+      ),
+    );
+  }
+}
+
+class _QuickChip extends ConsumerWidget {
+  final String prayerKey;
+  final IconData icon;
+  const _QuickChip({required this.prayerKey, required this.icon});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(settingsProvider);
+    // Me'ein Shalosh has a screen of its own; the rest are found in the
+    // reader's siddurim.
+    if (prayerKey == 'meeinShalosh') {
+      return ActionChip(
+        avatar: Icon(icon, size: 18),
+        label: Text(context.prayerTitle(s, "Me'ein Shalosh", 'מעין שלוש')),
+        onPressed: () => context.push('/meein-shalosh'),
+      );
+    }
+    final item = catalogItem(prayerKey)!;
+    final found = ref.watch(prayerRefProvider(prayerKey)).value;
+    if (found == null) return const SizedBox.shrink();
+    return ActionChip(
+      avatar: Icon(icon, size: 18),
+      label: Text(context.prayerTitle(s, item.en, item.he),
+          style: context.prayerTitleIsHebrew(s) ? TextStyle(fontFamily: s.hebrewFont) : null),
+      onPressed: () => context.push(readerPath(found.book, found.id)),
+    );
+  }
+}
+
 class _BookTile extends ConsumerWidget {
   final BookInfo book;
   final bool isDefault;
-  const _BookTile({required this.book, required this.isDefault});
+
+  /// Set smaller and quieter (the Shabbat siddurim).
+  final bool minor;
+  const _BookTile({required this.book, required this.isDefault, this.minor = false});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -285,12 +428,17 @@ class _BookTile extends ConsumerWidget {
     final en = book.byLanguage('en').length;
     final other = context.prayerSubtitle(s, book.title, book.heTitle);
     final versions = context.tr('{he} Hebrew · {en} translation versions', {'he': he, 'en': en});
+    final muted = Theme.of(context).colorScheme.onSurfaceVariant;
     return ListTile(
-      leading: CircleAvatar(child: Text(book.heTitle.characters.first, style: TextStyle(fontFamily: s.hebrewFont))),
+      dense: true,
+      visualDensity: minor ? VisualDensity.compact : null,
+      leading: CircleAvatar(
+          radius: minor ? 14 : 18,
+          child: Text(book.heTitle.characters.first, style: TextStyle(fontFamily: s.hebrewFont, fontSize: minor ? 13 : null))),
       title: Text(context.prayerTitle(s, book.title, book.heTitle),
-          style: context.prayerTitleIsHebrew(s) ? TextStyle(fontFamily: s.hebrewFont) : null),
+          style: (context.prayerTitleIsHebrew(s) ? TextStyle(fontFamily: s.hebrewFont) : const TextStyle()).copyWith(color: minor ? muted : null)),
       // Bidi isolates keep a Hebrew title from reordering the English text.
-      subtitle: Text(other == null ? versions : '\u2068$other\u2069 · $versions'),
+      subtitle: minor ? null : Text(other == null ? versions : '\u2068$other\u2069 · $versions'),
       trailing: isDefault
           ? Chip(label: Text(context.tr('Default')), visualDensity: VisualDensity.compact)
           : IconButton(
@@ -432,49 +580,6 @@ class _SeasonsCard extends ConsumerWidget {
                 ]),
               ),
               Icon(Icons.chevron_right, color: theme.colorScheme.outline),
-            ]),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _TehillimCard extends ConsumerWidget {
-  const _TehillimCard();
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final hd = ref.watch(readerDaytimeDateProvider);
-    final today = monthlyPortion(hd);
-    final read = ref.watch(tehillimProgressProvider.select((x) => x.read.length));
-    final hebFont = ref.watch(settingsProvider.select((s) => s.hebrewFont));
-    final theme = Theme.of(context);
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
-      child: Card(
-        clipBehavior: Clip.antiAlias,
-        child: InkWell(
-          onTap: () => context.push('/siddur/tehillim'),
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Row(children: [
-              Text('תהלים', style: TextStyle(fontFamily: hebFont, fontSize: 30, fontWeight: FontWeight.w700, color: theme.colorScheme.primary)),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(context.tr('Tehillim'), style: theme.textTheme.titleMedium),
-                  Text(
-                    '${context.tr('Today')}: ${today.rangeLabel} · ${context.tr('{n} of 150 chapters read this cycle', {'n': read})}',
-                    style: theme.textTheme.bodySmall,
-                  ),
-                ]),
-              ),
-              IconButton.filledTonal(
-                tooltip: context.tr("Read today's Tehillim"),
-                icon: const Icon(Icons.menu_book),
-                onPressed: () => context.push(tehillimReadPath(today)),
-              ),
             ]),
           ),
         ),

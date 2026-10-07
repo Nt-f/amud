@@ -259,6 +259,25 @@ class SegmentItem extends RenderItem {
       this.graphNode,
       this.gestures = const [],
       this.repeat});
+
+  /// This line with only one language, to set the two apart (the linear
+  /// reader's columns, or its Hebrew above a rule and English below).
+  SegmentItem onlyHebrew() => _withSides(he, null);
+  SegmentItem onlyTranslation() => _withSides(null, tr);
+
+  SegmentItem _withSides(ResolvedSegment? h, ResolvedSegment? t) => SegmentItem(key, node, h, t, kind, applicability, labelEn, labelHe, excluded,
+      announces: announces,
+      option: option,
+      chazarah: chazarah,
+      role: role,
+      voice: voice,
+      align: align,
+      fold: fold,
+      foldHe: foldHe,
+      select: select,
+      graphNode: graphNode,
+      gestures: gestures,
+      repeat: repeat);
 }
 
 /// Consecutive segments that aren't said today, folded into one row.
@@ -731,7 +750,7 @@ class SiddurResolver {
       if (!(prayer ? options.showTranslation : options.notesTranslation)) t = null;
       if (h == null && t == null) return;
       var ap = rubric == null ? Applicability.always : _eval(rubric.condition, ctx);
-      if (ap == Applicability.today && _ordinary(rubric!.expression, ctx.service)) ap = Applicability.always;
+      if (ap == Applicability.today && _ordinary(rubric!.expression, ctx.service) && !_justSwitched(rubric.expression, ctx)) ap = Applicability.always;
       // A circumstance the reader answered is no news to them: no "today" label.
       if (ap == Applicability.today && RegExp(r'\bif_').hasMatch(rubric!.expression)) ap = Applicability.always;
       if (sectionExcluded) ap = Applicability.notToday;
@@ -795,7 +814,26 @@ class SiddurResolver {
   Applicability _runApplicability(TextRun r, DayContext ctx) {
     if (r.rubric == null) return Applicability.always;
     final ap = _eval(r.rubric!.condition, ctx);
-    return ap == Applicability.today && _ordinary(r.rubric!.expression, ctx.service) ? Applicability.always : ap;
+    return ap == Applicability.today && _ordinary(r.rubric!.expression, ctx.service) && !_justSwitched(r.rubric!.expression, ctx)
+        ? Applicability.always
+        : ap;
+  }
+
+  static final _seasonal = RegExp(r'^\s*(!?)\s*(mashivHaruach|moridHatal|talUmatar)\s*$');
+
+  /// The seasonal wording ("Mashiv HaRuach", "ve'ten bracha") in the first 30
+  /// days after it begins: ordinary by then, but easy to get wrong, so it
+  /// stays highlighted.
+  static bool _justSwitched(String expression, DayContext ctx) {
+    final m = _seasonal.firstMatch(expression);
+    if (m == null) return false;
+    return switch ((m[1]!.isNotEmpty, m[2])) {
+      (false, 'mashivHaruach') => ctx['freshMashivHaruach'],
+      (false, 'moridHatal') => ctx['freshMoridHatal'],
+      (false, 'talUmatar') => ctx['freshTalUmatar'],
+      (true, 'talUmatar') => ctx['freshBracha'],
+      _ => false,
+    };
   }
 
   /// A condition that holds on an ordinary weekday ("!tishaBav", "!(cholHamoed

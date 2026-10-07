@@ -42,9 +42,9 @@
           {"ref": "28", "kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ</b> לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא:"},
           {"ref": "29", "kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא, בְּרִיךְ הוּא"},
           {"ref": "30", "parts": [
-            {"kind": "prayer", "text": "לְעֵֽלָּא ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "cite": "ע\"פ מחזור מכל השנה", "text": "<small>בעשי\"ת</small> "},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": "וּלְ֒עֵֽלָּא מִכָּל)  מִן כָּל בִּרְכָתָא וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא, דַּאֲמִירָן בְּעָלְ֒מָא, וְאִמְרוּ אָמֵן:"}
+            {"kind": "prayer", "text": "לְעֵֽלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "cite": "ע\"פ מחזור מכל השנה", "text": "<small>בעשי\"ת</small> "},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": "(וּלְ֒עֵֽלָּא מִכָּל)  מִן כָּל בִּרְכָתָא וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא, דַּאֲמִירָן בְּעָלְ֒מָא, וְאִמְרוּ אָמֵן:"}
           ]},
           {"ref": "31", "kind": "instruction", "en": "Ashrei and Uva LeTziyon: when making an announcement, it should be made before the chazzan begins Ashrei.", "cite": "מגן אברהם סי' קלב", "text": "<small>אשרי ובא לציון. כשמכריזים דבר יש להכריז קודם שיתחיל החזן אשרי (מגן אברהם סי' קלב)</small>"}
         ]
@@ -454,7 +454,7 @@
           {"ref": "30", "kind": "instruction", "en": "A father whose son has reached the age of thirteen years and one day says this blessing, without the Name and Kingship, when his son is called to the Torah for the first time:", "gloss": "Bar Mitzvah blessing", "text": "<small>מי שהגיע בנו לבן י\"ג שנה ויום אחד יברך האב בשעה שבנו עולה לתורה פעם ראשונה ברכה זו בלא שם ומלכות:</small>"},
           {"ref": "31", "kind": "prayer", "role": "individual", "voice": "aloud", "text": "בָּרוּךְ שֶׁפְּ֒טָרַֽנִי מֵעָנְשׁוֹ שֶׁל זֶה:"},
           {"ref": "32", "kind": "instruction", "en": "When the Torah is raised after the reading, the Arizal would look closely at the letters until he could recognize them, saying that a great light flows to a person from looking at the Torah from close, so that he can read the letters well. Therefore the one who raises the Torah unrolls it over three columns and shows the writing to the people. While they see it one should bow and say \"Vezot haTorah\", and only while facing the writing of the Torah scroll.", "cite": "Arizal", "text": "<small>בעת הגבהת ס\"ת לאחר הקריאה היה האר\"י ז\"ל מסתכל באותיות היטב עד שהיה מכירם לקרות והיה אומר שנמשך אור גדול על האדם ע\"י הסתכלות התורה מקרוב עד שיוכל לקרות האותיות היטב. לכן המגביה הס\"ת גולל הס\"ת על ג' דפין ומגביה ומראה כתיבתה לעם. ובעת ראייתם יש לכרוע ולומר וזאת התורה. ואין לומר וזאת התורה רק נגד הכתב של הס\"ת:</small>"},
-          {"ref": "33", "kind": "prayer", "role": "congregation", "voice": "aloud", "gestures": ["bow"], "text": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם משֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל עַל פִּי יְהֹוָה בְּיַד משֶׁה:"},
+          {"ref": "33", "kind": "prayer", "role": "congregation", "voice": "aloud", "text": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם משֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל עַל פִּי יְהֹוָה בְּיַד משֶׁה:"},
           {"ref": "34", "kind": "prayer", "role": "congregation", "voice": "aloud", "text": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְ֒כֶֽיהָ מְאֻשָּׁר: דְּרָכֶֽיהָ דַּרְ֒כֵי נֹֽעַם וְכָל נְתִיבוֹתֶֽיהָ שָׁלוֹם: אֹֽרֶךְ יָמִים בִּימִינָהּ בִּשְׂ֒מֹאלָהּ עֽשֶׁר וְכָבוֹד: יְהֹוָה חָפֵץ לְמַֽעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר:"},
           {"ref": "35", "kind": "instruction", "when": "tachanunShacharit", "en": "On Mondays and Thursdays when Tachanun is said, while the Torah is being rolled and before it is returned to the Ark, the chazzan says \"Yehi ratzon\" etc. It is right and proper to warn the congregation to answer Amen after each \"Yehi ratzon\", since they are great requests.", "gloss": "Said only when Tachanun is recited", "text": "<small>בשני וחמישי כשאומרים תחנון בשעה שהגולל גולל הס\"ת קודם שמכניסין הס\"ת להיכל יאמר הש\"ץ <b>יְהִי רָצוֹן</b> כו'. וראוי ונכון להזהיר לעם שיאמרו אמן אחר כל יהי רצון כי בקשות גדולות הם:</small>"},
           {"ref": "36", "kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "יְהִי רָצוֹן מִלִּפְנֵי אָבִֽינוּ שֶׁבַּשָּׁמַֽיִם לְכוֹנֵן אֶת בֵּית חַיֵּֽינוּ וּלְ֒הָשִׁיב אֶת שְׁכִינָתוֹ בְּתוֹכֵֽנוּ בִּמְ֒הֵרָה בְיָמֵֽינוּ וְנֹאמַר אָמֵן:"},
@@ -644,9 +644,9 @@
           {"ref": "19", "kind": "prayer", "node": "kaddish.shalem", "role": "congregation", "voice": "aloud", "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>:"},
           {"ref": "20", "parts": [
             {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא,"},
-            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": " בְּרִיךְ הוּא  לְעֵֽלָּא ("},
-            {"kind": "instruction", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "en": "During the Ten Days of Repentance:", "gloss": "Add 'and far above'", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": " וּלְ֒עֵֽלָּא מִכָּל)  מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": " בְּרִיךְ הוּא  לְעֵֽלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "en": "During the Ten Days of Repentance:", "gloss": "Add 'and far above'", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": " (וּלְ֒עֵֽלָּא מִכָּל)  מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
             {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
             {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": " דַּאֲמִירָן בְּעָלְ֒מָא,"},
             {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן,"}
@@ -654,9 +654,9 @@
           {"ref": "21", "kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": "תִּתְקַבֵּל צְלוֹתְ֒הוֹן וּבָעוּתְ֒הוֹן דְּכָל בֵּית יִשְׂרָאֵל קֳדָם אֲבוּהוֹן דִּי בִשְׁ֒מַיָּא וְאִמְרוּ אָמֵן:"},
           {"ref": "22", "kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"},
           {"ref": "23", "parts": [
-            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": "עוֹשֶׂה שָׁלוֹם ("},
-            {"kind": "instruction", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "en": "During the Ten Days of Repentance:", "gloss": "Add 'the peace'", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": " הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן"}
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": "עוֹשֶׂה שָׁלוֹם "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "en": "During the Ten Days of Repentance:", "gloss": "Add 'the peace'", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": " (הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן"}
           ]},
           {"ref": "24", "kind": "instruction", "en": "On Mondays, Thursdays and other days when the Torah is taken out, \"Yehalelu\" is said as the Torah is returned to its place. The chazzan says:", "gloss": "Said when returning the Torah", "text": "<small>בשני ובחמישי ושאר ימים שמוציאין ספר תורה אומרים יהללו כשמחזירים הס\"ת למקומו. ואומר החזן:</small>"},
           {"ref": "25", "kind": "prayer", "node": "torah.yehalelu", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>יְהַלְ֒לוּ אֶת־שֵׁם יְהֹוָה כִּי־נִשְׂגָּב שְׁמוֹ לְבַדּוֹ:</b>"},
@@ -1446,18 +1446,20 @@
           {"ref": "10", "kind": "prayer", "role": "congregation", "voice": "aloud", "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>:"},
           {"ref": "11", "parts": [
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא,"},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": " בְּרִיךְ הוּא  לְעֵֽלָּא ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Insert \"ולעלא מכל\" (and far above all)", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "en": "and far above all", "text": " וּלְ֒עֵֽלָּא מִכָּל)  מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": " בְּרִיךְ הוּא  לְעֵֽלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Insert \"ולעלא מכל\" (and far above all)", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "mourner", "voice": "aloud", "en": "and far above all", "text": " (וּלְ֒עֵֽלָּא מִכָּל)"},
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "en": "and far above all", "text": "  מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": " דַּאֲמִירָן בְּעָלְ֒מָא,"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן,"}
           ]},
           {"ref": "12", "kind": "prayer", "role": "mourner", "voice": "aloud", "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"},
           {"ref": "13", "parts": [
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "עוֹשֶׂה שָׁלוֹם ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Insert \"השלום\" (the peace)", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "en": "the peace", "text": " הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "עוֹשֶׂה שָׁלוֹם "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Insert \"השלום\" (the peace)", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "mourner", "voice": "aloud", "en": "the peace", "text": " (הַשָּׁלוֹם)"},
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "en": "the peace", "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}
           ]}
         ]
       },
@@ -1680,9 +1682,10 @@
           {"ref": "14", "kind": "prayer", "role": "mourner", "minyan": true, "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>"},
           {"ref": "15", "parts": [
             {"kind": "prayer", "role": "mourner", "minyan": true, "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא,"},
-            {"kind": "prayer", "role": "mourner", "minyan": true, "text": " בְּרִיךְ הוּא  לְעֵֽלָּא ("},
-            {"kind": "instruction", "forgot": true, "en": "During the Ten Days of Repentance:", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "role": "mourner", "minyan": true, "forgot": true, "text": " וּלְ֒עֵֽלָּא מִכָּל)  מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "text": " בְּרִיךְ הוּא  לְעֵֽלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "forgot": true, "en": "During the Ten Days of Repentance:", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "mourner", "minyan": true, "forgot": true, "text": " (וּלְ֒עֵֽלָּא מִכָּל)"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "forgot": true, "text": "  מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
             {"kind": "prayer", "role": "mourner", "minyan": true, "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
             {"kind": "prayer", "role": "mourner", "minyan": true, "text": " דַּאֲמִירָן בְּעָלְ֒מָא,"},
             {"kind": "prayer", "role": "congregation", "minyan": true, "text": " וְאִמְרוּ אָמֵן:"}
@@ -1690,9 +1693,10 @@
           {"ref": "16", "kind": "prayer", "role": "mourner", "minyan": true, "text": "עַל יִשְׂרָאֵל וְעַל רַבָּנָן וְעַל תַלְמִידֵיהוֹן וְעַל כָּל תַּלְמִידֵי תַלְמִידֵיהוֹן, וְעַל כָּל מָאן דְּעָסְ֒קִין בְּאוֹרַיְתָא, דִּי בְאַתְרָא הָדֵין וְדִי בְכָל אֲתַר וַאֲתַר, יְהֵא לְהוֹן וּלְכוֹן שְׁלָמָא רַבָּא חִנָּא וְחִסְדָּא וְרַחֲמִין וְחַיִּין אֲרִיכִין וּמְזוֹנָא רְוִיחֵי וּפוּרְקָנָא מִן קֳדָם אֲבוּהוֹן דְבִשְׁמַיָּא וְאַרְעָא וְאִמְרוּ אָמֵן:"},
           {"ref": "17", "kind": "prayer", "role": "mourner", "minyan": true, "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים טוֹבִים עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"},
           {"ref": "18", "parts": [
-            {"kind": "prayer", "role": "mourner", "minyan": true, "text": "עוֹשֶׂה שָׁלוֹם ("},
-            {"kind": "instruction", "forgot": true, "en": "During the Ten Days of Repentance:", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "role": "mourner", "minyan": true, "forgot": true, "text": " הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא בְּרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}
+            {"kind": "prayer", "role": "mourner", "minyan": true, "text": "עוֹשֶׂה שָׁלוֹם "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "forgot": true, "en": "During the Ten Days of Repentance:", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "mourner", "minyan": true, "forgot": true, "text": " (הַשָּׁלוֹם)"},
+            {"kind": "prayer", "role": "mourner", "minyan": true, "forgot": true, "text": " בִּמְרוֹמָיו הוּא בְּרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}
           ]}
         ]
       },
@@ -1798,18 +1802,18 @@
           {"ref": "7", "kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "en": "May His great Name be blessed forever...", "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>:"},
           {"ref": "8", "parts": [
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא,"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בְּרִיךְ הוּא  לְעֵֽלָּא ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Add 'ולעלא מכל' (far above all)", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " וּלְ֒עֵֽלָּא מִכָּל)  מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בְּרִיךְ הוּא  לְעֵֽלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Add 'ולעלא מכל' (far above all)", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " (וּלְ֒עֵֽלָּא מִכָּל)  מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " דַּאֲמִירָן בְּעָלְ֒מָא,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " וְאִמְרוּ אָמֵן,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}
           ]},
           {"ref": "9", "parts": [
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה שָׁלוֹם ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Add 'השלום' (the peace)", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן"}
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה שָׁלוֹם "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Add 'השלום' (the peace)", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " (הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן"}
           ]}
         ]
       },

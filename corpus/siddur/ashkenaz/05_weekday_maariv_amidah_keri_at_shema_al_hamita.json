@@ -13,7 +13,7 @@
           {"ref": "1", "kind": "note", "node": "amidah.opening", "gestures": ["feet_together"], "en": "The one praying must direct his heart to the meaning of the words he utters; if he cannot, he should at least think of things that humble the heart and direct it to his Father in heaven. He places his feet together as if they were one, takes care to pray quietly, and does not signal with his eyes, purse his lips or point with his fingers. He does not interrupt even for Kaddish or Kedushah.", "cite": "קיצור שו\"ע יח", "clean": "המתפלל צריך שיכוין בליבו פירוש המילות שהוא מוציא בשפתיו. ואם אינו יכול לכוין פירוש המילות לכל הפחות צריך שיחשוב בשעת התפילה בדברים המכניעים את הלב ומכוונים את לבו לאביו שבשמים. יכוין רגליו זה אצל זה כאילו אינן אלא אחת. ויזהר להתפלל בלחש. ולא ירמוז בעיניו ולא יקרוץ בשפתיו ולא יראה באצבעותיו ואינו פוסק אפילו לקדיש וקדושה (קיצשו\"ע יח)", "text": "<small>המתפלל צריך שיכוין בליבו פירוש המילות שהוא מוציא בשפתיו. ואם אינו יכול לכוין פירוש המילות לכל הפחות צריך שיחשוב בשעת התפילה בדברים המכניעים את הלב ומכוונים את לבו לאביו שבשמים. יכוין רגליו זה אצל זה כאילו אינן אלא אחת. ויזהר להתפלל בלחש. ולא ירמוז בעיניו ולא יקרוץ בשפתיו ולא יראה באצבעותיו ואינו פוסק אפילו לקדיש וקדושה (קיצשו\"ע יח)</small>"},
           {"ref": "2", "kind": "prayer", "node": "amidah.opening", "voice": "silent", "gestures": ["stand", "feet_together"], "text": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶֽךָ:"},
           {"ref": "3", "parts": [
-            {"kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": "<b>בָּרוּךְ</b> אַתָּה"},
+            {"kind": "prayer", "voice": "silent", "text": "<b>בָּרוּךְ</b> אַתָּה"},
             {"kind": "prayer", "voice": "silent", "text": " יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים וְקוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַֽעַן שְׁמוֹ בְּאַהֲבָה:"}
           ]},
           {"ref": "4", "parts": [
@@ -23,7 +23,7 @@
           {"ref": "5", "kind": "note", "forgot": true, "en": "If one did not say \"Zochreinu\" and remembered after already saying \"Baruch Atah Hashem\", he does not go back. If he remembers before saying the Name, even if he already said \"Baruch Atah\", he says \"Zochreinu...\" and continues \"Melech ozer\" in order. One who mistakenly says \"Zochreinu\" during the rest of the year: if he remembers before saying \"uchsoveinu\" he stops and begins \"Melech ozer\"; if he said \"uchsoveinu\" he returns to the beginning of the Amidah.", "cite": "דה\"ח", "clean": "אם לא אמר זכרנו ונזכר לאחר שכבר אמר בא\"י אינו חוזר אבל אם נזכר קודם שאמר השם אף שאמר ברוך אתה אומר זכרנו כו' מלך עוזר כסדר. הטועה ומזכיר זכרנו בשאר ימות השנה אם נזכר קודם שאמר וכתבנו פוסק ומתחיל מלך עוזר וגו' אבל אם אמר וכתבנו חוזר לראש התפלה. (דה\"ח)", "text": "<small>אם לא אמר זכרנו ונזכר לאחר שכבר אמר בא\"י אינו חוזר אבל אם נזכר קודם שאמר השם אף שאמר ברוך אתה אומר זכרנו כו' מלך עוזר כסדר. הטועה ומזכיר זכרנו בשאר ימות השנה אם נזכר קודם שאמר וכתבנו פוסק ומתחיל מלך עוזר וגו' אבל אם אמר וכתבנו חוזר לראש התפלה. (דה\"ח)</small>"},
           {"ref": "6", "parts": [
             {"kind": "prayer", "voice": "silent", "text": "מֶֽלֶךְ עוֹזֵר וּמוֹשִֽׁיעַ וּמָגֵן:"},
-            {"kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": " בָּרוּךְ אַתָּה יְהֹוָה מָגֵן אַבְרָהָם:"}
+            {"kind": "prayer", "voice": "silent", "text": " בָּרוּךְ אַתָּה יְהֹוָה מָגֵן אַבְרָהָם:"}
           ]}
         ]
       },
@@ -87,10 +87,10 @@
         "version": "The Metsudah siddur, 1981",
         "segs": [
           {"ref": "1", "kind": "instruction", "when": "false", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "In the chazzan's repetition, Kedushah is said here:", "clean": "בחזרת הש\"ץ אומרים כאן קדושה:", "text": "<small>בחזרת הש\"ץ אומרים כאן קדושה:</small>"},
-          {"ref": "2", "kind": "prayer", "voice": "silent", "text": "<b>אַתָּה קָדוֹשׁ</b> וְשִׁמְךָ קָדוֹשׁ וּקְדוֹשִׁים בְּכָל־יוֹם יְהַלְלֽוּךָ סֶּֽלָה."},
-          {"ref": "3", "kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "hakadosh", "voice": "silent", "text": "בָּרוּךְ אַתָּה יְהֹוָה הָאֵל הַקָּדוֹשׁ:"},
-          {"ref": "4", "parts": [
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance, conclude:", "clean": "בעשי\"ת מסיים:", "text": "<small>בעשי\"ת מסיים:</small>"},
+          {"ref": "2", "parts": [
+            {"kind": "prayer", "voice": "silent", "text": "<b>אַתָּה קָדוֹשׁ</b> וְשִׁמְךָ קָדוֹשׁ וּקְדוֹשִׁים בְּכָל־יוֹם יְהַלְלֽוּךָ סֶּֽלָה."},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "hakadosh", "voice": "silent", "text": " בָּרוּךְ אַתָּה יְהֹוָה הָאֵל הַקָּדוֹשׁ:"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance, conclude:", "clean": "בעשי\"ת מסיים:", "text": " <small>בעשי\"ת מסיים:</small>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "hakadosh", "voice": "silent", "text": " בָּרוּךְ אַתָּה יְהֹוָה הַמֶּֽלֶךְ הַקָּדוֹשׁ:"}
           ]},
           {"ref": "5", "kind": "note", "forgot": true, "en": "If one erred and concluded \"HaEl hakadosh\": if he remembers within the time of a short phrase (toch kedei dibbur) and says \"HaMelech hakadosh\", he has fulfilled his obligation; otherwise he must return to the beginning of the Amidah. The same applies if he is in doubt whether he said it. During the rest of the year, if one said \"HaMelech hakadosh\" he does not repeat.", "clean": "אם טעה וסיים האל הקדוש אם נזכר בתוך כדי דיבור ואמר המלך הקדוש יצא ואם לאו צריך לחזור לראש התפלה וה\"ה אם מסופק אם אמר צריך לחזור לראש. ובימות השנה אם אמר המלך הקדוש אינו חוזר.", "text": "<small>אם טעה וסיים האל הקדוש אם נזכר בתוך כדי דיבור ואמר המלך הקדוש יצא ואם לאו צריך לחזור לראש התפלה וה\"ה אם מסופק אם אמר צריך לחזור לראש. ובימות השנה אם אמר המלך הקדוש אינו חוזר.</small>"}
@@ -100,9 +100,11 @@
         "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
         "segs": [
           {"ref": "1", "translates": ["1"], "text": "<i>If you forgot to say this, the same law applies as above concerning “Remember us for life.”</i>"},
-          {"ref": "2", "translates": ["2"], "text": "You are holy and Your Name is holy and holy beings praise You every day, forever."},
-          {"ref": "3", "translates": ["3"], "text": "Blessed are You, Adonoy, the Almighty, the Holy One."},
-          {"ref": "4", "translates": ["4"], "text": "<i>During the Ten Days of Penitence:</i> Blessed are You, Adonoy, the King, the Holy One."},
+          {"ref": "2", "translates": ["2"], "parts": [
+            {"text": "You are holy and Your Name is holy and holy beings praise You every day, forever."},
+            {"when": "!aseretYemeiTeshuva", "alt": "hakadosh", "text": " Blessed are You, Adonoy, the Almighty, the Holy One."},
+            {"when": "aseretYemeiTeshuva", "alt": "hakadosh", "text": " <i>During the Ten Days of Penitence:</i> Blessed are You, Adonoy, the King, the Holy One."}
+          ]},
           {"ref": "5", "translates": ["5"], "text": "<i>If you mistakenly said, “the Almighty” instead of “the King,” or if you are in doubt—if you realized your error after a lapse of time sufficient to utter a three word greeting (Shalom Aleichem Rebbe), or if you had already started the next blessing, you must say the Shmoneh Esrei from the beginning. If you became aware of your error before that, you should immediately say “the King the Holy One” and continue your prayers.</i>"}
         ]
       }
@@ -259,10 +261,10 @@
       "he": {
         "version": "The Metsudah siddur, 1981",
         "segs": [
-          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>הָשִֽׁיבָה</b> שׁוֹפְטֵֽינוּ כְּבָרִאשׁוֹנָה וְיוֹעֲצֵֽינוּ כְּבַתְּחִלָּה וְהָסֵר מִמֶּֽנּוּ יָגוֹן וַאֲנָחָה וּמְלוֹךְ עָלֵֽינוּ אַתָּה יְהֹוָה לְבַדְּךָ בְּחֶֽסֶד וּבְרַחֲמִים וְצַדְּקֵֽנוּ בַּמִשְׁפָּט:"},
-          {"ref": "2", "kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "din_end", "voice": "silent", "text": "בָּרוּךְ אַתָּה יְהֹוָה מֶֽלֶךְ אֹהֵב צְדָקָה וּמִשְׁפָּט:"},
-          {"ref": "3", "parts": [
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance, conclude:", "clean": "בעשי\"ת יסיים:", "text": "<small>בעשי\"ת יסיים:</small>"},
+          {"ref": "1", "parts": [
+            {"kind": "prayer", "voice": "silent", "text": "<b>הָשִֽׁיבָה</b> שׁוֹפְטֵֽינוּ כְּבָרִאשׁוֹנָה וְיוֹעֲצֵֽינוּ כְּבַתְּחִלָּה וְהָסֵר מִמֶּֽנּוּ יָגוֹן וַאֲנָחָה וּמְלוֹךְ עָלֵֽינוּ אַתָּה יְהֹוָה לְבַדְּךָ בְּחֶֽסֶד וּבְרַחֲמִים וְצַדְּקֵֽנוּ בַּמִשְׁפָּט:"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "din_end", "voice": "silent", "text": " בָּרוּךְ אַתָּה יְהֹוָה מֶֽלֶךְ אֹהֵב צְדָקָה וּמִשְׁפָּט:"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance, conclude:", "clean": "בעשי\"ת יסיים:", "text": " <small>בעשי\"ת יסיים:</small>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "din_end", "voice": "silent", "text": " בָּרוּךְ אַתָּה יְהֹוָה הַמֶּֽלֶךְ הַמִּשְׁפָּט:"}
           ]},
           {"ref": "4", "kind": "note", "forgot": true, "en": "All year, if one said \"HaMelech hamishpat\" he has fulfilled his obligation and need not repeat. During the Ten Days of Repentance, if one erred and said \"Melech ohev tzedakah umishpat\": if he remembers within the time of a short phrase (toch kedei dibbur) he says \"HaMelech hamishpat\"; if later, he does not say it and is not made to repeat.", "clean": "בכל השנה אם אמר המלך המשפט יצא וא\"צ לחזור. ובעשי\"ת אם טעה ואמר מלך אוהב צדקה ומשפט אם נזכר תוך כדי דבור אומר המלך המשפט. ואם לאחר כ\"ד לא יאמר ואין מחזירין אותו.", "text": "<small>בכל השנה אם אמר המלך המשפט יצא וא\"צ לחזור. ובעשי\"ת אם טעה ואמר מלך אוהב צדקה ומשפט אם נזכר תוך כדי דבור אומר המלך המשפט. ואם לאחר כ\"ד לא יאמר ואין מחזירין אותו.</small>"}
@@ -271,9 +273,11 @@
       "en": {
         "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
         "segs": [
-          {"ref": "1", "translates": ["1"], "text": "Restore our judges<sup class=\"footnote-marker\">32</sup><i class=\"footnote\">We pray for the restoration of God’s reign of justice, as the prophet said, “And I will restore your judges as in former times, and your advisors as the beginning; afterward you (Jerusalem) will be called the city of righteousness, faithful city” (Isaiah 1:26). This will be manifested with the restoration of the Sanhedrin and their system of halachic justice.</i> as before and our counselors as at first. Remove sorrow and sighing from us,<sup class=\"footnote-marker\">33</sup><i class=\"footnote\">Few evils are the source of deeper grief and suffering than the absence of justice. With the restoration of justice, our sorrow and sighing will change to joy and gladness.—<i>Avudraham</i></i> and reign over us You, Adonoy, alone with kindness and compassion; and make us righteous with justice,"},
-          {"ref": "2", "translates": ["2"], "text": "Blessed are You, Adonoy, King, Lover of righteousness and justice."},
-          {"ref": "3", "translates": ["3"], "text": "<i>*During the Ten Days of Penitence:</i> Blessed are You, Adonoy, the King of Justice."},
+          {"ref": "1", "translates": ["1"], "parts": [
+            {"text": "Restore our judges<sup class=\"footnote-marker\">32</sup><i class=\"footnote\">We pray for the restoration of God’s reign of justice, as the prophet said, “And I will restore your judges as in former times, and your advisors as the beginning; afterward you (Jerusalem) will be called the city of righteousness, faithful city” (Isaiah 1:26). This will be manifested with the restoration of the Sanhedrin and their system of halachic justice.</i> as before and our counselors as at first. Remove sorrow and sighing from us,<sup class=\"footnote-marker\">33</sup><i class=\"footnote\">Few evils are the source of deeper grief and suffering than the absence of justice. With the restoration of justice, our sorrow and sighing will change to joy and gladness.—<i>Avudraham</i></i> and reign over us You, Adonoy, alone with kindness and compassion; and make us righteous with justice,"},
+            {"when": "!aseretYemeiTeshuva", "alt": "din_end", "text": " Blessed are You, Adonoy, King, Lover of righteousness and justice."},
+            {"when": "aseretYemeiTeshuva", "alt": "din_end", "text": " <i>*During the Ten Days of Penitence:</i> Blessed are You, Adonoy, the King of Justice."}
+          ]},
           {"ref": "4", "translates": ["4"], "text": "<i>If you mistakenly said, “King, Lover of righteousness and justice,” instead of “the King of Justice” and became aware of your mistake within the time it takes to utter the three word greeting (Sholom Aleichem Rebbe), you should immediately say “the King of Justice.” If you remembered after that interval, you may continue the Shemoneh Esrei since the word “King” was mentioned in the regular blessing.</i>"}
         ]
       }
@@ -409,9 +413,9 @@
       "he": {
         "version": "The Metsudah siddur, 1981",
         "segs": [
-          {"ref": "1", "kind": "note", "gestures": ["bow_full"], "en": "When saying \"Modim\" one bows head and body like a reed until all the vertebrae of the spine loosen. One bows quickly, in one motion, and rises slowly, head first and then body, so that it is not a burden.", "cite": "שו\"ע או\"ח סי' קיג", "clean": "כשאומר מודים כורע ראשו וגופו כאגמון עד שיתפקקו כל חוליות שבשדרה. וכשהוא כורע יכרע במהירות בפעם אחת וכשהוא זוקף זוקף בנחת ראשו תחלה ואחר כך גופו שלא תהא עליו כמשאוי (שו\"ע או\"ח סי' קיג)", "text": "<small>כשאומר מודים כורע ראשו וגופו כאגמון עד שיתפקקו כל חוליות שבשדרה. וכשהוא כורע יכרע במהירות בפעם אחת וכשהוא זוקף זוקף בנחת ראשו תחלה ואחר כך גופו שלא תהא עליו כמשאוי (שו\"ע או\"ח סי' קיג)</small>"},
+          {"ref": "1", "kind": "note", "en": "When saying \"Modim\" one bows head and body like a reed until all the vertebrae of the spine loosen. One bows quickly, in one motion, and rises slowly, head first and then body, so that it is not a burden.", "cite": "שו\"ע או\"ח סי' קיג", "clean": "כשאומר מודים כורע ראשו וגופו כאגמון עד שיתפקקו כל חוליות שבשדרה. וכשהוא כורע יכרע במהירות בפעם אחת וכשהוא זוקף זוקף בנחת ראשו תחלה ואחר כך גופו שלא תהא עליו כמשאוי (שו\"ע או\"ח סי' קיג)", "text": "<small>כשאומר מודים כורע ראשו וגופו כאגמון עד שיתפקקו כל חוליות שבשדרה. וכשהוא כורע יכרע במהירות בפעם אחת וכשהוא זוקף זוקף בנחת ראשו תחלה ואחר כך גופו שלא תהא עליו כמשאוי (שו\"ע או\"ח סי' קיג)</small>"},
           {"ref": "2", "parts": [
-            {"kind": "prayer", "voice": "silent", "gestures": ["bow_full"], "text": "<b>מוֹדִים</b> אֲנַֽחְנוּ לָךְ שָׁאַתָּה הוּא יְהֹוָה"},
+            {"kind": "prayer", "voice": "silent", "text": "<b>מוֹדִים</b> אֲנַֽחְנוּ לָךְ שָׁאַתָּה הוּא יְהֹוָה"},
             {"kind": "prayer", "voice": "silent", "text": " אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ לְעוֹלָם וָעֶד צוּר חַיֵּֽינוּ מָגֵן יִשְׁעֵֽנוּ אַתָּה הוּא לְדוֹר וָדוֹר נֽוֹדֶה לְּךָ וּנְסַפֵּר תְּהִלָּתֶֽךָ עַל־חַיֵּֽינוּ הַמְּסוּרִים בְּיָדֶֽךָ וְעַל נִשְׁמוֹתֵֽינוּ הַפְּקוּדוֹת לָךְ וְעַל נִסֶּֽיךָ שֶׁבְּכָל יוֹם עִמָּֽנוּ וְעַל נִפְלְאוֹתֶֽיךָ וְטוֹבוֹתֶֽיךָ שֶׁבְּכָל עֵת עֶֽרֶב וָבֹֽקֶר וְצָהֳרָֽיִם הַטּוֹב כִּי לֹא כָלוּ רַחֲמֶֽיךָ וְהַמְרַחֵם כִּי לֹא תַֽמּוּ חֲסָדֶֽיךָ מֵעוֹלָם קִוִּֽינוּ לָךְ:"}
           ]},
           {"ref": "3", "parts": [
@@ -435,7 +439,7 @@
           {"ref": "9", "kind": "note", "when": "aseretYemeiTeshuva", "forgot": true, "en": "If one forgot to say \"Uchtov\": if he remembers before saying the Name in the blessing \"HaTov shimcha\" he goes back; if he did not remember until after saying the Name he does not go back, as explained above regarding \"Zochreinu\" and \"Mi chamocha\".", "cite": "דה\"ח סי' תקפ\"ב", "clean": "אם שכח לומר וכתוב אם נזכר קודם שאמר השם מברכת הטוב חוזר ואם לא נזכר עד לאחר שאמר השם אינו חוזר כמו שנתבאר לעיל אצל זכרנו ומי כמוך. (דה\"ח סי' תקפ\"ב)", "text": "<small>אם שכח לומר וכתוב אם נזכר קודם שאמר השם מברכת הטוב חוזר ואם לא נזכר עד לאחר שאמר השם אינו חוזר כמו שנתבאר לעיל אצל זכרנו ומי כמוך. (דה\"ח סי' תקפ\"ב)</small>"},
           {"ref": "10", "parts": [
             {"kind": "prayer", "voice": "silent", "text": "<b>וְכֹל הַחַיִּים</b> יוֹדֽוּךָ סֶּֽלָה וִיהַלְ֒לוּ אֶת־שִׁמְךָ בֶּאֱמֶת הָאֵל יְשׁוּעָתֵֽנוּ וְעֶזְרָתֵֽנוּ סֶֽלָה:"},
-            {"kind": "prayer", "voice": "silent", "gestures": ["bow"], "text": " בָּרוּךְ אַתָּה יְהֹוָה הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת:"}
+            {"kind": "prayer", "voice": "silent", "text": " בָּרוּךְ אַתָּה יְהֹוָה הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת:"}
           ]}
         ]
       },
@@ -463,23 +467,25 @@
       "he": {
         "version": "The Metsudah siddur, 1981",
         "segs": [
-          {"ref": "1", "kind": "prayer", "voice": "silent", "text": "<b>שָׁלוֹם רָב</b> עַל יִשְׂרָאֵל עַמְּ֒ךָ תָּשִׂים לְעוֹלָם כִּי אַתָּה הוּא מֶֽלֶךְ אָדוֹן לְכָל־הַשָּׁלוֹם וְטוֹב בְּעֵינֶֽיךָ לְבָרֵךְ אֶת־עַמְּ֒ךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶֽךָ."},
-          {"ref": "2", "parts": [
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": "<small>בעשי\"ת:</small>"},
+          {"ref": "1", "parts": [
+            {"kind": "prayer", "voice": "silent", "text": "<b>שָׁלוֹם רָב</b> עַל יִשְׂרָאֵל עַמְּ֒ךָ תָּשִׂים לְעוֹלָם כִּי אַתָּה הוּא מֶֽלֶךְ אָדוֹן לְכָל־הַשָּׁלוֹם וְטוֹב בְּעֵינֶֽיךָ לְבָרֵךְ אֶת־עַמְּ֒ךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶֽךָ."},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " <small>בעשי\"ת:</small>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "voice": "silent", "text": " בְּסֵֽפֶר חַיִּים בְּרָכָה וְשָׁלוֹם וּפַרְנָסָה טוֹבָה נִזָּכֵר וְנִכָּתֵב לְפָנֶֽיךָ אֲנַֽחְנוּ וְכָל עַמְּךָ בֵּית יִשְׂרָאֵל לְחַיִּים טוֹבִים וּלְשָׁלוֹם:"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva && false", "alt": "peace_end", "voice": "silent", "text": " (בָּרוּךְ אַתָּה יְהֹוָה עֹשֶׂה הַשָּׁלוֹם:)"}
+            {"kind": "prayer", "when": "aseretYemeiTeshuva && false", "alt": "peace_end", "voice": "silent", "text": " (בָּרוּךְ אַתָּה יְהֹוָה עֹשֶׂה הַשָּׁלוֹם:)"},
+            {"kind": "prayer", "when": "!(aseretYemeiTeshuva && false)", "alt": "peace_end", "voice": "silent", "text": " בָּרוּךְ אַתָּה יְהֹוָה הַמְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם:"}
           ]},
-          {"ref": "3", "kind": "note", "when": "aseretYemeiTeshuva", "forgot": true, "en": "If one did not say \"BeSefer chayim\": once he has finished the blessing, or even only said \"Baruch Atah Hashem\", he does not go back. It seems proper to say \"BeSefer\" immediately after finishing \"HaMevarech es amo Yisrael bashalom\", before \"Yihyu leratzon\", since the Amidah is already complete. (According to Rabbeinu Tam one always says it at the end of a blessing even where one does not return; those who disagree hold that where there is no need to return it would be an interruption in the middle of the Amidah, which is not the case here.)", "cite": "חיי אדם כלל כ\"ד סעי' כ\"ה", "clean": "ואם לא אמר בְּסֵֽפֶר חַיִּים כיון שסיים הברכה או רק בא\"י אינו חוזר. ונ\"ל דבזה ראוי לומר בספר תיכף כשסיים המברך את עמו ישראל בשלום קודם יהיו לרצון כיון שכבר גמר התפלה. (דהא לר\"ת לעולם אומרים בסוף ברכה אפילו בדבר שאין מחזירין אלא דהחולקים סוברים כיון דא\"צ לחזור א\"כ הוי הפסק באמצע תפלה מה שאין כן כאן.) (חיי אדם כלל כ\"ד סעי' כ\"ה)", "text": "<small>ואם לא אמר בְּסֵֽפֶר חַיִּים כיון שסיים הברכה או רק בא\"י אינו חוזר. ונ\"ל דבזה ראוי לומר בספר תיכף כשסיים המברך את עמו ישראל בשלום קודם יהיו לרצון כיון שכבר גמר התפלה. (דהא לר\"ת לעולם אומרים בסוף ברכה אפילו בדבר שאין מחזירין אלא דהחולקים סוברים כיון דא\"צ לחזור א\"כ הוי הפסק באמצע תפלה מה שאין כן כאן.) (חיי אדם כלל כ\"ד סעי' כ\"ה)</small>"},
-          {"ref": "4", "kind": "prayer", "when": "!(aseretYemeiTeshuva && false)", "alt": "peace_end", "voice": "silent", "text": "בָּרוּךְ אַתָּה יְהֹוָה הַמְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם:"}
+          {"ref": "3", "kind": "note", "when": "aseretYemeiTeshuva", "forgot": true, "en": "If one did not say \"BeSefer chayim\": once he has finished the blessing, or even only said \"Baruch Atah Hashem\", he does not go back. It seems proper to say \"BeSefer\" immediately after finishing \"HaMevarech es amo Yisrael bashalom\", before \"Yihyu leratzon\", since the Amidah is already complete. (According to Rabbeinu Tam one always says it at the end of a blessing even where one does not return; those who disagree hold that where there is no need to return it would be an interruption in the middle of the Amidah, which is not the case here.)", "cite": "חיי אדם כלל כ\"ד סעי' כ\"ה", "clean": "ואם לא אמר בְּסֵֽפֶר חַיִּים כיון שסיים הברכה או רק בא\"י אינו חוזר. ונ\"ל דבזה ראוי לומר בספר תיכף כשסיים המברך את עמו ישראל בשלום קודם יהיו לרצון כיון שכבר גמר התפלה. (דהא לר\"ת לעולם אומרים בסוף ברכה אפילו בדבר שאין מחזירין אלא דהחולקים סוברים כיון דא\"צ לחזור א\"כ הוי הפסק באמצע תפלה מה שאין כן כאן.) (חיי אדם כלל כ\"ד סעי' כ\"ה)", "text": "<small>ואם לא אמר בְּסֵֽפֶר חַיִּים כיון שסיים הברכה או רק בא\"י אינו חוזר. ונ\"ל דבזה ראוי לומר בספר תיכף כשסיים המברך את עמו ישראל בשלום קודם יהיו לרצון כיון שכבר גמר התפלה. (דהא לר\"ת לעולם אומרים בסוף ברכה אפילו בדבר שאין מחזירין אלא דהחולקים סוברים כיון דא\"צ לחזור א\"כ הוי הפסק באמצע תפלה מה שאין כן כאן.) (חיי אדם כלל כ\"ד סעי' כ\"ה)</small>"}
         ]
       },
       "en": {
         "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
         "segs": [
-          {"ref": "1", "translates": ["1"], "text": "Bestow abundant peace upon Israel, Your people, forever. For You are King, the Master of all peace. And may it be good in Your sight to bless us and to bless Your people Israel, at all times and at every moment with Your peace."},
-          {"ref": "2", "translates": ["2"], "text": "<i>During the Ten Days of Penitence continue here:</i> May we be remembered and inscribed before You in the book of life, blessing, peace and abundant maintenance; we and all Your people, the House of Israel, for a good life and peace."},
-          {"ref": "3", "translates": ["3"], "text": "<i>If you forget to say this you need not go back and repeat it.</i>"},
-          {"ref": "4", "translates": ["4"], "text": "Blessed are You, Adonoy, Who blesses His people Israel with peace."}
+          {"ref": "1", "translates": ["1"], "parts": [
+            {"text": "Bestow abundant peace upon Israel, Your people, forever. For You are King, the Master of all peace. And may it be good in Your sight to bless us and to bless Your people Israel, at all times and at every moment with Your peace."},
+            {"when": "aseretYemeiTeshuva", "text": " <i>During the Ten Days of Penitence continue here:</i> May we be remembered and inscribed before You in the book of life, blessing, peace and abundant maintenance; we and all Your people, the House of Israel, for a good life and peace."},
+            {"when": "!(aseretYemeiTeshuva && false)", "alt": "peace_end", "text": " Blessed are You, Adonoy, Who blesses His people Israel with peace."}
+          ]},
+          {"ref": "3", "translates": ["3"], "text": "<i>If you forget to say this you need not go back and repeat it.</i>"}
         ]
       }
     },
@@ -493,13 +499,14 @@
         "segs": [
           {"ref": "1", "kind": "prayer", "voice": "silent", "text": "יִהְיוּ לְרָצוֹן אִמְ֒רֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶֽיךָ יְהֹוָה צוּרִי וְגוֹאֲלִי:"},
           {"ref": "2", "kind": "prayer", "voice": "silent", "text": "<b>אֱלֹהַי</b> נְצוֹר לְשׁוֹנִי מֵרָע וּשְׂפָתַי מִדַּבֵּר מִרְמָה. וְלִמְקַלְלַי נַפְשִׁי תִדּוֹם וְנַפְשִׁי כֶּעָפָר לַכֹּל תִּהְיֶה. פְּתַח לִבִּי בְּתוֹרָתֶֽךָ וּבְמִצְוֹתֶֽיךָ תִּרְדֹּף נַפְשִׁי. וְכֹל הַחוֹשְׁבִים עָלַי רָעָה מְהֵרָה הָפֵר עֲצָתָם וְקַלְקֵל מַחֲשַׁבְתָּם: עֲשֵׂה לְמַֽעַן שְׁמֶֽךָ עֲשֵׂה לְמַֽעַן יְמִינֶֽךָ עֲשֵׂה לְמַֽעַן קְדֻשָּׁתֶֽךָ עֲשֵׂה לְמַֽעַן תּוֹרָתֶֽךָ. לְמַֽעַן יֵחָלְצוּן יְדִידֶֽיךָ הוֹשִֽׁיעָה יְמִינְךָ וַעֲנֵֽנִי: יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶֽיךָ יְהֹוָה צוּרִי וְגוֹאֲלִי:"},
+          {"ref": "2a", "kind": "instruction", "node": "amidah.oseh_shalom", "voice": "silent", "en": "Bow, take three steps back as if taking leave of the Divine Presence, then bow left, right and center, while saying:", "text": "<small>כורע ופוסע שלוש פסיעות לאחור, ואחר כך משתחווה שמאלה, ימינה ואמצע, ואומר:</small>"},
           {"ref": "3", "parts": [
-            {"kind": "prayer", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["three_steps_back", "bow_left_right_center"], "text": "עֹשֶׂה "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "amidah.oseh_shalom", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": "(<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["three_steps_back", "bow_left_right_center"], "text": " הַשָּׁלוֹם)"},
-            {"kind": "prayer", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["three_steps_back", "bow_left_right_center"], "text": " שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}
+            {"kind": "prayer", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["three_steps_back"], "text": "עֹשֶׂה "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "amidah.oseh_shalom", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["three_steps_back"], "text": " (הַשָּׁלוֹם)"},
+            {"kind": "prayer", "node": "amidah.oseh_shalom", "voice": "silent", "gestures": ["three_steps_back"], "text": " שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}
           ]},
-          {"ref": "4", "kind": "prayer", "node": "amidah.yehi_ratzon_mikdash", "voice": "silent", "text": "<b>יְהִי רָצוֹן</b> מִלְּ֒פָנֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ שֶׁיִּבָּנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵֽינוּ וְתֵן חֶלְקֵֽנוּ בְּתוֹרָתֶֽךָ: וְשָׁם נַעֲבָדְ֒ךָ בְּיִרְאָה כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיּוֹת: וְעָרְ֒בָה לַיהוָֹה מִנְחַת יְהוּדָה וִירוּשָׁלָֽםִ כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיּוֹת:"}
+          {"ref": "4", "kind": "prayer", "node": "amidah.yehi_ratzon_mikdash", "voice": "silent", "text": "יְהִי רָצוֹן מִלְּ֒פָנֶֽיךָ יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ שֶׁיִּבָּנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵֽינוּ וְתֵן חֶלְקֵֽנוּ בְּתוֹרָתֶֽךָ: וְשָׁם נַעֲבָדְ֒ךָ בְּיִרְאָה כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיּוֹת: וְעָרְ֒בָה לַיהוָֹה מִנְחַת יְהוּדָה וִירוּשָׁלָֽםִ כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיּוֹת:"}
         ]
       },
       "en": {
@@ -536,8 +543,8 @@
           {"ref": "5", "kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא <b>בְּרִיךְ הוּא</b>"},
           {"ref": "6", "parts": [
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "לְעֵֽלָּא מִן־כָּל־"},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " (<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " <small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " (לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
             {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.shalem", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]},
@@ -552,9 +559,9 @@
           {"ref": "9", "parts": [
             {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה "},
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "שָׁלוֹם"},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " (<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " הַשָּׁלוֹם)"},
-            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "gestures": ["bow_left_right_center"], "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " <small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " (הַשָּׁלוֹם)"},
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.shalem", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]}
         ]
@@ -878,7 +885,7 @@
         "segs": [
           {"ref": "1", "parts": [
             {"kind": "prayer", "gestures": ["stand"], "text": "<b>עָלֵֽינוּ</b> לְשַׁבֵּֽחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֺּא עָשָֽׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֺא שָׂמָֽנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֺּא שָׂם חֶלְקֵֽנוּ כָּהֶם וְגוֹרָלֵֽנוּ כְּכָל הֲמוֹנָם: שֶׁהֵם מִשְׁתַּחֲוִים לָהֶֽבֶל וָרִיק וּמִתְפַּלְּ֒לִים אֶל אֵל לֹא יוֹשִֽׁיעַ, "},
-            {"kind": "prayer", "gestures": ["bow_full"], "text": "וַאֲנַֽחְנוּ כּוֹרְ֒עִים וּמִשְׁתַּחֲוִים וּמוֹדִים לִפְנֵי מֶֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא, "},
+            {"kind": "prayer", "text": "וַאֲנַֽחְנוּ כּוֹרְ֒עִים וּמִשְׁתַּחֲוִים וּמוֹדִים לִפְנֵי מֶֽלֶךְ מַלְכֵי הַמְּ֒לָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא, "},
             {"kind": "prayer", "text": "שֶׁהוּא נוֹטֶה שָׁמַֽיִם וְיוֹסֵד אָֽרֶץ, וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַֽיִם מִמַּֽעַל, וּשְׁ֒כִינַת עֻזּוֹ בְּגָבְ֒הֵי מְרוֹמִים, הוּא אֱלֺהֵֽינוּ אֵין עוֹד, אֱמֶת מַלְכֵּֽנוּ אֶֽפֶס זוּלָתוֹ כַּכָּתוּב בְּתוֹרָתוֹ וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל לְבָבֶֽךָ כִּי יְהֹוָה הוּא הָאֱלֺהִים בַּשָּׁמַֽיִם מִמַּֽעַל וְעַל הָאָֽרֶץ מִתָּֽחַת אֵין עוֹד:"}
           ]},
           {"ref": "2", "kind": "prayer", "text": "<b>עַל כֵּן</b> נְקַוֶּה לְךָ יְהֹוָה אֱלֺהֵֽינוּ לִרְאוֹת מְהֵרָה בְּתִפְאֶֽרֶת עֻזֶּֽךָ לְהַעֲבִיר גִּלּוּלִים מִן הָאָֽרֶץ וְהָאֱלִילִים כָּרוֹת יִכָּרֵתוּן לְתַקֵּן עוֹלָם בְּמַלְכוּת שַׁדַּי וְכָל בְּנֵי בָשָׂר יִקְרְאוּ בִשְׁ֒מֶֽךָ, לְהַפְנוֹת אֵלֶֽיךָ כָּל רִשְׁ֒עֵי אָֽרֶץ, יַכִּֽירוּ וְיֵדְ֒עוּ כָּל יוֹשְׁ֒בֵי תֵבֵל כִּי לְךָ תִכְרַע כָּל בֶּֽרֶךְ תִּשָּׁבַע כָּל לָשׁוֹן: לְפָנֶֽיךָ יְהֹוָה אֱלֺהֵֽינוּ יִכְרְעוּ וְיִפֹּֽלוּ, וְלִכְ֒בוֹד שִׁמְךָ יְקָר יִתֵּֽנוּ, וִיקַבְּ֒לוּ כֻלָּם אֶת עֹל מַלְכוּתֶֽךָ, וְתִמְלֺךְ עֲלֵיהֶם מְהֵרָה לְעוֹלָם וָעֶד, כִּי הַמַּלְכוּת שֶׁלְּ֒ךָ הִיא וּלְעֽוֹלְ֒מֵי עַד תִּמְלוֹךְ בְּכָבוֹד, כַּכָּתוּב בְּתוֹרָתֶֽךָ יְהֹוָה יִמְלֺךְ לְעֹלָם וָעֶד: וְנֶאֱמַר וְהָיָה יְהֹוָה לְמֶֽלֶךְ עַל כָּל הָאָֽרֶץ בַּיּוֹם הַהוּא יִהְיֶה יְהֹוָה אֶחָד וּשְׁמוֹ אֶחָד:"}
@@ -912,8 +919,8 @@
           {"ref": "4", "kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא <b>בְּרִיךְ הוּא</b>"},
           {"ref": "5", "parts": [
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "לְעֵֽלָּא מִן־כָּל־"},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " (<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " <small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " (לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]},
@@ -924,9 +931,9 @@
           {"ref": "7", "parts": [
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה "},
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "שָׁלוֹם"},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " (<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " הַשָּׁלוֹם)"},
-            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "gestures": ["bow_left_right_center"], "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " <small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " (הַשָּׁלוֹם)"},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]}
         ]
@@ -967,8 +974,8 @@
           {"ref": "6", "kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא <b>בְּרִיךְ הוּא</b>"},
           {"ref": "7", "parts": [
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "לְעֵֽלָּא מִן־כָּל־"},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " (<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " <small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " (לְעֵֽלָּא לְעֵֽלָּא מִכָּל)"},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]},
@@ -979,9 +986,9 @@
           {"ref": "9", "parts": [
             {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה "},
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "שָׁלוֹם"},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " (<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " הַשָּׁלוֹם)"},
-            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "gestures": ["bow_left_right_center"], "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת:", "text": " <small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " (הַשָּׁלוֹם)"},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ "},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>אָמֵן</b>:"}
           ]}
         ]

@@ -92,8 +92,9 @@ class MeeinShaloshScreen extends ConsumerStatefulWidget {
 }
 
 class _MeeinShaloshScreenState extends ConsumerState<MeeinShaloshScreen> {
-  /// The one food picked, or null to show all three options.
-  _Food? _ate;
+  /// The foods picked; empty shows all three options. Always combined in
+  /// [_Food] order (grain, wine, fruit), which is the order of the bracha.
+  final Set<_Food> _ate = {};
 
   @override
   Widget build(BuildContext context) {
@@ -108,8 +109,8 @@ class _MeeinShaloshScreenState extends ConsumerState<MeeinShaloshScreen> {
       appBar: AppBar(
         title: Text(context.tr("Me'ein Shalosh")),
         actions: [
-          if (_ate != null)
-            IconButton(tooltip: context.tr('Show all'), icon: const Icon(Icons.restart_alt), onPressed: () => setState(() => _ate = null)),
+          if (_ate.isNotEmpty)
+            IconButton(tooltip: context.tr('Show all'), icon: const Icon(Icons.restart_alt), onPressed: () => setState(_ate.clear)),
         ],
       ),
       body: SafeArea(
@@ -131,8 +132,8 @@ class _MeeinShaloshScreenState extends ConsumerState<MeeinShaloshScreen> {
                           Expanded(
                             child: _FoodToggle(
                               food: f,
-                              selected: _ate == f,
-                              onTap: () => setState(() => _ate = _ate == f ? null : f),
+                              selected: _ate.contains(f),
+                              onTap: () => setState(() => _ate.contains(f) ? _ate.remove(f) : _ate.add(f)),
                             ),
                           ),
                         ],
@@ -142,7 +143,7 @@ class _MeeinShaloshScreenState extends ConsumerState<MeeinShaloshScreen> {
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 6),
                     child: Text(
-                      context.tr(_ate == null ? 'Tap what you ate to build the bracha' : 'Tap again to show all'),
+                      context.tr(_ate.isEmpty ? 'Tap what you ate to build the bracha' : 'Tap again to deselect, or pick more'),
                       textAlign: TextAlign.center,
                       style: theme.textTheme.bodySmall,
                     ),
@@ -152,7 +153,7 @@ class _MeeinShaloshScreenState extends ConsumerState<MeeinShaloshScreen> {
                       child: Padding(
                         padding: const EdgeInsets.all(12),
                         child: _ScaleToFit(
-                          child: _BrachaText(ate: {?_ate}, seasonal: today),
+                          child: _BrachaText(ate: _ate, seasonal: today),
                         ),
                       ),
                     ),
@@ -235,7 +236,7 @@ class _FoodToggle extends ConsumerWidget {
   }
 }
 
-/// The bracha itself. With nothing picked, each insertion point lists all
+/// The bracha itself (picked foods are always joined in [_Food] order). With nothing picked, each insertion point lists all
 /// three options as color-coded rows; once foods are picked they're joined
 /// inline so the text reads straight through.
 class _BrachaText extends ConsumerWidget {

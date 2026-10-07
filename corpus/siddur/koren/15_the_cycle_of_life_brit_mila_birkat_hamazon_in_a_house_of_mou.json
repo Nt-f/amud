@@ -129,7 +129,7 @@
             {"kind": "instruction", "text": "<i class=\"instruction\">The Sandak also drinks some of the wine; some drops are given to the baby.</i>"},
             {"kind": "instruction", "text": "<br><i class=\"instruction\">The cup is then sent to the mother, who also drinks from it.</i>"}
           ]},
-          {"ref": "38", "translates": [], "text": "<i class=\"instruction\">All say Aleinu on page 180, and Mourner’s Kaddish on page 182.</i>"},
+          {"ref": "38", "translates": [], "node": "concl.aleinu", "text": "<i class=\"instruction\">All say Aleinu on page 180, and Mourner’s Kaddish on page 182.</i>"},
           {"ref": "39", "translates": ["39"], "text": "<small>BIRKAT HAMAZON AT A BRIT MILA</small>"},
           {"ref": "40", "translates": ["40"], "parts": [
             {"kind": "instruction", "text": "<i class=\"instruction\">Leader</i>"},
@@ -749,7 +749,7 @@
           {"ref": "27", "kind": "prayer", "role": "congregation", "text": "<i class=\"instruction\">קהל ואבל:</i> יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא."},
           {"ref": "28", "kind": "prayer", "role": "mourner", "minyan": true, "text": "<i class=\"instruction\">אבל:</i> יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר<br>וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל<br>שְׁמֵהּ דְּקֻדְשָׁא בְּרִיךְ הוּא (בְּרִיךְ הוּא)<br>לְעֵֽלָּא מִן כָּל בִּרְכָתָא<i class=\"instruction\"> בעשרת ימי תשובה:</i> לְעֵֽלָּא לְעֵֽלָּא מִכָּל בִּרְכָתָא/<br>וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא<br>דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן. (אָמֵן)"},
           {"ref": "29", "kind": "prayer", "role": "mourner", "minyan": true, "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא<br>וְחַיִּים, עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל<br>וְאִמְרוּ אָמֵן. (אָמֵן)"},
-          {"ref": "31", "kind": "prayer", "role": "congregation", "minyan": true, "gestures": ["bow_left_right_center"], "text": "<i class=\"instruction\">קהל:</i> עֹשֶׂה שָׁלוֹם/<i class=\"instruction\">בעשרת ימי תשובה:</i> הַשָּׁלוֹם/ בִּמְרוֹמָיו<br>הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל<br>וְאִמְרוּ אָמֵן. (אָמֵן)"}
+          {"ref": "31", "kind": "prayer", "role": "congregation", "minyan": true, "text": "<i class=\"instruction\">קהל:</i> עֹשֶׂה שָׁלוֹם/<i class=\"instruction\">בעשרת ימי תשובה:</i> הַשָּׁלוֹם/ בִּמְרוֹמָיו<br>הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל<br>וְאִמְרוּ אָמֵן. (אָמֵן)"}
         ]
       },
       "en": {
@@ -908,7 +908,7 @@
           {"ref": "8", "translates": ["8"], "text": "Blessed be He, and blessed be His name."},
           {"ref": "9", "translates": ["10"], "text": "<i class=\"instruction\">Continue with Birkat HaMazon on page 978 until “And may Jerusalem” on page 984. Then say:</i>"},
           {"ref": "10", "translates": ["10"], "text": "נַחֵם Comfort, O <small>LORD</small> our God, the mourners of Jerusalem and those who mourn here. Grant them consolation in their mourning and gladness in their grief, as it is said, “As a mother comforts her son, so will I comfort you, and in Jerusalem you shall find comfort.” Blessed are You, <small>LORD</small>, who brings comfort to Zion through the rebuilding of Jerusalem. Amen."},
-          {"ref": "11", "translates": ["11"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe – God our Father, our King, our Sovereign, our Creator, our Redeemer, our Maker, our Holy One, the Holy One of Jacob. He is our Shepherd, Israel’s Sheperd, our living King who is good and does good, the true God, the true Judge, who judges righteously and takes back souls in judgment. He rules the world according to His will, for all His ways are just, and we are His people and His servants. For everything, we are duty bound to acknowledge and bless Him. May He who repairs the breaches in Israel, repair this breach in us and grant us life and peace. May He always bestow on us grace, kindness, compassion and all good things. Of all that is good, may He never let us lack."},
+          {"ref": "11", "translates": ["11"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe – God our Father, our King, our Sovereign, our Creator, our Redeemer, our Maker, our Holy One, the Holy One of Jacob. He is our Shepherd, Israel’s Shepherd, our living King who is good and does good, the true God, the true Judge, who judges righteously and takes back souls in judgment. He rules the world according to His will, for all His ways are just, and we are His people and His servants. For everything, we are duty bound to acknowledge and bless Him. May He who repairs the breaches in Israel, repair this breach in us and grant us life and peace. May He always bestow on us grace, kindness, compassion and all good things. Of all that is good, may He never let us lack."},
           {"ref": "12", "translates": [], "text": "<i class=\"instruction\">Continue with “May the Compassionate One reign” on page 986.</i>"}
         ]
       }

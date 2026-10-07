@@ -117,9 +117,9 @@
             {"kind": "prayer", "text": " בִּשְׂכַר זֶה הַקָּדוֹשׁ בָּרוּךְ הוּא יְמַלֵּא רַחֲמִים עָלָיו לְהַחֲלִימוֹ וּלְרַפְּאֹתוֹ וּלְהַחֲזִיקוֹ וּלְהַחֲיוֹתוֹ,"},
             {"kind": "prayer", "text": " וְיִשְׁלַח לוֹ מְהֵרָה רְפוּאָה שְׁלֵמָה מִן הַשָּׁמַיִם לְרַמַ\"ח אֵבָרָיו וּשְׁסָ\"ה גִּידָיו בְּתוֹךְ שְׁאָר חוֹלֵי יִשְׂרָאֵל,"},
             {"kind": "prayer", "text": " רְפוּאַת הַנֶּפֶשׁ וּרְפוּאַת הַגּוּף ("},
-            {"kind": "instruction", "en": "On Shabbat:", "text": "<small>בשבת</small>"},
+            {"kind": "instruction", "when": "shabbat", "en": "On Shabbat:", "text": "<small>בשבת</small>"},
             {"kind": "prayer", "when": "shabbat", "text": " שַׁבָּת הִיא מִלִזְּעוֹק וּרְפוּאָה קְרוֹבָה לָבוֹא). ("},
-            {"kind": "instruction", "en": "On Yom Tov:", "text": "<small>ביו\"ט</small>"},
+            {"kind": "instruction", "when": "yomTov", "en": "On Yom Tov:", "text": "<small>ביו\"ט</small>"},
             {"kind": "prayer", "when": "yomTov", "text": " יוֹם טוֹב הוא מִלִזְּעוֹק וּרְפוּאָה קְרוֹבָה לָבוֹא),"},
             {"kind": "prayer", "text": " הַשְׁתָּא בַּעֲגָלָא וּבִזְמַן קָרִיב. וְנֹאמַר אָמֵן:"}
           ]},
@@ -489,9 +489,9 @@
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " <b>הַבָּא עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל לְטוֹבָה:</b>"}
           ]},
           {"ref": "6", "parts": [
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "<b>יְחַדְּשֵׁהוּ</b> הַקָּדוֹשׁ בָּרוּךְ הוּא עָלֵינוּ וְעַל כָּל עַמּוֹ בֵּית יִשְׂרָאֵל בְּכָל מָקוֹם שֶׁהֵם. לְטוֹבָה וְלִבְרָכָה. לְשָׂשׂוֹן וּלְשִׂמְחָה. לִישׁוּעָה וּלְנֶחָמָה. לְפַרְנָסָה טוֹבָה וּלְכַלְכָּלָה. לְחַיִּים טוֹבִים וּלְשָׁלוֹם. לִשְׁמוּעוֹת טוֹבוֹת. וְלִבְשׂוֹרוֹת טוֹבוֹת.  ("},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "<b>יְחַדְּשֵׁהוּ</b> הַקָּדוֹשׁ בָּרוּךְ הוּא עָלֵינוּ וְעַל כָּל עַמּוֹ בֵּית יִשְׂרָאֵל בְּכָל מָקוֹם שֶׁהֵם. לְטוֹבָה וְלִבְרָכָה. לְשָׂשׂוֹן וּלְשִׂמְחָה. לִישׁוּעָה וּלְנֶחָמָה. לְפַרְנָסָה טוֹבָה וּלְכַלְכָּלָה. לְחַיִּים טוֹבִים וּלְשָׁלוֹם. לִשְׁמוּעוֹת טוֹבוֹת. וְלִבְשׂוֹרוֹת טוֹבוֹת.  "},
             {"kind": "instruction", "when": "mashivHaruach", "role": "chazzan", "voice": "aloud", "en": "In winter:", "gloss": "Add 'and for rain at the proper time'", "text": "<small>בחורף</small>"},
-            {"kind": "prayer", "when": "mashivHaruach", "role": "chazzan", "voice": "aloud", "text": " וְלִגְשָׁמִים בְּעִתָּם). וְלִרְפוּאָה שְׁלֵמָה. וְלִגְאוּלָה קְרוֹבָה וְנֹאמַר אָמֵן:"}
+            {"kind": "prayer", "when": "mashivHaruach", "role": "chazzan", "voice": "aloud", "text": " (וְלִגְשָׁמִים בְּעִתָּם). וְלִרְפוּאָה שְׁלֵמָה. וְלִגְאוּלָה קְרוֹבָה וְנֹאמַר אָמֵן:"}
           ]}
         ]
       },
@@ -613,9 +613,10 @@
           {"ref": "14", "kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵה, וְיַצְמַח פֻּרְקָנֵה, וִיקָרֵב מְשִׁיחֵהּ. בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן."},
           {"ref": "15", "parts": [
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא. יִתְבָּרַךְ.</b> וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " בְּרִיךְ הוּא. לְעֵלָּא ("},
-            {"kind": "instruction", "forgot": true, "en": "During the Ten Days of Repentance:", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "forgot": true, "text": " וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " בְּרִיךְ הוּא. לְעֵלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "forgot": true, "en": "During the Ten Days of Repentance:", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "congregation", "voice": "aloud", "forgot": true, "text": " (וּלְעֵלָּא מִכָּל)"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "forgot": true, "text": " מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " דַּאֲמִירָן בְּעָלְמָא,"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן:"}
@@ -750,7 +751,7 @@
           {"ref": "1", "kind": "prayer", "node": "amidah.opening", "text": "<small><b>אֲדֹנָי, שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ:</b></small>"},
           {"ref": "2", "kind": "prayer", "node": "amidah.avot", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, אֱלֹהֵי אַבְרָהָם, אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב. הָאֵל הַגָּדוֹל, הַגִּבּוֹר וְהַנּוֹרָא, אֵל עֶלְיוֹן, גּוֹמֵל חֲסָדִים טוֹבִים, וְקוֹנֵה הַכֹּל, וְזוֹכֵר חַסְדֵי אָבוֹת, וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ, בְּאַהֲבָה.  "},
           {"ref": "3", "parts": [
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Said in the silent Amidah", "text": "<small>בעשרת ימי תשובה:</small>"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Said in the silent Amidah", "text": "<small>בעשרת ימי תשובה:</small>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.avot", "text": " זָכְרֵנוּ לְחַיִּים,"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.avot", "text": " מֶלֶךְ חָפֵץ בַּחַיִּים,"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.avot", "text": " וְכָּתְבֵנוּ בְּסֵפֶר הַחַיִּים,"},
@@ -759,14 +760,14 @@
           {"ref": "4", "kind": "prayer", "node": "amidah.avot", "text": "<b>מֶלֶךְ</b> עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן, בָּרוּךְ אַתָּה יְהֹוָה, מָגֵן אַבְרָהָם: "},
           {"ref": "5", "kind": "prayer", "node": "amidah.gevurot", "text": "<b>אַתָּה</b> גִּבּוֹר לְעוֹלָם, אֲדֹנָי. מְחַיֵּה מֵתִים אַתָּה, רַב לְהוֹשִׁיעַ.  "},
           {"ref": "6", "parts": [
-            {"kind": "instruction", "en": "In summer:", "gloss": "Outside Israel, Ashkenaz custom says nothing here in summer", "text": "<small>בקיץ:</small>"},
+            {"kind": "instruction", "when": "moridHatal", "en": "In summer:", "gloss": "Outside Israel, Ashkenaz custom says nothing here in summer", "text": "<small>בקיץ:</small>"},
             {"kind": "prayer", "when": "moridHatal", "node": "amidah.gevurot", "role": "individual", "text": " מוֹרִיד הַטָּל. "},
-            {"kind": "instruction", "en": "In winter:", "text": "<small>בחורף:</small>"},
+            {"kind": "instruction", "when": "mashivHaruach", "en": "In winter:", "text": "<small>בחורף:</small>"},
             {"kind": "prayer", "when": "mashivHaruach", "node": "amidah.gevurot", "role": "individual", "text": " מַשִּׁיב הָרוּחַ וּמוֹרִיד הַגֶּשֶׁם."}
           ]},
           {"ref": "7", "kind": "prayer", "node": "amidah.gevurot", "text": "<b>מְכַלְכֵּל</b> חַיִּים בְּחֶסֶד, מְחַיֵּה מֵתִים בְּרַחֲמִים רַבִּים, סוֹמֵךְ נוֹפְלִים, וְרוֹפֵא חוֹלִים, וּמַתִּיר אֲסוּרִים, וּמְקַיֵּם אֱמוּנָתוֹ לִישֵׁנֵי עָפָר. מִי כָמוֹךָ בַּעַל גְּבוּרוֹת, וּמִי דוֹמֶה לָּךְ, מֶלֶךְ מֵמִית וּמְחַיֶּה וּמַצְמִיחַ יְשׁוּעָה.  "},
           {"ref": "8", "parts": [
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Said in the silent Amidah", "text": "<small>בעשרת ימי תשובה:</small>"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Said in the silent Amidah", "text": "<small>בעשרת ימי תשובה:</small>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.gevurot", "text": " מִי כָמוֹךָ אָב הָרַחֲמָן,"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.gevurot", "text": " זוֹכֵר יְצוּרָיו בְּרַחֲמִים לְחַיִּים:"}
           ]},
@@ -802,17 +803,20 @@
           ]},
           {"ref": "17", "parts": [
             {"kind": "speaker", "en": "Chazzan:", "gloss": "Speaker label", "text": "<small>חזן:</small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "text": " לְדוֹר וָדוֹר נַגִּיד גָּדְלֶךָ. וּלְנֵצַח נְצָחִים קְדֻשָּׁתְךָ נַקְדִּישׁ. וְשִׁבְחֲךָ אֱלֹהֵינוּ מִפִּינוּ לֹא יָמוּשׁ לְעוֹלָם וָעֶד. כִּי אֵל מֶלֶךְ גָּדוֹל וְקָדוֹשׁ אָתָּה: בָּרוּךְ אַתָּה יְהֹוָה. הָאֵל ("},
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "gloss": "Insert 'the King' on Shabbat Shuva", "text": "<small>בשבת שובה</small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "en": "the King", "text": " הַמֶּלֶךְ) הַקָּדוֹשׁ:"}
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "text": " לְדוֹר וָדוֹר נַגִּיד גָּדְלֶךָ. וּלְנֵצַח נְצָחִים קְדֻשָּׁתְךָ נַקְדִּישׁ. וְשִׁבְחֲךָ אֱלֹהֵינוּ מִפִּינוּ לֹא יָמוּשׁ לְעוֹלָם וָעֶד. כִּי אֵל מֶלֶךְ גָּדוֹל וְקָדוֹשׁ אָתָּה: בָּרוּךְ אַתָּה יְהֹוָה."},
+            {"kind": "prayer", "when": "!shabbatShuva", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "text": " הָאֵל"},
+            {"kind": "instruction", "when": "shabbatShuva", "en": "On Shabbat Shuva:", "gloss": "Insert 'the King' on Shabbat Shuva", "text": "<small>בשבת שובה</small>"},
+            {"kind": "prayer", "when": "shabbatShuva", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "en": "the King", "text": " (הַמֶּלֶךְ)"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "en": "the King", "text": " הַקָּדוֹשׁ:"}
           ]},
           {"ref": "18", "parts": [
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "text": "<b>אַתָּה קָדוֹשׁ</b>,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "text": " וְשִׁמְךָ קָדוֹשׁ,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "text": " וּקְדוֹשִׁים בְּכָל יוֹם יְהַלְלוּךָ סֶּלָה. בָּרוּךְ אַתָּה יְהֹוָה,"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "text": " הָאֵל ("},
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "gloss": "Insert 'the King' on Shabbat Shuva", "text": "<small>בשבת שובה</small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "en": "the King", "text": " הַמֶּלֶךְ) הַקָּדוֹשׁ:"}
+            {"kind": "prayer", "when": "!shabbatShuva", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "text": " הָאֵל "},
+            {"kind": "instruction", "when": "shabbatShuva", "en": "On Shabbat Shuva:", "gloss": "Insert 'the King' on Shabbat Shuva", "text": "<small>בשבת שובה</small>"},
+            {"kind": "prayer", "when": "shabbatShuva", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "en": "the King", "text": " (הַמֶּלֶךְ)"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "en": "the King", "text": " הַקָּדוֹשׁ:"}
           ]},
           {"ref": "19", "kind": "instruction", "en": "When Rosh Chodesh falls on Shabbat, say:", "gloss": "Conditional text for Shabbat Rosh Chodesh", "text": "<small>כשחל ראש חודש בשבת אומרים:</small>"},
           {"ref": "20", "kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "en": "You formed Your world of old...", "text": "<b>אַתָּה יָצַרְתָּ</b> עוֹלָמְךָ מִקֶּדֶם כִּלִּיתָ מְלַאכְתְּךָ בַּיּוֹם הַשְּׁבִיעִי. בָּחַרְתָּ בָּנוּ מִכָּל עָם אָהַבְתָּ אוֹתָנוּ וְרָצִיתָ בָּנוּ וְרוֹמַמְתָּנוּ מִכָּל הַלְּשׁוֹנוֹת וְקִדַּשְׁתָּנוּ בְּמִצְוֹתֶיךָ. וְקֵרַבְתָּנוּ מַלְכֵּנוּ לַעֲבוֹדָתֶךָ וְשִׁמְךָ הַגָּדוֹל וְהַקָּדוֹשׁ עָלֵינוּ קָרָאתָ:"},
@@ -848,20 +852,20 @@
           {"ref": "40", "kind": "instruction", "en": "On Shabbat Chanukah and Purim Meshulash, say Al HaNissim here:", "text": "<small>בשבת חנוכה ופורים המשולש אומרים כאן על הניסים:</small>"},
           {"ref": "41", "kind": "prayer", "when": "chanukah || purim", "text": "<small><b>וְעַל הַנִּסִּים</b> וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַנִּפְלָאוֹת וְעַל הַנֶּחָמוֹת וְעַל הַמִּלְחָמוֹת שֶׁעָשִׂיתָ לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה.</small>"},
           {"ref": "42", "parts": [
-            {"kind": "instruction", "en": "On Chanukah:", "text": "<small>בחנוכה אומרים:</small>"},
+            {"kind": "instruction", "when": "chanukah", "en": "On Chanukah:", "text": "<small>בחנוכה אומרים:</small>"},
             {"kind": "prayer", "when": "chanukah", "text": " <b>בִּימֵי מַתִּתְיָהוּ</b> בֶן יוֹחָנָן כֹּהֵן גָּדוֹל חַשְׁמוֹנָאִי וּבָנָיו כְּשֶׁעָמְדָה מַלְכוּת יָוָן הָרְשָׁעָה עַל עַמְּךָ יִשְׂרָאֵל לְהַשְׁכִּיחָם תּוֹרָתֶךָ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנָךָ וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים עָמַדְתָּ לָהֶם בְּעֵת צָרָתָם רַבְתָּ אֶת רִיבָם דַּנְתָּ אֶת דִּינָם נָקַמְתָּ אֶת נִקְמָתָם מָסַרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים וְרַבִּים בְּיַד מְעַטִּים וּטְמֵאִים בְּיַד טְהוֹרִים וּרְשָׁעִים בְּיַד צַדִּיקִים וְזֵדִים בְּיַד עוֹסְקֵי תוֹרָתֶךָ וּלְךָ עָשִׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמָךְ וּלְעַמְּךָ יִשְׂרָאֵל עָשִׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה וְאַחַר כָּךְ בָּאוּ בָנֶיךָ לִדְבִיר בֵּיתֶךָ וּפִנּוּ אֶת הֵיכָלֶךָ וְטִהֲרוּ אֶת מִקְדָּשֶׁךָ וְהִדְלִיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶׁךָ וְקָבְעוּ שְׁמוֹנַת "},
             {"kind": "prayer", "when": "chanukah", "text": "<small>(יָמִים אֵלּוּ בְּהַלֵּל וּבְהוֹדָאָה וְעָשִׂיתָ עִמָּהֶם נֵס וָפֶלֶא וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל סֶלָה:)</small>"},
             {"kind": "prayer", "when": "chanukah", "text": " יְמֵי חֲנֻכָּה אֵלּוּ לְהוֹדוֹת וּלְהַלֵּל לְשִׁמְךָ הַגָּדוֹל:"}
           ]},
           {"ref": "43", "parts": [
-            {"kind": "instruction", "en": "On Purim Meshulash:", "text": "<small>בפורים המשולש אומרים:</small>"},
+            {"kind": "instruction", "when": "purim", "en": "On Purim Meshulash:", "text": "<small>בפורים המשולש אומרים:</small>"},
             {"kind": "prayer", "when": "purim", "text": " <b>בִּימֵי מָרְדְּכַי</b> וְאֶסְתֵּר בְּשׁוּשַׁן הַבִּירָה כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע בִּקֵּשׁ לְהַשְׁמִיד לַהֲרוֹג וּלְאַבֵּד אֶת כָּל הַיְּהוּדִים מִנַּעַר וְעַד זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד בִּשְׁלֹשָׁה עָשָׂר לְחֹדֶשׁ שְׁנֵים עָשָׂר הוּא חֹדֶשׁ אֲדָר וּשְׁלָלָם לָבוֹז וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים הֵפַרְתָּ אֶת עֲצָתוֹ וְקִלְקַלְתָּ אֶת מַחֲשַׁבְתּוֹ וַהֲשֵׁבוֹתָ לוֹ גְמוּלוֹ בְרֹאשׁוֹ וְתָלוּ אוֹתוֹ וְאֶת בָּנָיו עַל הָעֵץ "},
             {"kind": "prayer", "when": "purim", "text": "<small>(וְעָשִׂיתָ עִמָּהֶם נִסִּים וְנִפְלָאוֹת וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל)</small>"},
             {"kind": "prayer", "when": "purim", "text": ":"}
           ]},
           {"ref": "44", "kind": "prayer", "text": "<b>וְעַל</b> כֻּלָּם יִתְבָּרַךְ וְיִתְרוֹמַם וְיִתְנַשֵּׂא שִׁמְךָ מַלְכֵּנוּ תָמִיד לְעוֹלָם וָעֶד."},
           {"ref": "45", "parts": [
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "text": "<small>בעשרת ימי תשובה:</small>"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>בעשרת ימי תשובה:</small>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " וּכְתֹב לְחַיִּים טוֹבִים כָּל בְּנֵי בְרִיתֶךָ."}
           ]},
           {"ref": "46", "kind": "prayer", "text": "<b>וְכֹל</b> הַחַיִּים יוֹדוּךָ סֶּלָה: וִיהַלְלוּ וִיבָרְכוּ אֶת שִׁמְךָ הַגָּדוֹל, בֶּאֱמֶת, לְעוֹלָם כִּי טוֹב, הָאֵל יְשׁוּעָתֵנוּ וְעֶזְרָתֵנוּ סֶלָה, הָאֵל הַטּוֹב. בָּרוּךְ אַתָּה יְהֹוָה, הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת: "},
@@ -885,7 +889,7 @@
             {"kind": "prayer", "node": "amidah.shalom", "role": "chazzan", "voice": "aloud", "text": " בְּרֹב עֹז וְשָׁלוֹם.  "}
           ]},
           {"ref": "49", "parts": [
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small>בעשרת ימי תשובה:</small>"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small>בעשרת ימי תשובה:</small>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " בְּסֵפֶר חַיִּים,"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " בְּרָכָה וְשָׁלוֹם,"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " וּפַרְנָסָה טוֹבָה וּגְזֵרוֹת טוֹבוֹת,"},
@@ -902,9 +906,9 @@
           {"ref": "55", "kind": "instruction", "en": "It is customary to recite here a verse that begins and ends with the same letter as one's personal name.", "text": "<small>נוהגים לומר כאן פסוק המתחיל וגומר באוֹת שבה מתחיל וגומר שמו הפרטי</small>"},
           {"ref": "56", "kind": "prayer", "text": "<b>יִהְיוּ לְרָצוֹן</b> אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהֹוָה צוּרִי וְגֹאֲלִי:"},
           {"ref": "57", "parts": [
-            {"kind": "prayer", "text": "<b>עֹשֶׂה שָׁלוֹם</b> ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " הַשָּׁלוֹם) בִּמְרוֹמָיו. הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל. וְאִמְרוּ אָמֵן:  "}
+            {"kind": "prayer", "text": "<b>עֹשֶׂה שָׁלוֹם</b> "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " (הַשָּׁלוֹם) בִּמְרוֹמָיו. הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל. וְאִמְרוּ אָמֵן:  "}
           ]},
           {"ref": "58", "kind": "prayer", "text": "<b>יְהִי</b> רָצוֹן מִלְּפָנֶיךָ יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ. שֶׁיִּבָּנֶה בֵּית הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ. וְתֵן חֶלְקֵנוּ בְּתוֹרָתֶךָ: וְשָׁם נַעֲבָדְךָ בְּיִרְאָה כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיוֹת:"},
           {"ref": "59", "kind": "prayer", "text": "<b>וְעָרְבָה</b> לַיהֹוָה מִנְחַת יְהוּדָה וִירוּשָׁלָיִם. כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמוֹנִיוֹת:"},
@@ -915,9 +919,9 @@
             {"kind": "prayer", "text": " וִיקָרֵב מְשִׁיחֵהּ. בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,"},
             {"kind": "prayer", "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן. <b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ.</b> וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
-            {"kind": "prayer", "text": " בְּרִיךְ הוּא. לְעֵלָּא ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "text": " בְּרִיךְ הוּא. לְעֵלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " (וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
             {"kind": "prayer", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
             {"kind": "prayer", "text": " דַּאֲמִירָן בְּעָלְמָא,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן:"}
@@ -925,9 +929,9 @@
           {"ref": "62", "kind": "prayer", "text": "<b>תִּתְקַבֵּל</b> צְלוֹתְהוֹן וּבָעוּתְהוֹן דְכָל בֵּית יִשְׂרָאֵל קֳדָם אֲבוּהוֹן דִּי בִשְׁמַיָּא, וְאִמְרוּ אָמֵן:  "},
           {"ref": "63", "kind": "prayer", "text": "<b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים טוֹבִים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"},
           {"ref": "64", "parts": [
-            {"kind": "prayer", "text": "<b>עֹשֶׂה</b> שָׁלוֹם ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:  "}
+            {"kind": "prayer", "text": "<b>עֹשֶׂה</b> שָׁלוֹם "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " (הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:  "}
           ]},
           {"ref": "65", "kind": "prayer", "text": "<b>קַוֵּה</b> אֶל יְהֹוָה חֲזַק וְיַאֲמֵץ לִבֶּךָ וְקַוֵּה אֶל יְהֹוָה: אֵין קָדוֹשׁ כַּיהֹוָה כִּי אֵין בִּלְתֶּךָ וְאֵין צוּר כֵּאלֹהֵינוּ: כִּי מִי אֱלוֹהַּ מִבַּלְעֲדֵי יְהֹוָה וּמִי צוּר זוּלָתִי אֱלֹהֵינוּ: "},
           {"ref": "66", "kind": "prayer", "text": "<b>אֵין כֵּאלֹהֵינוּ</b>, אֵין כַּאדוֹנֵנוּ, אֵין כְּמַלְכֵּנוּ, אֵין כְּמוֹשִׁיעֵנוּ: מִי כֵאלֹהֵינוּ, מִי כַאדוֹנֵנוּ, מִי כְמַלְכֵּנוּ, מִי כְמוֹשִׁיעֵנוּ: נוֹדֶה לֵאלֹהֵינוּ, נוֹדֶה לַאדוֹנֵנוּ, נוֹדֶה לְמַלְכֵּנוּ, נוֹדֶה לְמוֹשִׁיעֵנוּ: בָּרוּךְ אֱלֹהֵינוּ, בָּרוּךְ אֲדוֹנֵנוּ, בָּרוּךְ מַלְכֵּנוּ, בָּרוּךְ מוֹשִׁיעֵנוּ: אַתָּה הוּא אֱלֹהֵינוּ, אַתָּה הוּא אֲדוֹנֵנוּ, אַתָּה הוּא מַלְכֵּנוּ, אַתָּה הוּא מוֹשִׁיעֵנוּ, אַתָּה תוֹשִׁיעֵנוּ: אַתָּה תָקוּם תְּרַחֵם צִיוֹן כִּי עֵת לְחֶנְנָה כִּי בָא מוֹעֵד:"},
@@ -942,9 +946,9 @@
             {"kind": "prayer", "text": " וִיקָרֵב מְשִׁיחֵהּ. בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,"},
             {"kind": "prayer", "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן. <b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ.</b> וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
-            {"kind": "prayer", "text": " בְּרִיךְ הוּא. לְעֵלָּא ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "text": " בְּרִיךְ הוּא. לְעֵלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " (וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
             {"kind": "prayer", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
             {"kind": "prayer", "text": " דַּאֲמִירָן בְּעָלְמָא,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן:"}
@@ -958,8 +962,9 @@
             {"kind": "prayer", "when": "il", "text": " קַדִּישָׁא) הָדֵין וְדִי בְכָל אֲתַר וַאֲתַר. יְהֵא לְהוֹן וּלְכוֹן ("},
             {"kind": "instruction", "en": "Some say:", "gloss": "Variant reading", "text": "<small>נ\"א</small>"},
             {"kind": "prayer", "when": "!il", "text": " לְכוֹן וּלְהוֹן) שְׁלָמָא רַבָּא חִנָּא וְחִסְדָּא וְרַחֲמִין וְחַיִּין אֲרִיכִין וּמְזוֹנָא רְוִיחֵי וּפוּרְקָנָא מִן קֳדָם אֲבוּהוֹן דְּבִשְׁמַיָּא וְאִמְרוּ אָמֵן: <b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים טוֹבִים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: <b>עֹשֶׂה</b> שָׁלוֹם ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "text": " הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא בְּרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " הַשָּׁלוֹם)"},
+            {"kind": "prayer", "text": " בִּמְרוֹמָיו הוּא בְּרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}
           ]},
           {"ref": "74", "kind": "prayer", "text": "<b>בָּרְכוּ אֶת יְהֹוָה הַמְּבֹרָךְ:</b>"},
           {"ref": "75", "parts": [
@@ -975,17 +980,17 @@
             {"kind": "prayer", "text": " וִיקָרֵב מְשִׁיחֵהּ. בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,"},
             {"kind": "prayer", "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן. <b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ.</b> וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
-            {"kind": "prayer", "text": " בְּרִיךְ הוּא. לְעֵלָּא ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "text": " בְּרִיךְ הוּא. לְעֵלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " (וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
             {"kind": "prayer", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
             {"kind": "prayer", "text": " דַּאֲמִירָן בְּעָלְמָא,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן:"}
           ]},
           {"ref": "80", "parts": [
-            {"kind": "prayer", "text": "<b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים טוֹבִים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: <b>עֹשֶׂה</b> שָׁלוֹם ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: "}
+            {"kind": "prayer", "text": "<b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים טוֹבִים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: <b>עֹשֶׂה</b> שָׁלוֹם "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " (הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: "}
           ]},
           {"ref": "81", "kind": "prayer", "text": "<b>שיר היחוד ליום השבת</b>"},
           {"ref": "82", "parts": [
@@ -1287,17 +1292,19 @@
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " וִיקָרֵב מְשִׁיחֵהּ. בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן. <b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ.</b> וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " בְּרִיךְ הוּא. לְעֵלָּא ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Conditional insertion for Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " וּלְעֵלָּא מִכָּל) מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " בְּרִיךְ הוּא. לְעֵלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Conditional insertion for Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " (וּלְעֵלָּא מִכָּל)"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " דַּאֲמִירָן בְּעָלְמָא,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן:"}
           ]},
           {"ref": "152", "parts": [
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "<b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים טוֹבִים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: <b>עֹשֶׂה</b> שָׁלוֹם ("},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Conditional insertion for Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: "}
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "<b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים טוֹבִים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: <b>עֹשֶׂה</b> שָׁלוֹם "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Conditional insertion for Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " (הַשָּׁלוֹם)"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: "}
           ]},
           {"ref": "153", "kind": "prayer", "role": "individual", "voice": "aloud", "text": "<b>אֲדוֹן</b> עוֹלָם אֲשֶׁר מָלַךְ, בְּטֶרֶם כָּל יְצִיר נִבְרָא: לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל, אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא: וְאַחֲרֵי כִּכְלוֹת הַכֹּל, לְבַדּוֹ יִמְלֹךְ נוֹרָא: וְהוּא הָיָה, וְהוּא הֹוֶה, וְהוּא יִהְיֶה בְּתִפְאָרָה: וְהוּא אֶחָד וְאֵין שֵׁנִי, לְהַמְשִׁיל לוֹ לְהַחְבִּירָה: בְּלִי רֵאשִׁית בְּלִי תַכְלִית, וְלוֹ הָעֹז וְהַמִּשְׂרָה: וְהוּא אֵלִי וְחַי גוֹאֲלִי, וְצוּר חֶבְלִי בְּעֵת צָרָה: וְהוּא נִסִּי וּמָנוֹס לִי, מְנָת כּוֹסִי בְּיוֹם אֶקְרָא: בְּיָדוֹ אַפְקִיד רוּחִי, בְּעֵת אִישָׁן וְאָעִירָה: וְעִם רוּחִי גְּוִיָּתִי, יְהֹוָה לִי וְלֹא אִירָא:"},
           {"ref": "154", "kind": "instruction", "en": "It is proper for each individual to read the portion of the Showbread:", "text": "<small>ראוי לכל יחיד לקרות הפרשה של לחם הפנים:</small>"},

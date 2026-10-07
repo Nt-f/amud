@@ -440,7 +440,7 @@
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kdr_oseh", "role": "mourner", "voice": "aloud", "minyan": true, "text": "שָׁלום "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "minyan": true, "en": "During the Ten Days of Repentance:", "text": "בעשי\"ת "},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kdr_oseh", "role": "mourner", "voice": "aloud", "minyan": true, "text": "הַשָּׁלום "},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "gestures": ["bow_left_right_center"], "text": "בִּמְרומָיו הוּא בְּרַחֲמָיו יַעֲשה שָׁלום עָלֵינוּ וְעַל כָּל יִשרָאֵל וְאִמְרוּ אָמֵן:"}
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "בִּמְרומָיו הוּא בְּרַחֲמָיו יַעֲשה שָׁלום עָלֵינוּ וְעַל כָּל יִשרָאֵל וְאִמְרוּ אָמֵן:"}
           ]}
         ]
       }
@@ -494,7 +494,7 @@
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "mk_oseh", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "שָׁלום "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "minyan": true, "en": "During the Ten Days of Repentance:", "text": "בעשי”ת: "},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "mk_oseh", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "הַשָּׁלום "},
-            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "gestures": ["bow_left_right_center"], "text": "בִּמְרומָיו הוּא יַעֲשה שָׁלום עָלֵינוּ וְעַל כָּל יִשרָאֵל וְאִמְרוּ אָמֵן: "},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "בִּמְרומָיו הוּא יַעֲשה שָׁלום עָלֵינוּ וְעַל כָּל יִשרָאֵל וְאִמְרוּ אָמֵן: "},
             {"kind": "speaker", "node": "kaddish.mourners", "role": "congregation", "minyan": true, "en": "Congregation:", "text": "[קהל:"},
             {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אמן]"}
           ]}

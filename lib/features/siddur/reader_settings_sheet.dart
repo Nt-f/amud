@@ -8,6 +8,7 @@ import '../../core/fonts.dart';
 import '../../core/settings.dart';
 import '../settings/font_gallery_screen.dart';
 import '../settings/typesetting_options.dart';
+import 'book_kind.dart';
 import 'versions_screen.dart';
 
 Future<void> showReaderSettings(BuildContext context, String book) => showModalBottomSheet<void>(
@@ -58,15 +59,40 @@ class _ReaderSettings extends ConsumerWidget {
             title: Text(context.tr('Full-screen reader')), value: s.fullscreenReader,
             onChanged: (v) => n.update((x) => x.copyWith(fullscreenReader: v))),
           SheetLabel(context.tr('Prayer text')),
-          ChoiceBar<TextLayout>(
-            options: [
-              (TextLayout.hebrewOnly, context.tr('Hebrew'), Icons.format_textdirection_r_to_l),
-              (TextLayout.interleaved, context.tr('Bilingual'), Icons.view_stream),
-              (TextLayout.sideBySide, context.tr('Side by side'), Icons.view_column),
-            ],
-            selected: s.layout == TextLayout.translationOnly ? TextLayout.interleaved : s.layout,
-            onChanged: (v) => n.update((x) => x.copyWith(layout: v)),
-          ),
+          if (forcesEnglish(book))
+            Text(context.tr('This commentary is in English, so it always opens in English text mode.'), style: theme.textTheme.bodySmall)
+          else ...[
+            ChoiceBar<TextLayout>(
+              options: [
+                (TextLayout.hebrewOnly, context.tr('Hebrew'), Icons.format_textdirection_r_to_l),
+                (TextLayout.interleaved, context.tr('Bilingual'), Icons.view_stream),
+                (TextLayout.sideBySide, context.tr('Side by side'), Icons.view_column),
+              ],
+              selected: s.layout == TextLayout.translationOnly ? TextLayout.interleaved : s.layout,
+              onChanged: (v) => n.update((x) => x.copyWith(layout: v)),
+            ),
+            SheetLabel(context.tr('Page style')),
+            ChoiceBar<LinearStyle>(
+              options: [
+                (LinearStyle.off, context.tr('Standard'), null),
+                (LinearStyle.facing, context.tr('Linear columns'), Icons.vertical_split),
+                (LinearStyle.below, context.tr('English below'), Icons.horizontal_split),
+              ],
+              selected: s.linearStyle,
+              // The linear page sets Hebrew with its English: bilingual text.
+              onChanged: (v) => n.update((x) => x.copyWith(
+                  linearStyle: v, layout: v != LinearStyle.off && x.layout == TextLayout.hebrewOnly ? TextLayout.interleaved : x.layout)),
+            ),
+            if (s.linearStyle != LinearStyle.off)
+              Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: Text(
+                    s.linearStyle == LinearStyle.facing
+                        ? context.tr('English on the left, Hebrew on the right, line by line, as in the Metsudah linear siddur. A narrow screen sets the English below.')
+                        : context.tr('Several Hebrew lines together, their English below a rule, a divider between each.'),
+                    style: theme.textTheme.bodySmall),
+              ),
+          ],
           SheetLabel(context.tr('Instructions & notes')),
           ChoiceBar<NotesLanguage>(
             options: [

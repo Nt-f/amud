@@ -345,7 +345,7 @@ List<Segment> corpusSegments(List<CorpusSegment> segs,
       ..foldHe = s.parts.first.foldHe
       ..select = s.parts.first.select
       ..graphNode = first.node
-      ..gestures = [for (final p in s.parts) ...p.gestures]
+      ..gestures = {for (final p in s.parts) ...p.gestures}.toList()
       ..repeat = first.repeat
       ..minyan = s.parts.every((p) => p.minyan || !p.prayer) && prayers.isNotEmpty && prayers.every((p) => p.minyan)
       ..en = kind == SegmentKind.prayer ? null : s.parts.map((p) => p.en).whereType<String>().join(' ');

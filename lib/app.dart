@@ -21,6 +21,7 @@ import 'features/home/home_screen.dart';
 import 'features/learning/learning_screen.dart';
 import 'features/settings/font_gallery_screen.dart';
 import 'features/settings/offline_screen.dart';
+import 'features/settings/sync_screen.dart';
 import 'features/settings/location_screen.dart';
 import 'features/settings/nav_tabs_screen.dart';
 import 'features/settings/settings_screen.dart';
@@ -63,6 +64,10 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
       redirect: (context, state) {
         final done = ref.read(settingsProvider).setupDone;
         final inSetup = state.matchedLocation == '/setup' || state.matchedLocation.startsWith('/settings/');
+        // Tehillim moved from the Siddur tab to the Torah tab; old links still work.
+        if (state.matchedLocation.startsWith('/siddur/tehillim')) {
+          return state.uri.toString().replaceFirst('/siddur/tehillim', '/torah/tehillim');
+        }
         return !done && !inSetup ? Uri(path: '/setup', queryParameters: {'returnTo': state.uri.toString()}).toString() : null;
       },
       routes: [
@@ -78,22 +83,6 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                 builder: (c, s) => LibraryScreen(section: s.uri.queryParameters['section']),
                 routes: [
                   GoRoute(path: 'seasons', builder: (c, s) => const SeasonsScreen()),
-                  GoRoute(
-                    path: 'tehillim',
-                    builder: (c, s) => const TehillimScreen(),
-                    routes: [
-                      GoRoute(
-                        path: 'read',
-                        builder: (c, s) {
-                          final q = s.uri.queryParameters;
-                          return TehillimReaderScreen(
-                            key: ValueKey(s.uri.toString()),
-                            portion: Portion(q['en'] ?? 'Tehillim', q['he'] ?? 'תהלים', Portion.decode(q['p'] ?? '1')),
-                          );
-                        },
-                      ),
-                    ],
-                  ),
                   GoRoute(
                     path: 'book/:book',
                     builder: (c, s) => BookScreen(book: s.pathParameters['book']!),
@@ -127,6 +116,22 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                       GoRoute(
                         path: 'progress',
                         builder: (c, s) => ShnayimMikraProgressScreen(year: int.tryParse(s.uri.queryParameters['year'] ?? '')),
+                      ),
+                    ],
+                  ),
+                  GoRoute(
+                    path: 'tehillim',
+                    builder: (c, s) => const TehillimScreen(),
+                    routes: [
+                      GoRoute(
+                        path: 'read',
+                        builder: (c, s) {
+                          final q = s.uri.queryParameters;
+                          return TehillimReaderScreen(
+                            key: ValueKey(s.uri.toString()),
+                            portion: Portion(q['en'] ?? 'Tehillim', q['he'] ?? 'תהלים', Portion.decode(q['p'] ?? '1')),
+                          );
+                        },
                       ),
                     ],
                   ),
@@ -170,6 +175,7 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                   GoRoute(path: 'location', parentNavigatorKey: _rootKey, builder: (c, s) => const LocationScreen()),
                   GoRoute(path: 'fonts', parentNavigatorKey: _rootKey, builder: (c, s) => const FontGalleryScreen()),
                   GoRoute(path: 'offline', parentNavigatorKey: _rootKey, builder: (c, s) => const OfflineScreen()),
+                  GoRoute(path: 'sync', parentNavigatorKey: _rootKey, builder: (c, s) => const SyncScreen()),
                   GoRoute(path: 'integrations', parentNavigatorKey: _rootKey, builder: (c, s) => const IntegrationsScreen()),
                   GoRoute(path: 'cards', parentNavigatorKey: _rootKey, builder: (c, s) => const CardGalleryScreen()),
                   GoRoute(path: 'rules', parentNavigatorKey: _rootKey, builder: (c, s) => const CustomRulesScreen()),
