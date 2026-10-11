@@ -1,0 +1,7 @@
+{
+  // Static files only (no Worker code runs): built by tool/content_site/build.py.
+  "name": "amud-content",
+  "compatibility_date": "2026-01-01",
+  "assets": { "directory": "./dist", "not_found_handling": "none" },
+  "routes": [{ "pattern": "text.amud.page", "custom_domain": true }]
+}

@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 
+import '../../core/content.dart';
 import '../../core/l10n.dart';
 import '../home/card_registry.dart';
 import '../home/today.dart';
@@ -78,7 +78,7 @@ class _CardGalleryScreenState extends ConsumerState<CardGalleryScreen> {
   Future<void> _loadBundled() async {
     try {
       final cards = parseCardGallery(
-        await rootBundle.loadString('assets/integrations/cards.json'),
+        await Content.readString('assets/integrations/cards.json'),
       );
       if (mounted) {
         setState(() {

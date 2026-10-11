@@ -2,12 +2,12 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:archive/archive.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hebcal/hebcal.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 import 'package:timezone/timezone.dart' as tz;
 
+import 'content.dart';
 import 'day_start.dart';
 import 'settings.dart';
 import 'storage.dart';
@@ -17,10 +17,7 @@ final storageProvider = Provider<Storage>((ref) => throw UnimplementedError('sto
 
 class _BundleSource implements TextSource {
   @override
-  Future<List<int>> readBytes(String file) async {
-    final data = await rootBundle.load(file);
-    return data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
-  }
+  Future<List<int>> readBytes(String file) => Content.read(file);
 }
 
 List<int> _gunzip(List<int> bytes) => const GZipDecoder().decodeBytes(bytes);
@@ -31,13 +28,13 @@ final manifestProvider = FutureProvider<Manifest>((ref) => ref.watch(libraryProv
 
 /// Per-book rule overrides from assets/rules/rules.json.
 final rulesProvider = FutureProvider<Map<String, dynamic>>((ref) async {
-  final raw = await rootBundle.loadString('assets/rules/rules.json');
+  final raw = await Content.readString('assets/rules/rules.json');
   return jsonDecode(raw) as Map<String, dynamic>;
 });
 
 /// The app's short notes (concise notes), from assets/rules/notes.json.
 final curatedNotesProvider = FutureProvider<Map<String, dynamic>>((ref) async {
-  final raw = await rootBundle.loadString('assets/rules/notes.json');
+  final raw = await Content.readString('assets/rules/notes.json');
   return jsonDecode(raw) as Map<String, dynamic>;
 });
 

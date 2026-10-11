@@ -10,6 +10,7 @@ import 'package:hebcal/hebcal.dart';
 
 import 'app.dart';
 import 'core/analytics.dart';
+import 'core/content.dart';
 import 'core/fonts.dart';
 import 'core/providers.dart';
 import 'core/settings.dart';
@@ -27,6 +28,7 @@ Future<void> main(List<String> args) async {
   if (!kIsWeb) AppLinks(); // Capture a cold-start link before asynchronous initialization.
   initHebcal(); // IANA tz database + learning schedules
   final storage = await Storage.open();
+  Content.attach(storage); // Content updates downloaded last time, before anything reads a text.
 
   // Cards are modular: each feature registers its card types here.
   final registry = CardRegistry();
@@ -69,6 +71,8 @@ Future<void> main(List<String> args) async {
   Future<void>.delayed(const Duration(seconds: 3), () => container.read(syncProvider.notifier).syncNow());
   // Look for a new release in the background (daily; Android/desktop).
   Future<void>.delayed(const Duration(seconds: 5), () => container.read(updateProvider.notifier).autoCheck());
+  // Content fixes between releases (texts, rules), in use from the next start.
+  Future<void>.delayed(const Duration(seconds: 8), () => checkContentUpdates(storage));
 }
 
 /// Re-plans notifications when the app returns to the foreground (dates,

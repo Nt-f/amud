@@ -1,9 +1,10 @@
 import 'dart:convert';
 
 import 'package:archive/archive.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hebcal/hebcal.dart';
+
+import '../../core/content.dart';
 
 /// Sefer Tehillim, bundled by tool/tehillim_sync.dart.
 class Tehillim {
@@ -17,8 +18,8 @@ class Tehillim {
   int verses(int chapter) => he[chapter - 1].length;
 
   static Future<Tehillim> load() async {
-    final bytes = await rootBundle.load('assets/tehillim/tehillim.json.gz');
-    final j = jsonDecode(utf8.decode(const GZipDecoder().decodeBytes(bytes.buffer.asUint8List()))) as Map<String, dynamic>;
+    final bytes = await Content.read('assets/tehillim/tehillim.json.gz');
+    final j = jsonDecode(utf8.decode(const GZipDecoder().decodeBytes(bytes))) as Map<String, dynamic>;
     List<List<String>> chapters(String k) => [for (final c in j[k] as List) (c as List).cast<String>()];
     return Tehillim(chapters('he'), chapters('en'), (j['heVersion'] as Map).cast(), (j['enVersion'] as Map).cast());
   }
