@@ -213,6 +213,9 @@ jobs:
       - run: mkdir web-dist && unzip -q amud-web.zip -d web-dist
       - uses: cloudflare/wrangler-action@v3
         with:
+          # The action's default (3.x) ignores _headers and _redirects for
+          # static assets.
+          wranglerVersion: '4.149.0'
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: ${{ (startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/master') && 'deploy' || 'versions upload' }} --config deploy/amud/wrangler.jsonc
