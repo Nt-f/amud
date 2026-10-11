@@ -1,0 +1,10 @@
+{
+  // amud.page: the landing page and the web app, static files only (no
+  // Worker code runs). Cloudflare Pages now deploys this way too. CI deploys
+  // the web build (tool/build_web.sh → web-dist/) on each release; see the
+  // `site` job in .github/workflows/build.yml.
+  "name": "amud",
+  "compatibility_date": "2026-01-01",
+  "assets": { "directory": "../../web-dist", "not_found_handling": "none" },
+  "routes": [{ "pattern": "amud.page", "custom_domain": true }]
+}

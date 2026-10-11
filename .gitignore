@@ -54,3 +54,6 @@ app.*.map.json
 
 # The built site (tool/build_web.sh); deploy from a fresh build
 /web-dist/
+
+# wrangler deploy cache
+.wrangler/

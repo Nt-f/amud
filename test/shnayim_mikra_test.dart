@@ -504,11 +504,14 @@ void main() {
     ));
     expect(find.textContaining('Shnayim Mikra'), findsOneWidget);
     int count() => c.read(shnayimMikraProgressProvider).values.expand((x) => x).length;
+    // Tests share storage, so today's aliyah may already be ticked: the
+    // button toggles it either way.
     final before = count();
-    await tester.tap(find.byIcon(Icons.check_circle_outline));
+    final wasDone = find.byIcon(Icons.check_circle).evaluate().isNotEmpty;
+    await tester.tap(find.byType(IconButton));
     await tester.pump();
-    expect(find.byIcon(Icons.check_circle), findsOneWidget);
-    expect(count(), before + 1);
+    expect(find.byIcon(wasDone ? Icons.check_circle_outline : Icons.check_circle), findsOneWidget);
+    expect(count(), before + (wasDone ? -1 : 1));
     await tester.pumpWidget(const SizedBox());
     c.dispose();
   });

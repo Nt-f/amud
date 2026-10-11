@@ -195,6 +195,26 @@ jobs:
           name: amud-web
           path: amud-web.zip
 
+  site:
+    # The landing page and web app on Cloudflare (amud.page, static files
+    # only; deploy/amud/wrangler.jsonc), from the same build as amud-web.zip.
+    # A tag or a run on master deploys; a run on another branch only uploads
+    # a preview version.
+    # Secrets: CLOUDFLARE_API_TOKEN (Workers Scripts: Edit, and Workers
+    # Routes: Edit on amud.page) and CLOUDFLARE_ACCOUNT_ID.
+    needs: [web]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: amud-web
+      - run: mkdir web-dist && unzip -q amud-web.zip -d web-dist
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: ${{ (startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/master') && 'deploy' || 'versions upload' }} --config deploy/amud/wrangler.jsonc
   release:
     if: startsWith(github.ref, 'refs/tags/v')
     needs: [version, windows, android, linux, web]

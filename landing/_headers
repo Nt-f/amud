@@ -1,0 +1,14 @@
+# Cloudflare Pages (amud.page). Everything else uses Pages' default,
+# "max-age=0, must-revalidate": Flutter's files keep their names across
+# builds, so caches must revalidate (the service worker keeps the app
+# offline either way).
+
+# Android verified app links: Google rejects anything not served as JSON.
+/.well-known/assetlinks.json
+  Content-Type: application/json
+
+# The bundled Sefaria texts, also a plain static API (see _redirects).
+/sefaria/*
+  Access-Control-Allow-Origin: *
+/app/assets/assets/sefaria/*
+  Access-Control-Allow-Origin: *

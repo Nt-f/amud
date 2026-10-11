@@ -99,14 +99,30 @@ deploying. A release's site is also attached to its GitHub Release as
 
 ## Redeploying amud.page
 
-The live site is the `flutter-siddur:latest` image running on port 8088,
-behind Cloudflare. To ship the current `web-dist/`:
+amud.page is static files on Cloudflare (a Worker with static assets and no
+code, which is what Cloudflare Pages now deploys as): `deploy/amud/wrangler.jsonc`.
+GitHub Actions deploys it: the `site` job in `build.yml` takes the `web`
+job's build and runs `wrangler deploy` on every `v*` tag, or when the
+workflow is run by hand on master (on another branch it only uploads a
+preview version). It needs the `CLOUDFLARE_API_TOKEN` and
+`CLOUDFLARE_ACCOUNT_ID` repository secrets.
+
+`landing/_headers` and `landing/_redirects` take the place of
+`docker/nginx.conf`: the app-links JSON type, CORS on the Sefaria texts and
+the `/sefaria/` path. Cloudflare's default `max-age=0, must-revalidate`
+covers the rest. The push sidecar (`/app/api/push/`) has no place there; it
+needs its own host if it is ever turned on.
+
+To deploy from this machine instead:
 
     tool/build_web.sh
-    docker build -f Dockerfile.prebuilt -t flutter-siddur:latest .
-    docker compose up -d --no-build
+    npx wrangler@4 deploy --config deploy/amud/wrangler.jsonc
 
-Installed PWAs pick up the new version the next time they're opened.
+Installed PWAs pick up the new version the next time they're opened. The
+Docker image above still works for self-hosting.
+
+The texts and content updates are a separate site, text.amud.page: see
+`content-site/README.md`.
 
 ## Android and Windows apps
 

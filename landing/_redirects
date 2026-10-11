@@ -1,0 +1,3 @@
+# Cloudflare Pages (amud.page): /sefaria/manifest.json and
+# /sefaria/<file>.json.gz serve the texts the web app bundles.
+/sefaria/* /app/assets/assets/sefaria/:splat 200
