@@ -200,8 +200,9 @@ jobs:
     # only; deploy/amud/wrangler.jsonc), from the same build as amud-web.zip.
     # A tag or a run on master deploys; a run on another branch only uploads
     # a preview version.
-    # Secrets: CLOUDFLARE_API_TOKEN (Workers Scripts: Edit, and Workers
-    # Routes: Edit on amud.page) and CLOUDFLARE_ACCOUNT_ID.
+    # Secrets: CLOUDFLARE_API_TOKEN (account: Workers Scripts: Edit) and
+    # CLOUDFLARE_ACCOUNT_ID. The amud.page domain is attached in the
+    # dashboard, not by the deploy (see deploy/amud/wrangler.jsonc).
     needs: [web]
     runs-on: ubuntu-latest
     steps:

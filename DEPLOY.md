@@ -104,8 +104,10 @@ code, which is what Cloudflare Pages now deploys as): `deploy/amud/wrangler.json
 GitHub Actions deploys it: the `site` job in `build.yml` takes the `web`
 job's build and runs `wrangler deploy` on every `v*` tag, or when the
 workflow is run by hand on master (on another branch it only uploads a
-preview version). It needs the `CLOUDFLARE_API_TOKEN` and
-`CLOUDFLARE_ACCOUNT_ID` repository secrets.
+preview version). It needs the `CLOUDFLARE_API_TOKEN` (account-level
+Workers Scripts: Edit) and `CLOUDFLARE_ACCOUNT_ID` repository secrets. The
+amud.page custom domain is attached once in the dashboard (Workers → amud →
+Settings → Domains & Routes); deploys leave it alone.
 
 `landing/_headers` and `landing/_redirects` take the place of
 `docker/nginx.conf`: the app-links JSON type, CORS on the Sefaria texts and

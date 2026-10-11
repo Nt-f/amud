@@ -3,8 +3,12 @@
   // Worker code runs). Cloudflare Pages now deploys this way too. CI deploys
   // the web build (tool/build_web.sh → web-dist/) on each release; see the
   // `site` job in .github/workflows/build.yml.
+  //
+  // The amud.page custom domain was attached once in the dashboard (Workers
+  // → amud → Settings → Domains & Routes). It isn't listed here: with no
+  // `routes`, a deploy leaves it alone, so the CI token needs only
+  // account-level Workers Scripts: Edit, not zone permissions.
   "name": "amud",
   "compatibility_date": "2026-01-01",
-  "assets": { "directory": "../../web-dist", "not_found_handling": "none" },
-  "routes": [{ "pattern": "amud.page", "custom_domain": true }]
+  "assets": { "directory": "../../web-dist", "not_found_handling": "none" }
 }
