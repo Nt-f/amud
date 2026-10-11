@@ -15,6 +15,8 @@ void main() {
     expect(ashkenaziSpelling('Birkat Hamazon'), 'Birchas Hamazon');
     expect(ashkenaziSpelling('Shabbat Shuva, Shemini Atzeret'), 'Shabbos Shuva, Shemini Atzeres');
     expect(ashkenaziSpelling('SHAVUOT'), 'SHAVUOS');
+    expect(ashkenaziSpelling('Ketubot, Bava Batra and Tosafot'), 'Kesubos, Bava Basra and Tosafos');
+    expect(ashkenaziSpelling('Page (tzurat hadaf)'), 'Page (tzuras hadaf)');
     // Doesn't touch words that merely contain a term.
     expect(ashkenaziSpelling('Alphabet and betting'), 'Alphabet and betting');
   });

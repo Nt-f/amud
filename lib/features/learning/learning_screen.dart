@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hebcal/hebcal.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -7,6 +8,7 @@ import '../../core/l10n.dart';
 import '../../core/format.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
+import '../gemara/gemara_home_screen.dart';
 
 final _learnDateProvider = StateProvider<PlainDate?>((ref) => null);
 
@@ -57,9 +59,18 @@ class LearningScreen extends ConsumerWidget {
                     Text(ev.render(context.hebcalLocale), style: theme.textTheme.bodyLarge),
                     Text(ev.render('he'), textDirection: TextDirection.rtl, style: TextStyle(fontFamily: s.hebrewFont, fontSize: 16)),
                   ]),
-            trailing: ev?.url() == null
-                ? null
-                : IconButton(icon: const Icon(Icons.open_in_new), onPressed: () => launchUrl(Uri.parse(ev!.url()!))),
+            trailing: switch (learningPath(key, date, ev)) {
+              // Daf Yomi, Mishnah Yomi and Kitzur Yomi open in the app's
+              // reader with the day's portion marked.
+              final path? => IconButton(
+                  tooltip: context.tr('Open'),
+                  icon: const Icon(Icons.menu_book_outlined),
+                  onPressed: () => context.push(path),
+                ),
+              null => ev?.url() == null
+                  ? null
+                  : IconButton(icon: const Icon(Icons.open_in_new), onPressed: () => launchUrl(Uri.parse(ev!.url()!))),
+            },
             onLongPress: () => ref.read(settingsProvider.notifier).update((x) {
               final l = [...x.learningSchedules];
               l.contains(key) ? l.remove(key) : l.add(key);

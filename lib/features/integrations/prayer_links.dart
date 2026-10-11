@@ -77,7 +77,12 @@ String? routeFromLink(Uri uri) {
       p == '/calendar' ||
       p == '/siddur' ||
       p.startsWith('/read/') ||
-      p.startsWith('/siddur/')) {
+      p.startsWith('/siddur/') ||
+      // The Torah tab: the Gemara, Mishnah and Kitzur, their books and the
+      // study reader; and the day's learning.
+      p == '/torah' ||
+      p.startsWith('/torah/') ||
+      p == '/learning') {
     return target.toString();
   }
   return null;
@@ -89,6 +94,10 @@ Uri sharePrayerLink(String prayer, {String? nusach}) => Uri.https(
       ? '/app/pray/${normalizePrayer(prayer)}'
       : '/app/siddur/$nusach/${normalizePrayer(prayer)}',
 );
+
+/// A link to a place in the Torah tab ([route] is the app's own path, with
+/// its query), that opens it in the app or on amud.page/app.
+Uri shareTorahLink(String route) => Uri.parse('https://amud.page/app$route');
 
 bool isReaderRoute(String path) =>
     path.startsWith('/pray/') ||

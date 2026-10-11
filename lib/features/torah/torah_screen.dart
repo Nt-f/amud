@@ -5,10 +5,12 @@ import 'package:hebcal/hebcal.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/analytics.dart';
+import '../../core/celebration.dart';
 import '../../core/focus_mode.dart';
 import '../../core/hebrew_text.dart';
 import '../../core/l10n.dart';
 import '../../core/page_swipe.dart';
+import '../../core/reader_mode.dart';
 import '../../core/search.dart';
 import '../../core/settings.dart';
 import '../../core/theme.dart';
@@ -19,6 +21,9 @@ import '../tehillim/tehillim_card.dart';
 import 'shnayim_mikra_screen.dart';
 import 'torah_library.dart';
 import 'torah_settings.dart';
+import '../gemara/gemara_home_screen.dart' show studyPath;
+import '../gemara/gemara_user.dart';
+import '../gemara/study_book.dart';
 
 String _name(BuildContext context, String en, String he) => context.uiLanguage == UiLanguage.en ? context.term(en) : he;
 
@@ -59,13 +64,25 @@ class TorahScreen extends ConsumerWidget {
           ),
         ),
         for (final c in torahCategories)
-          _WorkTile(
-            icon: c.icon,
-            title: _name(context, c.en, c.he),
-            subtitle: c.available ? [for (final w in c.availableWorks) _name(context, w.en, w.he)].join(' · ') : null,
-            available: c.available,
-            onTap: () => context.go('/torah/${c.id}'),
-          ),
+          // The Gemara has its own reader (page by page from Sefaria) rather
+          // than a downloaded book.
+          c.id == 'gemara' || c.id == 'mishnah'
+              ? _WorkTile(
+                  icon: c.icon,
+                  title: _name(context, c.en, c.he),
+                  subtitle: c.id == 'gemara'
+                      ? context.tr('The page, Rashi and Tosafot, with English phrase by phrase')
+                      : context.tr('Every masechta with Bartenura, Mishnah Yomi, English phrase by phrase'),
+                  available: true,
+                  onTap: () => context.go('/torah/${c.id}'),
+                )
+              : _WorkTile(
+                  icon: c.icon,
+                  title: _name(context, c.en, c.he),
+                  subtitle: c.available ? [for (final w in c.availableWorks) _name(context, w.en, w.he)].join(' · ') : null,
+                  available: c.available,
+                  onTap: () => context.go('/torah/${c.id}'),
+                ),
       ]),
     );
   }
@@ -245,8 +262,11 @@ KitzurTarget? kitzurTarget(KitzurShulchanAruchEvent ev) {
   return (siman: siman, from: int.parse(b[2]!), to: to);
 }
 
-/// Today's Kitzur Shulchan Aruch Yomi; opens in the downloaded Kitzur, or
-/// on Sefaria when it isn't downloaded.
+String heUiName(BuildContext context, int siman) =>
+    context.uiLanguage == UiLanguage.en ? '${context.tr('Siman')} $siman' : 'סימן ${gematriya(siman)}';
+
+/// Today's Kitzur Shulchan Aruch Yomi; opens in the study reader with the
+/// day's se'ifim marked.
 class KitzurYomiTile extends ConsumerWidget {
   const KitzurYomiTile({super.key});
 
@@ -254,7 +274,6 @@ class KitzurYomiTile extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final t = ref.watch(todaySnapshotProvider);
     final il = ref.watch(settingsProvider.select((s) => s.location.il));
-    final downloaded = ref.watch(torahLibraryProvider.select((m) => m[kitzur.id] is Downloaded));
     final theme = Theme.of(context);
     KitzurShulchanAruchEvent? ev;
     try {
@@ -262,7 +281,9 @@ class KitzurYomiTile extends ConsumerWidget {
     } catch (_) {}
     final target = ev == null ? null : kitzurTarget(ev);
     final url = ev?.url();
-    final inApp = downloaded && target != null;
+    // The study reader fetches a siman from Sefaria when the Kitzur isn't
+    // downloaded, so today's portion always opens in the app.
+    final inApp = target != null;
     return Card(
       // The primary container (the theme's blue), not the tertiary one,
       // which Material derives as pink from the default seed color.
@@ -277,8 +298,7 @@ class KitzurYomiTile extends ConsumerWidget {
         onTap: ev == null
             ? null
             : inApp
-                ? () => context.push(
-                    '/torah/halacha/kitzur/read?siman=${target.siman}&from=${target.from}${target.to == null ? '' : '&to=${target.to}'}')
+                ? () => context.push(studyPath(kitzurId, '${target.siman}', from: target.from - 1, to: target.to == null ? null : target.to! - 1))
                 : url == null
                     ? null
                     : () => launchUrl(Uri.parse(url)),
@@ -322,7 +342,19 @@ class TorahWorkScreen extends ConsumerWidget {
             ])
           : ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
         DownloadPanel(works: [w], label: context.tr('Download')),
-        if (w.id == kitzur.id) const KitzurYomiTile(),
+        if (w.id == kitzur.id) ...[
+          const KitzurYomiTile(),
+          if (ref.watch(gemaraMarksProvider).history.where((h) => h.tractate == kitzurId).firstOrNull case final r?)
+            Card(
+              child: ListTile(
+                leading: Icon(Icons.play_circle_outline, color: theme.colorScheme.primary),
+                title: Text(context.tr('Continue')),
+                subtitle: Text(heUiName(context, int.parse(r.amud))),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => context.push(studyPath(kitzurId, r.amud, segment: r.segment)),
+              ),
+            ),
+        ],
         const SizedBox(height: 8),
         ...switch (book) {
           AsyncData(value: final b?) => [
@@ -339,6 +371,10 @@ class TorahWorkScreen extends ConsumerWidget {
                   subtitle: he || b.titlesHe[i].isEmpty
                       ? null
                       : Text(b.titlesHe[i], textDirection: TextDirection.rtl, style: TextStyle(fontFamily: s.hebrewFont)),
+                  // A check for a siman marked complete in the reader.
+                  trailing: w.id == kitzur.id && ref.watch(gemaraMarksProvider).isComplete(kitzurId, '${i + 1}')
+                      ? Icon(Icons.check_circle, color: theme.colorScheme.primary)
+                      : null,
                   onTap: () => context.push('/torah/$category/$work/read?siman=${i + 1}'),
                 ),
             ],
@@ -374,6 +410,70 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
   /// One per se'if, for scrolling to today's portion.
   final _keys = <GlobalKey>[];
   bool _scrolled = false;
+
+  /// The highlighted se'if (0-based), and reader mode stepping from it.
+  int? _current;
+  bool _readerMode = false;
+  int _count = 0;
+  final _scroll = ScrollController();
+  bool _celebrated = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _scroll.addListener(_atEnd);
+  }
+
+  @override
+  void dispose() {
+    _scroll.dispose();
+    super.dispose();
+  }
+
+  /// Reaching the end: confetti for today's portion, fireworks for a whole
+  /// siman.
+  void _finish() {
+    if (_celebrated || !mounted) return;
+    _celebrated = true;
+    celebrate(context, widget.from != null ? Celebration.confetti : Celebration.fireworks);
+  }
+
+  void _atEnd() {
+    if (_scroll.hasClients && _scroll.position.maxScrollExtent > 0 && _scroll.position.extentAfter < 24) _finish();
+  }
+
+  void _showSeif(int i, {required bool animate}) {
+    if (i < 0 || i >= _keys.length) return;
+    final ctx = _keys[i].currentContext;
+    if (ctx == null) return;
+    Scrollable.ensureVisible(ctx, alignment: 0.12, duration: animate ? const Duration(milliseconds: 140) : Duration.zero);
+  }
+
+  void _startReader(int from) {
+    setState(() {
+      _current = from;
+      _readerMode = true;
+    });
+    _showSeif(from, animate: true);
+    analytics.event('reader_mode', {'reader': 'torah', 'on': true});
+  }
+
+  /// Steps the reader-mode se'if by [delta]; past the portion's end (or the
+  /// siman's) celebrates.
+  void _step(int delta) {
+    if (_count == 0) return;
+    final end = widget.to != null && widget.from != null ? widget.to!.clamp(1, _count) : _count;
+    final target = (_current ?? 0) + delta;
+    if (target >= end) {
+      setState(() => _current = end - 1);
+      _showSeif(end - 1, animate: true);
+      _finish();
+      return;
+    }
+    final i = target.clamp(0, _count - 1);
+    setState(() => _current = i);
+    _showSeif(i, animate: delta > 0);
+  }
 
   void _scrollToHighlight() {
     final from = widget.from;
@@ -417,6 +517,7 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
     while (_keys.length < count) {
       _keys.add(GlobalKey());
     }
+    _count = count;
     _scrollToHighlight();
     readingText({
       'work': w.id,
@@ -441,6 +542,13 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
               style: theme.textTheme.bodySmall, overflow: TextOverflow.ellipsis),
         ]),
         actions: [
+          IconButton(
+            tooltip: context.tr('Reader mode'),
+            isSelected: _readerMode,
+            icon: const Icon(Icons.chrome_reader_mode_outlined),
+            selectedIcon: const Icon(Icons.chrome_reader_mode),
+            onPressed: () => _readerMode ? setState(() => _readerMode = false) : _startReader(_current ?? (from ?? 1) - 1),
+          ),
           IconButton(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => showTorahTextSettings(context)),
         ],
     );
@@ -452,19 +560,37 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
         Expanded(
           child: FocusModeBody(
             child: DoubleTapListener(
-              onDoubleTap: toggleFocusMode,
+              // In reader mode a double tap steps back instead.
+              onDoubleTap: _readerMode ? () {} : toggleFocusMode,
               child: PageSwipe(
-              onNext: swipeTo(widget.siman + 1, 'next'),
-              onPrevious: swipeTo(widget.siman - 1, 'previous'),
+              onNext: _readerMode ? null : swipeTo(widget.siman + 1, 'next'),
+              onPrevious: _readerMode ? null : swipeTo(widget.siman - 1, 'previous'),
+              child: ReaderModeLayer(
+              active: _readerMode,
+              onNext: () => _step(1),
+              onBackTwo: () => _step(-2),
+              onExit: () => setState(() => _readerMode = false),
               child: SingleChildScrollView(
+        controller: _scroll,
         padding: EdgeInsets.symmetric(horizontal: ts.gutter(MediaQuery.sizeOf(context).width, min: 16)).copyWith(top: 8, bottom: 24),
         child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           for (var n = 1; n <= count; n++)
-            Container(
+            GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              // Tap marks a se'if; holding it starts reader mode from there.
+              onTap: () => setState(() => _current = _current == n - 1 ? null : n - 1),
+              onLongPress: () => _startReader(n - 1),
+              child: Container(
               key: _keys[n - 1],
               margin: const EdgeInsets.only(bottom: 10),
               padding: const EdgeInsets.all(10),
-              decoration: from != null && n >= from && n <= to
+              decoration: _current == n - 1
+                  ? BoxDecoration(
+                      color: theme.colorScheme.primary.withValues(alpha: 0.10),
+                      borderRadius: BorderRadius.circular(10),
+                      border: BorderDirectional(start: BorderSide(color: theme.colorScheme.primary, width: 3)),
+                    )
+                  : from != null && n >= from && n <= to
                   // The siddur's "said today" colors, for today's portion.
                   ? BoxDecoration(
                       color: colors.todayFill,
@@ -487,6 +613,7 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
                   ], enStyle, TextDirection.ltr),
                 ],
               ]),
+            ),
             ),
           const SizedBox(height: 8),
           Row(children: [
@@ -522,6 +649,7 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
                 style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.outline)),
           ],
         ]),
+              ),
               ),
               ),
             ),

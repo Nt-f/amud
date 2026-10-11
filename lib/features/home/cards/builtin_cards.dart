@@ -8,6 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../../core/format.dart';
 import '../../../core/l10n.dart';
+import '../../gemara/gemara_home_screen.dart' show learningPath;
 import '../../../core/providers.dart';
 import '../../../core/settings.dart';
 import '../../../core/split_row.dart';
@@ -463,7 +464,8 @@ class _LearningCard extends ConsumerWidget {
     return CardFrame(
       title: 'Daily learning',
       icon: Icons.menu_book_outlined,
-      onTap: () => context.go('/learning'),
+      // Pushed, so the learning screen has a way back to Home.
+      onTap: () => context.push('/learning'),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         for (final name in schedules)
           Builder(builder: (context) {
@@ -473,8 +475,14 @@ class _LearningCard extends ConsumerWidget {
             } catch (_) {}
             if (ev == null) return const SizedBox.shrink();
             final url = ev.url();
+            // The app's own reader where it has the text; Sefaria otherwise.
+            final inApp = learningPath(name, t.civil, ev);
             return InkWell(
-              onTap: url == null ? null : () => launchUrl(Uri.parse(url)),
+              onTap: inApp != null
+                  ? () => context.push(inApp)
+                  : url == null
+                      ? null
+                      : () => launchUrl(Uri.parse(url)),
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 4),
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

@@ -44,6 +44,14 @@ void main() {
     );
     expect(routeFromLink(Uri.parse('amud://voice/zmanim')), '/zmanim');
     expect(routeFromLink(Uri.parse('amud://voice/omer')), '/pray/omer');
+    // The Torah tab: homes, books, the study reader with its query, learning.
+    expect(routeFromLink(Uri.parse('https://amud.page/app/torah/gemara')), '/torah/gemara');
+    expect(routeFromLink(Uri.parse('https://amud.page/app/torah/mishnah/Mishnah%20Berakhot')), '/torah/mishnah/Mishnah%20Berakhot');
+    expect(routeFromLink(Uri.parse('amud://torah/read?b=Berakhot&u=2a&s=3')), '/torah/read?b=Berakhot&u=2a&s=3');
+    expect(routeFromLink(Uri.parse('https://amud.page/app/#/torah/read?b=Pirkei%20Avot&u=1')), '/torah/read?b=Pirkei%20Avot&u=1');
+    expect(routeFromLink(shareTorahLink('/torah/read?b=Berakhot&u=2a')), '/torah/read?b=Berakhot&u=2a');
+    expect(routeFromLink(Uri.parse('amud://learning')), '/learning');
+    expect(routeFromLink(Uri.parse('https://amud.page/app/torah/../settings')), isNull);
   });
 
   test('device preferences survive storage with safe defaults', () {

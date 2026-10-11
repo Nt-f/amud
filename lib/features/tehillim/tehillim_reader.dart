@@ -5,6 +5,8 @@ import 'package:go_router/go_router.dart';
 
 import '../../core/adaptive.dart';
 import '../../core/analytics.dart';
+import '../../core/celebration.dart';
+import '../../core/reader_mode.dart';
 import '../../core/fonts.dart';
 import '../../core/hebrew_text.dart';
 import '../../core/html_text.dart';
@@ -37,6 +39,27 @@ class TehillimReaderScreen extends ConsumerStatefulWidget {
 }
 
 class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
+  /// Reader mode steps verse by verse (passage by passage when verses flow
+  /// as a paragraph); one key per step, in reading order.
+  bool _readerMode = false;
+  int _step = 0;
+  final _stepKeys = <GlobalKey>[];
+
+  void _showStep(int i, {required bool animate}) {
+    if (i < 0 || i >= _stepKeys.length) return;
+    final ctx = _stepKeys[i].currentContext;
+    if (ctx != null) {
+      Scrollable.ensureVisible(ctx, alignment: 0.15, duration: animate ? const Duration(milliseconds: 140) : Duration.zero);
+    }
+  }
+
+  void _move(int delta, int count) {
+    if (count == 0) return;
+    final i = (_step + delta).clamp(0, count - 1);
+    setState(() => _step = i);
+    _showStep(i, animate: delta > 0);
+  }
+
   /// Text is selected: sideways drags move its handles, so swiping
   /// doesn't turn the page.
   bool _selected = false;
@@ -86,6 +109,16 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
         ]),
         actions: [
           IconButton(
+            tooltip: context.tr('Reader mode'),
+            isSelected: _readerMode,
+            icon: const Icon(Icons.chrome_reader_mode_outlined),
+            selectedIcon: const Icon(Icons.chrome_reader_mode),
+            onPressed: () {
+              setState(() => _readerMode = !_readerMode);
+              if (_readerMode) _showStep(_step, animate: true);
+            },
+          ),
+          IconButton(
             tooltip: context.tr('Text settings'),
             icon: const Icon(Icons.text_fields),
             onPressed: () => showTehillimSettings(context),
@@ -93,8 +126,8 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
         ],
       ),
       body: PageSwipe(
-        onNext: _turn(single, 1),
-        onPrevious: _turn(single, -1),
+        onNext: _readerMode ? null : _turn(single, 1),
+        onPrevious: _readerMode ? null : _turn(single, -1),
         child: data.when(
           loading: adaptiveProgress,
           error: (e, _) => Center(child: Text('$e')),
@@ -120,6 +153,24 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
     final flow = !ref.watch(tehillimProgressProvider.select((x) => x.versePerLine)) && s.showHebrewText != s.showTranslationText;
     final wide = MediaQuery.sizeOf(context).width > 700;
     final rows = <Widget Function(BuildContext)>[];
+    var steps = 0;
+    // Wraps a verse (or flowing passage) as a reader-mode step.
+    Widget Function(BuildContext) step(Widget Function(BuildContext) row) {
+      final n = steps++;
+      while (_stepKeys.length <= n) {
+        _stepKeys.add(GlobalKey());
+      }
+      return (c) => Container(
+            key: _stepKeys[n],
+            decoration: _readerMode && n == _step
+                ? BoxDecoration(
+                    color: Theme.of(c).colorScheme.primary.withValues(alpha: 0.10),
+                    borderRadius: BorderRadius.circular(8),
+                  )
+                : null,
+            child: row(c),
+          );
+    }
     int? lastBook;
     int? lastChapter;
     for (final ps in p.passages) {
@@ -137,25 +188,31 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
       final to = (ps.to ?? t.verses(ps.chapter)).clamp(1, t.verses(ps.chapter));
       if (flow) {
         final (c, from) = (ps.chapter, ps.from);
-        rows.add((ctx) => _Verse(
+        rows.add(step((ctx) => _Verse(
               chapter: c,
               verse: from,
               he: '',
               en: '',
               wide: wide,
               flow: [for (var v = from; v <= to; v++) (v, t.he[c - 1][v - 1], t.en[c - 1][v - 1])],
-            ));
+            )));
         continue;
       }
       for (var v = ps.from; v <= to; v++) {
         final (c, vv) = (ps.chapter, v);
-        rows.add((ctx) => _Verse(chapter: c, verse: vv, he: t.he[c - 1][vv - 1], en: t.en[c - 1][vv - 1], wide: wide));
+        rows.add(step((ctx) => _Verse(chapter: c, verse: vv, he: t.he[c - 1][vv - 1], en: t.en[c - 1][vv - 1], wide: wide)));
       }
     }
     rows.add((c) => _Footer(portion: p));
     final side = TypeScale.of(s, hebrewSize: 24 * s.textScale)
         .gutter(MediaQuery.sizeOf(context).width, min: wide ? 48 : 16, sideBySide: wide && s.layout == TextLayout.sideBySide);
-    return SelectionArea(
+    final count = steps;
+    return ReaderModeLayer(
+      active: _readerMode,
+      onNext: () => _move(1, count),
+      onBackTwo: () => _move(-2, count),
+      onExit: () => setState(() => _readerMode = false),
+      child: SelectionArea(
       onSelectionChanged: _selectionChanged,
       contextMenuBuilder: (context, state) => textReportMenu(context, state,
           selectedText: _selectedText, location: 'Tehillim / ${p.titleEn} / ${p.rangeLabel}'),
@@ -164,6 +221,7 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
         itemCount: rows.length,
         itemBuilder: (c, i) => rows[i](c),
       ),
+    ),
     );
   }
 }
@@ -362,7 +420,10 @@ class _Footer extends ConsumerWidget {
             onPressed: allRead
                 ? null
                 : () {
-                    if (ref.read(tehillimProgressProvider.notifier).markRead(chapters)) _celebrate(context);
+                    final finishedSefer = ref.read(tehillimProgressProvider.notifier).markRead(chapters);
+                    // A whole psalm is a perek: fireworks. A day's portion: confetti.
+                    celebrate(context, single != null ? Celebration.fireworks : Celebration.confetti);
+                    if (finishedSefer) _celebrate(context);
                   },
             icon: Icon(allRead ? Icons.check : Icons.done_all),
             label: Text(context.tr(allRead ? 'Marked as read' : 'Mark all as read')),

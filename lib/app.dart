@@ -38,6 +38,9 @@ import 'features/tehillim/tehillim_data.dart';
 import 'features/tehillim/tehillim_reader.dart';
 import 'features/tehillim/tehillim_screen.dart';
 import 'features/torah/shnayim_mikra_screen.dart';
+import 'features/gemara/gemara_home_screen.dart';
+import 'features/gemara/study_book.dart';
+import 'features/gemara/gemara_reader_screen.dart';
 import 'features/torah/torah_screen.dart';
 import 'features/zmanim/zmanim_screen.dart';
 
@@ -137,6 +140,44 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                   ),
                   // Opened from the Torah tab, so it doesn't add a tab to the bar.
                   GoRoute(path: 'shiurim', builder: (c, s) => const ShiurimScreen()),
+                  // The study reader: any unit of the Gemara, Mishnah or Kitzur.
+                  GoRoute(path: 'read', builder: (c, s) {
+                    final q = s.uri.queryParameters;
+                    return GemaraReaderScreen(
+                      key: ValueKey(s.uri.toString()),
+                      tractate: q['b'] ?? q['t'] ?? 'Berakhot',
+                      amud: q['u'] ?? q['a'] ?? '2a',
+                      segment: int.tryParse(q['s'] ?? ''),
+                      from: int.tryParse(q['from'] ?? ''),
+                      to: int.tryParse(q['to'] ?? ''),
+                    );
+                  }),
+                  GoRoute(
+                    path: 'gemara',
+                    builder: (c, s) => const StudyHomeScreen(kind: StudyKind.bavli),
+                    routes: [
+                      // Older links to the Gemara reader.
+                      GoRoute(path: 'read', builder: (c, s) {
+                    final q = s.uri.queryParameters;
+                    return GemaraReaderScreen(
+                      key: ValueKey(s.uri.toString()),
+                      tractate: q['b'] ?? q['t'] ?? 'Berakhot',
+                      amud: q['u'] ?? q['a'] ?? '2a',
+                      segment: int.tryParse(q['s'] ?? ''),
+                      from: int.tryParse(q['from'] ?? ''),
+                      to: int.tryParse(q['to'] ?? ''),
+                    );
+                  }),
+                      GoRoute(path: ':tractate', builder: (c, s) => StudyBookScreen(book: s.pathParameters['tractate']!)),
+                    ],
+                  ),
+                  GoRoute(
+                    path: 'mishnah',
+                    builder: (c, s) => const StudyHomeScreen(kind: StudyKind.mishnah),
+                    routes: [
+                      GoRoute(path: ':book', builder: (c, s) => StudyBookScreen(book: s.pathParameters['book']!)),
+                    ],
+                  ),
                   GoRoute(
                     path: ':category',
                     builder: (c, s) => TorahCategoryScreen(category: s.pathParameters['category']!),
@@ -149,6 +190,19 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                             path: 'read',
                             builder: (c, s) {
                               final q = s.uri.queryParameters;
+                              // The Kitzur reads in the study reader (views, marks,
+                              // reader mode); its daily portion is 1-based here.
+                              if (s.pathParameters['work'] == 'kitzur') {
+                                final from = int.tryParse(q['from'] ?? '');
+                                final to = int.tryParse(q['to'] ?? '');
+                                return GemaraReaderScreen(
+                                  key: ValueKey(s.uri.toString()),
+                                  tractate: kitzurId,
+                                  amud: q['siman'] ?? '1',
+                                  from: from == null ? null : from - 1,
+                                  to: to == null ? null : to - 1,
+                                );
+                              }
                               return TorahReaderScreen(
                                 key: ValueKey(s.uri.toString()),
                                 category: s.pathParameters['category']!,
