@@ -1,0 +1,78 @@
+name: Web
+
+# The landing page and web app on amud.page, as their own workflow so the site
+# is published on every push to master without waiting for the app builds
+# (build.yml: Android, Windows, Linux, release). Neither depends on the other.
+#
+# A push to master or a `v*` tag deploys. Running it by hand on another branch
+# only builds and uploads a preview version of the site.
+# A `v*` tag also attaches amud-web.zip to that version's GitHub Release.
+#
+# Secrets: CLOUDFLARE_API_TOKEN (account: Workers Scripts: Edit) and
+# CLOUDFLARE_ACCOUNT_ID. The amud.page domain is attached in the dashboard,
+# not by the deploy (see deploy/amud/wrangler.jsonc and DEPLOY.md).
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    tags: ['v*']
+
+# A newer push replaces a deploy still in progress for the same ref.
+concurrency:
+  group: web-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FLUTTER_VERSION: 3.41.2
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          cache: true
+      # The landing page at the site root and the app under /app/ (DEPLOY.md).
+      - run: bash tool/build_web.sh
+      - run: cd web-dist && zip -qr ../amud-web.zip .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: amud-web
+          path: amud-web.zip
+
+  site:
+    needs: [web]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: amud-web
+      - run: mkdir web-dist && unzip -q amud-web.zip -d web-dist
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          # The action's default (3.x) ignores _headers and _redirects for
+          # static assets.
+          wranglerVersion: '4.149.0'
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: ${{ (startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/master') && 'deploy' || 'versions upload' }} --config deploy/amud/wrangler.jsonc
+
+  release-asset:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [web]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: amud-web
+      # Adds to the release build.yml creates for the same tag (or creates it
+      # first; build.yml then fills in the notes and the other files).
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: amud-web.zip

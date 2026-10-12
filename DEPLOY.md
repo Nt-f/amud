@@ -101,11 +101,11 @@ deploying. A release's site is also attached to its GitHub Release as
 
 amud.page is static files on Cloudflare (a Worker with static assets and no
 code, which is what Cloudflare Pages now deploys as): `deploy/amud/wrangler.jsonc`.
-GitHub Actions deploys it: the `site` job in `build.yml` takes the `web`
-job's build and runs `wrangler deploy` on every `v*` tag, or when the
-workflow is run by hand on master (on another branch it only uploads a
-preview version). It needs the `CLOUDFLARE_API_TOKEN` (account-level
-Workers Scripts: Edit) and `CLOUDFLARE_ACCOUNT_ID` repository secrets. The
+GitHub Actions deploys it: `web.yml` (its own workflow, separate from the
+app builds in `build.yml`) builds the site and runs `wrangler deploy` on every
+push to master and every `v*` tag. Run by hand on another branch, it only
+uploads a preview version. A tag also attaches `amud-web.zip` to the release. It needs the
+`CLOUDFLARE_API_TOKEN` (account-level Workers Scripts: Edit) and `CLOUDFLARE_ACCOUNT_ID` repository secrets. The
 amud.page custom domain is attached once in the dashboard (Workers → amud →
 Settings → Domains & Routes); deploys leave it alone.
 
