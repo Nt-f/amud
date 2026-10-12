@@ -1,3 +1,5 @@
+import 'assistant.dart';
+
 /// Stable names shared by links, launcher shortcuts and voice assistants.
 const prayerShortcuts = <String, String>{
   'shacharit': 'Shacharis',
@@ -5,6 +7,17 @@ const prayerShortcuts = <String, String>{
   'maariv': 'Maariv',
   'birkat': 'Birkat HaMazon',
   'derech': 'Tefillat HaDerech',
+};
+
+/// Prayers a voice request can open (every `/pray/<name>` the app has).
+final voicePrayers = {
+  ...prayerShortcuts.keys,
+  'musaf',
+  'bedtime',
+  'hallel',
+  'havdalah',
+  'kiddushLevana',
+  'birkatHaChama',
 };
 
 String normalizePrayer(String name) => switch (name.toLowerCase()) {
@@ -28,9 +41,16 @@ String? routeFromLink(Uri uri) {
     if (uri.pathSegments.length != 1) return '/siddur';
     final feature = normalizePrayer(uri.pathSegments.single);
     if (feature == 'zmanim') return '/zmanim';
-    if (feature == 'omer' || prayerShortcuts.containsKey(feature)) {
+    if (feature == 'omer' || voicePrayers.contains(feature)) {
       return '/pray/$feature';
     }
+    // The user's own words (GET_THING) or a question shortcut: an answer.
+    final query = uri.queryParameters['q'];
+    if (feature == 'ask') {
+      return query == null || query.isEmpty ? '/ask' : Uri(path: '/ask', queryParameters: {'q': query}).toString();
+    }
+    final topic = matchAskTopic(feature);
+    if (topic != null) return Uri(path: '/ask', queryParameters: {'topic': topic.name}).toString();
     return '/siddur';
   }
   Uri target;
@@ -73,6 +93,7 @@ String? routeFromLink(Uri uri) {
   }
   if (p == '/' ||
       p == '/zmanim' ||
+      p == '/ask' ||
       p == '/personal-dates' ||
       p == '/calendar' ||
       p == '/siddur' ||

@@ -103,6 +103,11 @@ Map<String, Object?> buildWidgetTimeline(
               .where((e) => e.eventTime.isAfter(instant))
               .firstOrNull;
           final en = settings.uiLanguage == UiLanguage.en;
+          String nextTime(String key) {
+            final t = times.where((z) => z.$1 == key && z.$2.isAfter(instant)).firstOrNull;
+            return t == null ? '' : formatTime(t.$2, loc, hour12: settings.hour12);
+          }
+
           return <String, Object?>{
             'at': stamp,
             'prayerDay': prayerDay,
@@ -121,6 +126,9 @@ Map<String, Object?> buildWidgetTimeline(
             'nextZmanTime': next == null
                 ? ''
                 : formatTime(next.$2, loc, hour12: settings.hour12),
+            // Read by the Android App Functions (spoken answers) as well.
+            'sunriseTime': nextTime('sunrise'),
+            'sunsetTime': nextTime('sunset'),
             'candleLightingAt': candle?.eventTime.millisecondsSinceEpoch,
             'candleLighting': candle == null
                 ? ''

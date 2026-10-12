@@ -1,0 +1,9 @@
+<AppFunctionAppMetadata xmlns:appfn="http://schemas.android.com/apk/androidx.appfunctions"
+    appfn:description="Amud is a Jewish prayer book (siddur) and halachic times app.
+    Operational Patterns:
+    - Use 'getNextZman' for the next halachic time, 'getSunrise' and 'getSunset' for those times.
+    - Use 'getHebrewDate', 'getParsha' and 'getOmerCount' for the Jewish calendar.
+    - Use 'getCandleLighting' for the next Shabbat or Yom Tov candle lighting.
+    Constraints:
+    - Times are for the location saved in Amud. If a function reports no up-to-date times, ask the user to open Amud once."
+    appfn:displayDescription="@string/appfunctions_description" />

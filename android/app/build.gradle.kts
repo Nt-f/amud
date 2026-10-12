@@ -54,6 +54,8 @@ android {
     productFlavors {
         create("github") { dimension = "store" }
         create("play") { dimension = "store" }
+        // The standalone Wear OS app: flutter build appbundle --flavor wear -t lib/main_wear.dart
+        create("wear") { dimension = "store" }
     }
 
     // Every release must use the same key or Android refuses to install it
@@ -79,7 +81,7 @@ android {
 
 // A Play release signed with the debug key would be rejected on upload.
 gradle.taskGraph.whenReady {
-    if (storeFilePath == null && allTasks.any { it.name.contains("PlayRelease") }) {
+    if (storeFilePath == null && allTasks.any { it.name.contains("PlayRelease") || it.name.contains("WearRelease") }) {
         throw GradleException("Play releases need the upload key: set android/key.properties or SIDDUR_KEYSTORE_FILE.")
     }
 }

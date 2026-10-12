@@ -1,10 +1,24 @@
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- Google Assistant App Actions. OPEN_APP_FEATURE: "open Shacharis in Amud",
+       "show the Omer", "what is the Hebrew date in Amud". The shortcut id is the
+       feature; routeFromLink (lib/features/integrations/prayer_links.dart)
+       turns it into a screen. Synonyms are in values*/voice.xml (English,
+       Hebrew, Yiddish). -->
   <capability android:name="actions.intent.OPEN_APP_FEATURE">
     <intent android:action="android.intent.action.VIEW">
       <url-template android:value="amud://voice/{prayer}" />
       <parameter android:name="feature" android:key="prayer" />
     </intent>
     <intent android:action="android.intent.action.VIEW" android:data="amud://siddur" />
+  </capability>
+  <!-- GET_THING: the user's own words ("ask Amud when is sunset") go to the
+       Ask screen, which finds the topic. -->
+  <capability android:name="actions.intent.GET_THING">
+    <intent android:action="android.intent.action.VIEW">
+      <url-template android:value="amud://voice/ask{?q}" />
+      <parameter android:name="thing.name" android:key="q" />
+    </intent>
+    <intent android:action="android.intent.action.VIEW" android:data="amud://voice/ask" />
   </capability>
   <shortcut android:shortcutId="shacharit">
     <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
@@ -32,9 +46,73 @@
     </capability-binding>
   </shortcut>
   <shortcut android:shortcutId="zmanim">
-    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE"><parameter-binding android:key="feature" android:value="@array/voice_zmanim" /></capability-binding>
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_zmanim" />
+    </capability-binding>
   </shortcut>
   <shortcut android:shortcutId="omer">
-    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE"><parameter-binding android:key="feature" android:value="@array/voice_omer" /></capability-binding>
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_omer" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="musaf">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_musaf" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="bedtime">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_bedtime" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="hallel">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_hallel" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="havdalah">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_havdalah" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="kiddushLevana">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_kiddushLevana" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="birkatHaChama">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_birkatHaChama" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="nextZman">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_nextZman" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="date">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_date" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="parsha">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_parsha" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="candles">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_candles" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="sunrise">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_sunrise" />
+    </capability-binding>
+  </shortcut>
+  <shortcut android:shortcutId="sunset">
+    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+      <parameter-binding android:key="feature" android:value="@array/voice_sunset" />
+    </capability-binding>
   </shortcut>
 </shortcuts>

@@ -43,6 +43,7 @@ import 'features/gemara/study_book.dart';
 import 'features/gemara/gemara_reader_screen.dart';
 import 'features/torah/torah_screen.dart';
 import 'features/zmanim/zmanim_screen.dart';
+import 'features/integrations/ask_screen.dart';
 
 final _rootKey = GlobalKey<NavigatorState>();
 
@@ -245,6 +246,11 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
           path: '/read/:book',
           parentNavigatorKey: _rootKey,
           builder: (c, s) => ReaderScreen(book: s.pathParameters['book']!, nodeId: s.uri.queryParameters['node'] ?? '', standalone: true),
+        ),
+        GoRoute(
+          path: '/ask',
+          parentNavigatorKey: _rootKey,
+          builder: (c, s) => AskScreen(topic: s.uri.queryParameters['topic'], query: s.uri.queryParameters['q']),
         ),
         GoRoute(path: '/update', parentNavigatorKey: _rootKey, builder: (c, s) => const UpdateScreen()),
         GoRoute(path: '/setup', parentNavigatorKey: _rootKey, builder: (c, s) => const SetupScreen()),

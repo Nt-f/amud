@@ -4,6 +4,18 @@
   <string-array name="voice_maariv"><item>Maariv</item><item>Arvit</item><item>evening prayer</item></string-array>
   <string-array name="voice_birkat"><item>Birkat HaMazon</item><item>Birkat Hamazon</item><item>grace after meals</item></string-array>
   <string-array name="voice_derech"><item>Tefillat HaDerech</item><item>travelers prayer</item><item>travel prayer</item></string-array>
-<string-array name="voice_zmanim"><item>next zman</item><item>zmanim</item><item>halachic times</item></string-array>
-<string-array name="voice_omer"><item>Omer</item><item>Omer count</item></string-array>
+  <string-array name="voice_zmanim"><item>zmanim</item><item>halachic times</item></string-array>
+  <string-array name="voice_omer"><item>Omer</item><item>Omer count</item></string-array>
+  <string-array name="voice_musaf"><item>Musaf</item><item>additional prayer</item></string-array>
+  <string-array name="voice_bedtime"><item>Bedtime Shema</item><item>Shema before bed</item><item>bedtime prayer</item></string-array>
+  <string-array name="voice_hallel"><item>Hallel</item><item>praise prayer</item></string-array>
+  <string-array name="voice_havdalah"><item>Havdalah</item><item>Havdallah</item></string-array>
+  <string-array name="voice_kiddushLevana"><item>Kiddush Levana</item><item>blessing of the new moon</item><item>moon blessing</item></string-array>
+  <string-array name="voice_birkatHaChama"><item>Birkat HaChama</item><item>blessing of the sun</item><item>sun blessing</item></string-array>
+  <string-array name="voice_nextZman"><item>next zman</item><item>next halachic time</item></string-array>
+  <string-array name="voice_date"><item>Hebrew date</item><item>today\'s Hebrew date</item><item>what day is it</item></string-array>
+  <string-array name="voice_parsha"><item>parsha</item><item>weekly portion</item><item>Torah portion</item></string-array>
+  <string-array name="voice_candles"><item>candle lighting</item><item>candle lighting time</item></string-array>
+  <string-array name="voice_sunrise"><item>sunrise</item><item>netz</item><item>sunrise time</item></string-array>
+  <string-array name="voice_sunset"><item>sunset</item><item>shkia</item><item>sunset time</item></string-array>
 </resources>

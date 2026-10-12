@@ -37,4 +37,5 @@ dependencies {
     implementation("androidx.wear.protolayout:protolayout:1.3.0")
     implementation("androidx.wear.watchface:watchface-complications-data-source:1.2.1")
     implementation("com.google.guava:guava:33.4.0-android")
+    implementation("androidx.core:core:1.18.0")
 }

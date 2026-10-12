@@ -39,6 +39,13 @@ class MainActivity : FlutterActivity() {
         if (readerFullscreen) controller.hide(androidx.core.view.WindowInsetsCompat.Type.systemBars())
         else controller.show(androidx.core.view.WindowInsetsCompat.Type.systemBars())
     }
+    override fun onCreate(savedInstanceState: android.os.Bundle?) {
+        // Android 15 draws every app edge to edge; do the same on older versions
+        // so the layout is one thing everywhere. Flutter pads for the system bars
+        // itself (MediaQuery / SafeArea, Scaffold, AppBar and NavigationBar).
+        androidx.core.view.WindowCompat.enableEdgeToEdge(window)
+        super.onCreate(savedInstanceState)
+    }
     override fun onDestroy() {
         // Closed while reading: give the phone its notifications back.
         setReaderDnd(false)

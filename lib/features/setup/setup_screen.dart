@@ -199,9 +199,11 @@ class _WelcomePage extends ConsumerWidget {
           onChanged: (v) => set((x) => x.copyWith(uiLanguage: v)),
         ),
         const _Label('Spelling'),
-        _Choice<bool>(
-          value: s.ashkenaziSpelling,
-          options: const [(true, 'Ashkenazi (Shabbos)'), (false, 'Sephardi (Shabbat)')],
+        // Each label shows its own spelling, so it must not go through tr(): that
+        // would respell "Shabbat" as "Shabbos" while Ashkenazi is selected.
+        ChoiceBar<bool>(
+          options: const [(true, 'Ashkenazi (Shabbos)', null), (false, 'Sephardi (Shabbat)', null)],
+          selected: s.ashkenaziSpelling,
           onChanged: (v) => set((x) => x.copyWith(ashkenaziSpelling: v)),
         ),
       ],

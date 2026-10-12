@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:amud/core/settings.dart';
+import 'package:amud/features/integrations/assistant.dart';
 import 'package:amud/features/integrations/prayer_links.dart';
 import 'package:amud/features/integrations/seasonal_windows.dart';
 import 'package:amud/features/integrations/widget_snapshot.dart';
@@ -35,6 +36,32 @@ void main() {
       ),
       '/read/Siddur%20Ashkenaz?node=Weekday%2FMincha',
     );
+  });
+
+  test('assistant requests: every prayer, topic ids and the user\'s own words', () {
+    for (final p in ['musaf', 'bedtime', 'hallel', 'havdalah', 'kiddushLevana', 'birkatHaChama']) {
+      expect(routeFromLink(Uri.parse('amud://voice/$p')), '/pray/$p');
+    }
+    expect(routeFromLink(Uri.parse('amud://voice/kiddushlevana')), '/pray/kiddushLevana');
+    expect(routeFromLink(Uri.parse('amud://voice/sunset')), '/ask?topic=sunset');
+    expect(routeFromLink(Uri.parse('amud://voice/nextZman')), '/ask?topic=nextZman');
+    expect(routeFromLink(Uri.parse('amud://voice/ask?q=when%20is%20sunrise')), '/ask?q=when+is+sunrise');
+    expect(routeFromLink(Uri.parse('amud://voice/ask')), '/ask');
+    expect(routeFromLink(Uri.parse('amud://voice/nonsense')), '/siddur');
+    expect(routeFromLink(Uri.parse('https://amud.page/app/ask?topic=omer')), '/ask?topic=omer');
+  });
+
+  test('spoken words pick a topic in English, Hebrew and Yiddish', () {
+    expect(matchAskTopic('when is sunrise tomorrow'), AskTopic.sunrise);
+    expect(matchAskTopic('what time is candle lighting'), AskTopic.candles);
+    expect(matchAskTopic('מתי השקיעה'), AskTopic.sunset);
+    expect(matchAskTopic('פָּרָשַׁת הַשָּׁבוּעַ'), AskTopic.parsha);
+    expect(matchAskTopic('כמה ימים בעומר'), AskTopic.omer);
+    expect(matchAskTopic('ווען איז ליכט בענטשן'), AskTopic.candles);
+    expect(matchAskTopic('the next zman'), AskTopic.nextZman);
+    expect(matchAskTopic('what is the Hebrew date'), AskTopic.date);
+    expect(matchAskTopic(''), isNull);
+    expect(matchAskTopic('pizza recipes'), isNull);
   });
 
   test('voice features resolve to existing screens', () {

@@ -34,10 +34,23 @@ Unsigned or independently re-signed Apple bundles may not share their app group.
 
 Choose up to four icon-menu prayers; Android can additionally pin any of the
 five prayers. Siri/Shortcuts intents open a chosen prayer and answer next-zman
-and Omer queries from fresh saved data. Android declares OPEN_APP_FEATURE
-capabilities for prayers, zmanim and Omer; assistant availability depends on
-device, language and distribution. Android voice actions open the relevant
-screen. Validate them with the assistant tooling before release.
+and Omer queries from fresh saved data. Android declares two Google Assistant App Actions in
+`res/xml/shortcuts.xml`, with English, Hebrew and Yiddish synonyms in
+`res/values*/voice.xml`:
+
+* `OPEN_APP_FEATURE`: every prayer (Shacharis, Mincha, Maariv, Musaf, Hallel,
+  Havdalah, Birkat HaMazon, Tefillat HaDerech, Bedtime Shema, Kiddush Levana,
+  Birkat HaChama), the Omer and the zmanim screen. The shortcut id is the
+  feature, resolved by `routeFromLink`.
+* `GET_THING` and the question shortcuts (next zman, Hebrew date, parsha,
+  candle lighting, sunrise, sunset): open the Ask screen
+  (`amud://voice/ask?q=...`, `/ask?topic=...`), which shows the answer on
+  screen. `matchAskTopic` (`assistant.dart`) understands the user's own words.
+
+Assistant fulfillment opens the app; it does not speak the answer itself.
+Assistant availability depends on device, language (Yiddish is not an
+Assistant language) and distribution. Validate with the App Actions Test Tool
+in Android Studio before release.
 
 Examples:
 
