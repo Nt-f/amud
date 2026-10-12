@@ -6,6 +6,7 @@
 library;
 
 import 'analyzer.dart';
+import 'hodu.dart';
 import 'model.dart';
 import 'rubrics.dart';
 import 'rules.dart';
@@ -309,6 +310,7 @@ List<Segment> corpusSegments(List<CorpusSegment> segs,
     announced[p.when!] = (tidy(en), tidy(he));
   }
 
+  final hodu = HoduState();
   for (final s in segs) {
     for (final p in s.parts) {
       announce(p);
@@ -321,11 +323,16 @@ List<Segment> corpusSegments(List<CorpusSegment> segs,
     final whole = whens.length == 1 ? whens.single : null;
     final runs = <TextRun>[];
     for (final p in s.parts) {
-      final r = TextRun(p.text, p.prayer || s.parts.length == 1 ? RunKind.text : RunKind.marker,
-          whole == null && p.when != null ? rubric(p.when!) : null)
-        ..option = whole == null && p.alt != null
-        ..role = p.role != first.role ? p.role : null;
-      runs.add(r);
+      // Hodu's verses, answered by the congregation, within one run of text.
+      final answered = hebrew && p.prayer && (p.node ?? first.node) == 'hallel' && (p.role == null || p.role == 'individual' || p.role == 'responsive')
+          ? splitHoduResponses(p.text, hodu)
+          : null;
+      for (final (text, response) in answered ?? [(p.text, false)]) {
+        runs.add(TextRun(text, p.prayer || s.parts.length == 1 ? RunKind.text : RunKind.marker,
+            whole == null && p.when != null ? rubric(p.when!) : null)
+          ..option = whole == null && p.alt != null
+          ..role = response ? 'congregation' : (p.role != first.role ? p.role : null));
+      }
     }
     final seg = Segment(
       ref: s.ref,

@@ -474,8 +474,12 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
                   highlights: highlights,
                   scale: g.dafScale,
                   onTapWord: (w, global) {
+                    // Anchor the tooltip to the word's top edge, not the tap,
+                    // so it sits above the text rather than on it.
+                    final daf = _dafKey.currentContext?.findRenderObject() as RenderBox?;
+                    final anchor = w == null || daf == null ? global : daf.localToGlobal(Offset(w.x + w.width / 2, w.y));
                     setState(() {
-                      _tip = w == null ? null : (word: w, global: global);
+                      _tip = w == null ? null : (word: w, global: anchor);
                       if (w != null) _selected = w.word.segment;
                     });
                     if (w != null) _remember();
@@ -633,12 +637,12 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
     final tipWidth = (c.maxWidth - 24).clamp(0.0, wordOnly ? 210.0 : 300.0);
     final left = (at.dx - tipWidth / 2).clamp(12.0, c.maxWidth - tipWidth - 12);
     final above = at.dy > 130;
-    final room = above ? at.dy - 24 : c.maxHeight - at.dy - 36;
+    final room = above ? at.dy - 16 : c.maxHeight - at.dy - w.height - 16;
     return Positioned(
       left: left,
       width: tipWidth,
-      top: above ? null : at.dy + 22,
-      bottom: above ? c.maxHeight - at.dy + 14 : null,
+      top: above ? null : at.dy + w.height + 8,
+      bottom: above ? c.maxHeight - at.dy + 8 : null,
       child: Material(
         elevation: 8,
         borderRadius: BorderRadius.circular(12),

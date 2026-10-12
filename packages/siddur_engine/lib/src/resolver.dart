@@ -505,7 +505,7 @@ class SiddurResolver {
     _resolveNode(node, versions, contexts, options, out, baseLevel, baseService, inherited, true);
     // A section opened on a day none of it is said (Hoshanot in Cheshvan)
     // would be a blank page when hiding: show what isn't said, folded.
-    if (options.excluded == ExcludedDisplay.hide && !out.any((i) => i is SegmentItem || i is DynamicItem)) {
+    if (options.excluded == ExcludedDisplay.hide && !out.any((i) => i is SegmentItem || (i is DynamicItem && i.kind != 'leining'))) {
       return resolve(node, versions, contexts,
           options: ResolveOptions(
             excluded: ExcludedDisplay.collapse,
@@ -519,6 +519,14 @@ class SiddurResolver {
             forceExpanded: options.forceExpanded,
           ));
     }
+    // One reading for the section, where several of its parts could show it.
+    var shown = false;
+    out.removeWhere((i) {
+      if (i is! DynamicItem || i.kind != 'leining') return false;
+      final again = shown;
+      shown = true;
+      return again;
+    });
     _dropUnsaidOptionSets(out);
     return switch (options.excluded) {
       ExcludedDisplay.collapse => _group(out),
@@ -598,6 +606,36 @@ class SiddurResolver {
     return out;
   }
 
+  /// What is read from the Torah at this service, where it is the ordinary
+  /// parsha: the whole of it on Shabbat morning, and the start of the
+  /// coming Shabbat's on Shabbat afternoon, Monday and Thursday. Holidays,
+  /// fasts and Rosh Chodesh have readings of their own, which the siddur
+  /// prints.
+  DynamicItem? _leining(DayContext ctx, String id) {
+    final hd = ctx.hdate;
+    final dow = hd.getDay();
+    if (ctx.test('yomTov') || ctx.test('cholHamoed')) return null;
+    final shabbatOf = dow == 6 && ctx.service != Service.mincha ? hd : hd.onOrAfter(6).addDays(dow == 6 ? 7 : 0);
+    final weekday = (dow == 1 || dow == 4) && (ctx.service == Service.shacharit || ctx.service == Service.mincha) && !ctx.test('roshChodesh') && !ctx.test('fastDay') && !ctx.test('chanukah') && !ctx.test('purim');
+    if (!(dow == 6 && (ctx.service == Service.shacharit || ctx.service == Service.mincha)) && !weekday) return null;
+    final p = getSedra(shabbatOf.getFullYear(), ctx.il).lookup(shabbatOf);
+    if (p.chag || p.parsha.isEmpty) return null;
+    final r = ParshaReading.of(p.parsha);
+    if (r == null) return null;
+    final whole = dow == 6 && ctx.service == Service.shacharit;
+    // Rosh Chodesh, Chanukah and the special Shabbatot read their own maftir.
+    final special = whole &&
+        (ctx.test('roshChodesh') || ctx.test('chanukah') || getHolidaysOnDate(hd, ctx.il).any((e) => e.hasFlag(Flags.specialShabbat)));
+    final ranges = whole ? r.aliyot.take(special ? 6 : 7) : [r.aliyot.first];
+    return DynamicItem('leining:$id', 'leining', {
+      'parsha': r.parsha,
+      'book': r.book,
+      'scope': whole ? 'shabbat' : 'first',
+      'special': special,
+      'ranges': [for (final (b, e) in ranges) [b.chapter, b.verse, e.chapter, e.verse]],
+    });
+  }
+
   void _resolveNode(SchemaNode node, VersionSelection versions, ContextProvider contexts, ResolveOptions options,
       List<RenderItem> out, int baseLevel, Service service, Applicability inherited, bool isTop) {
     final svc = _corpusService(node) ?? serviceFor(node, service);
@@ -616,6 +654,11 @@ class SiddurResolver {
       return;
     }
     out.add(HeadingItem('h:${node.id}', node, node.path.length - baseLevel, ap, rule?.labelEn, rule?.labelHe));
+
+    if (node.isLeaf && !excluded && ({'torah.reading', 'torah.aliyah_blessings'}.contains(corpus?.leaf(node.id)?.node) || rule?.when == 'torahReading')) {
+      final reading = _leining(ctx, node.id);
+      if (reading != null) out.add(reading);
+    }
 
     if (ap == Applicability.today && rule != null && RegExp('omer', caseSensitive: false).hasMatch(rule.when)) {
       final day = ctx.number('omerDay').toInt();

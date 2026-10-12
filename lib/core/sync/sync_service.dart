@@ -152,7 +152,7 @@ class SyncController extends Notifier<SyncStatus> {
       final out = await engine.sync();
       await storage.writeJson(syncStateKey, syncStateToJson(st));
       state = state.copyWith(lastSynced: DateTime.fromMillisecondsSinceEpoch(st.lastSynced!));
-      _reload(out.appliedKeys);
+      reload(out.appliedKeys);
     } finally {
       _engine = null;
     }
@@ -160,7 +160,7 @@ class SyncController extends Notifier<SyncStatus> {
 
   /// Providers that read these keys once; make them read again. (Alerts
   /// re-plan themselves when the providers they watch change.)
-  void _reload(Set<String> keys) {
+  void reload(Set<String> keys) {
     for (final k in keys) {
       switch (k) {
         case 'settings':

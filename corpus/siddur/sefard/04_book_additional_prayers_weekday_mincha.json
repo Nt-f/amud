@@ -30,13 +30,13 @@
         "segs": [
           {"ref": "1", "translates": ["1"], "parts": [
             {"kind": "prayer", "text": "<small>According to some authorities it is a "},
-            {"kind": "instruction", "text": "<i>mitzvah</i>"},
+            {"kind": "instruction", "he": "מצווה", "text": "<i>mitzvah</i>"},
             {"kind": "prayer", "text": " to recite these six verses of remembrance every day. Those who do so are assured of a share in the World-to-Come.</small>"}
           ]},
           {"ref": "2", "translates": ["2"], "text": "<b><i>The Exodus</i></b>"},
           {"ref": "3", "translates": ["3"], "parts": [
             {"kind": "prayer", "text": "...in order that you remember the day you came out of the land of Egypt all the days of your life.<sup class=\"footnote-marker\">1</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Deuteronomy 16:3.</i>"}
+            {"kind": "instruction", "he": "דברים טז, ג.", "text": "<i class=\"footnote\">Deuteronomy 16:3.</i>"}
           ]},
           {"ref": "4", "translates": ["4"], "text": "<b><i>The Revelation at Mount Sinai</i></b>"},
           {"ref": "5", "translates": ["5"], "parts": [
@@ -45,7 +45,7 @@
             {"kind": "prayer", "text": " lest you forget the things which your eyes have seen;"},
             {"kind": "prayer", "text": " lest they be removed from your heart all the days of your life;"},
             {"kind": "prayer", "text": " and make them known to your children and to your children's children. [That what you witnessed] the day you stood before Adonoy your God at Chorev.<sup class=\"footnote-marker\">2</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Deuteronomy 4:9-10.</i>"}
+            {"kind": "instruction", "he": "דברים ד, ט-י", "text": "<i class=\"footnote\">Deuteronomy 4:9-10.</i>"}
           ]},
           {"ref": "6", "translates": ["6"], "text": "<b><i>The Attack of Amalek</i></b>"},
           {"ref": "7", "translates": ["7"], "parts": [
@@ -54,7 +54,7 @@
             {"kind": "prayer", "text": " and he cut off all the weak ones [who were straggling] behind you,"},
             {"kind": "prayer", "text": " when you were weary and exhausted;"},
             {"kind": "prayer", "text": " and he did not fear God.<sup class=\"footnote-marker\">3</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Other commentators say that these words refer to the Jewish people, who did not fear God.</i>"},
+            {"kind": "instruction", "he": "פרשנים אחרים אומרים שדברים אלו מתייחסים לעם ישראל, שלא יראו אלוהים.", "text": "<i class=\"footnote\">Other commentators say that these words refer to the Jewish people, who did not fear God.</i>"},
             {"kind": "prayer", "text": " When Adonoy,"},
             {"kind": "prayer", "text": " Your God,"},
             {"kind": "prayer", "text": " will relieve you from all your enemies around you,"},
@@ -62,7 +62,7 @@
             {"kind": "prayer", "text": " your God,"},
             {"kind": "prayer", "text": " gives you as a possession to inherit;"},
             {"kind": "prayer", "text": " you shall eradicate the memory of Amalek from beneath the heavens. Do not forget.<sup class=\"footnote-marker\">4</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Deuteronomy 25:17-19.</i>"}
+            {"kind": "instruction", "he": "דברים כה, יז-יט.", "text": "<i class=\"footnote\">Deuteronomy 25:17-19.</i>"}
           ]},
           {"ref": "8", "translates": ["8"], "text": "<b><i>The Sin of the Golden Calf</i></b>"},
           {"ref": "9", "translates": ["9"], "parts": [
@@ -71,7 +71,7 @@
             {"kind": "prayer", "text": " how you provoked Adonoy,"},
             {"kind": "prayer", "text": " Your God,"},
             {"kind": "prayer", "text": " in the desert.<sup class=\"footnote-marker\">5</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Deuteronomy 9:7.</i>"}
+            {"kind": "instruction", "he": "דברים ט, ז.", "text": "<i class=\"footnote\">Deuteronomy 9:7.</i>"}
           ]},
           {"ref": "10", "translates": ["10"], "text": "<b><i>What Happened to Miriam</i></b>"},
           {"ref": "11", "translates": ["11"], "parts": [
@@ -79,12 +79,12 @@
             {"kind": "prayer", "text": " your God,"},
             {"kind": "prayer", "text": " did to Miriam on the way,"},
             {"kind": "prayer", "text": " when you came out of Egypt.<sup class=\"footnote-marker\">6</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Deuteronomy 24:9.</i>"}
+            {"kind": "instruction", "he": "דברים כד, ט", "text": "<i class=\"footnote\">Deuteronomy 24:9.</i>"}
           ]},
           {"ref": "12", "translates": ["12"], "text": "<b><i>The Sabbath</i></b>"},
           {"ref": "13", "translates": ["13"], "parts": [
             {"kind": "prayer", "text": "Remember the Sabbath day to sanctify it.<sup class=\"footnote-marker\">7</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Exodus 20:8.</i>"}
+            {"kind": "instruction", "he": "שמות כ, ח", "text": "<i class=\"footnote\">Exodus 20:8.</i>"}
           ]}
         ]
       }
@@ -124,7 +124,7 @@
             {"kind": "prayer", "text": " Rabbeinu Bachya. Maimonides,"},
             {"kind": "prayer", "text": " the foremost of them all,"},
             {"kind": "prayer", "text": " formulated thirteen principles that have attained wide recognition and enduring fame.<sup class=\"footnote-marker\">1</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">In a fascinating work, <i>Rosh Amana,</i>"},
+            {"kind": "instruction", "he": "בחיבור מרתק, ראש אמונה,", "text": "<i class=\"footnote\">In a fascinating work, <i>Rosh Amana,</i>"},
             {"kind": "prayer", "text": " Don Isaac Abarbanel enumerates all the attacks on each and all of Maimonides’ principles,"},
             {"kind": "prayer", "text": " adding his own incisive questions to those of his predecessors,"},
             {"kind": "prayer", "text": " and then proceeds to vindicate Maimonides’ principles,"},
@@ -154,7 +154,7 @@
             {"kind": "prayer", "text": " knows all the deeds of men and all their thoughts,"},
             {"kind": "prayer", "text": " as it is said,"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">2</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Psalms 33:15.</i>"},
+            {"kind": "instruction", "he": "תהילים לג, טו", "text": "<i class=\"footnote\">Psalms 33:15.</i>"},
             {"kind": "prayer", "text": " He Who forms all their hearts as one,"},
             {"kind": "prayer", "text": " Who comprehends all their deeds."}
           ]},
@@ -192,7 +192,7 @@
             {"kind": "prayer", "text": " to fear Your Great,"},
             {"kind": "prayer", "text": " Mighty and Awesome Name with all our heart and with all our soul,"},
             {"kind": "prayer", "text": " for You are great and Your Name is awesome. Amein. "},
-            {"kind": "instruction", "text": "<i>Selah.</i>"}
+            {"kind": "instruction", "he": "סלה.", "text": "<i>Selah.</i>"}
           ]}
         ]
       }
@@ -225,7 +225,7 @@
             {"kind": "prayer", "text": " bring me back unto You in perfect repentance,"},
             {"kind": "prayer", "text": " for Your right hand is outstretched to receive those who repent,"},
             {"kind": "prayer", "text": " for You desire repentance. Amein. "},
-            {"kind": "instruction", "text": "<i>Selah.</i>"}
+            {"kind": "instruction", "he": "סלה.", "text": "<i>Selah.</i>"}
           ]}
         ]
       }
@@ -265,13 +265,13 @@
             {"kind": "prayer", "text": " \"What is this?\" For they did not know what it was. Moses said to them,"},
             {"kind": "prayer", "text": " \"This is the bread that Adonoy is giving you to eat.\" \"This is what Adonoy has commanded: Every man shall take as much as he needs for food,"},
             {"kind": "prayer", "text": " an "},
-            {"kind": "instruction", "text": "<i>omer</i>"},
+            {"kind": "instruction", "he": "עומר", "text": "<i>omer</i>"},
             {"kind": "prayer", "text": " per person;"},
             {"kind": "prayer", "text": " according to the number of your souls let each man take for the individuals in his tent.\" The Children of Israel did so;"},
             {"kind": "prayer", "text": " they gathered it,"},
             {"kind": "prayer", "text": " some more,"},
             {"kind": "prayer", "text": " some less. But when then they measured it with an "},
-            {"kind": "instruction", "text": "<i>omer,</i>"},
+            {"kind": "instruction", "he": "עומר,", "text": "<i>omer,</i>"},
             {"kind": "prayer", "text": " the one who took more did not have extra,"},
             {"kind": "prayer", "text": " and the one who took less was not lacking. Each one had gathered according to his required nourishment. Moses said to them,"},
             {"kind": "prayer", "text": " \"Let no one leave any of it over until morning.\" But some did not listen to Moses and left part of it over until the morning. It turned wormy and became putrid;"},
@@ -282,7 +282,7 @@
           {"ref": "7", "translates": ["7"], "parts": [
             {"kind": "prayer", "text": "On the sixth day [of the week] they gathered a double portion of food,"},
             {"kind": "prayer", "text": " two "},
-            {"kind": "instruction", "text": "<i>omers</i>"},
+            {"kind": "instruction", "he": "עומרים", "text": "<i>omers</i>"},
             {"kind": "prayer", "text": " for each person. All the leaders of the community came and reported it to Moses. He said to them,"},
             {"kind": "prayer", "text": " \"This is what Adonoy has [already] spoken: tomorrow is a day of rest,"},
             {"kind": "prayer", "text": " Adonoy's holy Shabbos. Bake what you want to bake,"},
@@ -301,21 +301,21 @@
             {"kind": "prayer", "text": " Adonoy has given you the Shabbos;"},
             {"kind": "prayer", "text": " that is why on the sixth day He gave you food for two days. Every man must remain in his place;"},
             {"kind": "prayer", "text": " no man may leave his designated place on the seventh day.\" So the people rested on the seventh day. The House of Israel named the food "},
-            {"kind": "instruction", "text": "<i>manna.</i>"},
+            {"kind": "instruction", "he": "מן.", "text": "<i>manna.</i>"},
             {"kind": "prayer", "text": " It was like white coriander seed and it tasted like dough kneaded with honey. Moses said,"},
             {"kind": "prayer", "text": " \"This is what Adonoy has commanded,"},
             {"kind": "prayer", "text": " ‘Fill an "},
-            {"kind": "instruction", "text": "<i>omer</i>"},
+            {"kind": "instruction", "he": "עומר", "text": "<i>omer</i>"},
             {"kind": "prayer", "text": " measure with it as a keepsake for your generations,"},
             {"kind": "prayer", "text": " so they will see the food with which I fed you in the wilderness when I took you out of Egypt.\" Moses said to Aaron,"},
             {"kind": "prayer", "text": " \"Take a jar and place an "},
-            {"kind": "instruction", "text": "<i>omer</i>"},
+            {"kind": "instruction", "he": "עומר", "text": "<i>omer</i>"},
             {"kind": "prayer", "text": " full of manna in it,"},
             {"kind": "prayer", "text": " and place it before Adonoy as a keepsake for your generations.\" As Adonoy commanded Moses,"},
             {"kind": "prayer", "text": " so did Aaron place it before the Testimony as a keepsake. The Children of Israel ate the manna for forty years until they came to an inhabited land. They ate the manna until they came to the edge of the land of Canaan. The "},
-            {"kind": "instruction", "text": "<i>omer</i>"},
+            {"kind": "instruction", "he": "עומר", "text": "<i>omer</i>"},
             {"kind": "prayer", "text": " is one-tenth of a "},
-            {"kind": "instruction", "text": "<i>ephah.</i>"}
+            {"kind": "instruction", "he": "אפה.", "text": "<i>ephah.</i>"}
           ]}
         ]
       }
@@ -826,7 +826,7 @@
           {"ref": "1", "translates": ["1"], "parts": [
             {"kind": "prayer", "text": "<small>(Numbers 28:1-8)</small><br>And Adonoy spoke to Moses to say: Command the Children of Israel,"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">1</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Kohanim, Levites and Israelites were to be present at the offering of the two daily public burnt-offerings. The Sages instituted the program of <i>Ma’amodos</i>"},
+            {"kind": "instruction", "he": "כהנים, לויים ואיש ישראל היו צריכים להיות נוכחים בהקרבת קרבנות העולתים היומיים. חכמים תיקנו את סדר המעמדות", "text": "<i class=\"footnote\">Kohanim, Levites and Israelites were to be present at the offering of the two daily public burnt-offerings. The Sages instituted the program of <i>Ma’amodos</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " under which representatives of all 12 tribes were always present when these sacrifices were offered. These representatives were rotated each week.</i> and say to them: My offering,"},
             {"kind": "prayer", "text": " My food,"},
@@ -840,25 +840,25 @@
             {"kind": "prayer", "text": " as a constant burnt-offering. Offer one lamb in the morning,"},
             {"kind": "prayer", "text": " and the second lamb,"},
             {"kind": "prayer", "text": " offer in the afternoon. And a tenth of an "},
-            {"kind": "instruction", "text": "<i>ephah</i>"},
+            {"kind": "instruction", "he": "אפה", "text": "<i>ephah</i>"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">2</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">One-tenth of an <i>ephah</i>"},
+            {"kind": "instruction", "he": "עשירית האפה", "text": "<i class=\"footnote\">One-tenth of an <i>ephah</i>"},
             {"kind": "prayer", "text": " is the equivalent of 43-⅕ eggs.</i> of fine flour as a meal-offering,"},
             {"kind": "prayer", "text": " mixed with oil of crushed [olives] measuring one-fourth of a "},
-            {"kind": "instruction", "text": "<i>hin.</i>"},
+            {"kind": "instruction", "he": "הן.", "text": "<i>hin.</i>"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">3</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">The <i>hin</i>"},
+            {"kind": "instruction", "he": "ה", "text": "<i class=\"footnote\">The <i>hin</i>"},
             {"kind": "prayer", "text": " is a liquid measure containing 12 "},
-            {"kind": "instruction", "text": "<i>logs</i>"},
+            {"kind": "instruction", "he": "לוגס", "text": "<i>logs</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " of which each "},
-            {"kind": "instruction", "text": "<i>log</i>"},
+            {"kind": "instruction", "he": "לוג", "text": "<i>log</i>"},
             {"kind": "prayer", "text": " is approximately 6 eggs.</i> [This is] a constant burnt-offering as offered at Mount Sinai for a pleasing odor,"},
             {"kind": "prayer", "text": " a fire-offering to Adonoy. And its libation will be a fourth of a "},
-            {"kind": "instruction", "text": "<i>hin</i>"},
+            {"kind": "instruction", "he": "הין", "text": "<i>hin</i>"},
             {"kind": "prayer", "text": " for the one lamb;"},
             {"kind": "prayer", "text": " in the Holy<sup class=\"footnote-marker\">4</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">On the Altar.</i>"},
+            {"kind": "instruction", "he": "על המזבח.", "text": "<i class=\"footnote\">On the Altar.</i>"},
             {"kind": "prayer", "text": " [Sanctuary] you will pour out a drink-offering of strong wine to Adonoy. And the second lamb you will offer in the afternoon;"},
             {"kind": "prayer", "text": " as the meal-offering of the morning [together] with its libation,"},
             {"kind": "prayer", "text": " you shall offer a fire-offering of pleasing odor to Adonoy."}
@@ -871,21 +871,21 @@
             {"kind": "prayer", "text": " Take for yourself spices— stacte,"},
             {"kind": "prayer", "text": " onycha,"},
             {"kind": "prayer", "text": " and galbanum—<sup class=\"footnote-marker\">1</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Galbanum has an offensive odor. The Torah includes it among the other spices to teach us to include even Jewish sinners among the rest of Jewry at our assemblies of fasting and prayers.—<i>Rashi</i>"},
+            {"kind": "instruction", "he": "לכלבנו יש ריח רע. התורה כוללת אותו בין שאר המשיכות כדי ללמדנו לכלול גם חוטאי ישראל יחד עם שאר עם ישראל במעמדי התענית והתפילה. —רש\"י", "text": "<i class=\"footnote\">Galbanum has an offensive odor. The Torah includes it among the other spices to teach us to include even Jewish sinners among the rest of Jewry at our assemblies of fasting and prayers.—<i>Rashi</i>"},
             {"kind": "prayer", "text": "</i> spices,"},
             {"kind": "prayer", "text": " and pure frankincense,"},
             {"kind": "prayer", "text": " [they] shall be in equal weights. You will make it into incense,"},
             {"kind": "prayer", "text": " a compound mixed by a compounder,"},
             {"kind": "prayer", "text": " salted,"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">2</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">The Hebrew word, <i>memulach</i>"},
+            {"kind": "instruction", "he": "המילה העברית, מומלץ", "text": "<i class=\"footnote\">The Hebrew word, <i>memulach</i>"},
             {"kind": "prayer", "text": " is rendered by Onkelos as mixed,"},
             {"kind": "prayer", "text": " to indicate that the spices should be well mixed together.—"},
-            {"kind": "instruction", "text": "<i>Rashi</i>"},
+            {"kind": "instruction", "he": "רש", "text": "<i>Rashi</i>"},
             {"kind": "prayer", "text": "</i> undefiled,"},
             {"kind": "prayer", "text": " and holy. You will pulverize some of it very fine,"},
             {"kind": "prayer", "text": " and place it before the [Ark of] Testimony<sup class=\"footnote-marker\">3</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">This incense was offered each day upon the Innermost Altar which is inside the Tent of Meeting.—<i>Rashi</i>"},
+            {"kind": "instruction", "he": "קטורת זו הוקטרכה בכל יום על המזבח הפנימי שבמשכן.—רש\"י", "text": "<i class=\"footnote\">This incense was offered each day upon the Innermost Altar which is inside the Tent of Meeting.—<i>Rashi</i>"},
             {"kind": "prayer", "text": "</i> in the Tent of Meeting,"},
             {"kind": "prayer", "text": " where I will meet with you;"},
             {"kind": "prayer", "text": " it will be to you holy of holies.\" It is also written:"}
@@ -895,18 +895,18 @@
             {"kind": "prayer", "text": "<small>(Maseches Kreisos 6a;"},
             {"kind": "prayer", "text": " Jerusalem Talmud,"},
             {"kind": "prayer", "text": " Maseches Yoma 4:5)</small><br>The Rabbis taught: How was the incense compounded? Three hundred and sixty-eight "},
-            {"kind": "instruction", "text": "<i>manim</i>"},
+            {"kind": "instruction", "he": "מים", "text": "<i>manim</i>"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">4</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">A <i>maneh</i>"},
+            {"kind": "instruction", "he": "מנה", "text": "<i class=\"footnote\">A <i>maneh</i>"},
             {"kind": "prayer", "text": " is a weight;"},
             {"kind": "prayer", "text": " plural, "},
-            {"kind": "instruction", "text": "<i>manim</i>"},
+            {"kind": "instruction", "he": "מים", "text": "<i>manim</i>"},
             {"kind": "prayer", "text": ".</i> were comprised therein,"},
             {"kind": "prayer", "text": " three hundred and sixty-five corresponding to the number of days in the solar year,"},
             {"kind": "prayer", "text": " one "},
-            {"kind": "instruction", "text": "<i>maneh</i>"},
+            {"kind": "instruction", "he": "מנה", "text": "<i>maneh</i>"},
             {"kind": "prayer", "text": " for each day— half in the morning and half in the afternoon. From the three remaining "},
-            {"kind": "instruction", "text": "<i>manim</i>"},
+            {"kind": "instruction", "he": "מים", "text": "<i>manim</i>"},
             {"kind": "prayer", "text": " the Kohein Gadol brought two handfuls [into the Holy of Holies] on Yom Kippur;"},
             {"kind": "prayer", "text": " [for which purpose] they were put back into the mortar on the eve of Yom Kippur,"},
             {"kind": "prayer", "text": " and ground [again] very thoroughly,"},
@@ -915,72 +915,72 @@
             {"kind": "prayer", "text": " 3) galbanum,"},
             {"kind": "prayer", "text": " 4) frankincense— by weight,"},
             {"kind": "prayer", "text": " seventy "},
-            {"kind": "instruction", "text": "<i>maneh</i>"},
+            {"kind": "instruction", "he": "מנה", "text": "<i>maneh</i>"},
             {"kind": "prayer", "text": " of each;"},
             {"kind": "prayer", "text": " 5) myrrh,"},
             {"kind": "prayer", "text": " 6) cassia,"},
             {"kind": "prayer", "text": " 7) spikenard and 8) saffron— in weight sixteen "},
-            {"kind": "instruction", "text": "<i>maneh</i>"},
+            {"kind": "instruction", "he": "מנה", "text": "<i>maneh</i>"},
             {"kind": "prayer", "text": " of each;"},
             {"kind": "prayer", "text": " 9) twelve "},
-            {"kind": "instruction", "text": "<i>maneh</i>"},
+            {"kind": "instruction", "he": "מנה", "text": "<i>maneh</i>"},
             {"kind": "prayer", "text": " of costus,"},
             {"kind": "prayer", "text": " 10) three of aromatic bark,"},
             {"kind": "prayer", "text": " and 11) nine of cinnamon. [Also used in the incense compound were:] Nine "},
-            {"kind": "instruction", "text": "<i>kabin</i>"},
+            {"kind": "instruction", "he": "כבין", "text": "<i>kabin</i>"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">5</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">A <i>kab</i>"},
+            {"kind": "instruction", "he": "כבין", "text": "<i class=\"footnote\">A <i>kab</i>"},
             {"kind": "prayer", "text": " is a sixth of a "},
-            {"kind": "instruction", "text": "<i>se’ah</i>"},
+            {"kind": "instruction", "he": "שע", "text": "<i>se’ah</i>"},
             {"kind": "prayer", "text": ".</i> of Carshina lye,"},
             {"kind": "prayer", "text": " Cyprus wine [measuring] three "},
-            {"kind": "instruction", "text": "<i>s'in</i>"},
+            {"kind": "instruction", "he": "ס'ין", "text": "<i>s'in</i>"},
             {"kind": "prayer", "text": " and three "},
-            {"kind": "instruction", "text": "<i>kabin</i>"},
+            {"kind": "instruction", "he": "כבין", "text": "<i>kabin</i>"},
             {"kind": "prayer", "text": "— if he had no Cyprus wine,"},
             {"kind": "prayer", "text": " he could use strong white wine— a fourth of a "},
-            {"kind": "instruction", "text": "<i>kab</i>"},
+            {"kind": "instruction", "he": "כב", "text": "<i>kab</i>"},
             {"kind": "prayer", "text": " of Sodom salt,"},
             {"kind": "prayer", "text": " and a minute quantity of "},
-            {"kind": "instruction", "text": "<i>maaleh ashan.</i>"},
+            {"kind": "instruction", "he": "מעלה אשן", "text": "<i>maaleh ashan.</i>"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">6</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">This herb causes the smoke of the burning incense to ascend in a straight line.</i>"},
+            {"kind": "instruction", "he": "עשב זה גורם לעשן הקטורת לעלות בקו ישר.", "text": "<i class=\"footnote\">This herb causes the smoke of the burning incense to ascend in a straight line.</i>"},
             {"kind": "prayer", "text": " Rabbi Nosson of Babylonia says,"},
             {"kind": "prayer", "text": " Jordan amber was added of a minute quantity,"},
             {"kind": "prayer", "text": " and if one added honey,"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">7</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Included are various sweeteners such as dates and other fruits.</i>"},
+            {"kind": "instruction", "he": "כולל ממתיקים שונים כגון תמרים ופירות אחרים.", "text": "<i class=\"footnote\">Included are various sweeteners such as dates and other fruits.</i>"},
             {"kind": "prayer", "text": " it (the incense) became unfit;"},
             {"kind": "prayer", "text": " and if one omitted<sup class=\"footnote-marker\">8</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">The same is true if one were to add to the prescribed number of eleven spices.—<i>Etz Yosef</i>"},
+            {"kind": "instruction", "he": "די בכך אם מוסיפים מעבר למספר המקובל של אחת עשרה תבלינים.—עץ יוסף", "text": "<i class=\"footnote\">The same is true if one were to add to the prescribed number of eleven spices.—<i>Etz Yosef</i>"},
             {"kind": "prayer", "text": "</i> any of its spices he was liable to the death penalty.\"<sup class=\"footnote-marker\">9</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">The death penalty was given only if the Kohein Gadol actually entered the Holy of Holies with incense which was unfit. This was considered as an unwarranted entry into the Holy of Holies which carried the death decree.—<i>Rashi</i></i>"}
+            {"kind": "instruction", "he": "עונש המוות ניתן רק אם כהן גדול נכנס בפועל לקודש הקודשים עם קטורת שאינה ראויה. הדבר נחשב ככניסה בלתי מוסמכת לקודש הקודשים, אשר עליה דין מיתה.—רש", "text": "<i class=\"footnote\">The death penalty was given only if the Kohein Gadol actually entered the Holy of Holies with incense which was unfit. This was considered as an unwarranted entry into the Holy of Holies which carried the death decree.—<i>Rashi</i></i>"}
           ]},
           {"ref": "8", "translates": ["8"], "parts": [
             {"kind": "prayer", "text": "Rabbi Shimon ben Gamliel says: The balm is nothing but sap which drips from the balsam tree. the lye of Carshina was used for rubbing the onycha in order to refine its appearance. The Cyprus wine was used to soak the onycha to give it a pungent odor. Though the water of Raglayim<sup class=\"footnote-marker\">10</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">10 This water came from a well named Raglayim.—<i>Kol Bo</i>"},
+            {"kind": "instruction", "he": "10 מים אלו יצאו מבאר רגלים.—כל בו", "text": "<i class=\"footnote\">10 This water came from a well named Raglayim.—<i>Kol Bo</i>"},
             {"kind": "prayer", "text": "</i> was well suited for that purpose,"},
             {"kind": "prayer", "text": " they did not bring the water of Raglayim into the Temple because it would be disrespectful.<sup class=\"footnote-marker\">11</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Since <i>Mei Raglayim</i>"},
+            {"kind": "instruction", "he": "מכיוון שמעי רגלים", "text": "<i class=\"footnote\">Since <i>Mei Raglayim</i>"},
             {"kind": "prayer", "text": " (lit.,"},
             {"kind": "prayer", "text": " water from the feet) is a euphemism for urine,"},
             {"kind": "prayer", "text": " it would have been disrespectful to use this water in the Temple. Others hold that the term “waters of Raglayim” actually refers to urine,"},
             {"kind": "prayer", "text": " which could have been used as a soaking agent were it not indecent to bring it into a sacred place.—"},
-            {"kind": "instruction", "text": "<i>Kol Bo</i></i>"}
+            {"kind": "instruction", "he": "כל בו", "text": "<i>Kol Bo</i></i>"}
           ]},
           {"ref": "9", "translates": ["9"], "parts": [
             {"kind": "prayer", "text": "It was taught in a "},
-            {"kind": "instruction", "text": "<i>Boraysa</i>"},
+            {"kind": "instruction", "he": "בורסא", "text": "<i>Boraysa</i>"},
             {"kind": "prayer", "text": ": Rabbi Nosson says,"},
             {"kind": "prayer", "text": " While [the Kohein] ground [the incense] he would say, "},
-            {"kind": "instruction", "text": "<i>‘Hodeik heiteiv, heiteiv hodeik,'</i>"},
+            {"kind": "instruction", "he": "'הודייק היתיב, היתיב הודייק'", "text": "<i>‘Hodeik heiteiv, heiteiv hodeik,'</i>"},
             {"kind": "prayer", "text": " because the sound<sup class=\"footnote-marker\">12</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Some suggest that the sound of these specific words affects the spices.</i>"},
+            {"kind": "instruction", "he": "יש המקשרים שקול המילים הללו משפיע על האתרוג.", "text": "<i class=\"footnote\">Some suggest that the sound of these specific words affects the spices.</i>"},
             {"kind": "prayer", "text": " is good for the spices. If half<sup class=\"footnote-marker\">13</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">184 <i>manim</i>"},
+            {"kind": "instruction", "he": "184 מנים", "text": "<i class=\"footnote\">184 <i>manim</i>"},
             {"kind": "prayer", "text": " instead of 368.</i> the quantity of incense was prepared it was acceptable,"},
             {"kind": "prayer", "text": " but if only a third or a fourth [of it was prepared] we have not heard<sup class=\"footnote-marker\">14</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">I.e., we did not hear our teachers expound this question.</i>"},
+            {"kind": "instruction", "he": "כלומר, לא שמענו מרבותינו את ביאור השאלה.", "text": "<i class=\"footnote\">I.e., we did not hear our teachers expound this question.</i>"},
             {"kind": "prayer", "text": " [whether it was acceptable.\"] Rabbi Yehuda said,"},
             {"kind": "prayer", "text": " This is the general rule: If [it was prepared with all its ingredients] in the correct proportion,"},
             {"kind": "prayer", "text": " it is acceptable even if only half was prepared;"},
@@ -989,15 +989,15 @@
           ]},
           {"ref": "10", "translates": ["10"], "parts": [
             {"kind": "prayer", "text": "It was taught in a "},
-            {"kind": "instruction", "text": "<i>Boraysa</i>"},
+            {"kind": "instruction", "he": "בורסא", "text": "<i>Boraysa</i>"},
             {"kind": "prayer", "text": ": Bar Kappara says,"},
             {"kind": "prayer", "text": " Once in sixty or seventy years<sup class=\"footnote-marker\">15</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">The exact number of years varied with the size of the hands of the High Priests over the years, for the surplus was what remained of these three <i>manim</i>"},
+            {"kind": "instruction", "he": "מספר השנים השתנה בהתאם לגודל ידיכה שלכהן הגדול לאורך השנים, שכן העודף היה מה שנשאר מאלו שלוש המנחות.", "text": "<i class=\"footnote\">The exact number of years varied with the size of the hands of the High Priests over the years, for the surplus was what remained of these three <i>manim</i>"},
             {"kind": "prayer", "text": " from which he took two handfuls each Yom Kippur.</i> the accumulated surplus was sufficient to provide half [the yearly quantity of incense.\"] Bar Kappara also taught,"},
             {"kind": "prayer", "text": " If he would have put into it a minute quantity of honey,"},
             {"kind": "prayer", "text": " no one could have withstood [resisted] the scent. Why was no honey mixed with it? Because the Torah says,"},
             {"kind": "prayer", "text": " ("},
-            {"kind": "instruction", "text": "<i>Leviticus</i>"},
+            {"kind": "instruction", "he": "ויקרא", "text": "<i>Leviticus</i>"},
             {"kind": "prayer", "text": " 2:11) For any leaven or honey,"},
             {"kind": "prayer", "text": " do not burn from them,"},
             {"kind": "prayer", "text": " [as] a fire-offering to Adonoy."}
@@ -1021,7 +1021,7 @@
           {"ref": "27", "translates": ["27"], "text": "Blessed and praised, glorified, and exalted and uplifted, honored and elevated and extolled be the Name of the Holy One, blessed is He;"},
           {"ref": "28", "translates": ["28"], "parts": [
             {"kind": "prayer", "text": "above ("},
-            {"kind": "instruction", "text": "<i>Ten Days of Penitence:</i>"},
+            {"kind": "instruction", "he": "עשרת ימי תשובה:", "text": "<i>Ten Days of Penitence:</i>"},
             {"kind": "prayer", "text": " far above) all the blessings and hymns,"},
             {"kind": "prayer", "text": " praises and consolations which we utter in the world—and say Amein."}
           ]}

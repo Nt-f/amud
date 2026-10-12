@@ -36,7 +36,7 @@
           {"ref": "4", "translates": ["4"], "text": "<small>When one is praying without a minyan, continue with the following:</small>"},
           {"ref": "6", "translates": ["6"], "parts": [
             {"kind": "prayer", "text": "<small>The Chazzan "},
-            {"kind": "instruction", "text": "<i>says:</i>"},
+            {"kind": "instruction", "he": "אומר:", "text": "<i>says:</i>"},
             {"kind": "prayer", "text": "</small> Bless Adonoy Who is blessed."}
           ]},
           {"ref": "7", "translates": ["7"], "text": "<small>The congregation responds and the Chazzan repeats:</small> Blessed is Adonoy, Who is blessed forever and ever."}
@@ -141,14 +141,14 @@
             {"kind": "prayer", "text": " King of the Universe,"},
             {"kind": "prayer", "text": " With His word He brings on evenings,"},
             {"kind": "prayer", "text": " with wisdom He opens the gates<sup class=\"footnote-marker\">1</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">These are the gates of sunrise and sunset through which God, in His infinite wisdom, has divided life on earth into two complementary halves.—Rabbi S.R. Hirsch</i>"},
+            {"kind": "instruction", "he": "אלו שערי זריחה ושקיעה שבהם חילק אלוהים, בחוכמתו האינסופית, את חיי העולם הזה לשניים משלימים.—הרב ס.ר. הירש", "text": "<i class=\"footnote\">These are the gates of sunrise and sunset through which God, in His infinite wisdom, has divided life on earth into two complementary halves.—Rabbi S.R. Hirsch</i>"},
             {"kind": "prayer", "text": " (of heaven);"},
             {"kind": "prayer", "text": " and with understanding changes<sup class=\"footnote-marker\">2</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">He alternates the three daily periods—evening, morning, and afternoon.—Avudraham</i>"},
+            {"kind": "instruction", "he": "הוא מחליף בין שלושת זמני התפילה—ערב, בוקר וערבית.—אבוברם", "text": "<i class=\"footnote\">He alternates the three daily periods—evening, morning, and afternoon.—Avudraham</i>"},
             {"kind": "prayer", "text": " the times and alternates the seasons,"},
             {"kind": "prayer", "text": " and arranges the stars in their watches,"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">3</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">The stars appear as watchmen appointed by God to stand guard over the sleeping world below. He also appointed them their places in definite orbits according to His will and for purposes known to Him alone.—S.R. Hirsch</i>"},
+            {"kind": "instruction", "he": "הכוכבים נראים כמשגיחים שמינה השם לשמור על העולם הישן המשתנה. הוא גם קבע להם מקומות במסלולים קבועים לפי רצונו ולמטרות הידועות לו בלבד.—ס.ר. הירש", "text": "<i class=\"footnote\">The stars appear as watchmen appointed by God to stand guard over the sleeping world below. He also appointed them their places in definite orbits according to His will and for purposes known to Him alone.—S.R. Hirsch</i>"},
             {"kind": "prayer", "text": " in the sky,"},
             {"kind": "prayer", "text": " according to His will. He creates day and night,"},
             {"kind": "prayer", "text": " He rolls the light away from before darkness,"},
@@ -187,7 +187,7 @@
             {"kind": "prayer", "text": " and when you travel on the road,"},
             {"kind": "prayer", "text": " and when you lie down and when you rise. And you shall bind them for a sign upon your hand,"},
             {"kind": "prayer", "text": " and they shall be for "},
-            {"kind": "instruction", "text": "<i>totafos</i>"},
+            {"kind": "instruction", "he": "תוספות", "text": "<i>totafos</i>"},
             {"kind": "prayer", "text": " between your eyes. And you shall write them upon the doorposts of your house and upon your gateways."}
           ]},
           {"ref": "7", "translates": ["7"], "parts": [
@@ -202,7 +202,7 @@
             {"kind": "prayer", "text": " and you will perish swiftly from the good land which Adonoy gives you. Place these words of Mine upon your hearts and upon your souls,"},
             {"kind": "prayer", "text": "— and bind them for a sign upon your hands,"},
             {"kind": "prayer", "text": " and they shall be for "},
-            {"kind": "instruction", "text": "<i>totafos</i>"},
+            {"kind": "instruction", "he": "תוספות", "text": "<i>totafos</i>"},
             {"kind": "prayer", "text": " between your eyes. And you shall teach them to your sons,"},
             {"kind": "prayer", "text": " to speak them when you sit in your house,"},
             {"kind": "prayer", "text": " and when you travel on the road,"},
@@ -215,7 +215,7 @@
           {"ref": "10", "translates": ["10"], "parts": [
             {"kind": "prayer", "text": "—and faithful is all this,"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">6</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">All that we have affirmed in the Shema, is true and trustworthy.—Etz Yosef</i>"},
+            {"kind": "instruction", "he": "כל אשר אמרנו בשמע הוא אמת ונאמן.—עץ יוסף", "text": "<i class=\"footnote\">All that we have affirmed in the Shema, is true and trustworthy.—Etz Yosef</i>"},
             {"kind": "prayer", "text": " and it is permanently established with us that he is Adonoy,"},
             {"kind": "prayer", "text": " our God,"},
             {"kind": "prayer", "text": " and there is nothing besides Him,"},
@@ -223,7 +223,7 @@
             {"kind": "prayer", "text": " Israel,"},
             {"kind": "prayer", "text": " are His people. [He] Who liberated us from the hand of kings,"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">7</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">He redeemed us from Pharaoh, and saved us from Sichon and Og in the days of Moses and from the thirty-one kings in the days of Joshua.—Etz Yosef</i>"},
+            {"kind": "instruction", "he": "הוא הפדינו ממצרים, והושיענו מסיחון ועוג בימי משה וממלכי שלושים ואחד בימי יהושע.—עץ יוֹסֵף", "text": "<i class=\"footnote\">He redeemed us from Pharaoh, and saved us from Sichon and Og in the days of Moses and from the thirty-one kings in the days of Joshua.—Etz Yosef</i>"},
             {"kind": "prayer", "text": " [is] our King,"},
             {"kind": "prayer", "text": " Who redeemed us from the grasp of all the tyrants.<sup class=\"footnote-marker\">8</sup>"},
             {"kind": "instruction", "text": "<i class=\"footnote\">“Tyrants” include Amalek and others who wanted to destroy us.—Etz Yosef</i>"},
@@ -231,10 +231,10 @@
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">9</sup>"},
             {"kind": "prayer", "text": "<i class=\"footnote\">The Malbim says that “oppressors” (צָרֵינוּ) refers to those who actively persecute us whereas “enemies” (אוֹיבֵינוּ) refers to those who would rejoice over our misfortune without necessarily contributing to our downfall in an outright manner.</i>"},
             {"kind": "prayer", "text": " and brings retribution on all those who are enemies of our soul. He does great things<sup class=\"footnote-marker\">10</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">“Great things” refers to the way God rules according to the laws of nature and “wonders” refers to those things that are classified as miracles.—Siach Yitzchak</i>"},
+            {"kind": "instruction", "he": "\"מעשים גדולים\" הכוונה לדרך שבה מנהיג השם לפי חוקי הטבע, ו\"נפלאות\" הכוונה לדברים הנחשבים כנסים.—סיע יצחק", "text": "<i class=\"footnote\">“Great things” refers to the way God rules according to the laws of nature and “wonders” refers to those things that are classified as miracles.—Siach Yitzchak</i>"},
             {"kind": "prayer", "text": " beyond comprehension,"},
             {"kind": "prayer", "text": " miracles and wonders without number. He sustains our soul in life<sup class=\"footnote-marker\">11</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Not only does God sustain our souls in exile but He also sustains our physical well- being.—Siach Yitzchak</i>"},
+            {"kind": "instruction", "he": "לא רק שהקבש משגיח על נפשותינו בגלות אלא הוא משגיח גם על שלומנו הגשמי.—סיח יצחק", "text": "<i class=\"footnote\">Not only does God sustain our souls in exile but He also sustains our physical well- being.—Siach Yitzchak</i>"},
             {"kind": "prayer", "text": " and does not allow our feet to slip. He makes us tread upon the high places of our enemies,"},
             {"kind": "prayer", "text": " and exalts our strength over all who hate us. He performed miracles for us and vengeance upon Pharaoh,"},
             {"kind": "prayer", "text": " signs and wonders in the land of the Hamites. He slew in His wrath,"},
@@ -242,7 +242,7 @@
             {"kind": "prayer", "text": " and brought out His people,"},
             {"kind": "prayer", "text": " Israel,"},
             {"kind": "prayer", "text": " from their midst to everlasting<sup class=\"footnote-marker\">12</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">The redemption from Egypt is the source for all later redemptions; it is the source from which our final and total salvation will spring. We became free, never again to taste the bitterness of spiritual or physical bondage.—Sfas Emes</i>"},
+            {"kind": "instruction", "he": "הגאולה ממצרים היא המקור לכל הגאואות הבאות; היא המקור שממנו תצא ישועתנו האחרונה והשלמה. זכינו לחירות, שלא נטעם עוד מרירות של עבדות רוחנית או גשמית. — שפת אמת", "text": "<i class=\"footnote\">The redemption from Egypt is the source for all later redemptions; it is the source from which our final and total salvation will spring. We became free, never again to taste the bitterness of spiritual or physical bondage.—Sfas Emes</i>"},
             {"kind": "prayer", "text": " freedom. He led His children through the divided parts of the Sea of Reeds,"},
             {"kind": "prayer", "text": " their pursuers and their enemies He drowned in its depths. And His children saw His mighty power— they praised and gave thanks to His Name,"},
             {"kind": "prayer", "text": " His sovereignty they willingly accepted;"},
@@ -254,22 +254,22 @@
             {"kind": "prayer", "text": " Adonoy! Who is like You? [You are] adorned in holiness,"},
             {"kind": "prayer", "text": " awesome in praise,"},
             {"kind": "prayer", "text": " performing wonders”<sup class=\"footnote-marker\">13</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Exodus 15:11.</i>"},
+            {"kind": "instruction", "he": "שמות טו, יא", "text": "<i class=\"footnote\">Exodus 15:11.</i>"},
             {"kind": "prayer", "text": " Your children beheld Your sovereignty when You divided the sea before Moses. “This is my God,"},
             {"kind": "prayer", "text": "”<sup class=\"footnote-marker\">14</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Exodus 15:2.</i>"},
+            {"kind": "instruction", "he": "שמות טו, ב", "text": "<i class=\"footnote\">Exodus 15:2.</i>"},
             {"kind": "prayer", "text": " they exclaimed,"},
             {"kind": "prayer", "text": " and declared,"}
           ]},
           {"ref": "12", "translates": ["12"], "parts": [
             {"kind": "prayer", "text": "“Adonoy will reign forever and ever.”<sup class=\"footnote-marker\">15</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Exodus 15:18.</i>"}
+            {"kind": "instruction", "he": "שמות טו, יח", "text": "<i class=\"footnote\">Exodus 15:18.</i>"}
           ]},
           {"ref": "13", "translates": ["13"], "parts": [
             {"kind": "prayer", "text": "And it is said,"},
             {"kind": "prayer", "text": " “For Adonoy has liberated Jacob and redeemed him from a hand,"},
             {"kind": "prayer", "text": " mightier than his.”<sup class=\"footnote-marker\">16</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Jeremiah 31:10.</i>"},
+            {"kind": "instruction", "he": "ירמיהו לא, י", "text": "<i class=\"footnote\">Jeremiah 31:10.</i>"},
             {"kind": "prayer", "text": " Blessed are You,"},
             {"kind": "prayer", "text": " Adonoy Who has redeemed Israel."}
           ]},
@@ -279,14 +279,14 @@
             {"kind": "prayer", "text": " our King,"},
             {"kind": "prayer", "text": " raise us again to good life,"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">17</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Undisturbed peace, and strength for a new day of vigorous living are the gifts that night brings and for which we pray to God.—S.R. Hirsch</i>"},
+            {"kind": "instruction", "he": "שלום ושלווה, וכוח ליום חדש של חיים מלאי חיות הם המתנות שהלילה מביא, ועליהן אנו מתפללים לאלוהים.—ס.ר. הירש", "text": "<i class=\"footnote\">Undisturbed peace, and strength for a new day of vigorous living are the gifts that night brings and for which we pray to God.—S.R. Hirsch</i>"},
             {"kind": "prayer", "text": " and peace Spread over us the shelter of Your peace,"},
             {"kind": "prayer", "text": " and direct us to better ourselves through Your good counsel;"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">18</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">We particularly ask of Him at night to bless us with wise counsel. Daytime is the time for achievement, but the rest that comes with nightfall is made to allow man to compose his thoughts. By virtue of the complete relaxation it affords, sleep endows the mind and spirit with renewed vigor. We pray therefore for Divine aid so that our nightly rest will help us take wise counsel and affirm worthy resolution for future days.—Avudraham and Siach Yitzchak</i>"},
+            {"kind": "instruction", "he": "אנו מבקשים ממנו במיוחד בלילה לברך אותנו בדעת ובינה. היום הוא זמן לפעולה, אך המנוחה המגיעה עם רדת הלילה נועדה לאפשר לאדם לעשות חשבון נפש. בזכות הרגיעה המלאה שהיא מעניקה, השינה מעניקה לנפש ולרוח כוח מחודש. לכן אנו מתפללים לעזרה משמים כדי שמנוחת הלילה תסייע לנו להחליט בדעת נכונה ולהתחזק בכוונות טובות לימים הבאים.—אבוהדרם וסיע יצחק", "text": "<i class=\"footnote\">We particularly ask of Him at night to bless us with wise counsel. Daytime is the time for achievement, but the rest that comes with nightfall is made to allow man to compose his thoughts. By virtue of the complete relaxation it affords, sleep endows the mind and spirit with renewed vigor. We pray therefore for Divine aid so that our nightly rest will help us take wise counsel and affirm worthy resolution for future days.—Avudraham and Siach Yitzchak</i>"},
             {"kind": "prayer", "text": " and deliver us speedily for Your Name's sake. Shield us,"},
             {"kind": "prayer", "text": " and remove from us<sup class=\"footnote-marker\">19</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Shield us from trouble before it comes, and remove it from us if it has already come.—Siach Yitzchak</i>"},
+            {"kind": "instruction", "he": "הגן עלינו מצרות לפני בואן, והסר אותן מאיתנו אם באו כבר.—סיח יצחק", "text": "<i class=\"footnote\">Shield us from trouble before it comes, and remove it from us if it has already come.—Siach Yitzchak</i>"},
             {"kind": "prayer", "text": " enemies,"},
             {"kind": "prayer", "text": " pestilence,"},
             {"kind": "prayer", "text": " sword,"},
@@ -313,30 +313,30 @@
             {"kind": "prayer", "text": " Who spreads the shelter of peace over us and over all His people,"},
             {"kind": "prayer", "text": " Israel and over Jerusalem."}
           ]},
-          {"ref": "15", "translates": ["15"], "kind": "instruction", "en": "On Shabbat:", "gloss": "Said only on Shabbat", "text": "<small>On Shabbos say:</small>"},
+          {"ref": "15", "translates": ["15"], "kind": "instruction", "en": "On Shabbat:", "he": "בשבת אומרים:", "gloss": "Said only on Shabbat", "text": "<small>On Shabbos say:</small>"},
           {"ref": "16", "translates": ["16"], "parts": [
             {"kind": "prayer", "text": "And the Children of Israel shall preserve the Sabbath,"},
             {"kind": "prayer", "text": " to maintain the Sabbath for their generations as an everlasting covenant. Between Me and between the Children of Israel it is a sign for eternity,"},
             {"kind": "prayer", "text": " that [in] six days,"},
             {"kind": "prayer", "text": " Adonoy made the heavens and the earth,"},
             {"kind": "prayer", "text": " and on the seventh [day] He abstained from work and rested.<sup class=\"footnote-marker\">22</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Exodus 31:16-17. This is merely metaphorical, since God of course does not become tired, nor does He require rest.</i>"}
+            {"kind": "instruction", "he": "שמות לא, טז-יז. זהו דימוי בלבד, שכן בטח שאינו עייף ואינו זקוק למנוחה.", "text": "<i class=\"footnote\">Exodus 31:16-17. This is merely metaphorical, since God of course does not become tired, nor does He require rest.</i>"}
           ]},
-          {"ref": "17", "translates": ["17"], "kind": "instruction", "en": "On the three pilgrimage festivals:", "gloss": "Said only on Pesach, Shavuot, and Sukkot", "text": "<small>On Pesach, Shavuos and Sukkos, say:</small>"},
+          {"ref": "17", "translates": ["17"], "kind": "instruction", "en": "On the three pilgrimage festivals:", "he": "בפסח, בשבועות וסוכות אומרים:", "gloss": "Said only on Pesach, Shavuot, and Sukkot", "text": "<small>On Pesach, Shavuos and Sukkos, say:</small>"},
           {"ref": "18", "translates": ["18"], "parts": [
             {"kind": "prayer", "text": "And Moses recounted the appointed seasons of Adonoy to the Children of Israel.<sup class=\"footnote-marker\">23</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">Leviticus 23:44.</i>"}
+            {"kind": "instruction", "he": "ויקרא כג, מ", "text": "<i class=\"footnote\">Leviticus 23:44.</i>"}
           ]},
           {"ref": "19", "translates": ["19"], "text": "<small>The Chazzan recites the following half-Kaddish</small>"},
           {"ref": "20", "translates": ["20"], "text": "Exalted and sanctified be His great Name in the world which He created according to His will and may He rule His kingdom bring forth His redemption and hasten the coming of His Mashiach. In your lifetime and in your days, and in the lifetime of the entire House of Israel, speedily and in the near future— and say Amein."},
           {"ref": "21", "translates": ["21"], "parts": [
             {"kind": "prayer", "text": "<b>May His great Name be blessed forever and for all eternity.</b> Blessed and praised,"},
             {"kind": "prayer", "text": " glorified,"},
-            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "gloss": "Said only during Aseret Yemei Teshuva", "text": " and exalted and uplifted,"},
+            {"kind": "instruction", "en": "During the Ten Days of Repentance:", "he": "והנשא ומוגא", "gloss": "Said only during Aseret Yemei Teshuva", "text": " and exalted and uplifted,"},
             {"kind": "prayer", "text": " honored and elevated and extolled be the Name of the Holy One,"},
             {"kind": "prayer", "text": " blessed is He;"},
             {"kind": "prayer", "text": " above ("},
-            {"kind": "instruction", "text": "<i>Ten Days of Penitence:</i>"},
+            {"kind": "instruction", "he": "עשרת ימי תשובה:", "text": "<i>Ten Days of Penitence:</i>"},
             {"kind": "prayer", "text": " far above) all the blessings and hymns,"},
             {"kind": "prayer", "text": " praises and consolations which we utter in the world—and say Amein."}
           ]}
@@ -484,7 +484,7 @@
           {"ref": "5", "translates": ["5"], "text": "You are mighty forever, my Master; You are the Resurrector of the dead the Powerful One to deliver us."},
           {"ref": "6", "translates": ["6"], "parts": [
             {"kind": "prayer", "text": "<small>From the Musaf of the first day of Pesach until the Musaf of Shemini Atzeres you should say:</small> He causes the dew to descend.<br><small>From the Musaf of Shemini Atzeres until the Musaf "},
-            {"kind": "instruction", "text": "<i>of the first day of Pesach you should say:</i>"},
+            {"kind": "instruction", "he": "ביום הראשון של פסח יש לומר:", "text": "<i>of the first day of Pesach you should say:</i>"},
             {"kind": "prayer", "text": "</small> Causer of the wind to blow and of the rain to fall."}
           ]},
           {"ref": "7", "translates": ["7"], "text": "Sustainer of the living with kindliness, Resurrector of the dead with great mercy, Supporter of the fallen, and Healer of the sick, and Releaser of the imprisoned, and Fulfiller of His faithfulness to those who sleep in the dust. Who is like You, Master of mighty deeds, and who can be compared to You? King Who causes death and restores life, and causes deliverance to sprout forth."},
@@ -493,20 +493,20 @@
           {"ref": "10", "translates": ["10"], "text": "You are holy and Your Name is holy and holy beings praise You every day, forever. For a great and Almighty King— great and holy—are You. Blessed are You, Adonoy, the Almighty, the Holy One.<br><small>During the Ten Days of Penitence:</small> Blessed are You, Adonoy, the King, the Holy One."},
           {"ref": "11", "translates": ["11"], "parts": [
             {"kind": "prayer", "text": "You have sanctified the seventh day<sup class=\"footnote-marker\">24</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">The first three and the last three blessings of Shemoneh Esrei are identical in all Sabbath services as well as in the regular weekday Shemoneh Esrei. The intermediate blessing, however, differs in each of the four Sabbath services. The thirteen petitions which make up the intermediate blessings of the weekday Shemoneh Esrei are omitted because prayers for personal needs are not recited on the Sabbath and Festivals. In reciting such personal requests one is reminded of his troubles and shortcomings, and our Sabbaths are not to be desecrated by sadness and misery.</i>"},
+            {"kind": "instruction", "he": "שלוש הברכות הראשונות ושלוש הברכות האחרונות של שמונה עשר זהות בכל עבודות השבת וכן בשמונה עשר של יום חול. אולם, הברכה האמצעית שונה בכל אחת מארבע עבודות השבת. שלושת עשר בקשות המרכיבות את ברכות האמצע של שמונה עשר של יום חול נשמטות, כיוון שבתחנונים וכו' אינם נאמרים בשבת ובחג. בשעת אמירת בקשות אישיות אדם נזכר בצערם ובחסרונותיו, והשבת אינה אמורה להישחת בעצבות ובצער.", "text": "<i class=\"footnote\">The first three and the last three blessings of Shemoneh Esrei are identical in all Sabbath services as well as in the regular weekday Shemoneh Esrei. The intermediate blessing, however, differs in each of the four Sabbath services. The thirteen petitions which make up the intermediate blessings of the weekday Shemoneh Esrei are omitted because prayers for personal needs are not recited on the Sabbath and Festivals. In reciting such personal requests one is reminded of his troubles and shortcomings, and our Sabbaths are not to be desecrated by sadness and misery.</i>"},
             {"kind": "prayer", "text": " to Your Name,"},
             {"kind": "prayer", "text": " [it was] the purpose of making heaven and earth;"},
             {"kind": "prayer", "text": " and You blessed it above all days and You sanctified it above all seasons. And so it is written in Your Torah:"}
           ]},
           {"ref": "12", "translates": ["12"], "parts": [
             {"kind": "prayer", "text": "And the heavens and the earth were completed and [so were] all their hosts.<sup class=\"footnote-marker\">25</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">The earthly hosts include all vegetation, all the living creatures, and mankind; while the heavenly hosts are the sun, moon, all the stars, and even the celestial beings such as angels.—Ramban</i>"},
+            {"kind": "instruction", "he": "צבאות הארץ כוללים את כל הצומח, כל בעלי החיים והאדם; ואילו צבאות השמים הם השמש, הירח, כל הכוכבים, ואף הישויות השמימיות כגון מלאכים. — רמב", "text": "<i class=\"footnote\">The earthly hosts include all vegetation, all the living creatures, and mankind; while the heavenly hosts are the sun, moon, all the stars, and even the celestial beings such as angels.—Ramban</i>"},
             {"kind": "prayer", "text": " And God completed by the seventh day<sup class=\"footnote-marker\">26</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">God completed His work at the precise instant that marked the beginning of the seventh day.—Seporno</i>"},
+            {"kind": "instruction", "he": "ה' השלים את מעשיו בדיוק ברגע שסימן את תחילת היום השביעי.—ספרנו", "text": "<i class=\"footnote\">God completed His work at the precise instant that marked the beginning of the seventh day.—Seporno</i>"},
             {"kind": "prayer", "text": " His work which He had done,"},
             {"kind": "prayer", "text": " and He abstained on the seventh day,"},
             {"kind": "prayer", "text": " from all His work which He had done. And God blessed the seventh day and sanctified it for on it He abstained from all His work which God had created to do.<sup class=\"footnote-marker\">27</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">God in His goodness, renews every day, continually the work of creation. On the Sabbath, however, God ceased even from His work of renewal. The renewal of the creation designated for the Sabbath was itself prepared and completed on the eve of the Sabbath.—Vilna Gaon</i>"}
+            {"kind": "instruction", "he": "בורא עולם בטובו, בכל יום ויום מחדש את מעשה בראשית. אולם בשבת, הפסיק אלוהים אפילו מעשה חידוש זה. חידוש הבריאה המיועד לשבת, נעשה ושלם כבר בערב שבת. — הגאון מווילינה", "text": "<i class=\"footnote\">God in His goodness, renews every day, continually the work of creation. On the Sabbath, however, God ceased even from His work of renewal. The renewal of the creation designated for the Sabbath was itself prepared and completed on the eve of the Sabbath.—Vilna Gaon</i>"}
           ]},
           {"ref": "13", "translates": ["13"], "text": "They will rejoice in Your Kingship yhose who preserve the Shabbos and call it a delight The people who sanctify the seventh [day] will all be satisfied and delighted from Your goodness. And in the seventh [day], You took pleasure and made it holy. “Most desirable of days,” You called it, in commemoration of the work of the [world's] beginning."},
           {"ref": "14", "translates": ["14"], "text": "Our God, and God of our fathers, be pleased with our rest, sanctify us with Your commandments and give us our share in Your Torah; satisfy us from Your goodness and gladden us with Your deliverance, and purify our hearts to serve You in truth. And give us as our inheritance, Adonoy our God, in love and in pleasure Your holy Shabbos; and may all Israel rest thereon— the sanctifiers of Your Name. Blessed are You Adonoy, Sanctifier of Shabbos."},
@@ -516,11 +516,11 @@
           {"ref": "18", "translates": ["18"], "text": "Rosh Chodesh"},
           {"ref": "19", "translates": ["19"], "parts": [
             {"kind": "prayer", "text": "the "},
-            {"kind": "instruction", "text": "<i>Festival of Matzos</i>"}
+            {"kind": "instruction", "he": "חג המצות", "text": "<i>Festival of Matzos</i>"}
           ]},
           {"ref": "20", "translates": ["20"], "parts": [
             {"kind": "prayer", "text": "the "},
-            {"kind": "instruction", "text": "<i>Festival of Sukkos</i>"}
+            {"kind": "instruction", "he": "חג הסוכות", "text": "<i>Festival of Sukkos</i>"}
           ]},
           {"ref": "21", "translates": ["21"], "text": "Remember us Adonoy, our God, on this day for well-being; be mindful of us on this day for blessing, and deliver us for good life. In accord with the promise of deliverance and compassion, spare us and favor us, have compassion on us and deliver us; for to You our eyes are directed because You are the Almighty Who is King, Gracious, and Merciful."},
           {"ref": "22", "translates": ["22"], "text": "And may our eyes behold Your merciful return to Zion. Blessed are You, Adonoy, Who returns His Divine Presence to Zion."},
@@ -659,15 +659,15 @@
       "en": {
         "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
         "segs": [
-          {"ref": "1", "translates": ["1"], "kind": "note", "en": "After the Amidah, the congregation repeats Vayechulu aloud and standing as testimony of creation. Halacha requires witnesses to stand and declare testimony together.", "text": "<small>After the Shemoneh Esrei has been said, the entire congregation repeats וַיְכֻלּוּ , in testimony of our belief that God created heaven and earth. According to Halacha, when one is a witness, he must stand and declare his testimony aloud.</small>"},
+          {"ref": "1", "translates": ["1"], "kind": "note", "en": "After the Amidah, the congregation repeats Vayechulu aloud and standing as testimony of creation. Halacha requires witnesses to stand and declare testimony together.", "he": "לאחר אמירת עמידה, כולם חוזרים על וַיְכֻלּוּ, כעדות על אמונתנו שבורא עולם ברא שמים וארץ. על פי ההלכה, עדים חייבים לעמוד ולדבר את עדותם בקול.", "text": "<small>After the Shemoneh Esrei has been said, the entire congregation repeats וַיְכֻלּוּ , in testimony of our belief that God created heaven and earth. According to Halacha, when one is a witness, he must stand and declare his testimony aloud.</small>"},
           {"ref": "2", "translates": ["2"], "kind": "prayer", "role": "congregation_then_chazzan", "text": "And the heavens and the earth were completed and [so were] all their hosts. And God completed by the seventh day His work which He had done, and He abstained on the seventh day, from all His work which He had done. And God blessed the seventh day and sanctified it for on it He abstained from all His work which God had created to do."},
-          {"ref": "3", "translates": ["3"], "kind": "note", "en": "The following prayer, Beracha MeEin Sheva (abridged seven blessings), is said only by the Chazzan. Not said on the first night of Passover, in a house of mourning, or in a bridegroom's house. Said only in a permanent place of prayer.", "text": "<small>The following prayer, בְּרָכָה מֵעֵין שֶׁבַע the abridged form of the seven blessings of the Maariv Shemoneh Esrei, is said only by the Chazzan. This prayer is not said if the first night of Passover occurs on Friday night. It is also not recited when prayers are held in the house of a bridegroom or in the house of a mourner. It is to be said only in a place that has been designated as a permanent place of prayer.</small><br>Blessed are You, Adonoy, our God and God of our fathers, God of Abraham, God of Isaac, and God of Jacob; the Almighty, the Great, the Powerful, the Awesome, the most high Almighty, Possessor of heaven and earth."},
+          {"ref": "3", "translates": ["3"], "kind": "note", "en": "The following prayer, Beracha MeEin Sheva (abridged seven blessings), is said only by the Chazzan. Not said on the first night of Passover, in a house of mourning, or in a bridegroom's house. Said only in a permanent place of prayer.", "he": "ברכה מעין שבע, בקיצור ברכות עמידה של ערבית, נאמרת על ידי שליח הציבור בלבד. אין אומרים תפילה זו אם ליל פסח חל בערב שבת. כמו כן, אין אומרים אותה בבית חתן או בבית אבל. יש לומר אותה רק במקום שהוגדר כמקום תפילה קבוע. ברוך אתה ה אלהינו ואלהי אבותינו אלהי אברהק אלהי יצחק ואלהי יעקב, שביר, גדול, גבור, נורא, אל עליון, בעל שמים וארץ.", "text": "<small>The following prayer, בְּרָכָה מֵעֵין שֶׁבַע the abridged form of the seven blessings of the Maariv Shemoneh Esrei, is said only by the Chazzan. This prayer is not said if the first night of Passover occurs on Friday night. It is also not recited when prayers are held in the house of a bridegroom or in the house of a mourner. It is to be said only in a place that has been designated as a permanent place of prayer.</small><br>Blessed are You, Adonoy, our God and God of our fathers, God of Abraham, God of Isaac, and God of Jacob; the Almighty, the Great, the Powerful, the Awesome, the most high Almighty, Possessor of heaven and earth."},
           {"ref": "4", "translates": ["4"], "parts": [
             {"kind": "prayer", "text": "<small>The congregation may recite the following paragraph,"},
             {"kind": "prayer", "text": " which should then be repeated aloud "},
-            {"kind": "instruction", "en": "and", "text": "<i>and </i>"},
+            {"kind": "instruction", "en": "and", "he": "ו", "text": "<i>and </i>"},
             {"kind": "prayer", "text": "in its entirety "},
-            {"kind": "instruction", "en": "by the Chazzan.", "text": "<i>by the Chazzan.</i>"},
+            {"kind": "instruction", "en": "by the Chazzan.", "he": "על ידי שליח הציבור", "text": "<i>by the Chazzan.</i>"},
             {"kind": "prayer", "text": "</small><br>Shield of [our] fathers with His word,"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">28</sup>"},
             {"kind": "prayer", "text": "<i class=\"footnote\">This paragraph is a précis of the entire Shemoneh Esrei just recited: The first line refers to the blessing מָגֵן אַבְרָהָם ,"},
@@ -676,7 +676,7 @@
             {"kind": "prayer", "text": "<i class=\"footnote\">This line refers to the blessing מְחַיֵּה הַמֵּתִים ,"},
             {"kind": "prayer", "text": " “Who restores the dead to life.”</i>"},
             {"kind": "prayer", "text": " with His utterance;"},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "Between Rosh Hashanah and Yom Kippur, substitute:", "text": " *the Almighty,"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "Between Rosh Hashanah and Yom Kippur, substitute:", "he": "*האל,", "text": " *the Almighty,"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " the Holy One<sup class=\"footnote-marker\">30</sup>"},
             {"kind": "prayer", "text": "<i class=\"footnote\">This line refers to the blessing הָאֵל הַקָּדוֹשׁ ,"},
             {"kind": "prayer", "text": " “The Almighty,"},
@@ -694,17 +694,17 @@
             {"kind": "prayer", "text": " “We are thankful to You.”</i>"},
             {"kind": "prayer", "text": " every day continuously,"},
             {"kind": "prayer", "text": " from the essence of the blessings.<sup class=\"footnote-marker\">34</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">We thank God each day in accordance with the blessing appropriate for that particular day.</i>"},
+            {"kind": "instruction", "he": "אנו מודים לה' בכל יום לפי הברכה המתאימה לאותו יום.", "text": "<i class=\"footnote\">We thank God each day in accordance with the blessing appropriate for that particular day.</i>"},
             {"kind": "prayer", "text": " Almighty of thanksgiving,"},
             {"kind": "prayer", "text": " Master of peace,"},
             {"kind": "prayer", "text": "<sup class=\"footnote-marker\">35</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">This line refers to the closing prayer of the Shemoneh Esrei, “Bestow peace.”—Avudraham</i>"},
+            {"kind": "instruction", "he": "שורה זו מתייחסת לתפילת סיום עמידה, \"תן שלום\".—אבוברהם", "text": "<i class=\"footnote\">This line refers to the closing prayer of the Shemoneh Esrei, “Bestow peace.”—Avudraham</i>"},
             {"kind": "prayer", "text": " Sanctifier of the Shabbos,"},
             {"kind": "prayer", "text": " Who blesses the seventh day and grants rest in sanctity to a people sated with delight— in commemoration of the work of creation.<sup class=\"footnote-marker\">36</sup>"},
-            {"kind": "instruction", "text": "<i class=\"footnote\">God commanded us to preserve the Sabbath as a reminder that He created the world.—Etz Yosef</i>"}
+            {"kind": "instruction", "he": "ציוה ה' לשמור את השבת למזכר לימי בראשית.—עץ יוסף", "text": "<i class=\"footnote\">God commanded us to preserve the Sabbath as a reminder that He created the world.—Etz Yosef</i>"}
           ]},
           {"ref": "5", "translates": ["5"], "kind": "prayer", "role": "chazzan", "text": "Our God, and God of our fathers, be pleased with our rest, sanctify us with Your commandments and give us our share in Your Torah; satisfy us from Your goodness and gladden us with Your deliverance, and purify our hearts to serve You in truth. And give us as our inheritance, Adonoy our God, in love and in pleasure Your holy Shabbos; and may Israel rest thereon— the sanctifiers of Your Name. Blessed are You Adonoy, Sanctifier of Shabbos."},
-          {"ref": "6", "translates": ["6"], "kind": "instruction", "en": "The Chazzan recites the following Kaddish:", "text": "<small>The Chazzan recites the following Kaddish:</small>"},
+          {"ref": "6", "translates": ["6"], "kind": "instruction", "en": "The Chazzan recites the following Kaddish:", "he": "שליח הציבור אומר את קדיש הבא:", "text": "<small>The Chazzan recites the following Kaddish:</small>"},
           {"ref": "7", "translates": ["7"], "parts": [
             {"kind": "prayer", "text": "Exalted and sanctified be His great Name in the world which He created according to His will and may He rule His kingdom bring forth His redemption and hasten the coming of His Mashiach in your lifetime and in your days,"},
             {"kind": "prayer", "text": " and in the lifetime of the entire House of Israel,"},
@@ -712,9 +712,9 @@
             {"kind": "prayer", "text": " glorified,"},
             {"kind": "prayer", "text": " and exalted and uplifted,"},
             {"kind": "prayer", "text": " honored and elevated and extolled be the Name of the Holy One,"},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "Ten Days of Penitence:", "text": " blessed is He;"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "Ten Days of Penitence:", "he": "ברוך הוא;", "text": " blessed is He;"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " above ("},
-            {"kind": "instruction", "text": "<i>Ten Days of Penitence:</i>"},
+            {"kind": "instruction", "he": "עשרת ימי תשובה:", "text": "<i>Ten Days of Penitence:</i>"},
             {"kind": "prayer", "text": " far above) all the blessings and hymns,"},
             {"kind": "prayer", "text": " praises and consolations which we utter in the world—and say Amein."}
           ]},
@@ -722,14 +722,14 @@
           {"ref": "9", "translates": ["9"], "parts": [
             {"kind": "prayer", "text": "May there be abundant peace from heaven and good life for us and for all Israel,"},
             {"kind": "prayer", "text": " —and say Amein. He Who makes peace ("},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "Ten Days of Penitence:", "text": "<i>Ten Days of Penitence:</i>"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "Ten Days of Penitence:", "he": "עשרת ימי תשובה:", "text": "<i>Ten Days of Penitence:</i>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " the peace) in His high heavens may He,"},
             {"kind": "prayer", "text": " make peace for us and or all Israel,"},
             {"kind": "prayer", "text": " and say,"},
             {"kind": "prayer", "text": " Amen."}
           ]},
           {"ref": "10", "translates": ["10"], "kind": "prayer", "role": "congregation_then_chazzan", "text": "A Psalm of David, Adonoy is my shepherd, I shall lack nothing. In lush pastures He makes me lie, besides tranquil waters, He leads me. My soul, He restores, He directs me in paths of righteousness for the sake of His Name. Though I walk in the valley of the shadow of death, I will fear no evil for You are with me, Your rod and Your staff, they comfort me. You prepare a table for me in the full presence of my enemies, You annointed my head with oil; my cup overflows. [May] only good and kindness pursue me all the days of my life, and I shall dwell in the House of Adonoy for long days."},
-          {"ref": "11", "translates": ["11"], "kind": "instruction", "en": "The Chazzan recites the following half-Kaddish", "text": "<small>The Chazzan recites the following half-Kaddish</small>"},
+          {"ref": "11", "translates": ["11"], "kind": "instruction", "en": "The Chazzan recites the following half-Kaddish", "he": "שליח הציבור אומר את חצי הקדיש הבא:", "text": "<small>The Chazzan recites the following half-Kaddish</small>"},
           {"ref": "12", "translates": ["12"], "kind": "prayer", "role": "chazzan", "minyan": true, "text": "Exalted and sanctified be His great Name in the world which He created according to His will and may He rule His kingdom bring forth His redemption and hasten the coming of His Mashiach. In your lifetime and in your days, and in the lifetime of the entire House of Israel, speedily and in the near future— and say Amein."},
           {"ref": "13", "translates": ["13"], "parts": [
             {"kind": "prayer", "text": "<b>May His great Name be blessed forever and for all eternity.</b> Blessed and praised,"},
@@ -738,13 +738,13 @@
             {"kind": "prayer", "text": " honored and elevated and extolled be the Name of the Holy One,"},
             {"kind": "prayer", "text": " blessed is He;"},
             {"kind": "prayer", "text": " above ("},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "Ten Days of Penitence:", "text": "<i>Ten Days of Penitence:</i>"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "Ten Days of Penitence:", "he": "עשרת ימי תשובה:", "text": "<i>Ten Days of Penitence:</i>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " far above) all the blessings and hymns,"},
             {"kind": "prayer", "text": " praises and consolations which we utter in the world—and say Amein."}
           ]},
           {"ref": "14", "translates": ["14"], "parts": [
-            {"kind": "instruction", "en": "The Chazzan", "text": "<small>The Chazzan"},
-            {"kind": "instruction", "en": "says:", "text": "<i> says:</i>"},
+            {"kind": "instruction", "en": "The Chazzan", "he": "שליח הציבור", "text": "<small>The Chazzan"},
+            {"kind": "instruction", "en": "says:", "he": "אומר:", "text": "<i> says:</i>"},
             {"kind": "prayer", "role": "chazzan", "minyan": true, "text": "</small> Bless Adonoy Who is blessed."}
           ]},
           {"ref": "15", "translates": ["15"], "kind": "prayer", "role": "congregation_then_chazzan", "minyan": true, "repeat": 3, "en": "The congregation responds and the Chazzan repeats:", "text": "<small>The congregation responds and the Chazzan repeats:</small> Blessed is Adonoy, Who is blessed forever and ever."},
@@ -759,14 +759,14 @@
             {"kind": "prayer", "text": " honored and elevated and extolled be the Name of the Holy One,"},
             {"kind": "prayer", "text": " blessed is He;"},
             {"kind": "prayer", "text": " above ("},
-            {"kind": "instruction", "text": "<i>Ten Days of Penitence:</i>"},
+            {"kind": "instruction", "he": "עשרת ימי תשובה:", "text": "<i>Ten Days of Penitence:</i>"},
             {"kind": "prayer", "text": " far above) all the blessings and hymns,"},
             {"kind": "prayer", "text": " praises and consolations which we utter in the world—and say Amein."}
           ]},
           {"ref": "21", "translates": ["21"], "parts": [
             {"kind": "prayer", "text": "May there be abundant peace from heaven and good life for us and for all Israel,"},
             {"kind": "prayer", "text": " —and say Amein. He Who makes peace ("},
-            {"kind": "instruction", "text": "<i>Ten Days of Penitence:</i>"},
+            {"kind": "instruction", "he": "עשרת ימי תשובה:", "text": "<i>Ten Days of Penitence:</i>"},
             {"kind": "prayer", "text": " the peace) in His high heavens may He,"},
             {"kind": "prayer", "text": " make peace for us and or all Israel,"},
             {"kind": "prayer", "text": " and say,"},

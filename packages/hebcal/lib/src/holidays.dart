@@ -93,6 +93,10 @@ const List<_StaticHoliday> _staticHolidays = [
   _StaticHoliday(Months.elul, 29, H.erevRoshHashana, _erev | _lc, emoji: '🍏🍯'),
 ];
 
+/// Only religious holidays are listed: the modern Israeli state and
+/// secular days are switched off.
+const bool _includeModern = false;
+
 class _ModernHoliday {
   final int firstYear;
   final int mm;
@@ -249,12 +253,12 @@ HolidayYearMap getHolidaysForYear(int year) {
     add([HolidayEvent(HDate(15, Months.adarI, year), H.shushanPurimKatan, _minorHoliday, '🎭️')]);
   }
 
-  final nisan27dt = dateYomHaShoah(year);
+  final nisan27dt = _includeModern ? dateYomHaShoah(year) : null;
   if (nisan27dt != null) {
     add([HolidayEvent(nisan27dt, H.yomHashoah, Flags.modernHoliday)]);
   }
 
-  final yomHaZikaronDt = dateYomHaZikaron(year);
+  final yomHaZikaronDt = _includeModern ? dateYomHaZikaron(year) : null;
   if (yomHaZikaronDt != null) {
     add([
       HolidayEvent(yomHaZikaronDt, H.yomHazikaron, Flags.modernHoliday, '🇮🇱'),
@@ -263,7 +267,7 @@ HolidayYearMap getHolidaysForYear(int year) {
   }
 
   for (final h in _staticModernHolidays) {
-    if (year >= h.firstYear) {
+    if (_includeModern && year >= h.firstYear) {
       var hd = HDate(h.dd, h.mm, year);
       final dow = hd.getDay();
       if (h.friSatMovetoThu && (dow == _fri || dow == _sat)) {

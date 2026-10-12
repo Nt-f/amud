@@ -21,10 +21,12 @@ import '../../core/page_swipe.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
 import '../../core/split_row.dart';
+import '../../core/tap_highlight.dart';
 import '../../core/theme.dart';
 import '../../core/titles.dart';
 import '../../core/typeset/typeset.dart';
 import 'book_kind.dart';
+import 'leining_block.dart';
 import 'linear_reader.dart';
 import 'reader_grouping.dart';
 import 'reader_typography.dart';
@@ -794,6 +796,8 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         );
       case DynamicItem d when d.kind == 'omer':
         return _OmerBlock(d.data);
+      case DynamicItem d when d.kind == 'leining':
+        return LeiningBlock(d.data);
       case DynamicItem d:
         return Container(
           margin: const EdgeInsets.symmetric(vertical: 6),
@@ -1304,18 +1308,21 @@ class _SegmentView extends ConsumerWidget {
             body,
           ]);
     final space = ts.space(role, compact: compact);
-    if (!today) return Padding(padding: space, child: content);
+    if (!today) return TapHighlight(id: item.key, child: Padding(padding: space, child: content));
     // The bar is laid over the fill rather than measured beside it: the
     // paragraphs size themselves from their width (see TypesetParagraph),
     // which an intrinsic-height row can't ask of them.
-    return Container(
-      margin: ts.print ? space : EdgeInsets.symmetric(vertical: compact ? 2 : 4),
-      clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(color: colors.todayFill, borderRadius: BorderRadius.circular(10)),
-      child: Stack(children: [
-        Padding(padding: const EdgeInsetsDirectional.fromSTEB(10, 4, 14, 4), child: content),
-        PositionedDirectional(top: 0, bottom: 0, end: 0, width: 4, child: ColoredBox(color: colors.todayBar)),
-      ]),
+    return TapHighlight(
+      id: item.key,
+      child: Container(
+        margin: ts.print ? space : EdgeInsets.symmetric(vertical: compact ? 2 : 4),
+        clipBehavior: Clip.antiAlias,
+        decoration: BoxDecoration(color: colors.todayFill, borderRadius: BorderRadius.circular(10)),
+        child: Stack(children: [
+          Padding(padding: const EdgeInsetsDirectional.fromSTEB(10, 4, 14, 4), child: content),
+          PositionedDirectional(top: 0, bottom: 0, end: 0, width: 4, child: ColoredBox(color: colors.todayBar)),
+        ]),
+      ),
     );
   }
 }

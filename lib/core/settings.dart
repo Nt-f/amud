@@ -156,6 +156,9 @@ class AppSettings {
   final bool showInstructions;
   final bool highlightToday;
 
+  /// ARGB of the color a tapped line is marked with; 0 is the theme's own.
+  final int highlightColor;
+
   /// Set the reader's text like a printed siddur (see core/typeset): sizes
   /// that follow what each paragraph is, ornaments between sections.
   final bool typesetting;
@@ -234,6 +237,7 @@ class AppSettings {
     this.choices = const {},
     this.showInstructions = true,
     this.highlightToday = true,
+    this.highlightColor = 0,
     this.typesetting = true,
     this.justifyText = true,
     this.typeContrast = 0.5,
@@ -288,6 +292,7 @@ class AppSettings {
     Map<String, String>? choices,
     bool? showInstructions,
     bool? highlightToday,
+    int? highlightColor,
     bool? typesetting,
     bool? justifyText,
     double? typeContrast,
@@ -341,6 +346,7 @@ class AppSettings {
         choices: choices ?? this.choices,
         showInstructions: showInstructions ?? this.showInstructions,
         highlightToday: highlightToday ?? this.highlightToday,
+        highlightColor: highlightColor ?? this.highlightColor,
         typesetting: typesetting ?? this.typesetting,
         justifyText: justifyText ?? this.justifyText,
         typeContrast: typeContrast ?? this.typeContrast,
@@ -399,6 +405,7 @@ class AppSettings {
         'choices': choices,
         'showInstructions': showInstructions,
         'highlightToday': highlightToday,
+        'highlightColor': highlightColor,
         'typesetting': typesetting,
         'justifyText': justifyText,
         'typeContrast': typeContrast,
@@ -501,6 +508,7 @@ class AppSettings {
           const {}),
       showInstructions: pick('showInstructions', d.showInstructions),
       highlightToday: pick('highlightToday', d.highlightToday),
+      highlightColor: pick('highlightColor', d.highlightColor),
       typesetting: pick('typesetting', d.typesetting),
       justifyText: pick('justifyText', d.justifyText),
       typeContrast: orElse(() => (j['typeContrast'] as num).toDouble().clamp(0.0, 1.0), d.typeContrast),

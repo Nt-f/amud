@@ -38,8 +38,8 @@
         "segs": [
           {"ref": "1", "translates": ["1"], "text": "<small><b>YIZKOR</b></small>"},
           {"ref": "2", "translates": [], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">The Yizkor service is said on the last day of Pesaḥ, the second day of Shavuot</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">(first day in Israel), Yom Kippur and Shemini Atzeret. In some communities, those who have not been bereaved of a parent or close relative do not participate in the service, but leave the synagogue and return at the end of Yizkor.</i>"}
+            {"kind": "instruction", "he": "זכר נאמר ביום האחרון של פסח, ובשני של שבועות.", "text": "<i class=\"instruction\">The Yizkor service is said on the last day of Pesaḥ, the second day of Shavuot</i>"},
+            {"kind": "instruction", "he": "(היום הראשון בארץ ישראל), יום כיפור ושמיני עצרת. בקהילות מסוימות, אלו שאינם אלו שאיבדו הורה או קרוב, אינם משתתפים בתפילה, אלא יוצאים מהבית ולא חוזרים אליו אלא בסוף יזכור.", "text": "<br><i class=\"instruction\">(first day in Israel), Yom Kippur and Shemini Atzeret. In some communities, those who have not been bereaved of a parent or close relative do not participate in the service, but leave the synagogue and return at the end of Yizkor.</i>"}
           ]},
           {"ref": "3", "translates": ["3"], "text": "יהוה <small>LORD</small>, what is man that You care for him, a mortal that You notice him?"},
           {"ref": "4", "translates": ["4"], "text": "Man is like a fleeting breath, his days like a passing shadow."},
@@ -55,9 +55,9 @@
           {"ref": "14", "translates": ["14"], "parts": [
             {"kind": "prayer", "text": "יִזְכֹּר May God remember the soul of my father,"},
             {"kind": "prayer", "text": " my teacher ("},
-            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "instruction", "he": "שם", "text": "<i>name</i>"},
             {"kind": "prayer", "text": " son of "},
-            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "instruction", "he": "שם האב", "text": "<i>father’s name</i>"},
             {"kind": "prayer", "text": ") who has gone to his eternal home,"},
             {"kind": "prayer", "text": " and to this I pledge (without formal vow) to give charity on his behalf,"},
             {"kind": "prayer", "text": " that his soul may be bound in the bond of everlasting life together with the souls of Abraham,"},
@@ -72,9 +72,9 @@
           {"ref": "16", "translates": ["16"], "parts": [
             {"kind": "prayer", "text": "יִזְכֹּר May God remember the soul of my mother,"},
             {"kind": "prayer", "text": " my teacher ("},
-            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "instruction", "he": "שם", "text": "<i>name</i>"},
             {"kind": "prayer", "text": " daughter of "},
-            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "instruction", "he": "שם האב", "text": "<i>father’s name</i>"},
             {"kind": "prayer", "text": ") who has gone to her eternal home,"},
             {"kind": "prayer", "text": " and to this I pledge (without formal vow) to give charity on her behalf,"},
             {"kind": "prayer", "text": " that her soul may be bound in the bond of everlasting life together with the souls of Abraham,"},
@@ -88,10 +88,10 @@
           {"ref": "17", "translates": [], "text": "<i class=\"instruction\">For martyrs:</i>"},
           {"ref": "18", "translates": ["18"], "parts": [
             {"kind": "prayer", "text": "<b>יִזְכֹּר</b> May God remember the soul of ("},
-            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "instruction", "he": "שם", "text": "<i>name</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " son/daughter of "},
-            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "instruction", "he": "שם האב", "text": "<i>father’s name</i>"},
             {"kind": "prayer", "text": "),"},
             {"kind": "prayer", "text": " and the souls of all my relatives,"},
             {"kind": "prayer", "text": " on my father’s or mother’s side,"},
@@ -116,9 +116,9 @@
             {"kind": "prayer", "text": " grant fitting rest on the wings of the Divine Presence,"},
             {"kind": "prayer", "text": " in the heights of the holy and the pure who shine like the radiance of heaven,"},
             {"kind": "prayer", "text": " to the soul of ("},
-            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "instruction", "he": "שם", "text": "<i>name</i>"},
             {"kind": "prayer", "text": " son of "},
-            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "instruction", "he": "שם האב", "text": "<i>father’s name</i>"},
             {"kind": "prayer", "text": ") who has gone to his eternal home,"},
             {"kind": "prayer", "text": " and to this I pledge (without formal vow) to give charity in his memory,"},
             {"kind": "prayer", "text": " may his resting place be in the Garden of Eden. Therefore,"},
@@ -135,10 +135,10 @@
             {"kind": "prayer", "text": " grant fitting rest on the wings of the Divine Presence,"},
             {"kind": "prayer", "text": " in the heights of the holy and the pure who shine like the radiance of heaven,"},
             {"kind": "prayer", "text": " to the soul of ("},
-            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "instruction", "he": "שם", "text": "<i>name</i>"},
             {"kind": "prayer", "text": " daughter of  "},
-            {"kind": "instruction", "text": "<i>father’s</i>"},
-            {"kind": "instruction", "text": " <i>name</i>"},
+            {"kind": "instruction", "he": "של אביו", "text": "<i>father’s</i>"},
+            {"kind": "instruction", "he": "שם", "text": " <i>name</i>"},
             {"kind": "prayer", "text": ") who has gone to her eternal home,"},
             {"kind": "prayer", "text": " and to this I pledge (without formal vow) to give charity in her memory,"},
             {"kind": "prayer", "text": " may her resting place be in the Garden of Eden. Therefore,"},
@@ -175,12 +175,12 @@
       "en": {
         "version": "English Edition; Koren Publishers Jerusalem, 2017",
         "segs": [
-          {"ref": "1", "translates": [], "kind": "instruction", "en": "Most congregations omit the following on days that Yizkor is said. Some also omit on Shabbat.", "gloss": "Omitted on Yizkor days and sometimes on Shabbat", "text": "<i class=\"instruction\">Most congregations omit the following on days that Yizkor is said. Some also omit on Shabbat.</i>"},
+          {"ref": "1", "translates": [], "kind": "instruction", "en": "Most congregations omit the following on days that Yizkor is said. Some also omit on Shabbat.", "he": "רוב הקהלים משמיטים את הבא להלן בימים בהם אומרים יזכור. יש המשמיטים גם בשבת.", "gloss": "Omitted on Yizkor days and sometimes on Shabbat", "text": "<i class=\"instruction\">Most congregations omit the following on days that Yizkor is said. Some also omit on Shabbat.</i>"},
           {"ref": "2", "translates": ["2"], "text": "יָהּ אֵלִי <small>LORD</small> my God and Redeemer, I will stand to greet You;<br>[God] who was and will be, was and is, the land of every nation is Yours."},
           {"ref": "3", "translates": ["3"], "text": "The thanksgiving-offering, burnt-offering, meal-offering, sin-offering, guilt-offering, peace-offering and inauguration-offering are all offerings to You.<br>Remember the weary nation that has borne much, and bring it back to Your land.<br>I will always praise You with “Happy are those who dwell in Your House.”"},
           {"ref": "4", "translates": ["4"], "text": "Fine beyond fine, undecipherable, His understanding is unfathomable,<br>Awesome God who distinguishes between good and evil with a single glance."},
           {"ref": "5", "translates": ["5"], "text": "The thanksgiving-offering, burnt-offering, meal-offering, sin-offering, guilt-offering, peace-offering and inauguration-offering are all offerings to You.<br>Remember the weary nation that has borne much, and bring it back to Your land.<br>I will always praise You with “Happy are those who dwell in Your House.”"},
-          {"ref": "6", "translates": [], "kind": "instruction", "en": "If Kohanim bless the congregation during the Leader's Repetition, the following is said. It is not said on Chol HaMo'ed or Shabbat Chol HaMo'ed.", "gloss": "Said only when Birkat Kohanim is performed, not on Chol HaMoed", "text": "<i class=\"instruction\">If Kohanim bless the congregation during the Leader’s Repetition, the following is said. It is not said on Ḥol HaMo’ed or Shabbat Ḥol HaMo’ed.</i>"},
+          {"ref": "6", "translates": [], "kind": "instruction", "en": "If Kohanim bless the congregation during the Leader's Repetition, the following is said. It is not said on Chol HaMo'ed or Shabbat Chol HaMo'ed.", "he": "אם הכהנים מברכים את הקהל במהלך חזרת שליח הציבור, אומרים את הדברים הבאים. אין אומרים זאת בחול המועד או בשבת חול המועד.", "gloss": "Said only when Birkat Kohanim is performed, not on Chol HaMoed", "text": "<i class=\"instruction\">If Kohanim bless the congregation during the Leader’s Repetition, the following is said. It is not said on Ḥol HaMo’ed or Shabbat Ḥol HaMo’ed.</i>"},
           {"ref": "7", "translates": ["7"], "text": "The thanksgiving-offering, burnt-offering, meal-offering, sin-offering, guilt-offering, peace-offering and inauguration-offering are all offerings to You.<br>Remember the weary nation that has borne much, and bring it back to Your land.<br>I will always praise You with “Happy are those who dwell in Your House.”"}
         ]
       }
@@ -266,32 +266,32 @@
       "en": {
         "version": "English Edition; Koren Publishers Jerusalem, 2017",
         "segs": [
-          {"ref": "1", "translates": [], "kind": "heading", "en": "Musaf for Festivals", "text": "<big>Musaf for Festivals</big>"},
-          {"ref": "2", "translates": [], "kind": "instruction", "en": "The following Amidah is said on Yom Tov and Chol HaMoed (including Shabbat Chol HaMoed).", "text": "<i class=\"instruction\">The following Amida is said on Yom Tov and Ḥol HaMo’ed (including Shabbat Ḥol HaMo’ed).</i>"},
+          {"ref": "1", "translates": [], "kind": "heading", "en": "Musaf for Festivals", "he": "מוסף לעדידי חגים", "text": "<big>Musaf for Festivals</big>"},
+          {"ref": "2", "translates": [], "kind": "instruction", "en": "The following Amidah is said on Yom Tov and Chol HaMoed (including Shabbat Chol HaMoed).", "he": "עמידה זו נאמרת ביום טוב ובחול המועד (כולל שבת חול המועד).", "text": "<i class=\"instruction\">The following Amida is said on Yom Tov and Ḥol HaMo’ed (including Shabbat Ḥol HaMo’ed).</i>"},
           {"ref": "3", "translates": [], "parts": [
-            {"kind": "instruction", "en": "On the first day of Pesach, the Leader begins the Repetition with 'Prayer for Dew' on page 840; on Shemini Atzeret, with 'Prayer for Rain' on page 846. In Israel, these prayers are said before the silent recitation of the Amidah.", "text": "<i class=\"instruction\">On the first day of Pesaḥ, the Leader begins the Repetition with “Prayer for Dew” on page 840; on Shemini Atzeret, with “Prayer for Rain” on page 846.</i>"},
-            {"kind": "instruction", "en": "On the first day of Pesach, the Leader begins the Repetition with 'Prayer for Dew' on page 840; on Shemini Atzeret, with 'Prayer for Rain' on page 846. In Israel, these prayers are said before the silent recitation of the Amidah.", "text": "<br><i class=\"instruction\">In Israel, these prayers are said before the silent recitation of the Amida.</i>"}
+            {"kind": "instruction", "en": "On the first day of Pesach, the Leader begins the Repetition with 'Prayer for Dew' on page 840; on Shemini Atzeret, with 'Prayer for Rain' on page 846. In Israel, these prayers are said before the silent recitation of the Amidah.", "he": "ביום הראשון של פסח, שליח הציבור מתחיל את החזרת העמידה ב\"תפילה על הטל\" בעמוד 840; בשמיני עצרת, ב\"תפילה על הגשם\" בעמוד 846.", "text": "<i class=\"instruction\">On the first day of Pesaḥ, the Leader begins the Repetition with “Prayer for Dew” on page 840; on Shemini Atzeret, with “Prayer for Rain” on page 846.</i>"},
+            {"kind": "instruction", "en": "On the first day of Pesach, the Leader begins the Repetition with 'Prayer for Dew' on page 840; on Shemini Atzeret, with 'Prayer for Rain' on page 846. In Israel, these prayers are said before the silent recitation of the Amidah.", "he": "בארץ ישראל, תפילות אלו נאמרות לפני עמידה.", "text": "<br><i class=\"instruction\">In Israel, these prayers are said before the silent recitation of the Amida.</i>"}
           ]},
-          {"ref": "4", "translates": [], "kind": "instruction", "en": "The following prayer, until 'in former years' on page 928, is said silently, standing with feet together. If there is a minyan, the Amidah is repeated aloud by the Leader. Take three steps forward and at the points indicated by ▾, bend the knees at the first word, bow at the second, and stand straight before saying God's name.", "text": "<i class=\"instruction\">The following prayer, until “in former years” on page 928, is said silently, standing with feet together. If there is a minyan, the Amida is repeated aloud by the Leader. Take three steps forward and at the points indicated by▾, bend the knees at the first word, bow at the second, and stand straight before saying God's name.</i>"},
+          {"ref": "4", "translates": [], "kind": "instruction", "en": "The following prayer, until 'in former years' on page 928, is said silently, standing with feet together. If there is a minyan, the Amidah is repeated aloud by the Leader. Take three steps forward and at the points indicated by ▾, bend the knees at the first word, bow at the second, and stand straight before saying God's name.", "he": "התפילה הבאה, עד \"במשנה הימים\" בעמוד 928, נאמרת בשקט בעמידה כשהרגליים צמודות. אם יש מניין, שליח הציבור חוזר על העמידה בקול. יש לעשות שלושה צעדים קדימה ובנקודות המסומנות ב▾, יש לכופף ברכיים במילה הראשונה, להשתחוות במילה השנייה, ולעמוד זקוף לפני אמירת שם השם.", "text": "<i class=\"instruction\">The following prayer, until “in former years” on page 928, is said silently, standing with feet together. If there is a minyan, the Amida is repeated aloud by the Leader. Take three steps forward and at the points indicated by▾, bend the knees at the first word, bow at the second, and stand straight before saying God's name.</i>"},
           {"ref": "5", "translates": ["5"], "kind": "prayer", "en": "When I proclaim the LORD's name, give glory to our God.", "text": "When I proclaim the <small>LORD</small>’s name, give glory to our God."},
           {"ref": "6", "translates": ["6"], "kind": "prayer", "en": "O LORD, open my lips, so that my mouth may declare Your praise.", "text": "O <small>LORD</small>, open my lips, so that my mouth may declare Your praise."},
-          {"ref": "7", "translates": ["7"], "kind": "heading", "en": "PATRIARCHS", "text": "<small><b>PATRIARCHS</b></small>"},
+          {"ref": "7", "translates": ["7"], "kind": "heading", "en": "PATRIARCHS", "he": "אבות", "text": "<small><b>PATRIARCHS</b></small>"},
           {"ref": "8", "translates": ["8"], "kind": "prayer", "en": "Blessed are You, LORD our God and God of our fathers, God of Abraham, God of Isaac and God of Jacob; the great, mighty and awesome God, God Most High, who bestows acts of loving-kindness and creates all, who remembers the loving-kindness of the fathers and will bring a Redeemer to their children's children for the sake of His name, in love. King, Helper, Savior, Shield: Blessed are You, LORD, Shield of Abraham.", "text": "▾בָּרוּךְ Blessed are You, <small>LORD</small> our God and God of our fathers, God of Abraham, God of Isaac and God of Jacob; the great, mighty and awesome God, God Most High, who bestows acts of loving-kindness and creates all, who remembers the loving-kindness of the fathers and will bring a Redeemer to their children’s children for the sake of His name, in love. King, Helper, Savior, Shield: ▾Blessed are You, <small>LORD</small>, Shield of Abraham."},
-          {"ref": "9", "translates": ["9"], "kind": "heading", "en": "DIVINE MIGHT", "text": "<small><b>DIVINE MIGHT</b></small>"},
+          {"ref": "9", "translates": ["9"], "kind": "heading", "en": "DIVINE MIGHT", "he": "עוצמת האל", "text": "<small><b>DIVINE MIGHT</b></small>"},
           {"ref": "10", "translates": ["10"], "kind": "prayer", "en": "You are eternally mighty, LORD. You give life to the dead and have great power to save.", "text": "אַתָּה גִּבּוֹר You are eternally mighty, <small>LORD</small>.<br>You give life to the dead and have great power to save."},
-          {"ref": "11", "translates": ["12"], "kind": "instruction", "en": "From Mincha of Shemini Atzeret, through Shacharit on the first day of Pesach (see laws 129–131):", "text": "<i class=\"instruction\">From Minḥa of Shemini Atzeret, through Shaḥarit on the first day of Pesaḥ (see laws 129–131):</i>"},
+          {"ref": "11", "translates": ["12"], "kind": "instruction", "en": "From Mincha of Shemini Atzeret, through Shacharit on the first day of Pesach (see laws 129–131):", "he": "ממנחה של שמיני עצרת, ועד שחרית של היום הראשון של פסח (ראה הלכות 129–131):", "text": "<i class=\"instruction\">From Minḥa of Shemini Atzeret, through Shaḥarit on the first day of Pesaḥ (see laws 129–131):</i>"},
           {"ref": "12", "translates": ["12"], "kind": "prayer", "en": "He makes the wind blow and the rain fall.", "gloss": "Said in winter (Diaspora)", "text": "He makes the wind blow and the rain fall."},
-          {"ref": "13", "translates": ["14"], "kind": "instruction", "en": "In Israel, on other Festivals:", "text": "<i class=\"instruction\">In Israel, on other Festivals:</i>"},
+          {"ref": "13", "translates": ["14"], "kind": "instruction", "en": "In Israel, on other Festivals:", "he": "בארץ ישראל, בחגים אחרים:", "text": "<i class=\"instruction\">In Israel, on other Festivals:</i>"},
           {"ref": "14", "translates": ["14"], "kind": "prayer", "en": "He causes the dew to fall.", "gloss": "Said in summer (Israel)", "text": "He causes the dew to fall."},
           {"ref": "15", "translates": ["15"], "kind": "prayer", "en": "He sustains the living with loving-kindness, and with great compassion revives the dead. He supports the fallen, heals the sick, sets captives free, and keeps His faith with those who sleep in the dust. Who is like You, Master of might, and who can compare to You, O King who brings death and gives life, and makes salvation grow? Faithful are You to revive the dead. Blessed are You, LORD, who revives the dead.", "text": "He sustains the living with loving-kindness, and with great compassion revives the dead. He supports the fallen, heals the sick, sets captives free, and keeps His faith with those who sleep in the dust. Who is like You, Master of might, and and who can compare to You, O King who brings death and gives life, and makes salvation grow? Faithful are You to revive the dead. Blessed are You, <small>LORD</small>, who revives the dead."},
-          {"ref": "16", "translates": [], "kind": "instruction", "en": "When saying the Amidah silently, continue with 'You are holy' on page 810.", "text": "<i class=\"instruction\">When saying the Amida silently, continue with “You are holy” on page 810.</i>"},
-          {"ref": "17", "translates": ["17"], "kind": "heading", "en": "KEDUSHA", "text": "<small><b>KEDUSHA</b></small>"},
-          {"ref": "18", "translates": [], "kind": "instruction", "en": "On Chol HaMoed, turn to the Kedusha on the next page. On Yom Tov, Shabbat Chol HaMoed and Hoshana Raba, during the Repetition, the following is said standing with feet together, rising on the toes at the words indicated by ▴.", "text": "<i class=\"instruction\">On Ḥol HaMo’ed, turn to the Kedusha on the next page. On Yom Tov, Shabbat Ḥol HaMo’ed and Hoshana Raba, during the Repetition, the following is said standing with feet together, rising on the toes at the words indicated by▴.</i>"},
+          {"ref": "16", "translates": [], "kind": "instruction", "en": "When saying the Amidah silently, continue with 'You are holy' on page 810.", "he": "בעת אמירת העמידה בכוונה, המשך ב\"קדוש\" בעמוד 810.", "text": "<i class=\"instruction\">When saying the Amida silently, continue with “You are holy” on page 810.</i>"},
+          {"ref": "17", "translates": ["17"], "kind": "heading", "en": "KEDUSHA", "he": "קדושה", "text": "<small><b>KEDUSHA</b></small>"},
+          {"ref": "18", "translates": [], "kind": "instruction", "en": "On Chol HaMoed, turn to the Kedusha on the next page. On Yom Tov, Shabbat Chol HaMoed and Hoshana Raba, during the Repetition, the following is said standing with feet together, rising on the toes at the words indicated by ▴.", "he": "בחול המועד, פנה לקדושה בעמוד הבא. ביום טוב, שבת חול המועד והושענא רבה, בחזרת העמידה, אומרים את הדברים הבאים בעמידה, ומתרוממים על קצות האצבעות במילים המסומנות ב▴.", "text": "<i class=\"instruction\">On Ḥol HaMo’ed, turn to the Kedusha on the next page. On Yom Tov, Shabbat Ḥol HaMo’ed and Hoshana Raba, during the Repetition, the following is said standing with feet together, rising on the toes at the words indicated by▴.</i>"},
           {"ref": "19", "translates": ["19"], "parts": [
-            {"kind": "instruction", "en": "Congregation then Leader:", "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
-            {"kind": "instruction", "en": "Congregation then Leader:", "text": " נַעֲרִיצְךָ We will revere and sanctify You with the words uttered by the holy Seraphim who sanctify Your name in the Sanctuary;"},
-            {"kind": "instruction", "en": "Congregation then Leader:", "text": " as is written by Your prophet: “They call out to one another,"},
-            {"kind": "instruction", "en": "Congregation then Leader:", "text": " saying:"}
+            {"kind": "instruction", "en": "Congregation then Leader:", "he": "הקהל ואז שליח ציבור:", "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
+            {"kind": "instruction", "en": "Congregation then Leader:", "he": "נעריצך נקדש ונשבחך בדברי השרפים הקדושים המקדשים שמך במקדש;", "text": " נַעֲרִיצְךָ We will revere and sanctify You with the words uttered by the holy Seraphim who sanctify Your name in the Sanctuary;"},
+            {"kind": "instruction", "en": "Congregation then Leader:", "he": "כפי שכתב נביאך: \"קראו איש אל רעהו,\"", "text": " as is written by Your prophet: “They call out to one another,"},
+            {"kind": "instruction", "en": "Congregation then Leader:", "he": "אומר:", "text": " saying:"}
           ]},
           {"ref": "20", "translates": ["20"], "parts": [
             {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "gestures": ["rise_on_toes"], "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
@@ -321,7 +321,7 @@
             {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "text": " will let us hear a second time in the presence of all that lives,"},
             {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "text": " His promise “to be Your God. I am the <small>LORD</small> your God.”"}
           ]},
-          {"ref": "23", "translates": [], "kind": "instruction", "en": "On Shabbat Chol HaMoed, the following paragraph is omitted:", "text": "<i class=\"instruction\">On Shabbat Ḥol HaMo’ed, the following paragraph is omitted:</i>"},
+          {"ref": "23", "translates": [], "kind": "instruction", "en": "On Shabbat Chol HaMoed, the following paragraph is omitted:", "he": "בשבת חול המועד, הפסקה הבאה נשמטת:", "text": "<i class=\"instruction\">On Shabbat Ḥol HaMo’ed, the following paragraph is omitted:</i>"},
           {"ref": "24", "translates": ["24"], "parts": [
             {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
             {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "text": " Glorious is our Glorious One,"},
@@ -330,8 +330,8 @@
             {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "text": " on that day the <small>LORD</small> shall be One and His name One."}
           ]},
           {"ref": "25", "translates": ["25"], "parts": [
-            {"kind": "instruction", "en": "Leader:", "text": "<i class=\"instruction\">Leader:</i>"},
-            {"kind": "instruction", "en": "Leader:", "text": " And in Your holy Writings it is written:"}
+            {"kind": "instruction", "en": "Leader:", "he": "שליח ציבור:", "text": "<i class=\"instruction\">Leader:</i>"},
+            {"kind": "instruction", "en": "Leader:", "he": "ובכתבי הקודש כתוב:", "text": " And in Your holy Writings it is written:"}
           ]},
           {"ref": "26", "translates": ["26"], "parts": [
             {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "gestures": ["rise_on_toes"], "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
@@ -352,18 +352,18 @@
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " <small>LORD</small>,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " the holy God."}
           ]},
-          {"ref": "28", "translates": [], "kind": "instruction", "en": "The Leader continues with 'You have chosen us' on the next page.", "text": "<i class=\"instruction\">The Leader continues with “You have chosen us” on the next page.</i>"},
-          {"ref": "29", "translates": ["29"], "kind": "heading", "en": "KEDUSHA FOR CHOL HAMOED", "text": "<small><b>KEDUSHA FOR ḤOL HAMO’ED</b></small>"},
+          {"ref": "28", "translates": [], "kind": "instruction", "en": "The Leader continues with 'You have chosen us' on the next page.", "he": "שליח הציבור ממשיך ב\"בחרתם\" בעמוד הבא.", "text": "<i class=\"instruction\">The Leader continues with “You have chosen us” on the next page.</i>"},
+          {"ref": "29", "translates": ["29"], "kind": "heading", "en": "KEDUSHA FOR CHOL HAMOED", "he": "קידוש לחול המועד", "text": "<small><b>KEDUSHA FOR ḤOL HAMO’ED</b></small>"},
           {"ref": "30", "translates": [], "parts": [
-            {"kind": "instruction", "en": "During the Leader's Repetition, the following is said standing with feet together, rising on the toes at the words indicated by ▴.", "text": "<i class=\"instruction\">During the Leader’s Repetition, the following is said standing</i>"},
-            {"kind": "instruction", "en": "During the Leader's Repetition, the following is said standing with feet together, rising on the toes at the words indicated by ▴.", "text": "<br><i class=\"instruction\">with feet together, rising on the toes at the words indicated by▴.</i>"}
+            {"kind": "instruction", "en": "During the Leader's Repetition, the following is said standing with feet together, rising on the toes at the words indicated by ▴.", "he": "במהלך חזרת שליח הציבור, האמור הבא נאמר בעמידה", "text": "<i class=\"instruction\">During the Leader’s Repetition, the following is said standing</i>"},
+            {"kind": "instruction", "en": "During the Leader's Repetition, the following is said standing with feet together, rising on the toes at the words indicated by ▴.", "he": "ברגליים צמודות, על קצות האצבעות במילים המסומנות ב-▴.", "text": "<br><i class=\"instruction\">with feet together, rising on the toes at the words indicated by▴.</i>"}
           ]},
           {"ref": "31", "translates": ["31"], "parts": [
-            {"kind": "instruction", "en": "Congregation then Leader:", "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
-            {"kind": "instruction", "en": "Congregation then Leader:", "text": " נְקַדֵּשׁ We will sanctify Your name on earth,"},
-            {"kind": "instruction", "en": "Congregation then Leader:", "text": " as they sanctify it in the highest heavens,"},
-            {"kind": "instruction", "en": "Congregation then Leader:", "text": " as is written by Your prophet,"},
-            {"kind": "instruction", "en": "Congregation then Leader:", "text": " “And they [the angels] call to one another saying:"}
+            {"kind": "instruction", "en": "Congregation then Leader:", "he": "הקהל ואז שליח ציבור:", "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
+            {"kind": "instruction", "en": "Congregation then Leader:", "he": "נקדש נקדש את שמך בארץ,", "text": " נְקַדֵּשׁ We will sanctify Your name on earth,"},
+            {"kind": "instruction", "en": "Congregation then Leader:", "he": "כשמקדשים זאת במרומים,", "text": " as they sanctify it in the highest heavens,"},
+            {"kind": "instruction", "en": "Congregation then Leader:", "he": "כפי שכתב נביאך,", "text": " as is written by Your prophet,"},
+            {"kind": "instruction", "en": "Congregation then Leader:", "he": "\"וכל המלאכים קוראים זה לזה באומר:", "text": " “And they [the angels] call to one another saying:"}
           ]},
           {"ref": "32", "translates": ["32"], "parts": [
             {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "gestures": ["rise_on_toes"], "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
@@ -395,13 +395,13 @@
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " <small>LORD</small>,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " the holy God."}
           ]},
-          {"ref": "36", "translates": [], "kind": "instruction", "en": "The Leader continues with 'You have chosen us' below.", "text": "<i class=\"instruction\">The Leader continues with “You have chosen us” below.</i>"},
-          {"ref": "37", "translates": [], "kind": "instruction", "en": "When saying the Amidah silently, continue here with 'You are holy':", "text": "<i class=\"instruction\">When saying the Amida silently, continue here with “You are holy”:</i>"},
-          {"ref": "38", "translates": ["38"], "kind": "heading", "en": "HOLINESS", "text": "<small><b>HOLINESS</b></small>"},
+          {"ref": "36", "translates": [], "kind": "instruction", "en": "The Leader continues with 'You have chosen us' below.", "he": "שליח הציבור ממשיך ב\"בחרתם\" להלן.", "text": "<i class=\"instruction\">The Leader continues with “You have chosen us” below.</i>"},
+          {"ref": "37", "translates": [], "kind": "instruction", "en": "When saying the Amidah silently, continue here with 'You are holy':", "he": "בעת אמירת העמידה בשקט, ממשיכים כאן ב\"קדוש\":", "text": "<i class=\"instruction\">When saying the Amida silently, continue here with “You are holy”:</i>"},
+          {"ref": "38", "translates": ["38"], "kind": "heading", "en": "HOLINESS", "he": "קדוש", "text": "<small><b>HOLINESS</b></small>"},
           {"ref": "39", "translates": ["39"], "kind": "prayer", "en": "You are holy and Your name is holy, and holy ones praise You daily, Selah! Blessed are You, LORD, the holy God.", "text": "אַתָּה קָדוֹשׁ You are holy and Your name is holy,<br>and holy ones praise You daily, Selah!<br>Blessed are You, <small>LORD</small>, the holy God."},
-          {"ref": "40", "translates": ["40"], "kind": "heading", "en": "HOLINESS OF THE DAY", "text": "<small><b>HOLINESS OF THE DAY</b></small>"},
+          {"ref": "40", "translates": ["40"], "kind": "heading", "en": "HOLINESS OF THE DAY", "he": "קדושת היום", "text": "<small><b>HOLINESS OF THE DAY</b></small>"},
           {"ref": "41", "translates": ["41"], "kind": "prayer", "en": "You have chosen us from among all peoples. You have loved and favored us. You have raised us above all tongues. You have made us holy through Your commandments. You have brought us near, our King, to Your service, and have called us by Your great and holy name.", "text": "אַתָּה בְחַרְתָּֽנוּ You have chosen us from among all peoples.<br>You have loved and favored us.<br>You have raised us above all tongues.<br>You have made us holy through Your commandments.<br>You have brought us near, our King, to Your service,<br>and have called us by Your great and holy name."},
-          {"ref": "42", "translates": [], "kind": "instruction", "en": "On Shabbat, add the words in parentheses:", "text": "<i class=\"instruction\">On Shabbat, add the words in parentheses:</i>"},
+          {"ref": "42", "translates": [], "kind": "instruction", "en": "On Shabbat, add the words in parentheses:", "he": "בשבת, יש להוסיף את המילים בסוגריים:", "text": "<i class=\"instruction\">On Shabbat, add the words in parentheses:</i>"},
           {"ref": "43", "translates": ["43"], "parts": [
             {"kind": "prayer", "en": "And You, LORD our God, have given us in love (Sabbaths for rest and) festivals for rejoicing, holy days and seasons for joy, (this Sabbath day and) this day of: On Pesach: the festival of Matzot, the time of our freedom. On Shavuot: the festival of Shavuot, the time of the giving of our Torah. On Sukkot: the festival of Sukkot, our time of rejoicing. On Shemini Atzeret & Simchat Torah: the festival of the eighth day, Shemini Atzeret, our time of rejoicing (with love), a holy assembly in memory of the exodus from Egypt.", "text": "וַתִּתֶּן לָֽנוּ And You,"},
             {"kind": "prayer", "en": "And You, LORD our God, have given us in love (Sabbaths for rest and) festivals for rejoicing, holy days and seasons for joy, (this Sabbath day and) this day of: On Pesach: the festival of Matzot, the time of our freedom. On Shavuot: the festival of Shavuot, the time of the giving of our Torah. On Sukkot: the festival of Sukkot, our time of rejoicing. On Shemini Atzeret & Simchat Torah: the festival of the eighth day, Shemini Atzeret, our time of rejoicing (with love), a holy assembly in memory of the exodus from Egypt.", "text": " <small>LORD</small> our God,"},
@@ -453,9 +453,9 @@
             {"kind": "prayer", "en": "But because of our sins we were exiled from our land and driven far from our country. We cannot go up to appear and bow before You, and to perform our duties in Your chosen House, the great and holy Temple that was called by Your name, because of the hand that was stretched out against Your Sanctuary. May it be Your will, LORD our God and God of our ancestors, merciful King, that You in Your abounding compassion may once more have mercy on us and on Your Sanctuary, rebuilding it swiftly and adding to its glory. Our Father, our King, reveal the glory of Your kingdom to us swiftly. Appear and be exalted over us in the sight of all that lives. Bring back our scattered ones from among the nations, and gather our dispersed people from the ends of the earth. Lead us to Zion, Your city, in jubilation, and to Jerusalem, home of Your Temple, with everlasting joy. There we will prepare for You our obligatory offerings: the regular daily offerings in their order and the additional offerings according to their law. And the additional offering(s of this Sabbath day and) of this day of: On Pesach: the festival of Matzot. On Shavuot: the festival of Shavuot. On Sukkot: the festival of Sukkot. On Shemini Atzeret & Simchat Torah: the festival of Shemini Atzeret. We will prepare and offer before You in love, in accord with Your will's commandment, as You wrote for us in Your Torah through Your servant Moses, by Your own word, as it is said:", "text": " by Your own word,"},
             {"kind": "prayer", "en": "But because of our sins we were exiled from our land and driven far from our country. We cannot go up to appear and bow before You, and to perform our duties in Your chosen House, the great and holy Temple that was called by Your name, because of the hand that was stretched out against Your Sanctuary. May it be Your will, LORD our God and God of our ancestors, merciful King, that You in Your abounding compassion may once more have mercy on us and on Your Sanctuary, rebuilding it swiftly and adding to its glory. Our Father, our King, reveal the glory of Your kingdom to us swiftly. Appear and be exalted over us in the sight of all that lives. Bring back our scattered ones from among the nations, and gather our dispersed people from the ends of the earth. Lead us to Zion, Your city, in jubilation, and to Jerusalem, home of Your Temple, with everlasting joy. There we will prepare for You our obligatory offerings: the regular daily offerings in their order and the additional offerings according to their law. And the additional offering(s of this Sabbath day and) of this day of: On Pesach: the festival of Matzot. On Shavuot: the festival of Shavuot. On Sukkot: the festival of Sukkot. On Shemini Atzeret & Simchat Torah: the festival of Shemini Atzeret. We will prepare and offer before You in love, in accord with Your will's commandment, as You wrote for us in Your Torah through Your servant Moses, by Your own word, as it is said:", "text": " as it is said:"}
           ]},
-          {"ref": "45", "translates": [], "kind": "instruction", "en": "On Shabbat add:", "text": "<i class=\"instruction\">On Shabbat add:</i>"},
+          {"ref": "45", "translates": [], "kind": "instruction", "en": "On Shabbat add:", "he": "בשבת יש להוסיף:", "text": "<i class=\"instruction\">On Shabbat add:</i>"},
           {"ref": "46", "translates": ["46"], "kind": "prayer", "en": "On the Sabbath day, make an offering of two lambs a year old, without blemish, together with two-tenths of an ephah of fine flour mixed with oil as a meal-offering, and its appropriate libation. This is the burnt-offering for every Sabbath, in addition to the regular daily burnt-offering and its libation.", "text": "וּבְיוֹם הַשַּׁבָּת On the Sabbath day, make an offering of two lambs a year old, without blemish, together with two-tenths of an ephah of fine flour mixed with oil as a meal-offering, and its appropriate libation. This is the burnt-offering for every Sabbath, in addition to the regular daily burnt-offering and its libation."},
-          {"ref": "47", "translates": [], "kind": "instruction", "en": "On the first two days of Pesach say (in Israel, on the first day only):", "text": "<i class=\"instruction\">On the first two days of Pesaḥ say (in Israel, on the first day only):</i>"},
+          {"ref": "47", "translates": [], "kind": "instruction", "en": "On the first two days of Pesach say (in Israel, on the first day only):", "he": "בימים הראשונים של פסח אמרו (בארץ ישראל, ביום הראשון בלבד):", "text": "<i class=\"instruction\">On the first two days of Pesaḥ say (in Israel, on the first day only):</i>"},
           {"ref": "48", "translates": ["48"], "kind": "prayer", "en": "On the fourteenth day of the first month there shall be a Pesach offering to the Lord. And on the fifteenth day of this month there shall be a festival: seven days unleavened bread shall be eaten. On the first day there shall be a sacred assembly: you shall do no laborious work. And you shall bring an offering consumed by fire, a burnt-offering to the Lord: two young bullocks, one ram, and seven yearling male lambs; they shall be to you unblemished. And their meal-offerings and wine-libations as ordained: three-tenths of an ephah for each bull, two-tenths of an ephah for the ram, one-tenth of an ephah for each lamb, wine for the libations, a male goat for atonement, and two regular daily offerings according to their law.", "text": "וּבַחֹֽדֶשׁ הָרִאשׁוֹן On the fourteenth day of the first month there shall be a Pesaḥ offering to the Lord. And on the fifteenth day of this month there shall be a festival: seven days unleavened bread shall be eaten. On the first day there shall be a sacred assembly: you shall do no laborious work. And you shall bring an offering consumed by fire, a burnt-offering to the Lord: two young bullocks, one ram, and seven yearling male lambs; they shall be to you unblemished. And their meal-offerings and wine-libations as ordained: three-tenths of an ephah for each bull, two-tenths of an ephah for the ram, one-tenth of an ephah for each lamb, wine for the libations, a male goat for atonement, and two regular daily offerings according to their law."},
           {"ref": "49", "translates": ["84"], "text": "<i class=\"instruction\">On weekdays, continue with “Our God and God of our ancestors” on page 822.<br>On Shabbat, continue with “Those who keep the Sabbath” at the top of page 822.</i>"},
           {"ref": "50", "translates": ["85"], "text": "<i class=\"instruction\">On the last six days of Pesaḥ say:</i>"},
@@ -500,7 +500,7 @@
           {"ref": "89", "translates": [], "text": "רְצֵה Find favor, <small>LORD</small> our God,<br>in Your people Israel and their prayer.<br>Restore the service to Your most holy House,<br>and accept in love and favor<br>the fire-offerings of Israel and their prayer.<br>May the service of Your people Israel<br>always find favor with You."},
           {"ref": "90", "translates": [], "text": "<i class=\"instruction\">If Kohanim bless the congregation during the Leader’s Repetition, the following is said. It is not said on Ḥol HaMo’ed or Shabbat Ḥol HaMo’ed.</i>"},
           {"ref": "91", "translates": [], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">All:</i>"},
+            {"kind": "instruction", "he": "כולם:", "text": "<i class=\"instruction\">All:</i>"},
             {"kind": "prayer", "text": " וְתֶעֱרַב May our entreaty be as pleasing to You as a burnt-offering and sacrifice. Please,"},
             {"kind": "prayer", "text": " Compassionate One,"},
             {"kind": "prayer", "text": " in Your abounding mercy restore Your Presence to Zion,"},
@@ -509,7 +509,7 @@
             {"kind": "prayer", "text": " that there we may serve You with reverence as in the days of old and as in former years."}
           ]},
           {"ref": "92", "translates": [], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Leader:</i>"},
+            {"kind": "instruction", "he": "שליח ציבור:", "text": "<i class=\"instruction\">Leader:</i>"},
             {"kind": "prayer", "text": " Blessed are You,"},
             {"kind": "prayer", "text": " <small>LORD</small>,"},
             {"kind": "prayer", "text": " for You alone do we serve with reverence."}
@@ -517,7 +517,7 @@
           {"ref": "93", "translates": [], "text": "<i class=\"instruction\">Continue with “We give thanks” on the next page.</i>"},
           {"ref": "94", "translates": [], "text": "<i class=\"instruction\">In Israel:</i>"},
           {"ref": "95", "translates": [], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">All:</i>"},
+            {"kind": "instruction", "he": "כולם:", "text": "<i class=\"instruction\">All:</i>"},
             {"kind": "prayer", "text": " וְתֶעֱרַב May our entreaty be as pleasing to You as a burnt-offering and sacrifice. Please,"},
             {"kind": "prayer", "text": " Compassionate One,"},
             {"kind": "prayer", "text": " in Your abounding mercy restore Your Presence to Zion,"},
@@ -526,8 +526,8 @@
           ]},
           {"ref": "96", "translates": [], "text": "<i class=\"instruction\">Continue with “And may our eyes” at the top of the next page.</i>"},
           {"ref": "97", "translates": [], "kind": "prayer", "node": "amidah.musaf.korbanot", "role": "congregation", "en": "And may our eyes witness Your return to Zion in compassion. Blessed are You, LORD, who restores His Presence to Zion.", "text": "And may our eyes witness Your return to Zion in compassion.<br>Blessed are You, <small>LORD</small>, who restores His Presence to Zion."},
-          {"ref": "98", "translates": [], "kind": "heading", "en": "THANKSGIVING", "text": "<small><b>THANKSGIVING</b></small>"},
-          {"ref": "99", "translates": [], "kind": "instruction", "en": "Bow at the first nine words.", "gloss": "At the start of Modim", "text": "<i class=\"instruction\">Bow at the first nine words.</i>"},
+          {"ref": "98", "translates": [], "kind": "heading", "en": "THANKSGIVING", "he": "הודיה", "text": "<small><b>THANKSGIVING</b></small>"},
+          {"ref": "99", "translates": [], "kind": "instruction", "en": "Bow at the first nine words.", "he": "להשתחוות בתחילת תשע המילים הראשונות.", "gloss": "At the start of Modim", "text": "<i class=\"instruction\">Bow at the first nine words.</i>"},
           {"ref": "100", "translates": [], "kind": "prayer", "node": "amidah.modim", "role": "individual", "text": "▾מוֹדִים We give thanks to You, for You are the Lord our God and God of our ancestors for ever and all time. You are the Rock of our lives, Shield of our salvation from generation to generation. We will thank You and declare Your praise for our lives, which are entrusted into Your hand; for our souls, which are placed in Your charge; for Your miracles which are with us every day; and for Your wonders and favors at all times, evening, morning and midday. You are good – for Your compassion never fails. You are compassionate – for Your loving-kindnesses never cease. We have always placed our hope in You."},
           {"ref": "101", "translates": [], "parts": [
             {"kind": "prayer", "node": "amidah.modim_derabbanan", "role": "congregation", "voice": "undertone", "en": "During the Leader’s Repetition, the congregation says quietly: Modim...", "text": "<small><i class=\"instruction\">During the Leader’s Repetition, the congregation says quietly:</i>"},
@@ -541,33 +541,33 @@
             {"kind": "prayer", "node": "amidah.modim_derabbanan", "role": "congregation", "voice": "undertone", "en": "During the Leader’s Repetition, the congregation says quietly: Modim...", "text": " for it is for us to give You thanks. Blessed be God to whom thanks­giving is due.</small>"}
           ]},
           {"ref": "102", "translates": [], "kind": "prayer", "node": "amidah.modim", "role": "individual", "text": "וְעַל כֻּלָּם For all these things may Your name be blessed and exalted, our King, continually, for ever and all time. Let all that lives thank You, Selah! and praise Your name in truth, God, our Savior and Help, Selah! ▾Blessed are You, <small>LORD</small>, whose name is “the Good” and to whom thanks are due."},
-          {"ref": "103", "translates": [], "kind": "note", "en": "Outside Israel, if Kohanim bless the congregation during the Leader’s Repetition, the service continues on page 830. In Israel, the regular Priestly Blessing on page 838 is said. If Kohanim do not ascend, the following is said. See laws 370–377.", "cite": "laws 370–377", "text": "<i class=\"instruction\">Outside Israel, if Kohanim bless the congregation during the Leader’s Repetition, the service continues on page 830. In Israel, the regular Priestly Blessing on page 838 is said. If Kohanim do not ascend, the following is said. See laws 370–377.</i>"},
+          {"ref": "103", "translates": [], "kind": "note", "en": "Outside Israel, if Kohanim bless the congregation during the Leader’s Repetition, the service continues on page 830. In Israel, the regular Priestly Blessing on page 838 is said. If Kohanim do not ascend, the following is said. See laws 370–377.", "he": "במערב, אם כוהנים מברכים את הקהל במהלך חזרת שליח הציבור, התפילה ממשיכה בדף 830. בארץ ישראל, אומרים את ברכת כוהנים הרגילה בדף 838. אם כוהנים אינם עולים, אומרים את הדברים הבאים. ראה הלכות 370–377.", "cite": "laws 370–377", "text": "<i class=\"instruction\">Outside Israel, if Kohanim bless the congregation during the Leader’s Repetition, the service continues on page 830. In Israel, the regular Priestly Blessing on page 838 is said. If Kohanim do not ascend, the following is said. See laws 370–377.</i>"},
           {"ref": "104", "translates": [], "parts": [
             {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Our God and God of our fathers, bless us with the threefold blessing...", "text": "<small>Our God and God of our fathers,"},
             {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Our God and God of our fathers, bless us with the threefold blessing...", "text": " bless us with the threefold blessing in the Torah,"},
             {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Our God and God of our fathers, bless us with the threefold blessing...", "text": " written by the hand of Moses Your servant and pronounced by Aaron and his sons the priests,"},
             {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Our God and God of our fathers, bless us with the threefold blessing...", "text": " Your holy people,"},
             {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Our God and God of our fathers, bless us with the threefold blessing...", "text": " as it is said:<br>May the Lord bless you and protect you.<br>"},
-            {"kind": "instruction", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Cong:", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Cong:", "he": "קהל:", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Our God and God of our fathers, bless us with the threefold blessing...", "text": " May it be Your will.<br>May the Lord make His face shine on you and be gracious to you.<br>"},
-            {"kind": "instruction", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Cong:", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Cong:", "he": "קהל:", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Our God and God of our fathers, bless us with the threefold blessing...", "text": " May it be Your will.<br>May the Lord turn His face toward you,"},
-            {"kind": "instruction", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Cong:", "text": " and grant you peace.<br>"},
+            {"kind": "instruction", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Cong:", "he": "ותן שלום.", "text": " and grant you peace.<br>"},
             {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Our God and God of our fathers, bless us with the threefold blessing...", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "node": "amidah.birkat_kohanim", "role": "chazzan", "en": "Our God and God of our fathers, bless us with the threefold blessing...", "text": " May it be Your will.</small>"}
           ]},
-          {"ref": "105", "translates": [], "kind": "heading", "en": "PEACE", "text": "<small><b>PEACE</b></small>"},
+          {"ref": "105", "translates": [], "kind": "heading", "en": "PEACE", "he": "שלום", "text": "<small><b>PEACE</b></small>"},
           {"ref": "106", "translates": [], "kind": "prayer", "node": "amidah.shalom", "role": "individual", "text": "שִׂים שָׁלוֹם Grant peace, goodness and blessing, grace, loving-kindness and compassion to us and all Israel Your people. Bless us, our Father, all as one, with the light of Your face, for by the light of Your face You have given us, <small>LORD</small> our God, the Torah of life and love of kindness, righteousness, blessing, compassion, life and peace. May it be good in Your eyes to bless Your people Israel at every time, in every hour, with Your peace. Blessed are You, <small>LORD</small>, who blesses His people Israel with peace."},
           {"ref": "107", "translates": [], "parts": [
-            {"kind": "instruction", "en": "The following verse concludes the Leader’s Repetition of the Amida. Some also say it here as part of the silent Amida. See law 368.", "cite": "law 368", "text": "<i class=\"instruction\">The following verse concludes the Leader’s Repetition of the Amida.</i>"},
-            {"kind": "instruction", "en": "The following verse concludes the Leader’s Repetition of the Amida. Some also say it here as part of the silent Amida. See law 368.", "cite": "law 368", "text": "<br><i class=\"instruction\">Some also say it here as part of the silent Amida. See law 368.</i>"}
+            {"kind": "instruction", "en": "The following verse concludes the Leader’s Repetition of the Amida. Some also say it here as part of the silent Amida. See law 368.", "he": "הפסוק הבא מסיים את חזרת שליח הציבור על העמידה.", "cite": "law 368", "text": "<i class=\"instruction\">The following verse concludes the Leader’s Repetition of the Amida.</i>"},
+            {"kind": "instruction", "en": "The following verse concludes the Leader’s Repetition of the Amida. Some also say it here as part of the silent Amida. See law 368.", "he": "יש האומרים גם כאן כחלק מעמידה. ראה הלכה 368.", "cite": "law 368", "text": "<br><i class=\"instruction\">Some also say it here as part of the silent Amida. See law 368.</i>"}
           ]},
           {"ref": "108", "translates": [], "kind": "prayer", "node": "amidah.oseh_shalom", "role": "individual", "en": "May the words of my mouth and the meditation of my heart find favor before You, LORD, my Rock and Redeemer.", "text": "May the words of my mouth and the meditation of my heart<br>find favor before You, <small>LORD</small>, my Rock and Redeemer."},
           {"ref": "109", "translates": [], "kind": "prayer", "node": "amidah.elokai_netzor", "role": "individual", "text": "אֱלֹהַי My God,<br>guard my tongue from evil and my lips from deceitful speech.<br>To those who curse me, let my soul be silent;<br>may my soul be to all like the dust.<br>Open my heart to Your Torah and let my soul<br>pursue Your commandments.<br>As for all who plan evil against me,<br>swiftly thwart their counsel and frustrate their plans.<br>Act for the sake of Your name; act for the sake of Your right hand;<br>act for the sake of Your holiness; act for the sake of Your Torah.<br>That Your beloved ones may be delivered,<br>save with Your right hand and answer me.<br>May the words of my mouth and the meditation of my heart find favor before You, <small>LORD</small>, my Rock and Redeemer."},
-          {"ref": "110", "translates": [], "kind": "instruction", "en": "Bow, take three steps back, then bow, first left, then right, then center, while saying:", "gloss": "Gestures for Oseh Shalom", "text": "<i class=\"instruction\">Bow, take three steps back, then bow, first left, then right, then center, while saying:</i>"},
+          {"ref": "110", "translates": [], "kind": "instruction", "en": "Bow, take three steps back, then bow, first left, then right, then center, while saying:", "he": "השתחוה, צעד שלושה צעדים לאחור, ואז השתחוה, תחילה שמא, ואחר כך ימינה, ואז במרכז, תוך אמירת:", "gloss": "Gestures for Oseh Shalom", "text": "<i class=\"instruction\">Bow, take three steps back, then bow, first left, then right, then center, while saying:</i>"},
           {"ref": "111", "translates": [], "kind": "prayer", "node": "amidah.oseh_shalom", "role": "individual", "en": "May He who makes peace in His high places, make peace for us and all Israel – and say: Amen.", "text": "May He who makes peace in His high places, make peace for us and all Israel – and say: Amen."},
           {"ref": "112", "translates": [], "kind": "prayer", "node": "amidah.yehi_ratzon_mikdash", "role": "individual", "text": "יְהִי רָצוֹן May it be Your will, <small>LORD</small> our God and God of our ancestors,<br>that the Temple be rebuilt speedily in our days,<br>and grant us a share in Your Torah. And there we will serve You<br>with reverence, as in the days of old and as in former years.<br>Then the offering of Judah and Jerusalem will be pleasing to the <small>LORD</small> as in the days of old and as in former years."},
-          {"ref": "113", "translates": [], "kind": "instruction", "en": "On Sukkot, Hoshanot (page 853) are said at this point. On other days of Yom Tov and Shabbat Ḥol HaMo’ed, Full Kaddish (page 554) is said and the service continues with “There is none like our God” on page 556. On Ḥol HaMo’ed Pesaḥ, Full Kaddish (page 178) is said and the service continues with Aleinu (page 180).", "gloss": "Service flow after Musaf Amidah varies by festival", "text": "<i class=\"instruction\">On Sukkot, Hoshanot ( page 853) are said at this point. On other days of Yom Tov and Shabbat Ḥol HaMo’ed, Full Kaddish ( page 554) is said and the service continues with “There is none like our God” on page 556. On Ḥol HaMo’ed Pesaḥ, Full Kaddish ( page 178) is said and the service continues with Aleinu ( page 180).</i>"}
+          {"ref": "113", "translates": [], "kind": "instruction", "en": "On Sukkot, Hoshanot (page 853) are said at this point. On other days of Yom Tov and Shabbat Ḥol HaMo’ed, Full Kaddish (page 554) is said and the service continues with “There is none like our God” on page 556. On Ḥol HaMo’ed Pesaḥ, Full Kaddish (page 178) is said and the service continues with Aleinu (page 180).", "he": "בסוכות נאמרים הושענות (עמוד 853). בימים אחרים של יום טוב ושבת חול המועד נאמר קדיש מלא (עמוד 554) והתפילה ממשיכה ב\"אין עוד כאלוקינו\" (עמוד 556). בחול המועד פסח נאמר קדיש מלא (עמוד 178) והתפילה ממשיכה בעלינו (עמוד 180).", "gloss": "Service flow after Musaf Amidah varies by festival", "text": "<i class=\"instruction\">On Sukkot, Hoshanot ( page 853) are said at this point. On other days of Yom Tov and Shabbat Ḥol HaMo’ed, Full Kaddish ( page 554) is said and the service continues with “There is none like our God” on page 556. On Ḥol HaMo’ed Pesaḥ, Full Kaddish ( page 178) is said and the service continues with Aleinu ( page 180).</i>"}
         ]
       }
     },
@@ -746,7 +746,7 @@
             {"kind": "prayer", "text": " and a sign for good. Grant me success in my paths,"},
             {"kind": "prayer", "text": " and set in my heart understanding that I may understand,"},
             {"kind": "prayer", "text": " discern and fulfill all the words of Your Torah’s teachings and mysteries. Save me from errors and purify my thoughts and my heart to serve You and be in awe of You. Prolong my days ("},
-            {"kind": "instruction", "text": "<i>add, where appropriate:</i>"},
+            {"kind": "instruction", "he": "להוסיף, לפי העניין:", "text": "<i>add, where appropriate:</i>"},
             {"kind": "prayer", "text": " and those of my father,"},
             {"kind": "prayer", "text": " mother,"},
             {"kind": "prayer", "text": " wife,"},
@@ -769,33 +769,33 @@
           {"ref": "46", "translates": ["47"], "text": "<i class=\"instruction\"> In Israel, the following is said by the Leader during the Repetition of the Amida when Kohanim bless the congregation. If there is more than one Kohen, a member of the congregation calls: (See laws 370–377.)</i>"},
           {"ref": "47", "translates": ["47"], "text": "Kohanim!"},
           {"ref": "48", "translates": ["49"], "text": "<i class=\"instruction\">The Kohanim respond:</i>"},
-          {"ref": "49", "translates": [], "kind": "instruction", "en": "In Israel, the following is said by the Leader during the Repetition of the Amida when Kohanim bless the congregation. If there is more than one Kohen, a member of the congregation calls:", "gloss": "Instruction for the call to Kohanim", "text": "<b>בָּרוּךְ </b>Blessed are You, <small>LORD</small> our God, King of the Universe,<br>who has made us holy with the holiness of Aaron,<br>and has commanded us to bless His people Israel with love."},
-          {"ref": "50", "translates": [], "kind": "instruction", "en": "The Leader calls word by word, followed by the Kohanim:", "gloss": "Instruction for the Leader's role in the blessing", "text": "<i class=\"instruction\">The Leader calls word by word, followed by the Kohanim:</i>"},
+          {"ref": "49", "translates": [], "kind": "instruction", "en": "In Israel, the following is said by the Leader during the Repetition of the Amida when Kohanim bless the congregation. If there is more than one Kohen, a member of the congregation calls:", "he": "ברוך אתה ה אלהינו מלך העולם אשר קדשנו בקדושת אהרן וציוונו לקדש את בני ישראל באהבה.", "gloss": "Instruction for the call to Kohanim", "text": "<b>בָּרוּךְ </b>Blessed are You, <small>LORD</small> our God, King of the Universe,<br>who has made us holy with the holiness of Aaron,<br>and has commanded us to bless His people Israel with love."},
+          {"ref": "50", "translates": [], "kind": "instruction", "en": "The Leader calls word by word, followed by the Kohanim:", "he": "שליח הציבור אומר מילה במילה, ואחריו הכהנים:", "gloss": "Instruction for the Leader's role in the blessing", "text": "<i class=\"instruction\">The Leader calls word by word, followed by the Kohanim:</i>"},
           {"ref": "51", "translates": [], "parts": [
             {"kind": "prayer", "role": "chazzan_then_congregation", "voice": "aloud", "en": "May the Lord bless you and protect you.", "text": "May the Lord bless you and protect you. ("},
-            {"kind": "instruction", "en": "Congregation:", "gloss": "Instruction for the congregation's response", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "en": "Congregation:", "he": "קהל:", "gloss": "Instruction for the congregation's response", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "en": "Amen.", "text": " Amen.)"}
           ]},
           {"ref": "52", "translates": [], "parts": [
             {"kind": "prayer", "role": "chazzan_then_congregation", "voice": "aloud", "en": "May the Lord make His face shine on you and be gracious to you.", "text": "May the Lord make His face shine on you and be gracious to you. ("},
-            {"kind": "instruction", "en": "Congregation:", "gloss": "Instruction for the congregation's response", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "en": "Congregation:", "he": "קהל:", "gloss": "Instruction for the congregation's response", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "en": "Amen.", "text": " Amen.)"}
           ]},
           {"ref": "53", "translates": [], "parts": [
             {"kind": "prayer", "role": "chazzan_then_congregation", "voice": "aloud", "en": "May it be Your will. May the Lord turn His face toward you, and grant you peace.", "text": "May it be Your will. May the Lord turn His face toward you,"},
-            {"kind": "instruction", "en": "Congregation:", "gloss": "Instruction for the congregation's response", "text": " and grant you peace. ("},
+            {"kind": "instruction", "en": "Congregation:", "he": "ותן שלום. (", "gloss": "Instruction for the congregation's response", "text": " and grant you peace. ("},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "en": "Amen.", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "text": " Amen.)"}
           ]},
-          {"ref": "54", "translates": [], "kind": "instruction", "en": "The Leader continues with 'Grant peace' below.", "gloss": "Instruction for the Leader's continuation", "text": "<i class=\"instruction\">The Leader continues with “Grant peace” below.</i>"},
-          {"ref": "55", "translates": [], "kind": "instruction", "en": "The congregation says:", "gloss": "Instruction for the congregation's response", "text": "<i class=\"instruction\">The congregation says:</i>"},
+          {"ref": "54", "translates": [], "kind": "instruction", "en": "The Leader continues with 'Grant peace' below.", "he": "שליח הציבור ממשיך ב\"תן שלום\" להלן.", "gloss": "Instruction for the Leader's continuation", "text": "<i class=\"instruction\">The Leader continues with “Grant peace” below.</i>"},
+          {"ref": "55", "translates": [], "kind": "instruction", "en": "The congregation says:", "he": "הקהל אומר:", "gloss": "Instruction for the congregation's response", "text": "<i class=\"instruction\">The congregation says:</i>"},
           {"ref": "56", "translates": [], "kind": "prayer", "role": "congregation", "voice": "aloud", "en": "Majestic One on high who dwells in power: You are peace and Your name is peace. May it be Your will to bestow on us and on Your people the house of Israel, life and blessing as a safeguard for peace.", "text": "אַדִּיר Majestic One on high who dwells in power: You are peace and Your name is peace. May it be Your will to bestow on us and on Your people the house of Israel, life and blessing as a safeguard for peace."},
-          {"ref": "57", "translates": [], "kind": "instruction", "en": "The Kohanim say:", "gloss": "Instruction for the Kohanim's response", "text": "<i class=\"instruction\">The Kohanim say:</i>"},
+          {"ref": "57", "translates": [], "kind": "instruction", "en": "The Kohanim say:", "he": "הכהנים אומרים:", "gloss": "Instruction for the Kohanim's response", "text": "<i class=\"instruction\">The Kohanim say:</i>"},
           {"ref": "58", "translates": [], "kind": "prayer", "role": "kohanim", "voice": "aloud", "en": "Master of the Universe: we have done what You have decreed for us. So too may You deal with us as You have promised us. Look down from Your holy dwelling place, from heaven, and bless Your people Israel and the land You have given us as You promised on oath to our ancestors, a land flowing with milk and honey.", "text": "רִבּוֹנוֹ Master of the Universe: we have done what You have decreed for us. So too may You deal with us as You have promised us. Look down from Your holy dwelling place, from heaven, and bless Your people Israel and the land You have given us as You promised on oath to our ancestors, a land flowing with milk and honey."},
-          {"ref": "59", "translates": [], "kind": "instruction", "en": "The Leader continues:", "gloss": "Instruction for the Leader's continuation", "text": "<i class=\"instruction\">The Leader continues:</i>"},
+          {"ref": "59", "translates": [], "kind": "instruction", "en": "The Leader continues:", "he": "שליח הציבור ממשיך:", "gloss": "Instruction for the Leader's continuation", "text": "<i class=\"instruction\">The Leader continues:</i>"},
           {"ref": "60", "translates": [], "kind": "prayer", "role": "chazzan", "voice": "aloud", "en": "Grant peace, goodness and blessing, grace, loving-kindness and compassion to us and all Israel Your people. Bless us, our Father, all as one, with the light of Your face, for by the light of Your face You have given us, LORD our God, the Torah of life and love of kindness, righteousness, blessing, compassion, life and peace. May it be good in Your eyes to bless Your people Israel at every time, in every hour, with Your peace.", "text": "<b>שִׂים שָׁלוֹם </b>Grant peace, goodness and blessing, grace, loving-kindness and compassion to us and all Israel Your people. Bless us, our Father, all as one, with the light of Your face, for by the light of Your face You have given us, <small>LORD</small> our God, the Torah of life and love of kindness, righteousness, blessing, compassion, life and peace. May it be good in Your eyes to bless Your people Israel at every time, in every hour, with Your peace. "},
           {"ref": "61", "translates": [], "parts": [
-            {"kind": "instruction", "forgot": true, "en": "Between Rosh HaShana and Yom Kippur:", "gloss": "Instruction for the Aseret Yemei Teshuva insertion", "text": "<small><i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>"},
+            {"kind": "instruction", "forgot": true, "en": "Between Rosh HaShana and Yom Kippur:", "he": "בין ראש השנה ליום כיפור:", "gloss": "Instruction for the Aseret Yemei Teshuva insertion", "text": "<small><i class=\"instruction\">Between Rosh HaShana and Yom Kippur:</i>"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "forgot": true, "en": "In the book of life, blessing, peace and prosperity, may we and all Your people the house of Israel be remembered and written before You for a good life, and for peace.", "text": " In the book of life,"},
             {"kind": "prayer", "text": " blessing,"},
             {"kind": "prayer", "text": " peace and prosperity,"},
@@ -803,7 +803,7 @@
             {"kind": "prayer", "text": " and for peace.</small>"}
           ]},
           {"ref": "62", "translates": [], "kind": "prayer", "role": "chazzan", "voice": "aloud", "en": "Blessed are You, LORD, who blesses His people Israel with peace.", "text": "Blessed are You, <small>LORD</small>, who blesses His people Israel with peace."},
-          {"ref": "63", "translates": [], "kind": "instruction", "en": "The following verse concludes the Leader's Repetition of the Amida (see law 368).", "gloss": "Instruction for the conclusion of the repetition", "text": "<i class=\"instruction\">The following verse concludes the Leader’s Repetition of the Amida (see law 368).</i>"},
+          {"ref": "63", "translates": [], "kind": "instruction", "en": "The following verse concludes the Leader's Repetition of the Amida (see law 368).", "he": "הפסוק הבא מסיים את חזרת שליח הציבור על העמידה (ראה הלכה 368).", "gloss": "Instruction for the conclusion of the repetition", "text": "<i class=\"instruction\">The following verse concludes the Leader’s Repetition of the Amida (see law 368).</i>"},
           {"ref": "64", "translates": [], "kind": "prayer", "role": "chazzan", "voice": "aloud", "en": "May the words of my mouth and the meditation of my heart find favor before You, LORD, my Rock and Redeemer.", "text": "May the words of my mouth and the meditation of my heart<br>find favor before You, <small>LORD</small>, my Rock and Redeemer."}
         ]
       }
@@ -853,9 +853,9 @@
           {"ref": "14", "translates": ["14"], "text": "טַל Dew – Let it sweeten the mountain streams;<br>let the chosen ones taste Your magnanimity.<br>Free Your beloved ones from captivity,<br>then sweetly we will raise our voices and sing –<br>With dew."},
           {"ref": "15", "translates": ["15"], "text": "טַל Dew – May it fill our granaries to overflowing.<br>Would that now You might renew our days.<br>Beloved! Let our name endure as Yours.<br>Make us like a well-watered garden – With dew."},
           {"ref": "16", "translates": ["16"], "text": "טַל Dew – With it bless our food;<br>in our fertile lands may there be no scarcity.<br>The nation You once led like a flock,<br>on her please, we pray, bestow Your favor – With dew."},
-          {"ref": "17", "translates": [], "kind": "speaker", "en": "Leader:", "text": "<i class=\"instruction\">Leader:</i>"},
+          {"ref": "17", "translates": [], "kind": "speaker", "en": "Leader:", "he": "שליח ציבור:", "text": "<i class=\"instruction\">Leader:</i>"},
           {"ref": "18", "translates": ["18"], "kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "For You, <small>LORD</small> our God, make the wind blow and the dew fall."},
-          {"ref": "19", "translates": [], "kind": "speaker", "en": "Congregation then Leader, responsively:", "text": "<i class=\"instruction\">Congregation then Leader, responsively:</i>"},
+          {"ref": "19", "translates": [], "kind": "speaker", "en": "Congregation then Leader, responsively:", "he": "הקהל ואחריו שליח הציבור, בתרועה ועקיבה:", "text": "<i class=\"instruction\">Congregation then Leader, responsively:</i>"},
           {"ref": "20", "translates": ["20"], "parts": [
             {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "minyan": true, "text": "For blessing,"},
             {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "minyan": true, "text": " and not for curse. "},
@@ -868,7 +868,7 @@
             {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "minyan": true, "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "minyan": true, "text": " Amen."}
           ]},
-          {"ref": "21", "translates": [], "kind": "instruction", "en": "The Ark is closed. Outside Israel, the Leader continues the Repetition with \"He sustains the living\" on page 806. In Israel, the Leader says Half Kaddish and the Musaf Amida is recited with the addition of \"He makes the dew fall.\"", "text": "<i class=\"instruction\">The Ark is closed. Outside Israel, the Leader continues the Repetition with “He sustains the living” on page 806. In Israel, the Leader says Half Kaddish and the Musaf Amida is recited with the addition of “He makes the dew fall.”</i>"}
+          {"ref": "21", "translates": [], "kind": "instruction", "en": "The Ark is closed. Outside Israel, the Leader continues the Repetition with \"He sustains the living\" on page 806. In Israel, the Leader says Half Kaddish and the Musaf Amida is recited with the addition of \"He makes the dew fall.\"", "he": "הארון סגור. מחוץ לארץ ישראל, שליח הציבור ממשיך את החזרה ב\"מקיים את החיים\" בעמוד 806. בארץ ישראל, שליח הציבור אומר חצי קדיש ומסדר מוסף נאמר עם התוספת \"המוריד את הטל\".", "text": "<i class=\"instruction\">The Ark is closed. Outside Israel, the Leader continues the Repetition with “He sustains the living” on page 806. In Israel, the Leader says Half Kaddish and the Musaf Amida is recited with the addition of “He makes the dew fall.”</i>"}
         ]
       }
     },
@@ -903,8 +903,8 @@
         "version": "English Edition; Koren Publishers Jerusalem, 2017",
         "segs": [
           {"ref": "1", "translates": [], "parts": [
-            {"kind": "instruction", "en": "On Shemini Atzeret, the Ark is opened at the Repetition of the Musaf Amida. All stand. In Israel, the Prayer for Rain is said before the silent Amida and starts on the next page.", "text": "<i class=\"instruction\">On Shemini Atzeret, the Ark is opened at the Repetition of the Musaf Amida. All stand.</i>"},
-            {"kind": "instruction", "en": "On Shemini Atzeret, the Ark is opened at the Repetition of the Musaf Amida. All stand. In Israel, the Prayer for Rain is said before the silent Amida and starts on the next page.", "text": "<br><i class=\"instruction\">In Israel, the Prayer for Rain is said before the silent Amida and starts on the next page.</i>"}
+            {"kind": "instruction", "en": "On Shemini Atzeret, the Ark is opened at the Repetition of the Musaf Amida. All stand. In Israel, the Prayer for Rain is said before the silent Amida and starts on the next page.", "he": "בשמיני עצרת, נפתח ארון הקודש בחזרת עמידה מוסף. כולם עומדים.", "text": "<i class=\"instruction\">On Shemini Atzeret, the Ark is opened at the Repetition of the Musaf Amida. All stand.</i>"},
+            {"kind": "instruction", "en": "On Shemini Atzeret, the Ark is opened at the Repetition of the Musaf Amida. All stand. In Israel, the Prayer for Rain is said before the silent Amida and starts on the next page.", "he": "בארץ ישראל אומרים תפילת שוואת הגשם לפני עמידה דקצרה, ומתחילה בעמוד הבא.", "text": "<br><i class=\"instruction\">In Israel, the Prayer for Rain is said before the silent Amida and starts on the next page.</i>"}
           ]},
           {"ref": "2", "translates": ["2"], "text": "When I proclaim the <small>LORD</small>’s name, give glory to our God."},
           {"ref": "3", "translates": ["3"], "text": "O <small>LORD</small>, open my lips, so that my mouth may declare Your praise."},
@@ -914,68 +914,68 @@
           {"ref": "7", "translates": ["7"], "text": "▾Blessed are You, <small>LORD</small>, Shield of Abraham."},
           {"ref": "8", "translates": ["8"], "text": "אַתָּה You are eternally mighty, <small>LORD</small>.<br>You give life to the dead and have great power to save."},
           {"ref": "9", "translates": ["9"], "text": "יַטְרִֽיחַ May He make him apportion due portions of rain,<br>Moistening the earth with drops pure as opal.<br>In the Torah You symbolized Your might by water.<br>Its drops refresh those in whom was breathed the breath of life,<br>Reviving those who make mention of the powers of rain."},
-          {"ref": "10", "translates": ["11"], "kind": "instruction", "en": "In Israel start here:", "text": "<i class=\"instruction\">In Israel start here:</i>"},
+          {"ref": "10", "translates": ["11"], "kind": "instruction", "en": "In Israel start here:", "he": "בישראל מתחילים כאן:", "text": "<i class=\"instruction\">In Israel start here:</i>"},
           {"ref": "11", "translates": ["11"], "text": "Our God and God of our fathers."},
           {"ref": "12", "translates": ["12"], "parts": [
             {"kind": "prayer", "text": " זְכוֹר Remember the Patriarch [Abraham]<br>who followed You like water.<br>You blessed him like a tree planted beside streams of water.<br>You shielded him and rescued him from fire and water.<br>You sought him because he sowed [righteousness] by all waters.<br>"},
-            {"kind": "instruction", "en": "Congregation:", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "en": "Congregation:", "he": "קהל:", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "role": "congregation", "text": " For his sake do not withhold water."}
           ]},
           {"ref": "13", "translates": ["13"], "parts": [
             {"kind": "prayer", "text": "זְכוֹר Remember [Isaac] whose birth was foretold when [Abraham said] “Let there be brought some water.”<br>You told his father to offer him,"},
-            {"kind": "instruction", "en": "Congregation:", "text": " to shed his blood like water.<br>[Isaac],"},
+            {"kind": "instruction", "en": "Congregation:", "he": "לשפוך דמו כמים.[יצחק],", "text": " to shed his blood like water.<br>[Isaac],"},
             {"kind": "prayer", "role": "congregation", "text": " too,"},
             {"kind": "prayer", "text": " cared and poured out his soul like water.<br>When he dug,"},
             {"kind": "prayer", "text": " he discovered wells of water.<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "he": "קהל:", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "text": " For his righteousness’ sake grant abundant water."}
           ]},
           {"ref": "14", "translates": ["14"], "parts": [
             {"kind": "prayer", "text": "זְכוֹר Remember [Jacob] who carried his staff<br>and crossed the Jordan’s water.<br>With steadfast heart he rolled away the stone from the well of water.<br>He wrestled with an angel composed of fire and water,"},
-            {"kind": "instruction", "en": "Congregation:", "text": "<br>So You promised to be with him through fire and water.<br>"},
+            {"kind": "instruction", "en": "Congregation:", "he": "כך הבטחת להיות עמו באש ובמים.", "text": "<br>So You promised to be with him through fire and water.<br>"},
             {"kind": "prayer", "role": "congregation", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "text": " For his sake do not withhold water."}
           ]},
           {"ref": "15", "translates": ["15"], "parts": [
             {"kind": "prayer", "text": "זְכוֹר Remember [Moses] who in a reed basket<br>was drawn out of the water.<br>They said: “He drew water for us,"},
-            {"kind": "instruction", "en": "Congregation:", "text": " and gave the flock water.”<br>When Your treasured people thirsted for water,"},
+            {"kind": "instruction", "en": "Congregation:", "he": "״וַיְשְׁאַב לַצֹאן מָיִם״ כִּי צָמְאָו עַם חֲבָבֶךָ לַמָּיִם,", "text": " and gave the flock water.”<br>When Your treasured people thirsted for water,"},
             {"kind": "prayer", "role": "congregation", "text": "<br>He struck the rock and out gushed water.<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "he": "קהל:", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "text": " For his righteousness’ sake grant abundant water."}
           ]},
           {"ref": "16", "translates": ["16"], "parts": [
             {"kind": "prayer", "text": "זְכוֹר Remember [Aaron],"},
-            {"kind": "instruction", "en": "Congregation:", "text": " chief officer of the Temple,"},
+            {"kind": "instruction", "en": "Congregation:", "he": "שר המשכן,", "text": " chief officer of the Temple,"},
             {"kind": "prayer", "role": "congregation", "text": "<br>who immersed five times in water.<br>He went and washed his hands in the sanctifying water.<br>He called out and sprinkled blood,"},
             {"kind": "prayer", "text": "<br>purifying the people as if with water.<br>He kept apart from the people who were as unruly as water.<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "he": "קהל:", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "text": " For his sake do not withhold water."}
           ]},
           {"ref": "17", "translates": ["17"], "parts": [
             {"kind": "prayer", "text": "<b>זְכוֹר</b> Remember the twelve tribes<br>You brought through the divided water,"},
-            {"kind": "instruction", "en": "Congregation:", "text": "<br>For whom You sweetened the bitterness of the water.<br>For Your sake their descendants’ blood was spilled like water.<br>Turn to us,"},
+            {"kind": "instruction", "en": "Congregation:", "he": "למי שמתקתק את מרירות המים. למענך נשפך דם צאצאיהם כמים. פנה אלינו,", "text": "<br>For whom You sweetened the bitterness of the water.<br>For Your sake their descendants’ blood was spilled like water.<br>Turn to us,"},
             {"kind": "prayer", "role": "congregation", "text": " for troubles engulf our souls like water.<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "he": "קהל:", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "text": " For their righteousness’ sake grant abundant water."}
           ]},
-          {"ref": "18", "translates": ["19"], "kind": "instruction", "en": "Leader:", "text": "<i class=\"instruction\">Leader:</i>"},
+          {"ref": "18", "translates": ["19"], "kind": "instruction", "en": "Leader:", "he": "שליח ציבור:", "text": "<i class=\"instruction\">Leader:</i>"},
           {"ref": "19", "translates": ["19"], "text": "For You, <small>LORD</small> our God, make the wind blow and the rain fall."},
-          {"ref": "20", "translates": ["21"], "kind": "instruction", "en": "Congregation then Leader, responsively:", "text": "<i class=\"instruction\">Congregation then Leader, responsively:</i>"},
+          {"ref": "20", "translates": ["21"], "kind": "instruction", "en": "Congregation then Leader, responsively:", "he": "הקהל ואחריו שליח הציבור, בתרועה ועקיבה:", "text": "<i class=\"instruction\">Congregation then Leader, responsively:</i>"},
           {"ref": "21", "translates": ["21"], "parts": [
             {"kind": "prayer", "text": "For blessing,"},
-            {"kind": "instruction", "en": "Congregation:", "text": " and not for curse. "},
+            {"kind": "instruction", "en": "Congregation:", "he": "ולא לקללה.", "text": " and not for curse. "},
             {"kind": "prayer", "role": "congregation", "text": "<i class=\"instruction\">Cong:</i>"},
-            {"kind": "instruction", "en": "Congregation:", "text": " Amen.<br>For life,"},
+            {"kind": "instruction", "en": "Congregation:", "he": "אמן. למען החיים,", "text": " Amen.<br>For life,"},
             {"kind": "prayer", "role": "congregation", "text": " and not for death. "},
-            {"kind": "instruction", "en": "Congregation:", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "en": "Congregation:", "he": "קהל:", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "role": "congregation", "text": " Amen.<br>For plenty,"},
             {"kind": "prayer", "text": " and not for scarcity. "},
-            {"kind": "instruction", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "he": "קהל:", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "text": " Amen."}
           ]},
           {"ref": "22", "translates": [], "parts": [
-            {"kind": "instruction", "en": "The Ark is closed. The Leader continues the Repetition with 'He sustains the living' on page 806. In Israel, the Leader says Half Kaddish, and the Musaf Amida is said with the addition of 'He makes the wind blow and the rain fall.'", "text": "<i class=\"instruction\">The Ark is closed. The Leader continues the Repetition with</i>"},
-            {"kind": "instruction", "en": "The Ark is closed. The Leader continues the Repetition with 'He sustains the living' on page 806. In Israel, the Leader says Half Kaddish, and the Musaf Amida is said with the addition of 'He makes the wind blow and the rain fall.'", "text": "<br><i class=\"instruction\">“He sustains the living” on page 806. In Israel, the Leader says Half Kaddish, and the Musaf Amida is said with the addition of “He makes the wind blow and the rain fall.”</i>"}
+            {"kind": "instruction", "en": "The Ark is closed. The Leader continues the Repetition with 'He sustains the living' on page 806. In Israel, the Leader says Half Kaddish, and the Musaf Amida is said with the addition of 'He makes the wind blow and the rain fall.'", "he": "הארון נסגר. שליח הציבור ממשיך את החזרה עם", "text": "<i class=\"instruction\">The Ark is closed. The Leader continues the Repetition with</i>"},
+            {"kind": "instruction", "en": "The Ark is closed. The Leader continues the Repetition with 'He sustains the living' on page 806. In Israel, the Leader says Half Kaddish, and the Musaf Amida is said with the addition of 'He makes the wind blow and the rain fall.'", "he": "\"המשגיח על החיים\" בעמוד 806. בארץ ישראל, שליח הציבור אומר חצי קדיש, ועמידת מוסף נאמרת עם התוספת של \"ההולך על פני השמים והמוריד גשם\".", "text": "<br><i class=\"instruction\">“He sustains the living” on page 806. In Israel, the Leader says Half Kaddish, and the Musaf Amida is said with the addition of “He makes the wind blow and the rain fall.”</i>"}
           ]}
         ]
       }
@@ -1020,18 +1020,18 @@
       "en": {
         "version": "English Edition; Koren Publishers Jerusalem, 2017",
         "segs": [
-          {"ref": "1", "translates": [], "kind": "instruction", "en": "Hoshanot are said after the Leader's Repetition of the Amida of Musaf (and in some congregations after Hallel) on every day of Sukkot.", "gloss": "Said on Chol HaMoed Sukkot, not Shabbat or Hoshana Raba", "text": "<i class=\"instruction\">Hoshanot are said after the Leader’s Repetition of the Amida of Musaf (and in some congregations after Hallel) on every day of Sukkot.</i>"},
+          {"ref": "1", "translates": [], "kind": "instruction", "en": "Hoshanot are said after the Leader's Repetition of the Amida of Musaf (and in some congregations after Hallel) on every day of Sukkot.", "he": "הושנות נאמרות לאחר חזרת שליח הציבור על עמידה של מוסף (ובחלק מהקהילות לאחר הלל) בכל יום בסוכות.", "gloss": "Said on Chol HaMoed Sukkot, not Shabbat or Hoshana Raba", "text": "<i class=\"instruction\">Hoshanot are said after the Leader’s Repetition of the Amida of Musaf (and in some congregations after Hallel) on every day of Sukkot.</i>"},
           {"ref": "2", "translates": [], "parts": [
-            {"kind": "instruction", "en": "On weekdays, the Ark is opened, and a Torah scroll is taken to the Bima. Members of the congregation who have a Lulav and Etrog make a circuit around the Bima and say Hoshanot. Mourners do not participate in the circuit.", "gloss": "Customary for Chol HaMoed", "text": "<i class=\"instruction\">On weekdays, the Ark is opened, and a Torah scroll is taken to the Bima.</i>"},
-            {"kind": "instruction", "en": "On weekdays, the Ark is opened, and a Torah scroll is taken to the Bima. Members of the congregation who have a Lulav and Etrog make a circuit around the Bima and say Hoshanot. Mourners do not participate in the circuit.", "gloss": "Customary for Chol HaMoed", "text": "<br><i class=\"instruction\">Members of the congregation who have a Lulav and Etrog make a circuit around the Bima and say Hoshanot. Mourners do not participate in the circuit.</i>"}
+            {"kind": "instruction", "en": "On weekdays, the Ark is opened, and a Torah scroll is taken to the Bima. Members of the congregation who have a Lulav and Etrog make a circuit around the Bima and say Hoshanot. Mourners do not participate in the circuit.", "he": "בימי חול נפתח ארון הקודש ומוצאים ספר תורה אל הבימה.", "gloss": "Customary for Chol HaMoed", "text": "<i class=\"instruction\">On weekdays, the Ark is opened, and a Torah scroll is taken to the Bima.</i>"},
+            {"kind": "instruction", "en": "On weekdays, the Ark is opened, and a Torah scroll is taken to the Bima. Members of the congregation who have a Lulav and Etrog make a circuit around the Bima and say Hoshanot. Mourners do not participate in the circuit.", "he": "חברי הקהל המחזיקים לולב ואתרוג מסתובבים סביב הבימה ואומרים הושנות. אבלים אינם משתתפים בסבב.", "gloss": "Customary for Chol HaMoed", "text": "<br><i class=\"instruction\">Members of the congregation who have a Lulav and Etrog make a circuit around the Bima and say Hoshanot. Mourners do not participate in the circuit.</i>"}
           ]},
-          {"ref": "3", "translates": [], "kind": "instruction", "en": "At the conclusion of the Hoshanot, the Torah scroll is returned to the Ark, which is then closed.", "text": "<i class=\"instruction\">At the conclusion of the Hoshanot, the Torah scroll is returned to the Ark, which is then closed.</i>"},
-          {"ref": "4", "translates": [], "kind": "instruction", "en": "On Shabbat, turn to page 856. On Hoshana Raba, turn to page 858.", "text": "<i class=\"instruction\">On Shabbat, turn to page 856. On Hoshana Raba, turn to page 858.</i>"},
+          {"ref": "3", "translates": [], "kind": "instruction", "en": "At the conclusion of the Hoshanot, the Torah scroll is returned to the Ark, which is then closed.", "he": "בסיום הושנות, מחזירים את ספר התורה לארון ואז סוגרים אותו.", "text": "<i class=\"instruction\">At the conclusion of the Hoshanot, the Torah scroll is returned to the Ark, which is then closed.</i>"},
+          {"ref": "4", "translates": [], "kind": "instruction", "en": "On Shabbat, turn to page 856. On Hoshana Raba, turn to page 858.", "he": "בשבת, עיין עמוד 856. בחושנא רבה, עיין עמוד 858.", "text": "<i class=\"instruction\">On Shabbat, turn to page 856. On Hoshana Raba, turn to page 858.</i>"},
           {"ref": "5", "translates": [], "kind": "instruction", "en": "[Image placeholder]", "text": "<img>"},
-          {"ref": "6", "translates": [], "kind": "speaker", "en": "Leader then Congregation:", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
+          {"ref": "6", "translates": [], "kind": "speaker", "en": "Leader then Congregation:", "he": "שליח ציבור ואחריו הקהל:", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
           {"ref": "7", "translates": ["7"], "text": "הוֹשַׁע נָא Save us, please for Your sake, our God, save us, please."},
           {"ref": "8", "translates": ["8"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
+            {"kind": "instruction", "he": "שליח ציבור ואחריו הקהל:", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
             {"kind": "prayer", "text": " Save us,"},
             {"kind": "prayer", "text": " please for Your sake,"},
             {"kind": "prayer", "text": " our Creator,"},
@@ -1039,7 +1039,7 @@
             {"kind": "prayer", "text": " please."}
           ]},
           {"ref": "9", "translates": ["9"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
+            {"kind": "instruction", "he": "שליח ציבור ואחריו הקהל:", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
             {"kind": "prayer", "text": " Save us,"},
             {"kind": "prayer", "text": " please for Your sake,"},
             {"kind": "prayer", "text": " our Redeemer,"},
@@ -1047,7 +1047,7 @@
             {"kind": "prayer", "text": " please."}
           ]},
           {"ref": "10", "translates": ["10"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
+            {"kind": "instruction", "he": "שליח ציבור ואחריו הקהל:", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
             {"kind": "prayer", "text": " Save us,"},
             {"kind": "prayer", "text": " please for Your sake,"},
             {"kind": "prayer", "text": " You who seek us,"},
@@ -1055,17 +1055,17 @@
             {"kind": "prayer", "text": " please."}
           ]},
           {"ref": "11", "translates": ["11"], "text": "Save us, please –<br>לְמַֽעַן אֲמִתָּךְ For the sake of Your truth – for the sake of Your covenant – for the sake of Your greatness and glory – for the sake of Your Law – for the sake of Your majesty – for the sake of Your promise – for the sake of Your remembrance – for the sake of Your love – for the sake of Your goodness – for the sake of Your oneness – for the sake of Your honor – for the sake of Your wisdom – for the sake of Your kingship – for the sake of Your eternity – for the sake of Your mystery – for the sake of Your might – for the sake of Your splendor – for the sake of Your righteousness – for the sake of Your holiness – for the sake of Your great compassion – for the sake of Your Presence – for the sake of Your praise – Save us, please."},
-          {"ref": "12", "translates": [], "kind": "instruction", "en": "Continue with “I and HE: save us, please” on the next page.", "text": "<i class=\"instruction\">Continue with “I and HE: save us, please” on the next page.</i>"},
+          {"ref": "12", "translates": [], "kind": "instruction", "en": "Continue with “I and HE: save us, please” on the next page.", "he": "להמשיך עם \"אני והוא: הושיענו נא\" בעמוד הבא.", "text": "<i class=\"instruction\">Continue with “I and HE: save us, please” on the next page.</i>"},
           {"ref": "13", "translates": ["13"], "text": "Save us, please –<br>אֶֽבֶן שְׁתִיָּה The Foundation Stone – the House You chose – the threshing-floor of Ornan – the hidden Shrine – Mount Moriah – where the <small>LORD</small> shall be seen – Your glorious Sanctuary – where David camped – the best of Lebanon – the Beauty of Heights, Joy of all the earth – the Place of Perfect Beauty – the Lodge of goodness – the Place of Your dwelling – the Shelter of Shalem – the tribes’ Pilgrimage – the precious Cornerstone – shining Zion – the Holy of Holies – [the walls] lined with love – Residence of Your glory – the Hill toward which all mouths pray – Save us, please."},
-          {"ref": "14", "translates": [], "kind": "instruction", "en": "Continue with “I and HE: save us, please” on the next page.", "text": "<i class=\"instruction\">Continue with “I and HE: save us, please” on the next page.</i>"},
+          {"ref": "14", "translates": [], "kind": "instruction", "en": "Continue with “I and HE: save us, please” on the next page.", "he": "להמשיך עם \"אני והוא: הושיענו נא\" בעמוד הבא.", "text": "<i class=\"instruction\">Continue with “I and HE: save us, please” on the next page.</i>"},
           {"ref": "15", "translates": ["15"], "text": "Save us, please –<br>אֶעֱרֹךְ שׁוּעִי I shall lay out my prayer – in the house of my prayer – I found my sin, fasting – I seek You from there, to save me – heed the sound of my prayer – and rise up to my aid – remember with compassion, my Savior – making life my delight – Beneficent One, hear my groaning – quickly, bring my savior – put an end to my accuser – that he condemn me no more – quickly, God of my salvation – make eternal my salvation – bear the iniquity of my wickedness – pass over my sin – turn to me and save me – righteous Rock, my Savior – receive, please, my prayer – raise the horn of my salvation – Almighty One, my Savior – come, show Yourself and save me – Save us, please."},
-          {"ref": "16", "translates": [], "kind": "instruction", "en": "Continue with “I and HE: save us, please” on the next page.", "text": "<i class=\"instruction\">Continue with “I and HE: save us, please” on the next page.</i>"},
+          {"ref": "16", "translates": [], "kind": "instruction", "en": "Continue with “I and HE: save us, please” on the next page.", "he": "להמשיך עם \"אני והוא: הושיענו נא\" בעמוד הבא.", "text": "<i class=\"instruction\">Continue with “I and HE: save us, please” on the next page.</i>"},
           {"ref": "17", "translates": ["17"], "text": "Save us, please –<br>אֹם אֲנִי חוֹמָה “I am a wall,” said the people – bright as the sun – exiled and reviled – fair like a date palm – killed on account of You – like sheep to the slaughter – dispersed among tormentors – wrapped in Your embrace, clinging to You – bearing Your yoke – the one to know Your Oneness – beaten down in exile – learning the awe of You – our faces scratched – given over to the violent – weighed down beneath Your burden – oppressed and in turmoil – redeemed by [Moses] Toviya – holy flock – the communities of Jacob – marked out with Your name – roaring, “Save us, please!” – leaning on You – Save us, please."},
-          {"ref": "18", "translates": [], "kind": "instruction", "en": "Continue with “I and HE: save us, please” on the next page.", "text": "<i class=\"instruction\">Continue with “I and HE: save us, please” on the next page.</i>"},
+          {"ref": "18", "translates": [], "kind": "instruction", "en": "Continue with “I and HE: save us, please” on the next page.", "he": "להמשיך עם \"אני והוא: הושיענו נא\" בעמוד הבא.", "text": "<i class=\"instruction\">Continue with “I and HE: save us, please” on the next page.</i>"},
           {"ref": "19", "translates": ["19"], "text": "Save us, please –<br>אֵל לְמוֹשָׁעוֹת God of all salvation – for keeping our four vows – we who draw close in prayer – who come knocking to lay out our prayer – who speak Your words of delight – who revel in their questions – crying out to be heard – we who watch for the Redemption – hear those who hold on to You – who understand Your calendar – who bow to You and pray – to comprehend Your message – as it comes from Your mouth – (You who give salvation) – telling their stories – making known Your testament – You who work salvation – bring a righteous [leader] for the saved – bring close our salvations – with noise, amid thundering – in three brief hours – speed us our salvation – Save us, please."},
-          {"ref": "20", "translates": [], "kind": "instruction", "en": "Continue with “I and HE: save us, please” on the next page.", "text": "<i class=\"instruction\">Continue with “I and HE: save us, please” on the next page.</i>"},
+          {"ref": "20", "translates": [], "kind": "instruction", "en": "Continue with “I and HE: save us, please” on the next page.", "he": "להמשיך עם \"אני והוא: הושיענו נא\" בעמוד הבא.", "text": "<i class=\"instruction\">Continue with “I and HE: save us, please” on the next page.</i>"},
           {"ref": "21", "translates": ["21"], "text": "Save us, please –<br>אָדוֹן הַמּוֹשִֽׁיעַ <small>LORD</small> and Savior – there is no one else – mighty, with great power to save – when I was brought low, He saved me – God who saves – who delivers and saves – save those who cry out to You – those who yet watch for You – nourish Your young lambs – make the harvest lavish – sprout every growing thing and save us – do not condemn this valley – make the good fruits sweet and save us – carry the clouds to us – shake down the raindrops – do not hold back the clouds – You who open Your hand and satisfy – relieve those who thirst for You – save those who call to You – save those You have loved – rescue those who rise to seek You – save Your innocent ones – Save us, please."},
-          {"ref": "22", "translates": [], "kind": "instruction", "en": "Continue with “I and HE: save us, please” below.", "text": "<i class=\"instruction\">Continue with “I and HE: save us, please” below.</i>"},
+          {"ref": "22", "translates": [], "kind": "instruction", "en": "Continue with “I and HE: save us, please” below.", "he": "המשך עם \"ואני ה\": הושיענו נא\" להלן.", "text": "<i class=\"instruction\">Continue with “I and HE: save us, please” below.</i>"},
           {"ref": "23", "translates": ["23"], "text": "<small>I</small> and <small>HE</small>: save us, please."},
           {"ref": "24", "translates": ["24"], "text": "כְּהוֹשַֽׁעְתָּ As You saved the mighty ones in Lud with You<br>coming down for Your people’s deliverance – save us, please."},
           {"ref": "25", "translates": ["25"], "text": "As You saved nation and God together<br>[the people] called for God’s salvation – save us, please."},
@@ -1080,9 +1080,9 @@
           {"ref": "34", "translates": ["34"], "text": "As You saved the returning exiles of the tribes of Jacob;<br>so come back and return the exiles of the tents of Jacob – and save us, please."},
           {"ref": "35", "translates": ["35"], "text": "As You saved those who kept Your commandments and waited for<br>salvation, / God of all salvation – and save us, please."},
           {"ref": "36", "translates": ["36"], "text": "<small>I</small> and <small>HE</small>: save us, please."},
-          {"ref": "37", "translates": [], "kind": "instruction", "en": "The Torah scroll is returned to the Ark.", "text": "<i class=\"instruction\">The Torah scroll is returned to the Ark.</i>"},
+          {"ref": "37", "translates": [], "kind": "instruction", "en": "The Torah scroll is returned to the Ark.", "he": "התורה מוחזרת לארון.", "text": "<i class=\"instruction\">The Torah scroll is returned to the Ark.</i>"},
           {"ref": "38", "translates": ["38"], "text": "הוֹשִֽׁיעָה Save Your people; bless Your legacy; tend them and carry them forever. Let these words with which I have pleaded with the <small>LORD</small> be close to the <small>LORD</small> our God day and night, that He may do justice for His servant, and justice for His people Israel, day after day; so that all the peoples of the earth will know that the <small>LORD</small> is God. There is no other."},
-          {"ref": "39", "translates": [], "kind": "instruction", "en": "The Ark is closed. On Yom Tov the Leader continues the service with Full Kaddish on page 554; on Ḥol HaMo’ed, with Full Kaddish on page 178.", "text": "<i class=\"instruction\">The Ark is closed. On Yom Tov the Leader continues the service with Full Kaddish on page 554; on Ḥol HaMo’ed, with Full Kaddish on page 178.</i>"}
+          {"ref": "39", "translates": [], "kind": "instruction", "en": "The Ark is closed. On Yom Tov the Leader continues the service with Full Kaddish on page 554; on Ḥol HaMo’ed, with Full Kaddish on page 178.", "he": "התיבה סגורה. ביום טוב ממשיך שליח הציבור את התפילה בקדיש שלם בעמוד 554; בחול המועד, בקדיש שלם בעמוד 178.", "text": "<i class=\"instruction\">The Ark is closed. On Yom Tov the Leader continues the service with Full Kaddish on page 554; on Ḥol HaMo’ed, with Full Kaddish on page 178.</i>"}
         ]
       }
     },
@@ -1130,40 +1130,40 @@
         "version": "English Edition; Koren Publishers Jerusalem, 2017",
         "segs": [
           {"ref": "1", "translates": [], "parts": [
-            {"kind": "instruction", "en": "The Ark is opened but no Torah scrolls are taken out. The congregation does not walk around the Bima.", "text": "<i class=\"instruction\">The Ark is opened but no Torah scrolls are taken out.</i>"},
-            {"kind": "instruction", "en": "The Ark is opened but no Torah scrolls are taken out. The congregation does not walk around the Bima.", "text": "<br><i class=\"instruction\">The congregation does not walk around the Bima.</i>"}
+            {"kind": "instruction", "en": "The Ark is opened but no Torah scrolls are taken out. The congregation does not walk around the Bima.", "he": "ההיכל נפתח אך אין מוציאים ספר תורה.", "text": "<i class=\"instruction\">The Ark is opened but no Torah scrolls are taken out.</i>"},
+            {"kind": "instruction", "en": "The Ark is opened but no Torah scrolls are taken out. The congregation does not walk around the Bima.", "he": "הקהל אינו מסתובב סביב הבימה.", "text": "<br><i class=\"instruction\">The congregation does not walk around the Bima.</i>"}
           ]},
           {"ref": "2", "translates": ["2"], "parts": [
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": "<br>הוֹשַׁע נָא Save us,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " please for Your sake,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " our God,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " save us,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " please."}
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "שליח ציבור ואחריו הקהל:", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "הוֹשַׁע נָא", "text": "<br>הוֹשַׁע נָא Save us,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "אנא לרעהותך,", "text": " please for Your sake,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "אלהינו,", "text": " our God,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "הושיענו,", "text": " save us,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "נא.", "text": " please."}
           ]},
           {"ref": "3", "translates": ["3"], "parts": [
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": "<br>Save us,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " please for Your sake,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " our Creator,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " save us,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " please."}
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "שליח ציבור ואחריו הקהל:", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "הושיענו,", "text": "<br>Save us,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "אנא לרעהותך,", "text": " please for Your sake,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "בוראנו,", "text": " our Creator,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "הושיענו,", "text": " save us,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "נא.", "text": " please."}
           ]},
           {"ref": "4", "translates": ["4"], "parts": [
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": "<br>Save us,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " please for Your sake,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " our Redeemer,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " save us,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " please."}
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "שליח ציבור ואחריו הקהל:", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "הושיענו,", "text": "<br>Save us,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "אנא לרעהותך,", "text": " please for Your sake,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "גואלנו", "text": " our Redeemer,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "הושיענו,", "text": " save us,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "נא.", "text": " please."}
           ]},
           {"ref": "5", "translates": ["5"], "parts": [
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": "<br>Save us,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " please for Your sake,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " You who seek us,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " save us,"},
-            {"kind": "instruction", "en": "Leader then Congregation:", "text": " please."}
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "שליח ציבור ואחריו הקהל:", "text": "<i class=\"instruction\">Leader then Congregation:</i>"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "הושיענו,", "text": "<br>Save us,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "אנא לרעהותך,", "text": " please for Your sake,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "אתם השואלים אותנו,", "text": " You who seek us,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "הושיענו,", "text": " save us,"},
+            {"kind": "instruction", "en": "Leader then Congregation:", "he": "נא.", "text": " please."}
           ]},
           {"ref": "6", "translates": ["6"], "text": "Save us, please –<br>אֹם נְצוּרָה כְּבָבַת A people guarded like the pupil of Your eye – who understand the Law that refreshes the spirit – who learn through all the laws of the Sabbath – who unfold the rules of carrying on the Sabbath – who fix two thousand cubits as our boundary for the Sabbath – and keep our feet from breaking the Sabbath – who remember early and keep hold of the Sabbath – and speed to hasten in the Sabbath – who for six days work hard for the Sabbath – who sit patiently on before ending the Sabbath – who call her an honor, delight, our Sabbath – who change their clothes, and dress for the Sabbath – who prepare themselves feast and drink for the Sabbath – laying a spread of sweet things on the Sabbath – holding three festive meals for the Sabbath – who break bread over two loaves on the Sabbath – distinguishing four domains on the Sabbath – who light the candles for the command, for the Sabbath – who sanctify the day on the Sabbath – who speak seven blessings [in the Amida] of the Sabbath – who read seven portions of Torah on the Sabbath – bring us into what is ours, the day that will be entirely Sabbath – Save us, please."},
           {"ref": "7", "translates": ["7"], "text": "<small>I</small> and <small>HE</small>: save us, please."},
@@ -1200,7 +1200,7 @@
           {"ref": "28", "translates": ["28"], "text": "As You saved those who kept Your commandments and waited for salvation,<br>God of all salvation – and save us, please."},
           {"ref": "29", "translates": ["29"], "text": "<small>I</small> and <small>HE</small>: save us, please."},
           {"ref": "30", "translates": ["30"], "text": "הוֹשִֽׁיעָה Save Your people; bless Your legacy; tend them and carry them forever. Let these words with which I have pleaded with the <small>LORD</small> be close to the <small>LORD</small> our God day and night, that He may do justice for His servant, and justice for His people Israel, day after day; so that all the peoples of the earth will know that the <small>LORD</small> is God. There is no other."},
-          {"ref": "31", "translates": [], "kind": "instruction", "en": "The Ark is closed and the Leader continues the service with Full Kaddish.", "text": "<i class=\"instruction\">The Ark is closed and the Leader continues the service with Full Kaddish on page 554.</i>"}
+          {"ref": "31", "translates": [], "kind": "instruction", "en": "The Ark is closed and the Leader continues the service with Full Kaddish.", "he": "הארון נסגר ושליח הציבור ממשיך בתפילה עם קדיש שלם בעמוד 554.", "text": "<i class=\"instruction\">The Ark is closed and the Leader continues the service with Full Kaddish on page 554.</i>"}
         ]
       }
     }

@@ -5,12 +5,14 @@ import 'package:hebcal/hebcal.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/adaptive.dart';
+import '../../core/fireworks.dart';
 import '../../core/focus_mode.dart';
 import '../../core/fonts.dart';
 import '../../core/format.dart';
 import '../../core/hebrew_text.dart';
 import '../../core/l10n.dart';
 import '../../core/settings.dart';
+import '../../core/tap_highlight.dart';
 import '../../core/typeset/typeset.dart';
 import '../home/today.dart';
 import '../settings/font_gallery_screen.dart';
@@ -126,6 +128,7 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
               onPressed: () {
                 final wasDone = done(aliyah);
                 ref.read(shnayimMikraProgressProvider.notifier).toggle(year, name, aliyah);
+                if (!wasDone) showFireworks(context);
                 // On to the next aliyah, as you would in the book.
                 if (!wasDone && aliyah < 7) setState(() => _aliyah = aliyah + 1);
               },
@@ -424,7 +427,9 @@ class _Aliyah extends ConsumerWidget {
                   child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
                     // The Torah's paragraphs are set apart with an ornament.
                     if (!single && i > 0) SectionOrnament(small: true, height: ts.sectionGap),
-                    unitView(units[i]),
+                    TapHighlight(
+                        id: 'mikra:${book.hashCode}:${units[i].first.at.chapter}:${units[i].first.at.verse}',
+                        child: unitView(units[i])),
                     if (!single) SizedBox(height: ts.line * 0.4),
                   ]),
                 ),
@@ -590,6 +595,8 @@ class _Settings extends ConsumerWidget {
             toggle("Show te'amim (trop)", style.showTeamim, (v) => own((x) => x.copyWith(showTeamim: v))),
             toggle('Show nikud (vowels)', style.showNikud, (v) => own((x) => x.copyWith(showNikud: v))),
           ],
+          const SizedBox(height: 12),
+          const HighlightColorPicker(),
           SheetLabel(context.tr('Offline')),
           const _OfflineStatus(),
           if (sm.needsRashi || ref.watch(rashiDownloadProvider).have.isNotEmpty) const _RashiOfflineStatus(),
@@ -773,7 +780,12 @@ class _ProgressState extends ConsumerState<ShnayimMikraProgressScreen> {
             shabbat: shabbat,
             current: r.parsha.join('-') == thisWeek,
             done: (a) => done.contains(ShnayimMikraProgress.entry(r.parsha.join('-'), a)),
-            onToggle: (a) => progress.toggle(year, r.parsha.join('-'), a),
+            onToggle: (a) {
+              final name = r.parsha.join('-');
+              final wasDone = progress.done(year, name, a);
+              progress.toggle(year, name, a);
+              if (!wasDone) showFireworks(context);
+            },
             onOpen: () => context.push(Uri(path: '/torah/shnayim-mikra', queryParameters: {'parsha': r.parsha.join('-'), 'year': '$year'}).toString()),
           ),
       ]),
@@ -877,7 +889,12 @@ class ShnayimMikraLine extends ConsumerWidget {
         IconButton(
           tooltip: context.tr(isDone(week.aliyah) ? 'Aliyah {n} done' : 'Mark aliyah {n} done', {'n': week.aliyah}),
           icon: Icon(isDone(week.aliyah) ? Icons.check_circle : Icons.check_circle_outline, color: c.primary),
-          onPressed: () => ref.read(shnayimMikraProgressProvider.notifier).toggle(year, name, week.aliyah),
+          onPressed: () {
+            final p = ref.read(shnayimMikraProgressProvider.notifier);
+            final wasDone = p.done(year, name, week.aliyah);
+            p.toggle(year, name, week.aliyah);
+            if (!wasDone) showFireworks(context);
+          },
         ),
       ]),
     );

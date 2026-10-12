@@ -67,47 +67,47 @@
         "version": "English Edition; Koren Publishers Jerusalem, 2017",
         "segs": [
           {"ref": "1", "translates": [], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">The following blessing and response are said only in the presence of a minyan.</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">They represent a formal summons to the congregation to engage in an act of collective prayer.</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">The custom of bowing at this point is based on</i>"},
-            {"kind": "instruction", "text": " <small><i class=\"instruction\">I</i>"},
-            {"kind": "instruction", "text": "</small> <i class=\"instruction\">Chronicles 29:20, “David said to</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">the whole assembly, ‘Now bless the</i>"},
-            {"kind": "instruction", "text": " <small><i class=\"instruction\">LORD</i>"},
-            {"kind": "instruction", "text": "</small> <i class=\"instruction\">your God.’ All the assembly blessed</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">the</i>"},
-            {"kind": "instruction", "text": " <small><i class=\"instruction\">LORD</i>"},
-            {"kind": "instruction", "text": "</small> <i class=\"instruction\">God of their fathers and bowed their heads low to the</i>"},
-            {"kind": "instruction", "text": " <small><i class=\"instruction\">LORD</i>"},
-            {"kind": "instruction", "text": "</small> <i class=\"instruction\">and the King.”</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">The Leader says the following, bowing at “Bless,” standing straight at “the</i>"},
-            {"kind": "instruction", "text": " <small><i class=\"instruction\">LORD.</i>"},
+            {"kind": "instruction", "he": "הברכה והנוסח הבאים נאמרים רק במניין.", "text": "<i class=\"instruction\">The following blessing and response are said only in the presence of a minyan.</i>"},
+            {"kind": "instruction", "he": "הן מהוות קריאה רשמית לקהל לעסוק בתפילה 공동ת.", "text": "<br><i class=\"instruction\">They represent a formal summons to the congregation to engage in an act of collective prayer.</i>"},
+            {"kind": "instruction", "he": "המנהג להשתחוות בנקודה זו מבוסס על", "text": "<br><i class=\"instruction\">The custom of bowing at this point is based on</i>"},
+            {"kind": "instruction", "he": "א", "text": " <small><i class=\"instruction\">I</i>"},
+            {"kind": "instruction", "he": "דברי הימים כט, כ: “ויאמר דוד", "text": "</small> <i class=\"instruction\">Chronicles 29:20, “David said to</i>"},
+            {"kind": "instruction", "he": "כל הקהל, 'ברוך את'", "text": "<br><i class=\"instruction\">the whole assembly, ‘Now bless the</i>"},
+            {"kind": "instruction", "he": "ה'", "text": " <small><i class=\"instruction\">LORD</i>"},
+            {"kind": "instruction", "he": "אלוהיכם. כל הקהל בירכו", "text": "</small> <i class=\"instruction\">your God.’ All the assembly blessed</i>"},
+            {"kind": "instruction", "he": "ה", "text": "<br><i class=\"instruction\">the</i>"},
+            {"kind": "instruction", "he": "ה'", "text": " <small><i class=\"instruction\">LORD</i>"},
+            {"kind": "instruction", "he": "אל אבותיהם והורידו את ראשם לפני", "text": "</small> <i class=\"instruction\">God of their fathers and bowed their heads low to the</i>"},
+            {"kind": "instruction", "he": "ה'", "text": " <small><i class=\"instruction\">LORD</i>"},
+            {"kind": "instruction", "he": "ומלך.", "text": "</small> <i class=\"instruction\">and the King.”</i>"},
+            {"kind": "instruction", "he": "שליח הציבור אומר את הבא, כשהוא כורע בשעת \"ברוך\" ומתיישר בשעת \"את\"", "text": "<br><i class=\"instruction\">The Leader says the following, bowing at “Bless,” standing straight at “the</i>"},
+            {"kind": "instruction", "he": "יהוה.", "text": " <small><i class=\"instruction\">LORD.</i>"},
             {"kind": "instruction", "text": "</small><i class=\"instruction\">”</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">The congregation, followed by the Leader, responds, bowing at “Bless,”</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">standing straight at “the</i>"},
-            {"kind": "instruction", "text": " <small><i class=\"instruction\">LORD.</i>"},
+            {"kind": "instruction", "he": "הקהל, ואחריו שליח הציבור, משיבים, ומתכופים במילה \"ברוך\"", "text": "<br><i class=\"instruction\">The congregation, followed by the Leader, responds, bowing at “Bless,”</i>"},
+            {"kind": "instruction", "he": "עומד זקוף ב-“", "text": "<br><i class=\"instruction\">standing straight at “the</i>"},
+            {"kind": "instruction", "he": "יהוה.", "text": " <small><i class=\"instruction\">LORD.</i>"},
             {"kind": "instruction", "text": "</small><i class=\"instruction\">”</i>"}
           ]},
           {"ref": "2", "translates": ["2"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Leader:</i>"},
+            {"kind": "instruction", "he": "שליח ציבור:", "text": "<i class=\"instruction\">Leader:</i>"},
             {"kind": "prayer", "text": " <small>BLESS</small> the <small>LORD</small>,"},
             {"kind": "prayer", "text": " the blessed One."}
           ]},
           {"ref": "3", "translates": ["3"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Congregation:</i>"},
+            {"kind": "instruction", "he": "קהל:", "text": "<i class=\"instruction\">Congregation:</i>"},
             {"kind": "prayer", "text": " Bless the <small>LORD</small>,"},
             {"kind": "prayer", "text": " the blessed One,"},
             {"kind": "prayer", "text": " for ever and all time."}
           ]},
           {"ref": "4", "translates": ["4"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Leader:</i>"},
+            {"kind": "instruction", "he": "שליח ציבור:", "text": "<i class=\"instruction\">Leader:</i>"},
             {"kind": "prayer", "text": " Bless the <small>LORD</small>,"},
             {"kind": "prayer", "text": " the blessed One,"},
             {"kind": "prayer", "text": " for ever and all time."}
           ]},
           {"ref": "5", "translates": [], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">The custom is to sit from this point until the Amida, since the predominant emotion of this section of the prayers is love rather than awe.</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">Conversation is forbidden until after the Amida. See table on pages 1329–1331.</i>"}
+            {"kind": "instruction", "he": "המנהג הוא לשבת מנקודה זו ועד העמידה, שכן הרגש השולט בחלק זה של התפילה הוא אהבה ולא יראה.", "text": "<i class=\"instruction\">The custom is to sit from this point until the Amida, since the predominant emotion of this section of the prayers is love rather than awe.</i>"},
+            {"kind": "instruction", "he": "חל איסור דיבור עד לאחר העמידה. ראה טבלה בעמודים 1329–1331.", "text": "<br><i class=\"instruction\">Conversation is forbidden until after the Amida. See table on pages 1329–1331.</i>"}
           ]},
           {"ref": "6", "translates": ["6"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God,<br>King of the Universe,<br>who forms light and creates darkness,<br>makes peace and creates all."},
           {"ref": "7", "translates": [], "text": "<i class=\"instruction\">If Yom Tov falls on a weekday continue with “In compassion” below.</i>"},
@@ -139,20 +139,20 @@
           {"ref": "33", "translates": [], "text": "<i class=\"instruction\">At this point, gather the four tzitziot of the tallit, holding them in the left hand.</i>"},
           {"ref": "34", "translates": ["34"], "text": "Bring us back in peace from the four quarters of the earth and lead us upright to our land.<br>▸For You are a God who performs acts of salvation,<br>and You chose us from all peoples and tongues,<br>bringing us close to Your great name for ever in truth,<br>that we may thank You<br>and proclaim Your oneness in love.<br>Blessed are You, <small>LORD</small>, who chooses His people Israel in love."},
           {"ref": "35", "translates": [], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">The Shema must be said with intense concentration. In the first paragraph one should accept, with love, the sovereignty of God; in the second, the mitzvot as the will of God. The end of the third paragraph constitutes fulfillment of the mitzva to remember, morning and evening, the exodus from Egypt. See laws 349–353.</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">When not praying with a minyan, say:</i>"}
+            {"kind": "instruction", "he": "יש לומר את שמע בכוונה גדולה. בפסוק הראשון יש לקבל באהבה את מלכות השם; ובפסוק השני את המצוות כרצון השם. סוף הפסוק השלישי הוא קיום מצוות זכירת יציאת מצרים בבוקר ובערב. ראה הלכות 349–353.", "text": "<i class=\"instruction\">The Shema must be said with intense concentration. In the first paragraph one should accept, with love, the sovereignty of God; in the second, the mitzvot as the will of God. The end of the third paragraph constitutes fulfillment of the mitzva to remember, morning and evening, the exodus from Egypt. See laws 349–353.</i>"},
+            {"kind": "instruction", "he": "כאשר אינו מתפלל במניין, אומר:", "text": "<br><i class=\"instruction\">When not praying with a minyan, say:</i>"}
           ]},
           {"ref": "36", "translates": ["36"], "text": "God, faithful King!"},
           {"ref": "37", "translates": [], "text": "<i class=\"instruction\">The following verse should be said aloud, while covering the eyes with the right hand:</i>"},
           {"ref": "38", "translates": ["38"], "text": "Listen, Israel: the <small>LORD</small> is our God,<br>the <small>LORD</small> is One."},
           {"ref": "39", "translates": ["39"], "parts": [
-            {"kind": "instruction", "text": "<small><i class=\"instruction\">Quietly:</i>"},
+            {"kind": "instruction", "he": "בשקט:", "text": "<small><i class=\"instruction\">Quietly:</i>"},
             {"kind": "prayer", "text": " Blessed be the name of His glorious kingdom for ever and all time.</small>"}
           ]},
           {"ref": "40", "translates": ["40"], "text": "וְאָהַבְתָּ Love the <small>LORD</small> your God with all your heart, with all your soul, and with all your might. These words which I command you today shall be on your heart. Teach them repeatedly to your children, speaking of them when you sit at home and when you travel on the way, when you lie down and when you rise. Bind them as a sign on your hand, and they shall be an emblem between your eyes. Write them on the doorposts of your house and gates."},
           {"ref": "41", "translates": ["41"], "text": "וְהָיָה If you indeed heed My commandments with which I charge you today, to love the <small>LORD</small> your God and worship Him with all your heart and with all your soul, I will give rain in your land in its season, the early and late rain; and you shall gather in your grain, wine and oil. I will give grass in your field for your cattle, and you shall eat and be satisfied. Be careful lest your heart be tempted and you go astray and worship other gods, bowing down to them. Then the <small>LORD</small>’s anger will flare against you and He will close the heavens so that there will be no rain. The land will not yield its crops, and you will perish swiftly from the good land that the <small>LORD</small> is giving you. Therefore, set these, My words, on your heart and soul. Bind them as a sign on your hand, and they shall be an emblem between your eyes. Teach them to your children, speaking of them when you sit at home and when you travel on the way, when you lie down and when you rise. Write them on the doorposts of your house and gates, so that you and your children may live long in the land that the <small>LORD</small> swore to your ancestors to give them, for as long as the heavens are above the earth."},
           {"ref": "42", "translates": [], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Hold the tzitziot in the right hand also (some transfer to the right hand), kissing them at</i>"},
+            {"kind": "instruction", "he": "גם את הציצית יש להחזיק ביד ימין (יש הנוהגים להעביר לימין), ולנשק אותה ב-", "text": "<i class=\"instruction\">Hold the tzitziot in the right hand also (some transfer to the right hand), kissing them at</i>"},
             {"kind": "instruction", "text": " <b><i class=\"instruction\">°</i>"},
             {"kind": "instruction", "text": "</b><i class=\"instruction\">.</i>"}
           ]},
@@ -166,9 +166,9 @@
           {"ref": "47", "translates": ["47"], "text": "וְיַצִּיב And firm, established and enduring, right, faithful,<br>beloved, cherished, delightful, pleasant,<br>awesome, mighty, perfect, accepted,<br>good and beautiful<br>is this faith for us for ever."},
           {"ref": "48", "translates": ["48"], "text": "True is the eternal God, our King, Rock of Jacob,<br>Shield of our salvation.<br>He exists and His name exists<br>through all generations.<br>His throne is established,<br>His kingship and faithfulness endure for ever."},
           {"ref": "49", "translates": [], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">At</i>"},
+            {"kind": "instruction", "he": "ב", "text": "<i class=\"instruction\">At</i>"},
             {"kind": "instruction", "text": " <b><i class=\"instruction\">°</i>"},
-            {"kind": "instruction", "text": "</b><i class=\"instruction\">, kiss the tzitziot and release them.</i>"}
+            {"kind": "instruction", "he": "נשק את הציצית ושחרר אותה.", "text": "</b><i class=\"instruction\">, kiss the tzitziot and release them.</i>"}
           ]},
           {"ref": "50", "translates": [], "parts": [
             {"kind": "prayer", "text": "His words live and persist,"},
@@ -195,8 +195,8 @@
           {"ref": "64", "translates": [], "text": "▸צוּר יִשְׂרָאֵל Rock of Israel! Arise to the help of Israel.<br>Deliver, as You promised, Judah and Israel."},
           {"ref": "65", "translates": [], "text": "Our Redeemer, the <small>LORD</small> of hosts is His name,<br>the Holy One of Israel."},
           {"ref": "66", "translates": [], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Pesaḥ, in many congregations, a short piyut is said here before the Amida (page 1250).</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">No such piyut is said on the eighth day of Pesaḥ, unless it falls on a Shabbat.</i>"}
+            {"kind": "instruction", "he": "בפסח, בקהילות רבות, אומרים כאן פיוט קצר לפני העמידה (עמוד 1250).", "text": "<i class=\"instruction\">On Pesaḥ, in many congregations, a short piyut is said here before the Amida (page 1250).</i>"},
+            {"kind": "instruction", "he": "אין אומרים פיוט זה בשמיני של פסח, אלא אם חל בשבת.", "text": "<br><i class=\"instruction\">No such piyut is said on the eighth day of Pesaḥ, unless it falls on a Shabbat.</i>"}
           ]},
           {"ref": "67", "translates": [], "text": "Blessed are You, <small>LORD</small>, who redeemed Israel."},
           {"ref": "68", "translates": [], "text": "<i class=\"instruction\">On Yom Tov (including one that falls on Shabbat) say the appropriate Amida on page 770.</i>"}
@@ -273,15 +273,15 @@
         "version": "English Edition; Koren Publishers Jerusalem, 2017",
         "segs": [
           {"ref": "1", "translates": ["2"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">The following prayer, until “in former years” on page 494, is said silently, standing with feet together. If there is a minyan, the Amida is repeated aloud by the Leader.</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">Take three steps forward and at the points indicated by , bend the knees at the first word,</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">bow at the second, and stand straight before saying God’s name.</i>"}
+            {"kind": "instruction", "he": "התפילה הבאה, עד \"בשנים קדמונות\" בעמוד 494, נאמרת בלחש, בעמידה עם רגליים צמודות. אם יש מניין, העמידה חוזרת בקול על ידי שליח הציבור.", "text": "<i class=\"instruction\">The following prayer, until “in former years” on page 494, is said silently, standing with feet together. If there is a minyan, the Amida is repeated aloud by the Leader.</i>"},
+            {"kind": "instruction", "he": "עשה שלושה צעדים קדימה, ובנקודות המסומנות ב- , כופפים את הברכיים במילה הראשונה,", "text": "<br><i class=\"instruction\">Take three steps forward and at the points indicated by , bend the knees at the first word,</i>"},
+            {"kind": "instruction", "he": "מתכופפים בשנייה, ועומדים זקוף לפני אמירת שם השם.", "text": "<br><i class=\"instruction\">bow at the second, and stand straight before saying God’s name.</i>"}
           ]},
           {"ref": "2", "translates": ["2"], "text": "O <small>LORD</small>, open my lips, so that my mouth may declare Your praise."},
           {"ref": "3", "translates": ["3"], "text": "<small><b>PATRIARCHS</b></small>"},
           {"ref": "4", "translates": ["4"], "text": "▾בָּרוּךְ Blessed are You, <small>LORD</small> our God and God of our fathers,<br>God of Abraham, God of Isaac and God of Jacob;<br>the great, mighty and awesome God, God Most High,<br>who bestows acts of loving-kindness and creates all,<br>who remembers the loving-kindness of the fathers<br>and will bring a Redeemer to their children’s children<br>for the sake of His name, in love."},
           {"ref": "5", "translates": ["5"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Shabbat Shuva:</i>"},
+            {"kind": "instruction", "he": "בשבת שובה:", "text": "<i class=\"instruction\">On Shabbat Shuva:</i>"},
             {"kind": "prayer", "text": " Remember us for life,"},
             {"kind": "prayer", "text": " O King who desires life,"},
             {"kind": "prayer", "text": "<br>and write us in the book of life – for Your sake,"},
@@ -292,14 +292,14 @@
           {"ref": "8", "translates": ["8"], "text": "אַתָּה גִּבּוֹר You are eternally mighty, <small>LORD</small>.<br>You give life to the dead and have great power to save."},
           {"ref": "9", "translates": ["10"], "text": "<i class=\"instruction\">The phrase “He makes the wind blow and the rain fall” is added from Simḥat Torah until Pesaḥ. In Israel, the phrase “He causes the dew to fall” is added from Pesaḥ until Shemini Atzeret. See laws 129–131.</i>"},
           {"ref": "10", "translates": ["10"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">In fall & winter:</i>"},
+            {"kind": "instruction", "he": "בסתיו ובחורף:", "text": "<i class=\"instruction\">In fall & winter:</i>"},
             {"kind": "prayer", "text": " He makes the wind blow and the rain fall.<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">In Israel, in spring & summer:</i>"},
+            {"kind": "instruction", "he": "בישראל, באביב ובקיץ:", "text": "<i class=\"instruction\">In Israel, in spring & summer:</i>"},
             {"kind": "prayer", "text": " He causes the dew to fall."}
           ]},
           {"ref": "11", "translates": ["11"], "text": "He sustains the living with loving-kindness,<br>and with great compassion revives the dead.<br>He supports the fallen, heals the sick, sets captives free,<br>and keeps His faith with those who sleep in the dust.<br>Who is like You, Master of might, and and who can compare to You,<br>O King who brings death and gives life, and makes salvation grow?"},
           {"ref": "12", "translates": ["12"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Shabbat Shuva:</i>"},
+            {"kind": "instruction", "he": "בשבת שובה:", "text": "<i class=\"instruction\">On Shabbat Shuva:</i>"},
             {"kind": "prayer", "text": " Who is like You,"},
             {"kind": "prayer", "text": " compassionate Father,"},
             {"kind": "prayer", "text": "<br>who remembers His creatures in compassion,"},
@@ -309,37 +309,37 @@
           {"ref": "14", "translates": ["15"], "text": "<i class=\"instruction\">When saying the Amida silently, continue with “You are holy” on the next page.</i>"},
           {"ref": "15", "translates": ["15"], "text": "<small><b>KEDUSHA</b></small>"},
           {"ref": "16", "translates": ["17"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">During the Leader’s Repetition, the following is said standing</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">with feet together, rising on the toes at the words indicated by▴.</i>"}
+            {"kind": "instruction", "he": "במהלך חזרת שליח הציבור, האמור הבא נאמר בעמידה", "text": "<i class=\"instruction\">During the Leader’s Repetition, the following is said standing</i>"},
+            {"kind": "instruction", "he": "ברגליים צמודות, על קצות האצבעות במילים המסומנות ב-▴.", "text": "<br><i class=\"instruction\">with feet together, rising on the toes at the words indicated by▴.</i>"}
           ]},
           {"ref": "17", "translates": ["17"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
+            {"kind": "instruction", "he": "הקהל ואז שליח ציבור:", "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
             {"kind": "prayer", "text": " נְקַדֵּשׁ We will sanctify Your name on earth,"},
             {"kind": "prayer", "text": "<br>as they sanctify it in the highest heavens,"},
             {"kind": "prayer", "text": "<br>as is written by Your prophet,"},
             {"kind": "prayer", "text": "<br>“And they [the angels] call to one another saying:"}
           ]},
           {"ref": "18", "translates": ["18"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
+            {"kind": "instruction", "he": "הקהל ואז שליח ציבור:", "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
             {"kind": "prayer", "text": " ▴Holy,"},
             {"kind": "prayer", "text": " ▴holy,"},
             {"kind": "prayer", "text": " ▴holy is the <small>LORD</small> of hosts<br>the whole world is filled with His glory.”"}
           ]},
           {"ref": "19", "translates": ["19"], "text": "Then with a sound of mighty noise, majestic and strong,<br>they make their voice heard, raising themselves<br>toward the Seraphim, and facing them say: “Blessed…"},
           {"ref": "20", "translates": ["20"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
+            {"kind": "instruction", "he": "הקהל ואז שליח ציבור:", "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
             {"kind": "prayer", "text": " ▴“Blessed is the <small>LORD</small>’s glory from His place.”"}
           ]},
           {"ref": "21", "translates": ["21"], "text": "Reveal Yourself from Your place, O our King, and reign over us,<br>for we are waiting for You. When will You reign in Zion?<br>May it be soon in our days, and may You dwell there for ever and all time. May You be exalted and sanctified in the midst of Jerusalem, Your city, from generation to generation for evermore. May our eyes see Your kingdom, as is said in the songs of Your splendor, written by David your righteous anointed one:"},
           {"ref": "22", "translates": ["22"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
+            {"kind": "instruction", "he": "הקהל ואז שליח ציבור:", "text": "<i class=\"instruction\">Cong. then Leader:</i>"},
             {"kind": "prayer", "text": " ▴“The <small>LORD</small> shall reign for ever. He is your God,"},
             {"kind": "prayer", "text": " Zion,"},
             {"kind": "prayer", "text": "<br>from generation to generation,"},
             {"kind": "prayer", "text": " Halleluya!”"}
           ]},
           {"ref": "23", "translates": ["23"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Leader:</i>"},
+            {"kind": "instruction", "he": "שליח ציבור:", "text": "<i class=\"instruction\">Leader:</i>"},
             {"kind": "prayer", "text": " From generation to generation we will declare Your greatness,"},
             {"kind": "prayer", "text": " and we will proclaim Your holiness for evermore.<br>Your praise,"},
             {"kind": "prayer", "text": " our God,"},
@@ -349,7 +349,7 @@
             {"kind": "prayer", "text": " are a great and holy King. Blessed are You,"},
             {"kind": "prayer", "text": " <small>LORD</small>,"},
             {"kind": "prayer", "text": "<br>the holy God. /"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Shabbat Shuva:</i>"},
+            {"kind": "instruction", "he": "בשבת שובה:", "text": "<i class=\"instruction\">On Shabbat Shuva:</i>"},
             {"kind": "prayer", "text": " the holy King./"}
           ]},
           {"ref": "24", "translates": ["25"], "text": "<i class=\"instruction\">The Leader continues with “Moses rejoiced” on the next page.</i>"},
@@ -360,9 +360,9 @@
             {"kind": "prayer", "text": " Selah!<br>Blessed are You,"},
             {"kind": "prayer", "text": " <small>LORD</small>,"},
             {"kind": "prayer", "text": "<br>the holy God. /"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Shabbat Shuva:</i>"},
+            {"kind": "instruction", "he": "בשבת שובה:", "text": "<i class=\"instruction\">On Shabbat Shuva:</i>"},
             {"kind": "prayer", "text": " the holy King./<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">(If forgotten, repeat the Amida.)</i>"}
+            {"kind": "instruction", "he": "(אם שכח, יש לחזור על העמידה)", "text": "<i class=\"instruction\">(If forgotten, repeat the Amida.)</i>"}
           ]},
           {"ref": "27", "translates": ["28"], "text": "<small><b>HOLINESS OF THE DAY</b></small>"},
           {"ref": "28", "translates": ["29"], "text": "יִשְׂמַח Moses rejoiced at the gift of his portion<br>when You called him “faithful servant.”<br>A crown of glory<br>You placed on his head<br>when he stood before You on Mount Sinai.<br>He brought down in his hands two tablets of stone<br>on which was engraved the observance of the Sabbath.<br>So it is written in Your Torah:"},
@@ -390,11 +390,11 @@
             {"kind": "prayer", "text": " loving-kindness and compassion,"},
             {"kind": "prayer", "text": " life and peace,"},
             {"kind": "prayer", "text": " on this day of:<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Rosh Ḥodesh:</i>"},
+            {"kind": "instruction", "he": "בראש חודש:", "text": "<i class=\"instruction\">On Rosh Ḥodesh:</i>"},
             {"kind": "prayer", "text": " Rosh Ḥodesh.<br> "},
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Pesaḥ:</i>"},
+            {"kind": "instruction", "he": "בפסח:", "text": "<i class=\"instruction\">On Pesaḥ:</i>"},
             {"kind": "prayer", "text": " the Festival of Matzot.<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Sukkot:</i>"},
+            {"kind": "instruction", "he": "בסוכות:", "text": "<i class=\"instruction\">On Sukkot:</i>"},
             {"kind": "prayer", "text": " the Festival of Sukkot.<br>On it remember us,"},
             {"kind": "prayer", "text": " Lord our God,"},
             {"kind": "prayer", "text": " for good;"},
@@ -411,7 +411,7 @@
           {"ref": "38", "translates": ["44"], "text": "<i class=\"instruction\">Bow at the first nine words.</i>"},
           {"ref": "39", "translates": ["45"], "text": "▾מוֹדִים We give thanks to You, for You are the Lord our God and God of our ancestors for ever and all time. You are the Rock of our lives, Shield of our salvation from generation to generation. We will thank You and declare Your praise for our lives, which are entrusted into Your hand; for our souls, which are placed in Your charge; for Your miracles which are with us every day; and for Your wonders and favors at all times, evening, morning and midday. You are good – for Your compassion never fails. You are compassionate – for Your loving-kindnesses never cease. We have always placed our hope in You."},
           {"ref": "40", "translates": ["46"], "parts": [
-            {"kind": "instruction", "text": "<small><i class=\"instruction\">During the Leader’s Repetition, the congregation says quietly:</i></small>"},
+            {"kind": "instruction", "he": "במהלך חזרת שליח הציבור, הקהל אומר בשקט:", "text": "<small><i class=\"instruction\">During the Leader’s Repetition, the congregation says quietly:</i></small>"},
             {"kind": "prayer", "text": "▾ מוֹדִים We give thanks to You,"},
             {"kind": "prayer", "text": " for You are the Lord our God and God of our ancestors,"},
             {"kind": "prayer", "text": " God of all flesh,"},
@@ -422,7 +422,7 @@
             {"kind": "prayer", "text": " for it is for us to give You thanks. Blessed be God to whom thanks­giving is due."}
           ]},
           {"ref": "41", "translates": ["47"], "parts": [
-            {"kind": "instruction", "text": "<small><i class=\"instruction\">On Ḥanukka:</i>"},
+            {"kind": "instruction", "he": "בחנוכה:", "text": "<small><i class=\"instruction\">On Ḥanukka:</i>"},
             {"kind": "prayer", "text": "<br>עַל הַנִּסִּים [We thank You also] for the miracles,"},
             {"kind": "prayer", "text": " the redemption,"},
             {"kind": "prayer", "text": " the mighty deeds,"},
@@ -445,10 +445,10 @@
             {"kind": "prayer", "text": " purified Your Sanctuary,"},
             {"kind": "prayer", "text": " kindled lights in Your holy courts,"},
             {"kind": "prayer", "text": " and designated these eight days of Ḥanukka for giving thanks and praise to Your great name.<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">Continue with “For all these things.”</i></small>"}
+            {"kind": "instruction", "he": "המשך עם \"על כל אלה\".", "text": "<i class=\"instruction\">Continue with “For all these things.”</i></small>"}
           ]},
           {"ref": "42", "translates": ["48"], "parts": [
-            {"kind": "instruction", "text": "<small><i class=\"instruction\">On Shushan Purim in Jerusalem:</i>"},
+            {"kind": "instruction", "he": "בשושןפורים בירושלים:", "text": "<small><i class=\"instruction\">On Shushan Purim in Jerusalem:</i>"},
             {"kind": "prayer", "text": "<br>עַל הַנִּסִּים [We thank You also] for the miracles,"},
             {"kind": "prayer", "text": " the redemption,"},
             {"kind": "prayer", "text": " the mighty deeds,"},
@@ -467,35 +467,35 @@
             {"kind": "prayer", "text": " frustrated his plans,"},
             {"kind": "prayer", "text": " and caused his scheme to recoil on his own head,"},
             {"kind": "prayer", "text": " so that they hanged him and his sons on the gallows.<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">Continue with “For all these things.”</i></small>"}
+            {"kind": "instruction", "he": "המשך עם \"על כל אלה\".", "text": "<i class=\"instruction\">Continue with “For all these things.”</i></small>"}
           ]},
           {"ref": "43", "translates": ["49"], "text": "וְעַל כֻּלָּם For all these things may Your name be blessed and exalted, our King, continually, for ever and all time."},
           {"ref": "44", "translates": ["50"], "parts": [
-            {"kind": "instruction", "text": "<small><i class=\"instruction\">On Shabbat Shuva:</i>"},
+            {"kind": "instruction", "he": "בשבת שובה:", "text": "<small><i class=\"instruction\">On Shabbat Shuva:</i>"},
             {"kind": "prayer", "text": " And write,"},
             {"kind": "prayer", "text": " for a good life,"},
             {"kind": "prayer", "text": " all the children of Your covenant.</small>"}
           ]},
           {"ref": "45", "translates": ["51"], "text": "Let all that lives thank You, Selah! and praise Your name in truth,<br>God, our Savior and Help, Selah!<br>▾Blessed are You, <small>LORD</small>, whose name is “the Good”<br>and to whom thanks are due."},
           {"ref": "46", "translates": ["53"], "parts": [
-            {"kind": "instruction", "text": "<small><i class=\"instruction\">The following is said by the Leader during the Repetition of the Amida, except in a house of mourning and on Tisha B’Av. In Israel, if Kohanim bless the congregation, turn to page 838. See laws 370–377.</i>"},
+            {"kind": "instruction", "he": "הבא זה נאמר על ידי שליח הציבור בחזרת העמידה, אלא בבית אבל ובתשבעה. בארץ ישראל, אם כוהנים מברכים את הקהל, פנה לעמוד 838. ראה הלכות 370–377.", "text": "<small><i class=\"instruction\">The following is said by the Leader during the Repetition of the Amida, except in a house of mourning and on Tisha B’Av. In Israel, if Kohanim bless the congregation, turn to page 838. See laws 370–377.</i>"},
             {"kind": "prayer", "text": "<br>Our God and God of our fathers,"},
             {"kind": "prayer", "text": " bless us with the threefold blessing in the Torah,"},
             {"kind": "prayer", "text": " written by the hand of Moses Your servant and pronounced by Aaron and his sons the priests,"},
             {"kind": "prayer", "text": " Your holy people,"},
             {"kind": "prayer", "text": " as it is said:<br>May the Lord bless you and protect you.<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "he": "קהל:", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "text": " May it be Your will.<br>May the Lord make His face shine on you and be gracious to you.<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "he": "קהל:", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "text": " May it be Your will.<br>May the Lord turn His face toward you,"},
             {"kind": "prayer", "text": " and grant you peace.<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "he": "קהל:", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "text": " May it be Your will.</small>"}
           ]},
           {"ref": "47", "translates": ["54"], "text": "<small><b>PEACE</b></small>"},
           {"ref": "48", "translates": ["56"], "text": "שִׂים שָׁלוֹם Grant peace, goodness and blessing,<br>grace, loving-kindness and compassion to us and all Israel Your people.<br>Bless us, our Father, all as one, with the light of Your face,<br>for by the light of Your face You have given us, <small>LORD</small> our God,<br>the Torah of life and love of kindness,<br>righteousness, blessing, compassion, life and peace.<br>May it be good in Your eyes to bless Your people Israel<br>at every time, in every hour, with Your peace."},
           {"ref": "49", "translates": ["57"], "parts": [
-            {"kind": "instruction", "text": "<small><i class=\"instruction\">On Shabbat Shuva:</i>"},
+            {"kind": "instruction", "he": "בשבת שובה:", "text": "<small><i class=\"instruction\">On Shabbat Shuva:</i>"},
             {"kind": "prayer", "text": " In the book of life,"},
             {"kind": "prayer", "text": " blessing,"},
             {"kind": "prayer", "text": " peace and prosperity,"},
@@ -504,14 +504,14 @@
           ]},
           {"ref": "50", "translates": ["57"], "text": "Blessed are You, <small>LORD</small>, who blesses His people Israel with peace."},
           {"ref": "51", "translates": ["57"], "parts": [
-            {"kind": "instruction", "text": "<small><i class=\"instruction\">*On Shabbat Shuva outside Israel, many end the blessing:</i>"},
+            {"kind": "instruction", "he": "*בראש שבת שובה מחוץ לארץ, רבים מסיימים את הברכה:", "text": "<small><i class=\"instruction\">*On Shabbat Shuva outside Israel, many end the blessing:</i>"},
             {"kind": "prayer", "text": "<br>Blessed are You,"},
             {"kind": "prayer", "text": " <small>LORD</small>,"},
             {"kind": "prayer", "text": " who makes peace.</small>"}
           ]},
           {"ref": "52", "translates": ["56"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">The following verse concludes the Leader’s Repetition of the Amida.</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">Some also say it here as part of the silent Amida. See law 368.</i>"}
+            {"kind": "instruction", "he": "הפסוק הבא מסיים את חזרת שליח הציבור על העמידה.", "text": "<i class=\"instruction\">The following verse concludes the Leader’s Repetition of the Amida.</i>"},
+            {"kind": "instruction", "he": "יש האומרים גם כאן כחלק מעמידה. ראה הלכה 368.", "text": "<br><i class=\"instruction\">Some also say it here as part of the silent Amida. See law 368.</i>"}
           ]},
           {"ref": "53", "translates": ["53"], "text": "May the words of my mouth and the meditation of my heart<br>find favor before You, <small>LORD</small>, my Rock and Redeemer."},
           {"ref": "54", "translates": ["54"], "text": "אֱלֹהַי My God,<br>guard my tongue from evil and my lips from deceitful speech.<br>To those who curse me, let my soul be silent;<br>may my soul be to all like the dust.<br>Open my heart to Your Torah and let my soul<br>pursue Your commandments.<br>As for all who plan evil against me,<br>swiftly thwart their counsel and frustrate their plans.<br> Act for the sake of Your name; act for the sake of Your right hand;<br> act for the sake of Your holiness; act for the sake of Your Torah.<br>That Your beloved ones may be delivered,<br>save with Your right hand and answer me.<br>May the words of my mouth and the meditation of my heart<br>find favor before You, <small>LORD</small>, my Rock and Redeemer."},
@@ -521,18 +521,18 @@
           {"ref": "58", "translates": [], "text": "<i class=\"instruction\">On Rosh Ḥodesh, Ḥol HaMo’ed and Ḥanukka, the service continues with Hallel on page 732.</i>"},
           {"ref": "59", "translates": ["59"], "text": "<small><b>FULL KADDISH</b></small>"},
           {"ref": "60", "translates": ["60"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Leader:</i>"},
+            {"kind": "instruction", "he": "שליח ציבור:", "text": "<i class=\"instruction\">Leader:</i>"},
             {"kind": "prayer", "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,"},
             {"kind": "prayer", "text": "<br>in the world He created by His will.<br>May He establish His kingdom >in your lifetime and in your days,"},
             {"kind": "prayer", "text": " and in the lifetime of all the house of Israel,"},
             {"kind": "prayer", "text": "<br>swiftly and soon – and say: Amen."}
           ]},
           {"ref": "61", "translates": ["61"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">All:</i>"},
+            {"kind": "instruction", "he": "כולם:", "text": "<i class=\"instruction\">All:</i>"},
             {"kind": "prayer", "text": " May His great name be blessed for ever and all time."}
           ]},
           {"ref": "62", "translates": ["62"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Leader:</i>"},
+            {"kind": "instruction", "he": "שליח ציבור:", "text": "<i class=\"instruction\">Leader:</i>"},
             {"kind": "prayer", "text": " Blessed and praised,"},
             {"kind": "prayer", "text": " glorified and exalted,"},
             {"kind": "prayer", "text": "<br>raised and honored,"},
@@ -657,7 +657,7 @@
             {"kind": "prayer", "text": " salvation and consolation,"},
             {"kind": "prayer", "text": " and nullify all hard and harsh decrees against us. And may the hearts of the government,"},
             {"kind": "prayer", "text": " its advisers and ministers / "},
-            {"kind": "instruction", "text": "<i class=\"instruction\">in Israel:</i>"},
+            {"kind": "instruction", "he": "בישראל:", "text": "<i class=\"instruction\">in Israel:</i>"},
             {"kind": "prayer", "text": " And may the hearts of our ministers and their advisers,"},
             {"kind": "prayer", "text": " / be favorable toward us. Amen. May this be Your will. "}
           ]},
@@ -673,7 +673,7 @@
             {"kind": "prayer", "text": "One is our God;"},
             {"kind": "prayer", "text": " great is our Master;"},
             {"kind": "prayer", "text": " holy ("},
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Hoshana Raba:</i>"},
+            {"kind": "instruction", "he": "בהושענא רבה:", "text": "<i class=\"instruction\">On Hoshana Raba:</i>"},
             {"kind": "prayer", "text": " and awesome) is His name."}
           ]},
           {"ref": "25", "translates": ["26"], "text": "<i class=\"instruction\">The Leader turns to face the Ark, bows and says:</i>"},
@@ -688,9 +688,9 @@
             {"kind": "prayer", "text": "וְיַעֲזֹר May He help,"},
             {"kind": "prayer", "text": " shield and save all who seek refuge in Him,"},
             {"kind": "prayer", "text": "<br>and let us say: Amen. Let us all render greatness to our God<br>and give honor to the Torah. *Let the Kohen come forward.<br>Arise ("},
-            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "instruction", "he": "שם", "text": "<i>name</i>"},
             {"kind": "prayer", "text": " son of "},
-            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "instruction", "he": "שם האב", "text": "<i>father’s name</i>"},
             {"kind": "prayer", "text": "),"},
             {"kind": "prayer", "text": " the Kohen."}
           ]},
@@ -698,33 +698,33 @@
           {"ref": "35", "translates": ["35"], "parts": [
             {"kind": "prayer", "text": "/As there is no Kohen,"},
             {"kind": "prayer", "text": " arise ("},
-            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "instruction", "he": "שם", "text": "<i>name</i>"},
             {"kind": "prayer", "text": " son of "},
-            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "instruction", "he": "שם האב", "text": "<i>father’s name</i>"},
             {"kind": "prayer", "text": ") in place of a Kohen./"}
           ]},
           {"ref": "36", "translates": ["36"], "text": "Blessed is He who, in His holiness, gave the Torah to His people Israel."},
           {"ref": "37", "translates": ["38"], "text": "<i class=\"instruction\">The congregation followed by the Gabbai:</i>"},
           {"ref": "38", "translates": ["38"], "text": "You who cling to the <small>LORD</small> your God are all alive today."},
           {"ref": "39", "translates": ["41"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">The appropriate Torah portion is read. The Torah portions for Yom Tov are to be found from page 1123</i>"},
+            {"kind": "instruction", "he": "קוראים את פרשת התורה המתאימה. פרשיות התורה לימי טוב מופיעות מעמוד 1123", "text": "<i class=\"instruction\">The appropriate Torah portion is read. The Torah portions for Yom Tov are to be found from page 1123</i>"},
             {"kind": "prayer", "text": "א"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">; see chart on page 1123.</i>"}
+            {"kind": "instruction", "he": "; ראה טבלה בעמוד 1123.", "text": "<i class=\"instruction\">; see chart on page 1123.</i>"}
           ]},
           {"ref": "40", "translates": ["42"], "text": "<i class=\"instruction\">The Reader shows the oleh the section to be read. The oleh touches the scroll at that place with the tzitzit of his tallit, which he then kisses. Holding the handles of the scroll, he says:</i>"},
           {"ref": "41", "translates": ["42"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Oleh:</i>"},
+            {"kind": "instruction", "he": "עולה:", "text": "<i class=\"instruction\">Oleh:</i>"},
             {"kind": "prayer", "text": " Bless the <small>LORD</small>,"},
             {"kind": "prayer", "text": " the blessed One."}
           ]},
           {"ref": "42", "translates": ["43"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Cong:</i>"},
+            {"kind": "instruction", "he": "קהל:", "text": "<i class=\"instruction\">Cong:</i>"},
             {"kind": "prayer", "text": " Bless the <small>LORD</small>,"},
             {"kind": "prayer", "text": " the blessed One,"},
             {"kind": "prayer", "text": " for ever and all time."}
           ]},
           {"ref": "43", "translates": ["44"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Oleh:</i>"},
+            {"kind": "instruction", "he": "עולה:", "text": "<i class=\"instruction\">Oleh:</i>"},
             {"kind": "prayer", "text": " Bless the <small>LORD</small>,"},
             {"kind": "prayer", "text": " the blessed One,"},
             {"kind": "prayer", "text": " for ever and all time."}
@@ -732,7 +732,7 @@
           {"ref": "44", "translates": ["46"], "text": "Blessed are You, <small>LORD</small> our God, King of the Universe,<br>who has chosen us from all peoples<br>and has given us His Torah.<br>Blessed are You, <small>LORD</small>, Giver of the Torah."},
           {"ref": "45", "translates": ["48"], "text": "<i class=\"instruction\">After the reading, the oleh says:</i>"},
           {"ref": "46", "translates": ["48"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Oleh:</i>"},
+            {"kind": "instruction", "he": "עולה:", "text": "<i class=\"instruction\">Oleh:</i>"},
             {"kind": "prayer", "text": " Blessed are You,"},
             {"kind": "prayer", "text": " <small>LORD</small> our God,"},
             {"kind": "prayer", "text": " King of the Universe,"},
@@ -754,21 +754,21 @@
             {"kind": "prayer", "text": " Abraham,"},
             {"kind": "prayer", "text": " Isaac and Jacob,"},
             {"kind": "prayer", "text": " bless ("},
-            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "instruction", "he": "שם", "text": "<i>name</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " son of "},
-            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "instruction", "he": "שם האב", "text": "<i>father’s name</i>"},
             {"kind": "prayer", "text": ") who has been called up in honor of the All-Present,"},
             {"kind": "prayer", "text": " in honor of the Torah,"},
             {"kind": "prayer", "text": " and in honor of the Sabbath ("},
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Yom Tov:</i>"},
+            {"kind": "instruction", "he": "ביום טוב:", "text": "<i class=\"instruction\">On Yom Tov:</i>"},
             {"kind": "prayer", "text": " and in honor of the festival). As a reward for this,"},
             {"kind": "prayer", "text": " may the Holy One,"},
             {"kind": "prayer", "text": " blessed be He,"},
             {"kind": "prayer", "text": " protect and deliver him from all trouble and distress,"},
             {"kind": "prayer", "text": " all infection and illness,"},
             {"kind": "prayer", "text": " and send blessing and success to all the work of his hands ("},
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Yom Tov:</i>"},
+            {"kind": "instruction", "he": "ביום טוב:", "text": "<i class=\"instruction\">On Yom Tov:</i>"},
             {"kind": "prayer", "text": " and may he merit to go up to Jerusalem for the festivals),"},
             {"kind": "prayer", "text": " together with all Israel,"},
             {"kind": "prayer", "text": " his brethren,"},
@@ -783,13 +783,13 @@
             {"kind": "prayer", "text": " David and Solomon,"},
             {"kind": "prayer", "text": " bless and heal one who is ill,"},
             {"kind": "prayer", "text": " ("},
-            {"kind": "instruction", "text": "<i>sick person’s name</i>"},
+            {"kind": "instruction", "he": "שם החולה", "text": "<i>sick person’s name</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " son of "},
-            {"kind": "instruction", "text": "<i>mother’s name</i>"},
+            {"kind": "instruction", "he": "שם האם", "text": "<i>mother’s name</i>"},
             {"kind": "prayer", "text": "),"},
             {"kind": "prayer", "text": " on whose behalf ("},
-            {"kind": "instruction", "text": "<i>name of the one making the offering</i>"},
+            {"kind": "instruction", "he": "שמו של המקריב", "text": "<i>name of the one making the offering</i>"},
             {"kind": "prayer", "text": ") is making a contribution to charity. As a reward for this,"},
             {"kind": "prayer", "text": " may the Holy One,"},
             {"kind": "prayer", "text": " blessed be He,"},
@@ -800,7 +800,7 @@
             {"kind": "prayer", "text": " sending him a swift and full recovery from heaven to all his 248 organs and 365 sinews,"},
             {"kind": "prayer", "text": " amongst the other sick ones in Israel,"},
             {"kind": "prayer", "text": " a healing of the spirit and a healing of the body – though on the Sabbath ("},
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Yom Tov:</i>"},
+            {"kind": "instruction", "he": "ביום טוב:", "text": "<i class=\"instruction\">On Yom Tov:</i>"},
             {"kind": "prayer", "text": " on festivals) it is forbidden to cry out,"},
             {"kind": "prayer", "text": " may healing be quick to come – now,"},
             {"kind": "prayer", "text": " swiftly and soon,"},
@@ -815,13 +815,13 @@
             {"kind": "prayer", "text": " David and Solomon,"},
             {"kind": "prayer", "text": " bless and heal one who is ill,"},
             {"kind": "prayer", "text": " ("},
-            {"kind": "instruction", "text": "<i>sick person’s name</i>"},
+            {"kind": "instruction", "he": "שם החולה", "text": "<i>sick person’s name</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " daughter of "},
-            {"kind": "instruction", "text": "<i>mother’s name</i>"},
+            {"kind": "instruction", "he": "שם האם", "text": "<i>mother’s name</i>"},
             {"kind": "prayer", "text": "),"},
             {"kind": "prayer", "text": " on whose behalf ("},
-            {"kind": "instruction", "text": "<i>name of the one making the offering</i>"},
+            {"kind": "instruction", "he": "שמו של המקריב", "text": "<i>name of the one making the offering</i>"},
             {"kind": "prayer", "text": ") is making a contribution to charity. As a reward for this,"},
             {"kind": "prayer", "text": " may the Holy One,"},
             {"kind": "prayer", "text": " blessed be He,"},
@@ -832,7 +832,7 @@
             {"kind": "prayer", "text": " sending her a swift and full recovery from heaven to all her organs and sinews,"},
             {"kind": "prayer", "text": " amongst the other sick ones in Israel,"},
             {"kind": "prayer", "text": " a healing of the spirit and a healing of the body – though on the Sabbath ("},
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Yom Tov:</i>"},
+            {"kind": "instruction", "he": "ביום טוב:", "text": "<i class=\"instruction\">On Yom Tov:</i>"},
             {"kind": "prayer", "text": " on festivals) it is forbidden to cry out,"},
             {"kind": "prayer", "text": " may healing be quick to come – now,"},
             {"kind": "prayer", "text": " swiftly and soon,"},
@@ -849,10 +849,10 @@
             {"kind": "prayer", "text": " Rebecca,"},
             {"kind": "prayer", "text": " Rachel and Leah,"},
             {"kind": "prayer", "text": " bless the woman who has given birth ("},
-            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "instruction", "he": "שם", "text": "<i>name</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " daughter of "},
-            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "instruction", "he": "שם האב", "text": "<i>father’s name</i>"},
             {"kind": "prayer", "text": "),"},
             {"kind": "prayer", "text": " and her son who has been born to her as an auspicious sign. Her husband,"},
             {"kind": "prayer", "text": " the child’s father,"},
@@ -872,17 +872,17 @@
             {"kind": "prayer", "text": " Rebecca,"},
             {"kind": "prayer", "text": " Rachel and Leah,"},
             {"kind": "prayer", "text": " bless the woman who has given birth ("},
-            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "instruction", "he": "שם", "text": "<i>name</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " daughter of "},
-            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "instruction", "he": "שם האב", "text": "<i>father’s name</i>"},
             {"kind": "prayer", "text": "),"},
             {"kind": "prayer", "text": " and her daughter who has been born to her as an auspicious sign;"},
             {"kind": "prayer", "text": " and may her name be called in Israel ("},
-            {"kind": "instruction", "text": "<i>baby’s name</i>"},
+            {"kind": "instruction", "he": "שם התינוק", "text": "<i>baby’s name</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " daughter of "},
-            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "instruction", "he": "שם האב", "text": "<i>father’s name</i>"},
             {"kind": "prayer", "text": "). Her husband,"},
             {"kind": "prayer", "text": " the child’s father,"},
             {"kind": "prayer", "text": " is making a contribution to charity. As a reward for this,"},
@@ -897,10 +897,10 @@
             {"kind": "prayer", "text": " Abraham,"},
             {"kind": "prayer", "text": " Isaac and Jacob,"},
             {"kind": "prayer", "text": " bless ("},
-            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "instruction", "he": "שם", "text": "<i>name</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " son of "},
-            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "instruction", "he": "שם האב", "text": "<i>father’s name</i>"},
             {"kind": "prayer", "text": ") who has completed thirteen years and attained the age of the commandments,"},
             {"kind": "prayer", "text": " who has been called to the Torah to give praise and thanks to God,"},
             {"kind": "prayer", "text": " may His name be blessed,"},
@@ -919,10 +919,10 @@
             {"kind": "prayer", "text": " Rebecca,"},
             {"kind": "prayer", "text": " Rachel and Leah,"},
             {"kind": "prayer", "text": " bless ("},
-            {"kind": "instruction", "text": "<i>name</i>"},
+            {"kind": "instruction", "he": "שם", "text": "<i>name</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " daughter of "},
-            {"kind": "instruction", "text": "<i>father’s name</i>"},
+            {"kind": "instruction", "he": "שם האב", "text": "<i>father’s name</i>"},
             {"kind": "prayer", "text": ") who has completed twelve years and attained the age of the commandments,"},
             {"kind": "prayer", "text": " and gives praise and thanks to God,"},
             {"kind": "prayer", "text": " may His name be blessed,"},
@@ -935,18 +935,18 @@
           {"ref": "68", "translates": [], "text": "<small><b>HALF KADDISH</b></small>"},
           {"ref": "69", "translates": ["68"], "text": "<i class=\"instruction\">Before Maftir is read, the Reader says Half Kaddish:</i>"},
           {"ref": "70", "translates": ["70"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Reader:</i>"},
+            {"kind": "instruction", "he": "קורא:", "text": "<i class=\"instruction\">Reader:</i>"},
             {"kind": "prayer", "text": " יִתְגַּדַּל Magnified and sanctified may His great name be,"},
             {"kind": "prayer", "text": "<br>in the world He created by His will.<br>May He establish His kingdom<br> in your lifetime and in your days,"},
             {"kind": "prayer", "text": " and in the lifetime of all the house of Israel,"},
             {"kind": "prayer", "text": "<br>swiftly and soon – and say: Amen."}
           ]},
           {"ref": "71", "translates": ["71"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">All:</i>"},
+            {"kind": "instruction", "he": "כולם:", "text": "<i class=\"instruction\">All:</i>"},
             {"kind": "prayer", "text": " May His great name be blessed for ever and all time."}
           ]},
           {"ref": "72", "translates": ["72"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Reader:</i>"},
+            {"kind": "instruction", "he": "קורא:", "text": "<i class=\"instruction\">Reader:</i>"},
             {"kind": "prayer", "text": " Blessed and praised,"},
             {"kind": "prayer", "text": " glorified and exalted,"},
             {"kind": "prayer", "text": "<br>raised and honored,"},
@@ -960,7 +960,7 @@
           {"ref": "74", "translates": ["75"], "text": "<i class=\"instruction\">The Torah scroll is lifted and the congregation says:</i>"},
           {"ref": "75", "translates": ["75"], "text": "וְזֹאת הַתּוֹרָה This is the Torah<br>that Moses placed before the children of Israel,<br>at the <small>LORD</small>’s commandment, by the hand of Moses."},
           {"ref": "76", "translates": ["76"], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Some add:</i>"},
+            {"kind": "instruction", "he": "יש המוסיפים:", "text": "<i class=\"instruction\">Some add:</i>"},
             {"kind": "prayer", "text": " It is a tree of life to those who grasp it,"},
             {"kind": "prayer", "text": " and those who uphold it are happy.<br>Its ways are ways of pleasantness,"},
             {"kind": "prayer", "text": " and all its paths are peace.<br>Long life is in its right hand;"},
@@ -984,13 +984,13 @@
             {"kind": "prayer", "text": " for divine worship,"},
             {"kind": "prayer", "text": " for the prophets,"},
             {"kind": "prayer", "text": " (for this Sabbath day) and for this day of<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Pesaḥ:</i>"},
+            {"kind": "instruction", "he": "בפסח:", "text": "<i class=\"instruction\">On Pesaḥ:</i>"},
             {"kind": "prayer", "text": " the Festival of Matzot<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Shavuot:</i>"},
+            {"kind": "instruction", "he": "בשבועות:", "text": "<i class=\"instruction\">On Shavuot:</i>"},
             {"kind": "prayer", "text": " the Festival of Shavuot<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Sukkot:</i>"},
+            {"kind": "instruction", "he": "בסוכות:", "text": "<i class=\"instruction\">On Sukkot:</i>"},
             {"kind": "prayer", "text": " the Festival of Sukkot<br>"},
-            {"kind": "instruction", "text": "<i class=\"instruction\">On Shemini Atzeret and Simḥat Torah:</i>"},
+            {"kind": "instruction", "he": "בשמיני עצרת ושמחת תורה:", "text": "<i class=\"instruction\">On Shemini Atzeret and Simḥat Torah:</i>"},
             {"kind": "prayer", "text": " the Festival of Shemini Atzeret"}
           ]},
           {"ref": "89", "translates": ["89"], "text": "which You, <small>LORD</small> our God, have given us (for holiness and rest), for joy and gladness, honor and glory – for all these we thank and bless You, <small>LORD</small> our God, and may Your name be blessed by the mouth of all that lives, continually, for ever and all time. Blessed are You, <small>LORD</small>, who sanctifies (the Sabbath,) Israel and the festivals."},
@@ -1023,16 +1023,16 @@
         "version": "English Edition; Koren Publishers Jerusalem, 2017",
         "segs": [
           {"ref": "1", "translates": ["1"], "text": "<small><b>PRAYER FOR THE WELFARE OF THE AMERICAN GOVERNMENT</b></small>"},
-          {"ref": "2", "translates": ["3"], "kind": "instruction", "en": "The Leader says the following:", "text": "<i class=\"instruction\">The Leader says the following:</i>"},
+          {"ref": "2", "translates": ["3"], "kind": "instruction", "en": "The Leader says the following:", "he": "שליח הציבור אומר את הבא:", "text": "<i class=\"instruction\">The Leader says the following:</i>"},
           {"ref": "3", "translates": ["3"], "text": "הַנּוֹתֵן תְּשׁוּעָה May He who gives salvation to kings and dominion to princes, whose kingdom is an everlasting kingdom, who delivers His servant David from the evil sword, who makes a way in the sea and a path through the mighty waters, bless and protect, guard and help, exalt, magnify and uplift the President, Vice President and all officials of this land. May the Supreme King of kings in His mercy put into their hearts and the hearts of all their counselors and officials, to deal kindly with us and all Israel. In their days and in ours, may Judah be saved and Israel dwell in safety, and may the Redeemer come to Zion. May this be His will, and let us say: Amen."},
           {"ref": "4", "translates": ["4"], "text": "<small><b>PRAYER FOR THE SAFETY OF THE AMERICAN MILITARY</b></small>"},
-          {"ref": "5", "translates": ["6"], "kind": "instruction", "en": "The Leader says the following:", "text": "<i class=\"instruction\">The Leader says the following:</i>"},
+          {"ref": "5", "translates": ["6"], "kind": "instruction", "en": "The Leader says the following:", "he": "שליח הציבור אומר את הבא:", "text": "<i class=\"instruction\">The Leader says the following:</i>"},
           {"ref": "6", "translates": ["6"], "text": "אַדִּיר בַּמָּרוֹם God on high who dwells in might, the King to whom peace belongs, look down from Your holy habitation and bless the soldiers of the American military forces who risk their lives for the sake of peace on earth. Be their shelter and stronghold, and let them not falter. Give them the strength and courage to thwart the plans of the enemy and end the rule of evil. May their enemies be scattered and their foes flee before them, and may they rejoice in Your salvation. Bring them back safely to their homes, as is written: “The <small>LORD</small> will guard you from all harm, He will guard your life. The <small>LORD</small> will guard your going and coming, now and for evermore.” And may there be fulfilled for us the verse: “Nation shall not lift up sword against nation, nor shall they learn war any more.” Let all the inhabitants on earth know that sovereignty is Yours and Your name inspires awe over all You have created – and let us say: Amen."},
           {"ref": "7", "translates": ["7"], "text": "<small><b>PRAYER FOR THE WELFARE OF THE CANADIAN GOVERNMENT</b></small>"},
-          {"ref": "8", "translates": ["9"], "kind": "instruction", "en": "The Leader says the following:", "text": "<i class=\"instruction\">The Leader says the following:</i>"},
+          {"ref": "8", "translates": ["9"], "kind": "instruction", "en": "The Leader says the following:", "he": "שליח הציבור אומר את הבא:", "text": "<i class=\"instruction\">The Leader says the following:</i>"},
           {"ref": "9", "translates": ["9"], "text": "הַנּוֹתֵן תְּשׁוּעָה May He who gives salvation to kings and dominion to princes, whose kingdom is an everlasting kingdom, who delivers His servant David from the evil sword, who makes a way in the sea and a path through the mighty waters, bless and protect, guard and help, exalt, magnify and uplift the Prime Minister and all the elected and appointed officials of Canada. May the Supreme King of kings in His mercy put into their hearts and the hearts of all their counselors and officials, to deal kindly with us and all Israel. In their days and in ours, may Judah be saved and Israel dwell in safety, and may the Redeemer come to Zion. May this be His will, and let us say: Amen."},
           {"ref": "10", "translates": ["10"], "text": "<small><b>PRAYER FOR THE SAFETY OF THE CANADIAN MILITARY FORCES</b></small>"},
-          {"ref": "11", "translates": ["12"], "kind": "instruction", "en": "The Leader says the following:", "text": "<i class=\"instruction\">The Leader says the following:</i>"},
+          {"ref": "11", "translates": ["12"], "kind": "instruction", "en": "The Leader says the following:", "he": "שליח הציבור אומר את הבא:", "text": "<i class=\"instruction\">The Leader says the following:</i>"},
           {"ref": "12", "translates": ["12"], "text": "אַדִּיר בַּמָּרוֹם God on high who dwells in might, the King to whom peace belongs, look down from Your holy habitation and bless the soldiers of the Canadian Forces who risk their lives for the sake of peace on earth. Be their shelter and stronghold, and let them not falter. Give them the strength and courage to thwart the plans of the enemy and end the rule of evil. May their enemies be scattered and their foes flee before them, and may they rejoice in Your salvation. Bring them back safely to their homes, as is written: “The <small>LORD</small> will guard you from all harm, He will guard your life. The <small>LORD</small> will guard your going and coming, now and for evermore.” And may there be fulfilled for us the verse: “Nation shall not lift up sword against nation, nor shall they learn war any more.” Let all the inhabitants on earth know that sovereignty is Yours and Your name inspires awe over all You have created – and let us say: Amen."}
         ]
       }
@@ -1061,10 +1061,10 @@
             {"kind": "prayer", "text": "As for our brothers,"},
             {"kind": "prayer", "text": " the whole house of Israel,"},
             {"kind": "prayer", "text": " remember them in all the lands of our ("},
-            {"kind": "instruction", "text": "<i class=\"instruction\">In Israel say:</i>"},
+            {"kind": "instruction", "he": "בישראל לומר:", "text": "<i class=\"instruction\">In Israel say:</i>"},
             {"kind": "prayer", "text": " their) dispersion,"},
             {"kind": "prayer", "text": " and swiftly lead us ("},
-            {"kind": "instruction", "text": "<i class=\"instruction\">In Israel say:</i>"},
+            {"kind": "instruction", "he": "בישראל לומר:", "text": "<i class=\"instruction\">In Israel say:</i>"},
             {"kind": "prayer", "text": " them) upright to Zion Your city,"},
             {"kind": "prayer", "text": " and Jerusalem Your dwelling place,"},
             {"kind": "prayer", "text": " as is written in the Torah of Moses Your servant: “Even if you are scattered to the furthermost lands under the heavens,"},
@@ -1129,9 +1129,9 @@
           {"ref": "5", "translates": ["6"], "text": "<i class=\"instruction\">The Leader, then the congregation:</i>"},
           {"ref": "6", "translates": ["6"], "parts": [
             {"kind": "prayer", "text": "The new month of ("},
-            {"kind": "instruction", "text": "<i>Hebrew month</i>"},
+            {"kind": "instruction", "he": "חודש עברי", "text": "<i>Hebrew month</i>"},
             {"kind": "prayer", "text": ") will occur on ("},
-            {"kind": "instruction", "text": "<i>day of week</i>"},
+            {"kind": "instruction", "he": "יום", "text": "<i>day of week</i>"},
             {"kind": "prayer", "text": ").<br>May it come to us and all Israel for good."}
           ]},
           {"ref": "7", "translates": ["9", "11"], "text": "<i class=\"instruction\">The congregation and Leader continue:</i>"},
@@ -1150,7 +1150,7 @@
             {"kind": "prayer", "text": " for life and peace,"},
             {"kind": "prayer", "text": " good tidings and good news,"},
             {"kind": "prayer", "text": " ("},
-            {"kind": "instruction", "text": "<i class=\"instruction\">In winter:</i>"},
+            {"kind": "instruction", "he": "בחורף:", "text": "<i class=\"instruction\">In winter:</i>"},
             {"kind": "prayer", "text": " for rain in its due season,"},
             {"kind": "prayer", "text": ") for complete healing and imminent redemption,"},
             {"kind": "prayer", "text": " and let us say: Amen."}

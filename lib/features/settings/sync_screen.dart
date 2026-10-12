@@ -1,9 +1,12 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
+import '../../core/providers.dart';
+import '../../core/sync/settings_file.dart';
 import '../../core/sync/sync_codec.dart';
 import '../../core/sync/sync_service.dart';
 import '../../core/sync/sync_transport.dart';
@@ -85,6 +88,43 @@ class _SyncScreenState extends ConsumerState<SyncScreen> {
     );
     if (!ok || !mounted) return;
     await _run(() => ref.read(syncProvider.notifier).leave(deleteRemote: deleteRemote));
+  }
+
+  void _toast(String english) {
+    if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.tr(english))));
+  }
+
+  Future<void> _export() async {
+    try {
+      final bytes = Uint8List.fromList(exportSettings(ref.read(storageProvider)));
+      final d = DateTime.now();
+      String two(int n) => n.toString().padLeft(2, '0');
+      final saved = await FilePicker.saveFile(
+        fileName: 'amud-settings-${d.year}-${two(d.month)}-${two(d.day)}.json',
+        bytes: bytes,
+        mimeType: 'application/json',
+        type: FileType.custom,
+        allowedExtensions: const ['json'],
+      );
+      if (saved != null) _toast('Settings saved to a file');
+    } catch (_) {
+      _toast('Could not save the file.');
+    }
+  }
+
+  Future<void> _import() async {
+    try {
+      final files = await FilePicker.pickFiles(type: FileType.any);
+      if (files.isEmpty) return;
+      final bytes = await files.first.xFile.readAsBytes();
+      final keys = await importSettings(ref.read(storageProvider), bytes);
+      ref.read(syncProvider.notifier).reload(keys);
+      _toast('Settings imported');
+    } on FormatException {
+      _toast('That is not an Amud settings file.');
+    } catch (_) {
+      _toast('Could not read the file.');
+    }
   }
 
   @override
@@ -198,6 +238,14 @@ class _SyncScreenState extends ConsumerState<SyncScreen> {
             ],
           ),
         ],
+        AdaptiveSection(
+          header: context.tr('Settings file'),
+          footer: context.tr('Save your settings to a file to back them up or move them to another device without syncing. Importing replaces the settings that sync with the ones in the file.'),
+          children: [
+            ListTile(leading: const Icon(Icons.file_upload_outlined), title: Text(context.tr('Export settings to a file')), onTap: _export),
+            ListTile(leading: const Icon(Icons.file_download_outlined), title: Text(context.tr('Import settings from a file')), onTap: _import),
+          ],
+        ),
         AdaptiveSection(header: context.tr('What syncs'), children: [
           pad(Text(
             context.tr('Syncs: text, language and display settings, minhagim, learning text settings, shiurim settings, personal dates, custom zmanim and rules. Stays on each device: location, reminders, fonts you added, and what you have shared about usage.'),

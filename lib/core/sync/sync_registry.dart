@@ -44,7 +44,7 @@ const syncedSettingsFields = {
   'hour12', 'candleLightingMins', 'havdalahMins', 'opinion', 'defaultBook', 'hebrewVersions', 'translationVersions', //
   'layout', 'linearStyle', 'notesLanguage', 'titleLanguage', 'uiLanguage', 'ashkenaziSpelling', 'showTeamim', 'showNikud', 'preferTrop',
   'textScale', 'hebrewFont', 'latinFont', 'excludedDisplay', 'showNotes', 'conciseNotes', 'collapseNotes', 'collapseChazarah',
-  'choices', 'showInstructions', 'highlightToday', 'typesetting', 'justifyText', 'typeContrast', 'minhagim', 'themeMode',
+  'choices', 'showInstructions', 'highlightToday', 'highlightColor', 'typesetting', 'justifyText', 'typeContrast', 'minhagim', 'themeMode',
   'warmth', 'seedColor', 'openLicensesOnly', 'learningSchedules',
 };
 

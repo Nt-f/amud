@@ -72,8 +72,6 @@ _TachanunYear _tachanunYear(int year, bool il) {
       HDate(14, Months.iyyar, year),
       for (final d in _range(1, 13)) HDate(d, Months.sivan, year),
       for (final d in _range(20, 31)) HDate(d, Months.tishrei, year),
-      if (year >= 5708) dateYomHaZikaron(year)!.next(),
-      if (year >= 5727) HDate(28, Months.iyyar, year),
     ];
     final yesPrev = <HDate>[
       HDate(29, Months.elul, year - 1),

@@ -532,11 +532,11 @@
         "version": "Sefaria Community Translation",
         "segs": [
           {"ref": "1", "translates": ["1"], "parts": [
-            {"kind": "instruction", "text": "For a male: "},
+            {"kind": "instruction", "he": "לגבר:", "text": "For a male: "},
             {"kind": "prayer", "text": "May the one who blessed our ancestors - Abraham, Isaac, and Jacob, Moses, and Aaron, David, and Solomon - may God bless the sick on behalf of a vow of tzedakah on their behalf, with this reward may the Holy Blessed One be filled with compassion for him to have pity on him and to heal him and to strengthen him and to give him life, to send speedily complete healing from the heavens to the 248 organs and 365 ligaments among all the sick of Israel, a healing of spirit and a healing of body (on Shabbat: Shabbat prevents from crying out, may healing come near soon; on Yom Tov: Yom Tov prevents calls out, may healing come near soon), now and speedily, and in a time soon, and let us say, Amen."}
           ]},
           {"ref": "2", "translates": ["2"], "parts": [
-            {"kind": "instruction", "text": "For a female: "},
+            {"kind": "instruction", "he": "לבת:", "text": "For a female: "},
             {"kind": "prayer", "text": "May the one who blessed our ancestors - Abraham, Isaac, and Jacob, Moses, and Aaron, David, and Solomon - may God bless the sick on behalf of a vow of tzedakah on their behalf, with this reward may the Holy Blessed One be filled with compassion for her to have pity on her and to heal her and to strengthen her and to give her life, to send speedily complete healing from the heavens to the 248 organs and 365 ligaments among all the sick of Israel, a healing of spirit and a healing of body (on Shabbat: Shabbat prevents from crying out, may healing come near soon; on Yom Tov: Yom Tov prevents from calling out, may healing come near soon), now and speedily, and in a time soon, and let us say, Amen."}
           ]}
         ]
@@ -724,11 +724,11 @@
         "version": "Sefaria Community Translation",
         "segs": [
           {"ref": "1", "translates": ["1"], "parts": [
-            {"kind": "instruction", "text": "(Before reading the haftarah, the reader recites this blessing:) "},
+            {"kind": "instruction", "he": "(לפני קריאת ההפטרה, השליח אומר את הברכה הבאה:)", "text": "(Before reading the haftarah, the reader recites this blessing:) "},
             {"kind": "prayer", "text": "Blessed are You, Eternal, our Divinity, King of the universe, who chose good prophets and favored their spoken words with truth. Blessed are You, Eternal, the Choosing of Torah, [the] servant Moses, [the] people Israel, and prophets of truth and justice."}
           ]},
           {"ref": "2", "translates": ["2"], "parts": [
-            {"kind": "instruction", "text": "(After reading the haftarah, the reader says these blessings:) "},
+            {"kind": "instruction", "he": "(לאחר קריאת ההפטרה, השליח אומר את הברכות הבאות:)", "text": "(After reading the haftarah, the reader says these blessings:) "},
             {"kind": "prayer", "text": "Blessed are You, Eternal, our Divinity, King of the universe, Rock of all infinitudes, righteous in all generations, Faithful Divinity who says and does, speaks and fulfills all words of truth and justice."}
           ]},
           {"ref": "3", "translates": ["3"], "text": "You are faithful, Eternal, our Divinity, and Your words are faithful. And not one of your earliest words will return empty. For You are a faithful and compassionate Divinity, King. Blessed are You, Eternal, the faithful Divinity in all generations."},
@@ -736,13 +736,13 @@
           {"ref": "5", "translates": ["5"], "text": "Blessed are You, Eternal, who causes Zion to rejoice with her [children]."},
           {"ref": "6", "translates": ["6"], "parts": [
             {"kind": "prayer", "text": "Gladden us, Eternal, our Divinity, with Your servant Elijah the prophet, and with the reign of the house of David, Your anointed one. May he quickly come and gladden our hearts. Upon his throne there shall not sit a stranger, nor shall others again possess his glory. For in Your holy name, You promised him that his light would not be extinguished for eternity. Blessed are You, Eternal, shield of David. "},
-            {"kind": "instruction", "text": "(Say the blessings until this point on communal fasts and Yom Kippur mincha.)"}
+            {"kind": "instruction", "he": "(אומר את הברכות עד נקודה זו בבתענית ובתפילת מנחה של יום כיפור.)", "text": "(Say the blessings until this point on communal fasts and Yom Kippur mincha.)"}
           ]},
           {"ref": "7", "translates": ["7"], "parts": [
-            {"kind": "instruction", "text": "(Say on Shabbat and Shabbat during Pesach:) "},
+            {"kind": "instruction", "he": "(אומר בשבת ובשבת של פסח:)", "text": "(Say on Shabbat and Shabbat during Pesach:) "},
             {"kind": "prayer", "text": "For the Torah, service, prophets, and this day of Shabbat that You have given us, Eternal, our Divinity, for holiness and comfort, for honor and glory. For everything, Eternal, our Divinity, we thank You and bless You. May Your name be blessed in the mouth of all life always, forever and ever. Blessed are You, Eternal, the one who sanctifies Shabbat."}
           ]},
-          {"ref": "8", "translates": ["8"], "kind": "instruction", "when": "(yomTov && !roshHashana && !yomKippur) || cholHamoedSukkot", "text": "(Say on the Three Pilgrimage Festivals -- Passover, Shavuot, and Sukkot -- and on the Shabbat during Sukkot:) "}
+          {"ref": "8", "translates": ["8"], "kind": "instruction", "when": "(yomTov && !roshHashana && !yomKippur) || cholHamoedSukkot", "he": "(אומר בשלוש הרגלים -- פסח, שבועות וסוכות -- ובשבת של סוכות:)", "text": "(Say on the Three Pilgrimage Festivals -- Passover, Shavuot, and Sukkot -- and on the Shabbat during Sukkot:) "}
         ]
       }
     },
@@ -854,7 +854,7 @@
           {"ref": "24", "translates": ["24"], "text": "<i>to love the Lord, your God, with all your heart and with all your soul,</i>"},
           {"ref": "25", "translates": ["25"], "parts": [
             {"kind": "prayer", "text": "<i>in order that you may live</i> "},
-            {"kind": "note", "text": "(Deuteronomy 30:4-6)."}
+            {"kind": "note", "he": "(דברים ל, ד-ו).", "text": "(Deuteronomy 30:4-6)."}
           ]},
           {"ref": "26", "translates": ["26"], "text": "Unify our hearts to love and be awed by Your name,"},
           {"ref": "27", "translates": ["27"], "text": "and to keep all the words of Your Torah,"},
@@ -907,7 +907,7 @@
           {"ref": "10", "translates": ["10"], "text": "And may the verse be fulfilled through them:"},
           {"ref": "11", "translates": ["11"], "parts": [
             {"kind": "prayer", "text": "<i>For it is the Lord, your God, who walks with you to fight for you against your enemies to save you</i> "},
-            {"kind": "note", "text": "(Deuteronomy 20:4)."}
+            {"kind": "note", "he": "(דברים כ, ד).", "text": "(Deuteronomy 20:4)."}
           ]},
           {"ref": "12", "translates": ["12"], "text": "And let us say, Amen. "}
         ]

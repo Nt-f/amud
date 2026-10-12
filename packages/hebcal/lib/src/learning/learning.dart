@@ -1050,6 +1050,9 @@ bool _tanakhSkipDay(HDate hd) {
   for (final ev in getHolidaysOnDate(hd, true)) {
     if (ev.hasFlag(Flags.chag) || _tanakhToSkip.contains(ev.getDesc())) return true;
   }
+  // The cycle still skips Yom HaAtzma'ut, though the calendar no longer lists it.
+  final atzmaut = dateYomHaZikaron(hd.getFullYear())?.next();
+  if (atzmaut != null && atzmaut.abs() == hd.abs()) return true;
   return false;
 }
 

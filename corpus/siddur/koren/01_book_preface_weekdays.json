@@ -10,7 +10,7 @@
       "en": {
         "version": "English Edition; Koren Publishers Jerusalem, 2017",
         "segs": [
-          {"ref": "1", "translates": [], "kind": "heading", "text": "<i>“One generation will praise Your works to the next…”</i>"},
+          {"ref": "1", "translates": [], "kind": "heading", "he": "\"דור לדור יספר מעשיך...\"", "text": "<i>“One generation will praise Your works to the next…”</i>"},
           {"ref": "2", "translates": [], "kind": "commentary", "text": "Since its initial publication in Hebrew in 1981, the original Koren Siddur has been recognized for its textual accuracy and innovative graphic design, which led to nothing less than a transformation in the very way people pray and connect to God. It was the hope of master typographer Eliyahu Koren “to present to worshipers a means to draw and connect them not only to the words of the prayers, but also to the contents and meaning that were before our sages when engraving the phrases of the prayers, and our rabbis throughout the ages when compiling versions of the prayers.” Koren typographic design aims to slow the reader down and help bring alive the meaning of the text to the user."},
           {"ref": "3", "translates": [], "kind": "commentary", "text": "We have remained committed to these qualities in our Siddurim with English, and have enriched the Siddur with the eloquent English translation and insightful introduction and commentary of one of the most articulate and original Jewish thinkers of our time, Rabbi Lord Jonathan Sacks."},
           {"ref": "4", "translates": [], "kind": "commentary", "text": "This is the most complete Siddur we have published. Building on the wonderful reception of the first Koren Sacks Siddur in 2008, we have responded to the various requests to create an edition which is more comprehensive and useful all year round, including the Ḥagim. To that purpose, in the Koren Shalem Siddur, we have introduced:"},
@@ -41,8 +41,8 @@
             {"kind": "commentary", "text": "<i>Avodat HaShem</i>"},
             {"kind": "commentary", "text": "  for Jews everywhere."}
           ]},
-          {"ref": "19", "translates": [], "kind": "heading", "text": "Matthew Miller, Publisher"},
-          {"ref": "20", "translates": [], "kind": "heading", "text": "Jerusalem, 5777 (2017)"}
+          {"ref": "19", "translates": [], "kind": "heading", "he": "מתי מילר, מוציא לאור", "text": "Matthew Miller, Publisher"},
+          {"ref": "20", "translates": [], "kind": "heading", "he": "ירושלים, תשע", "text": "Jerusalem, 5777 (2017)"}
         ]
       }
     },
@@ -63,9 +63,9 @@
           {"ref": "7", "translates": [], "kind": "commentary", "text": "It is with great pride that the Orthodox Union joins in presenting this Siddur to the Jewish communities of North America. Numerous siddurim are available, but this one, through a variety of modalities – intellectual, aesthetic, poetic and visual – is designed and is destined to motivate prayers which are richer, more meaningful, and – yes – more effective."},
           {"ref": "8", "translates": [], "kind": "commentary", "text": "For prayer to “fly heavenward,” it must come from a heart full of contrition and sincerity. This Siddur will help bring forth that contrition and sincerity from the souls of those who use it."},
           {"ref": "9", "translates": [], "kind": "commentary", "text": "May He who hears all of our prayers listen attentively to the prayers which this Siddur will evoke."},
-          {"ref": "10", "translates": [], "kind": "heading", "text": "Rabbi Dr. Tzvi Hersh Weinreb"},
-          {"ref": "11", "translates": [], "kind": "heading", "text": "Executive Vice President, Orthodox Union"},
-          {"ref": "12", "translates": [], "kind": "heading", "text": "New York, 5769 (2009)"}
+          {"ref": "10", "translates": [], "kind": "heading", "he": "הרב ד\"ר צבי הרש ויינרב", "text": "Rabbi Dr. Tzvi Hersh Weinreb"},
+          {"ref": "11", "translates": [], "kind": "heading", "he": "סגן נשיא, איגוד האורתודוקסים", "text": "Executive Vice President, Orthodox Union"},
+          {"ref": "12", "translates": [], "kind": "heading", "he": "ניו יורק, תשס״ט (2009)", "text": "New York, 5769 (2009)"}
         ]
       }
     },
@@ -78,7 +78,7 @@
         "version": "English Edition; Koren Publishers Jerusalem, 2017",
         "segs": [
           {"ref": "1", "translates": [], "parts": [
-            {"kind": "heading", "en": "1. Introduction", "text": "<big><i>1. Introduction</i>"},
+            {"kind": "heading", "en": "1. Introduction", "he": "1. מבוא", "text": "<big><i>1. Introduction</i>"},
             {"kind": "commentary", "text": "</big><br>Prayer is the language of the soul in conversation with God. It is the most intimate gesture of the religious life,"},
             {"kind": "commentary", "text": " and the most transformative. The very fact that we can pray testifies to the deepest elements of Jewish faith: that the universe did not come into existence accidentally,"},
             {"kind": "commentary", "text": " nor are our lives destined to be bereft of meaning. The universe exists,"},
@@ -122,7 +122,7 @@
           ]},
           {"ref": "7", "translates": [], "kind": "commentary", "text": "This introduction tells of how prayer came to take its present form, the distinct spiritual strands of which it is woven, the structures it has, and the path it takes in the journey of the spirit."},
           {"ref": "8", "translates": [], "parts": [
-            {"kind": "heading", "en": "2. Two Sources of Prayer", "text": "<big><i>2. Two Sources of Prayer</i>"},
+            {"kind": "heading", "en": "2. Two Sources of Prayer", "he": "2. שני מקורות לתפילה", "text": "<big><i>2. Two Sources of Prayer</i>"},
             {"kind": "commentary", "text": "</big><br>The best-known phrase about Jewish religious worship is: “If you serve the LORD your God with all your heart (Deut. 11:13) – what is [the sacrificial] service of the heart ("},
             {"kind": "commentary", "text": "<i>avoda shebalev</i>"},
             {"kind": "commentary", "text": ")? This is prayer” ("},
@@ -133,7 +133,7 @@
           {"ref": "9", "translates": [], "kind": "commentary", "text": "Throughout the Hebrew Bible, we find two quite different forms of religious worship. One is prayer. Outside the book of Psalms there are some 140 references to people praying; in ninety-seven cases we are told the words they said. Abraham prays for the cities of the plain. Jacob prays for deliverance before confronting Esau. Hannah prays for a child. These prayers are direct, simple and spontaneous. They have no fixed formula, no set text. Some are very brief, like Moses’ five-word prayer for his sister Miriam: “Please, God, heal her now.” Others are long, like Moses’ forty-day prayer for forgiveness of the people after the sin of the Golden Calf. There are no general rules: these prayers have no fixed time, place or liturgy. They are improvised as circumstance demands."},
           {"ref": "10", "translates": [], "parts": [
             {"kind": "commentary", "text": "The other form – generally known as "},
-            {"kind": "instruction", "text": "<i>avoda</i>"},
+            {"kind": "instruction", "he": "עבודה", "text": "<i>avoda</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " “service” – is sacrifice. Sacrifice could not be less like prayer. As set out from Exodus to Deuteronomy,"},
             {"kind": "prayer", "text": " the sacrificial service is minutely specified. It has its prescribed order: which offerings should be made,"},
@@ -154,9 +154,9 @@
             {"kind": "prayer", "text": " Jews began to gather to expound the Torah,"},
             {"kind": "prayer", "text": " articulate a collective hope of return,"},
             {"kind": "prayer", "text": " and recall the Temple and its service. These assemblies ("},
-            {"kind": "instruction", "text": "<i>kinishtu</i>"},
+            {"kind": "instruction", "he": "קינישטו", "text": "<i>kinishtu</i>"},
             {"kind": "prayer", "text": " in Babylonian, "},
-            {"kind": "instruction", "text": "<i>knesset</i>"},
+            {"kind": "instruction", "he": "כנסת", "text": "<i>knesset</i>"},
             {"kind": "prayer", "text": " in Hebrew) were not substitutes for the Temple;"},
             {"kind": "prayer", "text": " rather,"},
             {"kind": "prayer", "text": " they were reminders of it. The book of Daniel,"},
@@ -170,14 +170,14 @@
             {"kind": "prayer", "text": " or growth,"},
             {"kind": "prayer", "text": " of the synagogue. During the Second Temple period,"},
             {"kind": "prayer", "text": " priests were divided into twenty-four groups, "},
-            {"kind": "instruction", "text": "<i>mishmarot</i>"},
+            {"kind": "instruction", "he": "משמרות", "text": "<i>mishmarot</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " each of which served in the Temple for a week in a rota. They were accompanied by groups of local laypeople, "},
-            {"kind": "instruction", "text": "<i>ma’amadot</i>"},
+            {"kind": "instruction", "he": "מעמדות", "text": "<i>ma’amadot</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " some of whom accompanied them to the Temple,"},
             {"kind": "prayer", "text": " others of whom stayed in their towns but said prayers to coincide with the sacrifices. Whether the synagogue developed from these "},
-            {"kind": "instruction", "text": "<i>ma’amadot</i>"},
+            {"kind": "instruction", "he": "מעמדות", "text": "<i>ma’amadot</i>"},
             {"kind": "prayer", "text": ","},
             {"kind": "prayer", "text": " or whether its origins were earlier,"},
             {"kind": "prayer", "text": " by the time the Second Temple was destroyed in 70 CE,"},
@@ -212,7 +212,7 @@
             {"kind": "prayer", "text": " two great streams of Jewish spirituality met and became one."}
           ]},
           {"ref": "21", "translates": [], "parts": [
-            {"kind": "heading", "en": "3. Structures of Prayer", "text": "<big><i>3. Structures of Prayer</i>"},
+            {"kind": "heading", "en": "3. Structures of Prayer", "he": "3. מבנה התפילה", "text": "<big><i>3. Structures of Prayer</i>"},
             {"kind": "prayer", "text": "</big><br>The Hebrew word for a prayer book, "},
             {"kind": "prayer", "text": "<i>siddur</i>"},
             {"kind": "prayer", "text": ","},
@@ -241,12 +241,12 @@
           ]},
           {"ref": "22", "translates": [], "text": "The siddur as it exists today is the result of some forty centuries of Jewish history. Yet the result is not mere bricolage, a patchwork of random additions. It is as if the composition of the prayer book has been shaped by an “invisible hand,” a divine inspiration that transcends the intentions of any particular author. Specifically, form mirrors substance. The shape of the prayers reveals the basic shape of the Jewish spirit as it has been molded by its encounter with God. These are some of the structural features of the prayers:"},
           {"ref": "23", "translates": [], "parts": [
-            {"kind": "heading", "en": "A. From Universal to Particular", "text": "<big><i>A. From Universal to Particular</i>"},
+            {"kind": "heading", "en": "A. From Universal to Particular", "he": "א. מהכלל אל הפרט", "text": "<big><i>A. From Universal to Particular</i>"},
             {"kind": "prayer", "text": "</big><br>In general,"},
             {"kind": "prayer", "text": " sequences of Jewish prayer move from the universal to the particular. Grace after Meals,"},
             {"kind": "prayer", "text": " for example,"},
             {"kind": "prayer", "text": " begins with a blessing thanking God “who in His goodness feeds "},
-            {"kind": "instruction", "text": "<i>the whole world</i>"},
+            {"kind": "instruction", "he": "כל העולם", "text": "<i>the whole world</i>"},
             {"kind": "prayer", "text": ".” The second blessing moves to particularities: Israel,"},
             {"kind": "prayer", "text": " liberation from slavery,"},
             {"kind": "prayer", "text": " “the covenant which You sealed in our flesh,"},
@@ -271,16 +271,16 @@
             {"kind": "prayer", "text": " cherish what makes the beloved different,"},
             {"kind": "prayer", "text": " unique,"},
             {"kind": "prayer", "text": " irreplaceable: that is the theme of the greatest of all books of religious love, "},
-            {"kind": "instruction", "text": "<i>the </i>"},
+            {"kind": "instruction", "he": "ה", "text": "<i>the </i>"},
             {"kind": "prayer", "text": "Song of Songs. That,"},
             {"kind": "prayer", "text": " we believe,"},
             {"kind": "prayer", "text": " is how God loves us."}
           ]},
           {"ref": "28", "translates": [], "parts": [
-            {"kind": "heading", "en": "B. Mirror-image Symmetry", "text": "<big><i>B. Mirror-image Symmetry</i>"},
+            {"kind": "heading", "en": "B. Mirror-image Symmetry", "he": "ב. סימטריה מראה-מראה", "text": "<big><i>B. Mirror-image Symmetry</i>"},
             {"kind": "prayer", "text": "</big><br>Many Torah passages are constructed in the form of a mirror-image symmetry,"},
             {"kind": "prayer", "text": " technically known as "},
-            {"kind": "instruction", "text": "<i>chiasmus</i>"},
+            {"kind": "instruction", "he": "חיישמוס", "text": "<i>chiasmus</i>"},
             {"kind": "prayer", "text": ": a sequence with the form ABCCBA,"},
             {"kind": "prayer", "text": " where the second half reverses the order of the first. A precise example is the six-word commandment that forms the central element of the Noahide covenant (Gen. 9:6):"}
           ]},
@@ -1329,7 +1329,7 @@
           {"ref": "122", "translates": [], "kind": "commentary", "text": "When, at the end of his vision, Jacob opened his eyes, he said with a sense of awe: “Surely God is in this place and I did not know it.” That is what prayer does. It opens our eyes to the wonder of the world. It opens our ears to the still, small voice of God. It opens our hearts to those who need our help. God exists where we pray. As Rabbi Menaḥem Mendel of Kotzk said: “God lives where we let Him in.” And in that dialogue between the human soul and the Soul of the universe a momentous yet gentle strength is born."},
           {"ref": "123", "translates": [], "kind": "commentary", "text": "Chief Rabbi Jonathan Sacks"},
           {"ref": "124", "translates": [], "kind": "commentary", "text": "London, 5769 (2009)"},
-          {"ref": "125", "translates": [], "kind": "heading", "text": "<big><strong>Keywords of Prayer</strong></big>"},
+          {"ref": "125", "translates": [], "kind": "heading", "he": "מילות התפילה", "text": "<big><strong>Keywords of Prayer</strong></big>"},
           {"ref": "126", "translates": [], "parts": [
             {"kind": "commentary", "text": "<big><i>The names of God</i>"},
             {"kind": "commentary", "text": "</big><br>The two key names,"},
@@ -1651,7 +1651,7 @@
         "segs": [
           {"ref": "1", "translates": [], "kind": "commentary", "text": "This new edition of the Koren Siddur continues the Koren tradition of making the language of prayer more accessible, thus enhancing the prayer experience."},
           {"ref": "2", "translates": [], "kind": "commentary", "text": "One of the unique features of the Siddur is the use of typesetting to break up a prayer phrase-by-phrase – rather than using a block paragraph format – so that the reader will naturally pause at the correct places. No commas appear in the Hebrew text at the end of lines, but in the English translation, where linguistic clarity requires, we have retained the use of commas at the end of lines. Unlike other bilingual siddurim, the Hebrew text is on the left-hand page and the English on the right. This arrangement preserves the distinctive “fanning out” effect of the Koren text and the beauty of the Koren layout."},
-          {"ref": "3", "translates": [], "kind": "heading", "text": "Pronunciation Aids:"},
+          {"ref": "3", "translates": [], "kind": "heading", "he": "עזרים להגייה:", "text": "Pronunciation Aids:"},
           {"ref": "4", "translates": [], "parts": [
             {"kind": "commentary", "text": "Most Hebrew words are pronounced with a stress on the last syllable. For words where the stress is placed on the penultimate syllable,"},
             {"kind": "commentary", "text": " a short vertical line (the "},
@@ -1758,8 +1758,8 @@
             {"kind": "commentary", "text": " the double diamond that is the “period” of the Tanakh. This differs from the colon (:) which is used where appropriate in prayers that are not quotations from Tanakh."}
           ]},
           {"ref": "12", "translates": [], "kind": "commentary", "text": "We hope that these innovations will make praying with the Siddur a more profound and uplifting experience."},
-          {"ref": "13", "translates": [], "kind": "heading", "text": "Raphaël Freeman, Editor"},
-          {"ref": "14", "translates": [], "kind": "heading", "text": "Jerusalem, 5769 (2009)"}
+          {"ref": "13", "translates": [], "kind": "heading", "he": "רפאל פרימן, עורך", "text": "Raphaël Freeman, Editor"},
+          {"ref": "14", "translates": [], "kind": "heading", "he": "ירושלים, תשע", "text": "Jerusalem, 5769 (2009)"}
         ]
       }
     },
@@ -1788,8 +1788,8 @@
           {"ref": "2", "translates": ["3"], "text": "<i class=\"instruction\">On waking, our first thought should be that we are in the presence of God. Since we are forbidden to speak God’s name until we have washed our hands, the following prayer is said, which, without mentioning God’s name, acknowledges His presence and gives thanks for a new day and for the gift of life. See laws 315–323.</i>"},
           {"ref": "3", "translates": ["3"], "text": "מוֹדֶה I thank You, living and eternal King,<br>for giving me back my soul in mercy.<br>Great is Your faithfulness."},
           {"ref": "4", "translates": [], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Wash hands and say the following blessings.</i>"},
-            {"kind": "instruction", "text": "<br><i class=\"instruction\">Some have the custom to say “Wisdom begins” on page 10 at this point.</i>"}
+            {"kind": "instruction", "he": "נטילת ידיים ואמירת הברכות הבאות.", "text": "<i class=\"instruction\">Wash hands and say the following blessings.</i>"},
+            {"kind": "instruction", "he": "יש הנוהגים לומר \"חכמה היא\" בעמוד 10 בנקודה זו.", "text": "<br><i class=\"instruction\">Some have the custom to say “Wisdom begins” on page 10 at this point.</i>"}
           ]},
           {"ref": "5", "translates": ["5"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe,<br>who has made us holy through His commandments, and has commanded us about washing hands."},
           {"ref": "6", "translates": ["6"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God, King of the Universe,<br>who formed man in wisdom<br>and created in him many orifices and cavities.<br>It is revealed and known before the throne of Your glory<br>that were one of them to be ruptured or blocked,<br>it would be impossible to survive<br>and stand before You.<br>Blessed are You, <small>LORD</small>, Healer of all flesh who does wondrous deeds."},
@@ -1855,21 +1855,21 @@
           {"ref": "1", "translates": ["3", "4"], "text": "<i class=\"instruction\">Say the following meditation before putting on the tallit. Meditations before the fulfillment of mitzvot are to ensure that we do so with the requisite intention (kavana). This particularly applies to mitzvot whose purpose is to induce in us certain states of mind, as is the case with tallit and tefillin, both of which are external symbols of inward commitment to the life of observance of the mitzvot.</i>"},
           {"ref": "2", "translates": ["2"], "text": "בָּרְכִי נַפְשִׁי Bless the <small>LORD</small>, my soul. <small>LORD</small>, my God, You are very great, clothed in majesty and splendor, wrapped in a robe of light, spreading out the heavens like a tent."},
           {"ref": "3", "translates": ["3"], "parts": [
-            {"kind": "instruction", "text": "<small><i class=\"instruction\">Some say:</i>"},
+            {"kind": "instruction", "he": "יש אומרים:", "text": "<small><i class=\"instruction\">Some say:</i>"},
             {"kind": "prayer", "text": "<br>For the sake of the unification of the Holy One,"},
             {"kind": "prayer", "text": " blessed be He,"},
             {"kind": "prayer", "text": " and His Divine Presence,"},
             {"kind": "prayer", "text": " in reverence and love,"},
             {"kind": "prayer", "text": " to unify the name "},
-            {"kind": "instruction", "text": "<i>Yod-Heh</i>"},
+            {"kind": "instruction", "he": "יוד-ה", "text": "<i>Yod-Heh</i>"},
             {"kind": "prayer", "text": " with "},
-            {"kind": "instruction", "text": "<i>Vav-Heh</i>"},
+            {"kind": "instruction", "he": "וואו-ה", "text": "<i>Vav-Heh</i>"},
             {"kind": "prayer", "text": " in perfect unity in the name of all Israel.</small>"}
           ]},
           {"ref": "4", "translates": ["4"], "parts": [
             {"kind": "prayer", "text": "I am about to wrap myself in this tasseled garment (tallit). So may my soul,"},
             {"kind": "prayer", "text": " my 248 limbs and 365 sinews be wrapped in the light of the tassel ("},
-            {"kind": "instruction", "text": "<i>hatzitzit</i>"},
+            {"kind": "instruction", "he": "ציצית", "text": "<i>hatzitzit</i>"},
             {"kind": "prayer", "text": ") which amounts to 613 [commandments]. And just as I cover myself with a tasseled garment in this world,"},
             {"kind": "prayer", "text": " so may I be worthy of rabbinical dress and a fine garment in the World to Come in the Garden of Eden. Through the commandment of tassels may my life’s-breath,"},
             {"kind": "prayer", "text": " spirit,"},
@@ -1921,25 +1921,25 @@
             {"kind": "prayer", "text": " and His Divine Presence,"},
             {"kind": "prayer", "text": " in reverence and love,"},
             {"kind": "prayer", "text": " to unify the name "},
-            {"kind": "instruction", "text": "<i>Yod-Heh</i>"},
+            {"kind": "instruction", "he": "יוד-ה", "text": "<i>Yod-Heh</i>"},
             {"kind": "prayer", "text": " with "},
-            {"kind": "instruction", "text": "<i>Vav-Heh</i>"},
+            {"kind": "instruction", "he": "וואו-ה", "text": "<i>Vav-Heh</i>"},
             {"kind": "prayer", "text": " in perfect unity in the name of all Israel."}
           ]},
           {"ref": "3", "translates": ["3"], "parts": [
             {"kind": "prayer", "text": "By putting on the tefillin I hereby intend to fulfill the commandment of my Creator who commanded us to wear tefillin,"},
             {"kind": "prayer", "text": " as it is written in His Torah: “Bind them as a sign on your hand,"},
             {"kind": "prayer", "text": " and they shall be an emblem on the center of your head.” They contain these four sections of the Torah: one beginning with "},
-            {"kind": "instruction", "text": "<i>Shema</i>"},
+            {"kind": "instruction", "he": "שמע", "text": "<i>Shema</i>"},
             {"kind": "prayer", "text": " [Deut. 6:4–9];"},
             {"kind": "prayer", "text": " another with "},
-            {"kind": "instruction", "text": "<i>Vehaya im shamo’a</i>"},
+            {"kind": "instruction", "he": "והיה אם שמע", "text": "<i>Vehaya im shamo’a</i>"},
             {"kind": "prayer", "text": " [ibid. 11:13–21];"},
             {"kind": "prayer", "text": " the third with "},
-            {"kind": "instruction", "text": "<i>Kadesh Li</i>"},
+            {"kind": "instruction", "he": "קדש לי", "text": "<i>Kadesh Li</i>"},
             {"kind": "prayer", "text": " [Ex. 13:1–10];"},
             {"kind": "prayer", "text": " and the fourth with "},
-            {"kind": "instruction", "text": "<i>Vehaya ki yevi’akha</i>"},
+            {"kind": "instruction", "he": "והיה כי יביאך", "text": "<i>Vehaya ki yevi’akha</i>"},
             {"kind": "prayer", "text": " [ibid. 13:11–16]. These proclaim the uniqueness and unity of God,"},
             {"kind": "prayer", "text": " blessed be His name in the world. They also remind us of the miracles and wonders which He did for us when He brought us out of Egypt,"},
             {"kind": "prayer", "text": " and that He has the power and the dominion over the highest and the lowest to deal with them as He pleases. He commanded us to place one of the tefillin on the arm in memory of His “outstretched arm” (of redemption),"},
@@ -1960,8 +1960,8 @@
           ]},
           {"ref": "4", "translates": ["4"], "text": "And may it be Your will, <small>LORD</small> our God and God of our ancestors, that the commandment of tefillin be considered before You as if I had fulfilled it in all its specifics, details and intentions, as well as the 613 commandments dependent on it, Amen, Selah."},
           {"ref": "5", "translates": [], "parts": [
-            {"kind": "instruction", "text": "<i class=\"instruction\">Stand and place the hand-tefillin on the biceps of the left arm</i>"},
-            {"kind": "instruction", "text": " <i class=\"instruction\">(or right arm if you are left-handed), angled toward the heart, and before tightening the strap, say:</i>"}
+            {"kind": "instruction", "he": "עמוד ושים את התפילין על זרוע שמאל", "text": "<i class=\"instruction\">Stand and place the hand-tefillin on the biceps of the left arm</i>"},
+            {"kind": "instruction", "he": "(או יד ימין אם אתה שמאלי), מטה לכיוון הלב, ולפני הידוק הרצועה, אמור:", "text": " <i class=\"instruction\">(or right arm if you are left-handed), angled toward the heart, and before tightening the strap, say:</i>"}
           ]},
           {"ref": "6", "translates": ["6"], "text": "בָּרוּךְ Blessed are You, <small>LORD</small> our God,<br>King of the Universe,<br>who has made us holy through His commandments,<br>and has commanded us to put on tefillin."},
           {"ref": "7", "translates": [], "text": "<i class=\"instruction\">Wrap the strap of the hand-tefillin seven times around the arm. Place the head-tefillin above the hairline, centered between the eyes, and say quietly:</i>"},
@@ -1969,7 +1969,7 @@
           {"ref": "9", "translates": [], "text": "<i class=\"instruction\">Adjust the head-tefillin and say:</i>"},
           {"ref": "10", "translates": ["10"], "text": "בָּרוּךְ Blessed be the name of His glorious kingdom for ever and all time."},
           {"ref": "11", "translates": ["11"], "parts": [
-            {"kind": "instruction", "text": "<small><i class=\"instruction\">Some say:</i>"},
+            {"kind": "instruction", "he": "יש אומרים:", "text": "<small><i class=\"instruction\">Some say:</i>"},
             {"kind": "prayer", "text": "<br>From Your wisdom,"},
             {"kind": "prayer", "text": " God most high,"},
             {"kind": "prayer", "text": " grant me [wisdom],"},
@@ -2026,7 +2026,7 @@
       "en": {
         "version": "English Edition; Koren Publishers Jerusalem, 2017",
         "segs": [
-          {"ref": "1", "translates": [], "kind": "instruction", "en": "On entering the synagogue:", "gloss": "Customary to recite upon entering the synagogue", "text": "<i class=\"instruction\">On entering the synagogue:</i>"},
+          {"ref": "1", "translates": [], "kind": "instruction", "en": "On entering the synagogue:", "he": "עם הכניסה לבית הכנסת:", "gloss": "Customary to recite upon entering the synagogue", "text": "<i class=\"instruction\">On entering the synagogue:</i>"},
           {"ref": "2", "translates": ["2"], "text": "How goodly<br>are your tents, Jacob, your dwelling places, Israel.<br>As for me,<br>in Your great loving-kindness,<br>I will come into Your House.<br>I will bow down to Your holy Temple<br>in awe of You.<br><small>LORD</small>, I love the habitation of Your House,<br>the place where Your glory dwells."},
           {"ref": "3", "translates": ["3"], "text": "As for me,<br>I will bow in worship;<br>I will bend the knee<br>before the <small>LORD</small> my Maker."},
           {"ref": "4", "translates": ["4"], "text": "As for me,<br>may my prayer come to You, <small>LORD</small>,<br>at a time of favor.<br>God, in Your great loving-kindness,<br>answer me with Your faithful salvation."},

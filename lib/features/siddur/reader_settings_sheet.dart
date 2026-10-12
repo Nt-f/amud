@@ -6,6 +6,7 @@ import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/fonts.dart';
 import '../../core/settings.dart';
+import '../../core/tap_highlight.dart';
 import '../settings/font_gallery_screen.dart';
 import '../settings/typesetting_options.dart';
 import 'book_kind.dart';
@@ -159,6 +160,7 @@ class _ReaderSettings extends ConsumerWidget {
             value: s.highlightToday,
             onChanged: (v) => n.update((x) => x.copyWith(highlightToday: v)),
           ),
+          const HighlightColorPicker(),
           SheetLabel(context.tr('Text not said today')),
           ChoiceBar<ExcludedDisplay>(
             options: [

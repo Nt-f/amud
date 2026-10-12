@@ -107,8 +107,6 @@ class _TodayServices extends ConsumerWidget {
     ('omer', 'Sefirat HaOmer', 'ספירת העומר', Icons.filter_7),
     ('hallel', 'Hallel', 'הלל', Icons.celebration_outlined),
     ('kiddushLevana', 'Kiddush Levana', 'קידוש לבנה', Icons.brightness_3_outlined),
-    ('birkat', 'Birkat HaMazon', 'ברכת המזון', Icons.restaurant),
-    ('bedtime', 'Bedtime Shema', 'קריאת שמע על המיטה', Icons.bedtime_outlined),
   ];
 
   @override
@@ -347,7 +345,8 @@ class _CommentarySection extends ConsumerWidget {
   }
 }
 
-/// Short prayers for through the day, each opening straight in the reader.
+/// Short prayers for through the day, each opening straight in the reader:
+/// a grid of tiles per part of the day, tinted by group.
 class _QuickPrayers extends ConsumerWidget {
   const _QuickPrayers();
 
@@ -363,52 +362,96 @@ class _QuickPrayers extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
+    final cs = theme.colorScheme;
+    final accents = [
+      (cs.primaryContainer, cs.onPrimaryContainer),
+      (cs.tertiaryContainer, cs.onTertiaryContainer),
+      (cs.secondaryContainer, cs.onSecondaryContainer),
+    ];
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
       child: Card(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 14, 16, 12),
-          child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-            Text(context.tr('Quick prayers'), style: theme.textTheme.titleMedium),
-            for (final (label, items) in _groups) ...[
-              Padding(
-                padding: const EdgeInsets.only(top: 10, bottom: 4),
-                child: Text(context.tr(label), style: theme.textTheme.labelMedium?.copyWith(color: theme.colorScheme.outline)),
-              ),
-              Wrap(spacing: 8, runSpacing: 0, children: [for (final (key, icon) in items) _QuickChip(prayerKey: key, icon: icon)]),
-            ],
-          ]),
-        ),
+        clipBehavior: Clip.antiAlias,
+        child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 14, 16, 0),
+            child: Text(context.tr('Quick prayers'), style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(14, 6, 14, 14),
+            child: LayoutBuilder(builder: (context, c) {
+              final cols = c.maxWidth >= 520 ? 3 : 2;
+              final w = (c.maxWidth - 8 * (cols - 1)) / cols;
+              return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+                for (final (gi, (label, items)) in _groups.indexed) ...[
+                  Padding(
+                    padding: const EdgeInsets.only(top: 12, bottom: 6, left: 2),
+                    child: Text(context.tr(label), style: theme.textTheme.labelMedium?.copyWith(color: cs.outline)),
+                  ),
+                  Wrap(spacing: 8, runSpacing: 8, children: [
+                    for (final (key, icon) in items)
+                      SizedBox(width: w, child: _QuickTile(prayerKey: key, icon: icon, bg: accents[gi].$1, fg: accents[gi].$2)),
+                  ]),
+                ],
+              ]);
+            }),
+          ),
+        ]),
       ),
     );
   }
 }
 
-class _QuickChip extends ConsumerWidget {
+class _QuickTile extends ConsumerWidget {
   final String prayerKey;
   final IconData icon;
-  const _QuickChip({required this.prayerKey, required this.icon});
+  final Color bg;
+  final Color fg;
+  const _QuickTile({required this.prayerKey, required this.icon, required this.bg, required this.fg});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final s = ref.watch(settingsProvider);
+    final theme = Theme.of(context);
     // Me'ein Shalosh has a screen of its own; the rest are found in the
     // reader's siddurim.
+    final String en, he;
+    final VoidCallback onTap;
     if (prayerKey == 'meeinShalosh') {
-      return ActionChip(
-        avatar: Icon(icon, size: 18),
-        label: Text(context.prayerTitle(s, "Me'ein Shalosh", 'מעין שלוש')),
-        onPressed: () => context.push('/meein-shalosh'),
-      );
+      (en, he) = ("Me'ein Shalosh", 'מעין שלוש');
+      onTap = () => context.push('/meein-shalosh');
+    } else {
+      final item = catalogItem(prayerKey)!;
+      final found = ref.watch(prayerRefProvider(prayerKey)).value;
+      if (found == null) return const SizedBox.shrink();
+      (en, he) = (item.en, item.he);
+      onTap = () => context.push(readerPath(found.book, found.id));
     }
-    final item = catalogItem(prayerKey)!;
-    final found = ref.watch(prayerRefProvider(prayerKey)).value;
-    if (found == null) return const SizedBox.shrink();
-    return ActionChip(
-      avatar: Icon(icon, size: 18),
-      label: Text(context.prayerTitle(s, item.en, item.he),
-          style: context.prayerTitleIsHebrew(s) ? TextStyle(fontFamily: s.hebrewFont) : null),
-      onPressed: () => context.push(readerPath(found.book, found.id)),
+    return Material(
+      color: bg.withValues(alpha: 0.55),
+      borderRadius: BorderRadius.circular(16),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+          child: Row(children: [
+            Container(
+              width: 34,
+              height: 34,
+              decoration: BoxDecoration(color: bg, shape: BoxShape.circle),
+              child: Icon(icon, size: 18, color: fg),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Text(context.prayerTitle(s, en, he),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w600, fontFamily: context.prayerTitleIsHebrew(s) ? s.hebrewFont : null)),
+            ),
+          ]),
+        ),
+      ),
     );
   }
 }
