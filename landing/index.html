@@ -44,6 +44,7 @@
   "description": "A free, offline siddur app in Hebrew and English that shows each day's prayers as they're said, with zmanim, a Jewish calendar, Tehillim, daily learning and the Kitzur Shulchan Aruch.",
   "applicationCategory": "LifestyleApplication",
   "operatingSystem": "Android, iOS, Windows, macOS, Linux, Web",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=page.amud",
   "inLanguage": ["en", "he", "yi"],
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "license": "https://www.gnu.org/licenses/gpl-3.0.html",
@@ -242,6 +243,8 @@ h1 em { font-style: normal; color: var(--fan); }
 .btn-ghost { border-color: #5d73a8; color: var(--on-band); }
 .btn-ghost:hover { border-color: var(--on-band); color: #fff; }
 .btn svg { width: 20px; height: 20px; }
+.dl-all { margin: 14px 0 0; font-size: 14px; }
+.dl-all a { color: var(--on-band-2); }
 .platforms { margin-top: 20px; font-size: 14px; color: var(--on-band-3); }
 .platforms a { color: var(--on-band-2); }
 .trust { display: flex; flex-wrap: wrap; gap: 8px 20px; list-style: none; padding: 0; margin: 28px 0 0; font-size: 14px; color: var(--on-band-2); }
@@ -398,8 +401,9 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             Open the siddur
           </a>
-          <a class="btn btn-ghost" href="#download">Download the app</a>
+          <a class="btn btn-ghost" id="dl-main" href="#download">Download the app</a>
         </div>
+        <p class="dl-all"><a href="#download">All downloads</a></p>
         <p class="platforms">Android · Windows · Mac · Linux · <a href="/app/">web</a>, and iPhone through the web app.</p>
         <ul class="trust">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>No ads</li>
@@ -530,7 +534,8 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
         </div>
         <div class="dl-list">
           <a href="/app/"><b>Web app</b><small>Any browser · installable</small></a>
-          <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-android.apk"><b>Android</b><small>APK download</small></a>
+          <a href="https://play.google.com/store/apps/details?id=page.amud"><b>Android</b><small>Google Play</small></a>
+          <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-android.apk"><b>Android APK</b><small>Direct download, updates itself</small></a>
           <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-windows.zip"><b>Windows</b><small>Zip · unzip and run</small></a>
           <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-macos.zip"><b>Mac</b><small>Zip · right-click → Open</small></a>
           <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-linux-x64.tar.gz"><b>Linux</b><small>x64 tarball</small></a>
@@ -620,6 +625,23 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
   </div>
 </footer>
 <script>
+  // The hero button goes straight to the download that suits the visitor's
+  // device; "All downloads" below it and the list further down cover the rest.
+  // Without JavaScript, or on a device with no matching download (iPhone uses
+  // the web app), it stays a link to the list.
+  (function () {
+    var btn = document.getElementById('dl-main');
+    if (!btn) return;
+    var ua = navigator.userAgent || '';
+    var release = 'https://github.com/Nt-f/amud/releases/latest/download/';
+    var pick = null;
+    if (/Android/i.test(ua)) pick = ['https://play.google.com/store/apps/details?id=page.amud', 'Get it on Google Play'];
+    else if (/iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1)) pick = null;
+    else if (/Windows/i.test(ua)) pick = [release + 'amud-windows.zip', 'Download for Windows'];
+    else if (/Macintosh|Mac OS X/i.test(ua)) pick = [release + 'amud-macos.zip', 'Download for Mac'];
+    else if (/Linux/i.test(ua) && /x86_64|x64/i.test(ua)) pick = [release + 'amud-linux-x64.tar.gz', 'Download for Linux'];
+    if (pick) { btn.href = pick[0]; btn.textContent = pick[1]; }
+  })();
   // "Copy address" only shows where the clipboard API is available.
   (function () {
     var btn = document.querySelector('.copy');
