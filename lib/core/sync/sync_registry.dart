@@ -36,7 +36,7 @@ class SyncSource {
 const localSettingsFields = {
   'v', 'location', 'useElevation', 'exactAlarms', 'setupDone', 'seenFeatures', 'shareUsage', //
   'keepReaderAwake', 'fullscreenReader', 'readerDnd', 'travelPrompts', 'desktopTray', 'omerBadge',
-  'levanaReminder', 'hachamaReminder', 'navTabs',
+  'levanaReminder', 'hachamaReminder', 'navTabs', 'navLabels', 'expandedSettings',
 };
 
 /// AppSettings fields that sync: how the app looks, reads and counts.

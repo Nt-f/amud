@@ -19,42 +19,113 @@ const navTabs = <NavTab>[
   ('settings', Icons.settings_outlined, Icons.settings, CupertinoIcons.settings, 'Settings'),
 ];
 
-/// Choose which tabs the navigation bar shows, and their order.
+/// A shortcut the bar can show among the tabs: another part of the app,
+/// opened the way a link would open it. Its id in [AppSettings.navTabs],
+/// icons (Material, Cupertino), label and route.
+typedef NavShortcut = (String id, IconData icon, IconData cupertino, String label, String route);
+
+const navShortcuts = <NavShortcut>[
+  ('calendar', Icons.calendar_month_outlined, CupertinoIcons.calendar, 'Calendar', '/calendar'),
+  ('tehillim', Icons.auto_stories_outlined, CupertinoIcons.book_solid, 'Tehillim', '/torah/tehillim'),
+  ('learning', Icons.school_outlined, CupertinoIcons.lightbulb, 'Learning', '/learning'),
+  ('alerts', Icons.notifications_active_outlined, CupertinoIcons.bell, 'Alerts', '/alerts'),
+  ('personal-dates', Icons.event_repeat, CupertinoIcons.calendar_badge_plus, 'Dates', '/personal-dates'),
+];
+
+/// The most items the bar holds, tabs and shortcuts together.
+const maxNavItems = 7;
+
+/// An item on the bar: a tab (with its shell [branch]) or a shortcut (with
+/// its [route]).
+class NavItem {
+  final String id;
+  final IconData outlined, selected, cupertino;
+  final String label;
+  final int? branch;
+  final String? route;
+  const NavItem._(this.id, this.outlined, this.selected, this.cupertino, this.label, {this.branch, this.route});
+
+  /// The item for [id], or null for one this version doesn't know.
+  static NavItem? of(String id) {
+    final b = navTabs.indexWhere((t) => t.$1 == id);
+    if (b >= 0) {
+      final (_, o, s, c, l) = navTabs[b];
+      return NavItem._(id, o, s, c, l, branch: b);
+    }
+    for (final (sid, i, c, l, r) in navShortcuts) {
+      if (sid == id) return NavItem._(id, i, i, c, l, route: r);
+    }
+    return null;
+  }
+}
+
+/// Choose which tabs and shortcuts the navigation bar shows, their order,
+/// and whether it shows labels.
 class NavTabsScreen extends ConsumerWidget {
   const NavTabsScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final shown = ref.watch(settingsProvider.select((s) => s.navTabs));
+    final s = ref.watch(settingsProvider);
+    final shown = [for (final id in s.navTabs) if (NavItem.of(id) != null) id];
     void save(List<String> tabs) => ref.read(settingsProvider.notifier).update((x) => x.copyWith(navTabs: tabs));
-    final byId = {for (final t in navTabs) t.$1: t};
-    final hidden = [for (final t in navTabs) if (!shown.contains(t.$1)) t];
+    final hiddenTabs = [for (final t in navTabs) if (!shown.contains(t.$1)) t.$1];
+    final hiddenShortcuts = [for (final t in navShortcuts) if (!shown.contains(t.$1)) t.$1];
     final theme = Theme.of(context);
 
-    Widget tile(NavTab t, {required bool on, int? index}) => ListTile(
-          key: ValueKey(t.$1),
-          leading: Checkbox.adaptive(
-            value: on,
-            // Settings stays, so this screen can always be reached, and the
-            // bar needs two tabs at least.
-            onChanged: t.$1 == 'settings' || (on && shown.length <= 2) ? null : (v) => save(v! ? [...shown, t.$1] : [...shown]..remove(t.$1)),
-          ),
-          title: Row(children: [Icon(t.$2, size: 20), const SizedBox(width: 12), Text(context.tr(t.$5))]),
-          trailing: index == null
+    Widget tile(String id, {required bool on, int? index}) {
+      final item = NavItem.of(id)!;
+      return ListTile(
+        key: ValueKey(id),
+        leading: Checkbox.adaptive(
+          value: on,
+          // Settings stays, so this screen can always be reached; the bar
+          // needs two items at least, and has room for [maxNavItems].
+          onChanged: id == 'settings' || (on && shown.length <= 2) || (!on && shown.length >= maxNavItems)
               ? null
-              : ReorderableDragStartListener(index: index, child: const Icon(Icons.drag_handle)),
+              : (v) => save(v! ? [...shown, id] : [...shown]..remove(id)),
+        ),
+        title: Row(children: [
+          Icon(item.outlined, size: 20),
+          const SizedBox(width: 12),
+          Flexible(child: Text(context.tr(item.label))),
+          if (item.route != null) ...[
+            const SizedBox(width: 8),
+            Icon(Icons.north_east, size: 14, color: theme.colorScheme.outline),
+          ],
+        ]),
+        trailing: index == null ? null : ReorderableDragStartListener(index: index, child: const Icon(Icons.drag_handle)),
+      );
+    }
+
+    Widget heading(String text) => Padding(
+          padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
+          child: Text(text, style: theme.textTheme.titleSmall),
         );
 
     return Scaffold(
       appBar: AppBar(
         title: Text(context.tr('Navigation bar')),
         actions: [
-          TextButton(onPressed: () => save(const AppSettings().navTabs), child: Text(context.tr('Reset'))),
+          TextButton(
+            onPressed: () => ref.read(settingsProvider.notifier).update((x) => x.copyWith(
+                  navTabs: const AppSettings().navTabs,
+                  navLabels: const AppSettings().navLabels,
+                )),
+            child: Text(context.tr('Reset')),
+          ),
         ],
       ),
       body: ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+        SwitchListTile.adaptive(
+          title: Text(context.tr('Show labels')),
+          subtitle: Text(context.tr('Turn off for a bar of icons only')),
+          value: s.navLabels,
+          onChanged: (v) => ref.read(settingsProvider.notifier).update((x) => x.copyWith(navLabels: v)),
+        ),
+        const Divider(),
         Padding(
-          padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
+          padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
           child: Text(context.tr('Choose the tabs to show. Drag to reorder.'), style: theme.textTheme.bodySmall),
         ),
         ReorderableListView(
@@ -68,15 +139,22 @@ class NavTabsScreen extends ConsumerWidget {
             save(l);
           },
           children: [
-            for (var i = 0; i < shown.length; i++) tile(byId[shown[i]]!, on: true, index: i),
+            for (var i = 0; i < shown.length; i++) tile(shown[i], on: true, index: i),
           ],
         ),
-        if (hidden.isNotEmpty)
+        if (hiddenTabs.isNotEmpty) heading(context.tr('Hidden')),
+        for (final id in hiddenTabs) tile(id, on: false),
+        if (hiddenShortcuts.isNotEmpty) ...[
+          heading(context.tr('Shortcuts')),
           Padding(
-            padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
-            child: Text(context.tr('Hidden'), style: theme.textTheme.titleSmall),
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 4),
+            child: Text(
+              context.tr('Add other parts of the app to the bar. Up to {n} items fit.', {'n': maxNavItems}),
+              style: theme.textTheme.bodySmall,
+            ),
           ),
-        for (final t in hidden) tile(t, on: false),
+          for (final id in hiddenShortcuts) tile(id, on: false),
+        ],
       ]),
     );
   }
