@@ -402,7 +402,10 @@ void main() {
     const settings = AppSettings(omerReminder: true, ashkenaziSpelling: false);
     // From the day before the seventh of Pesach, over two weeks of the Omer.
     final start = HDate(20, Months.nisan, 5787);
-    final now = start.greg().toUtc();
+    // Midnight where the reminders are planned, not where the test runs (CI
+    // is UTC: its midnight is the evening before in New York).
+    final day = start.plainDate();
+    final now = tz.TZDateTime(settings.location.toLocation().tzLocation, day.year, day.month, day.day);
     final plan = planSeasonalReminders(settings, now, days: 14);
     final expected = [
       for (var d = 0; d < 14; d++)
