@@ -125,15 +125,15 @@
           {"ref": "99", "kind": "instruction", "en": "On Shabbat Shuva, this Psalm is said verse by verse before Half Kaddish.", "gloss": "Custom for Shabbat Shuva", "cite": "", "text": "<small><small>בשבת שובה אומרים קודם חצי קדיש מזמור זה פסוק בפסוק</small> </small>"},
           {"ref": "100", "kind": "prayer", "when": "aseretYemeiTeshuva", "text": "<small><small><b>שִׁיר הַמַּעֲלוֹת מִמַּעֲמַקִּים</b> קְרָאתִיךָ יְהֹוָה: אֲדֹנָי שִׁמְעָה בְקוֹלִי תִּהְיֶינָה אָזְנֶיךָ קַשֻּׁבוֹת לְקוֹל תַּחֲנוּנָי: אִם עֲוֹנוֹת תִּשְׁמָר יָהּ אֲדֹנָי מִי יַעֲמֹד: כִּי עִמְּךָ הַסְּלִיחָה לְמַעַן תִּוָּרֵא: קִוִּיתִי יְהֹוָה קִוְּתָה נַפְשִׁי וְלִדְבָרוֹ הוֹחָלְתִּי: נַפְשִׁי לַאדֹנָי מִשֹּׁמְרִים לַבֹּקֶר שֹׁמְרִים לַבֹּקֶר: יַחֵל יִשְׂרָאֵל אֶל יְהֹוָה כִּי עִם יְהֹוָה הַחֶסֶד וְהַרְבֵּה עִמּוֹ פְדוּת: וְהוּא יִפְדֶּה אֶת יִשְׂרָאֵל מִכֹּל עֲוֹנֹתָיו:</small></small>"},
           {"ref": "101", "kind": "instruction", "en": "Half Kaddish:", "gloss": "Chazzan recites", "text": "<b><small>חצי קדיש:</small></b>"},
-          {"ref": "102", "kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵה, וְיַצְמַח פֻּרְקָנֵה, וִיקָרֵב מְשִׁיחֵהּ. בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן.  </small>"},
+          {"ref": "102", "kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵה, וְיַצְמַח פֻּרְקָנֵה, וִיקָרֵב מְשִׁיחֵהּ. בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן.  </small>"},
           {"ref": "103", "parts": [
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא. יִתְבָּרַךְ.</b> וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " בְּרִיךְ הוּא. לְעֵלָּא "},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "en": "(During the Ten Days of Repentance: and far above all)", "text": "<small>( בעשי\"ת וּלְעֵלָּא מִכָּל)</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " דַּאֲמִירָן בְּעָלְמָא,"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן: "}
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא. יִתְבָּרַךְ.</b> וְיִשְׁתַּבַּח. וְיִתְפָּאַר. וְיִתְרוֹמַם. וְיִתְנַשֵּׂא. וְיִתְהַדָּר. וְיִתְעַלֶּה. וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא,"},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "text": " בְּרִיךְ הוּא. לְעֵלָּא "},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "en": "(During the Ten Days of Repentance: and far above all)", "text": "<small>( בעשי\"ת וּלְעֵלָּא מִכָּל)</small>"},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "text": " מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "text": " דַּאֲמִירָן בְּעָלְמָא,"},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן: "}
           ]},
           {"ref": "104", "parts": [
             {"kind": "speaker", "role": "chazzan", "en": "Chazzan:", "text": "<small>חזן:</small>"},
@@ -2352,26 +2352,26 @@
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "Who remembers His creatures for life, in His mercy.", "text": " זוֹכֵר יְצוּרָיו בְּרַחֲמִים לְחַיִּים:"}
           ]},
           {"ref": "9", "kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "text": "<b>וְנֶאֱמָן</b> אַתָּה לְהַחֲיוֹת מֵתִים. בָּרוּךְ אַתָּה יְהֹוָה, מְחַיֵּה הַמֵּתִים: "},
-          {"ref": "10", "kind": "heading", "en": "Kedushah", "text": "<b>קדושה</b>"},
-          {"ref": "11", "kind": "instruction", "en": "When the Chazzan repeats the Amidah, the Kedushah is said here.", "gloss": "Said only in the repetition", "text": "<small>בחזרת הש\"ץ אומרים קדושה:</small>"},
-          {"ref": "12", "kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "נַקְדִּישָׁךְ וְנַעֲרִיצָךְ כְּנֹעַם שִׂיחַ סוֹד שַׂרְפֵי קֹדֶשׁ. הַמְּשַׁלְּשִׁים לְךָ קְדֻשָּׁה. כַּכָּתוּב עַל יַד נְבִיאֶךָ. וְקָרָא זֶה אֶל זֶה וְאָמַר:"},
+          {"ref": "10", "kind": "heading", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "Kedushah", "text": "<b>קדושה</b>"},
+          {"ref": "11", "kind": "instruction", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "When the Chazzan repeats the Amidah, the Kedushah is said here.", "gloss": "Said only in the repetition", "text": "<small>בחזרת הש\"ץ אומרים קדושה:</small>"},
+          {"ref": "12", "kind": "prayer", "node": "amidah.kedusha", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "נַקְדִּישָׁךְ וְנַעֲרִיצָךְ כְּנֹעַם שִׂיחַ סוֹד שַׂרְפֵי קֹדֶשׁ. הַמְּשַׁלְּשִׁים לְךָ קְדֻשָּׁה. כַּכָּתוּב עַל יַד נְבִיאֶךָ. וְקָרָא זֶה אֶל זֶה וְאָמַר:"},
           {"ref": "13", "parts": [
-            {"kind": "instruction", "en": "Congregation and Chazzan:", "text": "<small>קו\"ח:</small>"},
-            {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "repeat": 3, "en": "Holy, holy, holy is Adonoy of hosts, the fullness of all the earth is His glory.", "text": " <b>קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ יְהֹוָה צְבָאוֹת. מְלֹא כָל הָאָרֶץ כְּבוֹדוֹ:</b> "},
-            {"kind": "instruction", "en": "Chazzan:", "text": "<small>חזן:</small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "Then, with the sound of great rushing, mighty and strong, they make their voice heard, raising themselves up toward the Serafim, Facing them, they offer praise and say:", "text": " <b>אָז.</b> בְּקוֹל רַעַשׁ גָּדוֹל אַדִּיר וְחָזָק. מַשְׁמִיעִים קוֹל. מִתְנַשְּׂאִים לְעֻמַּת שְׂרָפִים. לְעֻמָּתָם מְשַׁבְּחִים וְאוֹמְרִים: "}
+            {"kind": "instruction", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "Congregation and Chazzan:", "text": "<small>קו\"ח:</small>"},
+            {"kind": "prayer", "node": "amidah.kedusha", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "repeat": 3, "en": "Holy, holy, holy is Adonoy of hosts, the fullness of all the earth is His glory.", "text": " <b>קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ יְהֹוָה צְבָאוֹת. מְלֹא כָל הָאָרֶץ כְּבוֹדוֹ:</b> "},
+            {"kind": "instruction", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "text": "<small>חזן:</small>"},
+            {"kind": "prayer", "node": "amidah.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "Then, with the sound of great rushing, mighty and strong, they make their voice heard, raising themselves up toward the Serafim, Facing them, they offer praise and say:", "text": " <b>אָז.</b> בְּקוֹל רַעַשׁ גָּדוֹל אַדִּיר וְחָזָק. מַשְׁמִיעִים קוֹל. מִתְנַשְּׂאִים לְעֻמַּת שְׂרָפִים. לְעֻמָּתָם מְשַׁבְּחִים וְאוֹמְרִים: "}
           ]},
           {"ref": "14", "parts": [
-            {"kind": "instruction", "en": "Congregation and Chazzan:", "text": "<small>קו\"ח:</small>"},
-            {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "Blessed is the glory of Adonoy from its place.", "text": " <b>בָּרוּךְ כְּבוֹד יְהֹוָה מִמְּקוֹמוֹ:</b> "},
-            {"kind": "instruction", "en": "Chazzan:", "text": "<small>חזן:</small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "From Your place, our King, You will appear and reign over us, for we yearn for You— When will You reign in Zion? Soon, in our days, forever may You dwell [there]. You will be exalted and sanctified within Jerusalem, Your city for all generations and for all eternity. May our eyes behold Your kingship, as it is said in the songs of Your might by David, the anointed of Your righteousness:", "text": " מִמְּקוֹמְךָ מַלְכֵּנוּ תוֹפִיעַ. וְתִמְלוֹךְ עָלֵינוּ "},
-            {"kind": "prayer", "text": "<small> <small>(מְהֵרָה)</small>"},
-            {"kind": "prayer", "text": " </small> כִּי מְחַכִּים אֲנַחְנוּ לָךְ. מָתַי תִּמְלֹךְ בְּצִיּוֹן. בְּקָרוֹב בְּיָמֵינוּ לְעוֹלָם וָעֶד תִּשְׁכּוֹן. תִּתְגַּדֵּל וְתִתְקַדֵּשׁ בְּתוֹךְ יְרוּשָׁלַיִם עִירְךָ לְדוֹר וָדוֹר וּלְנֵצַח נְצָחִים. וְעֵינֵינוּ תִרְאֶינָה מַלְכוּתֶךָ כַּדָּבָר הָאָמוּר בְּשִׁירֵי עֻזֶּךָ. עַל יְדֵי דָּוִד מְשִׁיחַ צִדְקֶךָ:"}
+            {"kind": "instruction", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "Congregation and Chazzan:", "text": "<small>קו\"ח:</small>"},
+            {"kind": "prayer", "node": "amidah.kedusha", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "Blessed is the glory of Adonoy from its place.", "text": " <b>בָּרוּךְ כְּבוֹד יְהֹוָה מִמְּקוֹמוֹ:</b> "},
+            {"kind": "instruction", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "text": "<small>חזן:</small>"},
+            {"kind": "prayer", "node": "amidah.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "From Your place, our King, You will appear and reign over us, for we yearn for You— When will You reign in Zion? Soon, in our days, forever may You dwell [there]. You will be exalted and sanctified within Jerusalem, Your city for all generations and for all eternity. May our eyes behold Your kingship, as it is said in the songs of Your might by David, the anointed of Your righteousness:", "text": " מִמְּקוֹמְךָ מַלְכֵּנוּ תוֹפִיעַ. וְתִמְלוֹךְ עָלֵינוּ "},
+            {"kind": "prayer", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "text": "<small> <small>(מְהֵרָה)</small>"},
+            {"kind": "prayer", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "text": " </small> כִּי מְחַכִּים אֲנַחְנוּ לָךְ. מָתַי תִּמְלֹךְ בְּצִיּוֹן. בְּקָרוֹב בְּיָמֵינוּ לְעוֹלָם וָעֶד תִּשְׁכּוֹן. תִּתְגַּדֵּל וְתִתְקַדֵּשׁ בְּתוֹךְ יְרוּשָׁלַיִם עִירְךָ לְדוֹר וָדוֹר וּלְנֵצַח נְצָחִים. וְעֵינֵינוּ תִרְאֶינָה מַלְכוּתֶךָ כַּדָּבָר הָאָמוּר בְּשִׁירֵי עֻזֶּךָ. עַל יְדֵי דָּוִד מְשִׁיחַ צִדְקֶךָ:"}
           ]},
           {"ref": "15", "parts": [
-            {"kind": "instruction", "en": "Congregation and Chazzan:", "text": "<small>קו\"ח:</small>"},
-            {"kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "Adonoy will reign forever; Your God, Zion, throughout all generations! Praise God.", "text": " <b>יִמְלֹךְ יְהֹוָה לְעוֹלָם. אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר. הַלְלוּיָהּ:</b>"}
+            {"kind": "instruction", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "Congregation and Chazzan:", "text": "<small>קו\"ח:</small>"},
+            {"kind": "prayer", "node": "amidah.kedusha", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "Adonoy will reign forever; Your God, Zion, throughout all generations! Praise God.", "text": " <b>יִמְלֹךְ יְהֹוָה לְעוֹלָם. אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר. הַלְלוּיָהּ:</b>"}
           ]},
           {"ref": "16", "parts": [
             {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "text": "<b>אַתָּה קָדוֹשׁ</b>,"},
@@ -2483,10 +2483,10 @@
           {"ref": "58", "kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>תִּתְקַבֵּל</b> צְלוֹתְהוֹן וּבָעוּתְהוֹן דְכָל בֵּית יִשְׂרָאֵל קֳדָם אֲבוּהוֹן דִּי בִשְׁמַיָּא, וְאִמְרוּ אָמֵן:  "},
           {"ref": "59", "kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>יְהֵא</b> שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים טוֹבִים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"},
           {"ref": "60", "parts": [
-            {"kind": "prayer", "node": "concl.aleinu", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>עֹשֶׂה</b> שָׁלוֹם "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "concl.aleinu", "role": "chazzan", "voice": "aloud", "minyan": true, "en": "During the Ten Days of Repentance:", "gloss": "Adds 'HaShalom' (The Peace)", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "concl.aleinu", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " (הַשָּׁלוֹם)"},
-            {"kind": "prayer", "node": "concl.aleinu", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:  "}
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>עֹשֶׂה</b> שָׁלוֹם "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "en": "During the Ten Days of Repentance:", "gloss": "Adds 'HaShalom' (The Peace)", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " (הַשָּׁלוֹם)"},
+            {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:  "}
           ]},
           {"ref": "61", "kind": "heading", "en": "Psalm of the Day", "gloss": "Title for the daily psalm", "text": "<b>שיר של יום</b>"},
           {"ref": "62", "kind": "instruction", "en": "Today is the holy Sabbath on which the Levites used to recite in the Holy Temple:", "gloss": "Introduction to the Psalm of the Day", "text": "<b>הַיּוֹם</b> יוֹם שַׁבָּת קֹדֶשׁ שֶׁבּו הָיוּ הַלְוִיִּם אוֹמְרִים בְּבֵית הַמִּקְדָּשׁ:"},

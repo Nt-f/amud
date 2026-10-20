@@ -7,6 +7,8 @@ import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
 import '../../core/titles.dart';
+import '../tehillim/tehillim_data.dart';
+import '../tehillim/tehillim_reader.dart';
 import 'prayer_catalog.dart';
 import 'reader_screen.dart';
 import 'today_plan.dart';
@@ -35,13 +37,14 @@ const _routes = {
 /// The sections before and after [node] as read in order: in today's
 /// davening, the previous and next parts of the day's services (Hallel
 /// after the Amidah on Rosh Chodesh); otherwise the siddur's own order.
-/// [also] is what's said with it today but printed elsewhere.
-({PrayerRef? prev, PrayerRef? next, PlanService? nextService, List<PlanEntry> also}) prayerNeighbors(
+/// [also] is what's said with it today but printed elsewhere. [ended] is
+/// the service of today's davening this section ends, if it ends one.
+({PrayerRef? prev, PrayerRef? next, PlanService? nextService, PlanService? ended, List<PlanEntry> also}) prayerNeighbors(
     WidgetRef ref, String book, SchemaNode node) {
   final date = ref.watch(readerDaytimeDateProvider).abs();
   final plan = ref.watch(todayPlanProvider(date)).value;
   PrayerRef? prev, next;
-  PlanService? nextService;
+  PlanService? nextService, ended;
   final also = <PlanEntry>[];
   var inPlan = false;
   final siblings = node.parent?.children ?? const <SchemaNode>[];
@@ -76,11 +79,13 @@ const _routes = {
     bool skip(PlanEntry e) => at.covered.contains(e) || also.contains(e);
     if (last != null) {
       final after = entries.skip(entries.indexOf(last) + 1).where((e) => !skip(e));
+      final from = plan.serviceOf(last);
       if (after.isNotEmpty) {
         next = after.first.ref;
-        final from = plan.serviceOf(last), to = plan.serviceOf(after.first);
+        final to = plan.serviceOf(after.first);
         if (to != null && to != from) nextService = to;
       }
+      if (from != null && (after.isEmpty || plan.serviceOf(after.first) != from)) ended = from;
     }
     if (first != null) {
       final before = entries.take(entries.indexOf(first)).where((e) => !skip(e));
@@ -92,7 +97,7 @@ const _routes = {
     if (i + 1 < siblings.length) next = PrayerRef(book, siblings[i + 1]);
     if (i > 0) prev = PrayerRef(book, siblings[i - 1]);
   }
-  return (prev: prev, next: next, nextService: nextService, also: also);
+  return (prev: prev, next: next, nextService: nextService, ended: ended, also: also);
 }
 
 /// Links under a section of the reader: what comes next in today's
@@ -117,6 +122,13 @@ class RelatedPrayers extends ConsumerWidget {
     final next = around.next;
     final nextService = around.nextService == null ? null : context.prayerTitle(s, around.nextService!.en, around.nextService!.he);
     final also = around.also;
+    // After davening (Shacharit, or Musaf when it follows), today's
+    // Tehillim.
+    final davened = around.ended?.key;
+    final tehillim = const {'shacharit', 'musaf', 'mincha', 'maariv', 'shabbatEve'}.contains(davened) &&
+            around.nextService?.key != 'musaf'
+        ? monthlyPortion(ref.watch(readerDaytimeDateProvider))
+        : null;
 
     // Prayers that go with this one, when they're said today (or aren't
     // tied to a day).
@@ -164,6 +176,14 @@ class RelatedPrayers extends ConsumerWidget {
               overflow: TextOverflow.ellipsis,
             ),
           ),
+        if (tehillim != null) ...[
+          const SizedBox(height: 12),
+          OutlinedButton.icon(
+            onPressed: () => context.push(tehillimReadPath(tehillim)),
+            icon: const Icon(Icons.menu_book_outlined),
+            label: Text(context.tr("Today's Tehillim: {range}", {'range': tehillim.rangeLabel})),
+          ),
+        ],
         if (also.isNotEmpty) ...[
           const SizedBox(height: 16),
           Text(context.tr('Also today'), style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary)),

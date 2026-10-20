@@ -5,6 +5,7 @@
 list(APPEND FLUTTER_PLUGIN_LIST
   flutter_js
   flutter_timezone
+  fvp
   gtk
   printing
   record_linux

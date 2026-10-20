@@ -35,7 +35,7 @@ class _CustomZmanEditorState extends ConsumerState<_CustomZmanEditor> {
 
   CustomZman get draft => CustomZman(
         id: widget.existing?.id ?? DateTime.now().microsecondsSinceEpoch.toString(),
-        name: _name.text.trim().isEmpty ? 'Custom zman' : _name.text.trim(),
+        name: _name.text.trim().isEmpty ? context.tr('Custom zman') : _name.text.trim(),
         kind: kind,
         value: value,
         rising: rising,
@@ -50,6 +50,7 @@ class _CustomZmanEditorState extends ConsumerState<_CustomZmanEditor> {
     final z = ref.watch(zmanimProvider(today));
     final loc = ref.watch(locationProvider);
     final hour12 = ref.watch(settingsProvider.select((s) => s.hour12));
+    final names = ref.watch(zmanResolverProvider);
     final preview = draft.compute(z);
     return Padding(
       padding: EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(context).bottom),
@@ -57,7 +58,7 @@ class _CustomZmanEditorState extends ConsumerState<_CustomZmanEditor> {
         child: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
           child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-            Text(widget.existing == null ? 'New custom zman' : 'Edit custom zman', style: Theme.of(context).textTheme.titleLarge),
+            Text(widget.existing == null ? context.tr('New custom zman') : context.tr('Edit custom zman'), style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: 12),
             TextField(controller: _name, decoration: InputDecoration(labelText: context.tr('Name')), onChanged: (_) => setState(() {})),
             const SizedBox(height: 12),
@@ -65,7 +66,7 @@ class _CustomZmanEditorState extends ConsumerState<_CustomZmanEditor> {
               options: [
                 (CustomZmanKind.offset, context.tr('Offset'), null),
                 (CustomZmanKind.degrees, context.tr('Sun angle'), null),
-                (CustomZmanKind.shaahZmanit, context.term('Shaot'), null),
+                (CustomZmanKind.shaahZmanit, context.tr('Shaot'), null),
               ],
               selected: kind,
               onChanged: (v) => setState(() => kind = v),
@@ -76,7 +77,7 @@ class _CustomZmanEditorState extends ConsumerState<_CustomZmanEditor> {
                   DropdownButtonFormField<String>(
                     initialValue: baseKey,
                     decoration: InputDecoration(labelText: context.tr('Relative to')),
-                    items: [for (final d in builtInZmanim) DropdownMenuItem(value: d.key, child: Text(d.en))],
+                    items: [for (final d in builtInZmanim) DropdownMenuItem(value: d.key, child: Text(names.label(d.key)))],
                     onChanged: (v) => setState(() => baseKey = v!),
                   ),
                   Text(context.tr(minutes < 0 ? 'Minutes: {n} (before)' : 'Minutes: {n} (after)', {'n': minutes.toStringAsFixed(1)})),
@@ -87,22 +88,22 @@ class _CustomZmanEditorState extends ConsumerState<_CustomZmanEditor> {
                   Slider.adaptive(value: value.clamp(-2, 26), min: -2, max: 26, divisions: 1120, onChanged: (v) => setState(() => value = v)),
                   SwitchListTile.adaptive(
                     contentPadding: EdgeInsets.zero,
-                    title: Text(rising ? 'Morning (before sunrise)' : 'Evening (after sunset)'),
+                    title: Text(rising ? context.tr('Morning (before sunrise)') : context.tr('Evening (after sunset)')),
                     value: rising,
                     onChanged: (v) => setState(() => rising = v),
                   ),
                 ],
               CustomZmanKind.shaahZmanit => [
-                  Text('${value.toStringAsFixed(2)} shaos zmaniyos into the day'),
+                  Text(context.tr('{n} shaot zmaniyot into the day', {'n': value.toStringAsFixed(2)})),
                   Slider.adaptive(value: value.clamp(0, 12), min: 0, max: 12, divisions: 48, onChanged: (v) => setState(() => value = v)),
                   DropdownButtonFormField<String>(
                     initialValue: system,
                     decoration: InputDecoration(labelText: context.tr('Day defined by')),
-                    items: const [
-                      DropdownMenuItem(value: 'gra', child: Text('GRA (sunrise–sunset)')),
-                      DropdownMenuItem(value: 'mga', child: Text('MGA (72 min)')),
-                      DropdownMenuItem(value: 'deg16_1', child: Text('16.1° dawn–nightfall')),
-                      DropdownMenuItem(value: 'baalHatanya', child: Text('Baal HaTanya (1.583°)')),
+                    items: [
+                      DropdownMenuItem(value: 'gra', child: Text(context.tr('GRA (sunrise–sunset)'))),
+                      DropdownMenuItem(value: 'mga', child: Text(context.tr('MGA (72 min)'))),
+                      DropdownMenuItem(value: 'deg16_1', child: Text(context.tr('16.1° dawn–nightfall'))),
+                      DropdownMenuItem(value: 'baalHatanya', child: Text(context.tr('Baal HaTanya (1.583°)'))),
                     ],
                     onChanged: (v) => setState(() => system = v!),
                   ),

@@ -88,11 +88,55 @@
       "he": {
         "version": "Daat Siddur Ashkenaz",
         "segs": [
+          {"ref": "h1", "parts": [
+            {"kind": "speaker", "role": "chazzan", "en": "Chazzan:", "text": "<small>חזן:</small>"},
+            {"kind": "prayer", "node": "hallel", "role": "chazzan", "voice": "aloud", "text": " א הוֹדוּ לַיהוָה כִּי טוֹב כִּי לְעוֹלָם חַסְדּוֹ."}
+          ]},
+          {"ref": "h1r", "parts": [
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>קהל:</small>"},
+            {"kind": "prayer", "node": "hallel", "role": "congregation", "voice": "aloud", "text": " הוֹדוּ לַיהוָה כִּי טוֹב כִּי לְעוֹלָם חַסְדּוֹ."}
+          ]},
+          {"ref": "h2", "parts": [
+            {"kind": "speaker", "role": "chazzan", "en": "Chazzan:", "text": "<small>חזן:</small>"},
+            {"kind": "prayer", "node": "hallel", "role": "chazzan", "voice": "aloud", "text": " ב יֹאמַר נָא יִשְׂרָאֵל כִּי לְעוֹלָם חַסְדּוֹ."}
+          ]},
+          {"ref": "h2r", "parts": [
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>קהל:</small>"},
+            {"kind": "prayer", "node": "hallel", "role": "congregation", "voice": "aloud", "text": " הוֹדוּ לַיהוָה כִּי טוֹב כִּי לְעוֹלָם חַסְדּוֹ."}
+          ]},
+          {"ref": "h3", "parts": [
+            {"kind": "speaker", "role": "chazzan", "en": "Chazzan:", "text": "<small>חזן:</small>"},
+            {"kind": "prayer", "node": "hallel", "role": "chazzan", "voice": "aloud", "text": " ג יֹאמְרוּ נָא בֵית אַהֲרֹן כִּי לְעוֹלָם חַסְדּוֹ."}
+          ]},
+          {"ref": "h3r", "parts": [
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>קהל:</small>"},
+            {"kind": "prayer", "node": "hallel", "role": "congregation", "voice": "aloud", "text": " הוֹדוּ לַיהוָה כִּי טוֹב כִּי לְעוֹלָם חַסְדּוֹ."}
+          ]},
+          {"ref": "h4", "parts": [
+            {"kind": "speaker", "role": "chazzan", "en": "Chazzan:", "text": "<small>חזן:</small>"},
+            {"kind": "prayer", "node": "hallel", "role": "chazzan", "voice": "aloud", "text": " ד יֹאמְרוּ נָא יִרְאֵי יְהוָה כִּי לְעוֹלָם חַסְדּוֹ."}
+          ]},
+          {"ref": "h4r", "parts": [
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>קהל:</small>"},
+            {"kind": "prayer", "node": "hallel", "role": "congregation", "voice": "aloud", "text": " הוֹדוּ לַיהוָה כִּי טוֹב כִּי לְעוֹלָם חַסְדּוֹ."}
+          ]},
           {"ref": "1", "parts": [
-            {"kind": "prayer", "role": "responsive", "text": "א הוֹדוּ לַיהוָה כִּי טוֹב כִּי לְעוֹלָם חַסְדּוֹ. ב יֹאמַר נָא יִשְׂרָאֵל כִּי לְעוֹלָם חַסְדּוֹ. ג יֹאמְרוּ נָא בֵית אַהֲרֹן כִּי לְעוֹלָם חַסְדּוֹ. ד יֹאמְרוּ נָא יִרְאֵי יְהוָה כִּי לְעוֹלָם חַסְדּוֹ."},
-            {"kind": "prayer", "text": " ה מִן הַמֵּצַר קָרָאתִי יָּהּ עָנָנִי בַמֶּרְחָב יָהּ. ו יְהוָה לִי לֹא אִירָא מַה יַּעֲשֶׂה לִי אָדָם. זיְהוָה לִי בְּעֹזְרָי וַאֲנִי אֶרְאֶה בְשֹׂנְאָי. ח טוֹב לַחֲסוֹת בַּיהוָה מִבְּטֹחַ בָּאָדָם. ט טוֹב לַחֲסוֹת בַּיהוָה מִבְּטֹחַ בִּנְדִיבִים. י כָּל גּוֹיִם סְבָבוּנִי בְּשֵׁם יְהוָה כִּי אֲמִילַם. יא סַבּוּנִי גַם סְבָבוּנִי בְּשֵׁם יְהוָה כִּי אֲמִילַם. יב סַבּוּנִי כִדְבוֹרִים דֹּעֲכוּ כְּאֵשׁ קוֹצִים בְּשֵׁם יְהוָה כִּי אֲמִילַם. יג דַּחֹה דְחִיתַנִי לִנְפֹּל וַיהוָה עֲזָרָנִי. יד עָזִּי וְזִמְרָת יָהּ וַיְהִי לִי לִישׁוּעָה. טו קוֹל רִנָּה וִישׁוּעָה בְּאָהֳלֵי צַדִּיקִים יְמִין יְהוָה עֹשָׂה חָיִל. טז יְמִין יְהוָה רוֹמֵמָה יְמִין יְהוָה עֹשָׂה חָיִל. יז לֹא אָמוּת כִּי אֶחְיֶה וַאֲסַפֵּר מַעֲשֵׂי יָהּ. יח יַסֹּר יִסְּרַנִּי יָּהּ וְלַמָּוֶת לֹא נְתָנָנִי. יט פִּתְחוּ לִי שַׁעֲרֵי צֶדֶק אָבֹא בָם אוֹדֶה יָהּ. כ זֶה הַשַּׁעַר לַיהוָה צַדִּיקִים יָבֹאוּ בוֹ. כא אוֹדְךָ כִּי עֲנִיתָנִי וַתְּהִי לִי לִישׁוּעָה. כב אֶבֶן מָאֲסוּ הַבּוֹנִים הָיְתָה לְרֹאשׁ פִּנָּה. כג מֵאֵת יְהוָה הָיְתָה זֹּאת הִיא נִפְלָאת בְּעֵינֵינוּ. כד זֶה הַיּוֹם עָשָׂה יְהוָה נָגִילָה וְנִשְׂמְחָה בוֹ."},
+            {"kind": "prayer", "text": "ה מִן הַמֵּצַר קָרָאתִי יָּהּ עָנָנִי בַמֶּרְחָב יָהּ. ו יְהוָה לִי לֹא אִירָא מַה יַּעֲשֶׂה לִי אָדָם. זיְהוָה לִי בְּעֹזְרָי וַאֲנִי אֶרְאֶה בְשֹׂנְאָי. ח טוֹב לַחֲסוֹת בַּיהוָה מִבְּטֹחַ בָּאָדָם. ט טוֹב לַחֲסוֹת בַּיהוָה מִבְּטֹחַ בִּנְדִיבִים. י כָּל גּוֹיִם סְבָבוּנִי בְּשֵׁם יְהוָה כִּי אֲמִילַם. יא סַבּוּנִי גַם סְבָבוּנִי בְּשֵׁם יְהוָה כִּי אֲמִילַם. יב סַבּוּנִי כִדְבוֹרִים דֹּעֲכוּ כְּאֵשׁ קוֹצִים בְּשֵׁם יְהוָה כִּי אֲמִילַם. יג דַּחֹה דְחִיתַנִי לִנְפֹּל וַיהוָה עֲזָרָנִי. יד עָזִּי וְזִמְרָת יָהּ וַיְהִי לִי לִישׁוּעָה. טו קוֹל רִנָּה וִישׁוּעָה בְּאָהֳלֵי צַדִּיקִים יְמִין יְהוָה עֹשָׂה חָיִל. טז יְמִין יְהוָה רוֹמֵמָה יְמִין יְהוָה עֹשָׂה חָיִל. יז לֹא אָמוּת כִּי אֶחְיֶה וַאֲסַפֵּר מַעֲשֵׂי יָהּ. יח יַסֹּר יִסְּרַנִּי יָּהּ וְלַמָּוֶת לֹא נְתָנָנִי. יט פִּתְחוּ לִי שַׁעֲרֵי צֶדֶק אָבֹא בָם אוֹדֶה יָהּ. כ זֶה הַשַּׁעַר לַיהוָה צַדִּיקִים יָבֹאוּ בוֹ. כא אוֹדְךָ כִּי עֲנִיתָנִי וַתְּהִי לִי לִישׁוּעָה. כב אֶבֶן מָאֲסוּ הַבּוֹנִים הָיְתָה לְרֹאשׁ פִּנָּה. כג מֵאֵת יְהוָה הָיְתָה זֹּאת הִיא נִפְלָאת בְּעֵינֵינוּ. כד זֶה הַיּוֹם עָשָׂה יְהוָה נָגִילָה וְנִשְׂמְחָה בוֹ."},
             {"kind": "prayer", "role": "responsive", "text": " כה אָנָּא יְהוָה הוֹשִׁיעָה נָּא אָנָּא יְהוָה הַצְלִיחָה נָּא. כו בָּרוּךְ הַבָּא בְּשֵׁם יְהוָה בֵּרַכְנוּכֶם מִבֵּית יְהוָה. כז אֵל יְהוָה וַיָּאֶר לָנוּ אִסְרוּ חַג בַּעֲבֹתִים עַד קַרְנוֹת הַמִּזְבֵּחַ. כח אֵלִי אַתָּה וְאוֹדֶךָּ אֱלֹהַי אֲרוֹמְמֶךָּ. כט הוֹדוּ לַיהוָה כִּי טוֹב כִּי לְעוֹלָם חַסְדּוֹ."}
           ]}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "eh1", "translates": ["h1"], "comment": "Amud translation", "text": "Thank Hashem, for He is good, for His kindness endures forever."},
+          {"ref": "eh1r", "translates": ["h1r"], "comment": "Amud translation", "text": "Thank Hashem, for He is good, for His kindness endures forever."},
+          {"ref": "eh2", "translates": ["h2"], "comment": "Amud translation", "text": "Let Israel say: for His kindness endures forever."},
+          {"ref": "eh2r", "translates": ["h2r"], "comment": "Amud translation", "text": "Thank Hashem, for He is good, for His kindness endures forever."},
+          {"ref": "eh3", "translates": ["h3"], "comment": "Amud translation", "text": "Let the house of Aaron say: for His kindness endures forever."},
+          {"ref": "eh3r", "translates": ["h3r"], "comment": "Amud translation", "text": "Thank Hashem, for He is good, for His kindness endures forever."},
+          {"ref": "eh4", "translates": ["h4"], "comment": "Amud translation", "text": "Let those who fear Hashem say: for His kindness endures forever."},
+          {"ref": "eh4r", "translates": ["h4r"], "comment": "Amud translation", "text": "Thank Hashem, for He is good, for His kindness endures forever."}
         ]
       }
     },
@@ -170,7 +214,7 @@
           ]},
           {"ref": "10", "parts": [
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "בָּרוּךְ אַתָּה ה' הָאֵל "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת", "text": "<em><small>בעשי\"ת "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "amidah": "repetition", "minyan": true, "en": "During the Ten Days of Repentance:", "clean": "בעשי\"ת", "text": "<em><small>בעשי\"ת "},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "הַמֶּלֶךְ"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "</small></em> הַקָּדושׁ: "}
           ]},

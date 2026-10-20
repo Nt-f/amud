@@ -100,7 +100,10 @@ class _MeeinShaloshScreenState extends ConsumerState<MeeinShaloshScreen> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final date = ref.watch(readerDaytimeDateProvider);
-    final ctx = ref.watch(dayContextProvider((date.abs(), Service.shacharit)));
+    // Past sunset (before dawn), tonight's additions: Shabbat's on Friday
+    // night, none for a Rosh Chodesh that has ended.
+    final night = ref.watch(readerDateProvider) == null && ref.watch(halachicTodayProvider.select((d) => d.abs())) != date.abs();
+    final ctx = ref.watch(dayContextProvider(((night ? date.next() : date).abs(), Service.shacharit)));
     final today = [
       for (final s in _seasonal)
         if (ctx[s.$1]) s,

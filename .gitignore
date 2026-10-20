@@ -57,3 +57,10 @@ app.*.map.json
 
 # wrangler deploy cache
 .wrangler/
+
+# libmdk, which the vendored fvp's build downloads next to its sources
+# (packages/fvp/VENDORED.md)
+/packages/fvp/*/mdk-sdk/
+/packages/fvp/*/mdk-sdk-*
+/packages/fvp/*/fvp-deps.lock
+/packages/fvp/*/.fvp-mdk-*/

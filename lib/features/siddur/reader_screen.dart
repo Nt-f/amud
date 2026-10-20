@@ -21,7 +21,6 @@ import '../../core/page_swipe.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
 import '../../core/split_row.dart';
-import '../../core/tap_highlight.dart';
 import '../../core/theme.dart';
 import '../../core/titles.dart';
 import '../../core/typeset/typeset.dart';
@@ -33,6 +32,7 @@ import 'reader_typography.dart';
 import 'reading_marks.dart';
 import 'prayer_catalog.dart';
 import 'reader_choices.dart';
+import 'reader_compass.dart';
 import 'reader_jump.dart';
 import '../integrations/prayer_links.dart';
 import '../integrations/hachama_reader.dart';
@@ -44,7 +44,9 @@ import 'today_plan.dart';
 import 'day_guide_screen.dart';
 import 'prayer_insights.dart';
 
-typedef _ReaderKey = ({String book, String node, String expanded, int dateAbs});
+/// [night]: read after sunset on today's date, so Birkat HaMazon is the
+/// night's (see [ResolveOptions.night]).
+typedef _ReaderKey = ({String book, String node, String expanded, int dateAbs, bool night});
 
 final _resolvedProvider = FutureProvider.family<List<RenderItem>, _ReaderKey>((ref, k) async {
   final root = await ref.watch(bookIndexProvider(k.book).future);
@@ -54,6 +56,7 @@ final _resolvedProvider = FutureProvider.family<List<RenderItem>, _ReaderKey>((r
   final s = readerSettings(ref.watch(settingsProvider), k.book);
   final daytime = HDate.fromAbs(k.dateAbs);
   final ctxs = <Service, DayContext>{};
+  final nights = <Service, DayContext>{};
   return resolver.resolve(
     node,
     versions,
@@ -69,6 +72,10 @@ final _resolvedProvider = FutureProvider.family<List<RenderItem>, _ReaderKey>((r
       notesHebrew: s.showHebrewNotes,
       notesTranslation: s.showEnglishNotes,
       forceExpanded: k.expanded.isEmpty ? const {} : k.expanded.split('|').toSet(),
+      night: k.night
+          ? (svc) => nights.putIfAbsent(svc,
+              () => DayContext.forService(daytime.next(), svc, il: s.location.il, minhagim: s.minhagim).withChoices(choiceAnswers(s.choices)))
+          : null,
     ),
   );
 });
@@ -190,7 +197,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
 
   Future<void> _loadSelectionInsight() async {
     final date = ref.read(readerDaytimeDateProvider);
-    final key = (book: widget.book, node: widget.nodeId, expanded: (_expanded.toList()..sort()).join('|'), dateAbs: date.abs());
+    final key = (book: widget.book, node: widget.nodeId, expanded: (_expanded.toList()..sort()).join('|'), dateAbs: date.abs(), night: false);
     final selected = normalizeRubric(_selectedText);
     if (selected.isEmpty) return;
     final root = await ref.read(bookIndexProvider(widget.book).future);
@@ -252,20 +259,22 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
   Widget build(BuildContext context) {
     final date = ref.watch(readerDaytimeDateProvider);
     final picked = ref.watch(readerDateProvider);
-    final key = (book: widget.book, node: widget.nodeId, expanded: (_expanded.toList()..sort()).join('|'), dateAbs: date.abs());
+    // Past sunset, before dawn: the Hebrew date has moved on.
+    final night = picked == null && ref.watch(halachicTodayProvider.select((d) => d.abs())) != date.abs();
+    final key = (book: widget.book, node: widget.nodeId, expanded: (_expanded.toList()..sort()).join('|'), dateAbs: date.abs(), night: night);
     final items = ref.watch(_resolvedProvider(key));
     final rootAsync = ref.watch(bookIndexProvider(widget.book));
     final node = rootAsync.valueOrNull?.find(widget.nodeId);
     final s = readerSettings(ref.watch(settingsProvider), widget.book);
     final theme = Theme.of(context);
 
+    final title = node == null ? context.term(widget.book) : context.prayerTitle(s, node.en, node.he);
     final bar = AppBar(
         title: Builder(builder: (context) {
           final heTitle = context.prayerTitleIsHebrew(s);
           final sub = node == null ? null : context.prayerSubtitle(s, node.en, node.he);
           return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(node == null ? context.term(widget.book) : context.prayerTitle(s, node.en, node.he),
-                overflow: TextOverflow.ellipsis, style: node != null && heTitle ? TextStyle(fontFamily: s.hebrewFont) : null),
+            Text(title, overflow: TextOverflow.ellipsis, style: node != null && heTitle ? TextStyle(fontFamily: s.hebrewFont) : null),
             if (sub != null)
               Text(sub,
                   overflow: TextOverflow.ellipsis,
@@ -273,27 +282,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
                   textDirection: heTitle ? null : TextDirection.rtl),
           ]);
         }),
-        actions: [
-          IconButton(tooltip: context.tr("Why today?"), icon: const Icon(Icons.help_outline), onPressed: () => openDayGuide(context, date)),
-          IconButton(
-            tooltip: context.tr('Copy prayer link'), icon: const Icon(Icons.link),
-            onPressed: () async {
-              final link = Uri.https('amud.page', '/app/read/${widget.book}', {'node': widget.nodeId});
-              await Clipboard.setData(ClipboardData(text: link.toString()));
-              if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.tr('Link copied'))));
-            },
-          ),
-          IconButton(
-            tooltip: context.tr('Date'),
-            icon: Badge(isLabelVisible: picked != null, child: const Icon(Icons.event)),
-            onPressed: () => pickReaderDate(context, ref, date),
-          ),
-          IconButton(
-            tooltip: context.tr('Text settings'),
-            icon: const Icon(Icons.text_fields),
-            onPressed: () => showReaderSettings(context, widget.book),
-          ),
-        ],
+        actions: _barActions(context, title, date, picked != null),
     );
 
     final loaded = items.valueOrNull;
@@ -335,6 +324,9 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         const SingleActivator(LogicalKeyboardKey.pageUp): () => _pageOffset(-1),
         const SingleActivator(LogicalKeyboardKey.escape): () { if (focusMode.state) toggleFocusMode(); },
       },
+      // The reader's widgets read this book's settings (its font).
+      child: ProviderScope(
+      overrides: [readerBookProvider.overrideWithValue(widget.book)],
       child: Focus(autofocus: true, child: Scaffold(
       body: Column(children: [
         // Focus mode: the bars slide up out of view; the text keeps clear
@@ -347,7 +339,8 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
           ]),
         ),
         Expanded(
-          child: FocusModeBody(
+          child: Stack(children: [
+            Positioned.fill(child: FocusModeBody(
             child: DoubleTapListener(
               onDoubleTap: _doubleTap,
               child: PageSwipe(
@@ -364,12 +357,35 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
                 ),
               ),
             ),
-          ),
+            )),
+            PositionedDirectional(end: 16, bottom: 16 + MediaQuery.paddingOf(context).bottom, child: const ReaderCompass()),
+          ]),
         ),
       ]),
-    )),
+    ))),
     );
   }
+
+  /// The app bar's tools. On a narrow phone, or with large text, those the
+  /// title can't spare room for go in a menu (the link first, then Why
+  /// today?, then the date), so the prayer's name isn't cut to "Shach…".
+  List<Widget> _barActions(BuildContext context, String title, HDate date, bool picked) => fitBarActions(context, title, spare: const [1, 0, 2], [
+        BarTool(tooltip: context.tr('Why today?'), icon: const Icon(Icons.help_outline), onPressed: () => openDayGuide(context, date)),
+        BarTool(
+          tooltip: context.tr('Copy prayer link'),
+          icon: const Icon(Icons.link),
+          onPressed: () async {
+            final link = Uri.https('amud.page', '/app/read/${widget.book}', {'node': widget.nodeId});
+            await Clipboard.setData(ClipboardData(text: link.toString()));
+            if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.tr('Link copied'))));
+          },
+        ),
+        BarTool(
+            tooltip: context.tr('Date'),
+            icon: Badge(isLabelVisible: picked, child: const Icon(Icons.event)),
+            onPressed: () => pickReaderDate(context, ref, date)),
+        BarTool(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => showReaderSettings(context, widget.book)),
+      ]);
 
   void _pageOffset(int direction) {
     if (!_scroll.isAttached) return;
@@ -557,7 +573,9 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
               context.prayerTitle(s, (g is HeadingItem ? g.node : (g as CollapsedSectionItem).node).en,
                   (g is HeadingItem ? g.node : (g as CollapsedSectionItem).node).he),
         ];
-        if (titles.isEmpty && group.any((g) => g is SegmentItem && isChazarahSegment(g))) titles.add(context.tr('Modim DeRabbanan'));
+        if (titles.isEmpty && group.any((g) => g is SegmentItem && (isChazarahSegment(g) || g.graphNode == 'amidah.modim_derabbanan'))) {
+          titles.add(context.tr('Modim DeRabbanan'));
+        }
         // Kedushah, or Birkas Kohanim, printed inside the Amidah (or not said today).
         if (titles.isEmpty) {
           final inGroup = [
@@ -566,7 +584,9 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
           ].where((x) => x.chazarah);
           if (inGroup.any(_mentionsKedushah)) {
             titles.add(context.prayerTitle(s, 'Kedushah', 'קדושה'));
-          } else if (inGroup.any((x) => RegExp(r'kohanim|priestly', caseSensitive: false).hasMatch(x.node.en))) {
+          } else if (inGroup.any((x) =>
+              (x.graphNode?.startsWith('amidah.birkat_kohanim') ?? false) ||
+              RegExp(r'kohanim|priestly', caseSensitive: false).hasMatch(x.node.en))) {
             titles.add(context.prayerTitle(s, 'Birkat Kohanim', 'ברכת כהנים'));
           }
         }
@@ -627,10 +647,21 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
   /// The row(s) for one render item, with expanded groups and collapsible
   /// notes.
   List<Widget Function(BuildContext)> _rowsFor(BuildContext context, RenderItem it, TextLayout layout) {
-    final s = ref.read(settingsProvider);
+    final s = readerSettings(ref.read(settingsProvider), widget.book);
     switch (it) {
       case ExcludedGroupItem g when _expandedGroups.contains(g.key):
-        return [for (final si in g.items) (c) => _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), centered: _openers.contains('center:${si.key}'), linear: _linear)];
+        return [
+          // Opened after sunset: when these lines are still said.
+          if (g.beforeSunset)
+            (c) => _item(
+                c,
+                DynamicItem('sunset:${g.key}', 'note', {
+                  'en': 'If most of the meal was eaten before sunset, say this.',
+                  'he': 'אם רוב הסעודה נאכלה לפני השקיעה, אומרים זאת.',
+                }),
+                layout),
+          for (final si in g.items) (c) => _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), centered: _openers.contains('center:${si.key}'), linear: _linear),
+        ];
       case SegmentItem si when si.kind == SegmentKind.note && s.collapseNotes:
         final open = _toggledNotes.contains(si.key);
         void toggle() => setState(() => open ? _toggledNotes.remove(si.key) : _toggledNotes.add(si.key));
@@ -691,6 +722,8 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
 
   /// A repetition line that is, or announces, the Kedushah.
   static bool _mentionsKedushah(SegmentItem x) =>
+      x.graphNode == 'amidah.kedusha' ||
+      x.graphNode == 'amidah.musaf.kedusha' ||
       RegExp(r'kedush|keduash', caseSensitive: false).hasMatch(x.node.en) ||
       RegExp(r'kedush|keduash', caseSensitive: false).hasMatch(stripHtml(x.tr?.segment.html ?? '')) ||
       (x.he?.segment.html ?? '').contains('קדושה');
@@ -712,7 +745,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
   Widget _item(BuildContext context, RenderItem it, TextLayout layout) {
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
-    final s = ref.read(settingsProvider);
+    final s = readerSettings(ref.read(settingsProvider), widget.book);
     switch (it) {
       case HeadingItem h:
         if (h.level == 0 && h.node.isLeaf) return const SizedBox(height: 4);
@@ -786,8 +819,10 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         );
       case ExcludedGroupItem g:
         return _CollapsedTile(
-          icon: Icons.unfold_more,
-          title: context.tr('{n} lines not said today', {'n': g.items.length}),
+          icon: g.beforeSunset ? Icons.wb_twilight : Icons.unfold_more,
+          title: g.beforeSunset
+              ? context.tr('Said if most of the meal was eaten before sunset')
+              : context.tr('{n} lines not said today', {'n': g.items.length}),
           subtitle: {
             for (final i in g.items)
               if (i.labelEn != null || i.labelHe != null) conditionLabel(context, s, i.labelEn, i.labelHe),
@@ -951,7 +986,7 @@ class _PrintHeading extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final s = ref.watch(settingsProvider);
+    final s = ref.watch(readerSettingsProvider);
     final ts = TypeScale.of(s);
     final theme = Theme.of(context);
     final color = theme.colorScheme.primary;
@@ -998,7 +1033,7 @@ class _CollapsedTile extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
-    final s = ref.watch(settingsProvider);
+    final s = ref.watch(readerSettingsProvider);
     final tone = theme.colorScheme.outline;
     // Hidden text: a dashed edge, set off from the words around it.
     return ReaderControl(
@@ -1024,7 +1059,7 @@ class _OmerBlock extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final s = ref.watch(settingsProvider);
+    final s = ref.watch(readerSettingsProvider);
     final colors = SiddurColors.of(context);
     final theme = Theme.of(context);
     return Container(
@@ -1085,7 +1120,7 @@ class _SegmentView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final s = ref.watch(settingsProvider);
+    final s = ref.watch(readerSettingsProvider);
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
     final ts = TypeScale.of(s);
@@ -1264,13 +1299,17 @@ class _SegmentView extends ConsumerWidget {
       );
     } else if (today || (excluded && !strike && item.labelEn != null)) {
       final l = conditionLabel(context, s, item.labelEn, item.labelHe);
+      // The siddur's own instruction in the line ("בעשי״ת:") already names the
+      // condition; a dimmed line then only says that it isn't said today.
+      final named = [he, tr].any((x) => x != null && x.runs.any((r) => r.marker));
       lead = WidgetSpan(
         alignment: PlaceholderAlignment.middle,
         child: Padding(
           padding: const EdgeInsetsDirectional.only(end: 6),
           child: today
               ? _TodayChip(item.labelEn == null && item.labelHe == null ? context.tr('Today') : l)
-              : Text(context.tr('Not today · {label}', {'label': l}), style: theme.textTheme.labelSmall?.copyWith(color: colors.excluded)),
+              : Text(named ? context.tr('Not said today') : context.tr('Not today · {label}', {'label': l}),
+                  style: theme.textTheme.labelSmall?.copyWith(color: colors.excluded)),
         ),
       );
     }
@@ -1308,21 +1347,18 @@ class _SegmentView extends ConsumerWidget {
             body,
           ]);
     final space = ts.space(role, compact: compact);
-    if (!today) return TapHighlight(id: item.key, child: Padding(padding: space, child: content));
+    if (!today) return Padding(padding: space, child: content);
     // The bar is laid over the fill rather than measured beside it: the
     // paragraphs size themselves from their width (see TypesetParagraph),
     // which an intrinsic-height row can't ask of them.
-    return TapHighlight(
-      id: item.key,
-      child: Container(
-        margin: ts.print ? space : EdgeInsets.symmetric(vertical: compact ? 2 : 4),
-        clipBehavior: Clip.antiAlias,
-        decoration: BoxDecoration(color: colors.todayFill, borderRadius: BorderRadius.circular(10)),
-        child: Stack(children: [
-          Padding(padding: const EdgeInsetsDirectional.fromSTEB(10, 4, 14, 4), child: content),
-          PositionedDirectional(top: 0, bottom: 0, end: 0, width: 4, child: ColoredBox(color: colors.todayBar)),
-        ]),
-      ),
+    return Container(
+      margin: ts.print ? space : EdgeInsets.symmetric(vertical: compact ? 2 : 4),
+      clipBehavior: Clip.antiAlias,
+      decoration: BoxDecoration(color: colors.todayFill, borderRadius: BorderRadius.circular(10)),
+      child: Stack(children: [
+        Padding(padding: const EdgeInsetsDirectional.fromSTEB(10, 4, 14, 4), child: content),
+        PositionedDirectional(top: 0, bottom: 0, end: 0, width: 4, child: ColoredBox(color: colors.todayBar)),
+      ]),
     );
   }
 }
@@ -1460,7 +1496,7 @@ class _NoteRow extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final colors = SiddurColors.of(context);
-    final s = ref.watch(settingsProvider);
+    final s = ref.watch(readerSettingsProvider);
     final gap = TypeScale.of(s).controlGap;
     final seg = item.tr ?? item.he;
     final excerpt = seg == null ? '' : stripHtml(seg.segment.html).replaceAll(RegExp(r'\s+'), ' ').trim();
@@ -1522,7 +1558,7 @@ class _UnitCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
-    final s = ref.watch(settingsProvider);
+    final s = ref.watch(readerSettingsProvider);
     // Leading title lines ("הגדה של פסח", "קדש") repeat the heading.
     var start = 0;
     while (start < items.length && items[start].kind == SegmentKind.speaker) {

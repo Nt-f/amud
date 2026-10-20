@@ -26,6 +26,11 @@ import '../../core/settings.dart';
   return null;
 }
 
+/// Whether today's aliyah waits for the morning: after sunset on Sunday
+/// to Wednesday nights ([civilDay] is the day that night follows). Mikra
+/// isn't read at night, except Thursday and Friday nights for Shnayim Mikra.
+bool shnayimMikraRestsTonight(HDate civilDay, {required bool afterSunset}) => afterSunset && civilDay.getDay() <= 3;
+
 /// The parshiyot read on the Shabbatot of Hebrew [year], in order, with
 /// the Shabbat each is read.
 List<(ParshaReading, HDate)> parshiyotOfYear(int year, bool il) {

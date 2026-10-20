@@ -123,6 +123,28 @@ To deploy from this machine instead:
 Installed PWAs pick up the new version the next time they're opened. The
 Docker image above still works for self-hosting.
 
+## Daf video shiurim
+
+The daf videos stream as HLS from the `amud-video` R2 bucket, served at
+`https://video.amud.page` (the bucket's custom domain, with a CORS rule for
+`https://amud.page`). The app reads `daf/{tractate}/{daf}/{hevc|avc}/index.m3u8`,
+the tractate as Sefaria names it in lower case with dashes, and lights a
+daf's video mark only when the daf is in `daf/index.json`
+(`{"bekhorot": [30], …}`); see `lib/features/gemara/daf_video.dart`. Each
+daf has a 1080p HEVC stream and a 720p H.264 one, in 10-second fMP4
+segments; the learning-music-video kit's `hls.sh` encodes them.
+
+To publish a daf (wrangler logged in to the account):
+
+    tool/publish_daf_video.sh ~/yomis/bechoros30/hls Bekhorot 30
+
+It uploads the playlists, init files and segments with their HLS content
+types and cache times (playlists 5 minutes, the rest a day), skips files
+already up at the same size, checks every file is served, and only then
+adds the daf to `index.json`. Every build uses `video.amud.page`;
+`--dart-define=DAF_VIDEO_BASE=…` points a build elsewhere, and an empty
+value turns the videos off.
+
 The texts and content updates are a separate site, text.amud.page: see
 `content-site/README.md`.
 

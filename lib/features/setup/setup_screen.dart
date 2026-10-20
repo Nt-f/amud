@@ -26,7 +26,7 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
   final _pages = PageController();
   int _page = 0;
 
-  static const _count = 7;
+  static const _count = 8;
 
   void _set(AppSettings Function(AppSettings) f) => ref.read(settingsProvider.notifier).update(f);
 
@@ -43,6 +43,15 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
     });
     final destination = GoRouterState.of(context).uri.queryParameters['returnTo'];
     context.go(destination != null && destination.startsWith('/') && !destination.startsWith('//') && !destination.startsWith('/setup') ? destination : '/');
+  }
+
+  /// Finishes from the last page. The Sefirat HaOmer reminder is on from
+  /// the start, so notifications are requested here (the system asks only
+  /// if they aren't allowed yet).
+  Future<void> _start() async {
+    final s = ref.read(settingsProvider);
+    if (s.omerReminder || s.levanaReminder || s.levanaHeadsUp) await ref.read(notificationBackendProvider).requestPermission();
+    if (mounted) _finish();
   }
 
   void _go(int page) {
@@ -85,6 +94,7 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
                     _ZmanimPage(),
                     _AppearancePage(),
                     _NotificationsPage(),
+                    _RemindersPage(),
                   ],
                 ),
               ),
@@ -94,7 +104,7 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
                   if (_page > 0) TextButton.icon(onPressed: () => _go(_page - 1), icon: const Icon(Icons.arrow_back), label: Text(context.tr('Back'))),
                   const Spacer(),
                   FilledButton.icon(
-                    onPressed: last ? _finish : () => _go(_page + 1),
+                    onPressed: last ? _start : () => _go(_page + 1),
                     icon: Icon(last ? Icons.check : Icons.arrow_forward),
                     label: Text(context.tr(last ? 'Start' : 'Next')),
                     style: FilledButton.styleFrom(minimumSize: const Size(140, 48), textStyle: theme.textTheme.titleMedium),
@@ -312,7 +322,7 @@ class _SiddurPage extends ConsumerWidget {
                     Expanded(
                       child: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
                         Text(catalogFont(f)!.label, style: theme.textTheme.bodyMedium),
-                        Text('בָּרוּךְ אַתָּה יְהֹוָה',
+                        Text('מַה־טֹּֽבוּ אֹהָלֶֽיךָ',
                             textDirection: TextDirection.rtl, style: TextStyle(fontFamily: f, fontSize: 22, height: 1.5)),
                       ]),
                     ),
@@ -478,7 +488,7 @@ class _AppearancePage extends ConsumerWidget {
           ),
           const Icon(Icons.text_increase, size: 18),
         ]),
-        Text('בָּרוּךְ אַתָּה יְהֹוָה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם',
+        Text(previewText,
             textDirection: TextDirection.rtl,
             textAlign: TextAlign.center,
             style: TextStyle(fontFamily: s.hebrewFont, fontSize: 22 * s.textScale, height: 1.6)),
@@ -535,6 +545,50 @@ class _NotificationsPageState extends ConsumerState<_NotificationsPage> {
         ),
         const SizedBox(height: 8),
         Text(context.tr('Add alerts any time from the Zmanim page: tap a zman, then “Notify me”.'), style: theme.textTheme.bodySmall),
+      ],
+    );
+  }
+}
+
+/// Reminders for the mitzvot with a window of time: Kiddush Levana, as it
+/// opens or the Thursday before, and the Omer count (on from the start).
+class _RemindersPage extends ConsumerWidget {
+  const _RemindersPage();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(settingsProvider);
+    // Turned on once notifications are allowed, as in Settings.
+    Future<void> turn(bool on, AppSettings Function(AppSettings) f) async {
+      if (on && !await ref.read(notificationBackendProvider).requestPermission()) return;
+      ref.read(settingsProvider.notifier).update(f);
+    }
+
+    return _Page(
+      icon: Icons.nights_stay_outlined,
+      title: 'Kiddush Levana & Sefirah',
+      subtitle: 'Reminders for mitzvot with a window of time.',
+      children: [
+        const _Label('Kiddush Levana'),
+        _Switch(
+          title: "When it's open",
+          subtitle: 'At nightfall while the window is open',
+          value: s.levanaReminder,
+          onChanged: (v) => turn(v, (x) => x.copyWith(levanaReminder: v)),
+        ),
+        _Switch(
+          title: 'The Thursday before it opens',
+          subtitle: 'When it will be open by Motzei Shabbat',
+          value: s.levanaHeadsUp,
+          onChanged: (v) => turn(v, (x) => x.copyWith(levanaHeadsUp: v)),
+        ),
+        const _Label('Sefirat HaOmer'),
+        _Switch(
+          title: 'Sefirat HaOmer reminder',
+          subtitle: 'At nightfall during the Omer, not on Shabbat or Yom Tov',
+          value: s.omerReminder,
+          onChanged: (v) => turn(v, (x) => x.copyWith(omerReminder: v)),
+        ),
       ],
     );
   }

@@ -24,6 +24,10 @@ enum FontCategory {
   const FontCategory(this.label);
 }
 
+/// Hebrew shown to preview a font or text size: Mah Tovu (Numbers 24:5),
+/// which writes no Name of God, as a sample shouldn't.
+const previewText = 'מַה־טֹּֽבוּ אֹהָלֶֽיךָ יַעֲקֹב מִשְׁכְּנֹתֶֽיךָ יִשְׂרָאֵל';
+
 /// A font family available to the reader.
 class FontEntry {
   final String family;
@@ -231,9 +235,10 @@ class FontRepository extends Notifier<List<FontEntry>> {
       final bytes = _storage.readBlob('font:${f.family}');
       if (bytes != null) await _register(f.family, bytes);
     }
-    // The siddur's font and the Torah tab's (stored separately).
+    // The siddur's fonts and the Torah tab's (stored separately).
     final torah = _storage.readJson('torahSettings', (j) => (j as Map)['hebrewFont'] as String?);
-    for (final chosen in {ref.read(settingsProvider).hebrewFont, ?torah}) {
+    final s = ref.read(settingsProvider);
+    for (final chosen in {s.hebrewFont, s.sefardiFont, ?torah}) {
       if (chosen.startsWith('gf_')) await ref.read(remoteFontsProvider.notifier).loadCached(chosen);
     }
   }

@@ -1,3 +1,5 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import '../../core/settings.dart';
 
 /// What a manifest book is for, which decides where the Siddur tab lists it
@@ -24,6 +26,25 @@ BookKind bookKind(String title) {
 /// reader's layout setting, which stays for the siddurim.
 bool forcesEnglish(String book) => bookKind(book) == BookKind.commentary;
 
+/// The Sefardi siddur (Edot HaMizrach; Nusach Sefard is Chassidic and
+/// isn't), set in its own font (see [AppSettings.sefardiFont]).
+bool isSefardiBook(String book) => book.contains('Edot HaMizrach');
+
 /// The settings the reader of [book] uses.
-AppSettings readerSettings(AppSettings s, String book) =>
-    forcesEnglish(book) && s.layout != TextLayout.translationOnly ? s.copyWith(layout: TextLayout.translationOnly) : s;
+AppSettings readerSettings(AppSettings s, String book) {
+  if (forcesEnglish(book) && s.layout != TextLayout.translationOnly) return s.copyWith(layout: TextLayout.translationOnly);
+  if (isSefardiBook(book) && s.sefardiFont.isNotEmpty && s.sefardiFont != s.hebrewFont) return s.copyWith(hebrewFont: s.sefardiFont);
+  return s;
+}
+
+/// The book being read, for the widgets of its reader (overridden there);
+/// null elsewhere.
+final readerBookProvider = Provider<String?>((ref) => null);
+
+/// The settings as the current reader uses them ([readerSettings] of
+/// [readerBookProvider]): the app's settings outside a reader.
+final readerSettingsProvider = Provider<AppSettings>((ref) {
+  final s = ref.watch(settingsProvider);
+  final book = ref.watch(readerBookProvider);
+  return book == null ? s : readerSettings(s, book);
+}, dependencies: [readerBookProvider]);

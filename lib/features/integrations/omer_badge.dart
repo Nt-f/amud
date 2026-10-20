@@ -15,3 +15,20 @@ class OmerCounted extends Notifier<int?> {
 final omerCountedProvider = NotifierProvider<OmerCounted, int?>(
   OmerCounted.new,
 );
+
+/// The Hebrew year whose Omer last asked to turn the reminder on, so
+/// tapping the Omer card asks once a season.
+class OmerReminderAsked extends Notifier<int?> {
+  @override
+  int? build() => ref
+      .watch(storageProvider)
+      .readJson<int?>('omerReminderAsked', (j) => j is int ? j : null);
+  void mark(int year) {
+    state = year;
+    ref.read(storageProvider).writeJson('omerReminderAsked', year);
+  }
+}
+
+final omerReminderAskedProvider = NotifierProvider<OmerReminderAsked, int?>(
+  OmerReminderAsked.new,
+);

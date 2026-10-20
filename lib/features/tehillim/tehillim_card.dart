@@ -28,9 +28,15 @@ class TehillimCard extends ConsumerWidget {
           onTap: () => context.push('/torah/tehillim'),
           child: Padding(
             padding: const EdgeInsets.all(16),
-            child: Row(children: [
-              Text('תהלים', style: TextStyle(fontFamily: hebFont, fontSize: 30, fontWeight: FontWeight.w700, color: theme.colorScheme.primary)),
-              const SizedBox(width: 16),
+            child: LayoutBuilder(builder: (context, c) => Row(children: [
+              // The wordmark only where it leaves the words beside it room;
+              // the title says the same.
+              if (c.maxWidth - 80 - 16 - 48 >= 160 * MediaQuery.textScalerOf(context).scale(1)) ...[
+                Text('תהלים',
+                    textScaler: TextScaler.noScaling,
+                    style: TextStyle(fontFamily: hebFont, fontSize: 30, fontWeight: FontWeight.w700, color: theme.colorScheme.primary)),
+                const SizedBox(width: 16),
+              ],
               Expanded(
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Text(context.tr('Tehillim'), style: theme.textTheme.titleMedium),
@@ -45,7 +51,7 @@ class TehillimCard extends ConsumerWidget {
                 icon: const Icon(Icons.menu_book),
                 onPressed: () => context.push(tehillimReadPath(today)),
               ),
-            ]),
+            ])),
           ),
         ),
       ),

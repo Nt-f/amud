@@ -117,11 +117,29 @@ class CustomZman {
 
   String get key => 'custom:$id';
 
-  String describe() => switch (kind) {
-        CustomZmanKind.degrees => 'Sun ${value.toStringAsFixed(2)}° below horizon (${rising ? 'morning' : 'evening'})',
-        CustomZmanKind.offset =>
-          '${minutes >= 0 ? '+' : '−'}${minutes.abs().toStringAsFixed(minutes % 1 == 0 ? 0 : 1)} min from ${builtInByKey[baseKey]?.en ?? baseKey}',
-        CustomZmanKind.shaahZmanit => '${value.toStringAsFixed(2)} shaos zmaniyos ($system)',
+  /// How it's calculated, in the interface language of [t].
+  String describe(AppText t) {
+    final v = value.toStringAsFixed(2);
+    final base = builtInByKey[baseKey];
+    final zman = base == null ? baseKey : (t.lang == UiLanguage.en ? t.term(base.en) : base.he);
+    final n = minutes.abs().toStringAsFixed(minutes % 1 == 0 ? 0 : 1);
+    return switch (kind) {
+      CustomZmanKind.degrees => rising
+          ? t.tr('Sun {deg}° below the horizon (morning)', {'deg': v})
+          : t.tr('Sun {deg}° below the horizon (evening)', {'deg': v}),
+      CustomZmanKind.offset => minutes < 0
+          ? t.tr('{n} min before {zman}', {'n': n, 'zman': zman})
+          : t.tr('{n} min after {zman}', {'n': n, 'zman': zman}),
+      CustomZmanKind.shaahZmanit => t.tr('{n} shaot zmaniyot ({system})', {'n': v, 'system': _systemName(system, t)}),
+    };
+  }
+
+  /// The name of a [system] for dividing the day into shaos zmaniyos.
+  static String _systemName(String system, AppText t) => switch (system) {
+        'mga' => t.tr('MGA'),
+        'baalHatanya' => t.tr('Baal HaTanya'),
+        'deg16_1' => '16.1°',
+        _ => t.tr('GRA'),
       };
 
   DateTime? compute(Zmanim z) {

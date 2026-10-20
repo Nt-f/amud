@@ -5,8 +5,8 @@ import 'package:siddur_engine/siddur_engine.dart';
 import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/fonts.dart';
+import '../../core/heading.dart';
 import '../../core/settings.dart';
-import '../../core/tap_highlight.dart';
 import '../settings/font_gallery_screen.dart';
 import '../settings/typesetting_options.dart';
 import 'book_kind.dart';
@@ -48,10 +48,10 @@ class _ReaderSettings extends ConsumerWidget {
             ),
             const Icon(Icons.text_increase, size: 18),
           ]),
-          Text('בָּרוּךְ אַתָּה יְהֹוָה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם',
+          Text(previewText,
               textDirection: TextDirection.rtl,
               textAlign: TextAlign.center,
-              style: TextStyle(fontFamily: s.hebrewFont, fontSize: 22 * s.textScale, height: 1.6)),
+              style: TextStyle(fontFamily: readerSettings(s, book).hebrewFont, fontSize: 22 * s.textScale, height: 1.6)),
           const TypesettingOptions(),
           SwitchListTile.adaptive(contentPadding: EdgeInsets.zero,
             title: Text(context.tr('Keep screen on while reading')), value: s.keepReaderAwake,
@@ -59,6 +59,10 @@ class _ReaderSettings extends ConsumerWidget {
           SwitchListTile.adaptive(contentPadding: EdgeInsets.zero,
             title: Text(context.tr('Full-screen reader')), value: s.fullscreenReader,
             onChanged: (v) => n.update((x) => x.copyWith(fullscreenReader: v))),
+          if (compassPossible)
+            SwitchListTile.adaptive(contentPadding: EdgeInsets.zero,
+              title: Text(context.tr('Compass toward Jerusalem')), value: s.readerCompass,
+              onChanged: (v) => n.update((x) => x.copyWith(readerCompass: v))),
           SheetLabel(context.tr('Prayer text')),
           if (forcesEnglish(book))
             Text(context.tr('This commentary is in English, so it always opens in English text mode.'), style: theme.textTheme.bodySmall)
@@ -128,6 +132,30 @@ class _ReaderSettings extends ConsumerWidget {
             trailing: const Icon(Icons.chevron_right),
             onTap: () => Navigator.of(context, rootNavigator: true).push(MaterialPageRoute<void>(builder: (_) => const FontGalleryScreen())),
           ),
+          // The Sefardi siddur has a font of its own, in the style of
+          // Sefardi print.
+          if (isSefardiBook(book)) ...[
+            SwitchListTile.adaptive(
+              contentPadding: EdgeInsets.zero,
+              title: Text(context.tr('Sefardi typeface')),
+              subtitle: Text(context.tr('This siddur in a font of its own, as Sefardi siddurim are printed')),
+              value: s.sefardiFont.isNotEmpty,
+              onChanged: (v) => n.update((x) => x.copyWith(sefardiFont: v ? const AppSettings().sefardiFont : '')),
+            ),
+            if (s.sefardiFont.isNotEmpty)
+              ListTile(
+                contentPadding: EdgeInsets.zero,
+                leading: const Icon(Icons.font_download_outlined),
+                title: Text(context.tr('Sefardi siddur font')),
+                subtitle: Text(fontLabel(s.sefardiFont, userFonts)),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => Navigator.of(context, rootNavigator: true).push(MaterialPageRoute<void>(
+                    builder: (_) => FontGalleryScreen(
+                          selectedFont: settingsProvider.select((x) => x.sefardiFont),
+                          chooseFont: (ref, family) => ref.read(settingsProvider.notifier).update((x) => x.copyWith(sefardiFont: family)),
+                        ))),
+              ),
+          ],
           if (catalogFont(s.hebrewFont)?.teamim == false && s.showTeamim)
             Text(
               context.tr('This font has no te\'amim; passages with trop use {font}.',
@@ -160,7 +188,6 @@ class _ReaderSettings extends ConsumerWidget {
             value: s.highlightToday,
             onChanged: (v) => n.update((x) => x.copyWith(highlightToday: v)),
           ),
-          const HighlightColorPicker(),
           SheetLabel(context.tr('Text not said today')),
           ChoiceBar<ExcludedDisplay>(
             options: [

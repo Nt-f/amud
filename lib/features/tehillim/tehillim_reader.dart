@@ -13,6 +13,7 @@ import '../../core/html_text.dart';
 import '../../core/l10n.dart';
 import '../../core/text_report.dart';
 import '../../core/page_swipe.dart';
+import '../../core/portion_progress.dart';
 import '../../core/settings.dart';
 import '../../core/split_row.dart';
 import '../../core/theme.dart';
@@ -81,6 +82,18 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
 
   final _opened = Stopwatch()..start();
 
+  /// How far through the portion, for the bar along the top: the whole
+  /// page is the portion (the day's psalms, a list, a chapter).
+  final _progress = ValueNotifier<double?>(0);
+
+  bool _scrolled(ScrollNotification n) {
+    final m = n.metrics;
+    if (n.depth == 0 && m.axis == Axis.vertical) {
+      _progress.value = m.maxScrollExtent <= 0 ? 1 : (m.pixels / m.maxScrollExtent).clamp(0.0, 1.0);
+    }
+    return false;
+  }
+
   /// What's being read, for analytics.
   Map<String, Object?> get _text => {
         'reader': 'tehillim',
@@ -92,6 +105,7 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
   @override
   void dispose() {
     analytics.event('text_read', {..._text, 'seconds': _opened.elapsed.inSeconds});
+    _progress.dispose();
     super.dispose();
   }
 
@@ -125,15 +139,18 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
           ),
         ],
       ),
-      body: PageSwipe(
-        onNext: _readerMode ? null : _turn(single, 1),
-        onPrevious: _readerMode ? null : _turn(single, -1),
-        child: data.when(
-          loading: adaptiveProgress,
-          error: (e, _) => Center(child: Text('$e')),
-          data: (t) => _body(context, t),
+      body: Stack(fit: StackFit.expand, children: [
+        PageSwipe(
+          onNext: _readerMode ? null : _turn(single, 1),
+          onPrevious: _readerMode ? null : _turn(single, -1),
+          child: data.when(
+            loading: adaptiveProgress,
+            error: (e, _) => Center(child: Text('$e')),
+            data: (t) => _body(context, t),
+          ),
         ),
-      ),
+        if (data.hasValue) Positioned(top: 0, left: 0, right: 0, child: PortionProgressBar(progress: _progress)),
+      ]),
     );
   }
 
@@ -216,10 +233,16 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
       onSelectionChanged: _selectionChanged,
       contextMenuBuilder: (context, state) => textReportMenu(context, state,
           selectedText: _selectedText, location: 'Tehillim / ${p.titleEn} / ${p.rangeLabel}'),
-      child: ListView.builder(
-        padding: EdgeInsets.fromLTRB(side, 8, side, 96),
-        itemCount: rows.length,
-        itemBuilder: (c, i) => rows[i](c),
+      child: NotificationListener<ScrollMetricsNotification>(
+        onNotification: (n) => _scrolled(n.asScrollUpdate()),
+        child: NotificationListener<ScrollUpdateNotification>(
+          onNotification: _scrolled,
+          child: ListView.builder(
+            padding: EdgeInsets.fromLTRB(side, 8, side, 96),
+            itemCount: rows.length,
+            itemBuilder: (c, i) => rows[i](c),
+          ),
+        ),
       ),
     ),
     );

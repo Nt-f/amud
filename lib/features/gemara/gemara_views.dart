@@ -6,7 +6,7 @@ import 'package:hebcal/hebcal.dart' show gematriya;
 
 import '../../core/hebrew_text.dart';
 import '../../core/l10n.dart';
-import '../../core/theme.dart';
+import '../../core/portion_progress.dart';
 import 'daf_page.dart';
 import 'gemara_data.dart';
 import 'gemara_settings.dart';
@@ -158,8 +158,9 @@ class SegmentView extends ConsumerWidget {
   final GemaraStyle style;
   final bool selected;
 
-  /// In the day's portion (Mishnah Yomi, Kitzur Yomi).
-  final bool today;
+  /// In the day's portion (Mishnah Yomi, Kitzur Yomi), and whether it
+  /// begins or ends it: marked by a bar in the margin.
+  final ({bool first, bool last})? today;
   final int? selectedWord;
   final void Function(int token) onWord;
 
@@ -179,7 +180,7 @@ class SegmentView extends ConsumerWidget {
     required this.view,
     required this.style,
     required this.selected,
-    this.today = false,
+    this.today,
     required this.selectedWord,
     required this.onWord,
     required this.onSelect,
@@ -237,19 +238,22 @@ class SegmentView extends ConsumerWidget {
         ? highlightColors[highlight % highlightColors.length]
         : selected
             ? st.accent.withValues(alpha: 0.08)
-            : today
-                ? SiddurColors.of(context).todayFill
-                : null;
+            : null;
+    Widget marked(Widget passage, double gap) => switch (today) {
+          final t? => PortionMark(first: t.first, last: t.last, gap: gap, child: passage),
+          null => passage,
+        };
 
     // Phrase by phrase and word by word read as one continuous text: no
     // boxes, the passage number in the flow, the marks at its end.
     if (ws != null && (view == GemaraView.phrase || view == GemaraView.interlinear)) {
-      return InkWell(
+      final gap = view == GemaraView.interlinear ? 14.0 : 8.0;
+      return marked(InkWell(
         onTap: onSelect,
         onLongPress: onHold,
         borderRadius: BorderRadius.circular(6),
         child: Container(
-          margin: EdgeInsets.only(bottom: view == GemaraView.interlinear ? 14 : 8),
+          margin: EdgeInsets.only(bottom: gap),
           padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
           decoration: BoxDecoration(color: fill, borderRadius: BorderRadius.circular(6)),
           child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
@@ -262,7 +266,7 @@ class SegmentView extends ConsumerWidget {
             details,
           ]),
         ),
-      );
+      ), gap);
     }
 
     final body = switch (view) {
@@ -279,7 +283,7 @@ class SegmentView extends ConsumerWidget {
     };
     final needsWords = (view == GemaraView.phrase || view == GemaraView.interlinear) && tokens.isNotEmpty;
 
-    return InkWell(
+    return marked(InkWell(
       onTap: onSelect,
       onLongPress: onHold,
       borderRadius: BorderRadius.circular(10),
@@ -309,7 +313,7 @@ class SegmentView extends ConsumerWidget {
           details,
         ]),
       ),
-    );
+    ), 10);
   }
 }
 

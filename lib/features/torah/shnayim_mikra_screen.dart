@@ -1,16 +1,20 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hebcal/hebcal.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/adaptive.dart';
+import '../../core/analytics.dart';
 import '../../core/fireworks.dart';
 import '../../core/focus_mode.dart';
 import '../../core/fonts.dart';
 import '../../core/format.dart';
 import '../../core/hebrew_text.dart';
 import '../../core/l10n.dart';
+import '../../core/reader_mode.dart';
 import '../../core/settings.dart';
 import '../../core/tap_highlight.dart';
 import '../../core/typeset/typeset.dart';
@@ -80,6 +84,14 @@ class ShnayimMikraScreen extends ConsumerStatefulWidget {
 class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with FocusModeReader {
   int? _aliyah;
 
+  /// Reader mode: taps step pasuk by pasuk (see [ReaderModeLayer]).
+  bool _readerMode = false;
+
+  void _setReader(bool on) {
+    setState(() => _readerMode = on);
+    analytics.event('reader_mode', {'reader': 'shnayim_mikra', 'on': on});
+  }
+
   @override
   Widget build(BuildContext context) {
     final week = _thisWeek(ref);
@@ -100,18 +112,26 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
 
     final bar = AppBar(
       title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(context.tr('Shnayim Mikra')),
+        Text(context.tr('Shnayim Mikra'), overflow: TextOverflow.ellipsis),
         Text(renderParshaName(reading.parsha, context.hebcalLocale), style: theme.textTheme.bodySmall),
       ]),
-      actions: [
-        _ModeMenu(),
-        IconButton(
+      // On a narrow phone Your year, then Reader mode, wait in a menu.
+      actions: fitBarActions(context, context.tr('Shnayim Mikra'), spare: const [2, 0], [
+        BarTool(
+          tooltip: context.tr('Reader mode'),
+          isSelected: _readerMode,
+          icon: const Icon(Icons.chrome_reader_mode_outlined),
+          selectedIcon: const Icon(Icons.chrome_reader_mode),
+          onPressed: () => _setReader(!_readerMode),
+        ),
+        BarTool.custom(_ModeMenu()),
+        BarTool(
           tooltip: context.tr('Your year'),
           icon: const Icon(Icons.grid_view),
           onPressed: () => context.push('/torah/shnayim-mikra/progress?year=$year'),
         ),
-        IconButton(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => _showSettings(context)),
-      ],
+        BarTool(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => _showSettings(context)),
+      ]),
     );
 
     final body = switch (text) {
@@ -120,6 +140,8 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
           text: value,
           book: reading.book,
           range: reading.aliyot[aliyah - 1],
+          readerMode: _readerMode,
+          onReader: _setReader,
           footer: Column(children: [
             const SizedBox(height: 8),
             FilledButton.tonalIcon(
@@ -203,7 +225,8 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
             ]),
           ),
         ),
-        Expanded(child: FocusModeBody(child: DoubleTapListener(onDoubleTap: toggleFocusMode, child: body))),
+        // In reader mode a double tap steps back instead.
+        Expanded(child: FocusModeBody(child: DoubleTapListener(onDoubleTap: _readerMode ? () {} : toggleFocusMode, child: body))),
       ]),
     );
   }
@@ -249,18 +272,172 @@ List<InlineSpan> mikraSpans(String text, TextStyle ketiv) {
 }
 
 /// One aliyah, read by [MikraMode], in the siddur's layout and type
-/// settings and set as the siddur sets its text.
-class _Aliyah extends ConsumerWidget {
+/// settings and set as the siddur sets its text. Tapping a verse marks it,
+/// one verse at a time; in reader mode taps step the mark pasuk by pasuk.
+class _Aliyah extends ConsumerStatefulWidget {
   final MikraText text;
 
   /// The book of the Torah, 1 = Bereshit, for Rashi.
   final int book;
   final (Verse, Verse) range;
   final Widget footer;
-  const _Aliyah({super.key, required this.text, required this.book, required this.range, required this.footer});
+  final bool readerMode;
+
+  /// Turns reader mode on (holding a verse) or off.
+  final ValueChanged<bool> onReader;
+  const _Aliyah({
+    super.key,
+    required this.text,
+    required this.book,
+    required this.range,
+    required this.footer,
+    required this.readerMode,
+    required this.onReader,
+  });
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<_Aliyah> createState() => _AliyahState();
+}
+
+class _AliyahState extends ConsumerState<_Aliyah> {
+  /// The verse the reader tapped to mark, or reader mode is on.
+  Verse? _marked;
+  final _taps = <TapGestureRecognizer>[];
+
+  /// The recognizers of each verse's spans in running text, to find where
+  /// a verse is within its paragraph.
+  final _spansOf = <Verse, Set<GestureRecognizer>>{};
+  final _scroll = ScrollController();
+  final _unitKeys = <GlobalKey>[];
+  final _footerKey = GlobalKey();
+
+  /// This aliyah's verses and the units they're read in, as last built.
+  List<Verse> _verses = const [];
+  List<List<Verse>> _units = const [];
+
+  void _release() {
+    for (final t in _taps) {
+      t.dispose();
+    }
+    _taps.clear();
+    _spansOf.clear();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.readerMode) WidgetsBinding.instance.addPostFrameCallback((_) => _startReader(null));
+  }
+
+  @override
+  void didUpdateWidget(_Aliyah old) {
+    super.didUpdateWidget(old);
+    if (widget.readerMode && !old.readerMode) WidgetsBinding.instance.addPostFrameCallback((_) => _startReader(_marked));
+  }
+
+  void _startReader(Verse? from) {
+    if (!mounted || _verses.isEmpty) return;
+    final at = from != null && _verses.contains(from) ? from : _verses.first;
+    setState(() => _marked = at);
+    _reveal(at);
+  }
+
+  /// Moves reader mode's mark by [delta] verses; past the last, shows the
+  /// aliyah's end (its "done" button).
+  void _step(int delta) {
+    if (_verses.isEmpty) return;
+    final i = _marked == null ? -1 : _verses.indexOf(_marked!);
+    final target = i + delta;
+    if (target >= _verses.length) {
+      final end = _footerKey.currentContext;
+      if (end != null) Scrollable.ensureVisible(end, alignment: 0.5, duration: const Duration(milliseconds: 160));
+      return;
+    }
+    final v = _verses[target.clamp(0, _verses.length - 1)];
+    setState(() => _marked = v);
+    _reveal(v, animate: delta > 0);
+  }
+
+  /// Scrolls [v] near the top: its unit, then, in running text, the line
+  /// where the verse starts.
+  void _reveal(Verse v, {bool animate = true, int tries = 0}) {
+    final unit = _units.indexWhere((u) => u.contains(v));
+    if (unit < 0 || unit >= _unitKeys.length) return;
+    final duration = animate ? const Duration(milliseconds: 160) : Duration.zero;
+    final ctx = _unitKeys[unit].currentContext;
+    if (ctx == null) {
+      // Not built yet (the list builds lazily): move toward it and look again.
+      if (tries > 40 || !_scroll.hasClients) return;
+      final built = [for (final (i, k) in _unitKeys.indexed) if (k.currentContext != null) i];
+      final down = built.isEmpty || unit > built.last;
+      final p = _scroll.position;
+      _scroll.jumpTo((p.pixels + (down ? 1 : -1) * p.viewportDimension).clamp(p.minScrollExtent, p.maxScrollExtent));
+      WidgetsBinding.instance.addPostFrameCallback((_) => _reveal(v, animate: animate, tries: tries + 1));
+      return;
+    }
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      final spans = _spansOf[v];
+      final at = spans == null ? null : _firstLineOf(ctx.findRenderObject(), spans);
+      if (at == null) {
+        Scrollable.ensureVisible(ctx, alignment: 0.12, duration: duration);
+        return;
+      }
+      final viewport = RenderAbstractViewport.maybeOf(at.$1);
+      if (viewport == null || !_scroll.hasClients) return;
+      final p = _scroll.position;
+      final to = viewport.getOffsetToReveal(at.$1, 0.12, rect: at.$2).offset.clamp(p.minScrollExtent, p.maxScrollExtent);
+      duration == Duration.zero ? _scroll.jumpTo(to) : _scroll.animateTo(to, duration: duration, curve: Curves.easeOut);
+    });
+  }
+
+  /// The first paragraph under [root] holding a span of [spans], and the
+  /// box of that span's first character.
+  static (RenderParagraph, Rect)? _firstLineOf(RenderObject? root, Set<GestureRecognizer> spans) {
+    (RenderParagraph, Rect)? found;
+    void visit(RenderObject o) {
+      if (found != null) return;
+      if (o is RenderParagraph) {
+        var offset = 0;
+        int? start;
+        o.text.visitChildren((span) {
+          if (span is TextSpan) {
+            if (spans.contains(span.recognizer) && (span.text ?? '').isNotEmpty) {
+              start = offset;
+              return false;
+            }
+            offset += span.text?.length ?? 0;
+          } else if (span is PlaceholderSpan) {
+            offset += 1;
+          }
+          return true;
+        });
+        if (start != null) {
+          final boxes = o.getBoxesForSelection(TextSelection(baseOffset: start!, extentOffset: start! + 1));
+          if (boxes.isNotEmpty) found = (o, boxes.first.toRect());
+          return;
+        }
+      }
+      o.visitChildren(visit);
+    }
+
+    if (root != null) visit(root);
+    return found;
+  }
+
+  @override
+  void dispose() {
+    _release();
+    _scroll.dispose();
+    super.dispose();
+  }
+
+  void _toggle(Verse v) => setState(() => _marked = _marked == v ? null : v);
+
+  @override
+  Widget build(BuildContext context) {
+    _release();
+    final (text, book, range, footer) = (widget.text, widget.book, widget.range, widget.footer);
     final s = ref.watch(mikraStyleProvider);
     final sm = ref.watch(shnayimMikraSettingsProvider);
     final rashi = sm.needsRashi ? ref.watch(rashiBookProvider(book)) : null;
@@ -298,6 +475,27 @@ class _Aliyah extends ConsumerWidget {
     final mark = TextStyle(color: theme.colorScheme.primary, fontWeight: FontWeight.w700, fontSize: 14 * s.textScale);
     final ketiv = TextStyle(color: theme.colorScheme.outline, fontSize: 15 * s.textScale);
     final single = sm.mode == MikraMode.verse || mikraUnits(verses, sm.mode).every((u) => u.length == 1);
+    final fill = tapHighlightFill(context, ref.watch(settingsProvider));
+
+    // Within running text, a verse's own spans take the tap and the mark.
+    List<InlineSpan> tappable(Verse at, List<InlineSpan> spans) {
+      if (single) return spans;
+      final tap = TapGestureRecognizer()..onTap = () => _toggle(at);
+      _taps.add(tap);
+      (_spansOf[at] ??= {}).add(tap);
+      final on = _marked == at;
+      return [
+        for (final x in spans)
+          if (x is TextSpan && x.children == null)
+            TextSpan(
+                text: x.text,
+                style: on ? (x.style ?? const TextStyle()).copyWith(backgroundColor: fill) : x.style,
+                recognizer: tap,
+                locale: x.locale)
+          else
+            x,
+      ];
+    }
 
     Widget paragraph(List<InlineSpan> spans, TextStyle style, TextDirection dir) => ts.print
         ? TypesetParagraph(text: TextSpan(style: style, children: spans), textDirection: dir, em: style.fontSize!, align: ts.align(ParagraphRole.body))
@@ -322,8 +520,10 @@ class _Aliyah extends ConsumerWidget {
         final t = of(v);
         if (t.isEmpty) continue;
         spans
-          ..add(TextSpan(text: number(v.at, i == 0, hebrew: hebrew), style: mark))
-          ..addAll(kriKtiv ? mikraSpans(t, ketiv) : [TextSpan(text: t)])
+          ..addAll(tappable(v.at, [
+            TextSpan(text: number(v.at, i == 0, hebrew: hebrew), style: mark),
+            ...kriKtiv ? mikraSpans(t, ketiv) : [TextSpan(text: t)],
+          ]))
           ..add(const TextSpan(text: ' '));
         if (v.para.isNotEmpty && i < unit.length - 1) {
           paragraphs.add(spans);
@@ -341,13 +541,15 @@ class _Aliyah extends ConsumerWidget {
         for (final (i, r) in (list ?? const <RashiComment>[]).indexed) {
           rows.add(paragraph([
             if (rows.isEmpty && labelled) TextSpan(text: hebrew ? 'רש״י ' : 'Rashi ', style: mark),
-            // Which verse, where there are several.
-            if (i == 0 && unit.length > 1) TextSpan(text: number(v.at, true, hebrew: hebrew), style: mark),
-            if (r.dh.isNotEmpty)
-              TextSpan(
-                  text: '${hebrew ? hebrewMarks(r.dh, teamim: false, nikud: sm.rashiNikud) : r.dh} ',
-                  style: const TextStyle(fontWeight: FontWeight.w700)),
-            TextSpan(text: hebrew ? hebrewMarks(r.text, teamim: false, nikud: sm.rashiNikud) : r.text),
+            ...tappable(v.at, [
+              // Which verse, where there are several.
+              if (i == 0 && unit.length > 1) TextSpan(text: number(v.at, true, hebrew: hebrew), style: mark),
+              if (r.dh.isNotEmpty)
+                TextSpan(
+                    text: '${hebrew ? hebrewMarks(r.dh, teamim: false, nikud: sm.rashiNikud) : r.dh} ',
+                    style: const TextStyle(fontWeight: FontWeight.w700)),
+              TextSpan(text: hebrew ? hebrewMarks(r.text, teamim: false, nikud: sm.rashiNikud) : r.text),
+            ]),
           ], hebrew ? rashiStyle : rashiEnStyle, hebrew ? TextDirection.rtl : TextDirection.ltr));
         }
       }
@@ -398,6 +600,11 @@ class _Aliyah extends ConsumerWidget {
     }
 
     final units = mikraUnits(verses, sm.mode);
+    _verses = [for (final v in verses) v.at];
+    _units = [for (final u in units) [for (final v in u) v.at]];
+    while (_unitKeys.length < units.length) {
+      _unitKeys.add(GlobalKey());
+    }
     // While Rashi downloads, or if he couldn't, the verses show without him.
     final rashiNote = switch (rashi) {
       AsyncLoading() => ListTile(
@@ -417,22 +624,46 @@ class _Aliyah extends ConsumerWidget {
     return Column(children: [
       ?rashiNote,
       Expanded(
-        child: ListView.builder(
+        child: ReaderModeLayer(
+          active: widget.readerMode,
+          onNext: () => _step(1),
+          onBackTwo: () => _step(-2),
+          onExit: () => widget.onReader(false),
+          child: ListView.builder(
+          controller: _scroll,
           padding: EdgeInsets.fromLTRB(gutter, 8, gutter, 32 + MediaQuery.paddingOf(context).bottom),
           itemCount: units.length + 1,
           itemBuilder: (context, i) => i == units.length
-              ? footer
+              ? KeyedSubtree(key: _footerKey, child: footer)
               : Padding(
+                  key: _unitKeys[i],
                   padding: EdgeInsets.only(bottom: single ? 14 : 0),
                   child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
                     // The Torah's paragraphs are set apart with an ornament.
                     if (!single && i > 0) SectionOrnament(small: true, height: ts.sectionGap),
-                    TapHighlight(
-                        id: 'mikra:${book.hashCode}:${units[i].first.at.chapter}:${units[i].first.at.verse}',
-                        child: unitView(units[i])),
+                    // A verse at a time is marked whole; running text
+                    // marks the tapped verse within it.
+                    if (single)
+                      GestureDetector(
+                        behavior: HitTestBehavior.translucent,
+                        onTap: () => _toggle(units[i].first.at),
+                        // Holding a verse starts reader mode from it.
+                        onLongPress: () {
+                          setState(() => _marked = units[i].first.at);
+                          widget.onReader(true);
+                        },
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                              color: _marked == units[i].first.at ? fill : null, borderRadius: BorderRadius.circular(10)),
+                          child: unitView(units[i]),
+                        ),
+                      )
+                    else
+                      unitView(units[i]),
                     if (!single) SizedBox(height: ts.line * 0.4),
                   ]),
                 ),
+          ),
         ),
       ),
     ]);
@@ -849,6 +1080,7 @@ class _ParshaRow extends StatelessWidget {
 
 /// Today's Shnayim Mikra in the Home screen's date card: the aliyah, the
 /// week so far, and a button to check today's off. Tap to read.
+/// Dimmed on the nights it isn't read (see shnayimMikraRestsTonight).
 class ShnayimMikraLine extends ConsumerWidget {
   const ShnayimMikraLine({super.key});
 
@@ -856,47 +1088,51 @@ class ShnayimMikraLine extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final week = _thisWeek(ref);
     if (week == null) return const SizedBox.shrink();
+    final t = ref.watch(todaySnapshotProvider);
     final theme = Theme.of(context);
     final c = theme.colorScheme;
     final name = week.reading.parsha.join('-');
     final year = week.shabbat.getFullYear();
     final done = ref.watch(shnayimMikraProgressProvider)[year] ?? const {};
     bool isDone(int a) => done.contains(ShnayimMikraProgress.entry(name, a));
-    return InkWell(
-      onTap: () => context.push('/torah/shnayim-mikra'),
-      borderRadius: BorderRadius.circular(8),
-      child: Row(children: [
-        Expanded(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text('${context.tr('Shnayim Mikra')} · ${context.tr('Aliyah {n}', {'n': week.aliyah})}', style: theme.textTheme.bodyMedium),
-            const SizedBox(height: 4),
-            // The week: a dot per aliyah, filled when done.
-            Row(children: [
-              for (var a = 1; a <= 7; a++)
-                Container(
-                  width: 9,
-                  height: 9,
-                  margin: const EdgeInsetsDirectional.only(end: 4),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: isDone(a) ? c.primary : c.surfaceContainerHighest,
-                    border: Border.all(color: a <= week.aliyah ? c.primary.withValues(alpha: 0.5) : c.outlineVariant),
+    return Opacity(
+      opacity: shnayimMikraRestsTonight(t.hdate, afterSunset: t.afterSunset) ? 0.4 : 1,
+      child: InkWell(
+        onTap: () => context.push('/torah/shnayim-mikra'),
+        borderRadius: BorderRadius.circular(8),
+        child: Row(children: [
+          Expanded(
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text('${context.tr('Shnayim Mikra')} · ${context.tr('Aliyah {n}', {'n': week.aliyah})}', style: theme.textTheme.bodyMedium),
+              const SizedBox(height: 4),
+              // The week: a dot per aliyah, filled when done.
+              Row(children: [
+                for (var a = 1; a <= 7; a++)
+                  Container(
+                    width: 9,
+                    height: 9,
+                    margin: const EdgeInsetsDirectional.only(end: 4),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: isDone(a) ? c.primary : c.surfaceContainerHighest,
+                      border: Border.all(color: a <= week.aliyah ? c.primary.withValues(alpha: 0.5) : c.outlineVariant),
+                    ),
                   ),
-                ),
+              ]),
             ]),
-          ]),
-        ),
-        IconButton(
-          tooltip: context.tr(isDone(week.aliyah) ? 'Aliyah {n} done' : 'Mark aliyah {n} done', {'n': week.aliyah}),
-          icon: Icon(isDone(week.aliyah) ? Icons.check_circle : Icons.check_circle_outline, color: c.primary),
-          onPressed: () {
-            final p = ref.read(shnayimMikraProgressProvider.notifier);
-            final wasDone = p.done(year, name, week.aliyah);
-            p.toggle(year, name, week.aliyah);
-            if (!wasDone) showFireworks(context);
-          },
-        ),
-      ]),
+          ),
+          IconButton(
+            tooltip: context.tr(isDone(week.aliyah) ? 'Aliyah {n} done' : 'Mark aliyah {n} done', {'n': week.aliyah}),
+            icon: Icon(isDone(week.aliyah) ? Icons.check_circle : Icons.check_circle_outline, color: c.primary),
+            onPressed: () {
+              final p = ref.read(shnayimMikraProgressProvider.notifier);
+              final wasDone = p.done(year, name, week.aliyah);
+              p.toggle(year, name, week.aliyah);
+              if (!wasDone) showFireworks(context);
+            },
+          ),
+        ]),
+      ),
     );
   }
 }

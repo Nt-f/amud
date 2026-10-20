@@ -59,28 +59,22 @@ class DafPage extends StatefulWidget {
   State<DafPage> createState() => _DafPageState();
 }
 
-/// The words of an amud for the layout: the Gemara (Vilna text) and
-/// Rashi/Tosafot with their opening words in bold.
+/// The words of an amud for the layout: the Gemara (Vilna text) and the
+/// margins' commentaries (see [DafText.margin]) with their opening words in
+/// bold.
 ({List<DafWord> main, List<DafWord> inner, List<DafWord> outer}) dafWords(DafText t) {
   final main = <DafWord>[];
   for (var i = 0; i < t.length; i++) {
     main.addAll(wordsOfHtml(t.vilnaAt(i), segment: i));
   }
-  List<DafWord> side(List<Comment> Function(int) at) {
-    final out = <DafWord>[];
-    var n = 0;
-    for (var i = 0; i < t.length; i++) {
-      for (final c in at(i)) {
-        final (head, rest) = c.split;
-        if (head.isNotEmpty) out.addAll(wordsOfHtml(head, segment: i, comment: n, bold: true));
-        out.addAll(wordsOfHtml(rest, segment: i, comment: n));
-        n++;
-      }
-    }
-    return out;
-  }
+  List<DafWord> side({required bool inner}) => [
+        for (final (n, c) in t.margin(inner: inner).indexed) ...[
+          if (c.comment.split.$1.isNotEmpty) ...wordsOfHtml(c.comment.split.$1, segment: c.segment, comment: n, bold: true),
+          ...wordsOfHtml(c.comment.split.$2, segment: c.segment, comment: n),
+        ],
+      ];
 
-  return (main: main, inner: side(t.rashiAt), outer: side(t.tosafotAt));
+  return (main: main, inner: side(inner: true), outer: side(inner: false));
 }
 
 class _DafPageState extends State<DafPage> {

@@ -11,8 +11,18 @@ String formatTime(DateTime? t, Location loc, {bool? hour12, bool seconds = false
   final ss = seconds ? ':${l.second.toString().padLeft(2, '0')}' : '';
   if (!h12) return '${l.hour.toString().padLeft(2, '0')}:$mm$ss';
   final h = l.hour % 12 == 0 ? 12 : l.hour % 12;
-  return '$h:$mm$ss ${l.hour < 12 ? 'AM' : 'PM'}';
+  // A no-break space: on a narrow phone "AM" never wraps onto a line of
+  // its own.
+  final time = '$h:$mm$ss\u00A0${l.hour < 12 ? 'AM' : 'PM'}';
+  // In right-to-left text the bidi algorithm puts "PM" before the number
+  // ("PM 9:44"); a left-to-right isolate keeps it "9:44 PM", and to the
+  // text around it the time is one unit, so a range still reads right to left.
+  return dateLocale == 'en' ? time : '\u2066$time\u2069';
 }
+
+/// [s] with no-break spaces, so it wraps onto the next line whole: a Hebrew
+/// date after an English one is never split between the day and the month.
+String keepTogether(String s) => s.replaceAll(' ', '\u00A0');
 
 /// Language of formatted dates and countdowns: 'en', or 'he' for the
 /// Hebrew and Yiddish interfaces. Set from the interface language.

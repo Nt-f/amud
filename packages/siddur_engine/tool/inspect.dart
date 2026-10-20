@@ -1,5 +1,7 @@
-// Debug CLI: prints how a section resolves on a given Hebrew date.
-//   dart run tool/inspect.dart "Siddur Ashkenaz" "Weekday/Shacharit/Amidah" 5786 7 30
+// Debug CLI: prints how a section resolves on a given Hebrew date, in
+// Amud's own text where the book has a corpus (assets/corpus), as the app
+// shows it.
+//   dart run tool/inspect.dart "Siddur Ashkenaz" "Weekday/Shacharit/Amidah" 5786 7 30 [il]
 import 'dart:convert';
 import 'dart:io';
 
@@ -18,15 +20,33 @@ Future<void> main(List<String> args) async {
   final lib = SiddurLibrary(_FileSource('../..'), gzip.decode);
   final m = await lib.manifest();
   final book = m.book(args[0])!;
-  final root = await lib.index(book);
+  const slugs = {
+    'Siddur Ashkenaz': 'ashkenaz',
+    'Weekday Siddur Chabad': 'chabad',
+    'Siddur Sefard': 'sefard',
+    'Siddur Edot HaMizrach': 'edot_hamizrach',
+    'The Koren Shalem Siddur; Ashkenaz': 'koren',
+  };
+  final file = File('../../assets/corpus/${slugs[book.title]}.json.gz');
+  final corpus = slugs[book.title] == null || !file.existsSync()
+      ? null
+      : Corpus.fromJson(jsonDecode(utf8.decode(gzip.decode(file.readAsBytesSync()))) as Map<String, Object?>);
+  final root = corpus?.index ?? await lib.index(book);
   final node = root.find(args[1])!;
   final hd = HDate(int.parse(args[4]), int.parse(args[3]), int.parse(args[2]));
   final il = args.length > 5 && args[5] == 'il';
-  final heVersions = [for (final v in book.byLanguage('he')) await lib.version(v)];
-  final enVersions = [for (final v in book.byLanguage('en').where((v) => v.languageTag == null)) await lib.version(v)];
+  final heVersions = [
+    if (corpus != null) CorpusTextVersion(corpus, corpus.versionInfo('he')!),
+    for (final v in book.byLanguage('he')) await lib.version(v),
+  ];
+  final enVersions = [
+    if (corpus != null) CorpusTextVersion(corpus, corpus.versionInfo('en')!),
+    for (final v in book.byLanguage('en').where((v) => v.languageTag == null)) await lib.version(v),
+  ];
   final sel = VersionSelection(heVersions, enVersions);
   final rulesJson = jsonDecode(File('../../assets/rules/rules.json').readAsStringSync()) as Map<String, dynamic>;
-  final res = SiddurResolver().withOverrides((rulesJson[book.title] as Map<String, dynamic>?) ?? const {});
+  var res = SiddurResolver().withOverrides((rulesJson[book.title] as Map<String, dynamic>?) ?? const {});
+  if (corpus != null) res = res.withCorpus(corpus);
   final ctxs = <Service, DayContext>{};
   final items = res.resolve(node, sel,
       (s) => ctxs.putIfAbsent(s, () => DayContext.forService(hd, s, il: il)),
@@ -53,7 +73,7 @@ Future<void> main(List<String> args) async {
         final tag = s.applicability == Applicability.always ? '' : '{${s.applicability.name}: ${s.labelEn}} ';
         final runs = (s.he ?? s.tr)!.runs.where((r) => r.applicability != Applicability.always);
         final inline = runs.isEmpty ? '' : ' <<${runs.map((r) => '${r.applicability.name}:${r.labelEn}').join(', ')}>>';
-        print('    ${s.chazarah ? '[chazarah] ' : ''}${s.kind.name.substring(0, 3)} $tag${short((s.he ?? s.tr)!.segment.html)}$inline');
+        print('    ${s.chazarah ? '[chazarah] ' : ''}${s.graphNode != null ? '<${s.graphNode}> ' : ''}${s.kind.name.substring(0, 3)} $tag${short((s.he ?? s.tr)!.segment.html)}$inline');
     }
   }
 }

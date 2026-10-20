@@ -165,6 +165,17 @@ class DafText {
   List<Comment> rashiAt(int i) => commentary('rashi')?.at(i) ?? const [];
   List<Comment> tosafotAt(int i) => commentary('tosafot')?.at(i) ?? const [];
 
+  /// The comments printed in the inner margin (Rashi, and the Rashbam where
+  /// he takes Rashi's place) or the outer one (Tosafot), in page order: per
+  /// passage, each of that margin's commentaries in turn. A comment's place
+  /// in this list is its number on the page.
+  List<({String id, int segment, int index, Comment comment})> margin({required bool inner}) => [
+        for (var i = 0; i < length; i++)
+          for (final c in commentaries)
+            if (c.info.inner == inner)
+              for (final (k, comment) in c.at(i).indexed) (id: c.id, segment: i, index: k, comment: comment),
+      ];
+
   Map<String, Object?> toJson() => {
         'tractate': tractate,
         'amud': amud,
@@ -197,6 +208,8 @@ typedef CommentaryInfo = ({String en, String mark, bool inner});
 
 CommentaryInfo commentaryInfo(String id) => switch (id) {
       'rashi' => (en: 'Rashi', mark: 'רש״י', inner: true),
+      'rashbam' => (en: 'Rashbam', mark: 'רשב״ם', inner: true),
+      'mefaresh' => (en: 'Mefaresh', mark: 'מפרש', inner: true),
       'tosafot' => (en: 'Tosafot', mark: 'תוס׳', inner: false),
       'bartenura' => (en: 'Bartenura', mark: 'ברטנורא', inner: true),
       _ => (en: id, mark: id, inner: true),
@@ -276,9 +289,17 @@ Uri mainUri(StudyKind kind, String ref) => Uri.parse('$_api/${Uri.encodeComponen
 Uri commentaryUri(String commentator, String ref) =>
     Uri.parse('$_api/${Uri.encodeComponent('${commentator}_on_${_slug(ref)}')}?version=hebrew&version=english|all');
 
-/// Commentaries of a kind, by id and Sefaria name.
-List<(String, String)> commentatorsOf(StudyKind kind) => switch (kind) {
-      StudyKind.bavli => const [('rashi', 'Rashi'), ('tosafot', 'Tosafot')],
+/// Commentaries of a kind, by id and Sefaria name. On the page's inner
+/// margin Bava Batra has the Rashbam from 29a, where Rashi's ends, and
+/// Tamid the Mefaresh; Sefaria has no text for a ref where a commentary
+/// isn't printed, so it is left out there.
+List<(String, String)> commentatorsOf(StudyKind kind, [String? book]) => switch (kind) {
+      StudyKind.bavli => [
+          ('rashi', 'Rashi'),
+          if (book == 'Bava Batra') ('rashbam', 'Rashbam'),
+          if (book == 'Tamid') ('mefaresh', 'Mefaresh'),
+          ('tosafot', 'Tosafot'),
+        ],
       StudyKind.mishnah => const [('bartenura', 'Bartenura')],
       StudyKind.kitzur => const [],
     };
@@ -393,11 +414,13 @@ List<(String, List<int>)> splitBook(({StudyKind kind, String book, String main, 
 }
 
 /// Saved units. The version moves when what is saved changes (v2: no
-/// crowd-sourced commentary English; v3: any study text), so old copies are
-/// fetched again.
+/// crowd-sourced commentary English; v3: any study text; v4, only for the
+/// books it changed: the Rashbam and the Mefaresh on the page), so old
+/// copies are fetched again.
 const _blobPrefix = 'study3';
+const _blobPrefixes = {'Bava Batra': 'study4', 'Tamid': 'study4'};
 
-String dafBlobKey(String book, String unit) => '$_blobPrefix:$book:$unit';
+String dafBlobKey(String book, String unit) => '${_blobPrefixes[book] ?? _blobPrefix}:$book:$unit';
 String _blobKey(String book, String unit) => dafBlobKey(book, unit);
 
 List<int> _pack(DafText d) => GZipEncoder().encodeBytes(utf8.encode(jsonEncode(d.toJson())));
@@ -415,7 +438,7 @@ Future<String?> _get(http.Client client, Uri u) async {
 /// One unit from Sefaria, or null when Sefaria has no text for it.
 Future<DafText?> fetchUnit(http.Client client, StudyKind kind, String book, String unit) async {
   final ref = '$book.$unit';
-  final comms = commentatorsOf(kind);
+  final comms = commentatorsOf(kind, book);
   final results = await Future.wait([_get(client, mainUri(kind, ref)), for (final (_, name) in comms) _get(client, commentaryUri(name, ref))]);
   final main = results[0];
   if (main == null) return null;
@@ -428,14 +451,6 @@ Future<DafText?> fetchUnit(http.Client client, StudyKind kind, String book, Stri
   ));
   return d.length == 0 ? null : d;
 }
-
-/// Where a daf's video shiur will stream from: an HLS playlist per daf on
-/// Cloudflare R2 ("{base}/{tractate}/{daf}/index.m3u8"). Null until the
-/// streams exist; the daf tiles show a disabled video mark meanwhile.
-const String? dafVideoBase = null;
-
-Uri? dafVideoUri(String tractate, int daf) =>
-    dafVideoBase == null ? null : Uri.parse('$dafVideoBase/${Uri.encodeComponent(tractate.toLowerCase().replaceAll(' ', '-'))}/$daf/index.m3u8');
 
 /// A reference to one unit of a book, used as a provider key.
 typedef DafRef = ({String tractate, String amud});
@@ -545,7 +560,7 @@ class BookDownload extends FamilyNotifier<(int, int)?, String> {
     try {
       for (var n = 0; n < books.length && !_cancel; n++) {
         final b = books[n];
-        final comms = commentatorsOf(b.kind);
+        final comms = commentatorsOf(b.kind, b.id);
         final results = await Future.wait([
           _get(client, mainUri(b.kind, b.id)),
           for (final (_, name) in comms) _get(client, commentaryUri(name, b.id)),

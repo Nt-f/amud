@@ -5,11 +5,12 @@ import '../../core/l10n.dart';
 import '../../core/fonts.dart';
 import '../../core/settings.dart';
 
+// No sample writes a Name of God (see previewText).
 const _samples = [
-  ('Blessing', 'בָּרוּךְ אַתָּה יְהֹוָה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם'),
-  ('Te\'amim', 'שְׁמַ֖ע יִשְׂרָאֵ֑ל יְהֹוָ֥ה אֱלֹהֵ֖ינוּ יְהֹוָ֥ה ׀ אֶחָֽד׃'),
+  ('Pointed', previewText),
+  ('Te\'amim', 'מַה־טֹּ֥בוּ אֹהָלֶ֖יךָ יַעֲקֹ֑ב מִשְׁכְּנֹתֶ֖יךָ יִשְׂרָאֵֽל׃'),
   ('Alef-bet', 'אבגדהוזחטיכךלמםנןסעפףצץקרשת'),
-  ('Unpointed', 'ברוך אתה ה׳ אלהינו מלך העולם'),
+  ('Unpointed', 'מה טובו אהליך יעקב משכנותיך ישראל'),
 ];
 
 /// Browse, preview and choose among every open-licensed Hebrew font the

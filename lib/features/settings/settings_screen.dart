@@ -8,6 +8,7 @@ import 'package:go_router/go_router.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../core/heading.dart';
 import '../../core/l10n.dart';
 import '../../core/adaptive.dart';
 import '../../core/search.dart';
@@ -345,6 +346,9 @@ class SettingsScreen extends ConsumerWidget {
             onChanged: (v) => set((x) => x.copyWith(keepReaderAwake: v))),
           AdaptiveSwitchTile(title: context.tr('Full-screen reader'), subtitle: context.tr('Hide the phone status and navigation bars while reading'), value: s.fullscreenReader,
             onChanged: (v) => set((x) => x.copyWith(fullscreenReader: v))),
+          if (compassPossible)
+            AdaptiveSwitchTile(title: context.tr('Compass toward Jerusalem'), subtitle: context.tr('A dial in the siddur that points toward Jerusalem'),
+              value: s.readerCompass, onChanged: (v) => set((x) => x.copyWith(readerCompass: v))),
           if (!kIsWeb && defaultTargetPlatform == TargetPlatform.android)
             AdaptiveSwitchTile(
                 title: context.tr('Do Not Disturb while reading'),
@@ -389,6 +393,10 @@ class SettingsScreen extends ConsumerWidget {
           AdaptiveNavTile(icon: Icons.event_repeat, title: context.tr('Personal Hebrew dates'), onTap: () => context.push('/personal-dates')),
           AdaptiveSwitchTile(title: context.tr('Kiddush Levana reminder'), subtitle: context.tr('At nightfall while the window is open'), value: s.levanaReminder,
             onChanged: (v) async { if (v && !await ref.read(notificationBackendProvider).requestPermission()) return; set((x) => x.copyWith(levanaReminder: v)); }),
+          AdaptiveSwitchTile(title: context.tr('Kiddush Levana heads-up'), subtitle: context.tr('Thursday morning, when it opens by Motzei Shabbat'), value: s.levanaHeadsUp,
+            onChanged: (v) async { if (v && !await ref.read(notificationBackendProvider).requestPermission()) return; set((x) => x.copyWith(levanaHeadsUp: v)); }),
+          AdaptiveSwitchTile(title: context.tr('Sefirat HaOmer reminder'), subtitle: context.tr('At nightfall during the Omer, not on Shabbat or Yom Tov'), value: s.omerReminder,
+            onChanged: (v) async { if (v && !await ref.read(notificationBackendProvider).requestPermission()) return; set((x) => x.copyWith(omerReminder: v)); }),
           AdaptiveSwitchTile(title: context.tr('Birkat HaChama reminder'), value: s.hachamaReminder,
             onChanged: (v) async { if (v && !await ref.read(notificationBackendProvider).requestPermission()) return; set((x) => x.copyWith(hachamaReminder: v)); }),
           AdaptiveNavTile(icon: Icons.menu_book_outlined, title: context.tr('Daily learning'), onTap: () => context.push('/learning')),

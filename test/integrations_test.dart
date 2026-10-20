@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:amud/core/l10n.dart';
 import 'package:amud/core/settings.dart';
 import 'package:amud/features/integrations/assistant.dart';
 import 'package:amud/features/integrations/prayer_links.dart';
@@ -92,7 +93,9 @@ void main() {
       desktopTray: true,
       omerBadge: true,
       levanaReminder: true,
+      levanaHeadsUp: true,
       hachamaReminder: true,
+      omerReminder: false,
     );
     expect(AppSettings.fromJson(enabled.toJson()).toJson(), enabled.toJson());
   });
@@ -305,6 +308,126 @@ void main() {
       expect(planSeasonalReminders(const AppSettings(), now), isEmpty);
     },
   );
+
+  group('Kiddush Levana from the Thursday before a Motzei Shabbat it opens by', () {
+    final loc = const AppSettings().location.toLocation();
+
+    // Every window of 5787 (a leap year) and of Tishrei 5788.
+    List<({DateTime start, DateTime end})> windows(bool threeDays) {
+      var hd = HDate(1, Months.tishrei, 5787);
+      final out = [levanaWindow(hd, threeDays)];
+      while (hd.getFullYear() == 5787) {
+        hd = HDate(1, hd.getMonth(), hd.getFullYear()).addDays(30);
+        out.add(levanaWindow(hd, threeDays));
+      }
+      expect(out, hasLength(14));
+      return out;
+    }
+
+    // Counted from the window: the Thursday of the week whose Saturday is
+    // the first that midnight after it falls in the window.
+    PlainDate thursdayBefore(({DateTime start, DateTime end}) w) {
+      final opens = PlainDate.fromDateTime(tz.TZDateTime.from(w.start, loc.tzLocation));
+      return opens.addDays(4 - opens.dayOfWeek);
+    }
+
+    tz.TZDateTime at(PlainDate d, int hour) => tz.TZDateTime(loc.tzLocation, d.year, d.month, d.day, hour);
+
+    test('the card: open, not open yet from that Thursday, or closed', () {
+      for (final threeDays in [false, true]) {
+        ({LevanaPhase phase, DateTime start, DateTime end}) status(DateTime t) =>
+            levanaStatus(t, PlainDate.fromDateTime(tz.TZDateTime.from(t, loc.tzLocation)), loc, useElevation: false, threeDays: threeDays);
+        var soon = 0;
+        for (final w in windows(threeDays)) {
+          expect(status(w.start.add(const Duration(minutes: 1))).phase, LevanaPhase.open);
+          expect(status(w.end.subtract(const Duration(minutes: 1))).phase, LevanaPhase.open);
+          // Once it closes, the next month's.
+          final after = status(w.end.add(const Duration(minutes: 1)));
+          expect(after.phase, LevanaPhase.closed);
+          expect(after.start.isAfter(w.end), isTrue);
+          // Midday on each of the six days before it opens.
+          final thursday = thursdayBefore(w);
+          final opens = PlainDate.fromDateTime(tz.TZDateTime.from(w.start, loc.tzLocation));
+          for (var d = 1; d <= 6; d++) {
+            final day = opens.addDays(-d);
+            final s = status(at(day, 12));
+            expect(s.start, w.start);
+            final expected = day.abs >= thursday.abs ? LevanaPhase.soon : LevanaPhase.closed;
+            expect(s.phase, expected, reason: '$day, opening ${w.start}');
+            if (expected == LevanaPhase.soon) soon++;
+          }
+        }
+        expect(soon, greaterThan(0));
+      }
+    });
+
+    test('a heads-up on that Thursday morning, only when on and only before it opens', () {
+      final first = HDate(1, Months.tishrei, 5787);
+      final days = HDate(1, Months.tishrei, 5788).abs() - first.abs();
+      final now = at(first.plainDate(), 0);
+      for (final threeDays in [false, true]) {
+        final settings = AppSettings(
+          levanaHeadsUp: true,
+          omerReminder: false,
+          ashkenaziSpelling: false,
+          minhagim: const AppSettings().minhagim.copyWith(kiddushLevana3Days: threeDays),
+        );
+        final plan = planSeasonalReminders(settings, now, days: days);
+        final expected = {
+          for (final w in windows(threeDays))
+            if (thursdayBefore(w) case final t when at(t, 9).isBefore(w.start) && t.abs >= first.abs() && t.abs < first.abs() + days) t,
+        };
+        expect(expected, isNotEmpty);
+        expect({for (final n in plan) PlainDate.fromDateTime(tz.TZDateTime.from(n.fireAt, loc.tzLocation))}, expected);
+        for (final n in plan) {
+          final local = tz.TZDateTime.from(n.fireAt, loc.tzLocation);
+          expect((local.weekday, local.hour, local.minute), (DateTime.thursday, 9, 0));
+          expect(n.title, 'Kiddush Levana');
+          expect(n.body, endsWith(', in time for Motzei Shabbat.'));
+          expect(n.route, '/pray/kiddushLevana');
+        }
+        // Off by default.
+        expect(planSeasonalReminders(settings.copyWith(levanaHeadsUp: false), now, days: days), isEmpty);
+      }
+    });
+  });
+
+  test('the Omer reminder is on for new installs, and stays off once turned off', () {
+    expect(const AppSettings().omerReminder, isTrue);
+    expect(AppSettings.fromJson({}).omerReminder, isTrue);
+    expect(AppSettings.fromJson(const AppSettings(omerReminder: false).toJson()).omerReminder, isFalse);
+  });
+
+  test('Omer reminders: each night of the count at nightfall, not on Shabbat or Yom Tov, nor once counted', () {
+    const settings = AppSettings(omerReminder: true, ashkenaziSpelling: false);
+    // From the day before the seventh of Pesach, over two weeks of the Omer.
+    final start = HDate(20, Months.nisan, 5787);
+    final now = start.greg().toUtc();
+    final plan = planSeasonalReminders(settings, now, days: 14);
+    final expected = [
+      for (var d = 0; d < 14; d++)
+        if (start.addDays(d).next() case final night
+            when omerDay(night) > 0 &&
+                night.getDay() != 6 &&
+                !getHolidaysOnDate(night, settings.location.il).any((e) => e.hasFlag(Flags.chag)))
+          omerDay(night),
+    ];
+    expect(expected, isNot(contains(6)), reason: 'the night of the seventh of Pesach is Yom Tov');
+    expect([for (final n in plan) n.body], [for (final d in expected) 'Tonight is day $d of the Omer.']);
+    expect(plan.every((n) => n.route == '/pray/omer' && n.title == 'Sefirat HaOmer'), isTrue);
+    // In the reader's spelling and language.
+    expect(planSeasonalReminders(settings.copyWith(ashkenaziSpelling: true), now, days: 14).first.title, 'Sefiras HaOmer');
+    expect(planSeasonalReminders(settings.copyWith(uiLanguage: UiLanguage.he), now, days: 14).first.body, 'הלילה יום ${expected.first} לעומר.');
+    // Fires at nightfall.
+    final first = start.addDays(List.generate(14, (d) => d).firstWhere((d) => omerDay(start.addDays(d).next()) == expected.first));
+    final z = Zmanim(settings.location.toLocation(), first.plainDate(), false);
+    expect(plan.first.fireAt, z.tzeit(8.5));
+    // Counted tonight: tonight's reminder goes.
+    final counted = planSeasonalReminders(settings, now, days: 14, omerCounted: first.next().abs());
+    expect(counted.length, plan.length - 1);
+    // Outside the Omer, nothing.
+    expect(planSeasonalReminders(settings, HDate(8, Months.cheshvan, 5787).greg().toUtc()), isEmpty);
+  });
 
   test(
     'community galleries reject unsupported schemas and oversize scripts',

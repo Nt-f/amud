@@ -1,11 +1,15 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hebcal/hebcal.dart';
 
+import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/providers.dart';
+import 'daf_video.dart';
 import 'gemara_data.dart';
 import 'gemara_perakim.dart';
 import 'gemara_settings_sheet.dart';
@@ -75,14 +79,13 @@ class _CopyLink extends StatelessWidget {
   const _CopyLink(this.route);
 
   @override
-  Widget build(BuildContext context) => IconButton(
-        tooltip: context.tr('Copy link'),
-        icon: const Icon(Icons.link),
-        onPressed: () async {
-          await Clipboard.setData(ClipboardData(text: shareTorahLink(route).toString()));
-          if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.tr('Link copied'))));
-        },
-      );
+  Widget build(BuildContext context) =>
+      IconButton(tooltip: context.tr('Copy link'), icon: const Icon(Icons.link), onPressed: () => _copyLink(context, route));
+}
+
+Future<void> _copyLink(BuildContext context, String route) async {
+  await Clipboard.setData(ClipboardData(text: shareTorahLink(route).toString()));
+  if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.tr('Link copied'))));
 }
 
 /// Units of a book complete, as the book counts them: dafim for a tractate
@@ -126,39 +129,50 @@ class _StudyHomeScreenState extends ConsumerState<StudyHomeScreen> {
     }
     String sederName(String seder) => en ? context.tr('Seder {name}', {'name': context.term(seder)}) : 'סדר ${seders[seder]!.first.sederHe}';
     final shown = _seder == null ? seders.keys.toList() : [_seder!];
+    final heading = bavli ? context.tr('Gemara') : context.tr('Mishnah');
     return Scaffold(
       appBar: AppBar(
-        title: Text(bavli ? context.tr('Gemara') : context.tr('Mishnah')),
-        actions: [
-          if (bavli) IconButton(tooltip: context.tr('Go to a page'), icon: const Icon(Icons.search), onPressed: () => _goTo(context)),
-          _CopyLink(bavli ? '/torah/gemara' : '/torah/mishnah'),
-          IconButton(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => showGemaraSettings(context, kind: kind)),
-        ],
+        title: Text(heading),
+        // On a narrow phone the link, then Go to a page, wait in a menu.
+        actions: fitBarActions(context, heading, spare: bavli ? const [1, 0] : const [0], [
+          if (bavli) BarTool(tooltip: context.tr('Go to a page'), icon: const Icon(Icons.search), onPressed: () => _goTo(context)),
+          BarTool(
+              tooltip: context.tr('Copy link'),
+              icon: const Icon(Icons.link),
+              onPressed: () => _copyLink(context, bavli ? '/torah/gemara' : '/torah/mishnah')),
+          BarTool(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => showGemaraSettings(context, kind: kind)),
+        ]),
       ),
       body: ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
         StudyDownloadPanel(books: books, label: bavli ? context.tr('Download all of Shas') : context.tr('Download all of the Mishnah')),
-        Row(children: [
-          if (mine.firstOrNull case final r?)
-            Expanded(
-              child: _Shortcut(
+        // Side by side where each fits on one line, otherwise one above the
+        // other, so a narrow phone never cuts the place short.
+        LayoutBuilder(builder: (context, c) {
+          final shortcuts = [
+            if (mine.firstOrNull case final r?)
+              _Shortcut(
                 icon: Icons.play_circle_outline,
                 label: context.tr('Continue'),
                 place: title(r.tractate, r.amud),
                 onTap: () => context.push(studyPath(r.tractate, r.amud, segment: r.segment)),
               ),
-            ),
-          if (mine.isNotEmpty && today != null) const SizedBox(width: 8),
-          if (today != null)
-            Expanded(
-              child: _Shortcut(
+            if (today != null)
+              _Shortcut(
                 icon: Icons.today,
                 label: bavli ? context.tr('Daf Yomi') : context.tr('Mishnah Yomi'),
                 place: title(today.book, today.unit),
                 done: marks.isComplete(today.book, today.unit),
                 onTap: () => context.push(studyPath(today.book, today.unit, from: today.from, to: today.to)),
+                trailing: bavli && dafOfAmud(today.unit) != null ? DafVideoButton(tractate: today.book, daf: dafOfAmud(today.unit)!) : null,
               ),
-            ),
-        ]),
+          ];
+          if (shortcuts.length == 2 && shortcuts.every((s) => s.width(context) <= (c.maxWidth - 8) / 2)) {
+            return Row(children: [Expanded(child: shortcuts[0]), const SizedBox(width: 8), Expanded(child: shortcuts[1])]);
+          }
+          return Column(children: [
+            for (final (i, s) in shortcuts.indexed) Padding(padding: EdgeInsets.only(top: i == 0 ? 0 : 8), child: s),
+          ]);
+        }),
         const SizedBox(height: 12),
         // Seder filter.
         SingleChildScrollView(
@@ -341,7 +355,17 @@ class _Shortcut extends StatelessWidget {
   final String place;
   final bool done;
   final VoidCallback onTap;
-  const _Shortcut({required this.icon, required this.label, required this.place, required this.onTap, this.done = false});
+
+  /// Beside the place, inside the card (Daf Yomi's video).
+  final Widget? trailing;
+  const _Shortcut({required this.icon, required this.label, required this.place, required this.onTap, this.done = false, this.trailing});
+
+  /// How wide it is with the label and the place each on one line.
+  double width(BuildContext context) {
+    final theme = Theme.of(context);
+    final text = math.max(textWidth(context, label, theme.textTheme.labelMedium), textWidth(context, place, theme.textTheme.titleMedium));
+    return 12 + 24 + 10 + text + (trailing == null ? 0 : 40) + 12 + 2;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -359,9 +383,10 @@ class _Shortcut extends StatelessWidget {
             Expanded(
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Text(label, style: theme.textTheme.labelMedium?.copyWith(color: theme.colorScheme.outline)),
-                Text(place, style: theme.textTheme.titleMedium, overflow: TextOverflow.ellipsis),
+                Text(place, style: theme.textTheme.titleMedium),
               ]),
             ),
+            ?trailing,
           ]),
         ),
       ),
@@ -637,7 +662,7 @@ class _DafTile extends ConsumerWidget {
               style: (he ? const TextStyle(fontFamily: 'FrankRuehlCLM', fontSize: 16) : theme.textTheme.labelLarge)
                   ?.copyWith(fontWeight: FontWeight.w700)),
           const SizedBox(width: 3),
-          _VideoMark(tractate: t.sefaria, daf: daf),
+          _VideoMark(tractate: t, daf: daf),
         ]),
         // Amud a on the right in a Hebrew interface, as in the book.
         Row(textDirection: he ? TextDirection.rtl : TextDirection.ltr, children: [side('a'), side('b')]),
@@ -646,23 +671,98 @@ class _DafTile extends ConsumerWidget {
   }
 }
 
-/// The video shiur for a daf. Streams aren't published yet, so it is shown
-/// dimmed and says so when tapped (see [dafVideoUri]).
+/// The video shiur for a daf (see [DafVideoScreen]). For a daf that has none
+/// yet (not in [dafVideoIndex]) it is dimmed and says so when tapped.
 class _VideoMark extends StatelessWidget {
-  final String tractate;
+  final Tractate tractate;
   final int daf;
   const _VideoMark({required this.tractate, required this.daf});
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final ready = dafVideoUri(tractate, daf) != null;
-    return InkResponse(
-      radius: 14,
-      onTap: () => ScaffoldMessenger.of(context)
-        ..hideCurrentSnackBar()
-        ..showSnackBar(SnackBar(content: Text(context.tr('Video shiurim are coming soon.')))),
-      child: Icon(Icons.play_circle_outline, size: 15, color: ready ? theme.colorScheme.primary : theme.colorScheme.outline.withValues(alpha: 0.7)),
+    // Fetches the list the first time a tile shows (once a run).
+    dafVideoIndex.load();
+    return ValueListenableBuilder(
+      valueListenable: dafVideoIndex,
+      builder: (context, _, _) {
+        final ready = dafVideoUri(tractate.sefaria, daf) != null && dafVideoIndex.has(tractate.sefaria, daf);
+        return InkResponse(
+          radius: 14,
+          onTap: ready
+              ? () => context.push(dafVideoPath(tractate.sefaria, '$daf'))
+              : () => ScaffoldMessenger.of(context)
+                ..hideCurrentSnackBar()
+                ..showSnackBar(SnackBar(content: Text(context.tr('Video shiurim are coming soon.')))),
+          child: Icon(Icons.movie_outlined,
+              size: 15, color: ready ? theme.colorScheme.primary : theme.colorScheme.outline.withValues(alpha: 0.7)),
+        );
+      },
+    );
+  }
+}
+
+/// The daf of a Bavli amud ("50b" → 50); null for a unit that isn't one.
+int? dafOfAmud(String amud) => int.tryParse(RegExp(r'^(\d+)[ab]$').firstMatch(amud)?[1] ?? '');
+
+/// A button beside a way into a daf or a Kitzur Yomi (on Home, in the
+/// Gemara and the Kitzur, the reader's bar) that plays its video shiur.
+/// Dimmed for one without a video yet, saying so when tapped, unless
+/// [onlyWhenReady]; absent where videos are off.
+class DafVideoButton extends StatelessWidget {
+  /// The tractate (or the Kitzur) as Sefaria names it.
+  final String tractate;
+  final int? daf;
+
+  /// For the Kitzur: the siman, and the se'if the day's portion starts at
+  /// (null for the first day with a video in the siman).
+  final int? siman;
+  final int? seif;
+
+  /// Hidden, rather than dimmed, until there's a video (on a crowded bar).
+  final bool onlyWhenReady;
+  const DafVideoButton({super.key, required this.tractate, required int this.daf, this.onlyWhenReady = false})
+      : siman = null,
+        seif = null;
+  const DafVideoButton.kitzur({super.key, required int this.siman, this.seif, this.onlyWhenReady = false})
+      : tractate = kitzurId,
+        daf = null;
+
+  /// The video's unit when it's published, else null.
+  String? get readyUnit => switch (_unit) {
+        final u? when dafVideoIndex.hasUnit(tractate, u) => u,
+        _ => null,
+      };
+
+  String? get _unit => switch ((daf, siman, seif)) {
+        (final d?, _, _) => '$d',
+        (_, final s?, final e?) => kitzurVideoUnit(s, e),
+        (_, final s?, null) => dafVideoIndex.kitzurIn(s),
+        _ => null,
+      };
+
+  @override
+  Widget build(BuildContext context) {
+    if (dafVideoBase.isEmpty) return const SizedBox.shrink();
+    final theme = Theme.of(context);
+    dafVideoIndex.load();
+    return ValueListenableBuilder(
+      valueListenable: dafVideoIndex,
+      builder: (context, _, _) {
+        final unit = _unit;
+        final ready = unit != null && dafVideoIndex.hasUnit(tractate, unit);
+        if (!ready && onlyWhenReady) return const SizedBox.shrink();
+        return IconButton(
+          visualDensity: VisualDensity.compact,
+          tooltip: context.tr(ready ? 'Watch the shiur' : 'Video shiurim are coming soon.'),
+          icon: Icon(Icons.movie_outlined, color: ready ? theme.colorScheme.primary : theme.colorScheme.outline.withValues(alpha: 0.7)),
+          onPressed: ready
+              ? () => context.push(dafVideoPath(tractate, unit))
+              : () => ScaffoldMessenger.of(context)
+                ..hideCurrentSnackBar()
+                ..showSnackBar(SnackBar(content: Text(context.tr('Video shiurim are coming soon.')))),
+        );
+      },
     );
   }
 }

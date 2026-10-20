@@ -124,8 +124,12 @@ class _Grid extends ConsumerWidget {
     return LayoutBuilder(builder: (context, c) {
       const gap = 12.0;
       final width = c.maxWidth;
-      // 2 columns on phones, 4 on tablets, 6 on wide desktop/web.
-      final cols = width >= 1400 ? 6 : (width >= 840 ? 4 : 2);
+      // 2 columns on phones, 4 on tablets, 6 on wide desktop/web; 1 on
+      // phones too narrow for two compact cards side by side at this text
+      // size (360dp Samsungs with larger text or Screen zoom), where times
+      // and words broke mid-way.
+      final scale = MediaQuery.textScalerOf(context).scale(1);
+      final cols = width >= 1400 ? 6 : (width >= 840 ? 4 : ((width - 32 - gap) / 2 >= 150 * scale ? 2 : 1));
       final pad = width > 1400 ? (width - 1400) / 2 + 16 : 16.0;
       final colW = (width - pad * 2 - gap * (cols - 1)) / cols;
       return RefreshIndicator.adaptive(

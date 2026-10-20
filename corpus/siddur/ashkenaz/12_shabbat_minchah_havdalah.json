@@ -348,10 +348,10 @@
             {"kind": "prayer", "role": "chazzan", "amidah": "repetition", "minyan": true, "text": "לְדור וָדור נַגִּיד גָּדְלֶךָ וּלְנֵצַח נְצָחִים קְדֻשָּׁתְךָ נַקְדִּישׁ. וְשִׁבְחֲךָ אֱלהֵינוּ מִפִּינוּ לא יָמוּשׁ לְעולָם וָעֶד. כִּי אֵל מֶלֶךְ גָּדול וְקָדושׁ אָתָּה: "}
           ]},
           {"ref": "10", "parts": [
-            {"kind": "prayer", "node": "amidah.kedushat_hashem", "amidah": "repetition", "text": "בָּרוּךְ אַתָּה ה' הָאֵל "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "amidah.kedushat_hashem", "amidah": "repetition", "en": "During the Ten Days of Repentance:", "clean": "<small>בעשי\"ת:</small>", "text": "<em><small>בעשי\"ת "},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.kedushat_hashem", "amidah": "repetition", "text": "הַמֶּלֶךְ</small></em> "},
-            {"kind": "prayer", "node": "amidah.kedushat_hashem", "amidah": "repetition", "text": "הַקָּדושׁ:"}
+            {"kind": "prayer", "node": "amidah.kedushat_hashem", "amidah": "repetition", "minyan": true, "text": "בָּרוּךְ אַתָּה ה' הָאֵל "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "amidah.kedushat_hashem", "amidah": "repetition", "minyan": true, "en": "During the Ten Days of Repentance:", "clean": "<small>בעשי\"ת:</small>", "text": "<em><small>בעשי\"ת "},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.kedushat_hashem", "amidah": "repetition", "minyan": true, "text": "הַמֶּלֶךְ</small></em> "},
+            {"kind": "prayer", "node": "amidah.kedushat_hashem", "amidah": "repetition", "minyan": true, "text": "הַקָּדושׁ:"}
           ]}
         ]
       }

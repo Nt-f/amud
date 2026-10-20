@@ -212,11 +212,15 @@ class _ServiceTile extends ConsumerWidget {
           child: Column(children: [
             Icon(icon, color: now ? fg : theme.colorScheme.primary),
             const SizedBox(height: 6),
-            Text(context.prayerTitle(s, en, he),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: theme.textTheme.labelLarge?.copyWith(
-                    color: fg, fontWeight: FontWeight.w700, fontFamily: context.prayerTitleIsHebrew(s) ? s.hebrewFont : null)),
+            // Three to a row: on a narrow phone or with large text the name
+            // shrinks to fit rather than being cut off ("Shach…").
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(context.prayerTitle(s, en, he),
+                  maxLines: 1,
+                  style: theme.textTheme.labelLarge?.copyWith(
+                      color: fg, fontWeight: FontWeight.w700, fontFamily: context.prayerTitleIsHebrew(s) ? s.hebrewFont : null)),
+            ),
             Text(now ? context.tr('Now') : ' ', style: theme.textTheme.labelSmall?.copyWith(color: fg)),
           ]),
         ),
@@ -363,6 +367,7 @@ class _QuickPrayers extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final cs = theme.colorScheme;
+    final s = ref.watch(settingsProvider);
     final accents = [
       (cs.primaryContainer, cs.onPrimaryContainer),
       (cs.tertiaryContainer, cs.onTertiaryContainer),
@@ -380,8 +385,22 @@ class _QuickPrayers extends ConsumerWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(14, 6, 14, 14),
             child: LayoutBuilder(builder: (context, c) {
-              final cols = c.maxWidth >= 520 ? 3 : 2;
-              final w = (c.maxWidth - 8 * (cols - 1)) / cols;
+              // Two or three to a row; where a name would break mid-word
+              // (narrow phones, large text), two without their icons, then
+              // one.
+              final names = [
+                for (final (_, items) in _groups)
+                  for (final (key, _) in items) context.prayerTitle(s, _QuickTile.names(key).$1, _QuickTile.names(key).$2),
+              ];
+              final widest = widestWord(context, names, _QuickTile.labelStyle(context, s));
+              double width(int cols) => (c.maxWidth - 8 * (cols - 1)) / cols;
+              var cols = c.maxWidth >= 520 ? 3 : 2;
+              while (cols > 1 && width(cols) - _QuickTile.chrome < widest) {
+                cols--;
+              }
+              final icons = cols > 1 || width(2) - _QuickTile.bare < widest;
+              if (!icons) cols = 2;
+              final w = width(cols);
               return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
                 for (final (gi, (label, items)) in _groups.indexed) ...[
                   Padding(
@@ -390,7 +409,7 @@ class _QuickPrayers extends ConsumerWidget {
                   ),
                   Wrap(spacing: 8, runSpacing: 8, children: [
                     for (final (key, icon) in items)
-                      SizedBox(width: w, child: _QuickTile(prayerKey: key, icon: icon, bg: accents[gi].$1, fg: accents[gi].$2)),
+                      SizedBox(width: w, child: _QuickTile(prayerKey: key, icon: icons ? icon : null, bg: accents[gi].$1, fg: accents[gi].$2)),
                   ]),
                 ],
               ]);
@@ -404,27 +423,42 @@ class _QuickPrayers extends ConsumerWidget {
 
 class _QuickTile extends ConsumerWidget {
   final String prayerKey;
-  final IconData icon;
+
+  /// None where the name needs the room.
+  final IconData? icon;
   final Color bg;
   final Color fg;
   const _QuickTile({required this.prayerKey, required this.icon, required this.bg, required this.fg});
 
+  /// A prayer's English and Hebrew names.
+  static (String, String) names(String key) {
+    if (key == 'meeinShalosh') return ("Me'ein Shalosh", 'מעין שלוש');
+    final item = catalogItem(key)!;
+    return (item.en, item.he);
+  }
+
+  static TextStyle? labelStyle(BuildContext context, AppSettings s) => Theme.of(context)
+      .textTheme
+      .labelLarge
+      ?.copyWith(fontWeight: FontWeight.w600, fontFamily: context.prayerTitleIsHebrew(s) ? s.hebrewFont : null);
+
+  /// The tile's width beside its name: padding, icon and gap; and without
+  /// the icon.
+  static const chrome = 10 + 34 + 10 + 10.0;
+  static const bare = 10 + 10.0;
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final s = ref.watch(settingsProvider);
-    final theme = Theme.of(context);
+    final (en, he) = names(prayerKey);
     // Me'ein Shalosh has a screen of its own; the rest are found in the
     // reader's siddurim.
-    final String en, he;
     final VoidCallback onTap;
     if (prayerKey == 'meeinShalosh') {
-      (en, he) = ("Me'ein Shalosh", 'מעין שלוש');
       onTap = () => context.push('/meein-shalosh');
     } else {
-      final item = catalogItem(prayerKey)!;
       final found = ref.watch(prayerRefProvider(prayerKey)).value;
       if (found == null) return const SizedBox.shrink();
-      (en, he) = (item.en, item.he);
       onTap = () => context.push(readerPath(found.book, found.id));
     }
     return Material(
@@ -435,21 +469,24 @@ class _QuickTile extends ConsumerWidget {
         onTap: onTap,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-          child: Row(children: [
-            Container(
-              width: 34,
-              height: 34,
-              decoration: BoxDecoration(color: bg, shape: BoxShape.circle),
-              child: Icon(icon, size: 18, color: fg),
-            ),
-            const SizedBox(width: 10),
-            Expanded(
-              child: Text(context.prayerTitle(s, en, he),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w600, fontFamily: context.prayerTitleIsHebrew(s) ? s.hebrewFont : null)),
-            ),
-          ]),
+          // As tall without the icon as with it.
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(minHeight: 34),
+            child: Row(children: [
+              if (icon != null) ...[
+                Container(
+                  width: 34,
+                  height: 34,
+                  decoration: BoxDecoration(color: bg, shape: BoxShape.circle),
+                  child: Icon(icon, size: 18, color: fg),
+                ),
+                const SizedBox(width: 10),
+              ],
+              Expanded(
+                child: Text(context.prayerTitle(s, en, he), maxLines: 3, overflow: TextOverflow.ellipsis, style: labelStyle(context, s)),
+              ),
+            ]),
+          ),
         ),
       ),
     );

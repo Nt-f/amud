@@ -139,6 +139,10 @@ class AppSettings {
   final bool preferTrop;
   final double textScale;
   final String hebrewFont;
+
+  /// The Sefardi siddur's (Edot HaMizrach) own Hebrew font, in the style of
+  /// Sefardi print; empty for the same font as the other siddurim.
+  final String sefardiFont;
   final String? latinFont;
   final ExcludedDisplay excludedDisplay;
   final bool showNotes;
@@ -201,11 +205,28 @@ class AppSettings {
 
   /// Android: turn on Do Not Disturb while reading (and back off after).
   final bool readerDnd;
+
+  /// A compass toward Jerusalem over the reader, on devices that can tell
+  /// which way they face.
+  final bool readerCompass;
+
+  /// The compass points along a constant bearing (rhumb line) rather than
+  /// the shortest route (great circle): in America, east rather than
+  /// northeast.
+  final bool compassRhumbLine;
   final bool travelPrompts;
   final bool desktopTray;
   final bool omerBadge;
   final bool levanaReminder;
+
+  /// A heads-up on Thursday morning when the Kiddush Levana window isn't
+  /// open yet but will be by Motzei Shabbat.
+  final bool levanaHeadsUp;
   final bool hachamaReminder;
+
+  /// A reminder to count the Omer at nightfall (not on Shabbat or Yom Tov).
+  /// On for new installs; setup shows it.
+  final bool omerReminder;
 
   /// The tabs and shortcuts on the navigation bar, in order (see
   /// nav_tabs_screen.dart). Settings is always among them, so the bar can be
@@ -239,6 +260,7 @@ class AppSettings {
     this.preferTrop = true,
     this.textScale = 1.0,
     this.hebrewFont = 'TaameyFrankCLM',
+    this.sefardiFont = 'KeterYG',
     this.latinFont,
     this.excludedDisplay = ExcludedDisplay.hide,
     this.showNotes = true,
@@ -265,11 +287,15 @@ class AppSettings {
     this.keepReaderAwake = true,
     this.fullscreenReader = false,
     this.readerDnd = false,
+    this.readerCompass = true,
+    this.compassRhumbLine = false,
     this.travelPrompts = false,
     this.desktopTray = false,
     this.omerBadge = false,
     this.levanaReminder = false,
+    this.levanaHeadsUp = false,
     this.hachamaReminder = false,
+    this.omerReminder = true,
     this.navTabs = const ['home', 'siddur', 'zmanim', 'torah', 'settings'],
     this.navLabels = true,
     this.expandedSettings = const ['location'],
@@ -296,6 +322,7 @@ class AppSettings {
     bool? preferTrop,
     double? textScale,
     String? hebrewFont,
+    String? sefardiFont,
     String? Function()? latinFont,
     ExcludedDisplay? excludedDisplay,
     bool? showNotes,
@@ -322,11 +349,15 @@ class AppSettings {
     bool? keepReaderAwake,
     bool? fullscreenReader,
     bool? readerDnd,
+    bool? readerCompass,
+    bool? compassRhumbLine,
     bool? travelPrompts,
     bool? desktopTray,
     bool? omerBadge,
     bool? levanaReminder,
+    bool? levanaHeadsUp,
     bool? hachamaReminder,
+    bool? omerReminder,
     List<String>? navTabs,
     bool? navLabels,
     List<String>? expandedSettings,
@@ -352,6 +383,7 @@ class AppSettings {
         preferTrop: preferTrop ?? this.preferTrop,
         textScale: textScale ?? this.textScale,
         hebrewFont: hebrewFont ?? this.hebrewFont,
+        sefardiFont: sefardiFont ?? this.sefardiFont,
         latinFont: latinFont != null ? latinFont() : this.latinFont,
         excludedDisplay: excludedDisplay ?? this.excludedDisplay,
         showNotes: showNotes ?? this.showNotes,
@@ -378,11 +410,15 @@ class AppSettings {
         keepReaderAwake: keepReaderAwake ?? this.keepReaderAwake,
         fullscreenReader: fullscreenReader ?? this.fullscreenReader,
         readerDnd: readerDnd ?? this.readerDnd,
+        readerCompass: readerCompass ?? this.readerCompass,
+        compassRhumbLine: compassRhumbLine ?? this.compassRhumbLine,
         travelPrompts: travelPrompts ?? this.travelPrompts,
         desktopTray: desktopTray ?? this.desktopTray,
         omerBadge: omerBadge ?? this.omerBadge,
         levanaReminder: levanaReminder ?? this.levanaReminder,
+        levanaHeadsUp: levanaHeadsUp ?? this.levanaHeadsUp,
         hachamaReminder: hachamaReminder ?? this.hachamaReminder,
+        omerReminder: omerReminder ?? this.omerReminder,
         navTabs: navTabs ?? this.navTabs,
         navLabels: navLabels ?? this.navLabels,
         expandedSettings: expandedSettings ?? this.expandedSettings,
@@ -413,6 +449,7 @@ class AppSettings {
         'preferTrop': preferTrop,
         'textScale': textScale,
         'hebrewFont': hebrewFont,
+        'sefardiFont': sefardiFont,
         'latinFont': latinFont,
         'excludedDisplay': excludedDisplay.name,
         'showNotes': showNotes,
@@ -439,11 +476,15 @@ class AppSettings {
         'keepReaderAwake': keepReaderAwake,
         'fullscreenReader': fullscreenReader,
         'readerDnd': readerDnd,
+        'readerCompass': readerCompass,
+        'compassRhumbLine': compassRhumbLine,
         'travelPrompts': travelPrompts,
         'desktopTray': desktopTray,
         'omerBadge': omerBadge,
         'levanaReminder': levanaReminder,
+        'levanaHeadsUp': levanaHeadsUp,
         'hachamaReminder': hachamaReminder,
+        'omerReminder': omerReminder,
         'navTabs': navTabs,
         'navLabels': navLabels,
         'expandedSettings': expandedSettings,
@@ -513,6 +554,7 @@ class AppSettings {
       preferTrop: pick('preferTrop', d.preferTrop),
       textScale: orElse(() => (j['textScale'] as num).toDouble(), d.textScale),
       hebrewFont: pick('hebrewFont', d.hebrewFont),
+      sefardiFont: pick('sefardiFont', d.sefardiFont),
       latinFont: j['latinFont'] is String ? j['latinFont'] as String : null,
       excludedDisplay: byName(ExcludedDisplay.values, 'excludedDisplay', d.excludedDisplay),
       showNotes: pick('showNotes', d.showNotes),
@@ -545,11 +587,15 @@ class AppSettings {
       keepReaderAwake: pick('keepReaderAwake', d.keepReaderAwake),
       fullscreenReader: pick('fullscreenReader', d.fullscreenReader),
       readerDnd: pick('readerDnd', d.readerDnd),
+      readerCompass: pick('readerCompass', d.readerCompass),
+      compassRhumbLine: pick('compassRhumbLine', d.compassRhumbLine),
       travelPrompts: pick('travelPrompts', d.travelPrompts),
       desktopTray: pick('desktopTray', d.desktopTray),
       omerBadge: pick('omerBadge', d.omerBadge),
       levanaReminder: pick('levanaReminder', d.levanaReminder),
+      levanaHeadsUp: pick('levanaHeadsUp', d.levanaHeadsUp),
       hachamaReminder: pick('hachamaReminder', d.hachamaReminder),
+      omerReminder: pick('omerReminder', d.omerReminder),
       navTabs: orElse(() {
         final tabs = {for (final v in j['navTabs'] as List) if (v is String && (allNavTabIds.contains(v) || navShortcutIds.contains(v))) v};
         final list = tabs.contains('settings') ? tabs.toList() : [...tabs, 'settings'];

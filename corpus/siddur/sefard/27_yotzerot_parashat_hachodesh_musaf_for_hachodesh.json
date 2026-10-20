@@ -87,25 +87,25 @@
             {"kind": "note", "en": "(MS reads: yichshu)", "text": "<small>(נ\"א יֶחֱשׁוּ)</small>"},
             {"kind": "prayer", "text": " יַקְדִּישׁוּ. וְעֵת כִּי יִשְׁתּוֹקוּ יְשַׁלֵּשׁוּ קְדֻשָּׁה מְשֻׁלֶּשֶׁת:"}
           ]},
-          {"ref": "37", "kind": "instruction", "en": "Kedushah", "text": "<b><b><small> קדושה</small></b></b>"},
-          {"ref": "38", "kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "text": "<small><b><b><small>נַקְדִּישָׁךְ וְנַעֲרִיצָךְ כְּנֹעַם שִׂיחַ סוֹד שַׂרְפֵי קֹדֶשׁ. הַמְּשַׁלְּשִׁים לְךָ קְדֻשָּׁה. כַּכָּתוּב עַל יַד נְבִיאֶךָ. וְקָרָא זֶה אֶל זֶה וְאָמַר: </small></b></b></small>"},
+          {"ref": "37", "kind": "instruction", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "Kedushah", "text": "<b><b><small> קדושה</small></b></b>"},
+          {"ref": "38", "kind": "prayer", "node": "amidah.kedusha", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "<small><b><b><small>נַקְדִּישָׁךְ וְנַעֲרִיצָךְ כְּנֹעַם שִׂיחַ סוֹד שַׂרְפֵי קֹדֶשׁ. הַמְּשַׁלְּשִׁים לְךָ קְדֻשָּׁה. כַּכָּתוּב עַל יַד נְבִיאֶךָ. וְקָרָא זֶה אֶל זֶה וְאָמַר: </small></b></b></small>"},
           {"ref": "39", "parts": [
-            {"kind": "speaker", "en": "Congregation:", "text": "<small><b><b><small>קו\"ח:</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " <b>קָדוֹשׁ</b> קָדוֹשׁ קָדוֹשׁ יְהֹוָה צְבָאוֹת. מְלֹא כָל הָאָרֶץ כְּבוֹדוֹ: "},
-            {"kind": "speaker", "en": "Chazzan:", "text": "<small>חזן:</small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " <b>אָז.</b> בְּקוֹל רַעַשׁ גָּדוֹל אַדִּיר וְחָזָק. מַשְׁמִיעִים קוֹל. מִתְנַשְּׂאִים לְעֻמַּת שְׂרָפִים. לְעֻמָּתָם מְשַׁבְּחִים וְאוֹמְרִים: </b></b></small>"}
+            {"kind": "speaker", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "Congregation:", "text": "<small><b><b><small>קו\"ח:</small>"},
+            {"kind": "prayer", "node": "amidah.kedusha", "role": "congregation", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": " <b>קָדוֹשׁ</b> קָדוֹשׁ קָדוֹשׁ יְהֹוָה צְבָאוֹת. מְלֹא כָל הָאָרֶץ כְּבוֹדוֹ: "},
+            {"kind": "speaker", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "text": "<small>חזן:</small>"},
+            {"kind": "prayer", "node": "amidah.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": " <b>אָז.</b> בְּקוֹל רַעַשׁ גָּדוֹל אַדִּיר וְחָזָק. מַשְׁמִיעִים קוֹל. מִתְנַשְּׂאִים לְעֻמַּת שְׂרָפִים. לְעֻמָּתָם מְשַׁבְּחִים וְאוֹמְרִים: </b></b></small>"}
           ]},
           {"ref": "40", "parts": [
-            {"kind": "speaker", "en": "Congregation:", "text": "<small><b><b><small>קו\"ח:</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " <b>בָּרוּךְ</b> כְּבוֹד יְהֹוָה מִמְּקוֹמוֹ: "},
-            {"kind": "speaker", "en": "Chazzan:", "text": "<small>חזן:</small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " מִמְּקוֹמְךָ מַלְכֵּנוּ תוֹפִיעַ. וְתִמְלוֹךְ עָלֵינוּ "},
-            {"kind": "note", "en": "(Soon)", "text": "<small> <small>(מְהֵרָה)</small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " </small> כִּי מְחַכִּים אֲנַחְנוּ לָךְ. מָתַי תִּמְלֹךְ בְּצִיּוֹן. בְּקָרוֹב בְּיָמֵינוּ לְעוֹלָם וָעֶד תִּשְׁכּוֹן. תִּתְגַּדֵּל וְתִתְקַדֵּשׁ בְּתוֹךְ יְרוּשָׁלַיִם עִירְךָ לְדוֹר וָדוֹר וּלְנֵצַח נְצָחִים. וְעֵינֵינוּ תִרְאֶינָה מַלְכוּתֶךָ כַּדָּבָר הָאָמוּר בְּשִׁירֵי עֻזֶּךָ. עַל יְדֵי דָּוִד מְשִׁיחַ צִדְקֶךָ: </b></b></small>"}
+            {"kind": "speaker", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "Congregation:", "text": "<small><b><b><small>קו\"ח:</small>"},
+            {"kind": "prayer", "node": "amidah.kedusha", "role": "congregation", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": " <b>בָּרוּךְ</b> כְּבוֹד יְהֹוָה מִמְּקוֹמוֹ: "},
+            {"kind": "speaker", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "text": "<small>חזן:</small>"},
+            {"kind": "prayer", "node": "amidah.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": " מִמְּקוֹמְךָ מַלְכֵּנוּ תוֹפִיעַ. וְתִמְלוֹךְ עָלֵינוּ "},
+            {"kind": "note", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "(Soon)", "text": "<small> <small>(מְהֵרָה)</small>"},
+            {"kind": "prayer", "node": "amidah.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": " </small> כִּי מְחַכִּים אֲנַחְנוּ לָךְ. מָתַי תִּמְלֹךְ בְּצִיּוֹן. בְּקָרוֹב בְּיָמֵינוּ לְעוֹלָם וָעֶד תִּשְׁכּוֹן. תִּתְגַּדֵּל וְתִתְקַדֵּשׁ בְּתוֹךְ יְרוּשָׁלַיִם עִירְךָ לְדוֹר וָדוֹר וּלְנֵצַח נְצָחִים. וְעֵינֵינוּ תִרְאֶינָה מַלְכוּתֶךָ כַּדָּבָר הָאָמוּר בְּשִׁירֵי עֻזֶּךָ. עַל יְדֵי דָּוִד מְשִׁיחַ צִדְקֶךָ: </b></b></small>"}
           ]},
           {"ref": "41", "parts": [
-            {"kind": "speaker", "en": "Congregation:", "text": "<small><b><b><small>קו\"ח:</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " <b>יִמְלֹךְ</b> יְהֹוָה לְעוֹלָם. אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר. הַלְלוּיָהּ:</b></b></small>"}
+            {"kind": "speaker", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "Congregation:", "text": "<small><b><b><small>קו\"ח:</small>"},
+            {"kind": "prayer", "node": "amidah.kedusha", "role": "congregation", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": " <b>יִמְלֹךְ</b> יְהֹוָה לְעוֹלָם. אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר. הַלְלוּיָהּ:</b></b></small>"}
           ]},
           {"ref": "42", "kind": "prayer", "role": "congregation_then_chazzan", "voice": "aloud", "text": "<b>אַתָּה קָדוֹשׁ</b>, וְשִׁמְךָ קָדוֹשׁ, וּקְדוֹשִׁים בְּכָל יוֹם יְהַלְלוּךָ סֶּלָה. כִּי אֵל מֶלֶךְ גָדוֹל וְקָדוֹשׁ אָתָּה. בָּרוּךְ אַתָּה יְהֹוָה, הָאֵל הַקָּדוֹשׁ: "},
           {"ref": "43", "kind": "prayer", "node": "amidah.shabbat.yismach_moshe", "text": "<b>יִשְׂמַח מֹשֶׁה</b> בְּמַתְּנַת חֶלְקוֹ, כִּי עֶבֶד נֶאֱמָן קָרָאתָ לּוֹ. כְּלִיל תִּפְאֶרֶת בְּרֹאשׁוֹ נָתַתָּ, בְּעָמְדוֹ לְפָנֶיךָ עַל הַר סִינַי. וּשְׁנֵי לוּחוֹת אֲבָנִים הוֹרִיד בְּיָדוֹ, וְכָתוּב בָּהֶם שְׁמִירַת שַׁבָּת, וְכֵן כָּתוּב בְּתוֹרָתֶךָ:"},
@@ -206,37 +206,37 @@
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " <b>אַרְבַּע</b> תְּקוּפוֹת בַּשָּׁנָה. תְּחַדֵּשׁ אוֹרָם כְּבָרִאשׁוֹנָה. כַּאֲשֶׁר שָׁמַעְנוּ כֵּן עוֹד חִישׁ נָא. הַחֲיֵינוּ בְגֶשֶׁם בָּרִאשׁוֹן לְחָדְשֵׁי הַשָּׁנָה:</b></b>"}
           ]},
           {"ref": "12", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה. מְחַיֶּה הַמֵּתִים: "},
-          {"ref": "13", "kind": "instruction", "en": "Keter (Crown)", "text": "<b><b><small> כתר</small></b></b>"},
-          {"ref": "14", "kind": "prayer", "role": "congregation_then_chazzan", "text": "<small><b><b><small> <b>כֶּתֶר יִתְּנוּ לְךָ</b>, יְהֹוָה אֱלֹהֵינוּ מַלְאָכִים הֲמוֹנֵי מַעְלָה. עִם עַמְּךָ יִשְׂרָאֵל קְבוּצֵי מַטָּה: יַחַד כֻּלָּם קְדֻשָּׁה לְךָ יְשַׁלֵּשׁוּ כַּדָּבָר הָאָמוּר עַל יַד נְבִיאֶךָ וְקָרָא זֶה אֶל זֶה וְאָמַר: </small></b></b></small>"},
+          {"ref": "13", "kind": "instruction", "node": "amidah.musaf.kedusha", "amidah": "repetition", "minyan": true, "en": "Keter (Crown)", "text": "<b><b><small> כתר</small></b></b>"},
+          {"ref": "14", "kind": "prayer", "node": "amidah.musaf.kedusha", "role": "congregation_then_chazzan", "amidah": "repetition", "minyan": true, "text": "<small><b><b><small> <b>כֶּתֶר יִתְּנוּ לְךָ</b>, יְהֹוָה אֱלֹהֵינוּ מַלְאָכִים הֲמוֹנֵי מַעְלָה. עִם עַמְּךָ יִשְׂרָאֵל קְבוּצֵי מַטָּה: יַחַד כֻּלָּם קְדֻשָּׁה לְךָ יְשַׁלֵּשׁוּ כַּדָּבָר הָאָמוּר עַל יַד נְבִיאֶךָ וְקָרָא זֶה אֶל זֶה וְאָמַר: </small></b></b></small>"},
           {"ref": "15", "parts": [
-            {"kind": "speaker", "en": "Congregation:", "text": "<small><b><b><small><b>קו\"ח:</b></small>"},
-            {"kind": "prayer", "role": "congregation", "text": " קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ יְהֹוָה צְבָאוֹת מְלֹא כָל הָאָרֶץ כְּבוֹדוֹ: "},
-            {"kind": "speaker", "en": "Chazzan:", "text": "<small><b>חזן:</b></small>"},
-            {"kind": "prayer", "role": "chazzan", "text": " כְּבוֹדוֹ מָלֵא עוֹלָם. מְשָׁרְתָיו שׁוֹאֲלִים זֶה לָזֶה אַיֵּה מְקוֹם כְּבוֹדוֹ לְהַעֲרִיצוֹ. לְעֻמָּתָם מְשַׁבְּחִים וְאוֹמְרִים: </b></b></small>"}
+            {"kind": "speaker", "node": "amidah.musaf.kedusha", "amidah": "repetition", "minyan": true, "en": "Congregation:", "text": "<small><b><b><small><b>קו\"ח:</b></small>"},
+            {"kind": "prayer", "node": "amidah.musaf.kedusha", "role": "congregation", "amidah": "repetition", "minyan": true, "text": " קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ יְהֹוָה צְבָאוֹת מְלֹא כָל הָאָרֶץ כְּבוֹדוֹ: "},
+            {"kind": "speaker", "node": "amidah.musaf.kedusha", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "text": "<small><b>חזן:</b></small>"},
+            {"kind": "prayer", "node": "amidah.musaf.kedusha", "role": "chazzan", "amidah": "repetition", "minyan": true, "text": " כְּבוֹדוֹ מָלֵא עוֹלָם. מְשָׁרְתָיו שׁוֹאֲלִים זֶה לָזֶה אַיֵּה מְקוֹם כְּבוֹדוֹ לְהַעֲרִיצוֹ. לְעֻמָּתָם מְשַׁבְּחִים וְאוֹמְרִים: </b></b></small>"}
           ]},
           {"ref": "16", "parts": [
-            {"kind": "speaker", "en": "Congregation:", "text": "<small><b><b><small><b>קו\"ח:</b></small>"},
-            {"kind": "prayer", "role": "congregation", "text": " בָּרוּךְ כְּבוֹד יְהֹוָה מִמְּקוֹמוֹ: "},
-            {"kind": "speaker", "en": "Chazzan:", "text": "<small><b>חזן:</b></small>"},
-            {"kind": "prayer", "role": "chazzan", "text": " מִמְּקוֹמוֹ הוּא יִפֶן בְּרַחֲמָיו לְעַמּוֹ. וְיָחוֹן עַם הַמְיַחֲדִים שְׁמוֹ עֶרֶב וָבוֹקֶר בְּכָל יוֹם תָּמִיד. פַּעֲמַיִם בְּאַהֲבָה שְׁמַע אוֹמְרִים: </b></b></small>"}
+            {"kind": "speaker", "node": "amidah.musaf.kedusha", "amidah": "repetition", "minyan": true, "en": "Congregation:", "text": "<small><b><b><small><b>קו\"ח:</b></small>"},
+            {"kind": "prayer", "node": "amidah.musaf.kedusha", "role": "congregation", "amidah": "repetition", "minyan": true, "text": " בָּרוּךְ כְּבוֹד יְהֹוָה מִמְּקוֹמוֹ: "},
+            {"kind": "speaker", "node": "amidah.musaf.kedusha", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "text": "<small><b>חזן:</b></small>"},
+            {"kind": "prayer", "node": "amidah.musaf.kedusha", "role": "chazzan", "amidah": "repetition", "minyan": true, "text": " מִמְּקוֹמוֹ הוּא יִפֶן בְּרַחֲמָיו לְעַמּוֹ. וְיָחוֹן עַם הַמְיַחֲדִים שְׁמוֹ עֶרֶב וָבוֹקֶר בְּכָל יוֹם תָּמִיד. פַּעֲמַיִם בְּאַהֲבָה שְׁמַע אוֹמְרִים: </b></b></small>"}
           ]},
           {"ref": "17", "parts": [
-            {"kind": "speaker", "en": "Congregation:", "text": "<small><b><b><small><b>קו\"ח:</b></small>"},
-            {"kind": "prayer", "role": "congregation", "text": " שְׁמַע יִשְׂרָאֵל יְהֹוָה אֱלֹהֵינוּ יְהֹוָה אֶחָד: "},
-            {"kind": "speaker", "en": "Chazzan:", "text": "<small><b>חזן:</b></small>"},
-            {"kind": "prayer", "role": "chazzan", "text": " הוּא אֱלֹהֵינוּ הוּא אָבִינוּ. הוּא מַלְכֵּנוּ הוּא מוֹשִׁיעֵנוּ. וְהוּא יוֹשִׁיעֵנוּ וְיִגְאָלֵנוּ שֵׁנִית וְיַשְׁמִיעֵנוּ בְּרַחֲמָיו שֵׁנִית לְעֵינֵי כָּל חַי לֵאמֹר. הֵן גָּאַלְתִּי אֶתְכֶם אַחֲרִית כְּרֵאשִׁית לִהְיוֹת לָכֶם לֵאלֹהִים: </b></b></small>"}
+            {"kind": "speaker", "node": "amidah.musaf.kedusha", "amidah": "repetition", "minyan": true, "en": "Congregation:", "text": "<small><b><b><small><b>קו\"ח:</b></small>"},
+            {"kind": "prayer", "node": "amidah.musaf.kedusha", "role": "congregation", "amidah": "repetition", "minyan": true, "text": " שְׁמַע יִשְׂרָאֵל יְהֹוָה אֱלֹהֵינוּ יְהֹוָה אֶחָד: "},
+            {"kind": "speaker", "node": "amidah.musaf.kedusha", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "text": "<small><b>חזן:</b></small>"},
+            {"kind": "prayer", "node": "amidah.musaf.kedusha", "role": "chazzan", "amidah": "repetition", "minyan": true, "text": " הוּא אֱלֹהֵינוּ הוּא אָבִינוּ. הוּא מַלְכֵּנוּ הוּא מוֹשִׁיעֵנוּ. וְהוּא יוֹשִׁיעֵנוּ וְיִגְאָלֵנוּ שֵׁנִית וְיַשְׁמִיעֵנוּ בְּרַחֲמָיו שֵׁנִית לְעֵינֵי כָּל חַי לֵאמֹר. הֵן גָּאַלְתִּי אֶתְכֶם אַחֲרִית כְּרֵאשִׁית לִהְיוֹת לָכֶם לֵאלֹהִים: </b></b></small>"}
           ]},
           {"ref": "18", "parts": [
-            {"kind": "speaker", "en": "Congregation:", "text": "<small><b><b><small><b>קו\"ח:</b></small>"},
-            {"kind": "prayer", "role": "congregation", "text": " אֲנִי יְהֹוָה אֱלֹהֵיכֶם: "},
-            {"kind": "speaker", "en": "Chazzan:", "text": "<small><b>חזן:</b></small>"},
-            {"kind": "prayer", "role": "chazzan", "text": " וּבְדִבְרֵי קָדְשְׁךָ כָּתוּב לֵאמֹר: "},
-            {"kind": "speaker", "en": "Congregation:", "text": "<small><b>קו\"ח:</b></small>"},
-            {"kind": "prayer", "role": "congregation", "text": " יִמְלֹךְ יְהֹוָה לְעוֹלָם. אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר. הַלְלוּיָהּ:</b></b></small>"}
+            {"kind": "speaker", "node": "amidah.musaf.kedusha", "amidah": "repetition", "minyan": true, "en": "Congregation:", "text": "<small><b><b><small><b>קו\"ח:</b></small>"},
+            {"kind": "prayer", "node": "amidah.musaf.kedusha", "role": "congregation", "amidah": "repetition", "minyan": true, "text": " אֲנִי יְהֹוָה אֱלֹהֵיכֶם: "},
+            {"kind": "speaker", "node": "amidah.musaf.kedusha", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "text": "<small><b>חזן:</b></small>"},
+            {"kind": "prayer", "node": "amidah.musaf.kedusha", "role": "chazzan", "amidah": "repetition", "minyan": true, "text": " וּבְדִבְרֵי קָדְשְׁךָ כָּתוּב לֵאמֹר: "},
+            {"kind": "speaker", "node": "amidah.musaf.kedusha", "amidah": "repetition", "minyan": true, "en": "Congregation:", "text": "<small><b>קו\"ח:</b></small>"},
+            {"kind": "prayer", "node": "amidah.musaf.kedusha", "role": "congregation", "amidah": "repetition", "minyan": true, "text": " יִמְלֹךְ יְהֹוָה לְעוֹלָם. אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר. הַלְלוּיָהּ:</b></b></small>"}
           ]},
           {"ref": "19", "parts": [
-            {"kind": "speaker", "en": "Chazzan:", "text": "<small><b><b><small><b>חזן:</b></small>"},
-            {"kind": "prayer", "role": "chazzan", "text": "לְדוֹר וָדוֹר נַגִּיד גָּדְלֶךָ. וּלְנֵצַח נְצָחִים קְדֻשָּׁתְךָ נַקְדִּישׁ. וְשִׁבְחֲךָ אֱלֹהֵינוּ מִפִּינוּ לֹא יָמוּשׁ לְעוֹלָם וָעֶד. כִּי אֵל מֶלֶךְ גָּדוֹל וְקָדוֹשׁ אָתָּה:</b></b></small>"}
+            {"kind": "speaker", "node": "amidah.musaf.kedusha", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "text": "<small><b><b><small><b>חזן:</b></small>"},
+            {"kind": "prayer", "node": "amidah.musaf.kedusha", "role": "chazzan", "amidah": "repetition", "minyan": true, "text": "לְדוֹר וָדוֹר נַגִּיד גָּדְלֶךָ. וּלְנֵצַח נְצָחִים קְדֻשָּׁתְךָ נַקְדִּישׁ. וְשִׁבְחֲךָ אֱלֹהֵינוּ מִפִּינוּ לֹא יָמוּשׁ לְעוֹלָם וָעֶד. כִּי אֵל מֶלֶךְ גָּדוֹל וְקָדוֹשׁ אָתָּה:</b></b></small>"}
           ]},
           {"ref": "20", "kind": "prayer", "text": "<b>הִנֵּה</b> זֶה בָּא לִפְרָקִים. זָמוּן לִגְאוֹל רְצוּצִים מֵאֲרָקִים. הַחֹדֶשׁ אֲשֶׁר רְבִיבִים בּוֹ מְרִיקִים. חַשְׁרַת מַיִם לְמַלֹּאת רֵקִים. טִעוֹת לְרַוּוֹת וִירָקִים. טְלָאִים בּוֹ לְהָקִים. בְּאַרְבָּעָה פְרָקִים: "},
           {"ref": "21", "parts": [

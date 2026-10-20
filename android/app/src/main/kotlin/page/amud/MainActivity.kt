@@ -7,6 +7,7 @@ import android.provider.Settings
 import androidx.core.content.FileProvider
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodChannel
 import java.io.File
 
@@ -51,6 +52,16 @@ class MainActivity : FlutterActivity() {
         setReaderDnd(false)
         super.onDestroy()
     }
+    /// Whether a hardware decoder plays 1080p HEVC, for the daf videos' HEVC
+    /// stream (software decoders are too slow on most phones).
+    private fun hasHardwareHevc(): Boolean = android.media.MediaCodecList(android.media.MediaCodecList.REGULAR_CODECS).codecInfos.any { info ->
+        !info.isEncoder &&
+            info.supportedTypes.any { it.equals("video/hevc", ignoreCase = true) } &&
+            (if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) info.isHardwareAccelerated
+             else !info.name.startsWith("OMX.google.") && !info.name.startsWith("c2.android.")) &&
+            runCatching { info.getCapabilitiesForType("video/hevc").videoCapabilities.areSizeAndRateSupported(1920, 1080, 30.0) }.getOrDefault(false)
+    }
+
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
         if (hasFocus) applyReaderFullscreen()
@@ -60,6 +71,7 @@ class MainActivity : FlutterActivity() {
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "amud/integrations").setMethodCallHandler { call, result ->
             when (call.method) {
                 "setReaderDnd" -> result.success(setReaderDnd(call.arguments == true))
+                "hevcDecoder" -> result.success(hasHardwareHevc())
                 "readerDndAccess" -> result.success(notifications?.isNotificationPolicyAccessGranted == true)
                 "openReaderDndSettings" -> {
                     startActivity(Intent(Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS))
@@ -97,6 +109,7 @@ class MainActivity : FlutterActivity() {
                 else -> result.notImplemented()
             }
         }
+        EventChannel(flutterEngine.dartExecutor.binaryMessenger, "amud/heading").setStreamHandler(HeadingStream(this))
         // In-app updates: the Dart side downloads the release APK into
         // cacheDir/updates and asks here for the system installer.
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "siddur/installer").setMethodCallHandler { call, result ->

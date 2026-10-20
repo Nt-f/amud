@@ -305,55 +305,6 @@
       }
     },
     {
-      "path": "Shabbat/Musaf LeShabbat/Amidah/Kaddish Shalem",
-      "title": "קדיש שלם",
-      "node": "kaddish.shalem",
-      "service": "musaf",
-      "he": {
-        "version": "Daat Siddur Ashkenaz",
-        "segs": [
-          {"ref": "1", "parts": [
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ "},
-            {"kind": "note", "en": "Vilna Gaon's version: yitgadel veyitkadesh", "cite": "גרסת הגר\"א", "clean": "גרסת הגר\"א: יִתְגַּדֵּל וְיִתְקַדֵּשׁ", "text": "<em><small>גרסת הגר\"א: יִתְגַּדֵּל וְיִתְקַדֵּשׁ</small></em> "},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "שְׁמֵהּ רַבָּא. "},
-            {"kind": "speaker", "role": "congregation", "minyan": true, "en": "The congregation responds:", "text": "<small><em>ועונים: </em> "},
-            {"kind": "prayer", "role": "congregation", "minyan": true, "text": "אמן</small> "},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "בְּעָלְמָא דִי בְרָא כִּרְעוּתֵהּ. וְיַמְלִיךְ מַלְכוּתֵהּ, בְּחַיֵיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵי דְּכָל בֵּית יִשְׂרָאֵל, בַּעֲגַלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן:"},
-            {"kind": "speaker", "role": "congregation", "minyan": true, "en": "The congregation responds:", "text": "<br><small><em>הקהל עונה:</em> "},
-            {"kind": "prayer", "role": "congregation", "minyan": true, "text": "אמן. יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָא:<small></small></small><br>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָא: יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל , שְׁמֵהּ דְּקוּדְשָׁא בְּרִיךְ הוּא "},
-            {"kind": "speaker", "role": "congregation", "minyan": true, "en": "The congregation responds:", "text": "<small><em>ועונים: </em>"},
-            {"kind": "prayer", "role": "congregation", "minyan": true, "text": "בְּרִיךְ הוּא</small><br>"},
-            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leila", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "לְעֵילָא מִן כָּל "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "minyan": true, "en": "During the Ten Days of Repentance, instead of \"Le'eila min kol\":", "text": "<small><em>בעשרת ימי תשובה במקום לְעֵילָא מִן כָּל: </em> "},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leila", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "לְעֵילָא וּלְעֵילָא מִכָּל </small>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "בִּרְכָתָא וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחָמָתָא, דַאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן: "},
-            {"kind": "speaker", "role": "congregation", "minyan": true, "en": "The congregation responds:", "text": "<small><em>ועונים: </em> "},
-            {"kind": "prayer", "role": "congregation", "minyan": true, "text": "אמן</small><br>"},
-            {"kind": "speaker", "role": "congregation", "minyan": true, "en": "Congregation:", "text": "<small><em>קהל:<em> "},
-            {"kind": "prayer", "role": "congregation", "minyan": true, "text": "קַבֵּל בְּרַחֲמִים וּבְרָצון אֶת תְּפִלָּתֵנוּ: </em></em></small><em><em><br> "},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "תִּתְקַבַּל צְלוֹתְהוֹן וּבָעוּתְהוֹן דְּכָל בֵּית יִשְׂרָאֵל קֳדָם אֲבוּהוֹן דִּי בִשְׁמַיָּא , וְאִמְרוּ אָמֵן. "},
-            {"kind": "speaker", "role": "congregation", "minyan": true, "en": "The congregation responds:", "text": "<small><em>ועונים: </em>"},
-            {"kind": "prayer", "role": "congregation", "minyan": true, "text": "אמן</small><br>"},
-            {"kind": "speaker", "role": "congregation", "minyan": true, "en": "Congregation:", "text": "<small><em>קהל: </em>"},
-            {"kind": "prayer", "role": "congregation", "minyan": true, "text": "יְהִי שֵׁם יְהוָה מְברָךְ מֵעַתָּה וְעַד עולָם: </small><br>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָא וְחַיִּים עָלֵינו וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: "},
-            {"kind": "speaker", "role": "congregation", "minyan": true, "en": "The congregation responds:", "text": "<small><em>ועונים: </em>"},
-            {"kind": "prayer", "role": "congregation", "minyan": true, "text": "אמן</small><br>"},
-            {"kind": "speaker", "role": "congregation", "minyan": true, "en": "Congregation:", "text": "<small><em>קהל: </em>"},
-            {"kind": "prayer", "role": "congregation", "minyan": true, "text": "עֶזְרִי מֵעִם יְהוָה עשֵׂה שָׁמַיִם וָאָרֶץ: </small><br>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה "},
-            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "שָׁלוֹם "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "minyan": true, "en": "During the Ten Days of Repentance:", "text": "<small><em>בעשרת ימי תשובה: </em>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "השלום</small> "},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל, וְאִמְרוּ אָמֵן: "},
-            {"kind": "speaker", "role": "congregation", "minyan": true, "en": "The congregation responds:", "text": "<small><em>ועונים: </em>"},
-            {"kind": "prayer", "role": "congregation", "minyan": true, "text": "אמן</small></em></em>"}
-          ]}
-        ]
-      }
-    },
-    {
       "path": "Shabbat/Musaf LeShabbat/Kaddish Shalem",
       "title": "קדיש שלם",
       "node": "kaddish.shalem",

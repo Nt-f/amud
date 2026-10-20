@@ -6,11 +6,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
+import '../../core/adaptive.dart';
 import '../../core/analytics.dart';
 import '../../core/celebration.dart';
 import '../../core/focus_mode.dart';
 import '../../core/l10n.dart';
 import '../../core/page_swipe.dart';
+import '../../core/portion_progress.dart';
 import '../../core/providers.dart';
 import '../../core/reader_mode.dart';
 import '../../core/settings.dart';
@@ -19,8 +21,9 @@ import '../integrations/prayer_links.dart' show shareTorahLink;
 import '../torah/torah_settings.dart';
 import 'daf_layout.dart';
 import 'daf_page.dart';
+import 'daf_video.dart';
 import 'gemara_data.dart';
-import 'gemara_home_screen.dart' show studyPath;
+import 'gemara_home_screen.dart' show DafVideoButton, dafOfAmud, studyPath;
 import 'gemara_perakim.dart';
 import 'gemara_settings.dart';
 import 'gemara_settings_sheet.dart';
@@ -82,6 +85,16 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
   /// Reader mode: taps step passage by passage (see [ReaderModeLayer]).
   bool _readerMode = false;
 
+  /// This unit's place in the day's learning, as a share of the bar along
+  /// the top: a marked portion (Mishnah, Kitzur Yomi) fills all of it, each
+  /// amud of today's Daf Yomi its half. Null when it isn't a day's learning.
+  ({double start, double share})? _share;
+
+  /// How far through the day's learning, for that bar.
+  final _progress = ValueNotifier<double?>(null);
+  final _tracker = PortionTracker();
+  bool _pageQueued = false;
+
   /// Passages on the amud, for stepping.
   int _count = 0;
 
@@ -104,6 +117,7 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
       if (_tip != null) setState(() => _tip = null);
       final zoomed = _zoom.value.getMaxScaleOnAxis() > 1.01;
       if (zoomed != _zoomed) setState(() => _zoomed = zoomed);
+      _queuePageProgress();
     });
     WidgetsBinding.instance.addPostFrameCallback((_) => _remember());
   }
@@ -113,6 +127,7 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
     _saveTimer?.cancel();
     _positions.itemPositions.removeListener(_onScroll);
     _zoom.dispose();
+    _progress.dispose();
     super.dispose();
   }
 
@@ -133,6 +148,12 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
   // Item 0 is the header; segment n is item n + 1.
   void _onScroll() {
     final shown = _positions.itemPositions.value;
+    final share = _share;
+    final from = widget.from ?? 0;
+    if (share != null && from < _count) {
+      final to = (widget.to ?? _count - 1).clamp(from, _count - 1);
+      if (_tracker.progress(shown, from + 1, to + 1) case final p?) _progress.value = share.start + share.share * p;
+    }
     // Scrolled to the end of the unit with a day's portion in it.
     if (shown.any((p) => p.index == _count + 1 && p.itemLeadingEdge < 0.95)) _finishYomi();
     final first = shown.where((p) => p.itemTrailingEdge > 0.05).map((p) => p.index).fold<int?>(null, (a, b) => a == null || b < a ? b : a);
@@ -159,6 +180,38 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
       analytics.event('page_swipe', {'reader': _kind, 'way': delta > 0 ? 'next' : 'previous'});
       _go(a);
     };
+  }
+
+  /// The amudim of today's Daf Yomi, when it's in this tractate.
+  List<String> _dafYomiAmudim() {
+    final yomi = dafYomiPlace(ref.read(todayProvider));
+    if (yomi == null || yomi.book != widget.tractate) return const [];
+    final daf = yomi.unit.substring(0, yomi.unit.length - 1);
+    return ['${daf}a', '${daf}b'].where(_book.contains).toList();
+  }
+
+  ({double start, double share})? _portionShare() {
+    if (widget.from != null) return (start: 0.0, share: 1.0);
+    final amudim = _dafYomiAmudim();
+    final at = amudim.indexOf(widget.amud);
+    return at < 0 ? null : (start: at / amudim.length, share: 1 / amudim.length);
+  }
+
+  /// On the printed page, the day's progress follows the page as it pans,
+  /// measured once it has been drawn.
+  void _queuePageProgress() {
+    if (_pageQueued || _share == null) return;
+    _pageQueued = true;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _pageQueued = false;
+      final share = _share;
+      final daf = _dafKey.currentContext?.findRenderObject() as RenderBox?;
+      final viewer = _viewerKey.currentContext?.findRenderObject() as RenderBox?;
+      if (!mounted || !_onPage || share == null || daf == null || viewer == null || !daf.hasSize || !viewer.hasSize) return;
+      final top = viewer.localToGlobal(Offset.zero).dy;
+      double at(double y) => (daf.localToGlobal(Offset(0, y)).dy - top) / viewer.size.height;
+      _progress.value = share.start + share.share * portionProgress(at(0), at(daf.size.height));
+    });
   }
 
   GemaraStyle _style(BuildContext context) {
@@ -267,10 +320,7 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
       celebrate(context, Celebration.fireworks);
       return;
     }
-    final yomi = dafYomiPlace(ref.read(todayProvider));
-    if (yomi == null || yomi.book != widget.tractate) return;
-    final daf = yomi.unit.substring(0, yomi.unit.length - 1);
-    final amudim = ['${daf}a', '${daf}b'].where(_book.contains);
+    final amudim = _dafYomiAmudim();
     final now = ref.read(gemaraMarksProvider);
     if (amudim.contains(widget.amud) && amudim.every((a) => now.isComplete(widget.tractate, a))) {
       celebrate(context, Celebration.confetti);
@@ -323,50 +373,76 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
     // Loaded early so finishing the amud knows whether a perek ends here.
     if (t.kind == StudyKind.bavli) ref.watch(perakimProvider(widget.tractate));
     readingText({'work': _kind, 'book': widget.tractate, 'unit': widget.amud, 'view': view.name});
+    ref.watch(todayProvider);
+    _share = _portionShare();
+    if (_share != null) _progress.value ??= _share!.start;
 
-    final bar = AppBar(
-      title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(t.unitTitle(context, widget.amud)),
-        Text(views.firstWhere((v) => v.$1 == view).$3, style: theme.textTheme.bodySmall),
-      ]),
-      actions: [
-        PopupMenuButton<GemaraView>(
-          tooltip: context.tr('View'),
-          icon: Icon(views.firstWhere((v) => v.$1 == view).$2),
-          onSelected: (v) {
-            ref.read(gemaraSettingsProvider.notifier).update((x) => x.withView(_kind, v));
-            setState(() => _word = null);
-          },
-          itemBuilder: (context) => [
-            for (final (v, icon, label) in views)
-              CheckedPopupMenuItem(value: v, checked: v == view, child: Row(children: [Icon(icon, size: 20), const SizedBox(width: 12), Text(label)])),
-          ],
-        ),
-        IconButton(
-          tooltip: bookmarked ? context.tr('Remove bookmark') : context.tr('Bookmark'),
-          icon: Icon(bookmarked ? Icons.bookmark : Icons.bookmark_border),
-          onPressed: () => ref.read(gemaraMarksProvider.notifier).toggleBookmark(DafPlace(widget.tractate, widget.amud, _selected ?? _visible)),
-        ),
-        IconButton(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => showGemaraSettings(context, book: t)),
-        PopupMenuButton<String>(
-          tooltip: context.tr('More'),
-          onSelected: (v) async {
-            switch (v) {
-              case 'reader':
-                _readerMode ? setState(() => _readerMode = false) : _startReader(_selected ?? _visible);
-              case 'link':
+    // The daf's video, or a Kitzur Yomi day's (or the first in the siman).
+    final video = switch (t.kind) {
+      StudyKind.bavli when dafOfAmud(widget.amud) != null => DafVideoButton(tractate: widget.tractate, daf: dafOfAmud(widget.amud)!),
+      StudyKind.kitzur => DafVideoButton.kitzur(siman: int.parse(widget.amud), seif: widget.from == null ? null : widget.from! + 1),
+      _ => null,
+    };
+    if (video != null) dafVideoIndex.load();
+    final title = t.unitTitle(context, widget.amud);
+    final bar = ValueListenableBuilder(
+      valueListenable: dafVideoIndex,
+      builder: (context, _, _) {
+        final videoUnit = video?.readyUnit;
+        return AppBar(
+          title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(title),
+            Text(views.firstWhere((v) => v.$1 == view).$3, style: theme.textTheme.bodySmall),
+          ]),
+          // On a narrow phone the link, then Reader mode, the bookmark, text
+          // settings and the video wait in a menu.
+          actions: fitBarActions(context, title, spare: [if (videoUnit != null) ...[5, 4, 2, 3, 1] else ...[4, 3, 1, 2]], [
+            BarTool.custom(PopupMenuButton<GemaraView>(
+              tooltip: context.tr('View'),
+              icon: Icon(views.firstWhere((v) => v.$1 == view).$2),
+              onSelected: (v) {
+                ref.read(gemaraSettingsProvider.notifier).update((x) => x.withView(_kind, v));
+                setState(() => _word = null);
+              },
+              itemBuilder: (context) => [
+                for (final (v, icon, label) in views)
+                  CheckedPopupMenuItem(value: v, checked: v == view, child: Row(children: [Icon(icon, size: 20), const SizedBox(width: 12), Text(label)])),
+              ],
+            )),
+            if (videoUnit != null)
+              BarTool(
+                tooltip: context.tr('Watch the shiur'),
+                icon: const Icon(Icons.movie_outlined),
+                onPressed: () => context.push(dafVideoPath(video!.tractate, videoUnit)),
+              ),
+            BarTool(
+              tooltip: bookmarked ? context.tr('Remove bookmark') : context.tr('Bookmark'),
+              isSelected: bookmarked,
+              icon: const Icon(Icons.bookmark_border),
+              selectedIcon: const Icon(Icons.bookmark),
+              onPressed: () => ref.read(gemaraMarksProvider.notifier).toggleBookmark(DafPlace(widget.tractate, widget.amud, _selected ?? _visible)),
+            ),
+            BarTool(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => showGemaraSettings(context, book: t)),
+            BarTool(
+              tooltip: context.tr('Reader mode'),
+              isSelected: _readerMode,
+              icon: const Icon(Icons.chrome_reader_mode_outlined),
+              selectedIcon: const Icon(Icons.chrome_reader_mode),
+              onPressed: () => _readerMode ? setState(() => _readerMode = false) : _startReader(_selected ?? _visible),
+            ),
+            BarTool(
+              tooltip: context.tr('Copy link'),
+              icon: const Icon(Icons.link),
+              onPressed: () async {
                 // This unit, at the marked passage if there is one.
                 final link = shareTorahLink(studyPath(widget.tractate, widget.amud, segment: _selected));
                 await Clipboard.setData(ClipboardData(text: link.toString()));
                 if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.tr('Link copied'))));
-            }
-          },
-          itemBuilder: (context) => [
-            CheckedPopupMenuItem(value: 'reader', checked: _readerMode, child: Text(context.tr('Reader mode'))),
-            PopupMenuItem(value: 'link', child: ListTile(contentPadding: EdgeInsets.zero, leading: const Icon(Icons.link), title: Text(context.tr('Copy link')))),
-          ],
-        ),
-      ],
+              },
+            ),
+          ]),
+        );
+      },
     );
 
     final body = switch (daf) {
@@ -395,16 +471,19 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
         FocusModeBars(child: bar),
         Expanded(
           child: FocusModeBody(
-            child: DoubleTapListener(
-              // In reader mode a double tap steps back instead.
-              onDoubleTap: _readerMode ? () {} : toggleFocusMode,
-              child: PageSwipe(
-                // While the page is zoomed, sideways drags pan it instead.
-                onNext: _zoomed || _readerMode ? null : _swipe(1),
-                onPrevious: _zoomed || _readerMode ? null : _swipe(-1),
-                child: body,
+            child: Stack(fit: StackFit.expand, children: [
+              DoubleTapListener(
+                // In reader mode a double tap steps back instead.
+                onDoubleTap: _readerMode ? () {} : toggleFocusMode,
+                child: PageSwipe(
+                  // While the page is zoomed, sideways drags pan it instead.
+                  onNext: _zoomed || _readerMode ? null : _swipe(1),
+                  onPrevious: _zoomed || _readerMode ? null : _swipe(-1),
+                  child: body,
+                ),
               ),
-            ),
+              if (_share != null) Positioned(top: 0, left: 0, right: 0, child: PortionProgressBar(progress: _progress)),
+            ]),
           ),
         ),
         if (wordSeg != null && wordSeg.hasWords && _word! < wordSeg.tokens.length && view != GemaraView.daf)
@@ -466,7 +545,10 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
                 DafPage(
                   key: _dafKey,
                   text: d,
-                  onLayout: (l) => _dafLayout = l,
+                  onLayout: (l) {
+                    _dafLayout = l;
+                    _queuePageProgress();
+                  },
                   onHoldWord: (w) => _startReader(w.word.segment),
                   selected: _selected,
                   markedComments: tapMarks?.comments ?? const {},
@@ -514,20 +596,16 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
     final seg = tapped.word.segment;
     final page = [for (final w in wordsOfHtml(d.vilnaAt(seg), segment: seg)) w.text];
     final anchors = commentAnchors(d, seg, page);
-    DafColumn columnOf(String id) => id == 'rashi' ? DafColumn.inner : DafColumn.outer;
-    // A comment's number on the page counts every comment of its commentary
-    // on the passages before it (as the page lays them out).
-    int onPage(String id, int local) {
-      var n = local;
-      for (var s = 0; s < seg; s++) {
-        n += d.commentary(id)?.at(s).length ?? 0;
-      }
-      return n;
-    }
+    DafColumn columnOf(String id) => commentaryInfo(id).inner ? DafColumn.inner : DafColumn.outer;
+    // A comment's number on the page: its place in its margin.
+    final margins = {for (final inner in [true, false]) inner: d.margin(inner: inner)};
+    int onPage(String id, int local) =>
+        margins[commentaryInfo(id).inner]!.indexWhere((c) => c.id == id && c.segment == seg && c.index == local);
 
     if (tapped.column != DafColumn.main) {
-      final id = tapped.column == DafColumn.inner ? 'rashi' : 'tosafot';
-      final a = anchors.where((x) => x.id == id && onPage(id, x.index) == tapped.word.comment).firstOrNull;
+      final m = margins[tapped.column == DafColumn.inner]!;
+      final at = tapped.word.comment >= 0 && tapped.word.comment < m.length ? m[tapped.word.comment] : null;
+      final a = at == null ? null : anchors.where((x) => x.id == at.id && x.index == at.index && at.segment == seg).firstOrNull;
       return (
         words: a == null ? null : (strong: {for (var i = a.from; i <= a.to; i++) i}, light: const <int>{}),
         comments: {(tapped.column, tapped.word.comment)},
@@ -621,9 +699,8 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
               Text(context.tr('Word-by-word English isn\'t ready for this amud yet.'), style: st.small.copyWith(color: st.muted)),
             ]);
     } else {
-      final com = d.commentary(w.column == DafColumn.inner ? 'rashi' : 'tosafot');
-      final all = [for (var i = 0; i < d.length; i++) ...?com?.at(i)];
-      final comment = w.word.comment >= 0 && w.word.comment < all.length ? all[w.word.comment] : null;
+      final all = d.margin(inner: w.column == DafColumn.inner);
+      final comment = w.word.comment >= 0 && w.word.comment < all.length ? all[w.word.comment].comment : null;
       final en = comment == null ? '' : plainText(comment.en);
       final (head, _) = comment?.split ?? ('', '');
       body = Column(crossAxisAlignment: CrossAxisAlignment.stretch, mainAxisSize: MainAxisSize.min, children: [
@@ -716,7 +793,7 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
           view: view,
           style: st,
           selected: _selected == i,
-          today: widget.from != null && i >= widget.from! && i <= (widget.to ?? 1 << 30),
+          today: _portionMark(i),
           selectedWord: _wordSegment == i ? _word : null,
           onWord: (k) => _tapWord(i, k),
           expanded: _expanded == i,
@@ -731,6 +808,15 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
         );
       },
     );
+  }
+
+  /// Where passage [i] sits in the day's marked portion, if it's in it.
+  ({bool first, bool last})? _portionMark(int i) {
+    final from = widget.from;
+    if (from == null) return null;
+    final to = (widget.to ?? _count - 1).clamp(0, _count - 1);
+    if (i < from || i > to) return null;
+    return (first: i == from, last: i == to);
   }
 
   /// The end of the amud: the button that marks it complete, then the way

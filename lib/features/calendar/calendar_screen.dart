@@ -143,7 +143,7 @@ class CalendarView extends ConsumerWidget {
             padding: EdgeInsets.all(compact ? 12 : 16),
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(formatPlainDate(selected), style: theme.textTheme.titleMedium),
-              Text('${selHd.render(context.hebcalLocale)} · ${selHd.renderGematriya()}', style: theme.textTheme.bodyMedium),
+              Text('${selHd.render(context.hebcalLocale)} · ${keepTogether(selHd.renderGematriya())}', style: theme.textTheme.bodyMedium),
               const Divider(),
               if (selEvents.isEmpty) Text(context.tr('No events')),
               for (final e in selEvents)

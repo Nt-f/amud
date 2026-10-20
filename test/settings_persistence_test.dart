@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:amud/core/l10n.dart';
 import 'package:amud/core/settings.dart';
 import 'package:amud/core/storage.dart';
+import 'package:amud/features/siddur/book_kind.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -23,6 +24,17 @@ void main() {
     expect(s.location.name, const AppSettings().location.name);
     expect(s.hour12, isNull);
     expect(s.learningSchedules, ['dafYomi']);
+  });
+
+  test('the Sefardi siddur is set in its own font, unless that is turned off', () {
+    const s = AppSettings(hebrewFont: 'TaameyFrankCLM');
+    expect(readerSettings(s, 'Siddur Edot HaMizrach').hebrewFont, 'KeterYG');
+    expect(readerSettings(s, 'Siddur Sefard').hebrewFont, 'TaameyFrankCLM');
+    expect(readerSettings(s, 'Siddur Ashkenaz').hebrewFont, 'TaameyFrankCLM');
+    final off = AppSettings.fromJson(s.copyWith(sefardiFont: '').toJson());
+    expect(readerSettings(off, 'Siddur Edot HaMizrach').hebrewFont, 'TaameyFrankCLM');
+    // Saved before the setting existed: the default.
+    expect(AppSettings.fromJson({...s.toJson()}..remove('sefardiFont')).sefardiFont, 'KeterYG');
   });
 
   test('settings round-trip through storage', () async {

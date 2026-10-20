@@ -123,6 +123,12 @@ class ResolveOptions {
 
   /// Node ids the user explicitly expanded despite being excluded.
   final Set<String> forceExpanded;
+
+  /// Read after sunset, before the next dawn: the night's context. Birkat
+  /// HaMazon follows it (Retzei at the Friday night meal), and what only
+  /// the day that just ended adds (its Ya'aleh VeYavo) stays, folded, for
+  /// a meal mostly eaten before sunset (see [SegmentItem.beforeSunset]).
+  final ContextProvider? night;
   const ResolveOptions({
     this.excluded = ExcludedDisplay.collapse,
     this.showNotes = false,
@@ -133,6 +139,7 @@ class ResolveOptions {
     this.notesHebrew = true,
     this.notesTranslation = true,
     this.forceExpanded = const {},
+    this.night,
   });
 }
 
@@ -245,6 +252,10 @@ class SegmentItem extends RenderItem {
   final String? graphNode;
   final List<String> gestures;
   final int? repeat;
+
+  /// Not said tonight, but said on the day that ended at sunset: Birkat
+  /// HaMazon's Ya'aleh VeYavo after a meal mostly eaten before sunset.
+  final bool beforeSunset;
   const SegmentItem(super.key, this.node, this.he, this.tr, this.kind, this.applicability, this.labelEn,
       this.labelHe, this.excluded,
       {this.announces = false,
@@ -258,7 +269,8 @@ class SegmentItem extends RenderItem {
       this.select,
       this.graphNode,
       this.gestures = const [],
-      this.repeat});
+      this.repeat,
+      this.beforeSunset = false});
 
   /// This line with only one language, to set the two apart (the linear
   /// reader's columns, or its Hebrew above a rule and English below).
@@ -277,7 +289,8 @@ class SegmentItem extends RenderItem {
       select: select,
       graphNode: graphNode,
       gestures: gestures,
-      repeat: repeat);
+      repeat: repeat,
+      beforeSunset: beforeSunset);
 }
 
 /// Consecutive segments that aren't said today, folded into one row.
@@ -288,6 +301,9 @@ class ExcludedGroupItem extends RenderItem {
   /// Distinct labels of the grouped conditions.
   List<String> get labelsEn => {for (final i in items) if (i.labelEn != null) i.labelEn!}.toList();
   List<String> get labelsHe => {for (final i in items) if (i.labelHe != null) i.labelHe!}.toList();
+
+  /// Said only if the meal was mostly eaten before sunset.
+  bool get beforeSunset => items.isNotEmpty && items.every((i) => i.beforeSunset);
 }
 
 /// Generated content (e.g. today's Omer count) inserted by the engine.
@@ -517,21 +533,19 @@ class SiddurResolver {
             notesHebrew: options.notesHebrew,
             notesTranslation: options.notesTranslation,
             forceExpanded: options.forceExpanded,
+            night: options.night,
           ));
     }
-    // One reading for the section, where several of its parts could show it.
-    var shown = false;
-    out.removeWhere((i) {
-      if (i is! DynamicItem || i.kind != 'leining') return false;
-      final again = shown;
-      shown = true;
-      return again;
-    });
+    // One reading for the section, where several of its parts could show
+    // it: at the blessings over the reading, where the siddur has them.
+    final readings = [for (final i in out) if (i is DynamicItem && i.kind == 'leining') i];
+    final keep = readings.where((i) => i.data['at'] == true).firstOrNull ?? readings.firstOrNull;
+    out.removeWhere((i) => i is DynamicItem && i.kind == 'leining' && i != keep);
     _dropUnsaidOptionSets(out);
     return switch (options.excluded) {
       ExcludedDisplay.collapse => _group(out),
-      ExcludedDisplay.hide => _pruneEmptyHeadings(out),
-      ExcludedDisplay.dim => out,
+      ExcludedDisplay.hide => _pruneEmptyHeadings(_group(out, onlyBeforeSunset: true)),
+      ExcludedDisplay.dim => _group(out, onlyBeforeSunset: true),
     };
   }
 
@@ -581,12 +595,13 @@ class SiddurResolver {
     return [for (var i = 0; i < items.length; i++) if (keep[i]) items[i]];
   }
 
-  /// Folds runs of 2+ excluded segments into [ExcludedGroupItem]s.
-  static List<RenderItem> _group(List<RenderItem> items) {
+  /// Folds runs of 2+ excluded segments into [ExcludedGroupItem]s; lines
+  /// said only if the meal was before sunset are always folded, apart.
+  static List<RenderItem> _group(List<RenderItem> items, {bool onlyBeforeSunset = false}) {
     final out = <RenderItem>[];
     final buf = <SegmentItem>[];
     void flush() {
-      if (buf.length >= 2) {
+      if (buf.length >= 2 || (buf.isNotEmpty && buf.first.beforeSunset)) {
         out.add(ExcludedGroupItem('g:${buf.first.key}', List.of(buf)));
       } else {
         out.addAll(buf);
@@ -595,7 +610,8 @@ class SiddurResolver {
     }
 
     for (final it in items) {
-      if (it is SegmentItem && it.excluded && !it.option) {
+      if (it is SegmentItem && it.excluded && !it.option && (it.beforeSunset || !onlyBeforeSunset)) {
+        if (buf.isNotEmpty && buf.first.beforeSunset != it.beforeSunset) flush();
         buf.add(it);
       } else {
         flush();
@@ -636,6 +652,10 @@ class SiddurResolver {
     });
   }
 
+  /// A siddur's whole Torah service printed as one section ("Reading of the
+  /// Torah"), from taking out the Torah to returning it.
+  static final _torahService = RegExp(r'torah reading|reading of the torah', caseSensitive: false);
+
   void _resolveNode(SchemaNode node, VersionSelection versions, ContextProvider contexts, ResolveOptions options,
       List<RenderItem> out, int baseLevel, Service service, Applicability inherited, bool isTop) {
     final svc = _corpusService(node) ?? serviceFor(node, service);
@@ -655,9 +675,13 @@ class SiddurResolver {
     }
     out.add(HeadingItem('h:${node.id}', node, node.path.length - baseLevel, ap, rule?.labelEn, rule?.labelHe));
 
-    if (node.isLeaf && !excluded && ({'torah.reading', 'torah.aliyah_blessings'}.contains(corpus?.leaf(node.id)?.node) || rule?.when == 'torahReading')) {
+    final graph = corpus?.leaf(node.id)?.node;
+    final readingHere = {'torah.reading', 'torah.aliyah_blessings'}.contains(graph);
+    if (node.isLeaf &&
+        !excluded &&
+        (readingHere || rule?.when == 'torahReading' || (graph == 'torah.vayehi_binsoa' && _torahService.hasMatch(node.en)))) {
       final reading = _leining(ctx, node.id);
-      if (reading != null) out.add(reading);
+      if (reading != null) out.add(DynamicItem(reading.key, reading.kind, {...reading.data, 'at': readingHere}));
     }
 
     if (ap == Applicability.today && rule != null && RegExp('omer', caseSensitive: false).hasMatch(rule.when)) {
@@ -714,8 +738,18 @@ class SiddurResolver {
     }
   }
 
+  static final _mealBlessing = RegExp(r'birkat ha.?mazon|birchat ha.?mazon|birkas ha.?mazon|grace after meals|post meal blessing', caseSensitive: false);
+
   void _resolveLeaf(SchemaNode leaf, VersionSelection versions, DayContext ctx, ResolveOptions options,
       List<RenderItem> out, bool sectionExcluded) {
+    // Birkat HaMazon after sunset: tonight's, with the ended day's
+    // additions kept for a meal eaten mostly before sunset.
+    DayContext? ended;
+    final graph = corpus?.leaf(leaf.id)?.node;
+    if (options.night != null && (graph != null ? graph.startsWith('birkat_hamazon') : _mealBlessing.hasMatch(leaf.en))) {
+      ended = ctx;
+      ctx = options.night!(ctx.service);
+    }
     final (heInfo, heRaw) = versions.pick(versions.hebrew, leaf.path);
     final (trInfo, trRaw) = options.showTranslation || options.notesTranslation
         ? versions.pick(versions.translation, leaf.path)
@@ -796,14 +830,36 @@ class SiddurResolver {
       if (ap == Applicability.today && _ordinary(rubric!.expression, ctx.service) && !_justSwitched(rubric.expression, ctx)) ap = Applicability.always;
       // A circumstance the reader answered is no news to them: no "today" label.
       if (ap == Applicability.today && RegExp(r'\bif_').hasMatch(rubric!.expression)) ap = Applicability.always;
+      var labelEn = rubric?.labelEn, labelHe = rubric?.labelHe;
+      // A line made only of conditional parts, none said today (Shabbat
+      // Rosh Chodesh's "Retzei" with its leap-year phrase), isn't said.
+      if (ap == Applicability.always && h != null && h.hasInlineConditions) {
+        final said = [
+          for (final r in h.runs)
+            if (r.kind != RunKind.marker && r.html.replaceAll(RegExp(r'<[^>]*>'), '').trim().isNotEmpty) r
+        ];
+        if (said.isNotEmpty && said.every((r) => r.conditional && _runApplicability(r, ctx) == Applicability.notToday)) {
+          ap = Applicability.notToday;
+          labelEn = said.first.rubric!.labelEn;
+          labelHe = said.first.rubric!.labelHe;
+        }
+      }
+      // Not tonight's, but the day that just ended said it.
+      var beforeSunset = false;
+      if (ended != null && !sectionExcluded && ap == Applicability.notToday) {
+        beforeSunset = rubric != null
+            ? _eval(rubric.condition, ended) != Applicability.notToday
+            : h != null && h.runs.any((r) => r.conditional && _runApplicability(r, ended!) != Applicability.notToday);
+      }
       if (sectionExcluded) ap = Applicability.notToday;
       final isExcluded = ap == Applicability.notToday;
       // Hide means hidden, alternatives included; only a section opened
       // directly on a day it isn't said still shows, dimmed.
       final hide = options.excluded == ExcludedDisplay.hide && !sectionExcluded;
-      if (isExcluded && hide) return;
-      final heRuns = h == null ? null : _runs(h, ctx, hide);
-      final trRuns = t == null ? null : _runs(t, ctx, hide);
+      if (isExcluded && hide && !beforeSunset) return;
+      final runCtx = beforeSunset ? ended! : ctx;
+      final heRuns = h == null ? null : _runs(h, runCtx, hide);
+      final trRuns = t == null ? null : _runs(t, runCtx, hide);
       if (heRuns == null && trRuns == null) return;
       out.add(SegmentItem(
         key,
@@ -812,8 +868,8 @@ class SiddurResolver {
         trRuns,
         primary.kind,
         ap,
-        rubric?.labelEn,
-        rubric?.labelHe,
+        labelEn,
+        labelHe,
         isExcluded,
         announces: (h ?? t)!.announces,
         option: (h ?? t)!.option,
@@ -827,6 +883,7 @@ class SiddurResolver {
         graphNode: primary.graphNode ?? (fromCorpus ? corpus?.leaf(leaf.id)?.node : null),
         gestures: primary.gestures,
         repeat: primary.repeat,
+        beforeSunset: beforeSunset,
       ));
     }
 

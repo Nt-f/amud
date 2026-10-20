@@ -418,6 +418,93 @@ void main() {
     c.dispose();
   });
 
+  testWidgets('reader mode steps pasuk by pasuk, in verses and in running text', (tester) async {
+    late ProviderContainer c;
+    await tester.runAsync(() async {
+      c = await container();
+      await c.read(storageProvider).writeBlob('shnayim-mikra:1:format', [2]);
+      await c.read(storageProvider).writeBlob('shnayim-mikra:1', packShnayimMikra((
+        name: 'Genesis',
+        begin: (chapter: 6, verse: 9),
+        mikra: body(['פסוק ראשון', 'פסוק שני', 'פסוק שלישי']),
+        targum: body(['תרגום ראשון', 'תרגום שני', 'תרגום שלישי']),
+      )));
+    });
+    c.read(settingsProvider.notifier).update((x) => x.copyWith(layout: TextLayout.hebrewOnly));
+    c.read(shnayimMikraSettingsProvider.notifier)
+        .update((x) => x.copyWith(mode: MikraMode.verse, repeatVerse: true, showTargum: true, showRashi: false));
+    await tester.pumpWidget(UncontrolledProviderScope(
+      container: c,
+      child: MaterialApp(
+        theme: buildTheme(c.read(settingsProvider), Brightness.light),
+        home: const ShnayimMikraScreen(parsha: 'Noach', year: 5790),
+      ),
+    ));
+    await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 200)));
+    await tester.pump();
+
+    // The verse marked, wherever it shows.
+    Color? markOf(String words) {
+      Color? found;
+      for (final e in find.byType(RichText, skipOffstage: false).evaluate()) {
+        final text = (e.widget as RichText).text;
+        if (!text.toPlainText().contains(words)) continue;
+        text.visitChildren((s) {
+          if (s is TextSpan && (s.text ?? '').contains(words) && s.style?.backgroundColor != null) found = s.style!.backgroundColor;
+          return true;
+        });
+        e.visitAncestorElements((a) {
+          final w = a.widget;
+          if (w is DecoratedBox && w.decoration is BoxDecoration && (w.decoration as BoxDecoration).color != null) {
+            found = (w.decoration as BoxDecoration).color;
+          }
+          return found == null && w is! ListView;
+        });
+      }
+      return found;
+    }
+
+    // Taps a second apart unless [quick] (synthesized taps have no time).
+    var clock = Duration.zero;
+    Future<void> tapPage({bool quick = false}) async {
+      clock += quick ? const Duration(milliseconds: 80) : const Duration(seconds: 1);
+      final g = await tester.createGesture();
+      await g.down(tester.getCenter(find.byType(ListView)), timeStamp: clock);
+      await g.up(timeStamp: clock + const Duration(milliseconds: 20));
+      await tester.pump(const Duration(milliseconds: 400));
+    }
+
+    await tester.tap(find.byTooltip('Reader mode'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 200));
+    expect(markOf('פסוק ראשון'), isNotNull);
+    expect(markOf('פסוק שני'), isNull);
+    await tapPage();
+    expect(markOf('פסוק ראשון'), isNull);
+    expect(markOf('פסוק שני'), isNotNull);
+
+    // Running text: the pasuk, its repeat and its Targum are marked.
+    c.read(shnayimMikraSettingsProvider.notifier).update((x) => x.copyWith(mode: MikraMode.aliyah));
+    await tester.pump();
+    await tapPage();
+    expect(markOf('פסוק שלישי'), isNotNull);
+    expect(markOf('תרגום שלישי'), isNotNull);
+    expect(markOf('פסוק שני'), isNull);
+    // Past the last pasuk the mark stays, and the aliyah's end shows.
+    await tapPage();
+    expect(markOf('פסוק שלישי'), isNotNull);
+    // Two quick taps: back two from there.
+    await tapPage(quick: true);
+    expect(markOf('פסוק ראשון'), isNotNull);
+    expect(markOf('פסוק שלישי'), isNull);
+
+    await tester.tap(find.byTooltip('Reader mode'));
+    await tester.pump();
+    expect(find.textContaining('Reader mode: tap for next'), findsNothing);
+    await tester.pumpWidget(const SizedBox());
+    c.dispose();
+  });
+
   test('a saved order keeps the parts it knows, and adds new ones', () {
     ShnayimMikraSettings read(Object? order) => ShnayimMikraSettings.fromJson({'order': order});
     expect(read(null).order, MikraPart.values);
@@ -490,6 +577,15 @@ void main() {
     expect(c.read(shnayimMikraSettingsProvider).order, MikraPart.values);
     await tester.pumpWidget(const SizedBox());
     c.dispose();
+  });
+
+  test('the aliyah rests from Sunday to Wednesday nights, not Thursday or Friday night', () {
+    // Sunday, October 18, 2026, and the week from it.
+    final sunday = HDate.fromAbs(const PlainDate(2026, 10, 18).abs);
+    expect(sunday.getDay(), 0);
+    bool rests(int d, {required bool afterSunset}) => shnayimMikraRestsTonight(sunday.addDays(d), afterSunset: afterSunset);
+    expect([for (var d = 0; d < 7; d++) rests(d, afterSunset: true)], [true, true, true, true, false, false, false]);
+    expect([for (var d = 0; d < 7; d++) rests(d, afterSunset: false)], everyElement(isFalse));
   });
 
   testWidgets("the date card's line checks off today's aliyah", (tester) async {

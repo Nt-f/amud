@@ -35,16 +35,16 @@ class SyncSource {
 /// `test/sync_test.dart` fails when a new setting is in neither list.
 const localSettingsFields = {
   'v', 'location', 'useElevation', 'exactAlarms', 'setupDone', 'seenFeatures', 'shareUsage', //
-  'keepReaderAwake', 'fullscreenReader', 'readerDnd', 'travelPrompts', 'desktopTray', 'omerBadge',
-  'levanaReminder', 'hachamaReminder', 'navTabs', 'navLabels', 'expandedSettings',
+  'keepReaderAwake', 'fullscreenReader', 'readerDnd', 'readerCompass', 'travelPrompts', 'desktopTray', 'omerBadge',
+  'levanaReminder', 'levanaHeadsUp', 'hachamaReminder', 'omerReminder', 'navTabs', 'navLabels', 'expandedSettings',
 };
 
 /// AppSettings fields that sync: how the app looks, reads and counts.
 const syncedSettingsFields = {
   'hour12', 'candleLightingMins', 'havdalahMins', 'opinion', 'defaultBook', 'hebrewVersions', 'translationVersions', //
   'layout', 'linearStyle', 'notesLanguage', 'titleLanguage', 'uiLanguage', 'ashkenaziSpelling', 'showTeamim', 'showNikud', 'preferTrop',
-  'textScale', 'hebrewFont', 'latinFont', 'excludedDisplay', 'showNotes', 'conciseNotes', 'collapseNotes', 'collapseChazarah',
-  'choices', 'showInstructions', 'highlightToday', 'highlightColor', 'typesetting', 'justifyText', 'typeContrast', 'minhagim', 'themeMode',
+  'textScale', 'hebrewFont', 'sefardiFont', 'latinFont', 'excludedDisplay', 'showNotes', 'conciseNotes', 'collapseNotes', 'collapseChazarah',
+  'choices', 'showInstructions', 'highlightToday', 'highlightColor', 'typesetting', 'justifyText', 'typeContrast', 'minhagim', 'compassRhumbLine', 'themeMode',
   'warmth', 'seedColor', 'openLicensesOnly', 'learningSchedules',
 };
 

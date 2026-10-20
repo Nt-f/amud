@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -274,6 +276,74 @@ Future<T?> showAdaptivePicker<T>(BuildContext context,
 
 Widget adaptiveProgress() => const Center(child: CircularProgressIndicator.adaptive());
 
+/// One of an app bar's tools, for [fitBarActions].
+class BarTool {
+  final String tooltip;
+  final Widget icon;
+  final Widget? selectedIcon;
+  final bool? isSelected;
+  final VoidCallback? onPressed;
+
+  /// A tool of its own (a menu), always kept on the bar.
+  final Widget? custom;
+
+  const BarTool({required this.tooltip, required this.icon, this.selectedIcon, this.isSelected, required this.onPressed})
+      : custom = null;
+  const BarTool.custom(Widget this.custom)
+      : tooltip = '',
+        icon = const SizedBox.shrink(),
+        selectedIcon = null,
+        isSelected = null,
+        onPressed = null;
+}
+
+/// An app bar's [tools], in their order on the bar. Where they would cut
+/// the [title] short (narrow phones, large text: "Shach…"), those listed
+/// in [spare], first first, go into a "More" menu instead.
+List<Widget> fitBarActions(BuildContext context, String title, List<BarTool> tools, {required List<int> spare}) {
+  final scale = MediaQuery.textScalerOf(context).scale(1);
+  // Room for the whole title, or about nine letters of a long one, beside
+  // the back button and the title's spacing.
+  final need = math.min(textWidth(context, title, Theme.of(context).appBarTheme.titleTextStyle ?? Theme.of(context).textTheme.titleLarge),
+          120 * scale) +
+      8;
+  final fit = ((MediaQuery.sizeOf(context).width - 72 - need) / 48).floor();
+  final menu = tools.length <= fit ? const <int>{} : spare.take(math.max(0, tools.length - math.max(0, fit - 1))).toSet();
+  Widget icon(BarTool t) => t.isSelected == true ? t.selectedIcon ?? t.icon : t.icon;
+  return [
+    for (final (i, t) in tools.indexed)
+      if (!menu.contains(i))
+        t.custom ??
+            IconButton(tooltip: t.tooltip, icon: t.icon, selectedIcon: t.selectedIcon, isSelected: t.isSelected, onPressed: t.onPressed),
+    if (menu.isNotEmpty)
+      PopupMenuButton<VoidCallback>(
+        tooltip: context.tr('More'),
+        onSelected: (f) => f(),
+        itemBuilder: (_) => [
+          for (final (i, t) in tools.indexed)
+            if (menu.contains(i) && t.onPressed != null) PopupMenuItem(value: t.onPressed, child: ListTile(leading: icon(t), title: Text(t.tooltip))),
+        ],
+      ),
+  ];
+}
+
+/// How wide [text] is set on one line in [style] at the reader's text size,
+/// for layouts that choose how many columns fit.
+double textWidth(BuildContext context, String text, TextStyle? style) {
+  final p = TextPainter(
+      text: TextSpan(text: text, style: style), textDirection: Directionality.of(context), textScaler: MediaQuery.textScalerOf(context))
+    ..layout();
+  final w = p.width;
+  p.dispose();
+  return w;
+}
+
+/// The widest single word of [texts], so a layout can keep from breaking a
+/// word in the middle.
+double widestWord(BuildContext context, Iterable<String> texts, TextStyle? style) => texts
+    .expand((t) => t.split(RegExp(r'\s+')))
+    .fold(0.0, (w, word) => math.max(w, textWidth(context, word, style)));
+
 /// A single choice among a few options: a segmented bar when the labels
 /// fit on one line, otherwise chips that wrap, so long labels, large text
 /// or narrow phones never squeeze them into broken words.
@@ -286,17 +356,10 @@ class ChoiceBar<T> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final style = Theme.of(context).textTheme.labelLarge;
-    final scaler = MediaQuery.textScalerOf(context);
     return LayoutBuilder(builder: (context, c) {
       // Each segment needs its label, optional icon and padding; the bar
       // divides the width evenly, so the widest segment decides.
-      var widest = 0.0;
-      for (final (_, label, icon) in options) {
-        final p = TextPainter(text: TextSpan(text: label, style: style), textDirection: Directionality.of(context), textScaler: scaler)
-          ..layout();
-        widest = widest > p.width + (icon != null ? 26 : 0) ? widest : p.width + (icon != null ? 26 : 0);
-        p.dispose();
-      }
+      final widest = options.fold(0.0, (w, o) => math.max(w, textWidth(context, o.$2, style) + (o.$3 != null ? 26 : 0)));
       if ((widest + 32) * options.length <= c.maxWidth) {
         return SegmentedButton<T>(
           showSelectedIcon: false,

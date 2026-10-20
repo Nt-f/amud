@@ -1,4 +1,6 @@
+import CoreLocation
 import Flutter
+import VideoToolbox
 import WidgetKit
 import WatchConnectivity
 
@@ -20,9 +22,13 @@ final class IntegrationBridge: NSObject, WCSessionDelegate {
                 WidgetCenter.shared.reloadAllTimelines()
                 self?.syncWatch(json)
                 result(nil)
+            case "hevcDecoder":
+                // The daf videos' 1080p HEVC stream, where the hardware decodes it.
+                result(VTIsHardwareDecodeSupported(kCMVideoCodecType_HEVC))
             default: result(FlutterMethodNotImplemented)
             }
         }
+        FlutterEventChannel(name: "amud/heading", binaryMessenger: messenger).setStreamHandler(HeadingStream.shared)
         NotificationCenter.default.addObserver(self, selector: #selector(openPrayer(_:)), name: Notification.Name("AmudOpenPrayer"), object: nil)
         if WCSession.isSupported() { WCSession.default.delegate = self; WCSession.default.activate() }
         if #available(iOS 16.0, *) { AmudAppShortcuts.updateAppShortcutParameters() }
@@ -59,4 +65,34 @@ final class IntegrationBridge: NSObject, WCSessionDelegate {
     }
     func sessionDidBecomeInactive(_ session: WCSession) { }
     func sessionDidDeactivate(_ session: WCSession) { session.activate() }
+}
+
+/// The way the phone faces, for the reader's compass: degrees from true
+/// north (magnetic north until Location Services gives a fix).
+final class HeadingStream: NSObject, FlutterStreamHandler, CLLocationManagerDelegate {
+    static let shared = HeadingStream()
+    private let manager = CLLocationManager()
+    private var sink: FlutterEventSink?
+    func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {
+        guard CLLocationManager.headingAvailable() else {
+            events(FlutterEndOfEventStream)
+            return FlutterError(code: "unavailable", message: "No compass on this device", details: nil)
+        }
+        sink = events
+        manager.delegate = self
+        manager.headingFilter = 1
+        manager.startUpdatingHeading()
+        return nil
+    }
+    func onCancel(withArguments arguments: Any?) -> FlutterError? {
+        manager.stopUpdatingHeading()
+        sink = nil
+        return nil
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading heading: CLHeading) {
+        let degrees = heading.trueHeading >= 0 ? heading.trueHeading : heading.magneticHeading
+        sink?(["heading": degrees, "calibrate": heading.headingAccuracy < 0 || heading.headingAccuracy > 25])
+    }
+    // The figure-eight prompt is the reader's own hint, not a system sheet.
+    func locationManagerShouldDisplayHeadingCalibration(_ manager: CLLocationManager) -> Bool { false }
 }

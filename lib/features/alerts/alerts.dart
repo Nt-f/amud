@@ -11,6 +11,7 @@ import '../../core/settings.dart';
 import '../zmanim/zman_catalog.dart';
 import 'notification_backend.dart';
 import '../personal_dates/personal_dates.dart';
+import '../integrations/omer_badge.dart';
 import '../integrations/seasonal_windows.dart';
 import 'timer_backend.dart';
 import '../../core/analytics.dart';
@@ -227,7 +228,7 @@ class AlertScheduler {
       now: now,
       max: backend.maxPending,
     ), ...planPersonalDates(ref.read(personalDatesProvider), settings, now),
-       ...planSeasonalReminders(settings, now)];
+       ...planSeasonalReminders(settings, now, omerCounted: ref.read(omerCountedProvider))];
     plan.sort((a, b) => a.fireAt.compareTo(b.fireAt));
     final limited = plan.take(backend.maxPending).toList();
     try {
@@ -249,6 +250,8 @@ final alertSchedulerProvider = Provider<AlertScheduler>((ref) {
   ref.listen(personalDatesProvider, (_, _) => s.reschedule());
   ref.listen(alertsProvider, (_, _) => s.reschedule());
   ref.listen(customZmanimProvider, (_, _) => s.reschedule());
-  ref.listen(settingsProvider.select((x) => (x.location, x.useElevation, x.exactAlarms, x.minhagim, x.levanaReminder, x.hachamaReminder)), (_, _) => s.reschedule());
+  ref.listen(settingsProvider.select((x) => (x.location, x.useElevation, x.exactAlarms, x.minhagim, x.levanaReminder, x.levanaHeadsUp, x.hachamaReminder, x.omerReminder)), (_, _) => s.reschedule());
+  // Counting tonight drops tonight's Omer reminder.
+  ref.listen(omerCountedProvider, (_, _) => s.reschedule());
   return s;
 });

@@ -7,6 +7,7 @@ import '../../core/l10n.dart';
 import '../../core/settings.dart';
 import '../../core/theme.dart';
 import '../torah/shnayim_mikra.dart';
+import 'book_kind.dart';
 
 /// Today's Torah reading, worked out for the day and service by the engine
 /// (a `leining` dynamic item): the parsha and what is read from it, with
@@ -24,7 +25,7 @@ class _LeiningBlockState extends ConsumerState<LeiningBlock> {
 
   @override
   Widget build(BuildContext context) {
-    final s = ref.watch(settingsProvider);
+    final s = ref.watch(readerSettingsProvider);
     final colors = SiddurColors.of(context);
     final theme = Theme.of(context);
     final d = widget.data;

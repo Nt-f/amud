@@ -9,6 +9,7 @@ import '../../core/celebration.dart';
 import '../../core/focus_mode.dart';
 import '../../core/hebrew_text.dart';
 import '../../core/l10n.dart';
+import '../../core/split_row.dart';
 import '../../core/page_swipe.dart';
 import '../../core/reader_mode.dart';
 import '../../core/search.dart';
@@ -21,7 +22,7 @@ import '../tehillim/tehillim_card.dart';
 import 'shnayim_mikra_screen.dart';
 import 'torah_library.dart';
 import 'torah_settings.dart';
-import '../gemara/gemara_home_screen.dart' show studyPath;
+import '../gemara/gemara_home_screen.dart' show DafVideoButton, studyPath;
 import '../gemara/gemara_user.dart';
 import '../gemara/study_book.dart';
 
@@ -140,16 +141,20 @@ class _WorkTile extends StatelessWidget {
       child: ListTile(
         enabled: available,
         leading: Icon(icon, color: available ? theme.colorScheme.primary : null),
-        title: Text(title,
-            style: available ? null : const TextStyle(decoration: TextDecoration.lineThrough, decorationThickness: 2)),
+        // The chip beside the name, or under it on a narrow phone, where as
+        // the trailing widget it squeezed the name to a letter a line.
+        title: available
+            ? Text(title)
+            : SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
+                Text(title, style: const TextStyle(decoration: TextDecoration.lineThrough, decorationThickness: 2)),
+                Chip(
+                  avatar: const Icon(Icons.construction, size: 16),
+                  label: Text(context.tr('Work in progress')),
+                  visualDensity: VisualDensity.compact,
+                ),
+              ]),
         subtitle: subtitle == null ? null : Text(subtitle!),
-        trailing: available
-            ? const Icon(Icons.chevron_right)
-            : Chip(
-                avatar: const Icon(Icons.construction, size: 16),
-                label: Text(context.tr('Work in progress')),
-                visualDensity: VisualDensity.compact,
-              ),
+        trailing: available ? const Icon(Icons.chevron_right) : null,
         onTap: available ? onTap : null,
       ),
     );
@@ -294,7 +299,13 @@ class KitzurYomiTile extends ConsumerWidget {
             style: theme.textTheme.titleMedium?.copyWith(color: theme.colorScheme.onPrimaryContainer, fontWeight: FontWeight.w600)),
         subtitle: Text(ev == null ? context.tr('No reading today') : ev.renderBrief(context.hebcalLocale),
             style: TextStyle(color: theme.colorScheme.onPrimaryContainer)),
-        trailing: ev == null ? null : Icon(inApp ? Icons.chevron_right : Icons.open_in_new, color: theme.colorScheme.onPrimaryContainer),
+        trailing: ev == null
+            ? null
+            : Row(mainAxisSize: MainAxisSize.min, children: [
+                // The day's video shiur, as beside Daf Yomi.
+                if (target != null) DafVideoButton.kitzur(siman: target.siman, seif: target.from),
+                Icon(inApp ? Icons.chevron_right : Icons.open_in_new, color: theme.colorScheme.onPrimaryContainer),
+              ]),
         onTap: ev == null
             ? null
             : inApp

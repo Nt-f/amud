@@ -52,7 +52,7 @@ class LearningScreen extends ConsumerWidget {
         for (final (key, title, ev) in entries)
           ListTile(
             leading: Icon(s.learningSchedules.contains(key) ? Icons.star : Icons.star_border, color: theme.colorScheme.primary),
-            title: Text(title),
+            title: Text(context.tr(title)),
             subtitle: ev == null
                 ? const Text('—')
                 : Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

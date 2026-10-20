@@ -1,7 +1,10 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../home/cards/card_frame.dart';
@@ -63,16 +66,44 @@ class MinyanCard extends ConsumerWidget {
     final p = ref.watch(minyanProvidersProvider).first;
     final loc = ref.watch(locationProvider);
     final theme = Theme.of(context);
-    return CardFrame(
-      title: 'Find a minyan',
-      icon: Icons.groups_outlined,
-      trailing: Icon(Icons.open_in_new, size: 16, color: theme.colorScheme.outline),
-      onTap: () => launchUrl(p.webSearchUri(loc.latitude, loc.longitude), mode: LaunchMode.externalApplication),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(p.name, style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
-        Text(context.tr('Minyanim near {place}', {'place': loc.getShortName() ?? ''}),
-            style: theme.textTheme.bodySmall, maxLines: 2, overflow: TextOverflow.ellipsis),
-      ]),
-    );
+    const title = 'Find a minyan';
+    final link = Icon(Icons.open_in_new, size: 16, color: theme.colorScheme.outline);
+    final near = context.tr('Minyanim near {place}', {'place': loc.getShortName() ?? ''});
+    final small = theme.textTheme.bodySmall;
+    return LayoutBuilder(builder: (context, c) {
+      // The link beside the card's name, or where that would leave it on a
+      // line of its own (a compact card on a narrow phone), beside GoDaven.
+      final inHeading = CardFrame.fitsBesideTitle(context, title, 16, cardWidth: c.maxWidth);
+      final room = c.maxWidth - 2 * CardFrame.padding;
+      return CardFrame(
+        title: title,
+        icon: Icons.groups_outlined,
+        trailing: inHeading ? link : null,
+        onTap: () => launchUrl(p.webSearchUri(loc.latitude, loc.longitude), mode: LaunchMode.externalApplication),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Row(children: [
+            // Shrinks rather than breaking the name in a compact card.
+            Flexible(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(p.name, style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
+              ),
+            ),
+            if (!inHeading) ...[const SizedBox(width: 6), link],
+          ]),
+          // Set at least as wide as its longest word and shrunk to fit, so a
+          // long place name never breaks mid-word.
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: SizedBox(
+              width: math.max(room, widestWord(context, [near], small).ceilToDouble()),
+              child: Text(near, style: small, maxLines: 2, overflow: TextOverflow.ellipsis),
+            ),
+          ),
+        ]),
+      );
+    });
   }
 }

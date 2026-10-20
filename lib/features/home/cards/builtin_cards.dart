@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -6,24 +7,29 @@ import 'package:go_router/go_router.dart';
 import 'package:hebcal/hebcal.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../core/adaptive.dart';
 import '../../../core/format.dart';
 import '../../../core/l10n.dart';
-import '../../gemara/gemara_home_screen.dart' show learningPath;
+import '../../gemara/gemara_home_screen.dart' show DafVideoButton, dafOfAmud, learningPath;
+import '../../gemara/study_book.dart' show dafYomiPlace;
 import '../../../core/providers.dart';
 import '../../../core/settings.dart';
 import '../../../core/split_row.dart';
 import '../../../core/theme.dart';
 import '../../../core/titles.dart';
+import '../../alerts/alerts.dart';
 import '../../calendar/calendar_screen.dart';
 import '../../integrations/omer_badge.dart';
 import '../../js_cards/js_card.dart';
 import '../../minyan/minyan.dart';
+import '../../siddur/siddur_providers.dart';
 import '../../siddur/today_summary.dart';
 import '../../siddur/day_guide_screen.dart';
 import '../../zmanim/zman_catalog.dart';
 import '../card_registry.dart';
 import '../today.dart';
 import '../../torah/shnayim_mikra_screen.dart';
+import '../../torah/torah_screen.dart' show kitzurTarget;
 import 'card_frame.dart';
 
 void registerBuiltInCards(CardRegistry r) {
@@ -258,10 +264,15 @@ class _NextZmanCard extends ConsumerWidget {
       child: next == null
           ? Text(context.tr('No upcoming zmanim'))
           : Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(names.label(next.$1), style: theme.textTheme.titleMedium, maxLines: 2),
+              Text(names.label(next.$1), style: theme.textTheme.titleMedium, maxLines: 3, overflow: TextOverflow.ellipsis),
               const SizedBox(height: 6),
-              Text(formatTime(next.$2, t.location, hour12: s.hour12),
-                  style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w700)),
+              // Shrinks rather than breaking the time in a compact card.
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(formatTime(next.$2, t.location, hour12: s.hour12),
+                    style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w700)),
+              ),
               Text(context.tr('in {time}', {'time': formatCountdown(next.$2.difference(t.now))}), style: theme.textTheme.bodyMedium),
             ]),
     );
@@ -368,8 +379,12 @@ class _CandlesCard extends ConsumerWidget {
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Text('${e.getEmoji() ?? ''} ${e.renderBrief(context.hebcalLocale)}', style: theme.textTheme.bodyMedium),
-                    Text(formatTime(e.eventTime, t.location, hour12: s.hour12),
-                        style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      alignment: AlignmentDirectional.centerStart,
+                      child: Text(formatTime(e.eventTime, t.location, hour12: s.hour12),
+                          style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
+                    ),
                     Text(formatPlainDate(e.getDate().plainDate()), style: theme.textTheme.bodySmall),
                   ]),
                 ),
@@ -406,7 +421,45 @@ class _CalendarCard extends ConsumerWidget {
 /// advanced); 0 outside the Omer.
 int omerCountTonight(TodaySnapshot t) => !t.halachic.isSameDate(t.hdate) ? omerDay(t.halachic) : t.omerTonight;
 
-/// A slim strip in a standout color, shown only during the Omer.
+/// The blessing over the count, as in the siddur.
+const omerBlessing = 'בָּרוּךְ אַתָּה יְהֹוָה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָֽׁנוּ בְּמִצְוֹתָיו וְצִוָּֽנוּ עַל סְפִירַת הָעֹֽמֶר';
+
+/// Tonight's counting formula in Hebrew; Chabad counts "בָּעֹמֶר".
+String omerCountHe(OmerEvent ev, {required bool chabad}) {
+  final he = ev.getTodayIs('he');
+  return chabad ? he.replaceFirst(RegExp(r'לָעֽוֹמֶר$'), 'בָּעֽוֹמֶר') : he;
+}
+
+/// The sefira in English letters ("Tiferet sheb'Malkhut"), in the reader's
+/// spelling, including the word joined to "sheb'".
+String sefiraTranslit(OmerEvent ev, String Function(String) term) => ev
+    .sefira(OmerLang.translit)
+    .replaceAllMapped(RegExp(r"^(\S+)( sheb'| shebi)(\S+)$"), (m) => '${term(m[1]!)}${m[2]}${term(m[3]!)}');
+
+/// Once each Omer, for someone without the nightly reminder: offers to turn
+/// it on (and asks for notifications) before the count opens.
+Future<void> offerOmerReminder(BuildContext context, WidgetRef ref) async {
+  final year = ref.read(todaySnapshotProvider).halachic.getFullYear();
+  if (ref.read(settingsProvider).omerReminder || ref.read(omerReminderAskedProvider) == year) return;
+  ref.read(omerReminderAskedProvider.notifier).mark(year);
+  final on = await showDialog<bool>(
+    context: context,
+    builder: (c) => AlertDialog(
+      icon: const Icon(Icons.notifications_active_outlined),
+      title: Text(c.tr('Remind you to count?')),
+      content: Text(c.tr('A reminder at nightfall each night of the Omer, so no day is missed. Not on Shabbat or Yom Tov.')),
+      actions: [
+        TextButton(onPressed: () => Navigator.pop(c, false), child: Text(c.tr('Not now'))),
+        FilledButton(onPressed: () => Navigator.pop(c, true), child: Text(c.tr('Turn on'))),
+      ],
+    ),
+  );
+  if (on != true || !await ref.read(notificationBackendProvider).requestPermission()) return;
+  ref.read(settingsProvider.notifier).update((x) => x.copyWith(omerReminder: true));
+}
+
+/// Shown only during the Omer, in a standout color: the blessing and
+/// tonight's count front and center, the sefira under them.
 class _OmerCard extends ConsumerWidget {
   const _OmerCard();
 
@@ -414,36 +467,55 @@ class _OmerCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final t = ref.watch(todaySnapshotProvider);
     final hebFont = ref.watch(settingsProvider.select((s) => s.hebrewFont));
+    final chabad = ref.watch(defaultBookProvider).value?.contains('Chabad') ?? false;
     final theme = Theme.of(context);
     final day = omerCountTonight(t);
     final counted = ref.watch(omerCountedProvider) == t.halachic.abs();
     if (day == 0) return const SizedBox.shrink();
     final ev = OmerEvent(t.hdate.next(), day);
     final on = theme.colorScheme.onTertiaryContainer;
+    final hebrew = TextStyle(fontFamily: hebFont, color: on, height: 1.45);
     return Card(
       clipBehavior: Clip.antiAlias,
       color: theme.colorScheme.tertiaryContainer,
       child: InkWell(
-        onTap: () => context.push('/pray/omer'),
+        onTap: () async {
+          await offerOmerReminder(context, ref);
+          if (context.mounted) context.push('/pray/omer');
+        },
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-          child: Row(children: [
-            if (t.afterSunset)
-              IconButton(tooltip: context.tr(counted ? 'Counted tonight' : 'Mark Omer counted'),
-                icon: Icon(counted ? Icons.check_circle : Icons.check_circle_outline),
-                onPressed: counted ? null : () => ref.read(omerCountedProvider.notifier).mark(t.halachic.abs())),
-            Text('$day', style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w800, color: on)),
-            const SizedBox(width: 12),
-            Expanded(
-              child: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(context.tr('Sefirat HaOmer · tonight'),
-                      style: theme.textTheme.labelLarge?.copyWith(color: on, fontWeight: FontWeight.w700)),
-                  Text(ev.sefira(OmerLang.translit), style: theme.textTheme.bodySmall?.copyWith(color: on)),
-                ]),
-                Text(ev.sefira(OmerLang.he), textDirection: TextDirection.rtl, style: TextStyle(fontFamily: hebFont, fontSize: 17, color: on)),
-              ]),
-            ),
+          padding: const EdgeInsets.fromLTRB(16, 8, 8, 14),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            Row(children: [
+              Expanded(
+                child: Text(context.tr('Sefirat HaOmer · tonight'),
+                    style: theme.textTheme.labelLarge?.copyWith(color: on, fontWeight: FontWeight.w700)),
+              ),
+              Text('$day', style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800, color: on)),
+              if (t.afterSunset)
+                IconButton(
+                    tooltip: context.tr(counted ? 'Counted tonight' : 'Mark Omer counted'),
+                    icon: Icon(counted ? Icons.check_circle : Icons.check_circle_outline, color: on),
+                    onPressed: counted ? null : () => ref.read(omerCountedProvider.notifier).mark(t.halachic.abs()))
+              else
+                const SizedBox(width: 8),
+            ]),
+            const SizedBox(height: 6),
+            Text(omerBlessing, textAlign: TextAlign.center, textDirection: TextDirection.rtl, style: hebrew.copyWith(fontSize: 16)),
+            const SizedBox(height: 6),
+            Text(omerCountHe(ev, chabad: chabad),
+                textAlign: TextAlign.center,
+                textDirection: TextDirection.rtl,
+                style: hebrew.copyWith(fontSize: 21, fontWeight: FontWeight.w700)),
+            if (context.uiLanguage == UiLanguage.en)
+              Text(ev.getTodayIs('en'), textAlign: TextAlign.center, style: theme.textTheme.bodySmall?.copyWith(color: on)),
+            const SizedBox(height: 8),
+            Text(
+                context.uiLanguage == UiLanguage.en
+                    ? '${ev.sefira(OmerLang.he)} · ${sefiraTranslit(ev, AppText.of(context).term)}'
+                    : ev.sefira(OmerLang.he),
+                textAlign: TextAlign.center,
+                style: theme.textTheme.bodySmall?.copyWith(color: on.withValues(alpha: 0.8), fontFamily: hebFont)),
           ]),
         ),
       ),
@@ -477,7 +549,7 @@ class _LearningCard extends ConsumerWidget {
             final url = ev.url();
             // The app's own reader where it has the text; Sefaria otherwise.
             final inApp = learningPath(name, t.civil, ev);
-            return InkWell(
+            final entry = InkWell(
               onTap: inApp != null
                   ? () => context.push(inApp)
                   : url == null
@@ -486,11 +558,26 @@ class _LearningCard extends ConsumerWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 4),
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(context.term(learningScheduleTitles[name] ?? name), style: theme.textTheme.labelSmall),
+                  Text(context.tr(learningScheduleTitles[name] ?? name), style: theme.textTheme.labelSmall),
                   Text(ev.render(context.hebcalLocale), style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600)),
                 ]),
               ),
             );
+            // Daf Yomi's and Kitzur Yomi's video shiur, beside them.
+            final video = switch (name) {
+              'dafYomi' => switch (dafYomiPlace(t.civil)) {
+                  final daf? when dafOfAmud(daf.unit) != null => DafVideoButton(tractate: daf.book, daf: dafOfAmud(daf.unit)!),
+                  _ => null,
+                },
+              'kitzurShulchanAruch' => switch (ev is KitzurShulchanAruchEvent ? kitzurTarget(ev) : null) {
+                  final k? => DafVideoButton.kitzur(siman: k.siman, seif: k.from),
+                  null => null,
+                },
+              _ => null,
+            };
+            if (video == null) return entry;
+            // Beside the name where both fit; on a narrow card, under it.
+            return SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [entry, video]);
           }),
       ]),
     );
@@ -515,7 +602,7 @@ class _LearningEditorState extends State<_LearningEditor> {
           CheckboxListTile.adaptive(
             dense: true,
             value: sel.contains(e.key),
-            title: Text(context.term(e.value)),
+            title: Text(context.tr(e.value)),
             onChanged: (v) {
               setState(() => v == true ? sel.add(e.key) : sel.remove(e.key));
               widget.onChanged(widget.cfg.copyWith(settings: {...widget.cfg.settings, 'schedules': List.of(sel)}));
@@ -551,7 +638,15 @@ class _UpcomingCard extends ConsumerWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 4),
             child: Row(children: [
-              SizedBox(width: 32, child: Text(e.getEmoji(), style: const TextStyle(fontSize: 18))),
+              // Some holidays have two emoji (🕎1️⃣): shrunk to one line.
+              SizedBox(
+                width: 32,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: AlignmentDirectional.centerStart,
+                  child: Text(e.getEmoji(), style: const TextStyle(fontSize: 18)),
+                ),
+              ),
               Expanded(
                 child: SplitRow(crossAxisAlignment: CrossAxisAlignment.center, children: [
                   Text(e.render(context.hebcalLocale), style: theme.textTheme.bodyMedium),
@@ -595,9 +690,7 @@ class _QuickPrayersCard extends ConsumerWidget {
       title: 'Quick prayers',
       icon: Icons.bolt,
       child: LayoutBuilder(builder: (context, c) {
-        // As many columns as fit (Shacharit, Mincha and Maariv share a row
-        // when there's room).
-        final fit = (c.maxWidth / 110).floor().clamp(1, 3);
+        final label = theme.textTheme.bodyMedium?.copyWith(fontFamily: context.prayerTitleIsHebrew(s) ? s.hebrewFont : null);
         return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           for (final (i, (heading, items)) in _groups.indexed) ...[
             Padding(
@@ -605,7 +698,15 @@ class _QuickPrayersCard extends ConsumerWidget {
               child: Text(context.tr(heading), style: theme.textTheme.labelMedium?.copyWith(color: theme.colorScheme.outline)),
             ),
             Builder(builder: (context) {
-              final cols = fit < items.length ? (fit >= 2 ? 2 : 1) : items.length;
+              // As many columns as show every name whole on one line at this
+              // width and text size (Shacharit, Mincha and Maariv share a row
+              // when there's room).
+              final names = [for (final (en, he, _, _) in items) context.prayerTitle(s, en, he)];
+              final widest = names.fold(0.0, (w, n) => math.max(w, textWidth(context, n, label)));
+              var cols = math.min(3, items.length);
+              while (cols > 1 && (c.maxWidth - 8 * (cols - 1)) / cols - 26 < widest) {
+                cols--;
+              }
               final w = (c.maxWidth - 8 * (cols - 1)) / cols;
               return Wrap(spacing: 8, children: [
                 for (final (en, he, icon, path) in items)
@@ -619,11 +720,7 @@ class _QuickPrayersCard extends ConsumerWidget {
                         child: Row(children: [
                           Icon(icon, size: 18, color: theme.colorScheme.primary),
                           const SizedBox(width: 8),
-                          Expanded(
-                            child: Text(context.prayerTitle(s, en, he),
-                                style: theme.textTheme.bodyMedium?.copyWith(fontFamily: context.prayerTitleIsHebrew(s) ? s.hebrewFont : null),
-                                overflow: TextOverflow.ellipsis),
-                          ),
+                          Expanded(child: Text(context.prayerTitle(s, en, he), style: label)),
                         ]),
                       ),
                     ),

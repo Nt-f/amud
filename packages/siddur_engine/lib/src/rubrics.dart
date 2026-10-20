@@ -107,6 +107,8 @@ final List<_Entry> _english = [
   _Entry(r'ten days of (?:penitence|repentance)|aseres yemei|aseret yemei|between rosh hashana(?:h)? (?:&|and) yom kippur|shabbat shuva|shabbos shuvah', 'aseretYemeiTeshuva', _Cat.occasion, 'Aseret Yemei Teshuva', 'עשי"ת'),
   _Entry(r'rosh (?:c)?hodesh|new moon|new month|rosh chodesh', 'roshChodesh', _Cat.occasion, 'Rosh Chodesh', 'ראש חודש'),
   _Entry(r"(?:c)?hol ?ha ?mo[’']?ed", 'cholHamoed', _Cat.occasion, 'Chol HaMoed', 'חול המועד'),
+  _Entry(r'(?:whole|full|complete) hallel', 'wholeHallel', _Cat.occasion, 'Whole Hallel', 'הלל שלם'),
+  _Entry(r'half(?:-| )hallel', 'halfHallel', _Cat.occasion, 'Half Hallel', 'חצי הלל'),
   _Entry(r'(?:c)?hanuk(?:k)?a', 'chanukah', _Cat.occasion, 'Chanukah', 'חנוכה'),
   _Entry(r'purim', 'purim', _Cat.occasion, 'Purim', 'פורים'),
   _Entry(r"tish[’']?a b[’']?av|9th of av|ninth of av", 'tishaBav', _Cat.occasion, "Tisha B'Av", 'תשעה באב'),

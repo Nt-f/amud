@@ -38,6 +38,7 @@ import 'features/tehillim/tehillim_data.dart';
 import 'features/tehillim/tehillim_reader.dart';
 import 'features/tehillim/tehillim_screen.dart';
 import 'features/torah/shnayim_mikra_screen.dart';
+import 'features/gemara/daf_video.dart';
 import 'features/gemara/gemara_home_screen.dart';
 import 'features/gemara/study_book.dart';
 import 'features/gemara/gemara_reader_screen.dart';
@@ -212,15 +213,20 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                               final q = s.uri.queryParameters;
                               // The Kitzur reads in the study reader (views, marks,
                               // reader mode); its daily portion is 1-based here.
+                              // A single se'if (a search hit, a spoken
+                              // reference) opens at it rather than as a day's
+                              // portion.
                               if (s.pathParameters['work'] == 'kitzur') {
                                 final from = int.tryParse(q['from'] ?? '');
                                 final to = int.tryParse(q['to'] ?? '');
+                                final one = from != null && from == to;
                                 return GemaraReaderScreen(
                                   key: ValueKey(s.uri.toString()),
                                   tractate: kitzurId,
                                   amud: q['siman'] ?? '1',
-                                  from: from == null ? null : from - 1,
-                                  to: to == null ? null : to - 1,
+                                  segment: one ? from - 1 : null,
+                                  from: from == null || one ? null : from - 1,
+                                  to: to == null || one ? null : to - 1,
                                 );
                               }
                               return TorahReaderScreen(
@@ -279,6 +285,13 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
         GoRoute(path: '/calendar', parentNavigatorKey: _rootKey, builder: (c, s) => const CalendarScreen()),
         GoRoute(path: '/learning', parentNavigatorKey: _rootKey, builder: (c, s) => const LearningScreen()),
         GoRoute(path: '/meein-shalosh', parentNavigatorKey: _rootKey, builder: (c, s) => const MeeinShaloshScreen()),
+        GoRoute(
+            path: '/daf-video',
+            parentNavigatorKey: _rootKey,
+            builder: (c, s) => DafVideoScreen(
+                key: ValueKey(s.uri.toString()),
+                tractate: s.uri.queryParameters['t'] ?? 'Berakhot',
+                unit: s.uri.queryParameters['d'] ?? '2')),
       ],
     ));
 
