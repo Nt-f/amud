@@ -15,6 +15,7 @@ import '../../core/search.dart';
 import '../../core/fonts.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
+import '../../core/theme.dart';
 import '../../core/titles.dart';
 import '../update/update_service.dart';
 import '../alerts/alerts.dart';
@@ -62,7 +63,7 @@ class SettingsScreen extends ConsumerWidget {
       ),
       body: ListFilter(
         query: query,
-        child: ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 32)), children: [
+        child: ListView(padding: pagePadding(context, EdgeInsets.only(top: isCupertinoPlatform ? 12 : 0, bottom: 32)), children: [
         section('location', Icons.place_outlined, 'Location', [
           AdaptiveNavTile(
             icon: Icons.place_outlined,

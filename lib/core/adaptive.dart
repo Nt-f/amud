@@ -136,6 +136,43 @@ class AdaptiveSection extends StatelessWidget {
     final theme = Theme.of(context);
     final cupertino = isCupertinoPlatform;
 
+    // On iOS a folding group is one card, as in the system's Settings: its
+    // name is the first row, and opening it adds the options below that row,
+    // so open and closed look like the same thing.
+    if (cupertino && onExpandedChanged != null && header != null) {
+      final searching = q != null;
+      final shown = searching || expanded;
+      final row = CupertinoListTile.notched(
+        leading: icon == null
+            ? null
+            : DecoratedBox(
+                decoration: BoxDecoration(color: theme.colorScheme.primary, borderRadius: BorderRadius.circular(7)),
+                child: Center(child: Icon(icon, size: 19, color: theme.colorScheme.onPrimary)),
+              ),
+        title: Text(header!, style: const TextStyle(fontWeight: FontWeight.w600)),
+        trailing: searching
+            ? null
+            : AnimatedRotation(
+                turns: shown ? 0.25 : 0,
+                duration: const Duration(milliseconds: 200),
+                child: Icon(CupertinoIcons.chevron_forward, size: 18, color: CupertinoColors.tertiaryLabel.resolveFrom(context)),
+              ),
+        onTap: searching ? null : () => onExpandedChanged!(!expanded),
+      );
+      return AnimatedSize(
+        duration: const Duration(milliseconds: 200),
+        curve: Curves.easeInOut,
+        alignment: Alignment.topCenter,
+        child: CupertinoListSection.insetGrouped(
+          backgroundColor: theme.scaffoldBackgroundColor,
+          margin: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 14),
+          topMargin: 0,
+          footer: shown && footer != null ? Text(footer!) : null,
+          children: [Semantics(button: true, expanded: shown, child: row), if (shown) ...children],
+        ),
+      );
+    }
+
     Widget? title;
     if (header != null) {
       final text = Text(
