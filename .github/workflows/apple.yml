@@ -4,9 +4,10 @@ name: Apple
 # release never waits on them. When a tag's build succeeds, its file is
 # added to that tag's GitHub Release (created by build.yml).
 #
-# Both builds are unsigned: macOS asks to confirm the first launch
+# Both of those builds are unsigned: macOS asks to confirm the first launch
 # (right-click → Open), and the .ipa must be signed by a sideloading tool
-# (AltStore, Sideloadly) before it installs.
+# (AltStore, Sideloadly) before it installs. The appstore job builds a
+# signed iOS app and uploads it to TestFlight.
 on:
   workflow_dispatch:
   push:
@@ -62,6 +63,65 @@ jobs:
         run: bash .github/upload_to_release.sh amud-macos.zip
     permissions:
       contents: write
+
+  # Signs the iOS app (with the watch app and widgets inside it) and uploads
+  # it to App Store Connect, where it shows up in TestFlight. There is no
+  # certificate or profile in the repo: the API key lets Xcode create a
+  # cloud-managed distribution certificate and the profiles itself, so the
+  # key needs the Admin role. Repository secrets:
+  #   ASC_KEY_ID, ASC_ISSUER_ID  from App Store Connect → Integrations
+  #   ASC_KEY_P8                 base64 of the AuthKey_….p8 file
+  #   APPLE_TEAM_ID              from developer.apple.com → Membership
+  # App Store Connect refuses a build number it has already seen, so
+  # running this twice on the same commit fails the second upload.
+  appstore:
+    needs: version
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          cache: true
+      - run: flutter pub get
+      # Writes Generated.xcconfig (the version every target reads) and runs
+      # pod install, without building.
+      - run: flutter build ios --release --config-only --build-name=${{ needs.version.outputs.name }} --build-number=${{ needs.version.outputs.number }}
+      - name: API key
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: echo "$ASC_KEY_P8" | base64 -d > "$RUNNER_TEMP/AuthKey.p8"
+      - name: Archive
+        env:
+          TEAM: ${{ secrets.APPLE_TEAM_ID }}
+          KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ISSUER: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          xcodebuild -workspace ios/Runner.xcworkspace -scheme Runner \
+            -configuration Release -destination 'generic/platform=iOS' \
+            -archivePath build/Runner.xcarchive archive \
+            DEVELOPMENT_TEAM="$TEAM" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$RUNNER_TEMP/AuthKey.p8" \
+            -authenticationKeyID "$KEY_ID" \
+            -authenticationKeyIssuerID "$ISSUER"
+      # ExportOptions.plist says "upload", so this sends the build to App
+      # Store Connect instead of writing an .ipa.
+      - name: Upload
+        env:
+          KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ISSUER: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          xcodebuild -exportArchive -archivePath build/Runner.xcarchive \
+            -exportOptionsPlist ios/ExportOptions.plist \
+            -exportPath build/export \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$RUNNER_TEMP/AuthKey.p8" \
+            -authenticationKeyID "$KEY_ID" \
+            -authenticationKeyIssuerID "$ISSUER"
+      - if: always()
+        run: rm -f "$RUNNER_TEMP/AuthKey.p8"
 
   ios:
     needs: version
