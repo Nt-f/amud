@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:liquid_glass_renderer/liquid_glass_renderer.dart';
 
 import '../../../core/adaptive.dart';
 import '../../../core/l10n.dart';
@@ -45,76 +44,23 @@ class CardFrame extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (GlassCards.on(context)) {
-      // Glass under the content; an accent tints it.
-      final shape = RoundedSuperellipseBorder(borderRadius: BorderRadius.circular(20));
-      return LiquidGlass(
-        shape: const LiquidRoundedSuperellipse(borderRadius: 20),
-        clipBehavior: Clip.antiAlias,
-        child: Material(
-          type: MaterialType.transparency,
-          shape: shape,
-          clipBehavior: Clip.antiAlias,
-          child: Ink(
-            color: accent?.withValues(alpha: 0.45),
-            child: InkWell(onTap: onTap, customBorder: shape, child: _body(context)),
-          ),
-        ),
-      );
-    }
     return Card(
       clipBehavior: Clip.antiAlias,
       color: accent,
-      child: InkWell(onTap: onTap, child: _body(context)),
-    );
-  }
-
-  Widget _body(BuildContext context) => Padding(
-        padding: const EdgeInsets.all(padding),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          if (title != null)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: _heading(context),
-            ),
-          child,
-        ]),
-      );
-}
-
-/// Marks a dashboard whose cards are glass ([AppSettings.glassCards]). It
-/// sits inside the [LiquidGlassLayer] the cards refract through.
-class GlassCards extends InheritedWidget {
-  const GlassCards({super.key, required super.child});
-
-  static bool on(BuildContext context) => context.dependOnInheritedWidgetOfExactType<GlassCards>() != null;
-
-  @override
-  bool updateShouldNotify(GlassCards oldWidget) => false;
-}
-
-/// Soft washes of the theme's colors behind glass cards, so the glass has
-/// something to bend.
-class GlassBackdrop extends StatelessWidget {
-  const GlassBackdrop({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final c = Theme.of(context).colorScheme;
-    Widget wash(Alignment at, Color color) => Positioned.fill(
-          child: DecoratedBox(
-            decoration: BoxDecoration(
-              gradient: RadialGradient(center: at, radius: 0.9, colors: [color.withValues(alpha: 0.55), color.withValues(alpha: 0)]),
-            ),
-          ),
-        );
-    return IgnorePointer(
-      child: Stack(children: [
-        Positioned.fill(child: ColoredBox(color: c.surface)),
-        wash(const Alignment(-1, -0.8), c.primary),
-        wash(const Alignment(1.1, 0), c.tertiary),
-        wash(const Alignment(-0.6, 1), c.secondary),
-      ]),
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.all(padding),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            if (title != null)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: _heading(context),
+              ),
+            child,
+          ]),
+        ),
+      ),
     );
   }
 }

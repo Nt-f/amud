@@ -37,7 +37,6 @@ const localSettingsFields = {
   'v', 'location', 'useElevation', 'exactAlarms', 'setupDone', 'seenFeatures', 'shareUsage', //
   'keepReaderAwake', 'fullscreenReader', 'readerDnd', 'readerCompass', 'travelPrompts', 'desktopTray', 'omerBadge',
   'levanaReminder', 'levanaHeadsUp', 'hachamaReminder', 'omerReminder', 'navTabs', 'navLabels', 'expandedSettings',
-  'glassCards',
 };
 
 /// AppSettings fields that sync: how the app looks, reads and counts.

@@ -64,7 +64,7 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
       navigatorKey: _rootKey,
       // Tells the glass tab bar when a sheet or dialog covers it: UIKit
       // draws it above Flutter, so it steps aside.
-      observers: [if (isLiquidGlass) CNTabBarRouteObserver()],
+      observers: [if (isLiquidGlass) CNTabBarRouteObserver(), ..._sheetObservers()],
       // The app opens on the first tab of the bar. A launch link opens over
       // it after the first frame (see openFromOutside), so back and the tab
       // bar lead somewhere.
@@ -86,8 +86,8 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
           // readers) have swipes of their own.
           builder: (context, state, shell) => AdaptiveShell(shell: shell, atTabRoot: _tabRoots.contains(state.fullPath)),
           branches: [
-            StatefulShellBranch(routes: [GoRoute(path: '/', builder: (c, s) => const HomeScreen())]),
-            StatefulShellBranch(routes: [
+            StatefulShellBranch(observers: _sheetObservers(), routes: [GoRoute(path: '/', builder: (c, s) => const HomeScreen())]),
+            StatefulShellBranch(observers: _sheetObservers(), routes: [
               GoRoute(
                 path: '/siddur',
                 builder: (c, s) => LibraryScreen(section: s.uri.queryParameters['section']),
@@ -111,8 +111,8 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                 ],
               ),
             ]),
-            StatefulShellBranch(routes: [GoRoute(path: '/zmanim', builder: (c, s) => const ZmanimScreen())]),
-            StatefulShellBranch(routes: [
+            StatefulShellBranch(observers: _sheetObservers(), routes: [GoRoute(path: '/zmanim', builder: (c, s) => const ZmanimScreen())]),
+            StatefulShellBranch(observers: _sheetObservers(), routes: [
               GoRoute(
                 path: '/torah',
                 builder: (c, s) => const TorahScreen(),
@@ -250,8 +250,8 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
                 ],
               ),
             ]),
-            StatefulShellBranch(routes: [GoRoute(path: '/shiurim', builder: (c, s) => const ShiurimScreen())]),
-            StatefulShellBranch(routes: [
+            StatefulShellBranch(observers: _sheetObservers(), routes: [GoRoute(path: '/shiurim', builder: (c, s) => const ShiurimScreen())]),
+            StatefulShellBranch(observers: _sheetObservers(), routes: [
               GoRoute(
                 path: '/settings',
                 builder: (c, s) => const SettingsScreen(),
@@ -449,6 +449,32 @@ class AdaptiveShell extends ConsumerWidget {
   }
 }
 
+/// One per navigator: counts the sheets and dialogs open over the glass tab
+/// bar (iOS 26), which UIKit would otherwise draw on top of them. Most
+/// sheets open on their tab's navigator, under the bar.
+List<NavigatorObserver> _sheetObservers() => [if (isLiquidGlass) _SheetObserver()];
+
+class _SheetObserver extends NavigatorObserver {
+  static final open = ValueNotifier(0);
+
+  static bool _covers(Route<dynamic> r) => r is ModalBottomSheetRoute || r is RawDialogRoute || r is CupertinoModalPopupRoute;
+
+  @override
+  void didPush(Route<dynamic> route, Route<dynamic>? previousRoute) {
+    if (_covers(route)) open.value++;
+  }
+
+  @override
+  void didPop(Route<dynamic> route, Route<dynamic>? previousRoute) => _gone(route);
+
+  @override
+  void didRemove(Route<dynamic> route, Route<dynamic>? previousRoute) => _gone(route);
+
+  void _gone(Route<dynamic> route) {
+    if (_covers(route) && open.value > 0) open.value--;
+  }
+}
+
 /// UIKit's own tab bar, in Liquid Glass (iOS 26).
 class _GlassTabBar extends StatefulWidget {
   final List<NavItem> items;
@@ -469,19 +495,27 @@ class _GlassTabBarState extends State<_GlassTabBar> {
     if (widget.items[i].branch == null) setState(() {});
   }
 
+  // UIKit's own tab bar size; the package's default (24pt) is larger.
+  static const _iconSize = 18.0;
+
   @override
-  Widget build(BuildContext context) => SafeArea(
-        top: false,
+  Widget build(BuildContext context) => ValueListenableBuilder(
+        valueListenable: _SheetObserver.open,
+        // While a sheet or dialog is up the bar steps aside, as UIKit's does
+        // under a sheet.
+        builder: (context, sheets, bar) => sheets > 0 ? const SizedBox.shrink() : bar!,
+        // The bar reports its own height, home indicator included.
         child: CNTabBar(
           currentIndex: widget.selected,
           onTap: _tap,
           tint: Theme.of(context).colorScheme.primary,
+          iconSize: _iconSize,
           items: [
             for (final t in widget.items)
               CNTabBarItem(
                 label: widget.labels ? context.tr(t.label) : null,
-                icon: CNSymbol(t.symbols.$1),
-                activeIcon: CNSymbol(t.symbols.$2),
+                icon: CNSymbol(t.symbols.$1, size: _iconSize),
+                activeIcon: CNSymbol(t.symbols.$2, size: _iconSize),
               ),
           ],
         ),

@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:liquid_glass_renderer/liquid_glass_renderer.dart';
 
 import '../../core/l10n.dart';
 import '../../core/search.dart';
-import '../../core/settings.dart';
-import '../../core/theme.dart';
 import '../search/search_sources.dart';
 import '../../core/adaptive.dart';
 import '../setup/whats_new.dart';
@@ -29,7 +26,6 @@ class HomeScreen extends ConsumerWidget {
     final registry = ref.watch(cardRegistryProvider);
     final theme = Theme.of(context);
     final query = SearchQuery(ref.watch(pageSearchProvider('home')));
-    final glass = isLiquidGlass && ref.watch(settingsProvider.select((s) => s.glassCards));
 
     // No app bar: the date card already shows the date, and the space goes
     // to the cards. Editing is at the bottom of the dashboard.
@@ -43,9 +39,7 @@ class HomeScreen extends ConsumerWidget {
                 label: Text(context.tr('Done')),
               )
             : null,
-        body: Stack(children: [
-          if (glass) const Positioned.fill(child: GlassBackdrop()),
-          SafeArea(
+        body: SafeArea(
           bottom: false,
           child: Column(children: [
             // Several new features at once make a tall banner: it scrolls
@@ -66,17 +60,7 @@ class HomeScreen extends ConsumerWidget {
               child: editing
                   ? _EditList(cards: cards, registry: registry, onAdd: () => _addCard(context, ref))
                   : query.isEmpty
-                      ? glass
-                          ? LiquidGlassLayer(
-                              settings: LiquidGlassSettings(
-                                glassColor: theme.colorScheme.surface.withValues(alpha: 0.4),
-                                thickness: 16,
-                                blur: 8,
-                                lightIntensity: 0.6,
-                              ),
-                              child: GlassCards(child: _Grid(cards: cards, registry: registry)),
-                            )
-                          : _Grid(cards: cards, registry: registry)
+                      ? _Grid(cards: cards, registry: registry)
                       : SingleChildScrollView(
                           padding: pagePadding(context, const EdgeInsets.only(bottom: 24)),
                           child: Center(
@@ -89,7 +73,6 @@ class HomeScreen extends ConsumerWidget {
             ),
           ]),
         ),
-        ]),
       ),
     );
   }

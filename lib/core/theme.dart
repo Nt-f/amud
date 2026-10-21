@@ -120,7 +120,16 @@ ThemeData buildTheme(AppSettings s, Brightness brightness) {
             TargetPlatform.macOS: CupertinoPageTransitionsBuilder(),
             TargetPlatform.android: PredictiveBackPageTransitionsBuilder(),
           }),
-    cupertinoOverrideTheme: CupertinoThemeData(primaryColor: scheme.primary, brightness: brightness),
+    // Cupertino rows (settings lists) in the weight of the Material ones.
+    cupertinoOverrideTheme: CupertinoThemeData(
+      primaryColor: scheme.primary,
+      brightness: brightness,
+      textTheme: !isCupertinoPlatform ? null : CupertinoTextThemeData(
+        primaryColor: scheme.primary,
+        textStyle: TextStyle(
+            fontFamily: 'CupertinoSystemText', fontSize: 17, letterSpacing: appleTracking(17), fontWeight: _appleRow, color: scheme.onSurface),
+      ),
+    ),
     cardTheme: CardThemeData(
       elevation: 0,
       color: scheme.surfaceContainerLow,
@@ -147,8 +156,11 @@ ThemeData buildTheme(AppSettings s, Brightness brightness) {
     ),
   );
   final apple = isCupertinoPlatform;
+  final appleText = apple ? _appleTextTheme(base.textTheme) : null;
   return base.copyWith(
-      textTheme: apple ? _appleTextTheme(base.textTheme) : null,
+      textTheme: appleText,
+      listTileTheme: apple ? ListTileThemeData(titleTextStyle: appleText!.bodyLarge!.copyWith(fontWeight: _appleRow, color: scheme.onSurface)) : null,
+      popupMenuTheme: apple ? PopupMenuThemeData(labelTextStyle: WidgetStatePropertyAll(appleText!.bodyLarge!.copyWith(fontWeight: _appleRow, color: scheme.onSurface))) : null,
       // A navigation bar's title: 17pt semibold, centered.
       appBarTheme: apple
           ? base.appBarTheme.copyWith(
@@ -186,10 +198,15 @@ TextTheme _appleTextTheme(TextTheme t) => t.copyWith(
       bodyLarge: _appleStyle(t.bodyLarge!, 17, FontWeight.w400),
       bodyMedium: _appleStyle(t.bodyMedium!, 15, FontWeight.w400),
       bodySmall: _appleStyle(t.bodySmall!, 13, FontWeight.w400),
-      labelLarge: _appleStyle(t.labelLarge!, 15, FontWeight.w500),
-      labelMedium: _appleStyle(t.labelMedium!, 13, FontWeight.w500),
-      labelSmall: _appleStyle(t.labelSmall!, 11, FontWeight.w500),
+      labelLarge: _appleStyle(t.labelLarge!, 15, FontWeight.w600),
+      labelMedium: _appleStyle(t.labelMedium!, 13, FontWeight.w600),
+      labelSmall: _appleStyle(t.labelSmall!, 11, FontWeight.w600),
     );
+
+/// List rows and menus a step above Regular: Flutter sets San Francisco
+/// thinner than UIKit does, and Regular read as too light there. Body text
+/// stays Regular, since the prayer text inherits its weight.
+const _appleRow = FontWeight.w500;
 
 TextStyle _appleStyle(TextStyle s, double size, FontWeight weight) => s.copyWith(
       // The system font in its Text cut below 20pt, Display above, as UIKit

@@ -412,8 +412,6 @@ const Map<String, (String, String)> _strings = {
   '{n} fonts to preview': ('{n} גופנים לתצוגה', '{n} שריפטן צו באקוקן'),
   'Interface language': ('שפת הממשק', 'שפראך'),
   'Ashkenazi spelling': ('תעתיק אשכנזי', 'אשכנזישע אויסלייג'),
-  'Glass cards': ('כרטיסי זכוכית', 'גלאָז־קאַרטלעך'),
-  'Home cards in Liquid Glass. Uses more battery.': ('כרטיסי המסך הראשי בזכוכית נוזלית. צורך יותר סוללה.', 'די היים־קאַרטלעך אין פליסיק גלאָז. נוצט מער באַטעריע.'),
   'Shabbos, Sukkos, Shacharis in English text': ('Shabbos, Sukkos, Shacharis בטקסט האנגלי', 'Shabbos, Sukkos, Shacharis אויף ענגליש'),
   'Notifications & learning': ('התראות ולימוד', 'מעלדונגען און לערנען'),
   'Zman alerts': ('התראות זמנים', 'זמנים מעלדונגען'),

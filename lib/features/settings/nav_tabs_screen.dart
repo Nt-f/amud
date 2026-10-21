@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/settings.dart';
+import '../../core/theme.dart';
 
 /// A tab the navigation bar can show: its id in [AppSettings.navTabs], its
 /// icons (Material outlined and selected, Cupertino) and label.
@@ -95,16 +96,23 @@ class NavTabsScreen extends ConsumerWidget {
 
     Widget tile(String id, {required bool on, int? index}) {
       final item = NavItem.of(id)!;
+      // Settings stays, so this screen can always be reached; the bar needs
+      // two items at least, and has room for [maxNavItems].
+      final toggle = id == 'settings' || (on && shown.length <= 2) || (!on && shown.length >= maxNavItems)
+          ? null
+          : () => save(on ? ([...shown]..remove(id)) : [...shown, id]);
       return ListTile(
         key: ValueKey(id),
-        leading: Checkbox.adaptive(
-          value: on,
-          // Settings stays, so this screen can always be reached; the bar
-          // needs two items at least, and has room for [maxNavItems].
-          onChanged: id == 'settings' || (on && shown.length <= 2) || (!on && shown.length >= maxNavItems)
-              ? null
-              : (v) => save(v! ? [...shown, id] : [...shown]..remove(id)),
-        ),
+        onTap: toggle,
+        // The whole row toggles; on iOS a check circle the size of the
+        // system's own lists.
+        leading: isCupertinoPlatform
+            ? Semantics(
+                checked: on,
+                child: Icon(on ? CupertinoIcons.checkmark_circle_fill : CupertinoIcons.circle,
+                    size: 26, color: toggle == null ? theme.disabledColor : (on ? theme.colorScheme.primary : theme.colorScheme.outline)),
+              )
+            : Checkbox(value: on, onChanged: toggle == null ? null : (_) => toggle()),
         title: Row(children: [
           Icon(item.outlined, size: 20),
           const SizedBox(width: 12),

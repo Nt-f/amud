@@ -13,6 +13,10 @@ void main() {
     expect(theme.textTheme.headlineLarge!.fontFamily, 'CupertinoSystemDisplay');
     expect(theme.appBarTheme.titleTextStyle!.fontSize, 17);
     expect(theme.appBarTheme.titleTextStyle!.fontWeight, FontWeight.w600);
+    // Rows and menus a step heavier; body text, which the prayers inherit, stays Regular.
+    expect(theme.listTileTheme.titleTextStyle!.fontWeight, FontWeight.w500);
+    expect(theme.cupertinoOverrideTheme!.textTheme!.textStyle.fontWeight, FontWeight.w500);
+    expect(body.fontWeight, FontWeight.w400);
   }, variant: TargetPlatformVariant.only(TargetPlatform.iOS));
 
   testWidgets('elsewhere the Latin font the reader chose sets the interface too', (t) async {
