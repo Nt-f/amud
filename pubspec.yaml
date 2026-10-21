@@ -12,6 +12,8 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   cupertino_icons: ^1.0.8
+  # UIKit controls (tab bar, alerts) in Liquid Glass on iOS 26.
+  cupertino_native_better: ^1.7.0
   hebcal:
     path: packages/hebcal
   siddur_engine:

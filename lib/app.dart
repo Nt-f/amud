@@ -1,3 +1,4 @@
+import 'package:cupertino_native_better/cupertino_native_better.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -61,6 +62,9 @@ void openFromOutside(GoRouter router, String route) {
 
 final routerProvider = Provider<GoRouter>((ref) => GoRouter(
       navigatorKey: _rootKey,
+      // Tells the glass tab bar when a sheet or dialog covers it: UIKit
+      // draws it above Flutter, so it steps aside.
+      observers: [if (isLiquidGlass) CNTabBarRouteObserver()],
       // The app opens on the first tab of the bar. A launch link opens over
       // it after the first frame (see openFromOutside), so back and the tab
       // bar lead somewhere.
@@ -405,6 +409,12 @@ class AdaptiveShell extends ConsumerWidget {
         ]),
       );
     }
+    if (isLiquidGlass) {
+      return Scaffold(
+        body: _swipeable(focus, items),
+        bottomNavigationBar: away(vertical: true, _GlassTabBar(items: items, selected: selected, labels: labels, onTap: onTap)),
+      );
+    }
     if (isCupertinoPlatform) {
       return Scaffold(
         body: _swipeable(focus, items),
@@ -434,4 +444,43 @@ class AdaptiveShell extends ConsumerWidget {
       ),
     );
   }
+}
+
+/// UIKit's own tab bar, in Liquid Glass (iOS 26).
+class _GlassTabBar extends StatefulWidget {
+  final List<NavItem> items;
+  final int selected;
+  final bool labels;
+  final ValueChanged<int> onTap;
+  const _GlassTabBar({required this.items, required this.selected, required this.labels, required this.onTap});
+
+  @override
+  State<_GlassTabBar> createState() => _GlassTabBarState();
+}
+
+class _GlassTabBarState extends State<_GlassTabBar> {
+  void _tap(int i) {
+    widget.onTap(i);
+    // UIKit has already marked the tapped item. A shortcut opens a page and
+    // leaves the tab where it was, so the bar is rebuilt to mark it again.
+    if (widget.items[i].branch == null) setState(() {});
+  }
+
+  @override
+  Widget build(BuildContext context) => SafeArea(
+        top: false,
+        child: CNTabBar(
+          currentIndex: widget.selected,
+          onTap: _tap,
+          tint: Theme.of(context).colorScheme.primary,
+          items: [
+            for (final t in widget.items)
+              CNTabBarItem(
+                label: widget.labels ? context.tr(t.label) : null,
+                icon: CNSymbol(t.symbols.$1),
+                activeIcon: CNSymbol(t.symbols.$2),
+              ),
+          ],
+        ),
+      );
 }

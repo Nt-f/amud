@@ -1,6 +1,8 @@
 import 'dart:math' as math;
 
+import 'package:cupertino_native_better/cupertino_native_better.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'l10n.dart';
@@ -199,7 +201,18 @@ class AdaptiveSection extends StatelessWidget {
   }
 }
 
+/// UIKit's own alerts and action sheets (UIAlertController), in Liquid Glass
+/// from iOS 26.
+bool get _nativeAlerts => !kIsWeb && defaultTargetPlatform == TargetPlatform.iOS;
+
 Future<bool> showAdaptiveConfirm(BuildContext context, {required String title, String? message, String confirm = 'OK'}) async {
+  if (_nativeAlerts) {
+    final r = await CNAlert.show<bool>(context: context, title: title, message: message, actions: [
+      CNAlertAction(label: context.tr('Cancel'), value: false, isCancel: true),
+      CNAlertAction(label: context.tr(confirm), value: true, isDefault: true),
+    ]);
+    return r?.value ?? false;
+  }
   final r = await showAdaptiveDialog<bool>(
     context: context,
     builder: (ctx) => AlertDialog.adaptive(
@@ -224,6 +237,18 @@ Widget _action(BuildContext ctx, String label, VoidCallback onPressed, {bool isD
 /// Picks one of [options] with a native action sheet / Material bottom sheet.
 Future<T?> showAdaptivePicker<T>(BuildContext context,
     {required String title, required List<(T, String)> options, T? selected}) {
+  if (_nativeAlerts) {
+    // An action sheet has no checkmarks; the current choice is marked in its
+    // label. On an iPad it points at the row that opened it.
+    final box = context.findRenderObject();
+    return CNActionSheet.show<T>(
+      context: context,
+      anchorRect: box is RenderBox && box.hasSize ? box.localToGlobal(Offset.zero) & box.size : null,
+      title: title,
+      cancelLabel: context.tr('Cancel'),
+      actions: [for (final (v, label) in options) CNActionSheetAction(label: v == selected ? '✓ $label' : label, value: v)],
+    );
+  }
   if (isCupertinoPlatform) {
     return showCupertinoModalPopup<T>(
       context: context,

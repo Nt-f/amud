@@ -1,3 +1,4 @@
+import 'package:cupertino_native_better/cupertino_native_better.dart' show PlatformVersion;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -79,6 +80,10 @@ class SiddurColors extends ThemeExtension<SiddurColors> {
 bool get isCupertinoPlatform =>
     !kIsWeb && (defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.macOS);
 
+/// iOS 26 and later, where the native controls (tab bar, alerts) are drawn
+/// by UIKit in Liquid Glass.
+bool get isLiquidGlass => !kIsWeb && defaultTargetPlatform == TargetPlatform.iOS && PlatformVersion.isIOS26OrLater;
+
 ThemeData buildTheme(AppSettings s, Brightness brightness) {
   final dark = brightness == Brightness.dark;
   final w = s.warmth.clamp(0.0, 1.0);
@@ -101,7 +106,9 @@ ThemeData buildTheme(AppSettings s, Brightness brightness) {
     colorScheme: scheme,
     useMaterial3: true,
     scaffoldBackgroundColor: scheme.surface,
-    fontFamily: s.latinFont,
+    // The interface is set in San Francisco on Apple platforms, as native
+    // apps are; the Latin font the reader picked is for the texts.
+    fontFamily: isCupertinoPlatform ? null : s.latinFont,
     // Native navigation feel on Apple platforms, Material elsewhere.
     // On the web the browser already animates back/forward swipes; a
     // second slide from Flutter on top of it looks doubled and janky, so
@@ -139,7 +146,15 @@ ThemeData buildTheme(AppSettings s, Brightness brightness) {
       ),
     ),
   );
-  return base.copyWith(extensions: [
+  final apple = isCupertinoPlatform;
+  return base.copyWith(
+      textTheme: apple ? _appleTextTheme(base.textTheme) : null,
+      // A navigation bar's title: 17pt semibold, centered.
+      appBarTheme: apple
+          ? base.appBarTheme.copyWith(
+              titleTextStyle: _appleStyle(base.textTheme.titleLarge!, 17, FontWeight.w600).copyWith(color: scheme.onSurface))
+          : null,
+      extensions: [
     SiddurColors(
       todayBar: dark ? const Color(0xFFFFC857) : const Color(0xFFE09F1F),
       todayFill: dark ? const Color(0x33FFC857) : const Color(0x22E09F1F),
@@ -152,6 +167,57 @@ ThemeData buildTheme(AppSettings s, Brightness brightness) {
       note: dark ? const Color(0xFFB8A9D9) : const Color(0xFF6A5A8C),
     ),
   ]);
+}
+
+/// Material's roles at the sizes of Apple's text styles (Body 17,
+/// Subheadline 15, Footnote 13, Headline 17 semibold...), with San
+/// Francisco's own tracking. Material's tracking (+0.5 on body text) spaces
+/// San Francisco out until it no longer looks like the system font.
+TextTheme _appleTextTheme(TextTheme t) => t.copyWith(
+      displayLarge: _appleStyle(t.displayLarge!, 57, FontWeight.w400),
+      displayMedium: _appleStyle(t.displayMedium!, 45, FontWeight.w400),
+      displaySmall: _appleStyle(t.displaySmall!, 36, FontWeight.w400),
+      headlineLarge: _appleStyle(t.headlineLarge!, 34, FontWeight.w700),
+      headlineMedium: _appleStyle(t.headlineMedium!, 28, FontWeight.w700),
+      headlineSmall: _appleStyle(t.headlineSmall!, 22, FontWeight.w700),
+      titleLarge: _appleStyle(t.titleLarge!, 20, FontWeight.w600),
+      titleMedium: _appleStyle(t.titleMedium!, 17, FontWeight.w600),
+      titleSmall: _appleStyle(t.titleSmall!, 15, FontWeight.w600),
+      bodyLarge: _appleStyle(t.bodyLarge!, 17, FontWeight.w400),
+      bodyMedium: _appleStyle(t.bodyMedium!, 15, FontWeight.w400),
+      bodySmall: _appleStyle(t.bodySmall!, 13, FontWeight.w400),
+      labelLarge: _appleStyle(t.labelLarge!, 15, FontWeight.w500),
+      labelMedium: _appleStyle(t.labelMedium!, 13, FontWeight.w500),
+      labelSmall: _appleStyle(t.labelSmall!, 11, FontWeight.w500),
+    );
+
+TextStyle _appleStyle(TextStyle s, double size, FontWeight weight) => s.copyWith(
+      // The system font in its Text cut below 20pt, Display above, as UIKit
+      // switches between them.
+      fontFamily: size < 20 ? 'CupertinoSystemText' : 'CupertinoSystemDisplay',
+      fontSize: size,
+      fontWeight: weight,
+      letterSpacing: appleTracking(size),
+      // Apple's leading: Body is 17 on 22, Footnote 13 on 18.
+      height: switch (size) { <= 11 => 13 / 11, <= 13 => 18 / 13, <= 15 => 20 / 15, <= 17 => 22 / 17, <= 22 => 1.27, _ => 1.21 },
+    );
+
+/// San Francisco's tracking at [size] points, from Apple's table for the
+/// system font.
+double appleTracking(double size) {
+  const table = <(double, double)>[
+    (11, 0.06), (12, 0), (13, -0.08), (14, -0.15), (15, -0.23), (16, -0.31), (17, -0.43), (20, -0.45),
+    (22, -0.26), (24, 0.07), (28, 0.38), (34, 0.40), (40, 0.37), (48, 0.35), (56, 0.30), (64, 0.25),
+  ];
+  if (size <= table.first.$1) return table.first.$2;
+  for (var i = 1; i < table.length; i++) {
+    final (s1, t1) = table[i];
+    if (size <= s1) {
+      final (s0, t0) = table[i - 1];
+      return t0 + (t1 - t0) * (size - s0) / (s1 - s0);
+    }
+  }
+  return table.last.$2;
 }
 
 class _WebFadeTransitionsBuilder extends PageTransitionsBuilder {

@@ -32,6 +32,22 @@ const navShortcuts = <NavShortcut>[
   ('personal-dates', Icons.event_repeat, CupertinoIcons.calendar_badge_plus, 'Dates', '/personal-dates'),
 ];
 
+/// Each item's SF Symbols on the Liquid Glass tab bar (iOS 26), outlined
+/// and selected.
+const navSymbols = <String, (String, String)>{
+  'home': ('square.grid.2x2', 'square.grid.2x2.fill'),
+  'siddur': ('book', 'book.fill'),
+  'zmanim': ('sunrise', 'sunrise.fill'),
+  'torah': ('books.vertical', 'books.vertical.fill'),
+  'shiurim': ('ruler', 'ruler.fill'),
+  'settings': ('gearshape', 'gearshape.fill'),
+  'calendar': ('calendar', 'calendar'),
+  'tehillim': ('book.closed', 'book.closed.fill'),
+  'learning': ('graduationcap', 'graduationcap.fill'),
+  'alerts': ('bell', 'bell.fill'),
+  'personal-dates': ('calendar.badge.plus', 'calendar.badge.plus'),
+};
+
 /// The most items the bar holds, tabs and shortcuts together.
 const maxNavItems = 7;
 
@@ -44,6 +60,9 @@ class NavItem {
   final int? branch;
   final String? route;
   const NavItem._(this.id, this.outlined, this.selected, this.cupertino, this.label, {this.branch, this.route});
+
+  /// Its SF Symbols, outlined and selected (see [navSymbols]).
+  (String, String) get symbols => navSymbols[id] ?? ('circle', 'circle.fill');
 
   /// The item for [id], or null for one this version doesn't know.
   static NavItem? of(String id) {
