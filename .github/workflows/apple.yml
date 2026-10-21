@@ -86,8 +86,10 @@ jobs:
           cache: true
       - run: flutter pub get
       # Writes Generated.xcconfig (the version every target reads) and runs
-      # pod install, without building.
-      - run: flutter build ios --release --config-only --build-name=${{ needs.version.outputs.name }} --build-number=${{ needs.version.outputs.number }}
+      # pod install, without building. --no-codesign skips Flutter's check
+      # for a certificate on the runner: there is none until Archive has
+      # Xcode create one.
+      - run: flutter build ios --release --config-only --no-codesign --build-name=${{ needs.version.outputs.name }} --build-number=${{ needs.version.outputs.number }}
       - name: API key
         env:
           ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
