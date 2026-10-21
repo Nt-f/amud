@@ -6,6 +6,9 @@
 # Android verified app links: Google rejects anything not served as JSON.
 /.well-known/assetlinks.json
   Content-Type: application/json
+# iOS universal links: the file has no extension, so say it's JSON.
+/.well-known/apple-app-site-association
+  Content-Type: application/json
 
 # The bundled Sefaria texts, also a plain static API (see _redirects).
 /sefaria/*

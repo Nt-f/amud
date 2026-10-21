@@ -33,7 +33,7 @@ rm -rf web-dist
 if [[ "$BASE_HREF" == "/" ]]; then
   cp -r build/web web-dist
   mkdir -p web-dist/.well-known
-  cp landing/.well-known/assetlinks.json web-dist/.well-known/
+  cp landing/.well-known/assetlinks.json landing/.well-known/apple-app-site-association web-dist/.well-known/
 else
   mkdir -p "web-dist$BASE_HREF"
   cp -r build/web/. "web-dist$BASE_HREF"
