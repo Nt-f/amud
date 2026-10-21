@@ -8,10 +8,10 @@ import 'package:hebcal/hebcal.dart' show gematriya;
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 import 'package:video_player/video_player.dart';
-import 'package:wakelock_plus/wakelock_plus.dart';
 
 import '../../core/analytics.dart';
 import '../../core/l10n.dart';
+import '../integrations/reader_device.dart' show videoFullscreen, videoPlaying;
 import 'daf_video_codec_stub.dart' if (dart.library.js_interop) 'daf_video_codec_web.dart' as web;
 import 'gemara_data.dart';
 import 'study_book.dart';
@@ -133,7 +133,8 @@ Future<bool> canPlayHevc() async {
 }
 
 /// Where the video plays in the app: on Linux and Windows through fvp
-/// (packages/fvp), and on the web only where the browser plays HLS itself.
+/// (packages/fvp), and on the web where the browser plays HLS itself or
+/// through hls.js (see web/hlsjs).
 bool get playsInApp => kIsWeb
     ? web.webPlaysHls()
     : const {TargetPlatform.android, TargetPlatform.iOS, TargetPlatform.macOS, TargetPlatform.linux, TargetPlatform.windows}
@@ -165,7 +166,6 @@ class _DafVideoScreenState extends State<DafVideoScreen> {
   DafStream? _stream;
   bool _failed = false;
   bool _controls = true;
-  bool _awake = false;
   Timer? _hide;
 
   @override
@@ -179,12 +179,20 @@ class _DafVideoScreenState extends State<DafVideoScreen> {
     _hide?.cancel();
     _video?.removeListener(_changed);
     _video?.dispose();
-    _keepAwake(false);
+    videoPlaying.value = false;
+    videoFullscreen.value = false;
     super.dispose();
   }
 
   /// The HEVC stream where it plays, falling back to 720p if it won't start.
   Future<void> _open() async {
+    try {
+      await web.loadHlsJs();
+    } catch (e) {
+      debugPrint('Daf video: $e');
+      if (mounted) setState(() => _failed = true);
+      return;
+    }
     final order = [if (await canPlayHevc()) DafStream.hevc, DafStream.avc];
     for (final stream in order) {
       final uri = studyVideoUri(widget.tractate, widget.unit, stream, widget.base);
@@ -219,15 +227,9 @@ class _DafVideoScreenState extends State<DafVideoScreen> {
   }
 
   void _changed() {
-    _keepAwake(_video?.value.isPlaying ?? false);
+    // Keeps the screen on while playing.
+    videoPlaying.value = _video?.value.isPlaying ?? false;
     if (mounted) setState(() {});
-  }
-
-  /// Keeps the screen on while playing.
-  void _keepAwake(bool on) {
-    if (on == _awake) return;
-    _awake = on;
-    WakelockPlus.toggle(enable: on).catchError((Object e) => debugPrint('Wakelock: $e'));
   }
 
   /// Hides the controls a few seconds after the last touch, while playing.
@@ -257,28 +259,23 @@ class _DafVideoScreenState extends State<DafVideoScreen> {
     return h > 0 ? '$h:${two(m)}:${two(s)}' : '$m:${two(s)}';
   }
 
+  /// A phone in landscape: the video fills the screen with the system bars
+  /// hidden, and the app bar shows over it with the other controls.
+  bool _fullscreen(BuildContext context) =>
+      _video != null && MediaQuery.orientationOf(context) == Orientation.landscape && MediaQuery.sizeOf(context).shortestSide < 600;
+
   @override
   Widget build(BuildContext context) {
     final video = _video;
+    final full = _fullscreen(context);
+    if (videoFullscreen.value != full) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) videoFullscreen.value = _fullscreen(context);
+      });
+    }
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        foregroundColor: Colors.white,
-        title: Text(_title(context)),
-        actions: [
-          if (video != null)
-            PopupMenuButton<double>(
-              tooltip: context.tr('Playback speed'),
-              icon: const Icon(Icons.speed),
-              initialValue: video.value.playbackSpeed,
-              onSelected: video.setPlaybackSpeed,
-              itemBuilder: (_) => [
-                for (final r in const [0.75, 1.0, 1.25, 1.5, 1.75, 2.0]) PopupMenuItem(value: r, child: Text('$r×')),
-              ],
-            ),
-        ],
-      ),
+      appBar: full ? null : _bar(context),
       body: SafeArea(
         child: Center(
           child: switch (video) {
@@ -291,78 +288,115 @@ class _DafVideoScreenState extends State<DafVideoScreen> {
                     },
                     child: Text(context.tr('Retry')))),
             null => const CircularProgressIndicator(color: Colors.white),
-            final v => GestureDetector(
-                behavior: HitTestBehavior.opaque,
-                onTap: _touch,
-                child: Stack(alignment: Alignment.center, children: [
-                  // On the web the video is an HTML element that would take
-                  // the taps meant for the controls.
-                  AspectRatio(aspectRatio: v.value.aspectRatio, child: IgnorePointer(child: VideoPlayer(v))),
-                  if (v.value.isBuffering) const CircularProgressIndicator(color: Colors.white),
-                  if (_controls) ...[
-                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                      IconButton(
-                          tooltip: context.tr('Back 10 seconds'),
-                          iconSize: 36,
-                          color: Colors.white,
-                          icon: const Icon(Icons.replay_10),
-                          onPressed: () => _seek(-10)),
-                      const SizedBox(width: 24),
-                      IconButton.filled(
-                        tooltip: context.tr(v.value.isPlaying ? 'Pause' : 'Play'),
-                        iconSize: 48,
-                        icon: Icon(v.value.isPlaying ? Icons.pause : Icons.play_arrow),
-                        onPressed: () {
-                          v.value.isPlaying ? v.pause() : v.play();
-                          _later();
-                        },
-                      ),
-                      const SizedBox(width: 24),
-                      IconButton(
-                          tooltip: context.tr('Forward 10 seconds'),
-                          iconSize: 36,
-                          color: Colors.white,
-                          icon: const Icon(Icons.forward_10),
-                          onPressed: () => _seek(10)),
-                    ]),
-                    Positioned(
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
-                      child: DecoratedBox(
-                        // Keeps the time readable over a bright picture.
-                        decoration: const BoxDecoration(
-                            gradient: LinearGradient(
-                                begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [Colors.transparent, Colors.black54])),
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(12, 24, 12, 8),
-                          child: Column(mainAxisSize: MainAxisSize.min, children: [
-                        VideoProgressIndicator(v,
-                            allowScrubbing: true,
-                            padding: const EdgeInsets.symmetric(vertical: 10),
-                            colors: VideoProgressColors(
-                                playedColor: Theme.of(context).colorScheme.primary,
-                                bufferedColor: Colors.white38,
-                                backgroundColor: Colors.white12)),
-                        DefaultTextStyle(
-                          style: const TextStyle(color: Colors.white70, fontSize: 12),
-                          child: Row(children: [
-                            Text('${_time(v.value.position)} / ${_time(v.value.duration)}'),
-                            const Spacer(),
-                            // Which stream plays, for checking the HEVC one is chosen.
-                            if (_stream case final s?) Text(s.label),
-                          ]),
-                        ),
-                      ]),
-                        ),
-                      ),
-                    ),
-                  ],
-                ]),
-              ),
+            final v => _player(context, v, full),
           },
         ),
       ),
+    );
+  }
+
+  AppBar _bar(BuildContext context, {bool over = false}) => AppBar(
+        backgroundColor: over ? Colors.transparent : Colors.black,
+        foregroundColor: Colors.white,
+        // Over the video the app bar leaves the system bars to the screen.
+        primary: !over,
+        title: Text(_title(context)),
+        actions: [
+          if (_video case final video?)
+            PopupMenuButton<double>(
+              tooltip: context.tr('Playback speed'),
+              icon: const Icon(Icons.speed),
+              initialValue: video.value.playbackSpeed,
+              onSelected: (r) {
+                video.setPlaybackSpeed(r);
+                _later();
+              },
+              itemBuilder: (_) => [
+                for (final r in const [0.75, 1.0, 1.25, 1.5, 1.75, 2.0]) PopupMenuItem(value: r, child: Text('$r×')),
+              ],
+            ),
+        ],
+      );
+
+  /// The video with its controls. In [full] screen they spread to the
+  /// screen's edges, and the app bar shows with them at the top.
+  Widget _player(BuildContext context, VideoPlayerController v, bool full) {
+    // In full screen the stack spreads to the screen; otherwise it's the
+    // video's size, and its other children center on it.
+    Widget center(Widget child) => full ? Center(child: child) : child;
+    // Keeps the bars readable over a bright picture.
+    Widget shade(Alignment from, Widget child) => DecoratedBox(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(begin: from, end: -from, colors: const [Colors.black54, Colors.transparent])),
+        child: child);
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: _touch,
+      child: Stack(alignment: Alignment.center, fit: full ? StackFit.expand : StackFit.loose, children: [
+        // On the web the video is an HTML element that would take
+        // the taps meant for the controls.
+        center(AspectRatio(aspectRatio: v.value.aspectRatio, child: IgnorePointer(child: VideoPlayer(v)))),
+        if (v.value.isBuffering) center(const CircularProgressIndicator(color: Colors.white)),
+        if (_controls) ...[
+          if (full) Positioned(left: 0, right: 0, top: 0, child: shade(Alignment.topCenter, _bar(context, over: true))),
+          center(
+            Row(mainAxisSize: MainAxisSize.min, children: [
+              IconButton(
+                  tooltip: context.tr('Back 10 seconds'),
+                  iconSize: 36,
+                  color: Colors.white,
+                  icon: const Icon(Icons.replay_10),
+                  onPressed: () => _seek(-10)),
+              const SizedBox(width: 24),
+              IconButton.filled(
+                tooltip: context.tr(v.value.isPlaying ? 'Pause' : 'Play'),
+                iconSize: 48,
+                icon: Icon(v.value.isPlaying ? Icons.pause : Icons.play_arrow),
+                onPressed: () {
+                  v.value.isPlaying ? v.pause() : v.play();
+                  _later();
+                },
+              ),
+              const SizedBox(width: 24),
+              IconButton(
+                  tooltip: context.tr('Forward 10 seconds'),
+                  iconSize: 36,
+                  color: Colors.white,
+                  icon: const Icon(Icons.forward_10),
+                  onPressed: () => _seek(10)),
+            ]),
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: shade(
+              Alignment.bottomCenter,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12, 24, 12, 8),
+                child: Column(mainAxisSize: MainAxisSize.min, children: [
+                  VideoProgressIndicator(v,
+                      allowScrubbing: true,
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      colors: VideoProgressColors(
+                          playedColor: Theme.of(context).colorScheme.primary,
+                          bufferedColor: Colors.white38,
+                          backgroundColor: Colors.white12)),
+                  DefaultTextStyle(
+                    style: const TextStyle(color: Colors.white70, fontSize: 12),
+                    child: Row(children: [
+                      Text('${_time(v.value.position)} / ${_time(v.value.duration)}'),
+                      const Spacer(),
+                      // Which stream plays, for checking the HEVC one is chosen.
+                      if (_stream case final s?) Text(s.label),
+                    ]),
+                  ),
+                ]),
+              ),
+            ),
+          ),
+        ],
+      ]),
     );
   }
 

@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:amud/features/gemara/daf_video.dart';
 import 'package:amud/features/gemara/gemara_home_screen.dart' show dafOfAmud;
 import 'package:amud/features/gemara/study_book.dart' show kitzurId;
+import 'package:amud/features/integrations/reader_device.dart' show videoFullscreen, videoPlaying;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -122,6 +123,44 @@ void main() {
     expect(find.textContaining("couldn't be loaded"), findsOneWidget);
     expect(find.text('Retry'), findsOneWidget);
     await tester.pumpWidget(const SizedBox());
+  });
+
+  testWidgets('while it plays the screen stays on, and not after', (tester) async {
+    await play(tester, hevc: false);
+    expect(videoPlaying.value, isTrue);
+    await tester.pumpWidget(const SizedBox());
+    expect(videoPlaying.value, isFalse);
+  });
+
+  group('on a phone', () {
+    void screen(WidgetTester tester, Size size) {
+      tester.view.physicalSize = size;
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+    }
+
+    testWidgets('in landscape the video fills the screen, the app bar over it', (tester) async {
+      screen(tester, const Size(800, 360));
+      await play(tester, hevc: false);
+      await tester.pump();
+      expect(videoFullscreen.value, isTrue);
+      expect(tester.getSize(find.byType(AspectRatio)).height, 360);
+      expect(find.text('Bava Metzia 59'), findsOneWidget);
+      expect(tester.getRect(find.byType(AppBar)).top, 0);
+      await tester.pumpWidget(const SizedBox());
+      expect(videoFullscreen.value, isFalse);
+    });
+
+    testWidgets('in portrait it sits under the app bar, the screen wide', (tester) async {
+      screen(tester, const Size(360, 800));
+      await play(tester, hevc: false);
+      await tester.pump();
+      expect(videoFullscreen.value, isFalse);
+      final video = tester.getRect(find.byType(AspectRatio));
+      expect(video.width, 360);
+      expect(video.top, greaterThanOrEqualTo(tester.getRect(find.byType(AppBar)).bottom));
+      await tester.pumpWidget(const SizedBox());
+    });
   });
 
   test("a daf's video goes by the daf of either amud", () {

@@ -10,6 +10,13 @@ import '../../app.dart';
 import '../../core/settings.dart';
 import 'prayer_links.dart';
 
+/// What a video shiur on screen needs: the screen kept on while it plays,
+/// and the system bars hidden while it fills a phone in landscape.
+/// [ReaderDevice] owns both (it resets them on every route and lifecycle
+/// change), so the player sets these rather than changing them itself.
+final videoPlaying = ValueNotifier(false);
+final videoFullscreen = ValueNotifier(false);
+
 /// Owns device state independently of routes retained beneath the reader.
 class ReaderDevice extends ConsumerStatefulWidget {
   final Widget child;
@@ -22,6 +29,7 @@ class _ReaderDeviceState extends ConsumerState<ReaderDevice>
     with WidgetsBindingObserver {
   Future<void> _pending = Future.value();
   bool _resumed = true;
+  bool _locked = false;
   (bool, bool, bool)? _last;
 
   @override
@@ -29,6 +37,8 @@ class _ReaderDeviceState extends ConsumerState<ReaderDevice>
     super.initState();
     WidgetsBinding.instance.addObserver(this);
     ref.read(routerProvider).routeInformationProvider.addListener(_sync);
+    videoPlaying.addListener(_sync);
+    videoFullscreen.addListener(_sync);
     ref.listenManual(
       settingsProvider.select((s) => (s.keepReaderAwake, s.fullscreenReader, s.readerDnd)),
       (_, _) => _sync(),
@@ -44,12 +54,20 @@ class _ReaderDeviceState extends ConsumerState<ReaderDevice>
         isReaderRoute(
           ref.read(routerProvider).routeInformationProvider.value.uri.path,
         );
-    final state = (reading && s.keepReaderAwake, reading && s.fullscreenReader, reading && s.readerDnd);
+    final state = (
+      (reading && s.keepReaderAwake) || videoPlaying.value,
+      (reading && s.fullscreenReader) || (_resumed && videoFullscreen.value),
+      reading && s.readerDnd,
+    );
     if (_last == state) return;
     _last = state;
     _pending = _pending.then((_) async {
       try {
+        // Taking the lock again after a lifecycle change without releasing it
+        // would leak the first one on Linux, where each is its own request.
+        if (state.$1 && _locked) await WakelockPlus.disable();
         await WakelockPlus.toggle(enable: state.$1);
+        _locked = state.$1;
       } catch (e) {
         debugPrint('Reader wake lock: $e');
       }
@@ -92,6 +110,8 @@ class _ReaderDeviceState extends ConsumerState<ReaderDevice>
       }));
     }
     ref.read(routerProvider).routeInformationProvider.removeListener(_sync);
+    videoPlaying.removeListener(_sync);
+    videoFullscreen.removeListener(_sync);
     WidgetsBinding.instance.removeObserver(this);
     unawaited(
       _pending.then((_) => WakelockPlus.disable()).catchError((Object e) {
