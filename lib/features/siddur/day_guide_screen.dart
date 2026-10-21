@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hebcal/hebcal.dart';
 import 'package:siddur_engine/siddur_engine.dart';
+import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../home/cards/card_frame.dart';
@@ -171,7 +172,7 @@ class _DayGuideScreenState extends ConsumerState<DayGuideScreen> {
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.all(16),
+        padding: pagePadding(context, const EdgeInsets.all(16)),
         children: [
           Text(
             date.render('en'),

@@ -135,7 +135,7 @@ class _SyncScreenState extends ConsumerState<SyncScreen> {
     final error = _message ?? s.error;
     return Scaffold(
       appBar: AppBar(title: Text(context.tr('Sync between devices'))),
-      body: ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+      body: ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 32)), children: [
         pad(Text(
           context.tr('Keeps your reading and display settings the same on all your devices. It is end-to-end encrypted: the server only holds scrambled data it cannot read, and there is no account.'),
           style: theme.textTheme.bodyMedium,

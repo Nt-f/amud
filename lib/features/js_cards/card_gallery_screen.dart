@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 
+import '../../core/adaptive.dart';
 import '../../core/content.dart';
 import '../../core/l10n.dart';
 import '../home/card_registry.dart';
@@ -225,7 +226,7 @@ class _CardGalleryScreenState extends ConsumerState<CardGalleryScreen> {
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(title: Text(context.tr('Card gallery'))),
     body: ListView(
-      padding: const EdgeInsets.all(16),
+      padding: pagePadding(context, const EdgeInsets.all(16)),
       children: [
         Text(
           context.tr(

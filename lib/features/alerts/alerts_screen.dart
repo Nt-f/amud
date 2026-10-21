@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hebcal/hebcal.dart';
 import 'package:timezone/timezone.dart' as tz;
 
+import '../../core/adaptive.dart';
 import '../../core/format.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
@@ -37,7 +38,7 @@ class AlertsScreen extends ConsumerWidget {
         icon: const Icon(Icons.add_alert),
         label: Text(context.tr('New alert')),
       ),
-      body: ListView(padding: const EdgeInsets.only(bottom: 96), children: [
+      body: ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 96)), children: [
         if (!backend.firesWhenClosed)
           Card(
             margin: const EdgeInsets.all(16),

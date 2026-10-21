@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:hebcal/hebcal.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../core/adaptive.dart';
 import '../../core/analytics.dart';
 import '../../core/celebration.dart';
 import '../../core/focus_mode.dart';
@@ -47,10 +48,10 @@ class TorahScreen extends ConsumerWidget {
         ),
       ),
       body: !query.isEmpty
-          ? ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+          ? ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 32)), children: [
               SearchResults(query: query.raw, hebrewFont: ref.watch(torahSettingsProvider).hebrewFont, groups: torahResults(context, ref, query)),
             ])
-          : ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
+          : ListView(padding: pagePadding(context, const EdgeInsets.fromLTRB(12, 4, 12, 32)), children: [
         DownloadPanel(works: all, label: context.tr('Download everything')),
         const ShnayimMikraTile(),
         const TehillimCard(),
@@ -100,7 +101,7 @@ class TorahCategoryScreen extends ConsumerWidget {
     final states = ref.watch(torahLibraryProvider);
     return Scaffold(
       appBar: AppBar(title: Text(_name(context, c.en, c.he)), actions: [OfflineStatus(works: c.availableWorks)]),
-      body: ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
+      body: ListView(padding: pagePadding(context, const EdgeInsets.fromLTRB(12, 4, 12, 32)), children: [
         if (c.available) DownloadPanel(works: c.availableWorks, label: context.tr('Download all of {name}', {'name': _name(context, c.en, c.he)})),
         if (c.id == 'halacha') const KitzurYomiTile(),
         const SizedBox(height: 8),
@@ -348,10 +349,10 @@ class TorahWorkScreen extends ConsumerWidget {
               ),
       ),
       body: !query.isEmpty && book.value != null
-          ? ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+          ? ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 32)), children: [
               SearchResults(query: query.raw, hebrewFont: s.hebrewFont, groups: torahResults(context, ref, query, only: w.id)),
             ])
-          : ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
+          : ListView(padding: pagePadding(context, const EdgeInsets.fromLTRB(12, 4, 12, 32)), children: [
         DownloadPanel(works: [w], label: context.tr('Download')),
         if (w.id == kitzur.id) ...[
           const KitzurYomiTile(),
@@ -583,7 +584,7 @@ class _TorahReaderScreenState extends ConsumerState<TorahReaderScreen> with Focu
               onExit: () => setState(() => _readerMode = false),
               child: SingleChildScrollView(
         controller: _scroll,
-        padding: EdgeInsets.symmetric(horizontal: ts.gutter(MediaQuery.sizeOf(context).width, min: 16)).copyWith(top: 8, bottom: 24),
+        padding: pagePadding(context, EdgeInsets.symmetric(horizontal: ts.gutter(MediaQuery.sizeOf(context).width, min: 16)).copyWith(top: 8, bottom: 24)),
         child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           for (var n = 1; n <= count; n++)
             GestureDetector(

@@ -236,6 +236,9 @@ class AppSettings {
   /// The navigation bar shows labels under its icons.
   final bool navLabels;
 
+  /// Home cards in Liquid Glass over a tinted backdrop (iOS 26, opt-in).
+  final bool glassCards;
+
   /// The Settings sections that are open; the rest show only their header.
   final List<String> expandedSettings;
 
@@ -298,6 +301,7 @@ class AppSettings {
     this.omerReminder = true,
     this.navTabs = const ['home', 'siddur', 'zmanim', 'torah', 'settings'],
     this.navLabels = true,
+    this.glassCards = false,
     this.expandedSettings = const ['location'],
   });
 
@@ -360,6 +364,7 @@ class AppSettings {
     bool? omerReminder,
     List<String>? navTabs,
     bool? navLabels,
+    bool? glassCards,
     List<String>? expandedSettings,
   }) =>
       AppSettings(
@@ -421,6 +426,7 @@ class AppSettings {
         omerReminder: omerReminder ?? this.omerReminder,
         navTabs: navTabs ?? this.navTabs,
         navLabels: navLabels ?? this.navLabels,
+        glassCards: glassCards ?? this.glassCards,
         expandedSettings: expandedSettings ?? this.expandedSettings,
       );
 
@@ -487,6 +493,7 @@ class AppSettings {
         'omerReminder': omerReminder,
         'navTabs': navTabs,
         'navLabels': navLabels,
+        'glassCards': glassCards,
         'expandedSettings': expandedSettings,
       };
 
@@ -603,6 +610,7 @@ class AppSettings {
         return list.length >= 2 ? list : d.navTabs;
       }, d.navTabs),
       navLabels: pick('navLabels', d.navLabels),
+      glassCards: pick('glassCards', d.glassCards),
       expandedSettings: orElse(() => [for (final v in j['expandedSettings'] as List) if (v is String) v], d.expandedSettings),
     );
   }

@@ -410,7 +410,10 @@ class AdaptiveShell extends ConsumerWidget {
       );
     }
     if (isLiquidGlass) {
+      // Pages scroll under the floating bar, so its glass has something to
+      // refract. Their scroll views leave room at the end (pagePadding).
       return Scaffold(
+        extendBody: true,
         body: _swipeable(focus, items),
         bottomNavigationBar: away(vertical: true, _GlassTabBar(items: items, selected: selected, labels: labels, onTap: onTap)),
       );

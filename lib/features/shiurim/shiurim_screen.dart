@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import 'shiurim_data.dart';
 import 'shiurim_settings.dart';
@@ -85,7 +86,7 @@ class _ShiurimScreenState extends ConsumerState<ShiurimScreen> {
           IconButton(tooltip: context.tr('Settings'), icon: const Icon(Icons.tune), onPressed: () => _showSettings(context)),
         ],
       ),
-      body: ListView(padding: const EdgeInsets.fromLTRB(12, 8, 12, 32), children: [
+      body: ListView(padding: pagePadding(context, const EdgeInsets.fromLTRB(12, 8, 12, 32)), children: [
         SegmentedButton<bool>(
           segments: [
             ButtonSegment(value: false, label: Text(context.tr('Common shiurim')), icon: const Icon(Icons.star_outline)),
@@ -406,7 +407,7 @@ class ShiurimSourcesScreen extends StatelessWidget {
         );
     return Scaffold(
       appBar: AppBar(title: Text(context.tr('Where these come from'))),
-      body: ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+      body: ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 32)), children: [
         para(context.tr(
             "The units come from the Gemara, in fixed ratios: an amah is six tefachim, a revi'is a quarter of a log, and so on. "
             'What the poskim differ on is how big the base unit is today. The converter takes each posek\'s size for an amah, '

@@ -83,7 +83,7 @@ class _TodayTab extends ConsumerWidget {
     final theme = Theme.of(context);
     final weekday = hd.greg().weekday % 7;
     final nextUnread = [for (var c = 1; c <= 150; c++) if (!progress.read.contains(c)) c].firstOrNull;
-    return ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+    return ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 32)), children: [
       Card(
         margin: const EdgeInsets.all(16),
         child: Padding(
@@ -200,7 +200,7 @@ class _ChaptersTab extends ConsumerWidget {
           ),
         ),
       ],
-      const SliverToBoxAdapter(child: SizedBox(height: 32)),
+      SliverPadding(padding: pagePadding(context, const EdgeInsets.only(bottom: 32))),
     ]);
   }
 }
@@ -212,7 +212,7 @@ class _ListsTab extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final mine = ref.watch(tehillimProgressProvider.select((x) => x.lists));
     final theme = Theme.of(context);
-    return ListView(padding: const EdgeInsets.only(bottom: 96), children: [
+    return ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 96)), children: [
       _Header(context.tr('My lists')),
       if (mine.isEmpty)
         Padding(
@@ -333,7 +333,7 @@ class _NameTabState extends ConsumerState<_NameTab> {
     final hebFont = ref.watch(settingsProvider.select((s) => s.hebrewFont));
     final portion = nameStanzas(_name.text.trim(), neshamah: _neshamah);
     final age = int.tryParse(_age.text.trim());
-    return ListView(padding: const EdgeInsets.fromLTRB(16, 16, 16, 32), children: [
+    return ListView(padding: pagePadding(context, const EdgeInsets.fromLTRB(16, 16, 16, 32)), children: [
       Text(context.tr('Psalm 119 by name'), style: theme.textTheme.titleMedium),
       const SizedBox(height: 4),
       Text(context.tr('Psalm 119 has a stanza of eight verses for each Hebrew letter. Say the stanzas that spell a name, e.g. for someone who is ill or in memory of the departed.'),

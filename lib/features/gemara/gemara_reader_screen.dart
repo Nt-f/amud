@@ -535,7 +535,7 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
           maxScale: 5,
           boundaryMargin: const EdgeInsets.only(bottom: 48),
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(8, 8, 8, 32),
+            padding: pagePadding(context, const EdgeInsets.fromLTRB(8, 8, 8, 32)),
             child: SizedBox(
               width: width,
               child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
@@ -765,7 +765,7 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
       itemScrollController: _items,
       itemPositionsListener: _positions,
       initialScrollIndex: (_jump ?? widget.segment ?? widget.from ?? -1) + 1,
-      padding: EdgeInsets.fromLTRB(gutter, 8, gutter, 24),
+      padding: pagePadding(context, EdgeInsets.fromLTRB(gutter, 8, gutter, 24)),
       itemCount: d.length + 2,
       itemBuilder: (context, n) {
         if (n == 0) {

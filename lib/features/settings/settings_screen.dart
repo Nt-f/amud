@@ -15,6 +15,7 @@ import '../../core/search.dart';
 import '../../core/fonts.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
+import '../../core/theme.dart';
 import '../../core/titles.dart';
 import '../update/update_service.dart';
 import '../alerts/alerts.dart';
@@ -62,7 +63,7 @@ class SettingsScreen extends ConsumerWidget {
       ),
       body: ListFilter(
         query: query,
-        child: ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+        child: ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 32)), children: [
         section('location', Icons.place_outlined, 'Location', [
           AdaptiveNavTile(
             icon: Icons.place_outlined,
@@ -278,6 +279,13 @@ class SettingsScreen extends ConsumerWidget {
             value: s.ashkenaziSpelling,
             onChanged: (v) => set((x) => x.copyWith(ashkenaziSpelling: v)),
           ),
+          if (isLiquidGlass)
+            AdaptiveSwitchTile(
+              title: context.tr('Glass cards'),
+              subtitle: context.tr('Home cards in Liquid Glass. Uses more battery.'),
+              value: s.glassCards,
+              onChanged: (v) => set((x) => x.copyWith(glassCards: v)),
+            ),
           AdaptiveNavTile(
             icon: Icons.palette_outlined,
             title: context.tr('Theme'),

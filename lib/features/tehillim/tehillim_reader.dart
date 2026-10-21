@@ -238,7 +238,7 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
         child: NotificationListener<ScrollUpdateNotification>(
           onNotification: _scrolled,
           child: ListView.builder(
-            padding: EdgeInsets.fromLTRB(side, 8, side, 96),
+            padding: pagePadding(context, EdgeInsets.fromLTRB(side, 8, side, 96)),
             itemCount: rows.length,
             itemBuilder: (c, i) => rows[i](c),
           ),

@@ -7,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:record/record.dart';
 
+import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../../core/search.dart';
@@ -354,7 +355,7 @@ class _VoiceScreenState extends ConsumerState<VoiceScreen>
     return Scaffold(
       appBar: AppBar(title: Text(context.tr('Voice navigation'))),
       body: ListView(
-        padding: const EdgeInsets.all(16),
+        padding: pagePadding(context, const EdgeInsets.all(16)),
         children: [
           Text(context.tr('Speak in Hebrew, English, or both.')),
           const SizedBox(height: 8),

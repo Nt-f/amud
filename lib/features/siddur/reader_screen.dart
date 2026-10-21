@@ -411,7 +411,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         itemScrollController: _scroll,
         itemPositionsListener: _positions,
         scrollOffsetController: _offsetScroll,
-        padding: EdgeInsets.fromLTRB(side, 8, side, 96),
+        padding: pagePadding(context, EdgeInsets.fromLTRB(side, 8, side, 96)),
         itemCount: rows.length + 1,
         itemBuilder: (c, i) => i == rows.length
             ? (node == null ? const SizedBox.shrink() : RelatedPrayers(book: widget.book, node: node, standalone: widget.standalone))

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/adaptive.dart';
 import '../../core/format.dart';
 import '../../core/l10n.dart';
 import '../../core/settings.dart';
@@ -56,7 +57,7 @@ class AskScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(title: Text(picked == null ? context.tr('Today at a glance') : context.tr('Ask Amud'))),
       body: ListView(
-        padding: const EdgeInsets.all(16),
+        padding: pagePadding(context, const EdgeInsets.all(16)),
         children: [
           if ((query ?? '').isNotEmpty) Padding(padding: const EdgeInsets.only(bottom: 12), child: Text('“$query”', style: theme.textTheme.bodyMedium)),
           for (final t in topics)

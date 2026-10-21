@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/settings.dart';
 
@@ -135,7 +136,7 @@ class NavTabsScreen extends ConsumerWidget {
           ),
         ],
       ),
-      body: ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+      body: ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 32)), children: [
         SwitchListTile.adaptive(
           title: Text(context.tr('Show labels')),
           subtitle: Text(context.tr('Turn off for a bar of icons only')),

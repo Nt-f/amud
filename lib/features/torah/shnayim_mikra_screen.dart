@@ -989,7 +989,7 @@ class _ProgressState extends ConsumerState<ShnayimMikraProgressScreen> {
           IconButton(tooltip: context.tr('Next'), icon: const Icon(Icons.chevron_right), onPressed: () => setState(() => _year = year + 1)),
         ],
       ),
-      body: ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
+      body: ListView(padding: pagePadding(context, const EdgeInsets.fromLTRB(12, 4, 12, 32)), children: [
         Card(
           color: theme.colorScheme.secondaryContainer.withValues(alpha: 0.5),
           child: Padding(

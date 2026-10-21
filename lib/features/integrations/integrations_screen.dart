@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../alerts/alerts.dart';
 import 'platform_runtime.dart';
@@ -43,7 +44,7 @@ class _IntegrationsScreenState extends ConsumerState<IntegrationsScreen> {
     return Scaffold(
       appBar: AppBar(title: Text(context.tr('Widgets, shortcuts & voice'))),
       body: ListView(
-        padding: const EdgeInsets.all(16),
+        padding: pagePadding(context, const EdgeInsets.all(16)),
         children: [
           Text(
             context.tr('Home-screen widgets'),

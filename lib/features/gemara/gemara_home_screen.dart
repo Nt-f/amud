@@ -143,7 +143,7 @@ class _StudyHomeScreenState extends ConsumerState<StudyHomeScreen> {
           BarTool(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => showGemaraSettings(context, kind: kind)),
         ]),
       ),
-      body: ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
+      body: ListView(padding: pagePadding(context, const EdgeInsets.fromLTRB(12, 4, 12, 32)), children: [
         StudyDownloadPanel(books: books, label: bavli ? context.tr('Download all of Shas') : context.tr('Download all of the Mishnah')),
         // Side by side where each fits on one line, otherwise one above the
         // other, so a narrow phone never cuts the place short.
@@ -476,7 +476,7 @@ class StudyBookScreen extends ConsumerWidget {
         ]),
         actions: [_CopyLink('/torah/${b.kind == StudyKind.bavli ? 'gemara' : 'mishnah'}/${Uri.encodeComponent(b.id)}')],
       ),
-      body: ListView(padding: const EdgeInsets.fromLTRB(12, 4, 12, 32), children: [
+      body: ListView(padding: pagePadding(context, const EdgeInsets.fromLTRB(12, 4, 12, 32)), children: [
         ClipRRect(borderRadius: BorderRadius.circular(3), child: LinearProgressIndicator(value: done / total, minHeight: 5)),
         const SizedBox(height: 10),
         StudyDownloadPanel(books: [b], label: context.tr('Download {book}', {'book': b.name(context)})),

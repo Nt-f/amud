@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/fonts.dart';
 import '../../core/settings.dart';
@@ -136,7 +137,7 @@ class _FontGalleryScreenState extends ConsumerState<FontGalleryScreen> {
           ),
         ),
         SliverPadding(
-          padding: const EdgeInsets.fromLTRB(12, 0, 12, 96),
+          padding: pagePadding(context, const EdgeInsets.fromLTRB(12, 0, 12, 96)),
           sliver: SliverList.builder(
             itemCount: fonts.length,
             itemBuilder: (c, i) => _FontCard(

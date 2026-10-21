@@ -121,7 +121,7 @@ class _OfflineScreenState extends ConsumerState<OfflineScreen> {
 
     return Scaffold(
       appBar: AppBar(title: Text(context.tr('Offline & storage'))),
-      body: ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+      body: ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 32)), children: [
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

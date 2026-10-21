@@ -352,6 +352,13 @@ List<Widget> fitBarActions(BuildContext context, String title, List<BarTool> too
   ];
 }
 
+/// [padding] for a page's scroll view. On iOS 26 pages scroll under the
+/// floating glass tab bar, so the end gets the bar's height and the home
+/// indicator (the bottom of [MediaQuery.paddingOf]) as well; a scroll view
+/// without padding of its own adds that by itself.
+EdgeInsets pagePadding(BuildContext context, EdgeInsets padding) =>
+    isLiquidGlass ? padding.copyWith(bottom: padding.bottom + MediaQuery.paddingOf(context).bottom) : padding;
+
 /// How wide [text] is set on one line in [style] at the reader's text size,
 /// for layouts that choose how many columns fit.
 double textWidth(BuildContext context, String text, TextStyle? style) {

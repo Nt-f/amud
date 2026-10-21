@@ -59,7 +59,7 @@ class _VersionList extends ConsumerWidget {
             });
         final byTitle = {for (final v in avail) v.versionTitle: v};
         final unselected = avail.where((v) => !selected.contains(v.versionTitle)).toList();
-        return ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+        return ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 32)), children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
             child: Text(

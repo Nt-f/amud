@@ -14,6 +14,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   # UIKit controls (tab bar, alerts) in Liquid Glass on iOS 26.
   cupertino_native_better: ^1.7.0
+  # Glass home cards (opt-in, iOS 26). 1.0 needs Flutter 3.47.
+  liquid_glass_renderer: 0.2.0-dev.4
   hebcal:
     path: packages/hebcal
   siddur_engine:

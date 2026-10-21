@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/settings.dart';
 import '../../core/focus_mode.dart';
@@ -28,7 +29,7 @@ class _HachamaReaderState extends ConsumerState<HachamaReader>
               child: DoubleTapListener(
                 onDoubleTap: toggleFocusMode,
                 child: ListView(
-                  padding: const EdgeInsets.all(24),
+                  padding: pagePadding(context, const EdgeInsets.all(24)),
                   children: [
                     Text(
                       'בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם עוֹשֵׂה מַעֲשֵׂה בְרֵאשִׁית.',

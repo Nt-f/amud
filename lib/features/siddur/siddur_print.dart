@@ -6,6 +6,7 @@ import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 import 'package:siddur_engine/siddur_engine.dart';
+import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
@@ -288,7 +289,7 @@ class _SiddurPrintScreenState extends ConsumerState<SiddurPrintScreen> {
     return Scaffold(
       appBar: AppBar(title: Text(context.tr('Print siddur'))),
       body: ListView(
-        padding: const EdgeInsets.all(16),
+        padding: pagePadding(context, const EdgeInsets.all(16)),
         children: [
           ListTile(
             title: Text(date.render('en')),

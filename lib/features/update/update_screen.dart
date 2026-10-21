@@ -48,7 +48,7 @@ class _UpdateScreenState extends ConsumerState<UpdateScreen> {
     if (isPlayBuild) return _playScreen(context, u, n);
     return Scaffold(
       appBar: AppBar(title: Text(context.tr('App updates'))),
-      body: ListView(padding: const EdgeInsets.all(16), children: [
+      body: ListView(padding: pagePadding(context, const EdgeInsets.all(16)), children: [
         Card(
           child: Padding(
             padding: const EdgeInsets.all(16),
@@ -139,7 +139,7 @@ class _UpdateScreenState extends ConsumerState<UpdateScreen> {
     final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(title: Text(context.tr('App updates'))),
-      body: ListView(padding: const EdgeInsets.all(16), children: [
+      body: ListView(padding: pagePadding(context, const EdgeInsets.all(16)), children: [
         Card(
           child: Padding(
             padding: const EdgeInsets.all(16),

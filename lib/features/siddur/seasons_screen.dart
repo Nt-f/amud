@@ -45,7 +45,7 @@ class SeasonsScreen extends ConsumerWidget {
       body: Column(children: [
         DayBanner(date: date, picked: picked != null),
         Expanded(
-          child: ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+          child: ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 32)), children: [
             if (now.isNotEmpty)
               AdaptiveSection(header: context.tr('Today'), children: [
                 for (final i in now) _ItemTile(item: i, time: itemTime(i, day, night)),

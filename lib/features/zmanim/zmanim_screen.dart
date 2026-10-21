@@ -143,7 +143,7 @@ class ZmanimScreen extends ConsumerWidget {
         ),
       ),
       body: ListView(
-        padding: EdgeInsets.fromLTRB(wide ? 32 : 16, 8, wide ? 32 : 16, 32),
+        padding: pagePadding(context, EdgeInsets.fromLTRB(wide ? 32 : 16, 8, wide ? 32 : 16, 32)),
         children: [
           _DateNav(date: date, hd: hd, isToday: isToday),
           const SizedBox(height: 8),

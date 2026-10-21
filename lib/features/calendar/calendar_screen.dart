@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hebcal/hebcal.dart';
 
+import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/format.dart';
 import '../../core/providers.dart';
@@ -20,7 +21,7 @@ class CalendarScreen extends ConsumerWidget {
         appBar: AppBar(title: Text(context.tr('Calendar')), actions: [
           TextButton(onPressed: () => resetCalendar(ref), child: Text(context.tr('Today'))),
         ]),
-        body: ListView(padding: const EdgeInsets.fromLTRB(12, 0, 12, 32), children: const [CalendarView()]),
+        body: ListView(padding: pagePadding(context, const EdgeInsets.fromLTRB(12, 0, 12, 32)), children: const [CalendarView()]),
       );
 }
 

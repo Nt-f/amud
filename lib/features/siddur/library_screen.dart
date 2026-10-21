@@ -65,14 +65,14 @@ class LibraryScreen extends ConsumerWidget {
         loading: adaptiveProgress,
         error: (e, _) => Center(child: Text('$e')),
         data: (m) => !query.isEmpty
-            ? ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+            ? ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 32)), children: [
                 SearchResults(
                   query: query.raw,
                   hebrewFont: ref.watch(settingsProvider).hebrewFont,
                   groups: [...siddurResults(context, ref, query), (context.tr('Pages'), pageResults(context, query))],
                 ),
               ])
-            : ListView(padding: const EdgeInsets.only(bottom: 32), children: [
+            : ListView(padding: pagePadding(context, const EdgeInsets.only(bottom: 32)), children: [
           if (defaultBook.hasValue) _TodayServices(book: defaultBook.value!),
           const _QuickPrayers(),
           const _SeasonsCard(),
