@@ -15,9 +15,9 @@
           {"ref": "3", "kind": "prayer", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם<br>שֶׁלֹּא עָשַֽׂנִי גּוֹי."},
           {"ref": "4", "kind": "prayer", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם<br>שֶׁלֹּא עָשַֽׂנִי עָֽבֶד."},
           {"ref": "5", "parts": [
-            {"kind": "prayer", "alt": "gender_blessing", "en": "who has not made me a woman.", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם<br><i class=\"instruction\"></i> "},
-            {"kind": "prayer", "text": "שֶׁלֹּא עָשַֽׂנִי אִשָּׁה. / <i class=\"instruction\"></i> "},
-            {"kind": "prayer", "alt": "gender_blessing", "en": "who has made me according to His will.", "text": "שֶׁעָשַֽׂנִי כִּרְצוֹנוֹ."}
+            {"kind": "prayer", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם<br>"},
+            {"kind": "prayer", "when": "!if_woman", "alt": "gender_blessing", "en": "who has not made me a woman.", "text": "שֶׁלֹּא עָשַֽׂנִי אִשָּׁה.<br>"},
+            {"kind": "prayer", "when": "if_woman", "alt": "gender_blessing", "en": "who has made me according to His will.", "text": "שֶׁעָשַֽׂנִי כִּרְצוֹנוֹ."}
           ]},
           {"ref": "6", "kind": "prayer", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם<br>פּוֹקֵֽחַ עִוְרִים."},
           {"ref": "7", "kind": "prayer", "text": "בָּרוּךְ אַתָּה יהוה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם<br>מַלְבִּישׁ עֲרֻמִּים."},
@@ -44,10 +44,10 @@
             {"kind": "prayer", "text": "Blessed are You,"},
             {"kind": "prayer", "text": " <small>LORD</small> our God,"},
             {"kind": "prayer", "text": " King of the Universe,<br>"},
-            {"kind": "instruction", "he": "מנ:", "text": "<i class=\"instruction\">men:</i>"},
-            {"kind": "prayer", "text": " who has not made me a woman.<br>"},
-            {"kind": "instruction", "he": "נשים:", "text": "<i class=\"instruction\">women:</i>"},
-            {"kind": "prayer", "text": " who has made me according to His will."}
+            {"kind": "instruction", "when": "!if_woman", "he": "גברים:", "text": "<i class=\"instruction\">men:</i>"},
+            {"kind": "prayer", "when": "!if_woman", "text": " who has not made me a woman.<br>"},
+            {"kind": "instruction", "when": "if_woman", "he": "נשים:", "text": "<i class=\"instruction\">women:</i>"},
+            {"kind": "prayer", "when": "if_woman", "text": " who has made me according to His will."}
           ]},
           {"ref": "6", "translates": ["6"], "text": "Blessed are You, <small>LORD</small> our God, King of the Universe,<br>who gives sight to the blind."},
           {"ref": "7", "translates": ["7"], "text": "Blessed are You, <small>LORD</small> our God, King of the Universe,<br>who clothes the naked."},
@@ -416,7 +416,7 @@
         "version": "Hebrew Edition; Koren Publishers Jerusalem, 2017",
         "segs": [
           {"ref": "1", "kind": "prayer", "text": "מִזְמוֹר שִׁיר־חֲנֻכַּת הַבַּֽיִת לְדָוִד׃ אֲרוֹמִמְךָ יהוה כִּי דִלִּיתָֽנִי, וְלֹא־שִׂמַּֽחְתָּ אֹיְבַי לִי׃ יהוה אֱלֹהָי, שִׁוַּֽעְתִּי אֵלֶֽיךָ וַתִּרְפָּאֵֽנִי׃ יהוה, הֶעֱלִֽיתָ מִן־שְׁאוֹל נַפְשִׁי, חִיִּיתַֽנִי מִיָּרְדִי־בוֹר׃ זַמְּרוּ לַיהוה חֲסִידָיו, וְהוֹדוּ לְזֵֽכֶר קָדְשׁוֹ׃ כִּי רֶֽגַע בְּאַפּוֹ, חַיִּים בִּרְצוֹנוֹ, בָּעֶֽרֶב יָלִין בֶּֽכִי וְלַבֹּֽקֶר רִנָּה׃ וַאֲנִי אָמַֽרְתִּי בְשַׁלְוִי, בַּל־אֶמּוֹט לְעוֹלָם׃ יהוה, בִּרְצוֹנְךָ הֶעֱמַֽדְתָּה לְהַרְרִי עֹז, הִסְתַּֽרְתָּ פָנֶֽיךָ הָיִֽיתִי נִבְהָל׃ אֵלֶֽיךָ יהוה אֶקְרָא, וְאֶל־אֲדֹנָי אֶתְחַנָּן׃ מַה־בֶּֽצַע בְּדָמִי, בְּרִדְתִּי אֶל שָֽׁחַת, הֲיוֹדְךָ עָפָר, הֲיַגִּיד אֲמִתֶּֽךָ׃ שְׁמַע־יהוה וְחָנֵּֽנִי, יהוה הֱיֵה־עֹזֵר לִי׃ ◂הָפַֽכְתָּ מִסְפְּדִי לְמָחוֹל לִי, פִּתַּֽחְתָּ שַׂקִּי, וַתְּאַזְּרֵֽנִי שִׂמְחָה׃ לְמַֽעַן יְזַמֶּרְךָ כָבוֹד וְלֹא יִדֹּם, יהוה אֱלֹהַי, לְעוֹלָם אוֹדֶֽךָּ׃"},
-          {"ref": "2", "kind": "heading", "en": "Mourner's Kaddish", "text": "<b>קדיש יתום</b>"},
+          {"ref": "2", "kind": "heading", "node": "kaddish.mourners", "en": "Mourner's Kaddish", "text": "<b>קדיש יתום</b>"},
           {"ref": "4", "kind": "prayer", "node": "kaddish.mourners", "forgot": true, "en": "Mourner:", "gloss": "Start of Mourner's Kaddish", "text": "<i class=\"instruction\">אבל:</i> יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא (<i class=\"instruction\">קהל:</i> אָמֵן)<br>בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ<br>וְיַמְלִיךְ מַלְכוּתֵהּ<br>בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן<br>וּבְחַיֵּי דְּכָל בֵּית יִשְׂרָאֵל<br>בַּעֲגָלָא וּבִזְמַן קָרִיב<br>וְאִמְרוּ אָמֵן. (<i class=\"instruction\">קהל:</i> אָמֵן)"},
           {"ref": "5", "parts": [
             {"kind": "instruction", "node": "kaddish.mourners", "en": "Congregation and Mourner:", "gloss": "Response line", "text": "<i class=\"instruction\">קהל ואבל:</i> "},
@@ -507,7 +507,7 @@
           ]},
           {"ref": "32", "kind": "prayer", "text": "יִשְׁתַּבַּח שִׁמְךָ לָעַד, מַלְכֵּֽנוּ<br>הָאֵל הַמֶּֽלֶךְ הַגָּדוֹל וְהַקָּדוֹשׁ בַּשָּׁמַֽיִם וּבָאָֽרֶץ<br>כִּי לְךָ נָאֶה, יהוה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ<br>שִׁיר וּשְׁבָחָה, הַלֵּל וְזִמְרָה<br>עֹז וּמֶמְשָׁלָה, נֶֽצַח, גְּדֻלָּה וּגְבוּרָה<br>תְּהִלָּה וְתִפְאֶֽרֶת, קְדֻשָּׁה וּמַלְכוּת<br>בְּרָכוֹת וְהוֹדָאוֹת, מֵעַתָּה וְעַד עוֹלָם.<br>בָּרוּךְ אַתָּה יהוה<br>אֵל מֶֽלֶךְ גָּדוֹל בַּתִּשְׁבָּחוֹת<br>אֵל הַהוֹדָאוֹת<br>אֲדוֹן הַנִּפְלָאוֹת<br>הַבּוֹחֵר בְּשִׁירֵי זִמְרָה<br>מֶֽלֶךְ, אֵל, חֵי הָעוֹלָמִים."},
           {"ref": "34", "kind": "prayer", "text": "<small>שִׁיר הַמַּעֲלוֹת, מִמַּעֲמַקִּים קְרָאתִֽיךָ יהוה׃ אֲדֹנָי שִׁמְעָה בְקוֹלִי, תִּהְיֶֽינָה אָזְנֶֽיךָ קַשֻּׁבוֹת לְקוֹל תַּחֲנוּנָי׃ אִם־עֲוֹנוֹת תִּשְׁמָר־יָהּ, אֲדֹנָי מִי יַעֲמֹד׃ כִּי־עִמְּךָ הַסְּלִיחָה, לְמַֽעַן תִּוָּרֵא׃ קִוִּֽיתִי יהוה קִוְּתָה נַפְשִׁי, וְלִדְבָרוֹ הוֹחָֽלְתִּי׃ נַפְשִׁי לַאדֹנָי, מִשֹּׁמְרִים לַבֹּֽקֶר, שֹׁמְרִים לַבֹּֽקֶר׃ יַחֵל יִשְׂרָאֵל אֶל יהוה, כִּי־עִם־יהוה הַחֶֽסֶד, וְהַרְבֵּה עִמּוֹ פְדוּת׃ וְהוּא יִפְדֶּה אֶת־יִשְׂרָאֵל, מִכֹּל עֲוֹנוֹתָיו׃</small>"},
-          {"ref": "35", "kind": "heading", "en": "Half Kaddish", "text": "<b>חצי קדיש</b>"},
+          {"ref": "35", "kind": "heading", "node": "kaddish.half", "en": "Half Kaddish", "text": "<b>חצי קדיש</b>"},
           {"ref": "36", "kind": "prayer", "node": "kaddish.half", "en": "Chazzan:", "text": "<i class=\"instruction\">ש\"ץ:</i> יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא (<i class=\"instruction\">קהל:</i> אָמֵן)<br>בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ<br>וְיַמְלִיךְ מַלְכוּתֵהּ<br>בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְּכָל בֵּית יִשְׂרָאֵל<br>בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן. (<i class=\"instruction\">קהל:</i> אָמֵן)"},
           {"ref": "37", "kind": "prayer", "node": "kaddish.half", "en": "Congregation and Chazzan:", "text": "<i class=\"instruction\">קהל וש\"ץ:</i> יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא."},
           {"ref": "38", "kind": "prayer", "node": "kaddish.half", "en": "Chazzan:", "gloss": "Leader", "text": "<i class=\"instruction\">ש\"ץ:</i> יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא<br>וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל<br>שְׁמֵהּ דְּקֻדְשָׁא בְּרִיךְ הוּא (<i class=\"instruction\">קהל:</i> בְּרִיךְ הוּא)<br>לְעֵֽלָּא מִן כָּל בִּרְכָתָא /<i class=\"instruction\">בעשרת ימי תשובה:</i> לְעֵֽלָּא לְעֵֽלָּא מִכָּל בִּרְכָתָא/<br>וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא<br>דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן. (<i class=\"instruction\">קהל:</i> אָמֵן)"}

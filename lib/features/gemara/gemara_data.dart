@@ -597,6 +597,17 @@ class BookDownload extends FamilyNotifier<(int, int)?, String> {
   void cancel() => _cancel = true;
 }
 
+/// Rough saved size of a unit (gzipped), for the estimate before
+/// downloading, with its word-by-word layer ([BookDownload] saves both).
+/// Measured October 2026: an amud with Rashi and Tosafot 9.7 KB and its
+/// word-by-word 6.4 KB; a Mishnah perek with Bartenura 12.3 KB (Avot twice
+/// that) and its word-by-word 5.2 KB.
+int estimatedUnitBytes(StudyKind kind) => switch (kind) {
+      StudyKind.bavli => 16300,
+      StudyKind.mishnah => 17800,
+      StudyKind.kitzur => 5 * 1024,
+    };
+
 final bookDownloadProvider = NotifierProvider.family<BookDownload, (int, int)?, String>(BookDownload.new);
 
 /// How many units of a book (or of several, joined by '|') are saved.

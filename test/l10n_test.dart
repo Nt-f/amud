@@ -21,6 +21,7 @@ void main() {
     expect(ashkenaziSpelling('Tiferet, Malkhut'), 'Tiferes, Malchus');
     expect(ashkenaziSpelling('Day 13h 2m · shaah zmanit 65.2 min'), 'Day 13h 2m · shaah zmanis 65.2 min');
     expect(ashkenaziSpelling('4.50 shaot zmaniyot (GRA)'), '4.50 shaos zmaniyos (GRA)');
+    expect(ashkenaziSpelling('The aliyot you finished'), 'The aliyos you finished');
     // Doesn't touch words that merely contain a term.
     expect(ashkenaziSpelling('Alphabet and betting'), 'Alphabet and betting');
   });

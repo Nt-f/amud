@@ -1,4 +1,8 @@
 import 'package:amud/core/search.dart';
+import 'package:amud/features/gemara/gemara_home_screen.dart' show parseDafQuery;
+import 'package:amud/features/search/prayer_names.dart';
+import 'package:amud/features/search/search_sources.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -76,5 +80,41 @@ void main() {
     expect(score('kidush levana', ['Kiddush Levanah']), anyOf(3, 4));
     expect(score('havdakah', ['Havdalah']), 4);
     expect(score('yizkr', ['Yizkor']), 3, reason: 'only a vowel missing');
+  });
+
+  test('a section has the other names it is known by', () {
+    expect(prayerNamesFor('Tzafun', 'צפון').names, contains('Afikoman'));
+    expect(score('afikoman', ['Tzafun', 'צפון', ...prayerNamesFor('Tzafun', 'צפון').names]), 0);
+  });
+
+  test('a daf or perek by number, however the name is spelled', () {
+    String refs(String q) => [for (final r in studyRefs(q)) '${r.book.id} ${r.unit}'].join(', ');
+    expect(refs('Berachos 2a'), contains('Berakhot 2a'));
+    expect(refs('shabbos 31b'), contains('Shabbat 31b'));
+    expect(refs('ברכות ב:'), contains('Berakhot 2b'));
+    expect(refs('Kesubos 10'), contains('Ketubot 10a'));
+    expect(refs('avos 3'), contains('Pirkei Avot 3'));
+    // Bava Kamma, not a daf of a Bava.
+    expect(studyRefs('בבא קמא'), isEmpty);
+    expect(studyRefs('Berachos 200'), isEmpty);
+  });
+
+  test('the Gemara page box takes other spellings', () {
+    final p = parseDafQuery('Berachos 5b');
+    expect((p?.tractate, p?.amud), ('Berakhot', '5b'));
+    expect(parseDafQuery('Bava Basra 2')?.tractate, 'Bava Batra');
+  });
+
+  testWidgets('the group with the best match comes first', (tester) async {
+    SearchHit hit(String title, int score) => SearchHit(icon: Icons.abc, title: title, score: score, open: (_) {});
+    await tester.pumpWidget(MaterialApp(
+      home: Scaffold(
+        body: SearchResults(query: 'bris', groups: [
+          ('Mine', [hit('Verses of praise', 3)]),
+          ('Others', [hit('Brit Mila', 0)]),
+        ]),
+      ),
+    ));
+    expect(tester.getTopLeft(find.text('Brit Mila')).dy, lessThan(tester.getTopLeft(find.text('Verses of praise')).dy));
   });
 }

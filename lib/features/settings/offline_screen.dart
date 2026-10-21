@@ -117,6 +117,10 @@ class _OfflineScreenState extends ConsumerState<OfflineScreen> {
     final cardBytes = cards.fold<int>(0, (n, k) => n + (storage.readJson(k, (j) => utf8.encode(jsonEncode(j)).length) ?? 0));
     final chumash = ref.watch(chumashDownloadProvider);
     final rashi = ref.watch(rashiDownloadProvider);
+    final showRashi = rashi.bytes > 0 || mikra.needsRashi;
+    // The texts listed here: the books, Shnayim Mikra and Rashi if shown.
+    final fiveBooks = [ref.read(chumashDownloadProvider.notifier), if (showRashi) ref.read(rashiDownloadProvider.notifier)];
+    final allTexts = missing.fold<int>(0, (n, w) => n + w.estimatedBytes) + fiveBooks.fold<int>(0, (n, b) => n + b.missingBytes);
     final total = works.fold<int>(0, (n, w) => n + stored(w)) + chumash.bytes + rashi.bytes + _voiceBytes + fonts.fold<int>(0, (n, f) => n + f.bytes) + cardBytes;
 
     return Scaffold(
@@ -168,7 +172,7 @@ class _OfflineScreenState extends ConsumerState<OfflineScreen> {
             remove: () => ref.read(chumashDownloadProvider.notifier).remove(),
             confirm: _confirm,
           ),
-          if (rashi.bytes > 0 || ref.watch(shnayimMikraSettingsProvider.select((x) => x.needsRashi)))
+          if (showRashi)
             _FiveBooksTile(
               title: context.tr('Rashi'),
               detail: context.tr('Rashi on all five books, in Hebrew and English.'),
@@ -177,14 +181,18 @@ class _OfflineScreenState extends ConsumerState<OfflineScreen> {
               remove: () => ref.read(rashiDownloadProvider.notifier).remove(),
               confirm: _confirm,
             ),
-          if (missing.isNotEmpty && !downloading)
+          if (allTexts > 0 && !downloading && !chumash.busy && !rashi.busy)
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
               child: FilledButton.icon(
                 icon: const Icon(Icons.download_for_offline_outlined),
-                label: Text(context.tr('Download all texts · ≈ {size}',
-                    {'size': formatBytes(missing.fold<int>(0, (n, w) => n + w.estimatedBytes))})),
-                onPressed: () => library.downloadAll(missing),
+                label: Text(context.tr('Download all texts · ≈ {size}', {'size': formatBytes(allTexts)})),
+                onPressed: () async {
+                  await library.downloadAll(missing);
+                  for (final b in fiveBooks) {
+                    await b.downloadAll().catchError((_) {});
+                  }
+                },
               ),
             ),
         ]),

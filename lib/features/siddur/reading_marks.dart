@@ -138,5 +138,14 @@ List<String> readingLabels(BuildContext context, AppSettings s, SegmentItem item
       if (item.voice == 'undertone' || undertone) _instruction(s, _undertone),
       for (final g in item.gestures.toSet())
         if (_gestures[g] != null) _instruction(s, _gestures[g]!),
-      if (item.repeat != null) context.tr('×{n}', {'n': item.repeat}),
+      if (item.repeat != null && !namesRepeat(item)) context.tr('×{n}', {'n': item.repeat}),
     ];
+
+final _repeatMark = RegExp(r'''ג["״'׳]\s*פ|פעמים|\btimes\b|\bthrice\b|×\s*\d''', caseSensitive: false);
+
+/// A marker in the line itself ("ג"פ:", "Three times:").
+bool isRepeatMark(ResolvedRun r) => r.marker && _repeatMark.hasMatch(stripHtml(r.html));
+
+/// The siddur's own text already says how many times ("ג"פ:"), so the
+/// reader's "×3" would repeat it.
+bool namesRepeat(SegmentItem item) => [item.he, item.tr].any((x) => x != null && x.runs.any(isRepeatMark));

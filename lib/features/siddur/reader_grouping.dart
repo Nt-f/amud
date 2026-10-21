@@ -68,3 +68,23 @@ bool isRedundantRubric(SegmentItem it, SegmentItem? next, AppSettings s) {
 
   return short(it.he) && short(it.tr);
 }
+
+final _speakerEn = RegExp(r'\b(?:c?hazz?an|reader|leader|cong\.|congregation|shaliach|kahal|kohanim|mourners?)\b', caseSensitive: false);
+final _speakerHe = RegExp(r'חזן|ש"ץ|ש״ץ|ש"צ|ש״צ|שליח ה?צי?בור|קהל|הכהנים|אבל|קו"ח|קו״ח');
+// "In the chazzan's repetition…", "If there are no kohanim…": about when,
+// not who.
+final _conditionEn = RegExp(r'^\W*(?:if|in|when|on|during|after|before)\b|repetition', caseSensitive: false);
+final _conditionHe = RegExp(r'בחזרת|^\W*(?:אם|כש|ב[א-ת]+ )');
+
+/// A rubric that only says who says the line after it ("The chazzan says:",
+/// "קהל:"), so the reader's own role label would repeat it.
+bool namesSpeaker(SegmentItem it) {
+  if (it.kind == SegmentKind.speaker) return true;
+  if (it.kind != SegmentKind.instruction) return false;
+  String clean(ResolvedSegment? r) =>
+      r == null ? '' : stripHtml(r.segment.html).replaceAll(RegExp(r'\s+'), ' ').replaceAll(RegExp(r'^[\s\-–—\[\]()]+|[\s\-–—\[\]()]+$'), '');
+  final en = clean(it.tr);
+  final he = clean(it.he);
+  return (en.length <= 60 && en.endsWith(':') && _speakerEn.hasMatch(en) && !_conditionEn.hasMatch(en)) ||
+      (he.length <= 30 && _speakerHe.hasMatch(he) && !_conditionHe.hasMatch(he));
+}

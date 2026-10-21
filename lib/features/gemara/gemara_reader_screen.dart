@@ -21,6 +21,7 @@ import '../integrations/prayer_links.dart' show shareTorahLink;
 import '../torah/torah_settings.dart';
 import 'daf_layout.dart';
 import 'daf_page.dart';
+import 'daf_print.dart';
 import 'daf_video.dart';
 import 'gemara_data.dart';
 import 'gemara_home_screen.dart' show DafVideoButton, dafOfAmud, studyPath;
@@ -545,6 +546,7 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
                 DafPage(
                   key: _dafKey,
                   text: d,
+                  printed: ref.watch(dafLineMapProvider((tractate: d.tractate, amud: d.amud))).valueOrNull,
                   onLayout: (l) {
                     _dafLayout = l;
                     _queuePageProgress();

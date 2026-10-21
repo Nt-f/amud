@@ -279,7 +279,7 @@
             {"kind": "prayer", "text": " וְעַל־יְרוּשָׁלַיִם. אָמֵן: "}
           ]},
           {"ref": "13", "kind": "prayer", "text": "<b>וְשָׁמְר֥וּ</b> בְנֵֽי־יִשְׂרָאֵ֖ל אֶת־הַשַּׁבָּ֑ת לַעֲשׂ֧וֹת אֶת־הַשַּׁבָּ֛ת לְדֹרֹתָ֖ם בְּרִ֥ית עוֹלָֽם׃ בֵּינִ֗י וּבֵין֙ בְּנֵ֣י יִשְׂרָאֵ֔ל א֥וֹת הִ֖וא לְעֹלָ֑ם כִּי־שֵׁ֣שֶׁת יָמִ֗ים עָשָׂ֤ה יְהֹוָה֙ אֶת־הַשָּׁמַ֣יִם וְאֶת־הָאָ֔רֶץ וּבַיּוֹם֙ הַשְּׁבִיעִ֔י שָׁבַ֖ת וַיִּנָּפַֽשׁ׃"},
-          {"ref": "14", "kind": "instruction", "en": "The chazzan says Half Kaddish", "text": "<small>ואומר החזן חצי קדיש</small> "},
+          {"ref": "14", "kind": "instruction", "node": "kaddish.half", "en": "The chazzan says Half Kaddish", "text": "<small>ואומר החזן חצי קדיש</small> "},
           {"ref": "15", "parts": [
             {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. <small>[אָמֵן]</small>"},
             {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "text": " בְּעָלְמָא דִּי בְרָא,"},
@@ -502,7 +502,7 @@
             {"kind": "prayer", "text": " זֵכֶר לְמַעֲשֵׂה בְרֵאשִׁית: "}
           ]},
           {"ref": "38", "kind": "prayer", "node": "x.mein_shalosh_shabbat", "text": "<b>אֱלֹהֵינוּ</b> וֵאלֹהֵי אֲבוֹתֵינוּ, רְצֵה נָא בִּמְנוּחָתֵנוּ, קַדְּשֵׁנוּ בְּמִצְוֹתֶיךָ, שִׂים חֶלְקֵנוּ בְּתוֹרָתָךְ, שַׂבְּעֵנוּ מִטּוּבָךְ, שַׂמֵּחַ נַפְשֵׁנוּ בִּישׁוּעָתָךְ, וְטַהֵר לִבֵּנוּ לְעָבְדּךָ בֶאֱמֶת. וְהַנְחִילֵנוּ יְהֹוָה אֱלֹהֵינוּ בְּאַהֲבָה וּבְרָצוֹן שַׁבָּת קָדְשֶׁךָ, וְיָנוּחוּ בָהּ כָּל יִשְׂרָאֵל מְקַדּשֵׁי שְׁמֶךָ. בָּרוּךְ אַתָּה יְהֹוָה, מְקַדֵּשׁ הַשַּׁבָּת: "},
-          {"ref": "39", "kind": "instruction", "en": "The chazzan says Kaddish Titkabal:", "text": "<small>ואומר החזן קדיש תתקבל</small> "},
+          {"ref": "39", "kind": "instruction", "node": "kaddish.shalem", "en": "The chazzan says Kaddish Titkabal:", "text": "<small>ואומר החזן קדיש תתקבל</small> "},
           {"ref": "40", "parts": [
             {"kind": "prayer", "node": "kaddish.shalem", "role": "congregation", "voice": "aloud", "en": "Amen", "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. <small>[אָמֵן]</small>"},
             {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "text": " בְּעָלְמָא דִּי בְרָא,"},

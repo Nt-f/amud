@@ -270,11 +270,19 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
           ],
         ),
         // Home shortcuts open prayers above the tabs, so back returns Home.
-        GoRoute(path: '/pray/:section', parentNavigatorKey: _rootKey, builder: (c, s) => SectionReaderScreen(section: s.pathParameters['section']!)),
+        // The Siddur tab then opens on its first screen, not on a prayer
+        // left open there before.
+        GoRoute(path: '/pray/:section', parentNavigatorKey: _rootKey, builder: (c, s) {
+          AdaptiveShell.siddurStale = true;
+          return SectionReaderScreen(section: s.pathParameters['section']!);
+        }),
         GoRoute(
           path: '/read/:book',
           parentNavigatorKey: _rootKey,
-          builder: (c, s) => ReaderScreen(book: s.pathParameters['book']!, nodeId: s.uri.queryParameters['node'] ?? '', standalone: true),
+          builder: (c, s) {
+            AdaptiveShell.siddurStale = true;
+            return ReaderScreen(book: s.pathParameters['book']!, nodeId: s.uri.queryParameters['node'] ?? '', standalone: true);
+          },
         ),
         GoRoute(
           path: '/ask',
@@ -337,12 +345,23 @@ class AdaptiveShell extends ConsumerWidget {
   /// The tabs and shortcuts on the bar, in the user's order (see
   /// [NavTabsScreen]). A hidden tab opened anyway (by a link, say) shows at
   /// the end while it's open, so the bar always marks where you are.
-  List<NavItem> _items(List<String> ids) {
+  /// Past what fits on this screen ([maxNavItems]) the last are left off.
+  List<NavItem> _items(BuildContext context, List<String> ids, {required bool labels}) {
     final items = [for (final id in ids) ?NavItem.of(id)];
-    return items.any((t) => t.branch == shell.currentIndex) ? items : [...items, NavItem.of(navTabs[shell.currentIndex].$1)!];
+    final all = items.any((t) => t.branch == shell.currentIndex) ? items : [...items, NavItem.of(navTabs[shell.currentIndex].$1)!];
+    return fitNavItems(all, maxNavItems(context, labels: labels, ids: [for (final t in all) t.id]), branch: shell.currentIndex);
   }
 
-  void _go(int branch) => shell.goBranch(branch, initialLocation: branch == shell.currentIndex);
+  /// A prayer was opened above the tabs (from Home, a link), so the
+  /// Siddur tab goes back to its first screen when next opened.
+  static var siddurStale = false;
+  static final _siddurBranch = _tabRoots.toList().indexOf('/siddur');
+
+  void _go(int branch) {
+    final stale = branch == _siddurBranch && siddurStale;
+    if (branch == _siddurBranch) siddurStale = false;
+    shell.goBranch(branch, initialLocation: branch == shell.currentIndex || stale);
+  }
 
   /// Opens [item]: its tab, or a shortcut's page the way a link would.
   void _open(BuildContext context, NavItem item) {
@@ -367,9 +386,9 @@ class AdaptiveShell extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final wide = MediaQuery.sizeOf(context).width >= 900;
-    final items = _items(ref.watch(settingsProvider.select((s) => s.navTabs)));
+    final wide = MediaQuery.sizeOf(context).width >= navRailWidth;
     final labels = ref.watch(settingsProvider.select((s) => s.navLabels));
+    final items = _items(context, ref.watch(settingsProvider.select((s) => s.navTabs)), labels: labels);
     final selected = items.indexWhere((t) => t.branch == shell.currentIndex);
     void onTap(int i) => _open(context, items[i]);
     // Reader focus mode slides the navigation out of view.

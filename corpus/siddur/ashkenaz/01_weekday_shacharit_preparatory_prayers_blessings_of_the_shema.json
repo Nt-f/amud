@@ -1145,7 +1145,7 @@
       "he": {
         "version": "The Metsudah siddur, 1981",
         "segs": [
-          {"ref": "1", "kind": "speaker", "role": "chazzan", "en": "The chazzan says Half Kaddish:", "text": "<small>ואומר החזן חצי קדיש:</small>"},
+          {"ref": "1", "kind": "speaker", "node": "kaddish.half", "role": "chazzan", "en": "The chazzan says Half Kaddish:", "text": "<small>ואומר החזן חצי קדיש:</small>"},
           {"ref": "2", "parts": [
             {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא "},
             {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": "(<b>אָמֵן</b>)"}

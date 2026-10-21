@@ -66,8 +66,9 @@ Map<String, String> _patches(Storage s) =>
 
 /// Downloads newer content from [contentServer], at most every six hours
 /// unless [force]. Returns how many files changed (in use from the next
-/// start). Interlinear texts that changed are dropped from the device, so
-/// the next time one is opened the new version is fetched.
+/// start). Interlinear texts and printed-page line maps that changed are
+/// dropped from the device, so the next time one is opened the new version
+/// is fetched.
 Future<int> updateContent(Storage s, http.Client client, {bool force = false, String appBuild = ''}) async {
   // The web app is redeployed with its assets; there is nothing to patch.
   if (kIsWeb) return 0;
@@ -76,6 +77,7 @@ Future<int> updateContent(Storage s, http.Client client, {bool force = false, St
   if (!force && last != null && now - last < _checkEvery.inMilliseconds) return 0;
 
   var changed = await _updateInterlinear(s, client);
+  changed += await _updateDafPrint(s, client);
 
   final res = await client.get(Uri.parse('$contentServer/content/v$_format/manifest.json')).timeout(const Duration(seconds: 20));
   if (res.statusCode != 200) return changed;
@@ -155,6 +157,31 @@ Future<int> _updateInterlinear(Storage s, http.Client client) async {
     if (index[id]?['sha256'] == have) continue;
     final work = id.substring(id.indexOf('/') + 1);
     for (final b in s.blobKeys.where((k) => k.startsWith('interlinear:$work:')).toList()) {
+      await s.deleteBlob(b);
+    }
+    await s.deleteJson(key);
+    changed++;
+  }
+  return changed;
+}
+
+/// Saved per tractate: which bundle (by hash) its printed-page line maps
+/// came from (lib/features/gemara/daf_print.dart).
+String dafPrintShaKey(String book) => 'dafPrintSha:$book';
+
+/// Drops saved line maps whose tractate's bundle changed on the site, so
+/// the next amud opened fetches the new one.
+Future<int> _updateDafPrint(Storage s, http.Client client) async {
+  final saved = s.jsonKeys.where((k) => k.startsWith('dafPrintSha:')).toList();
+  if (saved.isEmpty) return 0;
+  final res = await client.get(Uri.parse('$contentServer/daf/v1/index.json')).timeout(const Duration(seconds: 20));
+  if (res.statusCode != 200) return 0;
+  final works = ((jsonDecode(utf8.decode(res.bodyBytes)) as Map)['works'] as Map?)?.cast<String, Object?>() ?? const {};
+  var changed = 0;
+  for (final key in saved) {
+    final book = key.substring('dafPrintSha:'.length);
+    if ((works[book] as Map?)?['sha256'] == s.readJson(key, (j) => j as String)) continue;
+    for (final b in s.blobKeys.where((k) => k.startsWith('dafPrint:$book:')).toList()) {
       await s.deleteBlob(b);
     }
     await s.deleteJson(key);

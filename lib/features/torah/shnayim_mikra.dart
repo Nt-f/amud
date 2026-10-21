@@ -174,6 +174,12 @@ abstract class _FiveBooks extends Notifier<ChumashState> {
   /// Called once the books are removed.
   void removed();
 
+  /// What all five books take, saved, for the estimate before downloading.
+  int get estimatedBytes;
+
+  /// The estimate for the books not kept yet.
+  int get missingBytes => estimatedBytes * (5 - state.have.length) ~/ 5;
+
   /// Deletes every book kept, to free the room.
   Future<void> remove() async {
     final storage = ref.read(storageProvider);
@@ -247,6 +253,10 @@ class ChumashDownload extends _FiveBooks {
 
   @override
   String get event => 'shnayim_mikra_download';
+
+  /// Measured October 2026: 933 KB.
+  @override
+  int get estimatedBytes => 935 * 1024;
 
   @override
   Future<List<int>> fetch(int book, Future<List<int>> Function(String ref, String query) get) async {
@@ -415,6 +425,10 @@ class RashiDownload extends _FiveBooks {
 
   @override
   String get event => 'shnayim_mikra_rashi_download';
+
+  /// Measured October 2026: 1.52 MB.
+  @override
+  int get estimatedBytes => 1490 * 1024;
 
   @override
   Future<List<int>> fetch(int book, Future<List<int>> Function(String ref, String query) get) async =>

@@ -169,7 +169,8 @@ void main() {
       ]
     };
     expect(ifs, contains('If: Ten or more ate together'));
-    expect(ifs, contains('If not: At a festive meal (wedding, bris, pidyon haben)'));
+    // A negated condition with a label of its own ("!if_festiveMeal") reads as that.
+    expect(ifs, contains('If: At an ordinary meal'));
   });
 
   test('Uva LeTziyon is said at Shabbat Mincha', () {

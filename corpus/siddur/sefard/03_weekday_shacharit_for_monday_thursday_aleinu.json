@@ -1439,27 +1439,27 @@
           {"ref": "7", "kind": "instruction", "en": "On days when Tachanun is not said, this is recited:", "gloss": "Recited in a shiva house on days without Tachanun", "text": "<small>ובימים שאין בהם תחנון אומרים זה:</small>"},
           {"ref": "8", "kind": "prayer", "text": "מִכְתָּם לְדָוִד שָׁמְרֵֽנִי אֵל כִּי־חָסִֽיתִי בָךְ: אָמַֽרְתְּ לַיהֺוָה אֲדֹנָי אָֽתָּה טוֹבָתִי בַּל־עָלֶֽיךָ: לִקְדוֹשִׁים אֲשֶׁר־בָּאָֽרֶץ הֵֽמָּה וְאַדִּירֵי כָּל־חֶפְצִי־בָם: יִרְבּוּ עַצְּבוֹתָם אַחֵר מָהָֽרוּ בַּל־אַסִּיךְ נִסְכֵּיהֶם מִדָּם וּבַל־אֶשָּׂא אֶת־שְׁמוֹתָם עַל־שְׂפָתָי: יְהֺוָה מְנָת־חֶלְקִי וְכוֹסִי אַתָּה תּוֹמִיךְ גּוֹרָלִי: חֲבָלִים נָֽפְלוּ־לִי בַּנְּעִמִים אַף־נַחֲלָת שָׁפְרָה עָלָי: אֲבָרֵךְ אֶת־יְהֺוָה אֲשֶׁר יְעָצָֽנִי אַף־לֵילוֹת יִסְּרֽוּנִי כִלְיוֹתָי: שִׁוִּיתִי יְהֺוָה לְנֶגְדִּי תָמִיד כִּי מִימִינִי בַּל־אֶמּוֹט: לָכֵן שָׂמַח לִבִּי וַיָּֽגֶל כְּבוֹדִי אַף־בְּשָׂרִי יִשְׁכֹּן לָבֶֽטַח: כִּי לֹא־תַעֲזֹב נַפְשִׁי לִשְׁאוֹל לֹא־תִתֵּן חֲסִידְךָ לִרְאוֹת שָֽׁחַת: תּוֹדִיעֵֽנִי אֹֽרַח חַיִּים שֽׂבַע שְׂמָחוֹת אֶת־פָּנֶֽיךָ נְעִימוֹת בִּימִינְךָ נֶֽצַח:"},
           {"ref": "9", "parts": [
-            {"kind": "instruction", "en": "Mourner's Kaddish", "text": "<small>קדיש יתום</small>"},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "<br><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא בְּעָלְ֒מָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ וְיַצְמַח פּוּרְ֒קָנֵהּ וִיקָרֵב (קֵץ) מְשִׁיחֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן:"}
+            {"kind": "instruction", "node": "kaddish.mourners", "en": "Mourner's Kaddish", "text": "<small>קדיש יתום</small>"},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "minyan": true, "text": "<br><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא בְּעָלְ֒מָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ וְיַצְמַח פּוּרְ֒קָנֵהּ וִיקָרֵב (קֵץ) מְשִׁיחֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,"},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "voice": "aloud", "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן:"}
           ]},
-          {"ref": "10", "kind": "prayer", "role": "congregation", "voice": "aloud", "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>:"},
+          {"ref": "10", "kind": "prayer", "node": "kaddish.mourners", "role": "congregation", "voice": "aloud", "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>:"},
           {"ref": "11", "parts": [
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא,"},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": " בְּרִיךְ הוּא  לְעֵֽלָּא "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Insert \"ולעלא מכל\" (and far above all)", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "mourner", "voice": "aloud", "en": "and far above all", "text": " (וּלְ֒עֵֽלָּא מִכָּל)"},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "en": "and far above all", "text": "  מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": " דַּאֲמִירָן בְּעָלְ֒מָא,"},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן,"}
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא,"},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "text": " בְּרִיךְ הוּא  לְעֵֽלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "gloss": "Insert \"ולעלא מכל\" (and far above all)", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "en": "and far above all", "text": " (וּלְ֒עֵֽלָּא מִכָּל)"},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "en": "and far above all", "text": "  מִן כָּל בִּרְכָתָא וְשִׁירָתָא,"},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "text": " תֻּשְׁבְּחָתָא וְנֶחֱמָתָא,"},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "text": " דַּאֲמִירָן בְּעָלְ֒מָא,"},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן,"}
           ]},
-          {"ref": "12", "kind": "prayer", "role": "mourner", "voice": "aloud", "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"},
+          {"ref": "12", "kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"},
           {"ref": "13", "parts": [
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "עוֹשֶׂה שָׁלוֹם "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Insert \"השלום\" (the peace)", "text": "<small>בעשי\"ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "mourner", "voice": "aloud", "en": "the peace", "text": " (הַשָּׁלוֹם)"},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "en": "the peace", "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "text": "עוֹשֶׂה שָׁלוֹם "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "en": "During the Ten Days of Repentance:", "gloss": "Insert \"השלום\" (the peace)", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "en": "the peace", "text": " (הַשָּׁלוֹם)"},
+            {"kind": "prayer", "node": "kaddish.mourners", "role": "mourner", "voice": "aloud", "en": "the peace", "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"}
           ]}
         ]
       },
@@ -1677,7 +1677,7 @@
           {"ref": "9", "kind": "prayer", "repeat": 3, "text": "אַתָּה סֵֽתֶר לִי מִצַּר תִּצְּ֒רֵֽנִי רָנֵּי פַלֵּט תְּסוֹבְ֒בֵֽנִי סֶֽלָה: וְעָרְ֒בָה לַיהוָֹה מִנְחַת יְהוּדָה וִירוּשָׁלָֽםִ כִּימֵי עוֹלָם וּכְשָׁנִים קַדְמֹנִיּוֹת:"},
           {"ref": "10", "kind": "prayer", "text": "תָּנָא דְבֵי אֵלִיָּֽהוּ כָּל הַשּׁוֹנֶה הֲלָכוֹת בְּכָל יוֹם מֻבְטָח לוֹ שֶׁהוּא בֶּן עוֹלָם הַבָּא שֶׁנֶּאֱמַר הֲלִיכוֹת עוֹלָם לוֹ אַל תִּקְרֵי הֲלִיכוֹת אֶלָּא הֲלָכוֹת:"},
           {"ref": "11", "kind": "prayer", "text": "<b>אָמַר</b> רַבִּי אֶלְעָזָר אָמַר רַבִּי חֲנִינָא. תַּלְמִידֵי חֲכָמִים מַרְבִּים שָׁלוֹם בָּעוֹלָם. שֶׁנֶּאֱמַר וְכָל בָּנַֽיִךְ לִמּוּדֵי יְהֹוָה וְרַב שְׁלוֹם בָּנָֽיךְ: אַל תִּקְרֵי בָּנָֽיךְ אֶלָּא בּוֹנָֽיךְ: שָׁלוֹם רָב לְאֹהֲבֵי תוֹרָתֶֽךָ וְאֵין לָֽמוֹ מִכְשׁוֹל: יְהִי שָׁלוֹם בְּחֵילֵךְ שַׁלְוָה בְּאַרְמְּנוֹתָֽיךְ לְמַֽעַן אַחַי וְרֵעָי אֲדַבְּרָה נָא שָׁלוֹם בָּךְ: לְמַֽעַן בֵּית יְהֹוָה אֱלֹהֵֽינוּ אֲבַקְ֒שָׁה טוֹב לָךְ: יְהֹוָה עֹז לְעַמּוֹ יִתֵּן יְהֹוָה יְבָרֵךְ אֶת עַמּוֹ בַשָּׁלוֹם:"},
-          {"ref": "12", "kind": "instruction", "en": "Kaddish d'Rabbanan:", "text": "<small>קדיש דרבנן:</small>"},
+          {"ref": "12", "kind": "instruction", "node": "kaddish.derabbanan", "en": "Kaddish d'Rabbanan:", "text": "<small>קדיש דרבנן:</small>"},
           {"ref": "13", "kind": "prayer", "node": "kaddish.derabbanan", "role": "mourner", "minyan": true, "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא בְּעָלְ֒מָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ וְיַצְמַח פּוּרְ֒קָנֵהּ וִיקָרֵב (קֵץ) מְשִׁיחֵהּ. בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן"},
           {"ref": "14", "kind": "prayer", "node": "kaddish.derabbanan", "role": "mourner", "minyan": true, "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>"},
           {"ref": "15", "parts": [

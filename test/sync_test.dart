@@ -51,7 +51,10 @@ class Device {
   final SyncState state;
   final int Function() clock;
 
-  SyncEngine get engine => SyncEngine(storage: storage, transport: mailbox, keys: keys, state: state, now: clock);
+  /// The progress groups included; null for all of them.
+  Set<String>? groups;
+
+  SyncEngine get engine => SyncEngine(storage: storage, transport: mailbox, keys: keys, state: state, groups: groups, now: clock);
   Future<SyncOutcome> sync() => engine.sync();
 
   Map<String, Object?>? get settings => storage.readJson('settings', (j) => (j as Map).cast<String, Object?>());
@@ -311,6 +314,63 @@ void main() {
       expect(m.rev, 1);
     });
 
+    test('progress made on two devices adds up, and unmarking removes just that mark', () async {
+      final keys = await SyncKeys.derive(SyncKeys.newSecret());
+      final m = FakeMailbox();
+      final a = await device('a', m, keys), b = await device('b', m, keys);
+      a.storage.writeJson('shnayimMikraDone', {'5787': ['Noach:1', 'Noach:2']});
+      a.storage.writeJson('gemaraMarks', {'completed': ['Berakhot:2a'], 'notes': {'Berakhot:2a:1': 'a note'}});
+      a.storage.writeJson('tehillim', {'read': [1, 2], 'completions': 1, 'ketiv': true});
+      b.storage.writeJson('shnayimMikraDone', {'5787': ['Bereshit:7']});
+      b.storage.writeJson('gemaraMarks', {'completed': ['Berakhot:2b'], 'highlights': {'Berakhot:2b:4': 2}});
+      b.storage.writeJson('tehillim', {'read': [3]});
+      await a.sync();
+      await b.sync();
+      await a.sync();
+      for (final d in [a, b]) {
+        expect(d.storage.readJson('shnayimMikraDone', (j) => j), {'5787': ['Bereshit:7', 'Noach:1', 'Noach:2']});
+        final g = d.storage.readJson('gemaraMarks', (j) => j as Map)!;
+        expect(g['completed'], ['Berakhot:2a', 'Berakhot:2b']);
+        expect(g['notes'], {'Berakhot:2a:1': 'a note'});
+        expect(g['highlights'], {'Berakhot:2b:4': 2});
+        final t = d.storage.readJson('tehillim', (j) => j as Map)!;
+        expect(t['read'], [1, 2, 3]);
+        expect(t['completions'], 1);
+        expect(t['ketiv'], true);
+      }
+
+      b.storage.writeJson('shnayimMikraDone', {'5787': ['Bereshit:7', 'Noach:2']}); // unmarks Noach:1
+      a.storage.writeJson('shnayimMikraDone', {'5787': ['Bereshit:7', 'Noach:1', 'Noach:2', 'Noach:3']});
+      await b.sync();
+      await a.sync();
+      await b.sync();
+      for (final d in [a, b]) {
+        expect(d.storage.readJson('shnayimMikraDone', (j) => j), {'5787': ['Bereshit:7', 'Noach:2', 'Noach:3']});
+      }
+    });
+
+    test('progress left out stays on the device, and is added in when included', () async {
+      final keys = await SyncKeys.derive(SyncKeys.newSecret());
+      final m = FakeMailbox();
+      final a = await device('a', m, keys), b = await device('b', m, keys);
+      b.groups = {'learning'};
+      a.storage.writeJson('tehillim', {'read': [1, 2]});
+      b.storage.writeJson('tehillim', {'read': [5]});
+      await a.sync();
+      await b.sync();
+      expect(b.storage.readJson('tehillim', (j) => (j as Map)['read']), [5]);
+      final remote = SyncDoc.decode(await keys.open(m.blob!));
+      expect(remote.entries.keys, isNot(contains('tehillim/read/5')));
+      expect(remote.entries['tehillim/read/1']?.v, true); // a's marks are kept for the others
+
+      b.groups = null; // b includes Tehillim now
+      await b.sync();
+      await a.sync();
+      for (final d in [a, b]) {
+        expect(d.storage.readJson('tehillim', (j) => (j as Map)['read']), [1, 2, 5]);
+      }
+    });
+
     test('state survives a restart', () async {
       final keys = await SyncKeys.derive(SyncKeys.newSecret());
       final m = FakeMailbox();
@@ -321,6 +381,7 @@ void main() {
       expect(back.deviceId, 'a');
       expect(back.doc.sameAs(a.state.doc), isTrue);
       expect(back.rev, a.state.rev);
+      expect(back.groups, a.state.groups);
     });
   });
 

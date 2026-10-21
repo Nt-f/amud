@@ -137,14 +137,17 @@ Measurement Protocol API secret on the web data stream and build with
 ## Releasing
 
 **Apps:** write the release notes in `release-notes/<version>.md` (the app
-shows them before and after updating), then push a version tag, for example:
+shows them before and after updating), then either run **Actions → Publish**
+on master (it tags pubspec.yaml's version and asks which Google Play track)
+or push a version tag yourself, for example:
 
     git tag v0.4.0 && git push origin v0.4.0
 
 GitHub Actions runs the tests, builds every platform (Android, Windows,
 Linux, macOS, unsigned iOS and the web site) and publishes them as a GitHub
-Release, which the in-app updater picks up. Android signing needs
-these repository secrets:
+Release, which the in-app updater picks up, then uploads the Play bundle to
+Google Play and the iOS build to TestFlight (see [DEPLOY.md](DEPLOY.md) for
+the Play secret). Android signing needs these repository secrets:
 
 - `SIDDUR_KEYSTORE_BASE64`
 - `SIDDUR_KEYSTORE_PASSWORD`

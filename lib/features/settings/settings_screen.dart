@@ -348,7 +348,7 @@ class SettingsScreen extends ConsumerWidget {
           AdaptiveSwitchTile(title: context.tr('Full-screen reader'), subtitle: context.tr('Hide the phone status and navigation bars while reading'), value: s.fullscreenReader,
             onChanged: (v) => set((x) => x.copyWith(fullscreenReader: v))),
           if (compassPossible)
-            AdaptiveSwitchTile(title: context.tr('Compass toward Jerusalem'), subtitle: context.tr('A dial in the siddur that points toward Jerusalem'),
+            AdaptiveSwitchTile(title: context.tr('Compass to the east'), subtitle: context.tr('A dial in the siddur that points east'),
               value: s.readerCompass, onChanged: (v) => set((x) => x.copyWith(readerCompass: v))),
           if (!kIsWeb && defaultTargetPlatform == TargetPlatform.android)
             AdaptiveSwitchTile(

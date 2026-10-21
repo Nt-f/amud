@@ -5,6 +5,7 @@ import 'package:archive/archive.dart';
 import 'package:amud/core/settings.dart';
 import 'package:amud/features/alerts/alerts.dart';
 import 'package:amud/features/siddur/reader_grouping.dart';
+import 'package:amud/features/siddur/reading_marks.dart';
 import 'package:amud/features/zmanim/zman_catalog.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hebcal/hebcal.dart';
@@ -102,5 +103,36 @@ void main() {
     // Choices made since are kept.
     final v2 = AppSettings.fromJson({...const AppSettings(ashkenaziSpelling: false).toJson()});
     expect(v2.ashkenaziSpelling, isFalse);
+  });
+
+  test('a rubric that only says who speaks stands in for the role label', () {
+    SegmentItem rubric(String he, String en, {SegmentKind kind = SegmentKind.instruction}) {
+      ResolvedSegment r(String html, bool hebrew) =>
+          ResolvedSegment(Segment(ref: 'r', html: html, hebrew: hebrew, kind: kind, runs: [TextRun(html, RunKind.text)]), const []);
+      return SegmentItem('k', SchemaNode.parse({'enTitle': 'Test'}), r(he, true), r(en, false), kind, Applicability.always, null, null, false);
+    }
+
+    expect(namesSpeaker(rubric('ואומר החזן:', 'The <i>Chazzan</i> says:')), isTrue);
+    expect(namesSpeaker(rubric('והקהל עונים והחזן חוזר:', 'The congregation responds and the Chazzan repeats:')), isTrue);
+    expect(namesSpeaker(rubric('קו"ח', 'Congregation, then chazzan')), isTrue);
+    expect(namesSpeaker(rubric('חזן:', 'Chazzan:', kind: SegmentKind.speaker)), isTrue);
+    // When, not who.
+    expect(namesSpeaker(rubric('בחזרת הש"ץ אומרים כאן קדושה:', "In the chazzan's repetition, Kedushah is said here:")), isFalse);
+    expect(namesSpeaker(rubric('אם אין כהנים אומר החזן:', 'If there are no kohanim, the chazzan says:')), isFalse);
+    expect(namesSpeaker(rubric('בר"ח:', 'On Rosh Chodesh:')), isFalse);
+  });
+
+  test('a line that says "ג"פ" itself gets no "×3"', () {
+    SegmentItem line(List<ResolvedRun> runs) => SegmentItem(
+        'k', SchemaNode.parse({'enTitle': 'Test'}),
+        ResolvedSegment(Segment(ref: 'r', html: '', hebrew: true, kind: SegmentKind.prayer, runs: const []), runs), null,
+        SegmentKind.prayer, Applicability.always, null, null, false,
+        repeat: 3);
+    const mark = ResolvedRun('<small>ג"פ:</small>', true, Applicability.always, null, null);
+    const verse = ResolvedRun(' יְהֹוָה צְבָאוֹת עִמָּֽנוּ', false, Applicability.always, null, null);
+    expect(isRepeatMark(mark), isTrue);
+    expect(namesRepeat(line([mark, verse, mark, verse])), isTrue);
+    expect(namesRepeat(line([verse])), isFalse);
+    expect(isRepeatMark(const ResolvedRun('<small>בר"ח:</small>', true, Applicability.always, null, null)), isFalse);
   });
 }

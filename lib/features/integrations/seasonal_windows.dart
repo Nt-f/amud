@@ -244,22 +244,8 @@ class _LevanaCard extends ConsumerWidget {
     return CardFrame(
       title: 'Kiddush Levana window',
       icon: Icons.nights_stay_outlined,
+      onTap: () => context.push('/pray/kiddushLevana'),
       accent: open ? scheme.primaryContainer : (soon ? colors.chipToday : null),
-      trailing: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
-        decoration: BoxDecoration(
-          color: open ? scheme.primary : null,
-          borderRadius: BorderRadius.circular(999),
-          border: Border.all(color: open ? scheme.primary : (soon ? colors.todayBar : scheme.outlineVariant), width: 1.5),
-        ),
-        child: Text(
-          context.tr(open ? 'Open now' : (soon ? 'Not open yet' : 'Closed')),
-          style: theme.textTheme.labelMedium?.copyWith(
-            color: open ? scheme.onPrimary : (soon ? scheme.onSurface : scheme.onSurfaceVariant),
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -282,10 +268,6 @@ class _LevanaCard extends ConsumerWidget {
                 ? context.tr('From 3 days after the molad; until halfway between molads.')
                 : context.tr('From 7 days after the molad; until halfway between molads.'),
             style: theme.textTheme.bodySmall?.copyWith(color: ink.withValues(alpha: 0.75)),
-          ),
-          TextButton(
-            onPressed: () => context.push('/pray/kiddushLevana'),
-            child: Text(context.tr('Read')),
           ),
         ],
       ),
@@ -313,15 +295,12 @@ class _HachamaCard extends ConsumerWidget {
     return CardFrame(
       title: 'Birkat HaChama',
       icon: Icons.wb_sunny_outlined,
+      onTap: () => context.push('/pray/birkatHaChama'),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(next?.getDate().render(context.hebcalLocale) ?? '—'),
           Text(context.tr('Recited in the morning, once every 28 years.')),
-          TextButton(
-            onPressed: () => context.push('/pray/birkatHaChama'),
-            child: Text(context.tr('Read')),
-          ),
         ],
       ),
     );

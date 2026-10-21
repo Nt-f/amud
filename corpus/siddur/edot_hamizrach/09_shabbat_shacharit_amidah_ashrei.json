@@ -248,7 +248,7 @@
           {"ref": "78", "kind": "prayer", "when": "shabbatShuva", "node": "avinu_malkeinu", "role": "together", "voice": "undertone", "en": "Avinu Malkeinu", "text": "<small>אָבִינוּ מַלְכֵּנוּ אַל תְּשִׁיבֵנוּ רֵיקָם מִלְּפָנֶיךָ:</small> "},
           {"ref": "79", "kind": "prayer", "node": "concl.ein_kelokeinu", "role": "congregation", "text": "<b>יְהִ֤י</b> שֵׁ֣ם יְהֹוָ֣ה מְבֹרָ֑ךְ מֵ֝עַתָּ֗ה וְעַד־עוֹלָֽם׃ מִמִּזְרַח־שֶׁ֥מֶשׁ עַד־מְבוֹא֑וֹ מְ֝הֻלָּ֗ל שֵׁ֣ם יְהֹוָֽה׃ רָ֖ם עַל־כׇּל־גּוֹיִ֥ם ׀ יְהֹוָ֑ה עַ֖ל הַשָּׁמַ֣יִם כְּבוֹדֽוֹ׃ יְהֹוָ֥ה אֲדֹנֵ֑ינוּ מָה־אַדִּ֥יר שִׁ֝מְךָ֗ בְּכׇל־הָאָֽרֶץ׃"},
           {"ref": "80", "kind": "instruction", "en": "On Rosh Chodesh, Chol HaMoed, or Chanukah, say Hallel before Kaddish", "gloss": "Hallel is said on these occasions", "text": "<small>בשבת ר\"ח או חול המועד או חנוכה אומרים הלל לפני הקדיש</small>  "},
-          {"ref": "81", "kind": "instruction", "en": "The chazzan says Kaddish Titkabal", "text": "<small>ואומר החזן קדיש תתקבל</small> "},
+          {"ref": "81", "kind": "instruction", "node": "kaddish.shalem", "en": "The chazzan says Kaddish Titkabal", "text": "<small>ואומר החזן קדיש תתקבל</small> "},
           {"ref": "82", "parts": [
             {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<small><b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. <small>[אָמֵן]</small>"},
             {"kind": "prayer", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בְּעָלְמָא דִּי בְרָא,"},

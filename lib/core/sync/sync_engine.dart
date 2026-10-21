@@ -8,7 +8,9 @@ import 'sync_transport.dart';
 
 /// What a device remembers about syncing (device-local; never synced).
 class SyncState {
-  SyncState({required this.deviceId, SyncDoc? doc, this.clock = 0, this.rev = 0, this.lastSynced}) : doc = doc ?? SyncDoc();
+  SyncState({required this.deviceId, SyncDoc? doc, this.clock = 0, this.rev = 0, this.lastSynced, Set<String>? groups})
+      : doc = doc ?? SyncDoc(),
+        groups = groups ?? {};
 
   final String deviceId;
   final SyncDoc doc;
@@ -17,6 +19,9 @@ class SyncState {
   /// The mailbox revision this doc was last in step with.
   int rev;
   int? lastSynced;
+
+  /// The optional groups ([syncGroups]) included when this device last synced.
+  Set<String> groups;
 }
 
 class SyncOutcome {
@@ -34,10 +39,15 @@ class SyncOutcome {
 /// writes what other devices changed back. Pure logic over [Storage] and a
 /// [SyncTransport], so it is tested without a network.
 class SyncEngine {
-  SyncEngine({required this.storage, required this.transport, required this.keys, required this.state, int Function()? now})
-      : _now = now ?? (() => DateTime.now().millisecondsSinceEpoch);
+  SyncEngine({required this.storage, required this.transport, required this.keys, required this.state, Set<String>? groups, int Function()? now})
+      : groups = groups ?? {...syncGroups},
+        _now = now ?? (() => DateTime.now().millisecondsSinceEpoch);
 
   final Storage storage;
+
+  /// The optional groups ([syncGroups]) this device includes.
+  final Set<String> groups;
+  late final List<SyncSource> _sources = [for (final s in syncSources) if (includesSource(s, groups)) s];
   final SyncTransport transport;
   final SyncKeys keys;
   final SyncState state;
@@ -51,7 +61,13 @@ class SyncEngine {
   /// The current value of every synced entry on this device.
   Map<String, Object?> snapshot() {
     final out = <String, Object?>{};
-    for (final s in syncSources) {
+    for (final s in _sources) {
+      if (s.isParts) {
+        for (final e in s.split!(storage.readJson<Object?>(s.key, (j) => j)).entries) {
+          out[s.entryName(e.key)] = e.value;
+        }
+        continue;
+      }
       if (!s.perField) {
         final v = storage.readJson<Object?>(s.key, (j) => j);
         if (v != null) out[s.key] = v;
@@ -78,6 +94,11 @@ class SyncEngine {
   /// untouched install holds by default is not stamped, so a new device
   /// doesn't overwrite another device's choices.
   void refreshLocal() {
+    // A group included again, or for the first time: what this device holds
+    // is added to what the others have, not taken as removing theirs.
+    for (final s in _sources.where((s) => s.isParts && !state.groups.contains(s.group))) {
+      state.doc.entries.removeWhere((name, _) => name.startsWith('${s.key}/'));
+    }
     final defaults = _defaultsByEntry();
     final snap = snapshot();
     for (final e in snap.entries) {
@@ -91,15 +112,25 @@ class SyncEngine {
       state.doc.entries[e.key] = SyncEntry(_tick(), state.deviceId, e.value);
     }
     // A whole-key value that was deleted here.
-    for (final s in syncSources.where((s) => !s.perField)) {
+    for (final s in _sources.where((s) => !s.perField)) {
       final prior = state.doc.entries[s.key];
       if (prior != null && prior.v != null && !snap.containsKey(s.key)) state.doc.entries[s.key] = SyncEntry(_tick(), state.deviceId, null);
+    }
+    // A part (a mark, a note) removed here.
+    for (final s in _sources.where((s) => s.isParts)) {
+      final gone = [
+        for (final e in state.doc.entries.entries)
+          if (e.key.startsWith('${s.key}/') && e.value.v != null && !snap.containsKey(e.key)) e.key,
+      ];
+      for (final name in gone) {
+        state.doc.entries[name] = SyncEntry(_tick(), state.deviceId, null);
+      }
     }
   }
 
 
   SyncSource? _source(String name) {
-    for (final s in syncSources) {
+    for (final s in _sources) {
       if (s.perField ? name.startsWith('${s.key}/') : name == s.key) return s;
     }
     return null; // an entry from a newer app version: kept in the doc, not applied
@@ -126,7 +157,7 @@ class SyncEngine {
     final out = <String>{};
     for (final e in state.doc.entries.entries) {
       final src = _source(e.key);
-      if (src == null) continue;
+      if (src == null || src.isParts) continue;
       final field = src.perField ? e.key.substring(src.key.length + 1) : null;
       if (field != null) {
         if (src.fields != null && !src.fields!.contains(field)) continue;
@@ -154,6 +185,16 @@ class SyncEngine {
       storage.writeJson(m.key, m.value);
       out.add(m.key);
     }
+    for (final s in _sources.where((s) => s.isParts)) {
+      final parts = {
+        for (final e in state.doc.entries.entries)
+          if (e.key.startsWith('${s.key}/') && e.value.v != null) e.key.substring(s.key.length + 1): e.value.v,
+      };
+      final mine = s.split!(storage.readJson<Object?>(s.key, (j) => j));
+      if (canon(parts) == canon(mine)) continue;
+      storage.writeJson(s.key, s.join!(parts));
+      out.add(s.key);
+    }
     return out;
   }
 
@@ -172,6 +213,7 @@ class SyncEngine {
       pulled += state.doc.mergeIn(remoteDoc).length;
       applied.addAll(applyToStorage());
       final rev = remote?.rev ?? 0;
+      state.groups = {...groups};
       if (blob != null && state.doc.sameAs(remoteDoc)) {
         state.rev = rev;
         state.lastSynced = _now();
@@ -194,12 +236,13 @@ class SyncEngine {
 const syncStateKey = 'sync';
 
 Map<String, Object?> syncStateToJson(SyncState s) =>
-    {'device': s.deviceId, 'clock': s.clock, 'rev': s.rev, 'last': s.lastSynced, 'doc': s.doc.toJson()};
+    {'device': s.deviceId, 'clock': s.clock, 'rev': s.rev, 'last': s.lastSynced, 'groups': (s.groups.toList()..sort()), 'doc': s.doc.toJson()};
 
 SyncState syncStateFromJson(Map<String, Object?> j) => SyncState(
       deviceId: j['device'] as String,
       clock: (j['clock'] as num?)?.toInt() ?? 0,
       rev: (j['rev'] as num?)?.toInt() ?? 0,
       lastSynced: (j['last'] as num?)?.toInt(),
+      groups: {for (final g in (j['groups'] as List?) ?? const []) '$g'},
       doc: SyncDoc.decode(utf8.encode(jsonEncode(j['doc']))),
     );

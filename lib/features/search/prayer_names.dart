@@ -1,4 +1,5 @@
 import '../../core/search.dart';
+import 'search_synonyms.dart';
 
 /// Other names people know a prayer by: the Ashkenazi, Sefardi and modern
 /// Hebrew transliterations, the English names siddurim translate it as,
@@ -27,7 +28,8 @@ typedef PrayerNameMatch = ({List<String> names, String? key});
 
 PrayerNameMatch prayerNamesFor(String en, String he) {
   final titles = [searchFold(en), searchFold(he)].where((t) => t.isNotEmpty);
-  final names = <String>[];
+  // Names for this exact section, from [sectionSynonyms].
+  final names = [...?sectionSynonyms['$en|$he']];
   String? key;
   for (final p in prayerNames) {
     for (final t in titles) {

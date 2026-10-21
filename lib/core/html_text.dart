@@ -149,18 +149,10 @@ final _leadHebrewWord = RegExp(r'^(\s*)([א-ת][^\s<]*)');
 /// set the first words of every paragraph in bold, some only some of them,
 /// and some none, and the reader mixes versions section by section. So the
 /// [opening] line of a prayer starts in bold (added for Hebrew when
-/// [addIfMissing]) and other lines lose a short bold lead-in. Lines that are
-/// bold throughout (responses such as "Amen, yehei shmei rabba") and
-/// longer bold passages are left alone.
+/// [addIfMissing]). A bold lead-in the siddur prints on a later paragraph
+/// ("<b>אֶת שֵׁם</b> הָאֵל…") is its own and stays.
 String normalizeOpeningBold(String html, {required bool opening, bool addIfMissing = false}) {
-  final m = _leadBold.firstMatch(html);
-  if (m != null) {
-    final rest = html.substring(m.end);
-    final restText = rest.replaceAll(RegExp(r'<[^>]*>'), '').trim();
-    final words = m[3]!.replaceAll(RegExp(r'<[^>]*>'), '').trim().split(RegExp(r'\s+')).length;
-    if (opening || restText.isEmpty || words > 4) return html;
-    return '${m[1]}${m[3]}$rest';
-  }
+  if (_leadBold.hasMatch(html)) return html;
   if (!opening || !addIfMissing) return html;
   return html.replaceFirstMapped(_leadHebrewWord, (w) => '${w[1]}<b>${w[2]}</b>');
 }

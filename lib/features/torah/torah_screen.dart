@@ -20,9 +20,11 @@ import '../../core/typeset/typeset.dart';
 import '../home/today.dart';
 import '../search/search_sources.dart';
 import '../tehillim/tehillim_card.dart';
+import 'shnayim_mikra.dart';
 import 'shnayim_mikra_screen.dart';
 import 'torah_library.dart';
 import 'torah_settings.dart';
+import '../gemara/gemara_data.dart' show bookDownloadProvider, estimatedUnitBytes, savedUnitsProvider;
 import '../gemara/gemara_home_screen.dart' show DafVideoButton, studyPath;
 import '../gemara/gemara_user.dart';
 import '../gemara/study_book.dart';
@@ -52,7 +54,7 @@ class TorahScreen extends ConsumerWidget {
               SearchResults(query: query.raw, hebrewFont: ref.watch(torahSettingsProvider).hebrewFont, groups: torahResults(context, ref, query)),
             ])
           : ListView(padding: pagePadding(context, const EdgeInsets.fromLTRB(12, 4, 12, 32)), children: [
-        DownloadPanel(works: all, label: context.tr('Download everything')),
+        const EverythingDownloadPanel(),
         const ShnayimMikraTile(),
         const TehillimCard(),
         const SizedBox(height: 8),
@@ -175,17 +177,106 @@ class DownloadPanel extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final states = ref.watch(torahLibraryProvider);
     final lib = ref.read(torahLibraryProvider.notifier);
-    final theme = Theme.of(context);
     final missing = [for (final w in works) if (states[w.id] is! Downloaded) w];
     final downloading = works.any((w) => states[w.id] is Downloading);
-    final failed = [for (final w in works) if (states[w.id] case DownloadFailed(:final error)) error];
-    final estimate = missing.fold<int>(0, (n, w) => n + w.estimatedBytes);
     if (missing.isEmpty && !downloading) return const SizedBox.shrink();
+    return _DownloadCard(
+      label: label,
+      estimate: missing.fold<int>(0, (n, w) => n + w.estimatedBytes),
+      busy: downloading,
+      failed: works.any((w) => states[w.id] is DownloadFailed),
+      onPressed: () => lib.downloadAll(missing),
+    );
+  }
+}
 
+/// The Torah tab's "Download everything": its books, Shnayim Mikra with
+/// Rashi, the Mishnah and Shas, with the size of what isn't saved yet.
+class EverythingDownloadPanel extends ConsumerWidget {
+  const EverythingDownloadPanel({super.key});
+
+  /// Set by Cancel; the books still to come aren't started.
+  static var _stop = false;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final works = [for (final c in torahCategories) ...c.availableWorks];
+    final states = ref.watch(torahLibraryProvider);
+    final chumash = ref.watch(chumashDownloadProvider);
+    final rashi = ref.watch(rashiDownloadProvider);
+    final fiveBooks = [ref.read(chumashDownloadProvider.notifier), ref.read(rashiDownloadProvider.notifier)];
+    final study = [
+      for (final kind in [StudyKind.mishnah, StudyKind.bavli])
+        (kind: kind, key: [for (final b in booksOf(kind)) b.id].join('|'), units: booksOf(kind).fold<int>(0, (n, b) => n + b.units.length)),
+    ];
+    final missing = [for (final w in works) if (states[w.id] is! Downloaded) w];
+    var estimate = missing.fold<int>(0, (n, w) => n + w.estimatedBytes) + fiveBooks.fold<int>(0, (n, b) => n + b.missingBytes);
+    (int, int)? progress;
+    for (final s in study) {
+      estimate += (s.units - ref.watch(savedUnitsProvider(s.key))).clamp(0, s.units).toInt() * estimatedUnitBytes(s.kind);
+      progress ??= ref.watch(bookDownloadProvider(s.key));
+    }
+    final busy = works.any((w) => states[w.id] is Downloading) || chumash.busy || rashi.busy || progress != null;
+    if (estimate == 0 && !busy) return const SizedBox.shrink();
+
+    Future<void> downloadAll() async {
+      _stop = false;
+      final studyDownloads = [for (final s in study) ref.read(bookDownloadProvider(s.key).notifier)];
+      await ref.read(torahLibraryProvider.notifier).downloadAll(missing);
+      for (final b in fiveBooks) {
+        if (_stop) return;
+        await b.downloadAll().catchError((_) {});
+      }
+      for (final d in studyDownloads) {
+        if (_stop) return;
+        await d.start();
+      }
+    }
+
+    return _DownloadCard(
+      label: context.tr('Download everything'),
+      estimate: estimate,
+      busy: busy,
+      progress: progress == null ? null : context.tr('Downloading from Sefaria… {done} of {total}', {'done': progress.$1, 'total': progress.$2}),
+      onCancel: progress == null
+          ? null
+          : () {
+              _stop = true;
+              for (final s in study) {
+                ref.read(bookDownloadProvider(s.key).notifier).cancel();
+              }
+            },
+      failed: chumash.failed || rashi.failed || works.any((w) => states[w.id] is DownloadFailed),
+      onPressed: downloadAll,
+    );
+  }
+}
+
+/// A download banner: one big button with the rough size, progress while
+/// it runs.
+class _DownloadCard extends StatelessWidget {
+  final String label;
+  final int estimate;
+  final bool busy;
+  final bool failed;
+  final VoidCallback onPressed;
+
+  /// What's being downloaded, and a way to stop it, when known.
+  final String? progress;
+  final VoidCallback? onCancel;
+  const _DownloadCard(
+      {required this.label, required this.estimate, required this.busy, required this.failed, required this.onPressed, this.progress, this.onCancel});
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     final Widget body;
-    if (downloading) {
+    if (busy) {
       body = Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-        Text(context.tr('Downloading from Sefaria…'), style: theme.textTheme.titleSmall),
+        Row(children: [
+          Expanded(child: Text(progress ?? context.tr('Downloading from Sefaria…'), style: theme.textTheme.titleSmall)),
+          if (onCancel != null) IconButton(tooltip: context.tr('Cancel'), icon: const Icon(Icons.close), onPressed: onCancel),
+        ]),
         const SizedBox(height: 10),
         const LinearProgressIndicator(),
       ]);
@@ -195,15 +286,15 @@ class DownloadPanel extends ConsumerWidget {
           style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20)),
           icon: const Icon(Icons.download),
           label: Text('$label · ≈ ${formatBytes(estimate)}', textAlign: TextAlign.center),
-          onPressed: () => lib.downloadAll(missing),
+          onPressed: onPressed,
         ),
         const SizedBox(height: 6),
         Text(
-          failed.isNotEmpty
+          failed
               ? context.tr("Download failed. Check your connection and try again.")
               : context.tr('Downloads from Sefaria once, then works offline.'),
           textAlign: TextAlign.center,
-          style: theme.textTheme.bodySmall?.copyWith(color: failed.isNotEmpty ? theme.colorScheme.error : theme.colorScheme.outline),
+          style: theme.textTheme.bodySmall?.copyWith(color: failed ? theme.colorScheme.error : theme.colorScheme.outline),
         ),
       ]);
     }

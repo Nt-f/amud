@@ -62,7 +62,7 @@ class _ReaderJumpBarState extends ConsumerState<ReaderJumpBar> {
     super.didUpdateWidget(old);
     if (old.active != widget.active) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        final c = widget.active < _keys.length ? _keys[widget.active].currentContext : null;
+        final c = widget.active >= 0 && widget.active < _keys.length ? _keys[widget.active].currentContext : null;
         if (c != null) Scrollable.ensureVisible(c, alignment: 0.5, duration: const Duration(milliseconds: 200));
       });
     }

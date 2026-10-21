@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hebcal/hebcal.dart';
+import 'package:hebcal/hebcal.dart' as hebcal show Locale;
 import 'package:siddur_engine/siddur_engine.dart';
 
 import '../../core/format.dart';
@@ -15,9 +16,12 @@ import '../siddur/reader_screen.dart';
 import '../siddur/siddur_providers.dart';
 import '../tehillim/tehillim_data.dart' show Passage, Portion;
 import '../tehillim/tehillim_reader.dart';
+import '../gemara/gemara_home_screen.dart' show studyPath;
+import '../gemara/study_book.dart';
 import '../torah/torah_library.dart';
 import '../zmanim/zman_catalog.dart';
 import 'prayer_names.dart';
+import 'search_synonyms.dart';
 import '../siddur/prayer_catalog.dart' show bookSearchOrder;
 
 // --- Siddur -----------------------------------------------------------------
@@ -139,8 +143,9 @@ List<(String, List<SearchHit>)> siddurResults(BuildContext context, WidgetRef re
       title: context.prayerTitle(s, e.node.en, e.node.he),
       hebrewTitle: hebrew,
       subtitle: where.isEmpty ? null : where.join(' › '),
+      score: score,
       // Top-level sections before the lines inside them.
-      score: score * 10 + e.path.length.clamp(0, 9),
+      rank: e.path.length,
       open: (c) => c.push(readerPath(e.book, e.node.id, standalone: standalone)),
     ));
   }
@@ -211,7 +216,7 @@ List<(String, List<SearchHit>)> torahResults(BuildContext context, WidgetRef ref
     for (final w in c.works) {
       if (only != null && w.id != only) continue;
       if (only == null) {
-        final score = q.score([w.en, w.he, c.en, c.he]);
+        final score = q.score([w.en, w.he, c.en, c.he, ...?torahSynonyms[w.id], ...?torahSynonyms[c.id]]);
         if (score != null) {
           books.add(SearchHit(
             icon: w.available ? Icons.menu_book_outlined : Icons.construction,
@@ -237,21 +242,24 @@ List<(String, List<SearchHit>)> torahResults(BuildContext context, WidgetRef ref
           open: (ctx) => ctx.push('/torah/${c.id}/${w.id}/read?siman=${i + 1}'),
         ));
       }
-      // Full text: plain matches only (no transliteration guessing), and
-      // not for one or two letters.
+      // Full text: the words typed, whole or starting words, in any order
+      // (no transliteration guessing), and not for one or two letters.
       final t = ref.watch(_torahTextProvider(w.id)).valueOrNull;
-      final words = searchFold(q.raw);
-      if (t == null || words.length < 3) continue;
+      final phrase = searchFold(q.raw);
+      if (t == null || phrase.length < 3) continue;
+      final words = [for (final x in phrase.split(' ')) RegExp('(?:^| )${RegExp.escape(x)}')];
       for (final s in t.seifim) {
-        final inHe = s.heFold.contains(words);
-        if (!inHe && !s.enFold.contains(words)) continue;
+        final inHe = s.heFold.contains(phrase) || words.every((x) => x.hasMatch(s.heFold));
+        if (!inHe && !s.enFold.contains(phrase) && !words.every((x) => x.hasMatch(s.enFold))) continue;
         final shown = inHe ? s.he : s.en;
         final at = q.indexIn(shown);
         text.add(SearchHit(
           icon: Icons.format_quote_outlined,
-          title: at < 0 ? shown.substring(0, shown.length.clamp(0, 100)) : _snippet(shown, at, words.length),
+          title: at < 0 ? shown.substring(0, shown.length.clamp(0, 100)) : _snippet(shown, at, phrase.length),
           hebrewTitle: inHe,
           subtitle: '${heUi ? w.he : context.term(w.en)} ${s.siman}:${s.seif}',
+          // The words together before the words apart.
+          score: (inHe ? s.heFold : s.enFold).contains(phrase) ? 2 : 3,
           // The snippet is built around the words typed.
           logAs: '${w.id} ${s.siman}:${s.seif}',
           open: (ctx) => ctx.push('/torah/${c.id}/${w.id}/read?siman=${s.siman}&from=${s.seif}&to=${s.seif}'),
@@ -259,6 +267,10 @@ List<(String, List<SearchHit>)> torahResults(BuildContext context, WidgetRef ref
         if (text.length >= 50) break;
       }
     }
+  }
+  if (only == null) {
+    books.addAll(studyBookResults(context, q));
+    books.addAll(parshaResults(context, q));
   }
   return [
     if (chapter != null)
@@ -279,6 +291,89 @@ List<(String, List<SearchHit>)> torahResults(BuildContext context, WidgetRef ref
   ];
 }
 
+/// The names a study book is known by: its own, the Ashkenazi spelling and
+/// [mishnahSynonyms] or [bavliSynonyms].
+List<String> _studyNames(StudyBook b) => [
+      b.en,
+      b.he,
+      hebcal.Locale.gettext(b.en, 'ashkenazi'),
+      ...?(b.kind == StudyKind.bavli ? bavliSynonyms : mishnahSynonyms)[b.id],
+    ];
+
+/// Masechtos of the Gemara and the Mishnah by name, and a daf or perek
+/// asked for by number: "Berachos 2a", "Shabbos 31b", "ברכות ב:", "Avos 3".
+List<SearchHit> studyBookResults(BuildContext context, SearchQuery q) {
+  final heUi = context.uiLanguage != UiLanguage.en;
+  final out = <SearchHit>[];
+  final books = [...booksOf(StudyKind.bavli), ...booksOf(StudyKind.mishnah)];
+  String kindName(StudyBook b) => b.kind == StudyKind.bavli ? context.tr('Gemara') : context.tr('Mishnah');
+  String name(StudyBook b) => heUi ? b.he : context.term(b.en);
+  for (final b in books) {
+    if (q.score(_studyNames(b)) case final score?) {
+      out.add(SearchHit(
+        icon: b.kind == StudyKind.bavli ? Icons.library_books_outlined : Icons.format_list_numbered,
+        title: name(b),
+        subtitle: '${kindName(b)} · ${heUi ? b.sederHe : context.term(b.seder)}',
+        score: score,
+        // The Gemara before the Mishnah of the same name.
+        rank: b.kind == StudyKind.bavli ? 0 : 1,
+        open: (c) => c.push('/torah/${b.kind == StudyKind.bavli ? 'gemara' : 'mishnah'}/${Uri.encodeComponent(b.id)}'),
+      ));
+    }
+  }
+  for (final r in studyRefs(q.raw)) {
+    final (b, unit) = (r.book, r.unit);
+    final n = int.parse(unit.replaceAll(RegExp('[ab]'), ''));
+    final label = b.kind == StudyKind.bavli
+        ? (heUi ? '${b.he} ${gematriya(n)}${unit.endsWith('b') ? ':' : '.'}' : '${context.term(b.en)} $unit')
+        : (heUi ? '${b.he} ${context.tr('Perek')} ${gematriya(n)}' : '${context.term(b.en)} ${context.tr('Perek')} $n');
+    out.add(SearchHit(
+      icon: Icons.bookmark_outline,
+      title: label,
+      hebrewTitle: heUi,
+      subtitle: kindName(b),
+      score: r.score,
+      rank: -1,
+      open: (c) => c.push(studyPath(b.id, unit)),
+    ));
+  }
+  return out;
+}
+
+/// A daf or perek asked for by number after the name: "Berachos 2a",
+/// "Shabbos 31b", "ברכות ב:", "Avos 3" (a perek). Not when the "number" is
+/// a word of a name: "בבא קמא" isn't daf 141 of a Bava.
+List<({StudyBook book, String unit, int score})> studyRefs(String raw) {
+  final books = [...booksOf(StudyKind.bavli), ...booksOf(StudyKind.mishnah)];
+  final m = RegExp(r'^\s*(.+?)\s+(\d+|[א-ת]{1,3})\s*([ab.:])?\s*$', caseSensitive: false).firstMatch(raw.replaceAll(RegExp('[״׳"]'), ''));
+  if (m == null) return const [];
+  final n = int.tryParse(m[2]!) ?? _hebrewNumber(m[2]!);
+  final last = searchFold(m[2]!);
+  if (n == null || books.any((b) => _studyNames(b).any((x) => searchFold(x).split(' ').contains(last)))) return const [];
+  final named = SearchQuery(m[1]!);
+  return [
+    for (final b in books)
+      if (named.score(_studyNames(b)) case final score? when score <= 3)
+        if (b.kind == StudyKind.bavli ? '$n${switch (m[3]) { 'b' || 'B' || ':' => 'b', _ => 'a' }}' : '$n' case final unit when b.units.contains(unit))
+          (book: b, unit: unit, score: score),
+  ];
+}
+
+/// The parshiyos by name, opening Shnayim Mikra on that parsha.
+List<SearchHit> parshaResults(BuildContext context, SearchQuery q) => [
+      for (final p in parshiot)
+        if (q.score([p, hebcal.Locale.gettext(p, 'ashkenazi'), hebcal.Locale.gettext(p, 'he'), ...?parshaSynonyms[p]]) case final score?)
+          SearchHit(
+            icon: Icons.auto_stories_outlined,
+            title: renderParshaName([p], context.hebcalLocale),
+            hebrewTitle: context.hebcalLocale == 'he',
+            subtitle: '${context.tr('Parsha')} · ${context.tr('Shnayim Mikra')}',
+            score: score,
+            rank: 2,
+            open: (c) => c.push(Uri(path: '/torah/shnayim-mikra', queryParameters: {'parsha': p}).toString()),
+          ),
+    ];
+
 // --- Zmanim, pages, everything ---------------------------------------------------
 
 /// Zmanim by name with today's time; opening one shows it on the Zmanim
@@ -290,7 +385,7 @@ List<SearchHit> zmanimResults(BuildContext context, WidgetRef ref, SearchQuery q
   final z = ref.watch(zmanimProvider(t.civil));
   return [
     for (final d in builtInZmanim)
-      if (q.score([names.name(d.key), d.en, d.he, d.opinion]) case final score?)
+      if (q.score([names.name(d.key), d.en, d.he, d.opinion, ...?zmanSynonyms[d.key]]) case final score?)
         SearchHit(
           icon: Icons.schedule,
           title: names.name(d.key),
@@ -321,7 +416,7 @@ const _tabRoutes = {'/siddur', '/torah', '/zmanim', '/settings'};
 
 List<SearchHit> pageResults(BuildContext context, SearchQuery q) => [
       for (final (en, he, icon, route, words) in _pages)
-        if (q.score([en, context.tr(en), he, ...words]) case final score?)
+        if (q.score([en, context.tr(en), he, ...words, ...?pageSynonyms[en]]) case final score?)
           SearchHit(
             icon: icon,
             title: context.tr(en),

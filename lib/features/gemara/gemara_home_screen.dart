@@ -10,6 +10,8 @@ import '../../core/adaptive.dart';
 import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import 'daf_video.dart';
+import '../../core/search.dart';
+import '../search/search_synonyms.dart';
 import 'gemara_data.dart';
 import 'gemara_perakim.dart';
 import 'gemara_settings_sheet.dart';
@@ -64,11 +66,24 @@ DafPlace? parseDafQuery(String q) {
   final m = RegExp(r'^\s*(.+?)\s+(\d+)\s*([ab.:])?\s*$', caseSensitive: false).firstMatch(q);
   if (m == null) return null;
   final name = m.group(1)!.trim();
-  final t = tractateNamed(name) ?? tractates.where((x) => x.he == name).firstOrNull;
+  final t = tractateNamed(name) ?? tractates.where((x) => x.he == name).firstOrNull ?? _closestTractate(name);
   if (t == null) return null;
   final side = switch (m.group(3)) { 'b' || 'B' || ':' => 'b', _ => 'a' };
   final amud = '${m.group(2)}$side';
   return t.contains(amud) ? DafPlace(t.sefaria, amud) : null;
+}
+
+/// The tractate [name] best matches as spelled another way ("Berachos",
+/// "Kesubos", "Bava Basra"), if any matches closely.
+Tractate? _closestTractate(String name) {
+  final q = SearchQuery(name);
+  Tractate? best;
+  var bestScore = 4;
+  for (final t in tractates) {
+    final score = q.score([t.sefaria, t.he, ...?bavliSynonyms[t.sefaria]]);
+    if (score != null && score < bestScore) (best, bestScore) = (t, score);
+  }
+  return best;
 }
 
 StudyKind? _kindOf(String book) => studyBook(book)?.kind;
@@ -285,13 +300,6 @@ class StudyDownloadPanel extends ConsumerWidget {
   final String label;
   const StudyDownloadPanel({super.key, required this.books, required this.label});
 
-  /// Rough saved size per unit (gzipped), for the estimate.
-  static int _bytesPer(StudyKind kind) => switch (kind) {
-        StudyKind.bavli => 14 * 1024,
-        StudyKind.mishnah => 8 * 1024,
-        StudyKind.kitzur => 5 * 1024,
-      };
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final key = [for (final b in books) b.id].join('|');
@@ -301,7 +309,7 @@ class StudyDownloadPanel extends ConsumerWidget {
     if (saved >= total && progress == null) return const SizedBox.shrink();
     final theme = Theme.of(context);
     final missing = total - saved;
-    final estimate = books.isEmpty ? 0 : missing * _bytesPer(books.first.kind);
+    final estimate = books.isEmpty ? 0 : missing * estimatedUnitBytes(books.first.kind);
     final Widget body;
     if (progress != null) {
       body = Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [

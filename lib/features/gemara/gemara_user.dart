@@ -25,7 +25,7 @@ class DafPlace {
 }
 
 /// The reader's own marks on the text, kept on the device (and carried by
-/// sync with the rest of the saved settings).
+/// sync and settings files when learning progress is included).
 class GemaraMarks {
   final List<DafPlace> bookmarks;
 

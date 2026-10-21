@@ -1,0 +1,74 @@
+name: Publish
+
+# One button for a release: Actions → Publish → Run workflow, on master.
+# It tags the commit it runs on as v<version> (the version field, or
+# pubspec.yaml's version without the +build) and starts, on that tag:
+#   build.yml  tests; Android, Windows, Linux; the GitHub Release; then
+#              the Play bundle to Google Play on the chosen track
+#   apple.yml  macOS and iOS onto the release; iOS to TestFlight
+#   web.yml    amud.page and amud-web.zip onto the release
+# Pushing a tag yourself does the same, with the Play track from the
+# PLAY_TRACK variable (default internal).
+#
+# A tag pushed with the workflow's own token doesn't start the tag
+# workflows, so this starts them by hand on the tag; nothing runs twice.
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version (blank for pubspec.yaml's)
+        type: string
+        required: false
+      play_track:
+        description: Google Play track
+        type: choice
+        options: [internal, alpha, beta, production]
+        default: internal
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Tag
+        id: tag
+        shell: bash
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          v="${VERSION#v}"
+          [[ -n "$v" ]] || v=$(grep '^version:' pubspec.yaml | sed 's/version: *//; s/+.*//')
+          if [[ ! "$v" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::\"$v\" is not a version like 0.11.0."
+            exit 1
+          fi
+          if git rev-parse -q --verify "refs/tags/v$v" >/dev/null; then
+            echo "::error::v$v is already tagged. Raise the version in pubspec.yaml or give a new one."
+            exit 1
+          fi
+          if [[ ! -f "release-notes/$v.md" ]]; then
+            echo "::warning::No release-notes/$v.md; the release lists commit subjects instead."
+          fi
+          git tag "v$v" "$GITHUB_SHA"
+          git push origin "v$v"
+          echo "tag=v$v" >> "$GITHUB_OUTPUT"
+      - name: Start the builds
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.tag.outputs.tag }}
+          TRACK: ${{ inputs.play_track }}
+        run: |
+          gh workflow run build.yml --ref "$TAG" -f play_track="$TRACK"
+          gh workflow run apple.yml --ref "$TAG"
+          gh workflow run web.yml --ref "$TAG"
+          {
+            echo "Tagged **$TAG** and started Build (Play track: $TRACK), Apple and Web."
+            echo
+            echo "Release: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/tag/$TAG (appears when Build finishes)"
+          } >> "$GITHUB_STEP_SUMMARY"

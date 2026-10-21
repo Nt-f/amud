@@ -1,39 +1,18 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../core/adaptive.dart';
 import '../../core/heading.dart';
 import '../../core/l10n.dart';
 import '../../core/settings.dart';
 
-/// The Kodesh HaKodashim, on the Temple Mount.
-const _templeLat = 31.77805, _templeLon = 35.23540;
+/// Mizrach: due east, in degrees from north.
+const _east = 90.0;
 
-/// Degrees from north, clockwise, from ([lat], [lon]) toward the Temple
-/// Mount: along the shortest route, or with [rhumbLine] a constant bearing.
-double bearingToJerusalem(double lat, double lon, {bool rhumbLine = false}) {
-  double rad(double d) => d * pi / 180;
-  final p1 = rad(lat), p2 = rad(_templeLat);
-  var dl = rad(_templeLon - lon);
-  if (dl > pi) dl -= 2 * pi;
-  if (dl < -pi) dl += 2 * pi;
-  final t = rhumbLine
-      ? atan2(dl, log(tan(pi / 4 + p2 / 2) / tan(pi / 4 + p1 / 2)))
-      : atan2(sin(dl) * cos(p2), cos(p1) * sin(p2) - sin(p1) * cos(p2) * cos(dl));
-  return (t * 180 / pi + 360) % 360;
-}
-
-/// Kilometres from ([lat], [lon]) to the Temple Mount.
-double kmToJerusalem(double lat, double lon) {
-  double rad(double d) => d * pi / 180;
-  final a = pow(sin(rad(_templeLat - lat) / 2), 2) + cos(rad(lat)) * cos(rad(_templeLat)) * pow(sin(rad(_templeLon - lon) / 2), 2);
-  return 6371 * 2 * atan2(sqrt(a), sqrt(1 - a));
-}
-
-/// Within this many degrees either side, the reader is facing Jerusalem.
+/// Within this many degrees either side, the reader is facing east.
 const _facing = 10.0;
 
 final _headingProvider = StreamProvider.autoDispose<DeviceHeading>((ref) {
@@ -41,72 +20,56 @@ final _headingProvider = StreamProvider.autoDispose<DeviceHeading>((ref) {
   return deviceHeadings(latitude: at.latitude, longitude: at.longitude, elevation: at.elevation);
 });
 
+/// Whether the app is in front: the compass only listens while it is.
+final _inFrontProvider = Provider.autoDispose<bool>((ref) {
+  final state = SchedulerBinding.instance.lifecycleState;
+  final front = state == null || state == AppLifecycleState.resumed;
+  final life = AppLifecycleListener(onStateChange: (s) {
+    if ((s == AppLifecycleState.resumed) != front) ref.invalidateSelf();
+  });
+  ref.onDispose(life.dispose);
+  return front;
+});
+
 /// How far, in degrees (-180 to 180, clockwise positive), to turn to face
-/// Jerusalem; null until the compass has a reading.
-double? _turnBy(WidgetRef ref) {
+/// east. Null where the reader's compass isn't shown (turned off, the app
+/// behind others, or no reading from the device), so the reader leaves no
+/// room for it.
+final readerCompassTurnProvider = Provider.autoDispose<double?>((ref) {
+  final s = ref.watch(settingsProvider);
+  if (!compassPossible || !s.readerCompass || !ref.watch(_inFrontProvider)) return null;
   final heading = ref.watch(_headingProvider).valueOrNull;
   if (heading == null) return null;
-  final s = ref.watch(settingsProvider);
-  final bearing = bearingToJerusalem(s.location.latitude, s.location.longitude, rhumbLine: s.compassRhumbLine);
-  return (bearing - heading.degrees + 540) % 360 - 180;
-}
+  return (_east - heading.degrees + 540) % 360 - 180;
+});
 
-/// A small dial over the reader that points toward Jerusalem. It appears
-/// once the device's compass gives a reading (so never where there is
-/// none), and only while the app is in front. Tap it for more.
-class ReaderCompass extends ConsumerStatefulWidget {
+/// A small dial in the reader's app bar that points east,
+/// while [readerCompassTurnProvider] has a reading. Tap it for more.
+class ReaderCompass extends ConsumerWidget {
   const ReaderCompass({super.key});
 
   @override
-  ConsumerState<ReaderCompass> createState() => _ReaderCompassState();
-}
-
-class _ReaderCompassState extends ConsumerState<ReaderCompass> {
-  late final AppLifecycleListener _life;
-  bool _front = true;
-
-  @override
-  void initState() {
-    super.initState();
-    _life = AppLifecycleListener(onStateChange: (s) {
-      final front = s == AppLifecycleState.resumed;
-      if (front != _front) setState(() => _front = front);
-    });
-  }
-
-  @override
-  void dispose() {
-    _life.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final s = ref.watch(settingsProvider);
-    // At the Temple Mount itself there is no direction to give.
-    if (!s.readerCompass || !_front || kmToJerusalem(s.location.latitude, s.location.longitude) < 0.1) return const SizedBox.shrink();
-    final turn = _turnBy(ref);
-    return AnimatedSwitcher(
-      duration: const Duration(milliseconds: 300),
-      child: turn == null
-          ? const SizedBox.shrink()
-          : _Dial(
-              key: const ValueKey('dial'),
-              turn: turn,
-              size: 48,
-              onTap: () => showModalBottomSheet<void>(context: context, builder: (_) => const _CompassSheet()),
-            ),
+  Widget build(BuildContext context, WidgetRef ref) {
+    final turn = ref.watch(readerCompassTurnProvider);
+    if (turn == null) return const SizedBox.shrink();
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 6),
+      child: _Dial(
+        turn: turn,
+        size: 36,
+        onTap: () => showModalBottomSheet<void>(context: context, builder: (_) => const _CompassSheet()),
+      ),
     );
   }
 }
 
 /// A needle pointing [turn] degrees from straight ahead, filled in when
-/// that is Jerusalem. Gives a tick when it comes into line.
+/// that is east. Gives a tick when it comes into line.
 class _Dial extends StatefulWidget {
   final double turn;
   final double size;
   final VoidCallback? onTap;
-  const _Dial({super.key, required this.turn, required this.size, this.onTap});
+  const _Dial({required this.turn, required this.size, this.onTap});
 
   @override
   State<_Dial> createState() => _DialState();
@@ -136,13 +99,12 @@ class _DialState extends State<_Dial> {
     final big = widget.size > 100;
     return Semantics(
       button: widget.onTap != null,
-      label: _facingNow ? context.tr('Facing Jerusalem') : context.tr('Compass toward Jerusalem'),
+      label: _facingNow ? context.tr('Facing east') : context.tr('Compass to the east'),
       child: Tooltip(
-        message: context.tr('Compass toward Jerusalem'),
+        message: context.tr('Compass to the east'),
         child: Material(
           shape: const CircleBorder(),
-          elevation: big ? 0 : 3,
-          color: _facingNow ? scheme.primaryContainer : scheme.surfaceContainerHigh.withValues(alpha: big ? 1 : 0.92),
+          color: _facingNow ? scheme.primaryContainer : big ? scheme.surfaceContainerHigh : Colors.transparent,
           child: InkWell(
             customBorder: const CircleBorder(),
             onTap: widget.onTap,
@@ -151,7 +113,11 @@ class _DialState extends State<_Dial> {
               child: AnimatedRotation(
                 turns: _turns,
                 duration: const Duration(milliseconds: 180),
-                child: CustomPaint(painter: _Needle(color: _facingNow ? scheme.primary : scheme.onSurfaceVariant, ticks: big ? scheme.outlineVariant : null)),
+                child: CustomPaint(
+                    painter: _Needle(
+                        color: _facingNow ? scheme.primary : scheme.onSurfaceVariant,
+                        ticks: big ? scheme.outlineVariant : null,
+                        ring: big || _facingNow ? null : scheme.outlineVariant)),
               ),
             ),
           ),
@@ -164,12 +130,16 @@ class _DialState extends State<_Dial> {
 class _Needle extends CustomPainter {
   final Color color;
   final Color? ticks;
-  const _Needle({required this.color, this.ticks});
+  final Color? ring;
+  const _Needle({required this.color, this.ticks, this.ring});
 
   @override
   void paint(Canvas canvas, Size size) {
     final c = size.center(Offset.zero);
     final r = size.shortestSide / 2;
+    if (ring != null) {
+      canvas.drawCircle(c, r - 1, Paint()..color = ring!..style = PaintingStyle.stroke..strokeWidth = 1.5);
+    }
     if (ticks != null) {
       final tick = Paint()..color = ticks!..strokeWidth = 2..strokeCap = StrokeCap.round;
       for (var i = 0; i < 24; i++) {
@@ -189,7 +159,7 @@ class _Needle extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(_Needle old) => old.color != color || old.ticks != ticks;
+  bool shouldRepaint(_Needle old) => old.color != color || old.ticks != ticks || old.ring != ring;
 }
 
 class _CompassSheet extends ConsumerWidget {
@@ -200,13 +170,12 @@ class _CompassSheet extends ConsumerWidget {
     final s = ref.watch(settingsProvider);
     final n = ref.read(settingsProvider.notifier);
     final theme = Theme.of(context);
-    final turn = _turnBy(ref);
+    final turn = ref.watch(readerCompassTurnProvider);
     final calibrate = ref.watch(_headingProvider).valueOrNull?.calibrate ?? false;
-    final bearing = bearingToJerusalem(s.location.latitude, s.location.longitude, rhumbLine: s.compassRhumbLine).round() % 360;
     final degrees = turn?.abs().round();
     return SafeArea(
       child: ListView(shrinkWrap: true, padding: const EdgeInsets.fromLTRB(20, 0, 20, 20), children: [
-        Text(context.tr('Compass toward Jerusalem'), style: theme.textTheme.titleLarge),
+        Text(context.tr('Compass to the east'), style: theme.textTheme.titleLarge),
         const SizedBox(height: 16),
         Center(child: turn == null ? const SizedBox.square(dimension: 200) : _Dial(turn: turn, size: 200)),
         const SizedBox(height: 16),
@@ -214,37 +183,20 @@ class _CompassSheet extends ConsumerWidget {
           turn == null
               ? ''
               : turn.abs() <= _facing
-                  ? context.tr('Facing Jerusalem')
+                  ? context.tr('Facing east')
                   : turn > 0
                       ? context.tr('Turn right {degrees}°', {'degrees': '$degrees'})
                       : context.tr('Turn left {degrees}°', {'degrees': '$degrees'}),
           textAlign: TextAlign.center,
           style: theme.textTheme.titleMedium,
         ),
-        Text(context.tr('{degrees}° from north, from {place}', {'degrees': '$bearing', 'place': s.location.name}),
-            textAlign: TextAlign.center, style: theme.textTheme.bodySmall),
+        Text(context.tr('Due east, 90° from north'), textAlign: TextAlign.center, style: theme.textTheme.bodySmall),
         if (calibrate)
           Padding(
             padding: const EdgeInsets.only(top: 12),
             child: Text(context.tr('The compass needs calibrating: move the phone in a figure eight, away from metal.'),
                 textAlign: TextAlign.center, style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.error)),
           ),
-        SheetLabel(context.tr('Direction')),
-        ChoiceBar<bool>(
-          options: [
-            (false, context.tr('Shortest route'), null),
-            (true, context.tr('Constant bearing'), null),
-          ],
-          selected: s.compassRhumbLine,
-          onChanged: (v) => n.update((x) => x.copyWith(compassRhumbLine: v)),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 4),
-          child: Text(
-              context.tr('The shortest route runs along the globe (northeast from America). A constant bearing keeps one compass heading the whole way (east from America).'),
-              style: theme.textTheme.bodySmall),
-        ),
-        const SizedBox(height: 8),
         SwitchListTile.adaptive(
           contentPadding: EdgeInsets.zero,
           title: Text(context.tr('Show the compass in the siddur')),

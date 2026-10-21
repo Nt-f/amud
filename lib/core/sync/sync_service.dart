@@ -5,8 +5,10 @@ import 'dart:typed_data';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../features/gemara/gemara_user.dart';
 import '../../features/personal_dates/personal_dates.dart';
 import '../../features/shiurim/shiurim_settings.dart';
+import '../../features/tehillim/tehillim_progress.dart';
 import '../../features/torah/shnayim_mikra.dart';
 import '../../features/torah/torah_settings.dart';
 import '../../features/zmanim/zman_catalog.dart';
@@ -55,6 +57,27 @@ final syncTransportProvider = Provider<SyncTransport Function(String url, SyncKe
 /// Whether an address is an Amud sync Worker (overridden in tests).
 final syncCheckProvider = Provider<Future<bool> Function(String url)>((ref) => WorkerTransport.check);
 
+/// The progress groups ([syncGroups]) this device includes in sync and in
+/// settings files; all of them unless the reader turned one off. Kept on the
+/// device.
+class SyncInclude extends Notifier<Set<String>> {
+  static const _key = 'syncInclude';
+
+  @override
+  Set<String> build() {
+    final off = ref.watch(storageProvider).readJson(_key, (j) => {for (final e in (j as Map).entries) if (e.value == false) '${e.key}'}) ?? const {};
+    return {for (final g in syncGroups) if (!off.contains(g)) g};
+  }
+
+  void set(String group, bool on) {
+    state = on ? {...state, group} : ({...state}..remove(group));
+    ref.read(storageProvider).writeJson(_key, {for (final g in syncGroups) g: state.contains(g)});
+    ref.read(syncProvider.notifier).syncNow();
+  }
+}
+
+final syncIncludeProvider = NotifierProvider<SyncInclude, Set<String>>(SyncInclude.new);
+
 /// Cross-device sync: opt-in, end-to-end encrypted, through a Worker.
 class SyncController extends Notifier<SyncStatus> {
   static const _configKey = syncConfigKey;
@@ -63,13 +86,14 @@ class SyncController extends Notifier<SyncStatus> {
   Timer? _timer;
   SyncEngine? _engine;
   bool _again = false;
-  late final Set<String> _sourceKeys = {for (final s in syncSources) s.key};
 
   @override
   SyncStatus build() {
     final storage = ref.watch(storageProvider);
     final sub = storage.changes.listen((key) {
-      if (!state.enabled || !_sourceKeys.contains(key) || (_engine?.applying ?? false)) return;
+      if (!state.enabled || (_engine?.applying ?? false)) return;
+      final include = ref.read(syncIncludeProvider);
+      if (!syncSources.any((s) => s.key == key && includesSource(s, include))) return;
       _timer?.cancel();
       _timer = Timer(_debounce, syncNow);
     });
@@ -147,7 +171,8 @@ class SyncController extends Notifier<SyncStatus> {
     final keys = await SyncKeys.derive(Uint8List.fromList(base64Url.decode(base64Url.normalize(cfg['secret'] as String))));
     final saved = storage.readJson(syncStateKey, (j) => syncStateFromJson((j as Map).cast<String, Object?>()));
     final st = saved ?? SyncState(deviceId: _newDeviceId());
-    final engine = _engine = SyncEngine(storage: storage, transport: ref.read(syncTransportProvider)(state.workerUrl!, keys), keys: keys, state: st);
+    final engine = _engine = SyncEngine(
+        storage: storage, transport: ref.read(syncTransportProvider)(state.workerUrl!, keys), keys: keys, state: st, groups: ref.read(syncIncludeProvider));
     try {
       final out = await engine.sync();
       await storage.writeJson(syncStateKey, syncStateToJson(st));
@@ -177,6 +202,12 @@ class SyncController extends Notifier<SyncStatus> {
           ref.invalidate(customRulesProvider);
         case 'customZmanim':
           ref.invalidate(customZmanimProvider);
+        case 'gemaraMarks':
+          ref.invalidate(gemaraMarksProvider);
+        case 'shnayimMikraDone':
+          ref.invalidate(shnayimMikraProgressProvider);
+        case 'tehillim':
+          ref.invalidate(tehillimProgressProvider);
       }
     }
   }

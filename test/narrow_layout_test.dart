@@ -14,6 +14,7 @@ import 'package:amud/features/gemara/gemara_user.dart';
 import 'package:amud/features/gemara/study_book.dart';
 import 'package:amud/features/home/card_registry.dart';
 import 'package:amud/features/home/cards/builtin_cards.dart';
+import 'package:amud/features/home/home_screen.dart';
 import 'package:amud/features/integrations/seasonal_windows.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -24,7 +25,8 @@ import 'package:timezone/timezone.dart' as tz;
 
 /// The reader's app bar on a phone [width] wide at text size [scale]: four
 /// tools, the link going into the menu first, then Why today?, then the date.
-Future<void> _bar(WidgetTester t, double width, double scale) async {
+/// With the [compass] first, text settings can go too.
+Future<void> _bar(WidgetTester t, double width, double scale, {bool compass = false}) async {
   t.view.physicalSize = Size(width, 800);
   t.view.devicePixelRatio = 1;
   t.platformDispatcher.textScaleFactorTestValue = scale;
@@ -36,7 +38,8 @@ Future<void> _bar(WidgetTester t, double width, double scale) async {
         appBar: AppBar(
           leading: const BackButton(),
           title: const Text('Shacharis'),
-          actions: fitBarActions(context, 'Shacharis', spare: const [1, 0, 2], [
+          actions: fitBarActions(context, 'Shacharis', spare: compass ? const [2, 1, 3, 4] : const [1, 0, 2], [
+            if (compass) const BarTool.custom(SizedBox(key: Key('compass'), width: 48, height: 48)),
             for (final i in [Icons.help_outline, Icons.link, Icons.event, Icons.text_fields])
               BarTool(tooltip: '${i.codePoint}', icon: Icon(i), onPressed: () => ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('tapped ${i.codePoint}')))),
           ]),
@@ -148,6 +151,20 @@ void main() {
     expect(find.byIcon(Icons.text_fields), findsOneWidget);
   });
 
+  testWidgets('the compass toward Jerusalem takes no room from the title; at 320dp text settings goes in the menu', (t) async {
+    double title() => t.getSize(find.text('Shacharis')).width;
+    for (final (width, scale) in [(360.0, 1.0), (320.0, 1.3)]) {
+      await _bar(t, width, scale);
+      final without = title();
+      await _bar(t, width, scale, compass: true);
+      expect(find.byKey(const Key('compass')), findsOneWidget);
+      expect(title(), without);
+    }
+    expect(find.byIcon(Icons.text_fields), findsNothing);
+    await _bar(t, 360, 1, compass: true);
+    expect(find.byIcon(Icons.text_fields), findsOneWidget);
+  });
+
   test('a time never leaves AM or PM on a line of its own', () {
     final loc = SavedLocation.newYork.toLocation();
     expect(formatTime(tz.TZDateTime(loc.tzLocation, 2026, 10, 19, 15, 22), loc, hour12: true), '3:22 PM');
@@ -175,14 +192,14 @@ void main() {
   });
 
   group('Kiddush Levana, Daf Yomi video', () {
-    testWidgets('“Not open yet” goes under the card’s name rather than cutting it', (t) async {
+    testWidgets('the card’s name is whole, with no status badge beside it', (t) async {
       // Thursday before Tammuz 5787's window, which opens Motzei Shabbos.
       // (The test font's letters are about twice as wide as Roboto's, so
       // 360dp here is tighter than 320dp with 1.3× text on a phone.)
       await _phone(t, 360, 1, _ny(2027, 7, 8, 12), _card('levanaWindow'));
-      expect(find.text('Not open yet'), findsOneWidget);
+      // The color and "Opens …" say it's not open yet.
+      expect(find.text('Not open yet'), findsNothing);
       expect(_whole(t, 'Kiddush Levanah window'), isTrue);
-      expect(t.getTopLeft(find.text('Not open yet')).dy, greaterThanOrEqualTo(t.getTopLeft(find.text('Kiddush Levanah window')).dy));
       await _phone(t, 412, 1, _ny(2027, 7, 8, 12), _card('levanaWindow'));
       expect(_whole(t, 'Kiddush Levanah window'), isTrue);
       await t.pumpWidget(const SizedBox());
@@ -248,4 +265,79 @@ void main() {
     await t.pumpWidget(const SizedBox());
     await t.pump(const Duration(seconds: 20));
   });
+
+  for (final (width, scale) in [(360.0, 1.3), (320.0, 1.3), (412.0, 1.0)]) {
+    testWidgets('editing the dashboard at ${width}dp, $scale× text: each card with its controls, its settings with a preview', (t) async {
+      t.view.physicalSize = Size(width, 900);
+      t.view.devicePixelRatio = 1;
+      t.platformDispatcher.textScaleFactorTestValue = scale;
+      addTearDown(t.view.reset);
+      addTearDown(t.platformDispatcher.clearTextScaleFactorTestValue);
+      late Storage storage;
+      await t.runAsync(() async {
+        final dir = await Directory.systemTemp.createTemp('narrow');
+        addTearDown(() => dir.delete(recursive: true));
+        // Its own box: Hive keeps one per name open between tests.
+        storage = await Storage.openAt(dir.path, name: 'dashboard${width.toInt()}');
+        await storage.writeJson('dashboardVersion', 4);
+        await storage.writeJson('dashboard', [
+          const CardConfig(id: 'a', type: 'levanaWindow', span: 2, settings: {'onlyWhenOpen': true}).toJson(),
+          const CardConfig(id: 'b', type: 'hachamaWindow').toJson(),
+          const CardConfig(id: 'c', type: 'nextZman').toJson(),
+        ]);
+      });
+      final r = CardRegistry();
+      registerBuiltInCards(r);
+      registerSeasonalCards(r);
+      final c = ProviderContainer(overrides: [
+        storageProvider.overrideWithValue(storage),
+        cardRegistryProvider.overrideWithValue(r),
+        nowProvider.overrideWith((ref) => Stream.value(_ny(2027, 7, 1, 12))),
+      ]);
+      addTearDown(c.dispose);
+      await t.pumpWidget(UncontrolledProviderScope(
+        container: c,
+        child: MaterialApp(
+          theme: buildTheme(const AppSettings(), Brightness.light),
+          builder: (context, w) => AppText(lang: UiLanguage.en, ashkenazi: true, child: w!),
+          home: const HomeScreen(),
+        ),
+      ));
+      await t.pump();
+      // Kiddush Levana is closed, so hidden until editing.
+      expect(find.text('Kiddush Levanah window'), findsNothing);
+      await t.tap(find.text('Edit dashboard'));
+      await t.pumpAndSettle(const Duration(milliseconds: 100), EnginePhase.sendSemanticsUpdate, const Duration(seconds: 5));
+      expect(find.text('Kiddush Levanah window'), findsOneWidget);
+      expect(find.byTooltip('Remove'), findsNWidgets(3));
+      expect(t.takeException(), isNull);
+      // Moving the second card first.
+      await t.ensureVisible(find.byTooltip('Move earlier').at(1));
+      await t.pump();
+      await t.tap(find.byTooltip('Move earlier').at(1));
+      await t.pump();
+      expect([for (final x in c.read(dashboardProvider)) x.id], ['b', 'a', 'c']);
+      // Its settings, with the card above them, follow the size chosen.
+      // (The card itself takes no taps while editing: they open its settings.)
+      await t.ensureVisible(find.text('Kiddush Levanah window'));
+      await t.pump();
+      await t.tap(find.text('Kiddush Levanah window'), warnIfMissed: false);
+      await t.pumpAndSettle(const Duration(milliseconds: 100), EnginePhase.sendSemanticsUpdate, const Duration(seconds: 5));
+      expect(find.text('Kiddush Levanah window'), findsNWidgets(2));
+      final preview = find.ancestor(of: find.text('Kiddush Levanah window').last, matching: find.byType(Card));
+      final wide = t.getSize(preview).width;
+      await t.tap(find.text('Compact'));
+      await t.pump();
+      expect(t.takeException(), isNull);
+      // One column at 1.3× text, where compact cards are full width too.
+      expect(t.getSize(preview).width, scale > 1 ? wide : lessThan(wide));
+      expect(t.getRect(find.text('Save')).bottom, lessThan(900));
+      await t.tap(find.text('Save'));
+      await t.pumpAndSettle(const Duration(milliseconds: 100), EnginePhase.sendSemanticsUpdate, const Duration(seconds: 5));
+      expect(c.read(dashboardProvider).firstWhere((x) => x.id == 'a').span, 1);
+      expect(t.takeException(), isNull);
+      await t.pumpWidget(const SizedBox());
+      await t.pump(const Duration(seconds: 20));
+    });
+  }
 }

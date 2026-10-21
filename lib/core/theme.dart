@@ -88,18 +88,18 @@ ThemeData buildTheme(AppSettings s, Brightness brightness) {
   final dark = brightness == Brightness.dark;
   final w = s.warmth.clamp(0.0, 1.0);
   final seeded = ColorScheme.fromSeed(seedColor: Color(s.seedColor), brightness: brightness);
-  // Warmth tints the page toward paper (light) or a warm brown (dark).
+  // Warmth tints the page toward yellowed paper (light) or a warm brown (dark).
   Color warm(Color c, Color paper, double max) => Color.lerp(c, paper, w * max)!;
-  final surface = dark ? warm(seeded.surface, const Color(0xFF221B12), 0.9) : warm(seeded.surface, const Color(0xFFF4E9D4), 1);
+  final surface = dark ? warm(seeded.surface, const Color(0xFF261A05), 0.9) : warm(seeded.surface, const Color(0xFFFDE8BD), 1);
   final scheme = w == 0
       ? seeded
       : seeded.copyWith(
           surface: surface,
-          surfaceContainerLowest: warm(seeded.surfaceContainerLowest, dark ? const Color(0xFF1C160E) : const Color(0xFFFBF4E6), dark ? 0.9 : 1),
-          surfaceContainerLow: warm(seeded.surfaceContainerLow, dark ? const Color(0xFF2A2218) : const Color(0xFFFAF1DF), dark ? 0.9 : 1),
-          surfaceContainer: warm(seeded.surfaceContainer, dark ? const Color(0xFF2F271C) : const Color(0xFFF0E4CC), dark ? 0.9 : 1),
-          surfaceContainerHigh: warm(seeded.surfaceContainerHigh, dark ? const Color(0xFF392F22) : const Color(0xFFEBDEC3), dark ? 0.9 : 1),
-          surfaceContainerHighest: warm(seeded.surfaceContainerHighest, dark ? const Color(0xFF433828) : const Color(0xFFE5D7BA), dark ? 0.9 : 1),
+          surfaceContainerLowest: warm(seeded.surfaceContainerLowest, dark ? const Color(0xFF201503) : const Color(0xFFFFF4DC), dark ? 0.9 : 1),
+          surfaceContainerLow: warm(seeded.surfaceContainerLow, dark ? const Color(0xFF2F2109) : const Color(0xFFFFF1D1), dark ? 0.9 : 1),
+          surfaceContainer: warm(seeded.surfaceContainer, dark ? const Color(0xFF34260C) : const Color(0xFFFAE3B1), dark ? 0.9 : 1),
+          surfaceContainerHigh: warm(seeded.surfaceContainerHigh, dark ? const Color(0xFF3F2D0E) : const Color(0xFFF6DDA5), dark ? 0.9 : 1),
+          surfaceContainerHighest: warm(seeded.surfaceContainerHighest, dark ? const Color(0xFF4A360F) : const Color(0xFFF0D599), dark ? 0.9 : 1),
           onSurface: warm(seeded.onSurface, dark ? const Color(0xFFF1E3CC) : const Color(0xFF3B2F20), 0.8),
         );
   final base = ThemeData(

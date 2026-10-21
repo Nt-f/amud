@@ -289,10 +289,17 @@ List<Segment> corpusSegments(List<CorpusSegment> segs,
   // Chodesh:"), else the rubric table's name for it.
   final announced = <String, (String, String)>{};
   RubricMatch rubric(String when) {
+    // A negated condition reads as its own label where it has one
+    // ("!if_woman": "Said by a man"), not "If not: Said by a woman".
+    String? label(String neg, String id) {
+      if (neg.isEmpty) return labels[id] == null ? null : 'If: ${labels[id]}';
+      if (labels['!$id'] != null) return 'If: ${labels['!$id']}';
+      return labels[id] == null ? null : 'If not: ${labels[id]}';
+    }
+
     final ifs = {
-      for (final m in RegExp(r'(!?)\s*\b(if_\w+)').allMatches(when))
-        if (labels[m.group(2)] != null) '${m.group(1)!.isEmpty ? 'If' : 'If not'}: ${labels[m.group(2)]}'
-    };
+      for (final m in RegExp(r'(!?)\s*\b(if_\w+)').allMatches(when)) label(m.group(1)!, m.group(2)!),
+    }..remove(null);
     if (ifs.isNotEmpty) {
       final l = [ifs.join(' / ')];
       return RubricMatch(when, l, l);

@@ -127,7 +127,9 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
   final _positions = ItemPositionsListener.create();
   final _offsetScroll = ScrollOffsetController();
   List<JumpPoint> _jumps = const [];
-  int _active = 0;
+
+  /// The key point the reader has reached; -1 above the first one.
+  int _active = -1;
 
   /// Scrolling to a chosen key point: the rows passed on the way don't
   /// change the mark.
@@ -150,7 +152,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     final visible = _positions.itemPositions.value.where((p) => p.itemTrailingEdge > 0.02);
     if (visible.isEmpty) return;
     final top = visible.map((p) => p.index).reduce((a, b) => a < b ? a : b);
-    var active = 0;
+    var active = -1;
     for (final (i, j) in _jumps.indexed) {
       if (j.row != null && j.row! <= top) active = i;
     }
@@ -290,7 +292,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     // Key points of this prayer, in order, then its parts printed
     // elsewhere; shown when there's somewhere to go.
     _jumps = built == null ? const [] : [...built.jumps, ..._elsewhere(node, date.abs())];
-    if (_active >= _jumps.length) _active = 0;
+    if (_active >= _jumps.length) _active = -1;
     final showJumps = _jumps.length >= 2;
     if (node != null) {
       final he = ref.watch(versionOrderProvider((widget.book, 'he'))).valueOrNull;
@@ -358,7 +360,6 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
               ),
             ),
             )),
-            PositionedDirectional(end: 16, bottom: 16 + MediaQuery.paddingOf(context).bottom, child: const ReaderCompass()),
           ]),
         ),
       ]),
@@ -366,10 +367,15 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     );
   }
 
-  /// The app bar's tools. On a narrow phone, or with large text, those the
-  /// title can't spare room for go in a menu (the link first, then Why
-  /// today?, then the date), so the prayer's name isn't cut to "Shach…".
-  List<Widget> _barActions(BuildContext context, String title, HDate date, bool picked) => fitBarActions(context, title, spare: const [1, 0, 2], [
+  /// The app bar's tools: the compass to the east first, while it has
+  /// a reading. On a narrow phone, or with large text, those the title
+  /// can't spare room for go in a menu (the link first, then Why today?,
+  /// then the date, then, beside the compass, text settings), so the
+  /// prayer's name isn't cut to "Shach…". The compass itself stays.
+  List<Widget> _barActions(BuildContext context, String title, HDate date, bool picked) {
+    final compass = ref.watch(readerCompassTurnProvider) != null;
+    return fitBarActions(context, title, spare: compass ? const [2, 1, 3, 4] : const [1, 0, 2], [
+        if (compass) const BarTool.custom(ReaderCompass()),
         BarTool(tooltip: context.tr('Why today?'), icon: const Icon(Icons.help_outline), onPressed: () => openDayGuide(context, date)),
         BarTool(
           tooltip: context.tr('Copy prayer link'),
@@ -386,6 +392,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
             onPressed: () => pickReaderDate(context, ref, date)),
         BarTool(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => showReaderSettings(context, widget.book)),
       ]);
+  }
 
   void _pageOffset(int direction) {
     if (!_scroll.isAttached) return;
@@ -487,12 +494,28 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         }
       }
     }
-    // Who says a line is shown where it changes ("role:" keys).
+    // A line whose condition an instruction just above already names
+    // ("נשים אומרות:") needs no "If: …" chip of its own ("named:" keys).
+    for (var k = 0; k + 1 < flat.length; k++) {
+      if (flat[k].announces) _openers.add('named:${flat[k + 1].key}');
+    }
+    // Who says a line is shown where it changes ("role:" keys), unless a
+    // rubric just above already says so ("The chazzan says:").
     String? lastRole;
+    var named = false;
     for (final it in list) {
-      if (it is! SegmentItem || it.kind != SegmentKind.prayer || it.excluded) continue;
-      if (it.role != lastRole && it.role != null) _openers.add('role:${it.key}');
+      if (it is DynamicItem) continue;
+      if (it is SegmentItem && rubric(it)) {
+        named = named || namesSpeaker(it);
+        continue;
+      }
+      if (it is! SegmentItem || it.kind != SegmentKind.prayer || it.excluded) {
+        named = false;
+        continue;
+      }
+      if (it.role != lastRole && it.role != null && !named) _openers.add('role:${it.key}');
       lastRole = it.role;
+      named = false;
     }
     // Opened directly on the repetition (e.g. Kedushah): show it as is.
     final groupChazarah = node == null || !isChazarahNode(node);
@@ -627,7 +650,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
           i += run.length;
           rows.add((c) => LinearBlock(
                 lines: run,
-                hebrew: (x) => _SegmentView(item: x.onlyHebrew(), layout: TextLayout.hebrewOnly, opening: _openers.contains(x.key), roleStart: _openers.contains('role:${x.key}'), centered: _openers.contains('center:${x.key}')),
+                hebrew: (x) => _SegmentView(item: x.onlyHebrew(), layout: TextLayout.hebrewOnly, opening: _openers.contains(x.key), roleStart: _openers.contains('role:${x.key}'), conditionNamed: _openers.contains('named:${x.key}'), centered: _openers.contains('center:${x.key}')),
                 english: (x) => _SegmentView(item: x.onlyTranslation(), layout: TextLayout.translationOnly, opening: false),
               ));
           // A divider where another run of the section follows.
@@ -660,12 +683,12 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
                   'he': 'אם רוב הסעודה נאכלה לפני השקיעה, אומרים זאת.',
                 }),
                 layout),
-          for (final si in g.items) (c) => _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), centered: _openers.contains('center:${si.key}'), linear: _linear),
+          for (final si in g.items) (c) => _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), conditionNamed: _openers.contains('named:${si.key}'), centered: _openers.contains('center:${si.key}'), linear: _linear),
         ];
       case SegmentItem si when si.kind == SegmentKind.note && s.collapseNotes:
         final open = _toggledNotes.contains(si.key);
         void toggle() => setState(() => open ? _toggledNotes.remove(si.key) : _toggledNotes.add(si.key));
-        return [(c) => _NoteRow(item: si, open: open, onTap: toggle, child: open ? _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), centered: _openers.contains('center:${si.key}'), linear: _linear) : null)];
+        return [(c) => _NoteRow(item: si, open: open, onTap: toggle, child: open ? _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), conditionNamed: _openers.contains('named:${si.key}'), centered: _openers.contains('center:${si.key}'), linear: _linear) : null)];
       default:
         return [(c) => _item(c, it, layout)];
     }
@@ -851,7 +874,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
           ]),
         );
       case SegmentItem si:
-        return _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), centered: _openers.contains('center:${si.key}'), linear: _linear);
+        return _SegmentView(item: si, layout: layout, opening: _openers.contains(si.key), roleStart: _openers.contains('role:${si.key}'), conditionNamed: _openers.contains('named:${si.key}'), centered: _openers.contains('center:${si.key}'), linear: _linear);
     }
   }
 }
@@ -941,13 +964,13 @@ class _IfChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
       decoration: BoxDecoration(
-          border: Border.all(color: colors.marker.withValues(alpha: 0.6)), borderRadius: BorderRadius.circular(20)),
+          border: Border.all(color: colors.instruction.withValues(alpha: 0.6)), borderRadius: BorderRadius.circular(20)),
       child: Row(mainAxisSize: MainAxisSize.min, children: [
-        Icon(Icons.help_outline, size: 11, color: colors.marker),
+        Icon(Icons.help_outline, size: 11, color: colors.instruction),
         const SizedBox(width: 3),
         Flexible(
           child: Text(label,
-              style: Theme.of(context).textTheme.labelSmall?.copyWith(height: 1.2, color: colors.marker),
+              style: Theme.of(context).textTheme.labelSmall?.copyWith(height: 1.2, color: colors.instruction),
               maxLines: 1,
               overflow: TextOverflow.ellipsis),
         ),
@@ -1103,6 +1126,9 @@ class _SegmentView extends ConsumerWidget {
   /// Who says it changes here: show the role.
   final bool roleStart;
 
+  /// An instruction just above names this line's condition.
+  final bool conditionNamed;
+
   /// Centered with the lines around it: a rubric introducing a centered
   /// line (Barchu's "the chazzan says"), or the middle of a responsive run.
   final bool centered;
@@ -1116,6 +1142,7 @@ class _SegmentView extends ConsumerWidget {
       this.compact = false,
       this.opening = false,
       this.roleStart = false,
+      this.conditionNamed = false,
       this.centered = false});
 
   @override
@@ -1178,6 +1205,10 @@ class _SegmentView extends ConsumerWidget {
             fontFamily: hebrewFamilyFor(s.hebrewFont, teamim: teamim, nikud: hasNikud(all)),
             height: ts.leading(role, hebrew: true, marks: teamim));
       }
+      // "Cong.", "If: …" inside a line: small, in the interface's font like
+      // the labels above lines, not the prayer font's Latin.
+      TextStyle mark(TextStyle base) => base.copyWith(
+          fontFamily: theme.textTheme.labelSmall?.fontFamily, fontSize: (base.fontSize ?? 16) * 0.55, color: colors.instruction, fontWeight: FontWeight.w600);
       final html = SefariaHtml(base, instructionStyle: TextStyle(color: colors.instruction, fontStyle: FontStyle.italic), onFootnote: footnote);
       // A change of speaker starts a new paragraph: the congregation's
       // "Amen" sits on its own line, on the far side, marked "Cong.". An
@@ -1198,7 +1229,7 @@ class _SegmentView extends ConsumerWidget {
       if (item.kind == SegmentKind.prayer && isResponse(item.role) && !excluded) {
         paragraphs.first.$2.add(TextSpan(
             text: '\u2068${readingRoleShort(context, s, item.role)}\u2069 ',
-            style: base.copyWith(fontSize: (base.fontSize ?? 16) * 0.55, color: colors.marker, fontWeight: FontWeight.w600)));
+            style: mark(base)));
       }
       for (final (i, r) in runs.indexed) {
         if (i > 0 && roles[i] != roles[i - 1]) {
@@ -1208,7 +1239,7 @@ class _SegmentView extends ConsumerWidget {
             paragraphs.last.$2.add(TextSpan(
                 // Isolated, so "Cong." keeps its full stop inside Hebrew text.
                 text: '\u2068${readingRoleShort(context, s, roles[i])}\u2069 ',
-                style: base.copyWith(fontSize: (base.fontSize ?? 16) * 0.55, color: colors.marker, fontWeight: FontWeight.w600)));
+                style: mark(base)));
           }
         }
         final spans = paragraphs.last.$2;
@@ -1225,18 +1256,23 @@ class _SegmentView extends ConsumerWidget {
             (i == 0 || (!runs[i - 1].marker && runs[i - 1].labelEn != r.labelEn))) {
           spans.add(TextSpan(
               text: '\u2068${conditionLabel(context, s, r.labelEn, r.labelHe)}\u2069 ',
-              style: base.copyWith(fontSize: (base.fontSize ?? 16) * 0.55, color: colors.marker, fontWeight: FontWeight.w600)));
+              style: mark(base)));
         }
         // Each labelled option ("לר"ח: …", "לפסח: …") starts its own line so
         // the choices are easy to tell apart.
         final optionStart = r.option && r.marker;
-        if (optionStart || (inOptions && !r.option)) spans.add(const TextSpan(text: '\n'));
+        // So does each verse said several times ("ג"פ: … ג"פ: …").
+        final repeatStart = i > 0 && isRepeatMark(r) && spans.isNotEmpty;
+        if (optionStart || repeatStart || (inOptions && !r.option)) spans.add(const TextSpan(text: '\n'));
         if (r.marker) inOptions = r.option;
         if (!r.option && !r.marker) inOptions = false;
         var st = base;
         if (r.marker) {
-          st = base.copyWith(fontSize: (base.fontSize ?? 16) * 0.72, color: colors.marker, fontWeight: FontWeight.w600);
-          if (r.applicability == Applicability.notToday) st = st.copyWith(color: colors.excluded);
+          // Inside an instruction it's the instruction's own words.
+          if (item.kind == SegmentKind.prayer) {
+            st = base.copyWith(fontSize: (base.fontSize ?? 16) * 0.72, color: colors.instruction, fontWeight: FontWeight.w600);
+            if (r.applicability == Applicability.notToday) st = st.copyWith(color: colors.excluded);
+          }
         } else if (r.applicability == Applicability.today && s.highlightToday) {
           // Inside a highlighted line the chosen option needs to stand out
           // from the highlight itself.
@@ -1264,8 +1300,13 @@ class _SegmentView extends ConsumerWidget {
         if (first && rtl && role == ParagraphRole.opening) spans = enlargeOpening(spans, ts.openingWord, lineHeight: base.height ?? 1.65);
         final align = explicitAlign(item.align) != null
             ? explicitAlign(item.align)!
-            : centered && ts.print
+            // A rubric over a centered line ("ואומר שליח צבור:" over ברכו).
+            : centered
             ? ParagraphAlign.center
+            // In a card (Kaddish, Kiddush) the column is narrow: justified
+            // lines open wide gaps, and responses on the far side zigzag.
+            : compact
+            ? ParagraphAlign.start
             : isResponse(p.$1)
                 ? ParagraphAlign.end
                 : (rightAligned && !rtl ? ParagraphAlign.end : ts.align(role));
@@ -1289,7 +1330,11 @@ class _SegmentView extends ConsumerWidget {
     // A personal circumstance ("If: Ten or more ate together"): said or not
     // is the reader's call, so it's labelled rather than judged.
     final ifLine = item.applicability == Applicability.unknown && item.labelEn != null;
-    if (ifLine) {
+    // The siddur's own instruction in the line ("נשים אומרות:") already names
+    // the condition.
+    final named = [he, tr].any((x) => x != null && x.runs.any((r) => r.marker));
+    if (ifLine && (named || conditionNamed || item.announces)) {
+    } else if (ifLine) {
       lead = WidgetSpan(
         alignment: PlaceholderAlignment.middle,
         child: Padding(
@@ -1299,9 +1344,8 @@ class _SegmentView extends ConsumerWidget {
       );
     } else if (today || (excluded && !strike && item.labelEn != null)) {
       final l = conditionLabel(context, s, item.labelEn, item.labelHe);
-      // The siddur's own instruction in the line ("בעשי״ת:") already names the
-      // condition; a dimmed line then only says that it isn't said today.
-      final named = [he, tr].any((x) => x != null && x.runs.any((r) => r.marker));
+      // When the siddur's own instruction names the condition, a dimmed line
+      // only says that it isn't said today.
       lead = WidgetSpan(
         alignment: PlaceholderAlignment.middle,
         child: Padding(
@@ -1340,8 +1384,8 @@ class _SegmentView extends ConsumerWidget {
         : Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
             Text(reading.join(' · '),
                 // Over a centered line, the label is centered too.
-                textAlign: centered && ts.print || ts.align(role) == ParagraphAlign.center ? TextAlign.center : null,
-                style: theme.textTheme.labelSmall?.copyWith(color: colors.marker, fontWeight: FontWeight.w600),
+                textAlign: centered || (explicitAlign(item.align) ?? ts.align(role)) == ParagraphAlign.center ? TextAlign.center : null,
+                style: theme.textTheme.labelSmall?.copyWith(color: colors.instruction, fontWeight: FontWeight.w600, letterSpacing: 0.4),
                 textDirection: (item.he != null && context.uiLanguage != UiLanguage.en) || (!s.showEnglishNotes && s.showHebrewNotes) ? TextDirection.rtl : null),
             const SizedBox(height: 2),
             body,
@@ -1603,7 +1647,7 @@ class _UnitCard extends ConsumerWidget {
           child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
             for (var i = 0; i < body.length; i++)
               if (!isRedundantRubric(body[i], i + 1 < body.length ? body[i + 1] : null, s))
-                _SegmentView(item: body[i], layout: layout, compact: true, opening: openers.contains(body[i].key), roleStart: openers.contains('role:${body[i].key}'), centered: openers.contains('center:${body[i].key}')),
+                _SegmentView(item: body[i], layout: layout, compact: true, opening: openers.contains(body[i].key), roleStart: openers.contains('role:${body[i].key}'), conditionNamed: openers.contains('named:${body[i].key}'), centered: openers.contains('center:${body[i].key}')),
           ]),
         ),
       ]),

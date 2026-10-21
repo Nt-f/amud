@@ -96,7 +96,7 @@ class _SyncScreenState extends ConsumerState<SyncScreen> {
 
   Future<void> _export() async {
     try {
-      final bytes = Uint8List.fromList(exportSettings(ref.read(storageProvider)));
+      final bytes = Uint8List.fromList(exportSettings(ref.read(storageProvider), groups: ref.read(syncIncludeProvider)));
       final d = DateTime.now();
       String two(int n) => n.toString().padLeft(2, '0');
       final saved = await FilePicker.saveFile(
@@ -117,7 +117,7 @@ class _SyncScreenState extends ConsumerState<SyncScreen> {
       final files = await FilePicker.pickFiles(type: FileType.any);
       if (files.isEmpty) return;
       final bytes = await files.first.xFile.readAsBytes();
-      final keys = await importSettings(ref.read(storageProvider), bytes);
+      final keys = await importSettings(ref.read(storageProvider), bytes, groups: ref.read(syncIncludeProvider));
       ref.read(syncProvider.notifier).reload(keys);
       _toast('Settings imported');
     } on FormatException {
@@ -130,6 +130,7 @@ class _SyncScreenState extends ConsumerState<SyncScreen> {
   @override
   Widget build(BuildContext context) {
     final s = ref.watch(syncProvider);
+    final include = ref.watch(syncIncludeProvider);
     final theme = Theme.of(context);
     Widget pad(Widget w) => Padding(padding: const EdgeInsets.all(16), child: w);
     final error = _message ?? s.error;
@@ -239,8 +240,25 @@ class _SyncScreenState extends ConsumerState<SyncScreen> {
           ),
         ],
         AdaptiveSection(
+          header: context.tr('Progress'),
+          footer: context.tr('Progress you include syncs and goes into settings files. Marks made on different devices add up.'),
+          children: [
+            for (final (group, title, subtitle) in const [
+              ('learning', 'Learning progress', 'Gemara, Mishnah and Kitzur: what you finished, where you were, bookmarks, notes and highlights'),
+              ('shnayimMikra', 'Shnayim Mikra progress', 'The aliyot you finished'),
+              ('tehillim', 'Tehillim progress', 'Chapters read, completed cycles, your lists and how Tehillim is shown'),
+            ])
+              AdaptiveSwitchTile(
+                title: context.tr(title),
+                subtitle: context.tr(subtitle),
+                value: include.contains(group),
+                onChanged: (v) => ref.read(syncIncludeProvider.notifier).set(group, v),
+              ),
+          ],
+        ),
+        AdaptiveSection(
           header: context.tr('Settings file'),
-          footer: context.tr('Save your settings to a file to back them up or move them to another device without syncing. Importing replaces the settings that sync with the ones in the file.'),
+          footer: context.tr('Save your settings to a file to back them up or move them to another device without syncing. Importing replaces the settings that sync with the ones in the file, and adds the progress in it to yours.'),
           children: [
             ListTile(leading: const Icon(Icons.file_upload_outlined), title: Text(context.tr('Export settings to a file')), onTap: _export),
             ListTile(leading: const Icon(Icons.file_download_outlined), title: Text(context.tr('Import settings from a file')), onTap: _import),
@@ -248,7 +266,7 @@ class _SyncScreenState extends ConsumerState<SyncScreen> {
         ),
         AdaptiveSection(header: context.tr('What syncs'), children: [
           pad(Text(
-            context.tr('Syncs: text, language and display settings, minhagim, learning text settings, shiurim settings, personal dates, custom zmanim and rules. Stays on each device: location, reminders, fonts you added, and what you have shared about usage.'),
+            context.tr('Syncs: text, language and display settings, minhagim, learning text settings, shiurim settings, personal dates, custom zmanim and rules, and the progress you include. Stays on each device: location, reminders, fonts you added, and what you have shared about usage.'),
             style: theme.textTheme.bodySmall,
           )),
         ]),

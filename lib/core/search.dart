@@ -301,13 +301,19 @@ class SearchHit {
 
   /// The title is Hebrew (for the font and direction).
   final bool hebrewTitle;
+
+  /// How well it matched (see [SearchQuery.score]): lower is better.
   final int score;
+
+  /// Orders hits that matched equally well: lower first.
+  final int rank;
   final void Function(BuildContext context) open;
 
   /// What analytics records for this hit instead of [title], for titles
   /// that carry what the user typed.
   final String? logAs;
-  const SearchHit({required this.icon, required this.title, this.subtitle, this.hebrewTitle = false, this.score = 0, required this.open, this.logAs});
+  const SearchHit(
+      {required this.icon, required this.title, this.subtitle, this.hebrewTitle = false, this.score = 0, this.rank = 0, required this.open, this.logAs});
 }
 
 /// Results under headings, best first within each group.
@@ -322,7 +328,13 @@ class SearchResults extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final shown = [for (final g in groups) if (g.$2.isNotEmpty) g];
+    // The group with the best match first, so a close match in another
+    // siddur isn't listed under a loose one in yours ("bris" finding
+    // "Verses of praise"); groups that match equally well keep their order.
+    int best(List<SearchHit> hits) => hits.map((h) => h.score).reduce((a, b) => a < b ? a : b);
+    final shown = [
+      for (final (i, g) in [for (final g in groups) if (g.$2.isNotEmpty) g].indexed) (i, g),
+    ]..sort((a, b) => switch (best(a.$2.$2).compareTo(best(b.$2.$2))) { 0 => a.$1.compareTo(b.$1), final c => c });
     if (shown.isEmpty) {
       return Padding(
         padding: const EdgeInsets.all(32),
@@ -331,12 +343,12 @@ class SearchResults extends StatelessWidget {
       );
     }
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-      for (final (heading, hits) in shown) ...[
+      for (final (_, (heading, hits)) in shown) ...[
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 16, 20, 4),
           child: Text(heading, style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary)),
         ),
-        for (final h in (hits.toList()..sort((a, b) => a.score.compareTo(b.score))))
+        for (final h in (hits.toList()..sort((a, b) => switch (a.score.compareTo(b.score)) { 0 => a.rank.compareTo(b.rank), final c => c })))
           ListTile(
             leading: Icon(h.icon),
             title: Text(h.title,

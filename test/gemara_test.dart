@@ -157,6 +157,73 @@ void main() {
       expect(lay(900, 100, 100).layoutCase, DafLayoutCase.doubleExtend);
     });
 
+    group('as printed', () {
+      // A page 1000 wide whose body runs from 100 to 900: two Gemara lines in
+      // the middle, a Rashi line in the top band and one in its column, a
+      // Tosafot line on the other side.
+      final map = DafLineMap.fromJson({
+        'frame': [100, 50, 900, 400],
+        'columns': {
+          'main': [
+            [300, 700, 120, 20, 0, 4],
+            [300, 700, 150, 20, 4, 9],
+          ],
+          'inner': [
+            [500, 900, 70, 15, 0, 6],
+            [720, 900, 120, 15, 6, 8],
+          ],
+          'outer': [
+            [100, 280, 120, 15, 0, 3],
+          ],
+        },
+        'words': {'main': 9, 'inner': 8, 'outer': 3},
+      });
+      DafLayout printed(List<DafWord> main) => layoutPrinted(
+            main: main,
+            inner: words(8),
+            outer: words(3),
+            map: map,
+            width: 400,
+            mainSize: 10,
+            sideSize: 7,
+            measure: measure,
+          );
+
+      test('each line holds its printed words, inside its printed box', () {
+        final l = printed(words(9));
+        expect(l.words.length, 9 + 8 + 3);
+        expect(l.height, closeTo(350 / 2, 0.01));
+        // Scaled by 400/800: the Gemara's box is 100–300 on screen.
+        for (final w in l.words.where((w) => w.column == DafColumn.main)) {
+          expect(w.x, greaterThanOrEqualTo(99.99));
+          expect(w.x + w.width, lessThanOrEqualTo(300.01));
+        }
+        // Right to left: a line's first word at its right edge.
+        final first = l.words.firstWhere((w) => w.column == DafColumn.main);
+        expect(first.x + first.width, closeTo(300, 0.01));
+        // The second Gemara line starts with word 4, on the line below.
+        final second = l.words.where((w) => w.column == DafColumn.main).elementAt(4);
+        expect(second.word.text, 'word4');
+        expect(second.y, greaterThan(first.y));
+        expect(l.words.where((w) => w.column == DafColumn.inner).last.x, greaterThan(300));
+        expect(l.words.where((w) => w.column == DafColumn.outer).first.x, lessThan(100));
+      });
+
+      test('a line too long for its box is set smaller, not past it', () {
+        final long = [for (var i = 0; i < 9; i++) DafWord('a-very-long-word-$i', segment: 0)];
+        final l = printed(long);
+        final line = l.words.where((w) => w.column == DafColumn.main).take(4).toList();
+        expect(line.first.x + line.first.width, closeTo(300, 0.01));
+        expect(line.last.x, greaterThanOrEqualTo(99.99));
+        expect(line.first.size, lessThan(printed(words(9)).words.first.size!));
+      });
+
+      test('a map is used only with the text it was made from', () {
+        expect(map.fits(main: 9, inner: 8, outer: 3), isTrue);
+        expect(map.fits(main: 10, inner: 8, outer: 3), isFalse);
+      });
+    });
+
     test('a word is found by tapping it', () {
       final l = lay(50, 50, 50);
       final w = l.words.first;

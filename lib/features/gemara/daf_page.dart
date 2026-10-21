@@ -40,9 +40,14 @@ class DafPage extends StatefulWidget {
 
   /// Font size of the Gemara relative to the default for this width.
   final double scale;
+
+  /// Where the Vilna page puts each line, if known for this amud: then the
+  /// page is set line for line as printed; else it is laid out by rule.
+  final DafLineMap? printed;
   const DafPage({
     super.key,
     required this.text,
+    this.printed,
     this.selected,
     this.markedComments = const {},
     this.wordMarks,
@@ -89,42 +94,55 @@ class _DafPageState extends State<DafPage> {
   }
 
   void _build(double width, Color ink, Color accent) {
-    final key = (widget.text, width, widget.scale, widget.mainFont, widget.sideFont, ink, accent);
+    final key = (widget.text, widget.printed, width, widget.scale, widget.mainFont, widget.sideFont, ink, accent);
     if (key == _key) return;
     _key = key;
     final mainSize = width * 0.0235 * widget.scale;
     final sideSize = width * 0.0158 * widget.scale;
-    TextStyle style(DafColumn c, DafWord w) => TextStyle(
+    TextStyle style(DafColumn c, DafWord w, [double? size]) => TextStyle(
           fontFamily: c == DafColumn.main ? widget.mainFont : widget.sideFont,
-          fontSize: (c == DafColumn.main ? mainSize : sideSize) * w.scale,
+          fontSize: size ?? (c == DafColumn.main ? mainSize : sideSize) * w.scale,
           fontWeight: w.bold ? FontWeight.w700 : FontWeight.w400,
           color: w.scale > 1 ? accent : ink,
           height: 1,
         );
     final painters = <String, TextPainter>{};
-    TextPainter painter(DafWord w, DafColumn c) => painters.putIfAbsent('${c.index}|${w.bold}|${w.scale}|${w.text}', () {
-          return TextPainter(text: TextSpan(text: w.text, style: style(c, w)), textDirection: TextDirection.rtl)..layout();
+    TextPainter painter(DafWord w, DafColumn c, [double? size]) => painters.putIfAbsent('${c.index}|${w.bold}|${w.scale}|$size|${w.text}', () {
+          return TextPainter(text: TextSpan(text: w.text, style: style(c, w, size)), textDirection: TextDirection.rtl)..layout();
         });
     final words = dafWords(widget.text);
-    final layout = layoutDaf(
-      main: words.main,
-      inner: words.inner,
-      outer: words.outer,
-      width: width,
-      innerOnRight: widget.text.amud.endsWith('a'),
-      options: DafGeometryOptions(
-        gap: width * 0.018,
-        mainLineHeight: mainSize * 1.32,
-        sideLineHeight: sideSize * 1.38,
-        mainSpace: mainSize * 0.3,
-        sideSpace: sideSize * 0.3,
-      ),
-      measure: (w, c) => painter(w, c).width,
-    );
+    final printed = widget.printed;
+    final usePrinted = printed != null && printed.fits(main: words.main.length, inner: words.inner.length, outer: words.outer.length);
+    final layout = usePrinted
+        ? layoutPrinted(
+            main: words.main,
+            inner: words.inner,
+            outer: words.outer,
+            map: printed,
+            width: width,
+            mainSize: mainSize,
+            sideSize: sideSize,
+            measure: (w, c) => painter(w, c).width,
+          )
+        : layoutDaf(
+            main: words.main,
+            inner: words.inner,
+            outer: words.outer,
+            width: width,
+            innerOnRight: widget.text.amud.endsWith('a'),
+            options: DafGeometryOptions(
+              gap: width * 0.018,
+              mainLineHeight: mainSize * 1.32,
+              sideLineHeight: sideSize * 1.38,
+              mainSpace: mainSize * 0.3,
+              sideSpace: sideSize * 0.3,
+            ),
+            measure: (w, c) => painter(w, c).width,
+          );
     final recorder = ui.PictureRecorder();
     final canvas = Canvas(recorder);
     for (final p in layout.words) {
-      final tp = painter(p.word, p.column);
+      final tp = painter(p.word, p.column, p.size);
       // Center the glyphs vertically in the line box.
       tp.paint(canvas, Offset(p.x, p.y + (p.height - tp.height) / 2));
     }

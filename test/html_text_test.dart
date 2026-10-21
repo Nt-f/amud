@@ -3,8 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   test('opening words: bold on the first line of a prayer, not later ones', () {
-    // Metsudah-style lead-in on a later paragraph goes.
-    expect(normalizeOpeningBold('<b>הוֹד וְהָדָר</b> לְפָנָיו', opening: false), 'הוֹד וְהָדָר לְפָנָיו');
+    // The siddur's own lead-in on a later paragraph stays.
+    expect(normalizeOpeningBold('<b>אֶת שֵׁם</b> הָאֵל', opening: false), '<b>אֶת שֵׁם</b> הָאֵל');
     // ...but stays where the prayer begins.
     expect(normalizeOpeningBold('<b>הוֹדוּ</b> לַיהוָֹה', opening: true, addIfMissing: true), '<b>הוֹדוּ</b> לַיהוָֹה');
     // A version without it gets one on the opening line only.

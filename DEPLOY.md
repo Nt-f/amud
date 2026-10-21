@@ -166,9 +166,22 @@ banner offers it, and Play's own update screen installs it.
     # → build/app/outputs/bundle/playRelease/app-play-release.aab
 
 It must be signed with the release (upload) key; the build fails rather
-than fall back to the debug key. CI also builds it on each tag as the
-`amud-play` artifact (not attached to the GitHub release). Upload it to
-Play by hand.
+than fall back to the debug key. CI builds it on each tag as the
+`amud-play` artifact (not attached to the GitHub release) and, once every
+platform has built, uploads it to Play (`play` job in `build.yml`), with
+the release notes' bullets as "What's new". Setup, once:
+
+1. Google Cloud console → a service account → Keys → add a JSON key.
+2. Play Console → Users and permissions → invite the service account's
+   email, with release rights for Amud.
+3. GitHub → Settings → Secrets and variables → Actions: secret
+   `PLAY_SERVICE_ACCOUNT_JSON` (the JSON file's contents). Optional
+   variables: `PLAY_TRACK` (default `internal`) and `PLAY_RELEASE_STATUS`
+   (default `completed`; `draft` until the app's first release is out of
+   review, which Play requires).
+
+The first bundle of a new app must be uploaded by hand in Play Console;
+the API only accepts uploads once the app exists there.
 
 Play Console needs the privacy policy URL, `https://amud.page/privacy`
 (`landing/privacy.html`), which the app links to under Settings → About.

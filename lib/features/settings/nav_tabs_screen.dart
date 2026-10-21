@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -50,8 +52,39 @@ const navSymbols = <String, (String, String)>{
   'personal-dates': ('calendar.badge.plus', 'calendar.badge.plus'),
 };
 
-/// The most items the bar holds, tabs and shortcuts together.
-const maxNavItems = 7;
+/// The most items the bar has room for on this screen, tabs and shortcuts
+/// together: as many as fit across a phone with the widest label of [ids]
+/// unbroken (each needs its 64dp indicator at least), or down a tablet's
+/// rail.
+int maxNavItems(BuildContext context, {required bool labels, required Iterable<String> ids}) {
+  final size = MediaQuery.sizeOf(context);
+  final scale = MediaQuery.textScalerOf(context);
+  final int fit;
+  if (size.width >= navRailWidth) {
+    final pad = MediaQuery.paddingOf(context);
+    fit = ((size.height - pad.vertical - 16) / (56 + (labels ? scale.scale(16) : 0))).floor();
+  } else {
+    final style = Theme.of(context).textTheme.labelMedium;
+    final widest = !labels
+        ? 0.0
+        : ids.fold(0.0, (w, id) => math.max(w, textWidth(context, context.tr(NavItem.of(id)?.label ?? ''), style)));
+    fit = (size.width / math.max(64, widest + 4)).floor();
+  }
+  return fit.clamp(2, navTabs.length + navShortcuts.length);
+}
+
+/// From this width the bar is a rail down the side.
+const navRailWidth = 900.0;
+
+/// [items] cut to [max] from the end, keeping Settings (so this screen can
+/// be reached) and the tab on [branch] (so the bar marks where you are).
+List<NavItem> fitNavItems(List<NavItem> items, int max, {int? branch}) {
+  final out = [...items];
+  for (var i = out.length - 1; i >= 0 && out.length > max; i--) {
+    if (out[i].id != 'settings' && out[i].branch != branch) out.removeAt(i);
+  }
+  return out;
+}
 
 /// An item on the bar: a tab (with its shell [branch]) or a shortcut (with
 /// its [route]).
@@ -93,12 +126,14 @@ class NavTabsScreen extends ConsumerWidget {
     final hiddenTabs = [for (final t in navTabs) if (!shown.contains(t.$1)) t.$1];
     final hiddenShortcuts = [for (final t in navShortcuts) if (!shown.contains(t.$1)) t.$1];
     final theme = Theme.of(context);
+    int fit(Iterable<String> ids) => maxNavItems(context, labels: s.navLabels, ids: ids);
+    final max = fit(shown);
 
     Widget tile(String id, {required bool on, int? index}) {
       final item = NavItem.of(id)!;
       // Settings stays, so this screen can always be reached; the bar needs
-      // two items at least, and has room for [maxNavItems].
-      final toggle = id == 'settings' || (on && shown.length <= 2) || (!on && shown.length >= maxNavItems)
+      // two items at least, and has room for [maxNavItems] on this screen.
+      final toggle = id == 'settings' || (on && shown.length <= 2) || (!on && shown.length >= fit([...shown, id]))
           ? null
           : () => save(on ? ([...shown]..remove(id)) : [...shown, id]);
       return ListTile(
@@ -156,6 +191,12 @@ class NavTabsScreen extends ConsumerWidget {
           padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
           child: Text(context.tr('Choose the tabs to show. Drag to reorder.'), style: theme.textTheme.bodySmall),
         ),
+        // Chosen on a larger screen (settings sync), more than fit here.
+        if (shown.length > max)
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 4),
+            child: Text(context.tr('{n} fit on this screen; the rest show on larger ones.', {'n': max}), style: theme.textTheme.bodySmall),
+          ),
         ReorderableListView(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
@@ -177,7 +218,7 @@ class NavTabsScreen extends ConsumerWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 0, 16, 4),
             child: Text(
-              context.tr('Add other parts of the app to the bar. Up to {n} items fit.', {'n': maxNavItems}),
+              context.tr('Add other parts of the app to the bar. Up to {n} items fit.', {'n': max}),
               style: theme.textTheme.bodySmall,
             ),
           ),

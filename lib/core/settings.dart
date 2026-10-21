@@ -206,14 +206,9 @@ class AppSettings {
   /// Android: turn on Do Not Disturb while reading (and back off after).
   final bool readerDnd;
 
-  /// A compass toward Jerusalem over the reader, on devices that can tell
-  /// which way they face.
+  /// A compass to the east in the reader's app bar, on devices that can
+  /// tell which way they face.
   final bool readerCompass;
-
-  /// The compass points along a constant bearing (rhumb line) rather than
-  /// the shortest route (great circle): in America, east rather than
-  /// northeast.
-  final bool compassRhumbLine;
   final bool travelPrompts;
   final bool desktopTray;
   final bool omerBadge;
@@ -288,7 +283,6 @@ class AppSettings {
     this.fullscreenReader = false,
     this.readerDnd = false,
     this.readerCompass = true,
-    this.compassRhumbLine = false,
     this.travelPrompts = false,
     this.desktopTray = false,
     this.omerBadge = false,
@@ -350,7 +344,6 @@ class AppSettings {
     bool? fullscreenReader,
     bool? readerDnd,
     bool? readerCompass,
-    bool? compassRhumbLine,
     bool? travelPrompts,
     bool? desktopTray,
     bool? omerBadge,
@@ -411,7 +404,6 @@ class AppSettings {
         fullscreenReader: fullscreenReader ?? this.fullscreenReader,
         readerDnd: readerDnd ?? this.readerDnd,
         readerCompass: readerCompass ?? this.readerCompass,
-        compassRhumbLine: compassRhumbLine ?? this.compassRhumbLine,
         travelPrompts: travelPrompts ?? this.travelPrompts,
         desktopTray: desktopTray ?? this.desktopTray,
         omerBadge: omerBadge ?? this.omerBadge,
@@ -477,7 +469,6 @@ class AppSettings {
         'fullscreenReader': fullscreenReader,
         'readerDnd': readerDnd,
         'readerCompass': readerCompass,
-        'compassRhumbLine': compassRhumbLine,
         'travelPrompts': travelPrompts,
         'desktopTray': desktopTray,
         'omerBadge': omerBadge,
@@ -588,7 +579,6 @@ class AppSettings {
       fullscreenReader: pick('fullscreenReader', d.fullscreenReader),
       readerDnd: pick('readerDnd', d.readerDnd),
       readerCompass: pick('readerCompass', d.readerCompass),
-      compassRhumbLine: pick('compassRhumbLine', d.compassRhumbLine),
       travelPrompts: pick('travelPrompts', d.travelPrompts),
       desktopTray: pick('desktopTray', d.desktopTray),
       omerBadge: pick('omerBadge', d.omerBadge),

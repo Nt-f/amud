@@ -5,14 +5,20 @@ import 'sync_registry.dart';
 
 /// A settings backup as a file: the same values that sync between devices
 /// (see [syncSources]), so device-only settings (location, reminders) and
-/// fonts that only exist on one device are left out.
+/// fonts that only exist on one device are left out. Progress goes in for
+/// the groups ([syncGroups]) the reader includes.
 const settingsFileFormat = 'amud-settings';
 
 /// The file's bytes, from what [storage] holds now.
-List<int> exportSettings(Storage storage) {
+List<int> exportSettings(Storage storage, {Set<String>? groups}) {
   final data = <String, Object?>{};
   for (final s in syncSources) {
+    if (!includesSource(s, groups ?? {...syncGroups})) continue;
     final stored = storage.readJson<Object?>(s.key, (j) => j);
+    if (s.isParts) {
+      if (stored != null) data[s.key] = s.join!(s.split!(stored));
+      continue;
+    }
     if (!s.perField) {
       if (stored != null) data[s.key] = stored;
       continue;
@@ -30,8 +36,9 @@ List<int> exportSettings(Storage storage) {
 }
 
 /// Applies a file made by [exportSettings]; returns the storage keys written.
-/// Throws [FormatException] when it isn't one.
-Future<Set<String>> importSettings(Storage storage, List<int> bytes) async {
+/// Progress in the file is added to what this device has. Throws
+/// [FormatException] when it isn't one.
+Future<Set<String>> importSettings(Storage storage, List<int> bytes, {Set<String>? groups}) async {
   final Object? j;
   try {
     j = jsonDecode(utf8.decode(bytes));
@@ -43,8 +50,10 @@ Future<Set<String>> importSettings(Storage storage, List<int> bytes) async {
   final written = <String>{};
   for (final s in syncSources) {
     final v = data[s.key];
-    if (v == null) continue;
-    if (!s.perField) {
+    if (v == null || !includesSource(s, groups ?? {...syncGroups})) continue;
+    if (s.isParts) {
+      await storage.writeJson(s.key, s.join!({...s.split!(storage.readJson<Object?>(s.key, (j) => j)), ...s.split!(v)}));
+    } else if (!s.perField) {
       await storage.writeJson(s.key, v);
     } else {
       if (v is! Map) continue;

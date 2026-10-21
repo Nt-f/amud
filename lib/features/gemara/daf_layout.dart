@@ -80,7 +80,11 @@ class PlacedWord {
   final double y;
   final double width;
   final double height;
-  const PlacedWord(this.word, this.column, this.x, this.y, this.width, this.height);
+
+  /// The font size to draw it at, where the layout chose one (the printed
+  /// page sets each line to fit); else the column's.
+  final double? size;
+  const PlacedWord(this.word, this.column, this.x, this.y, this.width, this.height, {this.size});
 
   bool contains(double px, double py) => px >= x && px <= x + width && py >= y && py <= y + height;
 }
@@ -295,6 +299,137 @@ DafLayout layoutDaf({
     [...mainFlow.words, ...innerFlow.words, ...outerFlow.words],
     layoutCase,
   );
+}
+
+// ------------------------------------------------------------------ printed
+
+/// One printed line of the Vilna page: its box on the scan (pixels; [base]
+/// is the baseline, [h] the height of its words) and the words of its
+/// column it holds, [from] to [to] (exclusive).
+class DafPrintedLine {
+  final double x0;
+  final double x1;
+  final double base;
+  final double h;
+  final int from;
+  final int to;
+  const DafPrintedLine(this.x0, this.x1, this.base, this.h, this.from, this.to);
+}
+
+/// Where the Romm Vilna page puts every line of an amud, read off the scan
+/// by tool/daf/linemap.py. The words are counted as [dafWords] counts them;
+/// [words] says how many each column had when the map was made, so a map
+/// made from other text is not used.
+class DafLineMap {
+  /// The page body on the scan: the Gemara, Rashi and Tosafot (the small
+  /// commentaries beside and below it are left out).
+  final double left;
+  final double top;
+  final double right;
+  final double bottom;
+  final Map<DafColumn, List<DafPrintedLine>> lines;
+  final Map<DafColumn, int> words;
+  const DafLineMap({required this.left, required this.top, required this.right, required this.bottom, required this.lines, required this.words});
+
+  static const _ids = {DafColumn.main: 'main', DafColumn.inner: 'inner', DafColumn.outer: 'outer'};
+
+  /// Whether this map was made from these words.
+  bool fits({required int main, required int inner, required int outer}) =>
+      words[DafColumn.main] == main && words[DafColumn.inner] == inner && words[DafColumn.outer] == outer;
+
+  factory DafLineMap.fromJson(Map<String, Object?> j) {
+    final frame = [for (final v in j['frame'] as List) (v as num).toDouble()];
+    final cols = (j['columns'] as Map).cast<String, Object?>();
+    final counts = (j['words'] as Map? ?? const {}).cast<String, Object?>();
+    return DafLineMap(
+      left: frame[0],
+      top: frame[1],
+      right: frame[2],
+      bottom: frame[3],
+      lines: {
+        for (final MapEntry(key: c, value: id) in _ids.entries)
+          c: [
+            for (final l in (cols[id] as List? ?? const []))
+              DafPrintedLine(
+                (l[0] as num).toDouble(),
+                (l[1] as num).toDouble(),
+                (l[2] as num).toDouble(),
+                (l[3] as num).toDouble(),
+                l[4] as int,
+                l[5] as int,
+              ),
+          ],
+      },
+      words: {for (final MapEntry(key: c, value: id) in _ids.entries) c: (counts[id] as num?)?.toInt() ?? -1},
+    );
+  }
+}
+
+/// Lays out an amud line for line as the Vilna page prints it ([map]),
+/// scaled to [width]. Each column's type size follows its printed line
+/// spacing; each line's words are justified into its printed width, and set
+/// smaller where they don't fit (the text spells out abbreviations the page
+/// abbreviates). [measure] gives a word's width at [mainSize] (the Gemara)
+/// or [sideSize].
+DafLayout layoutPrinted({
+  required List<DafWord> main,
+  required List<DafWord> inner,
+  required List<DafWord> outer,
+  required DafLineMap map,
+  required double width,
+  required double mainSize,
+  required double sideSize,
+  required DafMeasure measure,
+}) {
+  final s = width / (map.right - map.left);
+  final placed = <PlacedWord>[];
+  for (final (column, words) in [(DafColumn.main, main), (DafColumn.inner, inner), (DafColumn.outer, outer)]) {
+    final lines = map.lines[column] ?? const [];
+    if (lines.isEmpty) continue;
+    final ref = column == DafColumn.main ? mainSize : sideSize;
+    final size = _printedSize(lines, column) * s;
+    for (final line in lines) {
+      final from = math.min(line.from, words.length);
+      final to = math.min(line.to, words.length);
+      if (to <= from) continue;
+      final ws = words.sublist(from, to);
+      final widths = [for (final w in ws) measure(w, column) * size / ref];
+      final space = size * 0.25;
+      final natural = widths.fold(0.0, (a, b) => a + b) + space * (ws.length - 1);
+      final box = (line.x1 - line.x0) * s;
+      final fit = natural > box ? box / natural : 1.0;
+      final gap = ws.length > 1 ? (box - natural * fit) / (ws.length - 1) + space * fit : 0.0;
+      final lineSize = size * fit;
+      final height = lineSize * 1.3;
+      final baseline = (line.base - map.top) * s;
+      // The glyphs sit centered in the word's box (see DafPage): put the
+      // baseline, about 0.8 of the size below the glyphs' top, on the line.
+      final y = baseline - 0.8 * lineSize - (height - lineSize) / 2;
+      var x = (line.x1 - map.left) * s;
+      for (var k = 0; k < ws.length; k++) {
+        final w = widths[k] * fit;
+        x -= w;
+        placed.add(PlacedWord(ws[k], column, x, y, w, height, size: lineSize * ws[k].scale));
+        x -= gap;
+      }
+    }
+  }
+  return DafLayout(width, (map.bottom - map.top) * s, placed, DafLayoutCase.doubleWrap);
+}
+
+/// A column's type size on the scan: the Gemara's letters stand about three
+/// quarters of its line spacing, Rashi script's a little less.
+double _printedSize(List<DafPrintedLine> lines, DafColumn column) {
+  final steps = <double>[];
+  for (var k = 1; k < lines.length; k++) {
+    // Consecutive lines of one block (not the jump from one block to the
+    // next).
+    final d = lines[k].base - lines[k - 1].base;
+    if (d > 0 && d < 2.5 * lines[k].h) steps.add(d);
+  }
+  steps.sort();
+  final pitch = steps.isEmpty ? lines.first.h * 1.4 : steps[steps.length ~/ 2];
+  return pitch * (column == DafColumn.main ? 0.76 : 0.72);
 }
 
 // ------------------------------------------------------------------ input

@@ -27,6 +27,23 @@ void main() {
     expect(b.readJson<Object?>('personalDates', (j) => j), [{'n': 1}]);
   });
 
+  test('progress goes in a file only when included, and importing adds it to what is there', () async {
+    final a = await Storage.openAt('${dir.path}/d', name: 'd');
+    await a.writeJson('gemaraMarks', {'completed': ['Berakhot:2a'], 'bookmarks': []});
+    await a.writeJson('tehillim', {'read': [1]});
+    expect(utf8.decode(exportSettings(a, groups: {'tehillim'})), isNot(contains('gemaraMarks')));
+    final bytes = exportSettings(a);
+
+    final b = await Storage.openAt('${dir.path}/e', name: 'e');
+    await b.writeJson('gemaraMarks', {'completed': ['Shabbat:2a']});
+    await b.writeJson('tehillim', {'read': [9]});
+    final keys = await importSettings(b, bytes, groups: {'learning'});
+    expect(keys, contains('gemaraMarks'));
+    expect(keys, isNot(contains('tehillim')));
+    expect(b.readJson('gemaraMarks', (j) => (j as Map)['completed']), ['Berakhot:2a', 'Shabbat:2a']);
+    expect(b.readJson('tehillim', (j) => (j as Map)['read']), [9]);
+  });
+
   test('a file that is not settings is refused', () async {
     final a = await Storage.openAt('${dir.path}/c', name: 'c');
     expect(() => importSettings(a, utf8.encode('{"x":1}')), throwsFormatException);
