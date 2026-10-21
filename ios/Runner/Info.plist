@@ -18,6 +18,10 @@
 	<string>Amud</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Your location is used on-device to calculate zmanim (halachic times) and candle-lighting times. It is never sent anywhere.</string>
+	<!-- Amud only asks while in use; geolocator's code also references the
+	     background location API, so App Store Connect wants this key too. -->
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Your location is used on-device to calculate zmanim (halachic times) and candle-lighting times. It is never sent anywhere.</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>CFBundleExecutable</key>
