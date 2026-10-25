@@ -599,6 +599,12 @@
             {"kind": "instruction", "en": "For a single vessel, say 'vessel' (singular).", "text": "<small>על כלי אחד אומר כְּלִי</small>"}
           ]}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "a4", "translates": ["4"], "comment": "Amud translation", "text": "Blessed are You, Lord our God, King of the universe, who has sanctified us with His commandments and commanded us concerning the immersion of vessels. <small>(For a single vessel, say “a vessel.”)</small>"}
+        ]
       }
     },
     {
@@ -686,6 +692,12 @@
           {"ref": "1", "kind": "heading", "en": "Blessing on the Rainbow", "text": "<big><b>ברכת הקשת</b></big>"},
           {"ref": "2", "kind": "instruction", "en": "One who sees a rainbow must recite a blessing, and is forbidden to gaze at it except briefly for the sake of the blessing.", "text": "<small>הרואה קשת צריך לברך, ואסור להסתכל בה אלא בראיה קצרה לצורך הברכה</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶלֶךְ הָעוֹלָם, זוֹכֵר הַבְּרִית נֶאֱמָן בִּבְרִיתוֹ וְקַיָּם בְּמַאֲמָרוֹ:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "a3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Lord our God, King of the universe, who remembers the covenant, is faithful to His covenant, and keeps His word."}
         ]
       }
     },
@@ -776,7 +788,12 @@
       "en": {
         "version": "Sefaria Community Translation",
         "segs": [
-          {"ref": "3", "translates": ["3"], "text": "May it be Your will, Lord our God and God of our ancestors, to lead us in peace, guide our steps in peace, and support us in peace. If returning today, add: “and bring us back in peace.” Save us from every enemy and ambush along the way; send blessing upon the work of our hands; and grant us grace, kindness, and mercy in Your eyes and in the eyes of all who see us. Blessed are You (Lord), who hears prayer."}
+          {"ref": "3", "translates": ["3"], "text": "May it be Your will, Lord our God and God of our ancestors, to lead us in peace, guide our steps in peace, and support us in peace. If returning today, add: “and bring us back in peace.” Save us from every enemy and ambush along the way; send blessing upon the work of our hands; and grant us grace, kindness, and mercy in Your eyes and in the eyes of all who see us. Blessed are You (Lord), who hears prayer."},
+          {"ref": "a5", "translates": ["5"], "comment": "Amud translation", "text": "“And Jacob went on his way, and angels of God met him. And Jacob said when he saw them, ‘This is God’s camp,’ and he called the name of that place Mahanaim.”"},
+          {"ref": "a6", "translates": ["6"], "comment": "Amud translation", "text": "“And they journeyed, and a terror of God was upon the cities around them, and they did not pursue the sons of Jacob.” “For Your salvation I hope, Lord.” <small>(3 times)</small>"},
+          {"ref": "a7", "translates": ["7"], "comment": "Amud translation", "text": "“May the Lord bless you and keep you. May the Lord make His face shine upon you and be gracious to you. May the Lord lift up His face toward you and give you peace.” <small>(3 times)</small>"},
+          {"ref": "a8", "translates": ["8"], "comment": "Amud translation", "text": "“Behold, I send an angel before you, to guard you on the way and to bring you to the place that I have prepared.” <small>(3 times)</small>"},
+          {"ref": "a9", "translates": ["9"], "comment": "Amud translation", "text": "“The angel who redeemed me from all evil, bless the lads; and let my name be named in them, and the name of my fathers Abraham and Isaac; and let them grow into a multitude in the midst of the earth.” <small>(3 times)</small>"}
         ]
       }
     }

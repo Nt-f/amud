@@ -17,7 +17,7 @@ import 'today_plan.dart';
 /// the links under it.
 final _related = <(RegExp, List<String>)>[
   (RegExp(r'birkat ha.?mazon|birchat ha.?mazon|birchas ha.?mazon|grace after|post meal', caseSensitive: false), ['meeinShalosh', 'brachot']),
-  (RegExp(r'birkat hanehenin|blessings on (?:foods|enjoyments|pleasures)|before eating|berakha acharona', caseSensitive: false), ['birkat', 'meeinShalosh']),
+  (RegExp(r'birkat hanehenin|blessings on (?:foods|enjoyments|pleasures)|before eating|berakha acharona', caseSensitive: false), ['birkat', 'meeinShalosh', 'boreiNefashot']),
   (RegExp(r'kiddush|shabbat evening|shabbos in the home|zemir', caseSensitive: false), ['birkat']),
   (RegExp(r'candle lighting', caseSensitive: false), ['kabbalatShabbat', 'kiddushShabbat']),
   (RegExp(r'kabbal[ae][ts] shabb', caseSensitive: false), ['candles', 'kiddushShabbat']),

@@ -32,7 +32,7 @@
           {"ref": "8", "parts": [
             {"kind": "prayer", "text": "<b>וְעַל תְּנוּבַת הַשָּׂדֶה</b> וְעַל אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה שֶׁרָצִיתָ וְהִנְחַלְתָּ לַאֲבוֹתֵינוּ לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבּוֹעַ מִטּוּבָהּ,"},
             {"kind": "prayer", "text": " רַחֵם "},
-            {"kind": "instruction", "en": "(Optional)", "text": "<small>(נָא)</small>"},
+            {"kind": "prayer", "text": "<small>(נָא)</small>"},
             {"kind": "prayer", "text": " יְהֹוָה אֱלֹהֵינוּ עַל יִשְׂרָאֵל עַמֶּךָ וְעַל יְרוּשָׁלַיִם עִירֶךָ וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶךָ וְעַל מִזְבְּחֶךָ וְעַל הֵיכָלֶךָ,"},
             {"kind": "prayer", "text": " וּבְנֵה יְרוּשָׁלַיִם עִיר הַקֹּדֶשׁ בִּמְהֵרָה בְּיָמֵינוּ וְהַעֲלֵנוּ לְתוֹכָהּ וְשַׂמְּחֵנוּ בְּבִנְיָנָהּ וְנֹאכַל מִפִּרְיָּהּ וְנִשְׂבַּע מִטּוּבָהּ וּנְבָרֶכְךָ עָלֶיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה:"}
           ]},
@@ -45,13 +45,13 @@
             {"kind": "prayer", "when": "roshChodesh", "text": "</small> <b>וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם רֹאשׁ הַחֹדֶשׁ הַזֶּה:</b>"}
           ]},
           {"ref": "11", "parts": [
-            {"kind": "instruction", "en": "(On Rosh Hashanah:)", "gloss": "Said on Rosh Hashanah", "text": "<small><small>(בר\"ה:)</small>"},
+            {"kind": "instruction", "when": "roshHashana", "en": "(On Rosh Hashanah:)", "gloss": "Said on Rosh Hashanah", "text": "<small><small>(בר\"ה:)</small>"},
             {"kind": "prayer", "when": "roshHashana", "text": "</small> <b>וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם הַזִּכָּרוֹן הַזֶּה:</b>"}
           ]},
           {"ref": "12", "parts": [
             {"kind": "instruction", "when": "yomTov", "en": "(On Yom Tov:)", "gloss": "Said on Yom Tov", "text": "<small><small>(ביו\"ט:)</small>"},
             {"kind": "prayer", "when": "yomTov", "text": "</small> <b>וְשַׂמְחֵנוּ בְּיוֹם חַג "},
-            {"kind": "instruction", "en": "(Name of the holiday)", "text": "<small> <small>(פלוני)</small>"},
+            {"kind": "instruction", "when": "yomTov", "en": "(Name of the holiday)", "text": "<small> <small>(פלוני)</small>"},
             {"kind": "prayer", "when": "yomTov", "text": " </small> הַזֶּה:</b>"}
           ]},
           {"ref": "13", "kind": "prayer", "text": "<b>כִּי אַתָּה</b> יְהֹוָה טוֹב וּמֵטִיב לַכֹּל וְנוֹדֶה לְךָ עַל הָאָרֶץ וְעַל:"},
@@ -78,6 +78,26 @@
             {"kind": "prayer", "text": " (וְעַל פְּרִי גַפְנָהּ)</small>: "}
           ]}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "a3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Lord our God, King of the universe,"},
+          {"ref": "a4", "translates": ["4"], "comment": "Amud translation", "text": "<small>On wine:</small> for the vine and for the fruit of the vine,"},
+          {"ref": "a5", "translates": ["5"], "comment": "Amud translation", "text": "<small>On fruits of the Seven Species:</small> for the tree and for the fruit of the tree,"},
+          {"ref": "a6", "translates": ["6"], "comment": "Amud translation", "text": "<small>On grain products:</small> for the sustenance and for the nourishment,"},
+          {"ref": "a7", "translates": ["7"], "comment": "Amud translation", "text": "<small>On grain products and wine together:</small> for the sustenance and for the nourishment, and for the vine and for the fruit of the vine,"},
+          {"ref": "a8", "translates": ["8"], "comment": "Amud translation", "text": "and for the produce of the field, and for the desirable, good and spacious land that You were pleased to give as a heritage to our fathers, to eat of its fruit and to be satisfied with its goodness. Have mercy <small>(please)</small>, Lord our God, on Israel Your people, on Jerusalem Your city, on Zion the dwelling place of Your glory, on Your altar and on Your Temple. Rebuild Jerusalem, the holy city, speedily in our days; bring us up into it and gladden us in its rebuilding, and let us eat of its fruit and be satisfied with its goodness, and bless You for it in holiness and purity."},
+          {"ref": "a9", "translates": ["9"], "comment": "Amud translation", "text": "<small>(On Shabbat:)</small> Be pleased to strengthen us on this Shabbat day."},
+          {"ref": "a10", "translates": ["10"], "comment": "Amud translation", "text": "<small>(On Rosh Chodesh:)</small> Remember us for good on this day of the New Moon."},
+          {"ref": "a11", "translates": ["11"], "comment": "Amud translation", "text": "<small>(On Rosh Hashanah:)</small> Remember us for good on this Day of Remembrance."},
+          {"ref": "a12", "translates": ["12"], "comment": "Amud translation", "text": "<small>(On a festival:)</small> Gladden us on this day of the festival of <small>(name the festival)</small>."},
+          {"ref": "a13", "translates": ["13"], "comment": "Amud translation", "text": "For You, Lord, are good and do good to all, and we thank You for the land and for"},
+          {"ref": "a14", "translates": ["14"], "comment": "Amud translation", "text": "<small>(On wine:)</small> the fruit of the vine. Blessed are You, Lord, for the land and for the fruit of the vine <small>(in the Land of Israel: and for the fruit of its vine)</small>."},
+          {"ref": "a15", "translates": ["15"], "comment": "Amud translation", "text": "<small>(On fruits:)</small> the fruits. Blessed are You, Lord, for the land and for the fruits <small>(in the Land of Israel: and for its fruits)</small>."},
+          {"ref": "a16", "translates": ["16"], "comment": "Amud translation", "text": "<small>(On grain products:)</small> the sustenance. Blessed are You, Lord, for the land and for the sustenance and for the nourishment."},
+          {"ref": "a17", "translates": ["17"], "comment": "Amud translation", "text": "<small>(On grain products and wine together:)</small> the sustenance and for the fruit of the vine. Blessed are You, Lord, for the land and for the sustenance and for the nourishment and for the fruit of the vine <small>(in the Land of Israel: and for the fruit of its vine)</small>."}
+        ]
       }
     },
     {
@@ -91,6 +111,12 @@
           {"ref": "1", "kind": "heading", "en": "Creator of the fruit of the tree", "text": "<big><b>בורא פרי העץ</b></big>"},
           {"ref": "2", "kind": "instruction", "en": "On any fruit of the tree, one recites:", "text": "<small>על כל פרי העץ מברך:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הָעֵץ:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "a3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Lord our God, King of the universe, who creates the fruit of the tree."}
         ]
       }
     },
@@ -106,12 +132,18 @@
           {"ref": "2", "kind": "instruction", "en": "On fruit of the ground, one blesses:", "text": "<small>על פרי האדמה מברך:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הָאֲדָמָה:"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "a3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Lord our God, King of the universe, who creates the fruit of the ground."}
+        ]
       }
     },
     {
       "path": "Blessings/Shehakol",
       "title": "ברכת שהכל",
-      "node": "brachot.me_ein_shalosh",
+      "node": "brachot.hanehenin",
       "service": "none",
       "he": {
         "version": "Torat Emet 357",
@@ -119,6 +151,12 @@
           {"ref": "1", "kind": "heading", "en": "Blessing of Shehakol", "text": "<big><b>ברכת שהכל</b></big>"},
           {"ref": "2", "kind": "instruction", "en": "On meat and fish, dairy, eggs, cheese, spices, mushrooms, and the like. Also on all beverages except wine, one says:", "text": "<small>על בשר ודגים. חלב וביצה וגבינה. כמהין ופטריות וכדומה. גם על המשקים חוץ מיין אומר:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהַכֹּל נִהְיָה בִּדְבָרוֹ:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "a3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Lord our God, King of the universe, by whose word all things came to be."}
         ]
       }
     },
@@ -134,6 +172,12 @@
           {"ref": "2", "kind": "instruction", "en": "On fruits of the tree (except the seven species), fruits of the ground, vegetables, all drinks, and things that do not grow from the ground, one recites after eating them this:", "text": "<small>על פירות האילן חוץ מז' מינים ופירות האדמה וירקות ועל כל המשקין ועל דבר שאין גידולו מן הארץ מברכין אחר אכילתן זה:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא נְפָשׁוֹת רַבּוֹת וְחֶסְרוֹנָן עַל כָּל מַה שֶׁבָּרָאתָ לְהַחֲיוֹת בָּהֶם נֶפֶשׁ כָּל חָי. בָּרוּךְ חֵי הָעוֹלָמִים:"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "a3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Lord our God, King of the universe, who creates many living beings and their needs, for all that You have created with which to sustain the life of every living thing. Blessed is He who is the life of the worlds."}
+        ]
       }
     },
     {
@@ -147,6 +191,12 @@
           {"ref": "1", "kind": "heading", "en": "Blessing of Shehecheyanu", "text": "<big><b>ברכת שהחיינו</b></big>"},
           {"ref": "2", "kind": "instruction", "en": "One who puts on a new garment, or eats a new fruit that grows at a set time of year and renews each year, says:", "text": "<small>הלובש מלבוש חדש וכן האוכל פרי חדש הגדל בזמן קבוע בשנה ומתחדש משנה לשנה מברך:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְמַן הַזֶּה:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "a3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Lord our God, King of the universe, who has granted us life, sustained us, and brought us to this time."}
         ]
       }
     },
@@ -233,6 +283,13 @@
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, עוֹשֶׂה מַעֲשֶׂה בְּרֵאשִׁית:"},
           {"ref": "4", "kind": "instruction", "en": "On thunder one says:", "text": "<small>על הרעמים מברך:</small>"},
           {"ref": "5", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁכֹּחוֹ וּגְבוּרָתוֹ מָלֵא עוֹלָם:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "a3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Lord our God, King of the universe, who makes the work of creation."},
+          {"ref": "a5", "translates": ["5"], "comment": "Amud translation", "text": "Blessed are You, Lord our God, King of the universe, whose strength and might fill the world."}
         ]
       }
     },
@@ -355,6 +412,12 @@
             {"kind": "instruction", "en": "(If there are many, say: utensils:)", "text": "כשהם הרבה אומר: <b>כֵּלִים:</b>)</small>"}
           ]}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "a3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Lord our God, King of the universe, who has sanctified us with His commandments and commanded us concerning the immersion of a vessel. <small>(For several, say: of vessels.)</small>"}
+        ]
       }
     },
     {
@@ -369,12 +432,18 @@
           {"ref": "2", "kind": "instruction", "en": "One who affixes a mezuzah says:", "text": "<small>הקובע מזוזה מברך:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לִקְבֹּעַ מְזוּזָה:"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "a3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Lord our God, King of the universe, who has sanctified us with His commandments and commanded us to affix a mezuzah."}
+        ]
       }
     },
     {
       "path": "Blessings/Separating Challah",
       "title": "סדר הפרשת חלה",
-      "node": "lifecycle.pidyon_haben",
+      "node": "brachot.mitzvot",
       "service": "none",
       "he": {
         "version": "Torat Emet 357",
@@ -394,6 +463,13 @@
           {"ref": "8", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו, וְצִוָּנוּ לְהַפְרִישׁ חַלָּה מִן הָעִיסָה:"},
           {"ref": "9", "kind": "instruction", "en": "Then take a piece of any size, hold it in the right hand, and say:", "text": "<small>ואחר כך לוקחת חתיכה כל שהיא ומרימה ביד ימין ואומרת:</small>"},
           {"ref": "10", "kind": "prayer", "text": "<b>הֲרֵי</b> זוֹ חַלָּה:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "a8", "translates": ["8"], "comment": "Amud translation", "text": "Blessed are You, Lord our God, King of the universe, who has sanctified us with His commandments and commanded us to separate challah from the dough."},
+          {"ref": "a10", "translates": ["10"], "comment": "Amud translation", "text": "Behold, this is challah."}
         ]
       }
     },
@@ -437,7 +513,8 @@
             {"kind": "prayer", "text": " וְתִסְמְכֵנִי לְשָׁלוֹם,"},
             {"kind": "prayer", "text": " וְתַגִּיעֵנוּ לִמְחוֹז חֶפְצֵנוּ לְחַיִּים לְשִׂמְחָה וּלְשָׁלוֹם, "},
             {"kind": "instruction", "en": "If one intends to return immediately, say:", "text": "<small>[אם דעתו לחזור מיד אומר:</small>"},
-            {"kind": "prayer", "when": "if_returnImmediately", "text": " וְתַחְזִירֵנִי לְשָׁלוֹם] וְתַצִּילֵנוּ מִכַּף כָּל אוֹיֵב וְאוֹרֵב וְלִסְטִים וְחַיּוֹת רָעוֹת בַּדֶּרֶךְ,"},
+            {"kind": "prayer", "when": "if_returnImmediately", "text": " וְתַחְזִירֵנִי לְשָׁלוֹם]"},
+            {"kind": "prayer", "text": " וְתַצִּילֵנוּ מִכַּף כָּל אוֹיֵב וְאוֹרֵב וְלִסְטִים וְחַיּוֹת רָעוֹת בַּדֶּרֶךְ,"},
             {"kind": "prayer", "text": " וּמִכָּל מִינֵי פֻרְעָנִיּוֹת הַמִּתְרַגְּשׁוֹת וּבָאוֹת לָעוֹלָם וְתִשְׁלַח בְּרָכָה וְהַצְלָחָה בְּכָל מַעֲשֵׂה יָדֵינוּ,"},
             {"kind": "prayer", "text": " וְתִתְּנֵנוּ לְחֵן וּלְחֶסֶד וּלְרַחֲמִים בְּעֵינֶיךָ וּבְעֵינֵי כָל רֹאֵינוּ,"},
             {"kind": "prayer", "text": " וְתִגְמְלֵינוּ חֲסָדִים טוֹבִים וְתִשְׁמַע קוֹל תַּחֲנוּנֵינוּ,"},
@@ -472,7 +549,7 @@
             {"kind": "prayer", "repeat": 5, "text": " אַבְרָהָם וְיִצְחָק,"},
             {"kind": "prayer", "repeat": 5, "text": " וְיִדְגּוּ לָרוֹב בְּקֶרֶב הָאָרֶץ:"}
           ]},
-          {"ref": "10", "kind": "instruction", "en": "Sign of 15", "text": "<b>סימן לוי\"ה</b>"},
+          {"ref": "10", "kind": "instruction", "en": "(A reminder of how many times to say each verse above: 30, 6, 10, 5)", "text": "<b>סימן לוי\"ה</b>"},
           {"ref": "11", "parts": [
             {"kind": "instruction", "en": "(Say 3 times:)", "text": "<small><small>(ויאמר ג\"פ:)</small>"},
             {"kind": "prayer", "repeat": 3, "text": "</small> <b>וַיִסָּעוּ</b> וַיְהִי חִתַּת אֱלֹהִים עַל הֶעָרִים אֲשֶׁר סְבִיבוֹתֵיהֶם וְלֹא רָדְפוּ אַחֲרֵי בְּנֵי יַעֲקֹב:"}
@@ -507,7 +584,7 @@
             {"kind": "prayer", "repeat": 7, "text": " וּמַעֲשֵׂה יָדֵינוּ כּוֹנְנָה עָלֵינוּ,"},
             {"kind": "prayer", "repeat": 7, "text": " וּמַעֲשֵׂה יָדֵינוּ כּוֹנְנֵהוּ:"}
           ]},
-          {"ref": "17", "kind": "instruction", "en": "One should intend on the verse with 20 letters, 12 words, 10 letters, 3 letters, and the final letter 'Yud-Heh', which is a special name for protection.", "text": "<small>ויכוין בפסוק כ\"י מלאכי\"ו יצו\"ה ל\"ך ס\"ת \"יוהך\" והוא שם מסוגל לשמירה:</small>"},
+          {"ref": "17", "kind": "instruction", "en": "In the verse “For He will command His angels concerning you,” one should have in mind the last letters of its words, which form a Name that helps to protect.", "text": "<small>ויכוין בפסוק כ\"י מלאכי\"ו יצו\"ה ל\"ך ס\"ת \"יוהך\" והוא שם מסוגל לשמירה:</small>"},
           {"ref": "18", "parts": [
             {"kind": "instruction", "en": "(And say:)", "text": "<small><small>(ואומר:)</small>"},
             {"kind": "prayer", "text": "</small> <b>אַתָּה</b> סֵתֶר לִי מִצַּר תִּצְּרֵנִי רָנֵּי פַלֵּט תְּסוֹבְבֵנִי סֶלָה: בִּטְחוּ בַיהֹוָה עֲדֵי עַד כִּי בְּיָהּ יְהֹוָה צוּר עוֹלָמִים: יְהֹוָה עֹז לְעַמּוֹ יִתֵּן. יְהֹוָה יְבָרֵךְ אֶת עַמּוֹ בַשָּׁלוֹם: יְהֹוָה צְבָאוֹת עִמָּנוּ. מִשְׂגָּב לָנוּ אֱלֹהֵי יַעֲקֹב סֶלָה: יְהֹוָה צְבָאוֹת אַשְׁרֵי אָדָם בֹּטֵחַ בָּךְ."}
@@ -564,6 +641,32 @@
             {"kind": "prayer", "text": " הַלְלוּיָהּ: "}
           ]},
           {"ref": "33", "kind": "instruction", "en": "And continue with 'Yehi Ratzon' as in the order of the Traveler's Prayer.", "text": "<small>וממשיך יהי רצון כ\"סדר תפילת הדרך\":</small>"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "a3", "translates": ["3"], "comment": "Amud translation", "text": "May it be Your will, Lord our God and God of our fathers, that You lead us in peace, direct our steps in peace and guide us in peace, and support me in peace, and bring us to our desired destination in life, joy and peace <small>[if one intends to return immediately, say:</small> and bring me back in peace]. Rescue us from the hand of every enemy and ambush, from robbers and wild beasts on the way, and from all kinds of calamities that stir and come upon the world; send blessing and success in all the work of our hands; grant us grace, kindness and mercy in Your eyes and in the eyes of all who see us; bestow good kindness upon us, and hear the voice of our supplications, for You are God who hears prayer and supplication. Blessed are You, Lord, who hears prayer."},
+          {"ref": "a5", "translates": ["5"], "comment": "Amud translation", "text": "And Jacob went on his way, and angels of God met him. When Jacob saw them, he said, “This is the camp of God,” and he called the name of that place Mahanaim."},
+          {"ref": "a6", "translates": ["6"], "comment": "Amud translation", "text": "<small>(Say 30 times:)</small> For Your salvation I hope, Lord. I hope, Lord, for Your salvation. Lord, for Your salvation I hope."},
+          {"ref": "a7", "translates": ["7"], "comment": "Amud translation", "text": "<small>(Say 6 times:)</small> May the pleasantness of the Lord our God be upon us; establish the work of our hands for us; the work of our hands, establish it."},
+          {"ref": "a8", "translates": ["8"], "comment": "Amud translation", "text": "<small>(Say 10 times:)</small> May the Lord bless you and guard you. May the Lord make His face shine upon you and be gracious to you. May the Lord lift up His face toward you and grant you peace."},
+          {"ref": "a9", "translates": ["9"], "comment": "Amud translation", "text": "<small>(Say 5 times:)</small> May the angel who redeemed me from all evil bless the lads; may my name be called upon them, and the names of my fathers Abraham and Isaac; and may they multiply abundantly in the midst of the land."},
+          {"ref": "a11", "translates": ["11"], "comment": "Amud translation", "text": "<small>(Say 3 times:)</small> They journeyed on, and a terror from God was upon the cities around them, and they did not pursue the sons of Jacob."},
+          {"ref": "a12", "translates": ["12"], "comment": "Amud translation", "text": "<small>(Say 3 times:)</small> May the angel who redeemed me from all evil bless the lads; may my name be called upon them, and the names of my fathers Abraham and Isaac; and may they multiply abundantly in the midst of the land."},
+          {"ref": "a13", "translates": ["13"], "comment": "Amud translation", "text": "<small>(Say 3 times:)</small> For Your salvation I hope, Lord. I hope, Lord, for Your salvation. Lord, for Your salvation I hope."},
+          {"ref": "a14", "translates": ["14"], "comment": "Amud translation", "text": "<small>(Say 3 times:)</small> Behold, I am sending an angel before you to guard you on the way and to bring you to the place that I have prepared."},
+          {"ref": "a15", "translates": ["15"], "comment": "Amud translation", "text": "<small>(Say 3 times:)</small> May the Lord bless you and guard you. May the Lord make His face shine upon you and be gracious to you. May the Lord lift up His face toward you and grant you peace."},
+          {"ref": "a16", "translates": ["16"], "comment": "Amud translation", "text": "<small>(Say 7 times:)</small> May the pleasantness of the Lord our God be upon us; establish the work of our hands for us; the work of our hands, establish it."},
+          {"ref": "a18", "translates": ["18"], "comment": "Amud translation", "text": "<small>(And say:)</small> You are a shelter for me; You preserve me from distress; You surround me with songs of deliverance, Selah. Trust in the Lord forever, for in God the Lord is an everlasting Rock. The Lord will give strength to His people; the Lord will bless His people with peace. The Lord of hosts is with us; the God of Jacob is our stronghold, Selah. Lord of hosts, happy is the man who trusts in You."},
+          {"ref": "a19", "translates": ["19"], "comment": "Amud translation", "text": "<small>(Say 3 times:)</small> Lord, save! May the King answer us on the day we call. <small>(Have in mind the initials of “answer us on the day we call,” Yud-Beit-Kuf.)</small>"},
+          {"ref": "a20", "translates": ["20"], "comment": "Amud translation", "text": "A song of ascents. I lift up my eyes to the mountains: from where will my help come? My help comes from the Lord, Maker of heaven and earth. He will not let your foot slip; your Guardian does not slumber. Behold, the Guardian of Israel neither slumbers nor sleeps. The Lord is your Guardian; the Lord is your shade at your right hand. By day the sun will not strike you, nor the moon by night. The Lord will guard you from all evil; He will guard your soul. The Lord will guard your going out and your coming in, from now and forever."},
+          {"ref": "a21", "translates": ["21"], "comment": "Amud translation", "text": "<small>(And say:)</small> The name of the Lord is a tower of strength; the righteous man runs into it and is set safely on high. In the name of the Lord, God of Israel: at my right Michael, at my left Gabriel, before me Uriel, behind me Raphael, and above my head the Divine Presence of God."},
+          {"ref": "a24", "translates": ["24"], "comment": "Amud translation", "text": "May it be Your will, Lord my God and God of my fathers, that You bring me into this city in peace."},
+          {"ref": "a26", "translates": ["26"], "comment": "Amud translation", "text": "I give thanks before You, Lord my God and God of my fathers, that You have brought me into this city in peace."},
+          {"ref": "a28", "translates": ["28"], "comment": "Amud translation", "text": "May it be Your will, Lord my God and God of my fathers, that You bring me out of this city in peace."},
+          {"ref": "a30", "translates": ["30"], "comment": "Amud translation", "text": "I give thanks before You, Lord my God and God of my fathers, that You have brought me out of this city in peace. And just as You have brought me out in peace, so lead me in peace, support me in peace and direct our steps in peace; rescue us from the hand of every enemy and ambush, from robbers and wild beasts on the way, and from all kinds of calamities that stir and come upon the world; send blessing and success in all the work of our hands; grant us grace, kindness and mercy in Your eyes and in the eyes of all who see us; bestow good kindness upon us, and hear the voice of our prayer, for You hear the prayer of every mouth. Blessed are You, Lord, who hears prayer."},
+          {"ref": "a32", "translates": ["32"], "comment": "Amud translation", "text": "May it be Your will, Lord my God and God of my fathers, Abraham, Isaac and Jacob, the great, mighty and awesome God, crowned with the crown of faithfulness, that You act for the sake of the holiness of Your Thirteen Attributes of Mercy, for the sake of the holiness of the Gates of Mercy, for the sake of the merit of those who sleep in Hebron, Abraham, Isaac and Jacob, Your beloved and wholehearted ones, for the sake of the merit of the binding of Isaac, Your only one, who was bound upon the altar and became a perfect offering, holy and pure; for the sake of the merit, the holiness and the prophecy of Samuel the prophet, Elijah the prophet and Elisha the prophet, Your prophets, true prophets; and for the sake of the merit of all the righteous and pious who in every generation shielded Israel: still the sea <small>(the river)</small> from its raging, and let its waves be hushed. Fulfill the desire of our hearts and lead us swiftly to our desired destination for good, as it is in Your power to do. Hear our prayer, give ear to our supplication, and answer us at this hour in which we pray and plead before You. Lead us with a good and gentle wind, as is needed; guard us from the tumult of the waves and the roar of the breakers of the sea, from rushing wind and tempest, from sorrow, from turbulent weather and changing seasons, and from the evil creatures that grow in the sea and on dry land, and from every trouble and every loss. Let no accuser, adversary, harmful spirit, confounder, terror or menace hinder us. Bring forth a good wind from Your storehouses to steer the ship, and strengthen all who hold the oars, its pilots, its sailors, its helmsmen and its craftsmen, that they steer it properly, without laziness, without weariness and without failing strength. Bring us to our desired destination without any harm, without any distress and without any fear. For You rule the swelling of the sea; when its waves rise, You still them. Turn the storm to calm, and let its waves be hushed. Guard my soul and rescue me; let me not be put to shame, for I have taken refuge in You. And we will bless the Lord from now and forever. Praise the Lord!"}
         ]
       }
     },

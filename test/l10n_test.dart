@@ -17,6 +17,8 @@ void main() {
     expect(ashkenaziSpelling("Say Ya'aleh VeYavo"), "Say Ya'aleh V'Yovo");
     expect(ashkenaziSpelling('the Festival of Matzot; Mashiach'), 'the Festival of Matzos; Moshiach');
     expect(ashkenaziSpelling('Birkat Hamazon'), 'Birchas Hamazon');
+    expect(ashkenaziSpelling('Borei Nefashot · Birkot HaShachar · Tzitzit · Zechirot'), 'Borei Nefashos · Birchos HaShachar · Tzitzis · Zechiros');
+    expect(ashkenaziSpelling('Blessings on mitzvot'), 'Blessings on mitzvos');
     expect(ashkenaziSpelling('Shabbat Shuva, Shemini Atzeret'), 'Shabbos Shuva, Shemini Atzeres');
     expect(ashkenaziSpelling('SHAVUOT'), 'SHAVUOS');
     expect(ashkenaziSpelling('Ketubot, Bava Batra and Tosafot'), 'Kesubos, Bava Basra and Tosafos');

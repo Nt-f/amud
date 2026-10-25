@@ -349,19 +349,24 @@ class _CommentarySection extends ConsumerWidget {
   }
 }
 
-/// Short prayers for through the day, each opening straight in the reader:
-/// a grid of tiles per part of the day, tinted by group.
+/// The quick prayers by part of the day: short prayers said on their own
+/// through an ordinary day (catalog keys). Parts of a service (Aleinu,
+/// Adon Olam) are found in the service.
+const quickPrayerGroups = [
+  ('Morning', [('modehAni', Icons.wb_sunny_outlined), ('netilat', Icons.water_drop_outlined), ('birkotHashachar', Icons.wb_twilight),
+    ('torahBlessings', Icons.menu_book_outlined), ('tzitzit', Icons.gesture), ('tallit', Icons.checkroom_outlined),
+    ('tefillin', Icons.sports_martial_arts), ('remembrances', Icons.history_edu_outlined)]),
+  ('Food', [('brachot', Icons.local_dining_outlined), ('boreiNefashot', Icons.local_cafe_outlined), ('meeinShalosh', Icons.bakery_dining),
+    ('birkat', Icons.restaurant)]),
+  ('Through the day', [('asherYatzar', Icons.accessibility_new), ('sights', Icons.thunderstorm_outlined), ('mitzvot', Icons.door_front_door_outlined),
+    ('derech', Icons.directions_car_outlined), ('refuah', Icons.healing_outlined), ('parnassah', Icons.work_outline),
+    ('bedtime', Icons.bedtime_outlined)]),
+];
+
+/// [quickPrayerGroups], each opening straight in the reader: a grid of
+/// tiles per part of the day, tinted by group.
 class _QuickPrayers extends ConsumerWidget {
   const _QuickPrayers();
-
-  static const _groups = [
-    ('Morning', [('modehAni', Icons.wb_sunny_outlined), ('netilat', Icons.water_drop_outlined), ('asherYatzar', Icons.accessibility_new),
-      ('torahBlessings', Icons.menu_book_outlined), ('tallit', Icons.checkroom_outlined), ('tefillin', Icons.sports_martial_arts)]),
-    ('Blessings', [('birkat', Icons.restaurant), ('brachot', Icons.local_dining_outlined), ('meeinShalosh', Icons.bakery_dining),
-      ('derech', Icons.directions_walk), ('refuah', Icons.healing_outlined), ('blessChildren', Icons.child_care)]),
-    ('Closing & night', [('bedtime', Icons.bedtime_outlined), ('aleinu', Icons.flag_outlined), ('adonOlam', Icons.music_note_outlined),
-      ('yigdal', Icons.music_note_outlined)]),
-  ];
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -389,7 +394,7 @@ class _QuickPrayers extends ConsumerWidget {
               // (narrow phones, large text), two without their icons, then
               // one.
               final names = [
-                for (final (_, items) in _groups)
+                for (final (_, items) in quickPrayerGroups)
                   for (final (key, _) in items) context.prayerTitle(s, _QuickTile.names(key).$1, _QuickTile.names(key).$2),
               ];
               final widest = widestWord(context, names, _QuickTile.labelStyle(context, s));
@@ -402,7 +407,7 @@ class _QuickPrayers extends ConsumerWidget {
               if (!icons) cols = 2;
               final w = width(cols);
               return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-                for (final (gi, (label, items)) in _groups.indexed) ...[
+                for (final (gi, (label, items)) in quickPrayerGroups.indexed) ...[
                   Padding(
                     padding: const EdgeInsets.only(top: 12, bottom: 6, left: 2),
                     child: Text(context.tr(label), style: theme.textTheme.labelMedium?.copyWith(color: cs.outline)),

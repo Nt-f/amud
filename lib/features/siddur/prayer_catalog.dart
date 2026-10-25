@@ -99,6 +99,8 @@ const catalogGroups = <CatalogGroup>[
     CatalogItem('kiddushYomTov', 'Kiddush for Yom Tov', 'קידוש ליום טוב',
         [r'kiddush for yom tov evenings?$', r'yom tov eve kiddush$'],
         when: 'yomTov', evening: true),
+    CatalogItem('blessChildren', 'Blessing the Children', 'ברכת הבנים', [r'blessing the children$', r'birkat ha.?banim$'],
+        when: 'erevShabbat', evening: true),
     _havdalah,
   ]),
 ];
@@ -127,14 +129,19 @@ const extraItems = <CatalogItem>[
   CatalogItem('modehAni', 'Modeh Ani', 'מודה אני', [r'(^|/)modeh ani$', r'(^|/)modeh$']),
   CatalogItem('netilat', 'Netilat Yadayim', 'נטילת ידים', [r'(^|/)netilat yadayim$', r'washing (?:the )?hands$']),
   CatalogItem('asherYatzar', 'Asher Yatzar', 'אשר יצר', [r'(^|/)asher yatzar$']),
+  CatalogItem('birkotHashachar', 'Birkot HaShachar', 'ברכות השחר', [r'(^|/)morning blessings$', r'birkot ha.?shachar$']),
   CatalogItem('torahBlessings', 'Torah Blessings', 'ברכות התורה', [r'(^|/)torah blessings$', r'birkot ha.?torah$']),
+  CatalogItem('tzitzit', 'Tzitzit', 'ציצית', [r'(^|/)tzitzit$', r'(^|/)tzitzit and tallit$']),
   CatalogItem('tallit', 'Tallit', 'טלית', [r'(^|/)tallit$']),
   CatalogItem('tefillin', 'Tefillin', 'תפילין', [r'(^|/)tefillin$']),
-  CatalogItem('adonOlam', 'Adon Olam', 'אדון עולם', [r'(^|/)adon olam$']),
-  CatalogItem('yigdal', 'Yigdal', 'יגדל', [r'(^|/)yigdal$']),
-  CatalogItem('aleinu', 'Aleinu', 'עלינו', [r'(^|/)aleinu$', r'(^|/)alenu$']),
-  CatalogItem('refuah', 'Mi Sheberach for the sick', 'מי שברך לחולה', [r'mi sheberach/for sickness', r'for the sick$', r'prayer for the sick']),
-  CatalogItem('blessChildren', 'Blessing the Children', 'ברכת הבנים', [r'blessing the children$', r'birkat ha.?banim$']),
+  // The Six Remembrances; Edot HaMizrach says ten.
+  CatalogItem('remembrances', 'Zechirot', 'זכירות', [r'(^|/)six remembrances$', r'(^|/)ten remembrances$']),
+  CatalogItem('boreiNefashot', 'Borei Nefashot', 'בורא נפשות', [r'(^|/)borei nefashot$']),
+  CatalogItem('sights', 'Blessings on sights', 'ברכות הראייה',
+      [r'blessings on sights', r'(^|/)lightning (?:&|and) thunder$', r'blessings on lighting and thunder$', r'pleasures, sights and sounds$']),
+  CatalogItem('mitzvot', 'Blessings on mitzvot', 'ברכות המצוות', [r'(^|/)birkhot hamitzvot$', r'(^|/)blessings on mitzvot$', r'(^|/)mezuzah?$']),
+  CatalogItem('refuah', 'Prayer for healing', 'תפילה לרפואה', [r'prayer for recovery from illness$', r'prayer for taking medicine$']),
+  CatalogItem('parnassah', 'Prayer for livelihood', 'תפילה על הפרנסה', [r'prayer for livelihood$']),
   CatalogItem('derech', 'Tefillat HaDerech', 'תפילת הדרך', [r'tefillat ha.?derech$', r"traveler.?s prayer$"]),
 ];
 

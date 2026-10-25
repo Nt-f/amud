@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:amud/core/providers.dart' show corpusFiles;
+import 'package:amud/features/siddur/library_screen.dart' show quickPrayerGroups;
 import 'package:amud/features/siddur/prayer_catalog.dart';
 import 'package:amud/features/siddur/today_plan.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -22,6 +23,8 @@ void main() {
   final roots = <String, SchemaNode>{};
   final selections = <String, VersionSelection>{};
   final resolvers = <String, SiddurResolver>{};
+  // Each book's contents as the app reads them: the corpus's, where it has one.
+  final indexes = <String, SchemaNode>{};
 
   setUpAll(() async {
     lib = SiddurLibrary(_FileSource(), gzip.decode);
@@ -40,6 +43,19 @@ void main() {
           : Corpus.fromJson(jsonDecode(utf8.decode(gzip.decode(File(f).readAsBytesSync()))) as Map<String, Object?>);
       resolvers[b.title] =
           SiddurResolver().withOverrides((rules[b.title] as Map<String, dynamic>?) ?? const {}).withCorpus(corpus);
+      indexes[b.title] = corpus?.index ?? roots[b.title]!;
+    }
+  });
+
+  test('every quick prayer is found in a bundled siddur', () {
+    for (final (_, items) in quickPrayerGroups) {
+      for (final (key, _) in items) {
+        if (key == 'meeinShalosh') continue; // a screen of its own
+        final item = catalogItem(key);
+        expect(item, isNotNull, reason: key);
+        final found = bookSearchOrder(manifest, 'Siddur Ashkenaz').where((b) => findByPatterns(indexes[b]!, item!.patterns) != null);
+        expect(found, isNotEmpty, reason: key);
+      }
     }
   });
 
