@@ -33,13 +33,16 @@ const keyPoints = [
 }
 
 /// A place in the reader's list ([row]), or a part of today's davening
-/// printed elsewhere ([elsewhere], which opens it).
+/// printed elsewhere ([elsewhere], which opens it). With every section in
+/// the bar, [part] marks where a new part of the service begins (Pesukei
+/// DeZimra after the morning blessings), set off by a divider.
 class JumpPoint {
   final String en;
   final String he;
   final int? row;
   final PrayerRef? elsewhere;
-  const JumpPoint(this.en, this.he, {this.row, this.elsewhere});
+  final bool part;
+  const JumpPoint(this.en, this.he, {this.row, this.elsewhere, this.part = false});
 }
 
 /// Chips under the reader's title that jump to the service's key points.
@@ -83,7 +86,10 @@ class _ReaderJumpBarState extends ConsumerState<ReaderJumpBar> {
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.fromLTRB(12, 4, 12, 8),
           child: Row(children: [
-            for (final (i, p) in widget.points.indexed)
+            for (final (i, p) in widget.points.indexed) ...[
+              if (p.part)
+                Container(
+                    width: 1, height: 20, margin: const EdgeInsets.symmetric(horizontal: 6), color: theme.colorScheme.outlineVariant),
               Padding(
                 key: _keys[i],
                 padding: const EdgeInsets.symmetric(horizontal: 3),
@@ -96,6 +102,7 @@ class _ReaderJumpBarState extends ConsumerState<ReaderJumpBar> {
                   onSelected: (_) => widget.onTap(p),
                 ),
               ),
+            ],
           ]),
         ),
       ),

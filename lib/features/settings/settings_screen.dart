@@ -212,6 +212,18 @@ class SettingsScreen extends ConsumerWidget {
               subtitle: context.tr("Kedusha, Birkat Kohanim and Modim DeRabbanan fold into a row"),
               value: s.collapseChazarah,
               onChanged: (v) => set((x) => x.copyWith(collapseChazarah: v))),
+          AdaptiveNavTile(
+            icon: Icons.format_list_numbered,
+            title: context.tr('Jump bar'),
+            subtitle: context.tr(_jumpDetailLabel(s.jumpDetail)),
+            onTap: () async {
+              final v = await showAdaptivePicker(context,
+                  title: context.tr('Jump bar'),
+                  selected: s.jumpDetail,
+                  options: [for (final d in JumpDetail.values) (d, context.tr(_jumpDetailLabel(d)))]);
+              if (v != null) set((x) => x.copyWith(jumpDetail: v));
+            },
+          ),
         ]),
         section('notes', Icons.sticky_note_2_outlined, 'Halachic notes', [
           AdaptiveNavTile(
@@ -601,6 +613,11 @@ String titleLanguageLabel(TitleLanguage l) => switch (l) {
       TitleLanguage.english => 'English',
       TitleLanguage.hebrew => 'Hebrew',
       TitleLanguage.both => 'English & Hebrew',
+    };
+
+String _jumpDetailLabel(JumpDetail d) => switch (d) {
+      JumpDetail.keyPoints => 'Key points',
+      JumpDetail.sections => 'Every section',
     };
 
 String _excludedLabel(ExcludedDisplay e) => switch (e) {

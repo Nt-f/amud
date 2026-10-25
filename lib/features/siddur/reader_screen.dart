@@ -428,7 +428,8 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
   }
 
   /// The list's rows, and the key points among its headings (see
-  /// [keyPoints]) with the row each starts at.
+  /// [keyPoints]), or every heading ([JumpDetail.sections]), with the row
+  /// each starts at.
   ({List<Widget Function(BuildContext)> rows, List<JumpPoint> jumps}) _rows(BuildContext context, List<RenderItem> list, SchemaNode? node) {
     final s = readerSettings(ref.watch(settingsProvider), widget.book);
     final wide = MediaQuery.sizeOf(context).width > 700;
@@ -437,6 +438,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     final rows = <Widget Function(BuildContext)>[];
     final jumps = <JumpPoint>[];
     final seen = <String>{};
+    final everySection = s.jumpDetail == JumpDetail.sections;
     if (node != null && list.every((it) => it is HeadingItem)) {
       rows.add((c) => _CollapsedTile(
             icon: Icons.visibility_off_outlined,
@@ -596,8 +598,13 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
               context.prayerTitle(s, (g is HeadingItem ? g.node : (g as CollapsedSectionItem).node).en,
                   (g is HeadingItem ? g.node : (g as CollapsedSectionItem).node).he),
         ];
+        // With every section in the jump bar, the row is a place to jump
+        // to: its first section said today, or what it holds.
+        final firstSaid = group.whereType<HeadingItem>().where((h) => h.level > 0).firstOrNull;
+        var place = firstSaid == null ? null : (firstSaid.node.en, firstSaid.node.he);
         if (titles.isEmpty && group.any((g) => g is SegmentItem && (isChazarahSegment(g) || g.graphNode == 'amidah.modim_derabbanan'))) {
           titles.add(context.tr('Modim DeRabbanan'));
+          place = ('Modim DeRabbanan', 'מודים דרבנן');
         }
         // Kedushah, or Birkas Kohanim, printed inside the Amidah (or not said today).
         if (titles.isEmpty) {
@@ -607,12 +614,15 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
           ].where((x) => x.chazarah);
           if (inGroup.any(_mentionsKedushah)) {
             titles.add(context.prayerTitle(s, 'Kedushah', 'קדושה'));
+            place = ('Kedushah', 'קדושה');
           } else if (inGroup.any((x) =>
               (x.graphNode?.startsWith('amidah.birkat_kohanim') ?? false) ||
               RegExp(r'kohanim|priestly', caseSensitive: false).hasMatch(x.node.en))) {
             titles.add(context.prayerTitle(s, 'Birkat Kohanim', 'ברכת כהנים'));
+            place = ('Birkat Kohanim', 'ברכת כהנים');
           }
         }
+        if (everySection && place != null) jumps.add(JumpPoint(place.$1, place.$2, row: rows.length));
         rows.add((c) => _ChazarahHeader(
               title: titles.toSet().join(' · '),
               open: open,
@@ -641,8 +651,23 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         InsertedSectionItem ins => ins.labelEn,
         _ => null,
       };
-      final point = title == null ? null : keyPointFor(title);
-      if (point != null && seen.add(point.$1)) jumps.add(JumpPoint(point.$1, point.$2, row: rows.length));
+      if (everySection) {
+        // Every section below the prayer's own title, by its own name.
+        final name = switch (it) {
+          HeadingItem h when h.level > 0 => (h.node.en, h.node.he),
+          InsertedSectionItem ins => (ins.labelEn, ins.labelHe),
+          _ => null,
+        };
+        if (name != null && name.$1.trim().isNotEmpty) {
+          // A part of the service (Pesukei DeZimra, not a psalm in it) is
+          // set off from the sections before it.
+          final part = jumps.isNotEmpty && it is HeadingItem && it.level == 1 && !it.node.isLeaf;
+          jumps.add(JumpPoint(name.$1, name.$2, row: rows.length, part: part));
+        }
+      } else {
+        final point = title == null ? null : keyPointFor(title);
+        if (point != null && seen.add(point.$1)) jumps.add(JumpPoint(point.$1, point.$2, row: rows.length));
+      }
       // The linear page sets a run of lines with their English under a rule.
       if (_linear == LinearStyle.below && it is SegmentItem) {
         final run = linearRun(list, i, also: (x) => !_isChazarah(x) && _unitOf(x) == null && _foldOf(x) == null && !_repeatsKedushah(x));
