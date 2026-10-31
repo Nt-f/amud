@@ -1,8 +1,10 @@
 // Renders the App Store creative assets: product page header (21:9) and
 // search results (3:2). Usage:
-//   swift tool/store/render_creative.swift FONTDIR store/app-store/raw/iphone/01-home.png store/app-store/creative [guides]
+//   swift tool/store/render_creative.swift FONTDIR store/app-store/raw/iphone-6.3/01-home.png store/app-store/creative BEZEL [guides]
 // FONTDIR holds Google Fonts' Fraunces.ttf and DMSans.ttf variable fonts and
-// assets/fonts/Fraunces-Amud.ttf. "guides" draws the safe areas instead.
+// assets/fonts/Fraunces-Amud.ttf. The screenshot is an iPhone 18 Pro capture
+// (1206×2622) and BEZEL Apple's "iPhone 18 Pro - Black - Portrait.png" (Apple
+// Design Resources), used as is. "guides" draws the safe areas instead.
 import AppKit
 import CoreText
 import ImageIO
@@ -10,7 +12,8 @@ import UniformTypeIdentifiers
 
 let args = CommandLine.arguments
 let fontDir = args[1], shotPath = args[2], outDir = args[3]
-let guides = args.count > 4 && args[4] == "guides"
+let bezelPath = args[4]
+let guides = args.count > 5 && args[5] == "guides"
 
 func rgb(_ hex: UInt32, _ a: CGFloat = 1) -> CGColor {
   CGColor(srgbRed: CGFloat((hex >> 16) & 0xff) / 255, green: CGFloat((hex >> 8) & 0xff) / 255,
@@ -158,6 +161,31 @@ func background(_ ctx: CGContext, w: CGFloat, h: CGFloat, horizon: CGFloat, cx: 
   }
 }
 
+/// The bezel's screen opening as a clipping mask: the clear pixels connected
+/// to its center, so the capture's corners never show past the frame's.
+func openingMask(_ bezel: CGImage) -> CGImage {
+  let w = bezel.width, h = bezel.height
+  var rgba = [UInt8](repeating: 0, count: w * h * 4)
+  let c = CGContext(data: &rgba, width: w, height: h, bitsPerComponent: 8, bytesPerRow: w * 4,
+                    space: CGColorSpace(name: CGColorSpace.sRGB)!, bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue)!
+  c.draw(bezel, in: CGRect(x: 0, y: 0, width: w, height: h))
+  var mask = [UInt8](repeating: 0, count: w * h)
+  var stack = [(w / 2) + (h / 2) * w]
+  while let i = stack.popLast() {
+    if mask[i] != 0 || rgba[i * 4 + 3] >= 128 { continue }
+    mask[i] = 255
+    let x = i % w
+    if x > 0 { stack.append(i - 1) }
+    if x < w - 1 { stack.append(i + 1) }
+    if i >= w { stack.append(i - w) }
+    if i < w * (h - 1) { stack.append(i + w) }
+  }
+  return CGImage(width: w, height: h, bitsPerComponent: 8, bitsPerPixel: 8, bytesPerRow: w,
+                 space: CGColorSpaceCreateDeviceGray(), bitmapInfo: CGBitmapInfo(rawValue: 0),
+                 provider: CGDataProvider(data: Data(mask) as CFData)!, decode: nil, shouldInterpolate: true,
+                 intent: .defaultIntent)!
+}
+
 func drawGuide(_ ctx: CGContext, _ r: CGRect) {
   guard guides else { return }
   ctx.setStrokeColor(rgb(0x00ff00)); ctx.setLineWidth(6); ctx.stroke(r)
@@ -197,34 +225,23 @@ do {
   draw(ctx, sub[0], x: x + 6, baseline: 1500)
   draw(ctx, sub[1], x: x + 6, baseline: 1500 + 86)
 
-  // phone, right
+  // phone, right: the capture in Apple's bezel, as is (no shadow), its
+  // corners clipped to the bezel's opening
   let shot = NSImage(contentsOfFile: shotPath)!.cgImage(forProposedRect: nil, context: nil, hints: nil)!
-  let screenW: CGFloat = 820
-  let screenH = screenW * CGFloat(shot.height) / CGFloat(shot.width)
-  let bezel: CGFloat = 34
-  let screen = CGRect(x: 2160, y: 390, width: screenW, height: screenH)
-  let body = screen.insetBy(dx: -bezel, dy: -bezel)
-  let radius: CGFloat = screenW * 0.135
+  let bezel = NSImage(contentsOfFile: bezelPath)!.cgImage(forProposedRect: nil, context: nil, hints: nil)!
+  let opening = CGRect(x: 72, y: 69, width: 1206, height: 2622)  // the bezel's screen, from the top
+  precondition(shot.width == Int(opening.width) && shot.height == Int(opening.height), "an iPhone 18 Pro capture")
+  let scale: CGFloat = 0.68
+  let frame = CGRect(x: 2110, y: 330, width: CGFloat(bezel.width) * scale, height: CGFloat(bezel.height) * scale)
   ctx.saveGState()
-  ctx.setShadow(offset: CGSize(width: 0, height: 40), blur: 120, color: rgb(0x050a1a, 0.6))
-  ctx.addPath(CGPath(roundedRect: body, cornerWidth: radius + bezel, cornerHeight: radius + bezel, transform: nil))
-  ctx.setFillColor(rgb(0x0b0f1a)); ctx.fillPath()
+  // the context is flipped; draw the images upright
+  ctx.translateBy(x: 0, y: frame.maxY + frame.minY); ctx.scaleBy(x: 1, y: -1)
+  ctx.clip(to: frame, mask: openingMask(bezel))
+  ctx.draw(shot, in: CGRect(x: frame.minX + opening.minX * scale, y: frame.maxY - opening.maxY * scale,
+                            width: opening.width * scale, height: opening.height * scale))
+  ctx.resetClip()
+  ctx.draw(bezel, in: frame)
   ctx.restoreGState()
-  ctx.addPath(CGPath(roundedRect: body.insetBy(dx: 5, dy: 5), cornerWidth: radius + bezel - 5,
-                     cornerHeight: radius + bezel - 5, transform: nil))
-  ctx.setStrokeColor(rgb(0x4a5a80)); ctx.setLineWidth(6); ctx.strokePath()
-  ctx.saveGState()
-  ctx.addPath(CGPath(roundedRect: screen, cornerWidth: radius, cornerHeight: radius, transform: nil))
-  ctx.clip()
-  // the context is flipped; flip the image back
-  ctx.translateBy(x: 0, y: screen.maxY + screen.minY); ctx.scaleBy(x: 1, y: -1)
-  ctx.draw(shot, in: screen)
-  ctx.restoreGState()
-  // Dynamic Island
-  let island = CGRect(x: screen.midX - screenW * 0.155, y: screen.minY + screenW * 0.03,
-                      width: screenW * 0.31, height: screenW * 0.092)
-  ctx.addPath(CGPath(roundedRect: island, cornerWidth: island.height / 2, cornerHeight: island.height / 2, transform: nil))
-  ctx.setFillColor(rgb(0x000000)); ctx.fillPath()
 
   drawGuide(ctx, safe)
   save(ctx, guides ? "search-guides.png" : "search-results-3840x2560.png")

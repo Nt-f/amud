@@ -88,7 +88,8 @@ Texts come from Sefaria; the calendar and zmanim from a full port of Hebcal.
 
 | Folder | Size | Slot in App Store Connect |
 |---|---|---|
-| `iphone-6.9/` | 1320×2868 | iPhone 6.9" Display (used for all smaller iPhones) |
+| `iphone-6.3/` | 1206×2622 | iPhone with Dynamic Island (medium display): **required**; iPhone 18 Pro, 17, 16 and the like |
+| `iphone-6.9/` | 1320×2868 | iPhone with Dynamic Island (large display): iPhone 18 Pro Max, Air, Plus |
 | `ipad-13/` | 2064×2752 | iPad 13" Display (used for all smaller iPads) |
 | `watch/` | 422×514 | Apple Watch Ultra (used for all watch sizes) |
 | `raw/` | as captured | The same screens without captions, if you'd rather upload plain ones |
@@ -99,3 +100,5 @@ Texts come from Sefaria; the calendar and zmanim from a full port of Hebcal.
 The two creative assets follow Apple's Forest Explorer examples and keep their key art inside the safe areas of Apple's templates (header: the centred 1640×656; search results: the centred 2160×1024). `tool/store/render_creative.swift` redraws them; its first lines say how.
 
 App Store Connect takes up to 10 screenshots per device; the first three show in search results.
+
+The iPhone screenshots follow Apple's marketing guidelines (developer.apple.com/app-store/marketing/guidelines): the app as it runs, in Apple's own bezel (Apple Design Resources → Product Bezels, iPhone 18 Pro and Pro Max) used as is, with no shadow, cropping or tilt, and a status bar with full signal, Wi-Fi and battery. To redo them: `tool/store/capture_screens.sh` captures each screen on a simulator, and `tool/store/compose_screenshots.swift` adds the caption and bezel; each says how at its top.
