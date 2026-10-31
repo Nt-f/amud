@@ -259,6 +259,15 @@ const Map<String, (String, String)> _strings = {
   'Siddur for a date': ('סידור לתאריך', 'סידור פֿאַר אַ דאַטע'),
   'Choose date': ('בחירת תאריך', 'אויסקלײַבן אַ דאַטע'),
   'Print siddur': ('הדפסת סידור', 'דרוקן דעם סידור'),
+  'Print siddur for any date': ('הדפסת סידור לכל תאריך', 'דרוקן דעם סידור פֿאַר יעדער דאַטע'),
+  'See why prayers are added or omitted for a chosen date, with your location and customs.':
+      ('ראו מדוע תפילות נוספות או מושמטות בתאריך שבחרתם, לפי המיקום והמנהגים שלכם.', 'זעט פֿאַרוואָס תּפֿילות ווערן צוגעלייגט אָדער אויסגעלאָזט אויף אַ געקליבענער דאַטע, לויט אײַער אָרט און מנהגים.'),
+  'Select words in the siddur and choose Explain this line for a translation, curated context and applicable prayer conditions.':
+      ('סמנו מילים בסידור ובחרו "הסבר על השורה" לתרגום, הקשר נבחר ותנאי התפילה הרלוונטיים.', 'צייכנט אָן ווערטער אינעם סידור און קלײַבט "דערקלערן די שורה" פֿאַר אַ איבערזעצונג, אויסגעקליבענעם הסבר און די תנאים פֿון דער תּפֿילה.'),
+  'Preview tomorrow’s prayer changes from Home, or add the Prepare for tomorrow dashboard card.':
+      ('צפו בשינויים בתפילה של מחר ממסך הבית, או הוסיפו את הכרטיס "הכנה למחר".', 'קוקט פֿאָרויס אויף די ענדערונגען אין מאָרגנדיקן דאַווענען פֿון דער היים, אָדער לייגט צו דעם קאַרטל "צוגרייטן אויף מאָרגן".'),
+  'Choose a date and services in the Siddur tab, then preview, print or save a PDF with Hebrew and optional translation.':
+      ('בחרו תאריך ותפילות בלשונית הסידור, ואז הציגו, הדפיסו או שמרו PDF בעברית ועם תרגום לפי הבחירה.', 'קלײַבט אַ דאַטע און תּפֿילות אינעם סידור טאַב, דערנאָך קוקט פֿאָרויס, דרוקט אָדער היט אַ PDF אויף לשון קודש מיט אַ איבערזעצונג ווען איר ווילט.'),
   'Print siddur / Save PDF': ('הדפסת סידור / שמירת PDF', 'דרוקן סידור / היטן PDF'),
   'Print preview': ('תצוגה מקדימה להדפסה', 'דרוק פֿאָרויסקוק'),
   'Preview, print or save PDF': ('תצוגה מקדימה, הדפסה או שמירת PDF', 'פֿאָרויסקוק, דרוקן אָדער היטן PDF'),
@@ -1254,6 +1263,16 @@ const Map<String, (String, String)> _strings = {
   "Open Shacharit, Mincha or Maariv and a bar under the title jumps to its key points, such as Shema, Shemoneh Esrei, Hallel or the Torah reading. Parts said today that are printed elsewhere open from there too.":
       ('פתחו שחרית, מנחה או ערבית, ושורה מתחת לכותרת קופצת לנקודות המרכזיות, כמו שמע, שמונה עשרה, הלל או קריאת התורה. חלקים שנאמרים היום ומודפסים במקום אחר נפתחים משם גם כן.',
           'עפנט שחרית, מנחה אדער מעריב, און א ריי אונטער דעם טיטל שפרינגט צו די הויפט טיילן, ווי שמע, שמונה עשרה, הלל אדער קריאת התורה. טיילן וואס מען זאגט היינט און זענען געדרוקט אנדערשוואו עפענען זיך פון דארט אויך.'),
+  'Jump bar': ('סרגל ניווט', 'שפרינג־ריי'),
+  'Key points': ('נקודות מרכזיות', 'הויפט טיילן'),
+  'Every section': ('כל חלק', 'יעדער טייל'),
+  'Shema, Shemoneh Esrei, Hallel, the Torah reading': ('שמע, שמונה עשרה, הלל, קריאת התורה', 'שמע, שמונה עשרה, הלל, קריאת התורה'),
+  'Each prayer in the service: Tallit, Tefillin, Modeh Ani, each psalm and blessing':
+      ('כל תפילה שבסדר: טלית, תפילין, מודה אני, כל מזמור וכל ברכה', 'יעדע תפילה אין סדר: טלית, תפילין, מודה אני, יעדער מזמור און יעדע ברכה'),
+  'Jump to every section': ('קפיצה לכל חלק', 'שפרינגען צו יעדן טייל'),
+  'In Text settings, set the jump bar to Every section and it lists each prayer of the service: Tallit, Tefillin, Modeh Ani, each psalm and each blessing of the Amidah.':
+      ('בהגדרות הטקסט, בחרו בסרגל הניווט "כל חלק" והוא יציג כל תפילה שבסדר: טלית, תפילין, מודה אני, כל מזמור וכל ברכה של העמידה.',
+          'אין די טעקסט איינשטעלונגען, שטעלט די שפרינג־ריי אויף "יעדער טייל" און זי ווייזט יעדע תפילה אין סדר: טלית, תפילין, מודה אני, יעדער מזמור און יעדע ברכה פון שמונה עשרה.'),
   'Now': ('עכשיו', 'איצט'),
   'Added today': ('נוסף היום', 'צוגעלייגט היינט'),
   'Tap to open {service}': ('הקישו לפתיחת {service}', 'טאפט צו עפענען {service}'),

@@ -71,7 +71,7 @@ const syncedSettingsFields = {
   'layout', 'linearStyle', 'notesLanguage', 'titleLanguage', 'uiLanguage', 'ashkenaziSpelling', 'showTeamim', 'showNikud', 'preferTrop',
   'textScale', 'hebrewFont', 'sefardiFont', 'latinFont', 'excludedDisplay', 'showNotes', 'conciseNotes', 'collapseNotes', 'collapseChazarah',
   'choices', 'showInstructions', 'highlightToday', 'highlightColor', 'typesetting', 'justifyText', 'typeContrast', 'minhagim', 'themeMode',
-  'warmth', 'seedColor', 'openLicensesOnly', 'learningSchedules',
+  'warmth', 'seedColor', 'openLicensesOnly', 'learningSchedules', 'jumpDetail',
 };
 
 final syncSources = <SyncSource>[

@@ -12,6 +12,12 @@ import '../settings/typesetting_options.dart';
 import 'book_kind.dart';
 import 'versions_screen.dart';
 
+/// What a [JumpDetail] puts in the reader's jump bar.
+String jumpDetailHint(JumpDetail d) => switch (d) {
+      JumpDetail.keyPoints => 'Shema, Shemoneh Esrei, Hallel, the Torah reading',
+      JumpDetail.sections => 'Each prayer in the service: Tallit, Tefillin, Modeh Ani, each psalm and blessing',
+    };
+
 Future<void> showReaderSettings(BuildContext context, String book) => showModalBottomSheet<void>(
       context: context,
       isScrollControlled: true,
@@ -122,6 +128,19 @@ class _ReaderSettings extends ConsumerWidget {
             ],
             selected: s.titleLanguage,
             onChanged: (v) => n.update((x) => x.copyWith(titleLanguage: v)),
+          ),
+          SheetLabel(context.tr('Jump bar')),
+          ChoiceBar<JumpDetail>(
+            options: [
+              (JumpDetail.keyPoints, context.tr('Key points'), null),
+              (JumpDetail.sections, context.tr('Every section'), null),
+            ],
+            selected: s.jumpDetail,
+            onChanged: (v) => n.update((x) => x.copyWith(jumpDetail: v)),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 4),
+            child: Text(context.tr(jumpDetailHint(s.jumpDetail)), style: theme.textTheme.bodySmall),
           ),
           const SizedBox(height: 16),
           ListTile(

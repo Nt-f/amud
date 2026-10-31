@@ -86,6 +86,11 @@ enum NotesLanguage { bilingual, english, hebrew }
 /// otherwise.
 enum TitleLanguage { auto, english, hebrew, both }
 
+/// What the reader's jump bar offers: [keyPoints] (Shema, Shemoneh Esrei,
+/// Hallel…), or [sections], every section of the prayer (Tallit, Tefillin,
+/// Modeh Ani…).
+enum JumpDetail { keyPoints, sections }
+
 enum AppThemeMode {
   system('System'),
   light('Light'),
@@ -157,6 +162,9 @@ class AppSettings {
   /// Fold the chazzan's repetition (Kedushah, Birkas Kohanim, Modim
   /// DeRabbanan) into a tappable row.
   final bool collapseChazarah;
+
+  /// How many places the reader's jump bar offers (see [JumpDetail]).
+  final JumpDetail jumpDetail;
 
   /// The reader's answers to choices drawn in the text (id → option), e.g.
   /// `table` → `own`.
@@ -262,6 +270,7 @@ class AppSettings {
     this.conciseNotes = true,
     this.collapseNotes = true,
     this.collapseChazarah = true,
+    this.jumpDetail = JumpDetail.keyPoints,
     this.choices = const {},
     this.showInstructions = true,
     this.highlightToday = true,
@@ -323,6 +332,7 @@ class AppSettings {
     bool? conciseNotes,
     bool? collapseNotes,
     bool? collapseChazarah,
+    JumpDetail? jumpDetail,
     Map<String, String>? choices,
     bool? showInstructions,
     bool? highlightToday,
@@ -383,6 +393,7 @@ class AppSettings {
         conciseNotes: conciseNotes ?? this.conciseNotes,
         collapseNotes: collapseNotes ?? this.collapseNotes,
         collapseChazarah: collapseChazarah ?? this.collapseChazarah,
+        jumpDetail: jumpDetail ?? this.jumpDetail,
         choices: choices ?? this.choices,
         showInstructions: showInstructions ?? this.showInstructions,
         highlightToday: highlightToday ?? this.highlightToday,
@@ -448,6 +459,7 @@ class AppSettings {
         'conciseNotes': conciseNotes,
         'collapseNotes': collapseNotes,
         'collapseChazarah': collapseChazarah,
+        'jumpDetail': jumpDetail.name,
         'choices': choices,
         'showInstructions': showInstructions,
         'highlightToday': highlightToday,
@@ -552,6 +564,7 @@ class AppSettings {
       conciseNotes: pick('conciseNotes', d.conciseNotes),
       collapseNotes: pick('collapseNotes', d.collapseNotes),
       collapseChazarah: pick('collapseChazarah', d.collapseChazarah),
+      jumpDetail: byName(JumpDetail.values, 'jumpDetail', d.jumpDetail),
       choices: orElse(
           () => {
                 for (final e in ((j['choices'] as Map?) ?? const {}).entries)

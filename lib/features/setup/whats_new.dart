@@ -31,6 +31,8 @@ const features = [
   Feature(7, Icons.menu_book, 'Explain this line', 'Select words in the siddur and choose Explain this line for a translation, curated context and applicable prayer conditions.'),
   Feature(8, Icons.nights_stay_outlined, 'Prepare for tomorrow', 'Preview tomorrow’s prayer changes from Home, or add the Prepare for tomorrow dashboard card.'),
   Feature(9, Icons.print, 'Print siddur for any date', 'Choose a date and services in the Siddur tab, then preview, print or save a PDF with Hebrew and optional translation.'),
+  Feature(10, Icons.format_list_numbered, 'Jump to every section',
+      'In Text settings, set the jump bar to Every section and it lists each prayer of the service: Tallit, Tefillin, Modeh Ani, each psalm and each blessing of the Amidah.'),
 ];
 
 int get latestFeature => features.last.id;

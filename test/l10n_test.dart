@@ -1,6 +1,9 @@
 import 'dart:io';
 import 'package:flutter/widgets.dart';
 import 'package:amud/core/l10n.dart';
+import 'package:amud/core/settings.dart';
+import 'package:amud/features/setup/whats_new.dart';
+import 'package:amud/features/siddur/reader_settings_sheet.dart';
 import 'package:amud/features/zmanim/zman_catalog.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -22,6 +25,7 @@ void main() {
     expect(ashkenaziSpelling('Day 13h 2m · shaah zmanit 65.2 min'), 'Day 13h 2m · shaah zmanis 65.2 min');
     expect(ashkenaziSpelling('4.50 shaot zmaniyot (GRA)'), '4.50 shaos zmaniyos (GRA)');
     expect(ashkenaziSpelling('The aliyot you finished'), 'The aliyos you finished');
+    expect(ashkenaziSpelling('Each prayer in the service: Tallit, Tefillin, Modeh Ani'), 'Each prayer in the service: Tallis, Tefillin, Modeh Ani');
     // Doesn't touch words that merely contain a term.
     expect(ashkenaziSpelling('Alphabet and betting'), 'Alphabet and betting');
   });
@@ -38,6 +42,19 @@ void main() {
   });
 
   // tr() is given these as data, so the literal check below can't see them.
+  test('jump bar hints and new features are translated', () {
+    const he = AppText(lang: UiLanguage.he, ashkenazi: false, child: SizedBox());
+    const yi = AppText(lang: UiLanguage.yi, ashkenazi: true, child: SizedBox());
+    final texts = [
+      for (final d in JumpDetail.values) jumpDetailHint(d),
+      for (final f in features) ...[f.title, f.body],
+    ];
+    for (final t in texts) {
+      expect(he.tr(t), isNot(t), reason: t);
+      expect(yi.tr(t), isNot(yi.term(t)), reason: t);
+    }
+  });
+
   test('zman opinions and custom zman descriptions are translated', () {
     const he = AppText(lang: UiLanguage.he, ashkenazi: false, child: SizedBox());
     const yi = AppText(lang: UiLanguage.yi, ashkenazi: true, child: SizedBox());
