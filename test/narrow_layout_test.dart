@@ -16,8 +16,10 @@ import 'package:amud/features/home/card_registry.dart';
 import 'package:amud/features/home/cards/builtin_cards.dart';
 import 'package:amud/features/home/home_screen.dart';
 import 'package:amud/features/integrations/seasonal_windows.dart';
+import 'package:amud/features/siddur/meein_shalosh_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hebcal/hebcal.dart';
@@ -51,10 +53,10 @@ Future<void> _bar(WidgetTester t, double width, double scale, {bool compass = fa
 
 final _menu = find.byType(PopupMenuButton<VoidCallback>);
 
-/// [child] on a phone [width] wide at text size [scale], at [now] in New
-/// York, with its own storage.
-Future<ProviderContainer> _phone(WidgetTester t, double width, double scale, DateTime now, Widget child) async {
-  t.view.physicalSize = Size(width, 900);
+/// [child] on a phone [width] wide (and [height] tall) at text size
+/// [scale], at [now] in New York, with its own storage.
+Future<ProviderContainer> _phone(WidgetTester t, double width, double scale, DateTime now, Widget child, {double height = 900}) async {
+  t.view.physicalSize = Size(width, height);
   t.view.devicePixelRatio = 1;
   t.platformDispatcher.textScaleFactorTestValue = scale;
   addTearDown(t.view.reset);
@@ -112,6 +114,15 @@ bool _whole(WidgetTester t, String text) => !t.renderObject<RenderParagraph>(fin
 bool _unbroken(WidgetTester t, String text) {
   final p = t.renderObject<RenderParagraph>(find.text(text));
   return p.size.width >= p.getMinIntrinsicWidth(double.infinity);
+}
+
+/// Me'ein Shalosh's text: how much it's scaled down, where it's shown, the
+/// card it's in, and the page's scroll position.
+({double scale, Rect text, Rect card, ScrollPosition scroll}) _bracha(WidgetTester t) {
+  final card = find.byType(Card);
+  final text = find.descendant(of: card, matching: find.byType(Directionality)).first;
+  final rect = t.getRect(text);
+  return (scale: rect.width / t.renderObject<RenderBox>(text).size.width, text: rect, card: t.getRect(card), scroll: Scrollable.of(t.element(text)).position);
 }
 
 DateTime _ny(int y, int m, int d, int h) => tz.TZDateTime(tz.getLocation('America/New_York'), y, m, d, h);
@@ -340,4 +351,64 @@ void main() {
       await t.pump(const Duration(seconds: 20));
     });
   }
+
+  group("Me'ein Shalosh", () {
+    testWidgets('on an ordinary phone the bracha still fits without scrolling', (t) async {
+      await _phone(t, 360, 1.0, _ny(2026, 11, 3, 12), const MeeinShaloshScreen(), height: 780);
+      await t.pumpAndSettle();
+      expect(_bracha(t).scroll.maxScrollExtent, 0);
+      await t.tap(find.text('Al HaMichya'));
+      await t.pumpAndSettle();
+      expect(_bracha(t).scroll.maxScrollExtent, 0);
+      await t.pumpWidget(const SizedBox());
+      await t.pump(const Duration(seconds: 20));
+    });
+
+    for (final (w, h) in [(240.0, 320.0), (320.0, 240.0)]) {
+      for (final scale in [1.0, 1.3]) {
+        testWidgets('on a ${w.toInt()}×${h.toInt()} flip phone, $scale× text, it scrolls rather than shrink past reading or cut off the end', (t) async {
+          await _phone(t, w, scale, _ny(2026, 11, 3, 12), const MeeinShaloshScreen(), height: h);
+          await t.pumpAndSettle();
+          for (final pick in [null, 'Al HaMichya']) {
+            if (pick != null) {
+              await t.tap(find.text(pick));
+              await t.pumpAndSettle();
+            }
+            var b = _bracha(t);
+            expect(b.scale, greaterThanOrEqualTo(0.449), reason: 'text scaled to ${b.scale}');
+            expect(b.scroll.maxScrollExtent, greaterThan(0));
+            b.scroll.jumpTo(b.scroll.maxScrollExtent);
+            await t.pump();
+            b = _bracha(t);
+            // The whole bracha is inside its card, and the card's end is on screen.
+            expect(b.text.bottom, lessThanOrEqualTo(b.card.bottom));
+            expect(b.card.bottom, lessThanOrEqualTo(h));
+            b.scroll.jumpTo(0);
+            await t.pump();
+          }
+          await t.pumpWidget(const SizedBox());
+          await t.pump(const Duration(seconds: 20));
+        });
+      }
+    }
+
+    testWidgets("a flip phone's keypad scrolls it down and back up", (t) async {
+      await _phone(t, 240, 1.0, _ny(2026, 11, 3, 12), const MeeinShaloshScreen(), height: 320);
+      await t.pumpAndSettle();
+      final scroll = _bracha(t).scroll;
+      await t.sendKeyEvent(LogicalKeyboardKey.arrowDown);
+      await t.pumpAndSettle();
+      final down = scroll.pixels;
+      expect(down, greaterThan(0));
+      await t.sendKeyEvent(LogicalKeyboardKey.arrowDown);
+      await t.pumpAndSettle();
+      expect(scroll.pixels, greaterThan(down));
+      await t.sendKeyEvent(LogicalKeyboardKey.arrowUp);
+      await t.sendKeyEvent(LogicalKeyboardKey.arrowUp);
+      await t.pumpAndSettle();
+      expect(scroll.pixels, 0);
+      await t.pumpWidget(const SizedBox());
+      await t.pump(const Duration(seconds: 20));
+    });
+  });
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 
@@ -82,8 +83,10 @@ const _seasonal = [
 ];
 
 /// Bracha Me'ein Shalosh on a single screen: pick what you ate and the
-/// matching phrases are woven in, color-coded; the whole text is scaled to
-/// fit the screen so it never needs scrolling.
+/// matching phrases are woven in, color-coded. The whole text is scaled to
+/// fit the screen, but never below a readable size: on a screen too small
+/// for that (a flip phone) the page scrolls instead, by touch or with the
+/// keypad's up and down keys.
 class MeeinShaloshScreen extends ConsumerStatefulWidget {
   const MeeinShaloshScreen({super.key});
 
@@ -95,6 +98,15 @@ class _MeeinShaloshScreenState extends ConsumerState<MeeinShaloshScreen> {
   /// The foods picked; empty shows all three options. Always combined in
   /// [_Food] order (grain, wine, fruit), which is the order of the bracha.
   final Set<_Food> _ate = {};
+
+  final _scroll = ScrollController();
+  late final _keyScroll = _KeyScrollAction(_scroll);
+
+  @override
+  void dispose() {
+    _scroll.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -121,53 +133,118 @@ class _MeeinShaloshScreenState extends ConsumerState<MeeinShaloshScreen> {
         child: Center(
           child: ConstrainedBox(
             constraints: const BoxConstraints(maxWidth: 760),
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(12, 4, 12, 12),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  IntrinsicHeight(
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        for (final f in _Food.values) ...[
-                          if (f != _Food.grain) const SizedBox(width: 8),
-                          Expanded(
-                            child: _FoodToggle(
-                              food: f,
-                              selected: _ate.contains(f),
-                              onTap: () => setState(() => _ate.contains(f) ? _ate.remove(f) : _ate.add(f)),
+            // Up and down scroll when there's more to see; otherwise they
+            // move focus as usual.
+            child: Shortcuts(
+              shortcuts: const {
+                SingleActivator(LogicalKeyboardKey.arrowDown): ScrollIntent(direction: AxisDirection.down),
+                SingleActivator(LogicalKeyboardKey.arrowUp): ScrollIntent(direction: AxisDirection.up),
+                SingleActivator(LogicalKeyboardKey.pageDown): ScrollIntent(direction: AxisDirection.down, type: ScrollIncrementType.page),
+                SingleActivator(LogicalKeyboardKey.pageUp): ScrollIntent(direction: AxisDirection.up, type: ScrollIncrementType.page),
+              },
+              child: Actions(
+                actions: {ScrollIntent: _keyScroll},
+                child: Focus(
+                  autofocus: true,
+                  skipTraversal: true,
+                  child: Scrollbar(
+                    controller: _scroll,
+                    child: CustomScrollView(
+                      controller: _scroll,
+                      slivers: [
+                        // Fills the screen when the text fits at a readable
+                        // size; taller than it (and so scrolling) when not.
+                        SliverFillRemaining(
+                          hasScrollBody: false,
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(12, 4, 12, 12),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                IntrinsicHeight(
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+                                      for (final f in _Food.values) ...[
+                                        if (f != _Food.grain) const SizedBox(width: 8),
+                                        Expanded(
+                                          child: _FoodToggle(
+                                            food: f,
+                                            selected: _ate.contains(f),
+                                            onTap: () => setState(() => _ate.contains(f) ? _ate.remove(f) : _ate.add(f)),
+                                          ),
+                                        ),
+                                      ],
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: 6),
+                                  child: Text(
+                                    context.tr(_ate.isEmpty ? 'Tap what you ate to build the bracha' : 'Tap again to deselect, or pick more'),
+                                    textAlign: TextAlign.center,
+                                    style: theme.textTheme.bodySmall,
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Card(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(12),
+                                      child: _ScaleToFit(
+                                        child: _BrachaText(ate: _ate, seasonal: today),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                        ],
+                        ),
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 6),
-                    child: Text(
-                      context.tr(_ate.isEmpty ? 'Tap what you ate to build the bracha' : 'Tap again to deselect, or pick more'),
-                      textAlign: TextAlign.center,
-                      style: theme.textTheme.bodySmall,
-                    ),
-                  ),
-                  Expanded(
-                    child: Card(
-                      child: Padding(
-                        padding: const EdgeInsets.all(12),
-                        child: _ScaleToFit(
-                          child: _BrachaText(ate: _ate, seasonal: today),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
           ),
         ),
       ),
     );
+  }
+}
+
+/// Scrolls the bracha with the keypad: a third of the screen per arrow, most
+/// of it per page. Disabled at either end, so the key moves focus instead.
+class _KeyScrollAction extends Action<ScrollIntent> {
+  final ScrollController controller;
+  _KeyScrollAction(this.controller);
+
+  /// Where the last press is still scrolling to, so quick presses add up.
+  double? _target;
+
+  double get _from {
+    final p = controller.position;
+    return p.isScrollingNotifier.value && _target != null ? _target! : p.pixels;
+  }
+
+  @override
+  bool isEnabled(ScrollIntent intent) {
+    if (!controller.hasClients) return false;
+    final p = controller.position;
+    return switch (intent.direction) {
+      AxisDirection.down => _from < p.maxScrollExtent,
+      AxisDirection.up => _from > p.minScrollExtent,
+      _ => false,
+    };
+  }
+
+  @override
+  void invoke(ScrollIntent intent) {
+    final p = controller.position;
+    final step = p.viewportDimension * (intent.type == ScrollIncrementType.page ? 0.8 : 0.33);
+    final to = (_from + (intent.direction == AxisDirection.down ? step : -step)).clamp(p.minScrollExtent, p.maxScrollExtent);
+    _target = to;
+    controller.animateTo(to, duration: const Duration(milliseconds: 150), curve: Curves.easeOut);
   }
 }
 
@@ -407,7 +484,9 @@ class _BrachaText extends ConsumerWidget {
 /// Scales its child uniformly so it fills the available height without
 /// overflowing: the child is laid out at a wider (or narrower) virtual width
 /// and then scaled to the real width, so text reflows instead of just
-/// shrinking. Never scrolls.
+/// shrinking. It never shrinks below a readable size: its intrinsic height is
+/// what the child needs at that size, so in a [SliverFillRemaining] it grows
+/// past the screen (and scrolls) rather than shrink further.
 class _ScaleToFit extends SingleChildRenderObjectWidget {
   const _ScaleToFit({required super.child});
 
@@ -416,15 +495,30 @@ class _ScaleToFit extends SingleChildRenderObjectWidget {
 }
 
 class _RenderScaleToFit extends RenderProxyBox {
-  static const _minScale = 0.35, _maxScale = 1.6;
+  /// Below [_minScale] (about 10px, times the reader's text size) it scrolls
+  /// instead. Ordinary phones fit the bracha above it; a flip phone doesn't.
+  static const _minScale = 0.45, _maxScale = 1.6;
   double _scale = 1;
   double _dy = 0;
 
   Matrix4 get _transform => Matrix4.translationValues(0, _dy, 0)..multiply(Matrix4.diagonal3Values(_scale, _scale, 1));
 
+  /// The height the child needs at the smallest readable scale.
+  double _readableHeight(double width) => child == null ? 0 : child!.getMaxIntrinsicHeight(width / _minScale) * _minScale;
+
+  @override
+  double computeMinIntrinsicHeight(double width) => _readableHeight(width);
+
+  @override
+  double computeMaxIntrinsicHeight(double width) => _readableHeight(width);
+
+  @override
+  Size computeDryLayout(BoxConstraints constraints) =>
+      constraints.hasBoundedHeight ? constraints.biggest : Size(constraints.maxWidth, _readableHeight(constraints.maxWidth));
+
   @override
   void performLayout() {
-    size = constraints.biggest;
+    size = computeDryLayout(constraints);
     final child = this.child;
     if (child == null) return;
     // Height (in real pixels) the content needs at a given scale.
