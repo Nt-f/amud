@@ -84,9 +84,9 @@ const _seasonal = [
 
 /// Bracha Me'ein Shalosh on a single screen: pick what you ate and the
 /// matching phrases are woven in, color-coded. The whole text is scaled to
-/// fit the screen, but never below a readable size: on a screen too small
-/// for that (a flip phone) the page scrolls instead, by touch or with the
-/// keypad's up and down keys.
+/// fit the screen, but never below a readable size. On a screen too short
+/// for that (a flip phone) it's set at the reader's text size and the page
+/// scrolls, by touch or with the keypad's up and down keys.
 class MeeinShaloshScreen extends ConsumerStatefulWidget {
   const MeeinShaloshScreen({super.key});
 
@@ -110,7 +110,6 @@ class _MeeinShaloshScreenState extends ConsumerState<MeeinShaloshScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final date = ref.watch(readerDaytimeDateProvider);
     // Past sunset (before dawn), tonight's additions: Shabbat's on Friday
     // night, none for a Rosh Chodesh that has ended.
@@ -120,94 +119,111 @@ class _MeeinShaloshScreenState extends ConsumerState<MeeinShaloshScreen> {
       for (final s in _seasonal)
         if (ctx[s.$1]) s,
     ];
+    // A flip phone, a phone's cover screen or a phone on its side: too
+    // short to fit the bracha at a size worth reading, so it's set at the
+    // reader's text size and scrolls, under a title bar that scrolls away.
+    final compact = MediaQuery.sizeOf(context).height < 480;
+    final readerScale = ref.watch(settingsProvider.select((s) => s.textScale));
     return Scaffold(
-      appBar: AppBar(
-        title: Text(context.tr("Me'ein Shalosh")),
-        actions: [
-          if (_ate.isNotEmpty)
-            IconButton(tooltip: context.tr('Show all'), icon: const Icon(Icons.restart_alt), onPressed: () => setState(_ate.clear)),
-        ],
-      ),
       body: SafeArea(
         top: false,
-        child: Center(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 760),
-            // Up and down scroll when there's more to see; otherwise they
-            // move focus as usual.
-            child: Shortcuts(
-              shortcuts: const {
-                SingleActivator(LogicalKeyboardKey.arrowDown): ScrollIntent(direction: AxisDirection.down),
-                SingleActivator(LogicalKeyboardKey.arrowUp): ScrollIntent(direction: AxisDirection.up),
-                SingleActivator(LogicalKeyboardKey.pageDown): ScrollIntent(direction: AxisDirection.down, type: ScrollIncrementType.page),
-                SingleActivator(LogicalKeyboardKey.pageUp): ScrollIntent(direction: AxisDirection.up, type: ScrollIncrementType.page),
-              },
-              child: Actions(
-                actions: {ScrollIntent: _keyScroll},
-                child: Focus(
-                  autofocus: true,
-                  skipTraversal: true,
-                  child: Scrollbar(
+        // Up and down scroll when there's more to see; otherwise they move
+        // focus as usual.
+        child: Shortcuts(
+          shortcuts: const {
+            SingleActivator(LogicalKeyboardKey.arrowDown): ScrollIntent(direction: AxisDirection.down),
+            SingleActivator(LogicalKeyboardKey.arrowUp): ScrollIntent(direction: AxisDirection.up),
+            SingleActivator(LogicalKeyboardKey.pageDown): ScrollIntent(direction: AxisDirection.down, type: ScrollIncrementType.page),
+            SingleActivator(LogicalKeyboardKey.pageUp): ScrollIntent(direction: AxisDirection.up, type: ScrollIncrementType.page),
+          },
+          child: Actions(
+            actions: {ScrollIntent: _keyScroll},
+            child: Focus(
+              autofocus: true,
+              skipTraversal: true,
+              child: Scrollbar(
+                controller: _scroll,
+                child: LayoutBuilder(
+                  builder: (context, c) => CustomScrollView(
                     controller: _scroll,
-                    child: CustomScrollView(
-                      controller: _scroll,
-                      slivers: [
-                        // Fills the screen when the text fits at a readable
-                        // size; taller than it (and so scrolling) when not.
-                        SliverFillRemaining(
+                    slivers: [
+                      SliverAppBar(
+                        floating: true,
+                        snap: true,
+                        title: Text(context.tr("Me'ein Shalosh")),
+                        actions: [
+                          if (_ate.isNotEmpty)
+                            IconButton(tooltip: context.tr('Show all'), icon: const Icon(Icons.restart_alt), onPressed: () => setState(_ate.clear)),
+                        ],
+                      ),
+                      SliverPadding(
+                        padding: EdgeInsets.symmetric(horizontal: ((c.maxWidth - 760) / 2).clamp(0, double.infinity)),
+                        // Fills the screen when the text fits; taller than
+                        // it (and so scrolling) when not.
+                        sliver: SliverFillRemaining(
                           hasScrollBody: false,
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(12, 4, 12, 12),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                IntrinsicHeight(
-                                  child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                                    children: [
-                                      for (final f in _Food.values) ...[
-                                        if (f != _Food.grain) const SizedBox(width: 8),
-                                        Expanded(
-                                          child: _FoodToggle(
-                                            food: f,
-                                            selected: _ate.contains(f),
-                                            onTap: () => setState(() => _ate.contains(f) ? _ate.remove(f) : _ate.add(f)),
-                                          ),
-                                        ),
-                                      ],
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(vertical: 6),
-                                  child: Text(
-                                    context.tr(_ate.isEmpty ? 'Tap what you ate to build the bracha' : 'Tap again to deselect, or pick more'),
-                                    textAlign: TextAlign.center,
-                                    style: theme.textTheme.bodySmall,
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Card(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(12),
-                                      child: _ScaleToFit(
-                                        child: _BrachaText(ate: _ate, seasonal: today),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: _page(context, today, compact: compact, minScale: compact ? readerScale : _RenderScaleToFit.readableScale),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  /// The food buttons and the bracha under them, which is scaled to fit
+  /// what's left of the screen but no smaller than [minScale].
+  Widget _page(BuildContext context, List<(String, String, String)> today, {required bool compact, required double minScale}) {
+    final gap = compact ? 6.0 : 12.0;
+    return Padding(
+      padding: EdgeInsets.fromLTRB(gap, 4, gap, gap),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          IntrinsicHeight(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                for (final f in _Food.values) ...[
+                  if (f != _Food.grain) SizedBox(width: compact ? 6 : 8),
+                  Expanded(
+                    child: _FoodToggle(
+                      food: f,
+                      selected: _ate.contains(f),
+                      compact: compact,
+                      onTap: () => setState(() => _ate.contains(f) ? _ate.remove(f) : _ate.add(f)),
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: compact ? 4 : 6),
+            child: Text(
+              context.tr(_ate.isEmpty ? 'Tap what you ate to build the bracha' : 'Tap again to deselect, or pick more'),
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+          ),
+          Expanded(
+            child: Card(
+              margin: compact ? EdgeInsets.zero : null,
+              child: Padding(
+                padding: EdgeInsets.all(compact ? 8 : 12),
+                child: _ScaleToFit(
+                  minScale: minScale,
+                  child: _BrachaText(ate: _ate, seasonal: today),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -251,8 +267,11 @@ class _KeyScrollAction extends Action<ScrollIntent> {
 class _FoodToggle extends ConsumerWidget {
   final _Food food;
   final bool selected;
+
+  /// On a small screen: shorter, without the examples of what it's for.
+  final bool compact;
   final VoidCallback onTap;
-  const _FoodToggle({required this.food, required this.selected, required this.onTap});
+  const _FoodToggle({required this.food, required this.selected, required this.onTap, this.compact = false});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -274,7 +293,7 @@ class _FoodToggle extends ConsumerWidget {
         child: InkWell(
           onTap: onTap,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
+            padding: EdgeInsets.symmetric(horizontal: 6, vertical: compact ? 4 : 8),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -300,13 +319,14 @@ class _FoodToggle extends ConsumerWidget {
                     style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: fg),
                   ),
                 ),
-                Text(
-                  context.tr(info.foods),
-                  textAlign: TextAlign.center,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 10, height: 1.2, color: fg.withValues(alpha: 0.85)),
-                ),
+                if (!compact)
+                  Text(
+                    context.tr(info.foods),
+                    textAlign: TextAlign.center,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontSize: 10, height: 1.2, color: fg.withValues(alpha: 0.85)),
+                  ),
               ],
             ),
           ),
@@ -484,26 +504,41 @@ class _BrachaText extends ConsumerWidget {
 /// Scales its child uniformly so it fills the available height without
 /// overflowing: the child is laid out at a wider (or narrower) virtual width
 /// and then scaled to the real width, so text reflows instead of just
-/// shrinking. It never shrinks below a readable size: its intrinsic height is
-/// what the child needs at that size, so in a [SliverFillRemaining] it grows
-/// past the screen (and scrolls) rather than shrink further.
+/// shrinking. It never shrinks below [minScale]: its intrinsic height is what
+/// the child needs at that scale, so in a [SliverFillRemaining] it grows past
+/// the screen (and scrolls) rather than shrink further.
 class _ScaleToFit extends SingleChildRenderObjectWidget {
-  const _ScaleToFit({required super.child});
+  final double minScale;
+  const _ScaleToFit({required this.minScale, required super.child});
 
   @override
-  RenderObject createRenderObject(BuildContext context) => _RenderScaleToFit();
+  RenderObject createRenderObject(BuildContext context) => _RenderScaleToFit(minScale);
+
+  @override
+  void updateRenderObject(BuildContext context, _RenderScaleToFit renderObject) => renderObject.minScale = minScale;
 }
 
 class _RenderScaleToFit extends RenderProxyBox {
-  /// Below [_minScale] (about 10px, times the reader's text size) it scrolls
-  /// instead. Ordinary phones fit the bracha above it; a flip phone doesn't.
-  static const _minScale = 0.45, _maxScale = 1.6;
+  _RenderScaleToFit(this._minScale);
+
+  /// The smallest the bracha is worth reading at, about 10px (times the
+  /// system text size). Ordinary phones fit it above this.
+  static const readableScale = 0.45;
+  static const _maxScale = 1.6;
+
+  double _minScale;
+  set minScale(double v) {
+    if (v == _minScale) return;
+    _minScale = v;
+    markNeedsLayout();
+  }
+
   double _scale = 1;
   double _dy = 0;
 
   Matrix4 get _transform => Matrix4.translationValues(0, _dy, 0)..multiply(Matrix4.diagonal3Values(_scale, _scale, 1));
 
-  /// The height the child needs at the smallest readable scale.
+  /// The height the child needs at [_minScale].
   double _readableHeight(double width) => child == null ? 0 : child!.getMaxIntrinsicHeight(width / _minScale) * _minScale;
 
   @override
@@ -528,7 +563,7 @@ class _RenderScaleToFit extends RenderProxyBox {
     }
 
     // needed() only grows with scale, so binary search the largest that fits.
-    var lo = _minScale, hi = _maxScale;
+    var lo = _minScale, hi = _maxScale < _minScale ? _minScale : _maxScale;
     if (needed(hi) <= size.height) {
       lo = hi;
     } else {

@@ -366,7 +366,7 @@ void main() {
 
     for (final (w, h) in [(240.0, 320.0), (320.0, 240.0)]) {
       for (final scale in [1.0, 1.3]) {
-        testWidgets('on a ${w.toInt()}×${h.toInt()} flip phone, $scale× text, it scrolls rather than shrink past reading or cut off the end', (t) async {
+        testWidgets('on a ${w.toInt()}×${h.toInt()} flip phone, $scale× text, it scrolls at the reader\'s text size, its end not cut off', (t) async {
           await _phone(t, w, scale, _ny(2026, 11, 3, 12), const MeeinShaloshScreen(), height: h);
           await t.pumpAndSettle();
           for (final pick in [null, 'Al HaMichya']) {
@@ -375,14 +375,16 @@ void main() {
               await t.pumpAndSettle();
             }
             var b = _bracha(t);
-            expect(b.scale, greaterThanOrEqualTo(0.449), reason: 'text scaled to ${b.scale}');
+            expect(b.scale, closeTo(1, 0.001), reason: 'text scaled to ${b.scale}');
             expect(b.scroll.maxScrollExtent, greaterThan(0));
             b.scroll.jumpTo(b.scroll.maxScrollExtent);
             await t.pump();
             b = _bracha(t);
-            // The whole bracha is inside its card, and the card's end is on screen.
+            // The whole bracha is inside its card, and the card's end is on
+            // screen, with the title bar out of its way.
             expect(b.text.bottom, lessThanOrEqualTo(b.card.bottom));
             expect(b.card.bottom, lessThanOrEqualTo(h));
+            expect(find.text("Me'ein Shalosh").hitTestable(), findsNothing);
             b.scroll.jumpTo(0);
             await t.pump();
           }
