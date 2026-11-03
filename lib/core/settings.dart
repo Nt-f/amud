@@ -214,8 +214,8 @@ class AppSettings {
   /// Android: turn on Do Not Disturb while reading (and back off after).
   final bool readerDnd;
 
-  /// A compass to the east in the reader's app bar, on devices that can
-  /// tell which way they face.
+  /// A compass to the Western Wall in the reader's app bar, on devices
+  /// that can tell which way they face.
   final bool readerCompass;
   final bool travelPrompts;
   final bool desktopTray;

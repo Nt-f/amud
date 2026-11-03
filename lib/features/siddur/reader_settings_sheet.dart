@@ -67,7 +67,7 @@ class _ReaderSettings extends ConsumerWidget {
             onChanged: (v) => n.update((x) => x.copyWith(fullscreenReader: v))),
           if (compassPossible)
             SwitchListTile.adaptive(contentPadding: EdgeInsets.zero,
-              title: Text(context.tr('Compass to the east')), value: s.readerCompass,
+              title: Text(context.tr('Compass to the Western Wall')), value: s.readerCompass,
               onChanged: (v) => n.update((x) => x.copyWith(readerCompass: v))),
           SheetLabel(context.tr('Prayer text')),
           if (forcesEnglish(book))

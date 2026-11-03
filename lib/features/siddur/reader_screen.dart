@@ -367,7 +367,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     );
   }
 
-  /// The app bar's tools: the compass to the east first, while it has
+  /// The app bar's tools: the compass to the Western Wall first, while it has
   /// a reading. On a narrow phone, or with large text, those the title
   /// can't spare room for go in a menu (the link first, then Why today?,
   /// then the date, then, beside the compass, text settings), so the

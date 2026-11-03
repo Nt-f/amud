@@ -9,10 +9,19 @@ import '../../core/heading.dart';
 import '../../core/l10n.dart';
 import '../../core/settings.dart';
 
-/// Mizrach: due east, in degrees from north.
-const _east = 90.0;
+/// The Western Wall (the Kotel), in Jerusalem's Old City.
+const _kotelLat = 31.77670, _kotelLon = 35.23440;
 
-/// Within this many degrees either side, the reader is facing east.
+/// Degrees from north, clockwise, from ([lat], [lon]) toward the Western
+/// Wall, along the shortest route over the globe (northeast from America).
+double bearingToKotel(double lat, double lon) {
+  double rad(double d) => d * pi / 180;
+  final p1 = rad(lat), p2 = rad(_kotelLat), dl = rad(_kotelLon - lon);
+  final t = atan2(sin(dl) * cos(p2), cos(p1) * sin(p2) - sin(p1) * cos(p2) * cos(dl));
+  return (t * 180 / pi + 360) % 360;
+}
+
+/// Within this many degrees either side, the reader is facing the Wall.
 const _facing = 10.0;
 
 final _headingProvider = StreamProvider.autoDispose<DeviceHeading>((ref) {
@@ -32,18 +41,19 @@ final _inFrontProvider = Provider.autoDispose<bool>((ref) {
 });
 
 /// How far, in degrees (-180 to 180, clockwise positive), to turn to face
-/// east. Null where the reader's compass isn't shown (turned off, the app
-/// behind others, or no reading from the device), so the reader leaves no
-/// room for it.
+/// the Western Wall. Null where the reader's compass isn't shown (turned
+/// off, the app behind others, or no reading from the device), so the
+/// reader leaves no room for it.
 final readerCompassTurnProvider = Provider.autoDispose<double?>((ref) {
   final s = ref.watch(settingsProvider);
   if (!compassPossible || !s.readerCompass || !ref.watch(_inFrontProvider)) return null;
   final heading = ref.watch(_headingProvider).valueOrNull;
   if (heading == null) return null;
-  return (_east - heading.degrees + 540) % 360 - 180;
+  final bearing = bearingToKotel(s.location.latitude, s.location.longitude);
+  return (bearing - heading.degrees + 540) % 360 - 180;
 });
 
-/// A small dial in the reader's app bar that points east,
+/// A small dial in the reader's app bar that points to the Western Wall,
 /// while [readerCompassTurnProvider] has a reading. Tap it for more.
 class ReaderCompass extends ConsumerWidget {
   const ReaderCompass({super.key});
@@ -64,7 +74,7 @@ class ReaderCompass extends ConsumerWidget {
 }
 
 /// A needle pointing [turn] degrees from straight ahead, filled in when
-/// that is east. Gives a tick when it comes into line.
+/// that is toward the Western Wall. Gives a tick when it comes into line.
 class _Dial extends StatefulWidget {
   final double turn;
   final double size;
@@ -99,9 +109,9 @@ class _DialState extends State<_Dial> {
     final big = widget.size > 100;
     return Semantics(
       button: widget.onTap != null,
-      label: _facingNow ? context.tr('Facing east') : context.tr('Compass to the east'),
+      label: _facingNow ? context.tr('Facing the Western Wall') : context.tr('Compass to the Western Wall'),
       child: Tooltip(
-        message: context.tr('Compass to the east'),
+        message: context.tr('Compass to the Western Wall'),
         child: Material(
           shape: const CircleBorder(),
           color: _facingNow ? scheme.primaryContainer : big ? scheme.surfaceContainerHigh : Colors.transparent,
@@ -173,9 +183,10 @@ class _CompassSheet extends ConsumerWidget {
     final turn = ref.watch(readerCompassTurnProvider);
     final calibrate = ref.watch(_headingProvider).valueOrNull?.calibrate ?? false;
     final degrees = turn?.abs().round();
+    final bearing = bearingToKotel(s.location.latitude, s.location.longitude).round() % 360;
     return SafeArea(
       child: ListView(shrinkWrap: true, padding: const EdgeInsets.fromLTRB(20, 0, 20, 20), children: [
-        Text(context.tr('Compass to the east'), style: theme.textTheme.titleLarge),
+        Text(context.tr('Compass to the Western Wall'), style: theme.textTheme.titleLarge),
         const SizedBox(height: 16),
         Center(child: turn == null ? const SizedBox.square(dimension: 200) : _Dial(turn: turn, size: 200)),
         const SizedBox(height: 16),
@@ -183,14 +194,15 @@ class _CompassSheet extends ConsumerWidget {
           turn == null
               ? ''
               : turn.abs() <= _facing
-                  ? context.tr('Facing east')
+                  ? context.tr('Facing the Western Wall')
                   : turn > 0
                       ? context.tr('Turn right {degrees}°', {'degrees': '$degrees'})
                       : context.tr('Turn left {degrees}°', {'degrees': '$degrees'}),
           textAlign: TextAlign.center,
           style: theme.textTheme.titleMedium,
         ),
-        Text(context.tr('Due east, 90° from north'), textAlign: TextAlign.center, style: theme.textTheme.bodySmall),
+        Text(context.tr('The Western Wall is {degrees}° from north', {'degrees': '$bearing'}),
+            textAlign: TextAlign.center, style: theme.textTheme.bodySmall),
         if (calibrate)
           Padding(
             padding: const EdgeInsets.only(top: 12),

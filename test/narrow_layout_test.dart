@@ -162,7 +162,7 @@ void main() {
     expect(find.byIcon(Icons.text_fields), findsOneWidget);
   });
 
-  testWidgets('the compass toward Jerusalem takes no room from the title; at 320dp text settings goes in the menu', (t) async {
+  testWidgets('the compass to the Western Wall takes no room from the title; at 320dp text settings goes in the menu', (t) async {
     double title() => t.getSize(find.text('Shacharis')).width;
     for (final (width, scale) in [(360.0, 1.0), (320.0, 1.3)]) {
       await _bar(t, width, scale);
