@@ -16,7 +16,10 @@ import 'package:amud/features/home/card_registry.dart';
 import 'package:amud/features/home/cards/builtin_cards.dart';
 import 'package:amud/features/home/home_screen.dart';
 import 'package:amud/features/integrations/seasonal_windows.dart';
+import 'package:amud/features/siddur/book_kind.dart';
+import 'package:amud/features/siddur/leining_block.dart';
 import 'package:amud/features/siddur/meein_shalosh_screen.dart';
+import 'package:amud/features/torah/shnayim_mikra.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
@@ -175,6 +178,55 @@ void main() {
     await _bar(t, 360, 1, compass: true);
     expect(find.byIcon(Icons.text_fields), findsOneWidget);
   });
+
+  for (final (width, scale) in const [(360.0, 1.3), (320.0, 1.3)]) {
+    testWidgets('the Torah reading at ${width}dp, $scale× text: open, each aliyah one justified paragraph', (t) async {
+      t.view.physicalSize = Size(width, 1600);
+      t.view.devicePixelRatio = 1;
+      t.platformDispatcher.textScaleFactorTestValue = scale;
+      addTearDown(t.view.reset);
+      addTearDown(t.platformDispatcher.clearTextScaleFactorTestValue);
+      MikraVerse v(int c, int n) => (at: (chapter: c, verse: n), he: 'וַיְהִי עֶרֶב וַיְהִי בֹקֶר פָּסוּק $n', targum: '', en: 'In the beginning, verse $n.', para: '');
+      await t.pumpWidget(ProviderScope(
+        overrides: [
+          readerSettingsProvider.overrideWithValue(const AppSettings(layout: TextLayout.sideBySide)),
+          chumashBookProvider.overrideWith((ref, book) async => (name: 'Genesis', enCredit: '', verses: [for (var n = 1; n <= 6; n++) v(1, n)])),
+        ],
+        child: MaterialApp(
+          theme: buildTheme(const AppSettings(), Brightness.light),
+          builder: (context, w) => AppText(lang: UiLanguage.en, ashkenazi: true, child: w!),
+          home: const Scaffold(
+            body: SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16),
+                child: LeiningBlock({
+                  'parsha': ['Bereshit'],
+                  'book': 1,
+                  'scope': 'shabbat',
+                  'ranges': [[1, 1, 1, 3], [1, 4, 1, 6]],
+                }),
+              ),
+            ),
+          ),
+        ),
+      ));
+      await t.pumpAndSettle();
+      expect(t.takeException(), isNull);
+      // Open without a tap, each aliyah under its name.
+      expect(find.textContaining('כהן'), findsOneWidget);
+      expect(find.textContaining('לוי'), findsOneWidget);
+      // Each aliyah's verses are one justified paragraph.
+      final hebrew = find.byWidgetPredicate((w) => w is RichText && w.text.toPlainText().contains('פָּסוּק'));
+      expect(hebrew, findsNWidgets(2));
+      for (final e in hebrew.evaluate()) {
+        final r = e.widget as RichText;
+        expect(r.textAlign, TextAlign.justify);
+      }
+      final first = (hebrew.evaluate().first.widget as RichText).text.toPlainText();
+      expect(first, allOf(contains('פָּסוּק 1'), contains('פָּסוּק 3')));
+      expect(first, isNot(contains('פָּסוּק 4')));
+    });
+  }
 
   test('a time never leaves AM or PM on a line of its own', () {
     final loc = SavedLocation.newYork.toLocation();

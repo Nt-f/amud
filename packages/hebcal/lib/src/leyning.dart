@@ -4,7 +4,7 @@ import 'data/aliyot.g.dart';
 typedef Verse = ({int chapter, int verse});
 
 /// The Shabbat Torah reading of a parsha (or doubled parshiyot), in seven
-/// aliyot, from Hebcal's leyning tables.
+/// aliyot, and its weekday reading in three, from Hebcal's leyning tables.
 class ParshaReading {
   /// The parsha as named in [SedraResult.parsha]: `['Matot', 'Masei']`.
   final List<String> parsha;
@@ -15,7 +15,11 @@ class ParshaReading {
   /// The seven aliyot, first and last verse of each.
   final List<(Verse, Verse)> aliyot;
 
-  const ParshaReading(this.parsha, this.book, this.aliyot);
+  /// What is read on Monday, Thursday and Shabbat afternoon: Kohen, Levi
+  /// and Yisrael. For doubled parshiyot, the first parsha's.
+  final List<(Verse, Verse)> weekday;
+
+  const ParshaReading(this.parsha, this.book, this.aliyot, this.weekday);
 
   Verse get begin => aliyot.first.$1;
   Verse get end => aliyot.last.$2;
@@ -29,6 +33,8 @@ class ParshaReading {
       return (chapter: int.parse(c), verse: int.parse(v));
     }
 
-    return ParshaReading(parsha, d.$1, [for (final (b, e) in d.$2) (verse(b), verse(e))]);
+    List<(Verse, Verse)> ranges(List<(String, String)> r) => [for (final (b, e) in r) (verse(b), verse(e))];
+    final weekday = parshaWeekdayData[parsha.first];
+    return ParshaReading(parsha, d.$1, ranges(d.$2), weekday == null ? ranges(d.$2).take(1).toList() : ranges(weekday));
   }
 }

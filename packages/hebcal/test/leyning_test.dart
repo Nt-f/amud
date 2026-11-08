@@ -18,6 +18,14 @@ void main() {
             expect(key(b) <= key(e), isTrue, reason: '${p.parsha} aliyah ${i + 1}');
             if (i > 0) expect(key(b) > key(r.aliyot[i - 1].$2), isTrue, reason: '${p.parsha} aliyah ${i + 1}');
           }
+          // The weekday reading: Kohen, Levi and Yisrael, from the start.
+          expect(r.weekday, hasLength(3), reason: '${p.parsha}');
+          expect(r.weekday.first.$1, r.begin, reason: '${p.parsha}');
+          for (var i = 0; i < 3; i++) {
+            final (b, e) = r.weekday[i];
+            expect(key(b) <= key(e), isTrue, reason: '${p.parsha} weekday aliyah ${i + 1}');
+            if (i > 0) expect(key(b) > key(r.weekday[i - 1].$2), isTrue, reason: '${p.parsha} weekday aliyah ${i + 1}');
+          }
         }
       }
     }
@@ -28,6 +36,8 @@ void main() {
     expect(r.book, 4);
     expect(r.begin, (chapter: 30, verse: 2));
     expect(r.end, (chapter: 36, verse: 13));
+    // Matot's weekday reading, not one of the doubled parsha's own.
+    expect(r.weekday, [((chapter: 30, verse: 2), (chapter: 30, verse: 9)), ((chapter: 30, verse: 10), (chapter: 30, verse: 13)), ((chapter: 30, verse: 14), (chapter: 30, verse: 17))]);
     expect(ParshaReading.of(['Nonesuch']), isNull);
   });
 }

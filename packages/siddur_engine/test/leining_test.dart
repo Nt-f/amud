@@ -53,7 +53,9 @@ void main() {
             ];
         final onMonday = service('Weekday/Shacharit', monday);
         expect(onMonday, hasLength(1));
-        expect(onMonday.single.data['scope'], 'first');
+        expect(onMonday.single.data['scope'], 'weekday');
+        // Kohen, Levi and Yisrael.
+        expect((onMonday.single.data['ranges'] as List), hasLength(3));
         expect(onMonday.single.data['parsha'], getSedra(5787, false).lookup(shabbat.addDays(14)).parsha);
         expect(service('Weekday/Shacharit', tuesday), isEmpty);
         final onShabbat = service('Shabbat/Shacharit', shabbat);
