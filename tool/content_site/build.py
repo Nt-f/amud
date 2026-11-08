@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the content site served at text.amud.page (see content-site/README.md).
 
-    python3 tool/content_site/build.py --interlinear ~/path/to/interlinear/out [--daf-print build/daf_linemap]
+    python3 tool/content_site/build.py --interlinear ~/path/to/interlinear/out [--daf-print build/daf/place]
     cd content-site && npx wrangler deploy
 
 Two trees, both static:
@@ -14,9 +14,10 @@ Two trees, both static:
   interlinear/v1/<spine>/<slug>.<sha8>.json
                                   a whole tractate / masechta / book: {"spine", "work", "units": [...]}
 
-  daf/v1/index.json               {"version": ..., "works": {"<tractate>": {path, sha256, units}}}
-  daf/v1/<slug>.<sha8>.json       a tractate's printed-page line maps (tool/daf/linemap.py):
-                                  {"book", "amudim": {"2a": map, ...}}
+  daf/v2/index.json               {"version": ..., "works": {"<tractate>": {path, sha256, units}}}
+  daf/v2/<slug>.<sha8>.json       a tractate's printed pages, every word where the Vilna page
+                                  prints it (tool/daf/svg.py placement(), tool/daf/shas.py):
+                                  {"book", "amudim": {"2a": page, ...}}
 
 The app checks the two small JSON files now and then, downloads only what
 changed, and checks every file's hash before using it. A content fix ships by
@@ -107,15 +108,14 @@ def build_interlinear(src: Path, out: Path, version: str):
 
 
 def build_daf_print(src: Path, out: Path, version: str):
-    """tool/daf/linemap.py's output (<Book>_<amud>.json) as one bundle per
-    tractate. The debug images and the OCR text of the small commentaries
-    stay behind: the app sets the Gemara, Rashi and Tosafot."""
-    base = out / "daf" / "v1"
+    """tool/daf/shas.py's printed pages (<Book>_<amud>.json) as one bundle
+    per tractate."""
+    base = out / "daf" / "v2"
     base.mkdir(parents=True)
     by_book = {}
     for f in sorted(src.glob("*.json")):
         m = json.loads(f.read_text())
-        by_book.setdefault(m["book"], {})[m["amud"]] = {k: m[k] for k in ("page", "frame", "columns", "words")}
+        by_book.setdefault(m["book"], {})[m["amud"]] = {k: m[k] for k in ("frame", "words", "weight", "placed")}
     works = {}
     for book, amudim in by_book.items():
         amudim = dict(sorted(amudim.items(), key=lambda kv: unit_order(kv[0])))
@@ -141,9 +141,9 @@ HEADERS = """\
 /interlinear/v1/:spine/*
   Cache-Control: public, max-age=31536000, immutable
   Content-Type: application/json; charset=utf-8
-/daf/v1/index.json
+/daf/v2/index.json
   Cache-Control: no-cache
-/daf/v1/*
+/daf/v2/*
   Cache-Control: public, max-age=31536000, immutable
   Content-Type: application/json; charset=utf-8
 """
@@ -158,7 +158,7 @@ def main():
     # Required: a deploy replaces the whole site, so building without it would
     # take the interlinear texts down.
     ap.add_argument("--interlinear", type=Path, required=True, help="interlinear output folder (spine/work/unit.en.json)")
-    ap.add_argument("--daf-print", type=Path, help="tool/daf/linemap.py output folder (<Book>_<amud>.json)")
+    ap.add_argument("--daf-print", type=Path, help="tool/daf/shas.py's printed pages (build/daf/place)")
     ap.add_argument("--out", type=Path, default=ROOT / "content-site" / "dist")
     a = ap.parse_args()
     version = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d%H%M%S")
@@ -170,7 +170,7 @@ def main():
     if a.daf_print:
         build_daf_print(a.daf_print.expanduser(), a.out, version)
     else:
-        print("no --daf-print: deploying this takes the printed-page line maps down")
+        print("no --daf-print: deploying this takes the printed pages down")
     (a.out / "_headers").write_text(HEADERS)
     (a.out / "index.html").write_text(INDEX)
     n = sum(1 for f in a.out.rglob("*") if f.is_file())

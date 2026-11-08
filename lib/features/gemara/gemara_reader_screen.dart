@@ -546,7 +546,7 @@ class _GemaraReaderScreenState extends ConsumerState<GemaraReaderScreen> with Fo
                 DafPage(
                   key: _dafKey,
                   text: d,
-                  printed: ref.watch(dafLineMapProvider((tractate: d.tractate, amud: d.amud))).valueOrNull,
+                  printed: ref.watch(dafPrintProvider((tractate: d.tractate, amud: d.amud))).valueOrNull,
                   onLayout: (l) {
                     _dafLayout = l;
                     _queuePageProgress();

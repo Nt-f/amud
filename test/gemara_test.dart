@@ -158,69 +158,78 @@ void main() {
     });
 
     group('as printed', () {
-      // A page 1000 wide whose body runs from 100 to 900: two Gemara lines in
-      // the middle, a Rashi line in the top band and one in its column, a
-      // Tosafot line on the other side.
-      final map = DafLineMap.fromJson({
+      // A scan whose body runs from 100 to 900 across: two Gemara words, a
+      // big Tosafot opening word, a Rashi word the text lacks, the running
+      // head.
+      final print = DafPrint.fromJson({
+        'v': 2,
+        'size': [1000, 500],
         'frame': [100, 50, 900, 400],
-        'columns': {
-          'main': [
-            [300, 700, 120, 20, 0, 4],
-            [300, 700, 150, 20, 4, 9],
-          ],
-          'inner': [
-            [500, 900, 70, 15, 0, 6],
-            [720, 900, 120, 15, 6, 8],
-          ],
-          'outer': [
-            [100, 280, 120, 15, 0, 3],
-          ],
-        },
-        'words': {'main': 9, 'inner': 8, 'outer': 3},
+        'words': {'main': 3, 'inner': 2, 'outer': 1},
+        'weight': 0.03,
+        'placed': [
+          ['m', 1, 0, 'word1', 600, 120, 20, 20],
+          ['m', 2, 0, 'word2', 500, 120, 18, 20],
+          ['o', 0, 0, 'word0', 150, 130, 40, 40, 1],
+          ['i', 0, 1, 'word0', 800, 120, 14, 14],
+          ['i', -1, 1, 'extra', 750, 120, 14, 14],
+          ['', -1, 0, 'head', 450, 60, 22, 22],
+        ],
       });
-      DafLayout printed(List<DafWord> main) => layoutPrinted(
-            main: main,
-            inner: words(8),
-            outer: words(3),
-            map: map,
+      DafLayout printed({int main = 3}) => layoutPrint(
+            main: [for (var i = 0; i < main; i++) DafWord('word$i', segment: i)],
+            inner: [DafWord('word0', segment: 1, comment: 0), DafWord('word1', segment: 1, comment: 0)],
+            outer: [DafWord('word0', segment: 2, comment: 0)],
+            print: print,
             width: 400,
-            mainSize: 10,
-            sideSize: 7,
-            measure: measure,
+            advance: (text, rashi) => text.length * 0.5,
           );
 
-      test('each line holds its printed words, inside its printed box', () {
-        final l = printed(words(9));
-        expect(l.words.length, 9 + 8 + 3);
+      test('reads the placed words', () {
+        expect(print.words.length, 6);
+        expect(print.words[2].glyphs.big, isTrue);
+        expect(print.words[3].glyphs.rashi, isTrue);
+        expect(print.words.last.column, isNull);
+        expect(print.weight, 0.03);
+      });
+
+      test('each word where the print has it, scaled to the width', () {
+        final l = printed();
+        // Scaled by 400/800, from the frame's corner.
         expect(l.height, closeTo(350 / 2, 0.01));
-        // Scaled by 400/800: the Gemara's box is 100–300 on screen.
-        for (final w in l.words.where((w) => w.column == DafColumn.main)) {
-          expect(w.x, greaterThanOrEqualTo(99.99));
-          expect(w.x + w.width, lessThanOrEqualTo(300.01));
-        }
-        // Right to left: a line's first word at its right edge.
-        final first = l.words.firstWhere((w) => w.column == DafColumn.main);
-        expect(first.x + first.width, closeTo(300, 0.01));
-        // The second Gemara line starts with word 4, on the line below.
-        final second = l.words.where((w) => w.column == DafColumn.main).elementAt(4);
-        expect(second.word.text, 'word4');
-        expect(second.y, greaterThan(first.y));
-        expect(l.words.where((w) => w.column == DafColumn.inner).last.x, greaterThan(300));
-        expect(l.words.where((w) => w.column == DafColumn.outer).first.x, lessThan(100));
+        final w1 = l.words.first;
+        expect(w1.glyphs!.left, closeTo(250, 0.01));
+        expect(w1.glyphs!.base, closeTo(35, 0.01));
+        expect(w1.glyphs!.sy, closeTo(10, 0.01));
+        // Its box: its advance across (5 letters, half an em each, at 10).
+        expect(w1.x, closeTo(250, 0.01));
+        expect(w1.width, closeTo(25, 0.01));
+        expect(w1.y, lessThan(35));
+        expect(w1.y + w1.height, greaterThan(35));
       });
 
-      test('a line too long for its box is set smaller, not past it', () {
-        final long = [for (var i = 0; i < 9; i++) DafWord('a-very-long-word-$i', segment: 0)];
-        final l = printed(long);
-        final line = l.words.where((w) => w.column == DafColumn.main).take(4).toList();
-        expect(line.first.x + line.first.width, closeTo(300, 0.01));
-        expect(line.last.x, greaterThanOrEqualTo(99.99));
-        expect(line.first.size, lessThan(printed(words(9)).words.first.size!));
+      test("each word is the text's word it stands for", () {
+        final l = printed();
+        expect(l.words[0].word.segment, 1);
+        expect(l.words[1].word.position, 0);
+        expect(l.words[2].column, DafColumn.outer);
+        expect(l.words[2].word.segment, 2);
+        // A word the text lacks: the passage of the one before it.
+        final extra = l.words[4];
+        expect(extra.word.text, 'extra');
+        expect(extra.word.segment, 1);
+        expect(extra.word.comment, 0);
+        expect(extra.word.position, -1);
+        // The running head is drawn but can't be tapped.
+        expect(l.words.length, 5);
+        expect(l.extras.single.text, 'head');
       });
 
-      test('a map is used only with the text it was made from', () {
-        expect(map.fits(main: 9, inner: 8, outer: 3), isTrue);
-        expect(map.fits(main: 10, inner: 8, outer: 3), isFalse);
+      test('with other text, still drawn, but no word linked', () {
+        expect(print.fits(main: 3, inner: 2, outer: 1), isTrue);
+        final l = printed(main: 4);
+        expect(l.words.length, 5);
+        expect(l.words.every((w) => w.word.position == -1), isTrue);
       });
     });
 

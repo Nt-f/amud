@@ -11,42 +11,42 @@ import 'daf_layout.dart';
 import 'gemara_data.dart';
 import 'study_book.dart';
 
-/// Where the line maps come from: the content site, or elsewhere (a local
-/// copy, to try new maps) with `--dart-define=DAF_PRINT_BASE=http://…`.
+/// Where the printed pages come from: the content site, or elsewhere (a
+/// local copy, to try new ones) with `--dart-define=DAF_PRINT_BASE=http://…`.
 const dafPrintBase = String.fromEnvironment('DAF_PRINT_BASE', defaultValue: contentServer);
 
-/// The printed page's line maps (tool/daf/linemap.py), served a tractate at
-/// a time:
+/// The printed pages (every word where the Vilna page prints it, from
+/// tool/daf/svg.py; see [DafPrint]), served a tractate at a time:
 ///
-/// * `daf/v1/index.json`: `{"version", "works": {"<book>": {path, sha256, units}}}`
-/// * `daf/v1/<slug>.<sha8>.json`: `{"book", "amudim": {"2a": map, …}}`
+/// * `daf/v2/index.json`: `{"version", "works": {"<book>": {path, sha256, units}}}`
+/// * `daf/v2/<slug>.<sha8>.json`: `{"book", "amudim": {"2a": page, …}}`
 ///
 /// Opening an amud saves its whole tractate, so the rest open offline.
 Future<({Map<String, Object?> amudim, String sha})?> fetchDafPrint(http.Client client, String book) async {
-  final res = await client.get(Uri.parse('$dafPrintBase/daf/v1/index.json')).timeout(const Duration(seconds: 20));
+  final res = await client.get(Uri.parse('$dafPrintBase/$dafPrintPath/index.json')).timeout(const Duration(seconds: 20));
   if (res.statusCode != 200) return null;
   final works = ((jsonDecode(utf8.decode(res.bodyBytes)) as Map)['works'] as Map?)?.cast<String, Object?>();
   final entry = (works?[book] as Map?)?.cast<String, Object?>();
   if (entry == null) return null;
-  final got = await client.get(Uri.parse('$dafPrintBase/daf/v1/${entry['path']}')).timeout(const Duration(minutes: 2));
+  final got = await client.get(Uri.parse('$dafPrintBase/$dafPrintPath/${entry['path']}')).timeout(const Duration(minutes: 2));
   if (got.statusCode != 200) return null;
   final j = jsonDecode(utf8.decode(got.bodyBytes)) as Map<String, Object?>;
   return (amudim: (j['amudim'] as Map).cast<String, Object?>(), sha: '${entry['sha256']}');
 }
 
-String _blobKey(String book, String amud) => 'dafPrint:$book:$amud';
+String _blobKey(String book, String amud) => '${dafPrintBlobPrefix(book)}$amud';
 
-/// The line map of an amud, or null where there is none (not a Bavli amud,
-/// not made yet, or offline before its tractate was saved).
-final dafLineMapProvider = FutureProvider.family<DafLineMap?, DafRef>((ref, r) async {
+/// The printed page of an amud, or null where there is none (not a Bavli
+/// amud, not made yet, or offline before its tractate was saved).
+final dafPrintProvider = FutureProvider.family<DafPrint?, DafRef>((ref, r) async {
   final book = studyBook(r.tractate);
   if (book == null || book.kind != StudyKind.bavli) return null;
   final storage = ref.read(storageProvider);
-  DafLineMap? read(List<int>? blob) {
+  DafPrint? read(List<int>? blob) {
     if (blob == null) return null;
     try {
       final j = jsonDecode(utf8.decode(GZipDecoder().decodeBytes(blob)));
-      return j is Map ? DafLineMap.fromJson(j.cast<String, Object?>()) : null;
+      return j is Map ? DafPrint.fromJson(j.cast<String, Object?>()) : null;
     } catch (_) {
       return null;
     }
@@ -59,7 +59,7 @@ final dafLineMapProvider = FutureProvider.family<DafLineMap?, DafRef>((ref, r) a
   }
   final amudim = await _saveDafPrint(storage, book.id);
   final j = amudim[r.amud];
-  return j is Map ? DafLineMap.fromJson(j.cast<String, Object?>()) : null;
+  return j is Map ? DafPrint.fromJson(j.cast<String, Object?>()) : null;
 });
 
 final _downloads = <String, Future<Map<String, Object?>>>{};

@@ -80,7 +80,9 @@ def score(model, listfile, env):
 
 def read(png, model, env):
     """MODEL's reading of a line image (cached beside it)."""
-    cache = png.with_suffix(f'.{model}.txt')
+    # Keyed by the model file's time too: a retrained model reads afresh.
+    stamp = int((Path(env['TESSDATA_PREFIX']) / f'{model}.traineddata').stat().st_mtime)
+    cache = png.with_suffix(f'.{model}-{stamp}.txt')
     if not cache.exists():
         text = ''
         for psm in ('7', '13', '6'):  # 7 sometimes reads nothing
@@ -131,7 +133,17 @@ def main():
     if a.clean:
         def keep(f):
             png = Path(f).with_suffix('.png')
-            return error(png.with_suffix('.gt.txt').read_text().strip(), read(png, a.clean, env)) <= a.max_error
+            gt, got = png.with_suffix('.gt.txt').read_text().strip(), read(png, a.clean, env)
+            e = error(gt, got)
+            # The model these lines teach reads references in parentheses
+            # (small type, and left out of training until now) badly.
+            if e > a.max_error + (0.1 if '(' in gt else 0):
+                return False
+            # A word too many or too few at an end of the text, not of the
+            # image: the line's word range is a word off.
+            g, o = gt.split(), got.split()
+            ends = [(g[1:], o), (g[:-1], o), (g, o[1:]), (g, o[:-1])]
+            return not any(len(x) and len(y) and error(' '.join(x), ' '.join(y)) < e - 0.03 for x, y in ends)
         with ThreadPoolExecutor(os.cpu_count()) as ex:
             ok = list(ex.map(keep, lines))
         print(f'{a.clean} reads {ok.count(False)} of {len(lines)} lines far from their text: left out')
@@ -145,11 +157,6 @@ def main():
     held = set(pages[:max(1, len(pages) // 10)])
     mine = [f for f in lines if a.script == 'all' or script(f) == a.script]
     train = [f for f in mine if page(f) not in held]
-    # The print's period sits mid-line, not on the baseline as heb learned
-    # it, and few lines have one: heb_vilna dropped every one until these
-    # lines were trained on more often.
-    train += [f for f in train if '.' in Path(f).with_suffix('.gt.txt').read_text()] * 4
-    random.Random(2).shuffle(train)
     evals = [f for f in mine if page(f) in held]
     name = 'heb_vilna' if a.script == 'all' else f'heb_vilna_{a.script}'
     (d / f'{name}.train.txt').write_text('\n'.join(train) + '\n')
@@ -171,7 +178,11 @@ def main():
         '--max_iterations', str(a.iterations),
         '--learning_rate', str(a.learning_rate),
         '--target_error_rate', '0.01',
-    ], check=True, env=env)
+    ], env=env)
+    # lstmtraining now and then crashes on its way out, after the last
+    # checkpoint: that checkpoint is the model.
+    if not (d / 'out' / f'{name}_checkpoint').exists():
+        sys.exit('lstmtraining wrote no checkpoint')
     subprocess.run([
         tool('lstmtraining'), '--stop_training',
         '--continue_from', str(d / 'out' / f'{name}_checkpoint'),

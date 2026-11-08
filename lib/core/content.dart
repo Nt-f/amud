@@ -165,23 +165,29 @@ Future<int> _updateInterlinear(Storage s, http.Client client) async {
   return changed;
 }
 
-/// Saved per tractate: which bundle (by hash) its printed-page line maps
-/// came from (lib/features/gemara/daf_print.dart).
-String dafPrintShaKey(String book) => 'dafPrintSha:$book';
+/// Where on the content site the printed pages are
+/// (lib/features/gemara/daf_print.dart).
+const dafPrintPath = 'daf/v2';
 
-/// Drops saved line maps whose tractate's bundle changed on the site, so
-/// the next amud opened fetches the new one.
+/// Saved per tractate: which bundle (by hash) its printed pages came from.
+String dafPrintShaKey(String book) => 'dafPrint2Sha:$book';
+
+/// Saved per amud: its printed page, under this and the amud.
+String dafPrintBlobPrefix(String book) => 'dafPrint2:$book:';
+
+/// Drops saved printed pages whose tractate's bundle changed on the site,
+/// so the next amud opened fetches the new one.
 Future<int> _updateDafPrint(Storage s, http.Client client) async {
-  final saved = s.jsonKeys.where((k) => k.startsWith('dafPrintSha:')).toList();
+  final saved = s.jsonKeys.where((k) => k.startsWith('dafPrint2Sha:')).toList();
   if (saved.isEmpty) return 0;
-  final res = await client.get(Uri.parse('$contentServer/daf/v1/index.json')).timeout(const Duration(seconds: 20));
+  final res = await client.get(Uri.parse('$contentServer/$dafPrintPath/index.json')).timeout(const Duration(seconds: 20));
   if (res.statusCode != 200) return 0;
   final works = ((jsonDecode(utf8.decode(res.bodyBytes)) as Map)['works'] as Map?)?.cast<String, Object?>() ?? const {};
   var changed = 0;
   for (final key in saved) {
-    final book = key.substring('dafPrintSha:'.length);
+    final book = key.substring('dafPrint2Sha:'.length);
     if ((works[book] as Map?)?['sha256'] == s.readJson(key, (j) => j as String)) continue;
-    for (final b in s.blobKeys.where((k) => k.startsWith('dafPrint:$book:')).toList()) {
+    for (final b in s.blobKeys.where((k) => k.startsWith(dafPrintBlobPrefix(book))).toList()) {
       await s.deleteBlob(b);
     }
     await s.deleteJson(key);

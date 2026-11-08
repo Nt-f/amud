@@ -22,10 +22,17 @@ For each amud:
    line is decides between the Gemara, the inner margin (Rashi) and the
    outer one (Tosafot), and lines outside that frame are the small
    commentaries.
+   Then segment.py cuts the body's lines again from the scan's ink (the
+   page layout above runs Rashi's dense lines together and cuts lines into
+   pieces) and reads each on its own; LINEMAP_SEGMENT=0 skips it.
 4. Per text, align its lines in page order (top to bottom) to the app's
    words of it, character by character, and read off the word that ends
    each line. OCR errors don't move the result much: only the line ends
    matter, and the alignment is over the whole column.
+5. Put right the lines a reviewer has (tool/daf/corrections, from
+   review.py). A reviewed line can hold more than one run of words, where
+   the print sets comments in another order than Sefaria: its entry in
+   `columns` is [x0, x1, base, h, from, to, from2, to2, …].
 
 Words are counted exactly as the app counts them (`dafWords` in
 lib/features/gemara/daf_page.dart): the Gemara is Sefaria's Wikisource text
@@ -39,6 +46,7 @@ the model train_ocr.py makes from the pages themselves: OCR_LANG=heb_vilna.
 
 import argparse
 import csv
+import difflib
 import io
 import json
 import os
@@ -56,6 +64,8 @@ import numpy as np
 from PIL import Image, ImageDraw
 from rapidfuzz import fuzz
 
+import dots
+
 SCAN = 'https://manuscripts.sefaria.org/vilna-romm/{book}_{amud}.jpg'
 API = 'https://www.sefaria.org/api/v3/texts/'
 WIKISOURCE = 'Wikisource Talmud Bavli'
@@ -63,6 +73,9 @@ OCR_SCALE = 3
 # The Tesseract model: heb, or heb_vilna from train_ocr.py, which reads
 # Rashi script as itself.
 OCR_LANG = os.environ.get('OCR_LANG', 'heb')
+# The body's lines cut from the scan's ink and read one by one (segment.py),
+# not as Tesseract's page layout grouped them; LINEMAP_SEGMENT=0 for the old.
+SEGMENT = os.environ.get('LINEMAP_SEGMENT', '1') != '0'
 
 # ------------------------------------------------------------------ text
 
@@ -134,6 +147,14 @@ def flat_words(text):
 # ------------------------------------------------------------------ fetch
 
 
+def _write(path, data):
+    """Whole or not at all (pages read side by side fetch the same
+    neighbours)."""
+    tmp = path.with_name(f'.{path.name}.{os.getpid()}')
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
+
 def fetch(url, path):
     path = Path(path)
     if not path.exists():
@@ -146,7 +167,7 @@ def fetch(url, path):
                 break
             except urllib.error.HTTPError as e:
                 if e.code in (400, 404):
-                    path.write_bytes(b'null')
+                    _write(path, b'null')
                     return None
                 if attempt == 4 or e.code < 500 and e.code != 429:
                     raise
@@ -154,7 +175,7 @@ def fetch(url, path):
                 if attempt == 4:
                     raise
             time.sleep(5 * 2 ** attempt)
-        path.write_bytes(data)
+        _write(path, data)
     data = path.read_bytes()
     return None if data == b'null' else data
 
@@ -166,6 +187,16 @@ def sefaria(cache, ref, version):
         return None
     vs = json.loads(data).get('versions') or []
     return vs[0]['text'] if vs else None
+
+
+def he_names(cache, book):
+    """The tractate's Hebrew name, and for a two-word name its initials
+    (בבא בתרא, ב"ב)."""
+    data = fetch(f'https://www.sefaria.org/api/v2/raw/index/{book.replace(" ", "_")}', cache / 'index' / f'{book}.json')
+    titles = json.loads(data).get('schema', {}).get('titles', []) if data else []
+    he = next((t['text'] for t in titles if t.get('lang') == 'he' and t.get('primary')), '')
+    parts = he.split()
+    return [he] + ([f'{parts[0][0]}"{parts[1][0]}'] if len(parts) == 2 else []) if he else []
 
 
 def _margins(cache, book, amud):
@@ -203,7 +234,8 @@ def texts(cache, book, amud):
     inner, outer = _margins(cache, book, amud)
     streams = {'main': main, 'inner': inner, 'outer': outer}
     extra = {}
-    for cid, name in [('rng', 'Rav Nissim Gaon'), ('gilyon', 'Gilyon HaShas')]:
+    # (Nedarim prints the Ran in its inner margin, Rashi beside it.)
+    for cid, name in [('rng', 'Rav Nissim Gaon'), ('gilyon', 'Gilyon HaShas')] + ([('ran', 'Ran')] if book == 'Nedarim' else []):
         t = sefaria(cache, f'{name} on {ref}', 'hebrew')
         if t:
             extra[cid] = flat_words(t)
@@ -237,6 +269,60 @@ def ocr(cache, book, amud):
     if not gaps.exists():
         gaps.write_text(_fill_gaps(Image.open(img_path), rows))
     return img_path, rows + _words(gaps.read_text())
+
+
+ROOT = Path(__file__).resolve().parents[2]
+KRAKEN = Path(os.environ.get('KRAKEN', ROOT / 'build/daf/kraken-venv/bin/kraken'))
+KRAKEN_MODEL = Path(os.environ.get('KRAKEN_MODEL', ROOT / 'build/daf/kraken/vilna_seg.safetensors'))
+
+
+def kraken_lines(cache, book, amud, img_path):
+    """The lines kraken's line finder (trained on these pages, see
+    kraken_gt.py) finds on the scan, as dicts of x0, x1 and base; none
+    where kraken or the model isn't there."""
+    out = cache / 'kraken' / f'{book}_{amud}.json'
+    if not out.exists():
+        if not (KRAKEN.exists() and KRAKEN_MODEL.exists()):
+            return []
+        out.parent.mkdir(parents=True, exist_ok=True)
+        r = subprocess.run([str(KRAKEN), '-i', str(img_path), str(out), '-n', 'segment', '-bl', '-i', str(KRAKEN_MODEL)],
+                           capture_output=True)
+        if r.returncode or not out.exists():
+            return []
+    ks = []
+    for l in json.loads(out.read_text())['lines']:
+        xs, ys = [p[0] for p in l['baseline']], [p[1] for p in l['baseline']]
+        kind = ((l.get('tags') or {}).get('type') or [{}])[0].get('type')
+        ks.append(dict(x0=min(xs), x1=max(xs), base=sum(ys) / len(ys), kind=kind))
+    return ks
+
+
+def snap_to_kraken(lines, ks, grey):
+    """A body line whose box runs on past kraken's line on its baseline
+    over blank margin or a note beside it ends where kraken's does. (Where kraken's runs on past the line's, it is
+    more often across a gutter: those stay.)"""
+    for l in lines:
+        if l.get('stream') not in BODY or l.get('reviewed'):
+            continue
+        h = l['h']
+        near = [k for k in ks if abs(k['base'] - l['base']) < 0.4 * h and min(k['x1'], l['x1']) - max(k['x0'], l['x0']) > h]
+        if not near:
+            continue
+        k = max(near, key=lambda k: min(k['x1'], l['x1']) - max(k['x0'], l['x0']))
+        for a, b, end in ((l['x0'], k['x0'], 'x0'), (k['x1'], l['x1'], 'x1')):
+            if b - a <= h:
+                continue
+            # Where the strip is blank, or a line of another kind of text
+            # (a note beside it). (Kraken can break one row in two at a wide
+            # space: a line of its own kind there is the rest of it.)
+            other = any(m is not k and m['kind'] != k['kind'] and abs(m['base'] - l['base']) < 0.4 * h
+                        and min(m['x1'], b) - max(m['x0'], a) > 0.5 * (b - a) for m in ks)
+            strip = grey[int(l['base'] - h):int(l['base'] + 1), int(a):int(b)]
+            if other or strip.size and (strip < 128).mean() < 0.02:
+                l[end] = k[end]
+                l['snapped'] = True
+                if l.get('ink'):
+                    l['ink'] = (max(l['ink'][0], l['x0']), min(l['ink'][1], l['x1']))
 
 
 def _words(tsv_text):
@@ -388,6 +474,8 @@ def _same_line(a, b):
     h = max(a['h'], b['h'])
     if abs(a['base'] - b['base']) >= 0.5 * h or _overlap(a, b) > 0:
         return False
+    if _one_width(a, b):
+        return True  # one column's width: a wide justified space, not a gutter
     if a.get('pos') is not None and b.get('pos') is not None and a.get('stream') == b.get('stream'):
         # The text runs on from the right piece into the left.
         right, left = (a, b) if a['x1'] > b['x1'] else (b, a)
@@ -398,6 +486,14 @@ def _same_line(a, b):
     x0, x1 = sorted((a['x1'], b['x0']) if a['x1'] < b['x0'] else (b['x1'], a['x0']))
     gap = _gap(a, b)
     return gap < 1.2 * h and not a['gutters'][int(x0):int(x1) + 1].any() and not b['gutters'][int(x0):int(x1) + 1].any()
+
+
+def _one_width(a, b):
+    """Two pieces of one text whose column, from the lines just above and
+    below, holds them both: the space between them is a wide one in a
+    justified line."""
+    return (a.get('stream') is not None and a.get('stream') == b.get('stream')
+            and _inside(a, b.get('span')) and _inside(b, a.get('span')))
 
 
 def _rows(ws):
@@ -495,7 +591,7 @@ K = 7
 CARRIED = ('inner_prev', 'outer_prev', 'inner_next', 'outer_next')
 BODY = ('main', 'inner', 'outer') + CARRIED
 HEADINGS = ['תורה אור', 'מסורת הש"ס', 'עין משפט', 'נר מצוה', 'הגהות הב"ח', 'גליון הש"ס', 'רבינו חננאל', 'רב נסים גאון',
-            'הגהות הגר"א', 'ליקוטי רש"י', 'תוספות ישנים', 'הדרן עלך']
+            'הגהות הגר"א', 'ליקוטי רש"י', 'תוספות ישנים', 'הדרן עלך', 'רבינו גרשום', 'תוספות שאנץ']
 
 
 def _heading(text):
@@ -788,30 +884,75 @@ def reading_order(ls, by_text):
     The Gemara reads down its column; a commentary goes where its anchors
     put it (the top band's half, then the column, or on into the other
     margin when it takes both)."""
-    key = (lambda l: l['pos']) if by_text else (lambda l: (l['base'], -l['x1']))
+    if by_text:
+        ordered = sorted(ls, key=lambda l: l['pos'])
+    else:
+        # Down the page, and right to left along a baseline: pieces of one
+        # line a pixel or two apart in height still read right one first.
+        ordered = []
+        for l in sorted(ls, key=lambda l: l['base']):
+            if ordered and abs(l['base'] - ordered[-1][0][0]['base']) < 0.5 * max(l['h'], ordered[-1][0][0]['h']):
+                ordered[-1][0].append(l)
+            else:
+                ordered.append(([l],))
+        ordered = [l for (row,) in ordered for l in sorted(row, key=lambda l: -l['x1'])]
     out = []
-    for l in sorted(ls, key=key):
+    for l in ordered:
         p = out[-1] if out else None
         if p and _same_line(p, l):
             j = _line(sorted(p['words'] + l['words'], key=lambda w: -w['x1']))
             j.update(group=p['group'] if p['group'] == l['group'] else None, col=p['col'], gutters=p['gutters'])
-            j.update(stream=p['stream'], pos=p['pos'], letters=p['letters'] + l['letters'])
+            j.update(stream=p['stream'], pos=p['pos'], letters=p['letters'] + l['letters'], span=p.get('span'))
             out[-1] = j
         else:
             out.append(l)
     return out
 
 
+def _spans(ls):
+    """Each line's column: from the left end to the right end of the lines
+    of its text just above and below it (a column's lines are justified to
+    one width), where there are some."""
+    for l in ls:
+        around = [m for m in ls if 0.7 * l['h'] < abs(m['base'] - l['base']) < 4 * l['h'] and _overlap(m, l) > 0]
+        l['span'] = (min(m['x0'] for m in around), max(m['x1'] for m in around)) if len(around) >= 2 else None
+
+
+def _inside(l, span, slack=5):
+    return span is not None and span[0] - slack <= l['x0'] and l['x1'] <= span[1] + slack
+
+
 def _drop_specks(ls):
-    """A scrap of a gutter note between two lines of a column isn't a line."""
+    """A scrap of a gutter note between two lines of a column isn't a line
+    (but see _attach_specks)."""
+    _spans(ls)
     out = []
     for i, l in enumerate(ls):
         near = [m for m in ls[max(0, i - 1):i + 2] if m is not l and abs(m['base'] - l['base']) < 0.7 * m['h']]
         if near and l['letters'] <= 3 and l['x1'] - l['x0'] < 30 and not l.get('hits'):
+            l['speck_of'] = l['stream']
             l['stream'] = 'other'
             continue
         out.append(l)
     return out
+
+
+def _attach_specks(ls, specks):
+    """A short word inside its column is no scrap: justified wide, it can
+    stand apart from the rest of its line. Each dropped speck within the
+    column of a line on its baseline joins that line (after reading_order,
+    so it can't come between the pieces that make a line)."""
+    for sp in specks:
+        to = [l for l in ls if abs(l['base'] - sp['base']) < 0.5 * l['h'] and _inside(sp, l.get('span')) and _overlap(l, sp) == 0]
+        if len(to) != 1:
+            continue
+        l = to[0]
+        keep = {k: l[k] for k in ('group', 'col', 'gutters')}
+        if l.get('ink'):
+            keep['ink'] = (min(l['ink'][0], sp.get('ink', (sp['x0'],))[0]), max(l['ink'][1], sp.get('ink', (0, sp['x1']))[1]))
+        l.update(_line(sorted(l['words'] + sp['words'], key=lambda w: -w['x1'])), letters=l['letters'] + sp['letters'], **keep)
+        sp['stream'] = None
+    return ls
 
 # ------------------------------------------------------------------ align
 
@@ -900,49 +1041,391 @@ def line_ranges(lines, words, table, whole=True):
         out[-1] = (out[-1][0], len(words) if whole else out[-1][1])
     return out
 
+EDGE = 40  # words of the Gemara either side of the amud's, to align with
+
+
+def _gemara(cache, book, amud):
+    words = []
+    for seg in (sefaria(cache, f'{book}.{amud}', f'hebrew|{WIKISOURCE}') or []) if amud else []:
+        words += words_of_html(seg)
+    return words
+
+
+def _main_ranges(cache, book, amud, ls, words, table):
+    """The Gemara's line ranges, aligned with the end of the amud before
+    and the start of the one after around it: Sefaria's amud can begin or
+    end a few words from the print's. Words of a neighbour printed here are
+    carried, as the margins' are ('main_prev', 'main_next')."""
+    prev, nxt = neighbor(amud, -1), neighbor(amud, 1)
+    pw, nw = _gemara(cache, book, prev), _gemara(cache, book, nxt)
+    tail, head = pw[-EDGE:], nw[:EDGE]
+    off, n = len(tail), len(words)
+    ext = tail + words + head
+    rs = refine_ranges(ls, line_ranges(ls, ext, table, whole=False), ext, table)
+    # As line_ranges(whole=True): an end within a few words of the amud's
+    # own is taken to be it, unless a line holds the neighbour's words.
+    if rs and not any(a < off for a, b in rs if a < b):
+        first = next((i for i, (a, b) in enumerate(rs) if a < b), None)
+        if first is not None and off < rs[first][0] <= off + 3:
+            rs[first] = (off, rs[first][1])
+    if rs and not any(b > off + n for a, b in rs if a < b):
+        last = max((i for i, (a, b) in enumerate(rs) if a < b), default=None)
+        if last is not None and off + n - 3 <= rs[last][1] < off + n:
+            rs[last] = (rs[last][0], off + n)
+    ranges, carried = [], {}
+    for l, (a, b) in zip(ls, rs):
+        ranges.append((min(max(a, off), off + n) - off, max(min(b, off + n), off) - off))
+        for sid, (c, d), base, other, total in (('main_prev', (a, min(b, off)), len(pw) - len(tail), prev, len(pw)),
+                                                 ('main_next', (max(a, off + n), b), -(off + n), nxt, len(nw))):
+            if c < d:
+                col = carried.setdefault(sid, {'amud': other, 'words': total, 'lines': []})['lines']
+                col.append([round(l['x0']), round(l['x1']), round(l['base']), round(l['h']), c + base, d + base])
+    return ranges, carried
+
+
+def _joined(p, l):
+    """Line p with piece l, to its left, joined to it: their words, and
+    the ink they cover."""
+    j = dict(p, x0=min(p['x0'], l['x0']), x1=max(p['x1'], l['x1']), text=p['text'] + ' ' + l['text'],
+             letters=p.get('letters', 0) + l.get('letters', 0),
+             words=sorted(p.get('words', []) + l.get('words', []), key=lambda w: -w['x1']))
+    if p.get('ink') and l.get('ink'):
+        j['ink'] = (min(p['ink'][0], l['ink'][0]), max(p['ink'][1], l['ink'][1]))
+    elif p.get('ink') or l.get('ink'):
+        j['ink'] = (j['x0'], j['x1'])
+    return j
+
+
+def join_pieces(lines, ranges):
+    """Pieces of one printed line: a gap between words that lines up down
+    the column can pass for a gutter. Two pieces of one text on one
+    baseline, the left one's words running on from the right one's, a
+    little apart, are one line. (The top band's halves aren't: each runs
+    on down its own half.)"""
+    ls, rs = [], []
+    for l, r in zip(lines, ranges):
+        if ls:
+            p, (a, b) = ls[-1], rs[-1]
+            h = max(p['h'], l['h'])
+            if (a < b == r[0] < r[1] and abs(p['base'] - l['base']) < 0.5 * h
+                    and l['x1'] < p['x1'] and -1.5 * h < p['x0'] - l['x1'] < 3 * h):
+                ls[-1], rs[-1] = _joined(p, l), (a, r[1])
+                continue
+        ls.append(l)
+        rs.append(r)
+    # A short piece that got no words just right of a line on its baseline
+    # (a big opening word read apart from the rest of its line) is part of
+    # that line.
+    keep = []
+    for i, (l, r) in enumerate(zip(ls, rs)):
+        if r[0] == r[1] and len(fold(l['text'], FOLD_RASHI).replace(' ', '')) <= 10:
+            # (Its first word: at the line's right end.)
+            beside = [k for k, (m, q) in enumerate(zip(ls, rs)) if q[0] < q[1] and abs(m['base'] - l['base']) < 0.5 * max(m['h'], l['h'])
+                      and -0.3 * m['h'] < l['x0'] - m['x1'] < 2 * m['h']]
+            if len(beside) == 1:
+                ls[beside[0]] = _joined(ls[beside[0]], l)
+                continue
+        keep.append(i)
+    return [ls[i] for i in keep], [rs[i] for i in keep]
+
+
+CORRECTIONS = Path(__file__).parent / 'corrections'
+
+
+def corrections(book, amud):
+    """Reviewed lines of an amud (tool/daf/corrections/<Book>_<amud>.json,
+    from review.py): each {stream, base, x0, x1, words: [from, to], first,
+    last} or {stream, base, x0, x1, drop: true}, the line found again by its
+    place on the scan."""
+    path = CORRECTIONS / f'{book.replace(" ", "_")}_{amud}.json'
+    return json.loads(path.read_text())['lines'] if path.exists() else []
+
+
+def fix_headings(ls, ranges, words):
+    """A chapter's closing line (הדרן עלך …) on its own line, its words
+    alone: the line that stands taller or narrower than its column's near
+    where the text has it, with the lines before and after it ending and
+    starting there. The alignment can put it a word or two off, its big
+    letters read badly."""
+    ranges = [tuple(r) for r in ranges]
+    if len(ls) < 3:
+        return ranges
+    hs = sorted(l['h'] for l in ls)
+    med_h = hs[len(hs) // 2]
+    ws = sorted(l['x1'] - l['x0'] for l in ls)
+    med_w = ws[len(ws) // 2]
+    for h in range(len(words)):
+        if not fold(words[h], FOLD_SQUARE).startswith('הדרנ'):
+            continue
+        e = next((k for k in range(h, min(len(words), h + 8)) if words[k].rstrip().endswith(':')), None)
+        if e is None:
+            continue
+        near = [k for k, (a, b) in enumerate(ranges) if not ls[k].get('more') and not ls[k].get('reviewed')
+                and a < e + 4 and b > h - 4]
+        tall = [k for k in near if ls[k]['h'] > 1.2 * med_h and ls[k]['x1'] - ls[k]['x0'] < 0.75 * med_w]
+        if len(tall) != 1:
+            continue
+        k = tall[0]
+        ranges[k] = (h, e + 1)
+        if k > 0 and ranges[k - 1][0] < h < ranges[k - 1][1] + 3:
+            ranges[k - 1] = (ranges[k - 1][0], h)
+        if k + 1 < len(ranges) and ranges[k + 1][0] - 3 < e + 1 < ranges[k + 1][1]:
+            ranges[k + 1] = (e + 1, ranges[k + 1][1])
+    return ranges
+
+
+def drop_head_words(ls, ranges):
+    """A column's first line that is a word or two in letters far bigger
+    than the column's, above the rest of it, is the running head (the
+    tractate's name, matched to the first word of a text that starts with
+    it), not the text: its words go to the line below."""
+    ranges = [tuple(r) for r in ranges]
+    if len(ls) < 4:
+        return ranges
+    hs = sorted(l['h'] for l in ls)
+    med = hs[len(hs) // 2]
+    top = min(range(len(ls)), key=lambda k: ls[k]['base'])
+    l = ls[top]
+    a, b = ranges[top]
+    rest = [m for k, m in enumerate(ls) if k != top]
+    if (l['h'] > 1.6 * med and 0 < b - a <= 2 and not l.get('reviewed')
+            and all(m['base'] > l['base'] + 0.5 * l['h'] for m in rest)):
+        below = min((k for k in range(len(ls)) if k != top and ranges[k][0] == b), key=lambda k: ls[k]['base'], default=None)
+        if below is not None:
+            ranges[below] = (a, ranges[below][1])
+            ranges[top] = (a, a)
+    return ranges
+
+
+def apply_corrections(fixes, sid, ls, ranges, lines, words):
+    """The stream's lines and ranges with the reviewed ones put right: a
+    reviewed line takes its words (from another stream if it was taken for
+    one, or a new line where none was found), the lines beside it give
+    them up, and a dropped line has none."""
+    ls, ranges = list(ls), list(ranges)
+    done, freed = [], []
+    for f in fixes:
+        if f['stream'] != sid:
+            continue
+        def at(l):
+            return (abs(l['base'] - f['base']) < 0.5 * l['h']
+                    and min(l['x1'], f['x1']) - max(l['x0'], f['x0']) > 0.5 * min(l['x1'] - l['x0'], f['x1'] - f['x0']))
+        k = next((i for i, l in enumerate(ls) if at(l)), None)
+        if k is None:
+            other = next((l for l in lines if l.get('stream') != sid and at(l)), None)
+            if other is not None:
+                l = dict(other, stream=sid)
+                if not f.get('split'):
+                    other['moved_to'] = sid
+                else:
+                    # One printed row read as one line across two columns:
+                    # this text's part of it, cut where the reviewer drew.
+                    ws = [w for w in other['words'] if f['x0'] <= (w['x0'] + w['x1']) / 2 <= f['x1']]
+                    l.update(_line(ws), stream=sid, letters=sum(len(w['text']) for w in ws))
+                    rest = [w for w in other['words'] if w not in ws]
+                    if rest:
+                        other.update(_line(rest), letters=sum(len(w['text']) for w in rest))
+                    else:
+                        other['moved_to'] = sid
+            else:
+                l = dict(x0=f['x0'], x1=f['x1'], base=f['base'], h=f.get('h', 20), text='', stream=sid, letters=0, words=[])
+            ls.append(l)
+            ranges.append((0, 0))
+            k = len(ls) - 1
+        if f.get('drop'):
+            ranges[k] = (0, 0)
+            ls[k]['reviewed'] = True
+            continue
+        # One run of words, or several (comments the print sets in another
+        # order than Sefaria: a line can end one and begin another).
+        runs = [f['words']] if isinstance(f['words'][0], int) else f['words']
+        firsts = [f['first']] if isinstance(f['first'], str) else f['first']
+        lasts = [f['last']] if isinstance(f['last'], str) else f['last']
+        if not all(0 <= a < b <= len(words) and fold(words[a], FOLD_SQUARE) == fold(x, FOLD_SQUARE)
+                   and fold(words[b - 1], FOLD_SQUARE) == fold(y, FOLD_SQUARE) for (a, b), x, y in zip(runs, firsts, lasts)):
+            print(f"  correction at {sid} y{f['base']} no longer fits the text; left out", file=sys.stderr)
+            continue
+        freed.append(ranges[k])
+        ranges[k] = tuple(runs[0])
+        ls[k]['more'] = [tuple(r) for r in runs[1:]]
+        ls[k]['reviewed'] = True
+        done += [tuple(r) for r in runs]
+    # The others give up a reviewed line's words.
+    for i, (a, b) in enumerate(ranges):
+        if ls[i].get('reviewed') or a == b:
+            continue
+        for c, d in done:
+            if a < d and c < b:
+                if a >= c and b <= d:
+                    a = b = c
+                elif a < c:
+                    b = min(b, c)
+                else:
+                    a = max(a, d)
+        ranges[i] = (a, max(a, b))
+    # Words a reviewed line gave up go to the line beside them in the text
+    # that wasn't reviewed.
+    order = sorted((r for r in range(len(ranges)) if ranges[r][0] < ranges[r][1]), key=lambda r: ranges[r])
+    for p, q in zip(order, order[1:]):
+        (a0, b0), (a1, b1) = ranges[p], ranges[q]
+        if b0 < a1 and any(c < a1 and b0 < d for c, d in freed):
+            if not ls[q].get('reviewed'):
+                ranges[q] = (b0, b1)
+            elif not ls[p].get('reviewed'):
+                ranges[p] = (a0, a1)
+    return ls, ranges
+
+
+def refine_ranges(lines, ranges, words, table):
+    """The alignment can put a line break a word off where the OCR garbles
+    a line's first or last word. Each break between two lines moves up to
+    two words either way, to where both lines read most like their words
+    (Sefaria's verse references, in the margin in print, left out)."""
+    def text(a, b):
+        t = re.sub(r'\([^()\s]*(?:\s+[^()\s]+){0,3}?\s*\)|\([^()\s]*(?:\s+[^()\s]+){0,1}|^[^()]*\)', ' ', print_text(' '.join(words[a:b])))
+        return fold(t, table)
+    reads = [fold(print_text(l['text']), table) for l in lines]
+    out = list(ranges)
+    for _ in range(3):
+        changed = False
+        for i in range(len(out) - 1):
+            (a0, b0), (a1, b1) = out[i], out[i + 1]
+            if b0 != a1 or a0 >= b0 or a1 >= b1:
+                continue
+            def score(k):
+                return fuzz.ratio(reads[i], text(a0, k)) + fuzz.ratio(reads[i + 1], text(k, b1))
+            best, at = score(b0), b0
+            for k in range(max(a0 + 1, b0 - 2), min(b1 - 1, b0 + 2) + 1):
+                if k != b0 and score(k) > best + 3:
+                    best, at = score(k), k
+            if at != b0:
+                out[i], out[i + 1] = (a0, at), (at, b1)
+                changed = True
+        if not changed:
+            break
+    return out
+
 # ------------------------------------------------------------------ main
 
 
-def amud_map(cache, book, amud, debug_dir=None, verbose=False, training_dir=None):
+def page_image(img_path):
+    """The scan, its paper made white where it is dark (a scan of toned
+    paper, its background darker than the ink threshold of 128 these tools
+    use): grey, scaled so the paper is at 230."""
+    im = Image.open(img_path)
+    grey = im.convert('L')
+    small = grey.copy()
+    small.thumbnail((400, 400))
+    bg = float(np.percentile(np.asarray(small), 60))
+    if bg >= 170:
+        return im
+    return grey.point(lambda v: min(255, int(v * 230 / bg)))
+
+
+def amud_map(cache, book, amud, debug_dir=None, verbose=False, training_dir=None, lines_out=None):
+    """The amud's line map and a report on it; with `lines_out`, its lines
+    are added there too (gold.py reads them)."""
     img_path, rows = ocr(cache, book, amud)
     streams, extra = texts(cache, book, amud)
-    im = Image.open(img_path)
+    im = page_image(img_path)
     lines = lines_of(rows, im)
     info = classify(lines, streams, extra)
+    ks = kraken_lines(cache, book, amud, img_path) if os.environ.get('LINEMAP_KRAKEN', '1') != '0' else []
+    if SEGMENT:
+        # The body's lines again from the scan's ink (segment.py).
+        import segment
+        lines = segment.reline(lines, im, streams, extra, info['frame'],
+                               cache / 'seg' / OCR_LANG / f'{book.replace(" ", "_")}_{amud}.json')
+    if ks:
+        snap_to_kraken(lines, ks, np.asarray(im.convert('L')))
+    # Lines a reviewer found to be no body text's (notes, headings).
+    for f in corrections(book, amud):
+        if f.get('ignore'):
+            for l in lines:
+                if abs(l['base'] - f['base']) < 0.5 * l['h'] and min(l['x1'], f['x1']) - max(l['x0'], f['x0']) > 0.5 * min(l['x1'] - l['x0'], f['x1'] - f['x0']):
+                    l['reviewed'] = True
+                    if l.get('stream') in BODY:
+                        l['stream'] = 'other'
+    # A column's catchword: the next amud's first word, alone under its
+    # last line. It is no line of this amud's text.
+    nxt = neighbor(amud, 1)
+    try:
+        heads = texts(cache, book, nxt)[0] if nxt else {}
+    except SystemExit:
+        heads = {}
+    for sid in ('main', 'inner', 'outer'):
+        col = [l for l in lines if l.get('stream') == sid]
+        # (Its own text's next word, or the Gemara's.)
+        firsts = {fold(print_text(heads[k][0]), FOLD_SQUARE): print_text(heads[k][0]) for k in (sid, 'main') if heads.get(k)}
+        # (The reading leaves most catchwords unassigned, or to no text.)
+        loose = [l for l in lines if l.get('stream') in (None, 'other') and not l.get('catchword')]
+        for l in col + loose:
+            # (One word, though the reading can break it in two.)
+            word = fold(l['text'], FOLD_SQUARE).replace(' ', '')
+            if len(l['text'].split()) > 2 or len(word) > 10 or l.get('reviewed'):
+                continue
+            best = max(firsts, key=lambda f: difflib.SequenceMatcher(None, word, f).ratio(), default=None)
+            if not best or difflib.SequenceMatcher(None, word, best).ratio() < 0.6:
+                continue
+            over = [m for m in col if m is not l and m['x0'] - 5 <= l['x0'] and l['x1'] <= m['x1'] + 5]
+            above = max((m for m in over if m['base'] < l['base']), key=lambda m: m['base'], default=None)
+            if above and 0.5 * above['h'] < l['base'] - above['base'] < 2.5 * above['h'] \
+                    and l['x1'] - l['x0'] < 0.25 * (above['x1'] - above['x0']) and not any(m['base'] > l['base'] for m in over):
+                l['stream'], l['catchword'], l['catch_text'] = 'other', sid, firsts[best]
+    # A line found only by the lower bar is a catchword or nothing of the
+    # body's (a heading's piece, a stray word): it takes none of its words.
+    for l in lines:
+        if l.get('low') and l.get('stream') in BODY:
+            l['stream'] = 'other'
     result = {'book': book, 'amud': amud, 'page': [im.width, im.height],
               'frame': [round(v) for v in info['frame']], 'columns': {}, 'other': [],
               # The app uses a map only with the text it was made from.
               'words': {k: len(v) for k, v in streams.items()}}
     report = {}
+    result['carried'] = {}
     for sid in ['main', 'inner', 'outer']:
         ls = _drop_specks(sorted([l for l in lines if l['stream'] == sid], key=lambda l: l['base']))
         ls = reading_order(ls, by_text=sid != 'main')
+        ls = _attach_specks(ls, [l for l in lines if l.get('speck_of') == sid and l['stream'] == 'other'])
         lines = [l for l in lines if l['stream'] != sid] + ls
         words = streams[sid]
         # Rashi script read as square letters needs folding; read by the
         # Vilna model, it doesn't.
         table = FOLD_SQUARE if sid == 'main' or OCR_LANG != 'heb' else FOLD_RASHI
-        ranges = line_ranges(ls, words, table) if ls and words else []
+        if sid == 'main' and ls and words:
+            ranges, carried = _main_ranges(cache, book, amud, ls, words, table)
+            result['carried'].update(carried)
+        else:
+            ranges = line_ranges(ls, words, table) if ls and words else []
+            if ranges:
+                ranges = refine_ranges(ls, ranges, words, table)
+        if ranges:
+            ls, ranges = join_pieces(ls, ranges)
+            ranges = fix_headings(ls, ranges, words)
+            ranges = drop_head_words(ls, ranges)
+        ls, ranges = apply_corrections(corrections(book, amud), sid, ls, ranges, lines, words)
+        lines = [l for l in lines if l['stream'] != sid and l.get('moved_to') is None] + ls
         for k, l in enumerate(ls):
             l['order'] = k
         col = []
         for l, (a, b) in zip(ls, ranges):
             if a == b:
                 continue  # matched no words: a heading or a note, not this text
-            col.append([round(l['x0']), round(l['x1']), round(l['base']), round(l['h']), a, b])
+            col.append([round(l['x0']), round(l['x1']), round(l['base']), round(l['h']), a, b] + [v for r in l.get('more', []) for v in r])
             l['range'] = (a, b)
         result['columns'][sid] = col
         report[sid] = _quality(ls, words, table)
-    result['carried'] = {}
     for sid in CARRIED:
         ls = _drop_specks(sorted([l for l in lines if l['stream'] == sid], key=lambda l: l['base']))
         if not ls or not extra.get(sid):
             continue
         ls = reading_order(ls, by_text=True)
+        ls = _attach_specks(ls, [l for l in lines if l.get('speck_of') == sid and l['stream'] == 'other'])
         lines = [l for l in lines if l['stream'] != sid] + ls
         table = FOLD_SQUARE if OCR_LANG != 'heb' else FOLD_RASHI
         col = []
-        for l, (a, b) in zip(ls, line_ranges(ls, extra[sid], table, whole=False)):
+        rs = line_ranges(ls, extra[sid], table, whole=False)
+        for l, (a, b) in zip(ls, refine_ranges(ls, rs, extra[sid], table)):
             if a < b:
                 col.append([round(l['x0']), round(l['x1']), round(l['base']), round(l['h']), a, b])
                 l['range'] = (a, b)
@@ -953,7 +1436,7 @@ def amud_map(cache, book, amud, debug_dir=None, verbose=False, training_dir=None
     small = []
     for sid in sorted({l['stream'] for l in lines} - set(BODY) - {None}):
         ls = sorted([l for l in lines if l['stream'] == sid], key=lambda l: (l['base'], -l['x1']))
-        if training_dir and extra.get(sid) and all(l.get('pos') is not None for l in ls):
+        if (training_dir or lines_out is not None) and extra.get(sid) and all(l.get('pos') is not None for l in ls):
             # Not shown yet, but Sefaria has their text: training lines in
             # the small type.
             table = FOLD_SQUARE if OCR_LANG != 'heb' else FOLD_RASHI
@@ -965,45 +1448,96 @@ def amud_map(cache, book, amud, debug_dir=None, verbose=False, training_dir=None
             _quality([l for l in ordered if 'range' in l], extra[sid], table)
         result['other'].append({'id': sid, 'lines': [[round(l['x0']), round(l['x1']), round(l['base']), round(l['h']), l['text']] for l in ls]})
     if training_dir:
-        _export_training(im, lines + small, {**extra, **streams}, Path(training_dir), f'{book.replace(" ", "_")}_{amud}')
+        _export_training(im, lines + small, {**extra, **streams}, Path(training_dir), f'{book.replace(" ", "_")}_{amud}',
+                         he_names(cache, book))
     if verbose:
         _dump(lines, streams)
     if debug_dir:
         _debug(img_path, lines, streams, Path(debug_dir) / f'{book}_{amud}.png')
+    if lines_out is not None:
+        lines_out.extend(lines + small)
     return result, report
 
 
-def _export_training(im, lines, streams, out, name):
+def print_text(text):
+    """Sefaria's text as the print sets it, near enough to read a line
+    against: no markup, and none of Hebrew's own punctuation (the print sets
+    " ' - :) or vowel points (the print has none). heb has neither."""
+    text = re.sub(r'<[^>]+>', '', text).replace('&nbsp;', ' ')
+    for x, y in (('\u05f4', '"'), ('\u05f3', "'"), ('\u05be', '-'), ('\u05c3', ':')):
+        text = text.replace(x, y)
+    return ' '.join(re.sub(r'[\u0591-\u05c7\u200e\u200f\u202a-\u202e]', '', text).split())
+
+
+def line_box(l):
+    """A line's box on the scan, from the baseline rather than the word
+    boxes: one tall word box (a big opening word, a box run into the line
+    above) would take in a line too many."""
+    return [int(l['x0']) - 4, int(l['base'] - 1.25 * l['h']), int(l['x1']) + 4, int(l['base'] + 0.35 * l['h']) + 1]
+
+
+def line_image(im, box):
+    """The line's image as Tesseract reads it: grey, at OCR_SCALE."""
+    crop = im.crop(tuple(box)).convert('L')
+    return crop.resize((crop.width * OCR_SCALE, crop.height * OCR_SCALE), Image.LANCZOS)
+
+
+def _citations(text, names):
+    """Sefaria's references in parentheses as the print has them: it names
+    the tractate where the print, on that tractate's own page, doesn't
+    ((יבמות דף מא.) is printed (דף מא.) in Yevamot)."""
+    def one(m):
+        inner = f' {m[2]} '
+        for n in names:
+            inner = inner.replace(f' {n} ', ' ')
+        return m[1] + ' '.join(inner.split()) + m[3]
+    # A reference can run on from the line before or into the next.
+    return re.sub(r'(\(|^)([^()]*)(\)|$)', lambda m: one(m) if m[1] or m[3] else m[0], text)
+
+
+def _with_periods(gt, l, xs, left):
+    """Sefaria leaves out most of the print's periods; a line's text with
+    the ones found in its image (at OCR_SCALE, from page x `left`) put back,
+    after the word each follows, where the OCR found as many words as the
+    text has (so the word is known)."""
+    ws = sorted(l['words'], key=lambda w: -w['x1'])
+    words = gt.split()
+    if not xs or len(ws) != len(words):
+        return gt
+    for x in xs:
+        x = left + x / OCR_SCALE
+        after = [k for k, w in enumerate(ws) if w['x1'] > x + 1]
+        if after:
+            k = min(after, key=lambda k: ws[k]['x1'])
+            if not words[k].endswith(('.', ':')):
+                words[k] += '.'
+    return ' '.join(words)
+
+
+def _export_training(im, lines, streams, out, name, names=()):
     """Line images and their text, to fine-tune Tesseract on the Vilna
     type (tesstrain's layout: NAME.png, NAME.gt.txt and a line box file).
-    Only lines that matched their words well, and none with a citation in
-    parentheses (Sefaria spells those out). The Gemara's text has its
+    Only lines that matched their words well, with references in
+    parentheses as the print has them (see _citations; train_ocr.py --clean
+    drops those that still differ). The Gemara's text has its
     abbreviations spelled out, so a Gemara line is used only where
     Tesseract already read it right, with what it read."""
     out.mkdir(parents=True, exist_ok=True)
     for k, l in enumerate(lines):
-        if l.get('score', 0) < 80 or 'range' not in l or l['stream'] not in streams:
+        if l.get('score', 0) < 80 or 'range' not in l or l['stream'] not in streams or l.get('more'):
             continue
         a, b = l['range']
         if l['stream'] == 'main':
             if l['score'] < 100:
                 continue
-            gt = ' '.join(re.sub(r'[\u200e\u200f\u202a-\u202e]', '', l['text']).split())
+            gt = print_text(l['text'])
         else:
-            gt = ' '.join(w for w in streams[l['stream']][a:b] if w not in '–-—')
-        gt = re.sub(r'<[^>]+>', '', gt).replace('&nbsp;', ' ').strip()
-        # heb has none of Hebrew's own punctuation (the print sets " ' - :)
-        # or vowel points (the print has none).
-        for x, y in (('\u05f4', '"'), ('\u05f3', "'"), ('\u05be', '-'), ('\u05c3', ':')):
-            gt = gt.replace(x, y)
-        gt = re.sub(r'[\u0591-\u05c7]', '', gt)
-        if not gt or '(' in gt or ')' in gt:
+            gt = _citations(print_text(' '.join(w for w in streams[l['stream']][a:b] if w not in '–-—')), names)
+        if not gt:
             continue
-        # From the baseline, not the box: one tall word box (a big opening
-        # word, a box run into the line above) would take in a line too many.
-        top, bottom = l['base'] - 1.25 * l['h'], l['base'] + 0.35 * l['h']
-        crop = im.crop((int(l['x0']) - 4, int(top), int(l['x1']) + 4, int(bottom) + 1)).convert('L')
-        crop = crop.resize((crop.width * OCR_SCALE, crop.height * OCR_SCALE), Image.LANCZOS)
+        box = line_box(l)
+        crop = line_image(im, box)
+        gt = _with_periods(gt, l, dots.periods(crop), box[0])
         # NAME_STREAM_K, the stream without underscores (inner_prev →
         # innerprev): train_ocr.py splits on them.
         base = out / f'{name}_{l["stream"].replace("_", "")}_{k:03}'

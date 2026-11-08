@@ -41,9 +41,10 @@ class DafPage extends StatefulWidget {
   /// Font size of the Gemara relative to the default for this width.
   final double scale;
 
-  /// Where the Vilna page puts each line, if known for this amud: then the
-  /// page is set line for line as printed; else it is laid out by rule.
-  final DafLineMap? printed;
+  /// Where the Vilna page puts each word, if known for this amud: then the
+  /// page is drawn as printed (in the print's own type, whatever
+  /// [mainFont] and [sideFont] are); else it is laid out by rule.
+  final DafPrint? printed;
   const DafPage({
     super.key,
     required this.text,
@@ -112,18 +113,18 @@ class _DafPageState extends State<DafPage> {
         });
     final words = dafWords(widget.text);
     final printed = widget.printed;
-    final usePrinted = printed != null && printed.fits(main: words.main.length, inner: words.inner.length, outer: words.outer.length);
-    final layout = usePrinted
-        ? layoutPrinted(
-            main: words.main,
-            inner: words.inner,
-            outer: words.outer,
-            map: printed,
-            width: width,
-            mainSize: mainSize,
-            sideSize: sideSize,
-            measure: (w, c) => painter(w, c).width,
-          )
+    final ems = <(String, bool), double>{};
+    double advance(String text, bool rashi) => ems.putIfAbsent((text, rashi), () {
+          final tp = TextPainter(
+              text: TextSpan(text: text, style: printedStyle(DafGlyphs(text, rashi: rashi, left: 0, base: 0, sx: 100, sy: 100), ink)),
+              textDirection: TextDirection.rtl)
+            ..layout();
+          final w = tp.width / 100;
+          tp.dispose();
+          return w;
+        });
+    final layout = printed != null
+        ? layoutPrint(main: words.main, inner: words.inner, outer: words.outer, print: printed, width: width, advance: advance)
         : layoutDaf(
             main: words.main,
             inner: words.inner,
@@ -141,11 +142,18 @@ class _DafPageState extends State<DafPage> {
           );
     final recorder = ui.PictureRecorder();
     final canvas = Canvas(recorder);
+    void drawPrinted(DafGlyphs g) => paintPrinted(canvas, g, color: g.big ? accent : ink, weight: printed?.weight ?? 0);
+
     for (final p in layout.words) {
+      if (p.glyphs case final g?) {
+        drawPrinted(g);
+        continue;
+      }
       final tp = painter(p.word, p.column, p.size);
       // Center the glyphs vertically in the line box.
       tp.paint(canvas, Offset(p.x, p.y + (p.height - tp.height) / 2));
     }
+    layout.extras.forEach(drawPrinted);
     for (final tp in painters.values) {
       tp.dispose();
     }
@@ -185,6 +193,49 @@ class _DafPageState extends State<DafPage> {
       );
     });
   }
+}
+
+/// The print's type for a word of the printed page: the fonts
+/// tool/daf/svg.py placed its words with, at its size, its advances summed
+/// as placed (no kerning).
+TextStyle printedStyle(DafGlyphs g, Color color) => TextStyle(
+      fontFamily: g.rashi ? 'NotoRashiHebrew' : 'FrankRuehlCLM',
+      fontFamilyFallback: [g.rashi ? 'FrankRuehlCLM' : 'NotoRashiHebrew'],
+      fontSize: g.sy,
+      color: color,
+      height: 1,
+      fontFeatures: const [FontFeature.disable('kern'), FontFeature.disable('liga')],
+    );
+
+/// Draws a word of the printed page where and as the print has it; Rashi
+/// script [weight] em heavier than its font (stroked), as heavy as the
+/// print's.
+void paintPrinted(Canvas canvas, DafGlyphs g, {required Color color, double weight = 0}) {
+  final style = printedStyle(g, color);
+  final fill = TextPainter(text: TextSpan(text: g.text, style: style), textDirection: TextDirection.rtl)..layout();
+  canvas.save();
+  canvas.translate(g.left, g.base);
+  canvas.scale(g.sx / g.sy, 1);
+  final at = Offset(0, -fill.computeDistanceToActualBaseline(TextBaseline.alphabetic));
+  fill.paint(canvas, at);
+  if (g.rashi && weight > 0) {
+    final stroke = TextPainter(
+        text: TextSpan(
+            text: g.text,
+            style: style.copyWith(
+                color: null,
+                foreground: Paint()
+                  ..style = PaintingStyle.stroke
+                  ..strokeWidth = weight * g.sy
+                  ..strokeJoin = StrokeJoin.round
+                  ..color = color)),
+        textDirection: TextDirection.rtl)
+      ..layout();
+    stroke.paint(canvas, at);
+    stroke.dispose();
+  }
+  canvas.restore();
+  fill.dispose();
 }
 
 /// Marker colors for a selected passage: one per column, so the Gemara,

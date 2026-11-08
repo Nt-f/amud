@@ -81,10 +81,14 @@ class PlacedWord {
   final double width;
   final double height;
 
-  /// The font size to draw it at, where the layout chose one (the printed
-  /// page sets each line to fit); else the column's.
+  /// The font size to draw it at, where the layout chose one; else the
+  /// column's.
   final double? size;
-  const PlacedWord(this.word, this.column, this.x, this.y, this.width, this.height, {this.size});
+
+  /// On the printed page, the word as the print sets it, drawn just so
+  /// (then [word] is the text's word it stands for).
+  final DafGlyphs? glyphs;
+  const PlacedWord(this.word, this.column, this.x, this.y, this.width, this.height, {this.size, this.glyphs});
 
   bool contains(double px, double py) => px >= x && px <= x + width && py >= y && py <= y + height;
 }
@@ -96,7 +100,11 @@ class DafLayout {
   final double height;
   final List<PlacedWord> words;
   final DafLayoutCase layoutCase;
-  const DafLayout(this.width, this.height, this.words, this.layoutCase);
+
+  /// Drawn but not part of the text: the printed page's running head, page
+  /// number and catchwords.
+  final List<DafGlyphs> extras;
+  const DafLayout(this.width, this.height, this.words, this.layoutCase, {this.extras = const []});
 
   /// The word at a point, if any (a little slack between words).
   PlacedWord? hit(double x, double y) {
@@ -303,133 +311,138 @@ DafLayout layoutDaf({
 
 // ------------------------------------------------------------------ printed
 
-/// One printed line of the Vilna page: its box on the scan (pixels; [base]
-/// is the baseline, [h] the height of its words) and the words of its
-/// column it holds, [from] to [to] (exclusive).
-class DafPrintedLine {
-  final double x0;
-  final double x1;
+/// A word as the Romm Vilna page prints it: its letters in square type or
+/// Rashi script, the left end of their advance at [left] on the baseline
+/// [base], [sx] and [sy] pixels to the em across and up (the font size is
+/// [sy]; a word squeezed or widened to its printed width has [sx] ≠ [sy]).
+/// [big]: a section's big opening word.
+class DafGlyphs {
+  final String text;
+  final bool rashi;
+  final double left;
   final double base;
-  final double h;
-  final int from;
-  final int to;
-  const DafPrintedLine(this.x0, this.x1, this.base, this.h, this.from, this.to);
+  final double sx;
+  final double sy;
+  final bool big;
+  const DafGlyphs(this.text, {required this.rashi, required this.left, required this.base, required this.sx, required this.sy, this.big = false});
 }
 
-/// Where the Romm Vilna page puts every line of an amud, read off the scan
-/// by tool/daf/linemap.py. The words are counted as [dafWords] counts them;
-/// [words] says how many each column had when the map was made, so a map
-/// made from other text is not used.
-class DafLineMap {
-  /// The page body on the scan: the Gemara, Rashi and Tosafot (the small
-  /// commentaries beside and below it are left out).
+/// One word of a [DafPrint]: [column] and [index] are the text's word it
+/// stands for, as [dafWords] numbers them; a column but index -1 for a word
+/// of the print the text lacks; no column for the running head, page number
+/// and catchwords.
+class DafPrintWord {
+  final DafColumn? column;
+  final int index;
+  final DafGlyphs glyphs;
+  const DafPrintWord(this.column, this.index, this.glyphs);
+}
+
+/// Every word of an amud's Gemara, Rashi and Tosafot where the Romm Vilna
+/// page prints it, read off its scan by tool/daf/svg.py (in the scan's
+/// pixels). [frame] is the printed body's extent; [words] how many words
+/// each column had in the text it was made from.
+class DafPrint {
   final double left;
   final double top;
   final double right;
   final double bottom;
-  final Map<DafColumn, List<DafPrintedLine>> lines;
-  final Map<DafColumn, int> words;
-  const DafLineMap({required this.left, required this.top, required this.right, required this.bottom, required this.lines, required this.words});
+  final List<DafPrintWord> words;
+  final Map<DafColumn, int> counts;
 
+  /// Rashi script's letters are drawn this much (in em) heavier than the
+  /// font's, as heavy as the print's.
+  final double weight;
+  const DafPrint({
+    required this.left,
+    required this.top,
+    required this.right,
+    required this.bottom,
+    required this.words,
+    required this.counts,
+    this.weight = 0,
+  });
+
+  static const _columns = {'m': DafColumn.main, 'i': DafColumn.inner, 'o': DafColumn.outer};
   static const _ids = {DafColumn.main: 'main', DafColumn.inner: 'inner', DafColumn.outer: 'outer'};
 
-  /// Whether this map was made from these words.
+  /// Whether its words are numbered as these texts' are (else it is still
+  /// drawn, but tapping a word can't say which it is).
   bool fits({required int main, required int inner, required int outer}) =>
-      words[DafColumn.main] == main && words[DafColumn.inner] == inner && words[DafColumn.outer] == outer;
+      counts[DafColumn.main] == main && counts[DafColumn.inner] == inner && counts[DafColumn.outer] == outer;
 
-  factory DafLineMap.fromJson(Map<String, Object?> j) {
+  factory DafPrint.fromJson(Map<String, Object?> j) {
     final frame = [for (final v in j['frame'] as List) (v as num).toDouble()];
-    final cols = (j['columns'] as Map).cast<String, Object?>();
     final counts = (j['words'] as Map? ?? const {}).cast<String, Object?>();
-    return DafLineMap(
+    double d(Object? v) => (v as num).toDouble();
+    return DafPrint(
       left: frame[0],
       top: frame[1],
       right: frame[2],
       bottom: frame[3],
-      lines: {
-        for (final MapEntry(key: c, value: id) in _ids.entries)
-          c: [
-            for (final l in (cols[id] as List? ?? const []))
-              DafPrintedLine(
-                (l[0] as num).toDouble(),
-                (l[1] as num).toDouble(),
-                (l[2] as num).toDouble(),
-                (l[3] as num).toDouble(),
-                l[4] as int,
-                l[5] as int,
-              ),
-          ],
-      },
-      words: {for (final MapEntry(key: c, value: id) in _ids.entries) c: (counts[id] as num?)?.toInt() ?? -1},
+      weight: (j['weight'] as num?)?.toDouble() ?? 0,
+      counts: {for (final MapEntry(key: c, value: id) in _ids.entries) c: (counts[id] as num?)?.toInt() ?? -1},
+      words: [
+        for (final w in j['placed'] as List)
+          if (w case [final String c, final num k, final num font, final String text, final l, final b, final sx, final sy, ...final rest])
+            DafPrintWord(
+              _columns[c],
+              k.toInt(),
+              DafGlyphs(text, rashi: font == 1, left: d(l), base: d(b), sx: d(sx), sy: d(sy), big: rest.isNotEmpty && rest.first == 1),
+            ),
+      ],
     );
   }
 }
 
-/// Lays out an amud line for line as the Vilna page prints it ([map]),
-/// scaled to [width]. Each column's type size follows its printed line
-/// spacing; each line's words are justified into its printed width, and set
-/// smaller where they don't fit (the text spells out abbreviations the page
-/// abbreviates). [measure] gives a word's width at [mainSize] (the Gemara)
-/// or [sideSize].
-DafLayout layoutPrinted({
+/// The amud as the Vilna page prints it ([print]), scaled to [width]: every
+/// word where the print has it, linked to the text's word it stands for
+/// ([main], [inner], [outer], numbered as [dafWords] numbers them). A word
+/// of the print the text lacks takes the passage of the word before it in
+/// its column; with text numbered otherwise ([DafPrint.fits]) no word is
+/// linked. [advance] gives a word's advance in em, in square type or Rashi
+/// script.
+DafLayout layoutPrint({
   required List<DafWord> main,
   required List<DafWord> inner,
   required List<DafWord> outer,
-  required DafLineMap map,
+  required DafPrint print,
   required double width,
-  required double mainSize,
-  required double sideSize,
-  required DafMeasure measure,
+  required double Function(String text, bool rashi) advance,
 }) {
-  final s = width / (map.right - map.left);
+  final s = width / (print.right - print.left);
+  final linked = print.fits(main: main.length, inner: inner.length, outer: outer.length);
+  final texts = {DafColumn.main: main, DafColumn.inner: inner, DafColumn.outer: outer};
+  final last = <DafColumn, DafWord>{};
   final placed = <PlacedWord>[];
-  for (final (column, words) in [(DafColumn.main, main), (DafColumn.inner, inner), (DafColumn.outer, outer)]) {
-    final lines = map.lines[column] ?? const [];
-    if (lines.isEmpty) continue;
-    final ref = column == DafColumn.main ? mainSize : sideSize;
-    final size = _printedSize(lines, column) * s;
-    for (final line in lines) {
-      final from = math.min(line.from, words.length);
-      final to = math.min(line.to, words.length);
-      if (to <= from) continue;
-      final ws = words.sublist(from, to);
-      final widths = [for (final w in ws) measure(w, column) * size / ref];
-      final space = size * 0.25;
-      final natural = widths.fold(0.0, (a, b) => a + b) + space * (ws.length - 1);
-      final box = (line.x1 - line.x0) * s;
-      final fit = natural > box ? box / natural : 1.0;
-      final gap = ws.length > 1 ? (box - natural * fit) / (ws.length - 1) + space * fit : 0.0;
-      final lineSize = size * fit;
-      final height = lineSize * 1.3;
-      final baseline = (line.base - map.top) * s;
-      // The glyphs sit centered in the word's box (see DafPage): put the
-      // baseline, about 0.8 of the size below the glyphs' top, on the line.
-      final y = baseline - 0.8 * lineSize - (height - lineSize) / 2;
-      var x = (line.x1 - map.left) * s;
-      for (var k = 0; k < ws.length; k++) {
-        final w = widths[k] * fit;
-        x -= w;
-        placed.add(PlacedWord(ws[k], column, x, y, w, height, size: lineSize * ws[k].scale));
-        x -= gap;
-      }
+  final extras = <DafGlyphs>[];
+  for (final w in print.words) {
+    final g = w.glyphs;
+    final glyphs = DafGlyphs(
+      g.text,
+      rashi: g.rashi,
+      left: (g.left - print.left) * s,
+      base: (g.base - print.top) * s,
+      sx: g.sx * s,
+      sy: g.sy * s,
+      big: g.big,
+    );
+    final column = w.column;
+    if (column == null) {
+      extras.add(glyphs);
+      continue;
     }
+    final text = texts[column]!;
+    final own = linked && w.index >= 0 && w.index < text.length ? text[w.index] : null;
+    final before = last[column];
+    final word = own ?? DafWord(g.text, segment: before?.segment ?? 0, comment: before?.comment ?? -1, position: -1);
+    if (own != null) last[column] = own;
+    // Its box: the advance across, the letters' body and a little above
+    // and below.
+    final w0 = advance(g.text, g.rashi) * glyphs.sx;
+    placed.add(PlacedWord(word, column, glyphs.left, glyphs.base - 0.95 * glyphs.sy, w0, 1.25 * glyphs.sy, glyphs: glyphs));
   }
-  return DafLayout(width, (map.bottom - map.top) * s, placed, DafLayoutCase.doubleWrap);
-}
-
-/// A column's type size on the scan: the Gemara's letters stand about three
-/// quarters of its line spacing, Rashi script's a little less.
-double _printedSize(List<DafPrintedLine> lines, DafColumn column) {
-  final steps = <double>[];
-  for (var k = 1; k < lines.length; k++) {
-    // Consecutive lines of one block (not the jump from one block to the
-    // next).
-    final d = lines[k].base - lines[k - 1].base;
-    if (d > 0 && d < 2.5 * lines[k].h) steps.add(d);
-  }
-  steps.sort();
-  final pitch = steps.isEmpty ? lines.first.h * 1.4 : steps[steps.length ~/ 2];
-  return pitch * (column == DafColumn.main ? 0.76 : 0.72);
+  return DafLayout(width, (print.bottom - print.top) * s, placed, DafLayoutCase.doubleWrap, extras: extras);
 }
 
 // ------------------------------------------------------------------ input
