@@ -20,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SIDDUR = ROOT / "corpus" / "siddur"
-FIELDS = ("kind", "when", "alt", "node", "role", "voice", "amidah", "minyan",
+FIELDS = ("kind", "when", "plain", "alt", "node", "role", "voice", "amidah", "minyan",
           "gestures", "repeat", "forgot", "select", "fold", "cite", "gloss",
           "comment")
 
