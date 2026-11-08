@@ -570,6 +570,81 @@ Ashkenaz Weekday, files 01–05, in November 2026.
     hide along with it (Avinu Malkeinu's "On Fast Days:").
 54. **English words inside a Hebrew segment** ("Quietly:", "then") are
     split off as their own instruction.
-55. **Use `moridHatal`,** which already knows Israel and Sefardi custom.
-    Don't use `!mashivHaruach && il` (Sefard's `!mashivHaruach` is right,
-    because Nusach Sefard says Morid HaTal everywhere).
+55. **Morid HaTal by nusach.**
+    - In Ashkenaz siddurim (Ashkenaz, Koren), use `moridHatal`: Israel
+      says it, the diaspora says nothing. Not `!mashivHaruach && il`.
+    - In Sefard, Chabad and Edot HaMizrach, use `!mashivHaruach`. They
+      say Morid HaTal in summer everywhere, and `moridHatal` would hide it
+      outside Israel, because it follows the reader's `sefardi` setting,
+      which is off by default.
+
+**Chabad: the whole weekday siddur, November 2026**
+
+56. **Scan every Kaddish for the same three faults**, found in every
+    nusach so far:
+    - the congregation's "אמן", or "שמה דקודשא בריך הוא", tagged
+      instruction, so the Hebrew vanishes;
+    - wrong roles on "ויתעלה" and "בריך הוא";
+    - the Ten Days Oseh Shalom part swallowing "במרומיו … אמן".
+    In Oseh Shalom, the `alt` goes only on "שלום" and "(השלום)". The
+    "בעשי״ת" label gets the `when` and no `alt`.
+57. **Check the words after every alternative.** A `when` on one
+    alternative never covers the text glued after it. Ya'aleh VeYavo's
+    "זכרנו … עינינו" was hidden on Rosh Chodesh, and "כי אל מלך חנון ורחום"
+    showed every day.
+58. **When an insertion replaces a blessing's ending**, the ordinary
+    ending gets the opposite `when` (Nachem on Tisha B'Av:
+    `!tishaBav` on the usual closing).
+59. **Half-Hallel rubrics** ("skip the next psalm") are `halfHallel`,
+    not `wholeHallel`.
+60. **Occasion before `if_` in a condition:**
+    `roshChodesh && (if_a || if_b)`. The evaluator reports "unknown" for
+    an `if_` before it reaches the occasion, so `(if_a || if_b) &&
+    roshChodesh` shows on every day as "If: …".
+61. **A note explaining that a prayer is omitted** takes the opposite of
+    that prayer's condition (the Song of the Day note: `!tachanunShacharit`).
+62. **A bracket that mixes conditional and always-said lines** ("[ … ]")
+    is split at the "]", with the broader `when` on the rest.
+63. **A pointer bracket that only repeats the next block's first words**
+    ("[outside Israel add …]") is `when=false` on the whole segment.
+64. **Chabad's extra no-Tachanun days** (19–20 Kislev, 10 Shevat, 12–13
+    Tammuz, all of Nisan and so on) aren't in `tachanunShacharit` yet.
+    Don't hand-roll date conditions; list them in your report.
+65. **Locks for parallel helpers.** Ten helpers on one nusach lost no
+    edits when every `edit.py --apply` and `build_assets.py NUSACH` ran
+    under `flock LOCKFILE`. `fmt.py` takes file paths: use a `0*.json`
+    glob, since `book.json` makes it crash.
+
+**Koren batch 2: Koren special days, November 2026**
+
+66. **English segments can be mistyped too.** Koren's Hoshana Raba
+    English was `kind=instruction` with a machine-made `he`, so the
+    reader showed a label instead of the translation. Make it `prayer`
+    and clear the stray `en` and `he`.
+67. **`hDay` is the day of the month in any month.** Use a festival-day
+    variable (`hoshanaDay`, `chanukahDay`, `omerDay`), or
+    `hMonth == N && hDay == D`. Koren's Ushpizin `sukkot && hDay == 1..6`
+    never fired.
+68. **The Chol HaMoed Sukkot reading by day** goes by `hoshanaDay`,
+    following SA 663:1. Outside Israel, for day d: kohen d-1, levi d,
+    shelishi d+1, revi'i d-1 and d. In Israel, the day's own paragraph.
+    Decide `il`/`!il` from the English rubric: Sefaria-era tags here were
+    sometimes inverted.
+69. **Write `diaspora`, not `!il`.** The reader labels `!il` "Not in
+    Israel". A leaf that prints the diaspora and the Israeli orders one
+    after the other needs `diaspora` / `il` on every segment of each
+    half, or both show.
+70. **Check a Musaf for stray `amidah=repetition` / `role=chazzan`** on
+    ordinary blessings, Sim Shalom or the end of Modim; it hides them
+    from the silent Amidah.
+71. **An English-only rubric whose `translates` names several Hebrew
+    lines** makes `audit_translations` report "no gaps" although those
+    lines have no English. Point it at one line and translate the rest.
+72. **A Selichot leaf ending "Continue with … page N"** means the
+    service graph is missing the rest; check what's actually inserted on
+    the fast day.
+73. **Torah tables need no `when`.** The engine picks the weekday reading
+    itself (`_leining`), and holiday readings come from hebcal, so don't
+    map a book's holiday Torah tables into the service graph; they would
+    show twice. Free-standing ketiv words become a `note`: "Written X in
+    the scroll; read Y".

@@ -14,7 +14,9 @@ import source
 
 
 def main(argv):
-    paths = argv or [p for n in source.nusachim() for p in source.files(n)]
+    # book.json isn't a chunk file; a glob like corpus/siddur/koren/*.json
+    # names it too.
+    paths = [p for p in argv if os.path.basename(p) != 'book.json'] or [p for n in source.nusachim() for p in source.files(n)]
     changed = 0
     for p in paths:
         text = open(p).read()

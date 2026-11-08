@@ -21,6 +21,7 @@ void main() {
     expect(ashkenaziSpelling("V'Zot HaBerachah; tzara'at"), "V'Zos HaBerachah; tzara'as");
     expect(ashkenaziSpelling("Terumot and ma'asrot, terumat ma'aser; prugiyot"), "Terumos and ma'asros, terumas ma'aser; prugiyos");
     expect(ashkenaziSpelling('the letters Yod and Vav'), 'the letters Yud and Vov');
+    expect(ashkenaziSpelling("Va'etchanan, Toledot, Ki Tissa; the Haftarah"), "Va'eschanan, Toldos, Ki Sissa; the Haftorah");
     expect(ashkenaziSpelling("Say Ya'aleh VeYavo"), "Say Ya'aleh V'Yovo");
     expect(ashkenaziSpelling('the Festival of Matzot; Mashiach'), 'the Festival of Matzos; Moshiach');
     expect(ashkenaziSpelling('Birkat Hamazon'), 'Birchas Hamazon');
