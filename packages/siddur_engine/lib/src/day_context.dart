@@ -147,6 +147,12 @@ class DayContext {
   DayContext withChoices(Map<String, bool> answers) =>
       answers.isEmpty ? this : DayContext._(hdate, il, service, minhagim, Map.unmodifiable({...env, ...answers}), labels, labelsHe);
 
+  /// For a section printed for several services at once (a Yom Tov Amidah
+  /// for Maariv, Shacharit and Mincha): which service it is isn't known, so
+  /// a line for one service is marked "Mincha" rather than hidden.
+  DayContext withoutService() => DayContext._(hdate, il, service, minhagim,
+      Map.unmodifiable({...env}..removeWhere((k, _) => const {'shacharit', 'mincha', 'maariv', 'musaf'}.contains(k))), labels, labelsHe);
+
   bool operator [](String name) {
     final v = env[name];
     return v is bool ? v : (v is num ? v != 0 : false);
@@ -207,6 +213,7 @@ class DayContext {
     'tzomTammuz': '17 Tammuz',
     'yomKippurKatan': 'Yom Kippur Katan',
     'behab': 'Ta\'anit BeHaB',
+    'behabDay': 'Which BeHaB day: 1 first Monday, 2 Thursday, 3 second Monday (0 if none)',
     'threeWeeks': 'Bein HaMetzarim',
     'nineDays': 'Rosh Chodesh Av – Tisha B\'Av',
     'elul': 'Month of Elul',
@@ -374,7 +381,11 @@ class _Builder {
     set('taanitEsther', desc(HolidayDesc.taanitEsther));
     set('tzomTammuz', desc(HolidayDesc.tzomTammuz));
     set('yomKippurKatan', has((e) => e.hasFlag(Flags.yomKippurKatan)));
-    set('behab', has((e) => e.hasFlag(Flags.behab)));
+    final behab = has((e) => e.hasFlag(Flags.behab));
+    set('behab', behab);
+    // Which of the three: the first Monday, the Thursday, the second Monday
+    // (the first Monday has a BeHaB Thursday three days later).
+    set('behabDay', !behab ? 0 : dow == 4 ? 2 : getHolidaysOnDate(hd.addDays(3), il).any((e) => e.hasFlag(Flags.behab)) ? 1 : 3);
 
     final tammuz17 = HDate(17, Months.tamuz, year).abs();
     var av9 = HDate(9, Months.av, year);

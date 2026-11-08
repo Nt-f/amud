@@ -25,6 +25,11 @@ class SectionRule {
   /// everything inside it). Null = inherit.
   final Service? service;
 
+  /// In a book with Amud's own text (a corpus), the corpus decides instead:
+  /// its leaves carry their own conditions (Ashkenaz says "God of Israel" only
+  /// on Monday and Thursday, though the title says Tachanun).
+  final bool corpusDecides;
+
   SectionRule({
     required String title,
     String? within,
@@ -33,6 +38,7 @@ class SectionRule {
     this.labelEn = '',
     this.labelHe = '',
     this.service,
+    this.corpusDecides = false,
   })  : title = RegExp(title, caseSensitive: false),
         within = within == null ? null : RegExp(within, caseSensitive: false),
         notWithin = notWithin == null ? null : RegExp(notWithin, caseSensitive: false);
@@ -99,14 +105,14 @@ final List<SectionRule> serviceRules = [
 /// Default section rules, applied to every book. Order matters: the first
 /// matching rule wins for each node.
 final List<SectionRule> defaultSectionRules = [
-  SectionRule(title: r'ta(?:c)?h(?:a)?nun|tachnun|nefilat apayim|god of israel|shomer yisrael|vidui and 13', notWithin: r'Yom Kippur|Selich|Selih', when: 'tachanun', labelEn: 'Tachanun', labelHe: 'תחנון'),
-  SectionRule(title: r'^(?:for )?monday (?:&|and) thursday|^vehu rachum$', notWithin: r'Maariv|Arvit', when: 'monThu && tachanun', labelEn: 'Monday & Thursday', labelHe: 'שני וחמישי'),
+  SectionRule(title: r'ta(?:c)?h(?:a)?nun|tachnun|nefilat apayim|god of israel|shomer yisrael|vidui and 13', notWithin: r'Yom Kippur|Selich|Selih', when: 'tachanun', labelEn: 'Tachanun', labelHe: 'תחנון', corpusDecides: true),
+  SectionRule(title: r'^(?:for )?monday (?:&|and) thursday|^vehu rachum$', notWithin: r'Maariv|Arvit', when: 'monThu && tachanun', labelEn: 'Monday & Thursday', labelHe: 'שני וחמישי', corpusDecides: true),
   SectionRule(title: r'avinu malk', when: 'avinuMalkeinu', labelEn: 'Avinu Malkeinu', labelHe: 'אבינו מלכנו'),
   SectionRule(title: r'^hallel$|berakhah before the hallel|psalm 11[3-8]$|berakhah after the hallel', notWithin: r'Haggadah|Seder', when: 'hallel', labelEn: 'Hallel', labelHe: 'הלל'),
   SectionRule(title: r'sefirat ha.?omer|counting (?:of )?the omer', when: 'omer', labelEn: 'Sefirat HaOmer', labelHe: 'ספירת העומר', service: Service.maariv),
   SectionRule(title: r"motza.?ei shab|motzei shabbos|motzaei shabbat|additions for motza|ma.ariv for motza", when: 'dow == 0', labelEn: "Motza'ei Shabbat", labelHe: 'מוצאי שבת', service: Service.maariv),
   SectionRule(title: r'birkat ha.?levana|kiddush levan|blessing of the (?:new )?moon', when: 'kiddushLevana', labelEn: 'Kiddush Levana', labelHe: 'קידוש לבנה'),
-  SectionRule(title: r"^(?:le.?david|l.david hashem|psalm from rosh chodesh elul)$", notWithin: r'Shabbat Evening|Zemirot|Songs', when: 'ledavid', labelEn: 'LeDavid (Elul)', labelHe: 'לדוד ה׳ אורי'),
+  SectionRule(title: r"^(?:le.?david|l.david hashem|psalm from rosh chodesh elul)$", notWithin: r'Shabbat Evening|Zemirot|Songs|Torah Reading|Returning', when: 'ledavid', labelEn: 'LeDavid (Elul)', labelHe: 'לדוד ה׳ אורי'),
   SectionRule(title: r'prayer for dew|tefillat tal', when: 'pesachFirstDays && musaf', labelEn: 'Tefillat Tal', labelHe: 'תפילת טל'),
   SectionRule(title: r'prayer for rain|tefillat geshem', when: 'shminiAtzeret && musaf', labelEn: 'Tefillat Geshem', labelHe: 'תפילת גשם'),
   // The Hoshanos of one day come before the general rule, since the first
@@ -128,8 +134,13 @@ final List<SectionRule> defaultSectionRules = [
   SectionRule(title: r'^first day & chol hamoed$', within: r'sukkot', when: 'sukkot && !shabbat && !hoshanaRaba', labelEn: 'Sukkot', labelHe: 'סוכות'),
   SectionRule(title: r'hosha(?:.?a)?no[ts]', when: 'sukkot', labelEn: 'Hoshanot', labelHe: 'הושענות'),
   SectionRule(title: r'lulav', when: 'sukkot && !shabbat', labelEn: 'Lulav', labelHe: 'לולב'),
-  SectionRule(title: r'leaving the sukk', when: 'hoshanaRaba || shminiAtzeret', labelEn: 'Leaving the sukkah', labelHe: 'יציאה מהסוכה'),
-  SectionRule(title: r'prayers in the sukk|entering (?:the )?sukk|upon entering sukk|^ushpizin$', when: 'sukkot', labelEn: 'Sukkot', labelHe: 'סוכות'),
+  // The last meal in the sukkah (Rema 667:1, MB 668:5): Shemini Atzeret
+  // outside Israel, Hoshana Rabbah in Israel.
+  SectionRule(title: r'leaving the sukk', when: '(hoshanaRaba && il) || (shminiAtzeret && !il)', labelEn: 'Leaving the sukkah', labelHe: 'יציאה מהסוכה'),
+  // The section holding them all stays open on Shemini Atzeret abroad, for
+  // the prayer on leaving the sukkah.
+  SectionRule(title: r'^prayers in the sukk', when: 'sukkot || (shminiAtzeret && !il)', labelEn: 'Sukkot', labelHe: 'סוכות'),
+  SectionRule(title: r'entering (?:the )?sukk|upon entering sukk|^ushpizin$', when: 'sukkot', labelEn: 'Sukkot', labelHe: 'סוכות'),
   SectionRule(title: r'hakafot|hakafos', when: 'simchatTorah', labelEn: 'Simchat Torah', labelHe: 'שמחת תורה'),
   SectionRule(title: r'^kap+arot$|^kap+aros$', when: 'erevYomKippur || aseretYemeiTeshuva', labelEn: 'Before Yom Kippur', labelHe: 'ערב יום כפור'),
   SectionRule(title: r'^akdamut$|^akdamus$', when: 'shavuot', labelEn: 'Shavuot', labelHe: 'שבועות'),
@@ -154,8 +165,8 @@ final List<SectionRule> defaultSectionRules = [
   SectionRule(title: r'ten(?:th)? of tevet|asara b.?tevet|tenth of teves', when: 'asaraBTevet', labelEn: "Asara B'Tevet", labelHe: 'עשרה בטבת'),
   SectionRule(title: r'fast of esther|taanit esther', when: 'taanitEsther', labelEn: "Ta'anit Esther", labelHe: 'תענית אסתר'),
   SectionRule(title: r'seventeen(?:th)? of tam+uz|17 tam+uz', when: 'tzomTammuz', labelEn: '17 Tammuz', labelHe: 'י״ז בתמוז'),
-  SectionRule(title: r'yom kippur katan', when: 'yomKippurKatan || erevRoshChodesh', labelEn: 'Yom Kippur Katan', labelHe: 'יום כפור קטן'),
-  SectionRule(title: r'^bahab|behab|monday \(1\)|monday \(2\)|first monday|concluding monday', within: r'Selich|Selih|Fast', when: 'behab', labelEn: 'BeHaB', labelHe: 'בה״ב'),
+  SectionRule(title: r'yom kippur katan', when: 'yomKippurKatan', labelEn: 'Yom Kippur Katan', labelHe: 'יום כפור קטן'),
+  SectionRule(title: r'^bahab|behab|monday \(1\)|monday \(2\)|first monday|concluding monday', within: r'Selich|Selih|Fast', when: 'behab', labelEn: 'BeHaB', labelHe: 'בה״ב', corpusDecides: true),
   SectionRule(title: r'fast day torah reading|torah reading for fast|fast day mincha haftara', when: 'fastDay', labelEn: 'Fast day', labelHe: 'תענית'),
   // Said only on Shabbat, also in the Shabbat services used on Yom Tov.
   SectionRule(title: r'^ve.?sham(?:e)?ru$|^vay.?(?:e)?chulu$|^me.?ein sheva$|^magen avot$|^magein avos$', notWithin: r'Kiddush|Zemir|Meal|Evening$',

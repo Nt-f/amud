@@ -201,8 +201,11 @@ class ResolvedRun {
 
   /// Who says this run when it differs from the line's [SegmentItem.role].
   final String? role;
+
+  /// What one does at these words (see [TextRun.gestures]).
+  final List<String> gestures;
   const ResolvedRun(this.html, this.marker, this.applicability, this.labelEn, this.labelHe,
-      {this.option = false, this.role});
+      {this.option = false, this.role, this.gestures = const []});
 }
 
 class ResolvedSegment {
@@ -415,6 +418,7 @@ class SiddurResolver {
   SectionRule? sectionRuleFor(SchemaNode node) {
     final anc = node.ancestors.map((a) => a.en).toList();
     for (final r in sectionRules) {
+      if (r.corpusDecides && corpus != null) continue;
       if (r.matches(node.en, anc)) return r;
     }
     return null;
@@ -444,7 +448,7 @@ class SiddurResolver {
   Applicability ruleApplicability(SectionRule rule, DayContext ctx) {
     if (rule.when == 'true') return Applicability.always;
     final ap = _eval(rule.condition, ctx);
-    return ap == Applicability.today && _ordinary(rule.when, ctx.service) ? Applicability.always : ap;
+    return ap == Applicability.today && _ordinary(rule.when, ctx.service, ctx.il) ? Applicability.always : ap;
   }
 
   static const _fastDayOnly = RubricMatch('fastDay', ['Fast day'], ['תענית']);
@@ -624,7 +628,8 @@ class SiddurResolver {
 
   /// What is read from the Torah at this service, where it is the ordinary
   /// parsha: the whole of it on Shabbat morning, and the start of the
-  /// coming Shabbat's on Shabbat afternoon, Monday and Thursday. Holidays,
+  /// coming Shabbat's, in three aliyot, on Shabbat afternoon, Monday and
+  /// Thursday. Holidays,
   /// fasts and Rosh Chodesh have readings of their own, which the siddur
   /// prints.
   DynamicItem? _leining(DayContext ctx, String id) {
@@ -642,11 +647,11 @@ class SiddurResolver {
     // Rosh Chodesh, Chanukah and the special Shabbatot read their own maftir.
     final special = whole &&
         (ctx.test('roshChodesh') || ctx.test('chanukah') || getHolidaysOnDate(hd, ctx.il).any((e) => e.hasFlag(Flags.specialShabbat)));
-    final ranges = whole ? r.aliyot.take(special ? 6 : 7) : [r.aliyot.first];
+    final ranges = whole ? r.aliyot.take(special ? 6 : 7) : r.weekday;
     return DynamicItem('leining:$id', 'leining', {
       'parsha': r.parsha,
       'book': r.book,
-      'scope': whole ? 'shabbat' : 'first',
+      'scope': whole ? 'shabbat' : 'weekday',
       'special': special,
       'ranges': [for (final (b, e) in ranges) [b.chapter, b.verse, e.chapter, e.verse]],
     });
@@ -659,7 +664,9 @@ class SiddurResolver {
   void _resolveNode(SchemaNode node, VersionSelection versions, ContextProvider contexts, ResolveOptions options,
       List<RenderItem> out, int baseLevel, Service service, Applicability inherited, bool isTop) {
     final svc = _corpusService(node) ?? serviceFor(node, service);
-    final ctx = contexts(svc);
+    // A leaf for several services (corpus `service: any`) leaves the service
+    // open: its lines for one service are labelled, not hidden.
+    final ctx = corpus?.leaf(node.id)?.service == 'any' ? contexts(svc).withoutService() : contexts(svc);
     // A corpus leaf's own condition counts unless the leaf was opened
     // directly (the reader asked for it by name).
     final own = sectionRuleFor(node);
@@ -827,9 +834,11 @@ class SiddurResolver {
       if (!(prayer ? options.showTranslation : options.notesTranslation)) t = null;
       if (h == null && t == null) return;
       var ap = rubric == null ? Applicability.always : _eval(rubric.condition, ctx);
-      if (ap == Applicability.today && _ordinary(rubric!.expression, ctx.service) && !_justSwitched(rubric.expression, ctx)) ap = Applicability.always;
+      if (ap == Applicability.today && _ordinary(rubric!.expression, ctx.service, ctx.il) && !_justSwitched(rubric.expression, ctx)) ap = Applicability.always;
       // A circumstance the reader answered is no news to them: no "today" label.
       if (ap == Applicability.today && RegExp(r'\bif_').hasMatch(rubric!.expression)) ap = Applicability.always;
+      // Nor is a line the corpus marks plain (the Daily Psalm).
+      if (ap == Applicability.today && primary.unmarked) ap = Applicability.always;
       var labelEn = rubric?.labelEn, labelHe = rubric?.labelHe;
       // A line made only of conditional parts, none said today (Shabbat
       // Rosh Chodesh's "Retzei" with its leap-year phrase), isn't said.
@@ -914,7 +923,8 @@ class SiddurResolver {
   Applicability _runApplicability(TextRun r, DayContext ctx) {
     if (r.rubric == null) return Applicability.always;
     final ap = _eval(r.rubric!.condition, ctx);
-    return ap == Applicability.today && _ordinary(r.rubric!.expression, ctx.service) && !_justSwitched(r.rubric!.expression, ctx)
+    if (ap == Applicability.today && r.unmarked) return Applicability.always;
+    return ap == Applicability.today && _ordinary(r.rubric!.expression, ctx.service, ctx.il) && !_justSwitched(r.rubric!.expression, ctx)
         ? Applicability.always
         : ap;
   }
@@ -932,6 +942,9 @@ class SiddurResolver {
       (false, 'moridHatal') => ctx['freshMoridHatal'],
       (false, 'talUmatar') => ctx['freshTalUmatar'],
       (true, 'talUmatar') => ctx['freshBracha'],
+      // The summer wording, by the absence of the winter's (Sefard's Morid
+      // HaTal): it begins at Pesach, as ve'ten bracha does.
+      (true, 'mashivHaruach') => ctx['freshBracha'],
       _ => false,
     };
   }
@@ -940,10 +953,13 @@ class SiddurResolver {
   /// && noTefillinCholHamoed)", "minyan"): when it holds it isn't news, so
   /// no "today" label. Judged by evaluating it on a plain weekday.
   static final _ordinaryCache = <String, bool>{};
-  static bool _ordinary(String expression, [Service service = Service.shacharit]) =>
-      _ordinaryCache.putIfAbsent('$service|$expression', () {
+  static bool _ordinary(String expression, [Service service = Service.shacharit, bool il = false]) =>
+      _ordinaryCache.putIfAbsent('$service|$il|$expression', () {
+        // The seasonal wording is ordinary in its season, summer or winter:
+        // only its first 30 days are pointed out (see [_justSwitched]).
+        if (_seasonal.hasMatch(expression)) return true;
         // 13 Cheshvan 5786: a Tuesday with no occasion at all.
-        final plain = DayContext(HDate(13, Months.cheshvan, 5786), il: false, service: service);
+        final plain = DayContext(HDate(13, Months.cheshvan, 5786), il: il, service: service);
         return Condition.parse(expression).eval(plain.env);
       });
 
@@ -960,6 +976,7 @@ class SiddurResolver {
           r.rubric?.labelHe,
           option: r.option,
           role: r.role,
+          gestures: r.gestures,
         ),
     ];
     if (!hide) return ResolvedSegment(s, runs);

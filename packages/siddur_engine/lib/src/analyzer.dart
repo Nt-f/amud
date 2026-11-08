@@ -29,9 +29,17 @@ class TextRun {
   /// Part of a run of alternatives within the line (see [Segment.option]).
   bool option = false;
 
+  /// Said only on some days but nothing to point out when it is (corpus
+  /// `plain`): no "today" treatment.
+  bool unmarked = false;
+
   /// Who says this run, when it differs within the line (corpus `role`,
   /// e.g. the congregation's "Amen" inside the chazzan's Kaddish).
   String? role;
+
+  /// What one does at these words (corpus `gestures` on the part), for a
+  /// mark drawn at the words themselves (touching the tefillin).
+  List<String> gestures = const [];
 }
 
 class Segment {
@@ -100,6 +108,10 @@ class Segment {
 
   /// Said only with a minyan.
   bool minyan = false;
+
+  /// Said only on some days but nothing to point out when it is (corpus
+  /// `plain`, the Daily Psalm): shown like an ordinary line, not as today's.
+  bool unmarked = false;
 
   /// English rendering of a Hebrew instruction or note.
   String? en;

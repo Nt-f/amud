@@ -43,6 +43,7 @@ import 'siddur_providers.dart';
 import 'today_plan.dart';
 import 'day_guide_screen.dart';
 import 'prayer_insights.dart';
+import 'tefillin_mark.dart';
 
 /// [night]: read after sunset on today's date, so Birkat HaMazon is the
 /// night's (see [ResolveOptions.night]).
@@ -1309,7 +1310,21 @@ class _SegmentView extends ConsumerWidget {
         }
         // A psalm printed whole breaks into the paragraphs a siddur prints.
         final pieces = seg.segment.hebrew && !r.marker && item.kind == SegmentKind.prayer ? splitParagraphs(h) : [h];
-        spans.addAll(html.parse(marks(pieces.first), style: st));
+        // Touching the tefillin: a mark just before the words, joined to
+        // them so a line never breaks between the mark and its word.
+        final touch = seg.segment.hebrew ? r.gestures.where(inlineGestures.contains).firstOrNull : null;
+        if (touch != null) {
+          final (lead, word, rest) = splitFirstWord(pieces.first);
+          if (lead.isNotEmpty) spans.add(TextSpan(text: ' ', style: st));
+          spans.add(tefillinMarkSpan(touch,
+              fontSize: base.fontSize ?? 16,
+              color: excluded ? colors.excluded : colors.instruction,
+              captionFont: theme.textTheme.labelSmall?.fontFamily,
+              word: html.parse(marks(word), style: st)));
+          spans.addAll(html.parse(marks(rest), style: st));
+        } else {
+          spans.addAll(html.parse(marks(pieces.first), style: st));
+        }
         for (final piece in pieces.skip(1)) {
           final (number, words) = splitLeadingVerse(piece);
           paragraphs.add((roles[i], [

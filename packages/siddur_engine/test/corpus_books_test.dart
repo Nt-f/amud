@@ -142,7 +142,143 @@ void main() {
       final cholHamoedSukkot = HDate(18, Months.tishrei, 5786);
       final fast = HDate(10, Months.tevet, 5786);
 
+      if (slug == 'sefard') {
+        test('BaHaB: each day inserts its own Selichot (first Monday, Thursday, second Monday)', () {
+          List<String> selichot(HDate d) => [
+                for (final i in service('Weekday Shacharit', d))
+                  if (i is InsertedSectionItem && i.node.id.startsWith('Fast Days/Selichot for ')) i.node.id.split('for ').last,
+              ];
+          expect(selichot(HDate(8, Months.cheshvan, 5787)), ['BaHaB', 'First Monday']);
+          expect(selichot(HDate(11, Months.cheshvan, 5787)), ['BaHaB', 'Thursday']);
+          expect(selichot(HDate(15, Months.cheshvan, 5787)), ['BaHaB', 'Concluding Monday']);
+          expect(selichot(HDate(19, Months.tevet, 5787)), isEmpty);
+        });
+        test('Rosh Chodesh: the end of Shacharit after Musaf is said once', () {
+          final aleinu = service('Weekday Shacharit', HDate(1, Months.cheshvan, 5787))
+              .where((i) => i is SegmentItem && i.node.id != '' && (i.he?.segment.html.replaceAll(RegExp(r'[^א-ת]'), '').startsWith('עלינולשבח') ?? false));
+          expect(aleinu, hasLength(1));
+        });
+      }
       if (slug == 'ashkenaz') {
+        test('Vidui: in Israel every Tachanun day, elsewhere Monday and Thursday; God of Israel only Monday and Thursday', () {
+          Set<String> leaves(HDate d, {bool il = false}) => {
+                for (final i in resolver.resolve(root.find('Weekday/Shacharit/Post Amidah')!, versions,
+                    (s) => DayContext.forService(d, s, il: il),
+                    options: const ResolveOptions(excluded: ExcludedDisplay.hide)))
+                  if (i is SegmentItem) i.node.id.split('/').last,
+              };
+          final tuesday = HDate(19, Months.tevet, 5787), monday = HDate(18, Months.tevet, 5787);
+          expect(leaves(tuesday), isNot(contains('Vidui and 13 Middot')));
+          expect(leaves(tuesday), isNot(contains('God of Israel')));
+          expect(leaves(tuesday), contains('Shomer Yisrael'));
+          expect(leaves(monday), containsAll(['Vidui and 13 Middot', 'God of Israel']));
+          expect(leaves(tuesday, il: true), contains('Vidui and 13 Middot'));
+          expect(leaves(tuesday, il: true), isNot(contains('God of Israel')));
+          expect(leaves(roshChodesh), isNot(contains('Nefilat Apayim')));
+        });
+        test('touching the tefillin is marked at the words: the shel yad at "al yadecha", the shel rosh at "bein einecha"', () {
+          final runs = [
+            for (final i in said('Weekday/Shacharit/Preparatory Prayers/Tefillin', HDate(19, Months.tevet, 5787)))
+              if (i.he != null) ...i.he!.runs,
+          ];
+          String bare(ResolvedRun r) => r.html.replaceAll(RegExp(r'[^א-ת ]'), '').trim();
+          final yad = runs.where((r) => r.gestures.contains('touch_tefillin_yad')).map(bare).toList();
+          final rosh = runs.where((r) => r.gestures.contains('touch_tefillin_rosh')).map(bare).toList();
+          expect(yad, hasLength(2));
+          expect(yad.every((w) => w.startsWith('על')), isTrue, reason: '$yad');
+          expect(rosh, ['בין עיניך', 'בין עיניך']);
+        });
+        test('Hosha\'anot: the Ashkenaz order for every weekday Sukkot can start on (MB 663:6)', () {
+          const open = {
+            'lemaan': 'למעןאמתך', 'even': 'אבןשתיה', 'eerach': 'אערךשועי', 'om': 'אםאניחומה',
+            'el': 'אללמושעות', 'adon': 'אדוןהמושיע', 'netzura': 'אםנצורה',
+          };
+          // Days 1–6 of Sukkot, by the weekday of 15 Tishrei (Levushei Serad's table).
+          const table = {
+            1: ['lemaan', 'even', 'eerach', 'om', 'el', 'netzura'],
+            2: ['lemaan', 'even', 'eerach', 'el', 'netzura', 'adon'],
+            4: ['lemaan', 'even', 'netzura', 'eerach', 'el', 'adon'],
+            6: ['netzura', 'lemaan', 'eerach', 'even', 'el', 'adon'],
+          };
+          final seen = <int>{};
+          for (var year = 5780; seen.length < 4 && year < 5800; year++) {
+            final first = HDate(15, Months.tishrei, year);
+            final dow = first.getDay();
+            if (!table.containsKey(dow) || !seen.add(dow)) continue;
+            for (var day = 0; day < 6; day++) {
+              final d = first.addDays(day);
+              final said = [
+                for (final i in resolver.resolve(root.find("Festivals/Sukkot/Hosha'anot")!, versions,
+                    (s) => DayContext.forService(d, s, il: false),
+                    options: const ResolveOptions(excluded: ExcludedDisplay.hide)))
+                  if (i is SegmentItem && i.kind == SegmentKind.prayer && i.he != null)
+                    [for (final r in i.he!.runs) if (!r.marker) r.html].join().replaceAll(RegExp(r'[^א-ת]'), ''),
+              ].join('|');
+              final want = table[dow]![day];
+              for (final MapEntry(key: k, value: text) in open.entries) {
+                expect(said.contains('|$text') || said.startsWith(text), k == want,
+                    reason: '$year, 15 Tishrei on day $dow, day ${day + 1}: $k');
+              }
+            }
+          }
+          expect(seen, {1, 2, 4, 6});
+        });
+        test('leaving the sukkah: Shemini Atzeret abroad, Hoshana Rabbah in Israel (Rema 667:1)', () {
+          bool leaving(HDate d, bool il) => resolver
+              .resolve(root.find('Festivals/Sukkot/Prayers in the Sukkah')!, versions, (s) => DayContext.forService(d, s, il: il),
+                  options: const ResolveOptions(excluded: ExcludedDisplay.hide))
+              .any((i) => i is SegmentItem && i.node.id.endsWith('Leaving the Sukkah'));
+          expect(leaving(HDate(22, Months.tishrei, 5788), false), isTrue);
+          expect(leaving(HDate(21, Months.tishrei, 5788), false), isFalse);
+          expect(leaving(HDate(21, Months.tishrei, 5788), true), isTrue);
+          expect(leaving(HDate(22, Months.tishrei, 5788), true), isFalse);
+        });
+        test('bentching: Migdol on Shabbat, Yom Tov, Rosh Chodesh and Chol HaMoed; Magdil otherwise (MB 189:5)', () {
+          String bentch(HDate d) => [
+                for (final i in said('Berachot/Birkat HaMazon', d))
+                  if (i.he != null) for (final r in i.he!.runs) if (!r.marker) r.html,
+              ].join(' ').replaceAll(RegExp(r'[^א-ת ]'), '');
+          for (final (d, migdol) in [
+            (HDate(19, Months.tevet, 5787), false),
+            (HDate(1, Months.cheshvan, 5787), true),
+            (HDate(18, Months.tishrei, 5788), true),
+            (HDate(26, Months.kislev, 5787), false),
+          ]) {
+            expect(bentch(d).contains('מגדול ישועות'), migdol, reason: '$d');
+            expect(bentch(d).contains('מגדיל ישועות'), !migdol, reason: '$d');
+          }
+        });
+        test('Morid HaTal in Israel is highlighted for 30 days after Pesach, not all summer', () {
+          Applicability moridHatal(HDate d) => [
+                for (final i in resolver.resolve(root.find('Weekday/Shacharit/Amidah/Divine Might')!, versions,
+                    (s) => DayContext.forService(d, s, il: true)))
+                  if (i is SegmentItem && i.kind == SegmentKind.prayer && i.he!.segment.html.replaceAll(RegExp(r'[^א-ת]'), '') == 'מורידהטל')
+                    i.applicability,
+              ].single;
+          expect(moridHatal(HDate(20, Months.nisan, 5787)), Applicability.today);
+          expect(moridHatal(HDate(8, Months.tamuz, 5787)), Applicability.always);
+        });
+        test('Kaddish: "Oseh shalom" all year, "Oseh hashalom" in the Ten Days, never without "Oseh"', () {
+          String said_(HDate d) => [
+                for (final i in said('Weekday/Shacharit/Concluding Prayers/Kaddish Shalem', d))
+                  if (i.he != null) for (final r in i.he!.runs) if (!r.marker) r.html,
+              ].join(' ').replaceAll(RegExp(r'[^א-ת]'), '');
+          expect(said_(HDate(19, Months.tevet, 5787)), contains('עושהשלוםבמרומיו'));
+          expect(said_(HDate(4, Months.tishrei, 5788)), contains('עושההשלוםבמרומיו'));
+        });
+        test('the Ten Days\' wording is highlighted as today\'s, and the everyday wording is not said', () {
+          final tenDays = HDate(4, Months.tishrei, 5788);
+          for (final svc in ['Shacharit/Amidah', 'Minchah/Amida', 'Maariv/Amidah']) {
+            final runs = [
+              for (final i in said('Weekday/$svc/Holiness of God', tenDays))
+                if (i.kind == SegmentKind.prayer) ...i.he!.runs.where((r) => !r.marker),
+            ];
+            String bare(ResolvedRun r) => r.html.replaceAll(RegExp(r'[^א-ת]'), '');
+            final king = runs.where((r) => bare(r).contains('המלךהקדוש'));
+            expect(king, isNotEmpty, reason: svc);
+            expect(king.every((r) => r.applicability == Applicability.today), isTrue, reason: svc);
+          }
+        });
         test('a blessing\'s closing line is not set apart from its body', () {
           String bare(SegmentItem i) => [for (final r in i.he!.runs) if (!r.marker) r.html].join().replaceAll(RegExp(r'[^א-ת]'), '');
           final tenDays = HDate(5, Months.tishrei, 5786);
@@ -224,6 +360,22 @@ void main() {
         }
       });
 
+      test('the Daily Psalm is never marked as today\'s (corpus `plain`)', () {
+        const psalm = {
+          'ashkenaz': 'Weekday/Shacharit/Concluding Prayers/Song of the Day',
+          'chabad': 'Shacharit/Song of the Day',
+          'edot_hamizrach': 'Weekday Shacharit/Song of the Day',
+          'koren': 'Weekdays/The Daily Psalm',
+          'sefard': 'Weekday Shacharit/Song of the Day',
+        };
+        // Sunday 11 Cheshvan 5786 through Friday.
+        for (var d = 11; d <= 16; d++) {
+          final items = said(psalm[slug]!, HDate(d, Months.cheshvan, 5786));
+          expect(items.where((i) => i.kind == SegmentKind.prayer), isNotEmpty, reason: '$d Cheshvan');
+          expect(items.where((i) => i.applicability == Applicability.today), isEmpty, reason: '$d Cheshvan');
+        }
+      });
+
       test('a year resolves with nothing undetermined', () {
         final unknown = <String, int>{};
         var day = HDate(1, Months.tishrei, 5786);
@@ -232,8 +384,12 @@ void main() {
         while (day.abs() < end) {
           for (final top in root.children) {
             for (final i in resolver.resolve(top, versions, (s) => DayContext.forService(day, s, il: false))) {
-              // "If: …" lines are personal circumstances, left to the reader.
-          if (i is SegmentItem && i.applicability == Applicability.unknown && !(i.labelEn?.startsWith('If') ?? false)) {
+              // "If: …" lines are personal circumstances, left to the reader,
+              // as is the service in a section printed for several (`any`).
+          if (i is SegmentItem &&
+              i.applicability == Applicability.unknown &&
+              !(i.labelEn?.startsWith('If') ?? false) &&
+              corpus.leaf(i.node.id)?.service != 'any') {
                 final k = '${i.node.id} [${i.labelEn}]';
                 unknown[k] = (unknown[k] ?? 0) + 1;
               }

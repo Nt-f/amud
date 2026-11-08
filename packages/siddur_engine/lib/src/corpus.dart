@@ -19,6 +19,7 @@ class CorpusPart {
   final String text;
   final String kind;
   final String? when;
+  final bool plain;
   final String? alt;
   final String? role;
   final String? voice;
@@ -36,6 +37,7 @@ class CorpusPart {
 
   const CorpusPart(this.text, this.kind,
       {this.when,
+      this.plain = false,
       this.alt,
       this.role,
       this.voice,
@@ -55,6 +57,7 @@ class CorpusPart {
         j['text'] as String,
         (j['kind'] as String?) ?? 'prayer',
         when: j['when'] as String?,
+        plain: j['plain'] == true,
         alt: j['alt'] as String?,
         role: j['role'] as String?,
         voice: j['voice'] as String?,
@@ -338,7 +341,9 @@ List<Segment> corpusSegments(List<CorpusSegment> segs,
         runs.add(TextRun(text, p.prayer || s.parts.length == 1 ? RunKind.text : RunKind.marker,
             whole == null && p.when != null ? rubric(p.when!) : null)
           ..option = whole == null && p.alt != null
-          ..role = response ? 'congregation' : (p.role != first.role ? p.role : null));
+          ..unmarked = p.plain
+          ..role = response ? 'congregation' : (p.role != first.role ? p.role : null)
+          ..gestures = p.gestures);
       }
     }
     final seg = Segment(
@@ -352,6 +357,7 @@ List<Segment> corpusSegments(List<CorpusSegment> segs,
     )
       ..option = whole != null && s.parts.any((p) => p.alt != null)
       ..chazarah = s.parts.any((p) => p.amidah == 'repetition')
+      ..unmarked = s.parts.every((p) => p.plain)
       ..role = first.role
       ..voice = first.voice
       ..align = first.align

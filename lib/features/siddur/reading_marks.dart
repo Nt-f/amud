@@ -3,6 +3,7 @@ import 'package:siddur_engine/siddur_engine.dart';
 
 import '../../core/l10n.dart';
 import '../../core/settings.dart';
+import 'tefillin_mark.dart';
 
 // How a prayer is read (who says it, what one does), as English and Hebrew
 // like any instruction: shown in the language(s) chosen for instructions and
@@ -33,6 +34,10 @@ const _gestures = {
   'kiss_tzitzit': ('Kiss the tzitzit', 'מנשקים את הציצית'),
   'gather_tzitzit': ('Gather the tzitzit', 'אוספים את הציציות'),
   'touch_tefillin': ('Touch the tefillin', 'נוגעים בתפילין'),
+  // Drawn as a mark at the words (tefillin_mark.dart), not in the line
+  // above; the label is the mark's spoken description.
+  'touch_tefillin_yad': ('Touch the shel yad', 'נוגעים בתפילין של יד'),
+  'touch_tefillin_rosh': ('Touch the shel rosh', 'נוגעים בתפילין של ראש'),
   'head_down': ('Head down', 'מרכינים ראש'),
   'face_ark': ('Face the ark', 'פונים לארון הקודש'),
   'ark_open': ('Ark opened', 'ארון הקודש פתוח'),
@@ -137,7 +142,7 @@ List<String> readingLabels(BuildContext context, AppSettings s, SegmentItem item
       if (withRole && _roles[item.role] != null) readingRole(context, s, item.role),
       if (item.voice == 'undertone' || undertone) _instruction(s, _undertone),
       for (final g in item.gestures.toSet())
-        if (_gestures[g] != null) _instruction(s, _gestures[g]!),
+        if (_gestures[g] != null && !inlineGestures.contains(g)) _instruction(s, _gestures[g]!),
       if (item.repeat != null && !namesRepeat(item)) context.tr('×{n}', {'n': item.repeat}),
     ];
 
