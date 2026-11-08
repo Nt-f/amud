@@ -9,8 +9,14 @@ app's content updates and the word-by-word (interlinear) texts.
     cd content-site && npx wrangler@4 deploy
 
 `--interlinear` is the generator's output (`spine/work/unit.en.json`, from
-`scripts/interlinear.ts` in the talmud repo). It is required: a deploy
+`scripts/interlinear.ts` in the talmud repo). It (or `--live`) is required: a deploy
 replaces the whole site.
+
+To publish only the printed daf (`--daf-print build/daf/place`, from
+`tool/daf/shas.py render`) without touching anything else, use
+`--live DIR` instead of `--interlinear`: DIR is a copy of the live site's
+`content/v1` and `interlinear/v1` (each file checked against its sha256),
+deployed exactly as is.
 
 ## Content fixes without an app release
 

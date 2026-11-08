@@ -157,16 +157,25 @@ def main():
     ap = argparse.ArgumentParser()
     # Required: a deploy replaces the whole site, so building without it would
     # take the interlinear texts down.
-    ap.add_argument("--interlinear", type=Path, required=True, help="interlinear output folder (spine/work/unit.en.json)")
+    ap.add_argument("--interlinear", type=Path, help="interlinear output folder (spine/work/unit.en.json)")
+    # Ships only the printed pages: content/ and interlinear/ go up exactly
+    # as they are live (a copy fetched from the site), so nothing else changes.
+    ap.add_argument("--live", type=Path, help="a copy of the live site's content/v1 and interlinear/v1, deployed as is")
     ap.add_argument("--daf-print", type=Path, help="tool/daf/shas.py's printed pages (build/daf/place)")
     ap.add_argument("--out", type=Path, default=ROOT / "content-site" / "dist")
     a = ap.parse_args()
+    if not a.interlinear and not a.live:
+        ap.error("--interlinear or --live is required: a deploy replaces the whole site")
     version = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d%H%M%S")
     if a.out.exists():
         shutil.rmtree(a.out)
     a.out.mkdir(parents=True)
-    build_content(a.out, version)
-    build_interlinear(a.interlinear.expanduser(), a.out, version)
+    if a.live:
+        for tree in ("content/v1", "interlinear/v1"):
+            shutil.copytree(a.live.expanduser() / tree, a.out / tree)
+    else:
+        build_content(a.out, version)
+        build_interlinear(a.interlinear.expanduser(), a.out, version)
     if a.daf_print:
         build_daf_print(a.daf_print.expanduser(), a.out, version)
     else:
