@@ -608,11 +608,12 @@
             {"kind": "prayer", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "text": "נַקְדִּישָֽׁךְ וְנַעֲרִיצָֽךְ כְּנֹֽעַם שִֹֽיחַ סוֹד שַֹרְפֵֽי קֹֽדֶשׁ הַמְשַׁלְּשִֽׁים לְךָ קְדֻשָּֽׁה, כַּכָּתֽוּב עַל־יַד נְבִיאֶֽךָ, וְקָרָֽא זֶה אֶל־זֶֽה וְאָמַֽר: קָדֽוֹשׁ ׀ קָדֽוֹשׁ, קָדֽוֹשׁ יְיָ צְבָאֽוֹת, מְלֹא כָל־הָאָֽרֶץ כְּבוֹדֽוֹ: לְעֻמָּתָֽם מְשַׁבְּחִֽים וְאוֹמְרִֽים: בָּרֽוּךְ כְּבוֹד־יְיָ מִמְּקוֹמֽוֹ: וּבְדִבְרֵֽי קָדְשְׁךָֽ כָּתוּֽב לֵאמֹֽר: יִמְלֹֽךְ יְיָ לְעוֹלָֽם, אֱלֹהַֽיִךְ צִיּוֹֽן לְדֹר וָדֹֽר, הַלְלוּיָֽהּ:"}
           ]},
           {"ref": "11", "parts": [
-            {"kind": "prayer", "node": "amidah.kedusha", "text": "<b>אַתָּֽה קָדֽוֹשׁ</b> וְשִׁמְךָֽ קָדֽוֹשׁ,"},
-            {"kind": "prayer", "node": "amidah.kedusha", "text": " וּקְדוֹשִֽׁים בְּכָל־יוֹֽם יְהַלְלֽוּךָ סֶּֽלָה. בָּרֽוּךְ אַתָּֽה יְיָ,"},
-            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "node": "amidah.kedusha", "text": " הָאֵֽל "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Said only in the silent Amidah", "text": "<small>בעשי״ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.kedusha", "text": " (הַמֶּֽלֶךְ) הַקָּדֽוֹשׁ:"}
+            {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": "<b>אַתָּֽה קָדֽוֹשׁ</b> וְשִׁמְךָֽ קָדֽוֹשׁ,"},
+            {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " וּקְדוֹשִֽׁים בְּכָל־יוֹֽם יְהַלְלֽוּךָ סֶּֽלָה. בָּרֽוּךְ אַתָּֽה יְיָ,"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "text": " הָאֵֽל "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "amidah.kedushat_hashem", "en": "During the Ten Days of Repentance:", "gloss": "Said only in the silent Amidah", "text": "<small>בעשי״ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "text": " (הַמֶּֽלֶךְ)"},
+            {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " הַקָּדֽוֹשׁ:"}
           ]},
           {"ref": "12", "kind": "prayer", "node": "amidah.daat", "text": "<b>אַתָּֽה חוֹנֵֽן</b> לְאָדָֽם דַּֽעַת, וּמְלַמֵּֽד לֶאֱנֽוֹשׁ בִּינָֽה. חָנֵּֽנוּ מֵאִתְּךָֽ חָכְמָֽה בִּינָֽה וָדָֽעַת. בָּרֽוּךְ אַתָּֽה יְיָ, חוֹנֵֽן הַדָּֽעַת:"},
           {"ref": "13", "kind": "prayer", "node": "amidah.teshuva", "text": "<b>הֲשִׁיבֵנוּ</b> אָבִינוּ לְתוֹרָתֶךָ, וְקָרְבֵנוּ מַלְכֵּנוּ לַעֲבוֹדָתֶךָ, וְהַחֲזִירֵנוּ בִּתְשׁוּבָה שְׁלֵמָה לְפָנֶיךָ. בָּרוּךְ אַתָּה יְיָ, הָרוֹצֶה בִּתְשׁוּבָה:"},

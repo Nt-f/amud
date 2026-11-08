@@ -64,8 +64,8 @@
           {"ref": "54", "kind": "prayer", "role": "congregation_then_chazzan", "text": "כְּהוֹשַֽׁעְתָּ שְׁבֽוּת שִׁבְטֵֽי יַֽעֲקֹֽב. תָּשֽׁוּב וְתָשִֽׁיב שְׁבֽוּת אָֽהֳלֵֽי יַֽעֲקֹֽב. וְהוֹשִֽׁיעָה נָּֽא:"},
           {"ref": "55", "kind": "prayer", "role": "congregation_then_chazzan", "text": "כְּהוֹשַֽׁעְתָּ שֽׁוֹמְרֵֽי מִצְוֹֽת וְחוֹכֵֽי יְשׁוּעֽוֹת. אֵֽל לְמֽוֹשָׁעֽוֹת וְהוֹשִֽׁיעָה נָּֽא:"},
           {"ref": "57", "kind": "prayer", "role": "congregation_then_chazzan", "text": "אֲנִי וָהוֹ הוֹשִׁיעָה נָא:"},
-          {"ref": "59", "kind": "prayer", "text": "הוֹשִׁיעָה אֶת עַמֶּךָ וּבָרֵךְ אֶת נַחֲלָתֶךָ וּרְעֵם וְנַשְּׂאֵם עַד הָעוֹלָם: וְיִהְיוּ דְּבָרַי אֵלֶּה אֲשֶׁר הִתְחַנַּנְתִּי לִפְנֵי יְיָ קְרוֹבִים אֶל יְיָ אֱלֹהֵינוּ יוֹמָם וָלָיְלָה לַעֲשׂוֹת מִשְׁפַּט עַבְדּוֹ וּמִשְׁפַּט עַמּוֹ יִשְׂרָאֵל דְּבַר יוֹם בְּיוֹמוֹ: לְמַעַן דַּעַת כָּל עַמֵּי הָאָרֶץ כִּי יְיָ הוּא הָאֱלֹהִים אֵין עוֹד:"},
-          {"ref": "61", "kind": "instruction", "node": "kaddish.shalem", "minyan": true, "en": "Full Kaddish", "text": "<em><small>קדיש שלם</small></em>"}
+          {"ref": "59", "kind": "prayer", "role": "chazzan_then_congregation", "text": "הוֹשִׁיעָה אֶת עַמֶּךָ וּבָרֵךְ אֶת נַחֲלָתֶךָ וּרְעֵם וְנַשְּׂאֵם עַד הָעוֹלָם: וְיִהְיוּ דְּבָרַי אֵלֶּה אֲשֶׁר הִתְחַנַּנְתִּי לִפְנֵי יְיָ קְרוֹבִים אֶל יְיָ אֱלֹהֵינוּ יוֹמָם וָלָיְלָה לַעֲשׂוֹת מִשְׁפַּט עַבְדּוֹ וּמִשְׁפַּט עַמּוֹ יִשְׂרָאֵל דְּבַר יוֹם בְּיוֹמוֹ: לְמַעַן דַּעַת כָּל עַמֵּי הָאָרֶץ כִּי יְיָ הוּא הָאֱלֹהִים אֵין עוֹד:"},
+          {"ref": "61", "kind": "instruction", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "en": "Full Kaddish", "text": "<em><small>קדיש שלם</small></em>"}
         ]
       },
       "en": {
@@ -130,7 +130,7 @@
       "path": "Festivals/Sukkot/Hosha'anot/Fifth Day of Sukkot",
       "title": "יום חמישי של סוכות",
       "node": "hoshanot",
-      "when": "hoshanaDay == 5",
+      "when": "hoshanaDay == 5 && !shabbat",
       "service": "shacharit",
       "he": {
         "version": "Daat Siddur Ashkenaz",
@@ -180,8 +180,8 @@
           {"ref": "38", "kind": "prayer", "role": "congregation_then_chazzan", "text": "כְּהוֹשַֽׁעְתָּ שְׁבֽוּת שִׁבְטֵֽי יַֽעֲקֹֽב. תָּשֽׁוּב וְתָשִֽׁיב שְׁבֽוּת אָֽהֳלֵֽי יַֽעֲקֹֽב. וְהוֹשִֽׁיעָה נָּֽא:"},
           {"ref": "39", "kind": "prayer", "role": "congregation_then_chazzan", "text": "כְּהוֹשַֽׁעְתָּ שֽׁוֹמְרֵֽי מִצְוֹֽת וְחוֹכֵֽי יְשׁוּעֽוֹת. אֵֽל לְמֽוֹשָׁעֽוֹת וְהוֹשִֽׁיעָה נָּֽא:"},
           {"ref": "41", "kind": "prayer", "role": "congregation_then_chazzan", "text": "אֲנִי וָהוֹ הוֹשִׁיעָה נָא:"},
-          {"ref": "43", "kind": "prayer", "text": "הוֹשִׁיעָה אֶת עַמֶּךָ וּבָרֵךְ אֶת נַחֲלָתֶךָ וּרְעֵם וְנַשְּׂאֵם עַד הָעוֹלָם: וְיִהְיוּ דְּבָרַי אֵלֶּה אֲשֶׁר הִתְחַנַּנְתִּי לִפְנֵי יְיָ קְרוֹבִים אֶל יְיָ אֱלֹהֵינוּ יוֹמָם וָלָיְלָה לַעֲשׂוֹת מִשְׁפַּט עַבְדּוֹ וּמִשְׁפַּט עַמּוֹ יִשְׂרָאֵל דְּבַר יוֹם בְּיוֹמוֹ: לְמַעַן דַּעַת כָּל עַמֵּי הָאָרֶץ כִּי יְיָ הוּא הָאֱלֹהִים אֵין עוֹד:"},
-          {"ref": "45", "kind": "instruction", "node": "kaddish.shalem", "minyan": true, "en": "Full Kaddish", "text": "<em><small>קדיש שלם</small></em>"}
+          {"ref": "43", "kind": "prayer", "role": "chazzan_then_congregation", "text": "הוֹשִׁיעָה אֶת עַמֶּךָ וּבָרֵךְ אֶת נַחֲלָתֶךָ וּרְעֵם וְנַשְּׂאֵם עַד הָעוֹלָם: וְיִהְיוּ דְּבָרַי אֵלֶּה אֲשֶׁר הִתְחַנַּנְתִּי לִפְנֵי יְיָ קְרוֹבִים אֶל יְיָ אֱלֹהֵינוּ יוֹמָם וָלָיְלָה לַעֲשׂוֹת מִשְׁפַּט עַבְדּוֹ וּמִשְׁפַּט עַמּוֹ יִשְׂרָאֵל דְּבַר יוֹם בְּיוֹמוֹ: לְמַעַן דַּעַת כָּל עַמֵּי הָאָרֶץ כִּי יְיָ הוּא הָאֱלֹהִים אֵין עוֹד:"},
+          {"ref": "45", "kind": "instruction", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "en": "Full Kaddish", "text": "<em><small>קדיש שלם</small></em>"}
         ]
       },
       "en": {
@@ -238,7 +238,7 @@
       "path": "Festivals/Sukkot/Hosha'anot/Sixth Day of Sukkot",
       "title": "יום שישי של סוכות",
       "node": "hoshanot",
-      "when": "hoshanaDay == 6",
+      "when": "hoshanaDay == 6 && !shabbat",
       "service": "shacharit",
       "he": {
         "version": "Daat Siddur Ashkenaz",
@@ -281,8 +281,8 @@
           {"ref": "39", "kind": "prayer", "role": "congregation_then_chazzan", "text": "כְּהוֹשַֽׁעְתָּ שְׁבֽוּת שִׁבְטֵֽי יַֽעֲקֹֽב. תָּשֽׁוּב וְתָשִֽׁיב שְׁבֽוּת אָֽהֳלֵֽי יַֽעֲקֹֽב. וְהוֹשִֽׁיעָה נָּֽא:"},
           {"ref": "40", "kind": "prayer", "role": "congregation_then_chazzan", "text": "כְּהוֹשַֽׁעְתָּ שֽׁוֹמְרֵֽי מִצְוֹֽת וְחוֹכֵֽי יְשׁוּעֽוֹת. אֵֽל לְמֽוֹשָׁעֽוֹת וְהוֹשִֽׁיעָה נָּֽא:"},
           {"ref": "42", "kind": "prayer", "role": "congregation_then_chazzan", "text": "אֲנִי וָהוֹ הוֹשִׁיעָה נָא:"},
-          {"ref": "44", "kind": "prayer", "text": "הוֹשִׁיעָה אֶת עַמֶּךָ וּבָרֵךְ אֶת נַחֲלָתֶךָ וּרְעֵם וְנַשְּׂאֵם עַד הָעוֹלָם: וְיִהְיוּ דְּבָרַי אֵלֶּה אֲשֶׁר הִתְחַנַּנְתִּי לִפְנֵי יְיָ קְרוֹבִים אֶל יְיָ אֱלֹהֵינוּ יוֹמָם וָלָיְלָה לַעֲשׂוֹת מִשְׁפַּט עַבְדּוֹ וּמִשְׁפַּט עַמּוֹ יִשְׂרָאֵל דְּבַר יוֹם בְּיוֹמוֹ: לְמַעַן דַּעַת כָּל עַמֵּי הָאָרֶץ כִּי יְיָ הוּא הָאֱלֹהִים אֵין עוֹד:"},
-          {"ref": "46", "kind": "instruction", "node": "kaddish.shalem", "minyan": true, "en": "Full Kaddish", "text": "<em><small>קדיש שלם</small></em>"}
+          {"ref": "44", "kind": "prayer", "role": "chazzan_then_congregation", "text": "הוֹשִׁיעָה אֶת עַמֶּךָ וּבָרֵךְ אֶת נַחֲלָתֶךָ וּרְעֵם וְנַשְּׂאֵם עַד הָעוֹלָם: וְיִהְיוּ דְּבָרַי אֵלֶּה אֲשֶׁר הִתְחַנַּנְתִּי לִפְנֵי יְיָ קְרוֹבִים אֶל יְיָ אֱלֹהֵינוּ יוֹמָם וָלָיְלָה לַעֲשׂוֹת מִשְׁפַּט עַבְדּוֹ וּמִשְׁפַּט עַמּוֹ יִשְׂרָאֵל דְּבַר יוֹם בְּיוֹמוֹ: לְמַעַן דַּעַת כָּל עַמֵּי הָאָרֶץ כִּי יְיָ הוּא הָאֱלֹהִים אֵין עוֹד:"},
+          {"ref": "46", "kind": "instruction", "node": "kaddish.shalem", "role": "chazzan", "voice": "aloud", "minyan": true, "en": "Full Kaddish", "text": "<em><small>קדיש שלם</small></em>"}
         ]
       },
       "en": {
@@ -293,7 +293,7 @@
           {"ref": "4", "translates": ["4"], "text": "The Master who brings salvation:"},
           {"ref": "5", "translates": ["5"], "text": "Without You there is no salvation, "},
           {"ref": "6", "translates": ["6"], "text": "mighty One and great in saving, "},
-          {"ref": "7", "translates": ["7"], "text": "'I  became indigent and He will bring me salvation,' "},
+          {"ref": "7", "translates": ["7"], "text": "'I became indigent and He will bring me salvation,' "},
           {"ref": "8", "translates": ["8"], "text": "the saving God"},
           {"ref": "9", "translates": ["9"], "text": "who rescues and brings salvation"},
           {"ref": "10", "translates": ["10"], "text": " - bring salvation to those who cry to You; "},
@@ -455,7 +455,7 @@
           {"ref": "16", "translates": ["16"], "text": "The Master who brings salvation:"},
           {"ref": "17", "translates": ["17"], "text": "Without You there is no salvation, "},
           {"ref": "18", "translates": ["18"], "text": "mighty One and great in saving, "},
-          {"ref": "19", "translates": ["19"], "text": "'I  became indigent and He will bring me salvation,' "},
+          {"ref": "19", "translates": ["19"], "text": "'I became indigent and He will bring me salvation,' "},
           {"ref": "20", "translates": ["20"], "text": "the saving God"},
           {"ref": "21", "translates": ["21"], "text": "who rescues and brings salvation"},
           {"ref": "22", "translates": ["22"], "text": " - bring salvation to those who cry to You; "},
@@ -617,6 +617,26 @@
       "en": {
         "version": "Sefaria Community Translation",
         "segs": [
+          {"ref": "1", "translates": ["1"], "comment": "Amud translation", "text": "Mighty Rock of my salvation, to praise You is a delight."},
+          {"ref": "2", "translates": ["2"], "comment": "Amud translation", "text": "Restore my House of Prayer, and there we will bring a thanksgiving offering."},
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "When You have prepared the slaughter for the blaspheming foe,"},
+          {"ref": "4", "translates": ["4"], "comment": "Amud translation", "text": "then I shall complete, with a song of psalm, the dedication of the Altar."},
+          {"ref": "6", "translates": ["6"], "comment": "Amud translation", "text": "My soul was sated with troubles, my strength consumed by grief."},
+          {"ref": "7", "translates": ["7"], "comment": "Amud translation", "text": "They embittered my life with hardship, in the bondage of the heifer kingdom [Egypt]."},
+          {"ref": "8", "translates": ["8"], "comment": "Amud translation", "text": "But with His great hand He brought out the treasured nation;"},
+          {"ref": "9", "translates": ["9"], "comment": "Amud translation", "text": "Pharaoh's army and all his seed sank like a stone in the depths."},
+          {"ref": "11", "translates": ["11"], "comment": "Amud translation", "text": "He brought me to His holy abode, but there too I found no rest."},
+          {"ref": "12", "translates": ["12"], "comment": "Amud translation", "text": "An oppressor came and exiled me, for I had served strangers,"},
+          {"ref": "13", "translates": ["13"], "comment": "Amud translation", "text": "and I drank the wine of poison; I had almost perished."},
+          {"ref": "14", "translates": ["14"], "comment": "Amud translation", "text": "At the end of Babylon, with Zerubbabel, at the end of seventy years I was saved."},
+          {"ref": "16", "translates": ["16"], "comment": "Amud translation", "text": "He sought to cut down the lofty cypress, Haman the Agagite, son of Hammedatha,"},
+          {"ref": "17", "translates": ["17"], "comment": "Amud translation", "text": "but it became for him a snare and a trap, and his arrogance was ended."},
+          {"ref": "18", "translates": ["18"], "comment": "Amud translation", "text": "You lifted up the head of the Benjaminite [Mordechai], and the name of the enemy You blotted out."},
+          {"ref": "19", "translates": ["19"], "comment": "Amud translation", "text": "His many sons and his possessions You hanged on the gallows."},
+          {"ref": "21", "translates": ["21"], "comment": "Amud translation", "text": "The Greeks gathered against me in the days of the Hasmoneans,"},
+          {"ref": "22", "translates": ["22"], "comment": "Amud translation", "text": "and breached the walls of my towers and defiled all the oils."},
+          {"ref": "23", "translates": ["23"], "comment": "Amud translation", "text": "And from the last of the flasks a miracle was wrought for the roses [Israel]."},
+          {"ref": "24", "translates": ["24"], "comment": "Amud translation", "text": "The sages established eight days for song and rejoicing."},
           {"ref": "26", "translates": ["26"], "text": "Bare Your holy arm and hasten the End of salvation –"},
           {"ref": "27", "translates": ["27"], "text": "Avenge the vengeance of Your servants’ blood from the wicked nation."},
           {"ref": "28", "translates": ["28"], "text": "For the time has delayed and there is no end to the days of evil,"},

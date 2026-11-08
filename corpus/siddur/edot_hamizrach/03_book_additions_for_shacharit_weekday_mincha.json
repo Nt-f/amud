@@ -323,9 +323,9 @@
           {"ref": "9", "parts": [
             {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": "<b>אַתָּה</b> קָדוֹשׁ וְשִׁמְךָ קָדוֹשׁ,"},
             {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " וּקְדוֹשִׁים בְּכָל־יוֹם יְהַֽלְלֽוּךָ סֶּֽלָה: בָּרוּךְ אַתָּה יֹהֵוָהֵ,"},
-            {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " הָאֵל הַקָּדוֹשׁ: "},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "text": " הָאֵל הַקָּדוֹשׁ: "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "amidah.kedushat_hashem", "en": "During the Ten Days of Repentance:", "gloss": "Said only in the silent Amidah", "text": "<small><small>בעשרת ימי תשובה אומרים:</small></small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.kedushat_hashem", "text": " הַמֶּלֶךְ הַקָּדוֹשׁ:  "}
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "text": " הַמֶּלֶךְ הַקָּדוֹשׁ:  "}
           ]},
           {"ref": "10", "kind": "prayer", "node": "amidah.daat", "text": "<b>אַתָּה</b> חוֹנֵן לְאָדָם דַּֽעַת וּמְלַמֵּד לֶאֱנוֹשׁ בִּינָה. וְחָנֵּֽנוּ מֵאִתְּךָ חָכְמָה בִּינָה וָדָֽעַת: בָּרוּךְ אַתָּה יַהַוַהַ, חוֹנֵן הַדָּֽעַת:"},
           {"ref": "11", "kind": "prayer", "node": "amidah.teshuva", "text": "<b>הֲשִׁיבֵֽנוּ</b> אָבִֽינוּ לְתֽוֹרָתֶֽךָ, וְקָֽרְבֵֽנוּ מַלְכֵּֽנוּ לַֽעֲבֽוֹדָתֶֽךָ, וְהַֽחֲזִירֵֽנוּ בִּתְשׁוּבָה שְׁלֵמָה לְפָנֶֽיךָ: בָּרוּךְ אַתָּה יֵהֵוֵהֵ, הָרוֹצֶה בִּתְשׁוּבָה:"},

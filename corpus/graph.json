@@ -62,6 +62,24 @@
           "he": "סליחות לבה״ב"
         },
         {
+          "insert": "selichot.behab_first",
+          "when": "behabDay == 1",
+          "en": "Selichot for BaHaB",
+          "he": "סליחות לבה״ב"
+        },
+        {
+          "insert": "selichot.behab_thursday",
+          "when": "behabDay == 2",
+          "en": "Selichot for BaHaB",
+          "he": "סליחות לבה״ב"
+        },
+        {
+          "insert": "selichot.behab_second",
+          "when": "behabDay == 3",
+          "en": "Selichot for BaHaB",
+          "he": "סליחות לבה״ב"
+        },
+        {
           "anchor": "shacharit.weekday.tachanun"
         },
         {

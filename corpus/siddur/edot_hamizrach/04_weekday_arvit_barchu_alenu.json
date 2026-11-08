@@ -201,9 +201,9 @@
           {"ref": "7", "parts": [
             {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": "<b>אַתָּה</b> קָדוֹשׁ וְשִׁמְךָ קָדוֹשׁ,"},
             {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " וּקְדוֹשִׁים בְּכָל־יוֹם יְהַֽלְלֽוּךָ סֶּֽלָה: בָּרוּךְ אַתָּה יֹהֵוָהֵ,"},
-            {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " הָאֵל הַקָּדוֹשׁ: "},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "text": " הָאֵל הַקָּדוֹשׁ: "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "amidah.kedushat_hashem", "en": "During the Ten Days of Repentance:", "text": "<small><small>בעשרת ימי תשובה אומרים:</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.kedushat_hashem", "text": " הַמֶּלֶךְ הַקָּדוֹשׁ:</small>"}
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "text": " הַמֶּלֶךְ הַקָּדוֹשׁ:</small>"}
           ]},
           {"ref": "8", "kind": "prayer", "node": "amidah.daat", "text": "<b>אַתָּה</b> חוֹנֵן לְאָדָם דַּֽעַת וּמְלַמֵּד לֶאֱנוֹשׁ בִּינָה. "},
           {"ref": "9", "kind": "instruction", "en": "On Motzaei Shabbat and Yom Tov:", "text": "<small>במוצאי שבת ויום טוב אומרים</small>"},

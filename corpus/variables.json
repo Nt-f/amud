@@ -146,6 +146,9 @@
  "behab": {
   "doc": "Ta'anit BeHaB"
  },
+ "behabDay": {
+  "doc": "Which BeHaB day: 1 first Monday, 2 Thursday, 3 second Monday (0 if none)"
+ },
  "threeWeeks": {
   "doc": "Bein HaMetzarim"
  },

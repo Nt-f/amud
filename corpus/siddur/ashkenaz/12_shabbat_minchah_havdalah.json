@@ -227,7 +227,6 @@
       "path": "Shabbat/Minchah/Torah Reading/Returning Sefer to Aron/LeDavid",
       "title": "לדוד מזמור",
       "node": "torah.ledavid_mizmor",
-      "when": "torahReading",
       "service": "mincha",
       "he": {
         "version": "Daat Siddur Ashkenaz",
@@ -348,9 +347,10 @@
             {"kind": "prayer", "role": "chazzan", "amidah": "repetition", "minyan": true, "text": "לְדור וָדור נַגִּיד גָּדְלֶךָ וּלְנֵצַח נְצָחִים קְדֻשָּׁתְךָ נַקְדִּישׁ. וְשִׁבְחֲךָ אֱלהֵינוּ מִפִּינוּ לא יָמוּשׁ לְעולָם וָעֶד. כִּי אֵל מֶלֶךְ גָּדול וְקָדושׁ אָתָּה: "}
           ]},
           {"ref": "10", "parts": [
-            {"kind": "prayer", "node": "amidah.kedushat_hashem", "amidah": "repetition", "minyan": true, "text": "בָּרוּךְ אַתָּה ה' הָאֵל "},
+            {"kind": "prayer", "node": "amidah.kedushat_hashem", "amidah": "repetition", "minyan": true, "text": "בָּרוּךְ אַתָּה ה'"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "amidah": "repetition", "minyan": true, "text": " הָאֵל "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "amidah.kedushat_hashem", "amidah": "repetition", "minyan": true, "en": "During the Ten Days of Repentance:", "clean": "<small>בעשי\"ת:</small>", "text": "<em><small>בעשי\"ת "},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.kedushat_hashem", "amidah": "repetition", "minyan": true, "text": "הַמֶּלֶךְ</small></em> "},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "amidah": "repetition", "minyan": true, "text": "הַמֶּלֶךְ</small></em> "},
             {"kind": "prayer", "node": "amidah.kedushat_hashem", "amidah": "repetition", "minyan": true, "text": "הַקָּדושׁ:"}
           ]}
         ]
@@ -366,9 +366,10 @@
         "segs": [
           {"ref": "1", "kind": "prayer", "voice": "silent", "amidah": "silent", "text": "אַתָּה קָדושׁ וְשִׁמְךָ קָדושׁ וּקְדושִׁים בְּכָל יום יְהַלְּלוּךָ סֶּלָה: "},
           {"ref": "2", "parts": [
-            {"kind": "prayer", "amidah": "silent", "text": "בָּרוּךְ אַתָּה ה', הָאֵל "},
+            {"kind": "prayer", "amidah": "silent", "text": "בָּרוּךְ אַתָּה ה',"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kadosh_close", "amidah": "silent", "text": " הָאֵל "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "amidah": "silent", "en": "During the Ten Days of Repentance:", "clean": "<small>בעשי\"ת:</small>", "text": "<em><small>בעשי\"ת "},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "amidah": "silent", "text": "הַמֶּלֶךְ</small></em> "},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kadosh_close", "amidah": "silent", "text": "הַמֶּלֶךְ</small></em> "},
             {"kind": "prayer", "amidah": "silent", "text": "הַקָּדושׁ:"}
           ]}
         ]
@@ -466,14 +467,35 @@
         "segs": [
           {"ref": "1", "kind": "instruction", "when": "purim", "en": "For Purim:", "clean": "לפורים:", "text": "לפורים: "},
           {"ref": "2", "kind": "prayer", "when": "purim", "text": "בִּימֵי מָרְדְּכַי וְאֶסְתֵּר בְּשׁוּשַׁן הַבִּירָה. כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע. בִּקֵּשׁ לְהַשְׁמִיד לַהֲרֹג וּלְאַבֵּד אֶת כָּל הַיְּהוּדִים מִנַּעַר וְעַד זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד. בִּשְׁלשָׁה עָשָׂר לְחֹדֶשׁ שְׁנֵים עָשָׂר. הוּא חֹדֶשׁ אֲדָר. וּשְׁלָלָם לָבוֹז: "},
-          {"ref": "3", "kind": "prayer", "when": "purim", "text": "וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים. הֵפַרְתָּ אֶת עֲצָתוֹ. וְקִלְקַלְתָּ אֶת מַחֲשַׁבְתּוֹ. וַהֲשֵׁבוֹתָ לּוֹ גְּמוּלוֹ בְרֹאשׁוֹ. וְתָלוּ אוֹתוֹ וְאֶת בָּנָיו עַל הָעֵץ: "},
-          {"ref": "4", "kind": "prayer", "when": "chanukah || purim", "node": "amidah.al_hanissim", "text": "וְעַל כֻּלָּם יִתְבָּרַךְ וְיִתְרוֹמַם שִׁמְךָ מַלְכֵּנוּ תָּמִיד לְעוֹלָם וָעֶד: "},
+          {"ref": "3", "kind": "prayer", "when": "purim", "text": "וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים. הֵפַרְתָּ אֶת עֲצָתוֹ. וְקִלְקַלְתָּ אֶת מַחֲשַׁבְתּוֹ. וַהֲשֵׁבוֹתָ לּוֹ גְּמוּלוֹ בְרֹאשׁוֹ. וְתָלוּ אוֹתוֹ וְאֶת בָּנָיו עַל הָעֵץ: "}
+        ]
+      }
+    },
+    {
+      "path": "Shabbat/Minchah/Amidah/Thanksgiving/Conclusion",
+      "title": "סיום ההודאה",
+      "comment": "The end of Modim, said every day; moved out of the Purim Al HaNissim leaf, whose title rule hid it on every other day.",
+      "node": "amidah.modim",
+      "service": "mincha",
+      "he": {
+        "version": "Daat Siddur Ashkenaz",
+        "segs": [
+          {"ref": "4", "kind": "prayer", "node": "amidah.modim", "text": "וְעַל כֻּלָּם יִתְבָּרַךְ וְיִתְרוֹמַם שִׁמְךָ מַלְכֵּנוּ תָּמִיד לְעוֹלָם וָעֶד: "},
           {"ref": "5", "parts": [
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "amidah.modim", "en": "During the Ten Days of Repentance:", "clean": "<small>בעשי\"ת:</small>", "text": "<em><small>בש\"ת</small></em> "},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "node": "amidah.modim", "text": "וּכְתֹב לְחַיִּים טוֹבִים כָּל בְּנֵי בְרִיתֶךָ: "}
           ]},
           {"ref": "6", "kind": "prayer", "node": "amidah.modim", "text": "וְכֹל הַחַיִּים יוֹדוּךָ סֶּלָה. וִיהַלְלוּ אֶת שִׁמְךָ בֶּאֱמֶת הָאֵל יְשׁוּעָתֵנוּ וְעֶזְרָתֵנוּ סֶלָה: "},
           {"ref": "7", "kind": "prayer", "node": "amidah.modim", "text": "בָּרוּךְ אַתָּה יְהֹוָה. הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "4", "translates": ["4"], "comment": "Amud translation", "text": "For all these, may Your Name, our King, be blessed and exalted, continually, forever and ever."},
+          {"ref": "5", "translates": ["5"], "comment": "Amud translation", "text": "Inscribe all the children of Your covenant for a good life."},
+          {"ref": "6", "translates": ["6"], "comment": "Amud translation", "text": "All the living shall thank You, Selah, and praise Your Name in truth, God, our salvation and our help, Selah."},
+          {"ref": "7", "translates": ["7"], "comment": "Amud translation", "text": "Blessed are You, Adonoy, the Beneficent is Your Name, and to You it is fitting to give thanks."}
         ]
       }
     },

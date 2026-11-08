@@ -804,19 +804,19 @@
           {"ref": "17", "parts": [
             {"kind": "speaker", "node": "amidah.musaf.kedusha", "amidah": "repetition", "minyan": true, "en": "Chazzan:", "gloss": "Speaker label", "text": "<small>חזן:</small>"},
             {"kind": "prayer", "node": "amidah.musaf.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": " לְדוֹר וָדוֹר נַגִּיד גָּדְלֶךָ. וּלְנֵצַח נְצָחִים קְדֻשָּׁתְךָ נַקְדִּישׁ. וְשִׁבְחֲךָ אֱלֹהֵינוּ מִפִּינוּ לֹא יָמוּשׁ לְעוֹלָם וָעֶד. כִּי אֵל מֶלֶךְ גָּדוֹל וְקָדוֹשׁ אָתָּה: בָּרוּךְ אַתָּה יְהֹוָה."},
-            {"kind": "prayer", "when": "!shabbatShuva", "node": "amidah.musaf.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": " הָאֵל"},
+            {"kind": "prayer", "when": "!shabbatShuva", "alt": "kadosh_close", "node": "amidah.musaf.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": " הָאֵל"},
             {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.musaf.kedusha", "amidah": "repetition", "minyan": true, "en": "On Shabbat Shuva:", "gloss": "Insert 'the King' on Shabbat Shuva", "text": "<small>בשבת שובה</small>"},
             {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.musaf.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "the King", "text": " (הַמֶּלֶךְ)"},
             {"kind": "prayer", "node": "amidah.musaf.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "the King", "text": " הַקָּדוֹשׁ:"}
           ]},
           {"ref": "18", "parts": [
-            {"kind": "prayer", "node": "amidah.kedushat_hashem", "voice": "aloud", "text": "<b>אַתָּה קָדוֹשׁ</b>,"},
-            {"kind": "prayer", "node": "amidah.kedushat_hashem", "voice": "aloud", "text": " וְשִׁמְךָ קָדוֹשׁ,"},
-            {"kind": "prayer", "node": "amidah.kedushat_hashem", "voice": "aloud", "text": " וּקְדוֹשִׁים בְּכָל יוֹם יְהַלְלוּךָ סֶּלָה. בָּרוּךְ אַתָּה יְהֹוָה,"},
-            {"kind": "prayer", "when": "!shabbatShuva", "node": "amidah.kedushat_hashem", "voice": "aloud", "text": " הָאֵל "},
+            {"kind": "prayer", "node": "amidah.kedushat_hashem", "role": "individual", "voice": "silent", "text": "<b>אַתָּה קָדוֹשׁ</b>,"},
+            {"kind": "prayer", "node": "amidah.kedushat_hashem", "role": "individual", "voice": "silent", "text": " וְשִׁמְךָ קָדוֹשׁ,"},
+            {"kind": "prayer", "node": "amidah.kedushat_hashem", "role": "individual", "voice": "silent", "text": " וּקְדוֹשִׁים בְּכָל יוֹם יְהַלְלוּךָ סֶּלָה. בָּרוּךְ אַתָּה יְהֹוָה,"},
+            {"kind": "prayer", "when": "!shabbatShuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "role": "individual", "voice": "silent", "text": " הָאֵל "},
             {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.kedushat_hashem", "en": "On Shabbat Shuva:", "gloss": "Insert 'the King' on Shabbat Shuva", "text": "<small>בשבת שובה</small>"},
-            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.kedushat_hashem", "voice": "aloud", "en": "the King", "text": " (הַמֶּלֶךְ)"},
-            {"kind": "prayer", "node": "amidah.kedushat_hashem", "voice": "aloud", "en": "the King", "text": " הַקָּדוֹשׁ:"}
+            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.kedushat_hashem", "role": "individual", "voice": "silent", "en": "the King", "text": " (הַמֶּלֶךְ)"},
+            {"kind": "prayer", "node": "amidah.kedushat_hashem", "role": "individual", "voice": "silent", "en": "the King", "text": " הַקָּדוֹשׁ:"}
           ]},
           {"ref": "19", "kind": "instruction", "when": "roshChodesh", "node": "amidah.musaf.shabbat_rosh_chodesh", "en": "When Rosh Chodesh falls on Shabbat, say:", "gloss": "Conditional text for Shabbat Rosh Chodesh", "text": "<small>כשחל ראש חודש בשבת אומרים:</small>"},
           {"ref": "20", "kind": "prayer", "when": "roshChodesh", "node": "amidah.musaf.shabbat_rosh_chodesh", "voice": "aloud", "en": "You formed Your world of old...", "text": "<b>אַתָּה יָצַרְתָּ</b> עוֹלָמְךָ מִקֶּדֶם כִּלִּיתָ מְלַאכְתְּךָ בַּיּוֹם הַשְּׁבִיעִי. בָּחַרְתָּ בָּנוּ מִכָּל עָם אָהַבְתָּ אוֹתָנוּ וְרָצִיתָ בָּנוּ וְרוֹמַמְתָּנוּ מִכָּל הַלְּשׁוֹנוֹת וְקִדַּשְׁתָּנוּ בְּמִצְוֹתֶיךָ. וְקֵרַבְתָּנוּ מַלְכֵּנוּ לַעֲבוֹדָתֶךָ וְשִׁמְךָ הַגָּדוֹל וְהַקָּדוֹשׁ עָלֵינוּ קָרָאתָ:"},
@@ -1672,7 +1672,7 @@
         "segs": [
           {"ref": "t82", "translates": ["82"], "comment": "Amud translation", "text": "Then, on the seventh day, You rested;<br>therefore You blessed the Sabbath day."},
           {"ref": "t83", "translates": ["83"], "comment": "Amud translation", "text": "And for every deed praise is set in order;<br>Your devoted ones bless You at all times."},
-          {"ref": "t84", "translates": ["84"], "comment": "Amud translation", "text": "Blessed is Hashem, Creator of all,<br>the living God and everlasting King."},
+          {"ref": "t84", "translates": ["84"], "comment": "Amud translation", "text": "Blessed is Adonoy, Creator of all,<br>the living God and everlasting King."},
           {"ref": "t85", "translates": ["85"], "comment": "Amud translation", "text": "For from of old, upon Your servants<br>are Your abundant mercies and kindnesses."},
           {"ref": "t86", "translates": ["86"], "comment": "Amud translation", "text": "And in Egypt You began<br>to make known that You are greatly exalted"},
           {"ref": "t87", "translates": ["87"], "comment": "Amud translation", "text": "above all gods, when You executed<br>great judgments upon them and upon their gods."},
@@ -1682,18 +1682,18 @@
           {"ref": "t91", "translates": ["91"], "comment": "Amud translation", "text": "You knew their way in the wilderness,<br>in a parched land where no one had passed."},
           {"ref": "t92", "translates": ["92"], "comment": "Amud translation", "text": "You gave Your people grain from heaven,<br>meat like dust, and water from the rock."},
           {"ref": "t93", "translates": ["93"], "comment": "Amud translation", "text": "You drove out many nations and peoples;<br>they inherited their land and the toil of nations,"},
-          {"ref": "t94", "translates": ["94"], "comment": "Amud translation", "text": "so that they might keep statutes and teachings,<br>the words of Hashem, pure words."},
+          {"ref": "t94", "translates": ["94"], "comment": "Amud translation", "text": "so that they might keep statutes and teachings,<br>the words of Adonoy, pure words."},
           {"ref": "t95", "translates": ["95"], "comment": "Amud translation", "text": "They delighted in rich pasture,<br>and from the flinty rock, streams of oil."},
           {"ref": "t96", "translates": ["96"], "comment": "Amud translation", "text": "When they came to rest, they built Your holy city<br>and glorified Your Holy Temple."},
           {"ref": "t97", "translates": ["97"], "comment": "Amud translation", "text": "And You said, “Here I will dwell for length of days;<br>her provision I will abundantly bless.”"},
           {"ref": "t98", "translates": ["98"], "comment": "Amud translation", "text": "For there they will offer offerings of righteousness;<br>Your priests, too, will be clothed in righteousness."},
           {"ref": "t99", "translates": ["99"], "comment": "Amud translation", "text": "And the house of Levi will sing sweet songs;<br>to You they will shout for joy and sing."},
-          {"ref": "t100", "translates": ["100"], "comment": "Amud translation", "text": "The house of Israel and those who fear Hashem<br>will honor and thank Your name, Hashem."},
+          {"ref": "t100", "translates": ["100"], "comment": "Amud translation", "text": "The house of Israel and those who fear Adonoy<br>will honor and thank Your name, Adonoy."},
           {"ref": "t101", "translates": ["101"], "comment": "Amud translation", "text": "You did great good to those of old;<br>so do good also to those who come after."},
-          {"ref": "t102", "translates": ["102"], "comment": "Amud translation", "text": "Hashem, rejoice over us, please,<br>as You rejoiced over our fathers,"},
+          {"ref": "t102", "translates": ["102"], "comment": "Amud translation", "text": "Adonoy, rejoice over us, please,<br>as You rejoiced over our fathers,"},
           {"ref": "t103", "translates": ["103"], "comment": "Amud translation", "text": "to make us many and to do us good,<br>and we will thank You forever, for You do good."},
-          {"ref": "t104", "translates": ["104"], "comment": "Amud translation", "text": "Hashem, build Your city soon,<br>for Your name is called upon it."},
-          {"ref": "t105", "translates": ["105"], "comment": "Amud translation", "text": "Make the horn of David flourish in it,<br>and dwell in its midst forever, Hashem."},
+          {"ref": "t104", "translates": ["104"], "comment": "Amud translation", "text": "Adonoy, build Your city soon,<br>for Your name is called upon it."},
+          {"ref": "t105", "translates": ["105"], "comment": "Amud translation", "text": "Make the horn of David flourish in it,<br>and dwell in its midst forever, Adonoy."},
           {"ref": "t106", "translates": ["106"], "comment": "Amud translation", "text": "Offerings of righteousness will be offered there,<br>and as in days of old the meal-offering will be pleasing."},
           {"ref": "t107", "translates": ["107"], "comment": "Amud translation", "text": "Bless Your people with the light of Your face,<br>for they desire to do Your will."},
           {"ref": "t108", "translates": ["108"], "comment": "Amud translation", "text": "And by Your will, fulfill our desire;<br>look, please, upon Your people, all of us."},
@@ -1701,8 +1701,8 @@
           {"ref": "t110", "translates": ["110"], "comment": "Amud translation", "text": "And we will always tell Your praise<br>and extol Your glorious name."},
           {"ref": "t111", "translates": ["111"], "comment": "Amud translation", "text": "And from Your blessing Your people will be blessed,<br>for whatever You bless is blessed."},
           {"ref": "t112", "translates": ["112"], "comment": "Amud translation", "text": "And I, while I live, will praise my Creator<br>and bless You all the days of my service."},
-          {"ref": "t113", "translates": ["113"], "comment": "Amud translation", "text": "May the name of Hashem be blessed forever,<br>from world to world."},
-          {"ref": "t114", "translates": ["114"], "comment": "Amud translation", "text": "As it is written: “Blessed is Hashem, the God of Israel, from world to world; and all the people said, Amen, and praise to Hashem.” Daniel answered and said: “May the name of God be blessed from world to world, for wisdom and might are His.” And it is said: “And the Levites, Jeshua and Kadmiel, Bani, Hashabneiah, Sherebiah, Hodiah, Shebaniah and Pethahiah, said: Arise, bless Hashem your God from world to world; and let them bless Your glorious name, which is exalted above all blessing and praise.” And it is said: “Blessed is Hashem, the God of Israel, from world to world; and all the people said, Amen, Halleluyah.” And it is said: “And David blessed Hashem before the eyes of all the congregation, and David said: Blessed are You, Hashem, the God of Israel our father, from world to world.”"}
+          {"ref": "t113", "translates": ["113"], "comment": "Amud translation", "text": "May the name of Adonoy be blessed forever,<br>from world to world."},
+          {"ref": "t114", "translates": ["114"], "comment": "Amud translation", "text": "As it is written: “Blessed is Adonoy, the God of Israel, from world to world; and all the people said, Amen, and praise to Adonoy.” Daniel answered and said: “May the name of God be blessed from world to world, for wisdom and might are His.” And it is said: “And the Levites, Jeshua and Kadmiel, Bani, Hashabneiah, Sherebiah, Hodiah, Shebaniah and Pethahiah, said: Arise, bless Adonoy your God from world to world; and let them bless Your glorious name, which is exalted above all blessing and praise.” And it is said: “Blessed is Adonoy, the God of Israel, from world to world; and all the people said, Amen, Halleluyah.” And it is said: “And David blessed Adonoy before the eyes of all the congregation, and David said: Blessed are You, Adonoy, the God of Israel our father, from world to world.”"}
         ]
       }
     },
@@ -1871,7 +1871,7 @@
           {"ref": "t136", "translates": ["136"], "comment": "Amud translation", "text": "He carried them, bore them, bound them on as a crown;<br>because they are precious in His eyes, He honored them."},
           {"ref": "t137", "translates": ["137"], "comment": "Amud translation", "text": "His glory is upon me, and my glory is upon Him;<br>and He is near to me when I call to Him."},
           {"ref": "t138", "translates": ["138"], "comment": "Amud translation", "text": "He is bright and red, red in His garment,<br>when He treads the winepress on coming from Edom."},
-          {"ref": "t139", "translates": ["139"], "comment": "Amud translation", "text": "The knot of the tefillin He showed to the humble one,<br>the image of Hashem before his eyes."},
+          {"ref": "t139", "translates": ["139"], "comment": "Amud translation", "text": "The knot of the tefillin He showed to the humble one,<br>the image of Adonoy before his eyes."},
           {"ref": "t140", "translates": ["140"], "comment": "Amud translation", "text": "He desires His people; He glorifies the humble;<br>enthroned upon praises, He takes glory in them."},
           {"ref": "t141", "translates": ["141"], "comment": "Amud translation", "text": "The first of Your word is truth, calling from the beginning;<br>seek out the people who seek You, generation after generation."},
           {"ref": "t142", "translates": ["142"], "comment": "Amud translation", "text": "Set the multitude of my songs before You, please,<br>and may my song of joy draw near to You."},
@@ -1880,7 +1880,7 @@
           {"ref": "t145", "translates": ["145"], "comment": "Amud translation", "text": "May my blessing rise upon the head of the Provider,<br>Creator and Begetter, the righteous Mighty One."},
           {"ref": "t146", "translates": ["146"], "comment": "Amud translation", "text": "And to my blessing, nod Your head to me,<br>and take it to Yourself as the finest spices."},
           {"ref": "t147", "translates": ["147"], "comment": "Amud translation", "text": "May my words be pleasing to You,<br>for my soul longs for You."},
-          {"ref": "t148", "translates": ["148"], "comment": "Amud translation", "text": "Yours, Hashem, are the greatness, the might, the splendor, the victory and the majesty, for all that is in heaven and on earth is Yours. Yours, Hashem, is the kingdom, and You are exalted as head over all. Who can tell the mighty acts of Hashem, or proclaim all His praise?"}
+          {"ref": "t148", "translates": ["148"], "comment": "Amud translation", "text": "Yours, Adonoy, are the greatness, the might, the splendor, the victory and the majesty, for all that is in heaven and on earth is Yours. Yours, Adonoy, is the kingdom, and You are exalted as head over all. Who can tell the mighty acts of Adonoy, or proclaim all His praise?"}
         ]
       }
     },

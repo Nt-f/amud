@@ -172,9 +172,10 @@
           {"ref": "11", "parts": [
             {"kind": "prayer", "role": "individual", "voice": "silent", "text": "<b>אַתָּֽה קָדֽוֹשׁ</b> וְשִׁמְךָֽ קָדֽוֹשׁ,"},
             {"kind": "prayer", "role": "individual", "voice": "silent", "text": " וּקְדוֹשִֽׁים בְּכָל־יוֹֽם יְהַלְלֽוּךָ סֶּֽלָה. בָּרֽוּךְ אַתָּֽה יְיָ,"},
-            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "role": "individual", "voice": "silent", "text": " הָאֵֽל "},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kadosh_close", "role": "individual", "voice": "silent", "text": " הָאֵֽל "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>בעשי״ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "individual", "voice": "silent", "text": " (הַמֶּֽלֶךְ) הַקָּדֽוֹשׁ:"}
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kadosh_close", "role": "individual", "voice": "silent", "text": " (הַמֶּֽלֶךְ)"},
+            {"kind": "prayer", "role": "individual", "voice": "silent", "text": " הַקָּדֽוֹשׁ:"}
           ]},
           {"ref": "12", "kind": "prayer", "role": "individual", "voice": "silent", "text": "<b>אַתָּֽה חוֹנֵֽן</b> לְאָדָֽם דַּֽעַת, וּמְלַמֵּֽד לֶאֱנֽוֹשׁ בִּינָֽה. חָנֵּֽנוּ מֵאִתְּךָֽ חָכְמָֽה בִּינָֽה וָדָֽעַת. בָּרֽוּךְ אַתָּֽה יְיָ, חוֹנֵֽן הַדָּֽעַת:"},
           {"ref": "13", "kind": "prayer", "role": "individual", "voice": "silent", "text": "<b>הֲשִׁיבֵנוּ</b> אָבִינוּ לְתוֹרָתֶךָ, וְקָרְבֵנוּ מַלְכֵּנוּ לַעֲבוֹדָתֶךָ, וְהַחֲזִירֵנוּ בִּתְשׁוּבָה שְׁלֵמָה לְפָנֶיךָ. בָּרוּךְ אַתָּה יְיָ, הָרוֹצֶה בִּתְשׁוּבָה:"},
@@ -581,9 +582,10 @@
           {"ref": "26", "parts": [
             {"kind": "prayer", "text": "<b>אַתָּֽה קָדֽוֹשׁ</b> וְשִׁמְךָֽ קָדֽוֹשׁ,"},
             {"kind": "prayer", "text": " וּקְדוֹשִֽׁים בְּכָל־יוֹֽם יְהַלְלֽוּךָ סֶּֽלָה. בָּרֽוּךְ אַתָּֽה יְיָ,"},
-            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "text": " הָאֵֽל "},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "kadosh_close", "text": " הָאֵֽל "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>בעשי״ת</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": " (הַמֶּֽלֶךְ) הַקָּדֽוֹשׁ:"}
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "kadosh_close", "text": " (הַמֶּֽלֶךְ)"},
+            {"kind": "prayer", "text": " הַקָּדֽוֹשׁ:"}
           ]},
           {"ref": "27", "kind": "prayer", "text": "<b>אַתָּֽה חוֹנֵֽן</b> לְאָדָֽם דַּֽעַת, וּמְלַמֵּֽד לֶאֱנֽוֹשׁ בִּינָֽה. "},
           {"ref": "28", "parts": [

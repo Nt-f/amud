@@ -98,11 +98,10 @@
           ]},
           {"ref": "12", "parts": [
             {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": "<b>אַתָּה</b> קָדוֹשׁ וְשִׁמְךָ קָדוֹשׁ,"},
-            {"kind": "instruction", "en": "On Shabbat Shuva:", "text": " וּקְדוֹשִׁים בְּכָל־יוֹם יְהַֽלְלֽוּךָ סֶּֽלָה: בָּרוּךְ אַתָּה יֹהֵוָהֵ,"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " הָאֵל הַקָּדוֹשׁ: "},
-            {"kind": "instruction", "when": "shabbatShuva", "en": "On Shabbat Shuva:", "text": "<small><small>בשבת תשובה אומרים:</small>"},
-            {"kind": "prayer", "when": "shabbatShuva", "text": " הַמֶּלֶךְ הַקָּדוֹשׁ:"},
-            {"kind": "prayer", "text": "</small>  "}
+            {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " וּקְדוֹשִׁים בְּכָל־יוֹם יְהַֽלְלֽוּךָ סֶּֽלָה: בָּרוּךְ אַתָּה יֹהֵוָהֵ,"},
+            {"kind": "prayer", "when": "!shabbatShuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "text": " הָאֵל הַקָּדוֹשׁ: "},
+            {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.kedushat_hashem", "en": "On Shabbat Shuva:", "text": "<small>בשבת תשובה אומרים:</small>"},
+            {"kind": "prayer", "when": "shabbatShuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "text": " הַמֶּלֶךְ הַקָּדוֹשׁ:"}
           ]},
           {"ref": "13", "kind": "instruction", "en": "On Shabbat say:", "text": "<small>בשבת יאמר</small>"},
           {"ref": "14", "kind": "prayer", "node": "amidah.musaf.tikanta_shabbat", "text": "<b>תִּכַּנְתָּ</b> שַׁבָּת, רָצִיתָ קָרְבּנוֹתֶיהָ, צִוִּיתָ פֵירוּשֶׁיהָ עִם סִדּוּרֵי נְסָכֶיהָ, מְעַנְּגֶיהָ לְעוֹלָם כָּבוֹד יִנְחָלוּ, טוֹעֲמֶיהָ חַיִּים זָכוּ, וְגַם הָאוֹהֲבִים דְבָרֶיהָ גְּדֻלָּה בָחָרוּ. אָז מִסִּינַי נִצְטַוּוּ צִוּוּיֵי פְעָלֶיהָ כָּרָאוּי:"},
@@ -699,9 +698,9 @@
           {"ref": "9", "parts": [
             {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": "<b>אַתָּה</b> קָדוֹשׁ וְשִׁמְךָ קָדוֹשׁ,"},
             {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " וּקְדוֹשִׁים בְּכָל־יוֹם יְהַֽלְלֽוּךָ סֶּֽלָה: בָּרוּךְ אַתָּה יֹהֵוָהֵ,"},
-            {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " הָאֵל הַקָּדוֹשׁ: "},
+            {"kind": "prayer", "when": "!shabbatShuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "text": " הָאֵל הַקָּדוֹשׁ: "},
             {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.kedushat_hashem", "en": "On Shabbat Shuva:", "gloss": "Shabbat between Rosh Hashana and Yom Kippur", "text": "<small><small>בשבת תשובה אומרים:</small>"},
-            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.kedushat_hashem", "text": " הַמֶּלֶךְ הַקָּדוֹשׁ:</small>  "}
+            {"kind": "prayer", "when": "shabbatShuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "text": " הַמֶּלֶךְ הַקָּדוֹשׁ:</small>  "}
           ]},
           {"ref": "10", "kind": "prayer", "node": "amidah.shabbat.retzei_vimnuchateinu", "text": "<b>אַתָּה</b> אֶחָד וְשִׁמְךָ אֶחָד, וּמִי כְעַמְּךָ כְּיִשְׂרָאֵל גוֹי אֶחָד בָּאָרֶץ. תִּפְאֶרֶת גְּדֻלָּה, וַעֲטֶרֶת יְשׁוּעָה, יוֹם מְנוּחָה וּקְדֻשָּׁה לְעַמְּךָ נָתַתָּ. אַבְרָהָם יָגֵל, יִצְחָק יְרַנֵּן, יַעֲקֹב וּבָנָיו יָנוּחוּ בוֹ. מְנוּחַת אַהֲבָה וּנְדָבָה, מְנוּחַת אֱמֶת וֶאֱמוּנָה, מְנוּחַת שָׁלוֹם הַשְׁקֵט וָבֶטַח, מְנוּחָה שְׁלֵמָה שֶׁאַתָּה הוּא רוֹצֶה בָהּ. יַכִּירוּ בָנֶיךָ וְיֵדְעוּ כִּי מֵאִתְּךָ הִיא מְנוּחָתָם, וְעַל מְנוּחָתָם יַקְדִּישׁוּ אֶת שְׁמֶךָ: "},
           {"ref": "11", "kind": "prayer", "node": "amidah.shabbat.retzei_vimnuchateinu", "text": "<b>אֱלֹהֵינוּ</b> וֵאלֹהֵי אֲבוֹתֵינוּ, רְצֵה נָא בִּמְנוּחָתֵנוּ, קַדְּשֵׁנוּ בְּמִצְוֹתֶיךָ, שִׂים חֶלְקֵנוּ בְּתוֹרָתָךְ, שַׂבְּעֵנוּ מִטּוּבָךְ, שַׂמֵּחַ נַפְשֵׁנוּ בִּישׁוּעָתָךְ, וְטַהֵר לִבֵּנוּ לְעָבְדְּךָ בֶּאֱמֶת, וְהַנְחִילֵנוּ יְהֹוָה אֱלֹהֵינוּ בְּאַהֲבָה וּבְרָצוֹן שַׁבְּתוֹת קָדְשֶׁךָ, וְיָנוּחוּ בָם כָּל יִשְׂרָאֵל מְקַדְּשֵׁי שְׁמֶךָ. בָּרוּךְ אַתָּה יְהֹוָה, מְקַדֵּשׁ הַשַּׁבָּת:"},

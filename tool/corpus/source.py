@@ -17,16 +17,16 @@ ROLES = {'individual', 'chazzan', 'congregation', 'congregation_then_chazzan', '
 VOICES = {'silent', 'undertone', 'aloud'}
 AMIDAH = {'silent', 'repetition'}
 ALIGNS = {'start', 'center', 'end', 'justify'}
-SERVICES = {'shacharit', 'mincha', 'maariv', 'musaf', 'none'}
+SERVICES = {'shacharit', 'mincha', 'maariv', 'musaf', 'none', 'any'}
 GESTURES = {'stand', 'sit', 'bow', 'bow_full', 'knees_bend', 'rise_on_toes', 'feet_together', 'three_steps_back',
-            'three_steps_forward', 'cover_eyes', 'kiss_tzitzit', 'gather_tzitzit', 'touch_tefillin', 'head_down',
+            'three_steps_forward', 'cover_eyes', 'kiss_tzitzit', 'gather_tzitzit', 'touch_tefillin', 'touch_tefillin_yad', 'touch_tefillin_rosh', 'head_down',
             'face_ark', 'ark_open', 'ark_close', 'hold_torah', 'shake_lulav', 'hold_cup', 'look_at_candles',
             'look_at_fingernails', 'strike_chest', 'look_at_moon', 'raise_hands', 'turn_west',
             'bow_left_right_center'}
 
 # Field order in the files: what a line is and when it is said first, the
 # text last. `comment` is for editors and never reaches the app.
-PART_FIELDS = ['kind', 'when', 'alt', 'node', 'role', 'voice', 'align', 'fold', 'foldHe', 'select', 'amidah', 'minyan', 'gestures', 'repeat',
+PART_FIELDS = ['kind', 'when', 'plain', 'alt', 'node', 'role', 'voice', 'align', 'fold', 'foldHe', 'select', 'amidah', 'minyan', 'gestures', 'repeat',
                'forgot', 'en', 'he', 'gloss', 'cite', 'clean', 'comment', 'text']
 SEG_FIELDS = ['ref', 'translates', 'parts'] + PART_FIELDS
 LEAF_FIELDS = ['path', 'title', 'comment', 'node', 'when', 'service', 'he', 'en']
@@ -237,7 +237,7 @@ def _check_part(p, where, errs, known, english):
         errs.append(f'{where}: unknown node {p["node"]!r} (nodes.json, or x.…)')
     if 'repeat' in p and not (isinstance(p['repeat'], int) and p['repeat'] > 1):
         errs.append(f'{where}: repeat must be a whole number above 1')
-    for f in ('minyan', 'forgot'):
+    for f in ('minyan', 'forgot', 'plain'):
         if f in p and p[f] is not True:
             errs.append(f'{where}: {f} must be true or left out')
 

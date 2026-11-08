@@ -12,70 +12,99 @@
         "segs": [
           {"ref": "1", "kind": "heading", "en": "Final Blessing", "text": "<big><b>ברכה אחרונה</b></big>"},
           {"ref": "2", "kind": "heading", "en": "Final Blessing, Me'ein Shalosh", "text": "<big><b>ברכה אחרונה מעין שלוש</b></big>"},
-          {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם:"},
+          {"ref": "3", "kind": "prayer", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies)", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם:"},
           {"ref": "4", "parts": [
-            {"kind": "instruction", "en": "On wine:", "text": "<small>על היין:</small>"},
-            {"kind": "prayer", "text": " עַל הַגֶּפֶן וְעַל פְּרִי הַגֶּפֶן:"}
+            {"kind": "instruction", "when": "if_drankWine", "en": "On wine:", "text": "<small>על היין:</small>"},
+            {"kind": "prayer", "when": "if_drankWine", "text": " עַל הַגֶּפֶן וְעַל פְּרִי הַגֶּפֶן:"}
           ]},
           {"ref": "5", "parts": [
-            {"kind": "instruction", "en": "On fruits of the Seven Species:", "text": "<small>על פירות משבעת המינים:</small>"},
-            {"kind": "prayer", "text": " עַל הָעֵץ וְעַל פְּרִי הָעֵץ:"}
+            {"kind": "instruction", "when": "if_ateSevenSpecies", "en": "On fruits of the Seven Species:", "text": "<small>על פירות משבעת המינים:</small>"},
+            {"kind": "prayer", "when": "if_ateSevenSpecies", "text": " עַל הָעֵץ וְעַל פְּרִי הָעֵץ:"}
           ]},
           {"ref": "6", "parts": [
-            {"kind": "instruction", "en": "On grain products:", "text": "<small>על מזונות:</small>"},
-            {"kind": "prayer", "text": " עַל הַמִחְיָה וְעַל הַכַּלְכָּלָה:"}
+            {"kind": "instruction", "when": "if_ateGrain", "en": "On grain products:", "text": "<small>על מזונות:</small>"},
+            {"kind": "prayer", "when": "if_ateGrain", "text": " עַל הַמִחְיָה וְעַל הַכַּלְכָּלָה:"}
           ]},
           {"ref": "7", "parts": [
-            {"kind": "instruction", "en": "On grain products and wine together:", "text": "<small>על מזונות ויין ביחד:</small>"},
-            {"kind": "prayer", "text": " עַל הַמִּחְיָה וְעַל הַכַּלְכָּלָה וְעַל הַגֶּפֶן וְעַל פְּרִי הַגֶּפֶן:"}
+            {"kind": "instruction", "when": "if_ateGrain && if_drankWine", "en": "On grain products and wine together:", "text": "<small>על מזונות ויין ביחד:</small>"},
+            {"kind": "prayer", "when": "if_ateGrain && if_drankWine", "text": " עַל הַמִּחְיָה וְעַל הַכַּלְכָּלָה וְעַל הַגֶּפֶן וְעַל פְּרִי הַגֶּפֶן:"}
           ]},
           {"ref": "8", "parts": [
-            {"kind": "prayer", "text": "<b>וְעַל תְּנוּבַת הַשָּׂדֶה</b> וְעַל אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה שֶׁרָצִיתָ וְהִנְחַלְתָּ לַאֲבוֹתֵינוּ לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבּוֹעַ מִטּוּבָהּ,"},
-            {"kind": "prayer", "text": " רַחֵם "},
-            {"kind": "instruction", "en": "(Optional)", "text": "<small>(נָא)</small>"},
-            {"kind": "prayer", "text": " יְהֹוָה אֱלֹהֵינוּ עַל יִשְׂרָאֵל עַמֶּךָ וְעַל יְרוּשָׁלַיִם עִירֶךָ וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶךָ וְעַל מִזְבְּחֶךָ וְעַל הֵיכָלֶךָ,"},
-            {"kind": "prayer", "text": " וּבְנֵה יְרוּשָׁלַיִם עִיר הַקֹּדֶשׁ בִּמְהֵרָה בְּיָמֵינוּ וְהַעֲלֵנוּ לְתוֹכָהּ וְשַׂמְּחֵנוּ בְּבִנְיָנָהּ וְנֹאכַל מִפִּרְיָּהּ וְנִשְׂבַּע מִטּוּבָהּ וּנְבָרֶכְךָ עָלֶיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה:"}
+            {"kind": "prayer", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies)", "text": "<b>וְעַל תְּנוּבַת הַשָּׂדֶה</b> וְעַל אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה שֶׁרָצִיתָ וְהִנְחַלְתָּ לַאֲבוֹתֵינוּ לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבּוֹעַ מִטּוּבָהּ,"},
+            {"kind": "prayer", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies)", "text": " רַחֵם "},
+            {"kind": "prayer", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies)", "text": "<small>(נָא)</small>"},
+            {"kind": "prayer", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies)", "text": " יְהֹוָה אֱלֹהֵינוּ עַל יִשְׂרָאֵל עַמֶּךָ וְעַל יְרוּשָׁלַיִם עִירֶךָ וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶךָ וְעַל מִזְבְּחֶךָ וְעַל הֵיכָלֶךָ,"},
+            {"kind": "prayer", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies)", "text": " וּבְנֵה יְרוּשָׁלַיִם עִיר הַקֹּדֶשׁ בִּמְהֵרָה בְּיָמֵינוּ וְהַעֲלֵנוּ לְתוֹכָהּ וְשַׂמְּחֵנוּ בְּבִנְיָנָהּ וְנֹאכַל מִפִּרְיָּהּ וְנִשְׂבַּע מִטּוּבָהּ וּנְבָרֶכְךָ עָלֶיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה:"}
           ]},
           {"ref": "9", "parts": [
-            {"kind": "instruction", "when": "shabbat", "en": "(On Shabbat:)", "gloss": "Said on Shabbat", "text": "<small><small>(בשבת:)</small>"},
-            {"kind": "prayer", "when": "shabbat", "text": "</small> <b>וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַּׁבָּת הַזֶּה:</b>"}
+            {"kind": "instruction", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies) && shabbat", "en": "(On Shabbat:)", "gloss": "Said on Shabbat", "text": "<small><small>(בשבת:)</small>"},
+            {"kind": "prayer", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies) && shabbat", "text": "</small> <b>וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַּׁבָּת הַזֶּה:</b>"}
           ]},
           {"ref": "10", "parts": [
-            {"kind": "instruction", "when": "roshChodesh", "en": "(On Rosh Chodesh:)", "gloss": "Said on Rosh Chodesh", "text": "<small><small>(בר\"ח:)</small>"},
-            {"kind": "prayer", "when": "roshChodesh", "text": "</small> <b>וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם רֹאשׁ הַחֹדֶשׁ הַזֶּה:</b>"}
+            {"kind": "instruction", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies) && roshChodesh", "en": "(On Rosh Chodesh:)", "gloss": "Said on Rosh Chodesh", "text": "<small><small>(בר\"ח:)</small>"},
+            {"kind": "prayer", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies) && roshChodesh", "text": "</small> <b>וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם רֹאשׁ הַחֹדֶשׁ הַזֶּה:</b>"}
           ]},
           {"ref": "11", "parts": [
-            {"kind": "instruction", "en": "(On Rosh Hashanah:)", "gloss": "Said on Rosh Hashanah", "text": "<small><small>(בר\"ה:)</small>"},
-            {"kind": "prayer", "when": "roshHashana", "text": "</small> <b>וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם הַזִּכָּרוֹן הַזֶּה:</b>"}
+            {"kind": "instruction", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies) && roshHashana", "en": "(On Rosh Hashanah:)", "gloss": "Said on Rosh Hashanah", "text": "<small><small>(בר\"ה:)</small>"},
+            {"kind": "prayer", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies) && roshHashana", "text": "</small> <b>וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם הַזִּכָּרוֹן הַזֶּה:</b>"}
           ]},
           {"ref": "12", "parts": [
-            {"kind": "instruction", "when": "yomTov", "en": "(On Yom Tov:)", "gloss": "Said on Yom Tov", "text": "<small><small>(ביו\"ט:)</small>"},
-            {"kind": "prayer", "when": "yomTov", "text": "</small> <b>וְשַׂמְחֵנוּ בְּיוֹם חַג "},
-            {"kind": "instruction", "en": "(Name of the holiday)", "text": "<small> <small>(פלוני)</small>"},
-            {"kind": "prayer", "when": "yomTov", "text": " </small> הַזֶּה:</b>"}
+            {"kind": "instruction", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies) && yomTov", "en": "(On Yom Tov:)", "gloss": "Said on Yom Tov", "text": "<small><small>(ביו\"ט:)</small>"},
+            {"kind": "prayer", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies) && yomTov", "text": "</small> <b>וְשַׂמְחֵנוּ בְּיוֹם חַג "},
+            {"kind": "instruction", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies) && yomTov", "en": "(Name of the holiday)", "text": "<small> <small>(פלוני)</small>"},
+            {"kind": "prayer", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies) && yomTov", "text": " </small> הַזֶּה:</b>"}
           ]},
-          {"ref": "13", "kind": "prayer", "text": "<b>כִּי אַתָּה</b> יְהֹוָה טוֹב וּמֵטִיב לַכֹּל וְנוֹדֶה לְךָ עַל הָאָרֶץ וְעַל:"},
+          {"ref": "13", "kind": "prayer", "when": "(if_ateGrain || if_drankWine || if_ateSevenSpecies)", "text": "<b>כִּי אַתָּה</b> יְהֹוָה טוֹב וּמֵטִיב לַכֹּל וְנוֹדֶה לְךָ עַל הָאָרֶץ וְעַל:"},
           {"ref": "14", "parts": [
-            {"kind": "instruction", "en": "(On wine:)", "gloss": "Said on wine", "text": "<small><small>(על היין:)</small>"},
-            {"kind": "prayer", "when": "!il", "text": "</small> פְּרִי הַגָּפֶן: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל פְּרִי הַגָּפֶן: "},
-            {"kind": "instruction", "en": "(In Israel:)", "gloss": "Said in Israel", "text": "<small> <small>בא\"י</small>"},
-            {"kind": "prayer", "when": "il", "text": " (וְעַל פְּרִי גַפְנָהּ)</small>:"}
+            {"kind": "instruction", "when": "if_drankWine", "en": "(On wine:)", "gloss": "Said on wine", "text": "<small><small>(על היין:)</small>"},
+            {"kind": "prayer", "when": "if_drankWine", "text": "</small> פְּרִי הַגָּפֶן: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל פְּרִי הַגָּפֶן: "},
+            {"kind": "instruction", "when": "if_drankWine && il", "en": "(In Israel:)", "gloss": "Said in Israel", "text": "<small> <small>בא\"י</small>"},
+            {"kind": "prayer", "when": "if_drankWine && il", "text": " (וְעַל פְּרִי גַפְנָהּ)</small>:"}
           ]},
           {"ref": "15", "parts": [
-            {"kind": "instruction", "en": "(On fruits:)", "gloss": "Said on fruits", "text": "<small><small>(על הפירות:)</small>"},
-            {"kind": "prayer", "when": "!il", "text": "</small> הַפֵּרוֹת: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל הַפֵּרוֹת: "},
-            {"kind": "instruction", "en": "(In Israel:)", "gloss": "Said in Israel", "text": "<small> <small>בא\"י</small>"},
-            {"kind": "prayer", "when": "il", "text": " (וְעַל פֵּרוֹתֶיהָ)</small>:"}
+            {"kind": "instruction", "when": "if_ateSevenSpecies", "en": "(On fruits:)", "gloss": "Said on fruits", "text": "<small><small>(על הפירות:)</small>"},
+            {"kind": "prayer", "when": "if_ateSevenSpecies", "text": "</small> הַפֵּרוֹת: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל הַפֵּרוֹת: "},
+            {"kind": "instruction", "when": "if_ateSevenSpecies && il", "en": "(In Israel:)", "gloss": "Said in Israel", "text": "<small> <small>בא\"י</small>"},
+            {"kind": "prayer", "when": "if_ateSevenSpecies && il", "text": " (וְעַל פֵּרוֹתֶיהָ)</small>:"}
           ]},
           {"ref": "16", "parts": [
-            {"kind": "instruction", "en": "(On grain products:)", "gloss": "Said on grain products", "text": "<small><small>(על מזונות:)</small>"},
-            {"kind": "prayer", "text": "</small> הַמִחְיָה: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל הַמִחְיָה וְעַל הַכַּלְכָּלָה:"}
+            {"kind": "instruction", "when": "if_ateGrain", "en": "(On grain products:)", "gloss": "Said on grain products", "text": "<small><small>(על מזונות:)</small>"},
+            {"kind": "prayer", "when": "if_ateGrain", "text": "</small> הַמִחְיָה: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל הַמִחְיָה וְעַל הַכַּלְכָּלָה:"}
           ]},
           {"ref": "17", "parts": [
-            {"kind": "instruction", "en": "(For grains and wine together:)", "gloss": "Said when eating grain products and drinking wine", "text": "<small><small>(על מזונות ויין ביחד:)</small>"},
-            {"kind": "prayer", "when": "!il", "text": "</small> הַמִּחְיָה וְעַל פְּרִי הַגָּפֶן: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל הַמִחְיָה וְעַל הַכַּלְכָּלָה וְעַל פְּרִי הַגָּפֶן: "},
-            {"kind": "instruction", "en": "(In Israel:)", "gloss": "Israel custom", "text": "<small> <small>בא\"י</small>"},
-            {"kind": "prayer", "text": " (וְעַל פְּרִי גַפְנָהּ)</small>: "}
+            {"kind": "instruction", "when": "if_ateGrain && if_drankWine", "en": "(For grains and wine together:)", "gloss": "Said when eating grain products and drinking wine", "text": "<small><small>(על מזונות ויין ביחד:)</small>"},
+            {"kind": "prayer", "when": "if_ateGrain && if_drankWine", "text": "</small> הַמִּחְיָה וְעַל פְּרִי הַגָּפֶן: בָּרוּךְ אַתָּה יְהֹוָה עַל הָאָרֶץ וְעַל הַמִחְיָה וְעַל הַכַּלְכָּלָה וְעַל פְּרִי הַגָּפֶן: "},
+            {"kind": "instruction", "when": "if_ateGrain && if_drankWine && il", "en": "(In Israel:)", "gloss": "Israel custom", "text": "<small> <small>בא\"י</small>"},
+            {"kind": "prayer", "when": "if_ateGrain && if_drankWine && il", "text": " (וְעַל פְּרִי גַפְנָהּ)</small>: "}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe,"},
+          {"ref": "4", "translates": ["4"], "comment": "Amud translation", "text": "for the vine and for the fruit of the vine,"},
+          {"ref": "5", "translates": ["5"], "comment": "Amud translation", "text": "for the tree and for the fruit of the tree,"},
+          {"ref": "6", "translates": ["6"], "comment": "Amud translation", "text": "for the sustenance and for the nourishment,"},
+          {"ref": "7", "translates": ["7"], "comment": "Amud translation", "text": "for the sustenance and the nourishment, and for the vine and the fruit of the vine,"},
+          {"ref": "8", "translates": ["8"], "comment": "Amud translation", "text": "and for the produce of the field, and for the desirable, good and spacious land that You were pleased to give as a heritage to our fathers, to eat of its fruit and be satisfied with its goodness. Have mercy, Adonoy our God, (please) on Israel Your people, on Jerusalem Your city, on Zion the abode of Your glory, on Your altar and on Your Sanctuary. Rebuild Jerusalem, the holy city, speedily in our days, bring us up into it, make us rejoice in its rebuilding, and let us eat of its fruit and be satisfied with its goodness, and bless You for it in holiness and purity."},
+          {"ref": "9", "translates": ["9"], "comment": "Amud translation", "text": "And be pleased to strengthen us on this Shabbat day."},
+          {"ref": "10", "translates": ["10"], "comment": "Amud translation", "text": "And remember us for good on this day of Rosh Chodesh."},
+          {"ref": "11", "translates": ["11"], "comment": "Amud translation", "text": "And remember us for good on this Day of Remembrance."},
+          {"ref": "12", "translates": ["12"], "comment": "Amud translation", "text": "And make us rejoice on this festival day of (name of the festival)."},
+          {"ref": "13", "translates": ["13"], "comment": "Amud translation", "text": "For You, Adonoy, are good and do good to all, and we thank You for the land and for"},
+          {"ref": "14", "translates": ["14"], "parts": [
+            {"comment": "Amud translation", "text": "the fruit of the vine. Blessed are You, Adonoy, for the land and for the fruit of the vine."},
+            {"when": "il", "text": "(and for the fruit of its vine)"}
+          ]},
+          {"ref": "15", "translates": ["15"], "parts": [
+            {"comment": "Amud translation", "text": "the fruits. Blessed are You, Adonoy, for the land and for the fruits."},
+            {"when": "il", "text": "(and for its fruits)"}
+          ]},
+          {"ref": "16", "translates": ["16"], "comment": "Amud translation", "text": "the sustenance. Blessed are You, Adonoy, for the land and for the sustenance and for the nourishment."},
+          {"ref": "17", "translates": ["17"], "parts": [
+            {"comment": "Amud translation", "text": "the sustenance and the fruit of the vine. Blessed are You, Adonoy, for the land and for the sustenance, the nourishment, and the fruit of the vine."},
+            {"when": "il", "text": "(and for the fruit of its vine)"}
           ]}
         ]
       }
@@ -92,6 +121,12 @@
           {"ref": "2", "kind": "instruction", "en": "On any fruit of the tree, one recites:", "text": "<small>על כל פרי העץ מברך:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הָעֵץ:"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who creates the fruit of the tree."}
+        ]
       }
     },
     {
@@ -106,12 +141,18 @@
           {"ref": "2", "kind": "instruction", "en": "On fruit of the ground, one blesses:", "text": "<small>על פרי האדמה מברך:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הָאֲדָמָה:"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who creates the fruit of the ground."}
+        ]
       }
     },
     {
       "path": "Blessings/Shehakol",
       "title": "ברכת שהכל",
-      "node": "brachot.me_ein_shalosh",
+      "node": "brachot.hanehenin",
       "service": "none",
       "he": {
         "version": "Torat Emet 357",
@@ -119,6 +160,12 @@
           {"ref": "1", "kind": "heading", "en": "Blessing of Shehakol", "text": "<big><b>ברכת שהכל</b></big>"},
           {"ref": "2", "kind": "instruction", "en": "On meat and fish, dairy, eggs, cheese, spices, mushrooms, and the like. Also on all beverages except wine, one says:", "text": "<small>על בשר ודגים. חלב וביצה וגבינה. כמהין ופטריות וכדומה. גם על המשקים חוץ מיין אומר:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהַכֹּל נִהְיָה בִּדְבָרוֹ:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, by Whose word everything came to be."}
         ]
       }
     },
@@ -134,6 +181,12 @@
           {"ref": "2", "kind": "instruction", "en": "On fruits of the tree (except the seven species), fruits of the ground, vegetables, all drinks, and things that do not grow from the ground, one recites after eating them this:", "text": "<small>על פירות האילן חוץ מז' מינים ופירות האדמה וירקות ועל כל המשקין ועל דבר שאין גידולו מן הארץ מברכין אחר אכילתן זה:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא נְפָשׁוֹת רַבּוֹת וְחֶסְרוֹנָן עַל כָּל מַה שֶׁבָּרָאתָ לְהַחֲיוֹת בָּהֶם נֶפֶשׁ כָּל חָי. בָּרוּךְ חֵי הָעוֹלָמִים:"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Creator of many living beings and their needs, for all that You have created to sustain the soul of every living being. Blessed is He Who lives forever."}
+        ]
       }
     },
     {
@@ -147,6 +200,12 @@
           {"ref": "1", "kind": "heading", "en": "Blessing of Shehecheyanu", "text": "<big><b>ברכת שהחיינו</b></big>"},
           {"ref": "2", "kind": "instruction", "en": "One who puts on a new garment, or eats a new fruit that grows at a set time of year and renews each year, says:", "text": "<small>הלובש מלבוש חדש וכן האוכל פרי חדש הגדל בזמן קבוע בשנה ומתחדש משנה לשנה מברך:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְמַן הַזֶּה:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who has kept us alive, sustained us, and brought us to this season."}
         ]
       }
     },
@@ -162,6 +221,12 @@
           {"ref": "2", "kind": "instruction", "en": "On the scent of spices one says:", "text": "<small>על ריח בשמים מברך:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא מִינֵי בְשָׂמִים:"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who creates various kinds of spices."}
+        ]
       }
     },
     {
@@ -176,12 +241,18 @@
           {"ref": "2", "kind": "instruction", "en": "On the fragrance of herbs, one recites:", "text": "<small>על ריח טוב שבעשבים מברך:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא עִשְׂבֵּי בְשָׂמִים:"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who creates fragrant herbs."}
+        ]
       }
     },
     {
       "path": "Blessings/Fragrant Shrubs",
       "title": "ריח טוב שבעצים",
-      "node": "brachot.reiyah",
+      "node": "brachot.hanehenin",
       "service": "none",
       "he": {
         "version": "Torat Emet 357",
@@ -189,6 +260,12 @@
           {"ref": "1", "kind": "heading", "en": "Fragrant Shrubs", "text": "<big><b>ריח טוב שבעצים</b></big>"},
           {"ref": "2", "kind": "instruction", "en": "On the fragrance of trees and shrubs, one recites:", "text": "<small>על ריח טוב שבעצים ושיחים מברך:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא עֲצֵי בְשָׂמִים:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who creates fragrant trees."}
         ]
       }
     },
@@ -204,6 +281,12 @@
           {"ref": "2", "kind": "instruction", "en": "On a fragrant fruit, one recites:", "text": "<small>על ריח טוב שבפירות מברך:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַנּוֹתֵן רֵיחַ טוֹב בַּפֵּירוֹת:"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who gives a pleasant fragrance to fruits."}
+        ]
       }
     },
     {
@@ -217,6 +300,12 @@
           {"ref": "1", "kind": "heading", "en": "Fragrant Oils", "text": "<big><b>שמן אפרסמון</b></big>"},
           {"ref": "2", "kind": "instruction", "en": "On fragrant oil, one recites:", "text": "<small>על שמן אפרסמון מברך:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא שֶׁמֶן עָרֵב:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who creates pleasant oil."}
         ]
       }
     },
@@ -233,6 +322,13 @@
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, עוֹשֶׂה מַעֲשֶׂה בְּרֵאשִׁית:"},
           {"ref": "4", "kind": "instruction", "en": "On thunder one says:", "text": "<small>על הרעמים מברך:</small>"},
           {"ref": "5", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁכֹּחוֹ וּגְבוּרָתוֹ מָלֵא עוֹלָם:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who performs the work of Creation."},
+          {"ref": "5", "translates": ["5"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Whose strength and might fill the world."}
         ]
       }
     },
@@ -270,6 +366,12 @@
           {"ref": "2", "kind": "instruction", "en": "One who sees the Great Sea recites:", "text": "<small>הרואה את הים הגדול מברך:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, עֹשֶׂה אֶת הַיָּם הַגָּדוֹל:"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who made the Great Sea."}
+        ]
       }
     },
     {
@@ -287,6 +389,12 @@
             {"kind": "instruction", "en": "One who sees fruit trees (at least two) blossoming in the month of Nissan blesses once a year:", "text": " בפריחתם בימי ניסן מברך פעם אחת בשנה:</small>"}
           ]},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁלֹּא חִסֵּר בְּעוֹלָמוֹ כְּלוּם, וּבָרָא בוֹ בְּרִיוֹת טוֹבוֹת וְאִילָנוֹת טוֹבוֹת, לֵהָנוֹת בָּהֶם בְּנֵי אָדָם:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who has withheld nothing from His world, and has created in it good creatures and good trees, for people to enjoy."}
         ]
       }
     },
@@ -315,9 +423,9 @@
           {"ref": "15", "parts": [
             {"kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם,"},
             {"kind": "prayer", "text": " שֶׁעָשָׂה לִי "},
-            {"kind": "instruction", "en": "(for his teacher,", "text": "<small>(לְרַבִּי,"},
-            {"kind": "instruction", "en": "for my ancestors,", "text": " לַאֲבוֹתַי,"},
-            {"kind": "instruction", "en": "for our ancestors)", "text": " לַאֲבוֹתֵינוּ)</small>"},
+            {"kind": "prayer", "text": "<small>(לְרַבִּי,"},
+            {"kind": "prayer", "text": " לַאֲבוֹתַי,"},
+            {"kind": "prayer", "text": " לַאֲבוֹתֵינוּ)</small>"},
             {"kind": "prayer", "text": " נֵס בַּמָּקוֹם הַזֶּה:"}
           ]},
           {"ref": "16", "kind": "instruction", "en": "One who sees a strange creature, such as a dwarf, a black person, and the like, says:", "text": "<small>כשרואין בריה משונה, כגון גמד, וכושי וכדומה אומר:</small>"},
@@ -337,6 +445,24 @@
           {"ref": "27", "kind": "instruction", "en": "For the redemption of the firstborn of a donkey, one blesses:", "text": "<small>על פדיון פטר חמור יברך:</small>"},
           {"ref": "28", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו, וְצִוָּנוּ עַל פִּדְיוֹן פֶּטֶר חֲמוֹר:"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who has given of His wisdom to those who fear Him."},
+          {"ref": "5", "translates": ["5"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who has given of His wisdom to flesh and blood."},
+          {"ref": "7", "translates": ["7"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who has given of His glory to those who fear Him."},
+          {"ref": "9", "translates": ["9"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who has given of His glory to flesh and blood."},
+          {"ref": "11", "translates": ["11"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who establishes the boundary of the widow."},
+          {"ref": "13", "translates": ["13"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who performed miracles for our ancestors in this place."},
+          {"ref": "15", "translates": ["15"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who performed for me (for my teacher, for my ancestors, for our ancestors) a miracle in this place."},
+          {"ref": "17", "translates": ["17"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who makes creatures different."},
+          {"ref": "19", "translates": ["19"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who revives the dead."},
+          {"ref": "21", "translates": ["21"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Whose world has such as this."},
+          {"ref": "28", "translates": ["28"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who has sanctified us with His commandments and commanded us concerning the redemption of the firstborn of a donkey."},
+          {"ref": "23", "translates": ["23"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who fashioned you with justice, sustained and supported you with justice, caused you to die with justice, knows the number of all of you with justice, and will in the future restore you to life with justice. Blessed are You, Adonoy, Who revives the dead."},
+          {"ref": "25", "translates": ["25"], "comment": "Amud translation", "text": "We thank You, Adonoy our God, for every single drop that You have sent down to us. Even if our mouths were as full of song as the sea, our tongues of jubilation like the roar of its waves, our lips of praise like the breadth of the heavens, our eyes shining like the sun and the moon, our hands spread out like the eagles of heaven, and our feet swift as deer, we would not be able to thank You, Adonoy our God and God of our fathers, and to bless Your name, our King, for even one of the thousand thousands of thousands and myriad myriads of times of the good things, miracles and wonders that You did for our fathers and for us. In earlier times You redeemed us from Egypt, Adonoy our God, and ransomed us from the house of bondage; in famine You fed us, and in plenty You sustained us; from the sword You saved us, from plague You delivered us, and from severe, many and lasting diseases You lifted us up. Until now Your mercies have helped us, and Your kindnesses have not forsaken us, Adonoy our God; do not abandon us, Adonoy our God, forever. Therefore the limbs that You set within us, the spirit and soul that You breathed into our nostrils, and the tongue that You placed in our mouths, behold, they shall thank, bless, praise, glorify, sing to, exalt, revere, sanctify and crown Your name, our King. Blessed are You, Adonoy, God of abundant thanksgivings."}
+        ]
       }
     },
     {
@@ -352,8 +478,15 @@
           {"ref": "3", "parts": [
             {"kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, "},
             {"kind": "prayer", "text": "אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל טְבִילַת כֶּלִי: <small>("},
-            {"kind": "instruction", "en": "(If there are many, say: utensils:)", "text": "כשהם הרבה אומר: <b>כֵּלִים:</b>)</small>"}
+            {"kind": "instruction", "en": "(If there are many, say:", "text": "כשהם הרבה אומר:"},
+            {"kind": "prayer", "text": " <b>כֵּלִים:</b>)</small>"}
           ]}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who has sanctified us with His commandments and commanded us concerning the immersion of a utensil (utensils)."}
         ]
       }
     },
@@ -369,12 +502,18 @@
           {"ref": "2", "kind": "instruction", "en": "One who affixes a mezuzah says:", "text": "<small>הקובע מזוזה מברך:</small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לִקְבֹּעַ מְזוּזָה:"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who has sanctified us with His commandments and commanded us to affix a mezuzah."}
+        ]
       }
     },
     {
       "path": "Blessings/Separating Challah",
       "title": "סדר הפרשת חלה",
-      "node": "lifecycle.pidyon_haben",
+      "node": "brachot.mitzvot",
       "service": "none",
       "he": {
         "version": "Torat Emet 357",
@@ -395,12 +534,19 @@
           {"ref": "9", "kind": "instruction", "en": "Then take a piece of any size, hold it in the right hand, and say:", "text": "<small>ואחר כך לוקחת חתיכה כל שהיא ומרימה ביד ימין ואומרת:</small>"},
           {"ref": "10", "kind": "prayer", "text": "<b>הֲרֵי</b> זוֹ חַלָּה:"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "8", "translates": ["8"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who has sanctified us with His commandments and commanded us to separate challah from the dough."},
+          {"ref": "10", "translates": ["10"], "comment": "Amud translation", "text": "This is challah."}
+        ]
       }
     },
     {
       "path": "Blessings/Separating Terumot & Maasrot",
       "title": "סדר הפרשת תרומות ומעשרות",
-      "node": "front_matter",
+      "node": "brachot.mitzvot",
       "when": "true",
       "service": "none",
       "he": {
@@ -419,6 +565,16 @@
           {"ref": "11", "kind": "prayer", "text": "<small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְשָׁנוּ בְּמִצְוֹתָיו, וְצִוָּנוּ עַל פִּדְיוֹן נֶטַע רְבָעִי.</small>"},
           {"ref": "12", "kind": "prayer", "text": "<small>וּמְחוּלָל הוּא וְחוּמְשׁוֹ עַל שְׁתֵּי פְרוּטוּת שֶׁבִּרְשׁוּתִי לְחִילּוּל מַעֲשֵׂר שֵׁנִי וֶנֶטַע רְבָעִי. </small>"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "6", "translates": ["6"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who has sanctified us with His commandments and commanded us to separate terumot and ma'asrot."},
+          {"ref": "7", "translates": ["7"], "comment": "Amud translation", "text": "The portion that is more than one hundredth of what is here is hereby great terumah, on its northern side [each kind for its own kind]. That one hundredth that is here, and nine further parts like it on the northern side of the fruit [each kind for its own kind], is hereby first tithe. That one hundredth that I have made first tithe is made terumat ma'aser [each kind for its own kind], and second tithe is on its southern side [each kind for its own kind] [and if poor man's tithe is required, let poor man's tithe be on its southern side]."},
+          {"ref": "9", "translates": ["9"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who has sanctified us with His commandments and commanded us concerning the redemption of second tithe."},
+          {"ref": "11", "translates": ["11"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the Universe, Who has sanctified us with His commandments and commanded us concerning the redemption of fourth-year produce."},
+          {"ref": "12", "translates": ["12"], "comment": "Amud translation", "text": "It and its added fifth are hereby redeemed for two perutot that are in my possession, for the redemption of second tithe and fourth-year produce."}
+        ]
       }
     },
     {
@@ -436,8 +592,9 @@
             {"kind": "prayer", "text": " שֶׁתּוֹלִיכֵנוּ לְשָׁלוֹם וְתַצְעִידֵנוּ לְשָׁלוֹם וְתַדְרִיכֵנוּ לְשָׁלוֹם,"},
             {"kind": "prayer", "text": " וְתִסְמְכֵנִי לְשָׁלוֹם,"},
             {"kind": "prayer", "text": " וְתַגִּיעֵנוּ לִמְחוֹז חֶפְצֵנוּ לְחַיִּים לְשִׂמְחָה וּלְשָׁלוֹם, "},
-            {"kind": "instruction", "en": "If one intends to return immediately, say:", "text": "<small>[אם דעתו לחזור מיד אומר:</small>"},
-            {"kind": "prayer", "when": "if_returnImmediately", "text": " וְתַחְזִירֵנִי לְשָׁלוֹם] וְתַצִּילֵנוּ מִכַּף כָּל אוֹיֵב וְאוֹרֵב וְלִסְטִים וְחַיּוֹת רָעוֹת בַּדֶּרֶךְ,"},
+            {"kind": "instruction", "when": "if_returnImmediately", "en": "If one intends to return immediately, say:", "text": "<small>[אם דעתו לחזור מיד אומר:</small>"},
+            {"kind": "prayer", "when": "if_returnImmediately", "text": " וְתַחְזִירֵנִי לְשָׁלוֹם]"},
+            {"kind": "prayer", "text": " וְתַצִּילֵנוּ מִכַּף כָּל אוֹיֵב וְאוֹרֵב וְלִסְטִים וְחַיּוֹת רָעוֹת בַּדֶּרֶךְ,"},
             {"kind": "prayer", "text": " וּמִכָּל מִינֵי פֻרְעָנִיּוֹת הַמִּתְרַגְּשׁוֹת וּבָאוֹת לָעוֹלָם וְתִשְׁלַח בְּרָכָה וְהַצְלָחָה בְּכָל מַעֲשֵׂה יָדֵינוּ,"},
             {"kind": "prayer", "text": " וְתִתְּנֵנוּ לְחֵן וּלְחֶסֶד וּלְרַחֲמִים בְּעֵינֶיךָ וּבְעֵינֵי כָל רֹאֵינוּ,"},
             {"kind": "prayer", "text": " וְתִגְמְלֵינוּ חֲסָדִים טוֹבִים וְתִשְׁמַע קוֹל תַּחֲנוּנֵינוּ,"},
@@ -565,6 +722,36 @@
           ]},
           {"ref": "33", "kind": "instruction", "en": "And continue with 'Yehi Ratzon' as in the order of the Traveler's Prayer.", "text": "<small>וממשיך יהי רצון כ\"סדר תפילת הדרך\":</small>"}
         ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "parts": [
+            {"comment": "Amud translation", "text": "May it be Your will, Adonoy our God and God of our fathers, that You lead us in peace, direct our steps in peace, guide us in peace, and support me in peace, and bring us to our desired destination for life, joy and peace,"},
+            {"when": "if_returnImmediately", "text": "and bring me back in peace,"},
+            {"text": "and save us from the hand of every enemy and ambush, from robbers and wild beasts on the way, and from all kinds of calamities that rage and come into the world; and send blessing and success in all the work of our hands, and grant us grace, kindness and mercy in Your eyes and in the eyes of all who see us, and bestow upon us good kindnesses, and hear the sound of our supplications; for You are a God Who hears prayer and supplication. Blessed are You, Adonoy, Who hears prayer."}
+          ]},
+          {"ref": "5", "translates": ["5"], "comment": "Amud translation", "text": "And Jacob went on his way, and angels of God met him. And Jacob said when he saw them, “This is God's camp,” and he named that place Machanayim."},
+          {"ref": "6", "translates": ["6"], "comment": "Amud translation", "text": "For Your salvation I have hoped, Adonoy; I have hoped, Adonoy, for Your salvation; Adonoy, for Your salvation I have hoped."},
+          {"ref": "7", "translates": ["7"], "comment": "Amud translation", "text": "May the pleasantness of Adonoy our God be upon us; and establish for us the work of our hands; the work of our hands, establish it."},
+          {"ref": "8", "translates": ["8"], "comment": "Amud translation", "text": "May Adonoy bless you and guard you. May Adonoy make His face shine upon you and be gracious to you. May Adonoy lift up His face to you and grant you peace."},
+          {"ref": "9", "translates": ["9"], "comment": "Amud translation", "text": "The angel who redeems me from all evil, may he bless the lads; and let my name be named upon them, and the name of my fathers Abraham and Isaac; and may they multiply like fish in the midst of the earth."},
+          {"ref": "11", "translates": ["11"], "comment": "Amud translation", "text": "They journeyed, and a terror of God was upon the cities around them, and they did not pursue the sons of Jacob."},
+          {"ref": "12", "translates": ["12"], "comment": "Amud translation", "text": "The angel who redeems me from all evil, may he bless the lads; and let my name be named upon them, and the name of my fathers Abraham and Isaac; and may they multiply like fish in the midst of the earth."},
+          {"ref": "13", "translates": ["13"], "comment": "Amud translation", "text": "For Your salvation I have hoped, Adonoy; I have hoped, Adonoy, for Your salvation; Adonoy, for Your salvation I have hoped."},
+          {"ref": "14", "translates": ["14"], "comment": "Amud translation", "text": "Behold, I send an angel before you to guard you on the way and to bring you to the place that I have prepared."},
+          {"ref": "15", "translates": ["15"], "comment": "Amud translation", "text": "May Adonoy bless you and guard you. May Adonoy make His face shine upon you and be gracious to you. May Adonoy lift up His face to you and grant you peace."},
+          {"ref": "16", "translates": ["16"], "comment": "Amud translation", "text": "May the pleasantness of Adonoy our God be upon us; and establish for us the work of our hands; the work of our hands, establish it."},
+          {"ref": "18", "translates": ["18"], "comment": "Amud translation", "text": "You are a hiding place for me; You guard me from distress; You surround me with songs of deliverance, Selah. Trust in Adonoy forever, for in Yah, Adonoy, is an everlasting Rock. Adonoy will give strength to His people; Adonoy will bless His people with peace. Adonoy of Hosts is with us; the God of Jacob is our stronghold, Selah. Adonoy of Hosts, happy is the one who trusts in You."},
+          {"ref": "19", "translates": ["19"], "comment": "Amud translation", "text": "Adonoy, save! May the King answer us on the day we call."},
+          {"ref": "20", "translates": ["20"], "comment": "Amud translation", "text": "A song of ascents. I lift my eyes to the mountains: from where will my help come? My help comes from Adonoy, Maker of heaven and earth. He will not let your foot slip; your Guardian will not slumber. Behold, the Guardian of Israel neither slumbers nor sleeps. Adonoy is your Guardian; Adonoy is your shade at your right hand. By day the sun will not strike you, nor the moon by night. Adonoy will guard you from all evil; He will guard your soul. Adonoy will guard your going out and your coming in, from now and forever."},
+          {"ref": "21", "translates": ["21"], "comment": "Amud translation", "text": "The name of Adonoy is a tower of strength; the righteous run into it and are safe. In the name of Adonoy, God of Israel: on my right, Michael; on my left, Gabriel; before me, Uriel; behind me, Raphael; and above my head, the Divine Presence of God."},
+          {"ref": "24", "translates": ["24"], "comment": "Amud translation", "text": "May it be Your will, Adonoy my God and God of my fathers, that You bring me into this city in peace."},
+          {"ref": "26", "translates": ["26"], "comment": "Amud translation", "text": "I thank You, Adonoy my God and God of my fathers, for having brought me into this city in peace."},
+          {"ref": "28", "translates": ["28"], "comment": "Amud translation", "text": "May it be Your will, Adonoy my God and God of my fathers, that You take me out of this city in peace."},
+          {"ref": "30", "translates": ["30"], "comment": "Amud translation", "text": "I thank You, Adonoy my God and God of my fathers, for having taken me out of this city in peace; and as You have taken me out in peace, so lead me in peace, support me in peace, and direct our steps in peace, and save us from the hand of every enemy and ambush, from robbers and wild beasts on the way, and from all kinds of calamities that rage and come into the world; and send blessing and success in all the work of our hands, and grant us grace, kindness and mercy in Your eyes and in the eyes of all who see us, and bestow upon us good kindnesses, and hear the sound of our prayer. For You hear the prayer of every mouth. Blessed are You, Adonoy, Who hears prayer."},
+          {"ref": "32", "translates": ["32"], "comment": "Amud translation", "text": "May it be Your will, Adonoy my God and God of my fathers, Abraham, Isaac and Jacob, the great, mighty and awesome God, crowned with the crown of faith, that for the sake of the holiness of Your thirteen attributes of mercy, and for the sake of the holiness of the gates of mercy, and for the sake of the merit of those who sleep in Hebron, Abraham, Isaac and Jacob, Your beloved and wholehearted ones, and for the sake of the merit of the binding of Isaac, Your only son, who was bound upon the altar and was a perfect, holy and pure offering; and for the sake of the merit, holiness and prophecy of Samuel the prophet, Elijah the prophet and Elisha the prophet, Your prophets of truth; and for the sake of the merit of all the righteous and pious who in every generation protected Israel, You calm the sea (the river) from its fury, and its waves be still; and fulfil the desire of our hearts and bring us quickly to our desired destination, for good, as it is in Your power to do. Hear our prayer, give ear to our plea, and answer us in this hour in which we pray and plead before You. Lead us with a pleasant spirit as needed, and guard us from the roar of waves and the tumult of the breakers of the sea, from the storm wind, from tempest, from distress, from the confusion of times and the change of seasons, and from the evil creatures that grow in the sea and on dry land, and from every trouble and every loss. Let no sailor, adversary, harmful one, confuser, frightener or threatener delay us. Bring forth a good wind from Your treasuries to steer the ship; strengthen all who hold the oars, its pilots, its sailors, its ship's masters and its craftsmen, that they may steer it properly, without laziness, delay or weakening of strength; and bring us to our desired destination without any harm, without any distress and without any fear. For You rule the swelling of the sea; when its waves rise, You still them. Turn the storm to a whisper, and its waves are stilled. Guard my soul and save me; let me not be ashamed, for I have taken refuge in You. And we will bless Yah from now and forever. Halleluyah."}
+        ]
       }
     },
     {
@@ -579,6 +766,12 @@
           {"ref": "2", "kind": "instruction", "en": "On an airplane, add this prayer:", "text": "<small><b>באוירון מוסיפים תפילה זו:</b></small>"},
           {"ref": "3", "kind": "prayer", "text": "<b>וְיְהִי</b> רָצוֹן מִלְפָנֶיךָ שֶׁתִּשְׁמְרֵנוּ מֵרוּחַ סוֹעָה וְסַעַר וּמִצַּעַר. וְתוֹצִיא רוּחַ טוֹב מֵאוֹצְרוֹתֶיךָ לְהַנְהִיג אֶת סְפִינַת הָאֲוִיר, וְחַזֵּק כָּל מַנְהִיגֶיהָ שֶׁיִּנְהֲגוּ אוֹתָהּ כָּרָאוּי וְהַגִּיעֵנוּ אֶל מְחוֹז חֶפְצֵנוּ לְחַיִּים וּלְשָׁלוֹם בְּלִי שׁוּם פַּחַד. שָׁמְרָה נַפְשִׁי וְהַצִּילֵנִי, אַל אֵבוֹשׁ כִּי חָסִיתִי בָּךְ, וַאֲנַחְנוּ נְבָרֵךְ יָהּ מֵעַתָּה וְעַד עוֹלָם הַלְלוּיָהּ:"},
           {"ref": "4", "kind": "instruction", "en": "Afterwards, say 'And Jacob went on his way' through 'The dwelling of God' as above:", "text": "<small>ואחר כך יאמר <b>ויעקב הלך לדרכו</b> עד <b>שכינת אל</b> כדלעיל:</small>"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "May it be Your will that You guard us from storm wind, from tempest and from distress. Bring forth a good wind from Your treasuries to steer the aircraft, and strengthen all who pilot it, that they may steer it properly; and bring us to our desired destination for life and peace, without any fear. Guard my soul and save me; let me not be ashamed, for I have taken refuge in You. And we will bless Yah from now and forever. Halleluyah."}
         ]
       }
     },

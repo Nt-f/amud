@@ -54,13 +54,13 @@ Write (all by address, no Hebrew needed):
         verse ADDR wK [glued] n=N | verse ADDR wK insert n=N | unverse ADDR | tidy ADDR | balance ADDR   verse numbers are <sup class="verse">, made by the harness
         lset k=v ...                leaf fields (when, node, service, title, comment)
 Review: edit.py proposals | approve ID | reject ID | undo   (--propose saves a diff for the editor; the default asks y/N)
-Fields: kind when alt node role voice align amidah minyan gestures repeat forgot en he gloss cite comment
+Fields: kind when plain alt node role voice align amidah minyan gestures repeat forgot en he gloss cite comment
 """
 
-STRUCT = ['kind', 'when', 'alt', 'node', 'role', 'voice', 'align', 'amidah', 'minyan', 'gestures', 'repeat']
+STRUCT = ['kind', 'when', 'plain', 'alt', 'node', 'role', 'voice', 'align', 'amidah', 'minyan', 'gestures', 'repeat']
 LISTS = {'gestures'}
 INTS = {'repeat'}
-BOOLS = {'minyan', 'forgot'}
+BOOLS = {'minyan', 'forgot', 'plain'}
 LEAF_KEYS = {'when', 'node', 'service', 'title', 'comment'}
 VOID = {'br', 'img', 'hr', 'wbr'}
 
@@ -805,6 +805,10 @@ def op_new(s, toks):
         raise EditError('new needs text="..."')
     where = rest[0] if rest else 'end'
     segs = (lf.get(lang) or {}).get('segs')
+    if segs is None and lang == 'en' and 'en' not in lf:
+        # A leaf with no English at all: start one, credited to Amud's own translation.
+        lf['en'] = {'version': 'Amud translation', 'segs': []}
+        segs = lf['en']['segs']
     if segs is None:
         raise EditError(f'the leaf has no {lang} text')
     if any(x['ref'] == ref for x in segs):

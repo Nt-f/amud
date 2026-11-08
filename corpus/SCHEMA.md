@@ -115,7 +115,7 @@ After editing:
 | `title` | Hebrew title. Defaults to the English one. |
 | `node` | Default graph node for its segments (see Graph nodes). Required. |
 | `when` | A condition for the whole leaf, for a leaf said only on some days ("Musaf for Rosh Chodesh"). |
-| `service` | `shacharit`, `mincha`, `maariv`, `musaf` or `none`: the service its conditions are judged in. |
+| `service` | `shacharit`, `mincha`, `maariv`, `musaf` or `none`: the service its conditions are judged in. `any` for a leaf printed for several services at once (a Yom Tov Amidah for Maariv, Shacharit and Mincha): its lines tagged `mincha`, `!shacharit` and so on are then shown marked "Mincha", "Not on Shacharit", not hidden, since the app can't know which service the reader is at. |
 | `he`, `en` | The Hebrew and the English: `version`, the Sefaria version it came from (credited in the app), and `segs`. Either may be left out. |
 | `comment` | For editors. |
 
@@ -149,6 +149,7 @@ Split a segment into parts when it mixes things that need different tags:
 |  | `commentary` | Explanation, kavanah or essay that isn't said and isn't law. |
 | `text` | HTML | What is shown. |
 | `when` | condition | When this part applies (see Conditions). Omit when always, in context. |
+| `plain` | `true` | Said only on some days, but nothing to point out when it is: shown like any other line, without the "today" highlight or label (the Daily Psalm, one for each weekday). Hidden as usual on the days it isn't said. |
 | `alt` | short id | Alternatives where exactly one is said share an `alt` id (e.g. `"geshem"` for מוריד הטל / משיב הרוח), each with its own `when`. |
 | `node` | node key | Overrides the leaf's `node`. |
 | `role` | see below | Who says it. |
@@ -207,7 +208,8 @@ and add `minyan: true`. In practice:
 `stand`, `sit`, `bow` (at the start or end of a blessing), `bow_full`
 (Aleinu, Modim), `knees_bend`, `rise_on_toes` (Kadosh), `feet_together`,
 `three_steps_back`, `three_steps_forward`, `cover_eyes` (Shema),
-`kiss_tzitzit`, `gather_tzitzit`, `touch_tefillin`, `head_down` (Tachanun),
+`kiss_tzitzit`, `gather_tzitzit`, `touch_tefillin`, `touch_tefillin_yad` and
+`touch_tefillin_rosh` (see below), `head_down` (Tachanun),
 `face_ark`, `ark_open`, `ark_close`, `hold_torah`, `shake_lulav`,
 `hold_cup`, `look_at_candles`, `look_at_fingernails`, `strike_chest`,
 `look_at_moon`, `raise_hands` (kohanim), `turn_west` (Lecha Dodi's Bo'i
@@ -215,6 +217,13 @@ VeShalom), `bow_left_right_center` (Oseh Shalom).
 
 Put gestures on the part where they happen, and on an instruction that
 describes them.
+
+Touching the tefillin is marked at the words themselves. Split the part so
+that `touch_tefillin_yad` sits on the words where one touches the shel yad
+(עַל יָדֶךָ) and `touch_tefillin_rosh` on those for the shel rosh (בֵּין
+עֵינֶיךָ). The reader draws a small bayit with יד or ראש beneath it, always
+in Hebrew, just before those words, instead of a label above the line.
+Plain `touch_tefillin` is the older, whole-line form.
 
 ## Conditions
 

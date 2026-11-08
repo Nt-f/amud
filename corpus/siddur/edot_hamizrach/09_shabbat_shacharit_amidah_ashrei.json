@@ -56,9 +56,9 @@
           {"ref": "9", "parts": [
             {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": "<b>אַתָּה</b> קָדוֹשׁ וְשִׁמְךָ קָדוֹשׁ,"},
             {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " וּקְדוֹשִׁים בְּכָל־יוֹם יְהַֽלְלֽוּךָ סֶּֽלָה: בָּרוּךְ אַתָּה יהוה,"},
-            {"kind": "prayer", "node": "amidah.kedushat_hashem", "text": " הָאֵל הַקָּדוֹשׁ: "},
+            {"kind": "prayer", "when": "!shabbatShuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "text": " הָאֵל הַקָּדוֹשׁ: "},
             {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.kedushat_hashem", "en": "On Shabbat Shuva:", "text": "<small><small>בשבת תשובה אומרים:</small>"},
-            {"kind": "prayer", "when": "shabbatShuva", "node": "amidah.kedushat_hashem", "text": " הַמֶּלֶךְ הַקָּדוֹשׁ:</small>  "}
+            {"kind": "prayer", "when": "shabbatShuva", "alt": "kadosh_close", "node": "amidah.kedushat_hashem", "text": " הַמֶּלֶךְ הַקָּדוֹשׁ:</small>  "}
           ]},
           {"ref": "10", "kind": "prayer", "node": "amidah.shabbat.yismach_moshe", "text": "<b>יִשְׂמַח</b> מֹשֶׁה בְּמַתְּנַת חֶלְקוֹ, כִּי עֶבֶד נֶאֱמָן קָרָאתָ לּוֹ. כְּלִיל תִּפְאֶרֶת בּרֹאשׁוֹ נָתַתָּ, בְּעָמְדוֹ לְפָנֶיךָ עַל־הַר סִינַי. שְׁנֵי לוּחוֹת אֲבָנִים הוֹרִיד בְּיָדוֹ, וְכָתוּב בָּהֶם שְׁמִירַת שַׁבָּת, וְכֵן כָּתוּב בְּתוֹרָתָךְ: "},
           {"ref": "11", "kind": "prayer", "node": "amidah.shabbat.yismach_moshe", "text": "<b>וְשָׁמְר֥וּ</b> בְנֵֽי־יִשְׂרָאֵ֖ל אֶת־הַשַּׁבָּ֑ת לַעֲשׂ֧וֹת אֶת־הַשַּׁבָּ֛ת לְדֹרֹתָ֖ם בְּרִ֥ית עוֹלָֽם׃ בֵּינִ֗י וּבֵין֙ בְּנֵ֣י יִשְׂרָאֵ֔ל א֥וֹת הִ֖וא לְעֹלָ֑ם כִּי־שֵׁ֣שֶׁת יָמִ֗ים עָשָׂ֤ה יְהֹוָה֙ אֶת־הַשָּׁמַ֣יִם וְאֶת־הָאָ֔רֶץ וּבַיּוֹם֙ הַשְּׁבִיעִ֔י שָׁבַ֖ת וַיִּנָּפַֽשׁ׃"},

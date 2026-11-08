@@ -2373,6 +2373,14 @@
             {"kind": "instruction", "node": "amidah.kedusha", "amidah": "repetition", "minyan": true, "en": "Congregation and Chazzan:", "text": "<small>קו\"ח:</small>"},
             {"kind": "prayer", "node": "amidah.kedusha", "role": "congregation_then_chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "Adonoy will reign forever; Your God, Zion, throughout all generations! Praise God.", "text": " <b>יִמְלֹךְ יְהֹוָה לְעוֹלָם. אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר. הַלְלוּיָהּ:</b>"}
           ]},
+          {"ref": "15c", "kind": "speaker", "node": "amidah.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "The chazzan:", "text": "<small>שליח ציבור:</small>"},
+          {"ref": "15d", "parts": [
+            {"kind": "prayer", "node": "amidah.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "לְדוֹר וָדוֹר נַגִּיד גָּדְלֶךָ. וּלְנֵצַח נְצָחִים קְדֻשָּׁתְךָ נַקְדִּישׁ. וְשִׁבְחֲךָ אֱלֹהֵינוּ מִפִּינוּ לֹא יָמוּשׁ לְעוֹלָם וָעֶד. כִּי אֵל מֶלֶךְ גָּדוֹל וְקָדוֹשׁ אָתָּה: בָּרוּךְ אַתָּה יְהֹוָה."},
+            {"kind": "prayer", "when": "!shabbatShuva", "alt": "kadosh_close", "node": "amidah.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": " הָאֵל"},
+            {"kind": "instruction", "when": "shabbatShuva", "node": "amidah.kedusha", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "On Shabbat Shuva:", "gloss": "Insert 'the King' on Shabbat Shuva", "text": "<small>בשבת שובה</small>"},
+            {"kind": "prayer", "when": "shabbatShuva", "alt": "kadosh_close", "node": "amidah.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "the King", "text": " (הַמֶּלֶךְ)"},
+            {"kind": "prayer", "node": "amidah.kedusha", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "en": "the King", "text": " הַקָּדוֹשׁ:"}
+          ]},
           {"ref": "16", "parts": [
             {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "text": "<b>אַתָּה קָדוֹשׁ</b>,"},
             {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "text": " וְשִׁמְךָ קָדוֹשׁ,"},
@@ -2593,7 +2601,7 @@
             {"kind": "instruction", "he": "ישעיהו ו, ג.", "text": "<i class=\"footnote\">Isaiah 6:3.</i>"},
             {"kind": "prayer", "text": " “And they called to one another and said:"}
           ]},
-          {"ref": "13", "translates": ["13"], "text": "‘Holy, holy, holy is Adonoy of hosts, the fullness of all the earth is His glory.'” Facing them, they offer praise and say: Then, with the sound of great rushing, mighty and strong, they make their voice heard, raising themselves up toward the Serafim, Facing them, they offer praise and say:"},
+          {"ref": "13", "translates": ["13"], "text": "‘Holy, holy, holy is Adonoy of hosts, the fullness of all the earth is His glory.'” Then, with the sound of great rushing, mighty and strong, they make their voice heard, raising themselves up toward the Serafim, Facing them, they offer praise and say:"},
           {"ref": "14", "translates": ["14"], "parts": [
             {"kind": "prayer", "text": "<small>Congregation says and Chazzan repeats</small> “Blessed is the glory of Adonoy from its place.”<sup class=\"footnote-marker\">3</sup>"},
             {"kind": "instruction", "he": "יחזקאל ג, יב", "text": "<i class=\"footnote\">Ezekiel 3:12.</i>"},
@@ -2613,6 +2621,12 @@
             {"kind": "prayer", "text": " Zion,"},
             {"kind": "prayer", "text": " throughout all generations! Praise God.”<sup class=\"footnote-marker\">4</sup>"},
             {"kind": "instruction", "text": "<i class=\"footnote\">Psalms 146:10.</i>"}
+          ]},
+          {"ref": "15d", "translates": ["15d"], "parts": [
+            {"text": "From generation to generation we will declare Your greatness, and to all eternity, we will sanctify Your holiness, and Your praise, our God, will not depart from our mouth forever and ever; because You are the Almighty Who is King; Great, and Holy. Blessed are You, Adonoy,"},
+            {"when": "!shabbatShuva", "text": " the Almighty, the Holy One."},
+            {"when": "shabbatShuva", "text": " <small>On Shabbat Shuva:</small>"},
+            {"when": "shabbatShuva", "text": " the King, the Holy One."}
           ]},
           {"ref": "16", "translates": ["16"], "text": "You are holy and Your Name is holy and holy beings praise You every day, forever. Blessed are You, Adonoy, the Almighty, the Holy One. *Blessed are You, Adonoy, the King, the Holy One."},
           {"ref": "17", "translates": ["17"], "parts": [

@@ -59,7 +59,7 @@
           {"ref": "22", "kind": "prayer", "node": "birkat_hamazon", "role": "individual", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם הַזָּן אֶת־הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶֽסֶד וּבְרַחֲמִים הוּא נוֹתֵן לֶֽחֶם לְכָל־בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ וּבְטוּבוֹ הַגָּדוֹל תָּמִיד לֺא־חָסַר לָֽנוּ וְאַל־יֶחְסַר לָֽנוּ מָזוֹן לְעוֹלָם וָעֶד בַּעֲבוּר שְׁמוֹ הַגָּדוֹל כִּי הוּא אֵל זָן וּמְפַרְנֵס לַכֹּל וּמֵטִיב לַכֹּל וּמֵכִין מָזוֹן לְכָל־בְּרִיּוֹתָיו אֲשֶׁר בָּרָא: בָּרוּךְ אַתָּה יְהֹוָה הַזָּן אֶת־הַכֹּל:"},
           {"ref": "23", "kind": "note", "en": "This blessing was instituted by Joshua when Israel entered the land.", "text": "<small>ברכה זו יהושע תקנה כשנכנסו ישראל לארץ</small>"},
           {"ref": "24", "kind": "prayer", "node": "birkat_hamazon", "role": "individual", "text": "<b>נוֹדֶה</b> לְּךָ יְהֹוָה אֱלֺהֵֽינוּ עַל שֶׁהִנְחַֽלְתָּ לַאֲבוֹתֵֽינוּ אֶֽרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה וְעַל שֶׁהוֹצֵאתָֽנוּ יְהֹוָה אֱלֺהֵֽינוּ מֵאֶֽרֶץ מִצְרַֽיִם וּפְדִיתָֽנוּ מִבֵּית עֲבָדִים וְעַל בְּרִיתְ֒ךָ שֶׁחָתַֽמְתָּ בִּבְשָׂרֵֽנוּ וְעַל תּוֹרָתְ֒ךָ שֶׁלִּמַּדְתָּֽנוּ וְעַל חֻקֶּֽיךָ שֶׁהוֹדַעְתָּֽנוּ וְעַל חַיִּים חֵן וָחֶֽסֶד שֶׁחוֹנַנְתָּֽנוּ וְעַל אֲכִילַת מָזוֹן שָׁאַתָּה זָן וּמְפַרְנֵס אוֹתָֽנוּ תָּמִיד בְּכָל־יוֹם וּבְכָל־עֵת וּבְכָל שָׁעָה:"},
-          {"ref": "25", "kind": "note", "en": "On Chanukah and Purim, say Al HaNissim here. If one forgot, one does not repeat it. However, one may say it within the Harachmanim: 'Harachman hu ya'aseh lanu nissim v'nfalot k'mo she'asah la'avoteinu bayamim hahem bazman hazeh v'ch.' On Chanukah: 'Baymei Matityahu v'ch.' On Purim: 'Baymei Mordechai v'Esther v'ch.'", "cite": "Shulchan Aruch OC 188:1", "text": "<small>בחנוכה ופורים אומרים כאן על הניסים. ואם לא אמרו אין מחזירין אותו. ומכל מקום יוכל לאמרו בתוך שאר הרחמן. ויאמר הָרַחֲמָן הוּא יַעֲשֶׂה־לָּנוּ נִסִים וְנִפְלָאוֹת כְּמוֹ שֶׁעָשָׂה לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה וכו' בִּימֵי מַתִּתְיָהוּ וכו' או בִּימֵי מָרְדְּכַי וכו'.</small>"},
+          {"ref": "25", "kind": "note", "when": "chanukah || purim", "en": "On Chanukah and Purim, say Al HaNissim here. If one forgot, one does not repeat it. However, one may say it within the Harachmanim: 'Harachman hu ya'aseh lanu nissim v'nfalot k'mo she'asah la'avoteinu bayamim hahem bazman hazeh v'ch.' On Chanukah: 'Baymei Matityahu v'ch.' On Purim: 'Baymei Mordechai v'Esther v'ch.'", "cite": "Shulchan Aruch OC 188:1", "text": "<small>בחנוכה ופורים אומרים כאן על הניסים. ואם לא אמרו אין מחזירין אותו. ומכל מקום יוכל לאמרו בתוך שאר הרחמן. ויאמר הָרַחֲמָן הוּא יַעֲשֶׂה־לָּנוּ נִסִים וְנִפְלָאוֹת כְּמוֹ שֶׁעָשָׂה לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה וכו' בִּימֵי מַתִּתְיָהוּ וכו' או בִּימֵי מָרְדְּכַי וכו'.</small>"},
           {"ref": "26", "kind": "prayer", "when": "chanukah || purim", "node": "birkat_hamazon", "text": "<b>וְעַל הַנִּסִּים</b> וְעַל הַפֻּרְקָן וְעַל הַגְּ֒בוּרוֹת וְעַל הַתְּ֒שׁוּעוֹת וְעַל הַמִּלְחָמוֹת שֶׁעָשִֽׂיתָ לַאֲבוֹתֵֽינוּ בַּיָּמִים הָהֵם בִּזְּ֒מַן הַזֶּה:"},
           {"ref": "27", "kind": "instruction", "when": "chanukah", "en": "On Chanukah:", "text": "<small>בחנוכה אומרים:</small>"},
           {"ref": "28", "kind": "prayer", "when": "chanukah", "node": "birkat_hamazon", "text": "<b>בִּימֵי מַתִּתְיָֽהוּ</b> בֶּן־יוֹחָנָן כֹּהֵן גָּדוֹל חַשְׁמוֹנַאי וּבָנָיו כְּשֶׁעָמְ֒דָה מַלְכוּת יָוָן הָרְ֒שָׁעָה עַל־עַמְּ֒ךָ יִשְׂרָאֵל לְהַשְׁכִּיחָם תּוֹרָתֶֽךָ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנֶֽךָ: וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים עָמַֽדְתָּ לָהֶם בְּעֵת צָרָתָם רַֽבְתָּ אֶת־רִיבָם דַּֽנְתָּ אֶת־דִּינָם נָקַֽמְתָּ אֶת־נִקְמָתָם מָסַֽרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים וְרַבִּים בְּיַד מְעַטִּים וּטְמֵאִים בְּיַד טְהוֹרִים וּרְשָׁעִים בְּיַד צַדִּיקִים וְזֵדִים בְּיַד עוֹסְ֒קֵי תוֹרָתֶֽךָ וּלְךָ עָשִֽׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמֶֽךָ וּלְעַמְּ֒ךָ יִשְׂרָאֵל עָשִֽׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה וְאַחַר כַּךְ בָּֽאוּ בָנֶֽיךָ לִדְבִיר בֵּיתֶֽךָ וּפִנּוּ אֶת הֵיכָלֶֽךָ וְטִהֲרוּ אֶת מִקְדָּשֶֽׁךָ וְהִדְלִֽיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶֽׁךָ וְקָבְ֒עוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵֽלּוּ לְהוֹדוֹת וּלְהַלֵּל לְשִׁמְךָ הַגָּדוֹל:"},
@@ -70,38 +70,38 @@
           {"ref": "33", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>רַחֵם</b> יְהֹוָה אֱלֺהֵֽינוּ עַל־יִשְׂרָאֵל עַמֶּֽךָ וְעַל יְרוּשָׁלַֽיִם עִירֶֽךָ וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדֶֽךָ וְעַל מַלְכוּת בֵּית דָּוִד מְשִׁיחֶֽךָ וְעַל־הַבַּֽיִת הַגָּדוֹל וְהַקָּדוֹשׁ שֶׁנִּקְרָא שִׁמְךָ עָלָיו אֱלֺהֵֽינוּ אָבִֽינוּ רְעֵֽנוּ זוּנֵֽנוּ פַּרְנְ֒סֵֽנוּ וְכַלְכְּ֒לֵֽנוּ וְהַרְוִיחֵֽנוּ וְהַרְוַח־לָֽנוּ יְהֹוָה אֱלֺהֵֽינוּ מְהֵרָה מִכָּל־צָרוֹתֵֽינוּ וְנָא אַל־תַּצְרִיכֵֽנוּ יְהֹוָה אֱלֺהֵֽינוּ לֺא לִידֵי מַתְּ֒נַת בָּשָׂר וָדָם וְלֺא לִידֵי הַלְוָאָתָם כִּי אִם לְיָדְ֒ךָ הַמְּלֵאָה הַפְּ֒תוּחָה הַקְּ֒דוֹשָׁה וְהָרְ֒חָבָה שֶׁלֺּא נֵבוֹשׁ וְלֺא נִכָּלֵם לְעוֹלָם וָעֶד:"},
           {"ref": "34", "kind": "instruction", "when": "shabbat", "en": "On Shabbat, add:", "text": "<small>בשבת מוסיפים:</small>"},
           {"ref": "35", "kind": "prayer", "when": "shabbat", "node": "birkat_hamazon", "text": "<b>רְצֵה</b> וְהַחֲלִיצֵֽנוּ יְהֹוָה אֱלֺהֵֽינוּ בְּמִצְוֹתֶֽיךָ וּבְמִצְוַת יוֹם הַשְּׁ֒בִיעִי הַשַּׁבָּת הַגָּדוֹל וְהַקָּדוֹשׁ הַזֶּה כִּי יוֹם זֶה גָדוֹל וְקָדוֹשׁ הוּא לְפָנֶֽיךָ לִשְׁבָּת בּוֹ וְלָנֽוּחַ בּוֹ בְּאַהֲבָה כְּמִצְוַת רְצוֹנֶֽךָ וּבִרְצוֹנְ֒ךָ הָנִֽיחַ לָֽנוּ יְהֹוָה אֱלֺהֵֽינוּ שֶׁלֺּא תְהֵא צָרָה וְיָגוֹן וַאֲנָחָה בְּיוֹם מְנוּחָתֵֽנוּ וְהַרְאֵֽנוּ יְהֹוָה אֱלֺהֵֽינוּ בְּנֶחָמַת צִיּוֹן עִירֶֽךָ וּבְבִנְיַן יְרוּשָׁלַֽיִם עִיר קָדְשֶֽׁךָ כִּי אַתָּה הוּא בַּעַל הַיְשׁוּעוֹת וּבַעַל הַנֶּחָמוֹת:"},
-          {"ref": "36", "kind": "instruction", "when": "roshChodesh || cholHamoed", "en": "On Rosh Chodesh and Chol HaMoed, say 'Ya'aleh VeYavo' here:", "text": "<small>בראש חודש ובחול המועד אומרים כאן \"יעלה ויבא\":</small>"},
+          {"ref": "36", "kind": "instruction", "when": "roshChodesh || cholHamoed || yomTov", "en": "On Rosh Chodesh and Chol HaMoed, say 'Ya'aleh VeYavo' here:", "text": "<small>בראש חודש ובחול המועד אומרים כאן \"יעלה ויבא\":</small>"},
           {"ref": "37", "kind": "prayer", "when": "roshChodesh || cholHamoed || yomTov", "node": "birkat_hamazon", "text": "<b>אֱלֹהֵֽינוּ</b> וֵאלֹהֵי אֲבוֹתֵֽינוּ יַעֲלֶה וְיָבֹא וְיַגִּֽיעַ וְיֵרָאֶה וְיֵרָצֶה וְיִשָּׁמַע וְיִפָּקֵד וְיִזָּכֵר זִכְרוֹנֵֽנוּ וּפִקְדוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ וְזִכְרוֹן מָשִֽׁיחַ בֶּן־דָּוִד עַבְדֶּֽךָ וְזִכְרוֹן יְרוּשָׁלַֽיִם עִיר קָדְשֶֽׁךָ וְזִכְרוֹן כָּל־עַמְּ֒ךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ, לִפְלֵיטָה לְטוֹבָה לְחֵן וּלְחֶֽסֶד וּלְרַחֲמִים לְחַיִּים וּלְשָׁלוֹם בְּיוֹם"},
           {"ref": "38", "parts": [
-            {"kind": "instruction", "en": "For Rosh Chodesh:", "text": "<small>לְר\"ח:</small>"},
+            {"kind": "instruction", "when": "roshChodesh", "en": "For Rosh Chodesh:", "text": "<small>לְר\"ח:</small>"},
             {"kind": "prayer", "when": "roshChodesh", "text": " רֹאשׁ הַחֹֽדֶשׁ הַזֶּה"}
           ]},
           {"ref": "39", "parts": [
-            {"kind": "instruction", "en": "For Pesach:", "text": "<small>לְפֶסַח:</small>"},
-            {"kind": "prayer", "when": "pesachFirstDays || pesachLastDays", "text": " חַג הַמַּצּוֹת הַזֶּה"}
+            {"kind": "instruction", "when": "pesach", "en": "For Pesach:", "text": "<small>לְפֶסַח:</small>"},
+            {"kind": "prayer", "when": "pesach", "text": " חַג הַמַּצּוֹת הַזֶּה"}
           ]},
           {"ref": "40", "parts": [
-            {"kind": "instruction", "en": "On Shavuot:", "text": "<small>בשבועות:</small>"},
+            {"kind": "instruction", "when": "shavuot", "en": "On Shavuot:", "text": "<small>בשבועות:</small>"},
             {"kind": "prayer", "when": "shavuot", "text": " חַג הַשָּׁבֻעוֹת"}
           ]},
           {"ref": "41", "parts": [
-            {"kind": "instruction", "en": "For Sukkot:", "text": "<small>לְסֻכּוֹת:</small>"},
+            {"kind": "instruction", "when": "sukkot", "en": "For Sukkot:", "text": "<small>לְסֻכּוֹת:</small>"},
             {"kind": "prayer", "when": "sukkot", "text": " חַג הַסֻּכּוֹת הַזֶּה"}
           ]},
           {"ref": "42", "parts": [
-            {"kind": "instruction", "en": "For Shmini Atzeret and Simchat Torah:", "text": "<small>לש\"ע וש\"ת:</small>"},
+            {"kind": "instruction", "when": "shminiAtzeret || simchatTorah", "en": "For Shmini Atzeret and Simchat Torah:", "text": "<small>לש\"ע וש\"ת:</small>"},
             {"kind": "prayer", "when": "shminiAtzeret || simchatTorah", "text": " שְׁמִינִי עֲצֶֽרֶת הַחַג הַזֶּה"}
           ]},
           {"ref": "43", "parts": [
-            {"kind": "instruction", "en": "For Rosh Hashanah:", "text": "<small>לר\"ה:</small>"},
+            {"kind": "instruction", "when": "roshHashana", "en": "For Rosh Hashanah:", "text": "<small>לר\"ה:</small>"},
             {"kind": "prayer", "when": "roshHashana", "text": " הַזִּכָּרוֹן הַזֶּה"}
           ]},
           {"ref": "44", "parts": [
-            {"kind": "instruction", "en": "For children eating on Yom Kippur:", "text": "<small>ילדים האוכלים ביו\"כ:</small>"},
+            {"kind": "instruction", "when": "yomKippur", "en": "For children eating on Yom Kippur:", "text": "<small>ילדים האוכלים ביו\"כ:</small>"},
             {"kind": "prayer", "when": "yomKippur", "text": " הַכִּפּוּרִים"}
           ]},
           {"ref": "45", "kind": "prayer", "when": "roshChodesh || cholHamoed || yomTov", "node": "birkat_hamazon", "text": "זָכְרֵֽנוּ יְהֹוָה אֱלֹהֵֽינוּ בּוֹ לְטוֹבָה, וּפָקְדֵֽנוּ בוֹ לִבְרָכָה, וְהוֹשִׁיעֵֽנוּ בוֹ לְחַיִּים, וּבִדְבַר יְשׁוּעָה וְרַחֲמִים חוּס וְחָנֵּֽנוּ, וְרַחֵם עָלֵֽינוּ וְהוֹשִׁיעֵֽנוּ, כִּי אֵלֶֽיךָ עֵינֵֽינוּ, כִּי אֵל מֶֽלֶךְ חַנּוּן וְרַחוּם אָֽתָּה:"},
-          {"ref": "46", "kind": "note", "forgot": true, "en": "If one forgot to say Retzei on Shabbat or Ya'aleh VeYavo on Rosh Chodesh, Yom Tov, or Chol HaMoed, and remembered before saying the name in the blessing of Boneh Yerushalayim, one says it there. But if one said the name, and remembered before starting Hatov VeHameitiv, see below for laws of forgetting.", "text": "<small>שכח לומר רצה בשבת או יעלה ויבא בראש חודש ויום טוב וחול המועד ונזכר קודם שאמר השם מברכת בונה ירושלים אומרו שם אבל אם אמר השם אם נזכר קודם שהתחיל הטוב והמטיב ראה להלן דיני שכחה:</small>"},
+          {"ref": "46", "kind": "note", "when": "shabbat || roshChodesh || yomTov || cholHamoed", "forgot": true, "en": "If one forgot to say Retzei on Shabbat or Ya'aleh VeYavo on Rosh Chodesh, Yom Tov, or Chol HaMoed, and remembered before saying the name in the blessing of Boneh Yerushalayim, one says it there. But if one said the name, and remembered before starting Hatov VeHameitiv, see below for laws of forgetting.", "text": "<small>שכח לומר רצה בשבת או יעלה ויבא בראש חודש ויום טוב וחול המועד ונזכר קודם שאמר השם מברכת בונה ירושלים אומרו שם אבל אם אמר השם אם נזכר קודם שהתחיל הטוב והמטיב ראה להלן דיני שכחה:</small>"},
           {"ref": "47", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>וּבְנֵה</b> יְרוּשָׁלַֽיִם עִיר הַקֹּֽדֶשׁ בִּמְהֵרָה בְיָמֵֽינוּ: בָּרוּךְ אַתָּה יְהֹוָה בּוֹנֵה בְרַחֲמָיו יְרוּשָׁלָֽיִם, אָמֵן:"},
           {"ref": "48", "kind": "note", "en": "Hatov VeHameitiv was instituted in Yavneh on the day the victims of Beitar were buried. 'Hatov' because they did not rot, and 'Hameitiv' because they were buried.", "cite": "Berachot 48b", "text": "<small>הטוב והמטיב ביבנה תקנוה ביום שנתנו הרוגי ביתר לקבורה. הטוב שלא הסריחו. והמטיב שנתנו לקבורה.</small>"},
           {"ref": "49", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, הָאֵל אָבִֽינוּ, מַלְכֵּֽנוּ, אַדִּירֵֽנוּ בּוֹרְ֒אֵֽנוּ, גּוֹאֲלֵֽנוּ, יוֹצְ֒רֵֽנוּ, קְדוֹשֵֽׁנוּ קְדוֹשׁ יַעֲקֹב, רוֹעֵנוּ רוֹעֵה יִשְׂרָאֵל, הַמֶּֽלֶךְ הַטּוֹב, וְהַמֵּטִיב לַכֹּל, שֶׁבְּ֒כָל יוֹם וָיוֹם הוּא הֵטִיב, הוּא מֵטִיב, הוּא יֵיטִיב לָנוּ, הוּא גְמָלָֽנוּ, הוּא גוֹמְ֒לֵֽנוּ, הוּא יִגְמְ֒לֵֽנוּ לָעַד לְחֵן וּלְחֶֽסֶד וּלְרַחֲמִים וּלְרֶוַח הַצָּלָה וְהַצְלָחָה בְּרָכָה וִישׁוּעָה, נֶחָמָה, פַּרְנָסָה וְכַלְכָּלָה, וְרַחֲמִים, וְחַיִּים וְשָׁלוֹם, וְכָל־טוֹב, וּמִכָּל־טוּב לְעוֹלָם אַל יְחַסְּ֒רֵֽנוּ:"},
@@ -133,27 +133,27 @@
           {"ref": "74", "kind": "prayer", "when": "sukkot", "text": "<b>הָרַחֲמָן</b> הוּא יָקִים לָֽנוּ אֶת־סֻכַּת דָּוִד הַנּוֹפָֽלֶת:"},
           {"ref": "75", "parts": [
             {"kind": "prayer", "text": "<b>הָרַחֲמָן</b> הוּא יְזַכֵּֽנוּ לִימוֹת הַמָּשִֽׁיחַ וּלְחַיֵּי הָעוֹלָם הַבָּא,"},
-            {"kind": "prayer", "when": "!shabbat && !yomTov", "alt": "birkat_hamazon.magdil", "text": " מַגְדִּיל יְשׁוּעוֹת מַלְכּוֹ "},
+            {"kind": "prayer", "when": "!(shabbat || yomTov || roshChodesh || cholHamoed)", "alt": "birkat_hamazon.magdil", "text": " מַגְדִּיל יְשׁוּעוֹת מַלְכּוֹ "},
             {"kind": "instruction", "when": "shabbat||yomTov", "en": "On Shabbat and Yom Tov say:", "text": "<small>בשבת וביו\"ט אומר:</small>"},
-            {"kind": "prayer", "when": "shabbat||yomTov", "alt": "birkat_hamazon.magdil", "text": " מִגְדּוֹל יְשׁוּעוֹת מַלְכּוֹ,"},
+            {"kind": "prayer", "when": "shabbat || yomTov || roshChodesh || cholHamoed", "alt": "birkat_hamazon.magdil", "text": " מִגְדּוֹל יְשׁוּעוֹת מַלְכּוֹ,"},
             {"kind": "prayer", "text": " וְעֹֽשֶׂה חֶֽסֶד לִמְשִׁיחוֹ לְדָוִד וּלְזַרְעוֹ עַד עוֹלָם: עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו,"},
             {"kind": "prayer", "text": " הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן:"}
           ]},
           {"ref": "76", "kind": "prayer", "text": "<b>יְראוּ</b> אֶת־יְהֹוָה קְדוֹשָׁיו, כִּי אֵין מַחְסוֹר לִירֵאָיו: כְּפִירִים רָשׁוּ וְרָעֵֽבוּ, וְדוֹרְ֒שֵׁי יְהֹוָה לֺא־יַחְסְ֒רוּ כָל־טוֹב: הוֹדוּ לַיהוָֹה כִּי־טוֹב, כִּי לְעוֹלָם חַסְדּוֹ: פּוֹתֵֽחַ אֶת־יָדֶֽךָ, וּמַשְׂבִּֽיעַ לְכָל־חַי רָצוֹן: בָּרוּךְ הַגֶּֽבֶר אֲשֶׁר יִבְטַח בַּיהוָֹה, וְהָיָה יְהֹוָה מִבְטַחוֹ: נַֽעַר הָיִֽיתִי גַם־זָקַֽנְתִּי וְלֺא־רָאִֽיתִי צַדִּיק נֶעֱזָב, וְזַרְעוֹ מְבַקֶּשׁ־לָֽחֶם: יְהֹוָה עוֹז לְעַמּוֹ יִתֵּן, יְהֹוָה יְבָרֵךְ אֶת־עַמּוֹ בַּשָּׁלוֹם:"},
-          {"ref": "77", "kind": "note", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "en": "Laws of forgetting:", "text": "<b>דיני שכחה:</b>"},
-          {"ref": "78", "kind": "instruction", "when": "shabbat", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "en": "On Shabbat say:", "text": "<small>בשבת אומר:</small>"},
-          {"ref": "79", "kind": "prayer", "when": "shabbat", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָתַן שַׁבָּתוֹת לִמְנוּחָה לְעַמּוֹ יִשְׂרָאֵל בְּאַהֲבָה לְאוֹת וְלִבְרִית: בָּרוּךְ אַתָּה יְהֹוָה מְקַדֵּשׁ הַשַּׁבָּת:"},
+          {"ref": "77", "kind": "note", "when": "shabbat || roshChodesh || yomTov || cholHamoed", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "en": "Laws of forgetting:", "text": "<b>דיני שכחה:</b>"},
+          {"ref": "78", "kind": "instruction", "when": "shabbat && !yomTov", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "en": "On Shabbat say:", "text": "<small>בשבת אומר:</small>"},
+          {"ref": "79", "kind": "prayer", "when": "shabbat && !yomTov", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָתַן שַׁבָּתוֹת לִמְנוּחָה לְעַמּוֹ יִשְׂרָאֵל בְּאַהֲבָה לְאוֹת וְלִבְרִית: בָּרוּךְ אַתָּה יְהֹוָה מְקַדֵּשׁ הַשַּׁבָּת:"},
           {"ref": "80", "kind": "instruction", "when": "roshChodesh", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "en": "On Rosh Chodesh:", "text": "<small>בראש חודש:</small>"},
           {"ref": "81", "kind": "prayer", "when": "roshChodesh", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָתַן רָאשֵׁי חֳדָשִׁים לְעַמּוֹ יִשְׂרָאֵל לְזִכָּרוֹן:"},
-          {"ref": "82", "kind": "instruction", "when": "yomTov", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "en": "On Yom Tov say:", "text": "<small>ביו\"ט אומר:</small>"},
-          {"ref": "83", "kind": "prayer", "when": "yomTov", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָתַן יָמִים טוֹבִים לְעַמּוֹ יִשְׂרָאֵל לְשָׂשׂוֹן וּלְשִׂמְחָה אֶת יוֹם חַג (פלוני) הַזֶּה: בָּרוּךְ אַתָּה יְהֹוָה מְקַדֵּשׁ יִשְׂרָאֵל וְהַזְּ֒מַנִּים:"},
-          {"ref": "84", "kind": "instruction", "when": "yomTov&&shabbat", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "en": "On Yom Tov that falls on Shabbat:", "text": "<small>ביו\"ט שחל בשבת:</small>"},
-          {"ref": "85", "kind": "prayer", "when": "yomTov&&shabbat", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָתַן שַׁבָּתוֹת לִמְנוּחָה לְעַמּוֹ יִשְׂרָאֵל בְּאַהֲבָה לְאוֹת וְלִבְרִית וְיָמִים טוֹבִים לְשָׂשׂוֹן וּלְשִׂמְחָה אֶת יוֹם חַג (פלוני) הַזֶּה: בָּרוּךְ אַתָּה יְהֹוָה מְקַדֵּשׁ הַשַּׁבָּת וְיִשְׂרָאֵל וְהַזְּ֒מַנִּים:"},
-          {"ref": "86", "kind": "instruction", "when": "roshHashana", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "en": "On Rosh Hashanah:", "text": "<small>בראש השנה:</small>"},
-          {"ref": "87", "kind": "prayer", "when": "roshHashana", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָתַן יָמִים טוֹבִים לְעַמּוֹ יִשְׂרָאֵל לְזִכָּרוֹן:"},
-          {"ref": "88", "kind": "instruction", "when": "roshHashana&&shabbat", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "en": "On Rosh Hashanah that falls on Shabbat:", "text": "<small>בראש השנה שחל בשבת:</small>"},
-          {"ref": "89", "kind": "prayer", "when": "roshHashana&&shabbat", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָתַן שַׁבָּתוֹת לִמְנוּחָה לְעַמּוֹ יִשְׂרָאֵל בְּאַהֲבָה לְאוֹת וְלִבְרִית וְיָמִים טוֹבִים לְיִשְׂרָאֵל לְזִכָּרוֹן: בָּרוּךְ אַתָּה יְהֹוָה מְקַדֵּשׁ הַשַּׁבָּת וְיִשְׂרָאֵל וְיוֹם הַזִכָּרוֹן:"}
+          {"ref": "82", "kind": "instruction", "when": "yomTov && !shabbat && !roshHashana", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "en": "On Yom Tov say:", "text": "<small>ביו\"ט אומר:</small>"},
+          {"ref": "83", "kind": "prayer", "when": "yomTov && !shabbat && !roshHashana", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָתַן יָמִים טוֹבִים לְעַמּוֹ יִשְׂרָאֵל לְשָׂשׂוֹן וּלְשִׂמְחָה אֶת יוֹם חַג (פלוני) הַזֶּה: בָּרוּךְ אַתָּה יְהֹוָה מְקַדֵּשׁ יִשְׂרָאֵל וְהַזְּ֒מַנִּים:"},
+          {"ref": "84", "kind": "instruction", "when": "yomTov && shabbat && !roshHashana", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "en": "On Yom Tov that falls on Shabbat:", "text": "<small>ביו\"ט שחל בשבת:</small>"},
+          {"ref": "85", "kind": "prayer", "when": "yomTov && shabbat && !roshHashana", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָתַן שַׁבָּתוֹת לִמְנוּחָה לְעַמּוֹ יִשְׂרָאֵל בְּאַהֲבָה לְאוֹת וְלִבְרִית וְיָמִים טוֹבִים לְשָׂשׂוֹן וּלְשִׂמְחָה אֶת יוֹם חַג (פלוני) הַזֶּה: בָּרוּךְ אַתָּה יְהֹוָה מְקַדֵּשׁ הַשַּׁבָּת וְיִשְׂרָאֵל וְהַזְּ֒מַנִּים:"},
+          {"ref": "86", "kind": "instruction", "when": "roshHashana && !shabbat", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "en": "On Rosh Hashanah:", "text": "<small>בראש השנה:</small>"},
+          {"ref": "87", "kind": "prayer", "when": "roshHashana && !shabbat", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָתַן יָמִים טוֹבִים לְעַמּוֹ יִשְׂרָאֵל לְזִכָּרוֹן:"},
+          {"ref": "88", "kind": "instruction", "when": "roshHashana && shabbat", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "en": "On Rosh Hashanah that falls on Shabbat:", "text": "<small>בראש השנה שחל בשבת:</small>"},
+          {"ref": "89", "kind": "prayer", "when": "roshHashana && shabbat", "fold": "If one forgot Retzei or Ya'aleh VeYavo", "foldHe": "דיני שכחה", "forgot": true, "text": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָתַן שַׁבָּתוֹת לִמְנוּחָה לְעַמּוֹ יִשְׂרָאֵל בְּאַהֲבָה לְאוֹת וְלִבְרִית וְיָמִים טוֹבִים לְיִשְׂרָאֵל לְזִכָּרוֹן: בָּרוּךְ אַתָּה יְהֹוָה מְקַדֵּשׁ הַשַּׁבָּת וְיִשְׂרָאֵל וְיוֹם הַזִכָּרוֹן:"}
         ]
       },
       "en": {
@@ -197,7 +197,7 @@
           {"ref": "36", "translates": ["36"], "kind": "instruction", "when": "roshChodesh || cholHamoed", "he": "בראש חודש ובחג מוסיפים:", "text": "<i>On Rosh Chodesh and Yom Tov add:</i>"},
           {"ref": "37", "translates": ["37"], "kind": "prayer", "when": "roshChodesh || cholHamoed || yomTov", "text": "Our God and God of our fathers, may there ascend, come, and reach, appear, be desired, and heard, counted and recalled our remembrance and reckoning; the remembrance of our fathers; the remembrance of the Messiah the son of David, Your servant; the remembrance of Jerusalem, city of Your Sanctuary; and the remembrance of Your entire people, the House of Israel, before You for survival, for well-being, for favor, kindliness, compassion, for life and peace on this day of:"},
           {"ref": "38", "translates": ["38"], "kind": "instruction", "when": "roshChodesh", "he": "ראש חודש", "text": "<i>Rosh Chodesh</i>"},
-          {"ref": "39", "translates": ["39"], "kind": "instruction", "when": "pesachFirstDays || pesachLastDays", "he": "חג המצות", "text": "the <i>Festival of Matzos</i>"},
+          {"ref": "39", "translates": ["39"], "kind": "instruction", "when": "pesach", "he": "חג המצות", "text": "the <i>Festival of Matzos</i>"},
           {"ref": "t40", "translates": ["40"], "comment": "Amud translation", "text": "the Festival of Shavuot"},
           {"ref": "41", "translates": ["41"], "kind": "instruction", "when": "sukkot", "he": "חג הסוכות", "text": "the <i>Festival of Sukkos</i>"},
           {"ref": "42", "translates": ["42"], "kind": "instruction", "when": "shminiAtzeret || simchatTorah", "he": "שמיני עצרת", "text": "the <i>Festival of Shmini Atseres</i>"},
@@ -329,7 +329,12 @@
         "version": "Sefaria Community Translation",
         "segs": [
           {"ref": "1", "translates": ["1"], "text": "Praised are You, Lord our God, Ruler of the universe, who made us holy with the Divine commandments and commanded us regarding the washing of hands."},
-          {"ref": "2", "translates": ["2"], "text": "Praised are you, Lord our G-d, Ruler of the universe, who brings forth bread from the earth."}
+          {"ref": "2", "translates": ["2"], "text": "Praised are you, Lord our G-d, Ruler of the universe, who brings forth bread from the earth."},
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, Creator of various kinds of nourishment."},
+          {"ref": "4", "translates": ["4"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, Creator of the fruit of the vine."},
+          {"ref": "5", "translates": ["5"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, Creator of the fruit of the tree."},
+          {"ref": "6", "translates": ["6"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, Creator of the fruit of the ground."},
+          {"ref": "7", "translates": ["7"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, by whose word everything came to be."}
         ]
       }
     },
@@ -363,20 +368,21 @@
             {"kind": "prayer", "when": "shabbat", "text": " וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַׁבָּת הַזֶּה.<br>  "},
             {"kind": "instruction", "when": "roshChodesh", "en": "On Rosh Chodesh:", "text": "<small>בר\"ח:</small>"},
             {"kind": "prayer", "when": "roshChodesh", "text": " וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם רֹאשׁ הַחֹדֶשׁ הַזֶּה.<br>  "},
-            {"kind": "instruction", "en": "On Rosh Hashanah:", "text": "<small>בר\"ה:</small>"},
+            {"kind": "instruction", "when": "roshHashana", "en": "On Rosh Hashanah:", "text": "<small>בר\"ה:</small>"},
             {"kind": "prayer", "when": "roshHashana", "text": " וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם הַזִּכָּרוֹן הַזֶּה.<br>  "},
-            {"kind": "instruction", "when": "yomTov || cholHamoed", "en": "On Yom Tov and Chol HaMoed:", "text": "<small>ביום טוב ובחוה\"מ:</small>"},
-            {"kind": "prayer", "when": "yomTov || cholHamoed", "text": " וְשַׂמְּחֵנוּ בְיוֹם<br>  "},
-            {"kind": "instruction", "en": "On Pesach:", "text": "<small>בפסח:</small>"},
+            {"kind": "instruction", "when": "(yomTov && !roshHashana) || cholHamoed", "en": "On Yom Tov and Chol HaMoed:", "text": "<small>ביום טוב ובחוה\"מ:</small>"},
+            {"kind": "prayer", "when": "(yomTov && !roshHashana) || cholHamoed", "text": " וְשַׂמְּחֵנוּ בְיוֹם<br>  "},
+            {"kind": "instruction", "when": "pesach", "en": "On Pesach:", "text": "<small>בפסח:</small>"},
             {"kind": "prayer", "when": "pesach", "text": " חַג הַמַּצּוֹת הַזֶּה,<br>  "},
-            {"kind": "instruction", "en": "On Shavuot:", "text": "<small>בשבועות:</small>"},
+            {"kind": "instruction", "when": "shavuot", "en": "On Shavuot:", "text": "<small>בשבועות:</small>"},
             {"kind": "prayer", "when": "shavuot", "text": " חַג הַשָּׁבוּעוֹת הַזֶּה,<br>  "},
-            {"kind": "instruction", "en": "On Sukkot:", "text": "<small>בסוכות:</small>"},
+            {"kind": "instruction", "when": "sukkot", "en": "On Sukkot:", "text": "<small>בסוכות:</small>"},
             {"kind": "prayer", "when": "sukkot", "text": " חַג הַסֻּכּוֹת הַזֶּה,<br>  "},
-            {"kind": "instruction", "en": "On Shmini Atzeret:", "text": "<small>בשמיני עצרת:</small>"},
+            {"kind": "instruction", "when": "shminiAtzeret", "en": "On Shmini Atzeret:", "text": "<small>בשמיני עצרת:</small>"},
             {"kind": "prayer", "when": "shminiAtzeret", "text": " שְׁמִינִי,"},
             {"kind": "prayer", "when": "shminiAtzeret", "text": " חַג עֲצֶרֶת הַזֶּה,"},
-            {"kind": "prayer", "when": "yomTov || cholHamoed", "text": "<br>  בְּיוֹם (טוֹב) מִקְרָא קֹדֶשׁ הַזֶּה.<br> כִּי אַתָּה יְיָ טוֹב וּמֵטִיב לַכּל וְנוֹדֶה לְּךָ עַל הָאָרֶץ"}
+            {"kind": "prayer", "when": "(yomTov && !roshHashana) || cholHamoed", "text": "<br> בְּיוֹם (טוֹב) מִקְרָא קֹדֶשׁ הַזֶּה."},
+            {"kind": "prayer", "text": "<br> כִּי אַתָּה יְיָ טוֹב וּמֵטִיב לַכּל וְנוֹדֶה לְּךָ עַל הָאָרֶץ"}
           ]},
           {"ref": "6", "parts": [
             {"kind": "instruction", "en": "For the five grains:", "text": "<small>על חמשת מיני דגן—</small>"},
@@ -384,14 +390,16 @@
           ]},
           {"ref": "7", "parts": [
             {"kind": "instruction", "en": "For wine:", "text": "<small>על היין—</small>"},
-            {"kind": "prayer", "text": "וְעַל פְּרִי גַפְנָהּ ("},
-            {"kind": "instruction", "en": "Outside Israel", "text": "<small>בחו\"ל</small>"},
+            {"kind": "prayer", "text": "וְעַל פְּרִי גַפְנָהּ"},
+            {"kind": "prayer", "when": "diaspora", "text": " ("},
+            {"kind": "instruction", "when": "diaspora", "en": "Outside Israel", "text": "<small>בחו\"ל</small>"},
             {"kind": "prayer", "when": "diaspora", "text": "—וְעַל פְּרִי הַגָּֽפֶן)"}
           ]},
           {"ref": "8", "parts": [
             {"kind": "instruction", "en": "For fruit of the seven species:", "text": "<small>על פירות משבעת המינים—</small>"},
-            {"kind": "prayer", "text": "וְעַל פֵּרוֹתֶיהָ ("},
-            {"kind": "instruction", "en": "Outside Israel", "text": "<small>בחו\"ל</small>"},
+            {"kind": "prayer", "text": "וְעַל פֵּרוֹתֶיהָ"},
+            {"kind": "prayer", "when": "diaspora", "text": " ("},
+            {"kind": "instruction", "when": "diaspora", "en": "Outside Israel", "text": "<small>בחו\"ל</small>"},
             {"kind": "prayer", "when": "diaspora", "text": "—וְעַל הַפֵּרוֹת)"}
           ]},
           {"ref": "9", "kind": "prayer", "text": "בָּרוּךְ אַתָּה יְיָ, עַל הָאָרֶץ"},
@@ -403,15 +411,58 @@
           ]},
           {"ref": "11", "parts": [
             {"kind": "instruction", "en": "For wine:", "text": "<small>על היין—</small>"},
-            {"kind": "prayer", "text": "וְעַל פְּרִי גַפְנָהּ ("},
-            {"kind": "instruction", "en": "Outside Israel", "text": "<small>בחו\"ל</small>"},
+            {"kind": "prayer", "text": "וְעַל פְּרִי גַפְנָהּ"},
+            {"kind": "prayer", "when": "diaspora", "text": " ("},
+            {"kind": "instruction", "when": "diaspora", "en": "Outside Israel", "text": "<small>בחו\"ל</small>"},
             {"kind": "prayer", "when": "diaspora", "text": "—וְעַל פְּרִי הַגָּֽפֶן)."}
           ]},
           {"ref": "12", "parts": [
             {"kind": "instruction", "en": "For fruit of the seven species:", "text": "<small>על פירות משבעת המינים—</small>"},
-            {"kind": "prayer", "text": "וְעַל פֵּרוֹתֶיהָ ("},
-            {"kind": "instruction", "en": "Outside Israel", "text": "<small>בחו\"ל</small>"},
+            {"kind": "prayer", "text": "וְעַל פֵּרוֹתֶיהָ"},
+            {"kind": "prayer", "when": "diaspora", "text": " ("},
+            {"kind": "instruction", "when": "diaspora", "en": "Outside Israel", "text": "<small>בחו\"ל</small>"},
             {"kind": "prayer", "when": "diaspora", "text": "—וְעַל הַפֵּרוֹת)."}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe,"},
+          {"ref": "2", "translates": ["2"], "comment": "Amud translation", "text": "for the sustenance and the nourishment"},
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "for the vine and the fruit of the vine"},
+          {"ref": "4", "translates": ["4"], "comment": "Amud translation", "text": "for the tree and the fruit of the tree"},
+          {"ref": "5", "translates": ["5"], "parts": [
+            {"comment": "Amud translation", "text": "and for the produce of the field, and for the desirable, good and spacious land that You were pleased to give as a heritage to our ancestors, to eat of its fruit and be satisfied by its goodness. Have mercy (please), Hashem our God, on Israel Your people, on Jerusalem Your city, on Zion the dwelling place of Your glory, on Your altar and on Your Temple. Rebuild Jerusalem, the holy city, speedily in our days; bring us up into it and make us rejoice in its rebuilding; may we eat of its fruit and be satisfied by its goodness, and bless You for it in holiness and purity."},
+            {"when": "shabbat", "text": " Be pleased and strengthen us on this day of Shabbat."},
+            {"when": "roshChodesh", "text": " Remember us for good on this day of Rosh Chodesh."},
+            {"when": "roshHashana", "text": " Remember us for good on this Day of Remembrance."},
+            {"when": "(yomTov && !roshHashana) || cholHamoed", "text": " Make us rejoice on the day of"},
+            {"when": "pesach", "text": " this Festival of Matzot,"},
+            {"when": "shavuot", "text": " this Festival of Shavuot,"},
+            {"when": "sukkot", "text": " this Festival of Sukkot,"},
+            {"when": "shminiAtzeret", "text": " the Eighth Day, this Festival of Assembly,"},
+            {"when": "(yomTov && !roshHashana) || cholHamoed", "text": " on this day of holy convocation."},
+            {"text": " For You, Hashem, are good and do good to all, and we thank You for the land"}
+          ]},
+          {"ref": "6", "translates": ["6"], "comment": "Amud translation", "text": "and for the sustenance"},
+          {"ref": "7", "translates": ["7"], "parts": [
+            {"comment": "Amud translation", "text": "and for the fruit of her vine"},
+            {"when": "diaspora", "text": " (Outside Israel: and for the fruit of the vine)"}
+          ]},
+          {"ref": "8", "translates": ["8"], "parts": [
+            {"comment": "Amud translation", "text": "and for her fruits"},
+            {"when": "diaspora", "text": " (Outside Israel: and for the fruits)"}
+          ]},
+          {"ref": "9", "translates": ["9"], "comment": "Amud translation", "text": "Blessed are You, Adonoy, for the land"},
+          {"ref": "10", "translates": ["10"], "comment": "Amud translation", "text": "and for the sustenance (some also say: and the nourishment)."},
+          {"ref": "11", "translates": ["11"], "parts": [
+            {"comment": "Amud translation", "text": "and for the fruit of her vine"},
+            {"when": "diaspora", "text": " (Outside Israel: and for the fruit of the vine)."}
+          ]},
+          {"ref": "12", "translates": ["12"], "parts": [
+            {"comment": "Amud translation", "text": "and for her fruits"},
+            {"when": "diaspora", "text": " (Outside Israel: and for the fruits)."}
           ]}
         ]
       }
@@ -430,6 +481,12 @@
             {"kind": "instruction", "en": "(Chayim)", "text": "<small>חַי</small>"},
             {"kind": "prayer", "text": "</em> הָעוֹלָמִים:"}
           ]}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "5", "translates": ["5"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, Creator of many living beings and their needs, for all that You have created to sustain the soul of every living being. Blessed is the Life of the worlds."}
         ]
       }
     },
@@ -458,6 +515,21 @@
           {"ref": "29", "kind": "prayer", "text": "בָּרוּךְ עוֹשֹה מַעֲשֹה בְרֵאשִׁית:"},
           {"ref": "31", "kind": "instruction", "en": "On thunder one recites:", "text": "על הרעמים מברך:"},
           {"ref": "33", "kind": "prayer", "text": "בָּרוּךְ שֶׁכֹּחוֹ וּגְבוּרָתוֹ מָלֵא עוֹלָם:"}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, Creator of various kinds of spices."},
+          {"ref": "7", "translates": ["7"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, Maker of the work of creation."},
+          {"ref": "9", "translates": ["9"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, who made the great sea."},
+          {"ref": "11", "translates": ["11"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, who remembers the covenant, is faithful to His covenant, and keeps His word."},
+          {"ref": "15", "translates": ["15"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, whose strength and might fill the world."},
+          {"ref": "17", "translates": ["17"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, who is good and does good."},
+          {"ref": "19", "translates": ["19"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, the true Judge."},
+          {"ref": "23", "translates": ["23"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, who remembers the covenant, is faithful in His covenant, and keeps His word."},
+          {"ref": "29", "translates": ["29"], "comment": "Amud translation", "text": "Blessed is He who makes the work of creation."},
+          {"ref": "33", "translates": ["33"], "comment": "Amud translation", "text": "Blessed is He whose strength and might fill the world."}
         ]
       }
     },
@@ -509,7 +581,7 @@
             {"kind": "prayer", "text": "\"וִיהִי נֹעַם אֲדֹנָי אֱ-לֹהֵינוּ עָלֵינוּ,"},
             {"kind": "prayer", "text": " וּמַעֲשֹה יָדֵינוּ כּוֹנְנָה עָלֵינוּ,"},
             {"kind": "prayer", "text": " וּמַעֲשֹה יָדֵינוּ כּוֹנְנֵהוּ\" <em>"},
-            {"kind": "instruction", "en": "Numbers 6:26", "text": "<small>שם צ, יז</small>"},
+            {"kind": "instruction", "en": "Psalms 90:17", "text": "<small>שם צ, יז</small>"},
             {"kind": "prayer", "text": "</em>:"}
           ]},
           {"ref": "35", "kind": "prayer", "text": "בָּרוּךְ אַתָּה יְ‑יָ אֱ‑לֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁלֹּא חִסֵּר בְּעוֹלָמוֹ כְּלוּם, וּבָרָא בוֹ בְּרִיּוֹת טוֹבוֹת וְאִילָנוֹת טוֹבוֹת, לֵהָנוֹת בָּהֶם בְּנֵי אָדָם:"}
@@ -519,7 +591,13 @@
         "version": "Sefaria Community Translation",
         "segs": [
           {"ref": "9", "translates": ["9"], "text": "Blessed are You, Lord our God, King of the Universe, who sanctified us with His commandments and commanded us to affix the mezuzah."},
-          {"ref": "11", "translates": ["11"], "text": "And after he affixes it, he should kiss it and say, \"This is the gate of the Lord; the righteous shall come through it\" (Psalms 118:20). "}
+          {"ref": "11", "translates": ["11"], "text": "And after he affixes it, he should kiss it and say, \"This is the gate of the Lord; the righteous shall come through it\" (Psalms 118:20). "},
+          {"ref": "5", "translates": ["5"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, who has sanctified us with His commandments and commanded us to make a parapet."},
+          {"ref": "15", "translates": ["15"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, who has sanctified us with His commandments and commanded us concerning the immersion of vessels."},
+          {"ref": "21", "translates": ["21"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, who has sanctified us with His commandments and commanded us to separate challah."},
+          {"ref": "27", "translates": ["27"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, who has sanctified us with His commandments and commanded us concerning the redemption of a firstborn donkey."},
+          {"ref": "33", "translates": ["33"], "comment": "Amud translation", "text": "May the pleasantness of Adonoy our God be upon us, and the work of our hands establish for us; the work of our hands, establish it."},
+          {"ref": "35", "translates": ["35"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, who has left nothing lacking in His world, and created in it good creatures and good trees for people to enjoy."}
         ]
       }
     },
@@ -532,6 +610,12 @@
         "version": "Daat Siddur Ashkenaz",
         "segs": [
           {"ref": "1", "kind": "prayer", "role": "individual", "text": "ברוך אתה יי אלהינו מלך העולם, אשר יצר אתכם בדין, וזן וכלכל אתכם בדין, והמית אתכם בדין, ויודע מספר כלכם בדין, והוא עתיד להחיותכם ולקים אתכם בדין. ברוך אתה ד', מחיה המתים."}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "comment": "Amud translation", "text": "Blessed are You, Adonoy our God, King of the universe, who formed you in judgment, and nourished and sustained you in judgment, and caused you to die in judgment, and knows the number of all of you in judgment, and will in the future revive you and establish you in judgment. Blessed are You, Adonoy, who revives the dead."}
         ]
       }
     },
@@ -600,7 +684,7 @@
       "en": {
         "version": "Sefaria Community Translation",
         "segs": [
-          {"ref": "1", "translates": ["1"], "kind": "instruction", "en": "(recite first three blessings of Amidah first, then say:)", "he": "(אומרים תחילה את שלוש הברכות הראשונות של עמידה, ואז:) תן לנו ה אלוהינו בינה לדעת את דרכיך,", "gloss": "Havinenu is a shortened Amidah for times of danger or haste", "text": "(recite first three blessings of Amidah first, then say:) Grant us, Lord our God,  understanding to know Thy ways,"},
+          {"ref": "1", "translates": ["1"], "kind": "instruction", "en": "(recite first three blessings of Amidah first, then say:)", "he": "(אומרים תחילה את שלוש הברכות הראשונות של עמידה, ואז:) תן לנו ה אלוהינו בינה לדעת את דרכיך,", "gloss": "Havinenu is a shortened Amidah for times of danger or haste", "text": "(recite first three blessings of Amidah first, then say:) Grant us, Lord our God, understanding to know Thy ways,"},
           {"ref": "2", "translates": ["2"], "text": "and open our hearts to Thy awe,"},
           {"ref": "3", "translates": ["3"], "text": "and forgive us, so that we may be redeemed,"},
           {"ref": "4", "translates": ["4"], "text": "and keep us far away from pain,"},
@@ -629,18 +713,34 @@
             {"kind": "speaker", "role": "chazzan", "en": "Chazzan:", "gloss": "Speaker label", "text": "<em><small>חזן:</small>"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "</em> יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. [<em>"},
             {"kind": "speaker", "role": "congregation", "en": "Congregation:", "gloss": "Speaker label", "text": "<small>קהל:</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "</em> אמן] <br> בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכון וּבְיומֵיכון וּבְחַיֵּי דְכָל בֵּית יִשרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב,"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "</em> אמן]"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " <br> בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכון וּבְיומֵיכון וּבְחַיֵּי דְכָל בֵּית יִשרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב,"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן: [<em>"},
             {"kind": "speaker", "role": "congregation", "en": "Congregation:", "gloss": "Speaker label", "text": "<small>קהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "</em> אמן] <br> <em>"},
             {"kind": "speaker", "role": "together", "en": "Congregation and chazzan:", "gloss": "Speaker label", "text": "<small>קהל וחזן:</small>"},
-            {"kind": "prayer", "role": "together", "voice": "aloud", "text": "</em> יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא: <br> יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרומַם וְיִתְנַשּא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא. בְּרִיךְ הוּא. [<em>"},
+            {"kind": "prayer", "role": "together", "voice": "aloud", "text": "</em> יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא:"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " <br> יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרומַם וְיִתְנַשּא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא. בְּרִיךְ הוּא. [<em>"},
             {"kind": "speaker", "role": "congregation", "en": "Congregation:", "gloss": "Speaker label", "text": "<small>קהל:</small>"},
-            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "</em> בריך הוא:] <br> לְעֵלָּא <em>"},
-            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": "<small>בעשי\"ת לְעֵלָּא לְעֵלָּא מִכָּל</small>"},
-            {"kind": "prayer", "text": "</em> מִן כָּל בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן: [<em>"},
-            {"kind": "instruction", "en": "Congregation:", "text": "<small>קהל:</small>"},
-            {"kind": "prayer", "text": "</em> אמן]"}
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "</em> בריך הוא:]"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "role": "chazzan", "voice": "aloud", "text": " <br> לְעֵלָּא <em>"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "role": "chazzan", "voice": "aloud", "text": "<small> לְעֵלָּא לְעֵלָּא מִכָּל</small>"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "role": "chazzan", "voice": "aloud", "text": "</em> מִן כָּל"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "text": " בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן: [<em>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>קהל:</small>"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "</em> אמן]"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "parts": [
+            {"comment": "Amud translation", "text": "Magnified and sanctified be His great Name in the world that He created according to His will. May He establish His kingdom in your lifetime and in your days, and in the lifetime of all the House of Israel, speedily and soon; and say: Amen. May His great Name be blessed forever and to all eternity. Blessed, praised, glorified, exalted, extolled, honored, uplifted and lauded be the Name of the Holy One, blessed be He,"},
+            {"when": "!aseretYemeiTeshuva", "alt": "leela", "text": " beyond"},
+            {"when": "aseretYemeiTeshuva", "alt": "leela", "text": "far beyond"},
+            {"text": " all the blessings and hymns, praises and consolations that are uttered in the world; and say: Amen."}
           ]}
         ]
       }
@@ -655,45 +755,70 @@
         "version": "Daat Siddur Ashkenaz",
         "segs": [
           {"ref": "1", "parts": [
-            {"kind": "instruction", "en": "Mourner:", "text": "<em><small>אבל:</small>"},
+            {"kind": "speaker", "role": "mourner", "en": "Mourner:", "text": "<em><small>אבל:</small>"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "</em> יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. [<em>"},
-            {"kind": "instruction", "en": "Congregation:", "text": "<small>קהל:</small>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>קהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "</em> אמן]"}
           ]},
           {"ref": "2", "parts": [
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכון וּבְיומֵיכון וּבְחַיֵּי דְכָל בֵּית יִשרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב,"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": " וְאִמְרוּ אָמֵן: [<em>"},
-            {"kind": "instruction", "en": "Congregation:", "text": "<small>קהל:</small>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>קהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "</em> אמן] "}
           ]},
           {"ref": "3", "parts": [
-            {"kind": "instruction", "en": "Congregation and Mourner:", "text": "<em><small>קהל ואבל:</small>"},
+            {"kind": "speaker", "role": "together", "en": "Congregation and Mourner:", "text": "<em><small>קהל ואבל:</small>"},
             {"kind": "prayer", "role": "together", "voice": "aloud", "text": "</em> יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא: "}
           ]},
           {"ref": "4", "parts": [
-            {"kind": "instruction", "en": "Mourner:", "text": "<em><small>אבל:</small>"},
+            {"kind": "speaker", "role": "mourner", "en": "Mourner:", "text": "<em><small>אבל:</small>"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "</em> יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרומַם וְיִתְנַשּא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא. בְּרִיךְ הוּא. [<em>"},
-            {"kind": "instruction", "en": "Congregation:", "text": "<small>קהל:</small>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>קהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "</em> בריך הוא:]"}
           ]},
           {"ref": "5", "parts": [
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "לְעֵלָּא מִן כָּל בִּרְכָתָא <em>"},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Add 'Le'elaa Le'elaa'", "text": "<small>בעשי”ת: לְעֵלָּא לְעֵלָּא מִכָּל</small>"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "role": "mourner", "voice": "aloud", "text": "לְעֵלָּא מִן כָּל"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Add 'Le'elaa Le'elaa'", "text": "<em><small>בעשי”ת:</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "role": "mourner", "voice": "aloud", "text": "<small> לְעֵלָּא לְעֵלָּא מִכָּל</small>"},
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "</em> בִּרְכָתָא <em>"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "en": "...and praises and consolations that are said in the world. And say Amen:", "gloss": "Includes the added phrase during Aseret Yemei Teshuva", "text": "</em> וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן: [<em>"},
-            {"kind": "instruction", "en": "Congregation:", "text": "<small>קהל:</small>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>קהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "</em> אמן]"}
           ]},
           {"ref": "6", "parts": [
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל כָּל יִשרָאֵל. וְאִמְרוּ אָמֵן: [<em>"},
-            {"kind": "instruction", "en": "Congregation:", "text": "<small>קהל:</small>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>קהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "</em> אמן] "}
           ]},
           {"ref": "7", "parts": [
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "עוֹשה שָׁלוֹם <em>"},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Say 'HaShalom'", "text": "<small>בעשי”ת: הַשָּׁלום</small>"},
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "עוֹשה"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh", "role": "mourner", "voice": "aloud", "text": " שָׁלוֹם <em>"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Say 'HaShalom'", "text": "<small>בעשי”ת:</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "role": "mourner", "voice": "aloud", "text": "<small> הַשָּׁלום</small>"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "en": "...in the heights, He shall make peace upon us and upon all Israel. And say Amen:", "gloss": "Includes 'HaShalom' during Aseret Yemei Teshuva", "text": "</em> בִּמְרומָיו הוּא יַעֲשה שָׁלום עָלֵינוּ וְעַל כָּל יִשרָאֵל וְאִמְרוּ אָמֵן: [<em>"},
-            {"kind": "instruction", "en": "Congregation:", "text": "<small>קהל:</small>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>קהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": "</em> אמן]"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "comment": "Amud translation", "text": "Magnified and sanctified be His great Name. Amen."},
+          {"ref": "2", "translates": ["2"], "comment": "Amud translation", "text": "In the world that He created according to His will. May He establish His kingdom in your lifetime and in your days, and in the lifetime of all the House of Israel, speedily and soon; and say: Amen."},
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "May His great Name be blessed forever and to all eternity."},
+          {"ref": "4", "translates": ["4"], "comment": "Amud translation", "text": "Blessed, praised, glorified, exalted, extolled, honored, uplifted and lauded be the Name of the Holy One, blessed be He. Blessed is He."},
+          {"ref": "5", "translates": ["5"], "parts": [
+            {"when": "!aseretYemeiTeshuva", "alt": "leela", "comment": "Amud translation", "text": "Beyond"},
+            {"when": "aseretYemeiTeshuva", "alt": "leela", "text": "Far beyond"},
+            {"text": " all the blessings and hymns, praises and consolations that are uttered in the world; and say: Amen."}
+          ]},
+          {"ref": "6", "translates": ["6"], "comment": "Amud translation", "text": "May there be abundant peace from heaven, and life, for us and for all Israel; and say: Amen."},
+          {"ref": "7", "translates": ["7"], "parts": [
+            {"comment": "Amud translation", "text": "He who"},
+            {"when": "!aseretYemeiTeshuva", "alt": "oseh", "text": " makes peace"},
+            {"when": "aseretYemeiTeshuva", "alt": "oseh", "text": "makes the peace"},
+            {"text": " in His high heavens, may He make peace for us and for all Israel; and say: Amen."}
           ]}
         ]
       }
@@ -726,17 +851,17 @@
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "בִּרְכָתָא וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחָמָתָא, דַאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן: "},
             {"kind": "instruction", "en": "The congregation responds:", "text": "<small><em>ועונים: </em>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אמן</small>"},
-            {"kind": "instruction", "en": "Congregation:", "text": "<br><small><em>קהל:<em>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<br><small><em>קהל:<em>"},
             {"kind": "prayer", "role": "congregation", "voice": "undertone", "minyan": true, "text": " קַבֵּל בְּרַחֲמִים וּבְרָצון אֶת תְּפִלָּתֵנוּ: </em></em></small><em><em>"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<br> תִּתְקַבַּל צְלוֹתְהוֹן וּבָעוּתְהוֹן דְּכָל בֵּית יִשְׂרָאֵל קֳדָם אֲבוּהוֹן דִּי בִשְׁמַיָּא , וְאִמְרוּ אָמֵן. "},
             {"kind": "instruction", "en": "The congregation responds:", "text": "<small><em>ועונים: </em>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": "אמן</small>"},
-            {"kind": "instruction", "en": "Congregation:", "text": "<br><small><em>קהל: </em>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<br><small><em>קהל: </em>"},
             {"kind": "prayer", "role": "congregation", "voice": "undertone", "minyan": true, "text": "יְהִי שֵׁם יְהוָה מְברָךְ מֵעַתָּה וְעַד עולָם: </small>"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<br>יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָא וְחַיִּים עָלֵינו וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן: "},
             {"kind": "instruction", "en": "The congregation responds:", "text": "<small><em>ועונים: </em>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": "אמן</small>"},
-            {"kind": "instruction", "en": "Congregation:", "text": "<br><small><em>קהל: </em>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<br><small><em>קהל: </em>"},
             {"kind": "prayer", "role": "congregation", "voice": "undertone", "minyan": true, "text": "עֶזְרִי מֵעִם יְהוָה עשֵׂה שָׁמַיִם וָאָרֶץ: </small>"},
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "gestures": ["three_steps_back"], "text": "<br>עוֹשֶׂה "},
             {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "שָׁלוֹם "},
@@ -745,6 +870,20 @@
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל, וְאִמְרוּ אָמֵן: "},
             {"kind": "instruction", "en": "The congregation responds:", "text": "<small><em>ועונים: </em>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": "אמן</small></em></em>"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "parts": [
+            {"comment": "Amud translation", "text": "Magnified and sanctified be His great Name. Amen. In the world that He created according to His will. May He establish His kingdom in your lifetime and in your days, and in the lifetime of all the House of Israel, speedily and soon; and say: Amen. Amen. May His great Name be blessed forever and to all eternity. Blessed, praised, glorified, exalted, extolled, honored, uplifted and lauded be the Name of the Holy One, blessed be He. Blessed is He."},
+            {"when": "!aseretYemeiTeshuva", "alt": "leeila", "text": " Beyond"},
+            {"when": "aseretYemeiTeshuva", "alt": "leeila", "text": "Far beyond"},
+            {"text": " all the blessings and hymns, praises and consolations that are uttered in the world; and say: Amen. Amen. Accept our prayer with mercy and favor. May the prayers and supplications of all the House of Israel be accepted before their Father in heaven; and say: Amen. Amen. Blessed be the Name of Hashem from now and forever. May there be abundant peace from heaven, and life, for us and for all Israel; and say: Amen. Amen. My help is from Hashem, Maker of heaven and earth. He who"},
+            {"when": "!aseretYemeiTeshuva", "alt": "oseh", "text": " makes peace"},
+            {"when": "aseretYemeiTeshuva", "alt": "oseh", "text": "makes the peace"},
+            {"text": " in His high heavens, may He make peace for us and for all Israel; and say: Amen. Amen."}
           ]}
         ]
       }
@@ -758,14 +897,45 @@
       "he": {
         "version": "Daat Siddur Ashkenaz",
         "segs": [
-          {"ref": "1", "kind": "prayer", "role": "mourner", "voice": "aloud", "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. [אמן]"},
+          {"ref": "1", "parts": [
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא."},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " [אמן]"}
+          ]},
           {"ref": "3", "kind": "prayer", "role": "mourner", "voice": "aloud", "text": "בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן."},
           {"ref": "4", "kind": "prayer", "role": "congregation", "voice": "aloud", "text": "[אמן, יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא]"},
-          {"ref": "6", "kind": "prayer", "role": "mourner", "voice": "aloud", "text": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא: יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא. בְּרִיךְ הוּא. בריך הוא. [אמן]"},
-          {"ref": "8", "kind": "prayer", "role": "mourner", "voice": "aloud", "text": "לְעֵלָּא מִן כָּל בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן. [אמן]"},
-          {"ref": "10", "kind": "prayer", "role": "mourner", "voice": "aloud", "text": "עַל יִשְׂרָאֵל וְעַל רַבָּנָן. וְעַל תַּלְמִידֵיהוֹן וְעַל כָּל תַּלְמִידֵי תַלְמִידֵיהוֹן. וְעַל כָּל מַאן דְּעָסְקִין בְּאוֹרַיְתָא. דִּי בְאַתְרָא קַדִּישָׁא הָדֵין וְדִי בְכָל אֲתַר וַאֲתַר. יְהֵא לְהוֹן וּלְכוֹן שְׁלָמָא רַבָּא חִנָּא וְחִסְדָּא וְרַחֲמִין וְחַיִּין אֲרִיכִין וּמְזוֹנֵי רְוִיחֵי וּפֻרְקָנָא מִן קֳדָם אֲבוּהוֹן דְּבִשְׁמַיָּא וְאַרְעָא וְאִמְרוּ אָמֵן. [אמן]"},
-          {"ref": "12", "kind": "prayer", "role": "mourner", "voice": "aloud", "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל. וְאִמְרוּ אָמֵן. [אמן]"},
-          {"ref": "14", "kind": "prayer", "role": "mourner", "voice": "aloud", "text": "עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן. [אמן]"}
+          {"ref": "6", "parts": [
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא: יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא. בְּרִיךְ הוּא. בריך הוא."},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " [אמן]"}
+          ]},
+          {"ref": "8", "parts": [
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "לְעֵלָּא מִן כָּל בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן."},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " [אמן]"}
+          ]},
+          {"ref": "10", "parts": [
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "עַל יִשְׂרָאֵל וְעַל רַבָּנָן. וְעַל תַּלְמִידֵיהוֹן וְעַל כָּל תַּלְמִידֵי תַלְמִידֵיהוֹן. וְעַל כָּל מַאן דְּעָסְקִין בְּאוֹרַיְתָא. דִּי בְאַתְרָא קַדִּישָׁא הָדֵין וְדִי בְכָל אֲתַר וַאֲתַר. יְהֵא לְהוֹן וּלְכוֹן שְׁלָמָא רַבָּא חִנָּא וְחִסְדָּא וְרַחֲמִין וְחַיִּין אֲרִיכִין וּמְזוֹנֵי רְוִיחֵי וּפֻרְקָנָא מִן קֳדָם אֲבוּהוֹן דְּבִשְׁמַיָּא וְאַרְעָא וְאִמְרוּ אָמֵן."},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " [אמן]"}
+          ]},
+          {"ref": "12", "parts": [
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל. וְאִמְרוּ אָמֵן."},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " [אמן]"}
+          ]},
+          {"ref": "14", "parts": [
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "text": "עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן."},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "text": " [אמן]"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "comment": "Amud translation", "text": "Magnified and sanctified be His great Name. Amen."},
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "In the world that He created according to His will. May He establish His kingdom in your lifetime and in your days, and in the lifetime of all the House of Israel, speedily and soon; and say: Amen."},
+          {"ref": "4", "translates": ["4"], "comment": "Amud translation", "text": "Amen. May His great Name be blessed forever and to all eternity."},
+          {"ref": "6", "translates": ["6"], "comment": "Amud translation", "text": "May His great Name be blessed forever and to all eternity. Blessed, praised, glorified, exalted, extolled, honored, uplifted and lauded be the Name of the Holy One, blessed be He, blessed be He. Amen."},
+          {"ref": "8", "translates": ["8"], "comment": "Amud translation", "text": "Beyond all the blessings and hymns, praises and consolations that are uttered in the world; and say: Amen. Amen."},
+          {"ref": "10", "translates": ["10"], "comment": "Amud translation", "text": "Upon Israel, upon the rabbis, upon their disciples and the disciples of their disciples, and upon all who occupy themselves with the Torah, in this holy place and in every place: may there be for them and for you abundant peace, grace, kindness and mercy, long life, ample sustenance and deliverance, from their Father in heaven and on earth; and say: Amen. Amen."},
+          {"ref": "12", "translates": ["12"], "comment": "Amud translation", "text": "May there be abundant peace from heaven, and life, for us and for all Israel; and say: Amen. Amen."},
+          {"ref": "14", "translates": ["14"], "comment": "Amud translation", "text": "He who makes peace in His high heavens, may He make peace for us and for all Israel; and say: Amen. Amen."}
         ]
       }
     },
@@ -780,22 +950,22 @@
         "segs": [
           {"ref": "1", "parts": [
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא. "},
-            {"kind": "instruction", "en": "Congregation:", "text": "<small>הקהל:</small>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>הקהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (אָמֵן.)"}
           ]},
           {"ref": "2", "parts": [
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "בְּעָלְמָא דִּי הוּא עָתִיד לְאִתְחַדְתָּא, וּלְאַחֲיָאה מֵתַיָּא, וּלְאַסָּקָא יַתְּהוֹן לְחַיֵּי עָלְמָא, וּלְמִבְנָא קַרְתָּא דִּי יְרוּשְלֵם, וּלְשַׁכְלְלָא הֵיכָלֵהּ בְּגַוָּהּ, וּלְמֶעֱקַר פּוּלְחָנָא נוּכְרָאָה מִן אַרְעָה, וּלְאָתָבָא פּוּלְחָנָא דִּי שְׁמַיָּא לְאַתְרֵהּ, וְיַמְלִיך קוּדְשָׁא בְּרִיךְ הוּא בּמַלְכוּתֵהּ וִיקָרֵהּ, וְיַצְמַח פֻּרְקָנֵהּ, וִיקָרֵב מְשִׁיחֵהּ. "},
-            {"kind": "instruction", "en": "Congregation:", "text": "<small>הקהל:</small>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>הקהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (אָמֵן.)"}
           ]},
           {"ref": "3", "kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן. "},
           {"ref": "4", "parts": [
-            {"kind": "instruction", "en": "Congregation:", "text": "<small>הקהל:</small>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>הקהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (אָמֵן. יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא.)"}
           ]},
           {"ref": "5", "parts": [
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא. יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא, בְּרִיךְ הוּא. "},
-            {"kind": "instruction", "en": "Congregation:", "text": "הקהל:"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "הקהל:"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן "},
             {"kind": "instruction", "en": "(or:", "text": "<small>או: "},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": "(בְּרִיךְ הוּא)"},
@@ -806,25 +976,48 @@
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>בעשרת ימי תשובה:"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leeila", "role": "mourner", "voice": "aloud", "minyan": true, "text": " (לְעֵלָּא וּלְעֵלָּא מִכָּל בִּרְכָתָא)"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "</small> וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא, דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן. "},
-            {"kind": "instruction", "en": "Congregation:", "text": "<small>הקהל:</small>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>הקהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (אָמֵן.)"}
           ]},
           {"ref": "7", "parts": [
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא, וְחַיִּים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל, וְאִמְרוּ אָמֵן. "},
-            {"kind": "instruction", "en": "Congregation:", "text": "<small>הקהל:</small>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>הקהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (אָמֵן.) "}
           ]},
           {"ref": "8", "parts": [
             {"kind": "instruction", "gestures": ["three_steps_back"], "en": "Take three steps back.", "text": "<small>(פוסעים שלוש פסיעות לאחור)</small>"},
-            {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": " עוֹשֶׂה שָׁלוֹם "},
+            {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "gestures": ["three_steps_back"], "text": " עוֹשֶׂה"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh", "role": "mourner", "voice": "aloud", "minyan": true, "text": " שָׁלוֹם "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "text": "<small>בעשרת ימי תשובה: "},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "role": "mourner", "voice": "aloud", "minyan": true, "text": "(הַשָּׁלוֹם)"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "role": "mourner", "voice": "aloud", "minyan": true, "text": "(הַשָּׁלוֹם)"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "</small> בִּמְרוֹמָיו, הוּא "},
             {"kind": "instruction", "when": "false", "en": "In the Edot HaMizrach rite add:", "text": "<small>לפי נוסח עדות המזרח מוסיפים: "},
             {"kind": "prayer", "when": "false", "role": "mourner", "voice": "aloud", "minyan": true, "text": "(בְּרַחֲמָיו)"},
             {"kind": "prayer", "role": "mourner", "voice": "aloud", "minyan": true, "text": "</small> יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל, וְאִמְרוּ אָמֵן. "},
-            {"kind": "instruction", "en": "Congregation:", "text": "<small>הקהל:</small>"},
+            {"kind": "speaker", "role": "congregation", "en": "Congregation:", "text": "<small>הקהל:</small>"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " (אָמֵן.)"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "comment": "Amud translation", "text": "Magnified and sanctified be His great Name. Amen."},
+          {"ref": "2", "translates": ["2"], "comment": "Amud translation", "text": "In the world that is to be renewed, where He will revive the dead and raise them up to eternal life, rebuild the city of Jerusalem and complete His Temple within it, uproot foreign worship from the earth and restore the worship of Heaven to its place; and may the Holy One, blessed be He, reign in His kingdom and glory, may His deliverance sprout and His Messiah draw near. Amen."},
+          {"ref": "3", "translates": ["3"], "comment": "Amud translation", "text": "In your lifetime and in your days and in the lifetime of all the House of Israel, speedily and soon; and say: Amen."},
+          {"ref": "4", "translates": ["4"], "comment": "Amud translation", "text": "Amen. May His great Name be blessed forever and to all eternity."},
+          {"ref": "5", "translates": ["5"], "comment": "Amud translation", "text": "May His great Name be blessed forever and to all eternity. Blessed, praised, glorified, exalted, extolled, honored, uplifted and lauded be the Name of the Holy One, blessed be He. Amen. Or: Blessed be He."},
+          {"ref": "6", "translates": ["6"], "parts": [
+            {"when": "!aseretYemeiTeshuva", "alt": "leeila", "comment": "Amud translation", "text": "Beyond all blessings"},
+            {"when": "aseretYemeiTeshuva", "alt": "leeila", "text": "Far beyond all blessings"},
+            {"text": " and hymns, praises and consolations that are uttered in the world; and say: Amen. Amen."}
+          ]},
+          {"ref": "7", "translates": ["7"], "comment": "Amud translation", "text": "May there be abundant peace from heaven, and life, for us and for all Israel; and say: Amen. Amen."},
+          {"ref": "8", "translates": ["8"], "parts": [
+            {"comment": "Amud translation", "text": "He who"},
+            {"when": "!aseretYemeiTeshuva", "alt": "oseh", "text": " makes peace"},
+            {"when": "aseretYemeiTeshuva", "alt": "oseh", "text": "makes the peace"},
+            {"text": " in His high heavens, may He make peace for us and for all Israel; and say: Amen. Amen."}
           ]}
         ]
       }
@@ -847,25 +1040,52 @@
             {"kind": "prayer", "text": " וּלְמֶעְקַר פּוּלְחָנָא נוּכְרָאָה מֵאַרְעָא,"},
             {"kind": "prayer", "text": " וְלַאֲתָבָא פּוּלְחָנָא דִשְׁמַיָּא לְאַתְרֵהּ,"},
             {"kind": "prayer", "text": " וְיַמְלִיךְ קֻדְשָׁא בְרִיךְ הוּא בְּמַלְכוּתֵהּ וִיקָרֵיהּ <em>"},
-            {"kind": "instruction", "en": "Some say:", "gloss": "Customary in some communities", "text": "<small>נ\"ס: וְיַצְמַח פּוּרְקָנֵהּ וִיקָרֵב מְשִׁיחֵהּ</small>"},
+            {"kind": "instruction", "en": "Some say:", "gloss": "Customary in some communities", "text": "<small>נ\"ס:</small>"},
+            {"kind": "prayer", "text": "<small> וְיַצְמַח פּוּרְקָנֵהּ וִיקָרֵב מְשִׁיחֵהּ</small>"},
             {"kind": "prayer", "when": "false", "text": "</em>. בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל,"},
             {"kind": "prayer", "text": " בַּעֲגָלָא וּבִזְמַן קָרִיב,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן: "}
           ]},
-          {"ref": "2", "kind": "prayer", "text": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא. "},
+          {"ref": "2", "kind": "prayer", "role": "congregation", "voice": "aloud", "text": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא. "},
           {"ref": "3", "parts": [
-            {"kind": "prayer", "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדַּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא בְרִיךְ הוּא. לְעֵלָּא <em>"},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Added in Aseret Yemei Teshuva", "text": "<small>בעשי\"ת לְעֵלָּא לְעֵלָּא מִכָּל</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": "</em> מִן כָּל בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן: "}
+            {"kind": "prayer", "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדַּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא בְרִיךְ הוּא."},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "text": " לְעֵלָּא <em>"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Added in Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "text": "<small> לְעֵלָּא לְעֵלָּא מִכָּל</small>"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "text": "</em> מִן כָּל"},
+            {"kind": "prayer", "text": " בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא. וְאִמְרוּ אָמֵן: "}
           ]},
           {"ref": "4", "kind": "prayer", "text": "עַל יִשְׂרָאֵל וְעַל רַבָּנָן וְעַל תַּלְמִידֵיהוֹן וְעַל כָּל תַּלְמִידֵי תַלְמִידֵיהוֹן, וְעַל כָּל מַאן דְּעָסְקִין בְּאוֹרַיְתָא, דִּי בְּאַתְרָא קַדִּישָׁא הָדֵין וְדִי בְּכָל אֲתַר וַאֲתַר, יְהֵא לְהוֹן וּלְכוֹן שְׁלָמָא רַבָּא, חִנָּא וְחִסְדָּא וְרַחֲמִין, וְחַיִּין אֲרִיכִין וּמְזוֹנֵי רְוִיחֵי, וּפוּרְקָנָא, מִן קֳדָם אֲבוּהוֹן דְּבִשְׁמַיָּא וְאַרְעָא, וְאִמְרוּ אָמֵן: "},
           {"ref": "5", "kind": "prayer", "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים טוֹבִים עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל, וְאִמְרוּ אָמֵן: "},
           {"ref": "6", "parts": [
-            {"kind": "prayer", "text": "עוֹשֶׂה שָׁלוֹם <em>"},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Added in Aseret Yemei Teshuva", "text": "<small>בעשי\"ת הַשָּׁלוֹם</small>"},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "text": "</em> בִּמְרוֹמָיו,"},
+            {"kind": "prayer", "text": "עוֹשֶׂה"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh", "text": " שָׁלוֹם <em>"},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Added in Aseret Yemei Teshuva", "text": "<small>בעשי\"ת</small>"},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "text": "<small> הַשָּׁלוֹם</small>"},
+            {"kind": "prayer", "text": "</em> בִּמְרוֹמָיו,"},
             {"kind": "prayer", "text": " הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן:"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "1", "translates": ["1"], "comment": "Amud translation", "text": "Magnified and sanctified be His great Name, in the world that is to be renewed, where He will revive the dead and raise them up to eternal life, rebuild the city of Jerusalem and complete His Temple within it, uproot foreign worship from the earth and restore the worship of Heaven to its place; and may the Holy One, blessed be He, reign in His kingdom and glory. Some say: May His deliverance sprout and His Messiah draw near. In your lifetime and in your days and in the lifetime of all the House of Israel, speedily and soon; and say: Amen."},
+          {"ref": "2", "translates": ["2"], "comment": "Amud translation", "text": "May His great Name be blessed forever and to all eternity."},
+          {"ref": "3", "translates": ["3"], "parts": [
+            {"comment": "Amud translation", "text": "Blessed, praised, glorified, exalted, extolled, honored, uplifted and lauded be the Name of the Holy One, blessed be He,"},
+            {"when": "!aseretYemeiTeshuva", "alt": "leela", "text": " beyond"},
+            {"when": "aseretYemeiTeshuva", "alt": "leela", "text": "far beyond"},
+            {"text": " all blessings and hymns, praises and consolations that are uttered in the world; and say: Amen."}
+          ]},
+          {"ref": "4", "translates": ["4"], "comment": "Amud translation", "text": "Upon Israel, upon the rabbis, upon their disciples and the disciples of their disciples, and upon all who occupy themselves with the Torah, in this holy place and in every place: may there be for them and for you abundant peace, grace, kindness and mercy, long life, ample sustenance and deliverance, from their Father in heaven and on earth; and say: Amen."},
+          {"ref": "5", "translates": ["5"], "comment": "Amud translation", "text": "May there be abundant peace from heaven, and good life, for us and for all Israel; and say: Amen."},
+          {"ref": "6", "translates": ["6"], "parts": [
+            {"comment": "Amud translation", "text": "He who"},
+            {"when": "!aseretYemeiTeshuva", "alt": "oseh", "text": " makes peace"},
+            {"when": "aseretYemeiTeshuva", "alt": "oseh", "text": "makes the peace"},
+            {"text": " in His high heavens, may He make peace for us and for all Israel; and say: Amen."}
           ]}
         ]
       }

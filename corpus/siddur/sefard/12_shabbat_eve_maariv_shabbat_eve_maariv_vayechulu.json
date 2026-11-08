@@ -380,9 +380,9 @@
             {"kind": "prayer", "text": "<b>אַתָּה קָדוֹשׁ</b>,"},
             {"kind": "prayer", "text": " וְשִׁמְךָ קָדוֹשׁ,"},
             {"kind": "prayer", "text": " וּקְדוֹשִׁים בְּכָל יוֹם יְהַלְלוּךָ סֶּלָה. כִּי אֵל מֶלֶךְ גָדוֹל וְקָדוֹשׁ אָתָּה. בָּרוּךְ אַתָּה יְהֹוָה,"},
-            {"kind": "prayer", "text": " הָאֵל "},
+            {"kind": "prayer", "when": "!shabbatShuva", "alt": "kadosh_close", "text": " הָאֵל "},
             {"kind": "instruction", "when": "shabbatShuva", "en": "On Shabbat Shuva:", "text": "<small> <small>בשבת שובה:</small>"},
-            {"kind": "prayer", "when": "shabbatShuva", "role": "individual", "voice": "silent", "amidah": "silent", "en": "the King,", "text": " <b><small>(הַמֶּלֶךְ)"},
+            {"kind": "prayer", "when": "shabbatShuva", "alt": "kadosh_close", "role": "individual", "voice": "silent", "amidah": "silent", "en": "the King,", "text": " <b><small>(הַמֶּלֶךְ)"},
             {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "en": "the King,", "text": "</small>"},
             {"kind": "prayer", "role": "individual", "voice": "silent", "amidah": "silent", "text": " </b></small> הַקָּדוֹשׁ:  "}
           ]},
