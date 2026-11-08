@@ -607,9 +607,11 @@ Ashkenaz Weekday, files 01–05, in November 2026.
     is split at the "]", with the broader `when` on the rest.
 63. **A pointer bracket that only repeats the next block's first words**
     ("[outside Israel add …]") is `when=false` on the whole segment.
-64. **Chabad's extra no-Tachanun days** (19–20 Kislev, 10 Shevat, 12–13
-    Tammuz, all of Nisan and so on) aren't in `tachanunShacharit` yet.
-    Don't hand-roll date conditions; list them in your report.
+64. **Chabad's extra no-Tachanun days** are the variable
+    `chabadNoTachanun` (minhag_research.md item 16). In Chabad, every
+    `tachanunShacharit` / `tachanunMincha` is written
+    `(tachanunShacharit && !chabadNoTachanun)`. Don't hand-roll date
+    conditions for other customs; list them in your report.
 65. **Locks for parallel helpers.** Ten helpers on one nusach lost no
     edits when every `edit.py --apply` and `build_assets.py NUSACH` ran
     under `flock LOCKFILE`. `fmt.py` takes file paths: use a `0*.json`

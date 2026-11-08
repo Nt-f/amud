@@ -232,6 +232,8 @@ class DayContext {
     'halfHallel': 'Half Hallel',
     'tachanun': 'Tachanun said at this service',
     'tachanunShacharit': 'Tachanun said at Shacharit',
+    'chabadNoTachanun': 'A further day without Tachanun in Chabad (end of Tishrei, 10/19/20 Kislev, Pesach Sheni, Sivan 1-12, 12-13 Tammuz, and Mincha before most)',
+    'yomTovThisWeek': 'Motzaei Shabbat before a week with Yom Tov or Yom Kippur on a weekday (no Vihi Noam)',
     'tachanunMincha': 'Tachanun said at Mincha',
     'monThu': 'Monday or Thursday',
     'torahReading': 'Torah reading at this service',
@@ -436,6 +438,29 @@ class _Builder {
     set('tachanunShacharit', t.shacharit);
     set('tachanunMincha', t.mincha);
     set('tachanun', service == Service.mincha ? t.mincha : (service == Service.shacharit ? t.shacharit : false));
+    // Chabad's further days without Tachanun (the siddur's rubric before
+    // Lamnatzeach and Sefer HaMinhagim): to the end of Tishrei, 10, 19 and 20
+    // Kislev, Pesach Sheni, Sivan to the 12th, 12 and 13 Tammuz; and Mincha
+    // the afternoon before, except before Erev Rosh HaShana, Erev Yom
+    // Kippur and Pesach Sheni.
+    bool chabadDay(HDate d) {
+      final mo = d.getMonth(), da = d.getDate();
+      return (mo == Months.tishrei && da >= 9) ||
+          (mo == Months.kislev && (da == 10 || da == 19 || da == 20)) ||
+          (mo == Months.iyyar && da == 14) ||
+          (mo == Months.sivan && da <= 12) ||
+          (mo == Months.tamuz && (da == 12 || da == 13));
+    }
+    final tomorrow = hd.next();
+    final eveExcluded = (tomorrow.getMonth() == Months.elul && tomorrow.getDate() == 29) ||
+        (tomorrow.getMonth() == Months.tishrei && tomorrow.getDate() == 9) ||
+        (tomorrow.getMonth() == Months.iyyar && tomorrow.getDate() == 14);
+    set('chabadNoTachanun', chabadDay(hd) || (service == Service.mincha && chabadDay(tomorrow) && !eveExcluded));
+    // A Yom Tov or Yom Kippur on a weekday of the coming week (Vihi Noam and
+    // Ve'atah Kadosh are not said on Motzaei Shabbat before it, SA HaRav 295:3).
+    // From Sunday, the Maariv's own day, through Friday.
+    set('yomTovThisWeek', dow == 0 &&
+        [for (var i = 0; i < 6; i++) hd.addDays(i)].any((d) => getHolidaysOnDate(d, il).any((e) => e.hasFlag(Flags.chag))));
     set('monThu', dow == 1 || dow == 4);
     // At Mincha the Torah is read only on Shabbat, fast days and Yom Kippur.
     set('torahReading', service == Service.mincha

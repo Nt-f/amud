@@ -142,6 +142,17 @@ void main() {
       final cholHamoedSukkot = HDate(18, Months.tishrei, 5786);
       final fast = HDate(10, Months.tevet, 5786);
 
+      if (slug == 'chabad') {
+        test("Chabad's own days without Tachanun: 10 Kislev, and Mincha the day before (Sefer HaMinhagim)", () {
+          bool tachanun(String section, HDate d) => said(section, d).any((i) =>
+              i.kind == SegmentKind.prayer && (i.he?.segment.html.replaceAll(RegExp(r'[^א-ת ]'), '').contains('אשמנו') ?? false));
+          expect(tachanun('Shacharit/Tachnun', HDate(9, Months.kislev, 5787)), isTrue);
+          expect(tachanun('Mincha/Tachanun', HDate(9, Months.kislev, 5787)), isFalse);
+          expect(tachanun('Shacharit/Tachnun', HDate(10, Months.kislev, 5787)), isFalse);
+          expect(tachanun('Shacharit/Tachnun', HDate(26, Months.tishrei, 5787)), isFalse);
+          expect(tachanun('Shacharit/Tachnun', HDate(5, Months.cheshvan, 5787)), isTrue);
+        });
+      }
       if (slug == 'sefard') {
         test('BaHaB: each day inserts its own Selichot (first Monday, Thursday, second Monday)', () {
           List<String> selichot(HDate d) => [
