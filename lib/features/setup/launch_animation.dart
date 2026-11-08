@@ -9,8 +9,10 @@ const _fanDeep = Color(0xFF6F8CC0);
 
 /// Plays the Amud launch animation over [child] once per app start: the
 /// podium lines fly in, the pages fan open and the wordmark rises, then it
-/// fades into the app. A tap anywhere skips straight to the fade.
-/// With reduced motion the finished logo shows, still, for 1.2 seconds.
+/// fades into the app. The app is ready by the time it starts, so the whole
+/// thing is over in about two thirds of a second. A tap anywhere skips
+/// straight to the fade. With reduced motion the finished logo shows, still,
+/// for 0.3 seconds.
 /// On the web the page's own copy of the animation already played while the
 /// app loaded, so it's skipped there.
 class LaunchAnimation extends StatefulWidget {
@@ -28,20 +30,23 @@ class LaunchAnimation extends StatefulWidget {
 }
 
 class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderStateMixin {
-  // The podium is built (lines land by 1.27 s) and the siddur opens on it
-  // while it settles (0.95–1.8 s), the wordmark rises (1.75–2.35 s), and it
-  // all holds a moment before fading into the app.
+  // The design's timeline, in its own seconds: the podium is built (lines
+  // land by 1.27 s) and the siddur opens on it while it settles
+  // (0.95–1.8 s), the wordmark rises (1.75–2.35 s), and it all holds a
+  // moment before fading into the app.
   static const _length = Duration(milliseconds: 3100);
+  // How long that timeline actually takes to play: the app is already
+  // ready behind it, so it runs about six times as fast.
+  static const _playLength = Duration(milliseconds: 500);
   // Both keep their length when the system asks for reduced motion
   // (AnimationController would otherwise run them 20 times faster, so the
   // logo only blinked); reduced motion is handled here instead.
-  late final AnimationController _c = AnimationController(vsync: this, duration: _length, animationBehavior: AnimationBehavior.preserve);
+  late final AnimationController _c = AnimationController(vsync: this, duration: _playLength, animationBehavior: AnimationBehavior.preserve);
   late final AnimationController _fade =
-      AnimationController(vsync: this, duration: const Duration(milliseconds: 400), animationBehavior: AnimationBehavior.preserve);
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 150), animationBehavior: AnimationBehavior.preserve);
 
-  /// How long the finished logo shows, still, with reduced motion (the same
-  /// as the web page's splash).
-  static const _stillLength = Duration(milliseconds: 1200);
+  /// How long the finished logo shows, still, with reduced motion.
+  static const _stillLength = Duration(milliseconds: 300);
   bool _show = !kIsWeb && !LaunchAnimation._played;
 
   @override
@@ -50,10 +55,10 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
     LaunchAnimation._played = true;
     // Start once the first frame is on screen, plus a beat: the app's first
     // frames are slow, and a clock started earlier would spend the podium
-    // stage behind the native launch screen.
+    // stage behind the native launch screen or in dropped frames.
     if (_show) {
       WidgetsBinding.instance.addPostFrameCallback((_) async {
-        await Future<void>.delayed(const Duration(milliseconds: 250));
+        await Future<void>.delayed(const Duration(milliseconds: 100));
         if (!mounted || _finishing) return;
         if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
           _c.value = 1;

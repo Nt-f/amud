@@ -16,21 +16,30 @@ void main() {
       }
     }
 
-    await run(1300);
+    await run(250);
     expect(find.text('amud'), findsOneWidget);
-    await run(800);
+    await run(400);
     expect(find.text('amud'), findsNothing);
   });
 
   testWidgets('a tap skips the animation', (tester) async {
     LaunchAnimation.resetForTest();
     await tester.pumpWidget(MaterialApp(builder: (context, child) => LaunchAnimation(child: child!), home: const Text('app')));
-    await tester.pump(const Duration(milliseconds: 300));
-    await tester.pump(const Duration(milliseconds: 500));
+    await tester.pump(const Duration(milliseconds: 150));
+    await tester.pump(const Duration(milliseconds: 100));
     expect(find.text('amud'), findsOneWidget);
     await tester.tapAt(const Offset(10, 10));
-    // Just the fade, not the rest of the 3.1 s animation.
-    for (var t = 0; t < 500; t += 50) {
+    // Just the fade, not the rest of the animation.
+    for (var t = 0; t < 300; t += 50) {
+      await tester.pump(const Duration(milliseconds: 50));
+    }
+    expect(find.text('amud'), findsNothing);
+  });
+
+  testWidgets('the whole animation is over in well under a second', (tester) async {
+    LaunchAnimation.resetForTest();
+    await tester.pumpWidget(MaterialApp(builder: (context, child) => LaunchAnimation(child: child!), home: const Text('app')));
+    for (var t = 0; t < 900; t += 50) {
       await tester.pump(const Duration(milliseconds: 50));
     }
     expect(find.text('amud'), findsNothing);
