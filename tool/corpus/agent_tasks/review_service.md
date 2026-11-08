@@ -650,3 +650,24 @@ Ashkenaz Weekday, files 01–05, in November 2026.
     map a book's holiday Torah tables into the service graph; they would
     show twice. Free-standing ketiv words become a `note`: "Written X in
     the scroll; read Y".
+
+**Edot HaMizrach: weekday and special days, November 2026**
+
+74. **One inserted leaf may hold several unrelated units.** Edot's "Prayers
+    for Three Festivals/Mussaf" held the Musaf Amidah, then Rosh HaShana
+    night, the Ushpizin, festival Kiddush, the Zohar and Sukkot songs, so
+    all of it was inserted on Chol HaMoed. The orchestrator split it into
+    its own leaves. Report such a leaf; don't hide its contents with
+    stopgap occasion `when`s.
+75. **Sephardi Hallel on Rosh Chodesh and the last days of Pesach has no
+    blessing.** In Edot, the blessing block and Yehalelucha are
+    `wholeHallel`, and the skip rubrics are `halfHallel`.
+76. **Check the Daily Psalm's `dow` against the printed day.** Edot's was
+    off by one on all six days.
+77. **A section opened directly takes its parent's title rule; an insert
+    doesn't.** `inspect` on "Rosh Hodesh/Hallel" shows it hidden on
+    Chanukah, but inserted into Shacharit it's said. Resolve the service,
+    not only the section, before calling an insert broken.
+78. **Per-day readings** (the Nasi in Nisan, Chanukah's Torah reading) need
+    a `when` on every day's segment and on every heading, or the first
+    days and headings show every day.

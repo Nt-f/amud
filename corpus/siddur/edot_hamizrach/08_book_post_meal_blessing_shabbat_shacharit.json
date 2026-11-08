@@ -16,34 +16,44 @@
           {"ref": "2", "kind": "instruction", "en": "Wash the hands (Mayim Acharonim) and say:", "text": "<small>יטול מים אחרונים, ויאמר</small> "},
           {"ref": "3", "kind": "prayer", "node": "birkat_hamazon.shir_hamaalot", "fold": "Psalms before Birkat HaMazon", "foldHe": "מזמורים לפני ברכת המזון", "text": "<small><b>לַמְנַצֵּ֥חַ</b> בִּנְגִינֹ֗ת מִזְמ֥וֹר שִֽׁיר׃ אֱֽלֹהִ֗ים יְחׇנֵּ֥נוּ וִיבָרְכֵ֑נוּ יָ֤אֵֽר פָּנָ֖יו אִתָּ֣נוּ סֶֽלָה׃ לָדַ֣עַת בָּאָ֣רֶץ דַּרְכֶּ֑ךָ בְּכׇל־גּ֝וֹיִ֗ם יְשׁוּעָתֶֽךָ׃ יוֹד֖וּךָ עַמִּ֥ים ׀ אֱלֹהִ֑ים י֝וֹד֗וּךָ עַמִּ֥ים כֻּלָּֽם׃ יִ֥שְׂמְח֥וּ וִירַנְּנ֗וּ לְאֻ֫מִּ֥ים כִּֽי־תִשְׁפֹּ֣ט עַמִּ֣ים מִישֹׁ֑ר וּלְאֻמִּ֓ים ׀ בָּאָ֖רֶץ תַּנְחֵ֣ם סֶֽלָה׃ יוֹד֖וּךָ עַמִּ֥ים ׀ אֱלֹהִ֑ים י֝וֹד֗וּךָ עַמִּ֥ים כֻּלָּֽם׃ אֶ֭רֶץ נָתְנָ֣ה יְבוּלָ֑הּ יְ֝בָרְכֵ֗נוּ אֱלֹהִ֥ים אֱלֹהֵֽינוּ׃ יְבָרְכֵ֥נוּ אֱלֹהִ֑ים וְיִֽירְא֥וּ א֝וֹת֗וֹ כׇּל־אַפְסֵי־אָֽרֶץ׃ </small> "},
           {"ref": "4", "kind": "prayer", "node": "birkat_hamazon.shir_hamaalot", "fold": "Psalms before Birkat HaMazon", "foldHe": "מזמורים לפני ברכת המזון", "text": "<small><b>אֲבָרְכָ֣ה</b> אֶת־יְהֹוָ֣ה בְּכׇל־עֵ֑ת תָּ֝מִ֗יד תְּֽהִלָּת֥וֹ בְּפִֽי׃ ס֥וֹף דָּבָ֖ר הַכֹּ֣ל נִשְׁמָ֑ע אֶת־הָאֱלֹהִ֤ים יְרָא֙ וְאֶת־מִצְוֺתָ֣יו שְׁמ֔וֹר כִּי־זֶ֖ה כׇּל־הָאָדָֽם: תְּהִלַּ֥ת יְהֹוָ֗ה יְֽדַבֶּ֫ר פִּ֥י וִיבָרֵ֣ךְ כׇּל־בָּ֭שָׂר שֵׁ֥ם קׇדְשׁ֗וֹ לְעוֹלָ֥ם וָעֶֽד: וַאֲנַ֤חְנוּ ׀ נְבָ֘רֵ֤ךְ יָ֗הּ מֵעַתָּ֥ה וְעַד־עוֹלָ֗ם הַֽלְלוּיָֽהּ: וַיְדַבֵּ֣ר אֵלַ֔י זֶ֚ה הַשֻּׁלְחָ֔ן אֲשֶׁ֖ר לִפְנֵ֥י יְהֹוָֽה:</small> "},
-          {"ref": "5", "kind": "instruction", "fold": "Zimun", "foldHe": "זימון", "en": "If three or more are present, say:", "text": "<small>אם המסובים שלושה או יותר אומרים</small> "},
-          {"ref": "6", "kind": "instruction", "fold": "Zimun", "foldHe": "זימון", "en": "The leader says:", "text": "<small>יאמר המזמן</small>  "},
-          {"ref": "7", "kind": "prayer", "role": "head_of_household", "voice": "aloud", "fold": "Zimun", "foldHe": "זימון", "text": "<b>הַב</b> לָן וְנִבְרִיךְ לְמַלְכָּא עִלָּאָה קַדִּישָׁא:"},
-          {"ref": "8", "kind": "instruction", "fold": "Zimun", "foldHe": "זימון", "en": "The others respond:", "text": "<small>והמסובים עונים</small>  "},
-          {"ref": "9", "kind": "prayer", "role": "congregation", "voice": "aloud", "fold": "Zimun", "foldHe": "זימון", "text": "שָׁמַֽיִם:"},
-          {"ref": "10", "kind": "instruction", "fold": "Zimun", "foldHe": "זימון", "en": "And the leader says:", "text": "<small>ואומר המזמן</small>"},
+          {"ref": "5", "kind": "instruction", "when": "if_zimun", "node": "birkat_hamazon.zimun", "fold": "Zimun", "foldHe": "זימון", "en": "If three or more are present, say:", "text": "<small>אם המסובים שלושה או יותר אומרים</small> "},
+          {"ref": "6", "kind": "instruction", "when": "if_zimun", "node": "birkat_hamazon.zimun", "fold": "Zimun", "foldHe": "זימון", "en": "The leader says:", "text": "<small>יאמר המזמן</small>  "},
+          {"ref": "7", "kind": "prayer", "when": "if_zimun", "node": "birkat_hamazon.zimun", "role": "head_of_household", "voice": "aloud", "fold": "Zimun", "foldHe": "זימון", "text": "<b>הַב</b> לָן וְנִבְרִיךְ לְמַלְכָּא עִלָּאָה קַדִּישָׁא:"},
+          {"ref": "8", "kind": "instruction", "when": "if_zimun", "node": "birkat_hamazon.zimun", "fold": "Zimun", "foldHe": "זימון", "en": "The others respond:", "text": "<small>והמסובים עונים</small>  "},
+          {"ref": "9", "kind": "prayer", "when": "if_zimun", "node": "birkat_hamazon.zimun", "role": "congregation", "voice": "aloud", "fold": "Zimun", "foldHe": "זימון", "text": "שָׁמַֽיִם:"},
+          {"ref": "10", "kind": "instruction", "when": "if_zimun", "node": "birkat_hamazon.zimun", "fold": "Zimun", "foldHe": "זימון", "en": "And the leader says:", "text": "<small>ואומר המזמן</small>"},
           {"ref": "11", "parts": [
-            {"kind": "prayer", "role": "head_of_household", "fold": "Zimun", "foldHe": "זימון", "text": "בִּרְשׁוּת מַלְכָּא עִלָּאָה קַדִּישָׁא ("},
-            {"kind": "instruction", "en": "On Shabbat:", "text": "<small>בשבת</small> "},
-            {"kind": "prayer", "role": "head_of_household", "text": "וּבִרְשׁוּת שַׁבָּת מַלְכְּתָא.) ("},
-            {"kind": "instruction", "en": "On Yom Tov:", "text": "<small>ביו\"ט</small> "},
-            {"kind": "prayer", "role": "head_of_household", "text": "וּבִרְשׁוּת יוֹמָא טָבָא אוּשְׁפִּיזָא קַדִּישָׁא.) ("},
-            {"kind": "instruction", "en": "In the Sukkah:", "text": "<small>בסוכה</small> "},
-            {"kind": "prayer", "role": "head_of_household", "text": "וּבִרְשׁוּת שִׁבְעָה אוּשְׁפִּיזִין עִלָּאִין קַדִּישִׁין) וּבִרְשׁוּת מוֹרַי וְרַבּוֹתַי וּבִרְשֽׁוּתְכֶֽם. נְבָרֵךְ <small>("},
-            {"kind": "instruction", "en": "With ten or more:", "text": "בעשרה ויותר: <b>אֱלֹהֵֽינוּ</b>)</small> "},
-            {"kind": "prayer", "role": "head_of_household", "text": "שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ:  "}
+            {"kind": "prayer", "when": "if_zimun", "node": "birkat_hamazon.zimun", "role": "head_of_household", "fold": "Zimun", "foldHe": "זימון", "text": "בִּרְשׁוּת מַלְכָּא עִלָּאָה קַדִּישָׁא"},
+            {"kind": "prayer", "when": "shabbat && if_zimun", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": " ("},
+            {"kind": "instruction", "when": "shabbat && if_zimun", "node": "birkat_hamazon.zimun", "en": "On Shabbat:", "text": "<small>בשבת</small> "},
+            {"kind": "prayer", "when": "shabbat && if_zimun", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": "וּבִרְשׁוּת שַׁבָּת מַלְכְּתָא.)"},
+            {"kind": "prayer", "when": "yomTov && if_zimun", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": " ("},
+            {"kind": "instruction", "when": "yomTov && if_zimun", "node": "birkat_hamazon.zimun", "en": "On Yom Tov:", "text": "<small>ביו\"ט</small> "},
+            {"kind": "prayer", "when": "yomTov && if_zimun", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": "וּבִרְשׁוּת יוֹמָא טָבָא אוּשְׁפִּיזָא קַדִּישָׁא.)"},
+            {"kind": "prayer", "when": "sukkot && if_zimun", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": " ("},
+            {"kind": "instruction", "when": "sukkot && if_zimun", "node": "birkat_hamazon.zimun", "en": "In the Sukkah:", "text": "<small>בסוכה</small> "},
+            {"kind": "prayer", "when": "sukkot && if_zimun", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": "וּבִרְשׁוּת שִׁבְעָה אוּשְׁפִּיזִין עִלָּאִין קַדִּישִׁין)"},
+            {"kind": "prayer", "when": "if_zimun", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": " וּבִרְשׁוּת מוֹרַי וְרַבּוֹתַי וּבִרְשֽׁוּתְכֶֽם. נְבָרֵךְ"},
+            {"kind": "prayer", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": " <small>("},
+            {"kind": "instruction", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "en": "With ten or more:", "text": "בעשרה ויותר:"},
+            {"kind": "prayer", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": " <b>אֱלֹהֵֽינוּ</b>)</small> "},
+            {"kind": "prayer", "when": "if_zimun", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": "שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ:  "}
           ]},
-          {"ref": "12", "kind": "instruction", "fold": "Zimun", "foldHe": "זימון", "en": "And the others respond:", "text": "<small>והמסובים עונים</small>  "},
+          {"ref": "12", "kind": "instruction", "when": "if_zimun", "node": "birkat_hamazon.zimun", "fold": "Zimun", "foldHe": "זימון", "en": "And the others respond:", "text": "<small>והמסובים עונים</small>  "},
           {"ref": "13", "parts": [
-            {"kind": "prayer", "role": "congregation", "fold": "Zimun", "foldHe": "זימון", "text": "בָּרוּךְ <small>("},
-            {"kind": "instruction", "en": "With ten or more:", "text": "בעשרה ויותר: <b>אֱלֹהֵֽינוּ</b>)</small> "},
-            {"kind": "prayer", "role": "congregation", "text": "שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ:"}
+            {"kind": "prayer", "when": "if_zimun", "node": "birkat_hamazon.zimun", "role": "congregation", "fold": "Zimun", "foldHe": "זימון", "text": "בָּרוּךְ"},
+            {"kind": "prayer", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "role": "congregation", "text": " <small>("},
+            {"kind": "instruction", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "en": "With ten or more:", "text": "בעשרה ויותר:"},
+            {"kind": "prayer", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "role": "congregation", "text": " <b>אֱלֹהֵֽינוּ</b>)</small> "},
+            {"kind": "prayer", "when": "if_zimun", "node": "birkat_hamazon.zimun", "role": "congregation", "text": "שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ:"}
           ]},
-          {"ref": "14", "kind": "instruction", "fold": "Zimun", "foldHe": "זימון", "en": "And the leader responds:", "text": "<small>והמזמן עונה</small>  "},
+          {"ref": "14", "kind": "instruction", "when": "if_zimun", "node": "birkat_hamazon.zimun", "fold": "Zimun", "foldHe": "זימון", "en": "And the leader responds:", "text": "<small>והמזמן עונה</small>  "},
           {"ref": "15", "parts": [
-            {"kind": "prayer", "role": "head_of_household", "fold": "Zimun", "foldHe": "זימון", "text": "בָּרוּךְ <small>("},
-            {"kind": "instruction", "en": "With ten or more:", "text": "בעשרה ויותר: <b>אֱלֹהֵֽינוּ</b>)</small> "},
-            {"kind": "prayer", "role": "head_of_household", "text": "שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ:"}
+            {"kind": "prayer", "when": "if_zimun", "node": "birkat_hamazon.zimun", "role": "head_of_household", "fold": "Zimun", "foldHe": "זימון", "text": "בָּרוּךְ"},
+            {"kind": "prayer", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": " <small>("},
+            {"kind": "instruction", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "en": "With ten or more:", "text": "בעשרה ויותר:"},
+            {"kind": "prayer", "when": "if_zimunTen", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": " <b>אֱלֹהֵֽינוּ</b>)</small> "},
+            {"kind": "prayer", "when": "if_zimun", "node": "birkat_hamazon.zimun", "role": "head_of_household", "text": "שֶׁאָכַֽלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ חָיִֽינוּ:"}
           ]},
           {"ref": "16", "parts": [
             {"kind": "prayer", "node": "birkat_hamazon", "role": "individual", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה,"},
@@ -54,10 +64,10 @@
             {"kind": "prayer", "node": "birkat_hamazon", "role": "individual", "text": " וְאַל־יֶחְסַר לָֽנוּ מָזוֹן תָּמִיד לְעוֹלָם וָעֶד,"},
             {"kind": "prayer", "node": "birkat_hamazon", "role": "individual", "text": " כִּי הוּא אֵל זָן וּמְפַרְנֵס לַכֹּל וְשֻׁלְחָנוֹ עָרוּךְ לַכֹּל,"},
             {"kind": "prayer", "node": "birkat_hamazon", "role": "individual", "text": " וְהִתְקִין מִחְיָה וּמָזוֹן לְכָל־בְּרִיּוֹתָיו אֲשֶׁר בָּרָא בְּרַחֲמָיו וּבְרוֹב חֲסָדָיו. כָּאָמוּר,"},
-            {"kind": "instruction", "node": "birkat_hamazon", "role": "individual", "en": "Acrostic: P-A-Y (Yah) and S-A-L (Chet-Kaf)", "text": " פּוֹתֵ֥חַ אֶת־יָדֶ֑ךָ "},
-            {"kind": "prayer", "node": "birkat_hamazon", "role": "individual", "text": "<small>(ר\"ת <b>פא\"י</b> שהוא מספר <b>יאהדונהי</b> ומספר <b>סא\"ל</b> וס\"ת <b>חת\"ך</b>)</small>"},
-            {"kind": "instruction", "node": "birkat_hamazon", "role": "individual", "en": "Gematria: Chet-Kaf", "text": " וּמַשְׂבִּ֖יעַ "},
-            {"kind": "prayer", "node": "birkat_hamazon", "role": "individual", "text": "<small>(כמספר <b>חת\"ך</b>)</small>"},
+            {"kind": "prayer", "node": "birkat_hamazon", "role": "individual", "text": " פּוֹתֵ֥חַ אֶת־יָדֶ֑ךָ "},
+            {"kind": "commentary", "node": "birkat_hamazon", "role": "individual", "en": "(The initial letters, פא״י, equal the numerical value of the combined Divine Names and of סא״ל; the final letters are חת״ך.)", "text": "<small>(ר\"ת <b>פא\"י</b> שהוא מספר <b>יאהדונהי</b> ומספר <b>סא\"ל</b> וס\"ת <b>חת\"ך</b>)</small>"},
+            {"kind": "prayer", "node": "birkat_hamazon", "role": "individual", "text": " וּמַשְׂבִּ֖יעַ "},
+            {"kind": "commentary", "node": "birkat_hamazon", "role": "individual", "en": "(Equal in numerical value to חת״ך.)", "text": "<small>(כמספר <b>חת\"ך</b>)</small>"},
             {"kind": "prayer", "node": "birkat_hamazon", "role": "individual", "text": " לְכָל־חַ֣י רָצֽוֹן. בָּרוּךְ אַתָּה יְהֹוָה,"},
             {"kind": "prayer", "node": "birkat_hamazon", "role": "individual", "text": " הַזָּן אֶת־הַכֹּל:"}
           ]},
@@ -68,11 +78,11 @@
             {"kind": "instruction", "when": "chanukah", "en": "On Hanukkah say:", "text": "<small>בחנוכה אומרים</small> "},
             {"kind": "prayer", "when": "chanukah", "node": "birkat_hamazon", "text": "<small><b>בִּימֵי מַתִּתְיָה</b> בֶן־יוֹחָנָן כֹּהֵן גָּדוֹל חַשְׁמוֹנָאִי וּבָנָיו, כְּשֶׁעָֽמְדָֽה מַלְכוּת יָוָן הָרְשָׁעָה עַל עַמְּךָ יִשְׂרָאֵל, "},
             {"kind": "prayer", "when": "chanukah", "node": "birkat_hamazon", "text": "לְשַׁכְּחָם תּוֹרָתָךְ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנָךְ, וְאַתָּה בְּרַחֲמֶֽיךָ הָרַבִּים עָמַֽדְתָּ לָהֶם בְּעֵת צָרָתָם, רַֽבְתָּ אֶת רִיבָם, דַּֽנְתָּ אֶת דִּינָם, נָקַֽמְתָּ אֶת נִקְמָתָם, מָסַֽרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים, "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "וְרַבִּים בְּיַד מְעַטִּים, וּרְשָׁעִים בְּיַד צַדִּיקִים, וּטְמֵאִים בְּיַד טְהוֹרִים, וְזֵדִים בְּיַד עֽוֹסְקֵֽי תוֹרָתֶֽךָ. לְךָ עָשִֽׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמָךְ, "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "וּלְעַמְּךָ יִשְׂרָאֵל עָשִֽׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה. וְאַחַר כָּךְ בָּֽאוּ בָנֶֽיךָ לִדְבִיר בֵּיתֶֽךָ, וּפִנּוּ אֶת־הֵיכָלֶֽךָ, "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "וְטִהֲרוּ אֶת־מִקְדָּשֶֽׁךָ, וְהִדְלִֽיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶֽׁךָ. "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "וְקָֽבְעֽוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵֽלּוּ בְּהַלֵּל וּבְהוֹדָאָה. וְעָשִֽׂיתָ עִמָּהֶם נִסִּים וְנִפְלָאוֹת "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל סֶֽלָה:</small> "}
+            {"kind": "prayer", "when": "chanukah", "node": "birkat_hamazon", "text": "וְרַבִּים בְּיַד מְעַטִּים, וּרְשָׁעִים בְּיַד צַדִּיקִים, וּטְמֵאִים בְּיַד טְהוֹרִים, וְזֵדִים בְּיַד עֽוֹסְקֵֽי תוֹרָתֶֽךָ. לְךָ עָשִֽׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמָךְ, "},
+            {"kind": "prayer", "when": "chanukah", "node": "birkat_hamazon", "text": "וּלְעַמְּךָ יִשְׂרָאֵל עָשִֽׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה. וְאַחַר כָּךְ בָּֽאוּ בָנֶֽיךָ לִדְבִיר בֵּיתֶֽךָ, וּפִנּוּ אֶת־הֵיכָלֶֽךָ, "},
+            {"kind": "prayer", "when": "chanukah", "node": "birkat_hamazon", "text": "וְטִהֲרוּ אֶת־מִקְדָּשֶֽׁךָ, וְהִדְלִֽיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶֽׁךָ. "},
+            {"kind": "prayer", "when": "chanukah", "node": "birkat_hamazon", "text": "וְקָֽבְעֽוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵֽלּוּ בְּהַלֵּל וּבְהוֹדָאָה. וְעָשִֽׂיתָ עִמָּהֶם נִסִּים וְנִפְלָאוֹת "},
+            {"kind": "prayer", "when": "chanukah", "node": "birkat_hamazon", "text": "וְנוֹדֶה לְשִׁמְךָ הַגָּדוֹל סֶֽלָה:</small> "}
           ]},
           {"ref": "21", "parts": [
             {"kind": "instruction", "when": "purim", "en": "On Purim say:", "text": "<small>בפורים אומרים "},
@@ -80,68 +90,71 @@
           ]},
           {"ref": "22", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>עַל</b> הַכֹּל יְהֹוָה אֱלֹהֵֽינוּ אֲנַֽחְנוּ מוֹדִים לָךְ, וּמְבָֽרְכִֽים אֶת־שְׁמָךְ. כָּאָמוּר, וְאָֽכַלְתָּ֖ וְשָׂבָ֑עְתָּ וּבֵֽרַכְתָּ֙ אֶת־יְהֹוָ֣ה אֱלֹהֶ֔יךָ עַל־הָאָ֥רֶץ הַטֹּבָ֖ה אֲשֶׁ֥ר נָֽתַן־לָֽךְ. בָּרוּךְ אַתָּה יְהֹוָה, עַל הָאָֽרֶץ וְעַל הַמָּזוֹן:"},
           {"ref": "23", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>רַחֵם</b> יְהֹוָה אֱלֹהֵֽינוּ עָלֵֽינוּ וְעַל יִשְׂרָאֵל עַמָּךְ, וְעַל יְרוּשָׁלַֽיִם עִירָךְ, וְעַל הַר צִיּוֹן מִשְׁכַּן כְּבוֹדָךְ, וְעַל הֵיכָלָךְ, וְעַל מְעוֹנָךְ, וְעַל דְּבִירָךְ, וְעַל הַבַּֽיִת הַגָּדוֹל וְהַקָּדוֹשׁ שֶׁנִּקְרָא שִׁמְךָ עָלָיו. אָבִֽינוּ, רְעֵֽנוּ, זוּנֵֽנוּ, פַּרְנְסֵֽנוּ, כַּלְכְּלֵֽנוּ, הַרְוִיחֵֽנוּ הַרְוַח־לָֽנוּ מְהֵרָה מִכָּל־צָרוֹתֵֽינוּ. וְנָא, אַל תַּצְרִיכֵֽנוּ יְהֹוָה אֱלֹהֵֽינוּ, לִידֵי מַתְּנוֹת בָּשָׂר וָדָם וְלֹא לִידֵי הַלְוָאָתָם, אֶלָּא לְיָֽדְךָֽ הַמְּלֵאָה וְהָרְחָבָה, הָעֲשִׁירָה וְהַפְּתוּחָה, יְהִי רָצוֹן שֶׁלֹּא נֵבוֹשׁ בָּעוֹלָם הַזֶּה, וְלֹא נִכָּלֵם לָעוֹלָם הַבָּא, וּמַלְכוּת בֵּית דָּוִד מְשִׁיחָךְ תַּחֲזִירֶֽנָּה לִמְקוֹמָהּ בִּמְהֵרָה בְיָמֵֽינוּ:"},
-          {"ref": "24", "kind": "instruction", "en": "On Shabbat say:", "text": "<small>בשבת אומרים</small> "},
-          {"ref": "25", "kind": "prayer", "node": "birkat_hamazon", "text": "<small><b>רְצֵה</b> וְהַחֲלִיצֵֽנוּ יְהֹוָה אֱלֹהֵֽינוּ בְּמִצְוֹתֶֽיךָ וּבְמִצְוַת יוֹם הַשְּׁבִיעִי, הַשַּׁבָּת הַגָּדוֹל וְהַקָּדוֹשׁ הַזֶּה. כִּי יוֹם גָּדוֹל וְקָדוֹשׁ הוּא מִלְּפָנֶֽיךָ, נִשְׁבּוֹת בּוֹ וְנָנֽוּחַ בּוֹ וְנִתְעַנֵּג בּוֹ כְּמִצְוַת חֻקֵּי רְצוֹנָךְ, וְאַל־תְּהִי צָרָה וְיָגוֹן בְּיוֹם מְנוּחָתֵֽנוּ. וְהַרְאֵֽנוּ בְּנֶחָמַת צִיּוֹן בִּמְהֵרָה בְיָמֵֽינוּ, כִּי אַתָּה הוּא בַּֽעַל הַנֶּחָמוֹת. וַהֲגַם שֶׁאָכַֽלְנוּ וְשָׁתִֽינוּ חָרְבַּן בֵּֽיתְךָֽ הַגָּדוֹל וְהַקָּדוֹשׁ לֹא שָׁכַֽחְנוּ. אַל־תִּשְׁכָּחֵֽנוּ לָנֶֽצַח וְאַל־תִּזְנָחֵֽנוּ לָעַד כִּי אֵל מֶֽלֶךְ גָּדוֹל וְקָדוֹשׁ אָֽתָּה:</small> "},
-          {"ref": "26", "kind": "instruction", "en": "On Rosh Chodesh, Yom Tov, and Chol HaMoed say:", "text": "<small>בראש חודש ביום טוב ובחול המועד אומרים</small> "},
-          {"ref": "27", "kind": "prayer", "node": "birkat_hamazon", "text": "<small><b>אֱלֹהֵֽינוּ</b> וֵאלֹהֵי אֲבוֹתֵֽינוּ, יַעֲלֶה וְיָבֹא, וְיַגִּֽיעַ וְיֵרָאֶה, וְיֵרָצֶה וְיִשָּׁמַע, וְיִפָּקֵד וְיִזָּכֵר, זִכְרוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ, זִכְרוֹן יְרוּשָׁלַֽיִם עִירָךְ, וְזִכְרוֹן מָשִֽׁיחַ בֶּן־דָּוִד עַבְדָּךְ, וְזִכְרוֹן כָּל־עַמְּךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ, לִפְלֵיטָה, לְטוֹבָה, לְחֵן, לְחֶֽסֶד וּלְרַחֲמִים, לְחַיִּים טוֹבִים וּלְשָׁלוֹם, בְּיוֹם</small> "},
+          {"ref": "24", "kind": "instruction", "when": "shabbat", "en": "On Shabbat say:", "text": "<small>בשבת אומרים</small> "},
+          {"ref": "25", "kind": "prayer", "when": "shabbat", "node": "birkat_hamazon", "text": "<small><b>רְצֵה</b> וְהַחֲלִיצֵֽנוּ יְהֹוָה אֱלֹהֵֽינוּ בְּמִצְוֹתֶֽיךָ וּבְמִצְוַת יוֹם הַשְּׁבִיעִי, הַשַּׁבָּת הַגָּדוֹל וְהַקָּדוֹשׁ הַזֶּה. כִּי יוֹם גָּדוֹל וְקָדוֹשׁ הוּא מִלְּפָנֶֽיךָ, נִשְׁבּוֹת בּוֹ וְנָנֽוּחַ בּוֹ וְנִתְעַנֵּג בּוֹ כְּמִצְוַת חֻקֵּי רְצוֹנָךְ, וְאַל־תְּהִי צָרָה וְיָגוֹן בְּיוֹם מְנוּחָתֵֽנוּ. וְהַרְאֵֽנוּ בְּנֶחָמַת צִיּוֹן בִּמְהֵרָה בְיָמֵֽינוּ, כִּי אַתָּה הוּא בַּֽעַל הַנֶּחָמוֹת. וַהֲגַם שֶׁאָכַֽלְנוּ וְשָׁתִֽינוּ חָרְבַּן בֵּֽיתְךָֽ הַגָּדוֹל וְהַקָּדוֹשׁ לֹא שָׁכַֽחְנוּ. אַל־תִּשְׁכָּחֵֽנוּ לָנֶֽצַח וְאַל־תִּזְנָחֵֽנוּ לָעַד כִּי אֵל מֶֽלֶךְ גָּדוֹל וְקָדוֹשׁ אָֽתָּה:</small> "},
+          {"ref": "26", "kind": "instruction", "when": "roshChodesh || yomTov || cholHamoed", "en": "On Rosh Chodesh, Yom Tov, and Chol HaMoed say:", "text": "<small>בראש חודש ביום טוב ובחול המועד אומרים</small> "},
+          {"ref": "27", "kind": "prayer", "when": "roshChodesh || yomTov || cholHamoed", "node": "birkat_hamazon", "text": "<small><b>אֱלֹהֵֽינוּ</b> וֵאלֹהֵי אֲבוֹתֵֽינוּ, יַעֲלֶה וְיָבֹא, וְיַגִּֽיעַ וְיֵרָאֶה, וְיֵרָצֶה וְיִשָּׁמַע, וְיִפָּקֵד וְיִזָּכֵר, זִכְרוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ, זִכְרוֹן יְרוּשָׁלַֽיִם עִירָךְ, וְזִכְרוֹן מָשִֽׁיחַ בֶּן־דָּוִד עַבְדָּךְ, וְזִכְרוֹן כָּל־עַמְּךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ, לִפְלֵיטָה, לְטוֹבָה, לְחֵן, לְחֶֽסֶד וּלְרַחֲמִים, לְחַיִּים טוֹבִים וּלְשָׁלוֹם, בְּיוֹם</small> "},
           {"ref": "28", "parts": [
-            {"kind": "instruction", "en": "On Rosh Chodesh:", "text": "<small><small>בראש חדש:</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "רֹאשׁ חֹֽדֶשׁ הַזֶּה,</small>"}
+            {"kind": "instruction", "when": "roshChodesh", "en": "On Rosh Chodesh:", "text": "<small><small>בראש חדש:</small> "},
+            {"kind": "prayer", "when": "roshChodesh", "node": "birkat_hamazon", "text": "רֹאשׁ חֹֽדֶשׁ הַזֶּה,</small>"}
           ]},
           {"ref": "29", "parts": [
-            {"kind": "instruction", "en": "On Passover:", "text": "<small><small>בפסח:</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "חַג הַמַּצּוֹת הַזֶּה, בְּיוֹם "},
-            {"kind": "instruction", "en": "On Yom Tov add:", "text": "<small><small>ביום טוב מוסיפים:</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "טוֹב</small> מִקְרָא קֹֽדֶשׁ הַזֶּה, </small>  "}
+            {"kind": "instruction", "when": "pesach", "en": "On Passover:", "text": "<small><small>בפסח:</small> "},
+            {"kind": "prayer", "when": "pesach", "node": "birkat_hamazon", "text": "חַג הַמַּצּוֹת הַזֶּה,"},
+            {"kind": "prayer", "when": "pesach && yomTov", "node": "birkat_hamazon", "text": " בְּיוֹם "},
+            {"kind": "instruction", "when": "pesach && yomTov", "en": "On Yom Tov add:", "text": "<small><small>ביום טוב מוסיפים:</small> "},
+            {"kind": "prayer", "when": "pesach && yomTov", "node": "birkat_hamazon", "text": "טוֹב</small> מִקְרָא קֹֽדֶשׁ הַזֶּה, </small>  "}
           ]},
           {"ref": "30", "parts": [
-            {"kind": "instruction", "en": "On Shavuot:", "text": "<small><small>בשבועות:</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "חַג הַשָּׁבוּעוֹת הַזֶּה, "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "בְּיוֹם טוֹב מִקְרָא קֹֽדֶשׁ הַזֶּה, </small>  "}
+            {"kind": "instruction", "when": "shavuot", "en": "On Shavuot:", "text": "<small><small>בשבועות:</small> "},
+            {"kind": "prayer", "when": "shavuot", "node": "birkat_hamazon", "text": "חַג הַשָּׁבוּעוֹת הַזֶּה, "},
+            {"kind": "prayer", "when": "shavuot", "node": "birkat_hamazon", "text": "בְּיוֹם טוֹב מִקְרָא קֹֽדֶשׁ הַזֶּה, </small>  "}
           ]},
           {"ref": "31", "parts": [
-            {"kind": "instruction", "en": "On Rosh Hashanah:", "text": "<small><small>בראש השנה:</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "הַזִּכָּרוֹן הַזֶּה, "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "בְּיוֹם טוֹב מִקְרָא קֹֽדֶשׁ הַזֶּה, </small>  "}
+            {"kind": "instruction", "when": "roshHashana", "en": "On Rosh Hashanah:", "text": "<small><small>בראש השנה:</small> "},
+            {"kind": "prayer", "when": "roshHashana", "node": "birkat_hamazon", "text": "הַזִּכָּרוֹן הַזֶּה, "},
+            {"kind": "prayer", "when": "roshHashana", "node": "birkat_hamazon", "text": "בְּיוֹם טוֹב מִקְרָא קֹֽדֶשׁ הַזֶּה, </small>  "}
           ]},
           {"ref": "32", "parts": [
-            {"kind": "instruction", "en": "On Sukkot:", "text": "<small><small>בסוכות:</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "חַג הַסֻּכּוֹת הַזֶּה, בְּיוֹם "},
-            {"kind": "instruction", "en": "On Yom Tov add:", "text": "<small><small>ביום טוב מוסיפים:</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "טוֹב</small> מִקְרָא קֹֽדֶשׁ הַזֶּה, </small> "}
+            {"kind": "instruction", "when": "sukkot", "en": "On Sukkot:", "text": "<small><small>בסוכות:</small> "},
+            {"kind": "prayer", "when": "sukkot", "node": "birkat_hamazon", "text": "חַג הַסֻּכּוֹת הַזֶּה,"},
+            {"kind": "prayer", "when": "sukkot && yomTov", "node": "birkat_hamazon", "text": " בְּיוֹם "},
+            {"kind": "instruction", "when": "sukkot && yomTov", "en": "On Yom Tov add:", "text": "<small><small>ביום טוב מוסיפים:</small> "},
+            {"kind": "prayer", "when": "sukkot && yomTov", "node": "birkat_hamazon", "text": "טוֹב</small> מִקְרָא קֹֽדֶשׁ הַזֶּה, </small> "}
           ]},
           {"ref": "33", "parts": [
-            {"kind": "instruction", "en": "On Shmini Atzeret:", "text": "<small><small>בשמיני עצרת:</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "שְׁמִינִי חַג עֲצֶֽרֶת הַזֶּה, "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "בְּיוֹם טוֹב מִקְרָא קֹֽדֶשׁ הַזֶּה, </small>  "}
+            {"kind": "instruction", "when": "shminiAtzeret || simchatTorah", "en": "On Shmini Atzeret:", "text": "<small><small>בשמיני עצרת:</small> "},
+            {"kind": "prayer", "when": "shminiAtzeret || simchatTorah", "node": "birkat_hamazon", "text": "שְׁמִינִי חַג עֲצֶֽרֶת הַזֶּה, "},
+            {"kind": "prayer", "when": "shminiAtzeret || simchatTorah", "node": "birkat_hamazon", "text": "בְּיוֹם טוֹב מִקְרָא קֹֽדֶשׁ הַזֶּה, </small>  "}
           ]},
-          {"ref": "34", "kind": "prayer", "node": "birkat_hamazon", "text": "<small>לְרַחֵם בּוֹ עָלֵֽינוּ וּלְהוֹשִׁיעֵֽנוּ. זָכְרֵֽנוּ יְהֹוָה אֱלֹהֵֽינוּ בּוֹ לְטוֹבָה, וּפָקְדֵֽנוּ בוֹ לִבְרָכָה, וְהוֹשִׁיעֵֽנוּ בוֹ לְחַיִּים טוֹבִים, בִּדְבַר יְשׁוּעָה וְרַחֲמִים, חוּס וְחָנֵּֽנוּ, וַחֲמוֹל וְרַחֵם עָלֵֽינוּ, וְהוֹשִׁיעֵֽנוּ כִּי אֵלֶֽיךָ עֵינֵֽינוּ, כִּי אֵל מֶֽלֶךְ חַנּוּן וְרַחוּם אָֽתָּה:</small> "},
+          {"ref": "34", "kind": "prayer", "when": "roshChodesh || yomTov || cholHamoed", "node": "birkat_hamazon", "text": "<small>לְרַחֵם בּוֹ עָלֵֽינוּ וּלְהוֹשִׁיעֵֽנוּ. זָכְרֵֽנוּ יְהֹוָה אֱלֹהֵֽינוּ בּוֹ לְטוֹבָה, וּפָקְדֵֽנוּ בוֹ לִבְרָכָה, וְהוֹשִׁיעֵֽנוּ בוֹ לְחַיִּים טוֹבִים, בִּדְבַר יְשׁוּעָה וְרַחֲמִים, חוּס וְחָנֵּֽנוּ, וַחֲמוֹל וְרַחֵם עָלֵֽינוּ, וְהוֹשִׁיעֵֽנוּ כִּי אֵלֶֽיךָ עֵינֵֽינוּ, כִּי אֵל מֶֽלֶךְ חַנּוּן וְרַחוּם אָֽתָּה:</small> "},
           {"ref": "35", "parts": [
             {"kind": "prayer", "node": "birkat_hamazon", "text": "<b>וְתִבְנֶה</b> יְרוּשָׁלַֽיִם עִירָךְ בִּמְהֵרָה בְיָמֵֽינוּ. בָּרוּךְ אַתָּה יְהֹוָה. בּוֹנֵה יְרוּשָׁלָֽיִם "},
             {"kind": "instruction", "en": "And say quietly:", "text": "<small>ואומר בלחש</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "אָמֵן:  "}
+            {"kind": "prayer", "node": "birkat_hamazon", "voice": "undertone", "text": "אָמֵן:  "}
           ]},
-          {"ref": "36", "kind": "instruction", "en": "If one forgot to say 'Retzei' or 'Ya'aleh Veyavo' and remembered before starting 'HaTov VeHaMeitiv', he says. And only on Shabbat or the first night (and second outside Israel) of Passover or Sukkot, one says there and Malchuyot.", "text": "<small>אם שכח לומר \"רצה\" או \"יעלה ויבא\" ונזכר לפני שהתחיל ברכת הטוב והמטיב יאמר. ורק בשבת או ליל ראשון (ושני בחוץ לארץ) של פסח או סוכות אומרים שם ומלכות</small> "},
-          {"ref": "37", "kind": "prayer", "node": "birkat_hamazon", "text": "<small>בָּרוּךְ (אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶלֶךְ הָעוֹלָם), שֶׁנָּתַן</small> "},
+          {"ref": "36", "kind": "note", "when": "shabbat || roshChodesh || yomTov || cholHamoed", "forgot": true, "en": "If one forgot to say 'Retzei' or 'Ya'aleh Veyavo' and remembered before starting 'HaTov VeHaMeitiv', he says. And only on Shabbat or the first night (and second outside Israel) of Passover or Sukkot, one says there and Malchuyot.", "text": "<small>אם שכח לומר \"רצה\" או \"יעלה ויבא\" ונזכר לפני שהתחיל ברכת הטוב והמטיב יאמר. ורק בשבת או ליל ראשון (ושני בחוץ לארץ) של פסח או סוכות אומרים שם ומלכות</small> "},
+          {"ref": "37", "kind": "prayer", "when": "shabbat || roshChodesh || yomTov", "node": "birkat_hamazon", "forgot": true, "text": "<small>בָּרוּךְ (אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶלֶךְ הָעוֹלָם), שֶׁנָּתַן</small> "},
           {"ref": "38", "parts": [
-            {"kind": "instruction", "en": "For Shabbat:", "text": "<small><small>לשבת</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "שַׁבָּתוֹת לִמְנוּחָה לְעַמּוֹ יִשְׂרָאֵל, "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "בְּאַהֲבָה לְאוֹת וְלִבְרִית </small> "}
+            {"kind": "instruction", "when": "shabbat", "forgot": true, "en": "For Shabbat:", "text": "<small><small>לשבת</small> "},
+            {"kind": "prayer", "when": "shabbat", "node": "birkat_hamazon", "forgot": true, "text": "שַׁבָּתוֹת לִמְנוּחָה לְעַמּוֹ יִשְׂרָאֵל, "},
+            {"kind": "prayer", "when": "shabbat", "node": "birkat_hamazon", "forgot": true, "text": "בְּאַהֲבָה לְאוֹת וְלִבְרִית </small> "}
           ]},
           {"ref": "39", "parts": [
-            {"kind": "instruction", "en": "For Rosh Chodesh:", "text": "<small><small>לראש חודש</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "(וְ)רָאשֵׁי חֳדָשִׁים לְעַמּוֹ יִשְׂרָאֵל לְזִּכָּרוֹן: ע\"כ בחול</small> "}
+            {"kind": "instruction", "when": "roshChodesh", "forgot": true, "en": "For Rosh Chodesh:", "text": "<small><small>לראש חודש</small> "},
+            {"kind": "prayer", "when": "roshChodesh", "node": "birkat_hamazon", "forgot": true, "text": "(וְ)רָאשֵׁי חֳדָשִׁים לְעַמּוֹ יִשְׂרָאֵל לְזִּכָּרוֹן:"},
+            {"kind": "instruction", "when": "roshChodesh && !shabbat && !yomTov", "node": "birkat_hamazon", "forgot": true, "en": "Up to here on a weekday", "text": " ע\"כ בחול</small> "}
           ]},
           {"ref": "40", "parts": [
-            {"kind": "instruction", "en": "For Rosh Hashanah:", "text": "<small><small>לראש השנה</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "(וְ)יָמִים טוֹבִים לְיִשְׂרָאֵל אֶת יוֹם הַזִּכָּרוֹן הַזֶּה</small> "}
+            {"kind": "instruction", "when": "roshHashana", "forgot": true, "en": "For Rosh Hashanah:", "text": "<small><small>לראש השנה</small> "},
+            {"kind": "prayer", "when": "roshHashana", "node": "birkat_hamazon", "forgot": true, "text": "(וְ)יָמִים טוֹבִים לְיִשְׂרָאֵל אֶת יוֹם הַזִּכָּרוֹן הַזֶּה</small> "}
           ]},
           {"ref": "41", "parts": [
-            {"kind": "instruction", "en": "For the three Pilgrimage Festivals:", "text": "<small><small>לשלש רגלים</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "(וְ)יָמִים טוֹבִים לְשָׂשׂוֹן וּלְשִׂמְחָה, "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "אֶת יוֹם (חַג הַמַּצּוֹת הַזֶּה) (חַג הַשָּׁבוּעוֹת הַזֶּה) (חַג הַסֻּכּוֹת הַזֶּה) (שְׁמִינִי חַג עֲצֶֽרֶת הַזֶּה)</small> "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "<br><br><small>בָּרוּךְ (אַתָּה יְהֹוָה,) "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "מְקַדֵּשׁ (הַשַּׁבָּת) (וְ) (יִשְׂרָאֵל וְרָאשֵׁי חֳדָשִׁים) (יִשְׂרָאֵל וְיוֹם הַזִּכָּרוֹן) (יִשְׂרָאֵל וְהַזְּמַנִּים):</small>"}
+            {"kind": "instruction", "when": "yomTov && !roshHashana", "forgot": true, "en": "For the three Pilgrimage Festivals:", "text": "<small><small>לשלש רגלים</small> "},
+            {"kind": "prayer", "when": "yomTov && !roshHashana", "node": "birkat_hamazon", "forgot": true, "text": "(וְ)יָמִים טוֹבִים לְשָׂשׂוֹן וּלְשִׂמְחָה, "},
+            {"kind": "prayer", "when": "yomTov && !roshHashana", "node": "birkat_hamazon", "forgot": true, "text": "אֶת יוֹם (חַג הַמַּצּוֹת הַזֶּה) (חַג הַשָּׁבוּעוֹת הַזֶּה) (חַג הַסֻּכּוֹת הַזֶּה) (שְׁמִינִי חַג עֲצֶֽרֶת הַזֶּה)</small> "},
+            {"kind": "prayer", "when": "shabbat || yomTov", "node": "birkat_hamazon", "forgot": true, "text": "<br><br><small>בָּרוּךְ (אַתָּה יְהֹוָה,) "},
+            {"kind": "prayer", "when": "shabbat || yomTov", "node": "birkat_hamazon", "forgot": true, "text": "מְקַדֵּשׁ (הַשַּׁבָּת) (וְ) (יִשְׂרָאֵל וְרָאשֵׁי חֳדָשִׁים) (יִשְׂרָאֵל וְיוֹם הַזִּכָּרוֹן) (יִשְׂרָאֵל וְהַזְּמַנִּים):</small>"}
           ]},
           {"ref": "42", "parts": [
             {"kind": "prayer", "node": "birkat_hamazon", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה,"},
@@ -157,23 +170,23 @@
             {"kind": "prayer", "node": "birkat_hamazon", "text": " שֶׁבְּכָל־יוֹם וָיוֹם הוּא הֵטִיב לָֽנוּ,"},
             {"kind": "prayer", "node": "birkat_hamazon", "text": " הוּא מֵטִיב לָֽנוּ,"},
             {"kind": "prayer", "node": "birkat_hamazon", "text": " הוּא יֵיטִיב לָֽנוּ,"},
-            {"kind": "instruction", "node": "birkat_hamazon", "en": "They answer Amen", "text": " הוּא גְמָלָֽנוּ,"},
+            {"kind": "prayer", "node": "birkat_hamazon", "text": " הוּא גְמָלָֽנוּ,"},
             {"kind": "prayer", "node": "birkat_hamazon", "text": " הוּא גֽוֹמְלֵֽנוּ,"},
             {"kind": "prayer", "node": "birkat_hamazon", "text": " הוּא יִגְמְלֵֽנוּ לָעַד חֵן וָחֶֽסֶד וְרַחֲמִים וְרֶֽוַח וְהַצָּלָה וְכָל־טוֹב: "},
-            {"kind": "prayer", "node": "birkat_hamazon", "text": "<small>יענו אמן</small>"}
+            {"kind": "instruction", "node": "birkat_hamazon", "en": "They answer Amen", "text": "<small>יענו אמן</small>"}
           ]},
           {"ref": "43", "kind": "prayer", "node": "birkat_hamazon", "text": "<b>הָרַחֲמָן</b> הוּא יִשְׁתַּבַּח עַל כִּסֵּא כְבוֹדוֹ: הָרַחֲמָן הוּא יִשְׁתַּבַּח בַּשָּׁמַֽיִם וּבָאָֽרֶץ: הָרַחֲמָן הוּא יִשְׁתַּבַּח בָּֽנוּ לְדוֹר דּוֹרִים: הָרַחֲמָן הוּא קֶֽרֶן לְעַמּוֹ יָרִים: הָרַחֲמָן הוּא יִתְפָּאַר בָּֽנוּ לְנֵֽצַח נְצָחִים: הָרַחֲמָן הוּא יְפַרְנְסֵֽנוּ בְּכָבוֹד וְלֹא בְבִזּוּי בְּהֶתֵּר וְלֹא בְאִסּוּר בְּנַֽחַת וְלֹא בְצַֽעַר: הָרַחֲמָן הוּא יִתֵּן שָׁלוֹם בֵּינֵֽינוּ: הָרַחֲמָן הוּא יִשְׁלַח בְּרָכָה רְוָחָה וְהַצְלָחָה בְּכָל־מַעֲשֵׂה יָדֵֽינוּ: הָרַחֲמָן הוּא יַצְלִֽיחַ אֶת־דְּרָכֵֽינוּ: הָרַחֲמָן הוּא יִשְׁבֹּר עֹל גָּלוּת מְהֵרָה מֵעַל צַוָּארֵֽנוּ: הָרַחֲמָן הוּא יוֹלִיכֵֽנוּ מְהֵרָה קוֹמְמִיּוּת לְאַרְצֵֽנוּ: הָרַחֲמָן הוּא יִרְפָּאֵֽנוּ רְפוּאָה שְׁלֵמָה, רְפוּאַת הַנֶּֽפֶשׁ וּרְפוּאַת הַגּוּף: הָרַחֲמָן הוּא יִפְתַּח לָנוּ אֶת יָדוֹ הָרְחָבָה: הָרַחֲמָן הוּא יְבָרֵךְ כָּל־אֶחָד וְאֶחָד מִמֶּֽנּוּ בִּשְׁמוֹ הַגָּדוֹל כְּמוֹ שֶׁנִּתְבָּֽרְכֽוּ אֲבוֹתֵֽינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב, בַּכֹּל מִכֹּל כֹּל, כֵּן יְבָרֵךְ אוֹתָֽנוּ יַֽחַד בְּרָכָה שְׁלֵמָה, וְכֵן יְהִי רָצוֹן וְנֹאמַר אָמֵן: הָרַחֲמָן הוּא יִפְרוֹשׂ עָלֵֽינוּ סֻכַּת שְׁלוֹמוֹ:"},
-          {"ref": "44", "kind": "instruction", "en": "On Shabbat", "text": "<small>בשבת</small>   "},
-          {"ref": "45", "kind": "prayer", "node": "birkat_hamazon", "text": "<small>הָרַחֲמָן הוּא יַנְחִילֵֽנוּ עוֹלָם שֶׁכֻּלּוֹ שַׁבָּת וּמְנוּחָה לְחַיֵּי הָעוֹלָמִים:</small> "},
-          {"ref": "46", "kind": "instruction", "en": "On Rosh Chodesh", "text": "<small>בר''ח</small>   "},
-          {"ref": "47", "kind": "prayer", "node": "birkat_hamazon", "text": "<small>הָרַחֲמָן הוּא יְחַדֵּשׁ עָלֵֽינוּ אֶת הַחֹֽדֶשׁ הַזֶּה לְטוֹבָה וְלִבְרָכָה:</small> "},
-          {"ref": "48", "kind": "instruction", "en": "On Rosh Hashanah", "text": "<small>ברה''ש</small>   "},
+          {"ref": "44", "kind": "instruction", "when": "shabbat", "en": "On Shabbat", "text": "<small>בשבת</small>   "},
+          {"ref": "45", "kind": "prayer", "when": "shabbat", "node": "birkat_hamazon", "text": "<small>הָרַחֲמָן הוּא יַנְחִילֵֽנוּ עוֹלָם שֶׁכֻּלּוֹ שַׁבָּת וּמְנוּחָה לְחַיֵּי הָעוֹלָמִים:</small> "},
+          {"ref": "46", "kind": "instruction", "when": "roshChodesh", "en": "On Rosh Chodesh", "text": "<small>בר''ח</small>   "},
+          {"ref": "47", "kind": "prayer", "when": "roshChodesh", "node": "birkat_hamazon", "text": "<small>הָרַחֲמָן הוּא יְחַדֵּשׁ עָלֵֽינוּ אֶת הַחֹֽדֶשׁ הַזֶּה לְטוֹבָה וְלִבְרָכָה:</small> "},
+          {"ref": "48", "kind": "instruction", "when": "roshHashana", "en": "On Rosh Hashanah", "text": "<small>ברה''ש</small>   "},
           {"ref": "49", "kind": "prayer", "when": "roshHashana", "text": "<small>הָרַחֲמָן הוּא יְחַדֵּשׁ עָלֵֽינוּ אֶת הַשָּׁנָה הַזֹּאת לְטוֹבָה וְלִבְרָכָה:</small> "},
-          {"ref": "50", "kind": "instruction", "en": "On Sukkot:", "gloss": "Said on Sukkot", "text": "<small>בסוכות</small>   "},
+          {"ref": "50", "kind": "instruction", "when": "sukkot", "en": "On Sukkot:", "text": "<small>בסוכות</small>   "},
           {"ref": "51", "kind": "prayer", "when": "sukkot", "text": "<small>הָרַחֲמָן הוּא יְזַכֵּֽנוּ לֵישֵׁב בְּסֻכַּת עוֹרוֹ שֶׁל לִוְיָתָן: הָרַחֲמָן הוּא יַשְׁפִּֽיעַ עָלֵֽינוּ שֶֽׁפַע קְדֻשָּׁה וְטָהֳרָה מִשִּׁבְעָה אוּשְׁפִּיזִין עִלָּאִין קַדִּישִׁין, זְכוּתָם תְּהֵא מָגֵן וְצִנָּה בַּעֲדֵֽינוּ: הָרַחֲמָן הוּא יָקִים לָֽנוּ אֶת סֻכַּת דָּוִד הַנּוֹפֶֽלֶת:</small> "},
-          {"ref": "52", "kind": "instruction", "en": "On festivals:", "gloss": "Said on Yom Tov", "text": "<small>במועדים</small>   "},
-          {"ref": "53", "kind": "prayer", "when": "yomTov", "text": "<small>הָרַחֲמָן הוּא יַגִּיעֵֽנוּ לְמוֹעֲדִים אֲחֵרִים הַבָּאִים לִקְרָאתֵֽנוּ לְשָׁלוֹם:</small> "},
-          {"ref": "54", "kind": "instruction", "en": "On Yom Tov:", "gloss": "Said on Yom Tov", "text": "<small>ביו''ט</small>   "},
+          {"ref": "52", "kind": "instruction", "when": "yomTov || cholHamoed", "en": "On festivals:", "text": "<small>במועדים</small>   "},
+          {"ref": "53", "kind": "prayer", "when": "yomTov || cholHamoed", "text": "<small>הָרַחֲמָן הוּא יַגִּיעֵֽנוּ לְמוֹעֲדִים אֲחֵרִים הַבָּאִים לִקְרָאתֵֽנוּ לְשָׁלוֹם:</small> "},
+          {"ref": "54", "kind": "instruction", "when": "yomTov", "en": "On Yom Tov:", "text": "<small>ביו''ט</small>   "},
           {"ref": "55", "kind": "prayer", "when": "yomTov", "text": "<small>הָרַחֲמָן הוּא יַנְחִילֵֽנוּ יוֹם שֶׁכֻּלּוֹ טוֹב:</small> "},
           {"ref": "56", "kind": "prayer", "text": "<b>הָרַחֲמָן</b> הוּא יִטַּע תּוֹרָתוֹ וְאַהֲבָתוֹ בְּלִבֵּֽנוּ וְתִהְיֶה יִרְאָתוֹ עַל פָּנֵֽינוּ לְבִלְתִּי נֶחֱטָא. וְיִהְיוּ כָל־מַעֲשֵֽׂינוּ לְשֵׁם שָׁמָֽיִם:"},
           {"ref": "56a", "kind": "instruction", "node": "birkat_hamazon", "select": "table", "en": "Whose table did you eat at?", "text": "<small>סמוך על שלחן:</small>"},
@@ -205,9 +218,11 @@
           ]},
           {"ref": "58", "kind": "prayer", "text": "<b>הָרַחֲמָן</b> הוּא יְחַיֵּֽנוּ וִיזַכֵּֽנוּ וִיקָֽרְבֵֽנוּ לִימוֹת הַמָּשִֽׁיחַ וּלְבִנְיַן בֵּית הַמִּקְדָּשׁ וּלְחַיֵּי הָעוֹלָם הַבָּא. "},
           {"ref": "59", "parts": [
-            {"kind": "prayer", "text": "מַגְדִּיל ("},
-            {"kind": "instruction", "en": "On days when Musaf is said, Motzaei Shabbat, at the Purim feast and at a circumcision feast, say:", "gloss": "Use 'Magdol' instead of 'Magdil' on these occasions", "text": "<small>ביום שמתפללים מוסף, במוצ\"ש, בסעודת פורים ובסעודת מילה יאמר:</small>"},
-            {"kind": "prayer", "text": " מִגְדּ֖וֹל) יְשׁוּע֣וֹת מַלְכּ֑וֹ וְעֹֽשֶׂה־חֶ֧סֶד לִמְשִׁיח֛וֹ לְדָוִ֥ד וּלְזַרְע֖וֹ עַד־עוֹלָֽם: כְּ֭פִירִים רָשׁ֣וּ וְרָעֵ֑בוּ וְדֹרְשֵׁ֥י יְ֝הֹוָ֗ה לֹא־יַחְסְר֥וּ כָל־טֽוֹב: נַ֤עַר ׀ הָיִ֗יתִי גַּם־זָ֫קַ֥נְתִּי וְֽלֹא־רָ֭אִיתִי צַדִּ֣יק נֶעֱזָ֑ב וְ֝זַרְע֗וֹ מְבַקֶּשׁ־לָֽחֶם: כָּל־הַ֭יּוֹם חוֹנֵ֣ן וּמַלְוֶ֑ה וְ֝זַרְע֗וֹ לִבְרָכָֽה: מַה־שֶּׁאָכַֽלְנוּ יִהְיֶה לְשָׂבְעָה. וּמַה־שֶּׁשָּׁתִֽינוּ יִהְיֶה לִרְפוּאָה. וּמַה־שֶּׁהוֹתַֽרְנוּ יִהְיֶה לִבְרָכָה. כְּדִכְתִיב. וַיִּתֵּ֧ן לִפְנֵיהֶ֛ם וַיֹּאכְל֥וּ וַיּוֹתִ֖רוּ כִּדְבַ֥ר יְהֹוָֽה: בְּרוּכִ֣ים אַ֭תֶּם לַיהֹוָ֑ה עֹ֝שֵׂ֗ה שָׁמַ֥יִם וָאָֽרֶץ: בָּר֣וּךְ הַגֶּ֔בֶר אֲשֶׁ֥ר יִבְטַ֖ח בַּיהֹוָ֑ה וְהָיָ֥ה יְהֹוָ֖ה מִבְטַחֽוֹֹ: יְֽהֹוָ֗ה עֹ֭ז לְעַמּ֣וֹ יִתֵּ֑ן יְהֹוָ֓ה ׀ יְבָרֵ֖ךְ אֶת־עַמּ֣וֹ בַשָּׁלֽוֹם: עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו,"},
+            {"kind": "prayer", "when": "!(shabbat || roshChodesh || yomTov || cholHamoed || purim)", "alt": "magdil", "text": "מַגְדִּיל"},
+            {"kind": "prayer", "when": "shabbat || roshChodesh || yomTov || cholHamoed || purim", "text": " ("},
+            {"kind": "instruction", "when": "shabbat || roshChodesh || yomTov || cholHamoed || purim", "en": "On days when Musaf is said, Motzaei Shabbat, at the Purim feast and at a circumcision feast, say:", "gloss": "Use 'Magdol' instead of 'Magdil' on these occasions", "text": "<small>ביום שמתפללים מוסף, במוצ\"ש, בסעודת פורים ובסעודת מילה יאמר:</small>"},
+            {"kind": "prayer", "when": "shabbat || roshChodesh || yomTov || cholHamoed || purim", "alt": "magdil", "text": " מִגְדּ֖וֹל)"},
+            {"kind": "prayer", "text": " יְשׁוּע֣וֹת מַלְכּ֑וֹ וְעֹֽשֶׂה־חֶ֧סֶד לִמְשִׁיח֛וֹ לְדָוִ֥ד וּלְזַרְע֖וֹ עַד־עוֹלָֽם: כְּ֭פִירִים רָשׁ֣וּ וְרָעֵ֑בוּ וְדֹרְשֵׁ֥י יְ֝הֹוָ֗ה לֹא־יַחְסְר֥וּ כָל־טֽוֹב: נַ֤עַר ׀ הָיִ֗יתִי גַּם־זָ֫קַ֥נְתִּי וְֽלֹא־רָ֭אִיתִי צַדִּ֣יק נֶעֱזָ֑ב וְ֝זַרְע֗וֹ מְבַקֶּשׁ־לָֽחֶם: כָּל־הַ֭יּוֹם חוֹנֵ֣ן וּמַלְוֶ֑ה וְ֝זַרְע֗וֹ לִבְרָכָֽה: מַה־שֶּׁאָכַֽלְנוּ יִהְיֶה לְשָׂבְעָה. וּמַה־שֶּׁשָּׁתִֽינוּ יִהְיֶה לִרְפוּאָה. וּמַה־שֶּׁהוֹתַֽרְנוּ יִהְיֶה לִבְרָכָה. כְּדִכְתִיב. וַיִּתֵּ֧ן לִפְנֵיהֶ֛ם וַיֹּאכְל֥וּ וַיּוֹתִ֖רוּ כִּדְבַ֥ר יְהֹוָֽה: בְּרוּכִ֣ים אַ֭תֶּם לַיהֹוָ֑ה עֹ֝שֵׂ֗ה שָׁמַ֥יִם וָאָֽרֶץ: בָּר֣וּךְ הַגֶּ֔בֶר אֲשֶׁ֥ר יִבְטַ֖ח בַּיהֹוָ֑ה וְהָיָ֥ה יְהֹוָ֖ה מִבְטַחֽוֹֹ: יְֽהֹוָ֗ה עֹ֭ז לְעַמּ֣וֹ יִתֵּ֑ן יְהֹוָ֓ה ׀ יְבָרֵ֖ךְ אֶת־עַמּ֣וֹ בַשָּׁלֽוֹם: עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו,"},
             {"kind": "prayer", "text": " הוּא בְּרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ. וְעַל כָּל־עַמּוֹ יִשְׂרָאֵל,"},
             {"kind": "prayer", "text": " וְאִמְרוּ אָמֵן:"}
           ]}
@@ -238,7 +253,7 @@
           {"ref": "21", "translates": ["21"], "text": "On Purim Continue: In the days of Mordekhai &amp; Esther, in Shushan, the Capital (of Ancient Persia) – When Haman, the wicked,  stood against them, asking to destroy and kill and annihilate all the Jews – from the Youth to the Elderly, Baby &amp; Women – in a single day – on the 13th of the Twelfth month – which is the month of Adar – and to pillage and take booty and You with Your great mercy – You uprooted his advice &amp; confused his thought &amp; He returned to him his wiles upon his own head – and they hung him &amp; His children upon the gallows. And You did for them miracles and wonders - and we will thank Your great name, Forever."},
           {"ref": "22", "translates": ["22"], "text": "And Upon all, L·rd, our G·d, do we thank You &amp; bless Your Name. As it says “And you shall eat &amp; be satiated &amp; you shall bless the L·rd, our G·d for the good land that He gave you.” Blessed are You, L·rd, for the land &amp; the food."},
           {"ref": "23", "translates": ["23"], "text": "Have Mercy L·rd, our G·d upon us &amp; upon Israel Your people &amp; upon Jerusalem, Your city. And upon Mount Tzion – the Tabernacle of Your glory &amp; upon Your sanctuary. And upon Your Abode &amp; upon Your Inner Chamber. And upon the great &amp; holy abode upon which Your Name is called (Temple). Our father, Our Shepherd, Our Feeder, Our Sustainer, Our Provider. Our Deliverer. Deliver us speedily from all our  sufferings. And please, let us not need, L·rd, our G·d, from the hands [of others], gifts from flesh &amp; blood. And not from their hands – their loans – rather from Your hand – Full &amp; plentiful, rich &amp; open. May it be Your Will that we will not be embarrassed in this world &amp; we will not be denigrated in the next world. And upon the Kingship of the house of David Your Messiah - restore it in place speedily in our days."},
-          {"ref": "24", "translates": ["24", "26"], "text": " (On Shabbat we add : Retze: Desire &amp; Release … On Rosh Hodesh &amp; Festivals, &amp; Intermediate Holidays we add: Elo-keinu)"},
+          {"ref": "24", "translates": ["24"], "text": " (On Shabbat we add : Retze: Desire &amp; Release … On Rosh Hodesh &amp; Festivals, &amp; Intermediate Holidays we add: Elo-keinu)"},
           {"ref": "25", "translates": ["25"], "text": "May it please You, L·rd our G·d,  to give us  Rest Hash·m, our G·d from your Commandments &amp; from the commandments of the Seventh day, this Great and Holy Shabbat day, for this day is a great and holy day before you. Let us rest on it and let us have serenity and have pleasure with your commandments – the decrees of Your will. And do not let there be pain and suffering on the day of our rest. And let us see the consolation of Zion speedily in our days. For you are the one that is the master of rest. And even though we ate and drank, the destruction of the of your great and holy house – we did not forget. Do not forget us forever and do not abandon us forever, for you are G-d, a Great and Holy King. "},
           {"ref": "26", "translates": ["26"], "text": "(Rosh Hodesh, Intermed. days Passover &amp; Sukot say)"},
           {"ref": "27", "translates": ["27"], "text": "Our G·d, &amp; G·d of Our forefathers, may it rise, &amp; come, arrive, appear, find favor, &amp; be heard, &amp; be considered, &amp; be remembered &amp; our remembrance, &amp; the remembrance of our Patriarchs, &amp; the remembrance of Jerusalem, Your city, &amp; the remembrance of the Messiah, the son of David, Your servant, &amp; the remembrance of your entire People, the house of Israel before You – for deliverance, for good, for grace, for kindness, &amp; mercy, for a good life, and for peace on this day of "},
@@ -256,6 +271,7 @@
           {"ref": "t40", "translates": ["40"], "comment": "Amud translation", "text": "(and) festivals to Israel, this day of remembrance."},
           {"ref": "t41", "translates": ["41"], "comment": "Amud translation", "text": "(and) festivals for joy and gladness, this day of (the Festival of Matzot) (the Festival of Shavuot) (the Festival of Sukkot) (Shemini Atzeret). Blessed are You, (Hashem,) Who sanctifies (the Shabbat and) Israel and (Rosh Chodesh) (the Day of Remembrance) (the festivals)."},
           {"ref": "42", "translates": ["42"], "text": "Blessed are You, L·rd, our G·d, King of the universe, G·d, our Father, our King, our Glorious One, our Creator, our Redeemer, our Holiness. The Holiness of Jacob, our Shepherd, Shephard of Yisrael. The Good King that does good to all. Every single day He does Good, He causes good, &amp; will do good to us. He bestowed, bestows &amp; will bestow forever grace, &amp; kindness &amp; mercy &amp; bounty &amp; salvation &amp; all good. "},
+          {"ref": "t43", "translates": ["43"], "comment": "Amud translation", "text": "May the Merciful One be praised upon His glorious throne. May the Merciful One be praised in heaven and on earth. May the Merciful One be praised through us for all generations. May the Merciful One raise the horn of His people. May the Merciful One be glorified through us for all eternity. May the Merciful One sustain us with honor and not with disgrace, with what is permitted and not with what is forbidden, with ease and not with hardship. May the Merciful One grant peace among us. May the Merciful One send blessing, abundance and success in all our handiwork. May the Merciful One make our ways successful. May the Merciful One speedily break the yoke of exile from our necks. May the Merciful One speedily lead us upright to our land. May the Merciful One heal us with a complete healing, healing of the soul and healing of the body. May the Merciful One open His generous hand to us. May the Merciful One bless each and every one of us with His great name, as our fathers Abraham, Isaac and Jacob were blessed in everything, from everything, with everything; so may He bless us all together with a complete blessing, and so may it be His will, and let us say: Amen. May the Merciful One spread over us the shelter of His peace."},
           {"ref": "44", "translates": ["44"], "text": "* (Shabbat)"},
           {"ref": "45", "translates": ["45"], "text": "The Merciful One, He will bequeath to us a world that is complete rest and serenity for eternity"},
           {"ref": "46", "translates": ["46"], "text": "* (Rosh Hodesh) ..."},
@@ -265,7 +281,7 @@
           {"ref": "50", "translates": ["50"], "text": "* (Sukkot) ..."},
           {"ref": "51", "translates": ["51"], "text": "The Merciful One, He will give us the merit to sit in the Sukkah of the skin of Leviathan. The Merciful One, He will bestow upon us plentyof holiness and purity- from the seven lofty and holy guests – may there merit protect and shield us. The Merciful One, He will establish for us the Sukkah of David, that is fallen."},
           {"ref": "52", "translates": ["52"], "text": "* (Holidays) ..."},
-          {"ref": "54", "translates": ["52"], "text": "* (Yom Tov) ..."},
+          {"ref": "54", "translates": ["54"], "text": "* (Yom Tov) ..."},
           {"ref": "t53", "translates": ["53"], "comment": "Amud translation", "text": "May the Merciful One bring us to other festivals that are coming toward us in peace."},
           {"ref": "t55", "translates": ["55"], "comment": "Amud translation", "text": "May the Merciful One let us inherit the day that is entirely good."},
           {"ref": "t56", "translates": ["56"], "comment": "Amud translation", "text": "May the Merciful One implant His Torah and love of Him in our hearts, and may reverence for Him be upon our faces, that we not sin; and may all our deeds be for the sake of Heaven."},
@@ -290,16 +306,16 @@
           {"ref": "1", "kind": "heading", "en": "Blessing of Me'ein Shalosh", "text": "<big><b>ברכת מעין שלוש</b></big>"},
           {"ref": "2", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם"},
           {"ref": "3", "parts": [
-            {"kind": "instruction", "en": "If one ate grain foods:", "text": "<small>אם אכל מזונות יאמר</small>"},
-            {"kind": "prayer", "text": " עַל הַמִּחְיָה וְעַל הַכַּלְכָּלָה "}
+            {"kind": "instruction", "when": "if_ateGrain", "en": "If one ate grain foods:", "text": "<small>אם אכל מזונות יאמר</small>"},
+            {"kind": "prayer", "when": "if_ateGrain", "text": " עַל הַמִּחְיָה וְעַל הַכַּלְכָּלָה "}
           ]},
           {"ref": "4", "parts": [
-            {"kind": "instruction", "en": "If one drank wine:", "text": "<small>אם שתה יין יאמר</small>"},
-            {"kind": "prayer", "text": " (וְ)עַל הַגֶּֽפֶן וְעַל פְּרִי הַגֶּֽפֶן "}
+            {"kind": "instruction", "when": "if_drankWine", "en": "If one drank wine:", "text": "<small>אם שתה יין יאמר</small>"},
+            {"kind": "prayer", "when": "if_drankWine", "text": " (וְ)עַל הַגֶּֽפֶן וְעַל פְּרִי הַגֶּֽפֶן "}
           ]},
           {"ref": "5", "parts": [
-            {"kind": "instruction", "en": "If one ate fruits of the Seven Species:", "text": "<small>אם אכל פרות משבעת המינים יאמר</small>"},
-            {"kind": "prayer", "text": " (וְ)עַל הָעֵץ וְעַל פְּרִי הָעֵץ"}
+            {"kind": "instruction", "when": "if_ateSevenSpecies", "en": "If one ate fruits of the Seven Species:", "text": "<small>אם אכל פרות משבעת המינים יאמר</small>"},
+            {"kind": "prayer", "when": "if_ateSevenSpecies", "text": " (וְ)עַל הָעֵץ וְעַל פְּרִי הָעֵץ"}
           ]},
           {"ref": "6", "kind": "prayer", "text": "וְעַל תְּנוּבַת הַשָּׂדֶה, וְעַל אֶֽרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה, שֶׁרָצִֽיתָ וְהִנְחַֽלְתָּ לַאֲבוֹתֵֽינוּ, לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבֹּֽעַ מִטּוּבָהּ. רַחֵם יְהֹוָה אֱלֹהֵֽינוּ עָלֵֽינוּ וְעַל יִשְׂרָאֵל עַמָּךְ, וְעַל יְרוּשָׁלַֽיִם עִירָךְ, וְעַל הַר צִיּוֹן מִשְׁכַּן כְּבוֹדָךְ, וְעַל מִזְבָּחָךְ וְעַל הֵיכָלָךְ. וּבְנֵה יְרוּשָׁלַֽיִם עִיר הַקֹּֽדֶשׁ בִּמְהֵרָה בְיָמֵֽינוּ, וְהַעֲלֵֽנוּ לְתוֹכָהּ, וְשַׂמְּחֵֽנוּ בְּבִנְיָנָהּ, וּנְבָֽרְכָֽךְ עָלֶֽיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה:"},
           {"ref": "7", "parts": [
@@ -307,72 +323,121 @@
             {"kind": "prayer", "when": "shabbat", "text": " וּרְצֵה וְהַחֲלִיצֵֽנוּ בְּיוֹם הַשַּׁבָּת הַזֶּה.</small> "}
           ]},
           {"ref": "8", "parts": [
-            {"kind": "instruction", "en": "On Rosh Chodesh:", "text": "<small><small>בראש־חודש</small>"},
+            {"kind": "instruction", "when": "roshChodesh", "en": "On Rosh Chodesh:", "text": "<small><small>בראש־חודש</small>"},
             {"kind": "prayer", "when": "roshChodesh", "text": " וְזָכְרֵֽנוּ לְטוֹבָה בְּיוֹם רֹאשׁ חֹֽדֶשׁ הַזֶּה.</small> "}
           ]},
           {"ref": "9", "parts": [
-            {"kind": "instruction", "en": "On Rosh Hashana:", "text": "<small><small>בראש־השנה</small>"},
+            {"kind": "instruction", "when": "roshHashana", "en": "On Rosh Hashana:", "text": "<small><small>בראש־השנה</small>"},
             {"kind": "prayer", "when": "roshHashana", "text": " וְזָכְרֵֽנוּ לְטוֹבָה בְּיוֹם הַזִּכָּרוֹן הַזֶּה.</small> "}
           ]},
           {"ref": "10", "parts": [
-            {"kind": "instruction", "en": "On Pesach:", "text": "<small><small>בפסח</small>"},
+            {"kind": "instruction", "when": "pesach", "en": "On Pesach:", "text": "<small><small>בפסח</small>"},
             {"kind": "prayer", "when": "pesach", "text": " וְשַׂמְּחֵֽנוּ בְּיוֹם חַג הַמַּצּוֹת הַזֶּה,"},
-            {"kind": "prayer", "when": "pesach", "text": " בְּיוֹם "},
+            {"kind": "prayer", "when": "pesach && yomTov", "text": " בְּיוֹם "},
             {"kind": "instruction", "when": "pesach && yomTov", "en": "On Yom Tov:", "text": "<small><small>ביום טוב:</small>"},
             {"kind": "prayer", "when": "pesach && yomTov", "text": " טוֹב</small> מִקְרָא קֹדֶשׁ הַזֶּה.</small> "}
           ]},
           {"ref": "11", "parts": [
-            {"kind": "instruction", "en": "On Shavuot:", "text": "<small><small>בשבועות</small>"},
+            {"kind": "instruction", "when": "shavuot", "en": "On Shavuot:", "text": "<small><small>בשבועות</small>"},
             {"kind": "prayer", "when": "shavuot", "text": " וְשַׂמְּחֵֽנוּ בְּיוֹם חַג הַשָּׁבוּעוֹת הַזֶּה בְּיוֹם טוֹב מִקְרָא קֹֽדֶשׁ הַזֶּה.</small> "}
           ]},
           {"ref": "12", "parts": [
-            {"kind": "instruction", "en": "On Sukkot:", "text": "<small><small>בסוכות</small>"},
+            {"kind": "instruction", "when": "sukkot", "en": "On Sukkot:", "text": "<small><small>בסוכות</small>"},
             {"kind": "prayer", "when": "sukkot", "text": " וְשַׂמְּחֵֽנוּ בְּיוֹם הַסֻּכּוֹת הַזֶּה,"},
-            {"kind": "prayer", "when": "sukkot", "text": " בְּיוֹם "},
+            {"kind": "prayer", "when": "sukkot && yomTov", "text": " בְּיוֹם "},
             {"kind": "instruction", "when": "sukkot && yomTov", "en": "On Yom Tov:", "text": "<small><small>ביום טוב:</small>"},
             {"kind": "prayer", "when": "sukkot && yomTov", "text": " טוֹב</small> מִקְרָא קֹֽדֶשׁ הַזֶּה.</small> "}
           ]},
           {"ref": "13", "parts": [
-            {"kind": "instruction", "en": "On Shmini Atzeret:", "text": "<small><small>בשמיני עצרת</small>"},
-            {"kind": "prayer", "when": "shminiAtzeret", "text": " וְשַׂמְּחֵֽנוּ בְּיוֹם שְׁמִינִי חַג עֲצֶֽרֶת הַזֶּה בְּיוֹם טוֹב מִקְרָא קֹֽדֶשׁ הַזֶּה.</small> "}
+            {"kind": "instruction", "when": "shminiAtzeret || simchatTorah", "en": "On Shmini Atzeret:", "text": "<small><small>בשמיני עצרת</small>"},
+            {"kind": "prayer", "when": "shminiAtzeret || simchatTorah", "text": " וְשַׂמְּחֵֽנוּ בְּיוֹם שְׁמִינִי חַג עֲצֶֽרֶת הַזֶּה בְּיוֹם טוֹב מִקְרָא קֹֽדֶשׁ הַזֶּה.</small> "}
           ]},
           {"ref": "14", "kind": "prayer", "text": "כִּי אַתָּה טוֹב וּמֵטִיב לַכֹּל, וְנוֹדֶה לְךָ עַל הָאָֽרֶץ "},
           {"ref": "15", "parts": [
-            {"kind": "instruction", "en": "Bread/grains:", "text": "<small>מזונות</small>"},
-            {"kind": "prayer", "text": " וְעַל הַמִּחְיָה וְעַל הַכַּלְכָּלָה "},
-            {"kind": "instruction", "en": "Of the Land of Israel:", "text": "<small><small>של ארץ ישראל</small>"},
-            {"kind": "prayer", "text": " וְעַל מִחְיָתָהּ וְעַל כַּלְכָּלָתָהּ</small>"}
+            {"kind": "instruction", "when": "if_ateGrain", "en": "Bread/grains:", "text": "<small>מזונות</small>"},
+            {"kind": "prayer", "when": "if_ateGrain", "text": " וְעַל הַמִּחְיָה וְעַל הַכַּלְכָּלָה "},
+            {"kind": "instruction", "when": "if_ateGrain", "en": "Of the Land of Israel:", "text": "<small><small>של ארץ ישראל</small>"},
+            {"kind": "prayer", "when": "if_ateGrain", "text": " וְעַל מִחְיָתָהּ וְעַל כַּלְכָּלָתָהּ</small>"}
           ]},
           {"ref": "16", "parts": [
-            {"kind": "instruction", "en": "Wine:", "text": "<small>יין</small>"},
-            {"kind": "prayer", "text": " וְעַל פְּרִי הַגֶּֽפֶן "},
-            {"kind": "instruction", "en": "Of the Land of Israel:", "text": "<small><small>של ארץ ישראל</small>"},
-            {"kind": "prayer", "text": " וְעַל פְּרִי גַפְנָהּ</small> "}
+            {"kind": "instruction", "when": "if_drankWine", "en": "Wine:", "text": "<small>יין</small>"},
+            {"kind": "prayer", "when": "if_drankWine", "text": " וְעַל פְּרִי הַגֶּֽפֶן "},
+            {"kind": "instruction", "when": "if_drankWine", "en": "Of the Land of Israel:", "text": "<small><small>של ארץ ישראל</small>"},
+            {"kind": "prayer", "when": "if_drankWine", "text": " וְעַל פְּרִי גַפְנָהּ</small> "}
           ]},
           {"ref": "17", "parts": [
-            {"kind": "instruction", "en": "Fruits:", "text": "<small>פירות</small>"},
-            {"kind": "prayer", "text": " וְעַל הַפֵּרוֹת "},
-            {"kind": "instruction", "en": "Of the Land of Israel:", "text": "<small><small>של ארץ ישראל</small>"},
-            {"kind": "prayer", "text": " וְעַל פֵּרוֹתֶֽיהָ</small>"}
+            {"kind": "instruction", "when": "if_ateSevenSpecies", "en": "Fruits:", "text": "<small>פירות</small>"},
+            {"kind": "prayer", "when": "if_ateSevenSpecies", "text": " וְעַל הַפֵּרוֹת "},
+            {"kind": "instruction", "when": "if_ateSevenSpecies", "en": "Of the Land of Israel:", "text": "<small><small>של ארץ ישראל</small>"},
+            {"kind": "prayer", "when": "if_ateSevenSpecies", "text": " וְעַל פֵּרוֹתֶֽיהָ</small>"}
           ]},
           {"ref": "18", "kind": "prayer", "text": "בָּרוּךְ אַתָּה יְהֹוָה, עַל הָאָֽרֶץ וְעַל"},
           {"ref": "19", "parts": [
-            {"kind": "instruction", "en": "Bread/grains:", "text": "<small>מזונות</small>"},
-            {"kind": "prayer", "text": " הַמִּחְיָה וְעַל הַכַּלְכָּלָה: "},
-            {"kind": "instruction", "en": "Of the Land of Israel:", "text": "<small><small>של ארץ ישראל</small>"},
-            {"kind": "prayer", "text": " מִחְיָתָהּ וְעַל כַּלְכָּלָתָהּ:</small>"}
+            {"kind": "instruction", "when": "if_ateGrain", "en": "Bread/grains:", "text": "<small>מזונות</small>"},
+            {"kind": "prayer", "when": "if_ateGrain", "text": " הַמִּחְיָה וְעַל הַכַּלְכָּלָה: "},
+            {"kind": "instruction", "when": "if_ateGrain", "en": "Of the Land of Israel:", "text": "<small><small>של ארץ ישראל</small>"},
+            {"kind": "prayer", "when": "if_ateGrain", "text": " מִחְיָתָהּ וְעַל כַּלְכָּלָתָהּ:</small>"}
           ]},
           {"ref": "20", "parts": [
-            {"kind": "instruction", "en": "Wine:", "text": "<small>יין</small>"},
-            {"kind": "prayer", "text": " פְּרִי הַגֶּֽפֶן: "},
-            {"kind": "instruction", "en": "Of the Land of Israel:", "text": "<small><small>של ארץ ישראל</small>"},
-            {"kind": "prayer", "text": " פְּרִי גַפְנָהּ:</small>"}
+            {"kind": "instruction", "when": "if_drankWine", "en": "Wine:", "text": "<small>יין</small>"},
+            {"kind": "prayer", "when": "if_drankWine", "text": " פְּרִי הַגֶּֽפֶן: "},
+            {"kind": "instruction", "when": "if_drankWine", "en": "Of the Land of Israel:", "text": "<small><small>של ארץ ישראל</small>"},
+            {"kind": "prayer", "when": "if_drankWine", "text": " פְּרִי גַפְנָהּ:</small>"}
           ]},
           {"ref": "21", "parts": [
-            {"kind": "instruction", "en": "Fruits:", "text": "<small>פירות</small>"},
-            {"kind": "prayer", "text": " הַפֵּרוֹת: "},
-            {"kind": "instruction", "en": "Of the Land of Israel:", "text": "<small><small>של ארץ ישראל </small>"},
-            {"kind": "prayer", "text": "פֵּרוֹתֶֽיהָ:</small>"}
+            {"kind": "instruction", "when": "if_ateSevenSpecies", "en": "Fruits:", "text": "<small>פירות</small>"},
+            {"kind": "prayer", "when": "if_ateSevenSpecies", "text": " הַפֵּרוֹת: "},
+            {"kind": "instruction", "when": "if_ateSevenSpecies", "en": "Of the Land of Israel:", "text": "<small><small>של ארץ ישראל </small>"},
+            {"kind": "prayer", "when": "if_ateSevenSpecies", "text": "פֵּרוֹתֶֽיהָ:</small>"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Amud translation",
+        "segs": [
+          {"ref": "t2", "translates": ["2"], "comment": "Amud translation", "text": "Blessed are You, Hashem our God, King of the universe,"},
+          {"ref": "t3", "translates": ["3"], "comment": "Amud translation", "text": "for the sustenance and for the nourishment,"},
+          {"ref": "t4", "translates": ["4"], "comment": "Amud translation", "text": "(and) for the vine and for the fruit of the vine,"},
+          {"ref": "t5", "translates": ["5"], "comment": "Amud translation", "text": "(and) for the tree and for the fruit of the tree,"},
+          {"ref": "t6", "translates": ["6"], "comment": "Amud translation", "text": "and for the produce of the field, and for the desirable, good and spacious land that You were pleased to give as a heritage to our fathers, to eat of its fruit and be satisfied with its goodness. Have mercy, Hashem our God, on us and on Israel Your people, on Jerusalem Your city, on Mount Zion, the dwelling place of Your glory, on Your altar and on Your Temple. Rebuild Jerusalem, the holy city, speedily in our days; bring us up into it, make us rejoice in its rebuilding, and we shall bless You for it in holiness and purity."},
+          {"ref": "t7", "translates": ["7"], "comment": "Amud translation", "text": "And be pleased to strengthen us on this Shabbat day."},
+          {"ref": "t8", "translates": ["8"], "comment": "Amud translation", "text": "And remember us for good on this day of Rosh Chodesh."},
+          {"ref": "t9", "translates": ["9"], "comment": "Amud translation", "text": "And remember us for good on this Day of Remembrance."},
+          {"ref": "t10", "translates": ["10"], "parts": [
+            {"when": "pesach", "comment": "Amud translation", "text": "And make us rejoice on this Festival of Matzot,"},
+            {"when": "pesach && yomTov", "text": " on this day of holy convocation."}
+          ]},
+          {"ref": "t11", "translates": ["11"], "comment": "Amud translation", "text": "And make us rejoice on this Festival of Shavuot, on this day of holy convocation."},
+          {"ref": "t12", "translates": ["12"], "parts": [
+            {"when": "sukkot", "comment": "Amud translation", "text": "And make us rejoice on this Festival of Sukkot,"},
+            {"when": "sukkot && yomTov", "text": " on this day of holy convocation."}
+          ]},
+          {"ref": "t13", "translates": ["13"], "comment": "Amud translation", "text": "And make us rejoice on this Festival of Shemini Atzeret, on this day of holy convocation."},
+          {"ref": "t14", "translates": ["14"], "comment": "Amud translation", "text": "For You are good and do good to all, and we thank You for the land and for"},
+          {"ref": "t15", "translates": ["15"], "parts": [
+            {"comment": "Amud translation", "text": "and for the sustenance and for the nourishment"},
+            {"text": " (and for its sustenance and its nourishment)"}
+          ]},
+          {"ref": "t16", "translates": ["16"], "parts": [
+            {"comment": "Amud translation", "text": "and for the fruit of the vine"},
+            {"text": " (and for the fruit of its vine)"}
+          ]},
+          {"ref": "t17", "translates": ["17"], "parts": [
+            {"comment": "Amud translation", "text": "and for the fruits"},
+            {"text": " (and for its fruits)"}
+          ]},
+          {"ref": "t18", "translates": ["18"], "comment": "Amud translation", "text": "Blessed are You, Hashem, for the land and for"},
+          {"ref": "t19", "translates": ["19"], "parts": [
+            {"comment": "Amud translation", "text": "the sustenance and the nourishment."},
+            {"text": " (its sustenance and its nourishment.)"}
+          ]},
+          {"ref": "t20", "translates": ["20"], "parts": [
+            {"comment": "Amud translation", "text": "the fruit of the vine."},
+            {"text": " (the fruit of its vine.)"}
+          ]},
+          {"ref": "t21", "translates": ["21"], "parts": [
+            {"comment": "Amud translation", "text": "the fruits."},
+            {"text": " (its fruits.)"}
           ]}
         ]
       }
@@ -394,24 +459,19 @@
           {"ref": "7", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הָעֵץ: "},
           {"ref": "8", "kind": "instruction", "en": "On fruits of the ground, one recites:", "text": "<small>על פירות האדמה מברך</small> "},
           {"ref": "9", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הָאֲדָמָה: "},
-          {"ref": "10", "kind": "instruction", "en": "On things that do not grow from the ground, such as meat, fish, milk, cheese, and the like. Likewise on drinks (except wine), one recites:", "text": "<small>על דבר שאין גדולו מן הארץ כגון בשר, דגים, חלב, גבינה, וכדומה. וכן על  משקים (חוץ מן היין) מברך</small> "},
+          {"ref": "10", "kind": "instruction", "en": "On things that do not grow from the ground, such as meat, fish, milk, cheese, and the like. Likewise on drinks (except wine), one recites:", "text": "<small>על דבר שאין גדולו מן הארץ כגון בשר, דגים, חלב, גבינה, וכדומה. וכן על משקים (חוץ מן היין) מברך</small> "},
           {"ref": "11", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, שֶׁהַכֹּל נִהְיָה בִּדְבָרוֹ: "},
           {"ref": "12", "parts": [
-            {"kind": "instruction", "en": "After eating, if one ate a kezayit within the time of achilat peres (4 minutes, and some say 8 minutes),", "text": "<small>לאחר האכילה אם אכל כזית בכדי אכילת פרס <small>(4 דקות, וי\"א 8 דקות)</small>"},
-            {"kind": "prayer", "text": ","},
-            {"kind": "prayer", "text": " או שתה רביעית בבת אחת על פרות האילן (חוץ מן הז' מינים),"},
-            {"kind": "prayer", "text": " פרות האדמה,"},
-            {"kind": "prayer", "text": " ודבר שאין גידולו מן הארץ,"},
-            {"kind": "instruction", "en": "one recites:", "text": " מברך</small> "}
+            {"kind": "instruction", "node": "brachot.borei_nefashot", "en": "After eating, if one ate a kezayit within the time of achilat peres (4 minutes, and some say 8 minutes), or drank a quarter-log at once, of tree fruits (other than the seven species), fruits of the ground, or something that does not grow from the ground, one recites:", "text": "<small>לאחר האכילה אם אכל כזית בכדי אכילת פרס <small>(4 דקות, וי\"א 8 דקות)</small>, או שתה רביעית בבת אחת על פרות האילן (חוץ מן הז' מינים), פרות האדמה, ודבר שאין גידולו מן הארץ, מברך</small> "}
           ]},
-          {"ref": "13", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא נְפָשׁוֹת רַבּוֹת וְחֶסְרוֹנָן עַל כָּל־מַה־שֶּׁבָּרָֽאתָ לְהַחֲיוֹת בָּהֶם נֶֽפֶשׁ כָּל־חָי, בָּרוּךְ חַי הָעוֹלָמִים. "},
+          {"ref": "13", "kind": "prayer", "node": "brachot.borei_nefashot", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא נְפָשׁוֹת רַבּוֹת וְחֶסְרוֹנָן עַל כָּל־מַה־שֶּׁבָּרָֽאתָ לְהַחֲיוֹת בָּהֶם נֶֽפֶשׁ כָּל־חָי, בָּרוּךְ חַי הָעוֹלָמִים. "},
           {"ref": "14", "kind": "instruction", "en": "On a pleasant smell from trees, one recites:", "text": "<small>על ריח טוב שבעצים מברך</small> "},
           {"ref": "15", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא עֲצֵי בְשָׂמִים: "},
           {"ref": "16", "kind": "instruction", "en": "On a pleasant smell from herbs, one recites:", "text": "<small>על ריח טוב שבעשבים מברך</small> "},
           {"ref": "17", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא עִשְׂבֵּי בְשָׂמִים: "},
           {"ref": "18", "kind": "instruction", "en": "On a pleasant smell that is neither from a tree nor from a herb, or if one is in doubt whether it is from a tree or a herb, one recites:", "text": "<small>על ריח טוב שאינו עץ ולא עשב, או שהוא מסופק בו בין עץ לעשב, מברך</small> "},
           {"ref": "19", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא מִינֵי בְשָׂמִים: "},
-          {"ref": "20", "kind": "instruction", "en": "Any garment in which one rejoices, even if others do not rejoice in that garment, one recites Shehecheyanu, and likewise the opposite. Likewise one recites Shehecheyanu on a new fruit that appears annually and has a fixed season for its growth. However, on fruits where there is no distinction between old and new, such as walnuts, almonds, and apples that are found in the market all year, even though they are renewed annually and one knows they are new, one does not recite Shehecheyanu on them, since there is no distinction between new and old. The custom is to recite the blessing on the fruit first and then Shehecheyanu when eating a new fruit.", "text": "<small>כל בגד שהוא שמח בו, אפילו שלאחרים אין שמחה בבגד זה הרי זה מברך שהחיינו, וכן להיפך. וכן מברכים שהחיינו על פרי המתחדש משנה לשנה, ויש זמן קבוע לגידולו. אבל פירות שאין בהם היכר בין ישנים לחדשים, כגון אגוזים, שקדים, ותפוחים שנמצאים בשוק כל השנה וכדומה, אף על פי שהם מתחדשים משנה לשנה, ויודע באלו שהם חדשים, אפילו הכי לא יברך עליהם שהחיינו, מאחר שאין היכר בין חדשים לישנים. המנהג הוא לברך באכילת פרי חדש ברכת הפרי ואחר כך שהחיינו</small> "},
+          {"ref": "20", "kind": "note", "en": "Any garment in which one rejoices, even if others do not rejoice in that garment, one recites Shehecheyanu, and likewise the opposite. Likewise one recites Shehecheyanu on a new fruit that appears annually and has a fixed season for its growth. However, on fruits where there is no distinction between old and new, such as walnuts, almonds, and apples that are found in the market all year, even though they are renewed annually and one knows they are new, one does not recite Shehecheyanu on them, since there is no distinction between new and old. The custom is to recite the blessing on the fruit first and then Shehecheyanu when eating a new fruit.", "text": "<small>כל בגד שהוא שמח בו, אפילו שלאחרים אין שמחה בבגד זה הרי זה מברך שהחיינו, וכן להיפך. וכן מברכים שהחיינו על פרי המתחדש משנה לשנה, ויש זמן קבוע לגידולו. אבל פירות שאין בהם היכר בין ישנים לחדשים, כגון אגוזים, שקדים, ותפוחים שנמצאים בשוק כל השנה וכדומה, אף על פי שהם מתחדשים משנה לשנה, ויודע באלו שהם חדשים, אפילו הכי לא יברך עליהם שהחיינו, מאחר שאין היכר בין חדשים לישנים. המנהג הוא לברך באכילת פרי חדש ברכת הפרי ואחר כך שהחיינו</small> "},
           {"ref": "21", "kind": "prayer", "text": "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, שֶׁהֶחֱיָֽנוּ וְקִיְּמָֽנוּ וְהִגִּיעָֽנוּ לַזְּמַן הַזֶּה:"}
         ]
       },
@@ -424,7 +484,11 @@
           {"ref": "7", "translates": ["7"], "text": "Blessed are You, L·rd, Our G·d, King of the Universe Who creates fruit of the tree"},
           {"ref": "9", "translates": ["9"], "text": "Blessed are You, L·rd, Our G·d, King of the Universe Who creates fruit of the ground"},
           {"ref": "11", "translates": ["11"], "text": "Blessed are You, L·rd, Our G·d, King of the Universe that all was (made) by His word"},
-          {"ref": "13", "translates": ["13"], "text": "Blessed are You, L·rd, our G·d, King of the universe, Who creates Many Souls, &amp; their lackings on all that You created to give life to them – all living souls. Blessed is He Who lives Forever. "}
+          {"ref": "13", "translates": ["13"], "text": "Blessed are You, L·rd, our G·d, King of the universe, Who creates Many Souls, &amp; their lackings on all that You created to give life to them – all living souls. Blessed is He Who lives Forever. "},
+          {"ref": "t15", "translates": ["15"], "comment": "Amud translation", "text": "Blessed are You, Hashem our God, King of the universe, Who creates fragrant trees."},
+          {"ref": "t17", "translates": ["17"], "comment": "Amud translation", "text": "Blessed are You, Hashem our God, King of the universe, Who creates fragrant herbs."},
+          {"ref": "t19", "translates": ["19"], "comment": "Amud translation", "text": "Blessed are You, Hashem our God, King of the universe, Who creates various kinds of fragrance."},
+          {"ref": "t21", "translates": ["21"], "comment": "Amud translation", "text": "Blessed are You, Hashem our God, King of the universe, Who has kept us alive, sustained us, and brought us to this time."}
         ]
       }
     },
