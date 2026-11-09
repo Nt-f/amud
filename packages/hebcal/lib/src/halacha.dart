@@ -132,18 +132,24 @@ HallelType _hallel(List<Event> events, HDate hdate) {
     final desc = ev.getDesc();
     final month = hd.getMonth();
     final mday = hd.getDate();
-    if (desc.startsWith('Chanukah') ||
+    // Amud: Hallel starts on the first day of Chanukah (25 Kislev), not on
+    // its eve, and is whole on Shmini Atzeret and Simchat Torah (OC 668:1).
+    if ((desc.startsWith('Chanukah') && !(month == Months.kislev && mday == 24)) ||
         desc.startsWith('Shavuot') ||
         desc.startsWith('Sukkot') ||
+        desc == HolidayDesc.shminiAtzeret ||
+        desc == HolidayDesc.simchatTorah ||
         (month == Months.nisan && (mday == 15 || mday == 16) && ev.hasFlag(Flags.chag)) ||
         desc == HolidayDesc.yomHaatzmaUt ||
         desc == HolidayDesc.yomYerushalayim) {
       return HallelType.whole;
     }
     if (ev.hasFlag(Flags.roshChodesh) ||
+        // Amud: no Hallel on Pesach Sheni.
         (desc.startsWith('Pesach') &&
             desc != HolidayDesc.pesachI &&
-            desc != HolidayDesc.pesachII)) {
+            desc != HolidayDesc.pesachII &&
+            desc != HolidayDesc.pesachSheni)) {
       return HallelType.half;
     }
   }

@@ -11,11 +11,21 @@ import '../tool/parity_dump.dart';
 final _modern = RegExp(
     r'\| (Sigd|Yom HaAliyah|Yom HaShoah|Yom HaZikaron|Yom HaAtzma|Yom Yerushalayim|Herzl|Jabotinsky|Family Day|Ben-Gurion|Hebrew Language|Yitzhak Rabin)');
 
+/// Days where the port corrects upstream's Hallel (halacha.dart): none on
+/// Erev Chanukah or Pesach Sheni, whole on Shmini Atzeret/Simchat Torah.
+/// Upstream's line for each, and the port's.
+const _hallelFixes = {
+  'HD 2021-4-26 14 Iyyar 5781 י״ד אִיָּיר תשפ״א T110 H1': 'HD 2021-4-26 14 Iyyar 5781 י״ד אִיָּיר תשפ״א T110 H0',
+  'HD 2021-9-29 23 Tishrei 5782 כ״ג תִּשְׁרֵי תשפ״ב T000 H0': 'HD 2021-9-29 23 Tishrei 5782 כ״ג תִּשְׁרֵי תשפ״ב T000 H2',
+  'HD 2024-12-25 24 Kislev 5785 כ״ד כִּסְלֵו תשפ״ה T101 H2': 'HD 2024-12-25 24 Kislev 5785 כ״ד כִּסְלֵו תשפ״ה T101 H0',
+};
+
 void main() {
   test('matches upstream JS hebcal output', () {
     final expected = File('test/fixtures/hebcal_js_reference.txt')
         .readAsLinesSync()
         .where((l) => l.isNotEmpty && !_modern.hasMatch(l))
+        .map((l) => _hallelFixes[l] ?? l)
         .toList()
       ..sort();
     final actual = parityLines().where((l) => !_modern.hasMatch(l)).toList()..sort();
