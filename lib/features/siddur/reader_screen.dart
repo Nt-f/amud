@@ -16,6 +16,7 @@ import '../../core/focus_mode.dart';
 import '../../core/fonts.dart';
 import '../../core/format.dart';
 import '../../core/hebrew_text.dart';
+import '../../core/keypad.dart';
 import '../../core/html_text.dart';
 import '../../core/page_swipe.dart';
 import '../../core/providers.dart';
@@ -233,7 +234,11 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
                   textDirection: heTitle ? null : TextDirection.rtl),
           ]);
         }),
-        actions: _barActions(context, title, date, picked != null),
+        // A keypad phone reaches these from the menu (the left soft key),
+        // so the title has the bar.
+        actions: ref.watch(keypadModeProvider)
+            ? [if (ref.watch(readerCompassTurnProvider) != null) const ReaderCompass()]
+            : _barActions(context, title, date, picked != null),
     );
 
     final loaded = items.valueOrNull;
@@ -267,13 +272,38 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
             Router.neglect(context, () => context.pushReplacement(readerPath(r.book, r.id, standalone: widget.standalone)));
           };
 
+    final next = turnTo(around?.next, 'next');
+    final previous = turnTo(around?.prev, 'previous');
+    final ltr = Directionality.of(context) == TextDirection.ltr;
+    final keypad = ref.watch(keypadModeProvider);
     return CallbackShortcuts(
       bindings: {
         for (var i = 0; i < 9; i++)
           SingleActivator(LogicalKeyboardKey(LogicalKeyboardKey.digit1.keyId + i)): () { if (i < _jumps.length && _scroll.isAttached) _jump(_jumps[i]); },
         const SingleActivator(LogicalKeyboardKey.pageDown): () => _pageOffset(1),
         const SingleActivator(LogicalKeyboardKey.pageUp): () => _pageOffset(-1),
-        const SingleActivator(LogicalKeyboardKey.escape): () { if (focusMode.state) toggleFocusMode(); },
+        const SingleActivator(LogicalKeyboardKey.escape): () {
+          if (focusMode.state) {
+            toggleFocusMode();
+          } else if (keypad) {
+            Navigator.maybePop(context);
+          }
+        },
+        // A keypad phone: the d-pad scrolls and turns to the next prayer,
+        // the center key hides the bars, * and # size the text, 0 goes to
+        // the top and the left soft key opens the page's tools.
+        if (keypad) ...{
+          const SingleActivator(LogicalKeyboardKey.arrowDown): () => _keyStep(1),
+          const SingleActivator(LogicalKeyboardKey.arrowUp): () => _keyStep(-1),
+          SingleActivator(ltr ? LogicalKeyboardKey.arrowRight : LogicalKeyboardKey.arrowLeft): () => next?.call(),
+          SingleActivator(ltr ? LogicalKeyboardKey.arrowLeft : LogicalKeyboardKey.arrowRight): () => previous?.call(),
+          const SingleActivator(LogicalKeyboardKey.select): toggleFocusMode,
+          const SingleActivator(LogicalKeyboardKey.enter): toggleFocusMode,
+          const CharacterActivator('#'): () => _textSize(0.1),
+          const CharacterActivator('*'): () => _textSize(-0.1),
+          const SingleActivator(LogicalKeyboardKey.digit0): () { if (_scroll.isAttached) _scroll.jumpTo(index: 0); },
+          for (final k in keypadMenuKeys) k: () => _keypadMenu(context, title, date, next: next, previous: previous),
+        },
       },
       // The reader's widgets read this book's settings (its font).
       child: ProviderScope(
@@ -341,6 +371,39 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
             onPressed: () => pickReaderDate(context, ref, date)),
         BarTool(tooltip: context.tr('Text settings'), icon: const Icon(Icons.text_fields), onPressed: () => showReaderSettings(context, widget.book)),
       ]);
+  }
+
+  /// A d-pad press: a third of the screen.
+  void _keyStep(int direction) {
+    if (!_scroll.isAttached) return;
+    _offsetScroll.animateScroll(offset: direction * MediaQuery.sizeOf(context).height * 0.33,
+        duration: const Duration(milliseconds: 150), curve: Curves.easeOut);
+  }
+
+  /// * and # on a keypad: the reader's text size, a step at a time, within
+  /// the text settings' range.
+  void _textSize(double by) {
+    ref.read(settingsProvider.notifier).update((x) => x.copyWith(textScale: (((x.textScale + by) * 20).round() / 20).clamp(0.7, 2.2)));
+  }
+
+  /// The left soft key on a keypad: the app bar's tools, the keys that do
+  /// the same from the page, and the key points to jump to.
+  void _keypadMenu(BuildContext context, String title, HDate date, {VoidCallback? next, VoidCallback? previous}) {
+    final s = ref.read(settingsProvider);
+    showKeypadMenu(context, title, [
+      KeypadMenuItem(context.tr('Focus mode'), icon: Icons.fullscreen, key: context.tr('Select'), toggleFocusMode),
+      KeypadMenuItem(context.tr('Larger text'), icon: Icons.text_increase, key: '#', () => _textSize(0.1)),
+      KeypadMenuItem(context.tr('Smaller text'), icon: Icons.text_decrease, key: '*', () => _textSize(-0.1)),
+      if (next != null) KeypadMenuItem(context.tr('Next'), icon: Icons.skip_next, next),
+      if (previous != null) KeypadMenuItem(context.tr('Previous'), icon: Icons.skip_previous, previous),
+      KeypadMenuItem(context.tr('Text settings'), icon: Icons.text_fields, () => showReaderSettings(context, widget.book)),
+      KeypadMenuItem(context.tr('Date'), icon: Icons.event, () => pickReaderDate(context, ref, date)),
+      KeypadMenuItem(context.tr('Why today?'), icon: Icons.help_outline, () => openDayGuide(context, date)),
+      KeypadMenuItem(context.tr('Back to top'), icon: Icons.vertical_align_top, key: '0', () { if (_scroll.isAttached) _scroll.jumpTo(index: 0); }),
+      for (final (i, p) in _jumps.indexed)
+        KeypadMenuItem(context.prayerTitle(s, p.en, p.he), icon: p.elsewhere == null ? Icons.subdirectory_arrow_right : Icons.open_in_new,
+            key: i < 9 ? '${i + 1}' : null, () => _jump(p)),
+    ]);
   }
 
   void _pageOffset(int direction) {

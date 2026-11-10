@@ -100,14 +100,32 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
-                child: Row(children: [
-                  if (_page > 0) TextButton.icon(onPressed: () => _go(_page - 1), icon: const Icon(Icons.arrow_back), label: Text(context.tr('Back'))),
-                  const Spacer(),
-                  FilledButton.icon(
-                    onPressed: last ? _start : () => _go(_page + 1),
-                    icon: Icon(last ? Icons.check : Icons.arrow_forward),
-                    label: Text(context.tr(last ? 'Start' : 'Next')),
-                    style: FilledButton.styleFrom(minimumSize: const Size(140, 48), textStyle: theme.textTheme.titleMedium),
+                // A flip phone (240dp) has no room for Next at its full
+                // width beside Back; past that, they shrink rather than
+                // overflow.
+                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                  if (_page > 0)
+                    Flexible(
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        alignment: AlignmentDirectional.centerStart,
+                        child: TextButton.icon(onPressed: () => _go(_page - 1), icon: const Icon(Icons.arrow_back), label: Text(context.tr('Back'))),
+                      ),
+                    )
+                  else
+                    const SizedBox.shrink(),
+                  Flexible(
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      alignment: AlignmentDirectional.centerEnd,
+                      child: FilledButton.icon(
+                        onPressed: last ? _start : () => _go(_page + 1),
+                        icon: Icon(last ? Icons.check : Icons.arrow_forward),
+                        label: Text(context.tr(last ? 'Start' : 'Next')),
+                        style: FilledButton.styleFrom(
+                            minimumSize: Size(MediaQuery.sizeOf(context).width < 320 ? 0 : 140, 48), textStyle: theme.textTheme.titleMedium),
+                      ),
+                    ),
                   ),
                 ]),
               ),

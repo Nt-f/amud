@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:siddur_engine/siddur_engine.dart';
 
 import '../../core/fonts.dart';
+import '../../core/keypad.dart';
 import '../../core/l10n.dart';
 import '../../core/providers.dart';
 import '../../core/settings.dart';
@@ -100,7 +101,7 @@ class _MeeinShaloshScreenState extends ConsumerState<MeeinShaloshScreen> {
   final Set<_Food> _ate = {};
 
   final _scroll = ScrollController();
-  late final _keyScroll = _KeyScrollAction(_scroll);
+  late final _keyScroll = KeyScrollAction(_scroll);
 
   @override
   void dispose() {
@@ -226,41 +227,6 @@ class _MeeinShaloshScreenState extends ConsumerState<MeeinShaloshScreen> {
         ],
       ),
     );
-  }
-}
-
-/// Scrolls the bracha with the keypad: a third of the screen per arrow, most
-/// of it per page. Disabled at either end, so the key moves focus instead.
-class _KeyScrollAction extends Action<ScrollIntent> {
-  final ScrollController controller;
-  _KeyScrollAction(this.controller);
-
-  /// Where the last press is still scrolling to, so quick presses add up.
-  double? _target;
-
-  double get _from {
-    final p = controller.position;
-    return p.isScrollingNotifier.value && _target != null ? _target! : p.pixels;
-  }
-
-  @override
-  bool isEnabled(ScrollIntent intent) {
-    if (!controller.hasClients) return false;
-    final p = controller.position;
-    return switch (intent.direction) {
-      AxisDirection.down => _from < p.maxScrollExtent,
-      AxisDirection.up => _from > p.minScrollExtent,
-      _ => false,
-    };
-  }
-
-  @override
-  void invoke(ScrollIntent intent) {
-    final p = controller.position;
-    final step = p.viewportDimension * (intent.type == ScrollIncrementType.page ? 0.8 : 0.33);
-    final to = (_from + (intent.direction == AxisDirection.down ? step : -step)).clamp(p.minScrollExtent, p.maxScrollExtent);
-    _target = to;
-    controller.animateTo(to, duration: const Duration(milliseconds: 150), curve: Curves.easeOut);
   }
 }
 

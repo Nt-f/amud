@@ -2,6 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools">
     <!-- Update checks, downloadable fonts and links. Flutter only adds this to
          debug/profile builds, so release APKs need it declared here. -->
+    <!-- Flip phones have no touch screen; the app runs on their keypad
+         (lib/core/keypad.dart). Without these, Play hides it from them. -->
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.faketouch" android:required="false"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <!-- Zman notifications -->

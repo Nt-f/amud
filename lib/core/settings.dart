@@ -100,6 +100,16 @@ enum AppThemeMode {
   const AppThemeMode(this.label);
 }
 
+/// Keypad navigation (see [AppSettings.keypadNav]).
+enum KeypadNav {
+  auto('Automatic'),
+  on('On'),
+  off('Off');
+
+  final String label;
+  const KeypadNav(this.label);
+}
+
 /// Which zmanim methodology to show by default.
 enum ZmanimOpinion { gra, mga, baalHatanya }
 
@@ -239,6 +249,10 @@ class AppSettings {
   /// The navigation bar shows labels under its icons.
   final bool navLabels;
 
+  /// Driving the app with a keypad (a flip phone): found on a phone with no
+  /// touch screen, or turned on or off here. See `lib/core/keypad.dart`.
+  final KeypadNav keypadNav;
+
   /// The Settings sections that are open; the rest show only their header.
   final List<String> expandedSettings;
 
@@ -301,6 +315,7 @@ class AppSettings {
     this.omerReminder = true,
     this.navTabs = const ['home', 'siddur', 'zmanim', 'torah', 'settings'],
     this.navLabels = true,
+    this.keypadNav = KeypadNav.auto,
     this.expandedSettings = const ['location'],
   });
 
@@ -363,6 +378,7 @@ class AppSettings {
     bool? omerReminder,
     List<String>? navTabs,
     bool? navLabels,
+    KeypadNav? keypadNav,
     List<String>? expandedSettings,
   }) =>
       AppSettings(
@@ -424,6 +440,7 @@ class AppSettings {
         omerReminder: omerReminder ?? this.omerReminder,
         navTabs: navTabs ?? this.navTabs,
         navLabels: navLabels ?? this.navLabels,
+        keypadNav: keypadNav ?? this.keypadNav,
         expandedSettings: expandedSettings ?? this.expandedSettings,
       );
 
@@ -490,6 +507,7 @@ class AppSettings {
         'omerReminder': omerReminder,
         'navTabs': navTabs,
         'navLabels': navLabels,
+        'keypadNav': keypadNav.name,
         'expandedSettings': expandedSettings,
       };
 
@@ -606,6 +624,7 @@ class AppSettings {
         return list.length >= 2 ? list : d.navTabs;
       }, d.navTabs),
       navLabels: pick('navLabels', d.navLabels),
+      keypadNav: byName(KeypadNav.values, 'keypadNav', d.keypadNav),
       expandedSettings: orElse(() => [for (final v in j['expandedSettings'] as List) if (v is String) v], d.expandedSettings),
     );
   }

@@ -351,6 +351,18 @@ class SettingsScreen extends ConsumerWidget {
             subtitle: [for (final id in s.navTabs) ?NavItem.of(id)?.label].map(context.tr).join(' · '),
             onTap: () => context.push('/settings/tabs'),
           ),
+          // A flip phone: found when it has no touch screen; this turns it
+          // on for one that has (or off).
+          AdaptiveNavTile(
+            icon: Icons.dialpad,
+            title: context.tr('Keypad navigation'),
+            subtitle: '${context.tr(s.keypadNav.label)} · ${context.tr('For phones with keys and no touch screen')}',
+            onTap: () async {
+              final v = await showAdaptivePicker(context,
+                  title: context.tr('Keypad navigation'), selected: s.keypadNav, options: [for (final m in KeypadNav.values) (m, context.tr(m.label))]);
+              if (v != null) set((x) => x.copyWith(keypadNav: v));
+            },
+          ),
           AdaptiveNavTile(icon: Icons.widgets_outlined, title: context.tr('Card gallery'), onTap: () => context.push('/settings/cards')),
           AdaptiveNavTile(icon: Icons.link, title: context.tr('Widgets, shortcuts & voice'), onTap: () => context.push('/settings/integrations')),
         ]),

@@ -11,6 +11,7 @@ import 'features/js_cards/card_gallery_screen.dart';
 import 'features/integrations/integrations_screen.dart';
 import 'features/integrations/shared_note_screen.dart';
 import 'core/format.dart';
+import 'core/keypad.dart';
 import 'core/l10n.dart';
 import 'core/page_swipe.dart';
 import 'core/providers.dart';
@@ -325,9 +326,38 @@ class SiddurApp extends ConsumerWidget {
       locale: s.uiLanguage.locale,
       localizationsDelegates: appLocalizationsDelegates,
       supportedLocales: [for (final l in UiLanguage.values) l.locale],
-      builder: (context, child) => AppText(lang: s.uiLanguage, ashkenazi: s.ashkenaziSpelling, child: ReaderDevice(child: LaunchAnimation(child: child!))),
+      builder: (context, child) => AppText(
+        lang: s.uiLanguage,
+        ashkenazi: s.ashkenaziSpelling,
+        child: ReaderDevice(child: LaunchAnimation(child: KeypadLayer(
+          onMenu: () => _appMenu(ref),
+          onBack: () => ref.read(routerProvider).routerDelegate.popRoute(),
+          child: child!,
+        ))),
+      ),
     );
   }
+}
+
+/// The left soft key on a keypad phone, where the page has no menu of its
+/// own: every tab, then the shortcuts on the bar.
+void _appMenu(WidgetRef ref) {
+  final context = _rootKey.currentContext;
+  if (context == null) return;
+  final router = ref.read(routerProvider);
+  final ids = [for (final t in navTabs) t.$1, ...ref.read(settingsProvider).navTabs.where(navShortcutIds.contains)];
+  showKeypadMenu(context, context.tr('Menu'), [
+    for (final id in ids)
+      if (NavItem.of(id) case final item?)
+        KeypadMenuItem(context.tr(item.label), icon: item.outlined, () {
+          if (item.branch case final b?) {
+            if (b == AdaptiveShell._siddurBranch) AdaptiveShell.siddurStale = false;
+            router.go(_tabRoots.elementAt(b));
+          } else {
+            openFromOutside(router, item.route!);
+          }
+        }),
+  ]);
 }
 
 /// The first screen of each tab, in [navTabs] order.
@@ -384,8 +414,41 @@ class AdaptiveShell extends ConsumerWidget {
     return TabSwipe(onNext: to(i + 1), onPrevious: to(i - 1), child: shell);
   }
 
+  /// A keypad phone: no tab bar (its icons don't fit the screen, and the
+  /// left soft key lists the tabs). At a tab's first screen left and right
+  /// move between tabs, and back goes Home rather than out of the app.
+  Widget _keypad(BuildContext context, WidgetRef ref) {
+    final tabs = [for (final id in ref.watch(settingsProvider.select((s) => s.navTabs))) ?NavItem.of(id)?.branch];
+    final i = tabs.indexOf(shell.currentIndex);
+    final home = _tabRoots.toList().indexOf('/');
+    return PopScope(
+      canPop: !atTabRoot || shell.currentIndex == home,
+      onPopInvokedWithResult: (didPop, _) {
+        if (!didPop) _go(home);
+      },
+      child: Scaffold(
+        body: Actions(
+          actions: {
+            DirectionalFocusIntent: DirectionalOrScrollAction(
+              onEdge: (d) {
+                if (!atTabRoot || i < 0) return false;
+                final forward = (d == TraversalDirection.right) == (Directionality.of(context) == TextDirection.ltr);
+                final j = forward ? i + 1 : i - 1;
+                if (j < 0 || j >= tabs.length) return false;
+                _go(tabs[j]);
+                return true;
+              },
+            ),
+          },
+          child: shell,
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    if (ref.watch(keypadModeProvider)) return _keypad(context, ref);
     final wide = MediaQuery.sizeOf(context).width >= navRailWidth;
     final labels = ref.watch(settingsProvider.select((s) => s.navLabels));
     final items = _items(context, ref.watch(settingsProvider.select((s) => s.navTabs)), labels: labels);

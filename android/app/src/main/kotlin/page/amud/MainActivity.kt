@@ -72,6 +72,11 @@ class MainActivity : FlutterActivity() {
             when (call.method) {
                 "setReaderDnd" -> result.success(setReaderDnd(call.arguments == true))
                 "hevcDecoder" -> result.success(hasHardwareHevc())
+                // A flip phone: no touch screen, driven by its keypad.
+                "keypadDevice" -> result.success(
+                    !packageManager.hasSystemFeature(android.content.pm.PackageManager.FEATURE_TOUCHSCREEN) ||
+                        resources.configuration.touchscreen == android.content.res.Configuration.TOUCHSCREEN_NOTOUCH
+                )
                 "readerDndAccess" -> result.success(notifications?.isNotificationPolicyAccessGranted == true)
                 "openReaderDndSettings" -> {
                     startActivity(Intent(Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS))
