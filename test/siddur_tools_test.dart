@@ -196,36 +196,4 @@ void main() {
       expect(bytes.length, greaterThan(50000));
     },
   );
-
-  test('curated Shema source matches the selected line', () {
-    final root = SchemaNode.parse({
-      'title': 'Test',
-      'nodes': [
-        {'title': 'Shema'},
-      ],
-    });
-    final segment = Segment(
-      ref: '1',
-      html: 'שְׁמַע יִשְׂרָאֵל',
-      hebrew: true,
-      kind: SegmentKind.prayer,
-      runs: [TextRun('שְׁמַע יִשְׂרָאֵל', RunKind.text)],
-    );
-    final item = SegmentItem(
-      's',
-      root.children.first,
-      ResolvedSegment(segment, [
-        ResolvedRun(segment.html, false, Applicability.always, null, null),
-      ]),
-      null,
-      SegmentKind.prayer,
-      Applicability.always,
-      null,
-      null,
-      false,
-    );
-    expect(insightFor(item)?.source, 'Deuteronomy 6:4');
-    expect(vocabularyFor(segment.html), containsPair('שמע', 'Hear; listen'));
-    expect(vocabularyFor(segment.html).containsKey('נסים'), isFalse);
-  });
 }

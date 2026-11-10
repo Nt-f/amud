@@ -39,10 +39,10 @@ import '../integrations/hachama_reader.dart';
 import 'package:flutter/services.dart';
 import 'reader_settings_sheet.dart';
 import 'related_prayers.dart';
+import 'report_location.dart';
 import 'siddur_providers.dart';
 import 'today_plan.dart';
 import 'day_guide_screen.dart';
-import 'prayer_insights.dart';
 import 'tefillin_mark.dart';
 
 /// [night]: read after sunset on today's date, so Birkat HaMazon is the
@@ -112,6 +112,12 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
   /// doesn't turn the page.
   bool _selected = false;
   String _selectedText = '';
+
+  /// For a report: the rows holding the selection, what each row shows
+  /// (by index, from [_rows]), and the whole page's items.
+  final _selectedRows = SelectedRows();
+  List<List<RenderItem>> _rowItems = const [];
+  List<RenderItem> _pageItems = const [];
 
   void _selectionChanged(SelectedContent? c) {
     _selectedText = c?.plainText ?? '';
@@ -188,64 +194,6 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         if (e.extra && !at.covered.contains(e))
           JumpPoint(e.addedEn ?? e.node.en, e.addedHe ?? e.node.he, elsewhere: e.ref),
     ];
-  }
-
-  Future<void> _explainSelection(SchemaNode? node) async {
-    try {
-      await _loadSelectionInsight();
-    } catch (_) {
-      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.tr('Unable to load the explanation. Please try again.'))));
-    }
-  }
-
-  Future<void> _loadSelectionInsight() async {
-    final date = ref.read(readerDaytimeDateProvider);
-    final key = (book: widget.book, node: widget.nodeId, expanded: (_expanded.toList()..sort()).join('|'), dateAbs: date.abs(), night: false);
-    final selected = normalizeRubric(_selectedText);
-    if (selected.isEmpty) return;
-    final root = await ref.read(bookIndexProvider(widget.book).future);
-    final versions = await ref.read(versionSelectionProvider(widget.book).future);
-    final resolver = await ref.read(resolverProvider(widget.book).future);
-    final settings = ref.read(settingsProvider);
-    final items = resolver.resolve(root.find(key.node) ?? root, versions,
-      (svc) => DayContext.forService(date, svc, il: settings.location.il, minhagim: settings.minhagim),
-      options: const ResolveOptions(excluded: ExcludedDisplay.dim, showHebrew: true, showTranslation: true, showNotes: true),
-    );
-    final matches = <SegmentItem>[];
-    for (final item in items) {
-      final segments = switch (item) { SegmentItem s => [s], ExcludedGroupItem g => g.items, _ => <SegmentItem>[] };
-      for (final segment in segments) {
-        if ([segment.he, segment.tr].any((s) => s != null && normalizeRubric(s.segment.html).contains(selected))) { matches.add(segment); }
-      }
-    }
-    if (!mounted) return;
-    if (matches.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.tr('Select words within a single line to explain it.'))));
-      return;
-    }
-    final match = matches.length == 1 ? matches.single : await showDialog<SegmentItem>(
-      context: context, builder: (context) => AlertDialog(
-        title: Text(context.tr('Choose the passage')),
-        content: SizedBox(width: 520, height: 360, child: ListView(children: [
-          for (final item in matches) ListTile(
-            title: Text(item.node.en),
-            subtitle: Text(item.he?.segment.plain ?? item.tr?.segment.plain ?? '', maxLines: 3, overflow: TextOverflow.ellipsis),
-            onTap: () => Navigator.pop(context, item),
-          ),
-        ])),
-        actions: [TextButton(onPressed: () => Navigator.pop(context), child: Text(context.tr('Cancel')))],
-      ),
-    );
-    if (match == null || !mounted) return;
-    final service = SiddurResolver.serviceFor(match.node, Service.shacharit);
-    final day = ref.read(dayContextProvider((date.abs(), service)));
-    final rule = resolver.sectionRuleFor(match.node);
-    if (mounted) {
-      await showLineInsight(context, match, day, book: widget.book, sectionCondition: rule?.when, sources: [
-      for (final list in [versions.hebrew, versions.translation])
-        if (versions.pick(list, match.node.path).$1 != null) versions.pick(list, match.node.path).$1!,
-    ]);
-    }
   }
 
   void _doubleTap() {
@@ -413,8 +361,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
       key: _selection,
       onSelectionChanged: _selectionChanged,
       contextMenuBuilder: (context, state) => textReportMenu(context, state,
-          selectedText: _selectedText, location: '${widget.book} / ${node?.en ?? widget.nodeId} (${widget.nodeId})',
-          onExplain: () => _explainSelection(node)),
+          selectedText: _selectedText, place: () => _reportPlace(context, node)),
       child: ScrollablePositionedList.builder(
         itemScrollController: _scroll,
         itemPositionsListener: _positions,
@@ -423,9 +370,67 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         itemCount: rows.length + 1,
         itemBuilder: (c, i) => i == rows.length
             ? (node == null ? const SizedBox.shrink() : RelatedPrayers(book: widget.book, node: node, standalone: widget.standalone))
-            : rows[i](c),
+            : RowSelectionProbe(index: i, rows: _selectedRows, child: rows[i](c)),
       ),
     );
+  }
+
+  /// Where the selected text is, for a report: the section(s) and lines of
+  /// the rows that hold it, not just this page (Weekday Shacharit holds
+  /// Musaf for Rosh Chodesh, Hallel…), and the day it was read for.
+  ReportPlace _reportPlace(BuildContext context, SchemaNode? node) {
+    final rows = _selectedRows.indexes.where((i) => i < _rowItems.length).toList();
+    final picked = [for (final i in rows) ..._rowItems[i]];
+    // Where in its first row the selection starts tells one place of a
+    // common word from another (a row can hold a whole section). Begun in a
+    // title above, it runs into the first row with lines from its start.
+    final start = _selectedRows.start;
+    int? near;
+    for (final i in rows) {
+      final lines = segmentsIn(_rowItems[i]);
+      if (lines.isEmpty) continue;
+      near = lineAt(lines, i == start?.row ? start!.offset : 0);
+      break;
+    }
+    var spot = locateSelection(segmentsIn(picked), _selectedText, near: near);
+    // Only a section's title selected: that section.
+    final titled = sectionsIn(picked);
+    if (spot == null && titled.isNotEmpty) spot = SelectionSpot(const [], const [], titled, exact: true);
+    // No row said it holds the selection: the page's one place with these
+    // words, if there is only one.
+    if (spot == null && rows.isEmpty) {
+      final sure = locateSelection(segmentsIn(_pageItems), _selectedText, exactOnly: true);
+      if (sure != null && !sure.ambiguous) spot = sure;
+    }
+    final date = ref.read(readerDaytimeDateProvider);
+    final first = spot?.leaves.firstOrNull;
+    final at = first ?? node;
+    final service = at == null ? Service.shacharit : SiddurResolver.serviceFor(at, Service.shacharit);
+    // The Hebrew day the section is said on (Maariv's is the next one).
+    final day = ref.read(dayContextProvider((date.abs(), service)));
+    final location = reportLocation(
+      book: widget.book,
+      page: widget.nodeId,
+      spot: spot,
+      date: day.hdate,
+      civil: date.greg(),
+      dayLabels: day.labels,
+      chosenDate: ref.read(readerDateProvider) != null,
+    );
+    // Shown in the dialog: the section's own title under its parent's
+    // ("Musaf Amidah for Rosh Chodesh › Sanctity of the Day"), as the reader
+    // titles them.
+    final s = readerSettings(ref.read(settingsProvider), widget.book);
+    String title(SchemaNode n) => context.prayerTitle(s, n.en, n.he);
+    final page = node == null ? context.term(widget.book) : title(node);
+    if (first == null || first == node) return (label: page, location: location);
+    final parent = first.parent;
+    final more = spot!.leaves.length - 1;
+    final label = [
+      if (parent != null && !parent.isRoot && parent != node) title(parent),
+      title(first),
+    ].join(' › ');
+    return (label: more > 0 ? '$label +$more' : label, location: location);
   }
 
   /// The list's rows, and the key points among its headings (see
@@ -523,7 +528,20 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     // Opened directly on the repetition (e.g. Kedushah): show it as is.
     final groupChazarah = node == null || !isChazarahNode(node);
     var i = 0;
+    // What each row shows, for a report: each pass of the loop takes items
+    // [from, i) and adds rows; the rows added get those items.
+    // A group's rows (a fold, the repetition) each show one of its items.
+    final rowItems = <List<RenderItem>>[];
+    final own = <int, List<RenderItem>>{};
+    var from = 0;
+    void tag() {
+      while (rowItems.length < rows.length) {
+        rowItems.add(own[rowItems.length] ?? list.sublist(from, i));
+      }
+      from = i;
+    }
     while (i < list.length) {
+      tag();
       final it = list[i];
       // The line an instruction introduces, past any note placed above it.
       var n = i + 1;
@@ -579,6 +597,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         if (open) {
           for (final g in group) {
             for (final w in _rowsFor(context, g, layout)) {
+              own[rows.length] = [g];
               rows.add((c) => _ChazarahBody(child: w(c)));
             }
           }
@@ -633,6 +652,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         if (open) {
           for (final g in group) {
             for (final w in _rowsFor(context, g, layout)) {
+              own[rows.length] = [g];
               rows.add((c) => _ChazarahBody(child: w(c)));
             }
           }
@@ -690,6 +710,10 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
       rows.addAll(_rowsFor(context, it, layout));
       i++;
     }
+    tag();
+    assert(rowItems.length == rows.length);
+    _rowItems = rowItems;
+    _pageItems = list;
     return (rows: rows, jumps: jumps);
   }
 

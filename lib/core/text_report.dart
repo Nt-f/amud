@@ -51,44 +51,57 @@ Future<void> sendReport(
   if (res.statusCode != 200) throw Exception('HTTP ${res.statusCode}');
 }
 
+/// Where reported text is: [label] is shown in the dialog (short, for a
+/// narrow phone), [location] is sent (the section, lines and day).
+typedef ReportPlace = ({String label, String location});
+
 /// Extends the reader's native selection menu without replacing Copy/Select all.
+/// [place] is asked when Report is tapped, so it describes the selection then.
 Widget textReportMenu(
   BuildContext context,
   SelectableRegionState state, {
   required String selectedText,
-  required String location,
-  VoidCallback? onExplain,
+  required ReportPlace Function() place,
 }) => AdaptiveTextSelectionToolbar.buttonItems(
   anchors: state.contextMenuAnchors,
   buttonItems: [
     ...state.contextMenuButtonItems,
-    if (onExplain != null && selectedText.trim().isNotEmpty)
-      ContextMenuButtonItem(label: context.tr("Explain this line"), onPressed: () { state.hideToolbar(); onExplain(); }),
     if (selectedText.trim().isNotEmpty)
       ContextMenuButtonItem(
         label: context.tr('Report'),
         onPressed: () {
+          final at = place();
           state.hideToolbar();
           showDialog<void>(
             context: context,
-            builder: (_) =>
-                _TextReportDialog(text: selectedText, location: location),
+            builder: (_) => TextReportDialog(
+              text: selectedText,
+              label: at.label,
+              location: at.location,
+            ),
           );
         },
       ),
   ],
 );
 
-class _TextReportDialog extends StatefulWidget {
+/// The report form: [label] shown, [location] sent with the text.
+class TextReportDialog extends StatefulWidget {
   final String text;
+  final String label;
   final String location;
-  const _TextReportDialog({required this.text, required this.location});
+  const TextReportDialog({
+    super.key,
+    required this.text,
+    required this.label,
+    required this.location,
+  });
 
   @override
-  State<_TextReportDialog> createState() => _TextReportDialogState();
+  State<TextReportDialog> createState() => _TextReportDialogState();
 }
 
-class _TextReportDialogState extends State<_TextReportDialog> {
+class _TextReportDialogState extends State<TextReportDialog> {
   final _form = GlobalKey<FormState>();
   final _details = TextEditingController();
   final _correction = TextEditingController();
@@ -145,7 +158,7 @@ class _TextReportDialogState extends State<_TextReportDialog> {
     try {
       final opened = await launchUrl(
         Uri.https('github.com', '/Nt-f/amud/issues/new', {
-          'title': 'Text report: ${widget.location}',
+          'title': 'Text report: ${widget.label}',
           'body': _body,
         }),
         mode: LaunchMode.externalApplication,
@@ -186,7 +199,7 @@ class _TextReportDialogState extends State<_TextReportDialog> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                widget.location,
+                widget.label,
                 style: Theme.of(context).textTheme.labelMedium,
               ),
               const SizedBox(height: 8),

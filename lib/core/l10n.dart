@@ -266,18 +266,14 @@ final Map<String, String> _english = {
 
 /// English → (Hebrew, Yiddish). Missing entries fall back to English.
 const Map<String, (String, String)> _strings = {
-  'Words in this line': ('מילים בשורה זו', 'ווערטער אין דער שורה'),
   'This section has no date condition. Individual lines may have their own instructions.': ('לקטע זה אין תנאי תאריך. לשורות בודדות עשויות להיות הוראות משלהן.', 'דער שטיקל האָט נישט קיין דאַטע־תּנאי. באַזונדערע שורות קענען האָבן אייגענע הוראות.'),
   'Uses the rules for this siddur, including your custom rules.': ('לפי כללי סידור זה, כולל הכללים האישיים שלכם.', 'לויט די כּללים פֿונעם סידור, אַרײַנגערעכנט אײַערע אייגענע כּללים.'),
-  'Choose the passage': ('בחירת הקטע', 'אויסקלײַבן דעם שטיקל'),
   'Text sources': ('מקורות הטקסט', 'טעקסט־מקורות'),
   'Included for this date': ('נאמר בתאריך זה', 'מען זאָגט אויף דער דאַטע'),
   'Omitted for this date': ('אינו נאמר בתאריך זה', 'מען זאָגט נישט אויף דער דאַטע'),
   'Depends on circumstances not known to Amud': ('תלוי בנסיבות שאינן ידועות לעמוד', 'הענגט אָפּ פֿון אומבאַקאַנטע אומשטענדן'),
-  'This line is part of the regular prayer': ('שורה זו היא חלק מהתפילה הרגילה', 'די שורה איז אַ טייל פֿון דער געוויינטלעכער תּפֿילה'),
   'Unable to load the explanation. Please try again.': ('לא ניתן לטעון את ההסבר. נסו שוב.', 'מען קען נישט לאָדן דעם הסבר. פּרוּווט ווידער.'),
   'Why today?': ('למה היום?', 'פֿאַרוואָס הײַנט?'),
-  'Explain this line': ('הסבר על השורה', 'דערקלערן די שורה'),
   'Prepare for tomorrow': ('הכנה למחר', 'צוגרייטן אויף מאָרגן'),
   'Tomorrow’s prayer changes, previews and printing': ('השינויים בתפילה של מחר, תצוגה מקדימה והדפסה', 'די ענדערונגען אין מארגנדיקן דאווענען, פאראויסקוק און דרוקן'),
   'Siddur for a date': ('סידור לתאריך', 'סידור פֿאַר אַ דאַטע'),
@@ -286,8 +282,6 @@ const Map<String, (String, String)> _strings = {
   'Print siddur for any date': ('הדפסת סידור לכל תאריך', 'דרוקן דעם סידור פֿאַר יעדער דאַטע'),
   'See why prayers are added or omitted for a chosen date, with your location and customs.':
       ('ראו מדוע תפילות נוספות או מושמטות בתאריך שבחרתם, לפי המיקום והמנהגים שלכם.', 'זעט פֿאַרוואָס תּפֿילות ווערן צוגעלייגט אָדער אויסגעלאָזט אויף אַ געקליבענער דאַטע, לויט אײַער אָרט און מנהגים.'),
-  'Select words in the siddur and choose Explain this line for a translation, curated context and applicable prayer conditions.':
-      ('סמנו מילים בסידור ובחרו "הסבר על השורה" לתרגום, הקשר נבחר ותנאי התפילה הרלוונטיים.', 'צייכנט אָן ווערטער אינעם סידור און קלײַבט "דערקלערן די שורה" פֿאַר אַ איבערזעצונג, אויסגעקליבענעם הסבר און די תנאים פֿון דער תּפֿילה.'),
   'Preview tomorrow’s prayer changes from Home, or add the Prepare for tomorrow dashboard card.':
       ('צפו בשינויים בתפילה של מחר ממסך הבית, או הוסיפו את הכרטיס "הכנה למחר".', 'קוקט פֿאָרויס אויף די ענדערונגען אין מאָרגנדיקן דאַווענען פֿון דער היים, אָדער לייגט צו דעם קאַרטל "צוגרייטן אויף מאָרגן".'),
   'Choose a date and services in the Siddur tab, then preview, print or save a PDF with Hebrew and optional translation.':
@@ -296,15 +290,10 @@ const Map<String, (String, String)> _strings = {
   'Print preview': ('תצוגה מקדימה להדפסה', 'דרוק פֿאָרויסקוק'),
   'Preview, print or save PDF': ('תצוגה מקדימה, הדפסה או שמירת PDF', 'פֿאָרויסקוק, דרוקן אָדער היטן PDF'),
   'Prayers for this date': ('תפילות לתאריך זה', 'תּפֿילות פֿאַר דער דאַטע'),
-  'Biblical source': ('מקור בתנ״ך', 'מקור אין תנ״ך'),
   'Evening prayers belong to the next Hebrew date.': ('תפילות הערב שייכות לתאריך העברי הבא.', 'די אָוונט־תּפֿילות געהערן צום קומענדיקן ייִדישן טאָג.'),
   'No special additions or omissions.': ('אין תוספות או השמטות מיוחדות.', 'קיין באַזונדערע הוספות אָדער השמטות.'),
   'Preview prayers and print ahead.': ('צפו בתפילות והדפיסו מראש.', 'קוקט די תּפֿילות און דרוקט פֿריִער.'),
   'Tap to see all changes.': ('לחצו לצפייה בכל השינויים.', 'דריקט צו זען אַלע ענדערונגען.'),
-  'Select words within a single line to explain it.': ('בחרו מילים מתוך שורה אחת לקבלת הסבר.', 'קלײַבט ווערטער פֿון איין שורה פֿאַר אַ הסבר.'),
-  'No bundled translation is available for this line.': ('אין תרגום מצורף לשורה זו.', 'קיין בײַגעלייגטע איבערזעצונג פֿאַר דער שורה.'),
-  'No curated explanation is available for this passage yet.': ('עדיין אין הסבר ערוך לקטע זה.', 'נאָך נישטאָ קיין צוגעגרייטער הסבר פֿאַר דעם שטיקל.'),
-  'Based on this siddur’s instructions and your selected customs.': ('לפי הוראות הסידור והמנהגים שבחרתם.', 'לויט די הוראות פֿונעם סידור און אײַערע אויסגעקליבענע מנהגים.'),
   'Uses your selected siddur, text versions, location, and customs.': ('לפי הסידור, נוסחי הטקסט, המיקום והמנהגים שבחרתם.', 'לויט אײַער סידור, טעקסט־ווערסיעס, אָרט און מנהגים.'),
   'This day requires a machzor; the bundled siddur does not contain the complete service.': ('יום זה דורש מחזור; הסידור המצורף אינו מכיל את התפילה המלאה.', 'דער טאָג דאַרף אַ מחזור; דער סידור האָט נישט די גאַנצע תּפֿילה.'),
   'Unable to prepare PDF': ('לא ניתן להכין PDF', 'מען קען נישט צוגרייטן PDF'),

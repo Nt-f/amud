@@ -17,7 +17,8 @@ void main() {
       body: SelectionArea(
         onSelectionChanged: (selection) => selectedText = selection?.plainText ?? '',
         contextMenuBuilder: (context, state) => textReportMenu(context, state,
-            selectedText: selectedText, location: 'Siddur / Morning prayer'),
+            selectedText: selectedText,
+            place: () => (label: 'Siddur / Morning prayer', location: 'Siddur Ashkenaz › Weekday/Shacharit/Modeh Ani he 1')),
         child: const Center(child: Text('Prayer text to report')),
       ),
     ))));
@@ -28,7 +29,10 @@ void main() {
     await tester.tap(find.text('Report'));
     await tester.pumpAndSettle();
     expect(find.text('Report a text issue'), findsOneWidget);
+    // The short label is shown; the full location is what's sent.
     expect(find.text('Siddur / Morning prayer'), findsOneWidget);
+    expect(tester.widget<TextReportDialog>(find.byType(TextReportDialog)).location,
+        'Siddur Ashkenaz › Weekday/Shacharit/Modeh Ani he 1');
     expect(selectedText, isNotEmpty);
     // Reports go to the default Worker, so the button sends.
     await tester.tap(find.text('Send report'));

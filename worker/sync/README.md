@@ -47,3 +47,22 @@ Durable Object (`Reports`, table `reports`), at most 20 per uid per day. No
 auth to send, no IP stored. To read them, set a secret
 (`npx wrangler secret put ADMIN_TOKEN`) and `GET /v1/report` with
 `Authorization: Bearer <that token>` (newest 500).
+
+From the siddur reader, `location` (at most 300 characters) names the
+section the selected text is in, its lines, the page it was read on, and
+the day it was read for:
+
+    Siddur Ashkenaz › Festivals/Rosh Chodesh/Musaf Amidah for Rosh Chodesh/Sanctity of the Day he 1–2 · page Weekday/Shacharit · 30 Cheshvan 5787 (2026-11-10): Rosh Chodesh Kislev
+
+- The section is a corpus leaf path, with Hebrew (`he`) and English (`en`)
+  segment refs. Several sections are separated by `;`, and the list ends
+  with `+N more` when it doesn't fit.
+- `near` before the refs means the words weren't found as shown. The refs
+  then cover every line of the rows the selection touched.
+- `title` in place of refs means only the section's title was selected.
+- The date is the Hebrew day the section is said on (Maariv's is the next
+  day), with the civil date it was read on.
+- `page … (section not found)` means the reader couldn't tell.
+- `chosen date` means the reader was set to a date other than today.
+
+The Tehillim reader sends `Tehillim / <psalm> / <range>`.

@@ -232,7 +232,10 @@ class _TehillimReaderScreenState extends ConsumerState<TehillimReaderScreen> {
       child: SelectionArea(
       onSelectionChanged: _selectionChanged,
       contextMenuBuilder: (context, state) => textReportMenu(context, state,
-          selectedText: _selectedText, location: 'Tehillim / ${p.titleEn} / ${p.rangeLabel}'),
+          selectedText: _selectedText, place: () {
+            final at = 'Tehillim / ${p.titleEn} / ${p.rangeLabel}';
+            return (label: at, location: at);
+          }),
       child: NotificationListener<ScrollMetricsNotification>(
         onNotification: (n) => _scrolled(n.asScrollUpdate()),
         child: NotificationListener<ScrollUpdateNotification>(
