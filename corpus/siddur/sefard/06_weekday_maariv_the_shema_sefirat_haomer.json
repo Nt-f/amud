@@ -883,7 +883,7 @@
     {
       "path": "Weekday Maariv/Kaddish after VeAtah Kadosh",
       "title": "קדיש",
-      "comment": "Kaddish Shalem without Titkabal, after Megillah or Eichah and VeAtah Kadosh (ArtScroll Sefard, Laws 139, 141).",
+      "comment": "Kaddish Shalem without Titkabal, after Megillah or Eichah and VeAtah Kadosh.",
       "node": "kaddish.shalem",
       "when": "(purim && !motzaeiShabbat) || tishaBav",
       "service": "maariv",

@@ -426,7 +426,7 @@ class _CommentMarkers extends StatelessWidget {
 final _rli = String.fromCharCode(0x2067);
 final _pdi = String.fromCharCode(0x2069);
 
-/// ArtScroll-style elucidation: each Hebrew phrase in bold, then its
+/// Phrase-by-phrase elucidation: each Hebrew phrase in bold, then its
 /// English, then what the translator adds.
 class PhraseText extends StatefulWidget {
   final InterlinearSegment segment;

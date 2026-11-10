@@ -752,9 +752,9 @@ and `review_sefard_ma.md`)
 93. **Don't repeat a leaf's `when` on its parts**; it adds compound labels.
     Negated conditions (`!motzaeiShabbat`) print no label on ordinary days.
 
-**Nusach Sefard answers from ArtScroll Sefard, November 2026** (graded A =
-rewritten for the Sefard edition, B = kept in a section ArtScroll edited for
-Sefard, C = Ashkenaz text never revised; applied unless noted)
+**Nusach Sefard answers from a printed Sefard siddur, November 2026** (graded
+A = rewritten for its Sefard edition, B = kept in a section that edition
+edited for Sefard, C = Ashkenaz text never revised; applied unless noted)
 
 94. **Returning the Torah [A]:** on Monday and Thursday after Uva LeTziyon
     and Kaddish Shalem. On Rosh Chodesh and Chol HaMoed: Uva LeTziyon, the
@@ -768,7 +768,7 @@ Sefard, C = Ashkenaz text never revised; applied unless noted)
     Tov or always: a custom setting, not done.
 97. **Vehu Rachum [A]** is said after Shabbat and Yom Tov too in Sefard;
     don't copy Ashkenaz's `!motzaeiShabbat`.
-98. **שעשה לי כל צרכי on Tisha B'Av and Yom Kippur [C]:** ArtScroll doesn't
+98. **שעשה לי כל צרכי on Tisha B'Av and Yom Kippur [C]:** the siddur doesn't
     decide; left as printed. A custom setting if asked.
 99. **Gestures [B/C]:** stand from Vayevarech until after Barchu (Az Yashir,
     Yishtabach); tefillin at יוצר אור / ובורא חשך, at וקשרתם … / והיו
