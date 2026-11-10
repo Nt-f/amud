@@ -1363,6 +1363,7 @@ const Map<String, (String, String)> _strings = {
   'Your year': ('השנה שלך', 'אייער יאר'),
   'Aliyah {n} done': ('עלייה {n} הושלמה', 'עליה {n} פארטיק'),
   'Mark aliyah {n} done': ('סימון עלייה {n} כהושלמה', 'צייכנט עליה {n} ווי פארטיק'),
+  'Mark aliyah {n} not done': ('ביטול הסימון של עלייה {n}', 'צייכנט עליה {n} ווי נישט פארטיק'),
   'Text and Targum Onkelos from Sefaria. English: {credit}.': ('המקרא ותרגום אונקלוס מספריא. אנגלית: {credit}.', 'דער פסוק און תרגום אונקלוס פון ספריא. ענגליש: {credit}.'),
   'Shnayim Mikra · {year}': ('שניים מקרא · {year}', 'שנים מקרא · {year}'),
   '{done} of {total} aliyot · {whole} of {parshiyot} parshiyot': ('{done} מתוך {total} עליות · {whole} מתוך {parshiyot} פרשות', '{done} פון {total} עליות · {whole} פון {parshiyot} פרשיות'),

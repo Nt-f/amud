@@ -108,6 +108,14 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
     final aliyah = _aliyah ?? today ?? 1;
     final progress = ref.watch(shnayimMikraProgressProvider);
     bool done(int n) => progress[year]?.contains(ShnayimMikraProgress.entry(name, n)) ?? false;
+    // Checks aliyah [n] off, with fireworks, or clears it; true if it's now done.
+    bool check(int n) {
+      final wasDone = done(n);
+      ref.read(shnayimMikraProgressProvider.notifier).toggle(year, name, n);
+      if (!wasDone) showFireworks(context);
+      return !wasDone;
+    }
+
     final text = ref.watch(shnayimMikraProvider(name));
 
     final bar = AppBar(
@@ -148,11 +156,8 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
               icon: Icon(done(aliyah) ? Icons.check_circle : Icons.check_circle_outline),
               label: Text(done(aliyah) ? context.tr('Aliyah {n} done', {'n': aliyah}) : context.tr('Mark aliyah {n} done', {'n': aliyah})),
               onPressed: () {
-                final wasDone = done(aliyah);
-                ref.read(shnayimMikraProgressProvider.notifier).toggle(year, name, aliyah);
-                if (!wasDone) showFireworks(context);
                 // On to the next aliyah, as you would in the book.
-                if (!wasDone && aliyah < 7) setState(() => _aliyah = aliyah + 1);
+                if (check(aliyah) && aliyah < 7) setState(() => _aliyah = aliyah + 1);
               },
             ),
             const SizedBox(height: 16),
@@ -207,6 +212,9 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
       body: Column(children: [
         FocusModeBars(child: bar),
         // The seven aliyot by day: today's and the finished ones marked.
+        // The one open is only filled, without the chip's own check, so a
+        // check always means done. A long press checks a day off or clears
+        // it, as the button at the aliyah's end does.
         FocusModeBars(
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -215,11 +223,26 @@ class _ShnayimMikraScreenState extends ConsumerState<ShnayimMikraScreen> with Fo
               for (var n = 1; n <= 7; n++)
                 Padding(
                   padding: const EdgeInsetsDirectional.only(end: 6),
-                  child: ChoiceChip(
-                    avatar: done(n) ? const Icon(Icons.check, size: 16) : (n == today ? const Icon(Icons.today, size: 16) : null),
-                    label: Text('$n · ${_day(context, n)}'),
-                    selected: n == aliyah,
-                    onSelected: (_) => setState(() => _aliyah = n),
+                  child: MergeSemantics(
+                    child: Semantics(
+                      onLongPressHint: done(n)
+                          ? context.tr('Mark aliyah {n} not done', {'n': n})
+                          : context.tr('Mark aliyah {n} done', {'n': n}),
+                      child: GestureDetector(
+                        onLongPress: () {
+                          if (!check(n)) Feedback.forLongPress(context);
+                        },
+                        child: ChoiceChip(
+                          showCheckmark: false,
+                          avatar: done(n)
+                              ? Icon(Icons.check_circle, size: 16, color: theme.colorScheme.primary)
+                              : (n == today ? const Icon(Icons.today, size: 16) : null),
+                          label: Text('$n · ${_day(context, n)}'),
+                          selected: n == aliyah,
+                          onSelected: (_) => setState(() => _aliyah = n),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
             ]),

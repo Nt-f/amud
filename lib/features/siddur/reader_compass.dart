@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/heading.dart';
@@ -89,7 +88,7 @@ class _DialState extends State<_Dial> {
   /// The needle's angle in turns, unwrapped so that crossing south doesn't
   /// spin it all the way round.
   late double _turns = widget.turn / 360;
-  late bool _facingNow = widget.turn.abs() <= _facing;
+  bool get _facingNow => widget.turn.abs() <= _facing;
 
   @override
   void didUpdateWidget(_Dial old) {
@@ -98,9 +97,6 @@ class _DialState extends State<_Dial> {
     var delta = (target - _turns) % 1;
     if (delta > 0.5) delta -= 1;
     _turns += delta;
-    final facing = widget.turn.abs() <= _facing;
-    if (facing && !_facingNow) HapticFeedback.selectionClick();
-    _facingNow = facing;
   }
 
   @override

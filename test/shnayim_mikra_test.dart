@@ -413,6 +413,26 @@ void main() {
     await tester.tap(find.textContaining('Mark aliyah 1 done'));
     await tester.pump();
     expect(c.read(shnayimMikraProgressProvider.notifier).done(5790, 'Noach', 1), isTrue);
+    // Only the day checked off shows a check, not the day open now.
+    final sunday = find.widgetWithText(ChoiceChip, '1 · Sunday'), monday = find.widgetWithText(ChoiceChip, '2 · Monday');
+    expect(tester.widget<ChoiceChip>(monday).selected, isTrue);
+    expect(tester.widget<ChoiceChip>(monday).showCheckmark, isFalse);
+    expect(find.descendant(of: sunday, matching: find.byIcon(Icons.check_circle)), findsOneWidget);
+    expect(find.descendant(of: monday, matching: find.byIcon(Icons.check_circle)), findsNothing);
+    // A long press on a day checks it off, or clears it, and leaves the day open as it was.
+    final tuesday = find.widgetWithText(ChoiceChip, '3 · Tuesday');
+    final semantics = tester.ensureSemantics();
+    expect(tester.getSemantics(tuesday), containsSemantics(hasTapAction: true, hasLongPressAction: true, isSelected: false));
+    semantics.dispose();
+    await tester.longPress(tuesday);
+    await tester.pump();
+    expect(c.read(shnayimMikraProgressProvider.notifier).done(5790, 'Noach', 3), isTrue);
+    expect(find.descendant(of: tuesday, matching: find.byIcon(Icons.check_circle)), findsOneWidget);
+    expect(tester.widget<ChoiceChip>(monday).selected, isTrue);
+    await tester.longPress(tuesday);
+    await tester.pump();
+    expect(c.read(shnayimMikraProgressProvider.notifier).done(5790, 'Noach', 3), isFalse);
+    expect(tester.widget<ChoiceChip>(monday).selected, isTrue);
     // Stop the app clock's timer before the test ends.
     await tester.pumpWidget(const SizedBox());
     c.dispose();
