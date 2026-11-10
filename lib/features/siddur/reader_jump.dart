@@ -15,7 +15,7 @@ const keyPoints = [
   ('Hallel', 'הלל', r'^hallel'),
   ('Tachanun', 'תחנון', r'ta(?:c)?h(?:a)?n(?:u)?n'),
   ('Torah reading', 'קריאת התורה', r'torah reading|reading of the torah|kriat ha.?torah|removing the torah'),
-  ('Aleinu', 'עלינו', r'^al[ei]nu'),
+  ('Aleinu', 'עלינו', r'^al(?:e|i|ei)nu'),
   ('Candle lighting', 'הדלקת נרות', r'candle'),
   ('Kabbalat Shabbat', 'קבלת שבת', r'kabbal'),
   ('Kiddush Levana', 'קידוש לבנה', r'kiddush levan|blessing of the (?:new )?moon|birkat ha.?levana'),

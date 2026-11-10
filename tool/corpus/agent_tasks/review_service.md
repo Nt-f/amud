@@ -671,3 +671,55 @@ Ashkenaz Weekday, files 01–05, in November 2026.
 78. **Per-day readings** (the Nasi in Nisan, Chanukah's Torah reading) need
     a `when` on every day's segment and on every heading, or the first
     days and headings show every day.
+
+**Sefard Mincha, a second look, November 2026**
+
+Sefard's weekday Mincha passed the first review (batch 1) with every tag
+checked, and was still wrong on the page: the Amidah's blessing titles were
+small English lines at the side, "Ki Shem" and "Adonai Sefatai" ran
+together, Aleinu and Ashrei couldn't be reached from the jump bar, Avinu
+Malkeinu came after Aleinu, and the English of Birkat Kohanim showed
+"kohanim," as a rubric. What went wrong: the agents read every leaf in full
+but judged each line's tags, never the shape of the service or the page
+the reader draws; this brief forbade the structural fix (no `units.json`,
+"if edit.py can't express it, leave it"); and the orchestrator didn't pick
+it up. Rules 79 to 86 are what it took.
+
+79. **Compare the structure with Ashkenaz before tagging.** List the
+    service's leaves next to Ashkenaz's (`edit.py outline` in both). Where
+    one leaf holds several units, or a `heading` segment marks a unit, the
+    leaf must be split (SCHEMA, "One leaf per unit"). Agents report it; the
+    orchestrator splits it with a script over `source.py` before the
+    tagging review starts. Sefard's Mincha was three leaves (Korbanot with
+    Ashrei; a 119-segment Amidah; Tachanun with Kaddish, Aleinu, LeDavid
+    and Psalm 49) and is now 32, like Ashkenaz's.
+80. **Look at the page, not only `inspect`.** `inspect` prints a heading
+    segment and a leaf title alike. Build the web app and screenshot the
+    service next to Ashkenaz's at 412 wide (`tool/corpus/shoot_reader.py`),
+    on an ordinary day and on each occasion: blessing titles centred,
+    every unit in the jump bar, one "Chazaras HaShatz" row per Kedushah,
+    Modim DeRabbanan and Birkat Kohanim.
+81. **The book order is the service order.** Avinu Malkeinu was printed
+    after Tachanun, Kaddish and Aleinu, so on a fast it came after Aleinu.
+    Read the leaf order against Ashkenaz's.
+82. **The Amidah's opening.** "כי שם" and "אדני שפתי תפתח" are separate
+    segments (`amidah.opening`), with the three steps as an instruction
+    between them (`three_steps_back`, `three_steps_forward`) and
+    `feet_together` on "אדני שפתי". Sefard had all three in one line.
+83. **Shredded English** (SCHEMA, "Segments and parts"): an English
+    segment whose parts carry only `kind`/`text`/`he`, with an
+    `instruction` among them, is a translation a model split at commas
+    and italics. Join it into one `text`. 30 were joined in Sefard Mincha;
+    about 640 remain in Sefard and 640 in Koren (count them with a script:
+    English parts with `kind: instruction` and no `when`/`alt`).
+84. **Rule 27 was applied to some Kaddish copies and not others.** All
+    three Kaddishes of Sefard Mincha still said "ולעלא מכל מן כל" in the
+    Ten Days. On a Ten Days date, read every Kaddish's "לעלא" line in
+    `inspect` and look for both "מכל" and "מן כל".
+85. **Concise-note anchors match one segment** (SCHEMA, "Short notes").
+    The טל ומטר note's anchor "ותן טל ומטר" spanned two segments and had
+    never shown in any siddur. When you split or merge segments, re-check
+    the anchors in `assets/rules/notes.json` that fall in them.
+86. **Moving segments changes their node.** A segment without its own
+    `node` took its old leaf's; after a split, LeDavid's opening rubric
+    became `tachanun.vidui`. Read the nodes in `inspect` after any move.

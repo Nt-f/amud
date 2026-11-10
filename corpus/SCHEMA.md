@@ -46,6 +46,35 @@ After editing:
 - **Leave a note for other editors:** `comment`, on a leaf, segment or part.
   It never reaches the app.
 
+### One leaf per unit
+
+A service is a section whose leaves are its units, in the order they're
+said: Ashrei, the Amidah (a section with a leaf per blessing), Avinu
+Malkeinu, Tachanun, Kaddish Shalem, Aleinu… Ashkenaz's Weekday Minchah is
+the model. Don't let one leaf hold several units, and don't mark a unit
+with a `heading` segment inside a leaf:
+
+- The reader sets a leaf's title as a centred heading; a `heading`
+  segment is a small English line at the side.
+- Kedushah and Birkat Kohanim fold into one "Chazaras HaShatz" row
+  under their own name only when they are a leaf with that title.
+- The jump bar and the Today plan list leaves and sections. Aleinu inside
+  a "Tachanun" leaf can't be reached, and a condition on that leaf hides it.
+- The book order is the service order: a leaf printed in the wrong place
+  (Avinu Malkeinu after Aleinu) is said in the wrong place.
+
+Sefaria's weekday services for Sefard, Edot HaMizrach, Chabad and Koren
+were long leaves of this kind. To split one, regroup its segments with a
+script over `source.py` (never retype text), give each new leaf its
+`title`, `node` and `when`, move the English with the Hebrew it
+`translates`, drop the heading segments the titles replace, add the
+new section's Hebrew title to `book.json`, and update any path in
+`corpus/units.json`.
+
+- When segments move to a leaf with another `node`, a segment that had
+  no `node` of its own took the old leaf's: give it its real one.
+- `when: "true"` on a leaf means nothing; leave `when` out.
+
 ## book.json
 
 ```json
@@ -127,6 +156,15 @@ list of pieces with different tags, shown run together on one line.
 English segments also have `translates`: the refs of the Hebrew segments
 they translate, in order (`[]` for none). English without a counterpart
 is shown with the line before it.
+
+An English segment is normally one `text`, footnotes included
+(`…Zion<sup class="footnote-marker">1</sup><i class="footnote">…</i>…`).
+Split it into parts only where they differ in `when`/`alt` (one blessing
+ending for the Ten Days). A model once split hundreds of Sefard and Koren
+translations at every comma and made each italic word or footnote an
+`instruction` with a machine `he` ("the <i>kohanim,</i> Your holy
+people"): the reader showed those words as rubrics in the middle of the
+prayer. Join such parts back into one `text`.
 
 Split a segment into parts when it mixes things that need different tags:
 
@@ -309,6 +347,12 @@ one siddur: each is found by a Hebrew `anchor` within a section (`within`:
 `amidah`, `mazon` or a path regex). A note for one siddur only, or one
 place, goes in that siddur's text as a segment of `kind: note`. The file
 is bundled as it is; there is nothing to build.
+
+An `anchor` is matched against one Hebrew prayer segment at a time. If
+the words it names are split over two segments (`ותן` ends one line,
+`טל ומטר לברכה` is the next) it never matches, and the note silently
+never shows. After adding or changing an anchor, check that it matches in
+every siddur, not only the one you looked at.
 
 ## History
 

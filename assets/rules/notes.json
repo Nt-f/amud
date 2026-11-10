@@ -33,7 +33,7 @@
     },
     {
       "comment": "For about the first month: from 7 Cheshvan in Israel, from December 4/5 (in Kislev) elsewhere.",
-      "anchor": "ותן טל ומטר",
+      "anchor": "טל ומטר",
       "within": "amidah",
       "when": "talUmatar && ((il && ((hMonth == 8 && hDay >= 7) || (hMonth == 9 && hDay <= 7))) || (diaspora && ((hMonth == 9 && hDay >= 5) || (hMonth == 10 && hDay <= 29))))",
       "en": "V’sein tal u’matar now. Forgot it? Add it in Shema Koleinu; past that, go back to Bareich Aleinu; finished the Amidah — repeat it.",

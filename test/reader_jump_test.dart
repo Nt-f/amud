@@ -13,9 +13,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hebcal/hebcal.dart';
 
-/// The jump bar's points, reading [node] of the Ashkenaz siddur on a
-/// Tuesday with [settings]; "| " marks one set off as a new part.
-Future<List<String>> _chips(WidgetTester t, AppSettings settings, {String node = 'Weekday/Shacharit'}) async {
+/// The jump bar's points, reading [node] of [book] on a Tuesday with
+/// [settings]; "| " marks one set off as a new part.
+Future<List<String>> _chips(WidgetTester t, AppSettings settings, {String node = 'Weekday/Shacharit', String book = 'Siddur Ashkenaz'}) async {
   t.view.physicalSize = const Size(360, 900);
   t.view.devicePixelRatio = 1;
   addTearDown(t.view.reset);
@@ -33,16 +33,16 @@ Future<List<String>> _chips(WidgetTester t, AppSettings settings, {String node =
   expect(tuesday.getDay(), 2);
   c.read(readerDateProvider.notifier).state = tuesday;
   await t.runAsync(() async {
-    await c.read(bookIndexProvider('Siddur Ashkenaz').future);
-    await c.read(versionSelectionProvider('Siddur Ashkenaz').future);
-    await c.read(resolverProvider('Siddur Ashkenaz').future);
+    await c.read(bookIndexProvider(book).future);
+    await c.read(versionSelectionProvider(book).future);
+    await c.read(resolverProvider(book).future);
   });
   await t.pumpWidget(UncontrolledProviderScope(
     container: c,
     child: MaterialApp(
       theme: buildTheme(const AppSettings(), Brightness.light),
       builder: (context, w) => AppText(lang: UiLanguage.en, ashkenazi: settings.ashkenaziSpelling, child: w!),
-      home: ReaderScreen(book: 'Siddur Ashkenaz', nodeId: node),
+      home: ReaderScreen(book: book, nodeId: node),
     ),
   ));
   for (var i = 0; i < 20 && find.byType(ReaderJumpBar).evaluate().isEmpty; i++) {
@@ -65,6 +65,10 @@ void main() {
     expect(keyPointFor('Sefirat HaOmer')?.$1, 'Sefirat HaOmer');
     expect(keyPointFor('Counting of the Omer')?.$1, 'Sefirat HaOmer');
     expect(keyPointFor('Weekday Maariv/Sefirat HaOmer')?.$1, 'Sefirat HaOmer');
+    // Ashkenaz writes Alenu; Sefard, Aleinu.
+    for (final t in ['Alenu', 'Aleinu', 'Alinu']) {
+      expect(keyPointFor(t)?.$1, 'Aleinu', reason: t);
+    }
   });
 
   testWidgets('the jump bar offers the key points', (t) async {
@@ -96,5 +100,19 @@ void main() {
   testWidgets('every section, in the Ashkenazi spelling', (t) async {
     final ashkenazi = await _chips(t, const AppSettings(titleLanguage: TitleLanguage.english, jumpDetail: JumpDetail.sections, ashkenaziSpelling: true));
     expect(ashkenazi, containsAllInOrder(['Netilas Yadayim', 'Tzitzis', 'Tallis', 'Tefillin', 'Birchas Kohanim']));
+  });
+
+  testWidgets('Sefard Mincha: a section for each unit, like Ashkenaz', (t) async {
+    final key = await _chips(t, const AppSettings(titleLanguage: TitleLanguage.english, ashkenaziSpelling: false),
+        book: 'Siddur Sefard', node: 'Weekday Mincha');
+    expect(key, containsAllInOrder(['Shemoneh Esrei', 'Tachanun', 'Aleinu']));
+  });
+
+  testWidgets('Sefard Mincha: every unit in the bar', (t) async {
+    final every = await _chips(t, const AppSettings(titleLanguage: TitleLanguage.english, ashkenaziSpelling: false, jumpDetail: JumpDetail.sections),
+        book: 'Siddur Sefard', node: 'Weekday Mincha');
+    expect(every, containsAllInOrder(['Korbanot', 'Ashrei', '| Amidah', 'Patriarchs', 'Kedushah', 'Thanksgiving', 'Modim DeRabbanan', 'Peace',
+        'Concluding Passage', 'Tachanun', 'Kaddish Shalem', 'Aleinu', "Mourner's Kaddish"]));
+    expect(every, isNot(contains('Avinu Malkeinu')));
   });
 }
