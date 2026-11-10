@@ -751,3 +751,35 @@ and `review_sefard_ma.md`)
     missing. Copy the unit from the same siddur, never retype it.
 93. **Don't repeat a leaf's `when` on its parts**; it adds compound labels.
     Negated conditions (`!motzaeiShabbat`) print no label on ordinary days.
+
+**Nusach Sefard answers from ArtScroll Sefard, November 2026** (graded A =
+rewritten for the Sefard edition, B = kept in a section ArtScroll edited for
+Sefard, C = Ashkenaz text never revised; applied unless noted)
+
+94. **Returning the Torah [A]:** on Monday and Thursday after Uva LeTziyon
+    and Kaddish Shalem. On Rosh Chodesh and Chol HaMoed: Uva LeTziyon, the
+    return, Half Kaddish, Musaf, with no Kaddish Shalem before the return
+    (`Weekday Shacharit/Half Kaddish before Musaf`, the anchor for Musaf).
+    Purim and Tisha B'Av return it before Ashrei: not done yet.
+95. **Adir BaMarom [C]** only while the kohanim duchen; hidden after the
+    chazzan's Birkat Kohanim (Shacharit and Mincha).
+96. **Baruch Hashem LeOlam at Maariv [C]:** most say it; in Israel most
+    omit it (`diaspora` on the leaf). Some skip it after Shabbat and Yom
+    Tov or always: a custom setting, not done.
+97. **Vehu Rachum [A]** is said after Shabbat and Yom Tov too in Sefard;
+    don't copy Ashkenaz's `!motzaeiShabbat`.
+98. **שעשה לי כל צרכי on Tisha B'Av and Yom Kippur [C]:** ArtScroll doesn't
+    decide; left as printed. A custom setting if asked.
+99. **Gestures [B/C]:** stand from Vayevarech until after Barchu (Az Yashir,
+    Yishtabach); tefillin at יוצר אור / ובורא חשך, at וקשרתם … / והיו
+    לטטפת in both paragraphs and at פותח את ידך / ומשביע in Ashrei;
+    gather the tzitzit before מארבע כנפות; kiss them at each ציצת and at
+    וראיתם אתו and ונחמדים לעד. Cover the eyes for the first verse.
+100. **The Omer [A]** is counted after Kaddish Shalem, before Aleinu.
+101. **The Chanukah reading [C]** comes before the Half Kaddish and hagbah
+     (`Weekday Shacharit/After the Torah Reading` starts at the Kaddish).
+102. **Weeknight Purim and Tisha B'Av at Maariv [A/B]:** Kaddish Shalem,
+     Megillah or Eichah, VeAtah Kadosh, Kaddish without Titkabal, Aleinu.
+     On Motzaei Shabbat, Purim goes to Vihi Noam as usual; Tisha B'Av has
+     Kaddish Shalem after the Amidah and skips Vihi Noam. The Megillah and
+     Eichah themselves aren't inserted yet.

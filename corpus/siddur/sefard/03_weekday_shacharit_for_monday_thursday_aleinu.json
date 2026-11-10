@@ -165,33 +165,7 @@
           {"ref": "28", "kind": "prayer", "when": "if_birkatHagomel", "node": "torah.birkat_hagomel", "role": "congregation", "voice": "aloud", "text": "מִי שֶׁגְּ֒מָלְ֒ךָ טוֹב הוּא יִגְמָלְ֒ךָ כָּל־טוֹב סֶֽלָה:"},
           {"ref": "29", "kind": "heading", "when": "if_barMitzvahFather", "node": "torah.birkat_hagomel", "en": "Blessing of Baruch Shefartani", "text": "<b>ברכת ברוך שפטרני</b>"},
           {"ref": "30", "kind": "instruction", "when": "if_barMitzvahFather", "node": "torah.birkat_hagomel", "en": "A father whose son has reached the age of thirteen years and one day says this blessing, without the Name and Kingship, when his son is called to the Torah for the first time:", "gloss": "Bar Mitzvah blessing", "text": "<small>מי שהגיע בנו לבן י\"ג שנה ויום אחד יברך האב בשעה שבנו עולה לתורה פעם ראשונה ברכה זו בלא שם ומלכות:</small>"},
-          {"ref": "31", "kind": "prayer", "when": "if_barMitzvahFather", "node": "torah.birkat_hagomel", "role": "individual", "voice": "aloud", "text": "בָּרוּךְ שֶׁפְּ֒טָרַֽנִי מֵעָנְשׁוֹ שֶׁל זֶה:"},
-          {"ref": "hk27", "parts": [
-            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא בְּעָלְ֒מָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ וְיַצְמַח פּוּרְקָנֵהּ וִיקָרֵב (קֵץ) מְשִׁיחֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ"},
-            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן:"}
-          ]},
-          {"ref": "hk28", "kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ</b> לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא:"},
-          {"ref": "hk29", "parts": [
-            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא,"},
-            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": " בְּרִיךְ הוּא"}
-          ]},
-          {"ref": "hk30", "parts": [
-            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "לְעֵֽלָּא "},
-            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.half", "en": "During the Ten Days of Repentance:", "cite": "ע\"פ מחזור מכל השנה", "text": "<small>בעשי\"ת</small> "},
-            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "(וּלְ֒עֵֽלָּא מִכָּל)"},
-            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "  מִן כָּל"},
-            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָא וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא, דַּאֲמִירָן בְּעָלְ֒מָא, וְאִמְרוּ"},
-            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן:"}
-          ]},
-          {"ref": "32", "kind": "note", "node": "torah.hagbah", "en": "When the Torah is raised after the reading, the Arizal would look closely at the letters until he could recognize them, saying that a great light flows to a person from looking at the Torah from close, so that he can read the letters well. Therefore the one who raises the Torah unrolls it over three columns and shows the writing to the people. While they see it one should bow and say \"Vezot haTorah\", and only while facing the writing of the Torah scroll.", "cite": "Arizal", "text": "<small>בעת הגבהת ס\"ת לאחר הקריאה היה האר\"י ז\"ל מסתכל באותיות היטב עד שהיה מכירם לקרות והיה אומר שנמשך אור גדול על האדם ע\"י הסתכלות התורה מקרוב עד שיוכל לקרות האותיות היטב. לכן המגביה הס\"ת גולל הס\"ת על ג' דפין ומגביה ומראה כתיבתה לעם. ובעת ראייתם יש לכרוע ולומר וזאת התורה. ואין לומר וזאת התורה רק נגד הכתב של הס\"ת:</small>"},
-          {"ref": "33", "kind": "prayer", "node": "torah.hagbah", "role": "congregation", "voice": "aloud", "text": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם משֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל עַל פִּי יְהֹוָה בְּיַד משֶׁה:"},
-          {"ref": "34", "kind": "prayer", "node": "torah.hagbah", "role": "congregation", "voice": "aloud", "text": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְ֒כֶֽיהָ מְאֻשָּׁר: דְּרָכֶֽיהָ דַּרְ֒כֵי נֹֽעַם וְכָל נְתִיבוֹתֶֽיהָ שָׁלוֹם: אֹֽרֶךְ יָמִים בִּימִינָהּ בִּשְׂ֒מֹאלָהּ עֽשֶׁר וְכָבוֹד: יְהֹוָה חָפֵץ לְמַֽעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר:"},
-          {"ref": "35", "kind": "instruction", "when": "monThu && tachanunShacharit", "node": "torah.yehi_ratzon_mon_thu", "en": "On Mondays and Thursdays when Tachanun is said, while the Torah is being rolled and before it is returned to the Ark, the chazzan says \"Yehi ratzon\" etc. It is right and proper to warn the congregation to answer Amen after each \"Yehi ratzon\", since they are great requests.", "gloss": "Said only when Tachanun is recited", "text": "<small>בשני וחמישי כשאומרים תחנון בשעה שהגולל גולל הס\"ת קודם שמכניסין הס\"ת להיכל יאמר הש\"ץ <b>יְהִי רָצוֹן</b> כו'. וראוי ונכון להזהיר לעם שיאמרו אמן אחר כל יהי רצון כי בקשות גדולות הם:</small>"},
-          {"ref": "36", "kind": "prayer", "when": "monThu && tachanunShacharit", "node": "torah.yehi_ratzon_mon_thu", "role": "chazzan", "voice": "aloud", "text": "יְהִי רָצוֹן מִלִּפְנֵי אָבִֽינוּ שֶׁבַּשָּׁמַֽיִם לְכוֹנֵן אֶת בֵּית חַיֵּֽינוּ וּלְ֒הָשִׁיב אֶת שְׁכִינָתוֹ בְּתוֹכֵֽנוּ בִּמְ֒הֵרָה בְיָמֵֽינוּ וְנֹאמַר אָמֵן:"},
-          {"ref": "37", "kind": "prayer", "when": "monThu && tachanunShacharit", "node": "torah.yehi_ratzon_mon_thu", "role": "chazzan", "voice": "aloud", "text": "יְהִי רָצוֹן מִלִּפְנֵי אָבִֽינוּ שֶׁבַּשָּׁמַֽיִם לְרַחֵם עָלֵֽינוּ וְעַל פְּלֵטָתֵֽנוּ וְלִמְנֹֽעַ מַשְׁחִית וּמַגֵּפָה מֵעָלֵֽינוּ וּמֵעַל כָּל עַמּוֹ בֵּית יִשְׂרָאֵל וְנֹאמַר אָמֵן:"},
-          {"ref": "38", "kind": "prayer", "when": "monThu && tachanunShacharit", "node": "torah.yehi_ratzon_mon_thu", "role": "chazzan", "voice": "aloud", "text": "יְהִי רָצוֹן מִלִּפְנֵי אָבִֽינוּ שֶׁבַּשָּׁמַֽיִם לְקַיֵּם בָּֽנוּ חַכְ֒מֵי יִשְׂרָאֵל הֵם וּנְ֒שֵׁיהֶם וּבְ֒נֵיהֶם וּבְ֒נוֹתֵיהֶם וְתַלְמִידֵיהֶם וְתַלְמִידֵי תַלְמִידֵיהֶם בְּכָל מְקוֹמוֹת מֹושְׁ֒בוֹתֵיהֶם וְנֹאמַר אָמֵן:"},
-          {"ref": "39", "kind": "prayer", "when": "monThu && tachanunShacharit", "node": "torah.yehi_ratzon_mon_thu", "role": "chazzan", "voice": "aloud", "text": "יְהִי רָצוֹן מִלִּפְנֵי אָבִֽינוּ שֶׁבַּשָּׁמַֽיִם שֶׁנִּשְׁמַע וְנִתְבַּשֵּׂר בְּשׂוֹרוֹת טוֹבוֹת יְשׁוּעוֹת וְנֶחָמוֹת וִיקַבֵּץ נִדָּחֵֽינוּ מֵאַרְבַּע כַּנְ֒פוֹת הָאָֽרֶץ וְנֹאמַר אָמֵן:"},
-          {"ref": "40", "kind": "prayer", "when": "monThu && tachanunShacharit", "node": "x.torah.achenu", "role": "chazzan", "voice": "aloud", "text": "אַחֵֽינוּ כָּל בֵּית יִשְׂרָאֵל הַנְּ֒תוּנִים בַּצָּרָה וּבַשִּׁבְיָה הָעוֹמְ֒דִים בֵּין בַּיָּם וּבֵין בַּיַּבָּשָׁה הַמָּקוֹם יְרַחֵם עֲלֵיהֶם וְיוֹצִיאֵם מִצָּרָה לִרְ֒וָחָה וּמֵאֲפֵלָה לְאוֹרָה וּמִשִּׁעְבּוּד לִגְ֒אֻלָּה הַשְׁתָּא בַּעֲגָלָא וּבִזְמַן קָרִיב וְנֹאמַר אָמֵן:"}
+          {"ref": "31", "kind": "prayer", "when": "if_barMitzvahFather", "node": "torah.birkat_hagomel", "role": "individual", "voice": "aloud", "text": "בָּרוּךְ שֶׁפְּ֒טָרַֽנִי מֵעָנְשׁוֹ שֶׁל זֶה:"}
         ]
       },
       "en": {
@@ -227,7 +201,50 @@
           {"ref": "28", "translates": ["28"], "text": "He Who has bestowed goodness upon you, may He bestow every goodness upon you, forever."},
           {"ref": "29", "translates": ["29"], "text": "<b>Blessing by the father of a Bar Mitzvah</b>"},
           {"ref": "30", "translates": ["30"], "text": "<i>The following blessing is said by the father of a Bar Mitzvah, after the lad has been called to the Torah and has recited the blessing following the reading:</i>"},
-          {"ref": "31", "translates": ["31"], "text": "Blessed (are You) who has released me from the punishment<sup class=\"footnote-marker\">1</sup><i class=\"footnote\">The father is liable for the sins of his children only until they have been taught and trained to perform and observe the mitzvos. Once they have reached this level, even though they are <i>not yet thirteen years of age,</i> the father is no longer responsible for their sins.<br>Why then is this Beracha recited at the time of Bar Mitzvah? The <i>Dover Meisharim</i>, cites sources stating that on the contrary, children sometimes perish because of their fathers׳ sins. The fathers, in turn, are punished for causing the untimely deaths of their young children. Thus when they reach thirteen and are no longer liable for their <i>fathers’ sins,</i> the fathers too are released from the punishment they could have received for causing their children to perish. The Beracha is therefore recited at the Bar Mitzvah when the son becomes fully independent of his father.</i> of this [boy]."},
+          {"ref": "31", "translates": ["31"], "text": "Blessed (are You) who has released me from the punishment<sup class=\"footnote-marker\">1</sup><i class=\"footnote\">The father is liable for the sins of his children only until they have been taught and trained to perform and observe the mitzvos. Once they have reached this level, even though they are <i>not yet thirteen years of age,</i> the father is no longer responsible for their sins.<br>Why then is this Beracha recited at the time of Bar Mitzvah? The <i>Dover Meisharim</i>, cites sources stating that on the contrary, children sometimes perish because of their fathers׳ sins. The fathers, in turn, are punished for causing the untimely deaths of their young children. Thus when they reach thirteen and are no longer liable for their <i>fathers’ sins,</i> the fathers too are released from the punishment they could have received for causing their children to perish. The Beracha is therefore recited at the Bar Mitzvah when the son becomes fully independent of his father.</i> of this [boy]."}
+        ]
+      }
+    },
+    {
+      "path": "Weekday Shacharit/After the Torah Reading",
+      "title": "אחר הקריאה",
+      "node": "torah.hagbah",
+      "when": "torahReading",
+      "service": "shacharit",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "hk27", "parts": [
+            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא בְּעָלְ֒מָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ וְיַצְמַח פּוּרְקָנֵהּ וִיקָרֵב (קֵץ) מְשִׁיחֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ"},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן:"}
+          ]},
+          {"ref": "hk28", "kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ</b> לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא:"},
+          {"ref": "hk29", "parts": [
+            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא,"},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": " בְּרִיךְ הוּא"}
+          ]},
+          {"ref": "hk30", "parts": [
+            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "לְעֵֽלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "node": "kaddish.half", "en": "During the Ten Days of Repentance:", "cite": "ע\"פ מחזור מכל השנה", "text": "<small>בעשי\"ת</small> "},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "(וּלְ֒עֵֽלָּא מִכָּל)"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "  מִן כָּל"},
+            {"kind": "prayer", "node": "kaddish.half", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָא וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא, דַּאֲמִירָן בְּעָלְ֒מָא, וְאִמְרוּ"},
+            {"kind": "prayer", "node": "kaddish.half", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן:"}
+          ]},
+          {"ref": "32", "kind": "note", "node": "torah.hagbah", "en": "When the Torah is raised after the reading, the Arizal would look closely at the letters until he could recognize them, saying that a great light flows to a person from looking at the Torah from close, so that he can read the letters well. Therefore the one who raises the Torah unrolls it over three columns and shows the writing to the people. While they see it one should bow and say \"Vezot haTorah\", and only while facing the writing of the Torah scroll.", "cite": "Arizal", "text": "<small>בעת הגבהת ס\"ת לאחר הקריאה היה האר\"י ז\"ל מסתכל באותיות היטב עד שהיה מכירם לקרות והיה אומר שנמשך אור גדול על האדם ע\"י הסתכלות התורה מקרוב עד שיוכל לקרות האותיות היטב. לכן המגביה הס\"ת גולל הס\"ת על ג' דפין ומגביה ומראה כתיבתה לעם. ובעת ראייתם יש לכרוע ולומר וזאת התורה. ואין לומר וזאת התורה רק נגד הכתב של הס\"ת:</small>"},
+          {"ref": "33", "kind": "prayer", "node": "torah.hagbah", "role": "congregation", "voice": "aloud", "text": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם משֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל עַל פִּי יְהֹוָה בְּיַד משֶׁה:"},
+          {"ref": "34", "kind": "prayer", "node": "torah.hagbah", "role": "congregation", "voice": "aloud", "text": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְ֒כֶֽיהָ מְאֻשָּׁר: דְּרָכֶֽיהָ דַּרְ֒כֵי נֹֽעַם וְכָל נְתִיבוֹתֶֽיהָ שָׁלוֹם: אֹֽרֶךְ יָמִים בִּימִינָהּ בִּשְׂ֒מֹאלָהּ עֽשֶׁר וְכָבוֹד: יְהֹוָה חָפֵץ לְמַֽעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר:"},
+          {"ref": "35", "kind": "instruction", "when": "monThu && tachanunShacharit", "node": "torah.yehi_ratzon_mon_thu", "en": "On Mondays and Thursdays when Tachanun is said, while the Torah is being rolled and before it is returned to the Ark, the chazzan says \"Yehi ratzon\" etc. It is right and proper to warn the congregation to answer Amen after each \"Yehi ratzon\", since they are great requests.", "gloss": "Said only when Tachanun is recited", "text": "<small>בשני וחמישי כשאומרים תחנון בשעה שהגולל גולל הס\"ת קודם שמכניסין הס\"ת להיכל יאמר הש\"ץ <b>יְהִי רָצוֹן</b> כו'. וראוי ונכון להזהיר לעם שיאמרו אמן אחר כל יהי רצון כי בקשות גדולות הם:</small>"},
+          {"ref": "36", "kind": "prayer", "when": "monThu && tachanunShacharit", "node": "torah.yehi_ratzon_mon_thu", "role": "chazzan", "voice": "aloud", "text": "יְהִי רָצוֹן מִלִּפְנֵי אָבִֽינוּ שֶׁבַּשָּׁמַֽיִם לְכוֹנֵן אֶת בֵּית חַיֵּֽינוּ וּלְ֒הָשִׁיב אֶת שְׁכִינָתוֹ בְּתוֹכֵֽנוּ בִּמְ֒הֵרָה בְיָמֵֽינוּ וְנֹאמַר אָמֵן:"},
+          {"ref": "37", "kind": "prayer", "when": "monThu && tachanunShacharit", "node": "torah.yehi_ratzon_mon_thu", "role": "chazzan", "voice": "aloud", "text": "יְהִי רָצוֹן מִלִּפְנֵי אָבִֽינוּ שֶׁבַּשָּׁמַֽיִם לְרַחֵם עָלֵֽינוּ וְעַל פְּלֵטָתֵֽנוּ וְלִמְנֹֽעַ מַשְׁחִית וּמַגֵּפָה מֵעָלֵֽינוּ וּמֵעַל כָּל עַמּוֹ בֵּית יִשְׂרָאֵל וְנֹאמַר אָמֵן:"},
+          {"ref": "38", "kind": "prayer", "when": "monThu && tachanunShacharit", "node": "torah.yehi_ratzon_mon_thu", "role": "chazzan", "voice": "aloud", "text": "יְהִי רָצוֹן מִלִּפְנֵי אָבִֽינוּ שֶׁבַּשָּׁמַֽיִם לְקַיֵּם בָּֽנוּ חַכְ֒מֵי יִשְׂרָאֵל הֵם וּנְ֒שֵׁיהֶם וּבְ֒נֵיהֶם וּבְ֒נוֹתֵיהֶם וְתַלְמִידֵיהֶם וְתַלְמִידֵי תַלְמִידֵיהֶם בְּכָל מְקוֹמוֹת מֹושְׁ֒בוֹתֵיהֶם וְנֹאמַר אָמֵן:"},
+          {"ref": "39", "kind": "prayer", "when": "monThu && tachanunShacharit", "node": "torah.yehi_ratzon_mon_thu", "role": "chazzan", "voice": "aloud", "text": "יְהִי רָצוֹן מִלִּפְנֵי אָבִֽינוּ שֶׁבַּשָּׁמַֽיִם שֶׁנִּשְׁמַע וְנִתְבַּשֵּׂר בְּשׂוֹרוֹת טוֹבוֹת יְשׁוּעוֹת וְנֶחָמוֹת וִיקַבֵּץ נִדָּחֵֽינוּ מֵאַרְבַּע כַּנְ֒פוֹת הָאָֽרֶץ וְנֹאמַר אָמֵן:"},
+          {"ref": "40", "kind": "prayer", "when": "monThu && tachanunShacharit", "node": "x.torah.achenu", "role": "chazzan", "voice": "aloud", "text": "אַחֵֽינוּ כָּל בֵּית יִשְׂרָאֵל הַנְּ֒תוּנִים בַּצָּרָה וּבַשִּׁבְיָה הָעוֹמְ֒דִים בֵּין בַּיָּם וּבֵין בַּיַּבָּשָׁה הַמָּקוֹם יְרַחֵם עֲלֵיהֶם וְיוֹצִיאֵם מִצָּרָה לִרְ֒וָחָה וּמֵאֲפֵלָה לְאוֹרָה וּמִשִּׁעְבּוּד לִגְ֒אֻלָּה הַשְׁתָּא בַּעֲגָלָא וּבִזְמַן קָרִיב וְנֹאמַר אָמֵן:"}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
           {"ref": "hk27", "translates": ["hk27"], "text": "Exalted and sanctified be His great Name in the world which He created according to His will and may He rule His kingdom bring forth His redemption and hasten the coming if His Messiah in your lifetime and in your days, and in the lifetime of the entire House of Israel, speedily and in the near future— and say Amein."},
           {"ref": "hk28", "translates": ["hk28"], "text": "May His great Name be blessed forever and for all eternity."},
           {"ref": "hk29", "translates": ["hk29"], "text": "Blessed and praised, glorified, and exalted and uplifted, honored and elevated and extolled be the Name of the Holy One, blessed is He;"},
@@ -253,7 +270,12 @@
         "version": "The Metsudah siddur, 1981",
         "segs": [
           {"ref": "31", "kind": "note", "en": "Ashrei and Uva LeTziyon: when making an announcement, it should be made before the chazzan begins Ashrei.", "cite": "מגן אברהם סי' קלב", "text": "<small>אשרי ובא לציון. כשמכריזים דבר יש להכריז קודם שיתחיל החזן אשרי (מגן אברהם סי' קלב)</small>"},
-          {"ref": "1", "kind": "prayer", "text": "אַשְׁרֵי יוֹשְׁ֒בֵי בֵיתֶֽךָ עוֹד יְהַלְ֒לֽוּךָ סֶּֽלָה: אַשְׁרֵי הָעָם שֶׁכָּֽכָה לּוֹ אַשְׁרֵי הָעָם שֶׁיְהֹוָה אֱלֺהָיו: תְּהִלָּה לְדָוִד אֲרוֹמִמְךָ אֱלוֹהַי הַמֶּֽלֶךְ וַאֲבָרְ֒כָה שִׁמְךָ לְעוֹלָם וָעֶד: בְּכָל־יוֹם אֲבָרְ֒כֶֽךָ וַאֲהַלְ֒לָה שִׁמְךָ לְעוֹלָם וָעֶד: גָּדוֹל יְהֹוָה וּמְהֻלָּל מְאֹד וְלִגְ֒דֻלָּתוֹ אֵין חֵֽקֶר: דּוֹר לְדוֹר יְשַׁבַּח מַעֲשֶׂיךָ וּגְ֒בוּרֹתֶֽיךָ יַגִּֽידוּ: הֲדַר כְּבוֹד הוֹדֶֽךָ וְדִבְרֵי נִפְלְ֒אֹתֶֽיךָ אָשִֽׂיחָה: וֶעֱזוּז נוֹרְ֒אוֹתֶֽיךָ יֹאמֵֽרוּ וּגְ֒דֻלָּתְ֒ךָ אֲסַפְּ֒רֶֽנָּה: זֵֽכֶר רַב־טוּבְ֒ךָ יַבִּֽיעוּ וְצִדְ֒קָתְ֒ךָ יְרַנֵּֽנוּ: חַנּוּן וְרַחוּם יְהֹוָה אֶֽרֶךְ אַפַּֽיִם וּגְ֒דָל־חָֽסֶד: טוֹב־יְהֹוָה לַכֹּל וְרַחֲמָיו עַל־כָּל־מַעֲשָׂיו: יוֹדֽוּךָ יְהֹוָה כָּל־מַעֲשֶֽׂיךָ וַחֲסִידֶֽיךָ יְבָרְ֒כֽוּכָה: כְּבוֹד מַלְכוּתְ֒ךָ יֹאמֵֽרוּ וּגְ֒בוּרָתְ֒ךָ יְדַבֵּֽרוּ: לְהוֹדִֽיעַ לִבְנֵי הָאָדָם גְּבוּרֹתָיו וּכְ֒בוֹד הֲדַר מַלְכוּתוֹ: מַלְכוּתְ֒ךָ מַלְכוּת כָּל־עֹלָמִים וּמֶמְשַׁלְתְּ֒ךָ בְּכָל־דּוֹר וָדֹר: סוֹמֵךְ יְהֹוָה לְכָל־הַנֹּפְ֒לִים וְזוֹקֵף לְכָל־הַכְּ֒פוּפִים: עֵינֵי־כֹל אֵלֶֽיךָ יְשַׂבֵּֽרוּ וְאַתָּה נוֹתֵן־לָהֶם אֶת־אָכְלָם בְּעִתּוֹ: פּוֹתֵֽחַ אֶת־יָדֶֽךָ וּמַשְׂבִּֽיעַ לְכָל־חַי רָצוֹן: צַדִּיק יְהֹוָה בְּכָל־דְּרָכָיו וְחָסִיד בְּכָל־מַעֲשָׂיו: קָרוֹב יְהֹוָה לְכָל־קֹרְ֒אָיו לְכֹל אֲשֶׁר יִקְרָאֻֽהוּ בֶאֱמֶת: רְצוֹן־יְרֵאָיו יַעֲשֶׂה וְאֶת־שַׁוְעָתָם יִשְׁמַע וְיוֹשִׁיעֵם: שׁוֹמֵר יְהֹוָה אֶת־כָּל־אֹהֲבָיו וְאֵת כָּל־הָרְ֒שָׁעִים יַשְׁמִיד: תְּהִלַּת יְהֹוָה יְדַבֶּר פִּי וִיבָרֵךְ כָּל־בָּשָׂר שֵׁם קָדְשׁוֹ לְעוֹלָם וָעֶד: וַאֲנַֽחְנוּ נְבָרֵךְ יָהּ מֵעַתָּה וְעַד־עוֹלָם הַלְ֒לוּיָהּ:"}
+          {"ref": "1", "parts": [
+            {"kind": "prayer", "text": "אַשְׁרֵי יוֹשְׁ֒בֵי בֵיתֶֽךָ עוֹד יְהַלְ֒לֽוּךָ סֶּֽלָה: אַשְׁרֵי הָעָם שֶׁכָּֽכָה לּוֹ אַשְׁרֵי הָעָם שֶׁיְהֹוָה אֱלֺהָיו: תְּהִלָּה לְדָוִד אֲרוֹמִמְךָ אֱלוֹהַי הַמֶּֽלֶךְ וַאֲבָרְ֒כָה שִׁמְךָ לְעוֹלָם וָעֶד: בְּכָל־יוֹם אֲבָרְ֒כֶֽךָ וַאֲהַלְ֒לָה שִׁמְךָ לְעוֹלָם וָעֶד: גָּדוֹל יְהֹוָה וּמְהֻלָּל מְאֹד וְלִגְ֒דֻלָּתוֹ אֵין חֵֽקֶר: דּוֹר לְדוֹר יְשַׁבַּח מַעֲשֶׂיךָ וּגְ֒בוּרֹתֶֽיךָ יַגִּֽידוּ: הֲדַר כְּבוֹד הוֹדֶֽךָ וְדִבְרֵי נִפְלְ֒אֹתֶֽיךָ אָשִֽׂיחָה: וֶעֱזוּז נוֹרְ֒אוֹתֶֽיךָ יֹאמֵֽרוּ וּגְ֒דֻלָּתְ֒ךָ אֲסַפְּ֒רֶֽנָּה: זֵֽכֶר רַב־טוּבְ֒ךָ יַבִּֽיעוּ וְצִדְ֒קָתְ֒ךָ יְרַנֵּֽנוּ: חַנּוּן וְרַחוּם יְהֹוָה אֶֽרֶךְ אַפַּֽיִם וּגְ֒דָל־חָֽסֶד: טוֹב־יְהֹוָה לַכֹּל וְרַחֲמָיו עַל־כָּל־מַעֲשָׂיו: יוֹדֽוּךָ יְהֹוָה כָּל־מַעֲשֶֽׂיךָ וַחֲסִידֶֽיךָ יְבָרְ֒כֽוּכָה: כְּבוֹד מַלְכוּתְ֒ךָ יֹאמֵֽרוּ וּגְ֒בוּרָתְ֒ךָ יְדַבֵּֽרוּ: לְהוֹדִֽיעַ לִבְנֵי הָאָדָם גְּבוּרֹתָיו וּכְ֒בוֹד הֲדַר מַלְכוּתוֹ: מַלְכוּתְ֒ךָ מַלְכוּת כָּל־עֹלָמִים וּמֶמְשַׁלְתְּ֒ךָ בְּכָל־דּוֹר וָדֹר: סוֹמֵךְ יְהֹוָה לְכָל־הַנֹּפְ֒לִים וְזוֹקֵף לְכָל־הַכְּ֒פוּפִים: עֵינֵי־כֹל אֵלֶֽיךָ יְשַׂבֵּֽרוּ וְאַתָּה נוֹתֵן־לָהֶם אֶת־אָכְלָם בְּעִתּוֹ:"},
+            {"kind": "prayer", "gestures": ["touch_tefillin_yad"], "text": " פּוֹתֵֽחַ אֶת־יָדֶֽךָ"},
+            {"kind": "prayer", "gestures": ["touch_tefillin_rosh"], "text": " וּמַשְׂבִּֽיעַ לְכָל־חַי רָצוֹן:"},
+            {"kind": "prayer", "text": " צַדִּיק יְהֹוָה בְּכָל־דְּרָכָיו וְחָסִיד בְּכָל־מַעֲשָׂיו: קָרוֹב יְהֹוָה לְכָל־קֹרְ֒אָיו לְכֹל אֲשֶׁר יִקְרָאֻֽהוּ בֶאֱמֶת: רְצוֹן־יְרֵאָיו יַעֲשֶׂה וְאֶת־שַׁוְעָתָם יִשְׁמַע וְיוֹשִׁיעֵם: שׁוֹמֵר יְהֹוָה אֶת־כָּל־אֹהֲבָיו וְאֵת כָּל־הָרְ֒שָׁעִים יַשְׁמִיד: תְּהִלַּת יְהֹוָה יְדַבֶּר פִּי וִיבָרֵךְ כָּל־בָּשָׂר שֵׁם קָדְשׁוֹ לְעוֹלָם וָעֶד: וַאֲנַֽחְנוּ נְבָרֵךְ יָהּ מֵעַתָּה וְעַד־עוֹלָם הַלְ֒לוּיָהּ:"}
+          ]}
         ]
       },
       "en": {
@@ -336,11 +358,11 @@
       "path": "Weekday Shacharit/Kaddish Shalem",
       "title": "קדיש שלם",
       "node": "kaddish.shalem",
+      "when": "!roshChodesh && !cholHamoed",
       "service": "shacharit",
       "he": {
         "version": "The Metsudah siddur, 1981",
         "segs": [
-          {"ref": "17", "kind": "note", "en": "On Rosh Chodesh the Chazzan recites the half-Kaddish, the Tefillin are then removed and the congregation says the Musaf Amidah; and on Chol Hamoed the Chazzan recites the half-Kaddish, and the congregation says the Mussaf Amidah. On regular weekdays the Chazzan recites the following Kaddish:", "text": "<small>כל ימות השנה כשאין מוסף אומר הש\"ץ קדיש תתקבל אחר ובא לציון. אבל כשיש מוסף אומר הש\"ץ רק חצי קדיש על סדר קדושה ומתפללין מוסף. ובר\"ח חולצין התפילין קודם תפלת מוסף.</small>"},
           {"ref": "18", "parts": [
             {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא בְּעָלְ֒מָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ וְיַצְמַח פּוּרְ֒קָנֵהּ וִיקָרֵב (קֵץ) מְשִׁיחֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ"},
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן:"}
@@ -360,27 +382,26 @@
             {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן,"}
           ]},
           {"ref": "21", "parts": [
-            {"kind": "prayer", "when": "!roshChodesh && !cholHamoed", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "תִּתְקַבֵּל צְלוֹתְ֒הוֹן וּבָעוּתְ֒הוֹן דְּכָל בֵּית יִשְׂרָאֵל קֳדָם אֲבוּהוֹן דִּי בִשְׁ֒מַיָּא וְאִמְרוּ"},
-            {"kind": "prayer", "when": "!roshChodesh && !cholHamoed", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן:"}
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "תִּתְקַבֵּל צְלוֹתְ֒הוֹן וּבָעוּתְ֒הוֹן דְּכָל בֵּית יִשְׂרָאֵל קֳדָם אֲבוּהוֹן דִּי בִשְׁ֒מַיָּא וְאִמְרוּ"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן:"}
           ]},
           {"ref": "22", "parts": [
-            {"kind": "prayer", "when": "!roshChodesh && !cholHamoed", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ"},
-            {"kind": "prayer", "when": "!roshChodesh && !cholHamoed", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן:"}
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן:"}
           ]},
           {"ref": "23", "parts": [
-            {"kind": "prayer", "when": "!roshChodesh && !cholHamoed", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה"},
-            {"kind": "prayer", "when": "!aseretYemeiTeshuva && !roshChodesh && !cholHamoed", "alt": "oseh", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " שָׁלוֹם "},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "עוֹשֶׂה"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "oseh", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " שָׁלוֹם "},
             {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "gloss": "Add 'the peace'", "text": "<small>בעשי\"ת</small>"},
             {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "oseh", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " (הַשָּׁלוֹם)"},
-            {"kind": "prayer", "when": "!roshChodesh && !cholHamoed", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ"},
-            {"kind": "prayer", "when": "!roshChodesh && !cholHamoed", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן"}
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן"}
           ]}
         ]
       },
       "en": {
         "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
         "segs": [
-          {"ref": "17", "translates": ["17"], "text": "<small>On Rosh Chodesh the Chazzan recites the half-Kaddish, the Tefillin are then removed and the congregation says the Musaf Amidah; and on Chol Hamoed the Chazzan recites the half-Kaddish, and the congregation says the Mussaf Amidah. On regular weekdays the Chazzan recites the following Kaddish:</small>"},
           {"ref": "18", "translates": ["18"], "text": "Exalted and sanctified be His great Name in the world which He created according to His will and may He rule His kingdom bring forth His redemption and hasten the coming if His Messiah in your lifetime and in your days, and in the lifetime of the entire House of Israel, speedily and in the near future— and say Amein."},
           {"ref": "19", "translates": ["19"], "text": "May His great Name be blessed forever and for all eternity."},
           {"ref": "20", "translates": ["20"], "text": "Blessed and praised, glorified, and exalted and uplifted, honored and elevated and extolled be the Name of the Holy One, blessed is He; above (<i>Ten Days of Penitence:</i> far above) all the blessings and hymns, praises and consolations which we utter in the world—and say Amein."},
@@ -422,6 +443,46 @@
           {"ref": "28", "translates": ["28"], "text": "A psalm of David: the earth is Adonoy's and the fullness thereof,<sup class=\"footnote-marker\">32</sup><i class=\"footnote\">See notes for this Psalm on page 000.</i> the inhabited world and those who dwell in it. For He founded it upon the seas, and established it upon rivers. Who may ascend the mountain of Adonoy, and who may stand in the place of His holiness? The clean of hands and the pure of heart, who has not borne My soul in vain, and has not sworn deceitfully. He will bear Adonoy's blessing and righteousness from the God of his deliverance. This is the generation of those who seek Him, and seekers of Your Presence, [God of] Jacob, <i>selah.</i> Lift up your heads, gates, and be uplifted [you] entranceways to eternity, so that the King of Glory may enter. Who is this King of Glory? Adonoy, strong and mighty; Adonoy, the Mighty One in battle. Lift up your heads, gates, and lift, entranceways to eternity, so that the King of Glory may enter. Who is He, this King of Glory? Adonoy of hosts, He is the King of Glory, <i>selah.</i><sup class=\"footnote-marker\">33</sup><i class=\"footnote\">Psalms 24.</i>"},
           {"ref": "29", "translates": ["29"], "text": "<i>As the Torah is returned to the Ark the following is said:</i>"},
           {"ref": "30", "translates": ["30"], "text": "And when it<sup class=\"footnote-marker\">34</sup><i class=\"footnote\">The Ark.</i> rested, he<sup class=\"footnote-marker\">35</sup><i class=\"footnote\">Moses.</i> would say: Return, Adonoy, to the myriads and thousands of Israel.<sup class=\"footnote-marker\">36</sup><i class=\"footnote\">Numbers 10:36.</i> Arise, Adonoy unto Your resting place, You and the Ark of Your strength. Let Your priests clothe themselves in righteousness, and let Your devoted ones sing in joy. For the sake of David, Your servant, do not reject Your anointed.<sup class=\"footnote-marker\">37</sup><i class=\"footnote\">Psalms 132:8-10.</i> For I have given you good instruction, do not forsake My Torah.<sup class=\"footnote-marker\">38</sup><i class=\"footnote\">Proverbs 4:2.</i> It is a tree of life to those who grasp it, and those who support it are fortunate.<sup class=\"footnote-marker\">39</sup><i class=\"footnote\">Proverbs 3:18.</i> Its ways are ways of pleasantness and all its paths are peace.<sup class=\"footnote-marker\">40</sup><i class=\"footnote\">Proverbs 3:17.</i> Cause us to return to you, Adonoy, and we shall return; renew our days as of old.<sup class=\"footnote-marker\">41</sup><i class=\"footnote\">Lamentations 5:21.</i>"}
+        ]
+      }
+    },
+    {
+      "path": "Weekday Shacharit/Half Kaddish before Musaf",
+      "title": "חצי קדיש",
+      "node": "kaddish.half",
+      "when": "roshChodesh || cholHamoed",
+      "service": "shacharit",
+      "he": {
+        "version": "The Metsudah siddur, 1981",
+        "segs": [
+          {"ref": "17", "kind": "note", "en": "On Rosh Chodesh the Chazzan recites the half-Kaddish, the Tefillin are then removed and the congregation says the Musaf Amidah; and on Chol Hamoed the Chazzan recites the half-Kaddish, and the congregation says the Mussaf Amidah. On regular weekdays the Chazzan recites the following Kaddish:", "text": "<small>כל ימות השנה כשאין מוסף אומר הש\"ץ קדיש תתקבל אחר ובא לציון. אבל כשיש מוסף אומר הש\"ץ רק חצי קדיש על סדר קדושה ומתפללין מוסף. ובר\"ח חולצין התפילין קודם תפלת מוסף.</small>"},
+          {"ref": "27", "parts": [
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא בְּעָלְ֒מָא דִּי בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ וְיַצְמַח פּוּרְקָנֵהּ וִיקָרֵב (קֵץ) מְשִׁיחֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן:"}
+          ]},
+          {"ref": "28", "kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ</b> לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא:"},
+          {"ref": "29", "parts": [
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא,"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " בְּרִיךְ הוּא"}
+          ]},
+          {"ref": "30", "parts": [
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "לְעֵֽלָּא "},
+            {"kind": "instruction", "when": "aseretYemeiTeshuva", "en": "During the Ten Days of Repentance:", "cite": "ע\"פ מחזור מכל השנה", "text": "<small>בעשי\"ת</small> "},
+            {"kind": "prayer", "when": "aseretYemeiTeshuva", "alt": "leela", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "(וּלְ֒עֵֽלָּא מִכָּל)"},
+            {"kind": "prayer", "when": "!aseretYemeiTeshuva", "alt": "leela", "role": "chazzan", "voice": "aloud", "minyan": true, "text": "  מִן כָּל"},
+            {"kind": "prayer", "role": "chazzan", "voice": "aloud", "minyan": true, "text": " בִּרְכָתָא וְשִׁירָתָא, תֻּשְׁבְּחָתָא וְנֶחֱמָתָא, דַּאֲמִירָן בְּעָלְ֒מָא, וְאִמְרוּ"},
+            {"kind": "prayer", "role": "congregation", "voice": "aloud", "minyan": true, "text": " אָמֵן:"}
+          ]}
+        ]
+      },
+      "en": {
+        "version": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+        "segs": [
+          {"ref": "17", "translates": ["17"], "text": "<small>On Rosh Chodesh the Chazzan recites the half-Kaddish, the Tefillin are then removed and the congregation says the Musaf Amidah; and on Chol Hamoed the Chazzan recites the half-Kaddish, and the congregation says the Mussaf Amidah. On regular weekdays the Chazzan recites the following Kaddish:</small>"},
+          {"ref": "27", "translates": ["27"], "text": "Exalted and sanctified be His great Name in the world which He created according to His will and may He rule His kingdom bring forth His redemption and hasten the coming if His Messiah in your lifetime and in your days, and in the lifetime of the entire House of Israel, speedily and in the near future— and say Amein."},
+          {"ref": "28", "translates": ["28"], "text": "May His great Name be blessed forever and for all eternity."},
+          {"ref": "29", "translates": ["29"], "text": "Blessed and praised, glorified, and exalted and uplifted, honored and elevated and extolled be the Name of the Holy One, blessed is He;"},
+          {"ref": "30", "translates": ["30"], "text": "above (<i>Ten Days of Penitence:</i> far above) all the blessings and hymns, praises and consolations which we utter in the world—and say Amein."}
         ]
       }
     },

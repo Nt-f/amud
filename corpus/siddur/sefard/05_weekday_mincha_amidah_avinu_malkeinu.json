@@ -539,8 +539,8 @@
           {"ref": "113", "kind": "prayer", "when": "birkatKohanimChazzan", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "יְבָרֶכְ֒ךָ יְהֹוָה וְיִשְׁמְ֒רֶֽךָ:"},
           {"ref": "114", "kind": "prayer", "when": "birkatKohanimChazzan", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "יָאֵר יְהֹוָה פָּנָיו אֵלֶֽיךָ וִיחֻנֶּֽךָּ:"},
           {"ref": "115", "kind": "prayer", "when": "birkatKohanimChazzan", "role": "chazzan", "voice": "aloud", "amidah": "repetition", "minyan": true, "text": "יִשָּׂא יְהֹוָה פָּנָיו אֵלֶֽיךָ וְיָשֵׂם לְךָ שָׁלוֹם:"},
-          {"ref": "116", "kind": "instruction", "when": "birkatKohanimChazzan", "amidah": "repetition", "minyan": true, "en": "After Birkat Kohanim the congregation says:", "text": "<small>לאחר ברכת כהנים יאמרו הציבור:</small>"},
-          {"ref": "117", "kind": "prayer", "when": "birkatKohanimChazzan", "role": "congregation", "amidah": "repetition", "minyan": true, "text": "<small>אַדִּיר בַּמָּרוֹם שׁוֹכֵן בִּגְ֒בוּרָה, אַתָּה שָׁלוֹם וְשִׁמְךָ שָׁלוֹם. יְהִי רָצוֹן שֶׁתָּשִׂים עָלֵֽינוּ וְעַל כָּל עַמְּ֒ךָ בֵּית יִשְׂרָאֵל חַיִּים וּבְרָכָה לְמִשְׁמֶֽרֶת שָׁלוֹם:</small>"}
+          {"ref": "116", "kind": "instruction", "when": "false", "amidah": "repetition", "minyan": true, "en": "After Birkat Kohanim the congregation says:", "comment": "Adir BaMarom is said only while the kohanim duchen (ArtScroll prints it only there).", "text": "<small>לאחר ברכת כהנים יאמרו הציבור:</small>"},
+          {"ref": "117", "kind": "prayer", "when": "false", "role": "congregation", "amidah": "repetition", "minyan": true, "text": "<small>אַדִּיר בַּמָּרוֹם שׁוֹכֵן בִּגְ֒בוּרָה, אַתָּה שָׁלוֹם וְשִׁמְךָ שָׁלוֹם. יְהִי רָצוֹן שֶׁתָּשִׂים עָלֵֽינוּ וְעַל כָּל עַמְּ֒ךָ בֵּית יִשְׂרָאֵל חַיִּים וּבְרָכָה לְמִשְׁמֶֽרֶת שָׁלוֹם:</small>"}
         ]
       },
       "en": {
