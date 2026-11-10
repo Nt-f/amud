@@ -290,7 +290,8 @@ def _tall(grey, x0, x1, base, core):
         return 0, base
     p = a.sum(1)
     mid = int(base - 0.5 * core) - y0
-    peak = p[max(0, mid - int(core / 2)):mid + int(core / 2) + 1].max()
+    around = p[max(0, mid - int(core / 2)):mid + int(core / 2) + 1]
+    peak = around.max() if around.size else 0
     if peak == 0:
         return 0, base
     thick = np.flatnonzero(p >= 0.3 * peak)

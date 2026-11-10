@@ -34,6 +34,10 @@ from lineread import words as read_words
 INK = 128
 SQUARE = os.environ.get('OCR_SQUARE', 'heb_vilna_square')
 RASHI = os.environ.get('OCR_RASHI', 'heb_vilna_rashi')
+# First-pass lines under the body's regions in letters under this share of
+# the margins' are a foot commentary, not Rashi or Tosafot (SEG_SMALL_FOOT=0
+# to turn it off).
+SMALL_FOOT = float(os.environ.get('SEG_SMALL_FOOT', '0.8'))
 
 
 def _runs(on):
@@ -774,6 +778,18 @@ def _reline(lines, im, full, f, streams, extra, frame, cache_path):
         if over and not any(above(m, l['stream']) for m in out):
             m = max(over, key=lambda m: m['base'])
             l['stream'], l['pos'] = 'main', m['pos'] + m['letters']
+    # The first pass's lines below all the body's regions, in letters well
+    # under the margins', are another commentary run the width of the page
+    # at the foot (the Shitah Mekubetzet under Bekhorot's and Keritot's
+    # Gemara): read well, they quote Rashi and Tosafot enough to be taken
+    # for them, and the lines around those took their text. (A line's h is
+    # 1.3 of its letters' height.)
+    if plan and page_med.get('margin'):
+        floor = max(r[3] for r, _, _, _ in plan)
+        for l in out:
+            if (not l.get('seg') and l.get('stream') in linemap.BODY and l['base'] - 0.5 * l['h'] > floor
+                    and l['h'] < SMALL_FOOT * 1.3 * page_med['margin']):
+                l['stream'], l['pos'], l['why'] = 'other', None, 'small'
     _settle(out)
     return out
 

@@ -67,6 +67,14 @@ from rapidfuzz import fuzz
 import dots
 
 SCAN = 'https://manuscripts.sefaria.org/vilna-romm/{book}_{amud}.jpg'
+# Sefaria's scans filed under another amud's name (checked by the running
+# head's daf number and tool/daf/scanmatch.py): the amud → the file it's in.
+SCAN_FILE = {('Pesachim', '43a'): 'Pesachim_45a', ('Pesachim', '45a'): 'Pesachim_43a'}
+# Amudim with no scan of their own there.
+NO_SCAN = {
+    ('Nazir', '4a'): 'not at manuscripts.sefaria.org',
+    ('Makkot', '13b'): "Makkot_13b.jpg is a second scan of 14b",
+}
 API = 'https://www.sefaria.org/api/v3/texts/'
 WIKISOURCE = 'Wikisource Talmud Bavli'
 OCR_SCALE = 3
@@ -252,7 +260,12 @@ def texts(cache, book, amud):
 def ocr(cache, book, amud):
     tsv = cache / 'ocr' / ('' if OCR_LANG == 'heb' else OCR_LANG) / f'{book}_{amud}.tsv'
     img_path = cache / 'scan' / f'{book}_{amud}.jpg'
-    if fetch(SCAN.format(book=book.replace(' ', '_'), amud=amud), img_path) is None:
+    if (book, amud) in NO_SCAN:
+        raise SystemExit(f'no scan for {book} {amud}: {NO_SCAN[book, amud]}')
+    url = SCAN.format(book=book.replace(' ', '_'), amud=amud)
+    if (book, amud) in SCAN_FILE:
+        url = SCAN.rsplit('/', 1)[0] + f'/{SCAN_FILE[book, amud]}.jpg'
+    if fetch(url, img_path) is None:
         raise SystemExit(f'no scan for {book} {amud}')
     if not tsv.exists():
         tsv.parent.mkdir(parents=True, exist_ok=True)
@@ -285,9 +298,14 @@ def kraken_lines(cache, book, amud, img_path):
         if not (KRAKEN.exists() and KRAKEN_MODEL.exists()):
             return []
         out.parent.mkdir(parents=True, exist_ok=True)
-        r = subprocess.run([str(KRAKEN), '-i', str(img_path), str(out), '-n', 'segment', '-bl', '-i', str(KRAKEN_MODEL)],
-                           capture_output=True)
+        # On the CPU: it takes as long as on the GPU (the time is in its
+        # polygons), and a dozen at once on a shared GPU mostly failed
+        # (the Shas run of 2026-11-08 got lines for one page in six).
+        r = subprocess.run([str(KRAKEN), '-d', os.environ.get('KRAKEN_DEVICE', 'cpu'), '-i', str(img_path), str(out),
+                            '-n', 'segment', '-bl', '-i', str(KRAKEN_MODEL)], capture_output=True)
         if r.returncode or not out.exists():
+            err = (r.stderr or b'').decode(errors='replace').strip().splitlines()
+            print(f'kraken failed on {book} {amud}: {err[-1] if err else r.returncode}', file=sys.stderr)
             return []
     ks = []
     for l in json.loads(out.read_text())['lines']:
@@ -1336,6 +1354,9 @@ def amud_map(cache, book, amud, debug_dir=None, verbose=False, training_dir=None
         import segment
         lines = segment.reline(lines, im, streams, extra, info['frame'],
                                cache / 'seg' / OCR_LANG / f'{book.replace(" ", "_")}_{amud}.json')
+    # A "line" whose foot is at or past the scan's bottom edge is its dark
+    # border read as text (Bava Batra 3b's took 14 words of Rashi).
+    lines = [l for l in lines if l['base'] < im.height - 2]
     if ks:
         snap_to_kraken(lines, ks, np.asarray(im.convert('L')))
     # Lines a reviewer found to be no body text's (notes, headings).
