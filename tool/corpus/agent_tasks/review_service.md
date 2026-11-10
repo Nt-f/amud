@@ -723,3 +723,31 @@ it up. Rules 79 to 86 are what it took.
 86. **Moving segments changes their node.** A segment without its own
     `node` took its old leaf's; after a split, LeDavid's opening rubric
     became `tachanun.vidui`. Read the nodes in `inspect` after any move.
+
+**Sefard Shacharit and Maariv, November 2026** (split as in rule 79, then four
+reviewers read every leaf; their reports are `corpus/work/review_sefard_sh_*.md`
+and `review_sefard_ma.md`)
+
+87. **Re-check the copies you already fixed.** Sefard Mincha passed rule 79
+    and still had rule 38 ("ועל כלם" under Chanukah/Purim, hidden every
+    day) and rule 11 (Ten Days "forgot" notes without `when`); the Shacharit
+    and Maariv reviewers found both in their copies and in Mincha.
+88. **A day-specific section can hide a daily unit.** Shomer Yisrael and the
+    Half Kaddish sat in "For Monday & Thursday"; the daily Mourner's Kaddish
+    after the Song of the Day sat in L'David (title rule `ledavid`, Elul
+    only). Read what follows the special text to the end of the leaf.
+89. **A title rule decides by the leaf's English name.** "Mizmor Shir
+    Chanukat HaBayit" (Psalm 30, said daily) was hidden by the Chanukah rule
+    as soon as it became a leaf. Resolve an ordinary day after naming leaves.
+90. **Shredded English also hides in segments with conditional parts**
+    (rule 83's rejoin skipped them): look for any English part with
+    `kind: instruction` or a `he`, and rejoin it with `set … kind=prayer he=`
+    then `merge`, keeping the `when`/`alt` parts.
+91. **An inserted occasion that repeats the service's end** (Chol HaMoed's
+    Musaf with Kaveh … Aleinu) is split as in rule 46: "Holidays/After Yom
+    Tov Musaf".
+92. **Printed in English only:** a rubric in the translation that the Hebrew
+    lacks (the Half Kaddish after the Torah reading) may mean the Hebrew is
+    missing. Copy the unit from the same siddur, never retype it.
+93. **Don't repeat a leaf's `when` on its parts**; it adds compound labels.
+    Negated conditions (`!motzaeiShabbat`) print no label on ordinary days.
