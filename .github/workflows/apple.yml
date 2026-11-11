@@ -94,6 +94,16 @@ jobs:
         env:
           ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
         run: echo "$ASC_KEY_P8" | base64 -d > "$RUNNER_TEMP/AuthKey.p8"
+      # Archive has Xcode create a development certificate on this fresh
+      # Mac; the ones earlier runs made would fill the account's limit.
+      - name: Revoke earlier runs' development certificates
+        env:
+          ASC_KEY_PATH: ${{ runner.temp }}/AuthKey.p8
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          python3 -m pip install --quiet --break-system-packages 'pyjwt[crypto]'
+          python3 .github/revoke_ci_dev_certs.py
       - name: Archive
         env:
           TEAM: ${{ secrets.APPLE_TEAM_ID }}
