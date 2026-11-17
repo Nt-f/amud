@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 
 /// Brand colors from the Amud logo.
 const amudInk = Color(0xFF172A5C);
@@ -47,6 +48,9 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
 
   /// How long the finished logo shows, still, with reduced motion.
   static const _stillLength = Duration(milliseconds: 300);
+
+  /// How long the finished logo shows on a phone too slow to animate it.
+  static const _slowHold = Duration(milliseconds: 600);
   bool _show = !kIsWeb && !LaunchAnimation._played;
 
   @override
@@ -65,6 +69,7 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
           await Future<void>.delayed(_stillLength);
           await _finish();
         } else {
+          _c.addListener(_countFrame);
           _c.forward().whenComplete(_finish);
         }
       });
@@ -73,10 +78,23 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
 
   bool _finishing = false;
 
-  Future<void> _finish() async {
+  /// Frames the animation got to draw. A slow phone (a flip phone) draws
+  /// only a few in its half second, or none, and would fade out before the
+  /// logo was ever on screen.
+  int _frames = 0;
+  void _countFrame() => _frames++;
+
+  Future<void> _finish({bool skipped = false}) async {
     if (!mounted || !_show || _finishing) return;
     _finishing = true;
     _c.stop();
+    if (!skipped && _frames < 5 && !(MediaQuery.maybeDisableAnimationsOf(context) ?? false)) {
+      // The whole logo, held long enough to be seen, once it's drawn.
+      _c.value = 1;
+      await SchedulerBinding.instance.endOfFrame;
+      await Future<void>.delayed(_slowHold);
+      if (!mounted) return;
+    }
     await _fade.forward();
     if (mounted) setState(() => _show = false);
   }
@@ -100,7 +118,7 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
           // only skips it.
           child: GestureDetector(
             behavior: HitTestBehavior.opaque,
-            onTap: _finish,
+            onTap: () => _finish(skipped: true),
             child: AbsorbPointer(
               child: ColoredBox(
                 color: amudInk,
@@ -112,7 +130,15 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
                       final still = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
                       final t = still ? _length.inMilliseconds / 1000 : _c.value * _length.inMilliseconds / 1000;
                       final word = _segment(t, 1.75, .6, Curves.easeOut);
-                      return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                      // The mark and the word together are about 1.4 times
+                      // the mark's height: on a small screen (a flip phone's
+                      // 240 by 180) all of it is made smaller to fit.
+                      return Center(
+                          child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Padding(
+                          padding: const EdgeInsets.all(12),
+                          child: Column(mainAxisSize: MainAxisSize.min, children: [
                         CustomPaint(size: const Size.square(240), painter: _MarkPainter(t)),
                         const SizedBox(height: 20),
                         Opacity(
@@ -132,7 +158,9 @@ class _LaunchAnimationState extends State<LaunchAnimation> with TickerProviderSt
                                 )),
                           ),
                         ),
-                      ]);
+                      ]),
+                        ),
+                      ));
                     },
                   ),
                 ),

@@ -1,6 +1,8 @@
 import 'dart:io';
 
+import 'package:amud/core/keypad.dart';
 import 'package:amud/core/l10n.dart';
+import 'package:amud/core/page_swipe.dart';
 import 'package:amud/core/providers.dart';
 import 'package:amud/core/settings.dart';
 import 'package:amud/core/storage.dart';
@@ -9,6 +11,7 @@ import 'package:amud/features/siddur/reader_jump.dart';
 import 'package:amud/features/siddur/reader_screen.dart';
 import 'package:amud/features/siddur/siddur_providers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hebcal/hebcal.dart';
@@ -77,6 +80,13 @@ void main() {
     expect(key, isNot(contains('Tefillin')));
   });
 
+  testWidgets("with the jump bar, a swipe doesn't turn to another section", (t) async {
+    await _chips(t, const AppSettings(titleLanguage: TitleLanguage.english, ashkenaziSpelling: false));
+    final swipe = t.widget<PageSwipe>(find.byType(PageSwipe));
+    expect(swipe.onNext, isNull);
+    expect(swipe.onPrevious, isNull);
+  });
+
   testWidgets('or every section of the service', (t) async {
     final every = await _chips(t, const AppSettings(titleLanguage: TitleLanguage.english, ashkenaziSpelling: false, jumpDetail: JumpDetail.sections));
     expect(every, containsAllInOrder(['Preparatory Prayers', 'Modeh Ani', 'Tallit', 'Tefillin', '| Pesukei Dezimra', "Barukh She'amar",
@@ -114,5 +124,71 @@ void main() {
     expect(every, containsAllInOrder(['Korbanot', 'Ashrei', '| Amidah', 'Patriarchs', 'Kedushah', 'Thanksgiving', 'Modim DeRabbanan', 'Peace',
         'Concluding Passage', 'Tachanun', 'Kaddish Shalem', 'Aleinu', "Mourner's Kaddish"]));
     expect(every, isNot(contains('Avinu Malkeinu')));
+  });
+
+  testWidgets("a keypad's side keys go from one part of the service to the next, not to another prayer", (t) async {
+    t.view.physicalSize = const Size(240, 320);
+    t.view.devicePixelRatio = 1;
+    addTearDown(t.view.reset);
+    late Storage storage;
+    await t.runAsync(() async {
+      final dir = await Directory.systemTemp.createTemp('jumpkeys');
+      addTearDown(() => dir.delete(recursive: true));
+      storage = await Storage.openAt(dir.path, name: 'jumpkeys');
+    });
+    const book = 'Siddur Ashkenaz';
+    final c = ProviderContainer(overrides: [storageProvider.overrideWithValue(storage), keypadModeProvider.overrideWithValue(true)]);
+    addTearDown(c.dispose);
+    c.read(settingsProvider.notifier).update((s) => s.copyWith(readerCompass: false, titleLanguage: TitleLanguage.english));
+    c.read(readerDateProvider.notifier).state = HDate(16, Months.cheshvan, 5787);
+    await t.runAsync(() async {
+      await c.read(bookIndexProvider(book).future);
+      await c.read(versionSelectionProvider(book).future);
+      await c.read(resolverProvider(book).future);
+    });
+    await t.pumpWidget(UncontrolledProviderScope(
+      container: c,
+      child: MaterialApp(
+        theme: buildTheme(const AppSettings(), Brightness.light),
+        builder: (context, w) => AppText(
+          lang: UiLanguage.en,
+          ashkenazi: false,
+          child: KeypadLayer(appMenu: (_) => [KeypadMenuItem('Zmanim', () {})], onBack: () {}, child: w!),
+        ),
+        home: const ReaderScreen(book: book, nodeId: 'Weekday/Shacharit'),
+      ),
+    ));
+    for (var i = 0; i < 20 && find.byType(ReaderJumpBar).evaluate().isEmpty; i++) {
+      await t.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 100)));
+      await t.pump();
+    }
+    int active() => t.widget<ReaderJumpBar>(find.byType(ReaderJumpBar)).active;
+    expect(active(), -1);
+    await t.sendKeyEvent(LogicalKeyboardKey.arrowRight);
+    await t.pumpAndSettle();
+    expect(active(), 0);
+    await t.sendKeyEvent(LogicalKeyboardKey.arrowRight);
+    await t.pumpAndSettle();
+    expect(active(), 1);
+    await t.sendKeyEvent(LogicalKeyboardKey.arrowLeft);
+    await t.pumpAndSettle();
+    expect(active(), 0);
+    await t.sendKeyEvent(LogicalKeyboardKey.arrowLeft);
+    await t.pumpAndSettle();
+    expect(active(), -1, reason: 'back from the first part, to the top');
+    expect(t.takeException(), isNull, reason: 'no turn to another prayer (there is no router here to turn with)');
+    // The left soft key: the reader's own menu, then the app's.
+    await t.sendKeyEvent(LogicalKeyboardKey.contextMenu);
+    await t.pumpAndSettle();
+    final menu = find.byType(Dialog);
+    final list = find.descendant(of: menu, matching: find.byType(Scrollable));
+    for (final label in ['Shacharit', 'Focus mode', 'Larger text', 'Why today?', 'Go to', 'Zmanim']) {
+      final item = find.descendant(of: menu, matching: find.textContaining(label));
+      if (item.evaluate().isEmpty) await t.scrollUntilVisible(item, 100, scrollable: list);
+      expect(item, findsWidgets, reason: label);
+    }
+    await t.sendKeyEvent(LogicalKeyboardKey.contextMenu);
+    await t.pumpAndSettle();
+    expect(find.byType(Dialog), findsNothing);
   });
 }

@@ -115,15 +115,56 @@ class DirectionalOrScrollAction extends DirectionalFocusAction {
     final way = intent.direction == TraversalDirection.down ? AxisDirection.down : AxisDirection.up;
     final scrollable = vertical ? scrollableFor(focus) : null;
     if (scrollable != null && _overhangs(focus, scrollable, way) && canKeyScroll(scrollable.position, way)) {
-      return keyScroll(scrollable.position, way);
+      return _scrollOn(focus, scrollable, way);
     }
     // The text of a reader (a selection area around its list) has focus:
     // up and down read on.
     final text = focus is! FocusScopeNode && focus.context?.findAncestorWidgetOfExactType<SelectableRegion>() != null;
     if (text && scrollable != null && Scrollable.maybeOf(focus.context!) == null && canKeyScroll(scrollable.position, way)) {
-      return keyScroll(scrollable.position, way);
+      return _scrollOn(focus, scrollable, way);
+    }
+    // Focus read past, out of view (it may no longer have a place at all):
+    // go on from what's on screen.
+    if (vertical && scrollable != null && focus is! FocusScopeNode && Scrollable.maybeOf(focus.context!) != null) {
+      final view = _viewOf(scrollable);
+      if (view != null && (!focus.rect.isFinite || !focus.rect.overlaps(view))) {
+        // Last scrolled the other way, it's ahead: scroll back to it.
+        final ahead = _wentOff[focus] != null && _wentOff[focus] != way;
+        if (!ahead) {
+          final down = way == AxisDirection.down;
+          final shown = [
+            for (final n in focus.nearestScope?.traversalDescendants ?? const <FocusNode>[])
+              if (n != focus && n.canRequestFocus && !n.skipTraversal && n.context != null && n.context!.mounted && n.rect.isFinite)
+                if (down ? n.rect.top >= view.top - 1 && n.rect.top < view.bottom : n.rect.bottom <= view.bottom + 1 && n.rect.bottom > view.top) n,
+          ];
+          if (shown.isNotEmpty) {
+            final to = shown.reduce((a, b) => (down ? a.rect.top <= b.rect.top : a.rect.bottom >= b.rect.bottom) ? a : b);
+            to.requestFocus();
+            Scrollable.ensureVisible(to.context!,
+                alignmentPolicy: down ? ScrollPositionAlignmentPolicy.keepVisibleAtEnd : ScrollPositionAlignmentPolicy.keepVisibleAtStart);
+            return;
+          }
+        }
+        if (canKeyScroll(scrollable.position, way)) return _scrollOn(focus, scrollable, way);
+      }
     }
     final stops = _stopsToward(focus, intent.direction);
+    // Text between here and the next thing to press (an opened section of
+    // Why today?, a paragraph under a heading) is read through first, a
+    // step at a time, rather than passed over: focus moves on only once
+    // the next stop is in view, or there's no more of this list to see.
+    if (vertical && scrollable != null && focus is! FocusScopeNode && Scrollable.maybeOf(focus.context!) != null &&
+        canKeyScroll(scrollable.position, way)) {
+      final view = _viewOf(scrollable);
+      // The next stop in this list (one outside it, the button under it,
+      // comes once the list has been read to its end).
+      final next = _nearest([for (final n in stops) if (Scrollable.maybeOf(n.context!, axis: Axis.vertical) == scrollable) n], focus.rect,
+          intent.direction);
+      if (view != null) {
+        final unseen = next == null ? double.infinity : (way == AxisDirection.down ? next.rect.top - view.bottom : view.top - next.rect.bottom);
+        if (unseen > view.height * _unseenShare) return _scrollOn(focus, scrollable, way);
+      }
+    }
     // From outside the page's list (its app bar, a button under it), into
     // the list first: Flutter goes by distance, and would pass over what's
     // in the list but not yet scrolled into view.
@@ -144,8 +185,69 @@ class DirectionalOrScrollAction extends DirectionalFocusAction {
       if (vertical) scheduleMicrotask(() => _fromItsStart(way));
       return;
     }
-    if (scrollable != null && canKeyScroll(scrollable.position, way)) return keyScroll(scrollable.position, way);
-    if (!vertical) onEdge?.call(intent.direction);
+    if (scrollable != null && canKeyScroll(scrollable.position, way)) return _scrollOn(focus, scrollable, way);
+    if (!vertical && !_turnTab(focus, intent.direction)) onEdge?.call(intent.direction);
+  }
+
+  /// Which way the page last scrolled past a focused item, so once it's
+  /// out of view (and its place unknown) it's known to be above or below.
+  static final _wentOff = Expando<AxisDirection>();
+
+  static void _scrollOn(FocusNode focus, ScrollableState scrollable, AxisDirection way) {
+    _wentOff[focus] = way;
+    keyScroll(scrollable.position, way);
+  }
+
+  /// How much of the screen the page hidden before the next stop may fill
+  /// for focus to move straight to it: moving there shows it all at once,
+  /// beside the stop. More, and some would scroll by unseen.
+  static const _unseenShare = 0.5;
+
+  /// The part of the screen [scrollable] shows.
+  static Rect? _viewOf(ScrollableState scrollable) {
+    final box = scrollable.context.findRenderObject();
+    if (box is! RenderBox || !box.hasSize || !box.attached) return null;
+    return box.localToGlobal(Offset.zero) & box.size;
+  }
+
+  /// Where focus goes next [direction] among [stops], as Flutter chooses:
+  /// the nearest of those in line with [from], or of all of them.
+  static FocusNode? _nearest(List<FocusNode> stops, Rect from, TraversalDirection direction) {
+    if (stops.isEmpty) return null;
+    final inLine = [for (final n in stops) if (n.rect.left < from.right && n.rect.right > from.left) n];
+    final pool = inLine.isEmpty ? stops : inLine;
+    return direction == TraversalDirection.down
+        ? pool.reduce((a, b) => a.rect.top <= b.rect.top ? a : b)
+        : pool.reduce((a, b) => a.rect.bottom >= b.rect.bottom ? a : b);
+  }
+
+  /// A page with tabs along its top (Tehillim's): left and right, with
+  /// nothing beside, turn to the next tab, in the reading direction.
+  static bool _turnTab(FocusNode focus, TraversalDirection direction) {
+    final context = focus.context;
+    if (context == null || !context.mounted) return false;
+    var tabs = DefaultTabController.maybeOf(context);
+    if (tabs == null) {
+      void visit(Element e) {
+        if (tabs != null) return;
+        if (e.widget case TabBar(:final controller)) {
+          tabs = controller ?? DefaultTabController.maybeOf(e);
+          return;
+        }
+        e.debugVisitOnstageChildren(visit);
+      }
+
+      // The page (its route's scope) the focus is on.
+      final page = (focus is FocusScopeNode ? focus : focus.enclosingScope)?.context ?? context;
+      if (page.mounted) (page as Element).debugVisitOnstageChildren(visit);
+    }
+    final t = tabs;
+    if (t == null || t.indexIsChanging) return false;
+    final forward = (direction == TraversalDirection.right) == (Directionality.maybeOf(context) != TextDirection.rtl);
+    final to = t.index + (forward ? 1 : -1);
+    if (to < 0 || to >= t.length) return false;
+    t.animateTo(to);
+    return true;
   }
 
   /// What there is to move to [direction] from [focus]. Flutter can't be
@@ -236,13 +338,13 @@ ScrollableState? scrollableFor(FocusNode focus) {
 /// Wraps the whole app when keypad navigation is on: the soft keys, the
 /// d-pad, a ring around what has focus, and the soft-key bar.
 class KeypadLayer extends ConsumerStatefulWidget {
-  /// The app's own menu, where the page with focus has none.
-  final VoidCallback onMenu;
+  /// The app's own choices (its tabs), at the end of every page's menu.
+  final List<KeypadMenuItem> Function(BuildContext context) appMenu;
 
   /// Back, as the phone's back key goes.
   final VoidCallback onBack;
   final Widget child;
-  const KeypadLayer({super.key, required this.onMenu, required this.onBack, required this.child});
+  const KeypadLayer({super.key, required this.appMenu, required this.onBack, required this.child});
 
   @override
   ConsumerState<KeypadLayer> createState() => _KeypadLayerState();
@@ -283,6 +385,45 @@ class _KeypadLayerState extends ConsumerState<KeypadLayer> {
     return KeyEventResult.handled;
   }
 
+  /// The left soft key: the menu of the page on screen (its own choices
+  /// and its app bar's tools), then the app's. Pressed with the menu open,
+  /// it closes it; over another popup (a picker, a sheet), nothing.
+  void _menu() {
+    final open = _openMenu;
+    if (open != null && open.mounted) {
+      Navigator.of(open).pop();
+      return;
+    }
+    final f = primaryFocus?.context;
+    if (f != null && f.mounted && ModalRoute.of(f) is PopupRoute) return;
+    final root = _app.currentContext;
+    if (root == null || !root.mounted) return;
+    final navigator = _navigatorIn(root as Element);
+    if (navigator == null) return;
+    final page = keypadPageMenuIn(root);
+    final app = widget.appMenu(navigator.context);
+    final seen = <String>{};
+    final own = [for (final i in page.items) if (seen.add(i.label)) i];
+    showKeypadMenu(navigator.context, page.title ?? context.tr('Menu'), own.isEmpty ? app : own,
+        more: own.isEmpty ? const [] : app, moreTitle: context.tr('Go to'));
+  }
+
+  /// The app's first navigator, under [root].
+  static NavigatorState? _navigatorIn(Element root) {
+    NavigatorState? found;
+    void visit(Element e) {
+      if (found != null) return;
+      if (e is StatefulElement && e.state is NavigatorState) {
+        found = e.state as NavigatorState;
+        return;
+      }
+      e.visitChildElements(visit);
+    }
+
+    visit(root);
+    return found;
+  }
+
   @override
   Widget build(BuildContext context) {
     final on = ref.watch(keypadModeProvider);
@@ -307,7 +448,7 @@ class _KeypadLayerState extends ConsumerState<KeypadLayer> {
         actions: {
           DirectionalFocusIntent: _directional,
           KeypadMenuIntent: CallbackAction<KeypadMenuIntent>(onInvoke: (_) {
-            widget.onMenu();
+            _menu();
             return null;
           }),
           // The right soft key: back, as the phone's own back key would.
@@ -417,6 +558,8 @@ class _FocusRingState extends State<_FocusRing> {
     final me = context.findRenderObject();
     if (ro is! RenderBox || !ro.attached || !ro.hasSize || me is! RenderBox || !me.hasSize) return null;
     final r = f.rect.shift(-me.localToGlobal(Offset.zero));
+    // Scrolled out of what's laid out, it has no place.
+    if (!r.isFinite) return null;
     final size = me.size;
     // A whole page with focus (a reader): no ring around the screen.
     if (r.left <= 1 && r.top <= 1 && r.right >= size.width - 1 && r.bottom >= size.height - 1) return null;
@@ -445,6 +588,86 @@ class _FocusRingState extends State<_FocusRing> {
   }
 }
 
+/// A page's own choices for the left soft key's menu, above its app bar's
+/// tools. Wraps the page's [Scaffold].
+class KeypadPageMenu extends StatelessWidget {
+  /// The menu's title; the app bar's, when it's a plain [Text].
+  final String? title;
+  final List<KeypadMenuItem> Function() items;
+  final Widget child;
+  const KeypadPageMenu({super.key, this.title, required this.items, required this.child});
+
+  @override
+  Widget build(BuildContext context) => child;
+}
+
+/// The tools an app bar keeps in a "More" menu ([child]), listed in the
+/// keypad menu one by one.
+class KeypadBarTools extends StatelessWidget {
+  final List<KeypadMenuItem> items;
+  final Widget child;
+  const KeypadBarTools({super.key, required this.items, required this.child});
+
+  @override
+  Widget build(BuildContext context) => child;
+}
+
+/// The menu of the page on screen under [root]: the topmost page's
+/// [KeypadPageMenu], then the tools on its app bar (buttons with a
+/// tooltip, and menus).
+({String? title, List<KeypadMenuItem> items}) keypadPageMenuIn(Element root) {
+  // The last app bar found (the page on top) and the page menu around it.
+  KeypadPageMenu? menu;
+  Element? bar;
+  void visit(Element e, KeypadPageMenu? around) {
+    final w = e.widget;
+    if (w is KeypadPageMenu) {
+      around = w;
+      menu = w;
+      bar = null;
+    } else if (w is AppBar) {
+      menu = around;
+      bar = e;
+      return;
+    }
+    e.debugVisitOnstageChildren((c) => visit(c, around));
+  }
+
+  root.debugVisitOnstageChildren((c) => visit(c, null));
+  final items = [...?menu?.items()];
+  final title = menu?.title ?? switch ((bar?.widget as AppBar?)?.title) { Text(:final data?) => data, _ => null };
+  final b = bar;
+  if (b != null) {
+    final actions = (b.widget as AppBar).actions ?? const <Widget>[];
+    void tools(Element e) {
+      switch (e.widget) {
+        case KeypadBarTools(items: final more):
+          items.addAll(more);
+          return;
+        case IconButton(:final tooltip?, :final onPressed?, :final icon) when tooltip.isNotEmpty:
+          items.add(KeypadMenuItem(tooltip, onPressed, icon: icon is Icon ? icon.icon : null));
+          return;
+        case PopupMenuButton(:final tooltip) when e is StatefulElement && e.state is PopupMenuButtonState:
+          final state = e.state as PopupMenuButtonState;
+          items.add(KeypadMenuItem(tooltip ?? MaterialLocalizations.of(e).showMenuTooltip, state.showButtonMenu, icon: Icons.more_vert));
+          return;
+      }
+      e.visitChildElements(tools);
+    }
+
+    void find(Element e) {
+      if (actions.any((a) => identical(a, e.widget))) return tools(e);
+      e.visitChildElements(find);
+    }
+
+    b.visitChildElements(find);
+  }
+  return (title: title, items: items);
+}
+
+/// The keypad menu on screen, so the left soft key closes it.
+BuildContext? _openMenu;
+
 /// One choice in a [showKeypadMenu].
 class KeypadMenuItem {
   final String label;
@@ -457,13 +680,27 @@ class KeypadMenuItem {
 }
 
 /// A menu for the left soft key: a list the d-pad moves through, the first
-/// item focused. Labels are already translated.
-Future<void> showKeypadMenu(BuildContext context, String title, List<KeypadMenuItem> items) async {
+/// item focused, and [more] (the app's) under [moreTitle]. Labels are
+/// already translated.
+Future<void> showKeypadMenu(BuildContext context, String title, List<KeypadMenuItem> items,
+    {List<KeypadMenuItem> more = const [], String? moreTitle}) async {
   final picked = await showDialog<KeypadMenuItem>(
     context: context,
     useRootNavigator: true,
     builder: (ctx) {
+      _openMenu = ctx;
       final theme = Theme.of(ctx);
+      Widget tile(KeypadMenuItem item, {bool first = false}) => ListTile(
+            autofocus: first,
+            dense: true,
+            leading: item.icon == null ? null : Icon(item.icon, size: 20),
+            minLeadingWidth: 20,
+            title: Text(item.label),
+            trailing: item.key == null
+                ? null
+                : Text(item.key!, style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+            onTap: () => Navigator.pop(ctx, item),
+          );
       return Dialog(
         insetPadding: const EdgeInsets.all(8),
         child: ConstrainedBox(
@@ -476,24 +713,22 @@ Future<void> showKeypadMenu(BuildContext context, String title, List<KeypadMenuI
             const Divider(height: 1),
             Flexible(
               child: ListView(shrinkWrap: true, padding: const EdgeInsets.symmetric(vertical: 4), children: [
-                for (final (i, item) in items.indexed)
-                  ListTile(
-                    autofocus: i == 0,
-                    dense: true,
-                    leading: item.icon == null ? null : Icon(item.icon, size: 20),
-                    minLeadingWidth: 20,
-                    title: Text(item.label),
-                    trailing: item.key == null
-                        ? null
-                        : Text(item.key!, style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
-                    onTap: () => Navigator.pop(ctx, item),
-                  ),
+                for (final (i, item) in items.indexed) tile(item, first: i == 0),
+                if (more.isNotEmpty) ...[
+                  const Divider(height: 9),
+                  if (moreTitle != null)
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 4, 16, 2),
+                      child: Text(moreTitle, style: theme.textTheme.labelMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+                    ),
+                  for (final item in more) tile(item, first: items.isEmpty && identical(item, more.first)),
+                ],
               ]),
             ),
           ]),
         ),
       );
     },
-  );
+  ).whenComplete(() => _openMenu = null);
   picked?.onSelected();
 }

@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:archive/archive.dart';
+import 'package:flutter/foundation.dart' show compute;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hebcal/hebcal.dart';
 import 'package:siddur_engine/siddur_engine.dart';
@@ -72,8 +73,17 @@ final corpusProvider = FutureProvider.family<Corpus?, String>((ref, bookTitle) a
   } catch (_) {
     return null; // Not tagged yet: the engine's own analysis is used.
   }
-  return Corpus.fromJson(jsonDecode(utf8.decode(_gunzip(bytes))) as Map<String, Object?>);
+  // Off the UI thread: a siddur is megabytes of JSON, and the day's plan
+  // reads every one, which a slow phone would feel as a frozen screen.
+  // (On the web, where there's no second isolate, it runs here.)
+  try {
+    return await compute(_decodeCorpus, bytes, debugLabel: 'corpus');
+  } catch (e) {
+    return _decodeCorpus(bytes);
+  }
 });
+
+Corpus _decodeCorpus(List<int> bytes) => Corpus.fromJson(jsonDecode(utf8.decode(_gunzip(bytes))) as Map<String, Object?>);
 
 final resolverProvider = FutureProvider.family<SiddurResolver, String>((ref, bookTitle) async {
   final rules = await ref.watch(rulesProvider.future);

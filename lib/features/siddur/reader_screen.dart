@@ -136,8 +136,9 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
   final _offsetScroll = ScrollOffsetController();
   List<JumpPoint> _jumps = const [];
 
-  /// The key point the reader has reached; -1 above the first one.
-  int _active = -1;
+  /// The key point the reader has reached; -1 above the first one. Only
+  /// the jump bar shows it, so scrolling past one doesn't rebuild the page.
+  final _active = ValueNotifier(-1);
 
   /// Scrolling to a chosen key point: the rows passed on the way don't
   /// change the mark.
@@ -152,6 +153,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
   @override
   void dispose() {
     _positions.itemPositions.removeListener(_track);
+    _active.dispose();
     super.dispose();
   }
 
@@ -164,7 +166,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     for (final (i, j) in _jumps.indexed) {
       if (j.row != null && j.row! <= top) active = i;
     }
-    if (active != _active) setState(() => _active = active);
+    _active.value = active;
   }
 
   void _jump(JumpPoint p) {
@@ -174,7 +176,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
       context.push(readerPath(ref0.book, ref0.id, standalone: widget.standalone));
       return;
     }
-    setState(() => _active = _jumps.indexOf(p));
+    _active.value = _jumps.indexOf(p);
     _jumping = true;
     _scroll
         .scrollTo(index: p.row!, duration: const Duration(milliseconds: 350), curve: Curves.easeOutCubic)
@@ -242,11 +244,10 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     );
 
     final loaded = items.valueOrNull;
-    final built = loaded == null ? null : _rows(context, loaded, node);
+    final built = loaded == null ? null : _cachedRows(context, loaded, node);
     // Key points of this prayer, in order, then its parts printed
     // elsewhere; shown when there's somewhere to go.
     _jumps = built == null ? const [] : [...built.jumps, ..._elsewhere(node, date.abs())];
-    if (_active >= _jumps.length) _active = -1;
     final showJumps = _jumps.length >= 2;
     if (node != null) {
       final he = ref.watch(versionOrderProvider((widget.book, 'he'))).valueOrNull;
@@ -289,33 +290,41 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
             Navigator.maybePop(context);
           }
         },
-        // A keypad phone: the d-pad scrolls and turns to the next prayer,
-        // the center key hides the bars, * and # size the text, 0 goes to
-        // the top and the left soft key opens the page's tools.
+        // A keypad phone: the d-pad scrolls, and its sides go from one part
+        // of the service to the next, as the bar along the top lists them
+        // (or, with none, to the next prayer); the center key hides the
+        // bars, * and # size the text and 0 goes to the top. The left soft
+        // key opens the page's tools ([KeypadPageMenu]).
         if (keypad) ...{
           const SingleActivator(LogicalKeyboardKey.arrowDown): () => _keyStep(1),
           const SingleActivator(LogicalKeyboardKey.arrowUp): () => _keyStep(-1),
-          SingleActivator(ltr ? LogicalKeyboardKey.arrowRight : LogicalKeyboardKey.arrowLeft): () => next?.call(),
-          SingleActivator(ltr ? LogicalKeyboardKey.arrowLeft : LogicalKeyboardKey.arrowRight): () => previous?.call(),
+          SingleActivator(ltr ? LogicalKeyboardKey.arrowRight : LogicalKeyboardKey.arrowLeft): () => _keySide(true, next),
+          SingleActivator(ltr ? LogicalKeyboardKey.arrowLeft : LogicalKeyboardKey.arrowRight): () => _keySide(false, previous),
           const SingleActivator(LogicalKeyboardKey.select): toggleFocusMode,
           const SingleActivator(LogicalKeyboardKey.enter): toggleFocusMode,
           const CharacterActivator('#'): () => _textSize(0.1),
           const CharacterActivator('*'): () => _textSize(-0.1),
           const SingleActivator(LogicalKeyboardKey.digit0): () { if (_scroll.isAttached) _scroll.jumpTo(index: 0); },
-          for (final k in keypadMenuKeys) k: () => _keypadMenu(context, title, date, next: next, previous: previous),
         },
       },
       // The reader's widgets read this book's settings (its font).
       child: ProviderScope(
       overrides: [readerBookProvider.overrideWithValue(widget.book)],
-      child: Focus(autofocus: true, child: Scaffold(
+      child: Focus(autofocus: true, child: KeypadPageMenu(
+      title: title,
+      items: () => _keypadMenu(context, date, next: next, previous: previous),
+      child: Scaffold(
       body: Column(children: [
         // Focus mode: the bars slide up out of view; the text keeps clear
         // of the status bar.
         FocusModeBars(
           child: Column(mainAxisSize: MainAxisSize.min, children: [
             bar,
-            if (showJumps) ReaderJumpBar(points: _jumps, active: _active, onTap: _jump),
+            if (showJumps)
+              ValueListenableBuilder(
+                valueListenable: _active,
+                builder: (context, active, _) => ReaderJumpBar(points: _jumps, active: active < _jumps.length ? active : -1, onTap: _jump),
+              ),
             DayBanner(date: date, picked: picked != null),
           ]),
         ),
@@ -324,9 +333,12 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
             Positioned.fill(child: FocusModeBody(
             child: DoubleTapListener(
               onDoubleTap: _doubleTap,
+              // A service with the bar of its parts along the top (Shacharit)
+              // doesn't swipe to the next section; the links at its end lead
+              // on.
               child: PageSwipe(
-                onNext: turnTo(around?.next, 'next'),
-                onPrevious: turnTo(around?.prev, 'previous'),
+                onNext: showJumps ? null : next,
+                onPrevious: showJumps ? null : previous,
                 // Keep the text (and the place in it) while a changed setting or
                 // choice re-resolves it.
                 child: items.when(
@@ -342,7 +354,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
           ]),
         ),
       ]),
-    ))),
+    )))),
     );
   }
 
@@ -386,11 +398,27 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     ref.read(settingsProvider.notifier).update((x) => x.copyWith(textScale: (((x.textScale + by) * 20).round() / 20).clamp(0.7, 2.2)));
   }
 
+  /// The side keys on a keypad: the next (or previous) part of the service
+  /// in the jump bar, as a tab; with no parts, the next prayer.
+  void _keySide(bool forward, VoidCallback? turn) {
+    final rows = [for (final (i, p) in _jumps.indexed) if (p.row != null) i];
+    if (rows.isEmpty) return turn?.call();
+    if (!_scroll.isAttached) return;
+    final at = _active.value;
+    final to = forward ? rows.where((i) => i > at).firstOrNull : rows.reversed.where((i) => i < at).firstOrNull;
+    if (to != null) return _jump(_jumps[to]);
+    // Back from the first part: what's above it (Birchot HaShachar).
+    if (!forward && at >= 0) {
+      _active.value = -1;
+      _scroll.jumpTo(index: 0);
+    }
+  }
+
   /// The left soft key on a keypad: the app bar's tools, the keys that do
   /// the same from the page, and the key points to jump to.
-  void _keypadMenu(BuildContext context, String title, HDate date, {VoidCallback? next, VoidCallback? previous}) {
+  List<KeypadMenuItem> _keypadMenu(BuildContext context, HDate date, {VoidCallback? next, VoidCallback? previous}) {
     final s = ref.read(settingsProvider);
-    showKeypadMenu(context, title, [
+    return [
       KeypadMenuItem(context.tr('Focus mode'), icon: Icons.fullscreen, key: context.tr('Select'), toggleFocusMode),
       KeypadMenuItem(context.tr('Larger text'), icon: Icons.text_increase, key: '#', () => _textSize(0.1)),
       KeypadMenuItem(context.tr('Smaller text'), icon: Icons.text_decrease, key: '*', () => _textSize(-0.1)),
@@ -403,7 +431,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
       for (final (i, p) in _jumps.indexed)
         KeypadMenuItem(context.prayerTitle(s, p.en, p.he), icon: p.elsewhere == null ? Icons.subdirectory_arrow_right : Icons.open_in_new,
             key: i < 9 ? '${i + 1}' : null, () => _jump(p)),
-    ]);
+    ];
   }
 
   void _pageOffset(int direction) {
@@ -420,12 +448,8 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
     // stays centered rather than running the lines out to the edges.
     final columns = s.layout == TextLayout.sideBySide || linearPageStyle(s, wide: wide) == LinearStyle.facing;
     final side = TypeScale.of(s).gutter(width, min: wide ? 48 : 16, sideBySide: wide && columns);
-    return SelectionArea(
-      key: _selection,
-      onSelectionChanged: _selectionChanged,
-      contextMenuBuilder: (context, state) => textReportMenu(context, state,
-          selectedText: _selectedText, place: () => _reportPlace(context, node)),
-      child: ScrollablePositionedList.builder(
+    final keypad = ref.watch(keypadModeProvider);
+    final list = ScrollablePositionedList.builder(
         itemScrollController: _scroll,
         itemPositionsListener: _positions,
         scrollOffsetController: _offsetScroll,
@@ -433,8 +457,19 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
         itemCount: rows.length + 1,
         itemBuilder: (c, i) => i == rows.length
             ? (node == null ? const SizedBox.shrink() : RelatedPrayers(book: widget.book, node: node, standalone: widget.standalone))
-            : RowSelectionProbe(index: i, rows: _selectedRows, child: rows[i](c)),
-      ),
+            : keypad
+                ? rows[i](c)
+                : RowSelectionProbe(index: i, rows: _selectedRows, child: rows[i](c)),
+      );
+    // A keypad phone can't select text (and is too slow to keep track of
+    // what could be).
+    if (keypad) return list;
+    return SelectionArea(
+      key: _selection,
+      onSelectionChanged: _selectionChanged,
+      contextMenuBuilder: (context, state) => textReportMenu(context, state,
+          selectedText: _selectedText, place: () => _reportPlace(context, node)),
+      child: list,
     );
   }
 
@@ -475,6 +510,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
       book: widget.book,
       page: widget.nodeId,
       spot: spot,
+      corpus: ref.read(corpusProvider(widget.book)).value,
       date: day.hdate,
       civil: date.greg(),
       dayLabels: day.labels,
@@ -494,6 +530,37 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
       title(first),
     ].join(' › ');
     return (label: more > 0 ? '$label +$more' : label, location: location);
+  }
+
+  /// The last rows made, and what they were made from: a page is
+  /// rebuilt for things that don't change its rows (the jump bar's mark,
+  /// a selection, focus mode), and making them goes through the whole
+  /// service, which a slow phone feels while scrolling.
+  ({List<Widget Function(BuildContext)> rows, List<JumpPoint> jumps})? _built;
+  List<Object?> _builtFrom = const [];
+
+  ({List<Widget Function(BuildContext)> rows, List<JumpPoint> jumps}) _cachedRows(
+      BuildContext context, List<RenderItem> list, SchemaNode? node) {
+    String keys(Set<String> s) => (s.toList()..sort()).join('|');
+    final from = [
+      list,
+      node,
+      ref.read(settingsProvider),
+      MediaQuery.sizeOf(context).width > 700,
+      keys(_expanded),
+      keys(_expandedGroups),
+      keys(_toggledChazarah),
+      keys(_toggledFolds),
+      keys(_toggledNotes),
+    ];
+    final same = _built != null &&
+        _builtFrom.length == from.length &&
+        [for (var i = 0; i < from.length; i++) from[i] is String ? from[i] == _builtFrom[i] : identical(from[i], _builtFrom[i])].every((x) => x);
+    if (!same) {
+      _built = _rows(context, list, node);
+      _builtFrom = from;
+    }
+    return _built!;
   }
 
   /// The list's rows, and the key points among its headings (see

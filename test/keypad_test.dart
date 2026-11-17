@@ -21,13 +21,13 @@ void _flip(WidgetTester t, {double scale = 1}) {
   addTearDown(t.platformDispatcher.clearTextScaleFactorTestValue);
 }
 
-Widget _app(Widget home, {VoidCallback? onMenu, VoidCallback? onBack, UiLanguage lang = UiLanguage.en}) => ProviderScope(
+Widget _app(Widget home, {List<KeypadMenuItem> Function(BuildContext)? appMenu, VoidCallback? onBack, UiLanguage lang = UiLanguage.en}) => ProviderScope(
       overrides: [keypadModeProvider.overrideWithValue(true)],
       child: MaterialApp(
         builder: (c, child) => AppText(
           lang: lang,
           ashkenazi: false,
-          child: KeypadLayer(onMenu: onMenu ?? () {}, onBack: onBack ?? () {}, child: child!),
+          child: KeypadLayer(appMenu: appMenu ?? (_) => const [], onBack: onBack ?? () {}, child: child!),
         ),
         home: home,
       ),
@@ -151,13 +151,13 @@ void main() {
 
   testWidgets('the soft keys open the menu and go back, and the bar names them', (t) async {
     _flip(t);
-    var menus = 0, backs = 0;
-    await _open(t, _app(const Scaffold(body: Text('Page')), onMenu: () => menus++, onBack: () => backs++));
+    var backs = 0;
+    await _open(t, _app(const Scaffold(body: Text('Page')), appMenu: (_) => [KeypadMenuItem('Zmanim', () {})], onBack: () => backs++));
     expect(find.text('Menu'), findsOneWidget);
     expect(find.text('Select'), findsOneWidget);
     expect(find.text('Back'), findsOneWidget);
     await _press(t, LogicalKeyboardKey.contextMenu);
-    expect(menus, 1);
+    expect(find.text('Zmanim'), findsOneWidget);
     await _press(t, LogicalKeyboardKey.escape);
     expect(backs, 1);
   });
@@ -185,6 +185,110 @@ void main() {
     expect(picked, 'Why today?');
   });
 
+  testWidgets('the menu key closes its menu rather than opening another over it', (t) async {
+    _flip(t);
+    await _open(t, _app(const Scaffold(body: Text('Page')), appMenu: (_) => [KeypadMenuItem('Zmanim', () {})]));
+    await _press(t, LogicalKeyboardKey.contextMenu);
+    expect(find.byType(Dialog), findsOneWidget);
+    await _press(t, LogicalKeyboardKey.contextMenu);
+    expect(find.byType(Dialog), findsNothing);
+    await _press(t, LogicalKeyboardKey.contextMenu);
+    expect(find.byType(Dialog), findsOneWidget);
+    // Over another popup (a date picker, a sheet), it does nothing.
+    await _press(t, LogicalKeyboardKey.select);
+    await _press(t, LogicalKeyboardKey.escape);
+    await t.pumpAndSettle();
+    final page = t.element(find.text('Page'));
+    showDialog<void>(context: page, builder: (c) => const AlertDialog(content: TextField(autofocus: true)));
+    await t.pumpAndSettle();
+    await _press(t, LogicalKeyboardKey.contextMenu);
+    expect(find.text('Zmanim'), findsNothing);
+    expect(find.byType(AlertDialog), findsOneWidget);
+  });
+
+  testWidgets("a page's menu: its own choices, its app bar's tools, then the app's", (t) async {
+    _flip(t);
+    var shared = 0, sized = 0;
+    await _open(t, _app(
+      KeypadPageMenu(
+        items: () => [KeypadMenuItem('Focus mode', () {})],
+        child: Scaffold(
+          appBar: AppBar(title: const Text('Shacharis'), actions: [
+            IconButton(tooltip: 'Share', onPressed: () => shared++, icon: const Icon(Icons.share)),
+            KeypadBarTools(items: [KeypadMenuItem('Text settings', () => sized++)], child: const SizedBox()),
+          ]),
+          body: const SizedBox(),
+        ),
+      ),
+      appMenu: (_) => [KeypadMenuItem('Zmanim', () {})],
+    ));
+    await _press(t, LogicalKeyboardKey.contextMenu);
+    final dialog = find.byType(Dialog);
+    for (final label in ['Shacharis', 'Focus mode', 'Share', 'Text settings', 'Go to', 'Zmanim']) {
+      expect(find.descendant(of: dialog, matching: find.text(label)), findsOneWidget, reason: label);
+    }
+    expect(_focused(t, 'Focus mode'), isTrue);
+    await _press(t, LogicalKeyboardKey.arrowDown);
+    await _press(t, LogicalKeyboardKey.select);
+    expect(shared, 1);
+  });
+
+  testWidgets('an opened section is read through before focus moves past it', (t) async {
+    t.view.physicalSize = const Size(240, 180);
+    t.view.devicePixelRatio = 1;
+    addTearDown(t.view.reset);
+    final scroll = ScrollController();
+    addTearDown(scroll.dispose);
+    await _open(t, _app(Scaffold(
+      body: ListView(controller: scroll, children: [
+        ListTile(title: const Text('Mashiv haruach'), onTap: () {}),
+        const SizedBox(height: 600, child: Text('Why')),
+        ListTile(title: const Text('Tachanun'), onTap: () {}),
+      ]),
+    )));
+    await _press(t, LogicalKeyboardKey.arrowDown);
+    expect(_focused(t, 'Mashiv haruach'), isTrue);
+    await _press(t, LogicalKeyboardKey.arrowDown);
+    expect(_focused(t, 'Mashiv haruach'), isTrue, reason: 'the text below it is shown first');
+    expect(scroll.offset, greaterThan(0));
+    bool onTachanun() => find.text('Tachanun').evaluate().isNotEmpty && _focused(t, 'Tachanun');
+    var presses = 1;
+    while (!onTachanun() && presses < 40) {
+      final before = scroll.offset;
+      await _press(t, LogicalKeyboardKey.arrowDown);
+      presses++;
+      expect(scroll.offset - before, lessThan(160), reason: 'a step at a time, none of it passed over');
+    }
+    expect(onTachanun(), isTrue);
+    expect(presses, greaterThan(4));
+  });
+
+  testWidgets('left and right turn the tabs at the top of a page', (t) async {
+    _flip(t);
+    await _open(t, _app(DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(bottom: const TabBar(tabs: [Tab(text: 'Today'), Tab(text: 'Chapters'), Tab(text: 'Lists')])),
+        body: TabBarView(children: [
+          for (final n in ['One', 'Two', 'Three']) ListView(children: [ListTile(title: Text(n), onTap: () {})]),
+        ]),
+      ),
+    )));
+    final tabs = DefaultTabController.of(t.element(find.byType(TabBarView)));
+    for (var i = 0; i < 3 && !_focused(t, 'One'); i++) {
+      await _press(t, LogicalKeyboardKey.arrowDown);
+    }
+    expect(_focused(t, 'One'), isTrue);
+    await _press(t, LogicalKeyboardKey.arrowRight);
+    expect(tabs.index, 1);
+    await _press(t, LogicalKeyboardKey.arrowRight);
+    expect(tabs.index, 2);
+    await _press(t, LogicalKeyboardKey.arrowRight);
+    expect(tabs.index, 2);
+    await _press(t, LogicalKeyboardKey.arrowLeft);
+    expect(tabs.index, 1);
+  });
+
   testWidgets('the soft-key bar fits a 240dp screen in Yiddish at 1.3× text', (t) async {
     _flip(t, scale: 1.3);
     await _open(t, _app(const Scaffold(body: SizedBox()), lang: UiLanguage.yi));
@@ -206,7 +310,7 @@ void main() {
     await t.pumpWidget(UncontrolledProviderScope(
       container: c,
       child: MaterialApp(
-        builder: (context, child) => KeypadLayer(onMenu: () {}, onBack: () {}, child: child!),
+        builder: (context, child) => KeypadLayer(appMenu: (_) => const [], onBack: () {}, child: child!),
         home: const SetupScreen(),
       ),
     ));

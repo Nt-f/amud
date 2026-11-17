@@ -83,8 +83,8 @@ final routerProvider = Provider<GoRouter>((ref) => GoRouter(
       },
       routes: [
         StatefulShellRoute.indexedStack(
-          // Tabs swipe only on their own first screen: deeper pages (the
-          // readers) have swipes of their own.
+          // Tabs swipe only on their own first screen (never Home's):
+          // deeper pages (the readers) have swipes of their own.
           builder: (context, state, shell) => AdaptiveShell(shell: shell, atTabRoot: _tabRoots.contains(state.fullPath)),
           branches: [
             StatefulShellBranch(observers: _sheetObservers(), routes: [GoRoute(path: '/', builder: (c, s) => const HomeScreen())]),
@@ -330,7 +330,7 @@ class SiddurApp extends ConsumerWidget {
         lang: s.uiLanguage,
         ashkenazi: s.ashkenaziSpelling,
         child: ReaderDevice(child: LaunchAnimation(child: KeypadLayer(
-          onMenu: () => _appMenu(ref),
+          appMenu: (context) => _appMenu(context, ref),
           onBack: () => ref.read(routerProvider).routerDelegate.popRoute(),
           child: child!,
         ))),
@@ -339,14 +339,12 @@ class SiddurApp extends ConsumerWidget {
   }
 }
 
-/// The left soft key on a keypad phone, where the page has no menu of its
-/// own: every tab, then the shortcuts on the bar.
-void _appMenu(WidgetRef ref) {
-  final context = _rootKey.currentContext;
-  if (context == null) return;
+/// The app's part of the left soft key's menu on a keypad phone: every
+/// tab, then the shortcuts on the bar.
+List<KeypadMenuItem> _appMenu(BuildContext context, WidgetRef ref) {
   final router = ref.read(routerProvider);
   final ids = [for (final t in navTabs) t.$1, ...ref.read(settingsProvider).navTabs.where(navShortcutIds.contains)];
-  showKeypadMenu(context, context.tr('Menu'), [
+  return [
     for (final id in ids)
       if (NavItem.of(id) case final item?)
         KeypadMenuItem(context.tr(item.label), icon: item.outlined, () {
@@ -357,7 +355,7 @@ void _appMenu(WidgetRef ref) {
             openFromOutside(router, item.route!);
           }
         }),
-  ]);
+  ];
 }
 
 /// The first screen of each tab, in [navTabs] order.
@@ -401,11 +399,13 @@ class AdaptiveShell extends ConsumerWidget {
   }
 
   /// The tabs on either side, for [TabSwipe]; none while focus mode hides
-  /// the navigation. Shortcuts are passed over: they open a page, not a tab.
+  /// the navigation, and none from Home, which a stray swipe shouldn't
+  /// leave. Shortcuts are passed over: they open a page, not a tab.
   Widget _swipeable(bool focus, List<NavItem> items) {
     final tabs = [for (final t in items) ?t.branch];
     final i = tabs.indexOf(shell.currentIndex);
-    VoidCallback? to(int j) => !atTabRoot || focus || j < 0 || j >= tabs.length
+    final home = shell.currentIndex == _tabRoots.toList().indexOf('/');
+    VoidCallback? to(int j) => !atTabRoot || focus || home || j < 0 || j >= tabs.length
         ? null
         : () {
             analytics.event('tab_swipe', {'to': navTabs[tabs[j]].$1});

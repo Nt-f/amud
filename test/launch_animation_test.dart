@@ -44,4 +44,37 @@ void main() {
     }
     expect(find.text('amud'), findsNothing);
   });
+
+  testWidgets('on a flip phone\'s 240 by 180 screen the whole logo shows', (tester) async {
+    LaunchAnimation.resetForTest();
+    tester.view.physicalSize = const Size(240, 180);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(MaterialApp(builder: (context, child) => LaunchAnimation(child: child!), home: const Text('app')));
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(tester.takeException(), isNull);
+    final screen = Offset.zero & const Size(240, 180);
+    for (final f in [find.byType(CustomPaint).last, find.text('amud')]) {
+      final r = tester.getRect(f);
+      expect(screen.intersect(r), r, reason: '$f is on the screen');
+    }
+  });
+
+  testWidgets('a phone too slow to animate it still shows the finished logo for a moment', (tester) async {
+    LaunchAnimation.resetForTest();
+    await tester.pumpWidget(MaterialApp(builder: (context, child) => LaunchAnimation(child: child!), home: const Text('app')));
+    // Frames a third of a second apart: the half-second animation is over
+    // in two of them.
+    for (var i = 0; i < 3; i++) {
+      await tester.pump(const Duration(milliseconds: 330));
+    }
+    final word = tester.widget<Opacity>(find.ancestor(of: find.text('amud'), matching: find.byType(Opacity)).first);
+    expect(word.opacity, 1);
+    await tester.pump(const Duration(milliseconds: 330));
+    expect(find.text('amud'), findsOneWidget, reason: 'held, not faded yet');
+    for (var i = 0; i < 4; i++) {
+      await tester.pump(const Duration(milliseconds: 330));
+    }
+    expect(find.text('amud'), findsNothing);
+  });
 }

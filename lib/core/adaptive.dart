@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'keypad.dart';
 import 'l10n.dart';
 import 'search.dart';
 import 'theme.dart';
@@ -378,13 +379,21 @@ List<Widget> fitBarActions(BuildContext context, String title, List<BarTool> too
         t.custom ??
             IconButton(tooltip: t.tooltip, icon: t.icon, selectedIcon: t.selectedIcon, isSelected: t.isSelected, onPressed: t.onPressed),
     if (menu.isNotEmpty)
-      PopupMenuButton<VoidCallback>(
-        tooltip: context.tr('More'),
-        onSelected: (f) => f(),
-        itemBuilder: (_) => [
+      // A keypad's menu lists these one by one.
+      KeypadBarTools(
+        items: [
           for (final (i, t) in tools.indexed)
-            if (menu.contains(i) && t.onPressed != null) PopupMenuItem(value: t.onPressed, child: ListTile(leading: icon(t), title: Text(t.tooltip))),
+            if (menu.contains(i) && t.onPressed != null)
+              KeypadMenuItem(t.tooltip, t.onPressed!, icon: switch (icon(t)) { Icon(:final icon) => icon, _ => null }),
         ],
+        child: PopupMenuButton<VoidCallback>(
+          tooltip: context.tr('More'),
+          onSelected: (f) => f(),
+          itemBuilder: (_) => [
+            for (final (i, t) in tools.indexed)
+              if (menu.contains(i) && t.onPressed != null) PopupMenuItem(value: t.onPressed, child: ListTile(leading: icon(t), title: Text(t.tooltip))),
+          ],
+        ),
       ),
   ];
 }
