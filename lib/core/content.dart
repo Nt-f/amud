@@ -18,6 +18,7 @@ const _format = 1;
 
 const _patchesKey = 'contentPatches';
 const _checkedKey = 'contentCheckedAt';
+const _checkedBuildKey = 'contentCheckedBuild';
 const _bundledKey = 'contentBundledSha';
 const _checkEvery = Duration(hours: 6);
 
@@ -38,11 +39,18 @@ class Content {
 
   /// Called once at startup, before anything reads content. Also drops
   /// downloads no longer in use.
-  static void attach(Storage storage) {
+  ///
+  /// With [build] ([contentBuild]), downloads are used only if the last
+  /// check was made by this build: after an app update, which may ship newer
+  /// text, the app reads its own copies until [updateContent] has checked
+  /// them again (it does so at once). The downloads are kept meanwhile.
+  static void attach(Storage storage, {String? build}) {
     _storage = storage;
-    _active = _patches(storage);
+    final patches = _patches(storage);
+    final checked = build == null || storage.readJson(_checkedBuildKey, (j) => j as String) == build;
+    _active = checked ? patches : const {};
     if (kIsWeb) return;
-    final keep = {for (final sha in _active.values) _blobOf(sha)};
+    final keep = {for (final sha in patches.values) _blobOf(sha)};
     for (final k in storage.blobKeys.toList()) {
       if (k.startsWith('content:') && !keep.contains(k)) unawaited(storage.deleteBlob(k));
     }
@@ -74,7 +82,10 @@ Future<int> updateContent(Storage s, http.Client client, {bool force = false, St
   if (kIsWeb) return 0;
   final now = DateTime.now().millisecondsSinceEpoch;
   final last = s.readJson(_checkedKey, (j) => j as int);
-  if (!force && last != null && now - last < _checkEvery.inMilliseconds) return 0;
+  // After an app update, check at once: it may ship text newer than a file
+  // downloaded for the build before it.
+  final sameBuild = s.readJson(_checkedBuildKey, (j) => j as String) == appBuild;
+  if (!force && sameBuild && last != null && now - last < _checkEvery.inMilliseconds) return 0;
 
   var changed = await _updateInterlinear(s, client);
   changed += await _updateDafPrint(s, client);
@@ -86,29 +97,55 @@ Future<int> updateContent(Storage s, http.Client client, {bool force = false, St
   final files = (manifest['files'] as Map).cast<String, Object?>();
 
   final patches = _patches(s);
-  final bundled = _BundledShas(s, appBuild);
-  for (final MapEntry(key: path, value: info) in files.entries) {
-    final want = (info as Map)['sha256'] as String;
+  final take = await _newerThanBundled(files, _BundledShas(s, appBuild));
+  // Everything else is read from the app's own copy: a file the site no
+  // longer lists, one the app now ships, and one downloaded before that
+  // turns out not to be newer.
+  for (final path in patches.keys.where((p) => !take.containsKey(p)).toList()) {
+    patches.remove(path);
+    changed++;
+  }
+  for (final MapEntry(key: path, value: want) in take.entries) {
     if (patches[path] == want) continue;
-    if (await bundled.of(path) == want) {
-      // The app already ships this version (an app update caught up).
-      if (patches.remove(path) != null) changed++;
-      continue;
-    }
     final got = await client.get(Uri.parse('$contentServer/content/v$_format/files/$want')).timeout(const Duration(minutes: 2));
     if (got.statusCode != 200 || sha256.convert(got.bodyBytes).toString() != want) continue;
     await s.writeBlob(_blobOf(want), got.bodyBytes);
     patches[path] = want;
     changed++;
   }
-  // A file the site no longer lists goes back to the bundled one.
-  for (final path in patches.keys.where((p) => !files.containsKey(p)).toList()) {
-    patches.remove(path);
-    changed++;
-  }
   await s.writeJson(_patchesKey, patches);
   await s.writeJson(_checkedKey, now);
+  await s.writeJson(_checkedBuildKey, appBuild);
   return changed;
+}
+
+/// The site's files this build should use instead of its own (path → sha256).
+///
+/// A file replaces the bundled one only when the site says it is a later
+/// version of it: its `replaces` lists the hashes of the versions before it
+/// (tool/content_site/build.py). Otherwise the site is behind this build (it
+/// was published before the release) and its copy would put older text back.
+/// A file the build doesn't have is new, and taken unless the site is behind
+/// on files the build does have: then it is a leftover the build dropped.
+Future<Map<String, String>> _newerThanBundled(Map<String, Object?> files, _BundledShas bundled) async {
+  final take = <String, String>{};
+  final added = <String, String>{};
+  var behind = false;
+  for (final MapEntry(key: path, value: info) in files.entries) {
+    final want = (info as Map)['sha256'] as String;
+    final mine = await bundled.of(path);
+    if (mine == null) {
+      added[path] = want;
+    } else if (mine == want) {
+      continue; // The app ships this version.
+    } else if (info['replaces'] case final List earlier when earlier.contains(mine)) {
+      take[path] = want;
+    } else {
+      behind = true;
+    }
+  }
+  if (!behind) take.addAll(added);
+  return take;
 }
 
 /// The hash of each bundled asset, worked out once per app build.
@@ -196,13 +233,18 @@ Future<int> _updateDafPrint(Storage s, http.Client client) async {
   return changed;
 }
 
+/// This build, as [updateContent] and [Content.attach] name it.
+Future<String> contentBuild() async {
+  final info = await PackageInfo.fromPlatform();
+  return '${info.version}+${info.buildNumber}';
+}
+
 /// Runs [updateContent] in the background at startup; failures (offline)
 /// are tried again at the next start.
 Future<void> checkContentUpdates(Storage s) async {
   final client = http.Client();
   try {
-    final info = await PackageInfo.fromPlatform();
-    await updateContent(s, client, appBuild: '${info.version}+${info.buildNumber}');
+    await updateContent(s, client, appBuild: await contentBuild());
   } catch (_) {
   } finally {
     client.close();

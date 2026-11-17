@@ -27,8 +27,11 @@ Future<void> main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
   if (!kIsWeb) AppLinks(); // Capture a cold-start link before asynchronous initialization.
   initHebcal(); // IANA tz database + learning schedules
+  // Unknown (''), downloads aren't used: they may be older than this build.
+  final build = kIsWeb ? null : contentBuild().catchError((_) => '');
   final storage = await Storage.open();
-  Content.attach(storage); // Content updates downloaded last time, before anything reads a text.
+  // Content updates downloaded last time, before anything reads a text.
+  Content.attach(storage, build: await build);
 
   // Cards are modular: each feature registers its card types here.
   final registry = CardRegistry();
