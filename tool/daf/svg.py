@@ -45,6 +45,15 @@ RASHI = 'NotoRashiHebrew-Regular.ttf'
 EM = {SQUARE: 1.55, RASHI: 1.35}
 # Each word of a line read off the scan set over its own ink (_fitted).
 FIT = os.environ.get('SVG_FIT', '1') != '0'
+# The line reader's word places on matched lines (nnalign.py).
+NNALIGN = os.environ.get('NNALIGN_DIR')
+
+
+def _aligned(book, amud):
+    if not NNALIGN:
+        return []
+    p = Path(NNALIGN) / f'{book.replace(" ", "_")}_{amud}.json'
+    return json.loads(p.read_text())['lines'] if p.exists() else []
 # How a fitted line's words are spaced: each at its own place on the scan
 # ('centre'), or justified with equal spaces ('justify').
 PLACE = os.environ.get('SVG_PLACE', 'centre')
@@ -320,9 +329,14 @@ def _verse_refs(words):
             run = []
         if run is not None:
             run.append(k)
-            if t.endswith(')'):
+            # (Closed by a word ending "):" too, Eruvin 53a's mnemonic, and a
+            # reference is a few words: an unclosed parenthesis took the 302
+            # words to the next reference with it.)
+            if ')' in t:
                 if any(',' in linemap.print_text(words[j]) for j in run):
                     out.update(run)
+                run = None
+            elif len(run) >= 8:
                 run = None
     return out
 
@@ -1316,26 +1330,58 @@ def amud_svg(cache, book, amud, scan=False, core=False, lines_out=None):
     # (The body's: the small commentaries come from the margins' reading
     # below, all of a column from one source in one size.)
     tractate = linemap.he_names(cache, book)[:1]
-    # A column's last words the line map placed nowhere, where the line
-    # under its last one is one it left unclaimed, as tall and wide: that
-    # line's.
+    # A column's words the line map placed nowhere, after one of its lines
+    # and before its next (or its end), where the lines under that one are
+    # ones it left unclaimed, as tall and wide: theirs, as many as each
+    # reads, if they read as them (Gittin 62a: two lines over its הדרן).
+    sq = lambda t: linemap.fold(t, linemap.FOLD_SQUARE).replace(' ', '')
     for sid in ('main', 'inner', 'outer'):
-        col = [l for l in lines if l.get('stream') == sid and 'range' in l and l.get('score', 100) >= 50]
+        col = sorted([l for l in lines if l.get('stream') == sid and 'range' in l and l.get('score', 100) >= 50],
+                     key=lambda l: l['base'])
         if not col:
             continue
-        last = max(col, key=lambda l: l['range'][1])
-        end = last['range'][1]
-        if end >= len(words[sid]) or last is not max(col, key=lambda l: l['base']):
-            continue
-        below = [l for l in lines if l.get('stream') in (None, 'other') and not l.get('catchword')
-                 and 0.6 * last['h'] < l['base'] - last['base'] < 1.8 * last['h'] and abs(l['h'] - last['h']) < 0.3 * last['h']
-                 and min(l['x1'], last['x1']) - max(l['x0'], last['x0']) > 0.7 * (last['x1'] - last['x0'])]
-        if len(below) == 1:
-            l = below[0]
-            l.update(stream=sid, range=(end, min(len(words[sid]), end + len(l['text'].split()) + 3)), score=60, tail=True)
+        hh = float(np.median([l['h'] for l in col]))
+        for i, last in enumerate(col):
+            end = last['range'][1]
+            later = [l['range'][0] for l in col[i + 1:] if l['range'][0] >= end]
+            stop = min(later) if later else len(words[sid])
+            # (Only where no line of the column has any of these words.)
+            if end >= stop or any(l['range'][0] < stop and l['range'][1] > end for l in col if l is not last):
+                continue
+            while end < stop:
+                below = [l for l in lines if l.get('stream') in (None, 'other') and not l.get('catchword')
+                         and 0.6 * hh < l['base'] - last['base'] < 1.8 * hh and abs(l['h'] - hh) < 0.35 * hh
+                         and min(l['x1'], last['x1']) - max(l['x0'], last['x0']) > 0.7 * (last['x1'] - last['x0'])]
+                if len(below) != 1:
+                    break
+                l = below[0]
+                mine = sq(l['text'])
+                # Where in the words left it starts (the line above can end
+                # short of its own), and as many words as it has letters.
+                rest = words[sid][end:stop]
+                hay, own = '', []
+                for k, word in enumerate(rest):
+                    f = sq(word)
+                    hay += f
+                    own += [k] * len(f)
+                if not mine or not hay:
+                    break
+                al = fuzz.partial_ratio_alignment(mine, hay)
+                a = end + own[al.dest_start] if al and al.score >= 60 and al.dest_start < len(own) else end
+                b, got = a, 0
+                while b < stop and got < len(mine):
+                    got += len(sq(words[sid][b]))
+                    b += 1
+                if stop - b <= 2:
+                    b = stop
+                if a >= b or fuzz.ratio(mine, sq(''.join(words[sid][a:b]))) < 50:
+                    break
+                l.update(stream=sid, range=(a, b), score=60, tail=True)
+                last, end = l, b
     ranked = sorted([l for l in lines if l.get('stream') in linemap.BODY and l['stream'] in words and 'range' in l
                      and l.get('score', 100) >= 50], key=lambda l: l['stream'] != 'main')
     bigs = []
+    aligned = _aligned(book, amud)
     for l in sorted(ranked, key=lambda l: l['base']):
         a, b = l['range']
         sid = l['stream']
@@ -1349,7 +1395,14 @@ def amud_svg(cache, book, amud, scan=False, core=False, lines_out=None):
             ix = list(range(a, b))
         elif l.get('seg') and l['words']:
             # Read on its own off the scan: the print's words, in its order;
-            # a big opening word as big as it stands.
+            # a big opening word as big as it stands. Where the line reader
+            # placed the line's own words on its ink, they are its reading.
+            al = next((x for x in aligned if x['stream'] == sid and tuple(x['range']) == (a, b) and not l.get('more')
+                       and abs(x['base'] - l['base']) < 0.5 * l['h'] and abs(x['x0'] - l['x0']) < 0.5 * l['h']), None)
+            if al:
+                y0 = min((w.get('y0', l['base'] - l['h']) for w in l['words']), default=l['base'] - l['h'])
+                l['words'] = sorted([dict(text=t, x0=x0, x1=x1, y0=y0, y1=l['base'])
+                                     for t, (x0, x1) in zip(words[sid][a:b], al['words'])], key=lambda w: -w['x1'])
             l['words'] = _unstack(l['words'])
             for wd in l['words']:
                 wd['scale'], wd['drop'] = 1, 0

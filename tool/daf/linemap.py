@@ -70,14 +70,21 @@ SCAN = 'https://manuscripts.sefaria.org/vilna-romm/{book}_{amud}.jpg'
 # Sefaria's scans filed under another amud's name (checked by the running
 # head's daf number and tool/daf/scanmatch.py): the amud → the file it's in.
 SCAN_FILE = {('Pesachim', '43a'): 'Pesachim_45a', ('Pesachim', '45a'): 'Pesachim_43a'}
-# Amudim with no scan of their own there.
-NO_SCAN = {
-    ('Nazir', '4a'): 'not at manuscripts.sefaria.org',
-    ('Makkot', '13b'): "Makkot_13b.jpg is a second scan of 14b",
+# Amudim with no scan of their own there (Nazir_4a.jpg is missing,
+# Makkot_13b.jpg is a second scan of 14b): the same Vilna printing's page
+# from archive.org's "Talmud Bavli, Shas Vilna" (Public Domain Mark 1.0),
+# a JPEG 2000 in the volume's zip, checked by its running head.
+_IA = 'https://archive.org/download/Talmud_Bavli_Vilna_images/{v}_images_jp2.zip/{v}_images_jp2%2F{v}_images_{leaf:04d}.jp2'
+ALT_SCAN = {
+    ('Nazir', '4a'): _IA.format(v='Talmud_Bavli_Vilna_A_V09_Nedarim_Nazir_1884', leaf=252),
+    ('Makkot', '13b'): _IA.format(v="Talmud_Bavli_Vilna_A_V16_%27Avodah-Zarah_Horayot_%27Eduyyot_Makkot_Avot_Masekhtot-Qetanot_Makkot_1883", leaf=457),
 }
+NO_SCAN = {}
 API = 'https://www.sefaria.org/api/v3/texts/'
 WIKISOURCE = 'Wikisource Talmud Bavli'
-OCR_SCALE = 3
+# (OCR_SCALE: for scans at another size than Sefaria's, e.g. archive.org's,
+# 2.4× theirs, read at 1.)
+OCR_SCALE = int(os.environ.get('OCR_SCALE', '3'))
 # The Tesseract model: heb, or heb_vilna from train_ocr.py, which reads
 # Rashi script as itself.
 OCR_LANG = os.environ.get('OCR_LANG', 'heb')
@@ -265,6 +272,11 @@ def ocr(cache, book, amud):
     url = SCAN.format(book=book.replace(' ', '_'), amud=amud)
     if (book, amud) in SCAN_FILE:
         url = SCAN.rsplit('/', 1)[0] + f'/{SCAN_FILE[book, amud]}.jpg'
+    if (book, amud) in ALT_SCAN and not img_path.exists():
+        jp2 = img_path.with_suffix('.jp2')
+        if fetch(ALT_SCAN[book, amud], jp2) is None:
+            raise SystemExit(f'no scan for {book} {amud}')
+        Image.open(jp2).convert('RGB').save(img_path, quality=95)
     if fetch(url, img_path) is None:
         raise SystemExit(f'no scan for {book} {amud}')
     if not tsv.exists():
@@ -289,11 +301,18 @@ KRAKEN = Path(os.environ.get('KRAKEN', ROOT / 'build/daf/kraken-venv/bin/kraken'
 KRAKEN_MODEL = Path(os.environ.get('KRAKEN_MODEL', ROOT / 'build/daf/kraken/vilna_seg.safetensors'))
 
 
-def kraken_lines(cache, book, amud, img_path):
+def kraken_lines(cache, book, amud, img_path, typed=False):
     """The lines kraken's line finder (trained on these pages, see
     kraken_gt.py) finds on the scan, as dicts of x0, x1 and base; none
     where kraken or the model isn't there."""
-    out = cache / 'kraken' / f'{book}_{amud}.json'
+    # (typed: the second model's lines, typed by text (nn_data.py), read
+    # from KRAKEN_TYPED's cache beside the first's; never run here.)
+    name = os.environ.get('KRAKEN_TYPED') if typed else os.environ.get('KRAKEN_CACHE', 'kraken')
+    if not name:
+        return []
+    out = cache / name / f'{book}_{amud}.json'
+    if typed and not out.exists():
+        return []
     if not out.exists():
         if not (KRAKEN.exists() and KRAKEN_MODEL.exists()):
             return []
@@ -311,22 +330,50 @@ def kraken_lines(cache, book, amud, img_path):
     for l in json.loads(out.read_text())['lines']:
         xs, ys = [p[0] for p in l['baseline']], [p[1] for p in l['baseline']]
         kind = ((l.get('tags') or {}).get('type') or [{}])[0].get('type')
-        ks.append(dict(x0=min(xs), x1=max(xs), base=sum(ys) / len(ys), kind=kind))
+        ks.append(dict(x0=min(xs), x1=max(xs), base=sum(ys) / len(ys), kind=kind, src='typed' if typed else 'first'))
     return ks
+
+
+_OWN_KIND = {'main': ('main',), 'inner': ('inner',), 'outer': ('outer',)}
 
 
 def snap_to_kraken(lines, ks, grey):
     """A body line whose box runs on past kraken's line on its baseline
     over blank margin or a note beside it ends where kraken's does. (Where kraken's runs on past the line's, it is
-    more often across a gutter: those stay.)"""
+    more often across a gutter: those stay.)
+
+    With the second model's lines (typed by text, src 'typed'), a line also
+    ends where its own text's line does when what it runs on over is
+    another text's line: a Tosafot line read on across the Gemara's last
+    line (Bava Batra 17b). (Only then: that model breaks some long lines
+    into pieces, and takes some of them for notes.)"""
+    first = [k for k in ks if k.get('src') != 'typed']
+    typed = [k for k in ks if k.get('src') == 'typed']
     for l in lines:
         if l.get('stream') not in BODY or l.get('reviewed'):
             continue
         h = l['h']
-        near = [k for k in ks if abs(k['base'] - l['base']) < 0.4 * h and min(k['x1'], l['x1']) - max(k['x0'], l['x0']) > h]
+
+        def over(k):
+            return min(k['x1'], l['x1']) - max(k['x0'], l['x0'])
+        own = [k for k in typed if abs(k['base'] - l['base']) < 0.4 * h and over(k) > h and k['kind'] in _OWN_KIND.get(l['stream'], ())]
+        if own:
+            k = max(own, key=over)
+            for a, b, end in ((l['x0'], k['x0'], 'x0'), (k['x1'], l['x1'], 'x1')):
+                # (The Gemara's letters are bigger: its baseline is off the
+                # commentary's level with it, by most of a line. Pieces of
+                # one row typed two ways, on one baseline, are one line.)
+                if b - a > h and any(m['kind'] in _OWN_KIND and m['kind'] != k['kind'] and 0.3 * h < abs(m['base'] - l['base']) < 0.9 * h
+                                     and min(m['x1'], b) - max(m['x0'], a) > 0.5 * (b - a)
+                                     # (beside its own piece, not over it: the model can take
+                                     # a whole Rashi row for Tosafot and a piece of it for Rashi)
+                                     and min(m['x1'], k['x1']) - max(m['x0'], k['x0']) < 0.2 * (k['x1'] - k['x0']) for m in typed):
+                    l[end] = k[end]
+                    l['snapped'] = True
+        near = [k for k in first if abs(k['base'] - l['base']) < 0.4 * h and over(k) > h]
         if not near:
             continue
-        k = max(near, key=lambda k: min(k['x1'], l['x1']) - max(k['x0'], l['x0']))
+        k = max(near, key=over)
         for a, b, end in ((l['x0'], k['x0'], 'x0'), (k['x1'], l['x1'], 'x1')):
             if b - a <= h:
                 continue
@@ -334,13 +381,13 @@ def snap_to_kraken(lines, ks, grey):
             # (a note beside it). (Kraken can break one row in two at a wide
             # space: a line of its own kind there is the rest of it.)
             other = any(m is not k and m['kind'] != k['kind'] and abs(m['base'] - l['base']) < 0.4 * h
-                        and min(m['x1'], b) - max(m['x0'], a) > 0.5 * (b - a) for m in ks)
+                        and min(m['x1'], b) - max(m['x0'], a) > 0.5 * (b - a) for m in first)
             strip = grey[int(l['base'] - h):int(l['base'] + 1), int(a):int(b)]
             if other or strip.size and (strip < 128).mean() < 0.02:
                 l[end] = k[end]
                 l['snapped'] = True
-                if l.get('ink'):
-                    l['ink'] = (max(l['ink'][0], l['x0']), min(l['ink'][1], l['x1']))
+        if l.get('snapped') and l.get('ink'):
+            l['ink'] = (max(l['ink'][0], l['x0']), min(l['ink'][1], l['x1']))
 
 
 def _words(tsv_text):
@@ -535,7 +582,8 @@ def _split_word(w, gutters, image):
     run together (no space between them in the OCR): cut the image at the
     gutter and read each side again."""
     x0, x1 = int(w['x0']), int(w['x1'])
-    inside = np.flatnonzero(gutters[x0 + 3:x1 - 2]) + x0 + 3
+    # (max: a speck at the scan's edge, 0 to 1, would slice to -1.)
+    inside = np.flatnonzero(gutters[x0 + 3:max(x0 + 3, x1 - 2)]) + x0 + 3
     if len(inside) < 4:
         return [w]
     cut = int(np.median(inside))
@@ -763,7 +811,18 @@ def classify(lines, streams, extra):
     # split at the gutters; above the Gemara's end, such a line is the top
     # band run into the side columns.
     gem_end = max(l['y1'] for l in body if l['stream'] == 'main')
-    wide = [l['raw'][2] for l in lines if l['raw'] and l['raw'][0] < fx0 - 20 and l['raw'][1] > fx1 + 20 and l['raw'][2] > gem_end - 4]
+    # Its words cross the frame, and are no line of the body's: two side
+    # notes at one height can be read as one line with nothing between
+    # them, or a line of the Tosafot under the Gemara as one with the notes
+    # either side of it (Zevachim 95a, whose Tosafot were cut off so).
+    across, anchored = defaultdict(float), set()
+    for l in lines:
+        if l['raw']:
+            across[tuple(l['raw'])] += max(0.0, min(l['x1'], fx1) - max(l['x0'], fx0))
+            if l['stream'] in BODY and l['hits'] >= max(3, 0.3 * l['letters']):
+                anchored.add(tuple(l['raw']))
+    wide = [l['raw'][2] for l in lines if l['raw'] and l['raw'][0] < fx0 - 20 and l['raw'][1] > fx1 + 20 and l['raw'][2] > gem_end - 4
+            and across[tuple(l['raw'])] > 0.5 * (fx1 - fx0) and tuple(l['raw']) not in anchored]
     bottom = min(wide) if wide else float('inf')
     for l in lines:
         outside = l['base'] > bottom or l['x1'] < fx0 + 6 or l['x0'] > fx1 - 6 or l['x0'] < fx0 - 20 or l['x1'] > fx1 + 20
@@ -1148,6 +1207,7 @@ def join_pieces(lines, ranges):
 
 
 CORRECTIONS = Path(__file__).parent / 'corrections'
+NNFIT = Path(os.environ['NNFIT_DIR']) if os.environ.get('NNFIT_DIR') else None
 
 
 def corrections(book, amud):
@@ -1156,7 +1216,14 @@ def corrections(book, amud):
     last} or {stream, base, x0, x1, drop: true}, the line found again by its
     place on the scan."""
     path = CORRECTIONS / f'{book.replace(" ", "_")}_{amud}.json'
-    return json.loads(path.read_text())['lines'] if path.exists() else []
+    hand = json.loads(path.read_text())['lines'] if path.exists() else []
+    # And the line reader's (nnfit.py: words it placed on lines the OCR
+    # couldn't match), where no reviewer has been.
+    path = NNFIT / f'{book.replace(" ", "_")}_{amud}.json' if NNFIT else None
+    machine = json.loads(path.read_text())['lines'] if path and path.exists() else []
+    return hand + [m for m in machine if not any(
+        h['stream'] == m['stream'] and abs(h['base'] - m['base']) < 10 and min(h['x1'], m['x1']) - max(h['x0'], m['x0']) > 0
+        for h in hand)]
 
 
 def fix_headings(ls, ranges, words):
@@ -1226,9 +1293,27 @@ def apply_corrections(fixes, sid, ls, ranges, lines, words):
         if f['stream'] != sid:
             continue
         def at(l):
-            return (abs(l['base'] - f['base']) < 0.5 * l['h']
+            # (Not a scrap of a word or two the reading split off it.)
+            return (abs(l['base'] - f['base']) < 0.5 * l['h'] and l['x1'] - l['x0'] >= 0.4 * (f['x1'] - f['x0'])
                     and min(l['x1'], f['x1']) - max(l['x0'], f['x0']) > 0.5 * min(l['x1'] - l['x0'], f['x1'] - f['x0']))
         k = next((i for i, l in enumerate(ls) if at(l)), None)
+        if k is not None and f.get('split') and ls[k]['x1'] - ls[k]['x0'] > 1.5 * (f['x1'] - f['x0']):
+            # This text's line, read on across a gutter into the column
+            # beside it: this text's part of it; the rest is no text's
+            # until a correction of the other's takes it.
+            line = ls[k]
+            ws = [w for w in line['words'] if f['x0'] <= (w['x0'] + w['x1']) / 2 <= f['x1']]
+            rest = [w for w in line['words'] if w not in ws]
+            if rest:
+                # (Its box is the correction's: the reading may have few words
+                # in it, run into the rest of the row.)
+                piece = dict(line, **_line(ws), letters=sum(len(w['text']) for w in ws)) if ws \
+                    else dict(line, text='', words=[], letters=0)
+                piece.update(x0=f['x0'], x1=f['x1'])
+                other = dict(line, **_line(rest), stream='other', letters=sum(len(w['text']) for w in rest))
+                other.pop('range', None)
+                ls[k] = piece
+                lines.append(other)
         if k is None:
             other = next((l for l in lines if l.get('stream') != sid and at(l)), None)
             if other is not None:
@@ -1267,6 +1352,10 @@ def apply_corrections(fixes, sid, ls, ranges, lines, words):
         ranges[k] = tuple(runs[0])
         ls[k]['more'] = [tuple(r) for r in runs[1:]]
         ls[k]['reviewed'] = True
+        if f.get('score') is not None:
+            # (The reader's confidence: the OCR's reading of such a line is
+            # what failed.)
+            ls[k]['keep_score'] = f['score']
         done += [tuple(r) for r in runs]
     # The others give up a reviewed line's words.
     for i, (a, b) in enumerate(ranges):
@@ -1348,12 +1437,13 @@ def amud_map(cache, book, amud, debug_dir=None, verbose=False, training_dir=None
     im = page_image(img_path)
     lines = lines_of(rows, im)
     info = classify(lines, streams, extra)
-    ks = kraken_lines(cache, book, amud, img_path) if os.environ.get('LINEMAP_KRAKEN', '1') != '0' else []
+    ks = kraken_lines(cache, book, amud, img_path) + kraken_lines(cache, book, amud, img_path, typed=True) \
+        if os.environ.get('LINEMAP_KRAKEN', '1') != '0' else []
     if SEGMENT:
         # The body's lines again from the scan's ink (segment.py).
         import segment
         lines = segment.reline(lines, im, streams, extra, info['frame'],
-                               cache / 'seg' / OCR_LANG / f'{book.replace(" ", "_")}_{amud}.json')
+                               cache / 'seg' / OCR_LANG / f'{book.replace(" ", "_")}_{amud}.json', ks)
     # A "line" whose foot is at or past the scan's bottom edge is its dark
     # border read as text (Bava Batra 3b's took 14 words of Rashi).
     lines = [l for l in lines if l['base'] < im.height - 2]
@@ -1397,7 +1487,7 @@ def amud_map(cache, book, amud, debug_dir=None, verbose=False, training_dir=None
     # body's (a heading's piece, a stray word): it takes none of its words.
     for l in lines:
         if l.get('low') and l.get('stream') in BODY:
-            l['stream'] = 'other'
+            l['stream'], l['why'] = 'other', 'low_bar'
     result = {'book': book, 'amud': amud, 'page': [im.width, im.height],
               'frame': [round(v) for v in info['frame']], 'columns': {}, 'other': [],
               # The app uses a map only with the text it was made from.
@@ -1434,8 +1524,15 @@ def amud_map(cache, book, amud, debug_dir=None, verbose=False, training_dir=None
                 continue  # matched no words: a heading or a note, not this text
             col.append([round(l['x0']), round(l['x1']), round(l['base']), round(l['h']), a, b] + [v for r in l.get('more', []) for v in r])
             l['range'] = (a, b)
-        result['columns'][sid] = col
         report[sid] = _quality(ls, words, table)
+        if words and _reanchor(ls, words, table):
+            col = [[round(l['x0']), round(l['x1']), round(l['base']), round(l['h']), *l['range']]
+                   + [v for r in l.get('more', []) for v in r] for l in ls if 'range' in l]
+            report[sid] = _quality([l for l in ls if 'range' in l], words, table)
+        for l in ls:
+            if l.get('keep_score') is not None and 'score' in l:
+                l['score'] = max(l['score'], l.pop('keep_score'))
+        result['columns'][sid] = col
     for sid in CARRIED:
         ls = _drop_specks(sorted([l for l in lines if l['stream'] == sid], key=lambda l: l['base']))
         if not ls or not extra.get(sid):
@@ -1569,6 +1666,92 @@ def _export_training(im, lines, streams, out, name, names=()):
         # visual order, the line reversed.
         box = ''.join(f'{c} 0 0 {w} {h} 0\n' for c in gt[::-1]) + f'\t 0 0 {w} {h} 0\n'
         base.with_suffix('.box').write_text(box)
+
+
+def _reanchor(lines, words, table):
+    """A line the ranges matched badly (under 50), found again on its own
+    in the whole text: the commentaries are printed in an order of their
+    own (Bava Batra 162b's Tosafot, Yoma 78b's), and one line out of place
+    took the next 300 words with it, none of them drawn. Its words, where
+    they read best and no well-matched line has them. True if a line
+    changed."""
+    flat, owner = [], []
+    for k, w in enumerate(words):
+        for c in fold(w, table).replace(' ', ''):
+            flat.append(c)
+            owner.append(k)
+    hay = ''.join(flat)
+    if not hay:
+        return False
+    taken = np.zeros(len(words), bool)
+    for l in lines:
+        if 'range' in l and l.get('score', 0) >= 70:
+            taken[l['range'][0]:l['range'][1]] = True
+    changed = False
+    # (Under 70 too: Yoma 78b's 50s held words its 0s had.)
+    for l in sorted([l for l in lines if 'range' in l and l.get('score', 100) < 70], key=lambda l: -len(l['text'])):
+        mine = fold(l['text'], table).replace(' ', '')
+        if len(mine) < 20:
+            continue
+        al = fuzz.partial_ratio_alignment(mine, hay)
+        if al is None or al.score < 70:
+            continue
+        a, b = owner[al.dest_start], owner[max(al.dest_start, al.dest_end - 1)] + 1
+        # Its edges: the most words that read inside the line as well as
+        # the best do, from three words out to inside the match. (A line
+        # read with another text's words beside it, Zevachim 3a's, matched
+        # whole would take as many of this one's either side; Yoma 78b's
+        # match began three words early, in the line above.)
+        cands = []
+        for a2 in range(max(0, a - 3), b):
+            for b2 in range(a2 + 1, min(len(words), b + 3) + 1):
+                ws = fold(''.join(words[a2:b2]), table).replace(' ', '')
+                if len(ws) > 1.3 * len(mine):
+                    break
+                cands.append((fuzz.partial_ratio(ws, mine) if len(ws) <= len(mine) else fuzz.ratio(ws, mine), a2, b2, len(ws)))
+        if not cands:
+            continue
+        top = max(c[0] for c in cands)
+        s, a, b, n = max((c for c in cands if c[0] >= top - 1), key=lambda c: (c[3], c[0]))
+        # (A short line by more: Nedarim 54a's אמר ולא למעול שליח went to
+        # כלומר לא ימעול. And most of the line this text's.)
+        if s < (70 if len(mine) >= 30 else 85) or n < 0.4 * len(mine) or s < l.get('score', 0) + 10 or taken[a:b].sum() > 1:
+            continue
+        # (A word at its edge another line has stays that line's.)
+        while a < b and taken[a]:
+            a += 1
+        while b > a and taken[b - 1]:
+            b -= 1
+        l['range'], l['moved'] = (a, b), True
+        # (Its score, how well its words read in it: _quality's whole-line
+        # ratio would put a line half another text's at 0.)
+        l['keep_score'] = s
+        taken[a:b] = True
+        changed = True
+    if changed:
+        # A badly matched line left with words a line found again has
+        # (Yoma 78b's דאמר בגמרא טמא) gives them up, drawn twice otherwise:
+        # at its ends, the rest kept (Gittin 62a's line above its הדרן);
+        # in its middle, all of them.
+        for l in lines:
+            if 'range' not in l or l.get('score', 100) >= 70 or l.get('moved'):
+                continue
+            a, b = l['range']
+            for m in lines:
+                if m.get('moved') and 'range' in m and m['range'][0] < b and a < m['range'][1]:
+                    if m['range'][0] <= a:
+                        a = max(a, m['range'][1])
+                    elif m['range'][1] >= b:
+                        b = min(b, m['range'][0])
+                    else:
+                        a = b
+            if a >= b:
+                del l['range']
+            elif (a, b) != l['range']:
+                # (Its score as it was: a few words off its end make a line
+                # that read well enough to draw read worse.)
+                l['range'], l['keep_score'] = (a, b), l.get('score')
+    return changed
 
 
 def _quality(lines, words, table):

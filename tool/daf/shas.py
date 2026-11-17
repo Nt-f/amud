@@ -33,7 +33,9 @@ sys.path.insert(0, str(Path(__file__).parent))
 # (Before linemap is imported: it reads the model's name then.)
 os.environ.setdefault('OCR_LANG', 'heb_vilna')
 
-CACHE = ROOT / 'build' / 'daf' / 'cache'
+# (DAF_CACHE: another cache, e.g. one of another source's scans; its text/
+# and index/ can be links to this one's.)
+CACHE = Path(os.environ.get('DAF_CACHE', ROOT / 'build' / 'daf' / 'cache'))
 OUT = ROOT / 'build' / 'daf'
 SCORES = OUT / 'shas' / 'scores.jsonl'
 
@@ -89,6 +91,11 @@ def _render(job):
         page = svg.amud_svg(CACHE, book, amud, core=True, lines_out=lines)
         (OUT / 'svg_shas' / f'{name}.core.svg').write_text(page)
         (OUT / 'place' / f'{name}.json').write_text(json.dumps(svg.LAST_PLACED, ensure_ascii=False, separators=(',', ':')))
+        # Its lines too, for training data (nn_data.py).
+        (OUT / 'lines').mkdir(exist_ok=True)
+        keep = ('x0', 'x1', 'base', 'h', 'stream', 'range', 'score', 'why', 'text', 'letters', 'hits', 'catchword', 'tail', 'moved')
+        (OUT / 'lines' / f'{name}.json').write_text(json.dumps(
+            [{k: l[k] for k in keep if l.get(k) is not None} for l in lines], ensure_ascii=False, default=float, separators=(',', ':')))
         body = [l for l in lines if l.get('stream') in linemap.BODY]
         row = dict(page=f'{book} {amud}', lines=len(body), catch=len(svg.LAST_PLACED['catch']),
                    kraken=(CACHE / 'kraken' / f'{book}_{amud}.json').exists(),

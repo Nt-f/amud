@@ -474,15 +474,55 @@ def _dedupe(lines):
     return [l for l in lines if id(l) not in gone]
 
 
-def reline(lines, im, streams, extra, frame, cache_path):
+# Kraken's typed lines on the page being relined (in its f× pixels), for
+# _typed: set by reline.
+_KS = []
+_KIND = {'gemara': 'main', 'main': 'main', 'commentary': 'comment', 'inner': 'inner', 'outer': 'outer', 'note': 'note'}
+
+
+def _typed(l, src=None):
+    """What kraken's line finder (trained on these pages) takes the line
+    for, where it has one on it: 'main', 'inner', 'outer', 'comment' (the
+    first model's Rashi or Tosafot) or 'note' (or None). With two models'
+    lines, `src` picks one's."""
+    best, over = None, 0.5 * (l['x1'] - l['x0'])
+    for k in _KS:
+        if src is not None and k.get('src') != src:
+            continue
+        if abs(k['base'] - l['base']) < 0.5 * l['h']:
+            o = min(k['x1'], l['x1']) - max(k['x0'], l['x0'])
+            if o > over:
+                best, over = k, o
+    return _KIND.get(best['kind']) if best else None
+
+
+def _kraken_keeps(l):
+    """A line of a text kraken takes for that kind of text: no layout rule
+    puts it out of the body (the evidence of the line's own look over a
+    rule's guess from what is around it). Either model's word is enough:
+    the first knows Rashi's narrow side columns, the second the Gemara's
+    lines from the Tosafot's beside them."""
+    s = l.get('stream')
+    for src in {k.get('src') for k in _KS}:
+        k = _typed(l, src)
+        if k is not None and (k == 'main' if s == 'main' else k in ('comment', s) if s in ('inner', 'outer') else False):
+            return True
+    return False
+
+
+def reline(lines, im, streams, extra, frame, cache_path, ks=()):
     """The body's lines again, from segment's regions (see above): the first
     pass's lines in each region of the Gemara or a margin are replaced by
-    the region's own, read again. Returns the new list of lines."""
+    the region's own, read again. Returns the new list of lines. `ks` are
+    kraken's typed lines (linemap.kraken_lines): a line it types as the
+    text it was found to be is kept by the layout rules."""
+    global _KS
     # Everything here is measured for a scan 1100 to 1600 wide, as most are:
     # a few are 4100, looked at at 1530 and their lines scaled back.
     f = 1530 / im.width
     if f > 0.75:
         f = 1.0
+    _KS = [dict(k, x0=k['x0'] * f, x1=k['x1'] * f, base=k['base'] * f) for k in ks] if os.environ.get('SEG_KRAKEN_VETO', '1') != '0' else []
     if f != 1.0:
         lines = [_scaled(l, f) for l in lines]
         frame = [v * f for v in frame]
@@ -519,6 +559,40 @@ def _scaled(l, f):
     return m
 
 
+def _inside_line(part, lines):
+    """Words that match a heading (fuzzily) with the body's words right
+    beside them on both sides, on their baseline, are a line's words read as
+    a piece of their own, no heading: Shevuot 25a's Gemara has דבר מצוה
+    ("נר מצוה"), Moed Katan 25b's Rashi בתורה: בר ("תורה אור"), and each
+    lost the body under or beside it. A heading has body beside it on one
+    side at most (a side column's, by the body's edge; הדרן עלך centred
+    beside a column's last line)."""
+    x0, x1 = min(m['x0'] for m in part), max(m['x1'] for m in part)
+    hh = max(m['h'] for m in part)
+    base = part[0]['base']
+    sides = set()
+    for m in lines:
+        if m in part or m.get('stream') not in linemap.BODY or abs(m['base'] - base) >= 0.5 * hh:
+            continue
+        if -2 <= m['x0'] - x1 < 2 * hh:
+            sides.add('x1')  # beside its right end
+        if -2 <= x0 - m['x1'] < 2 * hh:
+            sides.add('x0')
+    return len(sides) == 2
+
+
+def _amid_column(h, lines):
+    """A "heading" with one body text's well-anchored lines just above and
+    just below it, over its width, is a line of that text misread (Bava
+    Metzia 65a's Tosafot "הוה אסור" read as תורה אור)."""
+    def near(sign):
+        return {m.get('stream') for m in lines if m is not h and m.get('stream') in linemap.BODY
+                and m.get('hits', 0) >= max(3, 0.2 * m.get('letters', 0))
+                and 0.5 * h['h'] < sign * (m['base'] - h['base']) < 2.2 * max(h['h'], m['h'])
+                and min(m['x1'], h['x1']) - max(m['x0'], h['x0']) > 0.5 * (h['x1'] - h['x0'])}
+    return bool(near(-1) & near(1))
+
+
 def _reline(lines, im, full, f, streams, extra, frame, cache_path):
     """reline on `im`, the page at f× (`full` is the scan itself, to read
     the lines from)."""
@@ -547,13 +621,32 @@ def _reline(lines, im, full, f, streams, extra, frame, cache_path):
             x0, x1 = min(m['x0'] for m in part), max(m['x1'] for m in part)
             if not linemap._heading(' '.join(m['text'] for m in part)):
                 continue
+            if _inside_line(part, lines):
+                continue
+            if any(_typed(m) in ('main', 'inner', 'outer', 'comment') for m in part) and 'הדרן' not in ' '.join(m['text'] for m in part):
+                continue
+            # The Gemara going on under it, well anchored: its own words
+            # read as a heading (Yoma 60b's רבי חנינא as רבינו חננאל cut
+            # off the whole Tosafot under the Gemara).
+            y = min(m['y0'] for m in part)
+            if any(m.get('stream') == 'main' and m['y0'] > y + l['h'] and m.get('letters', 0) >= 10
+                   and m.get('hits', 0) >= max(3, 0.3 * m.get('letters', 0)) for m in lines):
+                continue
             # Centred over its section, or leading a line of the foot from
             # the right edge (הגהות הב"ח).
             # (Inside the frame, its own line running on across the page;
             # one in a side column is outside it, beside the body's lines.)
+            # A line of the body beside it (well anchored in a margin's text)
+            # ends the run: the heading is a side column's, level with the
+            # body (Nazir 36a's הגהות הב"ח beside Rashi, which cut off the
+            # Tosafot under the Gemara as foot).
             run_x0 = x0
             for m in sorted([m for m in below if abs(m['base'] - l['base']) < 0.8 * max(m['h'], l['h'])], key=lambda m: -m['x1']):
                 if m['x1'] <= run_x0 + 2 and run_x0 - m['x1'] < 4 * l['h']:
+                    # (A fifth of its letters' runs: a note's line quoting a
+                    # few words of the Tosafot has fewer.)
+                    if m.get('stream') in linemap.BODY and m.get('hits', 0) >= max(3, 0.2 * m.get('letters', 0)):
+                        break
                     run_x0 = min(run_x0, m['x0'])
             foot = any(h in linemap.fold(' '.join(m['text'] for m in part), linemap.FOLD_SQUARE) for h in ('הגהות', 'גליון'))
             leads = foot and x0 < fx1 - 20 and x1 >= fx1 - 0.12 * (fx1 - fx0) and run_x0 < mid
@@ -563,7 +656,7 @@ def _reline(lines, im, full, f, streams, extra, frame, cache_path):
         bottom = min(bottom, min(heads) - 2)
         for l in lines:
             if l['y0'] > bottom and l.get('stream') in linemap.BODY:
-                l['stream'], l['pos'] = 'other', None
+                l['stream'], l['pos'], l['why'] = 'other', None, 'below_heading'
     index = linemap._index({**streams, **extra})
     gs, rs = regions(grey, top - 10, bottom + 10, fx0, fx1, lines, index)
     cache = json.loads(cache_path.read_text()) if cache_path.exists() else {}
@@ -574,19 +667,29 @@ def _reline(lines, im, full, f, streams, extra, frame, cache_path):
     gx0 = float(np.percentile([l['x0'] for l in gem], 5)) if gem else fx0
     gx1 = float(np.percentile([l['x1'] for l in gem], 95)) if gem else fx1
     for l in lines:
-        if l.get('stream') == 'main' and not gx0 - 10 <= (l['x0'] + l['x1']) / 2 <= gx1 + 10:
-            l['stream'], l['pos'] = 'other', None
+        if l.get('stream') == 'main' and not gx0 - 10 <= (l['x0'] + l['x1']) / 2 <= gx1 + 10 and not _kraken_keeps(l):
+            l['stream'], l['pos'], l['why'] = 'other', None, 'off_gemara'
     # A narrow column with a margin's heading in it (רבינו חננאל, עין
     # משפט) is that commentary's, however much of the Gemara it quotes.
-    heads = [l for l in lines if linemap._heading(l['text']) and 'הדרן' not in l['text']]
+    heads = [l for l in lines if linemap._heading(l['text']) and 'הדרן' not in l['text'] and not _inside_line([l], lines)]
     side = []
     for r in rs:
-        if r[2] - r[0] < 0.3 * (fx1 - fx0) and any(
-                r[1] - 60 <= l['base'] <= r[3] and abs((l['x0'] + l['x1']) / 2 - (r[0] + r[2]) / 2) < 0.25 * (r[2] - r[0]) for l in heads):
+        if r[2] - r[0] >= 0.3 * (fx1 - fx0):
+            continue
+        hs = [l for l in heads if r[1] - 60 <= l['base'] <= r[3] and abs((l['x0'] + l['x1']) / 2 - (r[0] + r[2]) / 2) < 0.25 * (r[2] - r[0])
+              and not _amid_column(l, lines)]
+        if hs:
             side.append(r)
+            # (Its lines from the heading down: Pesachim 3b's Rabbeinu
+            # Chananel begins under the Tosafot in the same column.)
+            y = min(l['base'] - l['h'] for l in hs)
             for l in lines:
-                if l.get('stream') in linemap.BODY and r[0] <= (l['x0'] + l['x1']) / 2 < r[2] and r[1] <= l['base'] <= r[3]:
-                    l['stream'], l['pos'] = 'other', None
+                if l.get('stream') in linemap.BODY and r[0] <= (l['x0'] + l['x1']) / 2 < r[2] and max(r[1], y) <= l['base'] <= r[3]:
+                    # (Not a commentary's own line, well anchored: Nedarim's
+                    # Tosafot is set in the side column under Ein Mishpat.)
+                    if l['stream'] != 'main' and l.get('hits', 0) >= max(3, 0.4 * l.get('letters', 0)) or _kraken_keeps(l):
+                        continue
+                    l['stream'], l['pos'], l['why'] = 'other', None, 'side_column'
     for r in rs:
         if r in side:
             continue
@@ -788,7 +891,7 @@ def _reline(lines, im, full, f, streams, extra, frame, cache_path):
         floor = max(r[3] for r, _, _, _ in plan)
         for l in out:
             if (not l.get('seg') and l.get('stream') in linemap.BODY and l['base'] - 0.5 * l['h'] > floor
-                    and l['h'] < SMALL_FOOT * 1.3 * page_med['margin']):
+                    and l['h'] < SMALL_FOOT * 1.3 * page_med['margin'] and not _kraken_keeps(l)):
                 l['stream'], l['pos'], l['why'] = 'other', None, 'small'
     _settle(out)
     return out
