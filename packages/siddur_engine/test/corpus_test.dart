@@ -66,6 +66,75 @@ void main() {
     expect(missing, isEmpty);
   });
 
+  test('every leaf and segment knows its lines in corpus/siddur', () {
+    final wrong = <String>[];
+    for (final f in Directory('../../assets/corpus').listSync().whereType<File>()) {
+      if (!f.path.endsWith('.json.gz')) continue;
+      final c = Corpus.fromJson(jsonDecode(utf8.decode(gzip.decode(f.readAsBytesSync()))) as Map<String, Object?>);
+      final files = <String, List<String>>{};
+      for (final leaf in c.leaves.values) {
+        final lines = files[leaf.file!] ??= File('../../corpus/siddur/${c.nusach}/${leaf.file}').readAsLinesSync();
+        String at(int? n) => n == null || n < 1 || n > lines.length ? '' : lines[n - 1].trim();
+        if (at(leaf.line) != '"path": ${jsonEncode(leaf.path)},') wrong.add('${leaf.file}:${leaf.line} ${leaf.path}');
+        for (final s in [...?leaf.he?.segments, ...?leaf.en?.segments]) {
+          final ok = at(s.line).startsWith('{"ref": ${jsonEncode(s.ref)}') &&
+              (s.lastLine == s.line || at(s.lastLine! + 1).startsWith(']}'));
+          if (!ok) wrong.add('${leaf.file}:${s.line}-${s.lastLine} ${leaf.path} ${s.ref}');
+        }
+      }
+    }
+    expect(wrong, isEmpty);
+  });
+
+  test("a line of Amud's text says where it is written; another version's doesn't", () {
+    final files = <String, List<String>>{};
+    // One script's letters, without vowels, tags, spaces or punctuation.
+    String letters(String html, bool hebrew) => hebrew
+        ? stripHtml(html).replaceAll(RegExp('[^א-ת]'), '')
+        : stripHtml(html).toLowerCase().replaceAll(RegExp('[^a-z]'), '');
+    // The text a line holds: its `text`, and an instruction's `en`.
+    final field = RegExp(r'"(?:text|en)": ("(?:[^"\\]|\\.)*")');
+    final wrong = <String>[];
+    var english = 0;
+    // Rosh Chodesh (Hallel, Musaf) and an ordinary day.
+    for (final day in [HDate(30, Months.cheshvan, 5787), HDate(3, Months.cheshvan, 5786)]) {
+      for (final i in resolve('Weekday/Shacharit', day).whereType<SegmentItem>()) {
+        final leaf = corpus.leaf(i.node.id);
+        for (final (seg, hebrew) in [(i.he?.segment, true), (i.tr?.segment, false)]) {
+          if (seg == null) continue;
+          if (seg.line == null) {
+            if (hebrew && leaf?.he != null) wrong.add('no line: ${i.node.id} ${seg.ref}');
+            continue;
+          }
+          // English joined from several lines, or an instruction's English
+          // from its Hebrew line's `en`, is still found where it says.
+          final lines = files[leaf!.file!] ??= File('../../corpus/siddur/${corpus.nusach}/${leaf.file}').readAsLinesSync();
+          final there = [
+            for (final l in lines.sublist(seg.line! - 1, seg.lastLine!))
+              for (final m in field.allMatches(l)) jsonDecode(m[1]!) as String,
+          ].join();
+          if (!letters(there, hebrew).contains(letters(seg.html, hebrew))) {
+            wrong.add('${leaf.file}:${seg.line}-${seg.lastLine} ${i.node.id} ${seg.ref}');
+          }
+          if (!hebrew) english++;
+        }
+      }
+    }
+    expect(wrong, isEmpty);
+    expect(english, greaterThan(100));
+
+    // Another version's text has no lines to point to.
+    final others = VersionSelection(versions.hebrew.skip(1).toList(), versions.translation.skip(1).toList());
+    final items = resolver
+        .resolve(root.find('Weekday/Shacharit')!, others,
+            (s) => DayContext.forService(HDate(30, Months.cheshvan, 5787), s, il: false),
+            options: const ResolveOptions(excluded: ExcludedDisplay.hide))
+        .whereType<SegmentItem>()
+        .toList();
+    expect(items, isNotEmpty);
+    expect([for (final i in items) ...[i.he?.segment.line, i.tr?.segment.line]].whereType<int>(), isEmpty);
+  });
+
   test("Ya'aleh VeYavo only on Rosh Chodesh", () {
     final plain = said(resolve('Weekday/Shacharit/Amidah', HDate(3, Months.cheshvan, 5786)));
     final rc = said(resolve('Weekday/Shacharit/Amidah', HDate(1, Months.cheshvan, 5786)));

@@ -83,7 +83,13 @@ class CorpusSegment {
 
   /// English only: refs of the Hebrew segments it translates.
   final List<String> he;
-  const CorpusSegment(this.ref, this.parts, [this.he = const []]);
+
+  /// Its lines in the leaf's chunk file ([CorpusLeaf.file]): where it
+  /// starts and, when split into parts, where they end. Null in a corpus
+  /// built without them.
+  final int? line;
+  final int? lastLine;
+  const CorpusSegment(this.ref, this.parts, [this.he = const [], this.line, this.lastLine]);
 
   String get html => parts.map((p) => p.text).join();
 }
@@ -101,7 +107,12 @@ class CorpusLeaf {
   final String? service;
   final CorpusText? he;
   final CorpusText? en;
-  const CorpusLeaf(this.path, this.node, this.when, this.service, this.he, this.en);
+
+  /// Where it is written: its chunk file in `corpus/siddur/<nusach>` and
+  /// the line of its path there (null in a corpus built without them).
+  final String? file;
+  final int? line;
+  const CorpusLeaf(this.path, this.node, this.when, this.service, this.he, this.en, {this.file, this.line});
 }
 
 /// A service as the service graph lays it out for one siddur: its own
@@ -216,22 +227,34 @@ class Corpus {
   factory Corpus.fromJson(Map<String, Object?> j) {
     List<CorpusPart> parts(Object? l) =>
         [for (final p in l as List) CorpusPart.fromJson((p as Map).cast<String, Object?>())];
-    CorpusText? text(Object? t, bool english) {
+    // Each segment's line is a step from the one before it, the first's
+    // from the leaf's line (see tool/corpus/build_assets.py).
+    CorpusText? text(Object? t, bool english, int? leafLine) {
       if (t is! Map) return null;
-      return CorpusText(t['version'] as String, [
-        for (final s in t['segs'] as List)
-          english
-              ? CorpusSegment(s[0] as String, parts(s[2]), [for (final h in s[1] as List) h as String])
-              : CorpusSegment(s[0] as String, parts(s[1])),
-      ]);
+      final k = english ? 3 : 2;
+      var at = leafLine;
+      final segs = <CorpusSegment>[];
+      for (final s in (t['segs'] as List).cast<List>()) {
+        int? line, last;
+        if (at != null && s.length > k) {
+          line = at = at + (s[k] as int);
+          last = s.length > k + 1 ? line + (s[k + 1] as int) : line;
+        }
+        segs.add(english
+            ? CorpusSegment(s[0] as String, parts(s[2]), [for (final h in s[1] as List) h as String], line, last)
+            : CorpusSegment(s[0] as String, parts(s[1]), const [], line, last));
+      }
+      return CorpusText(t['version'] as String, segs);
     }
 
     final leaves = <String, CorpusLeaf>{};
     for (final e in (j['leaves'] as Map).entries) {
       final l = (e.value as Map).cast<String, Object?>();
       final when = l['when'] as String?;
+      final line = l['line'] as int?;
       leaves[e.key as String] = CorpusLeaf(e.key as String, l['node'] as String, when == 'true' ? null : when,
-          l['service'] as String?, text(l['he'], false), text(l['en'], true));
+          l['service'] as String?, text(l['he'], false, line), text(l['en'], true, line),
+          file: l['file'] as String?, line: line);
     }
     return Corpus(
       j['book'] as String,
@@ -367,6 +390,8 @@ List<Segment> corpusSegments(List<CorpusSegment> segs,
       ..graphNode = first.node
       ..gestures = {for (final p in s.parts) ...p.gestures}.toList()
       ..repeat = first.repeat
+      ..line = s.line
+      ..lastLine = s.lastLine
       ..minyan = s.parts.every((p) => p.minyan || !p.prayer) && prayers.isNotEmpty && prayers.every((p) => p.minyan)
       ..en = kind == SegmentKind.prayer ? null : s.parts.map((p) => p.en).whereType<String>().join(' ');
     if (seg.en?.isEmpty ?? false) seg.en = null;
@@ -408,6 +433,7 @@ List<Segment?> alignedTranslation(CorpusText he, CorpusText en, List<Segment> en
 
 Segment _join(List<Segment> g) {
   final first = g.first;
+  final lines = g.every((s) => s.line != null);
   return Segment(
     ref: first.ref,
     html: g.map((s) => s.html).join('<br>'),
@@ -423,5 +449,7 @@ Segment _join(List<Segment> g) {
             ..role = r.role,
       ],
     ],
-  );
+  )
+    ..line = lines ? first.line : null
+    ..lastLine = lines ? g.map((s) => s.lastLine!).reduce((a, b) => a > b ? a : b) : null;
 }

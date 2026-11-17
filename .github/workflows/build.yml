@@ -87,7 +87,7 @@ jobs:
           flutter-version: ${{ env.FLUTTER_VERSION }}
           cache: true
       - run: flutter pub get
-      - run: flutter build windows --release --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }}
+      - run: flutter build windows --release --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }} --dart-define=GIT_COMMIT=${{ github.sha }}
       # The exe needs the DLLs and data/ folder beside it, so ship the
       # whole Release directory.
       - run: Compress-Archive -Path build/windows/x64/runner/Release/* -DestinationPath amud-windows.zip
@@ -128,7 +128,7 @@ jobs:
       # one of the three AOT compiles and ~20 MB of APK.
       # The "github" flavor updates itself from these releases; "play" is
       # the Google Play bundle (no updater), uploaded by the play job.
-      - run: flutter build apk --release --flavor github --target-platform android-arm,android-arm64 --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }}
+      - run: flutter build apk --release --flavor github --target-platform android-arm,android-arm64 --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }} --dart-define=GIT_COMMIT=${{ github.sha }}
         env:
           SIDDUR_KEYSTORE_PASSWORD: ${{ secrets.SIDDUR_KEYSTORE_PASSWORD }}
           SIDDUR_KEY_ALIAS: ${{ secrets.SIDDUR_KEY_ALIAS }}
@@ -142,7 +142,7 @@ jobs:
       - name: Play bundle
         if: env.SIDDUR_KEYSTORE_FILE != ''
         run: |
-          flutter build appbundle --release --flavor play --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }}
+          flutter build appbundle --release --flavor play --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }} --dart-define=GIT_COMMIT=${{ github.sha }}
           mv build/app/outputs/bundle/playRelease/app-play-release.aab amud-play.aab
         env:
           SIDDUR_KEYSTORE_PASSWORD: ${{ secrets.SIDDUR_KEYSTORE_PASSWORD }}
@@ -183,7 +183,7 @@ jobs:
           flutter-version: ${{ env.FLUTTER_VERSION }}
           cache: true
       - run: flutter pub get
-      - run: flutter build linux --release --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }}
+      - run: flutter build linux --release --build-name=${{ needs.version.outputs.name }} --build-number=${{ github.run_number }} --dart-define=GIT_COMMIT=${{ github.sha }}
       # The binary needs lib/ and data/ beside it; ship the bundle folder.
       - run: cp tool/integrations/install_linux_links.sh build/linux/x64/release/bundle/
       - run: tar -czf amud-linux-x64.tar.gz -C build/linux/x64/release/bundle .

@@ -30,9 +30,10 @@ void main() {
   // and Musaf for Rosh Chodesh.
   final roshChodesh = HDate(30, Months.cheshvan, 5787);
   late List<SegmentItem> page;
+  late Corpus corpus;
 
   setUpAll(() {
-    final corpus = Corpus.fromJson(
+    corpus = Corpus.fromJson(
         jsonDecode(utf8.decode(gzip.decode(File(corpusFiles[_book]!).readAsBytesSync()))) as Map<String, Object?>);
     final rules = jsonDecode(File('assets/rules/rules.json').readAsStringSync()) as Map<String, dynamic>;
     final resolver = SiddurResolver().withOverrides(rules[_book] as Map<String, dynamic>).withCorpus(corpus);
@@ -45,6 +46,30 @@ void main() {
 
   List<SegmentItem> leaf(String id) => [for (final s in page) if (s.node.id == id) s];
   List<String> heRefs(SelectionSpot s) => [for (final x in s.he) x.he!.segment.ref];
+
+  // Where Sanctity of the Day is written, as the build recorded it.
+  CorpusLeaf day() => corpus.leaf(_day)!;
+  String file() => 'corpus/siddur/ashkenaz/${day().file}';
+  int heLine(String ref) => day().he!.segments.firstWhere((s) => s.ref == ref).line!;
+
+  /// The text of the lines a location points to, read from corpus/siddur.
+  String pointedText(String location) {
+    final m = RegExp(r'(corpus/siddur/\S+\.json):([\d,-]+)').firstMatch(location)!;
+    final lines = File(m[1]!).readAsLinesSync();
+    final text = StringBuffer();
+    for (final range in m[2]!.split(',')) {
+      final [a, ...b] = range.split('-').map(int.parse).toList();
+      for (var n = a; n <= (b.firstOrNull ?? a); n++) {
+        for (final t in RegExp(r'"text": ("(?:[^"\\]|\\.)*")').allMatches(lines[n - 1])) {
+          text.write(jsonDecode(t[1]!) as String);
+        }
+      }
+    }
+    return stripHtml(text.toString());
+  }
+
+  String heLetters(String s) => s.replaceAll(RegExp('[^א-ת]'), '');
+  String enLetters(String s) => s.toLowerCase().replaceAll(RegExp('[^a-z]'), '');
 
   group('the reports from Rosh Chodesh Kislev 5787', () {
     // As the reader's rows would offer them: the section the selection is
@@ -78,6 +103,17 @@ void main() {
           reportLocation(
               book: _book, page: 'Weekday/Shacharit', spot: spot, date: roshChodesh, dayLabels: ['Rosh Chodesh Kislev']),
           '$_book › $_day he 1–2 · page Weekday/Shacharit · 30 Cheshvan 5787 (2026-11-10): Rosh Chodesh Kislev');
+      // With the corpus: its lines in corpus/siddur.
+      final at = reportLocation(
+          book: _book,
+          page: 'Weekday/Shacharit',
+          spot: spot,
+          corpus: corpus,
+          date: roshChodesh,
+          dayLabels: ['Rosh Chodesh Kislev']);
+      expect(at,
+          '${file()}:${heLine('1')}-${heLine('2')} · page Weekday/Shacharit · 30 Cheshvan 5787 (2026-11-10): Rosh Chodesh Kislev');
+      expect(heLetters(pointedText(at)), contains('תזכורוהביאנו'));
     });
   });
 
@@ -108,6 +144,23 @@ void main() {
     expect([for (final x in spot.en) x.tr!.segment.ref], [lines[2].tr!.segment.ref]);
     expect(reportLocation(book: _book, page: 'Weekday/Shacharit', spot: spot, date: roshChodesh, dayLabels: const []),
         contains('$_day he 3 en ${lines[2].tr!.segment.ref} · '));
+    final enLine = day().en!.segments.firstWhere((s) => s.ref == lines[2].tr!.segment.ref).line!;
+    final at = reportLocation(
+        book: _book, page: 'Weekday/Shacharit', spot: spot, corpus: corpus, date: roshChodesh, dayLabels: const []);
+    expect(at, startsWith('${file()}:${heLine('3')},$enLine · '));
+    // Too long for the Worker: the last lines go first, the day stays.
+    expect(
+        reportLocation(
+            book: _book,
+            page: 'Weekday/Shacharit',
+            spot: spot,
+            corpus: corpus,
+            date: roshChodesh,
+            dayLabels: const [],
+            max: at.length - 1),
+        '${file()}:${heLine('3')},… · page Weekday/Shacharit · 30 Cheshvan 5787 (2026-11-10)');
+    expect(heLetters(pointedText(at)), contains(heLetters(he.substring(3, 30))));
+    expect(enLetters(pointedText(at)), contains(enLetters(en.substring(0, 25))));
   });
 
   test('words not found as shown still name the section, marked "near"', () {
@@ -116,6 +169,10 @@ void main() {
     expect(spot.leaves.map((n) => n.id), [_day]);
     expect(reportLocation(book: _book, page: 'Weekday/Shacharit', spot: spot, date: roshChodesh, dayLabels: const []),
         startsWith('$_book › $_day near he 1–6 · '));
+    expect(
+        reportLocation(
+            book: _book, page: 'Weekday/Shacharit', spot: spot, corpus: corpus, date: roshChodesh, dayLabels: const []),
+        startsWith('near ${file()}:${heLine('1')}-'));
     expect(locateSelection(leaf(_day), 'Words the reader added', exactOnly: true), isNull);
     expect(locateSelection(const [], 'anything'), isNull);
   });
@@ -150,6 +207,24 @@ void main() {
     expect(at.length, lessThanOrEqualTo(300));
     expect(at, startsWith('$_book › $_musaf/Avot near he 1–6'));
     expect(at, matches(RegExp(r'; \+\d+ more · page Weekday/Shacharit · 30 Cheshvan 5787 \(2026-11-10\): Rosh Chodesh Kislev$')));
+    final lines = reportLocation(
+        book: _book,
+        page: 'Weekday/Shacharit',
+        spot: spot,
+        corpus: corpus,
+        date: roshChodesh,
+        dayLabels: ['Rosh Chodesh Kislev']);
+    expect(lines.length, lessThanOrEqualTo(300));
+    expect(lines, startsWith('near ${file()}:'));
+    expect(lines, endsWith(' · page Weekday/Shacharit · 30 Cheshvan 5787 (2026-11-10): Rosh Chodesh Kislev'));
+  });
+
+  test('a book without lines in its corpus: the section and its refs', () {
+    final spot = locateSelection(leaf(_day), 'תִּזְכּור: וַהֲבִיאֵנוּ')!;
+    final old = Corpus(corpus.book, {for (final l in corpus.leaves.values) l.path: CorpusLeaf(l.path, l.node, l.when, l.service, l.he, l.en)},
+        corpus.labels, corpus.inserts, corpus.services, corpus.heTitle, corpus.nusach);
+    expect(reportLocation(book: _book, page: 'P', spot: spot, corpus: old, date: roshChodesh, dayLabels: const []),
+        startsWith('$_book › $_day he 1–2 · '));
   });
 
   /// Opens Weekday Shacharit on Rosh Chodesh at Musaf's Sanctity of the Day,
@@ -243,11 +318,12 @@ void main() {
     final first = (await r.report(() => t.longPressAt(Offset(box.right - 40, box.top + 30))))!;
     expect(first.label, 'Musaf Amidah for Rosh Chodesh › Sanctity of the Day');
     expect(first.text.replaceAll(RegExp('[^א-ת]'), ''), 'ראשי');
-    expect(first.location, '$_book › $_day he 1$shown');
+    expect(first.location, '${file()}:${heLine('1')}$shown');
+    expect(heLetters(pointedText(first.location)), contains('ראשי'));
 
     // The section's title alone.
     final heading = (await r.report(() => t.longPressAt(rowRect(t, r.heading).center)))!;
-    expect(heading.location, '$_book › $_day title$shown');
+    expect(heading.location, '${file()}:${day().line}$shown');
 
     // A mouse drag from the title into the first line, then a right click.
     final drag = (await r.report(() async {
@@ -263,12 +339,17 @@ void main() {
     // Across two rows: the end of the title and the start of the first line.
     expect(drag.text, contains('the Day'));
     expect(drag.text, contains('רָ'));
-    expect(drag.location, '$_book › $_day he 1$shown');
+    expect(drag.location, '${file()}:${heLine('1')}$shown');
   });
 
   testWidgets('on the linear page, a row of several lines: each word in its own line', (t) async {
     final r = await openSanctity(t, linear: true);
     final letters = {for (final l in leaf(_day)) l.he!.segment.ref: normalizeHebrewWords(stripHtml(l.he!.segment.html))};
+    // Each Hebrew line's ref by its lines in the file ("335-339" when split).
+    final refAt = {
+      for (final s in day().he!.segments) s.line == s.lastLine ? '${s.line}' : '${s.line}-${s.lastLine}': s.ref,
+    };
+    final end = day().he!.segments.last.lastLine!;
     // The lines reported from each row.
     final byRow = <int, Set<String>>{};
     // Down the whole section, at the start (right) of each line of text.
@@ -282,11 +363,11 @@ void main() {
       if (got == null || row == null) continue;
       final word = normalizeHebrewWords(got.text);
       if (word.isEmpty) continue; // English
-      if (!got.location.startsWith('$_book › $_day ')) break; // past the section
-      expect(got.location, isNot(contains('near')));
-      final refs = RegExp(r' he ([\d, –]+) · ').firstMatch(got.location)?.group(1);
-      expect(refs, isNotNull, reason: got.location);
-      expect(refs, isNot(contains(',')), reason: '$word: ${got.location}');
+      expect(got.location, isNot(startsWith('near')));
+      final lines = RegExp('^${RegExp.escape(file())}:([\\d,-]+) · ').firstMatch(got.location)?.group(1);
+      if (lines == null || int.parse(lines.split(RegExp('[,-]')).first) > end) break; // past the section
+      final refs = refAt[lines];
+      expect(refs, isNotNull, reason: '$word: ${got.location}');
       expect(letters[refs]!.split(' '), anyElement(contains(word)), reason: '$word in line $refs');
       (byRow[row] ??= {}).add(refs!);
     }

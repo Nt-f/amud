@@ -799,6 +799,9 @@ class SiddurResolver {
       // English rendering of it.
       if (t == null && h != null && h.en != null && trInfo != null) {
         t = Segment(ref: h.ref, html: h.en!, hebrew: false, kind: h.kind, runs: [TextRun(h.en!, RunKind.text)])
+          // Written in the Hebrew line's `en`.
+          ..line = h.line
+          ..lastLine = h.lastLine
           ..rubric = h.rubric
           ..announces = h.announces
           ..followsPrevious = h.followsPrevious;

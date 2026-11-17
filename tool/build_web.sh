@@ -15,7 +15,10 @@ rm -rf build/web
 # starts and scrolls faster; the rest fall back to the JavaScript build.
 # --no-web-resources-cdn: serve the renderers ourselves (no Google CDN at
 # runtime), which is required for the app to work fully offline.
+# GIT_COMMIT: text reports say which build they came from, so the corpus
+# lines they point to can be read at that commit.
 flutter build web --release \
+  --dart-define=GIT_COMMIT="$(git rev-parse HEAD 2>/dev/null || true)" \
   --wasm \
   --no-web-resources-cdn \
   --no-source-maps \

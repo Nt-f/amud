@@ -11,16 +11,23 @@ assets/corpus/<nusach>.json.gz:
    "index": the table of contents, as Sefaria's schema ({"enTitle", "heTitle", "nodes"}),
    "editions": {"he"/"en": {"license", "segments", "sources": [{"version", "license", "source"?}]}},
    "labels": {if_…: label}, "inserts": [...], "services": {...},
-   "leaves": {path: {"node", "when"?, "service"?,
-                     "he": {"version", "segs": [[ref, [part, ...]], ...]},
-                     "en": {"version", "segs": [[ref, [he ref, ...], [part, ...]], ...]}}}}
+   "leaves": {path: {"node", "when"?, "service"?, "file", "line",
+                     "he": {"version", "segs": [[ref, [part, ...], step, span?], ...]},
+                     "en": {"version", "segs": [[ref, [he ref, ...], [part, ...], step, span?], ...]}}}}
 
 A part holds its fields and its text under "text"; a segment that isn't
 split is one part. Editors' comments are left out.
+
+Where the text is, for text reports: "file" is the leaf's chunk file in
+corpus/siddur/<nusach> and "line" the line of its path there. A segment
+starts `step` lines after the one before it (the first, after the leaf's
+line); a split one's parts end `span` lines after it starts. Steps keep
+the numbers small, so they cost little once gzipped.
 """
 import gzip
 import json
 import os
+import re
 import sys
 
 import source
@@ -108,6 +115,48 @@ def service_sections(spec, paths):
     return [k for k in kids if k not in spec.get('except', [])]
 
 
+_PATH = re.compile(r'^\s*"path": ("(?:[^"\\]|\\.)*"),$')
+_TEXT = re.compile(r'^\s*"(he|en)": \{$')
+_SEG = re.compile(r'^\s*\{"ref": ("(?:[^"\\]|\\.)*")')
+_SPLIT_END = re.compile(r'^\s*\]\},?$')
+
+
+def source_lines(path, doc):
+    """Where each leaf and segment of a chunk file is (1-based), read from
+    the file as written (one line per segment, or per part of a split one,
+    as fmt.py writes it): {leaf path: (line, {lang: [(ref, first, last)]})}.
+    Stops the build if that doesn't agree with [doc]."""
+    out, leaf, lang, split = {}, None, None, None
+    with open(path) as f:
+        for n, line in enumerate(f, 1):
+            line = line.rstrip('\n')
+            if m := _PATH.match(line):
+                leaf, lang, split = json.loads(m[1]), None, None
+                out[leaf] = (n, {})
+            elif leaf is not None and (m := _TEXT.match(line)):
+                lang, split = m[1], None
+                out[leaf][1][lang] = []
+            elif split is not None and _SPLIT_END.match(line):
+                out[leaf][1][lang].append((split[0], split[1], n - 1))
+                split = None
+            elif lang is not None and split is None and (m := _SEG.match(line)):
+                ref = json.loads(m[1])
+                if line.endswith('"parts": ['):
+                    split = (ref, n)
+                else:
+                    out[leaf][1][lang].append((ref, n, n))
+    rel = os.path.relpath(path, ROOT)
+    for leaf in doc['leaves']:
+        found = out.get(leaf['path'])
+        for lang in ('he', 'en'):
+            want = [s['ref'] for s in (leaf.get(lang) or {}).get('segs', [])]
+            got = [r for r, _, _ in (found[1].get(lang, []) if found else [])]
+            if want != got:
+                raise SystemExit(f'{rel}: {leaf["path"]} {lang}: can\'t find its lines '
+                                 f'(run tool/corpus/fmt.py)')
+    return out
+
+
 def _part(p):
     return {k: v for k, v in p.items() if k != 'comment'}
 
@@ -159,9 +208,12 @@ def build(nusach):
             print(e)
         raise SystemExit(f'{nusach}: {len(errs)} problem(s); nothing built')
     leaves = {}
-    for _, doc in chunks:
+    for path, doc in chunks:
+        lines = source_lines(path, doc)
         for leaf in doc['leaves']:
             out = {k: leaf[k] for k in ('node', 'when', 'service') if k in leaf}
+            out['file'] = os.path.basename(path)
+            out['line'] = lines[leaf['path']][0]
             if 'title' in leaf:
                 out['_title'] = leaf['title']
             for lang in ('he', 'en'):
@@ -169,9 +221,12 @@ def build(nusach):
                 if not t:
                     continue
                 segs = []
-                for s in t['segs']:
+                at = out['line']
+                for s, (_, first, last) in zip(t['segs'], lines[leaf['path']][1][lang]):
                     ps = [_part(p) for p in source.parts(s)]
-                    segs.append([s['ref'], ps] if lang == 'he' else [s['ref'], s.get('translates', []), ps])
+                    seg = [s['ref'], ps] if lang == 'he' else [s['ref'], s.get('translates', []), ps]
+                    segs.append(seg + [first - at] + ([last - first] if last > first else []))
+                    at = first
                 out[lang] = {'version': t['version'], 'segs': segs}
             leaves[leaf['path']] = out
     os.makedirs(OUT, exist_ok=True)

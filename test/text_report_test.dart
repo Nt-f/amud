@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:amud/core/providers.dart';
@@ -6,8 +7,28 @@ import 'package:amud/core/text_report.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:http/http.dart' as http;
+import 'package:http/testing.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 void main() {
+  test('a report says which build sent it', () async {
+    PackageInfo.setMockInitialValues(
+        appName: 'Amud', packageName: 'page.amud', version: '0.14.0', buildNumber: '10', buildSignature: '');
+    // CI builds pass --dart-define=GIT_COMMIT=<sha>; tests usually don't.
+    const commit = String.fromEnvironment('GIT_COMMIT');
+    final build = commit.isEmpty ? 'amud 0.14.0+10' : 'amud 0.14.0+10 ${commit.substring(0, 10)}';
+    expect(await appBuild(), build);
+    late http.Request sent;
+    await sendReport('https://worker.example/', 'a' * 32, {'location': 'here', 'app': await appBuild()},
+        client: MockClient((r) async {
+      sent = r;
+      return http.Response('{}', 200);
+    }));
+    expect(sent.url.toString(), 'https://worker.example/v1/report');
+    expect(jsonDecode(sent.body), {'uid': 'a' * 32, 'location': 'here', 'app': build});
+  });
+
   testWidgets('long press offers Report and requires issue details', (tester) async {
     var selectedText = '';
     // The dialog reads the report Worker's address from storage.

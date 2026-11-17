@@ -109,6 +109,12 @@ class Segment {
   /// Said only with a minyan.
   bool minyan = false;
 
+  /// Where it is written, when it is Amud's own text: its first and last
+  /// line in its leaf's chunk file (see [CorpusLeaf.file]). Null for any
+  /// other version's text.
+  int? line;
+  int? lastLine;
+
   /// Said only on some days but nothing to point out when it is (corpus
   /// `plain`, the Daily Psalm): shown like an ordinary line, not as today's.
   bool unmarked = false;

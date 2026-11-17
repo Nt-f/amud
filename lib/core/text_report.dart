@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'l10n.dart';
@@ -33,6 +34,20 @@ String reportWorkerUrl(Storage storage) {
   return (cfg?['url'] as String?) ?? defaultSyncWorker;
 }
 
+/// The build a report comes from, so its corpus lines can be read at that
+/// commit: "amud 0.14.0+10 93cd0669bf". The commit is there when the build
+/// was given one (`--dart-define=GIT_COMMIT=…`, as CI and tool/build_web.sh do).
+Future<String> appBuild() async {
+  const commit = String.fromEnvironment('GIT_COMMIT');
+  var build = 'amud';
+  try {
+    final info = await PackageInfo.fromPlatform();
+    build += ' ${info.version}+${info.buildNumber}';
+  } catch (_) {}
+  if (commit.isNotEmpty) build += ' ${commit.substring(0, min(commit.length, 10))}';
+  return build;
+}
+
 /// Posts a report to the Worker; throws on any failure.
 Future<void> sendReport(
   String baseUrl,
@@ -45,7 +60,7 @@ Future<void> sendReport(
       .post(
         Uri.parse('${baseUrl.replaceAll(RegExp(r'/+$'), '')}/v1/report'),
         headers: {'content-type': 'application/json'},
-        body: jsonEncode({'uid': uid, ...fields, 'app': 'amud'}),
+        body: jsonEncode({'uid': uid, 'app': 'amud', ...fields}),
       )
       .timeout(const Duration(seconds: 15));
   if (res.statusCode != 200) throw Exception('HTTP ${res.statusCode}');
@@ -116,8 +131,20 @@ class _TextReportDialogState extends State<TextReportDialog> {
     super.dispose();
   }
 
+  /// Which build this is (see [appBuild]).
+  String _app = 'amud';
+
+  @override
+  void initState() {
+    super.initState();
+    appBuild().then((v) {
+      if (mounted) setState(() => _app = v);
+    });
+  }
+
   String get _body =>
       'Reading location: ${widget.location}\n'
+      'App: $_app\n'
       'Issue type: $_type\n\nSelected text:\n${widget.text}\n\n'
       'Issue details:\n${_details.text.trim()}\n\n'
       'Suggested correction:\n${_correction.text.trim()}';
@@ -139,6 +166,7 @@ class _TextReportDialogState extends State<TextReportDialog> {
           'text': widget.text,
           'details': _details.text.trim(),
           'correction': _correction.text.trim(),
+          'app': await appBuild(),
         });
         if (!mounted) return;
         final messenger = ScaffoldMessenger.of(context);

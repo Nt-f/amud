@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart' show SelectionStatus;
 import 'package:hebcal/hebcal.dart';
@@ -5,9 +7,10 @@ import 'package:siddur_engine/siddur_engine.dart';
 
 import 'reader_typography.dart' show normalizeHebrewWords;
 
-// Where a text report's selection is: the section (leaf) and lines it holds,
-// not just the page it was read on. A page like Weekday Shacharit splices in
-// Musaf for Rosh Chodesh, Hallel and the rest; the leaf says which.
+// Where a text report's selection is: the lines of corpus/siddur it was
+// read from, not just the page it was read on. A page like Weekday Shacharit
+// splices in Musaf for Rosh Chodesh, Hallel and the rest; the file says
+// which. The lines are the build's (the report says which build it is).
 
 /// The reader's rows that hold part of the selection now (see
 /// [RowSelectionProbe]).
@@ -272,8 +275,62 @@ String _refs(Iterable<String> refs) {
   return out.join(', ');
 }
 
-/// Each leaf with its lines: "Festivals/Rosh Chodesh/…/Sanctity of the Day he 1–2"
-/// (or "title").
+/// Line numbers in order, runs joined: 331, 332, 333, 340 → ["331-333", "340"].
+List<String> _lines(Iterable<int> lines) {
+  final list = lines.toSet().toList()..sort();
+  final out = <String>[];
+  for (var i = 0; i < list.length; i++) {
+    var j = i;
+    while (j + 1 < list.length && list[j + 1] == list[j] + 1) {
+      j++;
+    }
+    out.add(_span(list[i], list[j]));
+    i = j;
+  }
+  return out;
+}
+
+String _span(int a, int b) => a == b ? '$a' : '$a-$b';
+
+/// What a report names: a chunk file or a section, and its lines.
+typedef _Place = ({String head, List<String> lines});
+
+/// Each chunk file with the lines selected in it:
+/// "corpus/siddur/ashkenaz/13_….json" and ["331-332"], or the leaf's path
+/// line when only its title was selected; where the words weren't found,
+/// "near" and the span of lines the rows hold. Null unless every line is
+/// Amud's own text with its place known (not another version the reader
+/// was set to, nor a corpus built without lines).
+List<_Place>? _files(SelectionSpot spot, Corpus? corpus) {
+  if (corpus == null) return null;
+  final byFile = <String, Set<int>>{};
+  for (final node in spot.leaves) {
+    final leaf = corpus.leaf(node.id);
+    if (leaf?.file == null || leaf?.line == null) return null;
+    final lines = byFile.putIfAbsent(leaf!.file!, () => {});
+    final shown = [
+      for (final s in spot.he) if (s.node == node && s.he != null) s.he!.segment,
+      for (final s in spot.en) if (s.node == node && s.tr != null) s.tr!.segment,
+    ];
+    for (final seg in shown) {
+      if (seg.line == null) return null;
+      for (var n = seg.line!; n <= (seg.lastLine ?? seg.line!); n++) {
+        lines.add(n);
+      }
+    }
+    // Selected in its title, not its lines.
+    if (shown.isEmpty) lines.add(leaf.line!);
+  }
+  return [
+    for (final MapEntry(key: file, value: lines) in byFile.entries)
+      spot.exact
+          ? (head: 'corpus/siddur/${corpus.nusach}/$file', lines: _lines(lines))
+          : (head: 'near corpus/siddur/${corpus.nusach}/$file', lines: [_span(lines.reduce(min), lines.reduce(max))]),
+  ];
+}
+
+/// Each leaf with its refs: "Festivals/Rosh Chodesh/…/Sanctity of the Day he 1–2"
+/// (or "title"), for a book without lines to point to.
 List<String> _sections(SelectionSpot spot) => [
       for (final leaf in spot.leaves)
         [
@@ -290,10 +347,11 @@ List<String> _sections(SelectionSpot spot) => [
 
 String _two(int n) => n.toString().padLeft(2, '0');
 
-/// The report's location: the book, then each section and its lines, the
-/// page read, and the day it was read for with what that day is. Kept to
-/// [max] characters (the Worker cuts what's longer), dropping sections from
-/// the end first so the first one and the day survive.
+/// The report's location: the lines of corpus/siddur the selection is in
+/// (from [corpus]; else the book and each section's refs), the page read,
+/// and the day it was read for with what that day is. Kept to [max]
+/// characters (the Worker cuts what's longer), dropping files or sections
+/// from the end, then the first file's last lines, so the day survives.
 ///
 /// [date] is the Hebrew day the section is said on (Maariv's is the next
 /// one), [civil] the civil date it was read on, if that isn't [date]'s.
@@ -301,6 +359,7 @@ String reportLocation({
   required String book,
   required String page,
   required SelectionSpot? spot,
+  Corpus? corpus,
   required HDate date,
   DateTime? civil,
   required List<String> dayLabels,
@@ -313,17 +372,26 @@ String reportLocation({
     if (dayLabels.isNotEmpty) dayLabels.join(', '),
   ].join(': ');
   if (spot == null) return _fit('$book › page $page (section not found) · $day', max);
-  final sections = _sections(spot);
-  String build(int shown) => [
-        '$book › ${sections.take(shown).join('; ')}'
-            '${shown < sections.length ? '; +${sections.length - shown} more' : ''}',
+  final files = _files(spot, corpus);
+  final places = files ?? [for (final s in _sections(spot)) (head: s, lines: const <String>[])];
+  String show(_Place p, int keep) => p.lines.isEmpty
+      ? p.head
+      : '${p.head}:${p.lines.take(keep).join(',')}${keep < p.lines.length ? ',…' : ''}';
+  // [keep]: how many of the first place's runs of lines are shown.
+  String build(int shown, [int? keep]) => [
+        '${files == null ? '$book › ' : ''}'
+            '${[for (final (i, p) in places.take(shown).indexed) show(p, i == 0 ? keep ?? p.lines.length : p.lines.length)].join('; ')}'
+            '${shown < places.length ? '; +${places.length - shown} more' : ''}',
         'page $page',
         day,
       ].join(' · ');
-  for (var shown = sections.length; shown > 1; shown--) {
+  for (var shown = places.length; shown > 1; shown--) {
     if (build(shown).length <= max) return build(shown);
   }
-  return _fit(build(1), max);
+  for (var keep = places.first.lines.length; keep > 1; keep--) {
+    if (build(1, keep).length <= max) return build(1, keep);
+  }
+  return _fit(build(1, 1), max);
 }
 
 String _fit(String s, int max) => s.length <= max ? s : '${s.substring(0, max - 1)}…';
