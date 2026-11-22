@@ -44,7 +44,7 @@
   "description": "A free, offline siddur app in Hebrew and English that shows each day's prayers as they're said, with zmanim, a Jewish calendar, Tehillim, daily learning and the Kitzur Shulchan Aruch.",
   "applicationCategory": "LifestyleApplication",
   "operatingSystem": "Android, iOS, Windows, macOS, Linux, Web",
-  "downloadUrl": "https://play.google.com/store/apps/details?id=page.amud",
+  "downloadUrl": ["https://play.google.com/store/apps/details?id=page.amud", "https://apps.apple.com/us/app/amud-your-siddur-your-nusuch/id6825167853"],
   "inLanguage": ["en", "he", "yi"],
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "license": "https://www.gnu.org/licenses/gpl-3.0.html",
@@ -102,7 +102,7 @@
     {
       "@type": "Question",
       "name": "Is there an iPhone app?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Use the web app: open amud.page/app in Safari, tap Share, then Add to Home Screen. It installs like an app and works offline. An unsigned .ipa is also published with each release for people who sideload apps." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, for iPhone and iPad: Amud is on the App Store at https://apps.apple.com/us/app/amud-your-siddur-your-nusuch/id6825167853. You can also open amud.page/app in Safari, tap Share, then Add to Home Screen. An unsigned .ipa is also published with each release for people who sideload apps." }
     },
     {
       "@type": "Question",
@@ -404,7 +404,7 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
           <a class="btn btn-ghost" id="dl-main" href="#download">Download the app</a>
         </div>
         <p class="dl-all"><a href="#download">All downloads</a></p>
-        <p class="platforms">Android · Windows · Mac · Linux · <a href="/app/">web</a>, and iPhone through the web app.</p>
+        <p class="platforms">iPhone · iPad · Android · Windows · Mac · Linux · <a href="/app/">web</a></p>
         <ul class="trust">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>No ads</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>No account</li>
@@ -529,17 +529,18 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
       <div class="download">
         <div>
           <h2>Get Amud</h2>
-          <p>Use it in your browser, or install it. The apps check for new versions and update themselves on Android. On iPhone and iPad, open the web app in Safari, tap Share, then Add to Home Screen.</p>
+          <p>Use it in your browser, or install it. The apps check for new versions and update themselves on Android. On iPhone and iPad, get it from the App Store.</p>
           <p>Something not working on your device? Write to <a href="mailto:info@amud.page">info@amud.page</a>.</p>
         </div>
         <div class="dl-list">
           <a href="/app/"><b>Web app</b><small>Any browser · installable</small></a>
+          <a href="https://apps.apple.com/us/app/amud-your-siddur-your-nusuch/id6825167853"><b>iPhone &amp; iPad</b><small>App Store</small></a>
           <a href="https://play.google.com/store/apps/details?id=page.amud"><b>Android</b><small>Google Play</small></a>
           <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-android.apk"><b>Android APK</b><small>Direct download, updates itself</small></a>
           <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-windows.zip"><b>Windows</b><small>Zip · unzip and run</small></a>
           <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-macos.zip"><b>Mac</b><small>Zip · right-click → Open</small></a>
           <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-linux-x64.tar.gz"><b>Linux</b><small>x64 tarball</small></a>
-          <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-ios-unsigned.ipa"><b>iPhone</b><small>Unsigned .ipa · for sideloading</small></a>
+          <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-ios-unsigned.ipa"><b>iPhone .ipa</b><small>Unsigned · for sideloading</small></a>
           <a href="https://github.com/Nt-f/amud/releases/latest"><b>All releases</b><small>Notes and older versions</small></a>
         </div>
       </div>
@@ -572,7 +573,7 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
       </details>
       <details>
         <summary>Is there an iPhone app?</summary>
-        <p>Use the web app: open <a href="/app/">amud.page/app</a> in Safari, tap Share, then Add to Home Screen. It installs like an app and works offline. An unsigned <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-ios-unsigned.ipa">.ipa</a> is also published with each release for people who sideload apps.</p>
+        <p>Yes, for iPhone and iPad: <a href="https://apps.apple.com/us/app/amud-your-siddur-your-nusuch/id6825167853">Amud on the App Store</a>. You can also open <a href="/app/">amud.page/app</a> in Safari, tap Share, then Add to Home Screen. An unsigned <a href="https://github.com/Nt-f/amud/releases/latest/download/amud-ios-unsigned.ipa">.ipa</a> is also published with each release for people who sideload apps.</p>
       </details>
       <details>
         <summary>Does Amud collect my data?</summary>
@@ -627,8 +628,8 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
 <script>
   // The hero button goes straight to the download that suits the visitor's
   // device; "All downloads" below it and the list further down cover the rest.
-  // Without JavaScript, or on a device with no matching download (iPhone uses
-  // the web app), it stays a link to the list.
+  // Without JavaScript, or on a device with no matching download, it stays a
+  // link to the list.
   (function () {
     var btn = document.getElementById('dl-main');
     if (!btn) return;
@@ -636,7 +637,7 @@ footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; }
     var release = 'https://github.com/Nt-f/amud/releases/latest/download/';
     var pick = null;
     if (/Android/i.test(ua)) pick = ['https://play.google.com/store/apps/details?id=page.amud', 'Get it on Google Play'];
-    else if (/iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1)) pick = null;
+    else if (/iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1)) pick = ['https://apps.apple.com/us/app/amud-your-siddur-your-nusuch/id6825167853', 'Download on the App Store'];
     else if (/Windows/i.test(ua)) pick = [release + 'amud-windows.zip', 'Download for Windows'];
     else if (/Macintosh|Mac OS X/i.test(ua)) pick = [release + 'amud-macos.zip', 'Download for Mac'];
     else if (/Linux/i.test(ua) && /x86_64|x64/i.test(ua)) pick = [release + 'amud-linux-x64.tar.gz', 'Download for Linux'];
