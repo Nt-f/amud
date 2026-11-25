@@ -145,9 +145,13 @@ bool isStandaloneVerse(SegmentItem item) => _yihyu.hasMatch(_words(item));
 /// A line the congregation says that is a paragraph in itself (Modim
 /// DeRabbanan, 31 words and more; "לך ה׳ הגדלה"), not a response like
 /// "אמן" set on the far side. Hallel's refrains and Kaddish's responses,
-/// 25 words at most, stay there, all alike. The Hebrew decides, so the
-/// translation beside it agrees.
-bool isLongResponse(SegmentItem item) => isResponse(item.role) && _words(item).split(' ').length > 30;
+/// 25 words at most, stay there, all alike, and so do verses the chazzan
+/// repeats in the same line (Hallel's "אבן מאסו"). The Hebrew decides, so
+/// the translation beside it agrees.
+bool isLongResponse(SegmentItem item) =>
+    isResponse(item.role) &&
+    (item.he?.runs ?? const []).every((r) => r.marker || r.role == null || isResponse(r.role)) &&
+    _words(item).split(' ').length > 30;
 
 /// An option's label short enough to stay on one line ("לר"ח:", "בשבת
 /// ור"ח:"), not a sentence of instruction that has to wrap.

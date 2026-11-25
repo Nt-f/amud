@@ -206,6 +206,17 @@ void main() {
       // The reader's own paragraph isn't a response at all.
       expect(isLongResponse(_line(modim)), isFalse);
       expect(isLongResponse(_line('אָמֵן', role: 'congregation')), isFalse);
+      // Verses the chazzan repeats in the same line stay on the far side.
+      final answered = Segment(ref: 'r', html: modim, hebrew: true, kind: SegmentKind.prayer, runs: [TextRun(modim, RunKind.text)]);
+      expect(
+          isLongResponse(SegmentItem('k', SchemaNode.parse({'enTitle': 'Test'}),
+              ResolvedSegment(answered, const [
+                ResolvedRun('אֶבֶן מָאֲסוּ הַבּוֹנִים', false, Applicability.always, null, null),
+                ResolvedRun('אֶבֶן מָאֲסוּ הַבּוֹנִים', false, Applicability.always, null, null, role: 'chazzan'),
+              ]),
+              null, SegmentKind.prayer, Applicability.always, null, null, false,
+              role: 'congregation')),
+          isFalse);
       // Hallel's longest refrain stays with the others.
       expect(isLongResponse(_line('הוֹדוּ לַיהֹוָה כִּי טוֹב כִּי לְעוֹלָם חַסְדּוֹ: יֹאמְרוּ נָא בֵית אַהֲרֹן כִּי לְעוֹלָם חַסְדּוֹ:', role: 'congregation')), isFalse);
     });
