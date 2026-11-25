@@ -40,7 +40,7 @@ jobs:
 
   macos:
     needs: version
-    runs-on: macos-latest
+    runs-on: xcode-27
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
@@ -76,7 +76,7 @@ jobs:
   # running this twice on the same commit fails the second upload.
   appstore:
     needs: version
-    runs-on: macos-latest
+    runs-on: xcode-27
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
@@ -137,7 +137,7 @@ jobs:
 
   ios:
     needs: version
-    runs-on: macos-latest
+    runs-on: xcode-27
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
