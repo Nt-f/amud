@@ -40,7 +40,10 @@ jobs:
 
   macos:
     needs: version
-    runs-on: xcode-27
+    # Stays on Xcode 26: Flutter 3.41.2's macOS packaging rejects Xcode 27's
+    # lipo, which lists FlutterMacOS's architectures as "x86_64 arm64".
+    # This zip goes to the GitHub Release only, not the App Store.
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
