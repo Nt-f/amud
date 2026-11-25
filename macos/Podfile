@@ -1,6 +1,6 @@
-# cupertino_native_better needs macOS 11 (keep in step with
+# Xcode 27 builds for macOS 12 and later (keep in step with
 # MACOSX_DEPLOYMENT_TARGET in Runner.xcodeproj).
-platform :osx, '11.0'
+platform :osx, '12.0'
 
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
@@ -40,5 +40,11 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     flutter_additional_macos_build_settings(target)
+    # Xcode 27 refuses a pod that still targets a macOS older than 12.
+    target.build_configurations.each do |config|
+      if config.build_settings['MACOSX_DEPLOYMENT_TARGET'].to_f < 12.0
+        config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '12.0'
+      end
+    end
   end
 end
