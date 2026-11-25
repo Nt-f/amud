@@ -781,9 +781,10 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> with FocusModeReade
             ));
         if (open) {
           for (final g in group) {
+            final said = g is SegmentItem && isLongResponse(g);
             for (final w in _rowsFor(context, g, layout)) {
               own[rows.length] = [g];
-              rows.add((c) => _ChazarahBody(child: w(c)));
+              rows.add((c) => _ChazarahBody(said: said, child: w(c)));
             }
           }
         }
@@ -1425,7 +1426,11 @@ class _SegmentView extends ConsumerWidget {
         final spans = paragraphs.last.$2;
         var h = r.html;
         if (i == 0 && !r.marker && item.kind == SegmentKind.prayer) {
-          h = normalizeOpeningBold(h, opening: opening, addIfMissing: seg.segment.hebrew);
+          // "יהיו לרצון" said in passing keeps none of the bold its siddur
+          // gives an opening.
+          h = isStandaloneVerse(item)
+              ? h.replaceFirstMapped(RegExp(r'^(\s*)<b>(.*?)</b>'), (m) => '${m[1]}${m[2]}')
+              : normalizeOpeningBold(h, opening: opening, addIfMissing: seg.segment.hebrew);
         }
         if (seg.segment.hebrew && !r.marker && item.kind == SegmentKind.prayer) h = verseNumbers(h);
         // A phrase that depends on a personal circumstance, where the
@@ -1447,11 +1452,23 @@ class _SegmentView extends ConsumerWidget {
         if (r.marker) inOptions = r.option;
         if (!r.option && !r.marker) inOptions = false;
         var st = base;
+        Color? labelFill;
         if (r.marker) {
           // Inside an instruction it's the instruction's own words.
           if (item.kind == SegmentKind.prayer) {
             st = base.copyWith(fontSize: (base.fontSize ?? 16) * 0.72, color: colors.instruction, fontWeight: FontWeight.w600);
             if (r.applicability == Applicability.notToday) st = st.copyWith(color: colors.excluded);
+            // The label of today's option ("לר"ח:") is highlighted with it,
+            // not a gap in the highlighted line. A longer instruction keeps
+            // its plain text, which can wrap.
+            final labelled = i + 1 < runs.length ? runs[i + 1] : null;
+            if (s.highlightToday &&
+                labelled != null &&
+                !labelled.marker &&
+                labelled.applicability == Applicability.today &&
+                isShortLabel(r.html)) {
+              labelFill = labelled.option ? colors.todayBar.withValues(alpha: 0.3) : colors.todayFill;
+            }
           }
         } else if (r.applicability == Applicability.today && s.highlightToday) {
           // Inside a highlighted line the chosen option needs to stand out
@@ -1476,6 +1493,26 @@ class _SegmentView extends ConsumerWidget {
               captionFont: theme.textTheme.labelSmall?.fontFamily,
               word: html.parse(marks(word), style: st)));
           spans.addAll(html.parse(marks(rest), style: st));
+        } else if (labelFill != null) {
+          // A span's own background follows its font's metrics, so small
+          // text (and the quote in "לר"ח") sits lower than the words around
+          // it. A box one line tall, centered in the line, lines up with
+          // their highlight exactly.
+          final lineHeight = (base.fontSize ?? 16) * (base.height ?? 1.65);
+          spans.add(WidgetSpan(
+            alignment: PlaceholderAlignment.middle,
+            child: Container(
+              height: lineHeight,
+              margin: const EdgeInsets.only(top: 1),
+              color: labelFill,
+              padding: EdgeInsets.symmetric(horizontal: (base.fontSize ?? 16) * 0.12),
+              child: Align(
+                widthFactor: 1,
+                child: Text.rich(TextSpan(children: html.parse(marks(pieces.first), style: st.copyWith(height: 1))),
+                    textDirection: rtl ? TextDirection.rtl : TextDirection.ltr, textScaler: TextScaler.noScaling),
+              ),
+            ),
+          ));
         } else {
           spans.addAll(html.parse(marks(pieces.first), style: st));
         }
@@ -1495,13 +1532,15 @@ class _SegmentView extends ConsumerWidget {
         final align = explicitAlign(item.align) != null
             ? explicitAlign(item.align)!
             // A rubric over a centered line ("ואומר שליח צבור:" over ברכו).
-            : centered
+            : centered || isStandaloneVerse(item)
             ? ParagraphAlign.center
             // In a card (Kaddish, Kiddush) the column is narrow: justified
             // lines open wide gaps, and responses on the far side zigzag.
             : compact
             ? ParagraphAlign.start
-            : isResponse(p.$1)
+            // A paragraph the congregation says (Modim DeRabbanan) is set
+            // like any other; an "Amen" inside it still on the far side.
+            : isResponse(p.$1) && !(p.$1 == item.role && isLongResponse(item))
                 ? ParagraphAlign.end
                 : (rightAligned && !rtl ? ParagraphAlign.end : ts.align(role));
         final w = TypesetParagraph(text: TextSpan(children: spans), textDirection: dir, em: base.fontSize ?? 16, align: align, balance: ts.print);
@@ -1706,7 +1745,9 @@ class _FoldHeader extends StatelessWidget {
 /// One expanded row of the repetition, tinted and faded.
 class _ChazarahBody extends StatelessWidget {
   final Widget child;
-  const _ChazarahBody({required this.child});
+  /// Said by the congregation too (Modim DeRabbanan): in full, not faded.
+  final bool said;
+  const _ChazarahBody({required this.child, this.said = false});
 
   @override
   Widget build(BuildContext context) {
@@ -1717,7 +1758,7 @@ class _ChazarahBody extends StatelessWidget {
         color: colors.chazarahFill,
         border: BorderDirectional(start: BorderSide(color: colors.chazarah, width: 3)),
       ),
-      child: Opacity(opacity: 0.72, child: child),
+      child: said ? child : Opacity(opacity: 0.72, child: child),
     );
   }
 }

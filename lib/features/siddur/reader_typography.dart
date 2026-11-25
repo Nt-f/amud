@@ -132,8 +132,26 @@ List<String> splitParagraphs(String html) {
 /// See [_preambles].
 bool isPreamble(SegmentItem item) {
   final words = _words(item);
-  return words.isNotEmpty && _preambles.any(words.startsWith);
+  return words.isNotEmpty && (_preambles.any(words.startsWith) || _yihyu.hasMatch(words));
 }
+
+/// "יהיו לרצון…" on a line of its own, before or after "אלהי נצור": a
+/// verse said in passing, set plain and centered, not as the opening of
+/// a prayer. Koren and Edot HaMizrach join "אמרי־פי" (the maqaf goes with
+/// the vowels), and some siddurim spell "וגאלי".
+final _yihyu = RegExp(r'^יהיו לרצון אמרי ?פי והגיון לבי לפניך ה צורי וגו?אלי$');
+bool isStandaloneVerse(SegmentItem item) => _yihyu.hasMatch(_words(item));
+
+/// A line the congregation says that is a paragraph in itself (Modim
+/// DeRabbanan, 31 words and more; "לך ה׳ הגדלה"), not a response like
+/// "אמן" set on the far side. Hallel's refrains and Kaddish's responses,
+/// 25 words at most, stay there, all alike. The Hebrew decides, so the
+/// translation beside it agrees.
+bool isLongResponse(SegmentItem item) => isResponse(item.role) && _words(item).split(' ').length > 30;
+
+/// An option's label short enough to stay on one line ("לר"ח:", "בשבת
+/// ור"ח:"), not a sentence of instruction that has to wrap.
+bool isShortLabel(String html) => stripHtml(html).trim().split(RegExp(r'\s+')).length <= 3;
 
 /// Said in an undertone, whether or not the corpus tags it so.
 bool isUndertone(SegmentItem item) {

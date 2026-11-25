@@ -183,6 +183,39 @@ void main() {
       expect(isPreamble(_line('בָּרוּךְ אַתָּה יְהֹוָה אֱלֹהֵינוּ')), isFalse);
     });
 
+    test('"יהיו לרצון" on a line of its own is a verse said in passing, as each siddur spells it', () {
+      for (final line in [
+        'יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶֽיךָ יְהֹוָה צוּרִי וְגוֹאֲלִי:', // Ashkenaz
+        '<b>יִהְיוּ לְרָצוֹן</b> אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהֹוָה צוּרִי וְגֹאֲלִי: ', // Sefard
+        'יִהְיוּ לְרָצוֹן אִמְרֵי־פִי וְהֶגְיוֹן לִבִּי לְפָנֶֽיךָ, יהוה צוּרִי וְגֹאֲלִי׃', // Koren
+        '<b>יִֽהְי֥וּ</b> לְרָצ֨וֹן ׀ אִמְרֵי־פִ֡י וְהֶגְי֣וֹן לִבִּ֣י לְפָנֶ֑יךָ יְ֝הֹוָ֗ה צוּרִ֥י וְגֹאֲלִֽי׃', // Edot HaMizrach
+        'יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ, יְיָ צוּרִי וְגוֹאֲלִי:', // Chabad
+      ]) {
+        expect(isStandaloneVerse(_line(line)), isTrue, reason: line);
+        // The prayer after it opens the section.
+        expect(isPreamble(_line(line)), isTrue, reason: line);
+      }
+      // At the end of אלהי נצור it's that prayer's last words.
+      expect(isStandaloneVerse(_line('עֲשֵׂה לְמַעַן תּוֹרָתֶךָ. יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהֹוָה צוּרִי וְגוֹאֲלִי:')), isFalse);
+    });
+
+    test("a paragraph the congregation says isn't a response on the far side", () {
+      const modim = 'מוֹדִים אֲנַחְנוּ לָךְ שָׁאַתָּה הוּא יְהֹוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ אֱלֹהֵי כָל בָּשָׂר יוֹצְרֵנוּ יוֹצֵר בְּרֵאשִׁית. '
+          'בְּרָכוֹת וְהוֹדָאוֹת לְשִׁמְךָ הַגָּדוֹל וְהַקָּדוֹשׁ עַל שֶׁהֶחֱיִיתָנוּ וְקִיַּמְתָּנוּ. כֵּן תְּחַיֵּנוּ וּתְקַיְּמֵנוּ וְתֶאֱסוֹף גָּלֻיּוֹתֵינוּ לְחַצְרוֹת קָדְשֶׁךָ לִשְׁמוֹר חֻקֶּיךָ';
+      expect(isLongResponse(_line(modim, role: 'congregation')), isTrue);
+      // The reader's own paragraph isn't a response at all.
+      expect(isLongResponse(_line(modim)), isFalse);
+      expect(isLongResponse(_line('אָמֵן', role: 'congregation')), isFalse);
+      // Hallel's longest refrain stays with the others.
+      expect(isLongResponse(_line('הוֹדוּ לַיהֹוָה כִּי טוֹב כִּי לְעוֹלָם חַסְדּוֹ: יֹאמְרוּ נָא בֵית אַהֲרֹן כִּי לְעוֹלָם חַסְדּוֹ:', role: 'congregation')), isFalse);
+    });
+
+    test('a short label is highlighted in a box; an instruction that wraps is not', () {
+      expect(isShortLabel('<small>לר"ח:</small>'), isTrue);
+      expect(isShortLabel('<small>בשבת ור"ח:</small>'), isTrue);
+      expect(isShortLabel('<small>בתענית אומר היחיד עננו, וכן שליח ציבור ששכח לומר בין גואל לרופא יאמר כאן עננו בלי חתימה</small>'), isFalse);
+    });
+
     test('Baruch shem is said quietly, tagged or not', () {
       expect(isUndertone(_line('בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד:')), isTrue);
       expect(const TypeScale(hebrewSize: 22, latinSize: 16).align(ParagraphRole.undertone), ParagraphAlign.center);
